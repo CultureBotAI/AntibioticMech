@@ -11,7 +11,7 @@
 
 ## Summary
 
-Post-remediation batch review of the 14 AntibioticRecord YAML files updated in Cycle 7 Stage 5 to resolve all 3 open Stage 4 record and category review findings: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion (Issue #1345, 3 records: neocarzinostatin CHEBI:29655 including companion single-record review 20261108T211000Z-neocarzinostatin-record-review, streptothricin E CHEBI:67576, and epoxomicin CHEBI:42265), cycle7-stage1-proposed-exact-natural-products-missing-mechanism-and-targets (Issue #1346, 5 records: benastatin A CHEBI:226154, benastatin B CHEBI:200324, tetarimycin A CHEBI:204430, 9-methylstreptimidone CHEBI:215258, and 7-deoxypactamycin CHEBI:198890), and seeded-exact-folate-inhibitors-with-card-only-targets-awaiting-primary-literature-promotion (Issue #1347, 6 records: sulfadoxine CHEBI:9329, sulfasalazine CHEBI:9334, sulfisoxazole CHEBI:102484, dapsone CHEBI:4325, brodimoprim CHEBI:131726, and tetroxoprim CHEBI:135420). Verified that all 14 EXACT ChEBI records carry complete single-molecule chemical_structure, curated biosynthesis_origin, curator-verified mode_of_action and mode_of_action_target_scope, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed Swiss-Prot UniProtKB protein_examples on the 4 DHPS inhibitors [UniProtKB:P0AC13] and 2 DHFR inhibitors [UniProtKB:P0ABQ4], and documented held_targets rationales on neocarzinostatin, streptothricin E, epoxomicin, benastatin A, benastatin B, tetarimycin A, 9-methylstreptimidone, and 7-deoxypactamycin in curation/uniprot_protein_examples.yaml), and are promoted to curation_status: REVIEWED (raising corpus REVIEWED count from 145 to 159 and reducing the review-readiness worklist from 2,960 to 2,946).
+Post-remediation batch review of the 14 AntibioticRecord YAML files updated in Cycle 7 Stage 5 to resolve all 3 open Stage 4 record and category review findings: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion (Issue #1345, 3 records: neocarzinostatin CHEBI:29655 including companion single-record review 20261108T210000Z-neocarzinostatin-record-review, streptothricin E CHEBI:67576, and epoxomicin CHEBI:42265), cycle7-stage1-proposed-exact-natural-products-missing-mechanism-and-targets (Issue #1346, 5 records: benastatin A CHEBI:226154, benastatin B CHEBI:200324, tetarimycin A CHEBI:204430, 9-methylstreptimidone CHEBI:215258, and 7-deoxypactamycin CHEBI:198890), and seeded-exact-folate-inhibitors-with-card-only-targets-awaiting-primary-literature-promotion (Issue #1347, 6 records: sulfadoxine CHEBI:9329, sulfasalazine CHEBI:9334, sulfisoxazole CHEBI:102484, dapsone CHEBI:4325, brodimoprim CHEBI:131726, and tetroxoprim CHEBI:135420). Verified that all 14 EXACT ChEBI records carry complete single-molecule chemical_structure, curated biosynthesis_origin, curator-verified mode_of_action and mode_of_action_target_scope, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed Swiss-Prot UniProtKB protein_examples on the 4 DHPS inhibitors [UniProtKB:P0AC13] and 2 DHFR inhibitors [UniProtKB:P0ABQ4], and documented held_targets rationales on neocarzinostatin, streptothricin E, epoxomicin, benastatin A, benastatin B, tetarimycin A, 9-methylstreptimidone, and 7-deoxypactamycin in curation/uniprot_protein_examples.yaml), and are promoted to curation_status: REVIEWED (raising corpus REVIEWED count from 145 to 159 and reducing the review-readiness worklist from 2,960 to 2,946).
 
 ## Scope And Provenance
 
@@ -19,7 +19,7 @@ Complete post-remediation review of all 14 AntibioticRecord YAML files modified 
 
 Selection: All 14 records in Cycle 7 Stage 5 resolved finding groups (Issues #1345, #1346, #1347).
 Coverage: full; 14 reviewed / 14 in the declared population.
-Source: working_tree at Git base 5e9c8bf4bb307ead357aa2474bb85e4ea98a9ce0.
+Source: working_tree at Git base 8ffffaf75be8d64f0a12e6acc0e7202626c9e2b0.
 Working-tree hashes do not imply those bytes were committed.
 
 | Target | Path / selector | Kind | Label |
@@ -110,7 +110,7 @@ Disposition: Resolved in Cycle 7 Stage 5 (Issue #1347): populated PRIMARY_LITERA
 ## Limits And Additional Notes
 
 - All 14 newly promoted REVIEWED records are registered in curation/causal_graphs.yaml held_records (bringing total held_records to 69) awaiting multi-step primary-literature causal_graphs in a subsequent Stage 2 goal.
-- Original Cycle 7 Stage 4 review bundles (20261108T211000Z-neocarzinostatin-record-review and 20261108T211100Z-cycle7-frozen-inventory-cohort-review) are preserved byte-for-byte.
+- Original Cycle 7 Stage 4 review bundles (20261108T210000Z-neocarzinostatin-record-review and 20261108T210100Z-cycle7-frozen-inventory-cohort-review) are preserved byte-for-byte.
 
 ## Complete Structured Record
 
@@ -140,7 +140,7 @@ summary: 'Post-remediation batch review of the 14 AntibioticRecord YAML files up
   in Cycle 7 Stage 5 to resolve all 3 open Stage 4 record and category review findings:
   proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion (Issue #1345,
   3 records: neocarzinostatin CHEBI:29655 including companion single-record review
-  20261108T211000Z-neocarzinostatin-record-review, streptothricin E CHEBI:67576, and
+  20261108T210000Z-neocarzinostatin-record-review, streptothricin E CHEBI:67576, and
   epoxomicin CHEBI:42265), cycle7-stage1-proposed-exact-natural-products-missing-mechanism-and-targets
   (Issue #1346, 5 records: benastatin A CHEBI:226154, benastatin B CHEBI:200324, tetarimycin
   A CHEBI:204430, 9-methylstreptimidone CHEBI:215258, and 7-deoxypactamycin CHEBI:198890),
@@ -157,7 +157,7 @@ summary: 'Post-remediation batch review of the 14 AntibioticRecord YAML files up
   and are promoted to curation_status: REVIEWED (raising corpus REVIEWED count from
   145 to 159 and reducing the review-readiness worklist from 2,960 to 2,946).'
 source:
-  git_revision: 5e9c8bf4bb307ead357aa2474bb85e4ea98a9ce0
+  git_revision: 8ffffaf75be8d64f0a12e6acc0e7202626c9e2b0
   state: working_tree
   inputs:
   - path: .claude/skills/review-yaml-category/SKILL.md
@@ -707,10 +707,10 @@ findings:
     PROPOSED to REVIEWED.'
   previous_occurrences:
   - repository: culturebotai/AntibioticMech
-    review_id: 20261108T211100Z-cycle7-frozen-inventory-cohort-review
+    review_id: 20261108T210100Z-cycle7-frozen-inventory-cohort-review
     finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
   - repository: culturebotai/AntibioticMech
-    review_id: 20261108T211000Z-neocarzinostatin-record-review
+    review_id: 20261108T210000Z-neocarzinostatin-record-review
     finding_id: neocarzinostatin-awaiting-reviewed-promotion
   external_issues:
   - https://github.com/CultureBotAI/AntibioticMech/issues/1345
@@ -766,7 +766,7 @@ findings:
     natural products to REVIEWED.'
   previous_occurrences:
   - repository: culturebotai/AntibioticMech
-    review_id: 20261108T211100Z-cycle7-frozen-inventory-cohort-review
+    review_id: 20261108T210100Z-cycle7-frozen-inventory-cohort-review
     finding_id: cycle7-stage1-proposed-exact-natural-products-missing-mechanism-and-targets
   external_issues:
   - https://github.com/CultureBotAI/AntibioticMech/issues/1346
@@ -838,7 +838,7 @@ findings:
     ChEBI folate-pathway inhibitors to REVIEWED.'
   previous_occurrences:
   - repository: culturebotai/AntibioticMech
-    review_id: 20261108T211100Z-cycle7-frozen-inventory-cohort-review
+    review_id: 20261108T210100Z-cycle7-frozen-inventory-cohort-review
     finding_id: seeded-exact-folate-inhibitors-with-card-only-targets-awaiting-primary-literature-promotion
   external_issues:
   - https://github.com/CultureBotAI/AntibioticMech/issues/1347
@@ -848,15 +848,15 @@ limitations:
   held_records (bringing total held_records to 69) awaiting multi-step primary-literature
   causal_graphs in a subsequent Stage 2 goal.
 notes:
-- Original Cycle 7 Stage 4 review bundles (20261108T211000Z-neocarzinostatin-record-review
-  and 20261108T211100Z-cycle7-frozen-inventory-cohort-review) are preserved byte-for-byte.
+- Original Cycle 7 Stage 4 review bundles (20261108T210000Z-neocarzinostatin-record-review
+  and 20261108T210100Z-cycle7-frozen-inventory-cohort-review) are preserved byte-for-byte.
 related_reviews:
 - repository: culturebotai/AntibioticMech
-  review_id: 20261108T211000Z-neocarzinostatin-record-review
+  review_id: 20261108T210000Z-neocarzinostatin-record-review
   relationship: Predecessor Cycle 7 Stage 4 single-record review of neocarzinostatin
     (CHEBI:29655)
 - repository: culturebotai/AntibioticMech
-  review_id: 20261108T211100Z-cycle7-frozen-inventory-cohort-review
+  review_id: 20261108T210100Z-cycle7-frozen-inventory-cohort-review
   relationship: Predecessor Cycle 7 Stage 4 full-inventory cohort review identifying
     the 3 resolved finding groups
 tags:

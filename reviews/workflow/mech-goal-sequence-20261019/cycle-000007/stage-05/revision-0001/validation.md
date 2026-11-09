@@ -41,7 +41,7 @@
      - Exit Code: `0` (`37 passed`).
 
 6. **README Statistics and Static Site Pages Synchronization ([`scripts/check_docs.py`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/scripts/check_docs.py), [`scripts/render_pages.py`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/scripts/render_pages.py), [`NEXT_TASKS.md`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/NEXT_TASKS.md))**
-   - Updated [`NEXT_TASKS.md`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/NEXT_TASKS.md) (`506` records with target or resistance evidence; `94` populated `PRIMARY_LITERATURE` `MolecularTarget` entries with reviewed `UniProtKB` `protein_examples` and `125` `held_targets`).
+   - Updated [`NEXT_TASKS.md`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/NEXT_TASKS.md) (`506` records with target or resistance evidence; `97` populated `PRIMARY_LITERATURE` `MolecularTarget` entries across `95` records in `curation/uniprot_protein_examples.yaml` and `125` `held_targets`).
    - Refresh Run (`BypassSandbox: true`, after `BypassSandbox: false` failed with `PermissionError` writing to `README.md` / `pages/`):
      - Command: `.venv/bin/python scripts/check_docs.py --write` and `.venv/bin/python scripts/render_pages.py`
      - Exit Code: `0`

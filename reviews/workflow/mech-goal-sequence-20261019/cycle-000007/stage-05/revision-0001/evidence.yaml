@@ -14,10 +14,10 @@ previous_evidence:
   sha256: d11feb49a227bba77766644bb5867ef703839e4c6e6a10d770d2a48d3352bbe9
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-05/revision-0001/issue_map.md
-  sha256: f4ff0871b58f93515b176030752a97f29e0b73d39c877f4afb7f640a330fdf75
+  sha256: 179cfd391767787d217d62d5ed193eb38d027e1bd651ff004ea79d31198bc95b
   kind: issue_map
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-05/revision-0001/validation.md
-  sha256: 023fb6f706b2d436985bc51049be22ce9c625f758b352b2b2d5006532079e043
+  sha256: ea5a083b668972e810e2032661226687367065321ededb2b8a9703d4faebfe68
   kind: validation
 findings:
 - finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
@@ -29,7 +29,8 @@ findings:
   carried_from: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
 - finding_id: cycle7-stage1-proposed-exact-natural-products-missing-mechanism-and-targets
   status: resolved
-  summary: 'Resolved in #1346 by curating mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes, and PRIMARY_LITERATURE molecular_targets (documented in curation/uniprot_protein_examples.yaml held_targets) and promoting all 5 Cycle 7 Stage 1 PROPOSED+EXACT natural products — benastatin A (CHEBI:226154, OTHER; PMID:38664572, PMID:19047004), benastatin B (CHEBI:200324, OTHER; PMID:38664572, PMID:19047004), tetarimycin A (CHEBI:204430, OTHER; PMID:23157252), 9-methylstreptimidone (CHEBI:215258, PROTEIN_SYNTHESIS_INHIBITION, GO:0022626 cytosolic ribosome; PMID:23438151, PMID:41162067), and 7-deoxypactamycin (CHEBI:198890, PROTEIN_SYNTHESIS_INHIBITION, GO:0015935 small ribosomal subunit; PMID:21513878, PMID:17827660) — to curation_status: REVIEWED via record_curation_event and write_validated_antibiotic.'
+  summary: 'Resolved in #1346 by curating mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes, and PRIMARY_LITERATURE molecular_targets (documented in curation/uniprot_protein_examples.yaml held_targets) and promoting all 5 Cycle 7 Stage 1 PROPOSED+EXACT natural products — benastatin A (CHEBI:226154, OTHER / MICROBIAL_TARGET, BIOLOGICAL_PROCESS Gram-positive bacterial cellular growth and metabolism; PMID:38664572, PMID:19047004), benastatin B (CHEBI:200324, OTHER / MICROBIAL_TARGET, BIOLOGICAL_PROCESS Gram-positive bacterial cellular growth and metabolism; PMID:38664572, PMID:19047004), tetarimycin A (CHEBI:204430, OTHER / MICROBIAL_TARGET, BIOLOGICAL_PROCESS Gram-positive bacterial cellular growth and viability; PMID:23157252), 9-methylstreptimidone (CHEBI:215258, PROTEIN_SYNTHESIS_INHIBITION / HOST_SHARED_TARGET, BIOLOGICAL_PROCESS eukaryotic 80S ribosomal translation; PMID:23438151, PMID:41162067), and 7-deoxypactamycin (CHEBI:198890, PROTEIN_SYNTHESIS_INHIBITION
+    / MICROBIAL_TARGET, RIBOSOMAL_SUBUNIT bacterial 30S ribosomal subunit; PMID:21513878, PMID:17827660) — to curation_status: REVIEWED via record_curation_event and write_validated_antibiotic.'
   group_id: group-02-cycle7-stage1-natural-products-mechanism-and-targets
   issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1346
   disposition: Curated mode_of_action and PRIMARY_LITERATURE molecular_targets across all 5 Cycle 7 Stage 1 EXACT natural products and promoted them to REVIEWED; verified via fresh structured review 20261108T235000Z-cycle7-stage5-remediated-records-review.
