@@ -1,0 +1,92 @@
+identifier: CHEBI:81026
+label: 2-hydroxymethylclavam
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An antipodal (3S,5S)-3-(hydroxymethyl)-4-oxa-1-azabicyclo[3.2.0]heptan-7-one
+  beta-lactam clavam metabolite from Streptomyces clavuligerus with antifungal activity.
+definition_source: DOI:10.1128/aac.44.3.720-726.2000
+synonyms:
+- synonym_text: 2-Hydroxymethylclavam
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C1[C@H]2N(C1=O)C[C@@H](O2)CO
+  standard_inchi: InChI=1S/C6H9NO3/c8-3-4-2-7-5(9)1-6(7)10-4/h4,6,8H,1-3H2/t4-,6+/m1/s1
+  standard_inchi_key: CRVXTEJTLQIKDI-XINAWCOVSA-N
+  molecular_formula: C6H9NO3
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000841/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 143.142
+  monoisotopic_mass: 143.0582
+xrefs:
+- pubchem.compound:3050259
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aac.44.3.720-726.2000#2-hydroxymethylclavam
+  source_label: 2-hydroxymethylclavam
+  minted_identifier: antibioticmech:curator-f595bd3071
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1128/aac.44.3.720-726.2000
+    snippet: 2-Hydroxymethylclavam is one of four antipodal (5S) clavam metabolites
+      produced by the paralogous clavam biosynthetic gene cluster of Streptomyces
+      clavuligerus that display antifungal activity against filamentous fungi and
+      yeasts.
+    notes: MIBiG 4.0.1 entry BGC0000841 (Streptomyces clavuligerus ATCC 27064); Jensen
+      et al. 2000 (DOI:10.1128/aac.44.3.720-726.2000, PMID:10681345), Mosher et al.
+      1999 (DOI:10.1128/aac.43.5.1215, PMID:10223939), and Brown et al. 1979 (DOI:10.1039/c39790000282)
+      characterize the biosynthesis and antifungal activity of 2-hydroxymethylclavam.
+      ChEBI CHEBI:81026 and PubChem CID 3050259 supply the stereo-complete SMILES,
+      Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1901
+  taxon_label: Streptomyces clavuligerus
+  strain: ATCC 27064
+  biosynthetic_gene_cluster: BGC0000841
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound '2-hydroxymethylclavam' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:10681345
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+- taxon_id: NCBITaxon:1901
+  taxon_label: Streptomyces clavuligerus
+  strain: ATCC 27064
+  biosynthetic_gene_cluster: BGC0000843
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound '2-hydroxymethylclavam' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:22435762
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

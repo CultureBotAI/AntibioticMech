@@ -1,0 +1,95 @@
+identifier: CHEBI:81027
+label: clavam-2-carboxylate
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An antipodal (3R,5S)-7-oxo-4-oxa-1-azabicyclo[3.2.0]heptane-3-carboxylic
+  acid beta-lactam clavam metabolite from Streptomyces clavuligerus with antifungal
+  activity.
+definition_source: DOI:10.1128/aac.44.3.720-726.2000
+synonyms:
+- synonym_text: Clavam-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: clavam-2-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C1[C@H]2N(C1=O)C[C@@H](O2)C(=O)O
+  standard_inchi: InChI=1S/C6H7NO4/c8-4-1-5-7(4)2-3(11-5)6(9)10/h3,5H,1-2H2,(H,9,10)/t3-,5+/m1/s1
+  standard_inchi_key: NMPWOLAIBCYZEP-WUJLRWPWSA-N
+  molecular_formula: C6H7NO4
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000841/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 157.125
+  monoisotopic_mass: 157.0375
+xrefs:
+- pubchem.compound:15573391
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aac.44.3.720-726.2000#clavam-2-carboxylate
+  source_label: clavam-2-carboxylate
+  minted_identifier: antibioticmech:curator-de380ad6a5
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1128/aac.44.3.720-726.2000
+    snippet: Clavam-2-carboxylate is an antipodal (5S) clavam beta-lactam metabolite
+      produced by Streptomyces clavuligerus that exhibits antifungal activity against
+      phytopathogenic and saprophytic fungi.
+    notes: MIBiG 4.0.1 entry BGC0000841 (Streptomyces clavuligerus ATCC 27064); Jensen
+      et al. 2000 (DOI:10.1128/aac.44.3.720-726.2000, PMID:10681345), Mosher et al.
+      1999 (DOI:10.1128/aac.43.5.1215, PMID:10223939), and Brown et al. 1979 (DOI:10.1039/c39790000282)
+      characterize the clavam biosynthetic pathway and antifungal activity of clavam-2-carboxylate.
+      ChEBI CHEBI:81027 and PubChem CID 15573391 supply the stereo-complete SMILES,
+      Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1901
+  taxon_label: Streptomyces clavuligerus
+  strain: ATCC 27064
+  biosynthetic_gene_cluster: BGC0000841
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'clavam-2-carboxylate' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:10681345
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+- taxon_id: NCBITaxon:1901
+  taxon_label: Streptomyces clavuligerus
+  strain: ATCC 27064
+  biosynthetic_gene_cluster: BGC0000843
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'clavam-2-carboxylate' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:22435762
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

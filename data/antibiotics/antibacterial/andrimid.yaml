@@ -1,0 +1,70 @@
+identifier: CHEBI:216634
+label: andrimid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An octatrienoyl-beta-phenylalanyl-valyl-methylpyrrolidinedione hybrid
+  polyketide-nonribosomal pseudopeptide antibiotic from Pantoea agglomerans that inhibits
+  bacterial acetyl-CoA carboxylase carboxyltransferase.
+definition_source: DOI:10.1074/jbc.m402989200
+synonyms:
+- synonym_text: Andrimid
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C\C=C\C=C\C=C\C(=O)N[C@@H](CC(=O)N[C@@H](C(C)C)C(=O)[C@H]1[C@H](C)C(=O)NC1=O)C1=CC=CC=C1
+  standard_inchi: InChI=1S/C27H33N3O5/c1-5-6-7-8-12-15-21(31)28-20(19-13-10-9-11-14-19)16-22(32)29-24(17(2)3)25(33)23-18(4)26(34)30-27(23)35/h5-15,17-18,20,23-24H,16H2,1-4H3,(H,28,31)(H,29,32)(H,30,34,35)/b6-5+,8-7+,15-12+/t18-,20-,23+,24-/m0/s1
+  standard_inchi_key: OHDXGZAYYBMHCY-QSUIEZAASA-N
+  molecular_formula: C27H33N3O5
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000956/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 479.577
+  monoisotopic_mass: 479.242
+xrefs:
+- pubchem.compound:636857
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1074/jbc.m402989200#andrimid
+  source_label: andrimid
+  minted_identifier: antibioticmech:curator-95ce6a5be5
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1074/jbc.m402989200
+    snippet: Pseudopeptide pyrrolidinedione antibiotics such as andrimid and moiramide
+      B produced by Pantoea agglomerans and Vibrio species selectively inhibit the
+      bacterial acetyl-CoA carboxylase carboxyltransferase reaction at nanomolar concentrations
+      and exhibit broad-spectrum antibacterial activity.
+    notes: MIBiG 4.0.1 entry BGC0000956 (Pantoea agglomerans); Freiberg et al. 2004
+      (DOI:10.1074/jbc.m402989200, PMID:15066985) and Jin et al. 2006 (DOI:10.1021/ja063194c,
+      PMID:16866529) characterize the polyunsaturated fatty-acid-capped beta-phenylalanine
+      pyrrolidinedione PKS-NRPS biosynthesis and nanomolar bacterial acetyl-CoA carboxylase
+      inhibition of andrimid. ChEBI CHEBI:216634 and PubChem CID 636857 supply the
+      stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:549
+  taxon_label: Pantoea agglomerans
+  biosynthetic_gene_cluster: BGC0000956
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'andrimid' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:15066985
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,73 @@
+identifier: CHEBI:204260
+label: endophenazine B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An N-methylated prenylated phenazin-7-one carboxylic acid antibiotic from
+  Streptomyces anulatus with antibacterial activity against Gram-positive bacteria
+  and antifungal activity.
+definition_source: DOI:10.7164/antibiotics.55.794
+synonyms:
+- synonym_text: Endophenazine B
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CN1C2=CC=CC(C(O)=O)=C2N=C2C(CC=C(C)C)=CC(=O)C=C12
+  standard_inchi: InChI=1S/C19H18N2O3/c1-11(2)7-8-12-9-13(22)10-16-17(12)20-18-14(19(23)24)5-4-6-15(18)21(16)3/h4-7,9-10H,8H2,1-3H3,(H,23,24)
+  standard_inchi_key: CIWWONHFDUMHHK-UHFFFAOYSA-N
+  molecular_formula: C19H18N2O3
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001080/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 322.364
+  monoisotopic_mass: 322.1317
+xrefs:
+- pubchem.compound:9973416
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.7164/antibiotics.55.794#endophenazine-b
+  source_label: endophenazine B
+  minted_identifier: antibioticmech:curator-0bb8b7d034
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.7164/antibiotics.55.794
+    snippet: Endophenazines A-D are prenylated phenazine antibiotics isolated from
+      arthropod-associated endosymbiotic Streptomyces anulatus strains that exhibit
+      antimicrobial activity against Gram-positive bacteria and filamentous fungi.
+    notes: MIBiG 4.0.1 entry BGC0001080 (Streptomyces anulatus); Gebhardt et al. 2002
+      (DOI:10.7164/antibiotics.55.794, PMID:12458768 and DOI:10.7164/antibiotics.55.801,
+      PMID:12458769) and Saleh et al. 2012 (DOI:10.3762/bjoc.8.57, PMID:22509222)
+      establish the isolation, chromophoric phenazin-7-one structure, biosynthesis,
+      and Gram-positive antibacterial and antifungal activity of endophenazine B.
+      ChEBI CHEBI:204260 and PubChem CID 9973416 supply the SMILES, Standard InChI,
+      and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1892
+  taxon_label: Streptomyces anulatus
+  biosynthetic_gene_cluster: BGC0001080
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'endophenazine B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:22509222
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
