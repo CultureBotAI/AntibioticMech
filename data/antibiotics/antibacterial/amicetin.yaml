@@ -81,6 +81,14 @@ curation_history:
     (MICROBIAL_TARGET) mode_of_action from Zhang et al. 2012 (DOI:10.1128/aem.07185-11,
     PMID:22267658) and DeBoer et al. 1953 (DOI:10.1021/ja01098a518).
   llm_assisted: true
+- timestamp: '2026-11-09T09:03:41Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial 50S ribosomal
+    subunit peptidyl-transferase center (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
+    backed by Zhang et al. 2012 (DOI:10.1128/aem.07185-11, PMID:22267658) and DeBoer
+    et al. 1953 (DOI:10.1021/ja01098a518).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -89,3 +97,29 @@ mode_of_action_notes: 'CURATOR: Disaccharide cytosine peptidyl nucleoside antibi
   peptidyl transferase center and inhibits peptide bond formation and bacterial translation
   (Zhang et al. 2012, DOI:10.1128/aem.07185-11, PMID:22267658; DeBoer et al. 1953,
   DOI:10.1021/ja01098a518).'
+molecular_targets:
+- target_label: bacterial 50S ribosomal subunit peptidyl-transferase center
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Binding of the disaccharide cytosine nucleoside antibiotic
+    amicetin to the 50S ribosomal subunit peptidyl-transferase center to inhibit peptide-bond
+    formation and bacterial protein synthesis in mycobacteria and Gram-positive/Gram-negative
+    bacteria (DeBoer et al. 1953, DOI:10.1021/ja01098a518; Zhang et al. 2012, DOI:10.1128/aem.07185-11,
+    PMID:22267658).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-04
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: DOI:10.1128/aem.07185-11
+    snippet: Amicetin is a disaccharide nucleoside antibiotic that inhibits bacterial
+      protein synthesis by binding to the 50S ribosomal subunit peptidyl transferase
+      center.
+    notes: Zhang et al. 2012 (Appl Environ Microbiol 78:2393-2401; PMID:22267658)
+      characterized the amicetin biosynthetic gene cluster and antibacterial translation
+      inhibition.
+  - reference: DOI:10.1021/ja01098a518
+    notes: DeBoer et al. 1953 (J Am Chem Soc 75:499-500) reported the discovery and
+      antimycobacterial/antibacterial activity of amicetin from Streptomyces vinaceusdrappus.

@@ -75,6 +75,22 @@ curation_history:
     (MICROBIAL_TARGET) mode_of_action from Freiberg et al. 2004 (DOI:10.1074/jbc.m402989200,
     PMID:15066985) and Jin et al. 2006 (DOI:10.1021/ja063194c, PMID:16866529).
   llm_assisted: true
+- timestamp: '2026-11-09T10:08:04Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial acetyl-CoA
+    carboxylase carboxyltransferase complex (AccA / AccD; GO:0009317, PROTEIN_COMPLEX,
+    DIRECT_BINDING_TARGET) backed by Freiberg et al. 2004 (DOI:10.1074/jbc.m402989200,
+    PMID:15066985) and Jin et al. 2006 (DOI:10.1021/ja063194c, PMID:16866529).
+  llm_assisted: true
+- timestamp: '2026-11-09T10:08:53Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_examples
+    (UniProtKB:P0ABD5, accA; UniProtKB:P0A9Q5, accD) to the primary-literature bacterial
+    acetyl-CoA carboxylase carboxyltransferase complex target on andrimid (DOI:10.1074/jbc.m402989200,
+    PMID:15066985; DOI:10.1021/ja063194c, PMID:16866529).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -84,3 +100,64 @@ mode_of_action_notes: 'CURATOR: Octatrienoyl-beta-phenylalanyl-valyl-methylpyrro
   (AccA/AccD, Ki = 5 nM against Escherichia coli ACC) to block malonyl-CoA formation
   and bacterial fatty acid / membrane lipid biosynthesis (Freiberg et al. 2004, DOI:10.1074/jbc.m402989200,
   PMID:15066985; Jin et al. 2006, DOI:10.1021/ja063194c, PMID:16866529).'
+molecular_targets:
+- target_id: GO:0009317
+  target_label: bacterial acetyl-CoA carboxylase carboxyltransferase complex (AccA
+    / AccD)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Competitive and sub-nanomolar/nanomolar inhibition of the
+    purified Escherichia coli and Staphylococcus aureus acetyl-CoA carboxylase (ACC)
+    carboxyltransferase reaction (AccA/AccD; Ki = 5 nM against E. coli ACC), selective
+    arrest of whole-cell bacterial fatty acid biosynthesis ([14C]acetate incorporation),
+    and target validation via spontaneous resistance mutations in accA and accD and
+    AccA/AccD overexpression (Freiberg et al. 2004, DOI:10.1074/jbc.m402989200, PMID:15066985;
+    Jin et al. 2006, DOI:10.1021/ja063194c, PMID:16866529).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2006-08
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: DOI:10.1074/jbc.m402989200
+    snippet: The pseudopeptidepyrrolidinedione antibiotics moiramide B and andrimid
+      selectively inhibit the bacterial acetyl-CoA carboxylase carboxyltransferase
+      reaction (Ki = 5 nM for E. coli ACC) and block fatty acid biosynthesis.
+    notes: Freiberg et al. 2004 (J Biol Chem 279:26066-26073; PMID:15066985) identified
+      the bacterial acetyl-CoA carboxylase carboxyltransferase heterotetramer (AccA2AccD2)
+      as the direct enzymatic target of andrimid and moiramide B in Escherichia coli
+      and Staphylococcus aureus.
+  - reference: PMID:15066985
+    notes: PubMed record for Freiberg et al. 2004 establishing nanomolar inhibition
+      of bacterial acetyl-CoA carboxylase carboxyltransferase (AccA/AccD) by andrimid.
+  - reference: DOI:10.1021/ja063194c
+    notes: Jin et al. 2006 (J Am Chem Soc 128:10660-10661; PMID:16866529) characterized
+      the hybrid NRPS-PKS biosynthetic cluster of the acetyl-CoA carboxylase inhibitor
+      andrimid in Pantoea agglomerans.
+  - reference: PMID:16866529
+    notes: PubMed record for Jin et al. 2006 on andrimid biosynthesis and ACC carboxyltransferase
+      inhibition.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABD5
+    protein_label: Acetyl-coenzyme A carboxylase carboxyl transferase subunit alpha
+    gene_symbol: accA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-09'
+    role: Escherichia coli K-12 acetyl-CoA carboxylase carboxyltransferase alpha subunit
+      (AccA, EC 2.1.3.15) forming the AccA2AccD2 heterotetramer directly inhibited
+      by andrimid (Ki = 5 nM) and harboring target-confirming resistance substitutions
+      (DOI:10.1074/jbc.m402989200, PMID:15066985; DOI:10.1021/ja063194c, PMID:16866529).
+  - uniprot_id: UniProtKB:P0A9Q5
+    protein_label: Acetyl-coenzyme A carboxylase carboxyl transferase subunit beta
+    gene_symbol: accD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-09'
+    role: Escherichia coli K-12 acetyl-CoA carboxylase carboxyltransferase beta subunit
+      (AccD, EC 2.1.3.15) forming the AccA2AccD2 heterotetramer directly inhibited
+      by andrimid (Ki = 5 nM) and harboring target-confirming resistance substitutions
+      (DOI:10.1074/jbc.m402989200, PMID:15066985; DOI:10.1021/ja063194c, PMID:16866529).
