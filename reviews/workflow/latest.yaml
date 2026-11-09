@@ -510,5 +510,41 @@ entries:
     pr_number: 1357
     status: merged
     verified_at: '2026-11-09T14:50:40.903690+00:00'
+- cycle: 8
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-05/revision-0001/evidence.yaml
+    sha256: 6a66089e3c9bdce07448e0707c4da24a26774030dea00e299c710faf400adcf2
+  parent_version: 1.0.0
+  receipt_sha256: 3e3f50b2979a4052d673a7dc7bfabf3ec149ab774aac9e8f1053ecb25044c47b
+  stage: 5
+  stage_key: resolve_review_findings
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    commit_publication:
+      commits:
+      - ee580e282a3382e51d5ef1982ded4f6fdd4c7fc5
+      - 144e68e7143c70e7e0d65f8f02f4979c2a3eb48a
+      - 5c426b76ef06c0321ddca356d095c972052df80e
+      complete: true
+      proofs:
+        144e68e7143c70e7e0d65f8f02f4979c2a3eb48a:
+          method: verified_merged_pr
+        5c426b76ef06c0321ddca356d095c972052df80e:
+          method: current_origin_branch_tip
+          tip: 5c426b76ef06c0321ddca356d095c972052df80e
+        ee580e282a3382e51d5ef1982ded4f6fdd4c7fc5:
+          method: verified_merged_pr
+    head_sha: 144e68e7143c70e7e0d65f8f02f4979c2a3eb48a
+    merge_commit_sha: 5c426b76ef06c0321ddca356d095c972052df80e
+    merged_at: '2026-11-09T17:48:34Z'
+    pr_number: 1362
+    status: merged
+    verified_at: '2026-11-09T17:58:48.888630+00:00'
 
 
