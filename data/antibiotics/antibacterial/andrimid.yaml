@@ -68,3 +68,19 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-09T06:35:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and CELL_MEMBRANE_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Freiberg et al. 2004 (DOI:10.1074/jbc.m402989200,
+    PMID:15066985) and Jin et al. 2006 (DOI:10.1021/ja063194c, PMID:16866529).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Octatrienoyl-beta-phenylalanyl-valyl-methylpyrrolidinedione
+  hybrid PKS-NRPS pseudopeptide antibiotic from Pantoea agglomerans that selectively
+  inhibits the bacterial multisubunit acetyl-CoA carboxylase carboxyltransferase reaction
+  (AccA/AccD, Ki = 5 nM against Escherichia coli ACC) to block malonyl-CoA formation
+  and bacterial fatty acid / membrane lipid biosynthesis (Freiberg et al. 2004, DOI:10.1074/jbc.m402989200,
+  PMID:15066985; Jin et al. 2006, DOI:10.1021/ja063194c, PMID:16866529).'

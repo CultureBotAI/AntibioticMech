@@ -181,4 +181,92 @@ curation_history:
     protein_examples (UniProtKB:P0ABQ4; DOI:10.1016/j.bcp.2005.10.052, PMID:16359642;
     PMID:391962) from SEEDED to REVIEWED (issue #1347).'
   llm_assisted: true
+- timestamp: '2026-11-09T06:35:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph brodimoprim_dhfr_tetrahydrofolate_biosynthesis_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0ABQ4)
+    and primary literature (DOI:10.1016/j.bcp.2005.10.052, PMID:391962).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
+causal_graphs:
+- graph_id: brodimoprim_dhfr_tetrahydrofolate_biosynthesis_inhibition
+  title: Brodimoprim selectively inhibits bacterial dihydrofolate reductase (DHFR)
+    to block tetrahydrofolate and nucleotide biosynthesis
+  description: Brodimoprim (5-(4-bromo-3,5-dimethoxybenzyl)pyrimidine-2,4-diamine),
+    a synthetic 2,4-diaminopyrimidine antibacterial, selectively binds and inhibits
+    bacterial dihydrofolate reductase (DHFR / FolA), blocking NADPH-dependent reduction
+    of 7,8-dihydrofolate to 5,6,7,8-tetrahydrofolate and arresting folate-dependent
+    thymidylate and purine biosynthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: brodimoprim
+    label: brodimoprim
+    node_type: COMPOUND
+    grounding: CHEBI:131726
+  - node_id: bacterial_dihydrofolate_reductase_fola
+    label: bacterial dihydrofolate reductase (DHFR)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial dihydrofolate reductase (DHFR / FolA, EC 1.5.1.3);
+      kept label-only with Escherichia coli K-12 FolA (UniProtKB:P0ABQ4) protein_example.
+    gene_symbols:
+    - folA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABQ4
+      protein_label: Dihydrofolate reductase
+      gene_symbol: folA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-08'
+      role: Escherichia coli K-12 dihydrofolate reductase (FolA / DHFR) selectively
+        inhibited at the dihydrofolate binding site by brodimoprim in purified enzyme
+        and antibacterial mechanism studies (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642;
+        PMID:391962).
+  - node_id: dihydrofolate_reductase_catalytic_activity
+    label: dihydrofolate reductase catalytic activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004146
+  - node_id: bacterial_tetrahydrofolate_and_nucleotide_biosynthesis
+    label: bacterial tetrahydrofolate regeneration and folate-dependent nucleotide
+      biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reduction of 7,8-dihydrofolate to 5,6,7,8-tetrahydrofolate and
+      downstream one-carbon thymidylate/purine biosynthesis arrested by brodimoprim
+      inhibition of bacterial DHFR (DOI:10.1016/j.bcp.2005.10.052; PMID:391962).
+  edges:
+  - subject: brodimoprim
+    predicate: inhibits
+    object: dihydrofolate_reductase_catalytic_activity
+    description: Brodimoprim selectively inhibits bacterial dihydrofolate reductase
+      (DHFR / FolA) catalytic activity.
+    evidence:
+    - reference: DOI:10.1016/j.bcp.2005.10.052
+      notes: Hawser et al. 2006 (PMID:16359642) characterized the selective inhibition
+        of bacterial dihydrofolate reductase (FolA / DHFR) by brodimoprim and comparator
+        2,4-diaminopyrimidines.
+    - reference: PMID:391962
+      notes: Then & Keller 1979 (PMID:391962) quantified cell-free inhibition of purified
+        Escherichia coli dihydrofolate reductase by brodimoprim and correlated enzyme
+        inhibition with antibacterial potency.
+  - subject: bacterial_dihydrofolate_reductase_fola
+    predicate: enables
+    object: dihydrofolate_reductase_catalytic_activity
+    description: Bacterial dihydrofolate reductase (FolA) catalyzes the NADPH-dependent
+      reduction of 7,8-dihydrofolate to 5,6,7,8-tetrahydrofolate.
+    evidence:
+    - reference: PMID:391962
+      notes: Purified Escherichia coli dihydrofolate reductase (FolA) catalyzed NADPH-dependent
+        dihydrofolate reduction in enzyme inhibition assays with brodimoprim (PMID:391962).
+  - subject: dihydrofolate_reductase_catalytic_activity
+    predicate: supports
+    object: bacterial_tetrahydrofolate_and_nucleotide_biosynthesis
+    description: DHFR-catalyzed tetrahydrofolate regeneration maintains one-carbon
+      cofactor pools required for bacterial thymidylate and purine biosynthesis.
+    evidence:
+    - reference: DOI:10.1016/j.bcp.2005.10.052
+      notes: Inhibition of bacterial DHFR by brodimoprim depletes reduced tetrahydrofolate
+        cofactors and blocks folate-dependent nucleotide synthesis and bacterial growth
+        (PMID:16359642; PMID:391962).

@@ -70,15 +70,15 @@ def test_every_causal_graph_gene_or_protein_node_has_valid_protein_examples(reco
                     assert normalized.get("role"), (
                         f"{path}: expected role on {normalized['uniprot_id']}"
                     )
-    assert causal_graph_records == 91
-    assert gene_or_protein_nodes == 72
+    assert causal_graph_records == 97
+    assert gene_or_protein_nodes == 78
 
     accounting = verify_corpus_protein_examples_accounting(records)
     assert accounting == {
-        "causal_graphs_total": 92,
-        "causal_graphs_with_protein_nodes": 70,
+        "causal_graphs_total": 98,
+        "causal_graphs_with_protein_nodes": 76,
         "causal_graphs_held": 22,
-        "gene_or_protein_nodes": 72,
+        "gene_or_protein_nodes": 78,
         "primary_literature_targets_total": 200,
         "primary_literature_targets_populated": 97,
         "primary_literature_targets_held": 103,

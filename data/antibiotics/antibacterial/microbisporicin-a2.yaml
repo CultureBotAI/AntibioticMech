@@ -69,3 +69,19 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-09T06:35:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and CELL_WALL_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Foulston & Bibb 2010 (DOI:10.1073/pnas.1008285107,
+    PMID:20628010) and Castiglione et al. 2008 (DOI:10.1128/aac.01716-07, PMID:18490500).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Pentacyclic 24-residue class I lantibiotic congener
+  (NAI-107 A2, bearing 5-chlorotryptophan and (4R)-4-hydroxy-L-proline) from Microbispora
+  corallina that binds the pyrophosphate moiety of cell wall peptidoglycan precursor
+  lipid II and inhibits bacterial peptidoglycan biosynthesis in Gram-positive pathogens
+  (Castiglione et al. 2008, DOI:10.1128/aac.01716-07, PMID:18490500; Foulston & Bibb
+  2010, DOI:10.1073/pnas.1008285107, PMID:20628010).'

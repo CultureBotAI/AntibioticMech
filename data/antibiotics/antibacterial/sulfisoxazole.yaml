@@ -546,6 +546,13 @@ curation_history:
     protein_examples (UniProtKB:P0AC13; DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641,
     PMID:22383845) from SEEDED to REVIEWED (issue #1347).'
   llm_assisted: true
+- timestamp: '2026-11-09T06:35:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph sulfisoxazole_dhps_paba_competitive_folate_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13)
+    and primary literature (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: FOLATE_PATHWAY_INHIBITION
 mode_of_action_notes: 'CURATOR: Synthetic isoxazolyl para-aminobenzenesulfonamide
@@ -555,3 +562,86 @@ mode_of_action_notes: 'CURATOR: Synthetic isoxazolyl para-aminobenzenesulfonamid
   and tetrahydrofolate biosynthesis (Roland et al. 1979, DOI:10.1128/AAC.15.2.195,
   PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845).'
 mode_of_action_target_scope: MICROBIAL_TARGET
+causal_graphs:
+- graph_id: sulfisoxazole_dhps_paba_competitive_folate_inhibition
+  title: Sulfisoxazole competitively inhibits bacterial dihydropteroate synthase (DHPS)
+    to block de novo folate biosynthesis
+  description: Sulfisoxazole (4-amino-N-(3,4-dimethyl-1,2-oxazol-5-yl)benzenesulfonamide),
+    a synthetic folate-pathway antimicrobial, acts as a para-aminobenzoate (pABA)
+    competitive substrate analog at dihydropteroate synthase (DHPS / FolP), forming
+    a dead-end pterin-sulfa adduct with 6-hydroxymethyl-7,8-dihydropterin pyrophosphate
+    (DHPPP) and blocking de novo folate biosynthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: sulfisoxazole
+    label: sulfisoxazole
+    node_type: COMPOUND
+    grounding: CHEBI:102484
+  - node_id: bacterial_dihydropteroate_synthase_folp
+    label: bacterial dihydropteroate synthase (DHPS)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial dihydropteroate synthase (DHPS / FolP, EC 2.5.1.15);
+      kept label-only with Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_example.
+    gene_symbols:
+    - folP
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AC13
+      protein_label: Dihydropteroate synthase
+      gene_symbol: folP
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-08'
+      role: Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively
+        inhibited at the para-aminobenzoic acid (PABA) active site by sulfisoxazole
+        in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195,
+        PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).
+  - node_id: dhps_paba_condensation_and_pterin_adduct_diversion
+    label: DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed
+      by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end
+      pterin-sulfisoxazole adduct (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641).
+  - node_id: bacterial_de_novo_folate_biosynthesis
+    label: bacterial de novo folate biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis
+      pathway arrested by sulfisoxazole inhibition of DHPS (DOI:10.1128/AAC.15.2.195;
+      DOI:10.1126/science.1214641).
+  edges:
+  - subject: sulfisoxazole
+    predicate: inhibits
+    object: dhps_paba_condensation_and_pterin_adduct_diversion
+    description: Sulfisoxazole competitively inhibits pABA utilization at bacterial
+      dihydropteroate synthase (DHPS) and forms an alternate pterin-sulfa adduct.
+    evidence:
+    - reference: DOI:10.1128/AAC.15.2.195
+      notes: Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli
+        dihydropteroate synthase inhibition by sulfisoxazole and demonstrated its
+        incorporation with DHPPP into a dead-end pterin-sulfa adduct.
+    - reference: DOI:10.1126/science.1214641
+      notes: Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of
+        sulfonamide/sulfone binding and pterin-sulfa conjugate formation at the bacterial
+        DHPS pABA site.
+  - subject: bacterial_dihydropteroate_synthase_folp
+    predicate: enables
+    object: dhps_paba_condensation_and_pterin_adduct_diversion
+    description: Bacterial dihydropteroate synthase (FolP) catalyzes the condensation
+      of DHPPP with para-aminobenzoate (pABA) at its active site.
+    evidence:
+    - reference: DOI:10.1128/AAC.15.2.195
+      notes: Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and
+        alternate substrate reaction with sulfisoxazole (PMID:378102).
+  - subject: dhps_paba_condensation_and_pterin_adduct_diversion
+    predicate: supports
+    object: bacterial_de_novo_folate_biosynthesis
+    description: DHPS-catalyzed dihydropteroate formation is an essential step in
+      bacterial de novo folate biosynthesis.
+    evidence:
+    - reference: DOI:10.1128/AAC.15.2.195
+      notes: Competitive inhibition of DHPS and DHPPP depletion by sulfisoxazole block
+        de novo dihydropteroate and folate synthesis required for microbial growth
+        (PMID:378102).
