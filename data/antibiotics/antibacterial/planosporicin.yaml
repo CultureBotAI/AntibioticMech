@@ -1,7 +1,7 @@
 identifier: CHEBI:226796
 label: planosporicin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A 24-residue pentacyclic class I lantibiotic from Planomonospora alba
   containing one (2S,3S,6R)-3-methyllanthionine and four lanthionine bridges that
@@ -87,6 +87,15 @@ curation_history:
     by Sherwood et al. 2013 (DOI:10.1128/jb.02291-12, PMID:23475977), Castiglione
     et al. 2007 (DOI:10.1021/bi700131x, PMID:17469849), and Maffioli et al. 2009 (DOI:10.1021/np800794y,
     PMID:19301921).
+  llm_assisted: true
+- timestamp: '2026-11-09T15:15:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI class I lantibiotic record (CHEBI:226796) with complete
+    4/4 chemical_structure, curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature peptidoglycan biosynthesis molecular_targets
+    (DOI:10.1128/jb.02291-12, PMID:23475977; DOI:10.1021/bi700669s, PMID:17567154)
+    from PROPOSED to REVIEWED (issue #1359).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION

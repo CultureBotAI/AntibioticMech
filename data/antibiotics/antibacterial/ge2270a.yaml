@@ -1,7 +1,7 @@
 identifier: CHEBI:29584
 label: GE2270A
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: GE2270A is the model molecule of cyclic thiazolyl peptide elfamycins.
   GE2270A is produced by Planobispora rosea. Biosynthesis of the molecule has been
@@ -62,6 +62,53 @@ molecular_targets:
   - reference: ARO:3000731
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3001237 (GE2270A); database
       assertion, not a primary citation.
+- target_id: GO:0003746
+  target_label: bacterial translation elongation factor Tu (EF-Tu)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: X-ray crystal structures of Escherichia coli EF-Tu-GDP-GE2270A
+    at 2.35 A resolution (Heffron & Jurnak 2000, DOI:10.1021/bi9913597, PMID:10625477,
+    PDB:1D8T) and Thermus thermophilus EF-Tu-GppNHp-GE2270A at 1.6 A resolution (Parmeggiani
+    et al. 2006, DOI:10.1021/bi0525122, PMID:16734421, PDB:2C77) establish that GE2270A
+    binds the 3'-aminoacyl-tRNA pocket on domain 2 of EF-Tu and prevents aminoacyl-tRNA
+    binding.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2000-01
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: PMID:10625477
+    notes: Heffron & Jurnak 2000 (Biochemistry 39:37-45; DOI:10.1021/bi9913597) resolved
+      the 2.35 A cocrystal structure of Escherichia coli EF-Tu-GDP bound to GE2270A
+      (PDB:1D8T), showing steric occlusion of the aminoacyl-tRNA binding cleft on
+      domain 2.
+  - reference: PMID:16734421
+    notes: Parmeggiani et al. 2006 (Biochemistry 45:6846-6857; DOI:10.1021/bi0525122)
+      resolved the 1.6 A cocrystal structure of Thermus thermophilus EF-Tu in complex
+      with GE2270A (PDB:2C77) and characterized E. coli EF-Tu resistance substitutions.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0CE47
+    protein_label: Elongation factor Tu 1
+    gene_symbol: tufA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-09'
+    role: Escherichia coli K-12 elongation factor Tu (TufA) directly bound at domain
+      2 by GE2270A in the 2.35 A cocrystal structure (PDB:1D8T; Heffron & Jurnak 2000,
+      PMID:10625477) and biochemical assays (Parmeggiani et al. 2006, PMID:16734421).
+  - uniprot_id: UniProtKB:P60338
+    protein_label: Elongation factor Tu-A
+    gene_symbol: tufA
+    taxon_id: NCBITaxon:274
+    taxon_label: Thermus thermophilus
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-09'
+    role: Thermus thermophilus elongation factor Tu-A (TufA) directly bound by GE2270A
+      in the 1.6 A EF-Tu-GppNHp-GE2270A cocrystal structure (PDB:2C77; Parmeggiani
+      et al. 2006, PMID:16734421).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -79,3 +126,37 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-11-09T15:05:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added NATURAL_PRODUCT biosynthesis_origin, curator-verified PROTEIN_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action, and primary-literature bacterial translation
+    elongation factor Tu (EF-Tu) molecular_targets on GE2270A (PMID:10625477, PMID:16734421;
+    issue #1361).'
+  llm_assisted: true
+- timestamp: '2026-11-09T15:10:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed Swiss-Prot UniProtKB protein_examples (Escherichia coli
+    K-12 tufA UniProtKB:P0CE47 and Thermus thermophilus tufA UniProtKB:P60338) to
+    the primary-literature bacterial translation elongation factor Tu (EF-Tu) target
+    on GE2270A (PMID:10625477, PMID:16734421).
+  llm_assisted: true
+- timestamp: '2026-11-09T15:15:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI thiazolyl peptide antibiotic record (CHEBI:29584)
+    with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), primary-literature bacterial translation elongation factor
+    Tu (EF-Tu) molecular_targets (PMID:10625477, PMID:16734421), and reviewed Swiss-Prot
+    TufA protein_examples (UniProtKB:P0CE47, UniProtKB:P60338) from SEEDED to REVIEWED
+    (issue #1361).'
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: 29-membered thiazolyl peptide antibiotic from Planobispora
+  rosea that binds domain 2 of bacterial elongation factor Tu (EF-Tu) and sterically
+  blocks formation of the aminoacyl-tRNA*EF-Tu*GTP ternary complex required for ribosomal
+  translation elongation (Heffron & Jurnak 2000, DOI:10.1021/bi9913597, PMID:10625477;
+  Parmeggiani et al. 2006, DOI:10.1021/bi0525122, PMID:16734421, PDB:2C77).'

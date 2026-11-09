@@ -1,7 +1,7 @@
 identifier: CHEBI:29668
 label: pulvomycin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: Pulvomycin is a polyketide antibiotic that binds elongation factor Tu
   (EF-Tu) to inhibit protein biosynthesis by preventing the formation of the ternary
@@ -58,6 +58,48 @@ molecular_targets:
   - reference: ARO:3000731
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000586 (pulvomycin); database
       assertion, not a primary citation.
+- target_id: GO:0003746
+  target_label: bacterial translation elongation factor Tu (EF-Tu)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: X-ray crystal structure of Thermus thermophilus EF-Tu-GppNHp
+    in complex with pulvomycin at 1.4 A resolution (PDB:2C78) and biochemical assays
+    with Escherichia coli EF-Tu demonstrate that pulvomycin spans the interface of
+    domains 1, 2, and 3 of EF-Tu and sterically blocks aminoacyl-tRNA binding (Parmeggiani
+    et al. 2006, DOI:10.1021/bi0525122, PMID:16734421).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2006-06
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: PMID:16734421
+    notes: Parmeggiani et al. 2006 (Biochemistry 45:6846-6857; DOI:10.1021/bi0525122)
+      determined the 1.4 A cocrystal structure of Thermus thermophilus EF-Tu bound
+      to pulvomycin (PDB:2C78) and characterized pulvomycin inhibition and resistance
+      mutations in Escherichia coli EF-Tu.
+  protein_examples:
+  - uniprot_id: UniProtKB:P60338
+    protein_label: Elongation factor Tu-A
+    gene_symbol: tufA
+    taxon_id: NCBITaxon:274
+    taxon_label: Thermus thermophilus
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-09'
+    role: Thermus thermophilus elongation factor Tu-A (TufA) directly bound at the
+      three-domain interface by pulvomycin in the 1.4 A cocrystal structure (PDB:2C78;
+      Parmeggiani et al. 2006, PMID:16734421).
+  - uniprot_id: UniProtKB:P0CE47
+    protein_label: Elongation factor Tu 1
+    gene_symbol: tufA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-09'
+    role: Escherichia coli K-12 elongation factor Tu (TufA) assayed for pulvomycin
+      inhibition of ternary complex formation and resistance substitutions in Parmeggiani
+      et al. 2006 (PMID:16734421).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -75,3 +117,36 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-11-09T15:05:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added NATURAL_PRODUCT biosynthesis_origin, curator-verified PROTEIN_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action, and primary-literature bacterial translation
+    elongation factor Tu (EF-Tu) molecular_targets on pulvomycin (PMID:16734421; issue
+    #1361).'
+  llm_assisted: true
+- timestamp: '2026-11-09T15:10:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed Swiss-Prot UniProtKB protein_examples (Thermus thermophilus
+    tufA UniProtKB:P60338 and Escherichia coli K-12 tufA UniProtKB:P0CE47) to the
+    primary-literature bacterial translation elongation factor Tu (EF-Tu) target on
+    pulvomycin (PMID:16734421).
+  llm_assisted: true
+- timestamp: '2026-11-09T15:15:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI macrocyclic lactone elfamycin antibiotic record (CHEBI:29668)
+    with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), primary-literature bacterial translation elongation factor
+    Tu (EF-Tu) molecular_targets (PMID:16734421), and reviewed Swiss-Prot TufA protein_examples
+    (UniProtKB:P60338, UniProtKB:P0CE47) from SEEDED to REVIEWED (issue #1361).'
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: 22-membered macrocyclic lactone elfamycin antibiotic
+  that binds at the three-domain interface of bacterial elongation factor Tu (EF-Tu)
+  and prevents formation of the aminoacyl-tRNA*EF-Tu*GTP ternary complex required
+  for ribosomal translation elongation (Parmeggiani et al. 2006, DOI:10.1021/bi0525122,
+  PMID:16734421, PDB:2C78).'

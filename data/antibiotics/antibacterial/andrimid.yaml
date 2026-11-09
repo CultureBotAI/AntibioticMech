@@ -1,7 +1,7 @@
 identifier: CHEBI:216634
 label: andrimid
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An octatrienoyl-beta-phenylalanyl-valyl-methylpyrrolidinedione hybrid
   polyketide-nonribosomal pseudopeptide antibiotic from Pantoea agglomerans that inhibits
@@ -90,6 +90,15 @@ curation_history:
     (UniProtKB:P0ABD5, accA; UniProtKB:P0A9Q5, accD) to the primary-literature bacterial
     acetyl-CoA carboxylase carboxyltransferase complex target on andrimid (DOI:10.1074/jbc.m402989200,
     PMID:15066985; DOI:10.1021/ja063194c, PMID:16866529).
+  llm_assisted: true
+- timestamp: '2026-11-09T15:15:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI pseudopeptide pyrrolidinedione antibiotic record
+    (CHEBI:216634) with complete 4/4 chemical_structure, curated mode_of_action (LIPID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), primary-literature acetyl-CoA carboxylase carboxyltransferase
+    (AccA/AccD) molecular_targets, and reviewed Swiss-Prot protein_examples (UniProtKB:P0ABD5,
+    UniProtKB:P0A9Q5) from PROPOSED to REVIEWED (issue #1359).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION

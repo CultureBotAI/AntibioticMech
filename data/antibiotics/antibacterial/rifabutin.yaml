@@ -1,7 +1,7 @@
 identifier: CHEBI:45367
 label: rifabutin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: Rifabutin is a semisynthetic rifamycin used in tuberculosis therapy. It
   inhibits DNA-dependent RNA synthesis.
@@ -165,6 +165,63 @@ molecular_targets:
   - reference: ARO:3000737
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000530 (rifabutin); database
       assertion, not a primary citation.
+- target_id: GO:0000428
+  target_label: DNA-directed RNA polymerase complex
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: X-ray crystal structure of Thermus thermophilus RNA polymerase
+    holoenzyme bound to rifabutin at 2.5 A resolution (PDB:2A68) and biochemical transcription
+    assays with Escherichia coli RNA polymerase show rifabutin binding the RpoB beta-subunit
+    pocket and blocking synthesis of nascent RNA transcripts beyond 2 nucleotides
+    (Artsimovitch et al. 2005, DOI:10.1016/j.cell.2005.07.014, PMID:16096056; Floss
+    & Yu 2005, DOI:10.1021/cr030112j, PMID:15700959).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2005-08
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: PMID:16096056
+    notes: Artsimovitch et al. 2005 (Cell 122:351-363; DOI:10.1016/j.cell.2005.07.014)
+      determined the 2.5 A crystal structure of Thermus thermophilus RNA polymerase
+      in complex with rifabutin (PDB:2A68) and measured direct transcription inhibition
+      on Escherichia coli RNA polymerase.
+  - reference: PMID:15700959
+    notes: Floss & Yu 2005 (Chem Rev 105:621-632; DOI:10.1021/cr030112j) reviewed
+      rifamycin structure-activity relationships, bacterial RNA polymerase RpoB binding,
+      and mycobacterial RpoB resistance mutations for rifabutin.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8RQE9
+    protein_label: DNA-directed RNA polymerase subunit beta
+    gene_symbol: rpoB
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-09'
+    role: Thermus thermophilus HB8 DNA-directed RNA polymerase beta subunit (RpoB,
+      EC 2.7.7.6) directly bound by rifabutin in the 2.5 A holoenzyme cocrystal structure
+      (PDB:2A68; Artsimovitch et al. 2005, PMID:16096056).
+  - uniprot_id: UniProtKB:P9WGY9
+    protein_label: DNA-directed RNA polymerase subunit beta
+    gene_symbol: rpoB
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-09'
+    role: Mycobacterium tuberculosis H37Rv DNA-directed RNA polymerase beta subunit
+      (RpoB, EC 2.7.7.6), the primary antimycobacterial target harboring the rifamycin
+      resistance-determining region (Floss & Yu 2005, PMID:15700959).
+  - uniprot_id: UniProtKB:P0A8V2
+    protein_label: DNA-directed RNA polymerase subunit beta
+    gene_symbol: rpoB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-09'
+    role: Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB, EC
+      2.7.7.6) assayed for biochemical transcription inhibition by rifabutin in Artsimovitch
+      et al. 2005 (PMID:16096056).
 activity_spectrum:
 - taxon_label: Mycobacterium tuberculosis complex
   assay: CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960
@@ -4927,3 +4984,36 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
     retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-11-09T15:05:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added SEMISYNTHETIC biosynthesis_origin, curator-verified NUCLEIC_ACID_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action, and primary-literature DNA-directed RNA polymerase
+    complex molecular_targets on rifabutin (PMID:16096056, PMID:15700959; issue #1361).'
+  llm_assisted: true
+- timestamp: '2026-11-09T15:10:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 3 reviewed Swiss-Prot UniProtKB protein_examples (Thermus thermophilus
+    HB8 rpoB UniProtKB:Q8RQE9, Mycobacterium tuberculosis H37Rv rpoB UniProtKB:P9WGY9,
+    and Escherichia coli K-12 rpoB UniProtKB:P0A8V2) to the primary-literature DNA-directed
+    RNA polymerase complex target on rifabutin (PMID:16096056, PMID:15700959).
+  llm_assisted: true
+- timestamp: '2026-11-09T15:15:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI spiropiperidyl rifamycin record (CHEBI:45367) with
+    complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), primary-literature DNA-directed RNA polymerase complex molecular_targets
+    (PMID:16096056, PMID:15700959), and reviewed Swiss-Prot RpoB protein_examples
+    (UniProtKB:Q8RQE9, UniProtKB:P9WGY9, UniProtKB:P0A8V2) from SEEDED to REVIEWED
+    (issue #1361).'
+  llm_assisted: true
+biosynthesis_origin: SEMISYNTHETIC
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Semisynthetic spiropiperidyl rifamycin antibiotic
+  that binds the conserved rifamycin pocket on the beta subunit (RpoB) of bacterial
+  DNA-directed RNA polymerase and inhibits transcription initiation and nascent RNA
+  elongation (Artsimovitch et al. 2005, DOI:10.1016/j.cell.2005.07.014, PMID:16096056,
+  PDB:2A68; Floss & Yu 2005, DOI:10.1021/cr030112j, PMID:15700959).'

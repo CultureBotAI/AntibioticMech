@@ -1,7 +1,7 @@
 identifier: CHEBI:217619
 label: TP-1161
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A 26-membered trisubstituted-pyridine macrocyclic thiopeptide antibiotic
   bearing a C-terminal aminoacetone moiety from marine Nocardiopsis sp. TFS65-07 with
@@ -75,4 +75,53 @@ curation_history:
   changes: Curated NATURAL_PRODUCT biosynthesis_origin from Engelhardt et al. 2010
     (DOI:10.1128/aem.00741-10, PMID:20562278; DOI:10.1021/np1005617, PMID:20929206).
   llm_assisted: true
+- timestamp: '2026-11-09T15:05:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Populated NATURAL_PRODUCT biosynthesis_origin, PROTEIN_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action, and primary-literature bacterial 50S ribosomal
+    subunit molecular_targets on TP-1161 backed by Engelhardt et al. 2010 (PMID:20562278,
+    PMID:20851988; issue #1360).'
+  llm_assisted: true
+- timestamp: '2026-11-09T15:15:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI 26-membered thiopeptide antibiotic record (CHEBI:217619)
+    with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature bacterial 50S ribosomal subunit molecular_targets
+    (PMID:20562278, PMID:20851988) from PROPOSED to REVIEWED (issue #1360).'
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: 26-membered macrocyclic thiopeptide antibiotic isolated
+  from the marine actinomycete Nocardiopsis sp. TFS65-07 that inhibits Gram-positive
+  bacterial protein biosynthesis by targeting the 50S ribosomal subunit (Engelhardt
+  et al. 2010, DOI:10.1128/AEM.00741-10, PMID:20562278; Engelhardt et al. 2010, DOI:10.1128/AEM.01442-10,
+  PMID:20851988).'
+molecular_targets:
+- target_id: GO:0015934
+  target_label: bacterial 50S ribosomal subunit
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: TP-1161 is a 26-membered series d1 thiopeptide antibiotic
+    isolated from marine Nocardiopsis sp. TFS65-07 (BGC0000625) with potent activity
+    against Gram-positive bacteria including Staphylococcus aureus, Staphylococcus
+    epidermidis, Streptococcus pneumoniae, and Enterococcus faecalis via 50S ribosomal
+    subunit translation inhibition (Engelhardt et al. 2010, DOI:10.1128/AEM.00741-10,
+    PMID:20562278; Engelhardt et al. 2010, DOI:10.1128/AEM.01442-10, PMID:20851988).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2010-08
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: PMID:20562278
+    notes: Engelhardt et al. 2010 (Appl Environ Microbiol 76:4969-4976; DOI:10.1128/AEM.00741-10)
+      isolated TP-1161, determined its 26-membered thiopeptide structure, and characterized
+      its Gram-positive antibacterial activity (MIC 0.25-1 ug/mL).
+  - reference: PMID:20851988
+    notes: Engelhardt et al. 2010 (Appl Environ Microbiol 76:7093-7101; DOI:10.1128/AEM.01442-10)
+      characterized the TP-1161 ribosomal peptide biosynthetic gene cluster (BGC0000625)
+      in Nocardiopsis sp. TFS65-07.

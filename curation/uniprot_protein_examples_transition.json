@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "uniprot_protein_examples_curation",
   "plan_path": "curation/uniprot_protein_examples.yaml",
-  "record_count": 97,
+  "record_count": 102,
   "record_deltas": [
     {
       "identifier": "CHEBI:100241",
@@ -5277,6 +5277,291 @@
         "curator": "antigravity",
         "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
         "changes": "Added 2 reviewed Enterococcus faecalis V583 Swiss-Prot UniProtKB protein_examples (UniProtKB:Q839D5, ecfA1; UniProtKB:Q839D4, ecfA2) to the primary-literature bacterial energy-coupling factor (ECF) vitamin transporter complex target on ECF transporter inhibitor 18 (DOI:10.1021/acs.jmedchem.5c02721).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:45367",
+      "label": "rifabutin",
+      "path": "data/antibiotics/antibacterial/rifabutin.yaml",
+      "before_sha256": "c618caf43bba4fa92db3e265e3773281276f01ab32956ed4feb7b0f27c850036",
+      "after_sha256": "f2b2d2f7cf076fd5a0d906daeb388f050f394d3664d115ddb63d3842b19fa244",
+      "unchanged_fields_sha256": "f22aada647c24878cf9ee3ce7762bfd4bcd70ce4f5c899c3e7762a11793c6b98",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "DNA-directed RNA polymerase complex",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q8RQE9",
+              "protein_label": "DNA-directed RNA polymerase subunit beta",
+              "gene_symbol": "rpoB",
+              "taxon_id": "NCBITaxon:300852",
+              "taxon_label": "Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Thermus thermophilus HB8 DNA-directed RNA polymerase beta subunit (RpoB, EC 2.7.7.6) directly bound by rifabutin in the 2.5 A holoenzyme cocrystal structure (PDB:2A68; Artsimovitch et al. 2005, PMID:16096056)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P9WGY9",
+              "protein_label": "DNA-directed RNA polymerase subunit beta",
+              "gene_symbol": "rpoB",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Mycobacterium tuberculosis H37Rv DNA-directed RNA polymerase beta subunit (RpoB, EC 2.7.7.6), the primary antimycobacterial target harboring the rifamycin resistance-determining region (Floss & Yu 2005, PMID:15700959)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0A8V2",
+              "protein_label": "DNA-directed RNA polymerase subunit beta",
+              "gene_symbol": "rpoB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB, EC 2.7.7.6) assayed for biochemical transcription inhibition by rifabutin in Artsimovitch et al. 2005 (PMID:16096056)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 3 reviewed Swiss-Prot UniProtKB protein_examples (Thermus thermophilus HB8 rpoB UniProtKB:Q8RQE9, Mycobacterium tuberculosis H37Rv rpoB UniProtKB:P9WGY9, and Escherichia coli K-12 rpoB UniProtKB:P0A8V2) to the primary-literature DNA-directed RNA polymerase complex target on rifabutin (PMID:16096056, PMID:15700959).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:75246",
+      "label": "rifaximin",
+      "path": "data/antibiotics/antibacterial/rifaximin.yaml",
+      "before_sha256": "6f714775913529b76d8d139dfc02c975edcd7817f629d99041de61242e608bdd",
+      "after_sha256": "5f7c88c2f10598bed4ee683eae6815e30401b39b1bd0e2c1099782bfa2d50891",
+      "unchanged_fields_sha256": "528292b259c72dfb46bfdb3326b082eceacf9d6fc5a30704de83351eccf01800",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "DNA-directed RNA polymerase complex",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0A8V2",
+              "protein_label": "DNA-directed RNA polymerase subunit beta",
+              "gene_symbol": "rpoB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB, EC 2.7.7.6) bound by rifaximin to inhibit bacterial RNA synthesis in enteric Escherichia coli (PMID:7774516, PMID:15855749, PMID:15700959)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0A8V2, rpoB) to the primary-literature DNA-directed RNA polymerase complex target on rifaximin (PMID:7774516, PMID:15855749, PMID:15700959).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:45304",
+      "label": "rifapentine",
+      "path": "data/antibiotics/antimycobacterial/rifapentine.yaml",
+      "before_sha256": "56c91986ad443040744a2d1304a3552e0b56341f7c13cd63cc68f1be40136138",
+      "after_sha256": "68c265886cc16429330162742b8342a6466b420537cff7108c56ab01901c1ce1",
+      "unchanged_fields_sha256": "18140e691b4a072eb52f3c83d4deec6da842813ab6567f1e97dc32ed722822e7",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "DNA-directed RNA polymerase complex",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q8RQE9",
+              "protein_label": "DNA-directed RNA polymerase subunit beta",
+              "gene_symbol": "rpoB",
+              "taxon_id": "NCBITaxon:300852",
+              "taxon_label": "Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Thermus thermophilus HB8 DNA-directed RNA polymerase beta subunit (RpoB, EC 2.7.7.6) directly bound by rifapentine in the 3.22 A holoenzyme cocrystal structure (PDB:2A69; Artsimovitch et al. 2005, PMID:16096056)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P9WGY9",
+              "protein_label": "DNA-directed RNA polymerase subunit beta",
+              "gene_symbol": "rpoB",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Mycobacterium tuberculosis H37Rv DNA-directed RNA polymerase beta subunit (RpoB, EC 2.7.7.6), the primary antimycobacterial target inhibited by rifapentine (Floss & Yu 2005, PMID:15700959)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0A8V2",
+              "protein_label": "DNA-directed RNA polymerase subunit beta",
+              "gene_symbol": "rpoB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB, EC 2.7.7.6) assayed for biochemical transcription inhibition by rifapentine in Artsimovitch et al. 2005 (PMID:16096056)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 3 reviewed Swiss-Prot UniProtKB protein_examples (Thermus thermophilus HB8 rpoB UniProtKB:Q8RQE9, Mycobacterium tuberculosis H37Rv rpoB UniProtKB:P9WGY9, and Escherichia coli K-12 rpoB UniProtKB:P0A8V2) to the primary-literature DNA-directed RNA polymerase complex target on rifapentine (PMID:16096056, PMID:15700959).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:29584",
+      "label": "GE2270A",
+      "path": "data/antibiotics/antibacterial/ge2270a.yaml",
+      "before_sha256": "8fb188821b962491641c7d65dfd70a99932c9a8ffc1dab2181f4cb1ae08a254f",
+      "after_sha256": "8e49686e2efa5384f36faf20a83b758dca0f90b1779b5e3231346e3c347834e2",
+      "unchanged_fields_sha256": "60c71471c14aa57f3560088b6ee12a27cf9a86dd776cf7af55584ff430dcf40a",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 5,
+      "curation_history_after_len": 6,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial translation elongation factor Tu (EF-Tu)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0CE47",
+              "protein_label": "Elongation factor Tu 1",
+              "gene_symbol": "tufA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Escherichia coli K-12 elongation factor Tu (TufA) directly bound at domain 2 by GE2270A in the 2.35 A cocrystal structure (PDB:1D8T; Heffron & Jurnak 2000, PMID:10625477) and biochemical assays (Parmeggiani et al. 2006, PMID:16734421)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P60338",
+              "protein_label": "Elongation factor Tu-A",
+              "gene_symbol": "tufA",
+              "taxon_id": "NCBITaxon:274",
+              "taxon_label": "Thermus thermophilus",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Thermus thermophilus elongation factor Tu-A (TufA) directly bound by GE2270A in the 1.6 A EF-Tu-GppNHp-GE2270A cocrystal structure (PDB:2C77; Parmeggiani et al. 2006, PMID:16734421)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 2 reviewed Swiss-Prot UniProtKB protein_examples (Escherichia coli K-12 tufA UniProtKB:P0CE47 and Thermus thermophilus tufA UniProtKB:P60338) to the primary-literature bacterial translation elongation factor Tu (EF-Tu) target on GE2270A (PMID:10625477, PMID:16734421).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:29668",
+      "label": "pulvomycin",
+      "path": "data/antibiotics/antibacterial/pulvomycin.yaml",
+      "before_sha256": "264c5cfb313e88554973e0420b21b089bce9cbeb481900c5fa80bbba1d3b0dae",
+      "after_sha256": "b749840a1d173d6d2524675c63a1febf815fb67fec6be85ea3fcf7c4249c09bd",
+      "unchanged_fields_sha256": "2008fd3f6dd14aa452fa0470b8fa94a28028e0b992187f81579fffb81f4c7b4f",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 5,
+      "curation_history_after_len": 6,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial translation elongation factor Tu (EF-Tu)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P60338",
+              "protein_label": "Elongation factor Tu-A",
+              "gene_symbol": "tufA",
+              "taxon_id": "NCBITaxon:274",
+              "taxon_label": "Thermus thermophilus",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Thermus thermophilus elongation factor Tu-A (TufA) directly bound at the three-domain interface by pulvomycin in the 1.4 A cocrystal structure (PDB:2C78; Parmeggiani et al. 2006, PMID:16734421)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0CE47",
+              "protein_label": "Elongation factor Tu 1",
+              "gene_symbol": "tufA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Escherichia coli K-12 elongation factor Tu (TufA) assayed for pulvomycin inhibition of ternary complex formation and resistance substitutions in Parmeggiani et al. 2006 (PMID:16734421)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 2 reviewed Swiss-Prot UniProtKB protein_examples (Thermus thermophilus tufA UniProtKB:P60338 and Escherichia coli K-12 tufA UniProtKB:P0CE47) to the primary-literature bacterial translation elongation factor Tu (EF-Tu) target on pulvomycin (PMID:16734421).",
         "llm_assisted": true
       }
     }
