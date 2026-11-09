@@ -92,3 +92,19 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-09T06:35:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and PROTEIN_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Shimamura et al. 2009 (DOI:10.1002/anie.200804138,
+    PMID:19115340), Gouda et al. 2012 (DOI:10.1248/cpb.60.169, PMID:22293474), and
+    Huo et al. 2012 (DOI:10.1016/j.chembiol.2012.08.013, PMID:23021914).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Macrocyclic amidine-thiazole RiPP peptide antibiotic
+  from Streptomyces bottropensis that selectively inhibits bacterial protein synthesis
+  by blocking aminoacyl-tRNA binding to the bacterial 50S ribosomal A site (Shimamura
+  et al. 2009, DOI:10.1002/anie.200804138, PMID:19115340; Gouda et al. 2012, DOI:10.1248/cpb.60.169,
+  PMID:22293474; Huo et al. 2012, DOI:10.1016/j.chembiol.2012.08.013, PMID:23021914).'

@@ -163,6 +163,77 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Brodimoprim selectively inhibits bacterial dihydrofolate reductase (DHFR) to block tetrahydrofolate and nucleotide biosynthesis <span class="pill">MECHANISTIC</span></h3>
+<p>Brodimoprim (5-(4-bromo-3,5-dimethoxybenzyl)pyrimidine-2,4-diamine), a synthetic 2,4-diaminopyrimidine antibacterial, selectively binds and inhibits bacterial dihydrofolate reductase (DHFR / FolA), blocking NADPH-dependent reduction of 7,8-dihydrofolate to 5,6,7,8-tetrahydrofolate and arresting folate-dependent thymidylate and purine biosynthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: brodimoprim_dhfr_tetrahydrofolate_biosynthesis_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — brodimoprim_dhfr_tetrahydrofolate_biosynthesis_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">brodimoprim</code></td>
+    <td>brodimoprim</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/brodimoprim.html"><code class="curie">CHEBI:131726</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dihydrofolate_reductase_fola</code></td>
+    <td>bacterial dihydrofolate reductase (DHFR)<br><span class="meta">Examples: Dihydrofolate reductase (folA) <a href="https://www.uniprot.org/uniprotkb/P0ABQ4"><code class="curie">UniProtKB:P0ABQ4</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Escherichia coli K-12 dihydrofolate reductase (FolA / DHFR) selectively inhibited at the dihydrofolate binding site by brodimoprim in purified enzyme and antibacterial mechanism studies (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dihydrofolate_reductase_catalytic_activity</code></td>
+    <td>dihydrofolate reductase catalytic activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><a href="https://amigo.geneontology.org/amigo/term/GO:0004146">GO:0004146</a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_tetrahydrofolate_and_nucleotide_biosynthesis</code></td>
+    <td>bacterial tetrahydrofolate regeneration and folate-dependent nucleotide biosynthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: brodimoprim_dhfr_tetrahydrofolate_biosynthesis_inhibition" tabindex="0">
+<table>
+  <caption>Edges — brodimoprim_dhfr_tetrahydrofolate_biosynthesis_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">brodimoprim</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">dihydrofolate_reductase_catalytic_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1016/j.bcp.2005.10.052">DOI:10.1016/j.bcp.2005.10.052</a></span> <span class="meta">(Hawser et al. 2006 (PMID:16359642) characterized the selective inhibition of bacterial dihydrofolate reductase (FolA / DHFR) by brodimoprim and comparator 2,4-diaminopyrimidines.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/391962">PMID:391962</a></span> <span class="meta">(Then &amp; Keller 1979 (PMID:391962) quantified cell-free inhibition of purified Escherichia coli dihydrofolate reductase by brodimoprim and correlated enzyme inhibition with antibacterial potency.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dihydrofolate_reductase_fola</code></td>
+    <td>enables</td>
+    <td><code class="curie">dihydrofolate_reductase_catalytic_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/391962">PMID:391962</a></span> <span class="meta">(Purified Escherichia coli dihydrofolate reductase (FolA) catalyzed NADPH-dependent dihydrofolate reduction in enzyme inhibition assays with brodimoprim (PMID:391962).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dihydrofolate_reductase_catalytic_activity</code></td>
+    <td>supports</td>
+    <td><code class="curie">bacterial_tetrahydrofolate_and_nucleotide_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1016/j.bcp.2005.10.052">DOI:10.1016/j.bcp.2005.10.052</a></span> <span class="meta">(Inhibition of bacterial DHFR by brodimoprim depletes reduced tetrahydrofolate cofactors and blocks folate-dependent nucleotide synthesis and bacterial growth (PMID:16359642; PMID:391962).)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -209,6 +280,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-11-08 · antigravity · LLM-assisted</span>
     <p>Promoted exact ChEBI 2,4-diaminopyrimidine record (CHEBI:131726) with complete 4/4 chemical_structure, curated mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0ABQ4; DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962) from SEEDED to REVIEWED (issue #1347).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-11-09 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph brodimoprim_dhfr_tetrahydrofolate_biosynthesis_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0ABQ4) and primary literature (DOI:10.1016/j.bcp.2005.10.052, PMID:391962).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -229,7 +305,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>2df1d424456b</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>c9c2080b6899</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

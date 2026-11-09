@@ -67,3 +67,19 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-09T06:35:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and ENERGY_METABOLISM_INHIBITION
+    (HOST_SHARED_TARGET) mode_of_action from Buntin et al. 2010 (DOI:10.1002/cbic.200900712,
+    PMID:20432424) and Kunze et al. 2004 (DOI:10.7164/antibiotics.57.151, PMID:15112964).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: ENERGY_METABOLISM_INHIBITION
+mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: Isochromanone- and oxazole-containing hybrid PKS-NRPS
+  antibiotic from Chondromyces crocatus Cm c5 that inhibits eukaryotic mitochondrial
+  respiratory chain NADH:ubiquinone oxidoreductase (complex I), blocking NADH oxidation
+  and mitochondrial electron transport in fungi and shared eukaryotic respiratory
+  complexes (Kunze et al. 2004, DOI:10.7164/antibiotics.57.151, PMID:15112964; Buntin
+  et al. 2010, DOI:10.1002/cbic.200900712, PMID:20432424).'

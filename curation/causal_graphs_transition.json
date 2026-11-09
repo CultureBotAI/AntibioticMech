@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "causal_graphs_curation",
   "plan_path": "curation/causal_graphs.yaml",
-  "record_count": 75,
+  "record_count": 81,
   "record_deltas": [
     {
       "identifier": "CHEBI:157683",
@@ -8930,6 +8930,706 @@
         "curator": "antigravity",
         "action": "CURATED_CAUSAL_GRAPHS",
         "changes": "Added evidence-backed MECHANISTIC causal graph sulfadiazine_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9329",
+      "label": "sulfadoxine",
+      "path": "data/antibiotics/antibacterial/sulfadoxine.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "83d9c3fc7d1b6d723a1df436c347ca666dc5e43744b75f101b184840ef9881f3",
+      "after_sha256": "87e6ccb42e4af57de040bc2371f114c46a9828e908d272b616ed933c22b4c019",
+      "unchanged_fields_sha256": "5d5c41d3054990849e78671aea83022bc854dae82e79a810459b882575865e3e",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "sulfadoxine_dhps_paba_competitive_folate_inhibition",
+          "title": "Sulfadoxine competitively inhibits bacterial dihydropteroate synthase (DHPS) to block de novo folate biosynthesis",
+          "description": "Sulfadoxine (4-amino-N-(5,6-dimethoxypyrimidin-4-yl)benzenesulfonamide), a synthetic folate-pathway antimicrobial, acts as a para-aminobenzoate (pABA) competitive substrate analog at dihydropteroate synthase (DHPS / FolP), forming a dead-end pterin-sulfa adduct with 6-hydroxymethyl-7,8-dihydropterin pyrophosphate (DHPPP) and blocking de novo folate biosynthesis.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "sulfadoxine",
+              "label": "sulfadoxine",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:9329"
+            },
+            {
+              "node_id": "bacterial_dihydropteroate_synthase_folp",
+              "label": "bacterial dihydropteroate synthase (DHPS)",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Bacterial dihydropteroate synthase (DHPS / FolP, EC 2.5.1.15); kept label-only with Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_example.",
+              "gene_symbols": [
+                "folP"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:P0AC13",
+                  "protein_label": "Dihydropteroate synthase",
+                  "gene_symbol": "folP",
+                  "taxon_id": "NCBITaxon:83333",
+                  "taxon_label": "Escherichia coli (strain K12)",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-11-08",
+                  "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfadoxine in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+                }
+              ]
+            },
+            {
+              "node_id": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "label": "DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation",
+              "node_type": "MOLECULAR_FUNCTION",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfadoxine adduct (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
+            },
+            {
+              "node_id": "bacterial_de_novo_folate_biosynthesis",
+              "label": "bacterial de novo folate biosynthesis",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfadoxine inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "sulfadoxine",
+              "predicate": "inhibits",
+              "object": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "description": "Sulfadoxine competitively inhibits pABA utilization at bacterial dihydropteroate synthase (DHPS) and forms an alternate pterin-sulfa adduct.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfadoxine and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfa adduct."
+                },
+                {
+                  "reference": "DOI:10.1126/science.1214641",
+                  "notes": "Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide/sulfone binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
+                }
+              ]
+            },
+            {
+              "subject": "bacterial_dihydropteroate_synthase_folp",
+              "predicate": "enables",
+              "object": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "description": "Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with para-aminobenzoate (pABA) at its active site.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfadoxine (PMID:378102)."
+                }
+              ]
+            },
+            {
+              "subject": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "predicate": "supports",
+              "object": "bacterial_de_novo_folate_biosynthesis",
+              "description": "DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo folate biosynthesis.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfadoxine block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:378102)."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T06:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph sulfadoxine_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9334",
+      "label": "sulfasalazine",
+      "path": "data/antibiotics/antibacterial/sulfasalazine.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "87776c3387b5344ae14bb5bbbbe01fd2708fef9226c490d31711a14a488c8520",
+      "after_sha256": "6ac76abd51a7b0ca28ba7fccdba016ed6a8db6420cc27a4942c0551d4405cef7",
+      "unchanged_fields_sha256": "20e66b546afa95cc14d753b10d39f663f047f175a761a8e09a8a01bccd75bf1d",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "sulfasalazine_dhps_paba_competitive_folate_inhibition",
+          "title": "Sulfasalazine competitively inhibits bacterial dihydropteroate synthase (DHPS) to block de novo folate biosynthesis",
+          "description": "Sulfasalazine (2-hydroxy-5-[[4-(pyridin-2-ylsulfamoyl)phenyl]diazenyl]benzoic acid), a synthetic folate-pathway antimicrobial, acts as a para-aminobenzoate (pABA) competitive substrate analog at dihydropteroate synthase (DHPS / FolP), forming a dead-end pterin-sulfa adduct with 6-hydroxymethyl-7,8-dihydropterin pyrophosphate (DHPPP) and blocking de novo folate biosynthesis.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "sulfasalazine",
+              "label": "sulfasalazine",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:9334"
+            },
+            {
+              "node_id": "bacterial_dihydropteroate_synthase_folp",
+              "label": "bacterial dihydropteroate synthase (DHPS)",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Bacterial dihydropteroate synthase (DHPS / FolP, EC 2.5.1.15); kept label-only with Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_example.",
+              "gene_symbols": [
+                "folP"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:P0AC13",
+                  "protein_label": "Dihydropteroate synthase",
+                  "gene_symbol": "folP",
+                  "taxon_id": "NCBITaxon:83333",
+                  "taxon_label": "Escherichia coli (strain K12)",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-11-08",
+                  "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfasalazine in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+                }
+              ]
+            },
+            {
+              "node_id": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "label": "DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation",
+              "node_type": "MOLECULAR_FUNCTION",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfasalazine adduct (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
+            },
+            {
+              "node_id": "bacterial_de_novo_folate_biosynthesis",
+              "label": "bacterial de novo folate biosynthesis",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfasalazine inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "sulfasalazine",
+              "predicate": "inhibits",
+              "object": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "description": "Sulfasalazine competitively inhibits pABA utilization at bacterial dihydropteroate synthase (DHPS) and forms an alternate pterin-sulfa adduct.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfasalazine and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfa adduct."
+                },
+                {
+                  "reference": "DOI:10.1126/science.1214641",
+                  "notes": "Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide/sulfone binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
+                }
+              ]
+            },
+            {
+              "subject": "bacterial_dihydropteroate_synthase_folp",
+              "predicate": "enables",
+              "object": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "description": "Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with para-aminobenzoate (pABA) at its active site.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfasalazine (PMID:378102)."
+                }
+              ]
+            },
+            {
+              "subject": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "predicate": "supports",
+              "object": "bacterial_de_novo_folate_biosynthesis",
+              "description": "DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo folate biosynthesis.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfasalazine block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:378102)."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T06:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph sulfasalazine_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:102484",
+      "label": "sulfisoxazole",
+      "path": "data/antibiotics/antibacterial/sulfisoxazole.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "68a31e812c466df50b99ad8b16f7fc349b2e1641fa9a4d32a2ffb0bd155cd391",
+      "after_sha256": "902da686db97a865c0a8401df8c8e2ac65e76bc927d49522cc398477d90e9c8c",
+      "unchanged_fields_sha256": "98c1f58f8f21aa814fc9884feff1f242511ef48aea20df567ef7775d7be23401",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 10,
+      "curation_history_after_len": 11,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "sulfisoxazole_dhps_paba_competitive_folate_inhibition",
+          "title": "Sulfisoxazole competitively inhibits bacterial dihydropteroate synthase (DHPS) to block de novo folate biosynthesis",
+          "description": "Sulfisoxazole (4-amino-N-(3,4-dimethyl-1,2-oxazol-5-yl)benzenesulfonamide), a synthetic folate-pathway antimicrobial, acts as a para-aminobenzoate (pABA) competitive substrate analog at dihydropteroate synthase (DHPS / FolP), forming a dead-end pterin-sulfa adduct with 6-hydroxymethyl-7,8-dihydropterin pyrophosphate (DHPPP) and blocking de novo folate biosynthesis.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "sulfisoxazole",
+              "label": "sulfisoxazole",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:102484"
+            },
+            {
+              "node_id": "bacterial_dihydropteroate_synthase_folp",
+              "label": "bacterial dihydropteroate synthase (DHPS)",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Bacterial dihydropteroate synthase (DHPS / FolP, EC 2.5.1.15); kept label-only with Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_example.",
+              "gene_symbols": [
+                "folP"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:P0AC13",
+                  "protein_label": "Dihydropteroate synthase",
+                  "gene_symbol": "folP",
+                  "taxon_id": "NCBITaxon:83333",
+                  "taxon_label": "Escherichia coli (strain K12)",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-11-08",
+                  "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfisoxazole in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+                }
+              ]
+            },
+            {
+              "node_id": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "label": "DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation",
+              "node_type": "MOLECULAR_FUNCTION",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfisoxazole adduct (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
+            },
+            {
+              "node_id": "bacterial_de_novo_folate_biosynthesis",
+              "label": "bacterial de novo folate biosynthesis",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfisoxazole inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "sulfisoxazole",
+              "predicate": "inhibits",
+              "object": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "description": "Sulfisoxazole competitively inhibits pABA utilization at bacterial dihydropteroate synthase (DHPS) and forms an alternate pterin-sulfa adduct.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfisoxazole and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfa adduct."
+                },
+                {
+                  "reference": "DOI:10.1126/science.1214641",
+                  "notes": "Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide/sulfone binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
+                }
+              ]
+            },
+            {
+              "subject": "bacterial_dihydropteroate_synthase_folp",
+              "predicate": "enables",
+              "object": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "description": "Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with para-aminobenzoate (pABA) at its active site.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfisoxazole (PMID:378102)."
+                }
+              ]
+            },
+            {
+              "subject": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "predicate": "supports",
+              "object": "bacterial_de_novo_folate_biosynthesis",
+              "description": "DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo folate biosynthesis.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfisoxazole block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:378102)."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T06:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph sulfisoxazole_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:4325",
+      "label": "dapsone",
+      "path": "data/antibiotics/antimycobacterial/dapsone.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "2077215e69046fca32d759342a5a2c34a4d15846091824aaf379cd3bb491251b",
+      "after_sha256": "cf46a500773fad7e4efc1f1814ddb445c92ef253ec85fc24b07e2b3cfad78cc2",
+      "unchanged_fields_sha256": "74125efc34b665eb91450eb844dd116f6efbc80b0d541569700cdd73ef1b5a2d",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 10,
+      "curation_history_after_len": 11,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "dapsone_dhps_paba_competitive_folate_inhibition",
+          "title": "Dapsone competitively inhibits bacterial dihydropteroate synthase (DHPS) to block de novo folate biosynthesis",
+          "description": "Dapsone (4,4'-diaminodiphenyl sulfone), a synthetic folate-pathway antimicrobial, acts as a para-aminobenzoate (pABA) competitive substrate analog at dihydropteroate synthase (DHPS / FolP), forming a dead-end pterin-sulfa adduct with 6-hydroxymethyl-7,8-dihydropterin pyrophosphate (DHPPP) and blocking de novo folate biosynthesis.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "dapsone",
+              "label": "dapsone",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:4325"
+            },
+            {
+              "node_id": "bacterial_dihydropteroate_synthase_folp",
+              "label": "bacterial dihydropteroate synthase (DHPS)",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Bacterial dihydropteroate synthase (DHPS / FolP, EC 2.5.1.15); kept label-only with Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_example.",
+              "gene_symbols": [
+                "folP"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:P0AC13",
+                  "protein_label": "Dihydropteroate synthase",
+                  "gene_symbol": "folP",
+                  "taxon_id": "NCBITaxon:83333",
+                  "taxon_label": "Escherichia coli (strain K12)",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-11-08",
+                  "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by dapsone in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+                }
+              ]
+            },
+            {
+              "node_id": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "label": "DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation",
+              "node_type": "MOLECULAR_FUNCTION",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-dapsone adduct (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
+            },
+            {
+              "node_id": "bacterial_de_novo_folate_biosynthesis",
+              "label": "bacterial de novo folate biosynthesis",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by dapsone inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "dapsone",
+              "predicate": "inhibits",
+              "object": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "description": "Dapsone competitively inhibits pABA utilization at bacterial dihydropteroate synthase (DHPS) and forms an alternate pterin-sulfa adduct.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase inhibition by dapsone and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfa adduct."
+                },
+                {
+                  "reference": "DOI:10.1126/science.1214641",
+                  "notes": "Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide/sulfone binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
+                }
+              ]
+            },
+            {
+              "subject": "bacterial_dihydropteroate_synthase_folp",
+              "predicate": "enables",
+              "object": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "description": "Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with para-aminobenzoate (pABA) at its active site.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with dapsone (PMID:378102)."
+                }
+              ]
+            },
+            {
+              "subject": "dhps_paba_condensation_and_pterin_adduct_diversion",
+              "predicate": "supports",
+              "object": "bacterial_de_novo_folate_biosynthesis",
+              "description": "DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo folate biosynthesis.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by dapsone block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:378102)."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T06:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph dapsone_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:131726",
+      "label": "brodimoprim",
+      "path": "data/antibiotics/antibacterial/brodimoprim.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "fc0aa9a6de7432b183df91567e5c071133c8d2a3ac343c8d9b4d6ce51a594523",
+      "after_sha256": "64c114d8661ee3313ef6b83340613c04baa32275b5aa64243dec364e43af6eb9",
+      "unchanged_fields_sha256": "406d0bc099bf394360d2226ed053b36fd27d6b5f9d45e33f30c0f52346f004b3",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "brodimoprim_dhfr_tetrahydrofolate_biosynthesis_inhibition",
+          "title": "Brodimoprim selectively inhibits bacterial dihydrofolate reductase (DHFR) to block tetrahydrofolate and nucleotide biosynthesis",
+          "description": "Brodimoprim (5-(4-bromo-3,5-dimethoxybenzyl)pyrimidine-2,4-diamine), a synthetic 2,4-diaminopyrimidine antibacterial, selectively binds and inhibits bacterial dihydrofolate reductase (DHFR / FolA), blocking NADPH-dependent reduction of 7,8-dihydrofolate to 5,6,7,8-tetrahydrofolate and arresting folate-dependent thymidylate and purine biosynthesis.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "brodimoprim",
+              "label": "brodimoprim",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:131726"
+            },
+            {
+              "node_id": "bacterial_dihydrofolate_reductase_fola",
+              "label": "bacterial dihydrofolate reductase (DHFR)",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Bacterial dihydrofolate reductase (DHFR / FolA, EC 1.5.1.3); kept label-only with Escherichia coli K-12 FolA (UniProtKB:P0ABQ4) protein_example.",
+              "gene_symbols": [
+                "folA"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:P0ABQ4",
+                  "protein_label": "Dihydrofolate reductase",
+                  "gene_symbol": "folA",
+                  "taxon_id": "NCBITaxon:83333",
+                  "taxon_label": "Escherichia coli (strain K12)",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-11-08",
+                  "role": "Escherichia coli K-12 dihydrofolate reductase (FolA / DHFR) selectively inhibited at the dihydrofolate binding site by brodimoprim in purified enzyme and antibacterial mechanism studies (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962)."
+                }
+              ]
+            },
+            {
+              "node_id": "dihydrofolate_reductase_catalytic_activity",
+              "label": "dihydrofolate reductase catalytic activity",
+              "node_type": "MOLECULAR_FUNCTION",
+              "grounding": "GO:0004146"
+            },
+            {
+              "node_id": "bacterial_tetrahydrofolate_and_nucleotide_biosynthesis",
+              "label": "bacterial tetrahydrofolate regeneration and folate-dependent nucleotide biosynthesis",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Reduction of 7,8-dihydrofolate to 5,6,7,8-tetrahydrofolate and downstream one-carbon thymidylate/purine biosynthesis arrested by brodimoprim inhibition of bacterial DHFR (DOI:10.1016/j.bcp.2005.10.052; PMID:391962)."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "brodimoprim",
+              "predicate": "inhibits",
+              "object": "dihydrofolate_reductase_catalytic_activity",
+              "description": "Brodimoprim selectively inhibits bacterial dihydrofolate reductase (DHFR / FolA) catalytic activity.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1016/j.bcp.2005.10.052",
+                  "notes": "Hawser et al. 2006 (PMID:16359642) characterized the selective inhibition of bacterial dihydrofolate reductase (FolA / DHFR) by brodimoprim and comparator 2,4-diaminopyrimidines."
+                },
+                {
+                  "reference": "PMID:391962",
+                  "notes": "Then & Keller 1979 (PMID:391962) quantified cell-free inhibition of purified Escherichia coli dihydrofolate reductase by brodimoprim and correlated enzyme inhibition with antibacterial potency."
+                }
+              ]
+            },
+            {
+              "subject": "bacterial_dihydrofolate_reductase_fola",
+              "predicate": "enables",
+              "object": "dihydrofolate_reductase_catalytic_activity",
+              "description": "Bacterial dihydrofolate reductase (FolA) catalyzes the NADPH-dependent reduction of 7,8-dihydrofolate to 5,6,7,8-tetrahydrofolate.",
+              "evidence": [
+                {
+                  "reference": "PMID:391962",
+                  "notes": "Purified Escherichia coli dihydrofolate reductase (FolA) catalyzed NADPH-dependent dihydrofolate reduction in enzyme inhibition assays with brodimoprim (PMID:391962)."
+                }
+              ]
+            },
+            {
+              "subject": "dihydrofolate_reductase_catalytic_activity",
+              "predicate": "supports",
+              "object": "bacterial_tetrahydrofolate_and_nucleotide_biosynthesis",
+              "description": "DHFR-catalyzed tetrahydrofolate regeneration maintains one-carbon cofactor pools required for bacterial thymidylate and purine biosynthesis.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1016/j.bcp.2005.10.052",
+                  "notes": "Inhibition of bacterial DHFR by brodimoprim depletes reduced tetrahydrofolate cofactors and blocks folate-dependent nucleotide synthesis and bacterial growth (PMID:16359642; PMID:391962)."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T06:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph brodimoprim_dhfr_tetrahydrofolate_biosynthesis_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0ABQ4) and primary literature (DOI:10.1016/j.bcp.2005.10.052, PMID:391962).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:135420",
+      "label": "tetroxoprim",
+      "path": "data/antibiotics/antibacterial/tetroxoprim.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "7bccecdaedceac399bb2aa7b67ecb9e9e107e7a15f014c86b320cac7b649b336",
+      "after_sha256": "b4aee8b80df84a2e48472470500d1ea40662180df05ec8afea57be533dd8e06e",
+      "unchanged_fields_sha256": "4089c53eee242c6481c0e0c893a81a808ce6e7677673578d9a6d3688b8e098ce",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "tetroxoprim_dhfr_tetrahydrofolate_biosynthesis_inhibition",
+          "title": "Tetroxoprim selectively inhibits bacterial dihydrofolate reductase (DHFR) to block tetrahydrofolate and nucleotide biosynthesis",
+          "description": "Tetroxoprim (5-[3,5-dimethoxy-4-(2-methoxyethoxy)benzyl]pyrimidine-2,4-diamine), a synthetic 2,4-diaminopyrimidine antibacterial, selectively binds and inhibits bacterial dihydrofolate reductase (DHFR / FolA), blocking NADPH-dependent reduction of 7,8-dihydrofolate to 5,6,7,8-tetrahydrofolate and arresting folate-dependent thymidylate and purine biosynthesis.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "tetroxoprim",
+              "label": "tetroxoprim",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:135420"
+            },
+            {
+              "node_id": "bacterial_dihydrofolate_reductase_fola",
+              "label": "bacterial dihydrofolate reductase (DHFR)",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Bacterial dihydrofolate reductase (DHFR / FolA, EC 1.5.1.3); kept label-only with Escherichia coli K-12 FolA (UniProtKB:P0ABQ4) protein_example.",
+              "gene_symbols": [
+                "folA"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:P0ABQ4",
+                  "protein_label": "Dihydrofolate reductase",
+                  "gene_symbol": "folA",
+                  "taxon_id": "NCBITaxon:83333",
+                  "taxon_label": "Escherichia coli (strain K12)",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-11-08",
+                  "role": "Escherichia coli K-12 dihydrofolate reductase (FolA / DHFR) selectively inhibited at the dihydrofolate binding site by tetroxoprim in purified enzyme and antibacterial mechanism studies (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962)."
+                }
+              ]
+            },
+            {
+              "node_id": "dihydrofolate_reductase_catalytic_activity",
+              "label": "dihydrofolate reductase catalytic activity",
+              "node_type": "MOLECULAR_FUNCTION",
+              "grounding": "GO:0004146"
+            },
+            {
+              "node_id": "bacterial_tetrahydrofolate_and_nucleotide_biosynthesis",
+              "label": "bacterial tetrahydrofolate regeneration and folate-dependent nucleotide biosynthesis",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Reduction of 7,8-dihydrofolate to 5,6,7,8-tetrahydrofolate and downstream one-carbon thymidylate/purine biosynthesis arrested by tetroxoprim inhibition of bacterial DHFR (DOI:10.1016/j.bcp.2005.10.052; PMID:391962)."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "tetroxoprim",
+              "predicate": "inhibits",
+              "object": "dihydrofolate_reductase_catalytic_activity",
+              "description": "Tetroxoprim selectively inhibits bacterial dihydrofolate reductase (DHFR / FolA) catalytic activity.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1016/j.bcp.2005.10.052",
+                  "notes": "Hawser et al. 2006 (PMID:16359642) characterized the selective inhibition of bacterial dihydrofolate reductase (FolA / DHFR) by tetroxoprim and comparator 2,4-diaminopyrimidines."
+                },
+                {
+                  "reference": "PMID:391962",
+                  "notes": "Then & Keller 1979 (PMID:391962) quantified cell-free inhibition of purified Escherichia coli dihydrofolate reductase by tetroxoprim and correlated enzyme inhibition with antibacterial potency."
+                }
+              ]
+            },
+            {
+              "subject": "bacterial_dihydrofolate_reductase_fola",
+              "predicate": "enables",
+              "object": "dihydrofolate_reductase_catalytic_activity",
+              "description": "Bacterial dihydrofolate reductase (FolA) catalyzes the NADPH-dependent reduction of 7,8-dihydrofolate to 5,6,7,8-tetrahydrofolate.",
+              "evidence": [
+                {
+                  "reference": "PMID:391962",
+                  "notes": "Purified Escherichia coli dihydrofolate reductase (FolA) catalyzed NADPH-dependent dihydrofolate reduction in enzyme inhibition assays with tetroxoprim (PMID:391962)."
+                }
+              ]
+            },
+            {
+              "subject": "dihydrofolate_reductase_catalytic_activity",
+              "predicate": "supports",
+              "object": "bacterial_tetrahydrofolate_and_nucleotide_biosynthesis",
+              "description": "DHFR-catalyzed tetrahydrofolate regeneration maintains one-carbon cofactor pools required for bacterial thymidylate and purine biosynthesis.",
+              "evidence": [
+                {
+                  "reference": "DOI:10.1016/j.bcp.2005.10.052",
+                  "notes": "Inhibition of bacterial DHFR by tetroxoprim depletes reduced tetrahydrofolate cofactors and blocks folate-dependent nucleotide synthesis and bacterial growth (PMID:16359642; PMID:391962)."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T06:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph tetroxoprim_dhfr_tetrahydrofolate_biosynthesis_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0ABQ4) and primary literature (DOI:10.1016/j.bcp.2005.10.052, PMID:391962).",
         "llm_assisted": true
       }
     }

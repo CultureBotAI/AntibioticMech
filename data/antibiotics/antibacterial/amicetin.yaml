@@ -74,3 +74,18 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-09T06:35:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and PROTEIN_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Zhang et al. 2012 (DOI:10.1128/aem.07185-11,
+    PMID:22267658) and DeBoer et al. 1953 (DOI:10.1021/ja01098a518).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Disaccharide cytosine peptidyl nucleoside antibiotic
+  from Streptomyces vinaceusdrappus that binds the bacterial 50S ribosomal subunit
+  peptidyl transferase center and inhibits peptide bond formation and bacterial translation
+  (Zhang et al. 2012, DOI:10.1128/aem.07185-11, PMID:22267658; DeBoer et al. 1953,
+  DOI:10.1021/ja01098a518).'
