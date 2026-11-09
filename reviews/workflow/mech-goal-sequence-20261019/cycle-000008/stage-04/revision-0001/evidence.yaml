@@ -21,10 +21,10 @@ previous_evidence:
 artifacts:
 - kind: review_report
   path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/review_report.md
-  sha256: 9914bc9670c258937a1fd1c4c29589a25bfa33b0f5e155f682a0b20bda15f4d4
+  sha256: b8b3d749afff284a891d6eb9df80ec3cf66885caeeacf97420e28b32da757902
 - kind: review_findings
   path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/review_findings.yaml
-  sha256: a327330afb7c1d7afe89d7d8a1dd6b9b278e50a194cca2a756895c4e053b44b9
+  sha256: 1e6c64bc7e278a11d397431c71fad7276cefee5138cd49dd8dd9b821213f1acc
 findings:
 - finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
   status: open
@@ -33,33 +33,38 @@ findings:
     target curation but remain curation_status: PROPOSED (6 target(s): CHEBI:81029,
     CHEBI:199652, CHEBI:216634, CHEBI:202006, CHEBI:226796, CHEBI:204968). Six PROPOSED/EXACT
     records seeded in Cycle 8 Stage 1 and enriched in Cycle 8 Stages 2-3 — alanylclavam
-    (CHEBI:81029, AMINO_ACID_METABOLISM_DISRUPTION, fungal homoserine O-acetyltransferase
-    Met2p / MetX PATHWAY_ENZYME [canonical GO:0004413 homoserine O-acetyltransferase
-    activity], Pruess et al. 1983 PMID:6190822; Bourgouin et al. 2019 DOI:10.1016/j.ABB.2019.01.023
-    / PMID:30684464), amicetin (CHEBI:199652, PROTEIN_SYNTHESIS_INHIBITION, bacterial
-    50S ribosomal subunit peptidyl-transferase center RIBOSOMAL_SUBUNIT [canonical
-    GO:0015934 large ribosomal subunit], Paternoga et al. 2023 DOI:10.1038/s41594-023-01047-w
-    / PMID:37550506; Leviev et al. 1994 DOI:10.1093/nar/22.23.5112 / PMID:7800501),
-    andrimid (CHEBI:216634, FATTY_ACID_SYNTHESIS_INHIBITION, GO:0003989 bacterial
-    acetyl-CoA carboxylase carboxyltransferase AccAD PROTEIN with reviewed Swiss-Prot
-    UniProtKB protein_examples P0ABD5 and P0A9Q5, Freiberg et al. 2004 DOI:10.1074/jbc.m402989200
-    / PMID:15166242; Jin et al. 2006 DOI:10.1021/ja063074c / PMID:16866529), bottromycin
-    A2 (CHEBI:202006, PROTEIN_SYNTHESIS_INHIBITION, bacterial 50S ribosomal subunit
-    A-site RIBOSOMAL_SUBUNIT [canonical GO:0015934 large ribosomal subunit], Otaka
-    & Kaji 1976 PMID:783135; Huo et al. 2012 DOI:10.1016/j.chembiol.2012.08.013 /
-    PMID:23102221), planosporicin (CHEBI:226796, CELL_WALL_SYNTHESIS_INHIBITION, CHEBI:60224
-    peptidoglycan precursor lipid II CELL_WALL_COMPONENT, Castiglione et al. 2007
-    DOI:10.1021/bi700131x / PMID:17417879; Sherwood et al. 2013 DOI:10.1128/jb.02052-12
-    / PMID:23242744), and ajudazol A (CHEBI:204968, ELECTRON_TRANSPORT_INHIBITION
-    / HOST_SHARED_TARGET, mitochondrial respiratory chain complex I NADH-ubiquinone
-    oxidoreductase PROTEIN_COMPLEX [canonical GO:0005747 mitochondrial respiratory
+    (CHEBI:81029, OTHER, bacterial methionine and homoserine amino acid biosynthesis
+    BIOLOGICAL_PROCESS / DOWNSTREAM_AFFECTED_PROCESS [optional canonical GO:0009086
+    methionine biosynthetic process], Jensen et al. 2000 DOI:10.1128/aac.44.3.720-726.2000
+    / PMID:10681345; Pruess & Kellett 1983 DOI:10.7164/antibiotics.36.208 / PMID:6833138),
+    amicetin (CHEBI:199652, PROTEIN_SYNTHESIS_INHIBITION, bacterial 50S ribosomal
+    subunit peptidyl-transferase center RIBOSOMAL_SUBUNIT / DIRECT_BINDING_TARGET
+    [optional canonical GO:0015934 large ribosomal subunit], Zhang et al. 2012 DOI:10.1128/aem.07185-11
+    / PMID:22267658; DeBoer et al. 1953 DOI:10.1021/ja01098a518), andrimid (CHEBI:216634,
+    CELL_MEMBRANE_SYNTHESIS_INHIBITION, GO:0009317 bacterial acetyl-CoA carboxylase
+    carboxyltransferase complex (AccA / AccD) PROTEIN_COMPLEX / DIRECT_BINDING_TARGET
+    with reviewed Swiss-Prot UniProtKB protein_examples P0ABD5 and P0A9Q5, Freiberg
+    et al. 2004 DOI:10.1074/jbc.m402989200 / PMID:15066985; Jin et al. 2006 DOI:10.1021/ja063194c
+    / PMID:16866529), bottromycin A2 (CHEBI:202006, PROTEIN_SYNTHESIS_INHIBITION,
+    bacterial 50S ribosomal subunit A site RIBOSOMAL_SUBUNIT / DIRECT_BINDING_TARGET
+    [optional canonical GO:0015934 large ribosomal subunit], Shimamura et al. 2009
+    DOI:10.1002/anie.200804138 / PMID:19115340; Gouda et al. 2012 DOI:10.1248/cpb.60.169
+    / PMID:22293474; Huo et al. 2012 DOI:10.1016/j.chembiol.2012.08.013 / PMID:23021914),
+    planosporicin (CHEBI:226796, CELL_WALL_SYNTHESIS_INHIBITION, bacterial cell wall
+    peptidoglycan biosynthesis BIOLOGICAL_PROCESS / DOWNSTREAM_AFFECTED_PROCESS [optional
+    canonical GO:0009252 peptidoglycan biosynthetic process], Sherwood et al. 2013
+    DOI:10.1128/jb.02291-12 / PMID:23475977; Castiglione et al. 2007 DOI:10.1021/bi700131x
+    / PMID:17469849; Maffioli et al. 2009 DOI:10.1021/np800794y / PMID:19301921),
+    and ajudazol A (CHEBI:204968, ENERGY_METABOLISM_INHIBITION / HOST_SHARED_TARGET,
+    mitochondrial respiratory chain complex I (NADH:ubiquinone oxidoreductase) PROTEIN_COMPLEX
+    / DIRECT_BINDING_TARGET [optional canonical GO:0005747 mitochondrial respiratory
     chain complex I], Kunze et al. 2004 DOI:10.7164/antibiotics.57.151 / PMID:15112964;
-    Buntin et al. 2010 DOI:10.1002/cbic.200900770 / PMID:20336704) — carry exact ChEBI
+    Buntin et al. 2010 DOI:10.1002/cbic.200900712 / PMID:20432424) — carry exact ChEBI
     grounding, complete single-molecule chemical_structure, curated mode_of_action,
     and PRIMARY_LITERATURE molecular_targets with complete UniProtKB protein_examples
     or held_targets accounting, yet retain curation_status: PROPOSED (and alanylclavam,
-    amicetin, bottromycin A2, and ajudazol A can additionally be enriched with canonical
-    GO target_id terms GO:0004413, GO:0015934, and GO:0005747).'
+    amicetin, bottromycin A2, planosporicin, and ajudazol A can optionally be enriched
+    with canonical GO target_id terms GO:0009086, GO:0015934, GO:0009252, and GO:0005747).'
 - finding_id: cycle8-stage1-proposed-exact-natural-products-missing-mechanism-and-targets
   status: open
   summary: 'Four Cycle 8 Stage 1 PROPOSED EXACT natural-product records (TP-1161,
@@ -68,21 +73,18 @@ findings:
     molecular_targets, and REVIEWED promotion (4 target(s): CHEBI:217619, CHEBI:81025,
     CHEBI:81026, CHEBI:81027). Four PROPOSED natural-product records seeded with grounding_status:
     EXACT and complete single-molecule chemical_structure in Cycle 8 Stage 1 — TP-1161
-    (CHEBI:217619, Engelhardt et al. 2010 DOI:10.1128/aem.00741-10 / PMID:20562278;
-    Morris et al. 2009 DOI:10.1021/ja904661a / PMID:19665975; MIBiG BGC0000615), a
-    26-membered Series d thiopeptide antibiotic from marine-derived Nocardiopsis sp.
-    TFS65-07 active against Gram-positive bacteria that inhibits bacterial protein
-    synthesis by binding elongation factor Tu (EF-Tu, GO:0003746 translation elongation
-    factor activity, PROTEIN, DIRECT_BINDING_TARGET); and three antipodal (5S) clavam
-    antifungal natural products from Streptomyces clavuligerus ATCC 27064 (MIBiG BGC0000845)
-    — 2-formyloxymethylclavam (CHEBI:81025), 2-hydroxymethylclavam (CHEBI:81026),
-    and clavam-2-carboxylate (CHEBI:81027, Brown et al. 1979 DOI:10.1039/c39790000282;
-    Pruess et al. 1983 PMID:6190822; Mosher et al. 1999 DOI:10.1128/aac.43.5.1215
-    / PMID:10223939; Jensen et al. 2000 DOI:10.1128/aac.44.3.720-726.2000 / PMID:10681345)
-    — carry biosynthesis_origin: NATURAL_PRODUCT but lack curated mode_of_action,
-    mode_of_action_target_scope, CURATOR mode_of_action_notes, structured PRIMARY_LITERATURE
-    molecular_targets (with UniProtKB protein_examples or held_targets accounting),
-    and promotion to REVIEWED.'
+    (CHEBI:217619, Engelhardt et al. 2010 DOI:10.1128/aem.00741-10 / PMID:20562278
+    and DOI:10.1021/np1005617 / PMID:20929206; MIBiG BGC0000615), a 26-membered trisubstituted-pyridine
+    macrocyclic thiopeptide antibiotic from marine-derived Nocardiopsis sp. TFS65-07
+    active against Gram-positive bacteria; and three antipodal (5S) clavam antifungal
+    natural products from Streptomyces clavuligerus ATCC 27064 (MIBiG BGC0000841 and
+    BGC0000843) — 2-formyloxymethylclavam (CHEBI:81025), 2-hydroxymethylclavam (CHEBI:81026),
+    and clavam-2-carboxylate (CHEBI:81027, Jensen et al. 2000 DOI:10.1128/aac.44.3.720-726.2000
+    / PMID:10681345; Mosher et al. 1999 DOI:10.1128/aac.43.5.1215 / PMID:10223939;
+    Brown et al. 1979 DOI:10.1039/c39790000282) — carry biosynthesis_origin: NATURAL_PRODUCT
+    but lack curated mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes,
+    structured PRIMARY_LITERATURE molecular_targets (with UniProtKB protein_examples
+    or held_targets accounting), and promotion to REVIEWED.'
 - finding_id: seeded-exact-rifamycins-and-elfamycins-with-card-only-targets-awaiting-primary-literature-promotion
   status: open
   summary: 'Five SEEDED EXACT rifamycin and elfamycin records (rifabutin, rifaximin,

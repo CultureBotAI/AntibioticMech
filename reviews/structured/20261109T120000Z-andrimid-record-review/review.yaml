@@ -17,19 +17,19 @@ verdict: needs_curation
 native_verdict: NEEDS_CURATION
 scientific_review: true
 summary: 'Whole-record review of PROPOSED/EXACT record CHEBI:216634 (andrimid, data/antibiotics/antibacterial/andrimid.yaml)
-  verified exact single-molecule chemical structure (C27H33N3O5, InChIKey BDHVWPFPGIGCPA-MDKDCDSJSA-N,
-  PubChem CID 54675763), antibacterial filing (CHEBI:33282), CURATOR discovery and
-  mechanistic evidence (Freiberg et al. 2004 DOI:10.1074/jbc.m402989200 / PMID:15166242;
-  Jin et al. 2006 DOI:10.1021/ja063074c / PMID:16866529), MIBiG 4.0.1 BGC0000956 producer
+  verified exact single-molecule chemical structure (C27H33N3O5, InChIKey OHDXGZAYYBMHCY-QSUIEZAASA-N,
+  PubChem CID 636857), antibacterial filing (CHEBI:33282), CURATOR discovery and
+  mechanistic evidence (Freiberg et al. 2004 DOI:10.1074/jbc.m402989200 / PMID:15066985;
+  Jin et al. 2006 DOI:10.1021/ja063194c / PMID:16866529), MIBiG 4.0.1 BGC0000956 producer
   provenance in Pantoea agglomerans (NCBITaxon:549), biosynthesis_origin (NATURAL_PRODUCT),
-  mode_of_action (FATTY_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and the PRIMARY_LITERATURE
+  mode_of_action (CELL_MEMBRANE_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and the PRIMARY_LITERATURE
   molecular_targets entry for bacterial acetyl-CoA carboxylase carboxyltransferase
-  (AccAD, GO:0003989, PROTEIN, DIRECT_BINDING_TARGET) carrying reviewed Swiss-Prot
-  UniProtKB protein_examples P0ABD5 (accA) and P0A9Q5 (accD) in Escherichia coli K-12.
-  One open coherence finding requires Cycle 8 Stage 5 grouped remediation: despite
-  having grounding_status: EXACT, complete chemical_structure, curated mode_of_action,
-  and PRIMARY_LITERATURE molecular_targets with reviewed UniProtKB protein_examples,
-  curation_status remains PROPOSED.'
+  complex (AccA / AccD, GO:0009317, PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) carrying
+  reviewed Swiss-Prot UniProtKB protein_examples P0ABD5 (accA) and P0A9Q5 (accD) in
+  Escherichia coli K-12. One open coherence finding requires Cycle 8 Stage 5 grouped
+  remediation: despite having grounding_status: EXACT, complete chemical_structure,
+  curated mode_of_action, and PRIMARY_LITERATURE molecular_targets with reviewed UniProtKB
+  protein_examples, curation_status remains PROPOSED.'
 source:
   git_revision: defe41100737cee8dc1e4722a2930e9752e6bee8
   state: working_tree
@@ -103,8 +103,8 @@ checks:
   command: .venv/bin/python scripts/validate_strict.py --quiet --workers 4 --out .temp/antibioticmech-record-validation.tsv
   exit_code: 0
   summary: CHEBI:216634 passes closed LinkML schema validation and OAK ontology label
-    correspondence (CHEBI:216634, CHEBI:33282, GO:0003989, NCBITaxon:549, NCBITaxon:83333,
-    UniProtKB:P0ABD5, UniProtKB:P0A9Q5) with 0 errors.
+    correspondence (CHEBI:216634, CHEBI:33282, GO:0009317, NCBITaxon:2, NCBITaxon:549,
+    NCBITaxon:83333, UniProtKB:P0ABD5, UniProtKB:P0A9Q5) with 0 errors.
   target_ids:
   - CHEBI:216634
   evidence_ids:
@@ -127,28 +127,28 @@ evidence:
 - evidence_id: andrimid-record
   kind: record_content
   reference: data/antibiotics/antibacterial/andrimid.yaml
-  locator: lines 1-162
+  locator: lines 1-163
   accessed_at: '2026-11-09T12:00:00Z'
   support: supports
   snapshot_sha256: 277c3c8c325ec351cae780551511632ad3ce46b737818914dba7177189fa87c7
-  summary: 'CHEBI:216634 carries exact C27H33N3O5 structure (InChIKey BDHVWPFPGIGCPA-MDKDCDSJSA-N,
-    PubChem CID 54675763), biosynthesis_origin: NATURAL_PRODUCT, mode_of_action: FATTY_ACID_SYNTHESIS_INHIBITION
+  summary: 'CHEBI:216634 carries exact C27H33N3O5 structure (InChIKey OHDXGZAYYBMHCY-QSUIEZAASA-N,
+    PubChem CID 636857), biosynthesis_origin: NATURAL_PRODUCT, mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
     (MICROBIAL_TARGET), and PRIMARY_LITERATURE molecular_targets[0] for bacterial
-    acetyl-CoA carboxylase carboxyltransferase (AccAD, GO:0003989, PROTEIN, DIRECT_BINDING_TARGET)
-    with reviewed Swiss-Prot UniProtKB protein_examples P0ABD5 and P0A9Q5, while retaining
-    curation_status: PROPOSED.'
+    acetyl-CoA carboxylase carboxyltransferase complex (AccA / AccD, GO:0009317, PROTEIN_COMPLEX,
+    DIRECT_BINDING_TARGET) with reviewed Swiss-Prot UniProtKB protein_examples P0ABD5
+    and P0A9Q5, while retaining curation_status: PROPOSED.'
 - evidence_id: freiberg-2004-jin-2006-andrimid
   kind: primary_source
   reference: DOI:10.1074/jbc.m402989200
-  locator: Freiberg et al. 2004 J Biol Chem 279:26066-26073 (PMID:15166242); Jin et
-    al. 2006 J Am Chem Soc 128:10660-10661 (DOI:10.1021/ja063074c; PMID:16866529)
+  locator: Freiberg et al. 2004 J Biol Chem 279:26066-26073 (PMID:15066985); Jin et
+    al. 2006 J Am Chem Soc 128:10660-10661 (DOI:10.1021/ja063194c; PMID:16866529)
   accessed_at: '2026-11-09T12:00:00Z'
   support: supports
   summary: Establishes andrimid as a hybrid polyketide-nonribosomal peptide pyrrolidinedione
     antibiotic from Pantoea agglomerans that directly binds and inhibits the bacterial
-    acetyl-CoA carboxylase carboxyltransferase beta/alpha complex (AccD/AccA, Ki =
-    5 nM against E. coli AccAD), blocking malonyl-CoA formation and bacterial fatty
-    acid biosynthesis.
+    acetyl-CoA carboxylase carboxyltransferase heterotetramer complex (AccA2AccD2,
+    Ki = 5 nM against E. coli ACC), blocking malonyl-CoA formation and bacterial fatty
+    acid / membrane lipid biosynthesis.
 - evidence_id: strict-validation-suite
   kind: validation
   reference: scripts/validate_strict.py
@@ -161,15 +161,16 @@ evidence:
 assessments:
 - assessment_id: andrimid-identity-moa-and-target-grounding
   area: evidence
-  topic: Exact ChEBI structure, mode_of_action, AccAD target grounding, and UniProtKB
-    protein_examples
+  topic: Exact ChEBI structure, mode_of_action, AccA/AccD complex target grounding,
+    and UniProtKB protein_examples
   outcome: supported
   summary: Exact CHEBI:216634 identity, C27H33N3O5 chemical_structure, NATURAL_PRODUCT
-    biosynthesis_origin, FATTY_ACID_SYNTHESIS_INHIBITION mode_of_action (MICROBIAL_TARGET),
-    and PRIMARY_LITERATURE bacterial acetyl-CoA carboxylase carboxyltransferase (GO:0003989,
-    PROTEIN) target with reviewed Swiss-Prot UniProtKB protein_examples P0ABD5 (accA)
-    and P0A9Q5 (accD) in Escherichia coli K-12 are accurately grounded in DOI:10.1074/jbc.m402989200
-    (PMID:15166242) and DOI:10.1021/ja063074c (PMID:16866529).
+    biosynthesis_origin, CELL_MEMBRANE_SYNTHESIS_INHIBITION mode_of_action (MICROBIAL_TARGET),
+    and PRIMARY_LITERATURE bacterial acetyl-CoA carboxylase carboxyltransferase complex
+    (AccA / AccD, GO:0009317, PROTEIN_COMPLEX) target with reviewed Swiss-Prot UniProtKB
+    protein_examples P0ABD5 (accA) and P0A9Q5 (accD) in Escherichia coli K-12 are
+    accurately grounded in DOI:10.1074/jbc.m402989200 (PMID:15066985) and DOI:10.1021/ja063194c
+    (PMID:16866529).
   target_ids:
   - CHEBI:216634
   evidence_ids:
@@ -200,13 +201,13 @@ findings:
     mechanism/target curation but remains curation_status: PROPOSED'
   description: 'In data/antibiotics/antibacterial/andrimid.yaml (CHEBI:216634), Cycle
     8 Stage 1 seeded the exact ChEBI compound, Cycle 8 Stage 2 curated biosynthesis_origin:
-    NATURAL_PRODUCT, mode_of_action: FATTY_ACID_SYNTHESIS_INHIBITION (MICROBIAL_TARGET)
-    with CURATOR mode_of_action_notes, and a PRIMARY_LITERATURE molecular_targets
-    entry for bacterial acetyl-CoA carboxylase carboxyltransferase (GO:0003989, PROTEIN,
-    DIRECT_BINDING_TARGET), and Cycle 8 Stage 3 curated reviewed Swiss-Prot UniProtKB
-    protein_examples P0ABD5 (accA) and P0A9Q5 (accD) in Escherichia coli K-12 backed
-    by DOI:10.1074/jbc.m402989200 (PMID:15166242) and DOI:10.1021/ja063074c (PMID:16866529),
-    yet curation_status remains PROPOSED.'
+    NATURAL_PRODUCT and mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION (MICROBIAL_TARGET)
+    with CURATOR mode_of_action_notes, and Cycle 8 Stage 3 curated a PRIMARY_LITERATURE
+    molecular_targets entry for bacterial acetyl-CoA carboxylase carboxyltransferase
+    complex (AccA / AccD, GO:0009317, PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) and
+    reviewed Swiss-Prot UniProtKB protein_examples P0ABD5 (accA) and P0A9Q5 (accD)
+    in Escherichia coli K-12 backed by DOI:10.1074/jbc.m402989200 (PMID:15066985)
+    and DOI:10.1021/ja063194c (PMID:16866529), yet curation_status remains PROPOSED.'
   target_ids:
   - CHEBI:216634
   field_paths:
