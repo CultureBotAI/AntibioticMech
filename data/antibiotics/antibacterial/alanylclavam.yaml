@@ -1,7 +1,7 @@
 identifier: CHEBI:81029
 label: alanylclavam
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An antipodal (3S,5S) beta-lactam clavam amino acid antibiotic from Streptomyces
   clavuligerus that acts as a methionine antimetabolite with antibacterial and antifungal
@@ -108,6 +108,15 @@ curation_history:
     and homoserine amino acid biosynthesis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
     backed by Jensen et al. 2000 (DOI:10.1128/aac.44.3.720-726.2000, PMID:10681345)
     and Pruess and Kellett 1983 (DOI:10.7164/antibiotics.36.208, PMID:6833138).
+  llm_assisted: true
+- timestamp: '2026-11-09T15:15:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI (5S)-clavam amino acid antimetabolite record (CHEBI:81029)
+    with complete 4/4 chemical_structure, curated mode_of_action (OTHER, MICROBIAL_TARGET),
+    and primary-literature molecular_targets (DOI:10.1128/aac.44.3.720-726.2000, PMID:10681345;
+    DOI:10.7164/antibiotics.36.208, PMID:6833138) from PROPOSED to REVIEWED (issue
+    #1359).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: OTHER

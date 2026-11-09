@@ -1,7 +1,7 @@
 identifier: CHEBI:202006
 label: bottromycin A2
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A ribosomally synthesized and post-translationally modified macrocyclic
   amidine-thiazole peptide antibiotic from Streptomyces bottropensis that inhibits
@@ -107,6 +107,14 @@ curation_history:
     subunit A site (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET) backed by Shimamura
     et al. 2009 (DOI:10.1002/anie.200804138, PMID:19115340), Gouda et al. 2012 (DOI:10.1248/cpb.60.169,
     PMID:22293474), and Huo et al. 2012 (DOI:10.1016/j.chembiol.2012.08.013, PMID:23021914).
+  llm_assisted: true
+- timestamp: '2026-11-09T15:15:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI macrocyclic amidine RiPP antibiotic record (CHEBI:202006)
+    with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature 50S ribosomal subunit A-site molecular_targets
+    (DOI:10.1002/anie.200804138, PMID:19115340) from PROPOSED to REVIEWED (issue #1359).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION

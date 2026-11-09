@@ -38,10 +38,10 @@ def test_reviewed_causal_graphs_accounting_and_quality_scores(records):
     accounting = verify_reviewed_causal_graphs_accounting(records)
     assert accounting == {
         "total_causal_graph_records": 97,
-        "reviewed_total": 159,
+        "reviewed_total": 174,
         "reviewed_existing_graphs": 15,
         "reviewed_curated_graphs": 81,
-        "reviewed_held": 63,
+        "reviewed_held": 78,
         "seeded_existing_graphs": 1,
     }
 
@@ -104,7 +104,7 @@ def test_plan_and_transition_summary_counts():
     assert sum(d["nodes_added"] for d in receipt["record_deltas"]) == 328
     assert sum(d["edges_added"] for d in receipt["record_deltas"]) == 247
     assert len(plan["existing_causal_graphs"]) == 16
-    assert len(plan["held_records"]) == 63
+    assert len(plan["held_records"]) == 78
 
     cohort_counts: dict[str, int] = {}
     for entry in plan["records"]:

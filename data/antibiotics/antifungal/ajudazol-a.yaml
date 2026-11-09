@@ -1,7 +1,7 @@
 identifier: CHEBI:204968
 label: ajudazol A
 antimicrobial_class: ANTIFUNGAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An isochromanone- and oxazole-containing hybrid polyketide-nonribosomal
   peptide antibiotic from Chondromyces crocatus that inhibits mitochondrial complex
@@ -81,6 +81,15 @@ curation_history:
     chain complex I (NADH:ubiquinone oxidoreductase; PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
     backed by Kunze et al. 2004 (DOI:10.7164/antibiotics.57.151, PMID:15112964) and
     Buntin et al. 2010 (DOI:10.1002/cbic.200900712, PMID:20432424).
+  llm_assisted: true
+- timestamp: '2026-11-09T15:15:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI isochromanone polyketide-NRPS antifungal record (CHEBI:204968)
+    with complete 4/4 chemical_structure, curated mode_of_action (ENERGY_METABOLISM_INHIBITION,
+    HOST_SHARED_TARGET), and primary-literature mitochondrial respiratory chain complex
+    I molecular_targets (DOI:10.7164/antibiotics.57.151, PMID:15112964) from PROPOSED
+    to REVIEWED (issue #1359).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: ENERGY_METABOLISM_INHIBITION

@@ -1,0 +1,1169 @@
+{
+  "schema_version": 1,
+  "task": "cycle8_stage5_review_remediation",
+  "issues": [
+    {
+      "issue_number": 1359,
+      "issue_url": "https://github.com/CultureBotAI/AntibioticMech/issues/1359",
+      "group_id": "group-01-proposed-exact-records-reviewed-promotion",
+      "finding_id": "proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion",
+      "records": [
+        "CHEBI:81029",
+        "CHEBI:199652",
+        "CHEBI:216634",
+        "CHEBI:202006",
+        "CHEBI:226796",
+        "CHEBI:204968"
+      ]
+    },
+    {
+      "issue_number": 1360,
+      "issue_url": "https://github.com/CultureBotAI/AntibioticMech/issues/1360",
+      "group_id": "group-02-cycle8-stage1-natural-products-mechanism-and-targets",
+      "finding_id": "cycle8-stage1-proposed-exact-natural-products-missing-mechanism-and-targets",
+      "records": [
+        "CHEBI:217619",
+        "CHEBI:81025",
+        "CHEBI:81026",
+        "CHEBI:81027"
+      ]
+    },
+    {
+      "issue_number": 1361,
+      "issue_url": "https://github.com/CultureBotAI/AntibioticMech/issues/1361",
+      "group_id": "group-03-seeded-exact-rifamycins-and-elfamycins-primary-targets",
+      "finding_id": "seeded-exact-rifamycins-and-elfamycins-with-card-only-targets-awaiting-primary-literature-promotion",
+      "records": [
+        "CHEBI:45367",
+        "CHEBI:75246",
+        "CHEBI:45304",
+        "CHEBI:29584",
+        "CHEBI:29668"
+      ]
+    }
+  ],
+  "molecular_targets_count": 9,
+  "molecular_targets_deltas": [
+    {
+      "identifier": "CHEBI:217619",
+      "label": "TP-1161",
+      "path": "data/antibiotics/antibacterial/tp-1161.yaml",
+      "before_sha256": "e461b0493920a8a623170d0dcfbe82b81fbd28c5de9032fe2bbe72cbee2b2b11",
+      "after_sha256": "2d1093999d4eb83111de6dd37f65667d6095a2f1ba9aa753248837ccabc945e0",
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ],
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: 26-membered macrocyclic thiopeptide antibiotic isolated from the marine actinomycete Nocardiopsis sp. TFS65-07 that inhibits Gram-positive bacterial protein biosynthesis by targeting the 50S ribosomal subunit (Engelhardt et al. 2010, DOI:10.1128/AEM.00741-10, PMID:20562278; Engelhardt et al. 2010, DOI:10.1128/AEM.01442-10, PMID:20851988)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_id": "GO:0015934",
+          "target_label": "bacterial 50S ribosomal subunit",
+          "target_type": "RIBOSOMAL_SUBUNIT",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "TP-1161 is a 26-membered series d1 thiopeptide antibiotic isolated from marine Nocardiopsis sp. TFS65-07 (BGC0000615) with potent activity against Gram-positive bacteria including Staphylococcus aureus, Staphylococcus epidermidis, Streptococcus pneumoniae, and Enterococcus faecalis via 50S ribosomal subunit translation inhibition (Engelhardt et al. 2010, DOI:10.1128/AEM.00741-10, PMID:20562278; Engelhardt et al. 2010, DOI:10.1128/AEM.01442-10, PMID:20851988).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2010-08",
+          "source_retrieved_on": "2026-11-09",
+          "evidence": [
+            {
+              "reference": "PMID:20562278",
+              "notes": "Engelhardt et al. 2010 (Appl Environ Microbiol 76:4969-4976; DOI:10.1128/AEM.00741-10) isolated TP-1161, determined its 26-membered thiopeptide structure, and characterized its Gram-positive antibacterial activity (MIC 0.25-1 ug/mL)."
+            },
+            {
+              "reference": "PMID:20851988",
+              "notes": "Engelhardt et al. 2010 (Appl Environ Microbiol 76:7093-7101; DOI:10.1128/AEM.01442-10) characterized the TP-1161 ribosomal peptide biosynthetic gene cluster (BGC0000615) in Nocardiopsis sp. TFS65-07."
+            }
+          ]
+        }
+      ],
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Populated PROTEIN_SYNTHESIS_INHIBITION (MICROBIAL_TARGET) mode_of_action, and primary-literature bacterial 50S ribosomal subunit molecular_targets on TP-1161 backed by Engelhardt et al. 2010 (PMID:20562278, PMID:20851988; issue #1360).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:81025",
+      "label": "2-formyloxymethylclavam",
+      "path": "data/antibiotics/antifungal/2-formyloxymethylclavam.yaml",
+      "before_sha256": "57b4f2a4458817789c1f153e327c48104f504f29816d0f516c8ae5db6f6d2d5d",
+      "after_sha256": "ecd1ce840b32bb0834811a7b94e4447a2d85fc06efc4203cec7945466ec021f0",
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ],
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "OTHER",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: (5S)-Clavam natural product produced by Streptomyces clavuligerus and Streptomyces antibioticus that lacks beta-lactamase inhibitory activity due to its (5S) ring-junction stereochemistry and acts as an antifungal antimetabolite inhibiting fungal cellular metabolic pathways (Brown et al. 1979, DOI:10.1039/C39790000282; Jensen et al. 2000, DOI:10.1128/AAC.44.3.720-726.2000, PMID:10681345; Tahlan et al. 2007, DOI:10.1016/j.chembiol.2006.11.012, PMID:17317567)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_id": "GO:0044237",
+          "target_label": "fungal cellular metabolic process",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:4751",
+          "taxon_label": "Fungi",
+          "experimental_context": "Whole-cell antifungal bioassays and (5S)-clavam biosynthetic pathway studies demonstrate that 2-formyloxymethylclavam inhibits fungal growth without inhibiting bacterial beta-lactamases (Brown et al. 1979, DOI:10.1039/C39790000282; Jensen et al. 2000, DOI:10.1128/AAC.44.3.720-726.2000, PMID:10681345; Tahlan et al. 2007, DOI:10.1016/j.chembiol.2006.11.012, PMID:17317567).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2000-03",
+          "source_retrieved_on": "2026-11-09",
+          "evidence": [
+            {
+              "reference": "PMID:10681345",
+              "notes": "Jensen et al. 2000 (Antimicrob Agents Chemother 44:720-726; DOI:10.1128/AAC.44.3.720-726.2000) characterized the paralogous early biosynthetic steps for clavulanic acid and the antifungal (5S)-clavam metabolites including 2-formyloxymethylclavam in Streptomyces clavuligerus."
+            },
+            {
+              "reference": "PMID:17317567",
+              "notes": "Tahlan et al. 2007 (Chem Biol 14:131-142; DOI:10.1016/j.chembiol.2006.11.012) established the late (5S)-clavam biosynthetic pathway and antifungal bioactivity of 2-formyloxymethylclavam."
+            },
+            {
+              "reference": "DOI:10.1039/C39790000282",
+              "notes": "Brown et al. 1979 (J Chem Soc Chem Commun 1979:282-283) isolated 2-formyloxymethylclavam from Streptomyces clavuligerus and reported its antifungal activity and absence of beta-lactamase inhibition."
+            }
+          ]
+        }
+      ],
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Populated OTHER (MICROBIAL_TARGET) mode_of_action, and primary-literature fungal cellular metabolic process molecular_targets on 2-formyloxymethylclavam (PMID:10681345, PMID:17317567, DOI:10.1039/C39790000282; issue #1360).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:81026",
+      "label": "2-hydroxymethylclavam",
+      "path": "data/antibiotics/antifungal/2-hydroxymethylclavam.yaml",
+      "before_sha256": "c5dd91f0174660f66e09ea0b2fa47fa07a8df20002285bdf36a0f5d45960b15d",
+      "after_sha256": "c0bd9e868f743fe272c38bfdd2953ab68f202a6f801943d4f56a4c59e1453e1c",
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ],
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "OTHER",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: (5S)-Clavam natural product produced by Streptomyces clavuligerus and Streptomyces antibioticus that lacks beta-lactamase inhibitory activity due to its (5S) ring-junction stereochemistry and acts as an antifungal antimetabolite inhibiting fungal cellular metabolic pathways (Brown et al. 1979, DOI:10.1039/C39790000282; Jensen et al. 2000, DOI:10.1128/AAC.44.3.720-726.2000, PMID:10681345; Tahlan et al. 2007, DOI:10.1016/j.chembiol.2006.11.012, PMID:17317567)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_id": "GO:0044237",
+          "target_label": "fungal cellular metabolic process",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:4751",
+          "taxon_label": "Fungi",
+          "experimental_context": "Whole-cell antifungal bioassays and (5S)-clavam biosynthetic pathway studies demonstrate that 2-hydroxymethylclavam inhibits fungal growth without inhibiting bacterial beta-lactamases (Brown et al. 1979, DOI:10.1039/C39790000282; Jensen et al. 2000, DOI:10.1128/AAC.44.3.720-726.2000, PMID:10681345; Tahlan et al. 2007, DOI:10.1016/j.chembiol.2006.11.012, PMID:17317567).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2000-03",
+          "source_retrieved_on": "2026-11-09",
+          "evidence": [
+            {
+              "reference": "PMID:10681345",
+              "notes": "Jensen et al. 2000 (Antimicrob Agents Chemother 44:720-726; DOI:10.1128/AAC.44.3.720-726.2000) characterized the paralogous early biosynthetic steps for clavulanic acid and the antifungal (5S)-clavam metabolites including 2-hydroxymethylclavam in Streptomyces clavuligerus."
+            },
+            {
+              "reference": "PMID:17317567",
+              "notes": "Tahlan et al. 2007 (Chem Biol 14:131-142; DOI:10.1016/j.chembiol.2006.11.012) established the late (5S)-clavam biosynthetic pathway and antifungal bioactivity of 2-hydroxymethylclavam."
+            },
+            {
+              "reference": "DOI:10.1039/C39790000282",
+              "notes": "Brown et al. 1979 (J Chem Soc Chem Commun 1979:282-283) isolated 2-hydroxymethylclavam from Streptomyces clavuligerus and reported its antifungal activity and absence of beta-lactamase inhibition."
+            }
+          ]
+        }
+      ],
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Populated OTHER (MICROBIAL_TARGET) mode_of_action, and primary-literature fungal cellular metabolic process molecular_targets on 2-hydroxymethylclavam (PMID:10681345, PMID:17317567, DOI:10.1039/C39790000282; issue #1360).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:81027",
+      "label": "clavam-2-carboxylate",
+      "path": "data/antibiotics/antifungal/clavam-2-carboxylate.yaml",
+      "before_sha256": "06fb401669e67cb82e7b0a8be5a4ea027c522585b2f6d7e2bae6a80796175df3",
+      "after_sha256": "d24feb01805838805298ea5d545d9c26aa307a0f71964cbe1611f4019b67f640",
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ],
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "OTHER",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: (5S)-Clavam natural product produced by Streptomyces clavuligerus that lacks beta-lactamase inhibitory activity due to its (5S) ring-junction stereochemistry and acts as an antifungal antimetabolite inhibiting fungal cellular metabolic pathways (Brown et al. 1979, DOI:10.1039/C39790000282; Jensen et al. 2000, DOI:10.1128/AAC.44.3.720-726.2000, PMID:10681345; Tahlan et al. 2007, DOI:10.1016/j.chembiol.2006.11.012, PMID:17317567)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_id": "GO:0044237",
+          "target_label": "fungal cellular metabolic process",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:4751",
+          "taxon_label": "Fungi",
+          "experimental_context": "Whole-cell antifungal bioassays and (5S)-clavam biosynthetic pathway studies demonstrate that clavam-2-carboxylate inhibits fungal growth without inhibiting bacterial beta-lactamases (Brown et al. 1979, DOI:10.1039/C39790000282; Jensen et al. 2000, DOI:10.1128/AAC.44.3.720-726.2000, PMID:10681345; Tahlan et al. 2007, DOI:10.1016/j.chembiol.2006.11.012, PMID:17317567).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2000-03",
+          "source_retrieved_on": "2026-11-09",
+          "evidence": [
+            {
+              "reference": "PMID:10681345",
+              "notes": "Jensen et al. 2000 (Antimicrob Agents Chemother 44:720-726; DOI:10.1128/AAC.44.3.720-726.2000) characterized the paralogous early biosynthetic steps for clavulanic acid and the antifungal (5S)-clavam metabolites including clavam-2-carboxylate in Streptomyces clavuligerus."
+            },
+            {
+              "reference": "PMID:17317567",
+              "notes": "Tahlan et al. 2007 (Chem Biol 14:131-142; DOI:10.1016/j.chembiol.2006.11.012) established the late (5S)-clavam biosynthetic pathway and antifungal bioactivity of clavam-2-carboxylate."
+            },
+            {
+              "reference": "DOI:10.1039/C39790000282",
+              "notes": "Brown et al. 1979 (J Chem Soc Chem Commun 1979:282-283) isolated clavam-2-carboxylate from Streptomyces clavuligerus and reported its antifungal activity and absence of beta-lactamase inhibition."
+            }
+          ]
+        }
+      ],
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Populated OTHER (MICROBIAL_TARGET) mode_of_action, and primary-literature fungal cellular metabolic process molecular_targets on clavam-2-carboxylate (PMID:10681345, PMID:17317567, DOI:10.1039/C39790000282; issue #1360).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:45367",
+      "label": "rifabutin",
+      "path": "data/antibiotics/antibacterial/rifabutin.yaml",
+      "before_sha256": "fdcf820d1eb37c4c3bbb21dc89ffe97d93b990fbebe7a8706811b475d43b18b1",
+      "after_sha256": "c618caf43bba4fa92db3e265e3773281276f01ab32956ed4feb7b0f27c850036",
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "parent_compounds",
+        "structural_class",
+        "structural_class_id",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "activity_spectrum",
+        "activity_membership_collections",
+        "clinical_status",
+        "clinical_status_assertions",
+        "curation_history"
+      ],
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SEMISYNTHETIC",
+        "mode_of_action": "NUCLEIC_ACID_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Semisynthetic spiropiperidyl rifamycin antibiotic that binds the conserved rifamycin pocket on the beta subunit (RpoB) of bacterial DNA-directed RNA polymerase and inhibits transcription initiation and nascent RNA elongation (Artsimovitch et al. 2005, DOI:10.1016/j.cell.2005.07.014, PMID:16096056, PDB:2A68; Floss & Yu 2005, DOI:10.1021/cr030112j, PMID:15700959)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000737",
+          "target_label": "rifamycin sensitive beta-subunit of RNA polymerase (rpoB)",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. RpoB is asserted as a target in the RNA polymerase complex.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000737",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000530 (rifabutin); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000737",
+          "target_label": "rifamycin sensitive beta-subunit of RNA polymerase (rpoB)",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. RpoB is asserted as a target in the RNA polymerase complex.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000737",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000530 (rifabutin); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_id": "GO:0000428",
+          "target_label": "DNA-directed RNA polymerase complex",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "X-ray crystal structure of Thermus thermophilus RNA polymerase holoenzyme bound to rifabutin at 2.5 A resolution (PDB:2A68) and biochemical transcription assays with Escherichia coli RNA polymerase show rifabutin binding the RpoB beta-subunit pocket and blocking synthesis of nascent RNA transcripts beyond 2 nucleotides (Artsimovitch et al. 2005, DOI:10.1016/j.cell.2005.07.014, PMID:16096056; Floss & Yu 2005, DOI:10.1021/cr030112j, PMID:15700959).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2005-08",
+          "source_retrieved_on": "2026-11-09",
+          "evidence": [
+            {
+              "reference": "PMID:16096056",
+              "notes": "Artsimovitch et al. 2005 (Cell 122:351-363; DOI:10.1016/j.cell.2005.07.014) determined the 2.5 A crystal structure of Thermus thermophilus RNA polymerase in complex with rifabutin (PDB:2A68) and measured direct transcription inhibition on Escherichia coli RNA polymerase."
+            },
+            {
+              "reference": "PMID:15700959",
+              "notes": "Floss & Yu 2005 (Chem Rev 105:621-632; DOI:10.1021/cr030112j) reviewed rifamycin structure-activity relationships, bacterial RNA polymerase RpoB binding, and mycobacterial RpoB resistance mutations for rifabutin."
+            }
+          ]
+        }
+      ],
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Added SEMISYNTHETIC biosynthesis_origin, curator-verified NUCLEIC_ACID_SYNTHESIS_INHIBITION (MICROBIAL_TARGET) mode_of_action, and primary-literature DNA-directed RNA polymerase complex molecular_targets on rifabutin (PMID:16096056, PMID:15700959; issue #1361).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:75246",
+      "label": "rifaximin",
+      "path": "data/antibiotics/antibacterial/rifaximin.yaml",
+      "before_sha256": "397b16e308463d5dc1a993bca493e381c78d073b438cdf83d7de6c231c9839e0",
+      "after_sha256": "6f714775913529b76d8d139dfc02c975edcd7817f629d99041de61242e608bdd",
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "activity_roles",
+        "structural_class",
+        "structural_class_id",
+        "chemical_structure",
+        "xrefs",
+        "drug_xrefs",
+        "document_xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "clinical_status",
+        "clinical_status_assertions",
+        "curation_history"
+      ],
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SEMISYNTHETIC",
+        "mode_of_action": "NUCLEIC_ACID_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Semisynthetic pyridoimidazorifamycin antibiotic that binds the beta subunit (RpoB) of bacterial DNA-dependent RNA polymerase to inhibit bacterial RNA synthesis in enteric pathogens (Gillis & Brogden 1995, DOI:10.2165/00003495-199549030-00009, PMID:7774516; Jiang & DuPont 2005, DOI:10.1159/000081991, PMID:15855749; Floss & Yu 2005, DOI:10.1021/cr030112j, PMID:15700959)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000737",
+          "target_label": "rifamycin sensitive beta-subunit of RNA polymerase (rpoB)",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. RpoB is asserted as a target in the RNA polymerase complex.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000737",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000517 (rifaximin); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000737",
+          "target_label": "rifamycin sensitive beta-subunit of RNA polymerase (rpoB)",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. RpoB is asserted as a target in the RNA polymerase complex.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000737",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000517 (rifaximin); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_id": "GO:0000428",
+          "target_label": "DNA-directed RNA polymerase complex",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Rifaximin binds the beta subunit (RpoB) of bacterial DNA-directed RNA polymerase (including Escherichia coli RNAP) to block transcription initiation and bacterial RNA synthesis without inhibiting mammalian RNA polymerase (Gillis & Brogden 1995, DOI:10.2165/00003495-199549030-00009, PMID:7774516; Jiang & DuPont 2005, DOI:10.1159/000081991, PMID:15855749; Floss & Yu 2005, DOI:10.1021/cr030112j, PMID:15700959).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "1995-03",
+          "source_retrieved_on": "2026-11-09",
+          "evidence": [
+            {
+              "reference": "PMID:7774516",
+              "notes": "Gillis & Brogden 1995 (Drugs 49:467-484; DOI:10.2165/00003495-199549030-00009) characterized rifaximin binding to the beta subunit (RpoB) of bacterial DNA-dependent RNA polymerase and inhibition of bacterial RNA synthesis."
+            },
+            {
+              "reference": "PMID:15855749",
+              "notes": "Jiang & DuPont 2005 (Chemotherapy 51 Suppl 1:67-72; DOI:10.1159/000081991) reviewed the mechanism of action of rifaximin via bacterial RNA polymerase RpoB binding and enteropathogenic Escherichia coli susceptibility."
+            },
+            {
+              "reference": "PMID:15700959",
+              "notes": "Floss & Yu 2005 (Chem Rev 105:621-632; DOI:10.1021/cr030112j) characterized the conserved rifamycin mode of action on bacterial DNA-directed RNA polymerase beta subunit RpoB."
+            }
+          ]
+        }
+      ],
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Added SEMISYNTHETIC biosynthesis_origin, curator-verified NUCLEIC_ACID_SYNTHESIS_INHIBITION (MICROBIAL_TARGET) mode_of_action, and primary-literature DNA-directed RNA polymerase complex molecular_targets on rifaximin (PMID:7774516, PMID:15855749, PMID:15700959; issue #1361).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:45304",
+      "label": "rifapentine",
+      "path": "data/antibiotics/antimycobacterial/rifapentine.yaml",
+      "before_sha256": "e06a64a17277e3724665f87100171d4a70e0275c42b8d921f632813a95ab48f2",
+      "after_sha256": "56c91986ad443040744a2d1304a3552e0b56341f7c13cd63cc68f1be40136138",
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "activity_roles",
+        "structural_class",
+        "structural_class_id",
+        "chemical_structure",
+        "xrefs",
+        "drug_xrefs",
+        "document_xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "clinical_status",
+        "clinical_status_assertions",
+        "curation_history"
+      ],
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SEMISYNTHETIC",
+        "mode_of_action": "NUCLEIC_ACID_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Semisynthetic cyclopentylpiperazinyl rifamycin SV derivative that binds the conserved rifamycin pocket on the beta subunit (RpoB) of bacterial DNA-directed RNA polymerase and sterically blocks nascent RNA elongation (Artsimovitch et al. 2005, DOI:10.1016/j.cell.2005.07.014, PMID:16096056, PDB:2A69; Floss & Yu 2005, DOI:10.1021/cr030112j, PMID:15700959)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000737",
+          "target_label": "rifamycin sensitive beta-subunit of RNA polymerase (rpoB)",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. RpoB is asserted as a target in the RNA polymerase complex.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000737",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000534 (rifapentine); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000737",
+          "target_label": "rifamycin sensitive beta-subunit of RNA polymerase (rpoB)",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. RpoB is asserted as a target in the RNA polymerase complex.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000737",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000534 (rifapentine); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_id": "GO:0000428",
+          "target_label": "DNA-directed RNA polymerase complex",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "X-ray crystal structure of Thermus thermophilus RNA polymerase holoenzyme bound to rifapentine at 3.22 A resolution (PDB:2A69) and biochemical transcription assays with Escherichia coli RNA polymerase demonstrate rifapentine binding to the RpoB beta-subunit pocket and blocking nascent RNA chain extension beyond 3 nucleotides (Artsimovitch et al. 2005, DOI:10.1016/j.cell.2005.07.014, PMID:16096056; Floss & Yu 2005, DOI:10.1021/cr030112j, PMID:15700959).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2005-08",
+          "source_retrieved_on": "2026-11-09",
+          "evidence": [
+            {
+              "reference": "PMID:16096056",
+              "notes": "Artsimovitch et al. 2005 (Cell 122:351-363; DOI:10.1016/j.cell.2005.07.014) determined the crystal structure of Thermus thermophilus RNA polymerase in complex with rifapentine (PDB:2A69) and assayed direct transcription inhibition on Escherichia coli RNA polymerase."
+            },
+            {
+              "reference": "PMID:15700959",
+              "notes": "Floss & Yu 2005 (Chem Rev 105:621-632; DOI:10.1021/cr030112j) reviewed rifamycin structure-activity relationships, bacterial RNA polymerase RpoB binding, and mycobacterial RpoB resistance mutations for rifapentine."
+            }
+          ]
+        }
+      ],
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Added SEMISYNTHETIC biosynthesis_origin, curator-verified NUCLEIC_ACID_SYNTHESIS_INHIBITION (MICROBIAL_TARGET) mode_of_action, and primary-literature DNA-directed RNA polymerase complex molecular_targets on rifapentine (PMID:16096056, PMID:15700959; issue #1361).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:29584",
+      "label": "GE2270A",
+      "path": "data/antibiotics/antibacterial/ge2270a.yaml",
+      "before_sha256": "96a0384cdf3c3474a56af128eb22fd2bad2250f530e67035b8644fc51776974f",
+      "after_sha256": "8fb188821b962491641c7d65dfd70a99932c9a8ffc1dab2181f4cb1ae08a254f",
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "parent_compounds",
+        "structural_class",
+        "structural_class_id",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "curation_history"
+      ],
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: 29-membered thiazolyl peptide antibiotic from Planobispora rosea that binds domain 2 of bacterial elongation factor Tu (EF-Tu) and sterically blocks formation of the aminoacyl-tRNA*EF-Tu*GTP ternary complex required for ribosomal translation elongation (Heffron & Jurnak 2000, DOI:10.1021/bi9913597, PMID:10625477; Parmeggiani et al. 2006, DOI:10.1021/bi0525122, PMID:16734421, PDB:2C77)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000731",
+          "target_label": "elongation factor Tu",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Elongation factor Tu is asserted as the antibiotic target.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000731",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3001237 (GE2270A); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000731",
+          "target_label": "elongation factor Tu",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Elongation factor Tu is asserted as the antibiotic target.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000731",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3001237 (GE2270A); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_id": "GO:0003746",
+          "target_label": "bacterial translation elongation factor Tu (EF-Tu)",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "X-ray crystal structures of Escherichia coli EF-Tu-GDP-GE2270A at 2.35 A resolution (Heffron & Jurnak 2000, DOI:10.1021/bi9913597, PMID:10625477, PDB:1D8T) and Thermus thermophilus EF-Tu-GppNHp-GE2270A at 1.6 A resolution (Parmeggiani et al. 2006, DOI:10.1021/bi0525122, PMID:16734421, PDB:2C77) establish that GE2270A binds the 3'-aminoacyl-tRNA pocket on domain 2 of EF-Tu and prevents aminoacyl-tRNA binding.",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2000-01",
+          "source_retrieved_on": "2026-11-09",
+          "evidence": [
+            {
+              "reference": "PMID:10625477",
+              "notes": "Heffron & Jurnak 2000 (Biochemistry 39:37-45; DOI:10.1021/bi9913597) resolved the 2.35 A cocrystal structure of Escherichia coli EF-Tu-GDP bound to GE2270A (PDB:1D8T), showing steric occlusion of the aminoacyl-tRNA binding cleft on domain 2."
+            },
+            {
+              "reference": "PMID:16734421",
+              "notes": "Parmeggiani et al. 2006 (Biochemistry 45:6846-6857; DOI:10.1021/bi0525122) resolved the 1.6 A cocrystal structure of Thermus thermophilus EF-Tu in complex with GE2270A (PDB:2C77) and characterized E. coli EF-Tu resistance substitutions."
+            }
+          ]
+        }
+      ],
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Added NATURAL_PRODUCT biosynthesis_origin, curator-verified PROTEIN_SYNTHESIS_INHIBITION (MICROBIAL_TARGET) mode_of_action, and primary-literature bacterial translation elongation factor Tu (EF-Tu) molecular_targets on GE2270A (PMID:10625477, PMID:16734421; issue #1361).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:29668",
+      "label": "pulvomycin",
+      "path": "data/antibiotics/antibacterial/pulvomycin.yaml",
+      "before_sha256": "1e1a7ce9e894ba6276ecb4052252317f7ae0faea0975c55e65161ebbdecc23e5",
+      "after_sha256": "264c5cfb313e88554973e0420b21b089bce9cbeb481900c5fa80bbba1d3b0dae",
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "structural_class",
+        "structural_class_id",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "curation_history"
+      ],
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: 22-membered macrocyclic lactone elfamycin antibiotic that binds at the three-domain interface of bacterial elongation factor Tu (EF-Tu) and prevents formation of the aminoacyl-tRNA*EF-Tu*GTP ternary complex required for ribosomal translation elongation (Parmeggiani et al. 2006, DOI:10.1021/bi0525122, PMID:16734421, PDB:2C78)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000731",
+          "target_label": "elongation factor Tu",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Elongation factor Tu is asserted as the antibiotic target.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000731",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000586 (pulvomycin); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000731",
+          "target_label": "elongation factor Tu",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Elongation factor Tu is asserted as the antibiotic target.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000731",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000586 (pulvomycin); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_id": "GO:0003746",
+          "target_label": "bacterial translation elongation factor Tu (EF-Tu)",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "X-ray crystal structure of Thermus thermophilus EF-Tu-GppNHp in complex with pulvomycin at 1.4 A resolution (PDB:2C78) and biochemical assays with Escherichia coli EF-Tu demonstrate that pulvomycin spans the interface of domains 1, 2, and 3 of EF-Tu and sterically blocks aminoacyl-tRNA binding (Parmeggiani et al. 2006, DOI:10.1021/bi0525122, PMID:16734421).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2006-06",
+          "source_retrieved_on": "2026-11-09",
+          "evidence": [
+            {
+              "reference": "PMID:16734421",
+              "notes": "Parmeggiani et al. 2006 (Biochemistry 45:6846-6857; DOI:10.1021/bi0525122) determined the 1.4 A cocrystal structure of Thermus thermophilus EF-Tu bound to pulvomycin (PDB:2C78) and characterized pulvomycin inhibition and resistance mutations in Escherichia coli EF-Tu."
+            }
+          ]
+        }
+      ],
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Added NATURAL_PRODUCT biosynthesis_origin, curator-verified PROTEIN_SYNTHESIS_INHIBITION (MICROBIAL_TARGET) mode_of_action, and primary-literature bacterial translation elongation factor Tu (EF-Tu) molecular_targets on pulvomycin (PMID:16734421; issue #1361).",
+        "llm_assisted": true
+      }
+    }
+  ],
+  "promoted_record_count": 15,
+  "promoted_record_deltas": [
+    {
+      "identifier": "CHEBI:81029",
+      "label": "alanylclavam",
+      "path": "data/antibiotics/antibacterial/alanylclavam.yaml",
+      "before_sha256": "b892ab86e9493e47e11f6ea3582b5bd06f52e9a81dd8eb2d819629ba18372bb4",
+      "after_sha256": "f459346ebda7fad7b64dd69c062121d90ab464c1f583dee7d5510ce63106384c",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI (5S)-clavam amino acid antimetabolite record (CHEBI:81029) with complete 4/4 chemical_structure, curated mode_of_action (OTHER, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1128/aac.44.3.720-726.2000, PMID:10681345; DOI:10.7164/antibiotics.36.208, PMID:6833138) from PROPOSED to REVIEWED (issue #1359).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:199652",
+      "label": "amicetin",
+      "path": "data/antibiotics/antibacterial/amicetin.yaml",
+      "before_sha256": "bddf199412dbbec8ddb45a44712c37477c04dfe7010beff6ee8dd568fff26f41",
+      "after_sha256": "cb2ace2f9ecb51c242d27741656c1ea07fcfaa008d528c7b050f4b259e1b2795",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI cytosine-disaccharide nucleoside antibiotic record (CHEBI:199652) with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature 50S ribosomal subunit peptidyl-transferase center molecular_targets (DOI:10.1128/aem.07185-11, PMID:22267658) from PROPOSED to REVIEWED (issue #1359).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:216634",
+      "label": "andrimid",
+      "path": "data/antibiotics/antibacterial/andrimid.yaml",
+      "before_sha256": "277c3c8c325ec351cae780551511632ad3ce46b737818914dba7177189fa87c7",
+      "after_sha256": "07fd61e5fe6853749953b1a9c53d8d4bfb5fb8b16892e133aa6c1f83584853eb",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI pseudopeptide pyrrolidinedione antibiotic record (CHEBI:216634) with complete 4/4 chemical_structure, curated mode_of_action (CELL_MEMBRANE_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), primary-literature acetyl-CoA carboxylase carboxyltransferase (AccA/AccD) molecular_targets, and reviewed Swiss-Prot protein_examples (UniProtKB:P0ABD5, UniProtKB:P0A9Q5) from PROPOSED to REVIEWED (issue #1359).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:202006",
+      "label": "bottromycin A2",
+      "path": "data/antibiotics/antibacterial/bottromycin-a2.yaml",
+      "before_sha256": "c699d69a4255632f7c5d31a296f6900b586b1934d0f2fc0675354c10d315d9e2",
+      "after_sha256": "6b7d848697f11747c550a21a9ee6097693c1253b3f4debe048c30ba29eb6b381",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI macrocyclic amidine RiPP antibiotic record (CHEBI:202006) with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature 50S ribosomal subunit A-site molecular_targets (DOI:10.1002/anie.200804138, PMID:19115340) from PROPOSED to REVIEWED (issue #1359).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:226796",
+      "label": "planosporicin",
+      "path": "data/antibiotics/antibacterial/planosporicin.yaml",
+      "before_sha256": "82af3e5a10cd92008759dd7e4cdaaf07ecc82ca7b5dd8280d8b61547f1f79427",
+      "after_sha256": "7aeb3cf2bf8c820ae2129ef08def53eb2cfc19fcf8cb5ae40916a2240e6b206d",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI class I lantibiotic record (CHEBI:226796) with complete 4/4 chemical_structure, curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature peptidoglycan biosynthesis molecular_targets (DOI:10.1128/jb.02291-12, PMID:23475977; DOI:10.1021/bi700131x, PMID:17469849) from PROPOSED to REVIEWED (issue #1359).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:204968",
+      "label": "ajudazol A",
+      "path": "data/antibiotics/antifungal/ajudazol-a.yaml",
+      "before_sha256": "1eb9d91ae047d7de6e4734705fb7b90ebaabc854b8d5ecf7665cb1fa9da62303",
+      "after_sha256": "fb2aae3484ce5159978b92e243e83e922ee3e64be019ae4022f1f3b5bac34d20",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI isochromanone polyketide-NRPS antifungal record (CHEBI:204968) with complete 4/4 chemical_structure, curated mode_of_action (ENERGY_METABOLISM_INHIBITION, HOST_SHARED_TARGET), and primary-literature mitochondrial respiratory chain complex I molecular_targets (DOI:10.7164/antibiotics.57.151, PMID:15112964) from PROPOSED to REVIEWED (issue #1359).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:217619",
+      "label": "TP-1161",
+      "path": "data/antibiotics/antibacterial/tp-1161.yaml",
+      "before_sha256": "2d1093999d4eb83111de6dd37f65667d6095a2f1ba9aa753248837ccabc945e0",
+      "after_sha256": "c7e668971f966e6b9ee97e1e3b8fabe5bddebeaddfb7127f8e5b2b1f3d6739d2",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI 26-membered thiopeptide antibiotic record (CHEBI:217619) with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature bacterial 50S ribosomal subunit molecular_targets (PMID:20562278, PMID:20851988) from PROPOSED to REVIEWED (issue #1360).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:81025",
+      "label": "2-formyloxymethylclavam",
+      "path": "data/antibiotics/antifungal/2-formyloxymethylclavam.yaml",
+      "before_sha256": "ecd1ce840b32bb0834811a7b94e4447a2d85fc06efc4203cec7945466ec021f0",
+      "after_sha256": "11f1649b78d2be17c0e0ffb9205e7bf194d2f17ad0dd7602ed332a0f6df10d1a",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI (5S)-clavam antifungal metabolite record (CHEBI:81025) with complete 4/4 chemical_structure, curated mode_of_action (OTHER, MICROBIAL_TARGET), and primary-literature fungal cellular metabolic process molecular_targets (PMID:10681345, PMID:17317567, DOI:10.1039/C39790000282) from PROPOSED to REVIEWED (issue #1360).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:81026",
+      "label": "2-hydroxymethylclavam",
+      "path": "data/antibiotics/antifungal/2-hydroxymethylclavam.yaml",
+      "before_sha256": "c0bd9e868f743fe272c38bfdd2953ab68f202a6f801943d4f56a4c59e1453e1c",
+      "after_sha256": "d8e45f1bc7ee423a24a6f1e4c7d3f648ffecc4d88cf7626e7e3f079cfb49b02f",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI (5S)-clavam antifungal metabolite record (CHEBI:81026) with complete 4/4 chemical_structure, curated mode_of_action (OTHER, MICROBIAL_TARGET), and primary-literature fungal cellular metabolic process molecular_targets (PMID:10681345, PMID:17317567, DOI:10.1039/C39790000282) from PROPOSED to REVIEWED (issue #1360).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:81027",
+      "label": "clavam-2-carboxylate",
+      "path": "data/antibiotics/antifungal/clavam-2-carboxylate.yaml",
+      "before_sha256": "d24feb01805838805298ea5d545d9c26aa307a0f71964cbe1611f4019b67f640",
+      "after_sha256": "54a0e84d27e1fadf4a83f353c04127e4026fb0c4d4de3fe42cc92fdcdcd9100c",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI (5S)-clavam antifungal metabolite record (CHEBI:81027) with complete 4/4 chemical_structure, curated mode_of_action (OTHER, MICROBIAL_TARGET), and primary-literature fungal cellular metabolic process molecular_targets (PMID:10681345, PMID:17317567, DOI:10.1039/C39790000282) from PROPOSED to REVIEWED (issue #1360).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:45367",
+      "label": "rifabutin",
+      "path": "data/antibiotics/antibacterial/rifabutin.yaml",
+      "before_sha256": "f2b2d2f7cf076fd5a0d906daeb388f050f394d3664d115ddb63d3842b19fa244",
+      "after_sha256": "4d5e40d7b47344fb9178238d7a7f2328fc0834f910b27801625907e235fdde88",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 10,
+      "curation_history_after_len": 11,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI spiropiperidyl rifamycin record (CHEBI:45367) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), primary-literature DNA-directed RNA polymerase complex molecular_targets (PMID:16096056, PMID:15700959), and reviewed Swiss-Prot RpoB protein_examples (UniProtKB:Q8RQE9, UniProtKB:P9WGY9, UniProtKB:P0A8V2) from SEEDED to REVIEWED (issue #1361).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:75246",
+      "label": "rifaximin",
+      "path": "data/antibiotics/antibacterial/rifaximin.yaml",
+      "before_sha256": "5f7c88c2f10598bed4ee683eae6815e30401b39b1bd0e2c1099782bfa2d50891",
+      "after_sha256": "c1fb640c8314ac8fe7e57317b4d7dbd249aae25aef65fd9fbca66636444c1b4f",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI pyridoimidazorifamycin record (CHEBI:75246) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), primary-literature DNA-directed RNA polymerase complex molecular_targets (PMID:7774516, PMID:15855749, PMID:15700959), and reviewed Swiss-Prot RpoB protein_example (UniProtKB:P0A8V2) from SEEDED to REVIEWED (issue #1361).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:45304",
+      "label": "rifapentine",
+      "path": "data/antibiotics/antimycobacterial/rifapentine.yaml",
+      "before_sha256": "68c265886cc16429330162742b8342a6466b420537cff7108c56ab01901c1ce1",
+      "after_sha256": "a3b3f0aec413293d176bfdb44db07b4310cbec8971451e44b89c741a5ebdcb0f",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI cyclopentylpiperazinyl rifamycin record (CHEBI:45304) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), primary-literature DNA-directed RNA polymerase complex molecular_targets (PMID:16096056, PMID:15700959), and reviewed Swiss-Prot RpoB protein_examples (UniProtKB:Q8RQE9, UniProtKB:P9WGY9, UniProtKB:P0A8V2) from SEEDED to REVIEWED (issue #1361).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:29584",
+      "label": "GE2270A",
+      "path": "data/antibiotics/antibacterial/ge2270a.yaml",
+      "before_sha256": "8e49686e2efa5384f36faf20a83b758dca0f90b1779b5e3231346e3c347834e2",
+      "after_sha256": "9fe69a1b2a3ab324fdbd2dc86a6b26d06cb57f4cba82d1be20ec57da44602d5c",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI thiazolyl peptide antibiotic record (CHEBI:29584) with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), primary-literature bacterial translation elongation factor Tu (EF-Tu) molecular_targets (PMID:10625477, PMID:16734421), and reviewed Swiss-Prot TufA protein_examples (UniProtKB:P0CE47, UniProtKB:P60338) from SEEDED to REVIEWED (issue #1361).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:29668",
+      "label": "pulvomycin",
+      "path": "data/antibiotics/antibacterial/pulvomycin.yaml",
+      "before_sha256": "b749840a1d173d6d2524675c63a1febf815fb67fec6be85ea3fcf7c4249c09bd",
+      "after_sha256": "dd19e0248b22c9ad4a52d3493014616f6bb4d1d8570ff9987f1a7c031ae342e1",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "added_history_event": {
+        "timestamp": "2026-11-09T15:15:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI macrocyclic lactone elfamycin antibiotic record (CHEBI:29668) with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), primary-literature bacterial translation elongation factor Tu (EF-Tu) molecular_targets (PMID:16734421), and reviewed Swiss-Prot TufA protein_examples (UniProtKB:P60338, UniProtKB:P0CE47) from SEEDED to REVIEWED (issue #1361).",
+        "llm_assisted": true
+      }
+    }
+  ]
+}

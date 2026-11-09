@@ -2,11 +2,11 @@ schema_version: 1
 task: causal_graphs_curation
 curation_action: CURATED_CAUSAL_GRAPHS
 retrieved_on: '2026-10-23'
-scope_note: 'Accounting-complete causal_graphs curation for all 159 REVIEWED AntibioticMech records. Every
+scope_note: 'Accounting-complete causal_graphs curation for all 174 REVIEWED AntibioticMech records. Every
   REVIEWED record is accounted for in exactly one of: existing_causal_graphs (15 pre-existing REVIEWED
   graphs; total corpus pre-existing graphs = 16 including SEEDED ofloxacin), records (62 Cohort A records
   with curated UniProtKB protein_examples on their proximal protein/complex target plus 19 Cohort B records
-  with a direct or measured non-protein molecular target), or held_records (63 held REVIEWED records).'
+  with a direct or measured non-protein molecular target), or held_records (78 held REVIEWED records).'
 existing_causal_graphs:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -7573,3 +7573,200 @@ held_records:
     a non-protein ribosomal subunit target without GENE_OR_PROTEIN nodes; held in held_records after Cycle
     7 Stage 5 REVIEWED promotion (issue #1346) because 0-protein-node causal_graphs require Stage 3 held_targets
     registration in curation/uniprot_protein_examples.yaml.'
+- identifier: CHEBI:81029
+  label: alanylclavam
+  path: data/antibiotics/antibacterial/alanylclavam.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial methionine and homoserine amino acid biosynthesis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - DOI:10.1128/aac.44.3.720-726.2000
+  - PMID:10681345
+  - DOI:10.7164/antibiotics.36.208
+  - PMID:6833138
+  reason: 'Primary-literature target in DOI:10.1128/aac.44.3.720-726.2000 (PMID:10681345) and DOI:10.7164/antibiotics.36.208
+    (PMID:6833138) is a downstream biological process (target_type=BIOLOGICAL_PROCESS: bacterial methionine
+    and homoserine amino acid biosynthesis) without a single purified enzyme accession.'
+- identifier: CHEBI:199652
+  label: amicetin
+  path: data/antibiotics/antibacterial/amicetin.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial 50S ribosomal subunit peptidyl-transferase center (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1128/aem.07185-11
+  - PMID:22267658
+  reason: 'Primary-literature target in DOI:10.1128/aem.07185-11 (PMID:22267658) is the bacterial 50S
+    ribosomal subunit peptidyl-transferase center (target_type=RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET),
+    a non-protein ribosomal target without GENE_OR_PROTEIN nodes; held in held_records after Cycle 8 Stage
+    5 REVIEWED promotion (issue #1359) because 0-protein-node causal_graphs require Stage 3 held_targets
+    registration in curation/uniprot_protein_examples.yaml.'
+- identifier: CHEBI:216634
+  label: andrimid
+  path: data/antibiotics/antibacterial/andrimid.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial acetyl-CoA carboxylase carboxyltransferase complex (AccA / AccD) (PROTEIN_COMPLEX,
+    DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1074/jbc.m402989200
+  - PMID:15066985
+  - DOI:10.1021/ja063194c
+  - PMID:16866529
+  reason: 'Promoted from PROPOSED to REVIEWED in Cycle 8 Stage 5 (issue #1359) with reviewed Escherichia
+    coli K-12 AccA (UniProtKB:P0ABD5) and AccD (UniProtKB:P0A9Q5) protein_examples on the bacterial acetyl-CoA
+    carboxylase carboxyltransferase complex target (DOI:10.1074/jbc.m402989200, PMID:15066985; DOI:10.1021/ja063194c,
+    PMID:16866529); held in held_records pending Stage 2 causal_graphs synthesis.'
+- identifier: CHEBI:202006
+  label: bottromycin A2
+  path: data/antibiotics/antibacterial/bottromycin-a2.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial 50S ribosomal subunit A site (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1002/anie.200804138
+  - PMID:19115340
+  reason: 'Primary-literature target in DOI:10.1002/anie.200804138 (PMID:19115340) is the bacterial 50S
+    ribosomal subunit A site (target_type=RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET), a non-protein ribosomal
+    target without GENE_OR_PROTEIN nodes; held in held_records after Cycle 8 Stage 5 REVIEWED promotion
+    (issue #1359) because 0-protein-node causal_graphs require Stage 3 held_targets registration in curation/uniprot_protein_examples.yaml.'
+- identifier: CHEBI:226796
+  label: planosporicin
+  path: data/antibiotics/antibacterial/planosporicin.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial cell wall peptidoglycan biosynthesis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - DOI:10.1128/jb.02291-12
+  - PMID:23475977
+  - DOI:10.1021/bi700131x
+  - PMID:17469849
+  reason: 'Primary-literature target in DOI:10.1128/jb.02291-12 (PMID:23475977) and DOI:10.1021/bi700131x
+    (PMID:17469849) is a downstream biological process (target_type=BIOLOGICAL_PROCESS: bacterial cell
+    wall peptidoglycan biosynthesis) without a single resolved protein target accession.'
+- identifier: CHEBI:204968
+  label: ajudazol A
+  path: data/antibiotics/antifungal/ajudazol-a.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: mitochondrial respiratory chain complex I (NADH:ubiquinone oxidoreductase) (PROTEIN_COMPLEX,
+    DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.7164/antibiotics.57.151
+  - PMID:15112964
+  reason: Primary-literature target in DOI:10.7164/antibiotics.57.151 (PMID:15112964) is mitochondrial
+    respiratory chain complex I (target_type=PROTEIN_COMPLEX, held in curation/uniprot_protein_examples.yaml
+    held_targets without a single resolved fungal complex I subunit accession).
+- identifier: CHEBI:217619
+  label: TP-1161
+  path: data/antibiotics/antibacterial/tp-1161.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial 50S ribosomal subunit (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
+  references:
+  - PMID:20562278
+  - DOI:10.1128/AEM.00741-10
+  - PMID:20851988
+  - DOI:10.1128/AEM.01442-10
+  reason: 'Primary-literature target in PMID:20562278 (DOI:10.1128/AEM.00741-10) and PMID:20851988 (DOI:10.1128/AEM.01442-10)
+    is the bacterial 50S ribosomal subunit (target_type=RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET), a non-protein
+    ribosomal target without GENE_OR_PROTEIN nodes; held in held_records after Cycle 8 Stage 5 REVIEWED
+    promotion (issue #1360) because 0-protein-node causal_graphs require Stage 3 held_targets registration
+    in curation/uniprot_protein_examples.yaml.'
+- identifier: CHEBI:81025
+  label: 2-formyloxymethylclavam
+  path: data/antibiotics/antifungal/2-formyloxymethylclavam.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: fungal cellular metabolic process (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - PMID:10681345
+  - PMID:17317567
+  - DOI:10.1039/C39790000282
+  reason: 'Primary-literature target in PMID:10681345, PMID:17317567, and DOI:10.1039/C39790000282 is
+    a downstream biological process (target_type=BIOLOGICAL_PROCESS: fungal cellular metabolic process)
+    without a single resolved fungal protein target.'
+- identifier: CHEBI:81026
+  label: 2-hydroxymethylclavam
+  path: data/antibiotics/antifungal/2-hydroxymethylclavam.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: fungal cellular metabolic process (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - PMID:10681345
+  - PMID:17317567
+  - DOI:10.1039/C39790000282
+  reason: 'Primary-literature target in PMID:10681345, PMID:17317567, and DOI:10.1039/C39790000282 is
+    a downstream biological process (target_type=BIOLOGICAL_PROCESS: fungal cellular metabolic process)
+    without a single resolved fungal protein target.'
+- identifier: CHEBI:81027
+  label: clavam-2-carboxylate
+  path: data/antibiotics/antifungal/clavam-2-carboxylate.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: fungal cellular metabolic process (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - PMID:10681345
+  - PMID:17317567
+  - DOI:10.1039/C39790000282
+  reason: 'Primary-literature target in PMID:10681345, PMID:17317567, and DOI:10.1039/C39790000282 is
+    a downstream biological process (target_type=BIOLOGICAL_PROCESS: fungal cellular metabolic process)
+    without a single resolved fungal protein target.'
+- identifier: CHEBI:45367
+  label: rifabutin
+  path: data/antibiotics/antibacterial/rifabutin.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: DNA-directed RNA polymerase complex (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+  references:
+  - PMID:16096056
+  - DOI:10.1016/j.cell.2005.07.014
+  - PMID:15700959
+  - DOI:10.1021/cr030112j
+  reason: 'Promoted from SEEDED to REVIEWED in Cycle 8 Stage 5 (issue #1361) with reviewed Swiss-Prot
+    RpoB protein_examples (UniProtKB:Q8RQE9, UniProtKB:P9WGY9, UniProtKB:P0A8V2) on the DNA-directed RNA
+    polymerase complex target (PMID:16096056, PMID:15700959); held in held_records pending Stage 2 causal_graphs
+    synthesis.'
+- identifier: CHEBI:75246
+  label: rifaximin
+  path: data/antibiotics/antibacterial/rifaximin.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: DNA-directed RNA polymerase complex (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+  references:
+  - PMID:7774516
+  - DOI:10.2165/00003495-199549030-00009
+  - PMID:15855749
+  - DOI:10.1159/000081991
+  - PMID:15700959
+  reason: 'Promoted from SEEDED to REVIEWED in Cycle 8 Stage 5 (issue #1361) with reviewed Escherichia
+    coli K-12 Swiss-Prot RpoB protein_example (UniProtKB:P0A8V2) on the DNA-directed RNA polymerase complex
+    target (PMID:7774516, PMID:15855749, PMID:15700959); held in held_records pending Stage 2 causal_graphs
+    synthesis.'
+- identifier: CHEBI:45304
+  label: rifapentine
+  path: data/antibiotics/antimycobacterial/rifapentine.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: DNA-directed RNA polymerase complex (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+  references:
+  - PMID:16096056
+  - DOI:10.1016/j.cell.2005.07.014
+  - PMID:15700959
+  - DOI:10.1021/cr030112j
+  reason: 'Promoted from SEEDED to REVIEWED in Cycle 8 Stage 5 (issue #1361) with reviewed Swiss-Prot
+    RpoB protein_examples (UniProtKB:Q8RQE9, UniProtKB:P9WGY9, UniProtKB:P0A8V2) on the DNA-directed RNA
+    polymerase complex target (PMID:16096056, PMID:15700959); held in held_records pending Stage 2 causal_graphs
+    synthesis.'
+- identifier: CHEBI:29584
+  label: GE2270A
+  path: data/antibiotics/antibacterial/ge2270a.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial translation elongation factor Tu (EF-Tu) (PROTEIN, DIRECT_BINDING_TARGET)
+  references:
+  - PMID:10625477
+  - DOI:10.1021/bi9913597
+  - PMID:16734421
+  - DOI:10.1021/bi0525122
+  reason: 'Promoted from SEEDED to REVIEWED in Cycle 8 Stage 5 (issue #1361) with reviewed Swiss-Prot
+    TufA protein_examples (UniProtKB:P0CE47, UniProtKB:P60338) on the bacterial translation elongation
+    factor Tu (EF-Tu) target (PMID:10625477, PMID:16734421); held in held_records pending Stage 2 causal_graphs
+    synthesis.'
+- identifier: CHEBI:29668
+  label: pulvomycin
+  path: data/antibiotics/antibacterial/pulvomycin.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial translation elongation factor Tu (EF-Tu) (PROTEIN, DIRECT_BINDING_TARGET)
+  references:
+  - PMID:16734421
+  - DOI:10.1021/bi0525122
+  reason: 'Promoted from SEEDED to REVIEWED in Cycle 8 Stage 5 (issue #1361) with reviewed Swiss-Prot
+    TufA protein_examples (UniProtKB:P60338, UniProtKB:P0CE47) on the bacterial translation elongation
+    factor Tu (EF-Tu) target (PMID:16734421); held in held_records pending Stage 2 causal_graphs synthesis.'

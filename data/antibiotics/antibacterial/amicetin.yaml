@@ -1,7 +1,7 @@
 identifier: CHEBI:199652
 label: amicetin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An alpha-(1->4)-disaccharide cytosine peptidyl nucleoside antibiotic from
   Streptomyces vinaceusdrappus bearing p-aminobenzoic acid and alpha-methylserine
@@ -88,6 +88,15 @@ curation_history:
     subunit peptidyl-transferase center (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
     backed by Zhang et al. 2012 (DOI:10.1128/aem.07185-11, PMID:22267658) and DeBoer
     et al. 1953 (DOI:10.1021/ja01098a518).
+  llm_assisted: true
+- timestamp: '2026-11-09T15:15:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI cytosine-disaccharide nucleoside antibiotic record
+    (CHEBI:199652) with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature 50S ribosomal subunit peptidyl-transferase
+    center molecular_targets (DOI:10.1128/aem.07185-11, PMID:22267658) from PROPOSED
+    to REVIEWED (issue #1359).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION

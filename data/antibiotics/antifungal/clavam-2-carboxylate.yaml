@@ -1,7 +1,7 @@
 identifier: CHEBI:81027
 label: clavam-2-carboxylate
 antimicrobial_class: ANTIFUNGAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An antipodal (3R,5S)-7-oxo-4-oxa-1-azabicyclo[3.2.0]heptane-3-carboxylic
   acid beta-lactam clavam metabolite from Streptomyces clavuligerus with antifungal
@@ -99,4 +99,57 @@ curation_history:
   changes: Curated NATURAL_PRODUCT biosynthesis_origin from Jensen et al. 2000 (DOI:10.1128/aac.44.3.720-726.2000,
     PMID:10681345) and Mosher et al. 1999 (DOI:10.1128/aac.43.5.1215, PMID:10223939).
   llm_assisted: true
+- timestamp: '2026-11-09T15:05:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Populated OTHER (MICROBIAL_TARGET) mode_of_action, and primary-literature
+    fungal cellular metabolic process molecular_targets on clavam-2-carboxylate (PMID:10681345,
+    PMID:17317567, DOI:10.1039/C39790000282; issue #1360).'
+  llm_assisted: true
+- timestamp: '2026-11-09T15:15:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI (5S)-clavam antifungal metabolite record (CHEBI:81027)
+    with complete 4/4 chemical_structure, curated mode_of_action (OTHER, MICROBIAL_TARGET),
+    and primary-literature fungal cellular metabolic process molecular_targets (PMID:10681345,
+    PMID:17317567, DOI:10.1039/C39790000282) from PROPOSED to REVIEWED (issue #1360).'
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: OTHER
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: (5S)-Clavam natural product produced by Streptomyces
+  clavuligerus that lacks beta-lactamase inhibitory activity due to its (5S) ring-junction
+  stereochemistry and acts as an antifungal antimetabolite inhibiting fungal cellular
+  metabolic pathways (Brown et al. 1979, DOI:10.1039/C39790000282; Jensen et al. 2000,
+  DOI:10.1128/AAC.44.3.720-726.2000, PMID:10681345; Tahlan et al. 2007, DOI:10.1016/j.chembiol.2006.11.012,
+  PMID:17317567).'
+molecular_targets:
+- target_id: GO:0044237
+  target_label: fungal cellular metabolic process
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  experimental_context: Whole-cell antifungal bioassays and (5S)-clavam biosynthetic
+    pathway studies demonstrate that clavam-2-carboxylate inhibits fungal growth without
+    inhibiting bacterial beta-lactamases (Brown et al. 1979, DOI:10.1039/C39790000282;
+    Jensen et al. 2000, DOI:10.1128/AAC.44.3.720-726.2000, PMID:10681345; Tahlan et
+    al. 2007, DOI:10.1016/j.chembiol.2006.11.012, PMID:17317567).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2000-03
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: PMID:10681345
+    notes: Jensen et al. 2000 (Antimicrob Agents Chemother 44:720-726; DOI:10.1128/AAC.44.3.720-726.2000)
+      characterized the paralogous early biosynthetic steps for clavulanic acid and
+      the antifungal (5S)-clavam metabolites including clavam-2-carboxylate in Streptomyces
+      clavuligerus.
+  - reference: PMID:17317567
+    notes: Tahlan et al. 2007 (Chem Biol 14:131-142; DOI:10.1016/j.chembiol.2006.11.012)
+      established the late (5S)-clavam biosynthetic pathway and antifungal bioactivity
+      of clavam-2-carboxylate.
+  - reference: DOI:10.1039/C39790000282
+    notes: Brown et al. 1979 (J Chem Soc Chem Commun 1979:282-283) isolated clavam-2-carboxylate
+      from Streptomyces clavuligerus and reported its antifungal activity and absence
+      of beta-lactamase inhibition.
