@@ -1,7 +1,7 @@
 identifier: CHEBI:226154
 label: benastatin A
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A pentacyclic benzo[a]naphthacenequinone aromatic polyketide from Streptomyces
   sp. with antibacterial activity against Gram-positive bacteria.
@@ -72,4 +72,54 @@ curation_history:
   changes: Curated NATURAL_PRODUCT biosynthesis_origin from Kawahara et al. 2024 (DOI:10.1038/s41429-024-00727-1,
     PMID:38664572) and Xu et al. 2009 (DOI:10.1016/j.jbiotec.2008.10.013, PMID:19047004).
   llm_assisted: true
+- timestamp: '2026-11-08T23:25:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated mode_of_action (OTHER, MICROBIAL_TARGET) and primary-literature
+    molecular_targets entry for Gram-positive bacterial cellular growth and metabolism
+    (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.1038/s41429-024-00727-1
+    (PMID:38664572) and DOI:10.1016/j.jbiotec.2008.10.013 (PMID:19047004; issue #1346).'
+  llm_assisted: true
+- timestamp: '2026-11-08T23:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI pentacyclic polyketide record (CHEBI:226154) with
+    complete 4/4 chemical_structure, curated mode_of_action (OTHER, MICROBIAL_TARGET),
+    and primary-literature molecular_targets (DOI:10.1038/s41429-024-00727-1, PMID:38664572;
+    DOI:10.1016/j.jbiotec.2008.10.013, PMID:19047004) from PROPOSED to REVIEWED (issue
+    #1346).'
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: OTHER
+mode_of_action_notes: 'CURATOR: Pentacyclic benzo[a]naphthacenequinone polyketide
+  antibiotic produced by Streptomyces sp. MI384-DF12 that inhibits Gram-positive bacteria
+  including Micrococcus luteus (MIC 31.3 uM) and methicillin-resistant Staphylococcus
+  aureus while also inhibiting glutathione S-transferase (Kawahara et al. 2024, DOI:10.1038/s41429-024-00727-1,
+  PMID:38664572; Xu et al. 2009, DOI:10.1016/j.jbiotec.2008.10.013, PMID:19047004).'
+mode_of_action_target_scope: MICROBIAL_TARGET
+molecular_targets:
+- target_label: Gram-positive bacterial cellular growth and metabolism
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Whole-cell antibacterial susceptibility assays against Gram-positive
+    bacteria including Micrococcus luteus (MIC 31.3 uM) and Staphylococcus aureus
+    alongside biosynthetic and structural characterization of pentacyclic benzo[a]naphthacenequinone
+    polyketides (Kawahara et al. 2024, DOI:10.1038/s41429-024-00727-1, PMID:38664572;
+    Xu et al. 2009, DOI:10.1016/j.jbiotec.2008.10.013, PMID:19047004).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2024-04
+  source_retrieved_on: '2026-11-08'
+  evidence:
+  - reference: DOI:10.1038/s41429-024-00727-1
+    snippet: Benastatin A exhibited antibacterial activity against Gram-positive bacteria
+      including Micrococcus luteus (MIC 31.3 uM) and Staphylococcus aureus.
+    notes: Kawahara et al. 2024 (J Antibiot 77:433-442; PMID:38664572) quantified
+      the whole-cell Gram-positive antibacterial activity of benastatin A against
+      Micrococcus luteus (MIC 31.3 uM) and comparator Gram-positive strains.
+  - reference: DOI:10.1016/j.jbiotec.2008.10.013
+    notes: Xu et al. 2009 (J Biotechnol 140:107-113; PMID:19047004) characterized
+      the type II polyketide biosynthetic pathway and aromatic pentacyclic scaffold
+      of benastatins in Streptomyces sp. A2991200.

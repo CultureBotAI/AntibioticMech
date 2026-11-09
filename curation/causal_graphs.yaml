@@ -2,16 +2,11 @@ schema_version: 1
 task: causal_graphs_curation
 curation_action: CURATED_CAUSAL_GRAPHS
 retrieved_on: '2026-10-23'
-scope_note: 'Accounting-complete causal_graphs curation for all 145 REVIEWED AntibioticMech records. Every
+scope_note: 'Accounting-complete causal_graphs curation for all 159 REVIEWED AntibioticMech records. Every
   REVIEWED record is accounted for in exactly one of: existing_causal_graphs (15 pre-existing REVIEWED
-  graphs; total corpus pre-existing graphs = 16 including SEEDED daptomycin), records (56 Cohort A records
+  graphs; total corpus pre-existing graphs = 16 including SEEDED ofloxacin), records (56 Cohort A records
   with curated UniProtKB protein_examples on their proximal protein/complex target plus 19 Cohort B records
-  with a direct or measured non-protein molecular target), or held_records (55 held REVIEWED records:
-  19 whose proximal protein/complex/ribosomal target is held in curation/uniprot_protein_examples.yaml
-  without a single verified experimental-strain UniProtKB accession and 36 whose cited primary literature
-  supports only a coarse or downstream affected component/process without a molecularly resolved proximal
-  step, or that were promoted to REVIEWED in Stage 5 with non-protein targets pending Stage 3 uniprot_protein_examples
-  held_targets synchronization).'
+  with a direct or measured non-protein molecular target), or held_records (69 held REVIEWED records).'
 existing_causal_graphs:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -6960,3 +6955,185 @@ held_records:
   reason: 'Primary-literature target in DOI:10.7164/antibiotics.30.11 (PMID:557042) and DOI:10.1021/acschembio.8b01076
     (PMID:30698415) is a downstream biological process (target_type=BIOLOGICAL_PROCESS: fungal cell-wall
     chitin biosynthesis) in Pyricularia oryzae without a single resolved Swiss-Prot protein target.'
+- identifier: CHEBI:29655
+  label: neocarzinostatin
+  path: data/antibiotics/antibacterial/neocarzinostatin.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial duplex DNA (NUCLEIC_ACID, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1016/j.chembiol.2004.12.013
+  - PMID:15797213
+  - DOI:10.7164/antibiotics.28.229
+  - PMID:123897
+  reason: 'Primary-literature target in DOI:10.1016/j.chembiol.2004.12.013 (PMID:15797213) and DOI:10.7164/antibiotics.28.229
+    (PMID:123897) is bacterial duplex DNA (CHEBI:16991; target_type=NUCLEIC_ACID, DIRECT_BINDING_TARGET),
+    a non-protein nucleic acid target without GENE_OR_PROTEIN nodes; held in held_records after Cycle
+    7 Stage 5 REVIEWED promotion (issue #1345) pending Stage 2 non-protein causal graph expansion.'
+- identifier: CHEBI:67576
+  label: streptothricin E
+  path: data/antibiotics/antibacterial/streptothricin-e.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial 30S ribosomal subunit (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1248/cpb.38.2296
+  - PMID:2177682
+  - DOI:10.1038/nchembio.1040
+  - PMID:22820420
+  reason: 'Primary-literature target in DOI:10.1248/cpb.38.2296 (PMID:2177682) and DOI:10.1038/nchembio.1040
+    (PMID:22820420) is the bacterial 30S ribosomal subunit (target_type=RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET),
+    a non-protein ribosomal subunit target without GENE_OR_PROTEIN nodes; held in held_records after Cycle
+    7 Stage 5 REVIEWED promotion (issue #1345) pending Stage 2 non-protein causal graph expansion.'
+- identifier: CHEBI:42265
+  label: epoxomicin
+  path: data/antibiotics/antiprotozoal/epoxomicin.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: Plasmodium falciparum 20S proteasome catalytic beta subunits (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1128/aac.00088-09
+  - PMID:19651911
+  - DOI:10.1021/cb400699p
+  - PMID:24168704
+  reason: Primary-literature target in DOI:10.1128/aac.00088-09 (PMID:19651911) and DOI:10.1021/cb400699p
+    (PMID:24168704) is the multi-subunit Plasmodium falciparum 20S proteasome catalytic beta2/beta5 core
+    complex (target_type=PROTEIN_COMPLEX, held in curation/uniprot_protein_examples.yaml held_targets
+    without a single reviewed Swiss-Prot subunit accession).
+- identifier: CHEBI:226154
+  label: benastatin A
+  path: data/antibiotics/antibacterial/benastatin-a.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: Gram-positive bacterial cellular growth and metabolism (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - DOI:10.1038/s41429-024-00727-1
+  - PMID:38664572
+  - DOI:10.1016/j.jbiotec.2008.10.013
+  - PMID:19047004
+  reason: 'Primary-literature target in DOI:10.1038/s41429-024-00727-1 (PMID:38664572) and DOI:10.1016/j.jbiotec.2008.10.013
+    (PMID:19047004) is a downstream biological process (target_type=BIOLOGICAL_PROCESS: Gram-positive
+    bacterial cellular growth and metabolism) without a single resolved bacterial protein target.'
+- identifier: CHEBI:200324
+  label: benastatin B
+  path: data/antibiotics/antibacterial/benastatin-b.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: Gram-positive bacterial cellular growth and metabolism (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - DOI:10.1038/s41429-024-00727-1
+  - PMID:38664572
+  - DOI:10.1016/j.jbiotec.2008.10.013
+  - PMID:19047004
+  reason: 'Primary-literature target in DOI:10.1038/s41429-024-00727-1 (PMID:38664572) and DOI:10.1016/j.jbiotec.2008.10.013
+    (PMID:19047004) is a downstream biological process (target_type=BIOLOGICAL_PROCESS: Gram-positive
+    bacterial cellular growth and metabolism) without a single resolved bacterial protein target.'
+- identifier: CHEBI:204430
+  label: tetarimycin A
+  path: data/antibiotics/antibacterial/tetarimycin-a.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: Gram-positive bacterial cellular growth and viability (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - DOI:10.1021/ja3093828
+  - PMID:23157252
+  reason: 'Primary-literature target in DOI:10.1021/ja3093828 (PMID:23157252) is a downstream biological
+    process (target_type=BIOLOGICAL_PROCESS: Gram-positive bacterial cellular growth and viability) without
+    a single resolved bacterial protein target.'
+- identifier: CHEBI:215258
+  label: 9-methylstreptimidone
+  path: data/antibiotics/antifungal/9-methylstreptimidone.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: eukaryotic 80S ribosomal translation (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - DOI:10.1021/ol400224n
+  - PMID:23438151
+  - DOI:10.1016/j.pestbp.2025.106683
+  - PMID:41162067
+  reason: 'Primary-literature target in DOI:10.1021/ol400224n (PMID:23438151) and DOI:10.1016/j.pestbp.2025.106683
+    (PMID:41162067) is a downstream biological process (target_type=BIOLOGICAL_PROCESS: eukaryotic 80S
+    ribosomal translation) without a single resolved fungal protein accession.'
+- identifier: CHEBI:198890
+  label: 7-deoxypactamycin
+  path: data/antibiotics/antiprotozoal/7-deoxypactamycin.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial 30S ribosomal subunit (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1016/j.chembiol.2011.01.016
+  - PMID:21513878
+  - DOI:10.1038/ja.2007.63
+  - PMID:17827660
+  reason: 'Primary-literature target in DOI:10.1016/j.chembiol.2011.01.016 (PMID:21513878) and DOI:10.1038/ja.2007.63
+    (PMID:17827660) is the bacterial 30S ribosomal subunit (target_type=RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET),
+    a non-protein ribosomal subunit target without GENE_OR_PROTEIN nodes; held in held_records after Cycle
+    7 Stage 5 REVIEWED promotion (issue #1346) pending Stage 2 non-protein causal graph expansion.'
+- identifier: CHEBI:9329
+  label: sulfadoxine
+  path: data/antibiotics/antibacterial/sulfadoxine.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial dihydropteroate synthase (FolP / DHPS) (PROTEIN, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1128/AAC.15.2.195
+  - PMID:378102
+  - DOI:10.1126/science.1214641
+  - PMID:22383845
+  reason: 'Primary-literature bacterial dihydropteroate synthase target (GO:0004156) carries reviewed
+    Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_examples curated in Cycle 7 Stage 5 (issue #1347);
+    held in held_records pending next Stage 2 expand_mechanisms causal_graphs curation.'
+- identifier: CHEBI:9334
+  label: sulfasalazine
+  path: data/antibiotics/antibacterial/sulfasalazine.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial dihydropteroate synthase (FolP / DHPS) (PROTEIN, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1128/AAC.15.2.195
+  - PMID:378102
+  - DOI:10.1126/science.1214641
+  - PMID:22383845
+  reason: 'Primary-literature bacterial dihydropteroate synthase target (GO:0004156) carries reviewed
+    Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_examples curated in Cycle 7 Stage 5 (issue #1347);
+    held in held_records pending next Stage 2 expand_mechanisms causal_graphs curation.'
+- identifier: CHEBI:102484
+  label: sulfisoxazole
+  path: data/antibiotics/antibacterial/sulfisoxazole.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial dihydropteroate synthase (FolP / DHPS) (PROTEIN, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1128/AAC.15.2.195
+  - PMID:378102
+  - DOI:10.1126/science.1214641
+  - PMID:22383845
+  reason: 'Primary-literature bacterial dihydropteroate synthase target (GO:0004156) carries reviewed
+    Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_examples curated in Cycle 7 Stage 5 (issue #1347);
+    held in held_records pending next Stage 2 expand_mechanisms causal_graphs curation.'
+- identifier: CHEBI:4325
+  label: dapsone
+  path: data/antibiotics/antimycobacterial/dapsone.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial dihydropteroate synthase (FolP / DHPS) (PROTEIN, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1128/AAC.15.2.195
+  - PMID:378102
+  - DOI:10.1126/science.1214641
+  - PMID:22383845
+  reason: 'Primary-literature bacterial dihydropteroate synthase target (GO:0004156) carries reviewed
+    Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_examples curated in Cycle 7 Stage 5 (issue #1347);
+    held in held_records pending next Stage 2 expand_mechanisms causal_graphs curation.'
+- identifier: CHEBI:131726
+  label: brodimoprim
+  path: data/antibiotics/antibacterial/brodimoprim.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial dihydrofolate reductase (FolA / DHFR) (PROTEIN, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1016/j.bcp.2005.10.052
+  - PMID:16359642
+  - PMID:391962
+  reason: 'Primary-literature bacterial dihydrofolate reductase target (GO:0004146) carries reviewed Escherichia
+    coli K-12 FolA (UniProtKB:P0ABQ4) protein_examples curated in Cycle 7 Stage 5 (issue #1347); held
+    in held_records pending next Stage 2 expand_mechanisms causal_graphs curation.'
+- identifier: CHEBI:135420
+  label: tetroxoprim
+  path: data/antibiotics/antibacterial/tetroxoprim.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial dihydrofolate reductase (FolA / DHFR) (PROTEIN, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1016/j.bcp.2005.10.052
+  - PMID:16359642
+  - PMID:391962
+  reason: 'Primary-literature bacterial dihydrofolate reductase target (GO:0004146) carries reviewed Escherichia
+    coli K-12 FolA (UniProtKB:P0ABQ4) protein_examples curated in Cycle 7 Stage 5 (issue #1347); held
+    in held_records pending next Stage 2 expand_mechanisms causal_graphs curation.'

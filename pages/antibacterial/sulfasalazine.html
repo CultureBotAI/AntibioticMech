@@ -36,13 +36,10 @@
   <code class="curie">CHEBI:9334</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_9334">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>Sulfasalazine is a derivative of the early sulfonamide sulfapyridine (salicylazosulfapyridine). It was developed to increase water solubility and is taken orally for ulcerative colitis.  <span class="meta">— PMID:22555</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000282">sulfonamide antibiotic</a><code class="curie">ARO:3000282</code></p>
@@ -106,10 +103,30 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000744">ARO:3000744</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000698 (sulfasalazine); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>bacterial dihydropteroate synthase (FolP / DHPS) <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta"><code class="curie">GO:0004156</code></p><p class="meta">Purified Escherichia coli dihydropteroate synthase (FolP / DHPS) cell-free enzyme inhibition (I50) and PABA competitive kinetics alongside structural and biochemical characterization of pterin-sulfonamide dead-end adduct formation in bacterial DHPS for sulfasalazine and comparator para-aminobenzenesulfonamide/sulfone folate inhibitors (Roland et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845). Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2012-03 (retrieved 2026-11-08).</p>
+<p><em>Bacteria</em> <code class="curie">NCBITaxon:2</code></p><div class="table-scroll" role="region" aria-label="bacterial dihydropteroate synthase (FolP / DHPS) organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Dihydropteroate synthase <a href="https://www.uniprot.org/uniprotkb/P0AC13"><code class="curie">UniProtKB:P0AC13</code></a><br><span class="meta">Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfasalazine in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).</span></td>
+    <td>folP</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1128/AAC.15.2.195">DOI:10.1128/AAC.15.2.195</a></span> — "Roland et al. quantified the cell-free inhibition (I50) of purified Escherichia coli dihydropteroate synthase by 27 sulfonamides and dapsone and correlated competitive DHPS enzyme inhibition with whole-cell antibacterial MICs." <span class="meta">(Roland et al. 1979 (Antimicrob Agents Chemother 15:195-197; PMID:378102) measured direct inhibition of purified Escherichia coli dihydropteroate synthase (FolP / DHPS) by sulfasalazine and comparator folate-pathway inhibitors.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1126/science.1214641">DOI:10.1126/science.1214641</a></span> <span class="meta">(Yun et al. 2012 (Science 335:1110-1114; PMID:22383845) resolved the structural and catalytic mechanism of sulfonamide/sulfone binding at the PABA site of bacterial dihydropteroate synthase (DHPS / FolP), demonstrating pterin-sulfa adduct catalysis and resistance loop mutations.)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Clinical status</dt><dd>APPROVED</dd></dl>
+<dt>Mode of action</dt><dd>FOLATE_PATHWAY_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Synthetic azo-linked sulfapyridine para-aminobenzenesulfonamide antimicrobial (sulfasalazine) that acts as a competitive structural analog of para-aminobenzoic acid (PABA) at the active site of bacterial dihydropteroate synthase (FolP / DHPS, EC 2.5.1.15), forming dead-end pterin-sulfa adducts and blocking de novo dihydropteroate and tetrahydrofolate biosynthesis (Roland et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845).</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
 
@@ -224,6 +241,21 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_MOLECULAR_TARGETS</span>
+    <span class="meta">2026-11-08 · antigravity · LLM-assisted</span>
+    <p>Curated biosynthesis_origin (SYNTHETIC), CURATOR mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial dihydropteroate synthase (FolP / DHPS) (GO:0004156, PROTEIN, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.15.2.195 (PMID:378102) and DOI:10.1126/science.1214641 (PMID:22383845; issue #1347).</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_UNIPROT_PROTEIN_EXAMPLES</span>
+    <span class="meta">2026-11-08 · antigravity · LLM-assisted</span>
+    <p>Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0AC13, folP) to the primary-literature bacterial dihydropteroate synthase target on sulfasalazine (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).</p>
+  </li>
+  <li>
+    <span class="pill">PROMOTED_TO_REVIEWED</span>
+    <span class="meta">2026-11-08 · antigravity · LLM-assisted</span>
+    <p>Promoted exact ChEBI folate-pathway inhibitor record (CHEBI:9334) with complete 4/4 chemical_structure, curated mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AC13; DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845) from SEEDED to REVIEWED (issue #1347).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -244,7 +276,7 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>224369a9340b</code>, 3105 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>03fdb6772528</code>, 3105 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>
