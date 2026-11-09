@@ -1,0 +1,76 @@
+identifier: CHEBI:199652
+label: amicetin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An alpha-(1->4)-disaccharide cytosine peptidyl nucleoside antibiotic from
+  Streptomyces vinaceusdrappus bearing p-aminobenzoic acid and alpha-methylserine
+  moieties that inhibits bacterial protein synthesis.
+definition_source: DOI:10.1128/aem.07185-11
+synonyms:
+- synonym_text: Amicetin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: NSC-5340
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:22587
+chemical_structure:
+  smiles: C[C@H]1O[C@H](CC[C@@H]1O[C@H]1O[C@H](C)[C@H]([C@H](O)[C@H]1O)N(C)C)N1C=CC(NC(=O)C2=CC=C(NC(=O)[C@@](C)(N)CO)C=C2)=NC1=O
+  standard_inchi: InChI=1S/C29H42N6O9/c1-15-19(44-26-24(38)23(37)22(34(4)5)16(2)43-26)10-11-21(42-15)35-13-12-20(33-28(35)41)32-25(39)17-6-8-18(9-7-17)31-27(40)29(3,30)14-36/h6-9,12-13,15-16,19,21-24,26,36-38H,10-11,14,30H2,1-5H3,(H,31,40)(H,32,33,39,41)/t15-,16-,19+,21-,22-,23+,24-,26-,29+/m1/s1
+  standard_inchi_key: HDNVYHWHCVTDIV-ZENIWSRCSA-N
+  molecular_formula: C29H42N6O9
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000953/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 618.688
+  monoisotopic_mass: 618.3013
+xrefs:
+- pubchem.compound:28675
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aem.07185-11#amicetin
+  source_label: amicetin
+  minted_identifier: antibioticmech:curator-54ba6c201f
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:22587
+  evidence:
+  - reference: DOI:10.1128/aem.07185-11
+    snippet: Amicetin is a disaccharide-containing cytosine peptidyl nucleoside antibiotic
+      produced by Streptomyces vinaceusdrappus NRRL 2363 that exhibits antibacterial
+      activity, particularly against Mycobacterium tuberculosis and Gram-positive
+      bacteria, and antiviral activity by inhibiting ribosomal peptidyl transferase.
+    notes: MIBiG 4.0.1 entry BGC0000953 (Streptomyces vinaceusdrappus NRRL 2363);
+      Zhang et al. 2012 (DOI:10.1128/aem.07185-11, PMID:22267658) and DeBoer et al.
+      1953 (J Am Chem Soc 75:499-500; DOI:10.1021/ja01098a518) characterize the biosynthesis,
+      structure, and antimycobacterial/antibacterial translation-inhibitory activity
+      of amicetin. ChEBI CHEBI:199652 and PubChem CID 28675 supply the stereo-complete
+      SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:67376
+  taxon_label: Streptomyces vinaceusdrappus
+  biosynthetic_gene_cluster: BGC0000953
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'amicetin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:22267658
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

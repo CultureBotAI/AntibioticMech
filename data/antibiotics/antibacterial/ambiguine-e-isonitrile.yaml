@@ -1,0 +1,72 @@
+identifier: antibioticmech:curator-ada4915062
+label: ambiguine E isonitrile
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A chlorinated epoxy-hydroxylated pentacyclic hapalindole-type indole alkaloid
+  isonitrile from Fischerella ambigua with potent antibacterial and antifungal activity.
+definition_source: DOI:10.1021/np800751j
+synonyms:
+- synonym_text: ambiguine E
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: C[C@@]1([C@@H](C[C@H]2[C@@]3([C@@]1([C@@H]4[C@@H](O4)C(C5=C3C6=C(C2(C)C)C=CC=C6N5)(C)C)[N+]#[C-])O)Cl)C=C
+  standard_inchi: InChI=1S/C26H29ClN2O2/c1-8-24(6)16(27)12-15-22(2,3)13-10-9-11-14-17(13)18-19(29-14)23(4,5)20-21(31-20)26(24,28-7)25(15,18)30/h8-11,15-16,20-21,29-30H,1,12H2,2-6H3/t15-,16-,20-,21+,24+,25-,26+/m1/s1
+  standard_inchi_key: LYCKQMCCONKVPQ-CXGOSFSJSA-N
+  molecular_formula: C26H29ClN2O2
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001126/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 437.0
+  monoisotopic_mass: 436.1918
+xrefs:
+- pubchem.compound:21610116
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/np800751j#ambiguine-e-isonitrile
+  source_label: ambiguine E isonitrile
+  minted_identifier: antibioticmech:curator-ada4915062
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1021/np800751j
+    snippet: Ambiguine E isonitrile isolated from Fischerella ambigua UTEX 1903 exhibited
+      potent antibacterial activity against Mycobacterium smegmatis (MIC 1.4 uM),
+      Staphylococcus aureus (MIC 1.5 uM), Bacillus anthracis (MIC 3.6 uM), and Mycobacterium
+      tuberculosis H37Rv (MIC 21.0 uM), as well as antifungal activity against Candida
+      albicans (MIC 0.9 uM).
+    notes: MIBiG 4.0.1 entry BGC0001126 (Fischerella ambigua UTEX 1903); Mo et al.
+      2009 (DOI:10.1021/np800751j, PMID:19371071) and Hillwig et al. 2014 (DOI:10.1021/cb400681n,
+      PMID:24180436) establish the amb biosynthetic gene cluster and antibacterial
+      and antifungal MICs of ambiguine E isonitrile. PubChem CID 21610116 supplies
+      the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:230521
+  taxon_label: Fischerella ambigua
+  strain: UTEX 1903
+  biosynthetic_gene_cluster: BGC0001126
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'ambiguine E isonitrile' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:24180436
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

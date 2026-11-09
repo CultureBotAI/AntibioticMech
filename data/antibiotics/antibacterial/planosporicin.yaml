@@ -1,0 +1,73 @@
+identifier: CHEBI:226796
+label: planosporicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 24-residue pentacyclic class I lantibiotic from Planomonospora alba
+  containing one (2S,3S,6R)-3-methyllanthionine and four lanthionine bridges that
+  inhibits Gram-positive bacterial cell wall peptidoglycan biosynthesis.
+definition_source: DOI:10.1128/jb.02291-12
+synonyms:
+- synonym_text: Planosporicin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: antibiotic 97518
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@H](C)[C@H](N)C(=O)N\C(=C/C)C(=O)N[C@H]1CSC[C@@H]2NC(=O)[C@@H](NC(=O)[C@@H]3CSCC[C@H](NC(=O)[C@H](CSC[C@@H]4NC(=O)CNC(=O)[C@H](CSC[C@@H]5NC(=O)[C@H](CC6=CN=CN6)NC(=O)[C@H](CSC[C@H](NC5=O)C(=O)N5CCC[C@H]5C(=O)NCC(O)=O)NC4=O)NC(=O)CNC(=O)CNC(=O)CNC(=O)[C@H](CCC(O)=O)NC2=O)NC(=O)[C@H](CC2=CNC4=C2C=CC=C4)NC(=O)C(=C)NC(=O)[C@@H](NC1=O)C(C)C)C(=O)N3)[C@@H](C)O
+  standard_inchi: InChI=1S/C90H125N27O28S5/c1-8-41(5)69(91)87(142)103-47(9-2)75(130)108-60-37-149-36-59-81(136)104-49(16-17-67(123)124)73(128)96-26-64(120)94-25-63(119)95-27-65(121)101-53-31-147-34-58-83(138)114-61(90(145)117-19-12-15-62(117)86(141)98-29-68(125)126)38-150-35-57(82(137)107-52(78(133)111-58)22-45-24-92-39-99-45)112-79(134)54(102-66(122)28-97-74(53)129)32-148-33-56(80(135)105-50-18-20-146-30-55(109-76(50)131)85(140)116-71(43(7)118)89(144)113-59)110-77(132)51(21-44-23-93-48-14-11-10-13-46(44)48)106-72(127)42(6)100-88(143)70(40(3)4)115-84(60)139/h9-11,13-14,23-24,39-41,43,49-62,69-71,93,118H,6,8,12,15-22,25-38,91H2,1-5,7H3,(H,92,99)(H,94,120)(H,95,119)(H,96,128)(H,97,129)(H,98,141)(H,100,143)(H,101,121)(H,102,122)(H,103,142)(H,104,136)(H,105,135)(H,106,127)(H,107,137)(H,108,130)(H,109,131)(H,110,132)(H,111,133)(H,112,134)(H,113,144)(H,114,138)(H,115,139)(H,116,140)(H,123,124)(H,125,126)/b47-9-/t41-,43+,49-,50-,51-,52-,53-,54-,55-,56-,57-,58-,59-,60-,61-,62-,69-,70-,71-/m0/s1
+  standard_inchi_key: LEODRKCPDOGTPF-BGZBNVMXSA-N
+  molecular_formula: C90H125N27O28S5
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000544/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 2193.486
+  monoisotopic_mass: 2191.7791
+xrefs:
+- pubchem.compound:139586698
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/jb.02291-12#planosporicin
+  source_label: planosporicin
+  minted_identifier: antibioticmech:curator-4c9a84c80a
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/jb.02291-12
+    snippet: Planosporicin (antibiotic 97518) is a 24-amino-acid pentacyclic class
+      I lantibiotic produced by the rare actinomycete Planomonospora alba that inhibits
+      cell wall peptidoglycan synthesis in Gram-positive pathogens including Staphylococcus
+      aureus, Streptococcus pneumoniae, and Enterococcus spp.
+    notes: MIBiG 4.0.1 entry BGC0000544 (Planomonospora alba); Sherwood et al. 2013
+      (DOI:10.1128/jb.02291-12, PMID:23475977), Castiglione et al. 2007 (DOI:10.1021/bi700131x,
+      PMID:17469849), and Maffioli et al. 2009 (DOI:10.1021/np800794y, PMID:19301921)
+      establish the structure, biosynthesis, and cell-wall-inhibitory Gram-positive
+      antibacterial activity of planosporicin. ChEBI CHEBI:226796 and PubChem CID
+      139586698 supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:161354
+  taxon_label: Planomonospora alba
+  biosynthetic_gene_cluster: BGC0000544
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'planosporicin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:23475977
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

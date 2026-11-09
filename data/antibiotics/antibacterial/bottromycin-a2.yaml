@@ -1,0 +1,94 @@
+identifier: CHEBI:202006
+label: bottromycin A2
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A ribosomally synthesized and post-translationally modified macrocyclic
+  amidine-thiazole peptide antibiotic from Streptomyces bottropensis that inhibits
+  bacterial 50S ribosomal A-site translation with potent activity against MRSA and
+  VRE.
+definition_source: DOI:10.1002/anie.200804138
+synonyms:
+- synonym_text: Bottromycin A2
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12[C@H](C)CCN1C(=O)CN\C(=N/[C@H](C(=O)N[C@@H]([C@@H](C)C1=CC=CC=C1)C(=O)N[C@H](CC(=O)OC)C1=NC=CS1)C(C)(C)C)[C@@H](NC(=O)[C@@H](NC2=O)C(C)C)C(C)(C)C'
+  standard_inchi: InChI=1S/C42H62N8O7S/c1-23(2)30-36(53)49-33(41(5,6)7)35(44-22-28(51)50-19-17-24(3)32(50)38(55)46-30)48-34(42(8,9)10)39(56)47-31(25(4)26-15-13-12-14-16-26)37(54)45-27(21-29(52)57-11)40-43-18-20-58-40/h12-16,18,20,23-25,27,30-34H,17,19,21-22H2,1-11H3,(H,44,48)(H,45,54)(H,46,55)(H,47,56)(H,49,53)/t24-,25+,27-,30+,31+,32+,33-,34-/m1/s1
+  standard_inchi_key: KSIZLOPUXFSFNR-XZNJZDOZSA-N
+  molecular_formula: C42H62N8O7S
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000468/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 823.074
+  monoisotopic_mass: 822.4462
+xrefs:
+- pubchem.compound:25215756
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1002/anie.200804138#bottromycin-a2
+  source_label: bottromycin A2
+  minted_identifier: antibioticmech:curator-c83123aec7
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1002/anie.200804138
+    snippet: Bottromycin A2, a macrocyclic amidine- and thiazole-containing peptide
+      antibiotic produced by Streptomyces bottropensis, exhibits potent antibacterial
+      activity against methicillin-resistant Staphylococcus aureus (MRSA, MIC 1 ug/mL)
+      and vancomycin-resistant enterococci (VRE, MIC 0.5 ug/mL) by blocking aminoacyl-tRNA
+      binding to the ribosomal A site.
+    notes: MIBiG 4.0.1 entries BGC0000468 and BGC0000469 (Streptomyces bottropensis
+      DSM 40262 and Streptomyces sp. BC16019); Shimamura et al. 2009 (DOI:10.1002/anie.200804138,
+      PMID:19115340), Gouda et al. 2012 (DOI:10.1248/cpb.60.169, PMID:22293474), and
+      Huo et al. 2012 (DOI:10.1016/j.chembiol.2012.08.013, PMID:23021914) establish
+      the total synthesis, revised stereostructure, RiPP biosynthesis, and potent
+      anti-MRSA/VRE antibacterial activity of bottromycin A2. ChEBI CHEBI:202006 and
+      PubChem CID 25215756 supply the stereo-complete SMILES, Standard InChI, and
+      InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:42235
+  taxon_label: Streptomyces bottropensis
+  strain: DSM40262
+  biosynthetic_gene_cluster: BGC0000468
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  reviewed: true
+  note: MIBiG active entry; compound 'bottromycin A2' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:19115340
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+- taxon_id: NCBITaxon:1109705
+  taxon_label: Streptomyces sp.
+  strain: BC16019
+  biosynthetic_gene_cluster: BGC0000469
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '6'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
+  reviewed: true
+  note: MIBiG active entry; compound 'bottromycin A2' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:23021914
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:07:28Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

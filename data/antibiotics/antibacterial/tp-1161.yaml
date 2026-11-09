@@ -1,0 +1,71 @@
+identifier: CHEBI:217619
+label: TP-1161
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 26-membered trisubstituted-pyridine macrocyclic thiopeptide antibiotic
+  bearing a C-terminal aminoacetone moiety from marine Nocardiopsis sp. TFS65-07 with
+  potent antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.1128/aem.00741-10
+synonyms:
+- synonym_text: antibiotic TP-1161
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C\C=C1\NC(=O)[C@@H](NC(=O)C2=CSC(=N2)C2=C(N=C(C=C2)C(=O)NC(=C)C(=O)NC(=C)C(=O)NCC(C)=O)C2=COC(=N2)C(=C)NC(=O)C(=C)NC(=O)C2=CSC(=N2)[C@H](C)NC(=O)C2=CSC(CNC(=O)C3=C(C)OC1=N3)=N2)[C@@H](C)O
+  standard_inchi: InChI=1S/C50H47N15O13S3/c1-10-28-48-65-36(26(9)78-48)45(75)52-14-34-58-31(16-79-34)42(72)57-24(7)49-62-32(17-80-49)43(73)55-22(5)40(70)56-23(6)47-61-30(15-77-47)37-27(50-63-33(18-81-50)44(74)64-35(25(8)67)46(76)60-28)11-12-29(59-37)41(71)54-21(4)39(69)53-20(3)38(68)51-13-19(2)66/h10-12,15-18,24-25,35,67H,3-6,13-14H2,1-2,7-9H3,(H,51,68)(H,52,75)(H,53,69)(H,54,71)(H,55,73)(H,56,70)(H,57,72)(H,60,76)(H,64,74)/b28-10+/t24-,25+,35-/m0/s1
+  standard_inchi_key: YGUKQAWJFUHKHO-SLBZEGPGSA-N
+  molecular_formula: C50H47N15O13S3
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000615/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1162.219
+  monoisotopic_mass: 1161.264
+xrefs:
+- pubchem.compound:71580188
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aem.00741-10#tp-1161
+  source_label: TP-1161
+  minted_identifier: antibioticmech:curator-02a58ae914
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/aem.00741-10
+    snippet: TP-1161, a new macrocyclic thiopeptide antibiotic bearing an unusual
+      aminoacetone moiety isolated from the marine sediment-derived actinomycete Nocardiopsis
+      sp. strain TFS65-07, exhibited potent in vitro antibacterial activity against
+      Gram-positive bacteria including Staphylococcus aureus, Staphylococcus haemolyticus,
+      Streptococcus pneumoniae, and Enterococcus faecalis with MICs ranging from 0.25
+      to 4 ug/mL.
+    notes: MIBiG 4.0.1 entry BGC0000615 (Nocardiopsis sp. TFS65-07); Engelhardt et
+      al. 2010 (DOI:10.1128/aem.00741-10, PMID:20562278 and DOI:10.1021/np1005617,
+      PMID:20929206) report the isolation, structure, biosynthetic gene cluster, and
+      Gram-positive antibacterial MICs of TP-1161. ChEBI CHEBI:217619 and PubChem
+      CID 71580188 supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:756929
+  taxon_label: Nocardiopsis sp.
+  strain: TFS65-07
+  biosynthetic_gene_cluster: BGC0000615
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'TP-1161' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:20562278
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,77 @@
+identifier: CHEBI:198461
+label: ambiguine K isonitrile
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A chlorinated pentacyclic hapalindole-type indole alkaloid isonitrile
+  from Fischerella ambigua with potent antimycobacterial, antibacterial, and antifungal
+  activity.
+definition_source: DOI:10.1021/np800751j
+synonyms:
+- synonym_text: Ambiguine K isonitrile
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: ambiguine K
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CC1(C)[C@H]2C[C@@H](Cl)[C@](C)(C=C)[C@]3(C=CC(C)(C)C4=C(C5=C1C=CC=C5N4)[C@]23O)[N+]#[C-]
+  standard_inchi: InChI=1S/C26H29ClN2O/c1-8-24(6)18(27)14-17-23(4,5)15-10-9-11-16-19(15)20-21(29-16)22(2,3)12-13-25(24,28-7)26(17,20)30/h8-13,17-18,29-30H,1,14H2,2-6H3/t17-,18-,24+,25+,26-/m1/s1
+  standard_inchi_key: RSUTYZFOFIAHFY-OWINPNOJSA-N
+  molecular_formula: C26H29ClN2O
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001126/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 420.984
+  monoisotopic_mass: 420.1968
+xrefs:
+- pubchem.compound:44139368
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/np800751j#ambiguine-k-isonitrile
+  source_label: ambiguine K isonitrile
+  minted_identifier: antibioticmech:curator-549788649c
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1021/np800751j
+    snippet: Ambiguine K isonitrile isolated from the cultured cyanobacterium Fischerella
+      ambigua UTEX 1903 showed potent antibacterial activity against Mycobacterium
+      tuberculosis H37Rv (MIC 6.6 uM), Staphylococcus aureus (MIC 4.6 uM), and Bacillus
+      anthracis (MIC 7.4 uM), and antifungal activity against Candida albicans (MIC
+      0.9 uM).
+    notes: MIBiG 4.0.1 entry BGC0001126 (Fischerella ambigua UTEX 1903); Mo et al.
+      2009 (DOI:10.1021/np800751j, PMID:19371071) and Hillwig et al. 2014 (DOI:10.1021/cb400681n,
+      PMID:24180436) establish the X-ray crystal structure, amb biosynthetic gene
+      cluster, and potent antimycobacterial, antibacterial, and antifungal MICs of
+      ambiguine K isonitrile. ChEBI CHEBI:198461 and PubChem CID 44139368 supply the
+      stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:230521
+  taxon_label: Fischerella ambigua
+  strain: UTEX 1903
+  biosynthetic_gene_cluster: BGC0001126
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'ambiguine K isonitrile' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:24180436
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,75 @@
+identifier: CHEBI:211622
+label: ambiguine L isonitrile
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A dechloro pentacyclic hapalindole-type indole alkaloid isonitrile from
+  Fischerella ambigua with antibacterial and antifungal activity.
+definition_source: DOI:10.1021/np800751j
+synonyms:
+- synonym_text: Ambiguine L isonitrile
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: ambiguine L
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CC1(C)[C@H]2CC[C@](C)(C=C)[C@]3(C=CC(C)(C)C4=C(C5=C1C=CC=C5N4)[C@]23O)[N+]#[C-]
+  standard_inchi: InChI=1S/C26H30N2O/c1-8-24(6)13-12-18-23(4,5)16-10-9-11-17-19(16)20-21(28-17)22(2,3)14-15-25(24,27-7)26(18,20)29/h8-11,14-15,18,28-29H,1,12-13H2,2-6H3/t18-,24+,25+,26-/m1/s1
+  standard_inchi_key: GCEYOMBDTZKZAO-PKNULQPYSA-N
+  molecular_formula: C26H30N2O
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001126/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 386.539
+  monoisotopic_mass: 386.2358
+xrefs:
+- pubchem.compound:44139241
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/np800751j#ambiguine-l-isonitrile
+  source_label: ambiguine L isonitrile
+  minted_identifier: antibioticmech:curator-30e30d6f4d
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1021/np800751j
+    snippet: Ambiguine L isonitrile isolated from the cyanobacterium Fischerella ambigua
+      UTEX 1903 exhibited antibacterial activity against Staphylococcus aureus (MIC
+      10.5 uM), Mycobacterium tuberculosis H37Rv (MIC 11.7 uM), and Bacillus anthracis
+      (MIC 16.2 uM), and potent antifungal activity against Candida albicans (MIC
+      1.0 uM).
+    notes: MIBiG 4.0.1 entry BGC0001126 (Fischerella ambigua UTEX 1903); Mo et al.
+      2009 (DOI:10.1021/np800751j, PMID:19371071) and Hillwig et al. 2014 (DOI:10.1021/cb400681n,
+      PMID:24180436) establish the amb biosynthetic gene cluster and antibacterial
+      and antifungal MICs of ambiguine L isonitrile. ChEBI CHEBI:211622 and PubChem
+      CID 44139241 supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:230521
+  taxon_label: Fischerella ambigua
+  strain: UTEX 1903
+  biosynthetic_gene_cluster: BGC0001126
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'ambiguine L isonitrile' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:24180436
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,68 @@
+identifier: CHEBI:224278
+label: xenortide D
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A linear C-terminally tryptamide-capped N-methylvalyl-N-methylphenylalanyl
+  nonribosomal dipeptide from Xenorhabdus nematophila with antiprotozoal activity
+  against Plasmodium falciparum and Trypanosoma brucei.
+definition_source: DOI:10.1021/np500390b
+synonyms:
+- synonym_text: Xenortide D
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35717
+chemical_structure:
+  smiles: CN[C@@H](C(C)C)C(=O)N(C)[C@@H](CC1=CC=CC=C1)C(=O)NCCC1=CNC2=CC=CC=C12
+  standard_inchi: InChI=1S/C26H34N4O2/c1-18(2)24(27-3)26(32)30(4)23(16-19-10-6-5-7-11-19)25(31)28-15-14-20-17-29-22-13-9-8-12-21(20)22/h5-13,17-18,23-24,27,29H,14-16H2,1-4H3,(H,28,31)/t23-,24-/m0/s1
+  standard_inchi_key: JWACXIROMWTVRE-ZEQRLZLVSA-N
+  molecular_formula: C26H34N4O2
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000465/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 434.584
+  monoisotopic_mass: 434.2682
+xrefs:
+- pubchem.compound:102585017
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/np500390b#xenortide-d
+  source_label: xenortide D
+  minted_identifier: antibioticmech:curator-792e05cfcf
+  role_terms:
+  - CHEBI:35717
+  evidence:
+  - reference: DOI:10.1021/np500390b
+    snippet: Reimer et al. identified the tryptamine-containing linear N-methylvalyl-N-methylphenylalanyl
+      dipeptide xenortide D from Xenorhabdus nematophila and demonstrated antiprotozoal
+      activity against Plasmodium falciparum and Trypanosoma brucei rhodesiense.
+    notes: MIBiG 4.0.1 entry BGC0000465 (Xenorhabdus nematophila ATCC 19061); Reimer
+      et al. 2014 (DOI:10.1021/np500390b, PMID:25080196) characterize the discovery,
+      NRPS biosynthesis, and antiprotozoal activity of xenortide D. ChEBI CHEBI:224278
+      and PubChem CID 102585017 supply the stereo-complete SMILES, Standard InChI,
+      and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:406817
+  taxon_label: Xenorhabdus nematophila
+  strain: ATCC 19061
+  biosynthetic_gene_cluster: BGC0000465
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'xenortide D' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:25080196
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,90 @@
+identifier: CHEBI:81025
+label: 2-formyloxymethylclavam
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An antipodal (3S,5S) O-formyloxymethyl-substituted beta-lactam clavam
+  metabolite from Streptomyces clavuligerus with antifungal activity.
+definition_source: DOI:10.1128/aac.44.3.720-726.2000
+synonyms:
+- synonym_text: 2-Formyloxymethylclavam
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C1[C@H]2N(C1=O)C[C@@H](O2)COC=O
+  standard_inchi: InChI=1S/C7H9NO4/c9-4-11-3-5-2-8-6(10)1-7(8)12-5/h4-5,7H,1-3H2/t5-,7+/m1/s1
+  standard_inchi_key: CFRVNACMJWVDID-VDTYLAMSSA-N
+  molecular_formula: C7H9NO4
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000841/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 171.152
+  monoisotopic_mass: 171.0532
+xrefs:
+- pubchem.compound:46173888
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aac.44.3.720-726.2000#2-formyloxymethylclavam
+  source_label: 2-formyloxymethylclavam
+  minted_identifier: antibioticmech:curator-4b802a83b0
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1128/aac.44.3.720-726.2000
+    snippet: 2-Formyloxymethylclavam is an antipodal (5S) clavam beta-lactam metabolite
+      biosynthesized by Streptomyces clavuligerus that exhibits antifungal activity.
+    notes: MIBiG 4.0.1 entry BGC0000841 (Streptomyces clavuligerus ATCC 27064); Jensen
+      et al. 2000 (DOI:10.1128/aac.44.3.720-726.2000, PMID:10681345), Mosher et al.
+      1999 (DOI:10.1128/aac.43.5.1215, PMID:10223939), and Brown et al. 1979 (DOI:10.1039/c39790000282)
+      characterize the clavam biosynthetic pathway and antifungal activity of 2-formyloxymethylclavam.
+      ChEBI CHEBI:81025 and PubChem CID 46173888 supply the stereo-complete SMILES,
+      Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1901
+  taxon_label: Streptomyces clavuligerus
+  strain: ATCC 27064
+  biosynthetic_gene_cluster: BGC0000841
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound '2-formyloxymethylclavam' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:10681345
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+- taxon_id: NCBITaxon:1901
+  taxon_label: Streptomyces clavuligerus
+  strain: ATCC 27064
+  biosynthetic_gene_cluster: BGC0000843
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound '2-formyloxymethylclavam' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:22435762
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

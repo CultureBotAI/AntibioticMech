@@ -1,0 +1,72 @@
+identifier: antibioticmech:curator-9938b03a40
+label: ambiguine C isonitrile
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A dechloro hydroxylated tetracyclic hapalindole-type indole alkaloid isonitrile
+  from Fischerella ambigua with antimycobacterial, antibacterial, and antifungal activity.
+definition_source: DOI:10.1021/np800751j
+synonyms:
+- synonym_text: ambiguine C
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: C[C@@]1(CC[C@H]2[C@]([C@H]1[N+]#[C-])(C3=C(NC4=CC=CC(=C43)C2(C)C)C(C)(C)C=C)O)C=C
+  standard_inchi: InChI=1S/C26H32N2O/c1-9-23(3,4)21-20-19-16(12-11-13-17(19)28-21)24(5,6)18-14-15-25(7,10-2)22(27-8)26(18,20)29/h9-13,18,22,28-29H,1-2,14-15H2,3-7H3/t18-,22+,25+,26-/m1/s1
+  standard_inchi_key: FDEFKOBGABILIC-XQHQYKGYSA-N
+  molecular_formula: C26H32N2O
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001126/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 388.5
+  monoisotopic_mass: 388.2515
+xrefs:
+- pubchem.compound:21610114
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/np800751j#ambiguine-c-isonitrile
+  source_label: ambiguine C isonitrile
+  minted_identifier: antibioticmech:curator-9938b03a40
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1021/np800751j
+    snippet: Ambiguine C isonitrile isolated from the cyanobacterium Fischerella ambigua
+      UTEX 1903 displayed antibacterial activity against Mycobacterium tuberculosis
+      H37Rv (MIC 7.0 uM), Staphylococcus aureus (MIC 7.4 uM), and Bacillus anthracis
+      (MIC 16.1 uM), as well as potent antifungal activity against Candida albicans
+      (MIC 1.0 uM).
+    notes: MIBiG 4.0.1 entry BGC0001126 (Fischerella ambigua UTEX 1903); Mo et al.
+      2009 (DOI:10.1021/np800751j, PMID:19371071) and Hillwig et al. 2014 (DOI:10.1021/cb400681n,
+      PMID:24180436) establish the amb biosynthetic gene cluster and antimycobacterial,
+      antibacterial, and antifungal MICs of ambiguine C isonitrile. PubChem CID 21610114
+      supplies the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:230521
+  taxon_label: Fischerella ambigua
+  strain: UTEX 1903
+  biosynthetic_gene_cluster: BGC0001126
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'ambiguine C isonitrile' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:24180436
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

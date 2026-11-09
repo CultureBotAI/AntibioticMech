@@ -1,0 +1,71 @@
+identifier: antibioticmech:curator-818cc246cc
+label: microbisporicin A2
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 24-residue pentacyclic class I lantibiotic congener from Microbispora
+  corallina containing 5-chlorotryptophan, S-[(Z)-2-aminovinyl]-D-cysteine, and (4R)-4-hydroxy-L-proline
+  that inhibits bacterial peptidoglycan biosynthesis.
+definition_source: DOI:10.1073/pnas.1008285107
+synonyms:
+- synonym_text: 107891 A2
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(N[C@H](C(NC(C(N[C@H](C(N[C@H](C(N[C@H]([C@H](C)SC[C@@H](C(N[C@H]([C@H](O)C)C(N[C@@H](C(N1[C@H]2[C@@H](O)CC1)=O)CSC[C@H](NC([C@H](CC(N)=O)NC([C@H](NC(CNC(CNC(CNC2=O)=O)=O)=O)CSC[C@@H](C(N/C=C\SC3)=O)NC4=O)=O)=O)C(N[C@@H]3C(N[C@@H]4CC5=CC=CC=C5)=O)=O)=O)=O)NC6=O)C(N7[C@H](C(NC6)=O)CCC7)=O)=O)CSC8)=O)CC(C)C)=O)=C)=O)CC9=CNC%10=C9C=C(Cl)C=C%10)[C@@H]8NC(/C(NC([C@H](C(C)C)N)=O)=C/C)=O
+  standard_inchi: InChI=1S/C94H127ClN26O26S5/c1-9-51(107-90(143)72(97)43(4)5)78(131)113-60-37-150-39-62(115-80(133)53(24-42(2)3)108-76(129)44(6)104-79(132)55(110-85(60)138)26-48-29-99-52-18-17-49(95)27-50(48)52)87(140)119-74-46(8)152-41-63(106-71(128)33-102-89(142)65-16-13-21-120(65)94(74)147)88(141)118-73(45(7)122)91(144)117-64-40-151-38-61-86(139)116-59-34-148-23-20-98-77(130)57(112-81(134)54(109-84(59)137)25-47-14-11-10-12-15-47)35-149-36-58(83(136)111-56(28-67(96)124)82(135)114-61)105-70(127)32-101-68(125)30-100-69(126)31-103-92(145)75-66(123)19-22-121(75)93(64)146/h9-12,14-15,17-18,20,23,27,29,42-43,45-46,53-66,72-75,99,122-123H,6,13,16,19,21-22,24-26,28,30-41,97H2,1-5,7-8H3,(H2,96,124)(H,98,130)(H,100,126)(H,101,125)(H,102,142)(H,103,145)(H,104,132)(H,105,127)(H,106,128)(H,107,143)(H,108,129)(H,109,137)(H,110,138)(H,111,136)(H,112,134)(H,113,131)(H,114,135)(H,115,133)(H,116,139)(H,117,144)(H,118,141)(H,119,140)/b23-20-,51-9-/t45-,46+,53+,54-,55+,56+,57+,58-,59+,60-,61+,62+,63+,64-,65+,66+,72+,73-,74-,75+/m1/s1
+  standard_inchi_key: MXXHBKLVTYBKIT-WCMIHIHVSA-N
+  molecular_formula: C94H127ClN26O26S5
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000529/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 2233.0
+  monoisotopic_mass: 2230.7707
+xrefs:
+- pubchem.compound:163192061
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1073/pnas.1008285107#microbisporicin-a2
+  source_label: microbisporicin A2
+  minted_identifier: antibioticmech:curator-818cc246cc
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1073/pnas.1008285107
+    snippet: Microbisporicin (NAI-107), a complex of two 24-amino-acid lantibiotic
+      congeners A1 and A2 containing 5-chlorotryptophan and mono- or dihydroxyproline
+      produced by Microbispora corallina, is a potent bactericidal inhibitor of cell
+      wall peptidoglycan synthesis in multidrug-resistant Gram-positive pathogens.
+    notes: MIBiG 4.0.1 entry BGC0000529 (Microbispora corallina); Foulston & Bibb
+      2010 (DOI:10.1073/pnas.1008285107, PMID:20628010) and Castiglione et al. 2008
+      (DOI:10.1128/aac.01716-07, PMID:18490500) characterize the biosynthetic gene
+      cluster and potent anti-Gram-positive antibacterial activity of microbisporicin
+      A2 (4-hydroxyproline congener of NAI-107). PubChem CID 163192061 supplies the
+      stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:83302
+  taxon_label: Microbispora corallina
+  biosynthetic_gene_cluster: BGC0000529
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'microbisporicin A2' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:20628010
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-09T04:09:29Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
