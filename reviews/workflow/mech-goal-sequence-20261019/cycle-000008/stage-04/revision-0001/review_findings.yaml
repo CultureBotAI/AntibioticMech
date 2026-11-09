@@ -920,10 +920,11 @@ actions:
 - action_id: promote-proposed-exact-records-with-primary-targets-to-reviewed
   description: 'Promote CHEBI:81029 (alanylclavam), CHEBI:199652 (amicetin), CHEBI:216634
     (andrimid), CHEBI:202006 (bottromycin A2), CHEBI:226796 (planosporicin), and CHEBI:204968
-    (ajudazol A) from curation_status: PROPOSED to REVIEWED (and enrich canonical
-    GO target_id terms GO:0004413 on alanylclavam, GO:0015934 on amicetin and bottromycin
-    A2, and GO:0005747 on ajudazol A) via record_curation_event and write_validated_antibiotic
-    during Cycle 8 Stage 5 grouped remediation.'
+    (ajudazol A) from curation_status: PROPOSED to REVIEWED (and optionally enrich
+    canonical GO target_id terms GO:0009086 on alanylclavam, GO:0015934 on amicetin
+    and bottromycin A2, GO:0009252 on planosporicin, and GO:0005747 on ajudazol A)
+    via record_curation_event and write_validated_antibiotic during Cycle 8 Stage
+    5 grouped remediation.'
   finding_ids:
   - proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
   target_ids:
@@ -948,7 +949,7 @@ actions:
     role: Curator-owned curation_status and molecular_targets slots on EXACT record
   - repository: CultureBotAI/AntibioticMech
     path: data/antibiotics/antibacterial/planosporicin.yaml
-    role: Curator-owned curation_status slot on EXACT record
+    role: Curator-owned curation_status and molecular_targets slots on EXACT record
   - repository: CultureBotAI/AntibioticMech
     path: data/antibiotics/antifungal/ajudazol-a.yaml
     role: Curator-owned curation_status and molecular_targets slots on EXACT record
