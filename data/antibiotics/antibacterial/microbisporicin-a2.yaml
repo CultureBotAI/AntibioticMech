@@ -76,6 +76,14 @@ curation_history:
     (MICROBIAL_TARGET) mode_of_action from Foulston & Bibb 2010 (DOI:10.1073/pnas.1008285107,
     PMID:20628010) and Castiglione et al. 2008 (DOI:10.1128/aac.01716-07, PMID:18490500).
   llm_assisted: true
+- timestamp: '2026-11-09T09:03:41Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial peptidoglycan
+    precursor lipid II (CELL_WALL_COMPONENT, DIRECT_BINDING_TARGET) backed by Foulston
+    and Bibb 2010 (DOI:10.1073/pnas.1008285107, PMID:20628010) and Castiglione et
+    al. 2008 (DOI:10.1128/aac.01716-07, PMID:18490500).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -85,3 +93,30 @@ mode_of_action_notes: 'CURATOR: Pentacyclic 24-residue class I lantibiotic conge
   lipid II and inhibits bacterial peptidoglycan biosynthesis in Gram-positive pathogens
   (Castiglione et al. 2008, DOI:10.1128/aac.01716-07, PMID:18490500; Foulston & Bibb
   2010, DOI:10.1073/pnas.1008285107, PMID:20628010).'
+molecular_targets:
+- target_label: bacterial peptidoglycan precursor lipid II
+  target_type: CELL_WALL_COMPONENT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Complexation with the membrane-bound peptidoglycan precursor
+    lipid II by the chlorinated/hydroxylated lantibiotic microbisporicin A2 (NAI-107
+    component), blocking nascent cell-wall peptidoglycan biosynthesis with potent
+    Gram-positive antibacterial activity (Castiglione et al. 2008, DOI:10.1128/aac.01716-07,
+    PMID:18490500; Foulston and Bibb 2010, DOI:10.1073/pnas.1008285107, PMID:20628010).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2010-08
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: DOI:10.1073/pnas.1008285107
+    snippet: Microbisporicin (NAI-107), a complex of two congener lantibiotics (A1
+      and A2) produced by Microbispora corallina, binds lipid II to inhibit bacterial
+      peptidoglycan biosynthesis.
+    notes: Foulston and Bibb 2010 (Proc Natl Acad Sci U S A 107:13461-13466; PMID:20628010)
+      characterized the microbisporicin (A1/A2) lantibiotic gene cluster and lipid
+      II-targeted peptidoglycan synthesis inhibition.
+  - reference: DOI:10.1128/aac.01716-07
+    notes: Castiglione et al. 2008 (Antimicrob Agents Chemother 52:2431-2440; PMID:18490500)
+      established the structures of microbisporicin A1 and A2 and demonstrated inhibition
+      of bacterial cell-wall peptidoglycan biosynthesis.

@@ -79,6 +79,15 @@ curation_history:
     PMID:23475977), Castiglione et al. 2007 (DOI:10.1021/bi700131x, PMID:17469849),
     and Maffioli et al. 2009 (DOI:10.1021/np800794y, PMID:19301921).
   llm_assisted: true
+- timestamp: '2026-11-09T09:03:41Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial cell wall
+    peptidoglycan biosynthesis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed
+    by Sherwood et al. 2013 (DOI:10.1128/jb.02291-12, PMID:23475977), Castiglione
+    et al. 2007 (DOI:10.1021/bi700131x, PMID:17469849), and Maffioli et al. 2009 (DOI:10.1021/np800794y,
+    PMID:19301921).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -87,3 +96,32 @@ mode_of_action_notes: 'CURATOR: Pentacyclic 24-residue class I lantibiotic (anti
   peptidoglycan biosynthesis (Castiglione et al. 2007, DOI:10.1021/bi700131x, PMID:17469849;
   Maffioli et al. 2009, DOI:10.1021/np800794y, PMID:19301921; Sherwood et al. 2013,
   DOI:10.1128/jb.02291-12, PMID:23475977).'
+molecular_targets:
+- target_label: bacterial cell wall peptidoglycan biosynthesis
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Selective inhibition of bacterial cell-wall peptidoglycan
+    biosynthesis (accumulation of UDP-MurNAc-pentapeptide without immediate membrane
+    depolarization) and whole-cell antibacterial activity against Gram-positive pathogens
+    by the 24-residue pentacyclic type A lantibiotic planosporicin (Castiglione et
+    al. 2007, DOI:10.1021/bi700131x, PMID:17469849; Maffioli et al. 2009, DOI:10.1021/np800794y,
+    PMID:19301921; Sherwood et al. 2013, DOI:10.1128/jb.02291-12, PMID:23475977).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2013-05
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: DOI:10.1128/jb.02291-12
+    snippet: Planosporicin, a 24-amino-acid pentacyclic lantibiotic produced by Planomonospora
+      alba, inhibits bacterial cell wall peptidoglycan biosynthesis.
+    notes: Sherwood et al. 2013 (J Bacteriol 195:2309-2321; PMID:23475977) characterized
+      the planosporicin lantibiotic gene cluster and cell-wall biosynthesis inhibition.
+  - reference: DOI:10.1021/bi700131x
+    notes: Castiglione et al. 2007 (Biochemistry 46:5884-5895; PMID:17469849) isolated
+      planosporicin (97518) and demonstrated selective inhibition of bacterial peptidoglycan
+      synthesis and accumulation of UDP-N-acetylmuramyl-pentapeptide.
+  - reference: DOI:10.1021/np800794y
+    notes: Maffioli et al. 2009 (J Nat Prod 72:605-607; PMID:19301921) revised the
+      lanthionine/methyllanthionine ring connectivity of planosporicin.

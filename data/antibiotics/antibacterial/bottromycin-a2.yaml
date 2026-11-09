@@ -100,6 +100,15 @@ curation_history:
     PMID:19115340), Gouda et al. 2012 (DOI:10.1248/cpb.60.169, PMID:22293474), and
     Huo et al. 2012 (DOI:10.1016/j.chembiol.2012.08.013, PMID:23021914).
   llm_assisted: true
+- timestamp: '2026-11-09T09:03:41Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial 50S ribosomal
+    subunit A site (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET) backed by Shimamura
+    et al. 2009 (DOI:10.1002/anie.200804138, PMID:19115340), Kobayashi et al. 2012
+    (DOI:10.1248/cpb.60.169, PMID:22293474), and Gomez-Escribano et al. 2012 (DOI:10.1016/j.chembiol.2012.08.013,
+    PMID:23021914).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -108,3 +117,34 @@ mode_of_action_notes: 'CURATOR: Macrocyclic amidine-thiazole RiPP peptide antibi
   by blocking aminoacyl-tRNA binding to the bacterial 50S ribosomal A site (Shimamura
   et al. 2009, DOI:10.1002/anie.200804138, PMID:19115340; Gouda et al. 2012, DOI:10.1248/cpb.60.169,
   PMID:22293474; Huo et al. 2012, DOI:10.1016/j.chembiol.2012.08.013, PMID:23021914).'
+molecular_targets:
+- target_label: bacterial 50S ribosomal subunit A site
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Selective binding to the bacterial 50S ribosomal subunit aminoacyl-tRNA
+    acceptor (A) site, blocking aminoacyl-tRNA binding and arresting bacterial translation
+    with potent MIC activity against methicillin-resistant Staphylococcus aureus and
+    vancomycin-resistant Enterococcus (Shimamura et al. 2009, DOI:10.1002/anie.200804138,
+    PMID:19115340; Kobayashi et al. 2012, DOI:10.1248/cpb.60.169, PMID:22293474; Gomez-Escribano
+    et al. 2012, DOI:10.1016/j.chembiol.2012.08.013, PMID:23021914).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-10
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: DOI:10.1002/anie.200804138
+    snippet: Bottromycin A2 blocks aminoacyl-tRNA binding to the A site on the 50S
+      ribosomal subunit and exhibits potent antibacterial activity against MRSA (MIC
+      = 1 ug/mL) and VRE (MIC = 0.5 ug/mL).
+    notes: Shimamura et al. 2009 (Angew Chem Int Ed 48:914-917; PMID:19115340) revised
+      the absolute configuration of bottromycin A2 and characterized its antibacterial
+      activity against MRSA and VRE via 50S ribosomal A-site inhibition.
+  - reference: DOI:10.1248/cpb.60.169
+    notes: Kobayashi et al. 2012 (Chem Pharm Bull 60:169-171; PMID:22293474) evaluated
+      structural requirements of bottromycin A2 derivatives for Gram-positive antibacterial
+      activity.
+  - reference: DOI:10.1016/j.chembiol.2012.08.013
+    notes: Gomez-Escribano et al. 2012 (Chem Biol 19:1296-1305; PMID:23021914) characterized
+      bottromycin A2 ribosomal peptide biosynthesis in Streptomyces scabiei.

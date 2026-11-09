@@ -74,6 +74,14 @@ curation_history:
     (HOST_SHARED_TARGET) mode_of_action from Buntin et al. 2010 (DOI:10.1002/cbic.200900712,
     PMID:20432424) and Kunze et al. 2004 (DOI:10.7164/antibiotics.57.151, PMID:15112964).
   llm_assisted: true
+- timestamp: '2026-11-09T09:03:41Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for mitochondrial respiratory
+    chain complex I (NADH:ubiquinone oxidoreductase; PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+    backed by Kunze et al. 2004 (DOI:10.7164/antibiotics.57.151, PMID:15112964) and
+    Buntin et al. 2010 (DOI:10.1002/cbic.200900712, PMID:20432424).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: ENERGY_METABOLISM_INHIBITION
 mode_of_action_target_scope: HOST_SHARED_TARGET
@@ -83,3 +91,31 @@ mode_of_action_notes: 'CURATOR: Isochromanone- and oxazole-containing hybrid PKS
   and mitochondrial electron transport in fungi and shared eukaryotic respiratory
   complexes (Kunze et al. 2004, DOI:10.7164/antibiotics.57.151, PMID:15112964; Buntin
   et al. 2010, DOI:10.1002/cbic.200900712, PMID:20432424).'
+molecular_targets:
+- target_label: mitochondrial respiratory chain complex I (NADH:ubiquinone oxidoreductase)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2759
+  taxon_label: Eukaryota
+  experimental_context: Potent inhibition of eukaryotic mitochondrial respiratory
+    chain complex I (NADH:ubiquinone oxidoreductase; IC50 = 17.5 ng/mL in bovine heart
+    submitochondrial particles) and antifungal activity against yeasts and filamentous
+    fungi by the isochromanone-oxazole myxobacterial polyketide-peptide ajudazol A
+    (Kunze et al. 2004, DOI:10.7164/antibiotics.57.151, PMID:15112964; Buntin et al.
+    2010, DOI:10.1002/cbic.200900712, PMID:20432424).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2010-05
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: DOI:10.7164/antibiotics.57.151
+    snippet: Ajudazol A inhibited NADH oxidation by mitochondrial complex I in beef
+      heart submitochondrial particles with an IC50 of 17.5 ng/mL (29.6 nM) and showed
+      antifungal activity.
+    notes: Kunze et al. 2004 (J Antibiot 57:151-155; PMID:15112964) isolated ajudazol
+      A from Chondromyces crocatus and demonstrated nanomolar inhibition of mitochondrial
+      respiratory complex I (NADH:ubiquinone oxidoreductase) and antifungal activity.
+  - reference: DOI:10.1002/cbic.200900712
+    notes: Buntin et al. 2010 (ChemBioChem 11:1137-1146; PMID:20432424) characterized
+      the hybrid PKS/NRPS biosynthetic pathway of the complex I inhibitor ajudazol
+      A in Chondromyces crocatus Cm c5.

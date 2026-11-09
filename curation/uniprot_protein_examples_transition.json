@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "uniprot_protein_examples_curation",
   "plan_path": "curation/uniprot_protein_examples.yaml",
-  "record_count": 95,
+  "record_count": 97,
   "record_deltas": [
     {
       "identifier": "CHEBI:100241",
@@ -5167,6 +5167,116 @@
         "curator": "antigravity",
         "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
         "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0ABQ4, folA) to the primary-literature bacterial dihydrofolate reductase target on tetroxoprim (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:216634",
+      "label": "andrimid",
+      "path": "data/antibiotics/antibacterial/andrimid.yaml",
+      "before_sha256": "b3f5eed79acf1ad7f2ee74c6b3b5134d71c0fa92190aa1419250c41823002d37",
+      "after_sha256": "8df809b0c491da1e96a4e77bc6dc72e6850fa60c145e1d2b3d931b6b7b3be992",
+      "unchanged_fields_sha256": "7ea4bf126dc0b1b9399ddf93aeaa622fc0763c467baa76b28c7f19131ead1668",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial acetyl-CoA carboxylase carboxyltransferase complex (AccA / AccD)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0ABD5",
+              "protein_label": "Acetyl-coenzyme A carboxylase carboxyl transferase subunit alpha",
+              "gene_symbol": "accA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Escherichia coli K-12 acetyl-CoA carboxylase carboxyltransferase alpha subunit (AccA, EC 2.1.3.15) forming the AccA2AccD2 heterotetramer directly inhibited by andrimid (Ki = 5 nM) and harboring target-confirming resistance substitutions (DOI:10.1074/jbc.m402989200, PMID:15066985; DOI:10.1021/ja063194c, PMID:16866529)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0A9Q5",
+              "protein_label": "Acetyl-coenzyme A carboxylase carboxyl transferase subunit beta",
+              "gene_symbol": "accD",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Escherichia coli K-12 acetyl-CoA carboxylase carboxyltransferase beta subunit (AccD, EC 2.1.3.15) forming the AccA2AccD2 heterotetramer directly inhibited by andrimid (Ki = 5 nM) and harboring target-confirming resistance substitutions (DOI:10.1074/jbc.m402989200, PMID:15066985; DOI:10.1021/ja063194c, PMID:16866529)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T09:03:43Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 2 reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_examples (UniProtKB:P0ABD5, accA; UniProtKB:P0A9Q5, accD) to the primary-literature bacterial acetyl-CoA carboxylase carboxyltransferase complex target on andrimid (DOI:10.1074/jbc.m402989200, PMID:15066985; DOI:10.1021/ja063194c, PMID:16866529).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:curator-cad9f0650f",
+      "label": "ECF transporter inhibitor 18",
+      "path": "data/antibiotics/antibacterial/ecf-transporter-inhibitor-18.yaml",
+      "before_sha256": "9b2c692a12ba5dfda443ca0eaf59815341cba222f7bda94bf7636842d6b36aa8",
+      "after_sha256": "6ade74d1049bb4d5b2eb825821a67328cbff1d04a9438ccea142f8e7524dec5b",
+      "unchanged_fields_sha256": "2f7ae8c44adfb887a50f87ff3e2ebe3c617e367c09e1625ffd1e12ad7482bc8f",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial energy-coupling factor (ECF) vitamin transporter complex (EcfA1 / EcfA2 / EcfT)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q839D5",
+              "protein_label": "Energy-coupling factor transporter ATP-binding protein EcfA1",
+              "gene_symbol": "ecfA1",
+              "taxon_id": "NCBITaxon:226185",
+              "taxon_label": "Enterococcus faecalis (strain ATCC 700802 / V583)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Enterococcus faecalis V583 energy-coupling factor (ECF) transporter ATP-binding subunit EcfA1 (EC 7.6.2.15) of the conserved Firmicutes ECF vitamin-uptake module inhibited by compound 18 (IC50 = 4 uM; MIC 1-9 ug/mL; DOI:10.1021/acs.jmedchem.5c02721, PMID:42249838)."
+            },
+            {
+              "uniprot_id": "UniProtKB:Q839D4",
+              "protein_label": "Energy-coupling factor transporter ATP-binding protein EcfA2",
+              "gene_symbol": "ecfA2",
+              "taxon_id": "NCBITaxon:226185",
+              "taxon_label": "Enterococcus faecalis (strain ATCC 700802 / V583)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-09",
+              "role": "Enterococcus faecalis V583 energy-coupling factor (ECF) transporter ATP-binding subunit EcfA2 (EC 7.6.2.15) of the conserved Firmicutes ECF vitamin-uptake module inhibited by compound 18 (IC50 = 4 uM; MIC 1-9 ug/mL; DOI:10.1021/acs.jmedchem.5c02721, PMID:42249838)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-09T09:03:44Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 2 reviewed Enterococcus faecalis V583 Swiss-Prot UniProtKB protein_examples (UniProtKB:Q839D5, ecfA1; UniProtKB:Q839D4, ecfA2) to the primary-literature bacterial energy-coupling factor (ECF) vitamin transporter complex target on ECF transporter inhibitor 18 (DOI:10.1021/acs.jmedchem.5c02721, PMID:42249838).",
         "llm_assisted": true
       }
     }

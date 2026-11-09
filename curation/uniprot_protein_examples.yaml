@@ -2753,6 +2753,72 @@ records:
       role: Escherichia coli K-12 dihydrofolate reductase (FolA / DHFR) selectively inhibited at the dihydrofolate
         binding site by tetroxoprim in purified enzyme and antibacterial mechanism studies (DOI:10.1016/j.bcp.2005.10.052,
         PMID:16359642; PMID:391962).
+- identifier: CHEBI:216634
+  label: andrimid
+  path: data/antibiotics/antibacterial/andrimid.yaml
+  changes: Added 2 reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_examples (UniProtKB:P0ABD5,
+    accA; UniProtKB:P0A9Q5, accD) to the primary-literature bacterial acetyl-CoA carboxylase carboxyltransferase
+    complex target on andrimid (DOI:10.1074/jbc.m402989200, PMID:15066985; DOI:10.1021/ja063194c, PMID:16866529).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: bacterial acetyl-CoA carboxylase carboxyltransferase complex (AccA / AccD)
+    target_reference: DOI:10.1074/jbc.m402989200
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABD5
+      protein_label: Acetyl-coenzyme A carboxylase carboxyl transferase subunit alpha
+      gene_symbol: accA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-09'
+      role: Escherichia coli K-12 acetyl-CoA carboxylase carboxyltransferase alpha subunit (AccA, EC 2.1.3.15)
+        forming the AccA2AccD2 heterotetramer directly inhibited by andrimid (Ki = 5 nM) and harboring
+        target-confirming resistance substitutions (DOI:10.1074/jbc.m402989200, PMID:15066985; DOI:10.1021/ja063194c,
+        PMID:16866529).
+    - uniprot_id: UniProtKB:P0A9Q5
+      protein_label: Acetyl-coenzyme A carboxylase carboxyl transferase subunit beta
+      gene_symbol: accD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-09'
+      role: Escherichia coli K-12 acetyl-CoA carboxylase carboxyltransferase beta subunit (AccD, EC 2.1.3.15)
+        forming the AccA2AccD2 heterotetramer directly inhibited by andrimid (Ki = 5 nM) and harboring
+        target-confirming resistance substitutions (DOI:10.1074/jbc.m402989200, PMID:15066985; DOI:10.1021/ja063194c,
+        PMID:16866529).
+- identifier: antibioticmech:curator-cad9f0650f
+  label: ECF transporter inhibitor 18
+  path: data/antibiotics/antibacterial/ecf-transporter-inhibitor-18.yaml
+  changes: Added 2 reviewed Enterococcus faecalis V583 Swiss-Prot UniProtKB protein_examples (UniProtKB:Q839D5,
+    ecfA1; UniProtKB:Q839D4, ecfA2) to the primary-literature bacterial energy-coupling factor (ECF) vitamin
+    transporter complex target on ECF transporter inhibitor 18 (DOI:10.1021/acs.jmedchem.5c02721, PMID:42249838).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: bacterial energy-coupling factor (ECF) vitamin transporter complex (EcfA1 / EcfA2 / EcfT)
+    target_reference: DOI:10.1021/acs.jmedchem.5c02721
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:Q839D5
+      protein_label: Energy-coupling factor transporter ATP-binding protein EcfA1
+      gene_symbol: ecfA1
+      taxon_id: NCBITaxon:226185
+      taxon_label: Enterococcus faecalis (strain ATCC 700802 / V583)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-09'
+      role: Enterococcus faecalis V583 energy-coupling factor (ECF) transporter ATP-binding subunit EcfA1
+        (EC 7.6.2.15) of the conserved Firmicutes ECF vitamin-uptake module inhibited by compound 18 (IC50
+        = 4 uM; MIC 1-9 ug/mL; DOI:10.1021/acs.jmedchem.5c02721, PMID:42249838).
+    - uniprot_id: UniProtKB:Q839D4
+      protein_label: Energy-coupling factor transporter ATP-binding protein EcfA2
+      gene_symbol: ecfA2
+      taxon_id: NCBITaxon:226185
+      taxon_label: Enterococcus faecalis (strain ATCC 700802 / V583)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-09'
+      role: Enterococcus faecalis V583 energy-coupling factor (ECF) transporter ATP-binding subunit EcfA2
+        (EC 7.6.2.15) of the conserved Firmicutes ECF vitamin-uptake module inhibited by compound 18 (IC50
+        = 4 uM; MIC 1-9 ug/mL; DOI:10.1021/acs.jmedchem.5c02721, PMID:42249838).
 held_targets:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -3940,3 +4006,65 @@ held_targets:
   target_reference: DOI:10.1016/j.chembiol.2011.01.016
   reason: 'Non-protein molecular target (target_type=RIBOSOMAL_SUBUNIT: bacterial 30S ribosomal subunit);
     UniProtKB protein examples do not apply to rRNA-anchored 30S ribonucleoprotein subunit targets.'
+- scope: molecular_targets
+  identifier: CHEBI:202006
+  label: bottromycin A2
+  path: data/antibiotics/antibacterial/bottromycin-a2.yaml
+  target_type: RIBOSOMAL_SUBUNIT
+  target_label: bacterial 50S ribosomal subunit A site
+  target_reference: DOI:10.1002/anie.200804138
+  reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 50S ribosomal subunit A site; DOI:10.1002/anie.200804138,
+    PMID:19115340) where bottromycin A2 blocks aminoacyl-tRNA binding to the 50S ribosomal A site without
+    a single primary polypeptide target accession.
+- scope: molecular_targets
+  identifier: antibioticmech:curator-818cc246cc
+  label: microbisporicin A2
+  path: data/antibiotics/antibacterial/microbisporicin-a2.yaml
+  target_type: CELL_WALL_COMPONENT
+  target_label: bacterial peptidoglycan precursor lipid II
+  target_reference: DOI:10.1073/pnas.1008285107
+  reason: 'Non-protein molecular target (target_type=CELL_WALL_COMPONENT: bacterial peptidoglycan precursor
+    lipid II; DOI:10.1073/pnas.1008285107, PMID:20628010); protein_examples are restricted to protein-containing
+    target types.'
+- scope: molecular_targets
+  identifier: CHEBI:226796
+  label: planosporicin
+  path: data/antibiotics/antibacterial/planosporicin.yaml
+  target_type: BIOLOGICAL_PROCESS
+  target_label: bacterial cell wall peptidoglycan biosynthesis
+  target_reference: DOI:10.1128/jb.02291-12
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: bacterial cell wall peptidoglycan
+    biosynthesis; DOI:10.1128/jb.02291-12, PMID:23475977); protein_examples are restricted to protein-containing
+    target types.'
+- scope: molecular_targets
+  identifier: CHEBI:81029
+  label: alanylclavam
+  path: data/antibiotics/antibacterial/alanylclavam.yaml
+  target_type: BIOLOGICAL_PROCESS
+  target_label: bacterial methionine and homoserine amino acid biosynthesis
+  target_reference: DOI:10.1128/aac.44.3.720-726.2000
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: bacterial methionine and homoserine
+    amino acid biosynthesis; DOI:10.1128/aac.44.3.720-726.2000, PMID:10681345); whole-cell antimetabolite
+    growth inhibition reversed by L-methionine or L-homoserine without a single purified enzyme accession
+    in the cited studies.'
+- scope: molecular_targets
+  identifier: CHEBI:199652
+  label: amicetin
+  path: data/antibiotics/antibacterial/amicetin.yaml
+  target_type: RIBOSOMAL_SUBUNIT
+  target_label: bacterial 50S ribosomal subunit peptidyl-transferase center
+  target_reference: DOI:10.1128/aem.07185-11
+  reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 50S ribosomal subunit peptidyl-transferase
+    center; DOI:10.1128/aem.07185-11, PMID:22267658) where amicetin binds 23S rRNA at the peptidyl-transferase
+    center without a single primary polypeptide target accession.
+- scope: molecular_targets
+  identifier: CHEBI:204968
+  label: ajudazol A
+  path: data/antibiotics/antifungal/ajudazol-a.yaml
+  target_type: PROTEIN_COMPLEX
+  target_label: mitochondrial respiratory chain complex I (NADH:ubiquinone oxidoreductase)
+  target_reference: DOI:10.7164/antibiotics.57.151
+  reason: Held because Kunze et al. 2004 (DOI:10.7164/antibiotics.57.151, PMID:15112964) measured NADH
+    oxidation inhibition in bovine heart submitochondrial particles (IC50 = 17.5 ng/mL) and whole-cell
+    antifungal activity without resolving which subunit of the ~45-subunit eukaryotic complex I is bound
+    or providing a fungal complex I cocrystal accession.
