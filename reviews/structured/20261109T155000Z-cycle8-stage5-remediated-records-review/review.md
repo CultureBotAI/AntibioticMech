@@ -11,7 +11,7 @@
 
 ## Summary
 
-Post-remediation batch review of the 15 AntibioticRecord YAML files updated in Cycle 8 Stage 5 to resolve all 3 open Stage 4 record and category review findings: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion (Issue #1359, 6 records: alanylclavam CHEBI:81029, amicetin CHEBI:199652, andrimid CHEBI:216634 including companion single-record review 20261109T120000Z-andrimid-record-review, bottromycin A2 CHEBI:202006, planosporicin CHEBI:226796, and ajudazol A CHEBI:204968), cycle8-stage1-proposed-exact-natural-products-missing-mechanism-and-targets (Issue #1360, 4 records: TP-1161 CHEBI:217619, 2-formyloxymethylclavam CHEBI:81025, 2-hydroxymethylclavam CHEBI:81026, and clavam-2-carboxylate CHEBI:81027), and seeded-exact-rifamycins-and-elfamycins-with-card-only-targets-awaiting-primary-literature-promotion (Issue #1361, 5 records: rifabutin CHEBI:45367, rifaximin CHEBI:75246, rifapentine CHEBI:45304, GE2270A CHEBI:29584, and pulvomycin CHEBI:29668). Verified that all 15 EXACT ChEBI records carry complete single-molecule chemical_structure, curated biosynthesis_origin, curator-verified mode_of_action and mode_of_action_target_scope, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed Swiss-Prot UniProtKB protein_examples on andrimid [UniProtKB:P0ABD5, UniProtKB:P0A9Q5], the 3 rifamycins [UniProtKB:P0A8V2, UniProtKB:P9WGY9], and the 2 elfamycins [UniProtKB:P0CE47], and documented held_targets rationales on the 9 non-protein molecular_targets in curation/uniprot_protein_examples.yaml), and are promoted to curation_status: REVIEWED (raising corpus REVIEWED count from 159 to 174 and reducing the review-readiness worklist from 2,966 to 2,951).
+Post-remediation batch review of the 15 AntibioticRecord YAML files updated in Cycle 8 Stage 5 to resolve all 3 open Stage 4 record and category review findings: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion (Issue #1359, 6 records: alanylclavam CHEBI:81029, amicetin CHEBI:199652, andrimid CHEBI:216634 including companion single-record review 20261109T120000Z-andrimid-record-review, bottromycin A2 CHEBI:202006, planosporicin CHEBI:226796, and ajudazol A CHEBI:204968), cycle8-stage1-proposed-exact-natural-products-missing-mechanism-and-targets (Issue #1360, 4 records: TP-1161 CHEBI:217619, 2-formyloxymethylclavam CHEBI:81025, 2-hydroxymethylclavam CHEBI:81026, and clavam-2-carboxylate CHEBI:81027), and seeded-exact-rifamycins-and-elfamycins-with-card-only-targets-awaiting-primary-literature-promotion (Issue #1361, 5 records: rifabutin CHEBI:45367, rifaximin CHEBI:75246, rifapentine CHEBI:45304, GE2270A CHEBI:29584, and pulvomycin CHEBI:29668). Verified that all 15 EXACT ChEBI records carry complete single-molecule chemical_structure, curated biosynthesis_origin, curator-verified mode_of_action and mode_of_action_target_scope, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed Swiss-Prot UniProtKB protein_examples on andrimid [UniProtKB:P0ABD5, UniProtKB:P0A9Q5] and 11 newly added reviewed Swiss-Prot UniProtKB protein_examples across the 5 Group 3 records [UniProtKB:Q8RQE9, UniProtKB:P9WGY9, UniProtKB:P0A8V2 on rifabutin and rifapentine; UniProtKB:P0A8V2 on rifaximin; UniProtKB:P0CE47, UniProtKB:P60338 on GE2270A and pulvomycin], and documented held_targets rationales on the 9 non-protein or unresolved-subunit molecular_targets in curation/uniprot_protein_examples.yaml), and are promoted to curation_status: REVIEWED (raising corpus REVIEWED count from 159 to 174 and reducing the review-readiness worklist from 2,966 to 2,951).
 
 ## Scope And Provenance
 
@@ -19,7 +19,7 @@ Complete post-remediation review of all 15 AntibioticRecord YAML files modified 
 
 Selection: All 15 records in Cycle 8 Stage 5 resolved finding groups (Issues #1359, #1360, #1361).
 Coverage: full; 15 reviewed / 15 in the declared population.
-Source: working_tree at Git base 0b7380c610b9c07b8858c5e748ca724218b76f55.
+Source: working_tree at Git base ee580e282a3382e51d5ef1982ded4f6fdd4c7fc5.
 Working-tree hashes do not imply those bytes were committed.
 
 | Target | Path / selector | Kind | Label |
@@ -60,13 +60,13 @@ All 6 Group 1 records (alanylclavam CHEBI:81029, amicetin CHEBI:199652, andrimid
 
 completeness: supported. Targets: CHEBI:217619, CHEBI:81025, CHEBI:81026, CHEBI:81027.
 
-All 4 Cycle 8 Stage 1 EXACT natural-product records (TP-1161 CHEBI:217619, 2-formyloxymethylclavam CHEBI:81025, 2-hydroxymethylclavam CHEBI:81026, and clavam-2-carboxylate CHEBI:81027) now carry curated mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (documented in curation/uniprot_protein_examples.yaml held_targets), and are promoted to curation_status: REVIEWED.
+All 4 Cycle 8 Stage 1 EXACT natural-product records (TP-1161 CHEBI:217619 [GO:0015934 bacterial 50S ribosomal subunit, RIBOSOMAL_SUBUNIT, PMID:20562278, PMID:20851988], 2-formyloxymethylclavam CHEBI:81025, 2-hydroxymethylclavam CHEBI:81026, and clavam-2-carboxylate CHEBI:81027 [GO:0044237 fungal cellular metabolic process, BIOLOGICAL_PROCESS, PMID:10681345, PMID:17317567, DOI:10.1039/C39790000282]) now carry curated mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (documented in curation/uniprot_protein_examples.yaml held_targets), and are promoted to curation_status: REVIEWED.
 
 ### Population of PRIMARY_LITERATURE molecular_targets, reviewed UniProtKB protein_examples, and REVIEWED promotion on 5 SEEDED/EXACT rifamycins and elfamycins
 
 completeness: supported. Targets: CHEBI:45367, CHEBI:75246, CHEBI:45304, CHEBI:29584, CHEBI:29668.
 
-All 5 Group 3 EXACT rifamycin and elfamycin records (rifabutin CHEBI:45367, rifaximin CHEBI:75246, rifapentine CHEBI:45304, GE2270A CHEBI:29584, and pulvomycin CHEBI:29668) now carry curated biosynthesis_origin (SEMISYNTHETIC on the 3 rifamycins; NATURAL_PRODUCT on the 2 elfamycins), MICROBIAL_TARGET mode_of_action_target_scope, CURATOR mode_of_action_notes (NUCLEIC_ACID_SYNTHESIS_INHIBITION or PROTEIN_SYNTHESIS_INHIBITION), and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) bacterial DNA-directed RNA polymerase beta-subunit (RpoB; GO:0003899) or bacterial translation elongation factor Tu (EF-Tu / TufA; GO:0003746) molecular_targets with 8 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P0A8V2 rpoB in E. coli K-12 and UniProtKB:P9WGY9 rpoB in M. tuberculosis H37Rv on each of the 3 rifamycins; UniProtKB:P0CE47 tufA in E. coli K-12 on each of the 2 elfamycins) while preserving their CARD_ARO molecular_targets, and are promoted from SEEDED to REVIEWED.
+All 5 Group 3 EXACT rifamycin and elfamycin records (rifabutin CHEBI:45367, rifaximin CHEBI:75246, rifapentine CHEBI:45304, GE2270A CHEBI:29584, and pulvomycin CHEBI:29668) now carry curated biosynthesis_origin (SEMISYNTHETIC on the 3 rifamycins; NATURAL_PRODUCT on the 2 elfamycins), MICROBIAL_TARGET mode_of_action_target_scope, CURATOR mode_of_action_notes (NUCLEIC_ACID_SYNTHESIS_INHIBITION or PROTEIN_SYNTHESIS_INHIBITION), and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) DNA-directed RNA polymerase complex (GO:0000428, PROTEIN_COMPLEX) or bacterial translation elongation factor Tu (EF-Tu; GO:0003746, PROTEIN) molecular_targets with 11 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:Q8RQE9 rpoB in T. thermophilus HB8, UniProtKB:P9WGY9 rpoB in M. tuberculosis H37Rv, and UniProtKB:P0A8V2 rpoB in E. coli K-12 on rifabutin and rifapentine; UniProtKB:P0A8V2 rpoB in E. coli K-12 on rifaximin; UniProtKB:P0CE47 tufA in E. coli K-12 and UniProtKB:P60338 tufA in T. thermophilus on GE2270A and pulvomycin) while preserving their CARD_ARO molecular_targets, and are promoted from SEEDED to REVIEWED.
 
 ## Findings
 
@@ -82,7 +82,7 @@ Disposition: Resolved in Cycle 8 Stage 5 (Issue #1359): promoted alanylclavam (C
 
 major / resolved / confirmed; issue key: cycle8-stage1-proposed-exact-natural-products-missing-mechanism-and-targets.
 
-Curated mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with all 4 non-protein targets documented in curation/uniprot_protein_examples.yaml held_targets), and promoted all 4 records from PROPOSED to REVIEWED via record_curation_event and write_validated_antibiotic.
+Curated mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (GO:0015934 bacterial 50S ribosomal subunit on TP-1161; GO:0044237 fungal cellular metabolic process on 2-formyloxymethylclavam, 2-hydroxymethylclavam, and clavam-2-carboxylate; all 4 non-protein targets documented in curation/uniprot_protein_examples.yaml held_targets), and promoted all 4 records from PROPOSED to REVIEWED via record_curation_event and write_validated_antibiotic.
 
 Disposition: Resolved in Cycle 8 Stage 5 (Issue #1360): curated mode_of_action and PRIMARY_LITERATURE molecular_targets and promoted all 4 Cycle 8 Stage 1 EXACT natural products to REVIEWED.
 
@@ -90,9 +90,9 @@ Disposition: Resolved in Cycle 8 Stage 5 (Issue #1360): curated mode_of_action a
 
 major / resolved / confirmed; issue key: seeded-exact-rifamycins-and-elfamycins-with-card-only-targets-awaiting-primary-literature-promotion.
 
-Curated biosynthesis_origin (SEMISYNTHETIC on rifabutin, rifaximin, rifapentine; NATURAL_PRODUCT on GE2270A, pulvomycin), MICROBIAL_TARGET mode_of_action_target_scope, CURATOR mode_of_action_notes (NUCLEIC_ACID_SYNTHESIS_INHIBITION or PROTEIN_SYNTHESIS_INHIBITION), and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) bacterial DNA-directed RNA polymerase beta-subunit (RpoB; GO:0003899) or bacterial translation elongation factor Tu (EF-Tu / TufA; GO:0003746) molecular_targets with 8 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P0A8V2 and UniProtKB:P9WGY9 on the 3 rifamycins; UniProtKB:P0CE47 on the 2 elfamycins) across rifabutin (CHEBI:45367), rifaximin (CHEBI:75246), rifapentine (CHEBI:45304), GE2270A (CHEBI:29584), and pulvomycin (CHEBI:29668) via apply_uniprot_examples_plan while preserving CARD_ARO molecular_targets, and promoted all 5 records from SEEDED to REVIEWED via record_curation_event and write_validated_antibiotic.
+Curated biosynthesis_origin (SEMISYNTHETIC on rifabutin, rifaximin, rifapentine; NATURAL_PRODUCT on GE2270A, pulvomycin), MICROBIAL_TARGET mode_of_action_target_scope, CURATOR mode_of_action_notes (NUCLEIC_ACID_SYNTHESIS_INHIBITION or PROTEIN_SYNTHESIS_INHIBITION), and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) DNA-directed RNA polymerase complex (GO:0000428, PROTEIN_COMPLEX) or bacterial translation elongation factor Tu (EF-Tu; GO:0003746, PROTEIN) molecular_targets with 11 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:Q8RQE9, UniProtKB:P9WGY9, UniProtKB:P0A8V2 on rifabutin and rifapentine; UniProtKB:P0A8V2 on rifaximin; UniProtKB:P0CE47, UniProtKB:P60338 on GE2270A and pulvomycin) across rifabutin (CHEBI:45367), rifaximin (CHEBI:75246), rifapentine (CHEBI:45304), GE2270A (CHEBI:29584), and pulvomycin (CHEBI:29668) via apply_uniprot_examples_plan while preserving CARD_ARO molecular_targets, and promoted all 5 records from SEEDED to REVIEWED via record_curation_event and write_validated_antibiotic.
 
-Disposition: Resolved in Cycle 8 Stage 5 (Issue #1361): populated PRIMARY_LITERATURE molecular_targets and reviewed UniProtKB protein_examples and promoted all 5 EXACT ChEBI rifamycins and elfamycins to REVIEWED.
+Disposition: Resolved in Cycle 8 Stage 5 (Issue #1361): populated PRIMARY_LITERATURE molecular_targets and 11 reviewed UniProtKB protein_examples and promoted all 5 EXACT ChEBI rifamycins and elfamycins to REVIEWED.
 
 ## Recommended Actions And Acceptance Checks
 
@@ -103,10 +103,10 @@ Disposition: Resolved in Cycle 8 Stage 5 (Issue #1361): populated PRIMARY_LITERA
 
 | Evidence | Reference / locator | Support | Observation |
 | --- | --- | --- | --- |
-| remediated-records-content | curation/record_review_queue.tsv; 15 remediated YAML records and refreshed review-readiness worklist (2,951 items) | supports | All 15 records were updated through native validated writers (write_validated_antibiotic, apply_uniprot_examples_plan, record_curation_event): 6 Group 1 PROPOSED/EXACT records (alanylclavam CHEBI:81029, amicetin CHEBI:199652, andrimid CHEBI:216634, bottromycin A2 CHEBI:202006, planosporicin CHEBI:226796, ajudazol A CHEBI:204968) promoted to REVIEWED; 4 Group 2 Cycle 8 Stage 1 PROPOSED/EXACT natural products (TP-1161 CHEBI:217619, 2-formyloxymethylclavam CHEBI:81025, 2-hydroxymethylclavam CHEBI:81026, clavam-2-carboxylate CHEBI:81027) populated with curated mode_of_action and PRIMARY_LITERATURE molecular_targets (documented in curation/uniprot_protein_examples.yaml held_targets) and promoted to REVIEWED; and 5 Group 3 SEEDED/EXACT rifamycins and elfamycins (rifabutin CHEBI:45367, rifaximin CHEBI:75246, rifapentine CHEBI:45304, GE2270A CHEBI:29584, pulvomycin CHEBI:29668) populated with curated biosynthesis_origin, MICROBIAL_TARGET mode_of_action, and PRIMARY_LITERATURE molecular_targets (GO:0003899 RpoB or GO:0003746 EF-Tu) with 8 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P0A8V2 and UniProtKB:P9WGY9 on the 3 rifamycins; UniProtKB:P0CE47 on the 2 elfamycins) while preserving CARD_ARO molecular_targets and promoted to REVIEWED (raising corpus REVIEWED count from 159 to 174 and reducing the review-readiness queue from 2,966 to 2,951). |
+| remediated-records-content | curation/record_review_queue.tsv; 15 remediated YAML records and refreshed review-readiness worklist (2,951 items) | supports | All 15 records were updated through native validated writers (write_validated_antibiotic, apply_uniprot_examples_plan, record_curation_event): 6 Group 1 PROPOSED/EXACT records (alanylclavam CHEBI:81029, amicetin CHEBI:199652, andrimid CHEBI:216634, bottromycin A2 CHEBI:202006, planosporicin CHEBI:226796, ajudazol A CHEBI:204968) promoted to REVIEWED; 4 Group 2 Cycle 8 Stage 1 PROPOSED/EXACT natural products (TP-1161 CHEBI:217619 [GO:0015934 bacterial 50S ribosomal subunit], 2-formyloxymethylclavam CHEBI:81025, 2-hydroxymethylclavam CHEBI:81026, and clavam-2-carboxylate CHEBI:81027 [GO:0044237 fungal cellular metabolic process]) populated with curated mode_of_action and PRIMARY_LITERATURE molecular_targets (documented in curation/uniprot_protein_examples.yaml held_targets) and promoted to REVIEWED; and 5 Group 3 SEEDED/EXACT rifamycins and elfamycins (rifabutin CHEBI:45367, rifaximin CHEBI:75246, rifapentine CHEBI:45304, GE2270A CHEBI:29584, pulvomycin CHEBI:29668) populated with curated biosynthesis_origin, MICROBIAL_TARGET mode_of_action, and PRIMARY_LITERATURE molecular_targets (GO:0000428 DNA-directed RNA polymerase complex PROTEIN_COMPLEX on the 3 rifamycins or GO:0003746 bacterial translation elongation factor Tu (EF-Tu) PROTEIN on the 2 elfamycins) with 11 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:Q8RQE9, UniProtKB:P9WGY9, UniProtKB:P0A8V2 on rifabutin and rifapentine; UniProtKB:P0A8V2 on rifaximin; UniProtKB:P0CE47, UniProtKB:P60338 on GE2270A and pulvomycin) while preserving CARD_ARO molecular_targets and promoted to REVIEWED (raising corpus REVIEWED count from 159 to 174 and reducing the review-readiness queue from 2,966 to 2,951). |
 | validate-strict-pass | scripts/validate_strict.py; 3125 files scanned, 0 files with ERROR, 0 total ERROR rows | supports | Closed-mode LinkML validation and OAK ontology label verification pass across all 3,125 records. |
 | verify-corpus-pass | scripts/verify_corpus.py; records expected: 3125, on disk: 3125, missing: 0, unexpected: 0, drifted fields: 0 | supports | Every curator-owned edit on the 15 remediated records survives seed_from_sources.py reproduction without drift. |
-| primary-literature-sources | PMID:10681345, PMID:6833138, PMID:22267658, PMID:15066985, PMID:16866529, PMID:19115340, PMID:22293474, PMID:23021914, PMID:23475977, PMID:17469849, PMID:19301921, PMID:15112964, PMID:20432424, PMID:20562278, PMID:20929206, PMID:10223939, PMID:15950068, PMID:1936373, PMID:28121985, PMID:7541225, PMID:9774383, PMID:16616535, PMID:9515709, PMID:16303766; Primary experimental mechanism and target studies cited across the 15 remediated records | supports | Primary studies support REVIEWED promotion on the 6 Group 1 records (alanylclavam PMID:10681345, PMID:6833138; amicetin PMID:22267658, DOI:10.1021/ja01098a518; andrimid PMID:15066985, PMID:16866529; bottromycin A2 PMID:19115340, PMID:22293474, PMID:23021914; planosporicin PMID:23475977, PMID:17469849, PMID:19301921; ajudazol A PMID:15112964, PMID:20432424), mode_of_action, PRIMARY_LITERATURE molecular_targets, and REVIEWED promotion on the 4 Cycle 8 Stage 1 natural products (TP-1161 PMID:20562278, PMID:20929206; 2-formyloxymethylclavam, 2-hydroxymethylclavam, and clavam-2-carboxylate PMID:10681345, PMID:10223939, DOI:10.1039/c39790000282), and PRIMARY_LITERATURE bacterial RpoB (GO:0003899) and EF-Tu (GO:0003746) molecular_targets with reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P9WGY9, UniProtKB:P0CE47) and REVIEWED promotion on the 5 SEEDED/EXACT rifamycins and elfamycins (rifabutin PMID:15950068, PMID:1936373; rifaximin PMID:28121985, PMID:7541225; rifapentine PMID:15950068, PMID:9774383; GE2270A PMID:16616535, PMID:9515709; pulvomycin PMID:16616535, PMID:16303766). |
+| primary-literature-sources | PMID:10681345, PMID:6833138, PMID:22267658, PMID:15066985, PMID:16866529, PMID:19115340, PMID:22293474, PMID:23021914, PMID:23475977, PMID:17469849, PMID:19301921, PMID:15112964, PMID:20432424, PMID:20562278, PMID:20851988, PMID:17317567, DOI:10.1039/C39790000282, PMID:16096056, PMID:15700959, PMID:7774516, PMID:15855749, PMID:10625477, PMID:16734421; Primary experimental mechanism and target studies cited across the 15 remediated records | supports | Primary studies support REVIEWED promotion on the 6 Group 1 records (alanylclavam PMID:10681345, PMID:6833138; amicetin PMID:22267658, DOI:10.1021/ja01098a518; andrimid PMID:15066985, PMID:16866529; bottromycin A2 PMID:19115340, PMID:22293474, PMID:23021914; planosporicin PMID:23475977, PMID:17469849, PMID:19301921; ajudazol A PMID:15112964, PMID:20432424), mode_of_action, PRIMARY_LITERATURE molecular_targets, and REVIEWED promotion on the 4 Cycle 8 Stage 1 natural products (TP-1161 GO:0015934 bacterial 50S ribosomal subunit, PMID:20562278, PMID:20851988; 2-formyloxymethylclavam, 2-hydroxymethylclavam, and clavam-2-carboxylate GO:0044237 fungal cellular metabolic process, PMID:10681345, PMID:17317567, DOI:10.1039/C39790000282), and PRIMARY_LITERATURE DNA-directed RNA polymerase complex (GO:0000428, PROTEIN_COMPLEX) and bacterial translation elongation factor Tu (EF-Tu; GO:0003746, PROTEIN) molecular_targets with 11 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:Q8RQE9, UniProtKB:P9WGY9, UniProtKB:P0A8V2 on rifabutin and rifapentine; UniProtKB:P0A8V2 on rifaximin; UniProtKB:P0CE47, UniProtKB:P60338 on GE2270A and pulvomycin) and REVIEWED promotion on the 5 SEEDED/EXACT rifamycins and elfamycins (rifabutin PMID:16096056, PMID:15700959; rifaximin PMID:7774516, PMID:15855749, PMID:15700959; rifapentine PMID:16096056, PMID:15700959; GE2270A PMID:10625477, PMID:16734421; pulvomycin PMID:16734421). |
 
 ## Limits And Additional Notes
 
@@ -152,13 +152,15 @@ summary: 'Post-remediation batch review of the 15 AntibioticRecord YAML files up
   biosynthesis_origin, curator-verified mode_of_action and mode_of_action_target_scope,
   and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets
   (with reviewed Swiss-Prot UniProtKB protein_examples on andrimid [UniProtKB:P0ABD5,
-  UniProtKB:P0A9Q5], the 3 rifamycins [UniProtKB:P0A8V2, UniProtKB:P9WGY9], and the
-  2 elfamycins [UniProtKB:P0CE47], and documented held_targets rationales on the 9
-  non-protein molecular_targets in curation/uniprot_protein_examples.yaml), and are
-  promoted to curation_status: REVIEWED (raising corpus REVIEWED count from 159 to
-  174 and reducing the review-readiness worklist from 2,966 to 2,951).'
+  UniProtKB:P0A9Q5] and 11 newly added reviewed Swiss-Prot UniProtKB protein_examples
+  across the 5 Group 3 records [UniProtKB:Q8RQE9, UniProtKB:P9WGY9, UniProtKB:P0A8V2
+  on rifabutin and rifapentine; UniProtKB:P0A8V2 on rifaximin; UniProtKB:P0CE47, UniProtKB:P60338
+  on GE2270A and pulvomycin], and documented held_targets rationales on the 9 non-protein
+  or unresolved-subunit molecular_targets in curation/uniprot_protein_examples.yaml),
+  and are promoted to curation_status: REVIEWED (raising corpus REVIEWED count from
+  159 to 174 and reducing the review-readiness worklist from 2,966 to 2,951).'
 source:
-  git_revision: 0b7380c610b9c07b8858c5e748ca724218b76f55
+  git_revision: ee580e282a3382e51d5ef1982ded4f6fdd4c7fc5
   state: working_tree
   inputs:
   - path: .claude/skills/review-yaml-category/SKILL.md
@@ -169,13 +171,13 @@ source:
     sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
   - path: curation/causal_graphs.yaml
     role: context
-    sha256: 07aec03fe019218b87a7fa0cc310820b46f1c6af2aa4562aa9b5dbe52885d498
+    sha256: 064a5bdaac1b593d4c898ba55c016bd0dc9aa2e3a0d93ec726279bbcaf89eac4
   - path: curation/curator_antibiotics.tsv
     role: context
     sha256: cae7471ab358d3d8a4529198dd8d99206176e53cd94ba05e5f458b69a634a45d
   - path: curation/cycle8_stage5_review_remediation_transition.json
     role: context
-    sha256: c9c6235beab6941d1af90bc318da98f2240f4c8bff83a4ee7c0026127b90b9e7
+    sha256: 0f1488849ca06efc4025adcec18cc514d4d6deddb980a2ebac7e43479ff8e11a
   - path: curation/record_review_queue.tsv
     role: context
     sha256: 91aa57f1cd2dec3cb751555e31a077f8e783291bc293073976ff33db87093f19
@@ -187,13 +189,13 @@ source:
     sha256: 48b5f467ca7c684032866839bef7455e84310640b52abee9b25da865df312fcc
   - path: data/antibiotics/antibacterial/alanylclavam.yaml
     role: target
-    sha256: 837286a6fefb3031b7c90cabcd1acc4c0de507ea618a5a241376257dc8f8cd3d
+    sha256: f459346ebda7fad7b64dd69c062121d90ab464c1f583dee7d5510ce63106384c
   - path: data/antibiotics/antibacterial/amicetin.yaml
     role: target
     sha256: cb2ace2f9ecb51c242d27741656c1ea07fcfaa008d528c7b050f4b259e1b2795
   - path: data/antibiotics/antibacterial/andrimid.yaml
     role: target
-    sha256: 7b53657676806be127b35ff3f789a95c965f26ce61a51fffc934824b41dd85ba
+    sha256: 07fd61e5fe6853749953b1a9c53d8d4bfb5fb8b16892e133aa6c1f83584853eb
   - path: data/antibiotics/antibacterial/bottromycin-a2.yaml
     role: target
     sha256: 6b7d848697f11747c550a21a9ee6097693c1253b3f4debe048c30ba29eb6b381
@@ -202,7 +204,7 @@ source:
     sha256: 9fe69a1b2a3ab324fdbd2dc86a6b26d06cb57f4cba82d1be20ec57da44602d5c
   - path: data/antibiotics/antibacterial/planosporicin.yaml
     role: target
-    sha256: dc8ca260e5a33a7e47f4466fbc27ab555af81c1156f5ea86963ea240e356455f
+    sha256: 7aeb3cf2bf8c820ae2129ef08def53eb2cfc19fcf8cb5ae40916a2240e6b206d
   - path: data/antibiotics/antibacterial/pulvomycin.yaml
     role: target
     sha256: dd19e0248b22c9ad4a52d3493014616f6bb4d1d8570ff9987f1a7c031ae342e1
@@ -214,19 +216,19 @@ source:
     sha256: c1fb640c8314ac8fe7e57317b4d7dbd249aae25aef65fd9fbca66636444c1b4f
   - path: data/antibiotics/antibacterial/tp-1161.yaml
     role: target
-    sha256: 5e8787757547242e735e82c85af4652b4183840eccbf08b05547599256cfb0bb
+    sha256: c7e668971f966e6b9ee97e1e3b8fabe5bddebeaddfb7127f8e5b2b1f3d6739d2
   - path: data/antibiotics/antifungal/2-formyloxymethylclavam.yaml
     role: target
-    sha256: be575e1b8bcc47a76f32ecd8294fdab5f9ffee78729478b530362c831a419da0
+    sha256: 11f1649b78d2be17c0e0ffb9205e7bf194d2f17ad0dd7602ed332a0f6df10d1a
   - path: data/antibiotics/antifungal/2-hydroxymethylclavam.yaml
     role: target
-    sha256: 7cd16d2b018cbebccd9e6be0433b9ba6c5cd8a39ac1011714b918fc80c48a0d6
+    sha256: d8e45f1bc7ee423a24a6f1e4c7d3f648ffecc4d88cf7626e7e3f079cfb49b02f
   - path: data/antibiotics/antifungal/ajudazol-a.yaml
     role: target
-    sha256: 883671b70e306bd11421159df71831e8a9da2809bd50b71f387b57d5a8ac8fc3
+    sha256: fb2aae3484ce5159978b92e243e83e922ee3e64be019ae4022f1f3b5bac34d20
   - path: data/antibiotics/antifungal/clavam-2-carboxylate.yaml
     role: target
-    sha256: 6f17e10dc9b9c9d20d80d0d1a5f7eccc1a7c44d784582cd3a117fe65f1da00cf
+    sha256: 54a0e84d27e1fadf4a83f353c04127e4026fb0c4d4de3fe42cc92fdcdcd9100c
   - path: data/antibiotics/antimycobacterial/rifapentine.yaml
     role: target
     sha256: a3b3f0aec413293d176bfdb44db07b4310cbec8971451e44b89c741a5ebdcb0f
@@ -562,18 +564,21 @@ evidence:
     records (alanylclavam CHEBI:81029, amicetin CHEBI:199652, andrimid CHEBI:216634,
     bottromycin A2 CHEBI:202006, planosporicin CHEBI:226796, ajudazol A CHEBI:204968)
     promoted to REVIEWED; 4 Group 2 Cycle 8 Stage 1 PROPOSED/EXACT natural products
-    (TP-1161 CHEBI:217619, 2-formyloxymethylclavam CHEBI:81025, 2-hydroxymethylclavam
-    CHEBI:81026, clavam-2-carboxylate CHEBI:81027) populated with curated mode_of_action
+    (TP-1161 CHEBI:217619 [GO:0015934 bacterial 50S ribosomal subunit], 2-formyloxymethylclavam
+    CHEBI:81025, 2-hydroxymethylclavam CHEBI:81026, and clavam-2-carboxylate CHEBI:81027
+    [GO:0044237 fungal cellular metabolic process]) populated with curated mode_of_action
     and PRIMARY_LITERATURE molecular_targets (documented in curation/uniprot_protein_examples.yaml
     held_targets) and promoted to REVIEWED; and 5 Group 3 SEEDED/EXACT rifamycins
     and elfamycins (rifabutin CHEBI:45367, rifaximin CHEBI:75246, rifapentine CHEBI:45304,
     GE2270A CHEBI:29584, pulvomycin CHEBI:29668) populated with curated biosynthesis_origin,
-    MICROBIAL_TARGET mode_of_action, and PRIMARY_LITERATURE molecular_targets (GO:0003899
-    RpoB or GO:0003746 EF-Tu) with 8 reviewed Swiss-Prot UniProtKB protein_examples
-    (UniProtKB:P0A8V2 and UniProtKB:P9WGY9 on the 3 rifamycins; UniProtKB:P0CE47 on
-    the 2 elfamycins) while preserving CARD_ARO molecular_targets and promoted to
-    REVIEWED (raising corpus REVIEWED count from 159 to 174 and reducing the review-readiness
-    queue from 2,966 to 2,951).'
+    MICROBIAL_TARGET mode_of_action, and PRIMARY_LITERATURE molecular_targets (GO:0000428
+    DNA-directed RNA polymerase complex PROTEIN_COMPLEX on the 3 rifamycins or GO:0003746
+    bacterial translation elongation factor Tu (EF-Tu) PROTEIN on the 2 elfamycins)
+    with 11 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:Q8RQE9, UniProtKB:P9WGY9,
+    UniProtKB:P0A8V2 on rifabutin and rifapentine; UniProtKB:P0A8V2 on rifaximin;
+    UniProtKB:P0CE47, UniProtKB:P60338 on GE2270A and pulvomycin) while preserving
+    CARD_ARO molecular_targets and promoted to REVIEWED (raising corpus REVIEWED count
+    from 159 to 174 and reducing the review-readiness queue from 2,966 to 2,951).'
 - evidence_id: validate-strict-pass
   kind: validation
   reference: scripts/validate_strict.py
@@ -597,9 +602,8 @@ evidence:
   kind: primary_source
   reference: PMID:10681345, PMID:6833138, PMID:22267658, PMID:15066985, PMID:16866529,
     PMID:19115340, PMID:22293474, PMID:23021914, PMID:23475977, PMID:17469849, PMID:19301921,
-    PMID:15112964, PMID:20432424, PMID:20562278, PMID:20929206, PMID:10223939, PMID:15950068,
-    PMID:1936373, PMID:28121985, PMID:7541225, PMID:9774383, PMID:16616535, PMID:9515709,
-    PMID:16303766
+    PMID:15112964, PMID:20432424, PMID:20562278, PMID:20851988, PMID:17317567, DOI:10.1039/C39790000282,
+    PMID:16096056, PMID:15700959, PMID:7774516, PMID:15855749, PMID:10625477, PMID:16734421
   locator: Primary experimental mechanism and target studies cited across the 15 remediated
     records
   accessed_at: '2026-11-09T15:48:00Z'
@@ -609,15 +613,18 @@ evidence:
     andrimid PMID:15066985, PMID:16866529; bottromycin A2 PMID:19115340, PMID:22293474,
     PMID:23021914; planosporicin PMID:23475977, PMID:17469849, PMID:19301921; ajudazol
     A PMID:15112964, PMID:20432424), mode_of_action, PRIMARY_LITERATURE molecular_targets,
-    and REVIEWED promotion on the 4 Cycle 8 Stage 1 natural products (TP-1161 PMID:20562278,
-    PMID:20929206; 2-formyloxymethylclavam, 2-hydroxymethylclavam, and clavam-2-carboxylate
-    PMID:10681345, PMID:10223939, DOI:10.1039/c39790000282), and PRIMARY_LITERATURE
-    bacterial RpoB (GO:0003899) and EF-Tu (GO:0003746) molecular_targets with reviewed
-    Swiss-Prot UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P9WGY9, UniProtKB:P0CE47)
-    and REVIEWED promotion on the 5 SEEDED/EXACT rifamycins and elfamycins (rifabutin
-    PMID:15950068, PMID:1936373; rifaximin PMID:28121985, PMID:7541225; rifapentine
-    PMID:15950068, PMID:9774383; GE2270A PMID:16616535, PMID:9515709; pulvomycin PMID:16616535,
-    PMID:16303766).
+    and REVIEWED promotion on the 4 Cycle 8 Stage 1 natural products (TP-1161 GO:0015934
+    bacterial 50S ribosomal subunit, PMID:20562278, PMID:20851988; 2-formyloxymethylclavam,
+    2-hydroxymethylclavam, and clavam-2-carboxylate GO:0044237 fungal cellular metabolic
+    process, PMID:10681345, PMID:17317567, DOI:10.1039/C39790000282), and PRIMARY_LITERATURE
+    DNA-directed RNA polymerase complex (GO:0000428, PROTEIN_COMPLEX) and bacterial
+    translation elongation factor Tu (EF-Tu; GO:0003746, PROTEIN) molecular_targets
+    with 11 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:Q8RQE9, UniProtKB:P9WGY9,
+    UniProtKB:P0A8V2 on rifabutin and rifapentine; UniProtKB:P0A8V2 on rifaximin;
+    UniProtKB:P0CE47, UniProtKB:P60338 on GE2270A and pulvomycin) and REVIEWED promotion
+    on the 5 SEEDED/EXACT rifamycins and elfamycins (rifabutin PMID:16096056, PMID:15700959;
+    rifaximin PMID:7774516, PMID:15855749, PMID:15700959; rifapentine PMID:16096056,
+    PMID:15700959; GE2270A PMID:10625477, PMID:16734421; pulvomycin PMID:16734421).
 assessments:
 - assessment_id: group1-six-proposed-exact-records-promoted-to-reviewed
   area: completeness
@@ -651,12 +658,15 @@ assessments:
   topic: Population of mode_of_action, PRIMARY_LITERATURE molecular_targets, and REVIEWED
     promotion on 4 Cycle 8 Stage 1 EXACT natural products
   outcome: supported
-  summary: 'All 4 Cycle 8 Stage 1 EXACT natural-product records (TP-1161 CHEBI:217619,
-    2-formyloxymethylclavam CHEBI:81025, 2-hydroxymethylclavam CHEBI:81026, and clavam-2-carboxylate
-    CHEBI:81027) now carry curated mode_of_action, mode_of_action_target_scope, CURATOR
-    mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE)
-    molecular_targets (documented in curation/uniprot_protein_examples.yaml held_targets),
-    and are promoted to curation_status: REVIEWED.'
+  summary: 'All 4 Cycle 8 Stage 1 EXACT natural-product records (TP-1161 CHEBI:217619
+    [GO:0015934 bacterial 50S ribosomal subunit, RIBOSOMAL_SUBUNIT, PMID:20562278,
+    PMID:20851988], 2-formyloxymethylclavam CHEBI:81025, 2-hydroxymethylclavam CHEBI:81026,
+    and clavam-2-carboxylate CHEBI:81027 [GO:0044237 fungal cellular metabolic process,
+    BIOLOGICAL_PROCESS, PMID:10681345, PMID:17317567, DOI:10.1039/C39790000282]) now
+    carry curated mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes,
+    and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets
+    (documented in curation/uniprot_protein_examples.yaml held_targets), and are promoted
+    to curation_status: REVIEWED.'
   target_ids:
   - CHEBI:217619
   - CHEBI:81025
@@ -677,13 +687,15 @@ assessments:
     CHEBI:29668) now carry curated biosynthesis_origin (SEMISYNTHETIC on the 3 rifamycins;
     NATURAL_PRODUCT on the 2 elfamycins), MICROBIAL_TARGET mode_of_action_target_scope,
     CURATOR mode_of_action_notes (NUCLEIC_ACID_SYNTHESIS_INHIBITION or PROTEIN_SYNTHESIS_INHIBITION),
-    and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) bacterial DNA-directed
-    RNA polymerase beta-subunit (RpoB; GO:0003899) or bacterial translation elongation
-    factor Tu (EF-Tu / TufA; GO:0003746) molecular_targets with 8 reviewed Swiss-Prot
-    UniProtKB protein_examples (UniProtKB:P0A8V2 rpoB in E. coli K-12 and UniProtKB:P9WGY9
-    rpoB in M. tuberculosis H37Rv on each of the 3 rifamycins; UniProtKB:P0CE47 tufA
-    in E. coli K-12 on each of the 2 elfamycins) while preserving their CARD_ARO molecular_targets,
-    and are promoted from SEEDED to REVIEWED.'
+    and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) DNA-directed
+    RNA polymerase complex (GO:0000428, PROTEIN_COMPLEX) or bacterial translation
+    elongation factor Tu (EF-Tu; GO:0003746, PROTEIN) molecular_targets with 11 reviewed
+    Swiss-Prot UniProtKB protein_examples (UniProtKB:Q8RQE9 rpoB in T. thermophilus
+    HB8, UniProtKB:P9WGY9 rpoB in M. tuberculosis H37Rv, and UniProtKB:P0A8V2 rpoB
+    in E. coli K-12 on rifabutin and rifapentine; UniProtKB:P0A8V2 rpoB in E. coli
+    K-12 on rifaximin; UniProtKB:P0CE47 tufA in E. coli K-12 and UniProtKB:P60338
+    tufA in T. thermophilus on GE2270A and pulvomycin) while preserving their CARD_ARO
+    molecular_targets, and are promoted from SEEDED to REVIEWED.'
   target_ids:
   - CHEBI:45367
   - CHEBI:75246
@@ -766,7 +778,9 @@ findings:
     4 Cycle 8 Stage 1 EXACT natural products to REVIEWED
   description: 'Curated mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes,
     and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets
-    (with all 4 non-protein targets documented in curation/uniprot_protein_examples.yaml
+    (GO:0015934 bacterial 50S ribosomal subunit on TP-1161; GO:0044237 fungal cellular
+    metabolic process on 2-formyloxymethylclavam, 2-hydroxymethylclavam, and clavam-2-carboxylate;
+    all 4 non-protein targets documented in curation/uniprot_protein_examples.yaml
     held_targets), and promoted all 4 records from PROPOSED to REVIEWED via record_curation_event
     and write_validated_antibiotic.'
   target_ids:
@@ -819,11 +833,12 @@ findings:
   description: 'Curated biosynthesis_origin (SEMISYNTHETIC on rifabutin, rifaximin,
     rifapentine; NATURAL_PRODUCT on GE2270A, pulvomycin), MICROBIAL_TARGET mode_of_action_target_scope,
     CURATOR mode_of_action_notes (NUCLEIC_ACID_SYNTHESIS_INHIBITION or PROTEIN_SYNTHESIS_INHIBITION),
-    and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) bacterial DNA-directed
-    RNA polymerase beta-subunit (RpoB; GO:0003899) or bacterial translation elongation
-    factor Tu (EF-Tu / TufA; GO:0003746) molecular_targets with 8 reviewed Swiss-Prot
-    UniProtKB protein_examples (UniProtKB:P0A8V2 and UniProtKB:P9WGY9 on the 3 rifamycins;
-    UniProtKB:P0CE47 on the 2 elfamycins) across rifabutin (CHEBI:45367), rifaximin
+    and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) DNA-directed
+    RNA polymerase complex (GO:0000428, PROTEIN_COMPLEX) or bacterial translation
+    elongation factor Tu (EF-Tu; GO:0003746, PROTEIN) molecular_targets with 11 reviewed
+    Swiss-Prot UniProtKB protein_examples (UniProtKB:Q8RQE9, UniProtKB:P9WGY9, UniProtKB:P0A8V2
+    on rifabutin and rifapentine; UniProtKB:P0A8V2 on rifaximin; UniProtKB:P0CE47,
+    UniProtKB:P60338 on GE2270A and pulvomycin) across rifabutin (CHEBI:45367), rifaximin
     (CHEBI:75246), rifapentine (CHEBI:45304), GE2270A (CHEBI:29584), and pulvomycin
     (CHEBI:29668) via apply_uniprot_examples_plan while preserving CARD_ARO molecular_targets,
     and promoted all 5 records from SEEDED to REVIEWED via record_curation_event and
@@ -869,8 +884,8 @@ findings:
     role: Curator-owned biosynthesis_origin, mode_of_action, molecular_targets, curation_status,
       and curation_history
   disposition_reason: 'Resolved in Cycle 8 Stage 5 (Issue #1361): populated PRIMARY_LITERATURE
-    molecular_targets and reviewed UniProtKB protein_examples and promoted all 5 EXACT
-    ChEBI rifamycins and elfamycins to REVIEWED.'
+    molecular_targets and 11 reviewed UniProtKB protein_examples and promoted all
+    5 EXACT ChEBI rifamycins and elfamycins to REVIEWED.'
   previous_occurrences:
   - repository: CultureBotAI/AntibioticMech
     review_id: 20261109T120100Z-cycle8-frozen-inventory-cohort-review

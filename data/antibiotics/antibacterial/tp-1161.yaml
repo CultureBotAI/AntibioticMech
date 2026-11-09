@@ -78,10 +78,9 @@ curation_history:
 - timestamp: '2026-11-09T15:05:00Z'
   curator: antigravity
   action: CURATED_MOLECULAR_TARGETS
-  changes: 'Populated NATURAL_PRODUCT biosynthesis_origin, PROTEIN_SYNTHESIS_INHIBITION
-    (MICROBIAL_TARGET) mode_of_action, and primary-literature bacterial 50S ribosomal
-    subunit molecular_targets on TP-1161 backed by Engelhardt et al. 2010 (PMID:20562278,
-    PMID:20851988; issue #1360).'
+  changes: 'Populated PROTEIN_SYNTHESIS_INHIBITION (MICROBIAL_TARGET) mode_of_action,
+    and primary-literature bacterial 50S ribosomal subunit molecular_targets on TP-1161
+    backed by Engelhardt et al. 2010 (PMID:20562278, PMID:20851988; issue #1360).'
   llm_assisted: true
 - timestamp: '2026-11-09T15:15:00Z'
   curator: antigravity
@@ -107,7 +106,7 @@ molecular_targets:
   taxon_id: NCBITaxon:2
   taxon_label: Bacteria
   experimental_context: TP-1161 is a 26-membered series d1 thiopeptide antibiotic
-    isolated from marine Nocardiopsis sp. TFS65-07 (BGC0000625) with potent activity
+    isolated from marine Nocardiopsis sp. TFS65-07 (BGC0000615) with potent activity
     against Gram-positive bacteria including Staphylococcus aureus, Staphylococcus
     epidermidis, Streptococcus pneumoniae, and Enterococcus faecalis via 50S ribosomal
     subunit translation inhibition (Engelhardt et al. 2010, DOI:10.1128/AEM.00741-10,
@@ -123,5 +122,5 @@ molecular_targets:
       its Gram-positive antibacterial activity (MIC 0.25-1 ug/mL).
   - reference: PMID:20851988
     notes: Engelhardt et al. 2010 (Appl Environ Microbiol 76:7093-7101; DOI:10.1128/AEM.01442-10)
-      characterized the TP-1161 ribosomal peptide biosynthetic gene cluster (BGC0000625)
+      characterized the TP-1161 ribosomal peptide biosynthetic gene cluster (BGC0000615)
       in Nocardiopsis sp. TFS65-07.
