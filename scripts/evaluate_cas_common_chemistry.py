@@ -9,6 +9,16 @@ Purpose:
     1. MINTED records whose structure already has a 3-star ChEBI entry outside
        the antimicrobial-role slice (`CHEBI_3STAR_OUTSIDE_ANTIMICROBIAL_SLICE`),
        which can be grounded via CC BY 4.0 ChEBI without importing CC BY-NC data.
+       Each such record is further classified by `grounding_action`:
+         - `CURATOR_XREF_READY`: `antibioticmech:curator-*` concept ready to
+           ground via `curation/curator_antibiotics.tsv` (`xrefs` column).
+         - `DECISION_NEEDS_INVENTORY_EXTRACT`: `antibioticmech:aro-*` concept
+           ready for `curation/decisions.tsv` once `extract_source_inventory.py`
+           refreshes `data/raw/chebi_antimicrobials.tsv` with
+           `load_curation_chebi_ids()`.
+         - `HOLD_CONGENER_COLLISION`: multiple corpus concepts share the same
+           candidate ChEBI target (e.g. `gramicidin C` vs `gramicidin S` on
+           `PubChem:73357` / `CHEBI:5530`) and must not be merged.
     2. Stereochemical or congener mismatches between PubChem/ARO and CAS/ChEBI
        (`CHEBI_STEREO_OR_CONGENER_DIFFERENCE`).
     3. CAS-resolved records that still lack a 3-star ChEBI entry
@@ -22,8 +32,9 @@ Inputs:
   - Optional full 3-star ChEBI structures TSV (`--chebi-structures-tsv`)
 
 Outputs:
-  - Summary metrics to stdout and optional TSV report (`--output-tsv` outside
-    `data/raw/` and `data/antibiotics/`).
+  - Summary metrics to stdout, optional TSV report (`--output-tsv`), and
+    optional overlay proposal TSV (`--emit-overlay-proposals`), both validated
+    to lie outside `data/raw/`, `data/antibiotics/`, and `curation/`.
 
 License Gate:
   CAS Common Chemistry is licensed under CC BY-NC 4.0
@@ -68,8 +79,7 @@ INCHIKEY_PREFIX_RE = re.compile(r"^InChIKey=", re.IGNORECASE)
 
 def strip_inchikey_prefix(value: str) -> str:
     """Normalize `InChIKey=XXXX-YYYY-Z` to standard 27-character `XXXX-YYYY-Z`."""
-    cleaned = INCHIKEY_PREFIX_RE.sub("", (value or "").strip())
-    return cleaned
+    return INCHIKEY_PREFIX_RE.sub("", (value or "").strip())
 
 
 def _component_count(formula_expr: str) -> int:
@@ -115,11 +125,12 @@ def has_deduplicated_component_smiles(
 
 
 def validate_output_path_is_outside_corpus(output_path: Path, repo_root: Path = REPO_ROOT) -> None:
-    """Refuse to write CC BY-NC 4.0 evaluation output inside `data/raw/` or `data/antibiotics/`."""
+    """Refuse to write CC BY-NC 4.0 output inside `data/raw/`, `data/antibiotics/`, or `curation/`."""
     resolved = output_path.resolve()
     forbidden_roots = (
         (repo_root / "data" / "raw").resolve(),
         (repo_root / "data" / "antibiotics").resolve(),
+        (repo_root / "curation").resolve(),
     )
     for forbidden in forbidden_roots:
         if resolved == forbidden or resolved.is_relative_to(forbidden):
@@ -157,6 +168,30 @@ def load_antibiotic_records(corpus_dir: Path = CORPUS_DIR) -> dict[str, dict]:
     return records
 
 
+def _classify_grounding_action(
+    row: dict[str, str],
+    chebi_target_counts: Counter[str],
+) -> str:
+    """Classify the actionable grounding path for an evaluated CAS row."""
+    category = row["evaluation_category"]
+    if category == "CHEBI_IN_ANTIMICROBIAL_SLICE":
+        return "ALREADY_IN_ANTIMICROBIAL_SLICE"
+    if category == "CHEBI_STEREO_OR_CONGENER_DIFFERENCE":
+        return "REVIEW_STEREO_OR_CONGENER"
+    if category != "CHEBI_3STAR_OUTSIDE_ANTIMICROBIAL_SLICE":
+        return "CAS_RN_ONLY_NO_CHEBI_3STAR"
+
+    chebi_id = row["candidate_chebi_id"]
+    label_norm = row["label"].strip().lower()
+    chebi_name_norm = row["candidate_chebi_name"].strip().lower()
+    if chebi_target_counts[chebi_id] > 1 and label_norm != chebi_name_norm:
+        return "HOLD_CONGENER_COLLISION"
+
+    if row["identifier"].startswith("antibioticmech:curator-"):
+        return "CURATOR_XREF_READY"
+    return "DECISION_NEEDS_INVENTORY_EXTRACT"
+
+
 def evaluate_cas_rows(
     cas_rows: list[dict[str, str]],
     records_by_id: dict[str, dict],
@@ -164,7 +199,7 @@ def evaluate_cas_rows(
     chebi_3star_all: dict[str, tuple[str, str]],
 ) -> list[dict[str, str]]:
     """Evaluate AntibioticMech CAS Common Chemistry rows against corpus and ChEBI."""
-    results: list[dict[str, str]] = []
+    preliminary: list[dict[str, str]] = []
     for row in cas_rows:
         if row.get("mech") != "AntibioticMech":
             continue
@@ -184,7 +219,6 @@ def evaluate_cas_rows(
             else ("DIFFERS" if corpus_ik and cas_ik else "CAS_ONLY")
         )
 
-        # Check whether either the corpus InChIKey or CAS InChIKey hits ChEBI
         antimicrobial_hit = chebi_antimicrobials.get(cas_ik) or chebi_antimicrobials.get(corpus_ik)
         chebi3_cas_hit = chebi_3star_all.get(cas_ik)
         chebi3_corpus_hit = chebi_3star_all.get(corpus_ik)
@@ -202,7 +236,7 @@ def evaluate_cas_rows(
             category = "CAS_RESOLVED_NO_CHEBI_3STAR"
             chebi_id, chebi_name = "", ""
 
-        results.append(
+        preliminary.append(
             {
                 "group": (row.get("group") or "").strip(),
                 "identifier": identifier,
@@ -219,7 +253,68 @@ def evaluate_cas_rows(
                 "evaluation_category": category,
             }
         )
-    return results
+
+    chebi_target_counts = Counter(
+        r["candidate_chebi_id"]
+        for r in preliminary
+        if r["evaluation_category"] == "CHEBI_3STAR_OUTSIDE_ANTIMICROBIAL_SLICE"
+        and r["candidate_chebi_id"]
+    )
+    for item in preliminary:
+        item["grounding_action"] = _classify_grounding_action(item, chebi_target_counts)
+    return preliminary
+
+
+def build_overlay_proposals(
+    evaluated_rows: list[dict[str, str]],
+    records_by_id: dict[str, dict],
+) -> list[dict[str, str]]:
+    """Build actionable ChEBI 3-star overlay proposals for `CHEBI_3STAR_OUTSIDE_ANTIMICROBIAL_SLICE`."""
+    proposals: list[dict[str, str]] = []
+    for row in evaluated_rows:
+        if row.get("evaluation_category") != "CHEBI_3STAR_OUTSIDE_ANTIMICROBIAL_SLICE":
+            continue
+        identifier = row["identifier"]
+        rec = records_by_id.get(identifier, {})
+        xrefs = [str(x) for x in (rec.get("xrefs") or [])]
+        aro_id = next((x for x in xrefs if x.startswith("ARO:")), "")
+        action = row["grounding_action"]
+        chebi_id = row["candidate_chebi_id"]
+        chebi_name = row["candidate_chebi_name"]
+        cas_rn = row["cas_rn"]
+        ik = row["corpus_inchikey"] or row["cas_inchikey"]
+
+        if action == "CURATOR_XREF_READY":
+            target_file = "curation/curator_antibiotics.tsv"
+            proposed = f"Append {chebi_id}|CAS-RN:{cas_rn} to xrefs for {row['label']}"
+        elif action == "DECISION_NEEDS_INVENTORY_EXTRACT":
+            target_file = "curation/decisions.tsv"
+            proposed = (
+                f"{aro_id}\t{row['label']}\t\tground\t{chebi_id}\t{chebi_name}\t"
+                f"3-star ChEBI exact Standard InChIKey match ({ik}, CAS-RN:{cas_rn})"
+            )
+        else:
+            target_file = "HOLD"
+            proposed = (
+                f"Do not merge {row['label']} ({aro_id or identifier}) into {chebi_id} "
+                f"({chebi_name}); distinct congener colliding on shared PubChem/CAS InChIKey {ik}"
+            )
+
+        proposals.append(
+            {
+                "identifier": identifier,
+                "aro_id": aro_id,
+                "label": row["label"],
+                "grounding_action": action,
+                "target_file": target_file,
+                "candidate_chebi_id": chebi_id,
+                "candidate_chebi_name": chebi_name,
+                "cas_rn": cas_rn,
+                "standard_inchi_key": ik,
+                "proposed_entry": proposed,
+            }
+        )
+    return proposals
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -240,7 +335,13 @@ def main(argv: list[str] | None = None) -> int:
         "--output-tsv",
         type=Path,
         default=None,
-        help="Optional output TSV path (must be outside data/raw/ and data/antibiotics/)",
+        help="Optional output TSV path (must be outside data/raw/, data/antibiotics/, and curation/)",
+    )
+    parser.add_argument(
+        "--emit-overlay-proposals",
+        type=Path,
+        default=None,
+        help="Optional TSV path for actionable ChEBI 3-star overlay proposals (outside data/ and curation/)",
     )
     args = parser.parse_args(argv)
 
@@ -250,6 +351,8 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.output_tsv is not None:
         validate_output_path_is_outside_corpus(args.output_tsv)
+    if args.emit_overlay_proposals is not None:
+        validate_output_path_is_outside_corpus(args.emit_overlay_proposals)
 
     with args.cas_tsv.open(newline="", encoding="utf-8") as fh:
         cas_rows = list(csv.DictReader(fh, delimiter="\t"))
@@ -267,6 +370,7 @@ def main(argv: list[str] | None = None) -> int:
 
     by_group = Counter(r["group"] for r in evaluated)
     by_category = Counter(r["evaluation_category"] for r in evaluated)
+    by_action = Counter(r["grounding_action"] for r in evaluated)
     dedup_count = sum(1 for r in evaluated if r["deduplicated_component_smiles"] == "true")
 
     print(f"CAS Common Chemistry license                : {CAS_LICENSE} ({REDISTRIBUTION_CLASS})")
@@ -279,6 +383,10 @@ def main(argv: list[str] | None = None) -> int:
     for category, count in sorted(by_category.items()):
         print(f"  {category:<43} : {count}")
     print(f"  deduplicated_component_smiles               : {dedup_count}")
+    print()
+    print("Grounding actions:")
+    for action, count in sorted(by_action.items()):
+        print(f"  {action:<43} : {count}")
     print()
     print("NOT WRITTEN TO CORPUS. CAS Common Chemistry is CC BY-NC 4.0; use")
     print("CHEBI_3STAR_OUTSIDE_ANTIMICROBIAL_SLICE leads to ground MINTED records")
@@ -300,6 +408,7 @@ def main(argv: list[str] | None = None) -> int:
             "candidate_chebi_name",
             "deduplicated_component_smiles",
             "evaluation_category",
+            "grounding_action",
         ]
         with args.output_tsv.open("w", newline="", encoding="utf-8") as fh:
             writer = csv.DictWriter(
@@ -307,6 +416,28 @@ def main(argv: list[str] | None = None) -> int:
             )
             writer.writeheader()
             writer.writerows(evaluated)
+
+    if args.emit_overlay_proposals is not None:
+        proposals = build_overlay_proposals(evaluated, records_by_id)
+        args.emit_overlay_proposals.parent.mkdir(parents=True, exist_ok=True)
+        proposal_fields = [
+            "identifier",
+            "aro_id",
+            "label",
+            "grounding_action",
+            "target_file",
+            "candidate_chebi_id",
+            "candidate_chebi_name",
+            "cas_rn",
+            "standard_inchi_key",
+            "proposed_entry",
+        ]
+        with args.emit_overlay_proposals.open("w", newline="", encoding="utf-8") as fh:
+            writer = csv.DictWriter(
+                fh, fieldnames=proposal_fields, delimiter="\t", lineterminator="\n"
+            )
+            writer.writeheader()
+            writer.writerows(proposals)
 
     return 0
 

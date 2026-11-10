@@ -41,6 +41,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 CONF_PATH = REPO_ROOT / "conf" / "sources.yaml"
 DOWNLOAD_DIR = REPO_ROOT / "downloads"
 RAW_DIR = REPO_ROOT / "data" / "raw"
+DECISIONS_TSV = REPO_ROOT / "curation" / "decisions.tsv"
+CURATOR_ANTIBIOTICS_TSV = REPO_ROOT / "curation" / "curator_antibiotics.tsv"
 
 CHEBI_INVENTORY = "chebi_antimicrobials.tsv"
 ARO_INVENTORY = "aro_antibiotics.tsv"
@@ -173,9 +175,42 @@ def role_name_rows(conf: dict, compounds: dict, acc2id: dict) -> list[dict]:
     return rows
 
 
-def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> list[dict]:
+def load_curation_chebi_ids(
+    decisions_tsv: Path = DECISIONS_TSV,
+    curator_tsv: Path = CURATOR_ANTIBIOTICS_TSV,
+) -> set[str]:
+    """Return ChEBI CURIEs referenced in `curation/decisions.tsv` or `curation/curator_antibiotics.tsv`.
+
+    Including curator-selected 3-star ChEBI terms in `chebi_antimicrobials.tsv`
+    (with `in_role_scope=false`) allows `seed_from_sources.py` to ground ARO
+    and CURATOR records whose 3-star ChEBI entries lack an antimicrobial role edge.
+    """
+    chebi_ids: set[str] = set()
+    if decisions_tsv.exists():
+        with decisions_tsv.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                target = (row.get("grounding_target_id") or "").strip()
+                if target.startswith("CHEBI:"):
+                    chebi_ids.add(target)
+    if curator_tsv.exists():
+        with curator_tsv.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                for token in (row.get("xrefs") or "").split("|"):
+                    tok = token.strip()
+                    if tok.startswith("CHEBI:"):
+                        chebi_ids.add(tok)
+    return chebi_ids
+
+
+def extract_chebi(
+    conf: dict,
+    *,
+    offline: bool,
+    aro_chebi_xrefs: set[str],
+    curation_chebi_ids: set[str] | None = None,
+) -> tuple[list[dict], list[dict]]:
     """ChEBI compounds bearing an in-scope antimicrobial role, plus any ChEBI id
-    cross-referenced by an ARO antibiotic molecule.
+    cross-referenced by an ARO antibiotic molecule or curation overlay.
 
     The second group matters: an ARO molecule whose ChEBI term happens not to
     carry an antimicrobial role (ChEBI files roles inconsistently for older
@@ -255,7 +290,7 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
     wanted: dict[str, list[str]] = {}
     for cid, roles in list(direct.items()) + list(inherited.items()):
         wanted.setdefault(cid, []).extend(roles)
-    for acc in aro_chebi_xrefs:
+    for acc in aro_chebi_xrefs | (curation_chebi_ids or set()):
         cid = acc2id.get(acc)
         if cid:
             wanted.setdefault(cid, [])
@@ -614,8 +649,13 @@ def main() -> int:
     print(f"  {len(resistance_rows)} resistance edges, {len(target_rows)} target edges", file=sys.stderr)
 
     print("=== ChEBI ===", file=sys.stderr)
-    chebi_rows, role_names = extract_chebi(conf, offline=args.offline,
-                                           aro_chebi_xrefs=aro_chebi_xrefs)
+    curation_chebi_ids = load_curation_chebi_ids()
+    chebi_rows, role_names = extract_chebi(
+        conf,
+        offline=args.offline,
+        aro_chebi_xrefs=aro_chebi_xrefs,
+        curation_chebi_ids=curation_chebi_ids,
+    )
     with_structure = sum(1 for r in chebi_rows if r["standard_inchi_key"])
     in_scope = sum(1 for r in chebi_rows if r["in_role_scope"] == "true")
     print(f"  {len(chebi_rows)} compounds ({in_scope} in role scope, "
