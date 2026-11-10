@@ -64,7 +64,6 @@ CORPUS_LICENSE = "CC-BY-4.0"
 REDISTRIBUTION_CLASS = "NON_COMMERCIAL"
 
 INCHIKEY_PREFIX_RE = re.compile(r"^InChIKey=", re.IGNORECASE)
-INCHI_MULTIPLIER_RE = re.compile(r"/f[^/]*?/m|\b[2-9]\d*\*|[.;][2-9]\d*[A-Za-z]")
 
 
 def strip_inchikey_prefix(value: str) -> str:
