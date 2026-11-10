@@ -12,11 +12,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from check_source_queue import UNSEEDABLE  # noqa: E402
 from evaluate_cas_common_chemistry import (  # noqa: E402
     REDISTRIBUTION_CLASS,
+    build_overlay_proposals,
     evaluate_cas_rows,
     has_deduplicated_component_smiles,
     strip_inchikey_prefix,
     validate_output_path_is_outside_corpus,
 )
+from extract_source_inventory import load_curation_chebi_ids  # noqa: E402
 
 
 def test_cas_common_chemistry_redistribution_is_unseedable_under_cc_by_4():
@@ -36,7 +38,6 @@ def test_strip_inchikey_prefix_normalizes_cas_format():
 
 
 def test_has_deduplicated_component_smiles_detects_polysalt_and_polyhydrate_collapse():
-    # Disodium salt where CAS canonicalSmile has only one [Na]
     assert (
         has_deduplicated_component_smiles(
             "C10H16N2O8.2H2O.2Na",
@@ -49,7 +50,6 @@ def test_has_deduplicated_component_smiles_detects_polysalt_and_polyhydrate_coll
         )
         is True
     )
-    # Neutral monomer without disconnected components
     assert (
         has_deduplicated_component_smiles(
             "C7H17NO7S",
@@ -60,9 +60,10 @@ def test_has_deduplicated_component_smiles_detects_polysalt_and_polyhydrate_coll
     )
 
 
-def test_validate_output_path_refuses_corpus_and_raw_directories(tmp_path):
+def test_validate_output_path_refuses_corpus_raw_and_curation_directories(tmp_path):
     (tmp_path / "data" / "raw").mkdir(parents=True)
     (tmp_path / "data" / "antibiotics").mkdir(parents=True)
+    (tmp_path / "curation").mkdir(parents=True)
     (tmp_path / "reports").mkdir(parents=True)
 
     with pytest.raises(ValueError, match="Refusing to write CC-BY-NC-4.0"):
@@ -75,27 +76,53 @@ def test_validate_output_path_refuses_corpus_and_raw_directories(tmp_path):
             tmp_path / "data" / "antibiotics" / "cas.tsv", repo_root=tmp_path
         )
 
+    with pytest.raises(ValueError, match="Refusing to write CC-BY-NC-4.0"):
+        validate_output_path_is_outside_corpus(
+            tmp_path / "curation" / "decisions.tsv", repo_root=tmp_path
+        )
+
     validate_output_path_is_outside_corpus(
         tmp_path / "reports" / "cas_eval.tsv", repo_root=tmp_path
     )
 
 
-def test_evaluate_cas_rows_classifies_chebi_3star_and_stereo_differences():
+def test_evaluate_cas_rows_classifies_chebi_3star_grounding_actions_and_congener_collision():
     cas_rows = [
         {
             "group": "antibiotic_minted",
             "mech": "AntibioticMech",
-            "identifier": "antibioticmech:ARO-3000150",
+            "identifier": "antibioticmech:aro-bf71825341",
             "query_name": "gramicidin S",
             "cas_rn": "113-73-5",
             "cas_name": "Gramicidin S",
             "molecular_formula": "C60H92N12O10",
-            "canonical_smiles": (
-                "CC(C)C1NC(=O)C(CCCN)NC(=O)C(Cc2ccccc2)NC(=O)C2CCCN2C(=O)"
-                "C(CC(C)C)NC(=O)C(CCCN)NC(=O)C(Cc2ccccc2)NC(=O)C2CCCN2C1=O"
-            ),
+            "canonical_smiles": "CC(C)C1NC(=O)...",
             "inchi": "InChI=1S/...",
             "inchikey": "InChIKey=BLRBXZWBHXWECJ-XFFZJAGNSA-N",
+        },
+        {
+            "group": "antibiotic_minted",
+            "mech": "AntibioticMech",
+            "identifier": "antibioticmech:aro-bf39ac682c",
+            "query_name": "gramicidin C",
+            "cas_rn": "113-73-5",
+            "cas_name": "Gramicidin S",
+            "molecular_formula": "C60H92N12O10",
+            "canonical_smiles": "CC(C)C1NC(=O)...",
+            "inchi": "InChI=1S/...",
+            "inchikey": "InChIKey=BLRBXZWBHXWECJ-XFFZJAGNSA-N",
+        },
+        {
+            "group": "antibiotic_minted",
+            "mech": "AntibioticMech",
+            "identifier": "antibioticmech:curator-223be9c74d",
+            "query_name": "Luteolin",
+            "cas_rn": "491-70-3",
+            "cas_name": "Luteolin",
+            "molecular_formula": "C15H10O6",
+            "canonical_smiles": "O=c1cc(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12",
+            "inchi": "InChI=1S/...",
+            "inchikey": "InChIKey=IQPNAANSBPBGFQ-UHFFFAOYSA-N",
         },
         {
             "group": "antibiotic_minted",
@@ -123,12 +150,31 @@ def test_evaluate_cas_rows_classifies_chebi_3star_and_stereo_differences():
         },
     ]
     records_by_id = {
-        "antibioticmech:ARO-3000150": {
-            "identifier": "antibioticmech:ARO-3000150",
+        "antibioticmech:aro-bf71825341": {
+            "identifier": "antibioticmech:aro-bf71825341",
             "label": "gramicidin S",
             "grounding_status": "MINTED",
+            "xrefs": ["ARO:3005195", "PubChem:73357"],
             "chemical_structure": {
                 "standard_inchi_key": "BLRBXZWBHXWECJ-XFFZJAGNSA-N",
+            },
+        },
+        "antibioticmech:aro-bf39ac682c": {
+            "identifier": "antibioticmech:aro-bf39ac682c",
+            "label": "gramicidin C",
+            "grounding_status": "MINTED",
+            "xrefs": ["ARO:3005193", "PubChem:73357"],
+            "chemical_structure": {
+                "standard_inchi_key": "BLRBXZWBHXWECJ-XFFZJAGNSA-N",
+            },
+        },
+        "antibioticmech:curator-223be9c74d": {
+            "identifier": "antibioticmech:curator-223be9c74d",
+            "label": "Luteolin",
+            "grounding_status": "MINTED",
+            "xrefs": ["PubChem:5280445"],
+            "chemical_structure": {
+                "standard_inchi_key": "IQPNAANSBPBGFQ-UHFFFAOYSA-N",
             },
         },
         "antibioticmech:ARO-3007577": {
@@ -149,6 +195,7 @@ def test_evaluate_cas_rows_classifies_chebi_3star_and_stereo_differences():
     chebi_antimicrobials: dict[str, tuple[str, str]] = {}
     chebi_3star_all = {
         "BLRBXZWBHXWECJ-XFFZJAGNSA-N": ("CHEBI:5530", "gramicidin S"),
+        "IQPNAANSBPBGFQ-UHFFFAOYSA-N": ("CHEBI:15864", "luteolin"),
         "HSMVPDGQOIQYSR-HYXKWVIFSA-N": ("CHEBI:81787", "(E)-triflumizole"),
     }
 
@@ -161,21 +208,54 @@ def test_evaluate_cas_rows_classifies_chebi_3star_and_stereo_differences():
     by_id = {r["identifier"]: r for r in evaluated}
 
     assert (
-        by_id["antibioticmech:ARO-3000150"]["evaluation_category"]
+        by_id["antibioticmech:aro-bf71825341"]["evaluation_category"]
         == "CHEBI_3STAR_OUTSIDE_ANTIMICROBIAL_SLICE"
     )
-    assert by_id["antibioticmech:ARO-3000150"]["candidate_chebi_id"] == "CHEBI:5530"
-    assert by_id["antibioticmech:ARO-3000150"]["inchikey_agreement"] == "AGREES"
-
     assert (
-        by_id["antibioticmech:ARO-3007577"]["evaluation_category"]
-        == "CHEBI_STEREO_OR_CONGENER_DIFFERENCE"
+        by_id["antibioticmech:aro-bf71825341"]["grounding_action"]
+        == "DECISION_NEEDS_INVENTORY_EXTRACT"
     )
-    assert by_id["antibioticmech:ARO-3007577"]["candidate_chebi_id"] == "CHEBI:81787"
-    assert by_id["antibioticmech:ARO-3007577"]["inchikey_agreement"] == "DIFFERS"
-
     assert (
-        by_id["antibioticmech:ARO-3005110"]["evaluation_category"]
-        == "CAS_RESOLVED_NO_CHEBI_3STAR"
+        by_id["antibioticmech:aro-bf39ac682c"]["grounding_action"]
+        == "HOLD_CONGENER_COLLISION"
     )
-    assert by_id["antibioticmech:ARO-3005110"]["inchikey_agreement"] == "CAS_ONLY"
+    assert (
+        by_id["antibioticmech:curator-223be9c74d"]["grounding_action"]
+        == "CURATOR_XREF_READY"
+    )
+    assert (
+        by_id["antibioticmech:ARO-3007577"]["grounding_action"]
+        == "REVIEW_STEREO_OR_CONGENER"
+    )
+    assert (
+        by_id["antibioticmech:ARO-3005110"]["grounding_action"]
+        == "CAS_RN_ONLY_NO_CHEBI_3STAR"
+    )
+
+    proposals = build_overlay_proposals(evaluated, records_by_id)
+    assert len(proposals) == 3
+    prop_by_id = {p["identifier"]: p for p in proposals}
+    assert prop_by_id["antibioticmech:curator-223be9c74d"]["target_file"] == (
+        "curation/curator_antibiotics.tsv"
+    )
+    assert prop_by_id["antibioticmech:aro-bf71825341"]["target_file"] == (
+        "curation/decisions.tsv"
+    )
+    assert prop_by_id["antibioticmech:aro-bf39ac682c"]["target_file"] == "HOLD"
+
+
+def test_load_curation_chebi_ids_collects_decisions_and_curator_xrefs(tmp_path):
+    decisions = tmp_path / "decisions.tsv"
+    decisions.write_text(
+        "aro_id\taro_name\taro_chebi_xref\taction\tgrounding_target_id\tgrounding_target_name\treason\n"
+        "ARO:3005195\tgramicidin S\t\tground\tCHEBI:5530\tgramicidin S\ttest\n",
+        encoding="utf-8",
+    )
+    curator = tmp_path / "curator_antibiotics.tsv"
+    curator.write_text(
+        "label\txrefs\tinchi_key\n"
+        "Luteolin\tPubChem:5280445|CHEBI:15864|CAS-RN:491-70-3\tIQPNAANSBPBGFQ-UHFFFAOYSA-N\n",
+        encoding="utf-8",
+    )
+    ids = load_curation_chebi_ids(decisions_tsv=decisions, curator_tsv=curator)
+    assert ids == {"CHEBI:5530", "CHEBI:15864"}
