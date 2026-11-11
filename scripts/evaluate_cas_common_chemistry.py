@@ -182,9 +182,7 @@ def _classify_grounding_action(
         return "CAS_RN_ONLY_NO_CHEBI_3STAR"
 
     chebi_id = row["candidate_chebi_id"]
-    label_norm = row["label"].strip().lower()
-    chebi_name_norm = row["candidate_chebi_name"].strip().lower()
-    if chebi_target_counts[chebi_id] > 1 and label_norm != chebi_name_norm:
+    if chebi_target_counts[chebi_id] > 1:
         return "HOLD_CONGENER_COLLISION"
 
     if row["identifier"].startswith("antibioticmech:curator-"):
@@ -292,19 +290,22 @@ def build_overlay_proposals(
 
         if action == "CURATOR_XREF_READY":
             target_file = "curation/curator_antibiotics.tsv"
-            proposed = f"Append {chebi_id}|CAS-RN:{cas_rn} to xrefs for {row['label']}"
+            proposed = (
+                f"Append {chebi_id} to xrefs for {row['label']} "
+                f"(3-star ChEBI exact Standard InChIKey match {ik})"
+            )
         elif action == "DECISION_NEEDS_INVENTORY_EXTRACT":
             target_file = "curation/decisions.tsv"
             proposed = (
-                f"{identifier}\tARO\t{aro_id}\t{row['label']}\tGROUND\t{chebi_id}\t"
-                f"curator\t2026-11-10\t"
-                f"3-star ChEBI exact Standard InChIKey match ({ik}, CAS-RN:{cas_rn})"
+                f"{aro_id}\t{row['label']}\t\tground\t{chebi_id}\t{chebi_name}\t"
+                f"3-star ChEBI exact Standard InChIKey match ({ik})"
             )
         else:
             target_file = "HOLD"
             proposed = (
-                f"Do not merge {row['label']} ({aro_id or identifier}) into {chebi_id} "
-                f"({chebi_name}); distinct congener colliding on shared PubChem/CAS InChIKey {ik}"
+                f"Hold {row['label']} ({aro_id or identifier}) -> {chebi_id} "
+                f"({chebi_name}); distinct congeners share PubChem/CAS InChIKey {ik} "
+                f"and grounding either one folds the sibling MINTED record in seed_from_sources.py"
             )
 
         proposals.append(

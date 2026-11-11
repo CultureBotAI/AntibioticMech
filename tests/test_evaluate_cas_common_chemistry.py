@@ -127,6 +127,18 @@ def test_evaluate_cas_rows_classifies_chebi_3star_grounding_actions_and_congener
         {
             "group": "antibiotic_minted",
             "mech": "AntibioticMech",
+            "identifier": "antibioticmech:aro-2eea3233f3",
+            "query_name": "ofloxacin",
+            "cas_rn": "82419-36-1",
+            "cas_name": "Ofloxacin",
+            "molecular_formula": "C18H20FN3O4",
+            "canonical_smiles": "CC1COc2c(N3CCN(C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23",
+            "inchi": "InChI=1S/...",
+            "inchikey": "InChIKey=GSDSWSVVBLHKDQ-UHFFFAOYSA-N",
+        },
+        {
+            "group": "antibiotic_minted",
+            "mech": "AntibioticMech",
             "identifier": "antibioticmech:ARO-3007577",
             "query_name": "triflumizole",
             "cas_rn": "99387-89-0",
@@ -177,6 +189,15 @@ def test_evaluate_cas_rows_classifies_chebi_3star_grounding_actions_and_congener
                 "standard_inchi_key": "IQPNAANSBPBGFQ-UHFFFAOYSA-N",
             },
         },
+        "antibioticmech:aro-2eea3233f3": {
+            "identifier": "antibioticmech:aro-2eea3233f3",
+            "label": "ofloxacin",
+            "grounding_status": "MINTED",
+            "xrefs": ["ARO:0000037", "PubChem:4583"],
+            "chemical_structure": {
+                "standard_inchi_key": "GSDSWSVVBLHKDQ-UHFFFAOYSA-N",
+            },
+        },
         "antibioticmech:ARO-3007577": {
             "identifier": "antibioticmech:ARO-3007577",
             "label": "triflumizole",
@@ -196,6 +217,7 @@ def test_evaluate_cas_rows_classifies_chebi_3star_grounding_actions_and_congener
     chebi_3star_all = {
         "BLRBXZWBHXWECJ-XFFZJAGNSA-N": ("CHEBI:5530", "gramicidin S"),
         "IQPNAANSBPBGFQ-UHFFFAOYSA-N": ("CHEBI:15864", "luteolin"),
+        "GSDSWSVVBLHKDQ-UHFFFAOYSA-N": ("CHEBI:7731", "ofloxacin"),
         "HSMVPDGQOIQYSR-HYXKWVIFSA-N": ("CHEBI:81787", "(E)-triflumizole"),
     }
 
@@ -213,11 +235,15 @@ def test_evaluate_cas_rows_classifies_chebi_3star_grounding_actions_and_congener
     )
     assert (
         by_id["antibioticmech:aro-bf71825341"]["grounding_action"]
-        == "DECISION_NEEDS_INVENTORY_EXTRACT"
+        == "HOLD_CONGENER_COLLISION"
     )
     assert (
         by_id["antibioticmech:aro-bf39ac682c"]["grounding_action"]
         == "HOLD_CONGENER_COLLISION"
+    )
+    assert (
+        by_id["antibioticmech:aro-2eea3233f3"]["grounding_action"]
+        == "DECISION_NEEDS_INVENTORY_EXTRACT"
     )
     assert (
         by_id["antibioticmech:curator-223be9c74d"]["grounding_action"]
@@ -233,14 +259,25 @@ def test_evaluate_cas_rows_classifies_chebi_3star_grounding_actions_and_congener
     )
 
     proposals = build_overlay_proposals(evaluated, records_by_id)
-    assert len(proposals) == 3
-    prop_by_id = {p["identifier"]: p for p in proposals}
+    assert len(proposals) == 4
+    prop_by_id = {p["identifier"]: p for r_idx, p in enumerate(proposals)}
     assert prop_by_id["antibioticmech:curator-223be9c74d"]["target_file"] == (
         "curation/curator_antibiotics.tsv"
     )
-    assert prop_by_id["antibioticmech:aro-bf71825341"]["target_file"] == (
+    assert "CAS-RN:" not in prop_by_id["antibioticmech:curator-223be9c74d"]["proposed_entry"]
+    assert prop_by_id["antibioticmech:aro-2eea3233f3"]["target_file"] == (
         "curation/decisions.tsv"
     )
+    assert prop_by_id["antibioticmech:aro-2eea3233f3"]["proposed_entry"].split("\t") == [
+        "ARO:0000037",
+        "ofloxacin",
+        "",
+        "ground",
+        "CHEBI:7731",
+        "ofloxacin",
+        "3-star ChEBI exact Standard InChIKey match (GSDSWSVVBLHKDQ-UHFFFAOYSA-N)",
+    ]
+    assert prop_by_id["antibioticmech:aro-bf71825341"]["target_file"] == "HOLD"
     assert prop_by_id["antibioticmech:aro-bf39ac682c"]["target_file"] == "HOLD"
 
 
