@@ -189,9 +189,13 @@ def load_curation_chebi_ids(
     if decisions_tsv.exists():
         with decisions_tsv.open(newline="", encoding="utf-8") as fh:
             for row in csv.DictReader(fh, delimiter="\t"):
-                target = (row.get("grounding_target_id") or "").strip()
-                if target.startswith("CHEBI:"):
-                    chebi_ids.add(target)
+                decision = (row.get("decision") or row.get("action") or "").strip().upper()
+                if decision == "EXCLUDE":
+                    continue
+                for col in ("identifier", "grounding_target_id", "chebi_id", "aro_chebi_xref"):
+                    target = (row.get(col) or "").strip()
+                    if target.startswith("CHEBI:"):
+                        chebi_ids.add(target)
     if curator_tsv.exists():
         with curator_tsv.open(newline="", encoding="utf-8") as fh:
             for row in csv.DictReader(fh, delimiter="\t"):

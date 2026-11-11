@@ -254,11 +254,17 @@ def evaluate_cas_rows(
             }
         )
 
-    chebi_target_counts = Counter(
-        r["candidate_chebi_id"]
-        for r in preliminary
-        if r["evaluation_category"] == "CHEBI_3STAR_OUTSIDE_ANTIMICROBIAL_SLICE"
-        and r["candidate_chebi_id"]
+    chebi_target_identifiers: dict[str, set[str]] = {}
+    for r in preliminary:
+        if (
+            r["evaluation_category"] == "CHEBI_3STAR_OUTSIDE_ANTIMICROBIAL_SLICE"
+            and r["candidate_chebi_id"]
+        ):
+            chebi_target_identifiers.setdefault(r["candidate_chebi_id"], set()).add(
+                r["identifier"]
+            )
+    chebi_target_counts: Counter[str] = Counter(
+        {cid: len(ids) for cid, ids in chebi_target_identifiers.items()}
     )
     for item in preliminary:
         item["grounding_action"] = _classify_grounding_action(item, chebi_target_counts)
@@ -290,7 +296,8 @@ def build_overlay_proposals(
         elif action == "DECISION_NEEDS_INVENTORY_EXTRACT":
             target_file = "curation/decisions.tsv"
             proposed = (
-                f"{aro_id}\t{row['label']}\t\tground\t{chebi_id}\t{chebi_name}\t"
+                f"{identifier}\tARO\t{aro_id}\t{row['label']}\tGROUND\t{chebi_id}\t"
+                f"curator\t2026-11-10\t"
                 f"3-star ChEBI exact Standard InChIKey match ({ik}, CAS-RN:{cas_rn})"
             )
         else:
