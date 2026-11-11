@@ -260,6 +260,7 @@ def test_evaluate_cas_rows_classifies_chebi_3star_grounding_actions_and_congener
 
     proposals = build_overlay_proposals(evaluated, records_by_id)
     assert len(proposals) == 4
+    assert [p["identifier"] for p in proposals] == sorted(p["identifier"] for p in proposals)
     prop_by_id = {p["identifier"]: p for r_idx, p in enumerate(proposals)}
     assert prop_by_id["antibioticmech:curator-223be9c74d"]["target_file"] == (
         "curation/curator_antibiotics.tsv"

@@ -322,6 +322,7 @@ def build_overlay_proposals(
                 "proposed_entry": proposed,
             }
         )
+    proposals.sort(key=lambda p: p["identifier"])
     return proposals
 
 
