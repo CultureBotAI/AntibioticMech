@@ -248,7 +248,8 @@ def test_load_curation_chebi_ids_collects_decisions_and_curator_xrefs(tmp_path):
     decisions = tmp_path / "decisions.tsv"
     decisions.write_text(
         "aro_id\taro_name\taro_chebi_xref\taction\tgrounding_target_id\tgrounding_target_name\treason\n"
-        "ARO:3005195\tgramicidin S\t\tground\tCHEBI:5530\tgramicidin S\ttest\n",
+        "ARO:3005195\tgramicidin S\t\tground\tCHEBI:5530\tgramicidin S\ttest\n"
+        "ARO:3009999\texplicit chebi\tCHEBI:12345\tkeep\t\t\texplicit chebi column\n",
         encoding="utf-8",
     )
     curator = tmp_path / "curator_antibiotics.tsv"
@@ -258,4 +259,46 @@ def test_load_curation_chebi_ids_collects_decisions_and_curator_xrefs(tmp_path):
         encoding="utf-8",
     )
     ids = load_curation_chebi_ids(decisions_tsv=decisions, curator_tsv=curator)
-    assert ids == {"CHEBI:5530", "CHEBI:15864"}
+    assert ids == {"CHEBI:5530", "CHEBI:12345", "CHEBI:15864"}
+
+    # Verify duplicate CAS rows for the same identifier do not trigger false HOLD_CONGENER_COLLISION (#1368)
+    dup_cas_rows = [
+        {
+            "group": "antibiotic_minted",
+            "mech": "AntibioticMech",
+            "identifier": "antibioticmech:curator-223be9c74d",
+            "query_name": "Luteolin",
+            "cas_rn": "491-70-3",
+            "cas_name": "4H-1-Benzopyran-4-one, 2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-",
+            "molecular_formula": "C15H10O6",
+            "canonical_smiles": "O=c1cc(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12",
+            "inchi": "InChI=1S/...",
+            "inchikey": "InChIKey=IQPNAANSBPBGFQ-UHFFFAOYSA-N",
+        },
+        {
+            "group": "antibiotic_inchi_fallback",
+            "mech": "AntibioticMech",
+            "identifier": "antibioticmech:curator-223be9c74d",
+            "query_name": "Luteolin",
+            "cas_rn": "491-70-3",
+            "cas_name": "4H-1-Benzopyran-4-one, 2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-",
+            "molecular_formula": "C15H10O6",
+            "canonical_smiles": "O=c1cc(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12",
+            "inchi": "InChI=1S/...",
+            "inchikey": "InChIKey=IQPNAANSBPBGFQ-UHFFFAOYSA-N",
+        },
+    ]
+    dup_eval = evaluate_cas_rows(
+        dup_cas_rows,
+        {
+            "antibioticmech:curator-223be9c74d": {
+                "identifier": "antibioticmech:curator-223be9c74d",
+                "label": "Luteolin flavone",
+                "grounding_status": "MINTED",
+                "chemical_structure": {"standard_inchi_key": "IQPNAANSBPBGFQ-UHFFFAOYSA-N"},
+            }
+        },
+        {},
+        {"IQPNAANSBPBGFQ-UHFFFAOYSA-N": ("CHEBI:15864", "luteolin")},
+    )
+    assert all(r["grounding_action"] == "CURATOR_XREF_READY" for r in dup_eval)
