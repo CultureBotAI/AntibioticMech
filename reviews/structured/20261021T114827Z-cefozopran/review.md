@@ -1,0 +1,1064 @@
+# Cefozopran: a correct thiadiazole structure with an inherited thiazole description
+
+- Review: 20261021T114827Z-cefozopran
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T11:39:17Z
+- Finished UTC: 2026-10-21T11:48:27Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One major chemical-description defect and one minor document-link defect. The native 6R,7R, Z-oxime zwitterion and current PubChem/ChEMBL agree on a 5-amino-1,2,4-thiadiazol-3-yl side chain. The definition and one exact synonym instead name the related 2-aminothiazol-4-yl analogue. The original synthesis paper explicitly distinguishes those compounds. A numeric Wikipedia document reference does not resolve; the named Cefozopran page does. Primary antibacterial evidence is bounded by compound number, hydration, salt and assay conditions.
+
+## Scope And Provenance
+
+Whole-record review of exact cefozopran zwitterion.
+
+Selection: Queue 241 in isolated batch 025; original captures preserved and actual ARO inventory owner appended before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:3502 | data/antibiotics/antibacterial/cefozopran.yaml | generated | cefozopran |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema | passed | True | CHEBI:3502 | Actual focused command passed with zero errors. |
+| Focused strict | passed | True | CHEBI:3502 | Actual focused command passed with zero errors. |
+| Supplemental molecular encodings and source mints | passed | False | CHEBI:3502 | Both encodings reproduce the complete key, formula, charge, masses and core stereochemistry; both source mints agree. |
+| Authoritative full QC | failed | True | CHEBI:3502 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:3502 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:3502 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:3502 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:3502 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:3502 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:3502 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:3502 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:3502 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Native zwitterionic molecular graph
+
+identity: supported. Targets: CHEBI:3502.
+
+Native molecular fields, two source mints and exact PubChem/ChEMBL/CAS agree on the thiadiazole, 6R,7R and Z oxime.
+
+### Chemical description and exact synonym
+
+identity: concern. Targets: CHEBI:3502.
+
+Definition and synonyms[3] name the thiazolyl analogue; retained synonyms[4], graph, parent and original compound 4 agree on thiadiazole. This is a substantive atom-identity difference, not spelling or tautomer normalization.
+
+### Parents, classification and antibiotic role
+
+grounding: supported. Targets: CHEBI:3502.
+
+Three ChEBI structural parents and ARO cephalosporin class are broader and appropriate; original compound-specific antibacterial assays support filing and antibiotic role.
+
+### Patent and document resolution
+
+grounding: concern. Targets: CHEBI:3502.
+
+Both patents are relevant cefozopran chemistry with salt/intermediate scope. Numeric Wikipedia document fails to resolve, while the named document is valid.
+
+### Every adopted PMID disposition
+
+evidence: supported. Targets: CHEBI:3502.
+
+One combination/activity study, one hydrochloride impurity study, one hydrochloride pharmacokinetic study and one allergy review are distinguished. None supplies blanket record-level primary support.
+
+### Optional primary assay enrichment
+
+evidence: supported. Targets: CHEBI:3502.
+
+Original compound 4 antibacterial results support activity, but Table 4 trihydrate and separate hydrochloride preparation preclude silent pure-anhydrous mass transfer. Strain-specific MICs and combination results stay separate.
+
+### Unpopulated molecular mechanism
+
+evidence: not_applicable. Targets: CHEBI:3502.
+
+No native mode, protein target or resistance claim exists. PBP prose in database and pharmacokinetic Introduction remains context; it is not promoted to a measured interaction.
+
+### Structured expression-source applicability
+
+scope: not_applicable. Targets: CHEBI:3502.
+
+No native gene, protein, pathway or transcriptomics dataset candidate is named. Database absence is not inferred as negative evidence.
+
+### Clinical, producer, datasets and graph
+
+scope: not_applicable. Targets: CHEBI:3502.
+
+No native assertions in these optional domains. Hydrochloride pharmacokinetics do not establish a neutral-zwitterion product approval or biosynthetic producer.
+
+### Actual source ownership and history
+
+provenance: supported. Targets: CHEBI:3502.
+
+ChEBI/ARO owners and both mints are traceable; all four seed/reseed events and original input hashes preserved. Scientific status remains SEEDED.
+
+### Populated defects versus optional additions
+
+completeness: supported. Targets: CHEBI:3502.
+
+Chemical-description and broken-document issues require source correction. Empty optional fields are not findings; assay enrichment is bounded and separately authorized.
+
+### Deterministic native checks
+
+schema: supported. Targets: CHEBI:3502.
+
+Focused schema/strict and molecular/mint checks pass despite the source-text and link defects.
+
+## Findings
+
+### F1: The definition and one exact name describe a thiazole analogue
+
+major / open / confirmed; issue key: chebi-3502-cefozopran-thiazole-thiadiazole-description.
+
+The definition and synonyms[3] say 2-amino-1,3-thiazol-4-yl, while the native structure, full-key database matches, thiadiazole parent and synonyms[4] contain 5-amino-1,2,4-thiadiazol-3-yl. The original paper explicitly labels SCE-2787 compound 4 with ring X=N and distinguishes thiazole analogue Id with X=CH. Correct the chemical description/name through source ownership; preserve the correct native structure.
+
+### F2: The numeric Wikipedia document reference does not resolve
+
+minor / open / confirmed; issue key: chebi-3502-unresolved-wikipedia-8398449.
+
+The adopted wikipedia.en:8398449 fails through its current Bioregistry route and Wikipedia numeric-title route; a curid attempt also fails. The separate named Cefozopran document resolves. Remove or repair the stale numeric mapping through maintained source ownership without treating this as a molecular identity defect.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the thiazolyl definition/name while preserving the thiadiazolyl structure.
+
+- Use the 5-amino-1,2,4-thiadiazol-3-yl side chain supported by the complete graph, retained correct synonym and original compound 4. Do not alter native formula, key, 6R,7R or Z oxime to fit the erroneous analogue description.
+- Apply an upstream or supported local source-adjudication correction to ChEBI-derived content so reseeding reproduces the fix.
+- Run schema/strict, exact structure/name comparison and applicable term/reference/history/corpus checks after separate curation authorization.
+
+### A2
+
+Repair or remove the unresolved numeric Wikipedia document mapping.
+
+- Retain the resolving Cefozopran document and do not guess a replacement numeric identifier.
+- Confirm the maintained source and regenerated record no longer carry the failed document route.
+
+### A3
+
+Optionally add compound-specific primary activity with material qualification.
+
+- Map compound 4 in Table 1 and Table 4, retain strain labels, agar-dilution method and table inoculum annotation; disclose trihydrate analysis and unresolved mass-basis correction.
+- Keep compound 4, thiazole Id, hydrochloride forms and aminoglycoside-combination experiments separate.
+- Follow the original target-binding references before adding PBP measurements; pharmacokinetic Introduction is not direct binding evidence.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/cefozopran.yaml; Entire YAML | supports | Read exact identity/status/class, structural definition, six synonyms, four parents, antibiotic role, complete structure, four exact xrefs, one drug xref, four document xrefs, both source concepts and four seed/reseed events. No native activity, target, resistance, producer, clinical-status or graph object is populated. |
+| owners | data/raw/chebi_antimicrobials.tsv;data/raw/aro_antibiotics.tsv; ChEBI row 87; ARO row 581 | supports | ChEBI owns the contradictory chemical definition/name plus correct structure and document mappings. ARO owns additional class/xref and primary lead PMID 1889877; its source concept remains separate. All four adopted PMID leads were inspected. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Identity, Equivalence, Evidence standard and generated ownership | supports | Chemical names and definition must agree with the exact graph; source-owned corrections must survive reseeding. Missing optional slots alone are not defects. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:3502; Current complete structure, definition, name and parents | partial | Current ChEBI preserves the same internal conflict: thiazolyl definition/IUPAC name, but thiadiazolyl graph and alternative full synonym. The cephalosporin CHEBI:23066, thiadiazoles CHEBI:38099 and imidazopyridazine CHEBI:48382 parents match the graph. Additional current role annotations do not force optional expansion. |
+| chemistry | RDKit 2026.03.5 molecular checks; 241-chemistry.json | supports | Both native encodings reproduce QDUIJCOKQCCXQY-WHJQOFBOSA-N, C19H17N9O5S2, one zwitterionic fragment with net zero charge, matching masses and core R,R; Z oxime is explicit. Both source mints agree. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/9571080/JSON; Complete current structure and systematic name | supports | CID 9571080 agrees with native complete key, formula and stereochemistry, explicitly naming 5-amino-1,2,4-thiadiazol-3-yl. |
+| chembl | https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1276663.json; Complete current molecule | supports | CHEMBL1276663 reproduces the native complete InChIKey and thiadiazole-containing stereochemical SMILES. |
+| cas | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/113359-04-9/JSON; CAS identity lookup | supports | CAS 113359-04-9 resolves the same exact zwitterionic CID 9571080, not a chloride-containing salt. |
+| aro | https://card.mcmaster.ca/aro/3009122; Current identity, classification and publication | supports | ARO cefozopran identity, cephalosporin classification and adopted SCE-2787 publication lead resolve. Original synthesis/primary literature establishes the code-to-compound mapping. |
+| kegg | https://rest.kegg.jp/get/D01052; Drug identity and formula | supports | D01052 is cefozopran/SCE2787 with matching formula, fourth-generation class and distinct product-group links. Generic PBP/cell-wall entries remain database context, not a new primary target experiment. |
+| synthesis | DOI:10.7164/antibiotics.45.709; PMID 1624373; pp 709–713, Table 1 image, compound 4 preparation pp 719–720 | supports | Original 1992 paper identifies SCE-2787 as compound 4, the 5-amino-1,2,4-thiadiazol-3-yl compound. Visually inspected Table 1 labels its ring X=N and the corresponding thiazole analogue Id X=CH. This independently refutes the native thiazolyl chemical description; the activity or identity of analogue Id must not be transferred. |
+| activity-material | DOI:10.7164/antibiotics.45.709; Table 1 p 713; Table 4 p 716 image; preparation p 720 | supports | Compound 4 was tested by serial twofold agar dilution; Table 1 labels inoculum 10^8 CFU/mL and reports S. aureus 308A-1 MIC 0.78, E. coli NIHJ JC-2 &lt;0.1, and P. aeruginosa IFO 3455/U31 0.78/12.5 µg/mL. Table 4 explicitly gives compound 4 as C19H17N9O5S2·3H2O; a hydrochloride is separately prepared. Preserve hydration and mass-basis qualification rather than assigning these directly to pure anhydrous zwitterion. |
+| adopted-1889877 | PMID:1889877; DOI 10.1007/BF01643250; complete inspected abstract | partial | 1991 checkerboard agar-dilution study distinguishes SCE-2787 monotherapy from aminoglycoside combinations in nosocomial Gram-negative isolates. Supports antibacterial activity with panel-specific MIC90 and combination effects; full reagent-form and methods inspection remains unresolved. |
+| adopted-22888513 | PMID:22888513; Influence of impurities on specific optical rotation; inspected abstract | context_only | Study explicitly concerns cefozopran hydrochloride product impurities, UV/optical-rotation HPLC and Chinese/Japanese product differences. It is preparation/quality evidence, not a direct antibacterial mechanism or exact anhydrous-zwitterion assay. |
+| adopted-25644122 | PMID:25644122; DOI 10.1007/s40268-014-0075-3; abstract and original Methods/Results sections | context_only | The 2015 randomized healthy-volunteer pharmacokinetic study explicitly administers cefozopran hydrochloride, not neutral anhydrous material. It measures exposure and tolerability in twelve volunteers; introductory PBP statements cite earlier literature and are not its own target-binding experiment. |
+| adopted-29017833 | PMID:29017833; DOI 10.1016/j.jaip.2017.08.027; inspected abstract | context_only | This is a review of beta-lactam allergy and side-chain cross-reactivity. It is an adopted contextual lead, not primary cefozopran antibacterial or binding evidence. |
+| patent-cn | https://patents.google.com/patent/CN1847247A/en; Description, embodiments 2/3 and claims 1–5 | partial | Relevant cefozopran/intermediate synthesis patent explicitly uses the thiadiazole side chain and produces cefozopran hydrochloride in embodiments 2/3. Broader intermediate, salt and process scope is retained; no quantitative antibacterial assay is assigned from these preparations. English text is machine-translated and chemical drawings were not independently decoded. |
+| patent-wo | https://patents.google.com/patent/WO2010089729A1/en; Description and claims for free base, hemi-/monohydrochloride polymorphs | supports | Relevant cefozopran process/polymorph document distinguishes free-base starting material, hemi- and monohydrochloride forms and preparation conditions. This is documentary chemistry scope, not exact universal salt equivalence or direct mechanism evidence. |
+| wiki | https://en.wikipedia.org/wiki/Cefozopran; Document identity only | context_only | Named Cefozopran document resolves; current page metadata gives article ID 17809838. It is not primary antibacterial evidence. |
+| wiki-numeric | https://bioregistry.io/wikipedia.en:8398449; Actual native document URI and Wikipedia numeric title | refutes | Both Bioregistry wikipedia.en:8398449 and Wikipedia /wiki/8398449 returned 404; an additional curid 8398449 attempt also returned 404. The independent named Cefozopran reference resolves. The numeric document identifier requires source-level repair/removal. |
+| local-search | Ignored-inclusive local and free literature search; 241-owner-hits.txt;241-local-hits.txt;241-primary-search.json | context_only | Exact label, identifier, source IDs and full key searched with ignored/hidden coverage outside .git/.venv. Historical discovery artifacts were not treated as source proof. All four native inventory leads were reviewed; additional SCE-2787 original synthesis and activity leads were followed. |
+| gates | Focused native checks; 241-focused-results.json | supports | Schema, strict and supplemental molecular/mint checks each exit 0. These do not detect the wrong chemical name/definition or failed external document route. |
+
+## Limits And Additional Notes
+
+- Most adopted leads were inspected at abstract level; the 2015 pharmacokinetic Methods/Results and original 1992 synthesis/activity sections, Table 1 and Table 4 were directly inspected. No complete primary binding audit is claimed.
+- Compound 4 was analytically a trihydrate, and hydrochloride material was separately made; the paper does not explicitly resolve a mass-basis adjustment for every MIC.
+- Patent chemistry scope was inspected from descriptions/claims; CN1847247 English text is translated and exact image-by-image structure mapping was not completed. No patent quantitative assay transfer is proposed.
+- The numeric Wikipedia route returned 404 on retrieval. This does not establish why the upstream mapping originated or whether a historical page once existed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 21 expanded input hashes unchanged, preserving original captures. No native/source/status/history edits.
+- Focused checks used batch 025 environment; standalone chemistry used existing batch 019 RDKit 2026.03.5 against batch 025 cwd.
+- Free public retrieval only. PMC retrieval for the additional 1992 activity paper returned CAPTCHA; independent J-STAGE original synthesis/activity full PDF was accessible.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T114827Z-cefozopran
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cefozopran: a correct thiadiazole structure with an inherited thiazole description'
+started_at: '2026-10-21T11:39:17Z'
+finished_at: '2026-10-21T11:48:27Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent entire native and actual ChEBI/ARO owner review;
+    current complete structure/xref comparisons; all four adopted PMID abstracts;
+    original 1992 synthesis/activity paper including visually inspected Tables 1 and
+    4; patent description and claim scopes.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: One major chemical-description defect and one minor document-link defect.
+  The native 6R,7R, Z-oxime zwitterion and current PubChem/ChEMBL agree on a 5-amino-1,2,4-thiadiazol-3-yl
+  side chain. The definition and one exact synonym instead name the related 2-aminothiazol-4-yl
+  analogue. The original synthesis paper explicitly distinguishes those compounds.
+  A numeric Wikipedia document reference does not resolve; the named Cefozopran page
+  does. Primary antibacterial evidence is bounded by compound number, hydration, salt
+  and assay conditions.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefozopran.yaml
+    sha256: 8e2ac0736a79bd0f5d83d487c6c4ecf6c7f323f1a2102fb11a211ccb10242fa1
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:3502
+  path: data/antibiotics/antibacterial/cefozopran.yaml
+  label: cefozopran
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, structure, definition, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity, class, xrefs and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+scope:
+  description: Whole-record review of exact cefozopran zwitterion.
+  selection: Queue 241 in isolated batch 025; original captures preserved and actual
+    ARO inventory owner appended before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:3502
+  exclusions:
+  - target: Thiazolyl analogue Id, cefozopran hydrochlorides, hydrated preparations
+      and drug combinations
+    reason: Distinct structures or materials retain separate identity and assay scope.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual focused command passed with zero errors.
+  target_ids:
+  - CHEBI:3502
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefozopran.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual focused command passed with zero errors.
+  target_ids:
+  - CHEBI:3502
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefozopran.yaml --out /private/tmp/am-review-session/241-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Supplemental molecular encodings and source mints
+  status: passed
+  required: false
+  summary: Both encodings reproduce the complete key, formula, charge, masses and
+    core stereochemistry; both source mints agree.
+  target_ids:
+  - CHEBI:3502
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/check199200.py
+    241 (cwd /private/tmp/antibioticmech-record-reviews-025)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:3502
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:3502
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:3502
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:3502
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:3502
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:3502
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:3502
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:3502
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:3502
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefozopran.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T11:44:39Z'
+  support: supports
+  summary: Read exact identity/status/class, structural definition, six synonyms,
+    four parents, antibiotic role, complete structure, four exact xrefs, one drug
+    xref, four document xrefs, both source concepts and four seed/reseed events. No
+    native activity, target, resistance, producer, clinical-status or graph object
+    is populated.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv;data/raw/aro_antibiotics.tsv
+  locator: ChEBI row 87; ARO row 581
+  accessed_at: '2026-10-21T11:44:39Z'
+  support: supports
+  summary: ChEBI owns the contradictory chemical definition/name plus correct structure
+    and document mappings. ARO owns additional class/xref and primary lead PMID 1889877;
+    its source concept remains separate. All four adopted PMID leads were inspected.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity, Equivalence, Evidence standard and generated ownership
+  accessed_at: '2026-10-21T11:44:39Z'
+  support: supports
+  summary: Chemical names and definition must agree with the exact graph; source-owned
+    corrections must survive reseeding. Missing optional slots alone are not defects.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:3502
+  locator: Current complete structure, definition, name and parents
+  accessed_at: '2026-10-21T11:40:07Z'
+  support: partial
+  summary: 'Current ChEBI preserves the same internal conflict: thiazolyl definition/IUPAC
+    name, but thiadiazolyl graph and alternative full synonym. The cephalosporin CHEBI:23066,
+    thiadiazoles CHEBI:38099 and imidazopyridazine CHEBI:48382 parents match the graph.
+    Additional current role annotations do not force optional expansion.'
+  snapshot_sha256: bae1825e93551a750574379b6d8fc56e32fe9cd1356c4b62f902036cbb9a991a
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit 2026.03.5 molecular checks
+  locator: 241-chemistry.json
+  accessed_at: '2026-10-21T11:39:53Z'
+  support: supports
+  summary: Both native encodings reproduce QDUIJCOKQCCXQY-WHJQOFBOSA-N, C19H17N9O5S2,
+    one zwitterionic fragment with net zero charge, matching masses and core R,R;
+    Z oxime is explicit. Both source mints agree.
+  snapshot_sha256: ae80c473b1d297f3e53bcb2a57c961db8f5a2cea5539b408ae84d00de7ed4e5f
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/9571080/JSON
+  locator: Complete current structure and systematic name
+  accessed_at: '2026-10-21T11:40:07Z'
+  support: supports
+  summary: CID 9571080 agrees with native complete key, formula and stereochemistry,
+    explicitly naming 5-amino-1,2,4-thiadiazol-3-yl.
+  snapshot_sha256: 2fa405733b9c02c68024cb2a2f5fab2be733bc881a464551183d51a362151f7a
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1276663.json
+  locator: Complete current molecule
+  accessed_at: '2026-10-21T11:40:07Z'
+  support: supports
+  summary: CHEMBL1276663 reproduces the native complete InChIKey and thiadiazole-containing
+    stereochemical SMILES.
+  snapshot_sha256: 3bd0ac1a6805be7326166e59259d3b4f1c417865057e297c227b6b7207a18671
+- evidence_id: cas
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/113359-04-9/JSON
+  locator: CAS identity lookup
+  accessed_at: '2026-10-21T11:40:07Z'
+  support: supports
+  summary: CAS 113359-04-9 resolves the same exact zwitterionic CID 9571080, not a
+    chloride-containing salt.
+  snapshot_sha256: 2fa405733b9c02c68024cb2a2f5fab2be733bc881a464551183d51a362151f7a
+- evidence_id: aro
+  kind: authority
+  reference: https://card.mcmaster.ca/aro/3009122
+  locator: Current identity, classification and publication
+  accessed_at: '2026-10-21T11:40:07Z'
+  support: supports
+  summary: ARO cefozopran identity, cephalosporin classification and adopted SCE-2787
+    publication lead resolve. Original synthesis/primary literature establishes the
+    code-to-compound mapping.
+  snapshot_sha256: 828b5b9c38062d275600dc769542d178ce5698f9881909a7b629b17d6d29f2ad
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/D01052
+  locator: Drug identity and formula
+  accessed_at: '2026-10-21T11:40:07Z'
+  support: supports
+  summary: D01052 is cefozopran/SCE2787 with matching formula, fourth-generation class
+    and distinct product-group links. Generic PBP/cell-wall entries remain database
+    context, not a new primary target experiment.
+  snapshot_sha256: cdf06c9c4f2a9bb8a95141c5f71e37c9d9baea783b0bf64c38b1f02c569c9ed9
+- evidence_id: synthesis
+  kind: primary_source
+  reference: DOI:10.7164/antibiotics.45.709
+  locator: PMID 1624373; pp 709–713, Table 1 image, compound 4 preparation pp 719–720
+  accessed_at: '2026-10-21T11:41:17Z'
+  support: supports
+  summary: Original 1992 paper identifies SCE-2787 as compound 4, the 5-amino-1,2,4-thiadiazol-3-yl
+    compound. Visually inspected Table 1 labels its ring X=N and the corresponding
+    thiazole analogue Id X=CH. This independently refutes the native thiazolyl chemical
+    description; the activity or identity of analogue Id must not be transferred.
+  snapshot_sha256: 7ad2e091c7487c0b76fbda1b46a8db1a81fd42d60f66ef71c677fe28f2c21c43
+- evidence_id: activity-material
+  kind: primary_source
+  reference: DOI:10.7164/antibiotics.45.709
+  locator: Table 1 p 713; Table 4 p 716 image; preparation p 720
+  accessed_at: '2026-10-21T11:41:17Z'
+  support: supports
+  summary: Compound 4 was tested by serial twofold agar dilution; Table 1 labels inoculum
+    10^8 CFU/mL and reports S. aureus 308A-1 MIC 0.78, E. coli NIHJ JC-2 <0.1, and
+    P. aeruginosa IFO 3455/U31 0.78/12.5 µg/mL. Table 4 explicitly gives compound
+    4 as C19H17N9O5S2·3H2O; a hydrochloride is separately prepared. Preserve hydration
+    and mass-basis qualification rather than assigning these directly to pure anhydrous
+    zwitterion.
+  snapshot_sha256: 7ad2e091c7487c0b76fbda1b46a8db1a81fd42d60f66ef71c677fe28f2c21c43
+- evidence_id: adopted-1889877
+  kind: primary_source
+  reference: PMID:1889877
+  locator: DOI 10.1007/BF01643250; complete inspected abstract
+  accessed_at: '2026-10-21T11:40:09Z'
+  support: partial
+  summary: 1991 checkerboard agar-dilution study distinguishes SCE-2787 monotherapy
+    from aminoglycoside combinations in nosocomial Gram-negative isolates. Supports
+    antibacterial activity with panel-specific MIC90 and combination effects; full
+    reagent-form and methods inspection remains unresolved.
+  snapshot_sha256: eeb9bdd9a67b89766aafa3d9b76ffad9031502cf8225d916a9c651e0bdba50bf
+- evidence_id: adopted-22888513
+  kind: primary_source
+  reference: PMID:22888513
+  locator: Influence of impurities on specific optical rotation; inspected abstract
+  accessed_at: '2026-10-21T11:40:09Z'
+  support: context_only
+  summary: Study explicitly concerns cefozopran hydrochloride product impurities,
+    UV/optical-rotation HPLC and Chinese/Japanese product differences. It is preparation/quality
+    evidence, not a direct antibacterial mechanism or exact anhydrous-zwitterion assay.
+  snapshot_sha256: eeb9bdd9a67b89766aafa3d9b76ffad9031502cf8225d916a9c651e0bdba50bf
+- evidence_id: adopted-25644122
+  kind: primary_source
+  reference: PMID:25644122
+  locator: DOI 10.1007/s40268-014-0075-3; abstract and original Methods/Results sections
+  accessed_at: '2026-10-21T11:40:38Z'
+  support: context_only
+  summary: The 2015 randomized healthy-volunteer pharmacokinetic study explicitly
+    administers cefozopran hydrochloride, not neutral anhydrous material. It measures
+    exposure and tolerability in twelve volunteers; introductory PBP statements cite
+    earlier literature and are not its own target-binding experiment.
+  snapshot_sha256: ca13e504c6b0a94916f74d9e16e53ea128d45fa63294353aece372a545bd476e
+- evidence_id: adopted-29017833
+  kind: primary_source
+  reference: PMID:29017833
+  locator: DOI 10.1016/j.jaip.2017.08.027; inspected abstract
+  accessed_at: '2026-10-21T11:40:09Z'
+  support: context_only
+  summary: This is a review of beta-lactam allergy and side-chain cross-reactivity.
+    It is an adopted contextual lead, not primary cefozopran antibacterial or binding
+    evidence.
+  snapshot_sha256: eeb9bdd9a67b89766aafa3d9b76ffad9031502cf8225d916a9c651e0bdba50bf
+- evidence_id: patent-cn
+  kind: primary_source
+  reference: https://patents.google.com/patent/CN1847247A/en
+  locator: Description, embodiments 2/3 and claims 1–5
+  accessed_at: '2026-10-21T11:40:09Z'
+  support: partial
+  summary: Relevant cefozopran/intermediate synthesis patent explicitly uses the thiadiazole
+    side chain and produces cefozopran hydrochloride in embodiments 2/3. Broader intermediate,
+    salt and process scope is retained; no quantitative antibacterial assay is assigned
+    from these preparations. English text is machine-translated and chemical drawings
+    were not independently decoded.
+  snapshot_sha256: af3a9fbff7f86480db38213d429978c7ddc424e642602f4a1ac6f09d35d6dff9
+- evidence_id: patent-wo
+  kind: primary_source
+  reference: https://patents.google.com/patent/WO2010089729A1/en
+  locator: Description and claims for free base, hemi-/monohydrochloride polymorphs
+  accessed_at: '2026-10-21T11:40:09Z'
+  support: supports
+  summary: Relevant cefozopran process/polymorph document distinguishes free-base
+    starting material, hemi- and monohydrochloride forms and preparation conditions.
+    This is documentary chemistry scope, not exact universal salt equivalence or direct
+    mechanism evidence.
+  snapshot_sha256: 1c611a2b9662e340651a777051fdd218c3ddcf330e429d5a0e57fb7ee10dc28a
+- evidence_id: wiki
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Cefozopran
+  locator: Document identity only
+  accessed_at: '2026-10-21T11:40:10Z'
+  support: context_only
+  summary: Named Cefozopran document resolves; current page metadata gives article
+    ID 17809838. It is not primary antibacterial evidence.
+  snapshot_sha256: 56ce5a1e46be3746b264dc317011dd37e373e41c4c9d41e33ae5181a3df1381f
+- evidence_id: wiki-numeric
+  kind: search
+  reference: https://bioregistry.io/wikipedia.en:8398449
+  locator: Actual native document URI and Wikipedia numeric title
+  accessed_at: '2026-10-21T11:42:43Z'
+  support: refutes
+  summary: Both Bioregistry wikipedia.en:8398449 and Wikipedia /wiki/8398449 returned
+    404; an additional curid 8398449 attempt also returned 404. The independent named
+    Cefozopran reference resolves. The numeric document identifier requires source-level
+    repair/removal.
+  snapshot_sha256: 20903ef84f21eee2c3073fc55b9d4cd9839b762aec905f9bce02305166b25392
+  search_scope: 2026-10-21; rg --no-ignore --hidden across isolated batch 025 outside
+    .git/.venv; current official structure sources, all adopted PMID abstracts, public
+    J-STAGE original synthesis PDF and native patent/document URLs.
+- evidence_id: local-search
+  kind: search
+  reference: Ignored-inclusive local and free literature search
+  locator: 241-owner-hits.txt;241-local-hits.txt;241-primary-search.json
+  accessed_at: '2026-10-21T11:39:46Z'
+  support: context_only
+  summary: Exact label, identifier, source IDs and full key searched with ignored/hidden
+    coverage outside .git/.venv. Historical discovery artifacts were not treated as
+    source proof. All four native inventory leads were reviewed; additional SCE-2787
+    original synthesis and activity leads were followed.
+  snapshot_sha256: e426701f3dc0f434ff27dc70e555fb5c96e4b7b9b625e0f2791771511d4648b3
+  search_scope: 2026-10-21; rg --no-ignore --hidden across isolated batch 025 outside
+    .git/.venv; current official structure sources, all adopted PMID abstracts, public
+    J-STAGE original synthesis PDF and native patent/document URLs.
+- evidence_id: gates
+  kind: validation
+  reference: Focused native checks
+  locator: 241-focused-results.json
+  accessed_at: '2026-10-21T11:39:53Z'
+  support: supports
+  summary: Schema, strict and supplemental molecular/mint checks each exit 0. These
+    do not detect the wrong chemical name/definition or failed external document route.
+  snapshot_sha256: 86f0b7ed96e1538e41bdebd143b928c612c53aab2756e360bf4934fa743bcaeb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Native zwitterionic molecular graph
+  outcome: supported
+  summary: Native molecular fields, two source mints and exact PubChem/ChEMBL/CAS
+    agree on the thiadiazole, 6R,7R and Z oxime.
+  target_ids:
+  - CHEBI:3502
+  evidence_ids:
+  - chemistry
+  - pubchem
+  - chembl
+  - cas
+- assessment_id: definition
+  area: identity
+  topic: Chemical description and exact synonym
+  outcome: concern
+  summary: Definition and synonyms[3] name the thiazolyl analogue; retained synonyms[4],
+    graph, parent and original compound 4 agree on thiadiazole. This is a substantive
+    atom-identity difference, not spelling or tautomer normalization.
+  target_ids:
+  - CHEBI:3502
+  evidence_ids:
+  - native
+  - chebi
+  - synthesis
+  - rubric
+- assessment_id: grounding
+  area: grounding
+  topic: Parents, classification and antibiotic role
+  outcome: supported
+  summary: Three ChEBI structural parents and ARO cephalosporin class are broader
+    and appropriate; original compound-specific antibacterial assays support filing
+    and antibiotic role.
+  target_ids:
+  - CHEBI:3502
+  evidence_ids:
+  - chebi
+  - aro
+  - synthesis
+  - activity-material
+- assessment_id: documents
+  area: grounding
+  topic: Patent and document resolution
+  outcome: concern
+  summary: Both patents are relevant cefozopran chemistry with salt/intermediate scope.
+    Numeric Wikipedia document fails to resolve, while the named document is valid.
+  target_ids:
+  - CHEBI:3502
+  evidence_ids:
+  - patent-cn
+  - patent-wo
+  - wiki
+  - wiki-numeric
+- assessment_id: leads
+  area: evidence
+  topic: Every adopted PMID disposition
+  outcome: supported
+  summary: One combination/activity study, one hydrochloride impurity study, one hydrochloride
+    pharmacokinetic study and one allergy review are distinguished. None supplies
+    blanket record-level primary support.
+  target_ids:
+  - CHEBI:3502
+  evidence_ids:
+  - adopted-1889877
+  - adopted-22888513
+  - adopted-25644122
+  - adopted-29017833
+- assessment_id: activity
+  area: evidence
+  topic: Optional primary assay enrichment
+  outcome: supported
+  summary: Original compound 4 antibacterial results support activity, but Table 4
+    trihydrate and separate hydrochloride preparation preclude silent pure-anhydrous
+    mass transfer. Strain-specific MICs and combination results stay separate.
+  target_ids:
+  - CHEBI:3502
+  evidence_ids:
+  - activity-material
+  - adopted-1889877
+- assessment_id: mechanism
+  area: evidence
+  topic: Unpopulated molecular mechanism
+  outcome: not_applicable
+  summary: No native mode, protein target or resistance claim exists. PBP prose in
+    database and pharmacokinetic Introduction remains context; it is not promoted
+    to a measured interaction.
+  target_ids:
+  - CHEBI:3502
+  evidence_ids:
+  - native
+  - kegg
+  - adopted-25644122
+- assessment_id: adapter
+  area: scope
+  topic: Structured expression-source applicability
+  outcome: not_applicable
+  summary: No native gene, protein, pathway or transcriptomics dataset candidate is
+    named. Database absence is not inferred as negative evidence.
+  target_ids:
+  - CHEBI:3502
+  evidence_ids:
+  - native
+- assessment_id: other-fields
+  area: scope
+  topic: Clinical, producer, datasets and graph
+  outcome: not_applicable
+  summary: No native assertions in these optional domains. Hydrochloride pharmacokinetics
+    do not establish a neutral-zwitterion product approval or biosynthetic producer.
+  target_ids:
+  - CHEBI:3502
+  evidence_ids:
+  - native
+  - adopted-25644122
+- assessment_id: provenance
+  area: provenance
+  topic: Actual source ownership and history
+  outcome: supported
+  summary: ChEBI/ARO owners and both mints are traceable; all four seed/reseed events
+    and original input hashes preserved. Scientific status remains SEEDED.
+  target_ids:
+  - CHEBI:3502
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+- assessment_id: completeness
+  area: completeness
+  topic: Populated defects versus optional additions
+  outcome: supported
+  summary: Chemical-description and broken-document issues require source correction.
+    Empty optional fields are not findings; assay enrichment is bounded and separately
+    authorized.
+  target_ids:
+  - CHEBI:3502
+  evidence_ids:
+  - rubric
+  - activity-material
+- assessment_id: schema
+  area: schema
+  topic: Deterministic native checks
+  outcome: supported
+  summary: Focused schema/strict and molecular/mint checks pass despite the source-text
+    and link defects.
+  target_ids:
+  - CHEBI:3502
+  evidence_ids:
+  - gates
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-3502-cefozopran-thiazole-thiadiazole-description
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The definition and one exact name describe a thiazole analogue
+  description: The definition and synonyms[3] say 2-amino-1,3-thiazol-4-yl, while
+    the native structure, full-key database matches, thiadiazole parent and synonyms[4]
+    contain 5-amino-1,2,4-thiadiazol-3-yl. The original paper explicitly labels SCE-2787
+    compound 4 with ring X=N and distinguishes thiazole analogue Id with X=CH. Correct
+    the chemical description/name through source ownership; preserve the correct native
+    structure.
+  target_ids:
+  - CHEBI:3502
+  field_paths:
+  - definition
+  - synonyms[3].synonym_text
+  evidence_ids:
+  - native
+  - owners
+  - chebi
+  - pubchem
+  - synthesis
+  - rubric
+  rule_id: native-review-checklist:Identity and Equivalence
+  native_severity: major wrong chemical description and exact-name equivalence
+  normalization_reason: A populated structural description replaces a ring nitrogen
+    with CH and denotes an analogue. The correct primary identifier and molecular
+    graph remain intact, so severity is major rather than wrong-native-identity blocker.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source-owned definition, exact names and document xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated source-owned fields
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Supported persistent source-adjudication route
+- finding_id: F2
+  issue_key: chebi-3502-unresolved-wikipedia-8398449
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The numeric Wikipedia document reference does not resolve
+  description: The adopted wikipedia.en:8398449 fails through its current Bioregistry
+    route and Wikipedia numeric-title route; a curid attempt also fails. The separate
+    named Cefozopran document resolves. Remove or repair the stale numeric mapping
+    through maintained source ownership without treating this as a molecular identity
+    defect.
+  target_ids:
+  - CHEBI:3502
+  field_paths:
+  - document_xrefs[2]
+  evidence_ids:
+  - native
+  - owners
+  - wiki
+  - wiki-numeric
+  rule_id: native-review-checklist:Equivalence and Evidence standard
+  native_severity: minor non-blocking document provenance defect
+  normalization_reason: This is a redundant documentary route, not the exact chemical
+    grounding or an assay citation required for antibacterial identity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source-owned definition, exact names and document xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated source-owned fields
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Supported persistent source-adjudication route
+actions:
+- action_id: A1
+  description: Correct the thiazolyl definition/name while preserving the thiadiazolyl
+    structure.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:3502
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source-owned definition, exact names and document xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated source-owned fields
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Supported persistent source-adjudication route
+  acceptance_checks:
+  - Use the 5-amino-1,2,4-thiadiazol-3-yl side chain supported by the complete graph,
+    retained correct synonym and original compound 4. Do not alter native formula,
+    key, 6R,7R or Z oxime to fit the erroneous analogue description.
+  - Apply an upstream or supported local source-adjudication correction to ChEBI-derived
+    content so reseeding reproduces the fix.
+  - Run schema/strict, exact structure/name comparison and applicable term/reference/history/corpus
+    checks after separate curation authorization.
+- action_id: A2
+  description: Repair or remove the unresolved numeric Wikipedia document mapping.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:3502
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source-owned definition, exact names and document xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated source-owned fields
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Supported persistent source-adjudication route
+  acceptance_checks:
+  - Retain the resolving Cefozopran document and do not guess a replacement numeric
+    identifier.
+  - Confirm the maintained source and regenerated record no longer carry the failed
+    document route.
+- action_id: A3
+  description: Optionally add compound-specific primary activity with material qualification.
+  finding_ids: []
+  target_ids:
+  - CHEBI:3502
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefozopran.yaml
+    role: Curator-owned activity_spectrum and primary evidence via validated writer
+  acceptance_checks:
+  - Map compound 4 in Table 1 and Table 4, retain strain labels, agar-dilution method
+    and table inoculum annotation; disclose trihydrate analysis and unresolved mass-basis
+    correction.
+  - Keep compound 4, thiazole Id, hydrochloride forms and aminoglycoside-combination
+    experiments separate.
+  - Follow the original target-binding references before adding PBP measurements;
+    pharmacokinetic Introduction is not direct binding evidence.
+limitations:
+- Most adopted leads were inspected at abstract level; the 2015 pharmacokinetic Methods/Results
+  and original 1992 synthesis/activity sections, Table 1 and Table 4 were directly
+  inspected. No complete primary binding audit is claimed.
+- Compound 4 was analytically a trihydrate, and hydrochloride material was separately
+  made; the paper does not explicitly resolve a mass-basis adjustment for every MIC.
+- Patent chemistry scope was inspected from descriptions/claims; CN1847247 English
+  text is translated and exact image-by-image structure mapping was not completed.
+  No patent quantitative assay transfer is proposed.
+- The numeric Wikipedia route returned 404 on retrieval. This does not establish why
+  the upstream mapping originated or whether a historical page once existed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 21 expanded input hashes unchanged, preserving original captures. No native/source/status/history
+  edits.
+- Focused checks used batch 025 environment; standalone chemistry used existing batch
+  019 RDKit 2026.03.5 against batch 025 cwd.
+- Free public retrieval only. PMC retrieval for the additional 1992 activity paper
+  returned CAPTCHA; independent J-STAGE original synthesis/activity full PDF was accessible.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:3502
+- https://doi.org/10.7164/antibiotics.45.709
+- https://www.jstage.jst.go.jp/article/antibiotics1968/45/5/45_5_709/_pdf
+tags:
+- cefozopran
+- chemical-description
+- thiadiazole
+- primary-activity
+```
