@@ -1,0 +1,769 @@
+schema_version: 1.0.0
+review_id: 20261021T081645Z-6-n-ethylnetilmicin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of ARO:3007377 (6'-N-ethylnetilmicin)
+started_at: '2026-10-21T08:12:01Z'
+finished_at: '2026-10-21T08:16:45Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Exact neutral derivative and all 13 explicitly database-level resistance
+  assertions supported; primary phenotype enrichment remains actionable and exact
+  antibacterial target remains unresolved
+scientific_review: true
+summary: Native SMILES, InChI, PubChem identity and deterministic mint agree. All
+  13 imported resistance edges reproduce and retain database-level attribution. One
+  minor finding identifies exact-compound primary resistance and activity evidence
+  suitable for bounded curation. Resistance enzymes and putative transport are not
+  the antimicrobial binding target; gene presence does not establish every strain
+  phenotype.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/6-n-ethylnetilmicin.yaml
+    sha256: 12b0e7a968e0476c33edd98091bfb0509fcd9ff52edd9b49530810eb73623a0f
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+scope:
+  description: Whole exact record, all 13 resistance entries, maintained ARO/PubChem
+    ownership, chemical encodings, source references, structured expression context
+    and selected primary resistance experiments.
+  selection: Path-ordered unreviewed queue index 062; exactly one record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-e4e652725f
+targets:
+- target_id: antibioticmech:aro-e4e652725f
+  path: data/antibiotics/antibacterial/6-n-ethylnetilmicin.yaml
+  label: 6'-N-ethylnetilmicin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted CARD identity, class and definition reference
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact PubChem structure
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported CARD resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Reviewed evidence qualification owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: schema
+  name: Documented per-record LinkML validation
+  status: passed
+  required: true
+  summary: Exit 0; No issues found.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/6-n-ethylnetilmicin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented closed-schema validation
+  status: passed
+  required: true
+  summary: Exit 0; one file and zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/6-n-ethylnetilmicin.yaml --out /private/tmp/am-review-session/062-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Structure, PubChem and mint comparison
+  status: passed
+  required: false
+  summary: Exit 0; two native encodings and current PubChem agree, one neutral fragment
+    and 11 assigned stereocentres; mint reproduces.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/062-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: aro
+  name: Full native resistance slice and source-term comparison
+  status: passed
+  required: false
+  summary: Exit 0; all 13 adopted edges, labels, mechanism types and database-evidence
+    qualifications reproduce; hashed local OBO checks 15 terms, and current official
+    CARD page corroborates all 13 determinant labels and exact drug CID.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/062-aro-check.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - aro-check
+- check_id: imodulondb-catalog
+  name: Structured dataset discovery
+  status: passed
+  required: false
+  summary: Exit 0; covered M. tuberculosis dataset found before open-ended web research.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/062-imodulondb-datasets.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - imodulondb
+- check_id: imodulondb-name
+  name: Exact protein-name search
+  status: passed
+  required: false
+  summary: Exit 0; AAC(2')-Ic query returned zero genes and modules in m_tuberculosis/modulome.
+    A locus-alias follow-up was therefore used.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism m_tuberculosis --dataset modulome --query
+    "AAC(2')-Ic" > /private/tmp/am-review-session/062-imodulondb-search.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - imodulondb
+- check_id: imodulondb-locus
+  name: Source-resolved locus search
+  status: passed
+  required: false
+  summary: Exit 0; Rv0262c resolves to aac/aminoglycoside 2-prime-N-acetyltransferase,
+    with no returned module. No component summary or resistance phenotype is inferred.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism m_tuberculosis --dataset modulome --query
+    Rv0262c > /private/tmp/am-review-session/062-imodulondb-locus.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - imodulondb
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/6-n-ethylnetilmicin.yaml
+  locator: Entire generated record
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: supports
+  summary: Read definition and its PMID, class/parent, full structure, two xrefs,
+    source concept, all 13 resistance mechanisms and their evidence, and three seed/reseed
+    events. Each resistance note explicitly calls its source a CARD/ARO database assertion
+    rather than a primary citation. No antimicrobial mode, target, producer, clinical,
+    activity observation, causal graph or dataset is asserted.
+- evidence_id: inventory
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; data/raw/aro_resistance_edges.tsv
+  locator: Exact ARO:3007377 rows and 062-owner-hits.txt
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: supports
+  summary: Adopted identity row has one definition lead, PMID:8385262. PubChem CID
+    15344654 supplies the complete neutral structure. Thirteen inactivation edges
+    reproduce; no exact target edge or curator override was found in ignored-inclusive
+    maintained-input searches. Optional empty sections are not intrinsically erroneous.
+- evidence_id: ownership
+  kind: record_content
+  reference: scripts/extract_source_inventory.py; scripts/enrich_pubchem_structures.py;
+    scripts/seed_from_sources.py
+  locator: ARO/PubChem imports, seeded resistance mapping and curation/card_evidence_reviews.json
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: supports
+  summary: Imported fields belong to maintained ARO/PubChem inventories and their
+    transforms. Primary evidence qualification belongs to the reviewed CARD overlay
+    or curator-owned annotation through validated writing/history; do not patch source-derived
+    rows only in generated YAML.
+- evidence_id: card
+  kind: database
+  reference: https://card.mcmaster.ca/ontology/46127
+  locator: 062-card.html exact term, parent, PubChem and all subterms
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: supports
+  summary: Current official CARD identifies ARO:3007377 as the exact 6-prime-N-ethyl
+    netilmicin derivative, links CID 15344654, classifies it as an aminoglycoside
+    and lists the same 13 resistance determinants. This corroborates source assertions,
+    not independent primary validation of all phenotype claims.
+  snapshot_sha256: 8670c6cd68fa28fb3248dc4615dbfc3c5a935c6cd3fc5d2593f1a8256890446f
+- evidence_id: aro-check
+  kind: validation
+  reference: Adopted CARD edge tables and read-only original downloads/aro.obo
+  locator: 062-aro-check.py and 062-aro-check.json
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: supports
+  summary: All 13 native labels, exact drug edges, ANTIBIOTIC_INACTIVATION types and
+    qualified evidence notes reproduce. Drug, parent and determinant terms are non-obsolete
+    in the local cache; current official drug page also corroborates labels. Cache
+    SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4 is not
+    a fresh ontology snapshot. AAC(3)-IIb has exact historical synonym aac(3)-Vb.
+  snapshot_sha256: c4e8b046fd042217dc25df4d954f16af28348e87704027161f45562257e7c761
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/15344654/property/InChI,InChIKey,MolecularFormula,IsomericSMILES/JSON
+  locator: 062-pubchem.json
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: supports
+  summary: Current CID 15344654 matches native InChI, key RZXCDENQJDMFQY-OLUUFXIRSA-N
+    and C23H45N5O7. It is the neutral exact derivative, not netilmicin, 2-prime-N-ethylnetilmicin
+    or an unspecified sulfate form.
+  snapshot_sha256: 51e0e8092b8b16be376d8be61360dce16f1848bbc597087420e22583ae0f6280
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit and hashlib calculations
+  locator: 062-chemistry.py and 062-chemistry.json
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: supports
+  summary: Native SMILES and InChI parse to the recorded key; formula, charge 0, one
+    fragment, 11 assigned stereocentres, average mass 503.641 (rounds to stored 503.6)
+    and exact mass 503.33189878 agree. Mint antibioticmech:aro-e4e652725f reproduces
+    from ARO|ARO:3007377.
+  snapshot_sha256: b6921569c7d8a3ead919ab60366772bef1a9eedb43f602d090a0e7b6229c835a
+- evidence_id: definition-reference
+  kind: database
+  reference: PMID:8385262
+  locator: DOI:10.1128/mr.57.1.138-163.1993; indexed review abstract in 062-core.json
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: context_only
+  summary: The cited article is a secondary review of aminoglycoside-modifying enzymes.
+    Its abstract supplies class-level context, not an exact-compound primary binding
+    experiment. The native brief chemical definition is separately corroborated by
+    current CARD and exact structure.
+  snapshot_sha256: f21037af350b90c61447d77bbce963cdd4332f7102db12ee32a37092843df628
+- evidence_id: primary1996
+  kind: primary_source
+  reference: PMID:8891143
+  locator: DOI:10.1128/AAC.40.10.2350; 062-primary1996.pdf pp 2351–2354; methods/Table
+    2 pixels inspected
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: supports
+  summary: In M. smegmatis mc²155, 6-prime-N-ethylnetilmicin MIC is 4 µg/mL with pSUM36,
+    32 with pAC20/pAC100 or pAC63, and 4 after pAC63* disruption. Mueller-Hinton agar,
+    37 °C and up to 5 days are specified; the printed inoculum is implausibly 10^-5
+    CFU/mL and needs clarification. Crude extracts acetylate this derivative. Gene
+    presence across 34 M. fortuitum isolates did not itself predict resistance.
+  snapshot_sha256: 32206b8af5b652f769003c26cccb9269b97b5997e4cee3c7461e519cefc05cdb
+- evidence_id: primary1992
+  kind: primary_source
+  reference: PMID:1444303
+  locator: DOI:10.1128/AAC.36.10.2222; indexed abstract in 062-core.json
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: partial
+  summary: Cloned historical aac(3)-Vb, now AAC(3)-IIb, supports high-level resistance
+    to the exact 6-prime derivative in the reported Serratia/E. coli system. The positional
+    acetylation experiment used sisomicin; do not describe it as direct product identification
+    for this drug. Full-text retrieval failed; no numerical values from search snippets
+    are imported.
+  snapshot_sha256: f21037af350b90c61447d77bbce963cdd4332f7102db12ee32a37092843df628
+- evidence_id: primary1993
+  kind: primary_source
+  reference: PMID:8257126
+  locator: DOI:10.1128/AAC.37.10.2074; indexed abstract in 062-core.json
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: partial
+  summary: AAC(3)-VIa study reports a phenotype distinguishing the two N-ethyl positional
+    derivatives; biochemical assignment of the 3-position used sisomicin. Exact-drug
+    resistance phenotype and a different substrate structural assay must remain separate.
+  snapshot_sha256: f21037af350b90c61447d77bbce963cdd4332f7102db12ee32a37092843df628
+- evidence_id: tap
+  kind: primary_source
+  reference: PMID:9811639
+  locator: DOI:10.1128/jb.180.22.5836-5843.1998; publisher full methods/results/Table
+    2
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: partial
+  summary: M. fortuitum Tap constructs in M. smegmatis raise this drug relative MIC
+    eightfold from 16 µg/mL control; Table 2 values are ratios, not all absolute MICs.
+    Disruption and CCCP comparisons support a bounded resistance phenotype. The tested
+    M. tuberculosis homolog lacks this phenotype under those constructs. Direct accumulation
+    used tetracycline, so drug-specific transport remains inferred.
+- evidence_id: source-leads
+  kind: database
+  reference: PMID:8385262; PMID:8407825; PMID:8891143; PMID:9159528; PMID:3892230;
+    PMID:8913451; PMID:1444303; PMID:18467306; PMID:6318050; PMID:19709289; PMID:8257126;
+    PMID:19949054; PMID:20185552; PMID:32571822
+  locator: 062-core.json and 062-lead-dispositions.json
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: context_only
+  summary: The sole adopted drug-definition PMID and all 13 additional unique determinant-definition
+    leads resolve; indexed abstracts were read. 3892230 is explicitly truncated by
+    the index. Several are gene epidemiology or other-drug studies and do not independently
+    validate every exact-drug edge. PMID 9159528 distinguishes expressed Id phenotype
+    from Ic and calls Ie putative; 32571822 reports gentamicin/tobramycin results.
+    Retain database level unless exact primary evidence is established.
+  snapshot_sha256: f21037af350b90c61447d77bbce963cdd4332f7102db12ee32a37092843df628
+- evidence_id: imodulondb
+  kind: database
+  reference: https://imodulondb.org/; https://mycobrowser.epfl.ch/genes/Rv0262c
+  locator: 062-imodulondb-datasets.txt, 062-imodulondb-search.txt, 062-imodulondb-locus.txt
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: context_only
+  summary: Catalog and both searches succeeded. Mycobrowser resolves native AAC(2')-Ic
+    to Rv0262c; exact protein-name query has no hits, but locus query returns m_tuberculosis/modulome/Rv0262c
+    (aac), with zero modules. This is bounded gene-context discovery, not negative
+    resistance evidence or an antimicrobial target assertion.
+  snapshot_sha256: d53f97b7219db18f24cf13161b52fba4bab0b19140c16018066c7e3babd9a11a
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual isolated batch 007 executions; 062-strict.tsv
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: supports
+  summary: Both focused native validators exited 0; strict scanned one record with
+    zero ERROR rows.
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive maintained-input and bounded public search
+  locator: 062-local-hits.txt and 062-owner-hits.txt
+  accessed_at: '2026-10-21T08:15:55Z'
+  support: context_only
+  summary: Identity and all native claims were checked before selected primary activity/resistance
+    work. An exact-compound ribosomal binding or direct antibacterial mechanism experiment
+    was not established in this bounded search; no universal absence claim is made.
+  search_scope: prepare.py 62 ran rg --no-ignore --hidden excluding only .git and
+    .venv before assessment. Maintained data/raw,curation,conf searches covered exact
+    ID,mint and label. iModulonDB ran before public exact-name derivative/mechanism/acetyltransferase/Tap
+    queries. One adopted drug PMID and 13 additional determinant-definition PMIDs
+    were inspected.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact 6-prime derivative and neutral structure
+  outcome: supported
+  summary: All native encodings and current PubChem agree. The source-concept minted
+    identifier is appropriate and reproducible; no substitution with the 2-prime sibling
+    is warranted.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  evidence_ids:
+  - record
+  - pubchem
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: ARO class, terms and xrefs
+  outcome: supported
+  summary: Drug and aminoglycoside parent identify the intended entity; CARD and PubChem
+    targets resolve. The label retains the prime position even though the normalized
+    file slug omits punctuation.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  evidence_ids:
+  - card
+  - aro-check
+  - pubchem
+- assessment_id: resistance
+  area: evidence
+  topic: All 13 imported resistance assertions
+  outcome: supported
+  summary: Every native entry accurately reproduces an explicit database assertion.
+    This assessment does not establish universal phenotype or primary support for
+    each determinant; reviewed primary sources show expression and construct dependence.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  evidence_ids:
+  - record
+  - aro-check
+  - primary1996
+  - source-leads
+- assessment_id: definition
+  area: evidence
+  topic: Secondary definition reference
+  outcome: supported
+  summary: The definition is modest and source-supported. PMID 8385262 is a review
+    and should not be relabelled primary evidence.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  evidence_ids:
+  - card
+  - definition-reference
+- assessment_id: mechanism
+  area: scope
+  topic: Antimicrobial target versus resistance
+  outcome: unknown
+  summary: Acetyltransferases and Tap describe resistance, not the lethal binding
+    target. Exact-derivative direct ribosomal binding or translation inhibition was
+    not established; class expectation alone is insufficient.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  evidence_ids:
+  - primary1996
+  - tap
+  - definition-reference
+- assessment_id: completeness
+  area: completeness
+  topic: Specific primary phenotype enrichment
+  outcome: concern
+  summary: Primary data can qualify an existing inactivation edge and add a distinct
+    bounded Tap phenotype. This is a minor evidence opportunity, not a claim that
+    every optional field is required.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  evidence_ids:
+  - record
+  - primary1996
+  - tap
+- assessment_id: expression
+  area: scope
+  topic: Gene-context adapter
+  outcome: supported
+  summary: A source-resolved locus is present in the covered gene table but no module
+    is returned. This neither proves nor refutes resistance to this compound.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  evidence_ids:
+  - imodulondb
+- assessment_id: optional
+  area: representation
+  topic: Producer, clinical, graph and dataset objects
+  outcome: not_applicable
+  summary: No such objects are asserted. A derivative or source organism for a resistance
+    gene is not the antibiotic producer; in-vitro resistance is not clinical efficacy.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  evidence_ids:
+  - record
+  - primary1996
+- assessment_id: provenance
+  area: ownership
+  topic: Source owners and history
+  outcome: supported
+  summary: ARO/PubChem owners were captured before judgment, all 19 input hashes remain
+    unchanged, and three seed/reseed events and the mint are internally consistent.
+    Future primary evidence must use maintained overlays/curator ownership and validated
+    history.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  evidence_ids:
+  - inventory
+  - ownership
+  - chemistry
+- assessment_id: schema
+  area: schema
+  topic: Focused native validation
+  outcome: supported
+  summary: Both documented per-record gates pass; full-corpus shared gate completion
+    is handled separately.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: aro-3007377-primary-resistance-phenotype-completeness
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Primary exact-compound resistance observations are available for bounded
+    annotation
+  description: The correctly attributed database slice can be supplemented with primary
+    evidence for a specific inactivation determinant and a distinct putative-efflux
+    phenotype. Preserve the assay construct, host and evidentiary level rather than
+    promoting all database edges to primary validation.
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  field_paths:
+  - resistance_mechanisms
+  - evidence
+  - activity_spectrum
+  - discussions
+  evidence_ids:
+  - record
+  - primary1996
+  - primary1992
+  - primary1993
+  - tap
+  rule_id: 'review-checklist: Evidence standard, Resistance and Activity'
+  native_severity: minor actionable primary-evidence completeness gap
+  normalization_reason: Verified exact-compound primary results are available; current
+    database notes are accurate, and optional emptiness alone is not a defect.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Reviewed primary evidence qualification for existing imported CARD assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/6-n-ethylnetilmicin.yaml
+    role: Curator-owned evidence, resistance_mechanisms, activity_spectrum and discussions
+      through validated writer/history
+actions:
+- action_id: A1
+  description: Curate selected primary resistance/activity observations with exact
+    derivative, construct and source-access boundaries.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-e4e652725f
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Reviewed primary evidence qualification for existing imported CARD assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/6-n-ethylnetilmicin.yaml
+    role: Curator-owned evidence, resistance_mechanisms, activity_spectrum and discussions
+      through validated writer/history
+  acceptance_checks:
+  - Attach the direct primary study to the narrow existing determinant claim, retaining
+    host/construct comparisons and distinguishing gene presence from expressed resistance.
+    Resolve the printed inoculum anomaly before quantitative assay normalization.
+  - Represent the Tap result as construct-specific resistance with putative transport;
+    its direct accumulation experiment concerns another substrate. Do not generalize
+    homolog behavior across organisms or vectors.
+  - Map historical aac(3)-Vb to current AAC(3)-IIb explicitly. Separate exact-drug
+    phenotypes from sisomicin acetylation-product experiments and retain abstract-only
+    limits where full text was unavailable.
+  - Keep each imported assertion at database evidence level unless its exact primary
+    support is verified; do not infer an antimicrobial binding target, clinical efficacy
+    or antibiotic biosynthesis from resistance studies.
+  - Use the maintained reviewed-evidence overlay or authorized curator fields, validated
+    writer/history and all required native gates before REVIEWED sign-off.
+limitations:
+- All native ARO terms/edges were checked against adopted tables and the hashed local
+  OBO; the current official drug page corroborated the 13 determinant labels. Individual
+  current determinant pages and all primary phenotype experiments were not exhaustively
+  inspected.
+- The sole adopted definition reference and 13 additional determinant-definition references
+  were resolved and their indexed abstracts read; 3892230 is index-truncated. Most
+  full texts were not retrieved. EPMC fullTextXML requests for Tap and the 1992/1993/2020
+  studies returned 500; a 1992 PDF endpoint returned 404. Publisher Tap full text
+  and the 1996 PDF were independently accessible.
+- The 1996 primary PDF prints an implausible 10^-5 CFU/mL inoculum. This was verified
+  visually and was not silently corrected to 10^5. Exact reagent salt/purity is not
+  established for all experiments.
+- The 1998 Tap table gives fold-relative values with a parenthetical baseline, not
+  a complete table of absolute MICs. Its homolog-specific negative result is limited
+  to those tested constructs; broader literature can differ.
+- No exact-compound direct antibacterial binding target or clinical efficacy was established.
+  iModulonDB gene presence is computational context only. This review is bounded and
+  is not native REVIEWED sign-off; required shared gates remain incomplete.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Only scratch artifacts were written; no native record, maintained source or history
+  changed. All 19 captured input hashes were rechecked unchanged.
+- Default prepare.py ChEBI owners were replaced with actual ARO/PubChem owners before
+  scientific judgment, retaining all original input hashes and adding six maintained
+  inputs.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://card.mcmaster.ca/ontology/46127
+- https://pubchem.ncbi.nlm.nih.gov/compound/15344654
+- https://pubmed.ncbi.nlm.nih.gov/8385262/
+- https://pubmed.ncbi.nlm.nih.gov/8891143/
+- https://pubmed.ncbi.nlm.nih.gov/1444303/
+- https://pubmed.ncbi.nlm.nih.gov/8257126/
+- https://journals.asm.org/doi/10.1128/jb.180.22.5836-5843.1998
+tags:
+- record-review
+- aminoglycoside
+- exact-positional-derivative
+- card-database-assertion
+- resistance-evidence-scope
