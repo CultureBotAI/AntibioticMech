@@ -1,0 +1,769 @@
+schema_version: 1.0.0
+review_id: 20261021T105314Z-carrimycin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Carrimycin: mixture concept conflated with one isovalerylspiramycin structure'
+started_at: '2026-10-21T10:32:41Z'
+finished_at: '2026-10-21T10:53:14Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent full native and actual ARO/PubChem-owner review,
+    current database comparisons, cited case report and primary component/producer
+    research; exact graph substituents compared with the published congener drawing.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'One confirmed blocker: carrimycin/bitespiramycin denotes a multicomponent
+  preparation, but the generated record assigns one PubChem graph. Its acetyl and
+  isovaleryl substituents map to isovalerylspiramycin II connectivity. The cited case
+  report itself explicitly describes the mixture, and primary production/analytical
+  studies corroborate it. Internal molecular encodings and focused validators pass;
+  they do not establish exact equivalence of the product concept and this constituent.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/carrimycin.yaml
+    sha256: f4c138735d6b7570a3bd3289cbc9ad991a687bc28200b5ddce9999e2ca2d9bcb
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-340d45af79
+  path: data/antibiotics/antibacterial/carrimycin.yaml
+  label: carrimycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, cross-references and class
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem enrichment owner
+scope:
+  description: Whole-record review of carrimycin, including exact mixture-versus-constituent
+    boundary.
+  selection: Queue 199 in isolated batch 020; original capture preserved and actual
+    ARO/PubChem owners appended before detailed assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-340d45af79
+  exclusions:
+  - target: Individual isovalerylspiramycins, other acylated spiramycins and clinical
+      carrimycin formulations
+    reason: Compared only to resolve scope; no separate record review or assay transfer
+      to an isolated congener is claimed.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual focused command passed with zero errors.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/carrimycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual focused command passed with zero errors.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/carrimycin.yaml --out /private/tmp/am-review-session/199-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Independent graph and all source mints
+  status: passed
+  required: true
+  summary: Corrected scratch check passes both encodings, source-precision masses
+    and the ARO mint. Earlier generic helper had assumed a ChEBI identifier and overly
+    strict average-mass precision; those helper failures are retained and are not
+    native defects.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/check199200.py
+    199 (cwd /private/tmp/antibioticmech-record-reviews-020)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/carrimycin.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T10:48:11Z'
+  support: supports
+  summary: Read minted carrimycin identity, bitespiramycin synonym, ARO macrolide
+    parent/class, definition sourced to PMID 37113529, one C50H84N2O16 graph, ARO/ChEMBL/PubChem
+    xrefs and three seed events. No populated curated mode, molecular target, activity_spectrum,
+    resistance, clinical or graph block.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv
+  locator: ARO row 412 and PubChem row 148; extractor, enrichment script, seeder and
+    decisions
+  accessed_at: '2026-10-21T10:48:11Z'
+  support: supports
+  summary: The ARO row supplies the mixture-level name, synonym, definition and xrefs.
+    PubChem enrichment supplies CID 101485377 as one exact structure. The correction
+    belongs in source harmonization/decisions, not a generated-file-only edit. Original
+    input hashes were retained when actual source owners were appended.
+- evidence_id: aro
+  kind: authority
+  reference: https://card.mcmaster.ca/aro/3007457
+  locator: Live ARO:3007457 entry
+  accessed_at: '2026-10-21T10:44:20Z'
+  support: partial
+  summary: Current ARO repeats carrimycin/bitespiramycin, genetically engineered S.
+    spiramyceticus, macrolide class, CID 101485377, CHEMBL4650385 and PMID 37113529.
+    Its SMILES is N/A. It establishes provenance but does not resolve the preparation-to-constituent
+    mismatch.
+  snapshot_sha256: dbec3c2e68d5e5b12388b052789a231e4a2c63ed435ed391e36d075c5dbf8224
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/101485377
+  locator: Current PUG compound graph and IUPAC structure
+  accessed_at: '2026-10-21T10:44:19Z'
+  support: partial
+  summary: The live CID matches native PNMQDIDLWTXQLZ-RZELCZIWSA-N and C50H84N2O16
+    exactly. It contains a macrocyclic O-acetyl substituent and a sugar O-isovaleryl
+    substituent. Exact reproduction of the supplied graph does not demonstrate that
+    the whole carrimycin mixture is one molecule.
+  snapshot_sha256: 248c6941a9dd1aca789bc51ee139a841134a6cb1ef2fd1b3a8ef8ecc6e46ebfa
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4650385.json
+  locator: Live molecule type, structure and synonyms
+  accessed_at: '2026-10-21T10:44:19Z'
+  support: context_only
+  summary: CHEMBL4650385 names carrimycin/4-double-prime-isovalerylspiramycin, but
+    molecule_structures is null and structure_type is NONE. It cannot corroborate
+    exact equivalence to the one native graph. Its development-phase field is not
+    evidence of a regulator-approved exact constituent.
+  snapshot_sha256: d6282038a2dba09431081fba9c6687c04b9392500103666e21ddf1e72fa84700
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit 2026.03.5 and source mint
+  locator: 199-chemistry.json; 199-chem005-initial.json retained separately
+  accessed_at: '2026-10-21T10:44:02Z'
+  support: supports
+  summary: Both encodings give the same neutral single-fragment C50H84N2O16 structure
+    with 19 assigned tetrahedral centres and two specified olefins. Average mass 969.22
+    rounds to the native 969.2; exact mass 968.582084608 agrees. The ARO-derived mint
+    is correct.
+  snapshot_sha256: d04b648c5ea090e0e6001643dd94cd3b7bc6342fae85c0ba4a315ebac7af47d9
+- evidence_id: cited-case
+  kind: primary_source
+  reference: https://doi.org/10.2147/IDR.S407076
+  locator: PMID 37113529 / PMC10126721; full Introduction, case treatment and Discussion
+    via Europe PMC XML
+  accessed_at: '2026-10-21T10:45:44Z'
+  support: refutes
+  summary: The native cited paper explicitly describes carrimycin as isovalerylspiramycins
+    I–III plus other 4-double-prime-acylspiramycins. Its patient received meropenem
+    plus carrimycin before carrimycin alone, following several other antibiotics.
+    Clinical improvement does not identify the active constituent or establish a pure-congener
+    MIC or mechanism. The paper discusses possible mechanisms and states that the
+    mechanism for MDR K. pneumoniae remains unclear.
+  snapshot_sha256: 6b6acd551749765aeb0a4b2f474e1ac359e67834013f35df6833b27cc70de034
+- evidence_id: component-analysis
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.jpba.2012.03.013
+  locator: PMID 22482901 abstract; companion component-production abstracts
+  accessed_at: '2026-10-21T10:44:57Z'
+  support: refutes
+  summary: The inspected primary analytical abstract characterizes bitespiramycin
+    as a group of 4-double-prime-acylated spiramycins and reports 38 components in
+    commercial samples. PMID 20490499 separately describes the I/II/III mixture and
+    engineering a strain producing component I. These are direct evidence against
+    treating the preparation name as one exact graph, although complete analytical
+    tables were not inspected.
+  snapshot_sha256: cb3427eff6bfd41e47fafb21b8eac49ac13e7d0ec5b2286088e6eaa356b71ba1
+- evidence_id: producer
+  kind: primary_source
+  reference: https://doi.org/10.1186/s12866-025-04120-2
+  locator: PMC12326811; Introduction, Methods, Results and Figure 3 HPLC profiles
+  accessed_at: '2026-10-21T10:45:14Z'
+  support: refutes
+  summary: Full primary production study identifies carrimycin/bitespiramycin and
+    reports nine main HPLC components, including isovalerylspiramycins I, II and III
+    as peaks 6, 8 and 9. S. spiramyceticus 54-IA and engineered mutants produce the
+    multicomponent material. This supports the producer statement at preparation scope,
+    not unique production of only the native graph.
+  snapshot_sha256: 6c08839ec774544bf83fe46aea0b2c01cb3d00bbaae69d56fbde44e692d3b47c
+- evidence_id: congener-drawing
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/04c6/12326811/e5c3b73c33ac/12866_2025_4120_Fig1_HTML.jpg
+  locator: 2025 Figure 1A, ISP I/II/III substituent key; inspected image
+  accessed_at: '2026-10-21T10:45:44Z'
+  support: refutes
+  summary: The drawing specifies ISP I R=H, ISP II R=COCH3 and ISP III R=COCH2CH3
+    at the macrocycle oxygen, all with the 4-double-prime isovaleryl group. The native
+    O-acetyl graph matches component II connectivity. This mapping does not independently
+    redetermine every absolute stereocentre.
+  snapshot_sha256: 5b096f832675bdf88cc14b734d70c6975e1e3508ddca3d64538f289165f03a93
+- evidence_id: atom-map
+  kind: validation
+  reference: Scratch native substructure mapping
+  locator: 199-component-map.json; zero-based RDKit atoms
+  accessed_at: '2026-10-21T10:46:44Z'
+  support: supports
+  summary: Native O-acetyl substructure is atoms 13/18/19/20/21 and O-isovaleryl substructure
+    is 36/40/41/42/43/44/45/46. The primary drawing labels the macrocycle position
+    3; oxacyclo IUPAC numbering calls the corresponding O-acetyl-bearing ring atom
+    position 4. These are numbering conventions, not two different substitution sites.
+  snapshot_sha256: 6d12b564f50ff6ec3d07d5295db3527ea9fdd8da034605d2b80d274c9721f27b
+- evidence_id: earlier-production
+  kind: primary_source
+  reference: https://doi.org/10.1590/S1517-83822009000400003
+  locator: PMC3768584; full introduction, organism methods and component measurements
+  accessed_at: '2026-10-21T10:45:14Z'
+  support: refutes
+  summary: The earlier primary fermentation paper also treats bitespiramycin as multiple
+    4-double-prime-O-acylspiramycins, with composition changed by amino-acid feeding.
+    Its WSJ-1-195 strain is genetically engineered from S. spiramyceticus F21. It
+    corroborates preparation composition and producer scope.
+  snapshot_sha256: 6d8aa3c48f1cc8d7053a5cf6f1b7ba3d0c467f09e38930b25a9c140d2adf7657
+- evidence_id: antibacterial
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.bmcl.2017.08.046
+  locator: PMID 28867456; inspected abstract
+  accessed_at: '2026-10-21T10:44:57Z'
+  support: partial
+  summary: The primary abstract reports bitespiramycin antibacterial assays against
+    Chlamydia, Ureaplasma and Mycoplasma and a hamster infection experiment. This
+    supports antibacterial preparation activity, but not transfer of every endpoint
+    to isolated isovalerylspiramycin II. Full assay tables were not inspected.
+  snapshot_sha256: cb3427eff6bfd41e47fafb21b8eac49ac13e7d0ec5b2286088e6eaa356b71ba1
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive repository and free primary searches
+  locator: 199-owner-hits.txt; exact carrimycin/label/key plus public EPMC research
+  accessed_at: '2026-10-21T10:44:03Z'
+  support: context_only
+  summary: Ignored-inclusive repository search found source/native/generated references
+    and historical research ledgers, with no exact curator correction found. Free
+    primary searches separated mixture studies, isolated isovalerylspiramycin I, derivatives,
+    host-cancer and antiviral studies. Native text names no gene/protein/regulator/pathway
+    requiring a structured adapter.
+  snapshot_sha256: 9caa0f4c2af7030c4ea2b9534e506723876d3cf526e1a897429947fe33905c1e
+  search_scope: rg --no-ignore --hidden name/slug/full key across batch 020 outside
+    .git/.venv; EPMC title/abstract search for carrimycin/bitespiramycin and source-linked
+    primary texts, accessed 2026-10-21.
+- evidence_id: gates
+  kind: validation
+  reference: Actual schema/strict commands
+  locator: 199-focused-results.json; 199-validation.tsv
+  accessed_at: '2026-10-21T10:44:35Z'
+  support: supports
+  summary: Both focused commands exited zero; strict scanned one record with zero
+    errors. Valid schemas and coherent encodings do not detect the mixture-level scientific
+    mismatch.
+  snapshot_sha256: 76664ba6b4f4a564ca4ffe1635aa544430c3a1823b1b69d136811fb5e96c5ddb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Mixture concept versus single molecular graph
+  outcome: concern
+  summary: The record conflates a demonstrated multicomponent preparation with one
+    constituent graph. The exact-name, source-concept and chemical-structure relationship
+    fails the repository unit-of-corpus rule despite correct deterministic minting.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  evidence_ids:
+  - native
+  - owners
+  - cited-case
+  - component-analysis
+  - producer
+  - congener-drawing
+- assessment_id: structure
+  area: identity
+  topic: Internal chemistry and constituent mapping
+  outcome: supported
+  summary: SMILES/InChI/key/formula/charge/masses agree internally and with PubChem.
+    Native O-acetyl/isovaleryl connectivity maps to ISP II in the primary figure;
+    exact chemical consistency is distinct from correct preparation identity.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  evidence_ids:
+  - chemistry
+  - pubchem
+  - congener-drawing
+  - atom-map
+- assessment_id: grounding
+  area: grounding
+  topic: Macrolide class and antibacterial filing
+  outcome: concern
+  summary: The macrolide class is compatible with the supplied graph and the preparation
+    has primary antibacterial evidence. Exact-constituent antimicrobial eligibility
+    cannot be certified solely from the mixture studies.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  evidence_ids:
+  - aro
+  - antibacterial
+  - cited-case
+  - producer
+- assessment_id: xref
+  area: grounding
+  topic: Exact versus preparation-level xrefs
+  outcome: concern
+  summary: The PubChem graph is verified, while ARO and structureless ChEMBL describe
+    the preparation-level concept. They cannot collectively support exact equivalence
+    to one congener.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  evidence_ids:
+  - aro
+  - pubchem
+  - chembl
+- assessment_id: definition
+  area: evidence
+  topic: Cited evidence and producer scope
+  outcome: concern
+  summary: The cited case report supports the mixture identity and broad antibacterial
+    context but is not a direct pure-congener Gram-positive or M. tuberculosis experiment.
+    Genetically engineered Streptomyces production is corroborated at mixture scope.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  evidence_ids:
+  - native
+  - cited-case
+  - producer
+  - earlier-production
+- assessment_id: mechanism
+  area: evidence
+  topic: Constituent-specific mechanism
+  outcome: unknown
+  summary: The case report discusses macrolide mechanisms and possible host effects,
+    not a direct isolated-ISP-II mechanism experiment. No native molecular target
+    is populated; do not transfer viral or host-cancer targets from adjacent literature.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  evidence_ids:
+  - cited-case
+  - antibacterial
+  - native
+- assessment_id: activity
+  area: evidence
+  topic: Mixture activity versus exact constituent
+  outcome: unknown
+  summary: Bitespiramycin has primary antibacterial evidence, but inspected quantitative
+    efficacy and patient response are not resolved to the one native constituent.
+    No exact-constituent MIC or resistance observation is adopted.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  evidence_ids:
+  - antibacterial
+  - cited-case
+  - component-analysis
+- assessment_id: optional-domains
+  area: scope
+  topic: Adapters, clinical claims and resistance
+  outcome: not_applicable
+  summary: Native record has no named gene, protein, pathway, clinical approval, resistance,
+    dataset or causal-graph claim. Source-paper biosynthetic genes do not retroactively
+    make the sparse native record an adapter query. A clinical case and publication
+    claims about authorization are not independently verified regulatory evidence.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  evidence_ids:
+  - native
+  - cited-case
+- assessment_id: history
+  area: provenance
+  topic: Source ownership and history
+  outcome: supported
+  summary: The ARO mint and three seed events are coherent and original hashes remain
+    unchanged. Expanded ownership accurately identifies the ARO/PubChem enrichment
+    path; native SEEDED status was not changed.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  evidence_ids:
+  - owners
+  - chemistry
+  - native
+- assessment_id: completeness
+  area: completeness
+  topic: Identity before optional enrichment
+  outcome: concern
+  summary: Identity adjudication is prerequisite to adding exact mechanism, activity
+    or producer claims. Optional empty fields are not independently defective.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  evidence_ids:
+  - cited-case
+  - producer
+  - native
+- assessment_id: schema
+  area: schema
+  topic: Focused deterministic checks
+  outcome: supported
+  summary: Schema, strict and corrected source-aware chemistry checks pass; the scientifically
+    decisive finding is outside those checks.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  evidence_ids:
+  - gates
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: carrimycin-mixture-concept-single-congener
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: Resolve the carrimycin mixture before assigning one constituent structure
+  description: Carrimycin/bitespiramycin is a documented mixture of isovalerylspiramycins
+    I–III and other acylated spiramycins. The native record attaches that preparation-level
+    name, source concept and cited case report to one C50H84N2O16 PubChem graph with
+    ISP II connectivity. Current ChEMBL is structureless. This is not a permissible
+    exact-equivalence relationship in a corpus whose record unit is one chemical structure.
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  field_paths:
+  - label
+  - synonyms
+  - definition
+  - chemical_structure
+  - xrefs
+  - source_concepts
+  evidence_ids:
+  - native
+  - owners
+  - cited-case
+  - component-analysis
+  - producer
+  - congener-drawing
+  - atom-map
+  - chembl
+  rule_id: docs/HARMONIZATION.md:The unit of the corpus is a structure; native-review-checklist:Identity
+    and Equivalence
+  native_severity: blocker mixture identity conflated with individual structure
+  normalization_reason: The defect makes one record denote a preparation and a constituent
+    simultaneously. It is a core identity error, not merely an optional evidence gap
+    or wrong synonym spelling.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, cross-references and class
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem enrichment owner
+actions:
+- action_id: A1
+  description: Adjudicate the ARO mixture concept through maintained decisions and
+    separate any primary-supported individual constituent record.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, cross-references and class
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem enrichment owner
+  acceptance_checks:
+  - Use the supported exclusion/worklist decision for the mixture-level ARO:3007457
+    concept unless an explicitly justified exact-constituent remapping is supported;
+    do not silently relabel a mixture accession as ISP II.
+  - If retaining an individual ISP II record, independently verify its full structure
+    and exact-compound antibacterial evidence, with appropriate exact identifiers
+    and producer/material context. Do not inherit the mixture clinical case or broad
+    mechanism as constituent evidence.
+  - Resolve or qualify the structureless ChEMBL preparation xref and the PubChem constituent
+    mapping through the maintained extraction/enrichment path.
+  - Re-seed through the validated workflow and run exact identity, schema, strict,
+    corpus reproduction, duplicate, term/reference/history and applicable source-provenance
+    gates. Preserve the old source accession as provenance where appropriate.
+- action_id: A2
+  description: After identity is resolved, optionally curate congener-specific activity
+    and mechanism from directly characterized material.
+  finding_ids: []
+  target_ids:
+  - antibioticmech:aro-340d45af79
+  depends_on:
+  - A1
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/carrimycin.yaml
+    role: Curator-owned evidence and activity_spectrum after identity adjudication
+  acceptance_checks:
+  - Require material composition/purity and exact congener assignment for each assay;
+    mixture, host-target and antiviral observations remain separately scoped.
+  - Retain combination treatment and observational limitations of the 2023 case; do
+    not encode it as an isolated-congener MIC or controlled efficacy experiment.
+limitations:
+- Component II mapping is based on native connectivity and the inspected primary substituent
+  drawing, not independent reanalysis of every stereocentre or all raw spectral data.
+- The 2012 component-analysis and 2017 antibacterial studies were inspected as primary
+  abstracts; full component tables and detailed assay protocols were not independently
+  read. The cited 2023 case and 2009/2025 production papers were read in full.
+- No exact isolated-ISP-II antibacterial mechanism or regulatory status was established;
+  mixture-level activity does not resolve those claims.
+- Several direct PMC pages returned verification screens; successful Europe PMC XML
+  and alternate public PMC pages were used, and failed response artifacts are retained
+  separately.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Original 13 input hashes preserved; expanded capture includes actual ARO/PubChem
+  owners before detailed judgment. No native/source/status/history edits.
+- All expanded input hashes rechecked unchanged. Chemistry used locked batch 019 RDKit
+  2026.03.5 against batch 020 cwd; schema/strict used the batch 020 environment.
+- Initial generic scratch chemistry failures were helper limitations (ChEBI-only mint
+  and mass precision), not native record findings.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://card.mcmaster.ca/aro/3007457
+- https://doi.org/10.2147/IDR.S407076
+- https://doi.org/10.1186/s12866-025-04120-2
+tags:
+- carrimycin
+- mixture-boundary
+- identity
+- primary-evidence

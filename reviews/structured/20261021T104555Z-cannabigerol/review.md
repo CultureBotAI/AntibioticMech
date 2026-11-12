@@ -1,0 +1,906 @@
+# Cannabigerol: exact identity and scoped membrane evidence
+
+- Review: 20261021T104555Z-cannabigerol
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T10:32:34Z
+- Finished UTC: 2026-10-21T10:45:55Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+No confirmed native defect. Exact neutral E-cannabigerol identity, both CAS identifiers, KEGG structure and antibacterial filing are supported. Published S. mutans experiments and the Farha study support bacterial membrane effects, with organism, reagent and permeabilizer conditions retained. Optional mechanism/activity enrichment is actionable; DrugBank access and exact Helichrysum neutral-CBG occurrence remain bounded limitations. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole-record review of exact cannabigerol.
+
+Selection: Queue 191 in isolated batch 020; root initial input capture preserved.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:69477 | data/antibiotics/antibacterial/cannabigerol.yaml | generated | cannabigerol |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema | passed | True | CHEBI:69477 | Actual batch 020 focused command passed with no record errors. |
+| Focused strict | passed | True | CHEBI:69477 | Actual batch 020 focused command passed with no record errors. |
+| Independent structure and mint | passed | True | CHEBI:69477 | Batch 020 lacked RDKit; authorized locked batch 019 interpreter against batch 020 cwd passed both native encodings and KEGG exact graph. The initial missing-dependency result is retained separately. |
+| Authoritative full QC | failed | True | CHEBI:69477 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:69477 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:69477 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:69477 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:69477 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:69477 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:69477 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:69477 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:69477 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral E-cannabigerol
+
+identity: supported. Targets: CHEBI:69477.
+
+Native identity/structure/source mint agree with live authority, NIST, PubChem and exact KEGG MOL. No salt, acid or stereoisomer conflation was found.
+
+### Chemical parents and antibacterial filing
+
+grounding: supported. Targets: CHEBI:69477.
+
+Resorcinols and phytocannabinoids are broader compatible parents. Source antibacterial role and filing are supported by compound-specific primary observations. Non-antimicrobial ChEBI roles are outside the adopted activity-role slice.
+
+### Identity versus document/drug references
+
+grounding: unknown. Targets: CHEBI:69477.
+
+CAS/KEGG identity and patent/Wikipedia document destinations are verified. DrugBank live details remain inaccessible; no mismatch was established and no approval is inferred.
+
+### Structure and botanical occurrence
+
+evidence: unknown. Targets: CHEBI:69477.
+
+Structural definition is supported and Cannabis origin is consistent with the hemp literature. Helichrysum occurrence is a historical source assertion requiring direct neutral-CBG confirmation; modern CBGA biosynthesis is not sufficient to resolve it.
+
+### Membrane effects with organism boundaries
+
+evidence: supported. Targets: CHEBI:69477.
+
+Published S. mutans measurements and Farha abstract/preprint support MEMBRANE_DISRUPTION with microbial-target scope as an optional curation lead. Keep S. mutans hyperpolarization separate from MRSA membrane-potential experiments; no direct protein-binding or shared host-receptor mode follows.
+
+### Exact strain/assay observations
+
+evidence: supported. Targets: CHEBI:69477.
+
+Bacterial activity is supported. Published S. mutans 2.5µg/mL depends on BHI conditions and initial density. Farha preprintUSA3002µg/mL and Gram-negative partner-assisted values have distinct media, strain and version scope; they are not unrestricted species-wide single-agent efficacy. Additional final-paper comparators give MRSA ATCC 43300 4–8 µg/mL and N. gonorrhoeae ATCC 19424 1–2 µg/mL in 2021, versus MRSA 7112 64 µg/mL and V. harveyi MM30 &gt;128 µg/mL in 2025. Different strains, preparations and assay protocols prevent treating these as contradictory measurements of one condition.
+
+### Experimental failure to select resistance
+
+evidence: supported. Targets: CHEBI:69477.
+
+The inspected preprint reports no MIC increase over a defined 15-day passage experiment. This does not establish impossibility of resistance, and altered outer-membrane strains are sensitization experiments rather than direct target proof. Native resistance fields remain empty.
+
+### Adapters, host targets and optional domains
+
+scope: not_applicable. Targets: CHEBI:69477.
+
+No native named gene/protein/regulator/pathway requires iModulonDB. Host receptor effects in citation leads are not bacterial targets. No native clinical, dataset or graph claims require further validation; murine efficacy and patent language do not assert approval.
+
+### Maintained owners and status
+
+provenance: supported. Targets: CHEBI:69477.
+
+The ChEBI source concept, mint and four seed events are coherent. SEEDED status is retained; this review adds no native evidence or history event.
+
+### Actionable optional mechanism/activity enrichment
+
+completeness: supported. Targets: CHEBI:69477.
+
+Evidence permits bounded membrane and strain-resolved activity enrichment through the validated curator writer. Optional blanks alone are not defects; all added targets/observations would need narrow claim-level evidence and assay context.
+
+### Focused deterministic checks
+
+schema: supported. Targets: CHEBI:69477.
+
+Schema/strict and alternate-environment chemistry pass; these checks do not certify biological claims.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Optionally curate bacterial membrane mode and exact activity observations from inspected primary studies.
+
+- Use MEMBRANE_DISRUPTION and microbial-target scope only with compound-specific evidence; do not assign a specific protein from genetic sensitivity or dye changes.
+- Record S. mutans UA159/ATCC700610, BHI, 24h,2.5µg/mL,95% hemp isolate and density dependence; distinguish survivor regrowth from complete eradication.
+- Before adopting Farha detailed values reconcile accessible version 3 to the final article/SI and exact strain table; preserve polymyxin B concentration and outer-membrane conditions for Gram-negative observations.
+- Do not infer universal resistance-proof behavior, clinical approval or antibacterial CB1/CB2 targeting.
+- Keep the final 2021 commercial CBG panel (Table 2 row 25, ATCC 43300/19424, n=4) and 2025 isolated CBG panel (Table 1 row 1, MRSA 7112/V. harveyi MM30) as separate activity_spectrum observations; resolve per-row media details, preserve upper-limit results and do not transfer CBD mechanisms.
+
+### A2
+
+Resolve direct neutral-CBG occurrence in Helichrysum and independently verify inaccessible DrugBank details.
+
+- Inspect the original 1979 paper or equivalent exact-compound analytical evidence, preserving voucher and extraction/decarboxylation conditions.
+- Do not substitute CBGA occurrence or an enzyme substrate assay for neutral CBG occurrence.
+- Keep the DrugBank map source-asserted until its exact live identity is independently verified; no source-only removal is warranted by HTTP403.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/cannabigerol.yaml; Complete YAML | supports | Read exact CBG definition, three source synonyms, two parents, antibacterial role, full structure, two CAS and KEGG xrefs, DrugBank and two document xrefs, exact source concept and four seed events. No populated mechanism, target, activity, resistance, producer, clinical or graph block. |
+| owners | data/raw/chebi_antimicrobials.tsv; Row 1769; source config, role table and seeder ownership | supports | ChEBI owns the exact structure/definition/parents/role and ten PMID leads. No additional source table or exact curator addition was found in ignored-inclusive search. The maintained source/extractor and decisions govern generated corrections. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:69477; Live identity, ontology, source species and xrefs | supports | Current authority matches E-cannabigerol C21H32O2, neutral charge, masses, resorcinol/phytocannabinoid parents and antibacterial role. Source species occurrence is asserted for Cannabis and Helichrysum; the latter points to a Cannabis prenylogue paper and needs direct botanical context. |
+| chemistry | Independent RDKit 2026.03.5 encodings and source mint; 191-chemistry.json; batch 019 interpreter against batch 020 cwd | supports | Both native encodings give QXACEHWTBCFNSA-SFQUDFHCSA-N, neutral C21H32O2, one fragment, matching average/exact masses and no tetrahedral centres. The specified olefin geometry and exact CHEBI mint agree. |
+| nist | https://webbook.nist.gov/cgi/cbook.cgi?ID=C2808335&amp;Units=SI; Official CAS 2808-33-5 entry; full InChI/key | supports | NIST CAS 2808-33-5 matches the same E-specific InChI/key despite its less explicit textual name. Thus the two retained CAS labels are not evidence of a native stereoisomer collision. CAS 25654-31-3 is also asserted by exact current ChEBI/KEGG. |
+| kegg | https://rest.kegg.jp/get/C20219; Current text and MOL; independent exact-key comparison | supports | KEGG C20219 is cannabigerol with the same formula and CAS 25654-31-3. Retrieved MOL independently yields QXACEHWTBCFNSA-SFQUDFHCSA-N, confirming exact E geometry rather than label-only matching. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/5315659; Exact InChIKey PUG compound JSON | supports | Independent PubChem structure retrieval resolves CID5315659 for the exact CBG graph; it is supplementary identity corroboration rather than a native extra xref or activity source. |
+| drugbank | https://go.drugbank.com/drugs/DB14734; Direct access attempt and current source xref | unknown | Direct DrugBank access returned HTTP403. Current ChEBI retains the mapping, but its live details were not independently inspected. A drug database xref alone is not a clinical approval claim. |
+| patent | https://patents.google.com/patent/EP2175848A1/en; Therapeutic uses of cannabigerol; title and description | context_only | The patent is explicitly about CBG and receptor-related proposed therapeutic uses. Native placement as a document xref is appropriate; patent claims are not adopted as antibacterial experiments or regulatory approval. |
+| wikipedia | https://en.wikipedia.org/wiki/Cannabigerol; Resolved named document | context_only | The retained Wikipedia link resolves to CBG. It is treated as a document link, not exact structure or primary mechanism evidence. |
+| adopted-references | EuropePMC MED core records; All ten ChEBI PMID leads and added PMID32017534; identifiers, titles and abstracts | context_only | All ten adopted PMIDs resolve:20614687 urinary detection,21902175 hemp prenylogue comparison,23415610 colitis,25269802 colon-cancer assays,27503475 appetite,28343385 LC-MS method,29427593 cannabinoid-rich extracts/aldose reductase,29977202 host CB receptors,31035309 cachexia and 31941059 hypothalamic models. These are not bacterial target evidence. Related analogues, mixtures, docking and host endpoints were kept separate. |
+| farha-published | https://doi.org/10.1021/acsinfecdis.9b00419; PMID32017534; inspected published abstract | partial | Published abstract supports CBG membrane activity in Gram-positive bacteria, mouse MRSA efficacy and Gram-negative activity after outer-membrane permeabilization, including polymyxin B combinations. Detailed quantities below are explicitly drawn from the accessible author preprint, not silently presented as checked final-text values. |
+| farha-preprint | https://www.biorxiv.org/content/10.1101/833392v3.full; Version 3; Results, Figures 2/3/5 and Methods | partial | Author preprint reports CBG MIC 2µg/mL against USA300 by CLSI broth microdilution in CAMHB; membrane-probe and chemical-genetic evidence support membrane effects without a unique binding protein. E. coli &gt;128µg/mL becomes susceptible with polymyxin B (example 1µg/mL CBG plus 0.062µg/mL partner). Inner-membrane ONPG assays require partner treatment. Sigma cannabinoid solutions and synthesized characterized CBG are described. Fifteen-day passage with no MIC increase is bounded, not proof resistance cannot occur. |
+| mutans | https://doi.org/10.3389/fmicb.2021.656471; PMC8100047; Materials, Results/Table 1 and membrane assays | supports | A 95%-purity hemp CBG isolate from NC Labs, with ethanol controls, inhibited S. mutans UA159/ATCC700610 in BHI (reported 24h MIC 2.5µg/mL). Growth response depended on starting cell density. At 5–10µg/mL viable counts declined at 8h but survivors regrew. PI/calcein, DiOC2(3) and laurdan measurements support increased permeability, hyperpolarization and lower fluidity in this organism. They do not prove a specific ion-channel target. |
+| botanical | https://doi.org/10.1038/s41477-023-01402-3; 2023 primary paper Results/introduction and enzyme assays | partial | Full primary paper confirms major cannabigerolic acid accumulation and cannabinoid biosynthesis in H. umbraculigerum. It does not by itself establish natural accumulation of neutral CBG: CBG use in glycosyltransferase assays must not be conflated with occurrence. The older 1979 neutral-CBG report was located but its primary body was inaccessible; exact Helichrysum neutral occurrence remains qualified. |
+| search | Ignored-inclusive repository and free primary searches; Exact ID/label/key; CBG antibacterial and Helichrysum leads | context_only | Ignored-inclusive repository search found native/raw/generated references and historical research ledgers, no extra curated item. Free primary follow-up located relevant CBG experiments; CBD, CBGA, prenylogues and synthetic derivatives were separated. No native named gene/protein/pathway triggered an adapter query. |
+| gates | Actual focused commands and alternate chemistry environment; 191-focused-results.json plus 191-chemistry.json | supports | Batch 020 schema and strict passed. Initial chemistry invocation failed only because RDKit was absent; the existing locked batch 019 interpreter successfully checked batch 020 target bytes, with no new dependency installation. |
+| cbg-panel-2021 | https://doi.org/10.1038/s42003-020-01530-y; PMC7815910; Table 2 row 25, General chemical methods and MIC methods | supports | Final published paper reports commercial natural analogue 25, cannabigerol, purchased through Kinesis Australia/Cerilliant: MIC 4–8 µg/mL against S. aureus MRSA ATCC 43300 and 1–2 µg/mL against N. gonorrhoeae ATCC 19424 (n=4). This is a distinct strain/material panel; detailed laboratory/media assignment for this row was not fully resolved. The paper’s CBD mechanism and animal experiments are not transferred to CBG. |
+| cbg-panel-2025 | https://doi.org/10.3390/microorganisms13020287; PMC11857621; Methods 2.1–2.2 and Table 1 row 1 | supports | Compound 1 CBG was isolated from THC-rich Cannabis sativa through extraction/chromatographic purification and identified by HPLC-UV/MS. Table 1 reports MRSA 7112 MIC 64 µg/mL and V. harveyi MM30 &gt;128 µg/mL, using a modified EUCAST twofold microdilution protocol and 24 h endpoints (MRSA in Mueller-Hinton medium at 37 °C; V. harveyi at 30 °C), DMSO and doxycycline controls. These strain/preparation/method-specific values are retained separately from the lower MICs in other studies. |
+
+## Limits And Additional Notes
+
+- DrugBank DB14734 returned HTTP403; native xref is retained as source-asserted with no demonstrated mismatch.
+- Farha final abstract was inspected; detailed experiments came from the accessible version 3 preprint and were not silently substituted for the final article/SI. All supplementary raw data and clinical-isolate rows were not independently reprocessed.
+- Exact neutral CBG occurrence in Helichrysum was not independently resolved: the older primary report was inaccessible in full, while the inspected 2023 paper establishes CBGA biosynthesis and CBG enzyme-substrate use.
+- The native record has no curated molecular target; membrane evidence does not identify a unique binding protein. Host pharmacology abstracts do not establish microbial mechanisms.
+- The final 2021 analogue panel and 2025 isolated-compound panel were inspected separately; per-row laboratory/media mapping and all supplementary raw data were not reprocessed. These additional MICs do not remove the stated Farha final-text access boundary.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 13 original captured hashes rechecked unchanged; no native/source/status/history edits.
+- Batch 020 schema/strict used its own environment; chemistry used the pre-existing locked batch 019 RDKit 2026.03.5 environment against batch 020 cwd after the local dependency failure.
+- No blanket optional-field or alias-only finding. Experimental resistance-selection limits are not broad resistance predictions.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T104555Z-cannabigerol
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cannabigerol: exact identity and scoped membrane evidence'
+started_at: '2026-10-21T10:32:34Z'
+finished_at: '2026-10-21T10:45:55Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent full CBG native/raw-owner review, exact structural
+    and cross-reference comparisons, ten adopted citation metadata/abstracts, and
+    primary antibacterial experiment text with separate botanical-source assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: No confirmed native defect. Exact neutral E-cannabigerol identity, both CAS
+  identifiers, KEGG structure and antibacterial filing are supported. Published S.
+  mutans experiments and the Farha study support bacterial membrane effects, with
+  organism, reagent and permeabilizer conditions retained. Optional mechanism/activity
+  enrichment is actionable; DrugBank access and exact Helichrysum neutral-CBG occurrence
+  remain bounded limitations. Scientific assessment retains the stated evidence limits;
+  full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cannabigerol.yaml
+    sha256: ef502ffcd8ff30c91a54a5eb5ccf3e897a90f9b8854180a9a4ec20457a62932d
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:69477
+  path: data/antibiotics/antibacterial/cannabigerol.yaml
+  label: cannabigerol
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Whole-record review of exact cannabigerol.
+  selection: Queue 191 in isolated batch 020; root initial input capture preserved.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:69477
+  exclusions:
+  - target: Cannabigerolic acid, cannabidiol, cannabinol, prenylogues and synthetic
+      derivatives
+    reason: Different molecules and preparations; their assays and targets are not
+      transferred.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual batch 020 focused command passed with no record errors.
+  target_ids:
+  - CHEBI:69477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cannabigerol.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual batch 020 focused command passed with no record errors.
+  target_ids:
+  - CHEBI:69477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cannabigerol.yaml --out /private/tmp/am-review-session/191-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Independent structure and mint
+  status: passed
+  required: true
+  summary: Batch 020 lacked RDKit; authorized locked batch 019 interpreter against
+    batch 020 cwd passed both native encodings and KEGG exact graph. The initial missing-dependency
+    result is retained separately.
+  target_ids:
+  - CHEBI:69477
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/chem005.py
+    191 (cwd /private/tmp/antibioticmech-record-reviews-020)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+  - kegg
+  - gates
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:69477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:69477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:69477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:69477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:69477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:69477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:69477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:69477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:69477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cannabigerol.yaml
+  locator: Complete YAML
+  accessed_at: '2026-10-21T10:36:56Z'
+  support: supports
+  summary: Read exact CBG definition, three source synonyms, two parents, antibacterial
+    role, full structure, two CAS and KEGG xrefs, DrugBank and two document xrefs,
+    exact source concept and four seed events. No populated mechanism, target, activity,
+    resistance, producer, clinical or graph block.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Row 1769; source config, role table and seeder ownership
+  accessed_at: '2026-10-21T10:36:56Z'
+  support: supports
+  summary: ChEBI owns the exact structure/definition/parents/role and ten PMID leads.
+    No additional source table or exact curator addition was found in ignored-inclusive
+    search. The maintained source/extractor and decisions govern generated corrections.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:69477
+  locator: Live identity, ontology, source species and xrefs
+  accessed_at: '2026-10-21T10:33:56Z'
+  support: supports
+  summary: Current authority matches E-cannabigerol C21H32O2, neutral charge, masses,
+    resorcinol/phytocannabinoid parents and antibacterial role. Source species occurrence
+    is asserted for Cannabis and Helichrysum; the latter points to a Cannabis prenylogue
+    paper and needs direct botanical context.
+  snapshot_sha256: f20f9fea523887323049fc56acb1d0c4f909cb9277cf7435094c5c49f6b7de66
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit 2026.03.5 encodings and source mint
+  locator: 191-chemistry.json; batch 019 interpreter against batch 020 cwd
+  accessed_at: '2026-10-21T10:33:51Z'
+  support: supports
+  summary: Both native encodings give QXACEHWTBCFNSA-SFQUDFHCSA-N, neutral C21H32O2,
+    one fragment, matching average/exact masses and no tetrahedral centres. The specified
+    olefin geometry and exact CHEBI mint agree.
+  snapshot_sha256: db34e586eb73e6bf8388e17a32d818938222aad5df79ce7b1b3502eb57b2465c
+- evidence_id: nist
+  kind: authority
+  reference: https://webbook.nist.gov/cgi/cbook.cgi?ID=C2808335&Units=SI
+  locator: Official CAS 2808-33-5 entry; full InChI/key
+  accessed_at: '2026-10-21T10:34:16Z'
+  support: supports
+  summary: NIST CAS 2808-33-5 matches the same E-specific InChI/key despite its less
+    explicit textual name. Thus the two retained CAS labels are not evidence of a
+    native stereoisomer collision. CAS 25654-31-3 is also asserted by exact current
+    ChEBI/KEGG.
+  snapshot_sha256: 10f41d99ec858a9fcfe1b84748cc26669445b2bfbe36732a684ee22024b7e0ac
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/C20219
+  locator: Current text and MOL; independent exact-key comparison
+  accessed_at: '2026-10-21T10:35:15Z'
+  support: supports
+  summary: KEGG C20219 is cannabigerol with the same formula and CAS 25654-31-3. Retrieved
+    MOL independently yields QXACEHWTBCFNSA-SFQUDFHCSA-N, confirming exact E geometry
+    rather than label-only matching.
+  snapshot_sha256: 731ce18b78313af4bcc426eb9172802b13441ed4040f38e42f71106b56a55cfd
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/5315659
+  locator: Exact InChIKey PUG compound JSON
+  accessed_at: '2026-10-21T10:33:55Z'
+  support: supports
+  summary: Independent PubChem structure retrieval resolves CID5315659 for the exact
+    CBG graph; it is supplementary identity corroboration rather than a native extra
+    xref or activity source.
+  snapshot_sha256: 0f8ea45f1b298eace301c275e9eb67d230ac38d9e7ae319dfb7220c6ec8a4504
+- evidence_id: drugbank
+  kind: database
+  reference: https://go.drugbank.com/drugs/DB14734
+  locator: Direct access attempt and current source xref
+  accessed_at: '2026-10-21T10:33:56Z'
+  support: unknown
+  summary: Direct DrugBank access returned HTTP403. Current ChEBI retains the mapping,
+    but its live details were not independently inspected. A drug database xref alone
+    is not a clinical approval claim.
+  snapshot_sha256: 35f690720534390c78ad0cf0685069df849b14b953f703721af57fab6450a646
+- evidence_id: patent
+  kind: primary_source
+  reference: https://patents.google.com/patent/EP2175848A1/en
+  locator: Therapeutic uses of cannabigerol; title and description
+  accessed_at: '2026-10-21T10:33:55Z'
+  support: context_only
+  summary: The patent is explicitly about CBG and receptor-related proposed therapeutic
+    uses. Native placement as a document xref is appropriate; patent claims are not
+    adopted as antibacterial experiments or regulatory approval.
+  snapshot_sha256: a4edb41e629fc9fde4d8ee0b09211cbdc58495ae24373ec7cb37c81004627aac
+- evidence_id: wikipedia
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Cannabigerol
+  locator: Resolved named document
+  accessed_at: '2026-10-21T10:33:54Z'
+  support: context_only
+  summary: The retained Wikipedia link resolves to CBG. It is treated as a document
+    link, not exact structure or primary mechanism evidence.
+  snapshot_sha256: 4167f7eba4803c794deb659b6a61090202185c39a4fe08fd7136e887c5fb79a7
+- evidence_id: adopted-references
+  kind: primary_source
+  reference: EuropePMC MED core records
+  locator: All ten ChEBI PMID leads and added PMID32017534; identifiers, titles and
+    abstracts
+  accessed_at: '2026-10-21T10:33:56Z'
+  support: context_only
+  summary: All ten adopted PMIDs resolve:20614687 urinary detection,21902175 hemp
+    prenylogue comparison,23415610 colitis,25269802 colon-cancer assays,27503475 appetite,28343385
+    LC-MS method,29427593 cannabinoid-rich extracts/aldose reductase,29977202 host
+    CB receptors,31035309 cachexia and 31941059 hypothalamic models. These are not
+    bacterial target evidence. Related analogues, mixtures, docking and host endpoints
+    were kept separate.
+  snapshot_sha256: 7b54ac33c9e8f2f11c86465787ac06eaea2e7529055988ec235c60a2e284c468
+- evidence_id: farha-published
+  kind: primary_source
+  reference: https://doi.org/10.1021/acsinfecdis.9b00419
+  locator: PMID32017534; inspected published abstract
+  accessed_at: '2026-10-21T10:33:56Z'
+  support: partial
+  summary: Published abstract supports CBG membrane activity in Gram-positive bacteria,
+    mouse MRSA efficacy and Gram-negative activity after outer-membrane permeabilization,
+    including polymyxin B combinations. Detailed quantities below are explicitly drawn
+    from the accessible author preprint, not silently presented as checked final-text
+    values.
+  snapshot_sha256: 7b54ac33c9e8f2f11c86465787ac06eaea2e7529055988ec235c60a2e284c468
+- evidence_id: farha-preprint
+  kind: primary_source
+  reference: https://www.biorxiv.org/content/10.1101/833392v3.full
+  locator: Version 3; Results, Figures 2/3/5 and Methods
+  accessed_at: '2026-10-21T10:34:18Z'
+  support: partial
+  summary: Author preprint reports CBG MIC 2µg/mL against USA300 by CLSI broth microdilution
+    in CAMHB; membrane-probe and chemical-genetic evidence support membrane effects
+    without a unique binding protein. E. coli >128µg/mL becomes susceptible with polymyxin
+    B (example 1µg/mL CBG plus 0.062µg/mL partner). Inner-membrane ONPG assays require
+    partner treatment. Sigma cannabinoid solutions and synthesized characterized CBG
+    are described. Fifteen-day passage with no MIC increase is bounded, not proof
+    resistance cannot occur.
+  snapshot_sha256: e3318d5c4ea798cd147d694785758ef40ad68e138991168aede833eaadebb44b
+- evidence_id: mutans
+  kind: primary_source
+  reference: https://doi.org/10.3389/fmicb.2021.656471
+  locator: PMC8100047; Materials, Results/Table 1 and membrane assays
+  accessed_at: '2026-10-21T10:34:17Z'
+  support: supports
+  summary: A 95%-purity hemp CBG isolate from NC Labs, with ethanol controls, inhibited
+    S. mutans UA159/ATCC700610 in BHI (reported 24h MIC 2.5µg/mL). Growth response
+    depended on starting cell density. At 5–10µg/mL viable counts declined at 8h but
+    survivors regrew. PI/calcein, DiOC2(3) and laurdan measurements support increased
+    permeability, hyperpolarization and lower fluidity in this organism. They do not
+    prove a specific ion-channel target.
+  snapshot_sha256: d5a294a800c73137ce8c5aa936bc64d7f36e836efde38edd7fbdd5e9b1fe5066
+- evidence_id: botanical
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41477-023-01402-3
+  locator: 2023 primary paper Results/introduction and enzyme assays
+  accessed_at: '2026-10-21T10:35:05Z'
+  support: partial
+  summary: 'Full primary paper confirms major cannabigerolic acid accumulation and
+    cannabinoid biosynthesis in H. umbraculigerum. It does not by itself establish
+    natural accumulation of neutral CBG: CBG use in glycosyltransferase assays must
+    not be conflated with occurrence. The older 1979 neutral-CBG report was located
+    but its primary body was inaccessible; exact Helichrysum neutral occurrence remains
+    qualified.'
+  snapshot_sha256: 9d210eb76589ca62d5da31166eaaffea2e6e6990b3fcc878f7b4272b96d94168
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive repository and free primary searches
+  locator: Exact ID/label/key; CBG antibacterial and Helichrysum leads
+  accessed_at: '2026-10-21T10:33:27Z'
+  support: context_only
+  summary: Ignored-inclusive repository search found native/raw/generated references
+    and historical research ledgers, no extra curated item. Free primary follow-up
+    located relevant CBG experiments; CBD, CBGA, prenylogues and synthetic derivatives
+    were separated. No native named gene/protein/pathway triggered an adapter query.
+  snapshot_sha256: 87ebe7907d89d3c9eecd475106d7cb0af22ae506409a30ee35b02987a5446e5b
+  search_scope: rg --no-ignore --hidden exact CHEBI:69477/cannabigerol/key outside
+    .git/.venv; free EPMC MED/PubMed/PMC, bioRxiv, official identity pages and primary
+    botanical publisher/repository leads accessed 2026-10-21.
+- evidence_id: gates
+  kind: validation
+  reference: Actual focused commands and alternate chemistry environment
+  locator: 191-focused-results.json plus 191-chemistry.json
+  accessed_at: '2026-10-21T10:35:34Z'
+  support: supports
+  summary: Batch 020 schema and strict passed. Initial chemistry invocation failed
+    only because RDKit was absent; the existing locked batch 019 interpreter successfully
+    checked batch 020 target bytes, with no new dependency installation.
+  snapshot_sha256: 6ba5f3f2b68048d3fad3aa2a92aed5ff4c290a3d9514e8052149af3afdc9693f
+- evidence_id: cbg-panel-2021
+  kind: primary_source
+  reference: https://doi.org/10.1038/s42003-020-01530-y
+  locator: PMC7815910; Table 2 row 25, General chemical methods and MIC methods
+  accessed_at: '2026-10-21T10:38:12Z'
+  support: supports
+  summary: 'Final published paper reports commercial natural analogue 25, cannabigerol,
+    purchased through Kinesis Australia/Cerilliant: MIC 4–8 µg/mL against S. aureus
+    MRSA ATCC 43300 and 1–2 µg/mL against N. gonorrhoeae ATCC 19424 (n=4). This is
+    a distinct strain/material panel; detailed laboratory/media assignment for this
+    row was not fully resolved. The paper’s CBD mechanism and animal experiments are
+    not transferred to CBG.'
+  snapshot_sha256: 6bc756cdc6b795b2133d4195d82a18d2d66b8705f1ffe3b1399addc78465c9d9
+- evidence_id: cbg-panel-2025
+  kind: primary_source
+  reference: https://doi.org/10.3390/microorganisms13020287
+  locator: PMC11857621; Methods 2.1–2.2 and Table 1 row 1
+  accessed_at: '2026-10-21T10:38:12Z'
+  support: supports
+  summary: Compound 1 CBG was isolated from THC-rich Cannabis sativa through extraction/chromatographic
+    purification and identified by HPLC-UV/MS. Table 1 reports MRSA 7112 MIC 64 µg/mL
+    and V. harveyi MM30 >128 µg/mL, using a modified EUCAST twofold microdilution
+    protocol and 24 h endpoints (MRSA in Mueller-Hinton medium at 37 °C; V. harveyi
+    at 30 °C), DMSO and doxycycline controls. These strain/preparation/method-specific
+    values are retained separately from the lower MICs in other studies.
+  snapshot_sha256: 08761a8130fa8ad9e2895121664c78a9272adbb0159dd23ea1d91a9b8e577e87
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral E-cannabigerol
+  outcome: supported
+  summary: Native identity/structure/source mint agree with live authority, NIST,
+    PubChem and exact KEGG MOL. No salt, acid or stereoisomer conflation was found.
+  target_ids:
+  - CHEBI:69477
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - nist
+  - kegg
+  - pubchem
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical parents and antibacterial filing
+  outcome: supported
+  summary: Resorcinols and phytocannabinoids are broader compatible parents. Source
+    antibacterial role and filing are supported by compound-specific primary observations.
+    Non-antimicrobial ChEBI roles are outside the adopted activity-role slice.
+  target_ids:
+  - CHEBI:69477
+  evidence_ids:
+  - chebi
+  - owners
+  - mutans
+  - farha-published
+- assessment_id: xref
+  area: grounding
+  topic: Identity versus document/drug references
+  outcome: unknown
+  summary: CAS/KEGG identity and patent/Wikipedia document destinations are verified.
+    DrugBank live details remain inaccessible; no mismatch was established and no
+    approval is inferred.
+  target_ids:
+  - CHEBI:69477
+  evidence_ids:
+  - nist
+  - kegg
+  - patent
+  - wikipedia
+  - drugbank
+- assessment_id: definition
+  area: evidence
+  topic: Structure and botanical occurrence
+  outcome: unknown
+  summary: Structural definition is supported and Cannabis origin is consistent with
+    the hemp literature. Helichrysum occurrence is a historical source assertion requiring
+    direct neutral-CBG confirmation; modern CBGA biosynthesis is not sufficient to
+    resolve it.
+  target_ids:
+  - CHEBI:69477
+  evidence_ids:
+  - native
+  - chebi
+  - adopted-references
+  - botanical
+- assessment_id: mechanism
+  area: evidence
+  topic: Membrane effects with organism boundaries
+  outcome: supported
+  summary: Published S. mutans measurements and Farha abstract/preprint support MEMBRANE_DISRUPTION
+    with microbial-target scope as an optional curation lead. Keep S. mutans hyperpolarization
+    separate from MRSA membrane-potential experiments; no direct protein-binding or
+    shared host-receptor mode follows.
+  target_ids:
+  - CHEBI:69477
+  evidence_ids:
+  - mutans
+  - farha-published
+  - farha-preprint
+- assessment_id: activity
+  area: evidence
+  topic: Exact strain/assay observations
+  outcome: supported
+  summary: Bacterial activity is supported. Published S. mutans 2.5µg/mL depends on
+    BHI conditions and initial density. Farha preprintUSA3002µg/mL and Gram-negative
+    partner-assisted values have distinct media, strain and version scope; they are
+    not unrestricted species-wide single-agent efficacy. Additional final-paper comparators
+    give MRSA ATCC 43300 4–8 µg/mL and N. gonorrhoeae ATCC 19424 1–2 µg/mL in 2021,
+    versus MRSA 7112 64 µg/mL and V. harveyi MM30 >128 µg/mL in 2025. Different strains,
+    preparations and assay protocols prevent treating these as contradictory measurements
+    of one condition.
+  target_ids:
+  - CHEBI:69477
+  evidence_ids:
+  - mutans
+  - farha-preprint
+  - cbg-panel-2021
+  - cbg-panel-2025
+- assessment_id: resistance
+  area: evidence
+  topic: Experimental failure to select resistance
+  outcome: supported
+  summary: The inspected preprint reports no MIC increase over a defined 15-day passage
+    experiment. This does not establish impossibility of resistance, and altered outer-membrane
+    strains are sensitization experiments rather than direct target proof. Native
+    resistance fields remain empty.
+  target_ids:
+  - CHEBI:69477
+  evidence_ids:
+  - native
+  - farha-preprint
+- assessment_id: scope
+  area: scope
+  topic: Adapters, host targets and optional domains
+  outcome: not_applicable
+  summary: No native named gene/protein/regulator/pathway requires iModulonDB. Host
+    receptor effects in citation leads are not bacterial targets. No native clinical,
+    dataset or graph claims require further validation; murine efficacy and patent
+    language do not assert approval.
+  target_ids:
+  - CHEBI:69477
+  evidence_ids:
+  - native
+  - adopted-references
+  - patent
+- assessment_id: history
+  area: provenance
+  topic: Maintained owners and status
+  outcome: supported
+  summary: The ChEBI source concept, mint and four seed events are coherent. SEEDED
+    status is retained; this review adds no native evidence or history event.
+  target_ids:
+  - CHEBI:69477
+  evidence_ids:
+  - owners
+  - native
+  - chemistry
+- assessment_id: completeness
+  area: completeness
+  topic: Actionable optional mechanism/activity enrichment
+  outcome: supported
+  summary: Evidence permits bounded membrane and strain-resolved activity enrichment
+    through the validated curator writer. Optional blanks alone are not defects; all
+    added targets/observations would need narrow claim-level evidence and assay context.
+  target_ids:
+  - CHEBI:69477
+  evidence_ids:
+  - mutans
+  - farha-published
+  - farha-preprint
+  - cbg-panel-2021
+  - cbg-panel-2025
+- assessment_id: schema
+  area: schema
+  topic: Focused deterministic checks
+  outcome: supported
+  summary: Schema/strict and alternate-environment chemistry pass; these checks do
+    not certify biological claims.
+  target_ids:
+  - CHEBI:69477
+  evidence_ids:
+  - gates
+  - chemistry
+findings: []
+actions:
+- action_id: A1
+  description: Optionally curate bacterial membrane mode and exact activity observations
+    from inspected primary studies.
+  finding_ids: []
+  target_ids:
+  - CHEBI:69477
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cannabigerol.yaml
+    role: Curator-owned mode, molecular targets and activity_spectrum through validated
+      writer
+  acceptance_checks:
+  - Use MEMBRANE_DISRUPTION and microbial-target scope only with compound-specific
+    evidence; do not assign a specific protein from genetic sensitivity or dye changes.
+  - Record S. mutans UA159/ATCC700610, BHI, 24h,2.5µg/mL,95% hemp isolate and density
+    dependence; distinguish survivor regrowth from complete eradication.
+  - Before adopting Farha detailed values reconcile accessible version 3 to the final
+    article/SI and exact strain table; preserve polymyxin B concentration and outer-membrane
+    conditions for Gram-negative observations.
+  - Do not infer universal resistance-proof behavior, clinical approval or antibacterial
+    CB1/CB2 targeting.
+  - Keep the final 2021 commercial CBG panel (Table 2 row 25, ATCC 43300/19424, n=4)
+    and 2025 isolated CBG panel (Table 1 row 1, MRSA 7112/V. harveyi MM30) as separate
+    activity_spectrum observations; resolve per-row media details, preserve upper-limit
+    results and do not transfer CBD mechanisms.
+- action_id: A2
+  description: Resolve direct neutral-CBG occurrence in Helichrysum and independently
+    verify inaccessible DrugBank details.
+  finding_ids: []
+  target_ids:
+  - CHEBI:69477
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source-owned definition and xrefs
+  acceptance_checks:
+  - Inspect the original 1979 paper or equivalent exact-compound analytical evidence,
+    preserving voucher and extraction/decarboxylation conditions.
+  - Do not substitute CBGA occurrence or an enzyme substrate assay for neutral CBG
+    occurrence.
+  - Keep the DrugBank map source-asserted until its exact live identity is independently
+    verified; no source-only removal is warranted by HTTP403.
+limitations:
+- DrugBank DB14734 returned HTTP403; native xref is retained as source-asserted with
+  no demonstrated mismatch.
+- Farha final abstract was inspected; detailed experiments came from the accessible
+  version 3 preprint and were not silently substituted for the final article/SI. All
+  supplementary raw data and clinical-isolate rows were not independently reprocessed.
+- 'Exact neutral CBG occurrence in Helichrysum was not independently resolved: the
+  older primary report was inaccessible in full, while the inspected 2023 paper establishes
+  CBGA biosynthesis and CBG enzyme-substrate use.'
+- The native record has no curated molecular target; membrane evidence does not identify
+  a unique binding protein. Host pharmacology abstracts do not establish microbial
+  mechanisms.
+- The final 2021 analogue panel and 2025 isolated-compound panel were inspected separately;
+  per-row laboratory/media mapping and all supplementary raw data were not reprocessed.
+  These additional MICs do not remove the stated Farha final-text access boundary.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 13 original captured hashes rechecked unchanged; no native/source/status/history
+  edits.
+- Batch 020 schema/strict used its own environment; chemistry used the pre-existing
+  locked batch 019 RDKit 2026.03.5 environment against batch 020 cwd after the local
+  dependency failure.
+- No blanket optional-field or alias-only finding. Experimental resistance-selection
+  limits are not broad resistance predictions.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:69477
+- https://doi.org/10.3389/fmicb.2021.656471
+- https://doi.org/10.1021/acsinfecdis.9b00419
+tags:
+- cannabigerol
+- membrane-effects
+- primary-evidence
+- assay-scope
+```
