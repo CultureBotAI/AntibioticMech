@@ -1,0 +1,600 @@
+schema_version: 1.0.0
+review_id: 20261021T175745Z-griseofulvin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of griseofulvin
+started_at: '2026-10-21T17:38:03Z'
+finished_at: '2026-10-21T17:57:45Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The exact neutral, configured griseofulvin structure agrees across independently
+  checked authorities. Original isolation and fungal susceptibility evidence support
+  the producer and antifungal context. The adopted antibacterial role conflicts with
+  the clinical label but remains an unresolved database assertion, and historical
+  alias versus trade-name sources do not establish a definite naming error. No confirmed
+  native scientific defect was demonstrated. Scientific assessment retains the stated
+  evidence limits; full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/griseofulvin.yaml
+    sha256: 6e273b696bc7d35bfd2ffd14f54d92de0dd7c9ad8ee8dd815272c89beaafbcf1
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:27779
+  path: data/antibiotics/antibacterial/griseofulvin.yaml
+  label: griseofulvin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted exact identity, structure, roles and literature leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: Role names
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Class priority, role mapping and synonym controls
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native generation
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion decisions
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 516; all original 13 input hashes
+    preserved, with actual maintained owner roles resolved before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:27779
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:27779
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    516
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:27779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/griseofulvin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:27779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/griseofulvin.yaml --out /private/tmp/am-review-session/516-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent authority structure comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/516-authority-check.py
+    > /private/tmp/am-review-session/516-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Twenty native and authority encodings agree at full key, formula, charge,
+    mass and reciprocal chirality-aware atom mapping.
+  target_ids:
+  - CHEBI:27779
+- check_id: ledger
+  name: Input, adopted citation, term and history audit
+  command: .venv/bin/python /private/tmp/am-review-session/516-ledger.py > /private/tmp/am-review-session/516-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 13 original inputs unchanged; all six adopted leads individually disposed,
+    current term definitions inspected and four chronological history events verified.
+  target_ids:
+  - CHEBI:27779
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:27779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:27779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:27779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:27779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:27779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:27779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:27779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:27779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:27779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/griseofulvin.yaml
+  locator: Entire native including all names, parents, roles, chemical/drug/document
+    identifiers and four history events
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: The SEEDED/EXACT neutral C17H17ClO6 entity has two configured stereocentres.
+    It contains no molecular-target, resistance, MIC, causal-graph or structured producer
+    claim. The antibacterial filing follows the adopted antibacterial role and configured
+    class priority; the definition separately describes antifungal use.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:27779;PubChem:441140;CHEMBL562;kegg.compound:C06686;kegg.drug:D00209
+  locator: 516-authority-chemistry.json;516-chebi.mol;516-pubchem.json;516-chembl.json;516-kegg.mol;516-kegg-drug.mol
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: Native SMILES/InChI, current ChEBI SMILES/InChI/molfile, PubChem and ChEMBL
+    encodings, KEGG compound/drug molfiles, KNApSAcK, LipidMaps, PPDB and VSDB SMILES/InChI
+    reproduce DDUHZTYCFQRHIY-RBHXEPJQSA-N, C17H17ClO6, zero charge and the configured
+    graph by reciprocal chirality-aware matching. Average mass352.77 and exact mass352.07137
+    agree.
+  snapshot_sha256: dc04dec0a7a87a01b57216ee56df9a9483fd643ed4da4dd9c539704974e713ec
+- evidence_id: groundings
+  kind: database
+  reference: cas:126-07-8;knapsack:C00002398;lincs.smallmolecule:LSM-5259;lipidmaps:LMPK13060001;metacyc.compound:CPD-17786;ppdb:1807;reaxys:95226;vsdb:1807
+  locator: 516-fetch.json;516-fetch2.json;516-source-audit.json;516-lincs-archive-audit.json
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: CAS/name/constitution are corroborated by official NIST, whose stereo-unspecified
+    graph is not exact stereo proof. KNApSAcK canonical structures match despite a
+    discordant displayed legacy-looking key. LipidMaps, PPDB and VSDB exact configured
+    encodings match. LINCS retrieval failed500 and the exact identifier is absent
+    only from a limited 2020 HMS collection; MetaCyc leads to account creation and
+    Reaxys was inaccessible. These unresolved mappings are not asserted wrong.
+  snapshot_sha256: d58723c172f3286244dd7f947478a770dbfe7cd466f7d9d0f2c3b7e5dab0848a
+- evidence_id: drug-documents
+  kind: database
+  reference: drugbank:DB00400;drugcentral:1331;kegg.drug:D00209;patent:US3069328;patent:US3069329;wikipedia.en:Griseofulvin
+  locator: 516-drugcentral.html;516-kegg-drug.txt;516-patent-US3069328.html;516-patent-US3069329.html;516-wikipedia.html;516-source-audit.json
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: DrugCentral and KEGG drug records were read as permitted broader drug context.
+    DrugBank name was corroborated, but full record access was blocked or a corporate
+    shell. Both patents concern griseofulvin fermentation production; selected descriptions,
+    examples and claims were read, establishing document relevance rather than potency
+    or target proof. Wikipedia was inspected as secondary context, not primary evidence.
+  snapshot_sha256: d58723c172f3286244dd7f947478a770dbfe7cd466f7d9d0f2c3b7e5dab0848a
+- evidence_id: terms
+  kind: authority
+  reference: CHEBI:36683;CHEBI:37948;CHEBI:38830;CHEBI:87113;CHEBI:87128;CHEBI:33282;CHEBI:35718;CHEBI:86327
+  locator: 516-chebi-<id>.json;516-source-audit.json;conf/sources.yaml class priority
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: Current term definitions and the graph support organochlorine, oxaspiro
+    and benzofuran classes and the antifungal classifications. ChEBI still explicitly
+    assigns antibacterial role; repository priority correctly generates antibacterial
+    before antifungal when both are present. That mechanical consistency does not
+    establish primary antibacterial activity.
+  snapshot_sha256: d58723c172f3286244dd7f947478a770dbfe7cd466f7d9d0f2c3b7e5dab0848a
+- evidence_id: isolation
+  kind: primary_source
+  reference: PMID:16746904;DOI:10.1042/bj0330240
+  locator: 516-1939-img26.jpg and516-1939-img34.jpg, actual scanned printed pages240
+    and248;516-fetch3.json/516-fetch4.json
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: The 1939 original identifies the neutral chlorinated C17H17O6Cl metabolite
+    isolated from Penicillium griseofulvum mycelium and describes culture/isolation
+    chemistry. These two actual pages were visually read. Its provisional historical
+    structural proposal is not used as proof of modern absolute configuration or antibacterial
+    activity.
+  snapshot_sha256: ca770460f917626008ea4a4e037b7f4b8d718485ad57078e467657acff51a6c1
+- evidence_id: clinical
+  kind: authority
+  reference: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efb8a660-802c-4ca6-bbff-ad7b48b91aef
+  locator: 516-label.html/.txt; Description, Clinical Pharmacology/Microbiology and
+    Indications
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: Current official ultramicrosize product labeling supports oral dermatophyte
+    treatment and describes griseofulvin crystals with formulation excipients. It
+    excludes bacterial effect/use. This clinical statement conflicts with the current
+    database antibacterial role but does not prove the absence of every experimental
+    antibacterial effect. Crystal size and formulation are not a different molecular
+    entity.
+  snapshot_sha256: 3d2c9d30a82d16c3378d5e618bda3234a7f356f8adb72792e78646168af8c406
+- evidence_id: fungal
+  kind: primary_source
+  reference: PMID:32015042;DOI:10.1128/AAC.01964-19
+  locator: 516-fungal2020.html/.txt; abstract, full Results and HTML Tables1/2, selected
+    Discussion through ULWT paragraph, entire Methods
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: The original tests Sigma griseofulvin dissolved in DMSO against498 Indian
+    clinical T. mentagrophytes/interdigitale-complex isolates under the paper taxonomy.
+    Modified CLSI M38-A2 uses about80% inhibition for griseofulvin. Its MIC distribution
+    and statistical upper limits are population summaries, not individual strain rows
+    or clinical breakpoints. The reported squalene-epoxidase mutations concern terbinafine/naftifine,
+    not demonstrated griseofulvin resistance.
+  snapshot_sha256: 4050146a0e93e6d7cb954d299af493d522b04f8ff92f65d5f034f769d3edb688
+- evidence_id: mechanism
+  kind: primary_source
+  reference: PMID:15985553;DOI:10.1073/pnas.0501821102
+  locator: 516-mechanism2005.html/.txt; entire main, HTML Table1 and all figure captions;
+    figure images not independently inspected
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: The original uses HeLa cells and goat/bovine brain tubulin. It measures
+    weak goat-tubulin interaction by corrected fluorescence and suppression of bovine
+    microtubule dynamics at lower concentrations than those reducing polymer mass.
+    This is direct mammalian experimental context, not a fungal or bacterial binding
+    experiment and not a blanket claim that all concentrations inhibit polymerization.
+  snapshot_sha256: ad4f80363dd86957659e65cab0dee378200d6aec8e9e6f16bdb360d29cadc205
+- evidence_id: followup
+  kind: database
+  reference: PMID:36173282;PMID:15868210;PMID:8651940;PMID:22191585;PMID:31931149
+  locator: 516-fungal-mechanism-core.json; complete supplied original abstracts
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: Fungal discovery includes Didymella experiments with microscale thermophoresis
+    as well as docking/omics, and Magnaporthe live microtubule imaging. Other originals
+    address bovine tubulin or fungal-versus-cancer structure-activity comparisons.
+    The 2020 antibacterial repurposing abstract chiefly tests42 derivatives; its parent
+    control and exact parent potency were not verified. No derivative effect is transferred
+    to native griseofulvin.
+  snapshot_sha256: 0207b403001670239c82cb0555673e531a69d1bb94ee5636608667473a14e7c0
+- evidence_id: leads
+  kind: database
+  reference: PMID:14407521;PMID:15078340;PMID:16922553;PMID:23111828;PMID:25476923;PMID:3277037
+  locator: 516-adopted-core.json;516-source-audit.json individual dispositions
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: 'All six adopted records were assessed: three complete original abstracts,
+    one explicitly truncated review abstract, and two metadata-only records without
+    abstracts. Host iron physiology, physical lipid monolayers and cancer-cell effects
+    do not establish antibacterial action; the chemistry and general reviews are not
+    primary target proof.'
+  snapshot_sha256: d58723c172f3286244dd7f947478a770dbfe7cd466f7d9d0f2c3b7e5dab0848a
+- evidence_id: curling-origin
+  kind: primary_source
+  reference: DOI:10.1038/160574a0;https://www.nature.com/articles/160574a0
+  locator: Publisher abstract/preview read through web provider; local HTML/PDF requests
+    returned challenge pages
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: The 1947 original describes a Penicillium janczewskii metabolite named
+    Curling factor after distorted Botrytis germ tubes and its identification with
+    griseofulvin by chemical comparison. Historical alias origin does not exclude
+    subsequent commercial name use. Full subscription PDF was not read.
+- evidence_id: trade-names
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/books/NBK396277/
+  locator: IARC2001 Some Thyrotropic Agents, Exposure Data sections1.1.1,1.1.4,1.2
+    and1.3; full web search-provider text inspected, direct opening challenge
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: The IARC secondary monograph lists both Curling factor and Amudane among
+    trade names, alongside a broad collection of products and pharmacopoeial formulations.
+    This counterevidence prevents declaring the native Curling factor BRAND_NAME false
+    solely from its historical origin. An exact Amudane product label was not established,
+    so its precise name typing remains unresolved.
+- evidence_id: search
+  kind: search
+  reference: Public exact-griseofulvin primary discovery and local owner search
+  locator: 516-discovery.json;516-owners-search.json;516-fetch*.json;516-source-audit.json
+  accessed_at: '2026-10-21T17:57:20Z'
+  support: supports
+  summary: The bounded discovery search distinguished parent griseofulvin from derivatives,
+    nanomaterials and host assays. Publisher/repository attempts for the2020 antibacterial
+    derivative paper did not yield the full original. The search is not a claim of
+    exhaustive absence of antibacterial parent literature.
+  search_scope: Ignored-inclusive raw/curation/conf/scripts/src owner search; EuropePMC
+    exact griseofulvin tubulin/microtubule/antibacterial/curling discovery, first100
+    results of287; selected original and official-source follow-up.
+  snapshot_sha256: d58723c172f3286244dd7f947478a770dbfe7cd466f7d9d0f2c3b7e5dab0848a
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact configured neutral griseofulvin
+  outcome: supported
+  summary: Twenty encodings agree at atom-mapped stereochemistry and full identifier;
+    no salt, mixture or stereoisomer substitution was demonstrated.
+  target_ids:
+  - CHEBI:27779
+  evidence_ids:
+  - record
+  - chemistry
+- assessment_id: xref
+  area: grounding
+  topic: All asserted identifier and document boundaries
+  outcome: unknown
+  summary: Verified accessible structure identifiers agree; inaccessible LINCS/MetaCyc/Reaxys
+    and incomplete DrugBank inspection remain explicit. KNApSAcK key metadata conflict
+    does not override its matching actual structures. Separate drug and document identifiers
+    do not assert exact product equivalence.
+  target_ids:
+  - CHEBI:27779
+  evidence_ids:
+  - groundings
+  - drug-documents
+  - chemistry
+- assessment_id: classes
+  area: scope
+  topic: Antifungal context and antibacterial-role conflict
+  outcome: unknown
+  summary: Producer and antifungal context are supported. Current ChEBI antibacterial
+    assertion and clinical label conflict remain unresolved without verified parent
+    antibacterial primary experiments; neither universal inactivity nor mandatory
+    role removal is established. Filing follows configured priority.
+  target_ids:
+  - CHEBI:27779
+  evidence_ids:
+  - terms
+  - clinical
+  - isolation
+  - fungal
+  - followup
+- assessment_id: names
+  area: nomenclature
+  topic: Historical aliases and commercial name types
+  outcome: unknown
+  summary: Curling factor has a primary historical metabolite origin and a later authoritative
+    trade-name listing. That combination does not establish a false BRAND_NAME. Amudane
+    has secondary trade-name support but no exact product authority was verified;
+    source-aware follow-up is preferable to an unsupported forced correction.
+  target_ids:
+  - CHEBI:27779
+  evidence_ids:
+  - curling-origin
+  - trade-names
+  - record
+- assessment_id: mechanism-scope
+  area: evidence
+  topic: Optional molecular mechanism enrichment
+  outcome: supported
+  summary: The native asserts no molecular target. Mammalian tubulin experiments and
+    fungal follow-up must remain species-, material- and assay-specific if later curated;
+    direct measurements are distinguished from docking.
+  target_ids:
+  - CHEBI:27779
+  evidence_ids:
+  - mechanism
+  - followup
+  - record
+- assessment_id: references
+  area: provenance
+  topic: Adopted citations, generated ownership and history
+  outcome: supported
+  summary: All six adopted leads were assessed at declared read depth; original13
+    input hashes and four ordered history events are intact. Actual ChEBI, role and
+    generator owners were already captured.
+  target_ids:
+  - CHEBI:27779
+  evidence_ids:
+  - leads
+  - search
+  - record
+- assessment_id: quantities
+  area: quantity
+  topic: MIC and formulation scope
+  outcome: supported
+  summary: There are no native MIC rows to verify. Original population distributions
+    and formulation details were not promoted to individual observations or different
+    chemical identities.
+  target_ids:
+  - CHEBI:27779
+  evidence_ids:
+  - record
+  - fungal
+  - clinical
+findings: []
+actions: []
+limitations:
+- 'Primary antibacterial support for the parent remains unresolved: the label excludes
+  clinical bacterial effect/use, current ChEBI asserts antibacterial, and the accessible2020
+  repurposing abstract emphasizes derivatives. Full2020 original was blocked by publisher/repository
+  access.'
+- LINCS LSM-5259, MetaCyc CPD-17786 and Reaxys95226 exact mappings were not independently
+  resolved; DrugBank full record access was blocked. The limited HMS archive does
+  not establish global LINCS absence.
+- KNApSAcK displays a discordant legacy-looking InChIKey although its actual standard
+  InChI and SMILES match the native configured graph; this external metadata issue
+  was not classified as a native wrong-xref defect.
+- Historical brand-name products were not individually verified. Curling factor has
+  both original metabolite-name and later secondary trade-name evidence; Amudane exact
+  name type remains unresolved.
+- The1939 original was read visually on pages240 and248 only; the1947 source was publisher
+  abstract/preview. The2005 entire main/table/captions were read without independent
+  figure-image inspection. The2020 fungal paper was read at the selected-main depth
+  stated in evidence, not its complete supplement.
+- All six frozen adopted leads were assessed, but three have only review/metadata
+  access as specified. Additional current ChEBI discovery citations were not all pursued.
+  Supplementary fungal mechanistic originals were abstract-only.
+- The record has no populated bacterial protein/pathway assertion, so the structured
+  bacterial adapter condition was not triggered. No fungal or mammalian finding was
+  converted to a bacterial target.
+- Required shared corpus gates and the known platform SciPy QC failure are handled
+  by the coordinating finalizer; focused record checks do not substitute for that
+  failed full gate.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Scientific verdict is pass_with_limitations with no confirmed findings; unknown
+  assessments preserve unresolved source conflicts rather than inventing a required
+  correction.
+- No native or maintained source was changed. Scratch evidence and a draft were produced
+  for independent audit; the coordinating agent controls immutable saving.
+- All command paths are literal and executable from /private/tmp/antibioticmech-record-reviews-052.
+  Standalone chemistry uses the019 interpreter, while native schema/strict and ledger
+  use052.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

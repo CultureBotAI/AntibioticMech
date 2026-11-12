@@ -1,0 +1,632 @@
+# (−)-Gynuraone: coherent configured chromanone with a definition typo
+
+- Review: 20261021T175754Z-gynuraone-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T17:38:04Z
+- Finished UTC: 2026-10-21T17:57:54Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native2R,3R chromanone agrees with current ChEBI and PubChem. The adopted original supplement identifies the matching isolated compound9 and its formula/NMR signals. One localized definition typo is confirmed; exact antibacterial assay attribution remains incompletely resolved because the original main result table was inaccessible.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position518; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:68289 | data/antibiotics/antibacterial/gynuraone.yaml | generated | (−)-gynuraone |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:68289 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:68289 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:68289 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:68289 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:68289 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:68289 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:68289 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:68289 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:68289 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:68289 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:68289 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:68289 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Source reproducibility and scientific status
+
+ownership: supported. Targets: CHEBI:68289.
+
+Original captured inputs, native history and actual source owners are preserved. Saving a review does not promote native curation status.
+
+### Configured chromanone and structural parents
+
+identity: supported. Targets: CHEBI:68289.
+
+Native and authority SMILES/InChI agree at2R,3R, formula and full key. Secondary alpha-hydroxy ketone, secondary alcohol, phenol and chromanone classes fit. The original supplement supports constitution but does not independently re-establish absolute configuration.
+
+### Original compound-specific antibacterial attribution
+
+evidence: unknown. Targets: CHEBI:68289.
+
+The adopted original abstract and supplement support isolation, but neither accessible section ties compound9 to a specific antibacterial assay result. Preserve the source-attributed role with an explicit unresolved primary-evidence boundary; do not infer inactivity from access failure.
+
+### Target, quantitative activity and producer assertions
+
+completeness: unknown. Targets: CHEBI:68289.
+
+No native protein target or quantitative assay is asserted. Plant host, endophytic isolate and purified-metabolite experiments remain distinct, and generic collection-level activity cannot fill a compound-specific MIC.
+
+## Findings
+
+### F1: Correct the localized definition typo
+
+minor / open / confirmed; issue key: gynuraone-isolated-form-definition-typo.
+
+The definition says 'Isolated form the endophytic fungus'; the intended wording is 'Isolated from the endophytic fungus'. This is a localized prose defect, with no implication that the independently corroborated graph should change.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the maintained definition typo and regenerate.
+
+- Use Isolated from; preserve2R,3R identity and current formula/key.
+- Run focused schema/strict, reproduction and required QC.
+
+### A2
+
+Resolve the original compound9 activity row before quantitative or target enrichment.
+
+- Obtain the2011 main assay table and methods; verify compound9, organism, concentration, endpoint and controls.
+- Do not transfer other metabolites’ Legionella/Microbotryum results, antiplatelet findings or the plant host to untested native claims.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/gynuraone.yaml; Entire native record including every name, parent, role, cross-reference, chemical field and three chronological history entries | supports | The SEEDED exact ChEBI record denotes (−)-gynuraone, C10H10O4, full key COBAEYCUCRUGRP-MLUIRONXSA-N. It asserts no structured molecular target, resistance mechanism, quantitative activity observation, producer object or causal graph. All three import history events were read; they are not scientific sign-off. |
+| source | data/raw/chebi_antimicrobials.tsv; conf/sources.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; 518-source-rows.json; applicable extraction, class precedence and emission rules | supports | The exact adopted row reproduces the imported fields. All original thirteen source/context hashes remain unchanged. Roles are source assertions; exact-compound primary support is assessed separately. Maintained source/extraction ownership controls reproducible corrections. |
+| authority | CHEBI:68289; CHEBI:2468; CHEBI:33853; CHEBI:35681; CHEBI:38763; CHEBI:33282; 518-chebi.json; 518-term-*.json; 518-ledger.json | supports | Every asserted ChEBI parent and role resolves to the intended current term. Parent definitions were compared with the actual graph, not accepted solely because upstream repeats them. Current identity, names, formula and charge agree with the adopted row. |
+| chemistry | 518-authority-chemistry.json; Independent forward parsing of native, official ChEBI and PubChem SMILES/InChI; 052-root-authorities.py | supports | Six independently parsed encodings reproduce the same full key, formula, neutral charge and masses, with 2 assigned stereocentres and matching stereochemical graph connectivity. |
+| ledger | 052-root-ledger.py; 052-root-ledger.log; 518-ledger.json; original capture versus current files | supports | Thirteen original hashes are preserved and unchanged; all 1 adopted PMID records were resolved and their complete indexed abstracts read. The history is chronological. The focused schema and strict checks passed; chemistry results retain actual failures separately. |
+| search | 518-local-hits.txt; 052-root-fetch1.json through 052-root-fetch6.json; Ignored-inclusive local search and bounded official-authority / adopted-PMID / original-paper follow-up | context_only | Local searches include hidden and ignored files. Retrieved PubMed name searches are discovery lists, not assertions that every result was read. Native fields contain no named gene/protein/locus/regulator/expression pathway requiring a structured transcriptomics query. Access failures and selected-section reading limits are retained. |
+| original | PMID:21244021; DOI:10.1021/np100730b; Complete indexed original abstract; official ACS supporting information SI13, compound9 characterization; main paper inaccessible | partial | The fungal study isolates metabolites from Microdiplodia sp. associated with Lycium intricatum. SI13 names compound9 with the transposed spelling Gyrunaone and gives H2/H3 coupling9Hz, methyl and OH resonances, and HREIMS194.0575 for C10H10O4. This corroborates the chromanone material; the abstract only says most metabolites inhibited Legionella and/or Microbotryum. It does not assign an exact compound9 assay row or establish its absolute configuration independently. |
+| leads | PMID:14531028; DOI:10.1055/s-2003-42796; PMID:26027122; Both complete indexed original abstracts in518-primary-search.json | supports | The2003 Gynura japonica original reports new(−)-gynuraone isolated from rhizome and structure elucidation by spectroscopy/chemical evidence; its named antiplatelet-active compounds are other molecules. The2015 Arthrinium sp.A092 study explicitly isolates(−)-gynuraone2. These support natural-product context, not a fungal antibacterial MIC or antibacterial mechanism. |
+| access | https://arpi.unipi.it/handle/11568/148582; ACS main and official supplement; Publisher/author-repository routes;518-pisa.html;052-root-fetch2/4/5/6.json | context_only | ACS main returned403; the Pisa author repository contains abstract metadata and explicitly no attached files. The official ACS supplement was successfully retrieved through its public Figshare API. A retrieved author thesis was searched for the exact name/paper but only bibliographic context was located in that bounded search; it was not treated as a substitute main result table. |
+
+## Limits And Additional Notes
+
+- Only the2011 original abstract and exact-compound SI13 characterization were read; the main assay table and full methods remained unavailable after bounded publisher/author-repository searches. No exact MIC, strain or mechanism is inferred.
+- The2003 and2015 originals were read at abstract depth. Raw spectra, original optical rotation and an independent absolute-configuration determination were not reanalyzed.
+- No external xref is asserted natively. Current ChEBI/PubChem graph agreement corroborates identity but does not replace missing primary assay evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native/source bytes, source history, scientific status or earlier immutable review bundles were changed. Original thirteen hashes remain preserved.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T175754Z-gynuraone-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: '(−)-Gynuraone: coherent configured chromanone with a definition typo'
+started_at: '2026-10-21T17:38:04Z'
+finished_at: '2026-10-21T17:57:54Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native2R,3R chromanone agrees with current ChEBI and PubChem. The adopted
+  original supplement identifies the matching isolated compound9 and its formula/NMR
+  signals. One localized definition typo is confirmed; exact antibacterial assay attribution
+  remains incompletely resolved because the original main result table was inaccessible.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/gynuraone.yaml
+    sha256: 9d7028867929b53d3125b2b95a39e266c6670077f9e90350be38f1c9322a4dbf
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:68289
+  path: data/antibiotics/antibacterial/gynuraone.yaml
+  label: (−)-gynuraone
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position518; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:68289
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:68289
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    518
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:68289
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/gynuraone.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:68289
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/gynuraone.yaml --out /private/tmp/am-review-session/518-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:68289
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:68289
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:68289
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:68289
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:68289
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:68289
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:68289
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:68289
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:68289
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/gynuraone.yaml
+  locator: Entire native record including every name, parent, role, cross-reference,
+    chemical field and three chronological history entries
+  accessed_at: '2026-10-21T17:50:34Z'
+  support: supports
+  summary: The SEEDED exact ChEBI record denotes (−)-gynuraone, C10H10O4, full key
+    COBAEYCUCRUGRP-MLUIRONXSA-N. It asserts no structured molecular target, resistance
+    mechanism, quantitative activity observation, producer object or causal graph.
+    All three import history events were read; they are not scientific sign-off.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; conf/sources.yaml; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: 518-source-rows.json; applicable extraction, class precedence and emission
+    rules
+  accessed_at: '2026-10-21T17:50:34Z'
+  support: supports
+  summary: The exact adopted row reproduces the imported fields. All original thirteen
+    source/context hashes remain unchanged. Roles are source assertions; exact-compound
+    primary support is assessed separately. Maintained source/extraction ownership
+    controls reproducible corrections.
+  snapshot_sha256: 1d97b1f346842347a028df0b812ff148f5c0daa9e868d963c87ec15a05055dbe
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:68289; CHEBI:2468; CHEBI:33853; CHEBI:35681; CHEBI:38763; CHEBI:33282
+  locator: 518-chebi.json; 518-term-*.json; 518-ledger.json
+  accessed_at: '2026-10-21T17:50:34Z'
+  support: supports
+  summary: Every asserted ChEBI parent and role resolves to the intended current term.
+    Parent definitions were compared with the actual graph, not accepted solely because
+    upstream repeats them. Current identity, names, formula and charge agree with
+    the adopted row.
+  snapshot_sha256: c4ab9f7be41226cd9256696e63616e0e1b64c43e8dc1fcf1a4cf2ec507ae5ddf
+- evidence_id: chemistry
+  kind: validation
+  reference: 518-authority-chemistry.json
+  locator: Independent forward parsing of native, official ChEBI and PubChem SMILES/InChI;
+    052-root-authorities.py
+  accessed_at: '2026-10-21T17:50:34Z'
+  support: supports
+  summary: Six independently parsed encodings reproduce the same full key, formula,
+    neutral charge and masses, with 2 assigned stereocentres and matching stereochemical
+    graph connectivity.
+  snapshot_sha256: fcd778c1e682821db88ed2a98271f546ec4f7c22697f5b7bbb052dc46a03bd03
+- evidence_id: ledger
+  kind: validation
+  reference: 052-root-ledger.py; 052-root-ledger.log
+  locator: 518-ledger.json; original capture versus current files
+  accessed_at: '2026-10-21T17:50:34Z'
+  support: supports
+  summary: Thirteen original hashes are preserved and unchanged; all 1 adopted PMID
+    records were resolved and their complete indexed abstracts read. The history is
+    chronological. The focused schema and strict checks passed; chemistry results
+    retain actual failures separately.
+  snapshot_sha256: c4ab9f7be41226cd9256696e63616e0e1b64c43e8dc1fcf1a4cf2ec507ae5ddf
+- evidence_id: search
+  kind: search
+  reference: 518-local-hits.txt; 052-root-fetch1.json through 052-root-fetch6.json
+  locator: Ignored-inclusive local search and bounded official-authority / adopted-PMID
+    / original-paper follow-up
+  accessed_at: '2026-10-21T17:50:34Z'
+  support: context_only
+  summary: Local searches include hidden and ignored files. Retrieved PubMed name
+    searches are discovery lists, not assertions that every result was read. Native
+    fields contain no named gene/protein/locus/regulator/expression pathway requiring
+    a structured transcriptomics query. Access failures and selected-section reading
+    limits are retained.
+  search_scope: Own batch052 worktree; rg --no-ignore --hidden with exact (−)-gynuraone
+    and CHEBI:68289; all adopted PMIDs; EuropePMC and primary publisher/repository
+    follow-up, 2026-10-21.
+  snapshot_sha256: 310ff9c1322a3e84580f863e0848a78b2e0b11eed2e810fd39e5f3dc624aba38
+- evidence_id: original
+  kind: primary_source
+  reference: PMID:21244021; DOI:10.1021/np100730b
+  locator: Complete indexed original abstract; official ACS supporting information
+    SI13, compound9 characterization; main paper inaccessible
+  accessed_at: '2026-10-21T17:50:34Z'
+  support: partial
+  summary: The fungal study isolates metabolites from Microdiplodia sp. associated
+    with Lycium intricatum. SI13 names compound9 with the transposed spelling Gyrunaone
+    and gives H2/H3 coupling9Hz, methyl and OH resonances, and HREIMS194.0575 for
+    C10H10O4. This corroborates the chromanone material; the abstract only says most
+    metabolites inhibited Legionella and/or Microbotryum. It does not assign an exact
+    compound9 assay row or establish its absolute configuration independently.
+  snapshot_sha256: 6a56e2eaaf98dd525f5dca6df5e5b1f5ffe92e1c96230381032b74e518495513
+- evidence_id: leads
+  kind: primary_source
+  reference: PMID:14531028; DOI:10.1055/s-2003-42796; PMID:26027122
+  locator: Both complete indexed original abstracts in518-primary-search.json
+  accessed_at: '2026-10-21T17:50:34Z'
+  support: supports
+  summary: The2003 Gynura japonica original reports new(−)-gynuraone isolated from
+    rhizome and structure elucidation by spectroscopy/chemical evidence; its named
+    antiplatelet-active compounds are other molecules. The2015 Arthrinium sp.A092
+    study explicitly isolates(−)-gynuraone2. These support natural-product context,
+    not a fungal antibacterial MIC or antibacterial mechanism.
+  snapshot_sha256: 867092e7add2b249385e995d4960aac14d531ef5672a3f2800c06f128060ccab
+- evidence_id: access
+  kind: search
+  reference: https://arpi.unipi.it/handle/11568/148582; ACS main and official supplement
+  locator: Publisher/author-repository routes;518-pisa.html;052-root-fetch2/4/5/6.json
+  accessed_at: '2026-10-21T17:50:34Z'
+  support: context_only
+  summary: ACS main returned403; the Pisa author repository contains abstract metadata
+    and explicitly no attached files. The official ACS supplement was successfully
+    retrieved through its public Figshare API. A retrieved author thesis was searched
+    for the exact name/paper but only bibliographic context was located in that bounded
+    search; it was not treated as a substitute main result table.
+  search_scope: Exact DOI/title and gynuraone public original-paper follow-up; no
+    paid access, account creation or author contact.
+  snapshot_sha256: b13b5951bce49beeb37726d61a71a9981817e226c0d60aaecbda916bb63b257b
+assessments:
+- assessment_id: ownership
+  area: ownership
+  topic: Source reproducibility and scientific status
+  outcome: supported
+  summary: Original captured inputs, native history and actual source owners are preserved.
+    Saving a review does not promote native curation status.
+  target_ids:
+  - CHEBI:68289
+  evidence_ids:
+  - native
+  - source
+  - ledger
+- assessment_id: identity
+  area: identity
+  topic: Configured chromanone and structural parents
+  outcome: supported
+  summary: Native and authority SMILES/InChI agree at2R,3R, formula and full key.
+    Secondary alpha-hydroxy ketone, secondary alcohol, phenol and chromanone classes
+    fit. The original supplement supports constitution but does not independently
+    re-establish absolute configuration.
+  target_ids:
+  - CHEBI:68289
+  evidence_ids:
+  - native
+  - chemistry
+  - authority
+  - original
+- assessment_id: activity
+  area: evidence
+  topic: Original compound-specific antibacterial attribution
+  outcome: unknown
+  summary: The adopted original abstract and supplement support isolation, but neither
+    accessible section ties compound9 to a specific antibacterial assay result. Preserve
+    the source-attributed role with an explicit unresolved primary-evidence boundary;
+    do not infer inactivity from access failure.
+  target_ids:
+  - CHEBI:68289
+  evidence_ids:
+  - original
+  - access
+  - leads
+- assessment_id: optional
+  area: completeness
+  topic: Target, quantitative activity and producer assertions
+  outcome: unknown
+  summary: No native protein target or quantitative assay is asserted. Plant host,
+    endophytic isolate and purified-metabolite experiments remain distinct, and generic
+    collection-level activity cannot fill a compound-specific MIC.
+  target_ids:
+  - CHEBI:68289
+  evidence_ids:
+  - native
+  - original
+  - leads
+  - search
+findings:
+- finding_id: F1
+  issue_key: gynuraone-isolated-form-definition-typo
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the localized definition typo
+  description: The definition says 'Isolated form the endophytic fungus'; the intended
+    wording is 'Isolated from the endophytic fungus'. This is a localized prose defect,
+    with no implication that the independently corroborated graph should change.
+  target_ids:
+  - CHEBI:68289
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - source
+  - authority
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained ChEBI identity, definition and structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated native fields
+  rule_id: Clear and accurate scientific definition
+  native_severity: minor
+  normalization_reason: Localized spelling error; no independent molecular-identity
+    change.
+actions:
+- action_id: A1
+  description: Correct the maintained definition typo and regenerate.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:68289
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained ChEBI identity, definition and structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated native fields
+  acceptance_checks:
+  - Use Isolated from; preserve2R,3R identity and current formula/key.
+  - Run focused schema/strict, reproduction and required QC.
+- action_id: A2
+  description: Resolve the original compound9 activity row before quantitative or
+    target enrichment.
+  finding_ids: []
+  target_ids:
+  - CHEBI:68289
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/gynuraone.yaml
+    role: Optional primary-evidence curation
+  acceptance_checks:
+  - Obtain the2011 main assay table and methods; verify compound9, organism, concentration,
+    endpoint and controls.
+  - Do not transfer other metabolites’ Legionella/Microbotryum results, antiplatelet
+    findings or the plant host to untested native claims.
+limitations:
+- Only the2011 original abstract and exact-compound SI13 characterization were read;
+  the main assay table and full methods remained unavailable after bounded publisher/author-repository
+  searches. No exact MIC, strain or mechanism is inferred.
+- The2003 and2015 originals were read at abstract depth. Raw spectra, original optical
+  rotation and an independent absolute-configuration determination were not reanalyzed.
+- No external xref is asserted natively. Current ChEBI/PubChem graph agreement corroborates
+  identity but does not replace missing primary assay evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native/source bytes, source history, scientific status or earlier immutable review
+  bundles were changed. Original thirteen hashes remain preserved.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

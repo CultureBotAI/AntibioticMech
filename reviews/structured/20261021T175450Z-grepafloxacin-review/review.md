@@ -1,0 +1,950 @@
+# Review of grepafloxacin
+
+- Review: 20261021T175450Z-grepafloxacin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T17:38:02Z
+- Finished UTC: 2026-10-21T17:54:50Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The neutral grepafloxacin graph and main chemical identifiers agree across independent authorities. Three hydrochloride/hydrate names are incorrectly typed as exact synonyms, and Raxar is a product brand. Original pneumococcal experiments support both gyrase and topoisomerase IV with assay-dependent target preference; native database-level target/resistance qualifications, including the already bounded Salmonella parE annotation, should be preserved.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position 515; original 13 input hashes preserved and six actual ARO/target/qualification inputs appended before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:5543 | data/antibiotics/antibacterial/grepafloxacin.yaml | generated | Grepafloxacin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:5543 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:5543 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:5543 | Actual focused execution exited 0. |
+| Structured iModulonDB discovery | passed | False | CHEBI:5543 | Actual read-only structured adapter command exited0; gene or dataset results are catalog context. |
+| Structured iModulonDB discovery | passed | False | CHEBI:5543 | Actual read-only structured adapter command exited0; gene or dataset results are catalog context. |
+| Structured iModulonDB discovery | passed | False | CHEBI:5543 | Actual read-only structured adapter command exited0; gene or dataset results are catalog context. |
+| Independent authority structure comparison | passed | False | CHEBI:5543 | Twelve native/authority canonical encodings agree at exact key, formula, charge, mass and reciprocal chirality-aware graph comparison. |
+| Input, source, reference, term and history audit | passed | False | CHEBI:5543 | 19 unchanged inputs, original 13 preserved; all 12 adopted leads and 39 current ARO leads assessed, 20 current resistance edges and six chronological events checked. |
+| Authoritative full QC | failed | True | CHEBI:5543 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:5543 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:5543 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:5543 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:5543 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:5543 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:5543 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:5543 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:5543 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Neutral grepafloxacin identity
+
+identity: supported. Targets: CHEBI:5543.
+
+Independent authority structures agree at the neutral parent identity. The single unspecified centre is retained without inventing a mixture or an enantiomer.
+
+### Exact salt aliases and product-brand typing
+
+nomenclature: concern. Targets: CHEBI:5543.
+
+Three salt/hydrate names cannot be exact synonyms of the neutral entity; Raxar is a confirmed tablet brand. The record itself need not be re-grounded or changed to the salt.
+
+### Antibacterial classification and historical withdrawal
+
+scope: supported. Targets: CHEBI:5543.
+
+Primary activity, structure and current term scope support antibacterial filing; FDA historical narrative supports withdrawal due cardiovascular safety concerns.
+
+### GyrA and enzyme target scope
+
+evidence: unknown. Targets: CHEBI:5543.
+
+Pneumococcal holoenzyme and mutant evidence supports gyrase/topoisomerase IV action with assay-dependent preference. Direct isolated-GyrA binding and universal taxonomic scope remain unverified; native PRIMARY_EVIDENCE_NEEDED status is honest.
+
+### Twenty inherited resistance assertions
+
+evidence: unknown. Targets: CHEBI:5543.
+
+Current database relationships are reproducible, but available abstracts and selected originals do not establish every exact grepafloxacin–allele effect. Existing Salmonella parE qualification already preserves the tested-background limit.
+
+### Chemical groundings and separate drug context
+
+grounding: supported. Targets: CHEBI:5543.
+
+PubChem, ChEMBL, KEGG and canonical HMDB structure support the neutral entity. CAS is corroborated but lacks direct registry structure access. DrugCentral drug_xrefs is explicitly broader context.
+
+### Maintained inputs, citations and source history
+
+ownership: supported. Targets: CHEBI:5543.
+
+Actual source owners, preserved hashes, all adopted lead dispositions and six chronological events are verified; no scientific status upgrade is justified by validator success.
+
+## Findings
+
+### F1: Three exact aliases denote hydrochloride or hydrated hydrochloride forms
+
+major / open / confirmed; issue key: grepafloxacin-neutral-record-exact-hydrochloride-aliases.
+
+The neutral C19H22FN3O3 record types grepafloxacin HCl, grepafloxacin hydrochloride and grepafloxacin hydrochloride hydrate as EXACT_SYNONYM. The official label separately specifies hydrochloride sesquihydrate material. Correct these source-scoped alias assertions without replacing the supported neutral molecular identity.
+
+### F2: Raxar is a product brand typed as an exact chemical synonym
+
+minor / open / confirmed; issue key: grepafloxacin-raxar-brand-exact-synonym.
+
+The official label identifies Raxar tablets as a formulated hydrochloride sesquihydrate product with excipients and base-equivalent doses. Preserve the useful name and provenance as BRAND_NAME rather than EXACT_SYNONYM.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Use the existing source-concept synonym_exclusions lane for CHEBI:5543 to suppress the three chemically false exact salt/hydrate names from this neutral record. Retain them only in an explicitly related material context if the maintained model supports it; do not globally ban names or alter the neutral structure. Preserve upstream provenance and regenerate through the seeder.
+
+- No three named salt/hydrate aliases remain EXACT_SYNONYM for CHEBI:5543.
+- The neutral full key AIJTTZAVMXIJGM-UHFFFAOYSA-N, formula and unspecified-centre scope remain intact.
+- Run focused schema/strict, source/reference/history/corpus checks and full QC, reporting actual failed or blocked gates.
+
+### A2
+
+Add a maintained source-aware ARO alias-type correction for Raxar to BRAND_NAME, then regenerate. Do not assume all unexamined brand-like strings require the same change.
+
+- Raxar remains searchable with ARO provenance and BRAND_NAME typing.
+- DrugCentral remains in drug_xrefs; no product formula or clinical assay is silently copied to the neutral chemical graph.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/grepafloxacin.yaml; Entire record including all 20 resistance assertions, target, source concepts and six history events | supports | The SEEDED/EXACT neutral C19H22FN3O3 record has three hydrochloride/hydrate EXACT_SYNONYM aliases and Raxar as EXACT_SYNONYM. It has six chemical xrefs, one separate DrugCentral drug_xref, no MIC or producer objects, and a database GyrA target explicitly marked PRIMARY_EVIDENCE_NEEDED. |
+| chemistry | CHEBI:5543;PubChem:72474;CHEMBL583;kegg.compound:C11368;HMDB0014509; 515-authority-chemistry.json;515-chebi-5543.json;515-chebi.mol;515-pubchem.json;515-chembl.json;515-kegg.mol | supports | Native SMILES/InChI, current ChEBI SMILES/InChI/molfile, PubChem and ChEMBL encodings, KEGG molfile and the canonical HMDB web-displayed SMILES reproduce AIJTTZAVMXIJGM-UHFFFAOYSA-N, C19H22FN3O3 and zero charge. One piperazine stereocentre is unspecified; this alone does not establish a mixture. The separate HMDB S-specific 3D panel is not adopted as an exact structure. |
+| label | https://www.accessdata.fda.gov/drugsatfda_docs/nda/98/20-695S003_Raxar_Prntlbl.pdf; 515-fda-label.pdf; actual product-information page 1, PDF page 2, rendered515-fda-label-page2.png | supports | The official historical Raxar label explicitly identifies plus/minus grepafloxacin monohydrochloride sesquihydrate, C19H22FN3O3.HCl.1.5H2O, molecular weight 422.88. Tablet doses are expressed as grepafloxacin base but the product contains the hydrochloride salt and excipients. That formula unit and tablet product are distinct from the native neutral molecular entity. |
+| synonym-source | CHEBI:5543;ARO:3000665;drugcentral:1330; 515-chebi-5543.json names;515-aro-blocks.json;515-drugcentral.html;515-raw-rows.json | supports | Current ChEBI reproduces the three salt/hydrate names with DrugCentral provenance; current ARO calls Raxar an exact synonym. DrugCentral1330 visibly combines neutral molecular descriptors with broader drug/salt aliases. Its separate native drug_xrefs placement permits this context; the error is promoting these aliases to exact chemical identity. Tomefloxacin remains an asserted alias in current ChEBI/DrugCentral, with no demonstrated conflicting identity. |
+| grounding | CHEBI:5543;cas:119914-60-2;HMDB0014509;drugcentral:1330; 515-fetch.json/515-fetch3.json; official HMDB page through web provider;515-drugcentral.txt;515-source-audit.json | supports | Current two-star ChEBI and ARO agree on the neutral named identity; no three-star ChEBI status is invented. CAS119914-60-2 is corroborated by ChEBI, KEGG, HMDB and DrugCentral, but official CAS API returned401. HMDB canonical 2D SMILES/InChI were read through its official web result after direct HTML/XML403; DrugCentral drug context was read. No false exact equivalence is inferred from the permitted drug_xref. |
+| terms | CHEBI:26513;CHEBI:86324;CHEBI:87211;CHEBI:33281;ARO:0000001; 515-chebi-&lt;id&gt;.json;515-aro-blocks.json;515-source-audit.json | supports | The graph and current source terms support quinoline, quinolone and fluoroquinolone classes. The generic antimicrobial role is compatible with antibacterial filing and primary activity. Current ChEBI also has a more specific antibacterial role, but its omission from this frozen source projection is not evidence that the native generic role is false. |
+| primary | PMID:11796384;DOI:10.1128/AAC.46.2.582-585.2002; 515-target-original.html/.txt; entire main and HTML Table1 | supports | Original S. pneumoniae7785 selection and recombinant enzyme experiments support intracellular gyrase preference while both gyrase and topoisomerase IV contribute. Isolated catalytic/cleavage assays favor topoisomerase IV. The genetic sequence and holoenzyme–DNA assays do not establish direct binding to isolated GyrA in every taxon. Salt form is not resolved in the inspected main; no MIC row or assay context is transferred into this review-only native record. |
+| card | ARO:3000665;ARO:3000733;20 native resistance terms; 515-aro-blocks.json, official426-current-aro.obo SHA d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4;515-source-audit.json | supports | All 20 native grepafloxacin resistance relationships and the GyrA target relationship are present in the inspected current official ARO snapshot. Their definitions and PMID sets were read. These remain database assertions; many cited original abstracts concern other fluoroquinolones, mutation associations or family reviews. Their presence is not exact-compound functional verification. |
+| salmonella | PMID:19104017;DOI:10.1128/aac.01005-08; Reused490-independent-salmonella-original.pdf and .fetch.json; selected methods, Results p1083, Discussion p1085, visually inspected Tables1/3; ignored-inclusive grepafloxacin text search | supports | The Enteritidis original tests ciprofloxacin/nalidixic acid in Table1 and unrelated antibiotics in Table3. ParE complementation has no independent effect in that background while indirect contribution remains unresolved. No grepafloxacin string was found in its full extracted text. The native overlay already states the appropriate bounded conclusion, so this is not a new finding against that qualified annotation. |
+| leads | 12 adopted PMID leads and39 current ARO PMID leads; 515-adopted-core-0.json;515-current-core-0/1.json;515-source-audit.json individual dispositions | supports | All49 unique MED records were assessed:45 complete supplied abstracts, two incomplete/truncated supplied abstracts and two metadata-only records without abstracts. Adopted host transporter/toxicity/modeling studies are not antibacterial target evidence; historical clinical/safety reviews are secondary. Current ARO discovery abstracts do not establish every grepafloxacin–allele edge. Additional current ChEBI discovery citations outside the adopted set were not all pursued. |
+| adapter | kg-microbe-sources imodulondb; 515-imodulon-datasets.json;515-imodulon-gyrA.json;515-imodulon-parC.json | supports | Before primary mechanism web follow-up, the documented structured adapter listed datasets and searched E. coli precise1k for gyrA and parC; all commands exited0. Gene matches were returned but zero matching iModulons. No result justified a module summary or biochemical target upgrade. |
+| withdrawal | https://public-inspection.federalregister.gov/2014-15371.pdf?1404218983=; 515-withdrawal2014.pdf, grepafloxacin passage pp17–18; source is a2014 proposed rule recounting historical actions | supports | FDA recounts cardiac repolarization/QTc concerns and withdrawal of the Raxar NDA in2007. This independently supports the native historical withdrawal/toxicity wording; the source is not misrepresented as a final2014 rule or a present therapeutic recommendation. |
+| owners | Maintained ChEBI/ARO extraction, synonym controls and CARD qualification; 515-inspect.json;515-owners-search.json;515-source-audit.json | supports | Ignored-inclusive searches traced source fields to exact adopted inventories, conf/sources.yaml synonym_exclusions, ARO target mapping, qualification overlay and extractor/seeder. All19 hashes, original13 snapshots and six chronological events are preserved. Source concepts, xref namespaces and evidence placement were checked. |
+
+## Limits And Additional Notes
+
+- All12 adopted leads and39 current ARO discovery leads were assessed at recorded depth; two have no abstracts and two supplied abstracts are incomplete/truncated. Most original main texts were not read, and additional current ChEBI discovery citations were not all followed.
+- The2002 pneumococcal main and HTML Table1 were read, but actual figure images and rendered table were not independently verified. The inspected main does not resolve salt form; no quantitative record enrichment is performed.
+- Exact taxon/allele functional proof remains incomplete for the20 current CARD edges. The qualified Salmonella parE assertion is not treated as universally inactive or as an unqualified experimental claim.
+- Direct HMDB downloads returned403, but official web-displayed canonical2D SMILES/InChI were independently parsed. Its separate S-specific3D panel is not used. CAS API401 prevents independent registry-structure confirmation despite concordant public source identifiers.
+- The GINAS parent/salt page downloads were application shells and were not used as verified chemical records. The first PMC HTML attempt was a challenge, EuropePMC XML returned500 and a CiteSeer PDF returned404; the later official PMC HTML succeeded.
+- Raxar source inspection was confined to the actual official description/material page. Historical withdrawal was checked in the2014 proposed-rule narrative; no claim is made about every jurisdiction or clinical use.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Structured iModulonDB adapter commands ran before protein follow-up; gene catalog matches are not binding or resistance assays.
+- Standalone chemistry used batch019 against batch052; schema/strict, ledger and contract used batch052. Native/source bytes and SEEDED status remain unchanged.
+- A read-only helper import of unavailable bs4 failed before producing parsed authority evidence; standard-library HTML processing then succeeded.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T175450Z-grepafloxacin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of grepafloxacin
+started_at: '2026-10-21T17:38:02Z'
+finished_at: '2026-10-21T17:54:50Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The neutral grepafloxacin graph and main chemical identifiers agree across
+  independent authorities. Three hydrochloride/hydrate names are incorrectly typed
+  as exact synonyms, and Raxar is a product brand. Original pneumococcal experiments
+  support both gyrase and topoisomerase IV with assay-dependent target preference;
+  native database-level target/resistance qualifications, including the already bounded
+  Salmonella parE annotation, should be preserved.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/grepafloxacin.yaml
+    sha256: c236186276c3aad7566ec2e06273b92d785fa3143ac2c52c8757f779de6728ee
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+targets:
+- target_id: CHEBI:5543
+  path: data/antibiotics/antibacterial/grepafloxacin.yaml
+  label: Grepafloxacin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, synonyms, structures, terms and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO definition and equivalence
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Database resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Database target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target type/relation mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Existing Salmonella parE evidence qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Qualification overlay implementation
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source controls, synonym exclusions and drug-reference placement
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI and ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated native fields
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding/exclusion overrides
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 515; original 13 input hashes preserved
+    and six actual ARO/target/qualification inputs appended before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:5543
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:5543
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    515
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:5543
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/grepafloxacin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:5543
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/grepafloxacin.yaml --out /private/tmp/am-review-session/515-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-datasets
+  name: Structured iModulonDB discovery
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual read-only structured adapter command exited0; gene or dataset results
+    are catalog context.
+  target_ids:
+  - CHEBI:5543
+- check_id: adapter-gyrA
+  name: Structured iModulonDB discovery
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query gyrA
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual read-only structured adapter command exited0; gene or dataset results
+    are catalog context.
+  target_ids:
+  - CHEBI:5543
+- check_id: adapter-parC
+  name: Structured iModulonDB discovery
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query parC
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual read-only structured adapter command exited0; gene or dataset results
+    are catalog context.
+  target_ids:
+  - CHEBI:5543
+- check_id: authority
+  name: Independent authority structure comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/515-authority-check.py
+    > /private/tmp/am-review-session/515-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Twelve native/authority canonical encodings agree at exact key, formula,
+    charge, mass and reciprocal chirality-aware graph comparison.
+  target_ids:
+  - CHEBI:5543
+- check_id: ledger
+  name: Input, source, reference, term and history audit
+  command: .venv/bin/python /private/tmp/am-review-session/515-ledger.py > /private/tmp/am-review-session/515-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 unchanged inputs, original 13 preserved; all 12 adopted leads and 39
+    current ARO leads assessed, 20 current resistance edges and six chronological
+    events checked.
+  target_ids:
+  - CHEBI:5543
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:5543
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:5543
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:5543
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:5543
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:5543
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:5543
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:5543
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:5543
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:5543
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/grepafloxacin.yaml
+  locator: Entire record including all 20 resistance assertions, target, source concepts
+    and six history events
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: The SEEDED/EXACT neutral C19H22FN3O3 record has three hydrochloride/hydrate
+    EXACT_SYNONYM aliases and Raxar as EXACT_SYNONYM. It has six chemical xrefs, one
+    separate DrugCentral drug_xref, no MIC or producer objects, and a database GyrA
+    target explicitly marked PRIMARY_EVIDENCE_NEEDED.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:5543;PubChem:72474;CHEMBL583;kegg.compound:C11368;HMDB0014509
+  locator: 515-authority-chemistry.json;515-chebi-5543.json;515-chebi.mol;515-pubchem.json;515-chembl.json;515-kegg.mol
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: Native SMILES/InChI, current ChEBI SMILES/InChI/molfile, PubChem and ChEMBL
+    encodings, KEGG molfile and the canonical HMDB web-displayed SMILES reproduce
+    AIJTTZAVMXIJGM-UHFFFAOYSA-N, C19H22FN3O3 and zero charge. One piperazine stereocentre
+    is unspecified; this alone does not establish a mixture. The separate HMDB S-specific
+    3D panel is not adopted as an exact structure.
+  snapshot_sha256: 65d21948651bf4f2426793f890d34360ef2e7dca851b72e667524d10aec5d9af
+- evidence_id: label
+  kind: authority
+  reference: https://www.accessdata.fda.gov/drugsatfda_docs/nda/98/20-695S003_Raxar_Prntlbl.pdf
+  locator: 515-fda-label.pdf; actual product-information page 1, PDF page 2, rendered515-fda-label-page2.png
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: The official historical Raxar label explicitly identifies plus/minus grepafloxacin
+    monohydrochloride sesquihydrate, C19H22FN3O3.HCl.1.5H2O, molecular weight 422.88.
+    Tablet doses are expressed as grepafloxacin base but the product contains the
+    hydrochloride salt and excipients. That formula unit and tablet product are distinct
+    from the native neutral molecular entity.
+  snapshot_sha256: dbe1bc22a836f2f3b479847332c70d796469bf04015b7373e247744803fb3d25
+- evidence_id: synonym-source
+  kind: database
+  reference: CHEBI:5543;ARO:3000665;drugcentral:1330
+  locator: 515-chebi-5543.json names;515-aro-blocks.json;515-drugcentral.html;515-raw-rows.json
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: Current ChEBI reproduces the three salt/hydrate names with DrugCentral
+    provenance; current ARO calls Raxar an exact synonym. DrugCentral1330 visibly
+    combines neutral molecular descriptors with broader drug/salt aliases. Its separate
+    native drug_xrefs placement permits this context; the error is promoting these
+    aliases to exact chemical identity. Tomefloxacin remains an asserted alias in
+    current ChEBI/DrugCentral, with no demonstrated conflicting identity.
+  snapshot_sha256: fe5ce07cc319f7542426409e0e3e6917250d02c3062ba85f134f9a0b3a0d59a1
+- evidence_id: grounding
+  kind: authority
+  reference: CHEBI:5543;cas:119914-60-2;HMDB0014509;drugcentral:1330
+  locator: 515-fetch.json/515-fetch3.json; official HMDB page through web provider;515-drugcentral.txt;515-source-audit.json
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: Current two-star ChEBI and ARO agree on the neutral named identity; no
+    three-star ChEBI status is invented. CAS119914-60-2 is corroborated by ChEBI,
+    KEGG, HMDB and DrugCentral, but official CAS API returned401. HMDB canonical 2D
+    SMILES/InChI were read through its official web result after direct HTML/XML403;
+    DrugCentral drug context was read. No false exact equivalence is inferred from
+    the permitted drug_xref.
+  snapshot_sha256: f791912621fb530e9db1cd4e3412a9b070c02df511682f66ef0bd8dff5d6dad9
+- evidence_id: terms
+  kind: authority
+  reference: CHEBI:26513;CHEBI:86324;CHEBI:87211;CHEBI:33281;ARO:0000001
+  locator: 515-chebi-<id>.json;515-aro-blocks.json;515-source-audit.json
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: The graph and current source terms support quinoline, quinolone and fluoroquinolone
+    classes. The generic antimicrobial role is compatible with antibacterial filing
+    and primary activity. Current ChEBI also has a more specific antibacterial role,
+    but its omission from this frozen source projection is not evidence that the native
+    generic role is false.
+  snapshot_sha256: f791912621fb530e9db1cd4e3412a9b070c02df511682f66ef0bd8dff5d6dad9
+- evidence_id: primary
+  kind: primary_source
+  reference: PMID:11796384;DOI:10.1128/AAC.46.2.582-585.2002
+  locator: 515-target-original.html/.txt; entire main and HTML Table1
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: Original S. pneumoniae7785 selection and recombinant enzyme experiments
+    support intracellular gyrase preference while both gyrase and topoisomerase IV
+    contribute. Isolated catalytic/cleavage assays favor topoisomerase IV. The genetic
+    sequence and holoenzyme–DNA assays do not establish direct binding to isolated
+    GyrA in every taxon. Salt form is not resolved in the inspected main; no MIC row
+    or assay context is transferred into this review-only native record.
+  snapshot_sha256: 6a5debed7c3ff7eff41aa11854d13c6d3b43f3df335f35dd9f3ce8c6a8153062
+- evidence_id: card
+  kind: database
+  reference: ARO:3000665;ARO:3000733;20 native resistance terms
+  locator: 515-aro-blocks.json, official426-current-aro.obo SHA d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4;515-source-audit.json
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: All 20 native grepafloxacin resistance relationships and the GyrA target
+    relationship are present in the inspected current official ARO snapshot. Their
+    definitions and PMID sets were read. These remain database assertions; many cited
+    original abstracts concern other fluoroquinolones, mutation associations or family
+    reviews. Their presence is not exact-compound functional verification.
+  snapshot_sha256: a8c06d6af916e5ea926ce1d6e75495d2b1cc0d990fd64ecd27747ee3a5c6555c
+- evidence_id: salmonella
+  kind: primary_source
+  reference: PMID:19104017;DOI:10.1128/aac.01005-08
+  locator: Reused490-independent-salmonella-original.pdf and .fetch.json; selected
+    methods, Results p1083, Discussion p1085, visually inspected Tables1/3; ignored-inclusive
+    grepafloxacin text search
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: The Enteritidis original tests ciprofloxacin/nalidixic acid in Table1 and
+    unrelated antibiotics in Table3. ParE complementation has no independent effect
+    in that background while indirect contribution remains unresolved. No grepafloxacin
+    string was found in its full extracted text. The native overlay already states
+    the appropriate bounded conclusion, so this is not a new finding against that
+    qualified annotation.
+  snapshot_sha256: 3281d8f94f69709393c506e6739a9a78bab73487634ff2aa264fcfe257a9ebf2
+- evidence_id: leads
+  kind: database
+  reference: 12 adopted PMID leads and39 current ARO PMID leads
+  locator: 515-adopted-core-0.json;515-current-core-0/1.json;515-source-audit.json
+    individual dispositions
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: All49 unique MED records were assessed:45 complete supplied abstracts,
+    two incomplete/truncated supplied abstracts and two metadata-only records without
+    abstracts. Adopted host transporter/toxicity/modeling studies are not antibacterial
+    target evidence; historical clinical/safety reviews are secondary. Current ARO
+    discovery abstracts do not establish every grepafloxacin–allele edge. Additional
+    current ChEBI discovery citations outside the adopted set were not all pursued.
+  snapshot_sha256: f791912621fb530e9db1cd4e3412a9b070c02df511682f66ef0bd8dff5d6dad9
+- evidence_id: adapter
+  kind: search
+  reference: kg-microbe-sources imodulondb
+  locator: 515-imodulon-datasets.json;515-imodulon-gyrA.json;515-imodulon-parC.json
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: Before primary mechanism web follow-up, the documented structured adapter
+    listed datasets and searched E. coli precise1k for gyrA and parC; all commands
+    exited0. Gene matches were returned but zero matching iModulons. No result justified
+    a module summary or biochemical target upgrade.
+  search_scope: E. coli precise1k; exact gyrA and parC gene queries after dataset
+    discovery; no matching iModulons.
+  snapshot_sha256: 424b867c86f081f31f7cce9346e736715e30d1de662965620bbdb8b547d23f99
+- evidence_id: withdrawal
+  kind: authority
+  reference: https://public-inspection.federalregister.gov/2014-15371.pdf?1404218983=
+  locator: 515-withdrawal2014.pdf, grepafloxacin passage pp17–18; source is a2014
+    proposed rule recounting historical actions
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: FDA recounts cardiac repolarization/QTc concerns and withdrawal of the
+    Raxar NDA in2007. This independently supports the native historical withdrawal/toxicity
+    wording; the source is not misrepresented as a final2014 rule or a present therapeutic
+    recommendation.
+  snapshot_sha256: 90fc68a730f6cbd2d4a53897a1ded35e4c632d980a45883c8ad3f5e99cc66a34
+- evidence_id: owners
+  kind: validation
+  reference: Maintained ChEBI/ARO extraction, synonym controls and CARD qualification
+  locator: 515-inspect.json;515-owners-search.json;515-source-audit.json
+  accessed_at: '2026-10-21T17:49:39Z'
+  support: supports
+  summary: Ignored-inclusive searches traced source fields to exact adopted inventories,
+    conf/sources.yaml synonym_exclusions, ARO target mapping, qualification overlay
+    and extractor/seeder. All19 hashes, original13 snapshots and six chronological
+    events are preserved. Source concepts, xref namespaces and evidence placement
+    were checked.
+  snapshot_sha256: f791912621fb530e9db1cd4e3412a9b070c02df511682f66ef0bd8dff5d6dad9
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral grepafloxacin identity
+  outcome: supported
+  summary: Independent authority structures agree at the neutral parent identity.
+    The single unspecified centre is retained without inventing a mixture or an enantiomer.
+  target_ids:
+  - CHEBI:5543
+  evidence_ids:
+  - chemistry
+  - grounding
+- assessment_id: aliases
+  area: nomenclature
+  topic: Exact salt aliases and product-brand typing
+  outcome: concern
+  summary: Three salt/hydrate names cannot be exact synonyms of the neutral entity;
+    Raxar is a confirmed tablet brand. The record itself need not be re-grounded or
+    changed to the salt.
+  target_ids:
+  - CHEBI:5543
+  evidence_ids:
+  - label
+  - synonym-source
+  - record
+- assessment_id: classification
+  area: scope
+  topic: Antibacterial classification and historical withdrawal
+  outcome: supported
+  summary: Primary activity, structure and current term scope support antibacterial
+    filing; FDA historical narrative supports withdrawal due cardiovascular safety
+    concerns.
+  target_ids:
+  - CHEBI:5543
+  evidence_ids:
+  - terms
+  - primary
+  - withdrawal
+- assessment_id: targets
+  area: evidence
+  topic: GyrA and enzyme target scope
+  outcome: unknown
+  summary: Pneumococcal holoenzyme and mutant evidence supports gyrase/topoisomerase
+    IV action with assay-dependent preference. Direct isolated-GyrA binding and universal
+    taxonomic scope remain unverified; native PRIMARY_EVIDENCE_NEEDED status is honest.
+  target_ids:
+  - CHEBI:5543
+  evidence_ids:
+  - primary
+  - card
+  - adapter
+- assessment_id: resistance
+  area: evidence
+  topic: Twenty inherited resistance assertions
+  outcome: unknown
+  summary: Current database relationships are reproducible, but available abstracts
+    and selected originals do not establish every exact grepafloxacin–allele effect.
+    Existing Salmonella parE qualification already preserves the tested-background
+    limit.
+  target_ids:
+  - CHEBI:5543
+  evidence_ids:
+  - card
+  - salmonella
+  - leads
+- assessment_id: xref
+  area: grounding
+  topic: Chemical groundings and separate drug context
+  outcome: supported
+  summary: PubChem, ChEMBL, KEGG and canonical HMDB structure support the neutral
+    entity. CAS is corroborated but lacks direct registry structure access. DrugCentral
+    drug_xrefs is explicitly broader context.
+  target_ids:
+  - CHEBI:5543
+  evidence_ids:
+  - chemistry
+  - grounding
+  - synonym-source
+- assessment_id: provenance
+  area: ownership
+  topic: Maintained inputs, citations and source history
+  outcome: supported
+  summary: Actual source owners, preserved hashes, all adopted lead dispositions and
+    six chronological events are verified; no scientific status upgrade is justified
+    by validator success.
+  target_ids:
+  - CHEBI:5543
+  evidence_ids:
+  - owners
+  - leads
+findings:
+- finding_id: F1
+  issue_key: grepafloxacin-neutral-record-exact-hydrochloride-aliases
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Three exact aliases denote hydrochloride or hydrated hydrochloride forms
+  description: The neutral C19H22FN3O3 record types grepafloxacin HCl, grepafloxacin
+    hydrochloride and grepafloxacin hydrochloride hydrate as EXACT_SYNONYM. The official
+    label separately specifies hydrochloride sesquihydrate material. Correct these
+    source-scoped alias assertions without replacing the supported neutral molecular
+    identity.
+  target_ids:
+  - CHEBI:5543
+  field_paths:
+  - synonyms[2]
+  - synonyms[3]
+  - synonyms[4]
+  evidence_ids:
+  - record
+  - chemistry
+  - label
+  - synonym-source
+  - owners
+  rule_id: 'review-checklist: exact chemical entity and salt/hydrate boundaries'
+  normalization_reason: Major exact-alias identity error; the supported neutral graph
+    itself is not the wrong molecule.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI alias provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-concept synonym_exclusions and normalized alias controls
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Upstream synonym extraction and source-aware type normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated alias projection
+- finding_id: F2
+  issue_key: grepafloxacin-raxar-brand-exact-synonym
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Raxar is a product brand typed as an exact chemical synonym
+  description: The official label identifies Raxar tablets as a formulated hydrochloride
+    sesquihydrate product with excipients and base-equivalent doses. Preserve the
+    useful name and provenance as BRAND_NAME rather than EXACT_SYNONYM.
+  target_ids:
+  - CHEBI:5543
+  field_paths:
+  - synonyms[6].synonym_type
+  evidence_ids:
+  - label
+  - synonym-source
+  - record
+  rule_id: SynonymTypeEnum.BRAND_NAME and exact product/material scope
+  normalization_reason: Minor semantic typing correction for a valid drug-associated
+    brand, separate from the exact salt-alias identity error.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO Raxar alias provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-concept synonym_exclusions and normalized alias controls
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Upstream synonym extraction and source-aware type normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated alias projection
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:5543
+  description: Use the existing source-concept synonym_exclusions lane for CHEBI:5543
+    to suppress the three chemically false exact salt/hydrate names from this neutral
+    record. Retain them only in an explicitly related material context if the maintained
+    model supports it; do not globally ban names or alter the neutral structure. Preserve
+    upstream provenance and regenerate through the seeder.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI alias provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-concept synonym_exclusions and normalized alias controls
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Upstream synonym extraction and source-aware type normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated alias projection
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - No three named salt/hydrate aliases remain EXACT_SYNONYM for CHEBI:5543.
+  - The neutral full key AIJTTZAVMXIJGM-UHFFFAOYSA-N, formula and unspecified-centre
+    scope remain intact.
+  - Run focused schema/strict, source/reference/history/corpus checks and full QC,
+    reporting actual failed or blocked gates.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:5543
+  description: Add a maintained source-aware ARO alias-type correction for Raxar to
+    BRAND_NAME, then regenerate. Do not assume all unexamined brand-like strings require
+    the same change.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO Raxar alias provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-concept synonym_exclusions and normalized alias controls
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Upstream synonym extraction and source-aware type normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated alias projection
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - Raxar remains searchable with ARO provenance and BRAND_NAME typing.
+  - DrugCentral remains in drug_xrefs; no product formula or clinical assay is silently
+    copied to the neutral chemical graph.
+limitations:
+- All12 adopted leads and39 current ARO discovery leads were assessed at recorded
+  depth; two have no abstracts and two supplied abstracts are incomplete/truncated.
+  Most original main texts were not read, and additional current ChEBI discovery citations
+  were not all followed.
+- The2002 pneumococcal main and HTML Table1 were read, but actual figure images and
+  rendered table were not independently verified. The inspected main does not resolve
+  salt form; no quantitative record enrichment is performed.
+- Exact taxon/allele functional proof remains incomplete for the20 current CARD edges.
+  The qualified Salmonella parE assertion is not treated as universally inactive or
+  as an unqualified experimental claim.
+- Direct HMDB downloads returned403, but official web-displayed canonical2D SMILES/InChI
+  were independently parsed. Its separate S-specific3D panel is not used. CAS API401
+  prevents independent registry-structure confirmation despite concordant public source
+  identifiers.
+- The GINAS parent/salt page downloads were application shells and were not used as
+  verified chemical records. The first PMC HTML attempt was a challenge, EuropePMC
+  XML returned500 and a CiteSeer PDF returned404; the later official PMC HTML succeeded.
+- Raxar source inspection was confined to the actual official description/material
+  page. Historical withdrawal was checked in the2014 proposed-rule narrative; no claim
+  is made about every jurisdiction or clinical use.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Structured iModulonDB adapter commands ran before protein follow-up; gene catalog
+  matches are not binding or resistance assays.
+- Standalone chemistry used batch019 against batch052; schema/strict, ledger and contract
+  used batch052. Native/source bytes and SEEDED status remain unchanged.
+- A read-only helper import of unavailable bs4 failed before producing parsed authority
+  evidence; standard-library HTML processing then succeeded.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:5543
+- https://pubchem.ncbi.nlm.nih.gov/compound/72474
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC127062/
+- https://www.accessdata.fda.gov/drugsatfda_docs/nda/98/20-695S003_Raxar_Prntlbl.pdf
+tags:
+- record-review
+- grepafloxacin
+- salt-alias
+- brand-name
+```
