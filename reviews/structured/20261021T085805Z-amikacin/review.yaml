@@ -1,0 +1,1269 @@
+schema_version: 1.0.0
+review_id: 20261021T085805Z-amikacin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Amikacin: verified activity provenance and Eis mechanism classification'
+started_at: '2026-10-21T08:46:41Z'
+finished_at: '2026-10-21T08:58:05Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Whole-record read, owner captures, official identity/source
+    comparisons, independent chemistry, structured adapter and primary paper inspection.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Identity,294 activity observations and membership integrity are supported
+  at their stated source scope. One major inherited error classifies Eis antibiotic
+  acetylation as target alteration. All102 CARD edges resolve; retain the exact Eis
+  resistance association with variant,loss-of-function and assay qualifications.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/amikacin.yaml
+    sha256: 8391a6c8efb2240012e1800d45ca715f729218336c3f5c976c5e8747ee3be930
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/cryptic_activity.tsv
+    sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+    role: context
+  - path: data/raw/cryptic_memberships.tsv.gz
+    sha256: f121fc3ac48a44a89931366d908877d833bd846d9690257583c5dbbdb8bd2601
+    role: context
+  - path: data/raw/cryptic_isolates.tsv.gz
+    sha256: 7d51bf3032e295a56e2543f52f12e59d6a8589ad6f2208e2314a154e6e8cf2c5
+    role: context
+  - path: scripts/extract_cryptic_memberships.py
+    sha256: d944260859c29ff3af55137c311e14be45b6c3219b5283c4cbd1b794d49fe952
+    role: context
+  - path: scripts/cryptic_membership_inventory.py
+    sha256: b0d8ae24cac64dfb2813bfa5a5ef590e3330e3c5ace82e25f3528b025147d6cc
+    role: context
+  - path: data/antibiotics/antibacterial/membership-a37c45fb1a20e600de75799e474f2e0bd69cd13bd42d517882d768c88ca75adc.json.gz
+    sha256: a37c45fb1a20e600de75799e474f2e0bd69cd13bd42d517882d768c88ca75adc
+    role: context
+  - path: scripts/audit_cryptic_memberships.py
+    sha256: dd6f01406c4712a063781a36524b6a021850d5a495f689ad8bd6dd3684bb2f57
+    role: context
+  - path: scripts/evaluate_cryptic_activity.py
+    sha256: e880b98a62a7f2d4f313f7b2c44d5b1e939669fbce569290a9a2c8b4c662d1c7
+    role: context
+  - path: curation/cryptic_drug_map.tsv
+    sha256: 69643f9b5e6dfc91761a4541317de63c5dca565131f6a07a3193878d7f863a54
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+targets:
+- target_id: CHEBI:2637
+  path: data/antibiotics/antibacterial/amikacin.yaml
+  label: amikacin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Maintained source or generator for CARD resistance/target or CRyPTIC activity/membership
+      assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Maintained source or generator for CARD resistance/target or CRyPTIC activity/membership
+      assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Maintained source or generator for CARD resistance/target or CRyPTIC activity/membership
+      assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/cryptic_activity.tsv
+    role: Maintained source or generator for CARD resistance/target or CRyPTIC activity/membership
+      assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/cryptic_memberships.tsv.gz
+    role: Maintained source or generator for CARD resistance/target or CRyPTIC activity/membership
+      assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/cryptic_isolates.tsv.gz
+    role: Maintained source or generator for CARD resistance/target or CRyPTIC activity/membership
+      assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_cryptic_memberships.py
+    role: Maintained source or generator for CARD resistance/target or CRyPTIC activity/membership
+      assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/cryptic_membership_inventory.py
+    role: Maintained source or generator for CARD resistance/target or CRyPTIC activity/membership
+      assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/membership-a37c45fb1a20e600de75799e474f2e0bd69cd13bd42d517882d768c88ca75adc.json.gz
+    role: Maintained source or generator for CARD resistance/target or CRyPTIC activity/membership
+      assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/amikacin.yaml
+    role: Curator-owned CDC activity observations, BioSample identifiers and associated
+      history
+scope:
+  description: Whole-record scientific review of exact free-base amikacin.
+  selection: Queue092 in isolated batch010.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:2637
+  exclusions:
+  - target: Amikacin disulfate and formulation-specific approval assertions
+    reason: Distinct exact salt or product scope; sulfate-reagent primary work is
+      considered explicitly as active-moiety context.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual focused command passed.
+  target_ids:
+  - CHEBI:2637
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/amikacin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual focused command passed.
+  target_ids:
+  - CHEBI:2637
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/amikacin.yaml --out /private/tmp/am-review-session/092-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: memberships
+  name: Documented full adopted membership audit
+  status: passed
+  required: true
+  summary: Actual command exit0; membership scope is normalized inventories without
+    raw-release/pages options.
+  target_ids:
+  - CHEBI:2637
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just audit-cryptic-memberships
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - membership
+- check_id: chemistry
+  name: Independent exact chemistry
+  status: passed
+  required: true
+  summary: Full-key,formula,charge,mass and both mints agree.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - chemistry
+- check_id: adapter
+  name: Structured source adapter
+  status: passed
+  required: true
+  summary: Datasets and four covered-organism searches ran successfully before web
+    follow-up; no informative module hit.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:2637
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:2637
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:2637
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:2637
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:2637
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:2637
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:2637
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:2637
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:2637
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/amikacin.yaml
+  locator: Entire 5,887-line YAML
+  accessed_at: '2026-10-21T08:56:43Z'
+  support: supports
+  summary: Read all identity fields, 294 activity observations, 102 CARD resistance
+    assertions, one molecular target, membership collection, sources, xrefs and 19
+    history events. CRyPTIC groups retain Mycobacterium tuberculosis complex label
+    without falsely assigning the species taxon; CDC entries retain individual strain
+    and method scope. Record is SEEDED and EXACT.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/aro_resistance_edges.tsv; data/raw/aro_target_edges.tsv;
+    data/raw/cryptic_activity.tsv; data/raw/cryptic_memberships.tsv.gz; data/raw/cryptic_isolates.tsv.gz
+  locator: Captured exact owners and source transform
+  accessed_at: '2026-10-21T08:48:57Z'
+  support: supports
+  summary: All 276 CRyPTIC native groups reproduce the seeder outputs from adopted
+    activity rows, and all 102 CARD determinants, labels and mechanism types match
+    adopted edges. CDC observations and their BioSample additions are curator-owned
+    native annotations, distinct from source-generated blocks.
+  snapshot_sha256: 4b13966ea0a16cc01d7190c005c6f0658c6cbb5b999f2169fd903fcb4c805e48
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:2637
+  locator: Identity, structure, parents, roles and cross-references
+  accessed_at: '2026-10-21T08:48:40Z'
+  support: supports
+  summary: Exact free-base amikacin structure and definition agree with native. Current
+    ChEBI includes all four chemical parents and antibacterial-drug/antimicrobial
+    roles; it distinguishes conjugate acid CHEBI:84739. Parent entries were inspected.
+  snapshot_sha256: 3115564f4b6d3c13bcbd4ba8d124f570d7fbfe833e5979825c58d5bee0636e2f
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculations
+  locator: Native SMILES/InChI and both source mints
+  accessed_at: '2026-10-21T08:48:56Z'
+  support: supports
+  summary: Both encodings reproduce LKCWBDHBTVXHDL-RMDFUYIESA-N, C22H43N5O13, zero
+    charge, one fragment, 16 specified stereocentres, mass585.608 and exact mass585.285736436.
+    Both ARO and ChEBI source mints reproduce. Initial helper compared the ChEBI mint
+    with the first ARO source; corrected scratch compares each source individually
+    and exposes no native defect.
+  snapshot_sha256: 5f73b40bfd869c305b53334041bab262eff8fed5ae783948584544c8946eb370
+- evidence_id: gsrs
+  kind: authority
+  reference: https://gsrs.ncats.nih.gov/api/v1/substances/84319SGC3C?view=full
+  locator: Exact structure and codes
+  accessed_at: '2026-10-21T08:48:39Z'
+  support: supports
+  summary: GSRS independently agrees with full native InChI/key, neutral free base,
+    16 defined centres, CAS37517-28-5, PubChem37768, ChEBI2637 and DrugBankDB00479.
+  snapshot_sha256: c27875661af889f66e3e3756532d944595dbb3b546b2b1f4236bc14ac195fe34
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/37768
+  locator: PUG properties
+  accessed_at: '2026-10-21T08:48:39Z'
+  support: supports
+  summary: Exact full InChI/key, formula, charge and masses match the native free
+    base.
+  snapshot_sha256: 00ef93055215f51ced938aa08fef4a7b20495fe9bb7f8065bdad82dc3fdedf31
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL177.json
+  locator: Molecule structures
+  accessed_at: '2026-10-21T08:48:39Z'
+  support: supports
+  summary: Exact canonical SMILES, Standard InChI/key and molecular formula agree.
+  snapshot_sha256: 6e2d82be3b3ecd8e07afdda29a67a9ab8972e9eb2caf4be42c48b223f4b39df0
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/C06820+D02543
+  locator: Compound and drug records
+  accessed_at: '2026-10-21T08:48:39Z'
+  support: supports
+  summary: Both KEGG entries denote amikacin free base with correct formula, CAS and
+    ChEBI identity. Compound and drug xrefs preserve their distinct placements; KEGG
+    target statements are database context.
+  snapshot_sha256: ca3c93fe55eb96c0b299ef7a000a8ef7b408e61bc04a4989c1dbc46793b36d20
+- evidence_id: drugcentral
+  kind: database
+  reference: https://drugcentral.org/drugcard/157
+  locator: Identity section
+  accessed_at: '2026-10-21T08:51:51Z'
+  support: supports
+  summary: Drug157 resolves to amikacin, CAS37517-28-5 and free-base formula/mass.
+    Its broader formulation synonyms are not exact salt evidence.
+  snapshot_sha256: ea208d5c575efec607a71a8ae208b51216d2097a55e081d53443da046db4adbf
+- evidence_id: patent
+  kind: primary_source
+  reference: https://patents.google.com/patent/US3781268A/en
+  locator: Description of 1-substituted kanamycin derivatives
+  accessed_at: '2026-10-21T08:51:51Z'
+  support: context_only
+  summary: The document explicitly concerns N1 acylation of kanamycin A/B by the amino-hydroxybutyryl
+    moiety and includes corresponding acid-addition salts. This verifies a relevant
+    document link, not a single exact assay or a unique preparation across the entire
+    patent.
+  snapshot_sha256: 6adb3d20712705cc3692d94bf11832671f9b5efd7182c5935fc98e0f94c51846
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Ontology dated11August2026; ARO0000013,0000016,3000755 and all102 resistance
+    terms
+  accessed_at: '2026-10-21T08:51:51Z'
+  support: supports
+  summary: All 102 native term labels and explicit amikacin resistance edges resolve
+    unchanged. Definitions distinguish modifying enzymes, rRNA methylases/mutations,
+    efflux systems and the PvrR regulator; native database-assertion wording is retained.
+    The target is16S rRNA, not an invented single protein. Eis ARO3009333 inherits
+    a target-alteration classification through the variant hierarchy, although its
+    definition merely asserts resistance.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: aro-compare
+  kind: validation
+  reference: Independent live ARO term/edge comparison
+  locator: 102 exact IDs
+  accessed_at: '2026-10-21T08:53:26Z'
+  support: supports
+  summary: All102 labels and explicit confers_resistance_to_antibiotic ARO0000013
+    edges match current source; this verifies database claims without promoting each
+    to independently established primary evidence.
+  snapshot_sha256: c0414efa8e1c387d6705aeed2ca518807f10d10f88c83083b1e692438e688001
+- evidence_id: extractor
+  kind: record_content
+  reference: scripts/extract_source_inventory.py
+  locator: mechanism_for lines450–502; conf/sources.yaml aro_mechanism_map
+  accessed_at: '2026-10-21T08:56:43Z'
+  support: supports
+  summary: Extractor chooses the nearest mapped is_a/participates_in ancestor; ARO0001001
+    maps to ANTIBIOTIC_TARGET_ALTERATION. The Eis source row344 retains this ancestor.
+    Generic mutant ancestry does not establish the biochemical mechanism. Existing
+    card_evidence_reviews can attach a source-scope qualification, but its implementation
+    deliberately cannot change the inherited mechanism enum.
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb
+  locator: datasets then covered-organism searches before open-ended follow-up
+  accessed_at: '2026-10-21T08:47:54Z'
+  support: context_only
+  summary: The adapter returned e_coli/precise1k/b2470 acrD and m_tuberculosis/modulome/Rv2416c
+    eis; eis also had two irrelevant substring hits. No informative iModulons were
+    returned; PvrR and AbuO searches in covered Paeruginosa/Abaumannii datasets returned
+    no hits. No absence or direct phenotype conclusion follows.
+  snapshot_sha256: bfa76de1434179e569c5fd266137e49c2e74b864fddb8e0a9208383bebc9ba96
+- evidence_id: cryptic
+  kind: database
+  reference: https://zenodo.org/records/15680920
+  locator: Version3.4.0 description and file inventory
+  accessed_at: '2026-10-21T08:56:43Z'
+  support: partial
+  summary: Official release page describes M.tuberculosis complex samples and identifies
+    DST_MEASUREMENTS and UKMYC_PHENOTYPES, matching the native source/version boundary.
+    Native groups preserve different methods, thresholds, quality, reading times,
+    inequality endpoints and missing/unknown phenotypes. Counts are measurements within
+    groups, not a unique cohort prevalence or universal susceptibility.
+- evidence_id: membership
+  kind: validation
+  reference: just audit-cryptic-memberships
+  locator: Complete adopted normalized membership cohort
+  accessed_at: '2026-10-21T08:52:18Z'
+  support: supports
+  summary: Actual command exit0:26 compounds,4,012 groups,857,940 memberships,858,402
+    measurements and65,444 source isolate IDs. Verifies all attached collections against
+    normalized inventories and exact-structure identities. No raw-release or publication-pages
+    option was used.
+  snapshot_sha256: 06fe77756b7b5dc546289d62f26fe30189d99500725329d0047360d9cf1ec135
+- evidence_id: membership-target
+  kind: validation
+  reference: data/antibiotics/antibacterial/amikacin.yaml
+  locator: activity_membership_collections[0]
+  accessed_at: '2026-10-21T08:53:26Z'
+  support: supports
+  summary: Exact compressed SHA256,682,199 bytes and9,402,686 uncompressed bytes match.
+    Collection identity/key agree;38,217 distinct subjects,276 groups,63,785 memberships
+    and measurements,8,584 subjects without sequencing context, and all subject indices
+    valid. This supports source linkage, not an independently rederived genotype-resistance
+    association.
+  snapshot_sha256: b11a6caba870d8414077fb8bf81e38873de68db68f044f57add7b8524834f295
+- evidence_id: cdc-0497
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=497&PanelID=10
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:39Z'
+  support: supports
+  summary: Exact strain 0497, Klebsiella pneumoniae, source MIC 16 microgram/mL and
+    R interpretation match native; microgram/mL equals mg/L. BioSample SAMN11953783
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: a051484239cede3ae714de7dce6e59af657e65e108a5da125365f07bec124e91
+- evidence_id: cdc-0346
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=346&PanelID=10
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:39Z'
+  support: supports
+  summary: Exact strain 0346, Escherichia coli, source MIC >64 microgram/mL and R
+    interpretation match native; microgram/mL equals mg/L. BioSample SAMN11953774
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: 633c197e2981c5ee5390ed398e7df1bc9e6d4e0cefaffeafdcba66062d33731f
+- evidence_id: cdc-1153
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10444&PanelID=1247
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:39Z'
+  support: supports
+  summary: Exact strain 1153, Klebsiella pneumoniae, source MIC >64 microgram/mL and
+    R interpretation match native; microgram/mL equals mg/L. BioSample SAMN34111340
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: f6cc6f58bbf10ca78f659afa192c79da8c4d6c97e8e06d065a55c1cd2a12db53
+- evidence_id: cdc-1155
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10446&PanelID=1247
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:39Z'
+  support: supports
+  summary: Exact strain 1155, Pseudomonas aeruginosa, source MIC >64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. BioSample SAMN34111341
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: 133f90719488c018c805ab07fbe1090642c32ba1eec37baa706f4d93cab3356d
+- evidence_id: cdc-1156
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10447&PanelID=1247
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:40Z'
+  support: supports
+  summary: Exact strain 1156, Pseudomonas aeruginosa, source MIC >64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. BioSample SAMN34111342
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: d9514775505c90dd6585837392f4cb0c272e9ef421ac85a60b1e2f5c34109a4f
+- evidence_id: cdc-1157
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10448&PanelID=1247
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:40Z'
+  support: supports
+  summary: Exact strain 1157, Pseudomonas aeruginosa, source MIC >64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. BioSample SAMN34111343
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: 578b95f5054522f904be562bf582fa7416766e846a596ddfc039dfd997d103df
+- evidence_id: cdc-1158
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10449&PanelID=1247
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:40Z'
+  support: supports
+  summary: Exact strain 1158, Klebsiella pneumoniae, source MIC >64 microgram/mL and
+    R interpretation match native; microgram/mL equals mg/L. BioSample SAMN34111344
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: a389b1646077d6d4f1cfa2166235eddfb6145d0678948bc1cfe9f07f0e46d346
+- evidence_id: cdc-1159
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10450&PanelID=1247
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:40Z'
+  support: supports
+  summary: Exact strain 1159, Pseudomonas aeruginosa, source MIC >64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. BioSample SAMN34111345
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: ce49eb121717683d4c99f111b76b4cdf4ec9183880dc51688e8d15378dfd8ac5
+- evidence_id: cdc-1161
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10452&PanelID=1247
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:40Z'
+  support: supports
+  summary: Exact strain 1161, Pseudomonas aeruginosa, source MIC >64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. BioSample SAMN34111347
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: 7ce098634ff43bb8cd74650c0b551aae0491781e1f7f4d14edf5433a334eebcd
+- evidence_id: cdc-1163
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10454&PanelID=1247
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:40Z'
+  support: supports
+  summary: Exact strain 1163, Klebsiella pneumoniae, source MIC >64 microgram/mL and
+    R interpretation match native; microgram/mL equals mg/L. BioSample SAMN34111349
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: 7ef4b8afc23221c1a3e16ec75ddc7d1031e4ed167f8ffd5d03b979e4e28ddc8a
+- evidence_id: cdc-1268
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10559&PanelID=10
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:40Z'
+  support: supports
+  summary: Exact strain 1268, Pseudomonas aeruginosa, source MIC >64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. BioSample SAMN33435241
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: 989b1e02c22ef95be5bc44b185a5787692cd288ef11a490316fffa9453fa6756
+- evidence_id: cdc-1269
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10560&PanelID=10
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:40Z'
+  support: supports
+  summary: Exact strain 1269, Pseudomonas aeruginosa, source MIC >64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. BioSample SAMN33435242
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: 833feb97d7eca0ac00138826d87811e6d109e99ad30cd2777af80547103764fe
+- evidence_id: cdc-1270
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10561&PanelID=10
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:40Z'
+  support: supports
+  summary: Exact strain 1270, Pseudomonas aeruginosa, source MIC >64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. BioSample SAMN33435243
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: 0ac9b823b83a6fbf014e5a42d5fbfef084cb1bc9f5c170cf630680a61bef8869
+- evidence_id: cdc-1328
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10619&PanelID=10
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:40Z'
+  support: supports
+  summary: Exact strain 1328, Pseudomonas aeruginosa, source MIC >64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. BioSample SAMN50502207
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: b230320d9460b3e30a4755118c7b8ccc91d8f9f69061b0c7220ff43689a9c8ba
+- evidence_id: cdc-0083
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=83&PanelID=1227
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:44Z'
+  support: supports
+  summary: Exact strain 0083, Acinetobacter baumannii, source MIC >64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. BioSample SAMN04014924
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: 89113d8ea8f1ca3223c9673eac3389c50c02244938d7e583e95b01a79ef7c206
+- evidence_id: cdc-0078
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=78&PanelID=1227
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:42Z'
+  support: supports
+  summary: Exact strain 0078, Acinetobacter baumannii, source MIC 64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. BioSample SAMN04014919
+    agrees. BMD modal method is explicit.
+  snapshot_sha256: ef4dc43defb30968140cb769aecc648c010060bf92698c65db5a14658e2fce6b
+- evidence_id: cdc-1332
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10623&PanelID=1394
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:41Z'
+  support: supports
+  summary: Exact strain 1332, Pseudomonas aeruginosa, source MIC >64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. Source explicitly
+    says BioSample data unavailable; native makes no accession claim. Page does not
+    state BMD/modal protocol and native assay appropriately does not add it.
+  snapshot_sha256: 0351c059bc40eb858fc411cd6ccec4c2a6b4c227961348f9cdc68a6163db7e23
+- evidence_id: cdc-1333
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10624&PanelID=1394
+  locator: Isolate identity, Amikacin MIC row and interpretation footnote
+  accessed_at: '2026-10-21T08:48:41Z'
+  support: supports
+  summary: Exact strain 1333, Pseudomonas aeruginosa, source MIC >64 microgram/mL
+    and R interpretation match native; microgram/mL equals mg/L. Source explicitly
+    says BioSample data unavailable; native makes no accession claim. Page does not
+    state BMD/modal protocol and native assay appropriately does not add it.
+  snapshot_sha256: 921ff612d2c85c5e8d8557ee0daf300dc02560a565e7d30d5f4ba2cb99386b4e
+- evidence_id: cdc-comparison
+  kind: validation
+  reference: Independent CDC/native comparison
+  locator: All18 observations
+  accessed_at: '2026-10-21T08:53:46Z'
+  support: supports
+  summary: All MIC values/qualifiers, species labels and16 BioSample links match;0078
+    is64 and0497 is16, the other16 are>64. Historical interpretation standards are
+    preserved:0083 CLSI2020S30,0078 CLSI2024S34,1332/1333 CLSI2026Ed36,others CLSI2025S35.
+    CDC predicted resistance-gene lists are not treated as experimentally proven causes
+    of these MICs.
+  snapshot_sha256: ef975b59d762b4bc821ef4267563fd937f0df7a44a2b52dcb0c3dea3ddee071e
+- evidence_id: taxon-287
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/287
+  locator: Taxonomy scientificName/rank
+  accessed_at: '2026-10-21T08:54:27Z'
+  support: supports
+  summary: Official taxon resolves to the species label used in its CDC observations.
+  snapshot_sha256: b1f1bf425b7d767c2098f79a74642175d13b877f972557cf935c80ffa5e5b2cd
+- evidence_id: taxon-470
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/470
+  locator: Taxonomy scientificName/rank
+  accessed_at: '2026-10-21T08:54:27Z'
+  support: supports
+  summary: Official taxon resolves to the species label used in its CDC observations.
+  snapshot_sha256: 1da6987e686086e2f56d4704367b7dc9ff476012459608bc0279c891d08375a4
+- evidence_id: taxon-562
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/562
+  locator: Taxonomy scientificName/rank
+  accessed_at: '2026-10-21T08:54:27Z'
+  support: supports
+  summary: Official taxon resolves to the species label used in its CDC observations.
+  snapshot_sha256: 66d5c5c74569e24b72fd7b011961dc221b58d841db7db3023337fb534733e200
+- evidence_id: taxon-573
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/573
+  locator: Taxonomy scientificName/rank
+  accessed_at: '2026-10-21T08:54:27Z'
+  support: supports
+  summary: Official taxon resolves to the species label used in its CDC observations.
+  snapshot_sha256: 1dba9bac4108eba692a8d42877dc2c65b47367e3eb8b57bed1d97f9cb699afd7
+- evidence_id: ribosome
+  kind: primary_source
+  reference: PMID:37537169
+  locator: DOI10.1038/s41467-023-40416-5; full main text Results/Methods
+  accessed_at: '2026-10-21T08:45:03Z'
+  support: partial
+  summary: The2023 X-ray/cryo-EM and kinetic study supports functional amikacin binding
+    at16S-rRNA h44, impairing translocation, termination and recycling. Secondary50S
+    P-site binding was observed without established inhibitory function; B5 binding
+    was species-specific. Native NUCLEIC_ACID/direct-binding target is scientifically
+    consistent but remains honestly database-sourced PRIMARY_EVIDENCE_NEEDED. Sulfate
+    reagent and apparently reversed catalog ordering require explicit active-moiety/preparation
+    scope for future quantitative curation.
+  snapshot_sha256: 2c55435981b62655cd27bc57798382a2731efc815ba1edfa4094a782df311ea5
+- evidence_id: eis-biochemistry
+  kind: primary_source
+  reference: PMID:21628583
+  locator: DOI10.1073/pnas.1105379108; Results:Unique Multiacetylation; Methods
+  accessed_at: '2026-10-21T08:52:46Z'
+  support: supports
+  summary: Full main text reports purified H37Rv Eis Rv2416c acetylating amikacin
+    and other aminoglycosides, measured by UV/visible coupled assay and mass spectrometry.
+    This demonstrates drug modification; it does not demonstrate alteration of the
+    ribosomal target. Crystal structure used CoA/acetylated hygromycin, not an amikacin-bound
+    ribosome or an amikacin-specific cocrystal.
+  snapshot_sha256: 83641f8fdf86c8995df8883f0d2242f19e882de44a0aca08e377d1f6a0b49334
+- evidence_id: eis-epistasis
+  kind: primary_source
+  reference: PMID:34460306
+  locator: DOI10.1128/AAC.01164-21; Results,Table3,Discussion,Methods
+  accessed_at: '2026-10-21T08:52:46Z'
+  support: supports
+  summary: Full main text/Table3 retain modest AMK MICs0.5–2mg/L in seven C-14T clinical
+    isolates with intact eis versus<=0.25 in five C-14T isolates carrying loss-of-function
+    variants, measured on UKMYC5/6 plates with provisional1mg/L threshold. These observations
+    preserve variant/functional-enzyme dependence and support resistance association
+    without calling every eis mutation resistant. Paper identifies Eis as acetyltransferase;
+    unrelated efflux wording in Table3 footnote is not adopted as its mechanism.
+  snapshot_sha256: 357ff421707e1dadae0b70ed3594f097687573d6d9b43fb2f6b3798d9bd4bb24
+- evidence_id: eis-earlier
+  kind: primary_source
+  reference: PMID:25339395
+  locator: DOI10.1128/JCM.02059-14; abstract,Methods,Discussion
+  accessed_at: '2026-10-21T08:52:22Z'
+  support: partial
+  summary: Study of603 samples from503 SouthKorean patients used LJ40microgram/mL
+    and subsets tested by other methods. Its eis promoter mutants were associated
+    with KAN resistance but not AMK resistance; preserve this method/cohort result
+    alongside later C-14T low-level AMK findings. It does not refute every variant-level
+    AMK association.
+  snapshot_sha256: c77676140a51b2cc1c0dda35aad573315030c2ae5d36a2286858d56444e82d96
+- evidence_id: rrs
+  kind: primary_source
+  reference: PMID:19752274
+  locator: DOI10.1128/AAC.00851-09; Results,Tables2–4,Discussion
+  accessed_at: '2026-10-21T08:52:22Z'
+  support: partial
+  summary: 145 Georgian isolates with complete data show strong A1401G association
+    with high AMK/KAN MICs, while9/78 KAN-resistant isolates remained AMK-susceptible
+    under study thresholds. Supports bounded rRNA resistance context and cautions
+    against class-wide cross-resistance transfer; observational association is distinguished
+    from allelic causality.
+  snapshot_sha256: 830d3f9ce43d960f1ad97f4839a33f486ef7805c699c8052c402ba346f6f0373
+- evidence_id: lead-11744283
+  kind: primary_source
+  reference: PMID:11744283
+  locator: Primary abstract via EuropePMC
+  accessed_at: '2026-10-21T08:48:43Z'
+  support: context_only
+  summary: Guinea-pig ototoxicity/noise; relevant drug context but not direct bacterial
+    target proof or an exact single-agent native MIC assertion.
+  snapshot_sha256: 1bef8726f445ef14bad5bcb6861b09e575be8d696142283dbe593b71694bb7db
+- evidence_id: lead-15305513
+  kind: primary_source
+  reference: PMID:15305513
+  locator: Primary abstract via EuropePMC
+  accessed_at: '2026-10-21T08:48:48Z'
+  support: context_only
+  summary: Whale pharmacokinetics in two animals; relevant drug context but not direct
+    bacterial target proof or an exact single-agent native MIC assertion.
+  snapshot_sha256: 05ac02c5f85ffd8b6804a9f8a94696ed8817cec19351d7df43bec4fde4150eff
+- evidence_id: lead-17365906
+  kind: primary_source
+  reference: PMID:17365906
+  locator: Primary abstract via EuropePMC
+  accessed_at: '2026-10-21T08:48:43Z'
+  support: context_only
+  summary: Mouse nephrotoxicity and N-acetylcysteine; relevant drug context but not
+    direct bacterial target proof or an exact single-agent native MIC assertion.
+  snapshot_sha256: c921183a1bf803e9b013774b8771472ad6b9a8be3246a819263b69857d028774
+- evidence_id: lead-19495517
+  kind: primary_source
+  reference: PMID:19495517
+  locator: Primary abstract via EuropePMC
+  accessed_at: '2026-10-21T08:48:43Z'
+  support: context_only
+  summary: Neonatal drug monitoring; relevant drug context but not direct bacterial
+    target proof or an exact single-agent native MIC assertion.
+  snapshot_sha256: 9669adaaaca381e2c67a709c566d25996f033620825ae2c193caee46f30cb267
+- evidence_id: lead-20195673
+  kind: primary_source
+  reference: PMID:20195673
+  locator: Primary abstract via EuropePMC
+  accessed_at: '2026-10-21T08:48:44Z'
+  support: context_only
+  summary: Febrile-neutropenia combination-regimen comparison; relevant drug context
+    but not direct bacterial target proof or an exact single-agent native MIC assertion.
+  snapshot_sha256: d7797e3c66a646d931024c0d50ff72660ad77532bb20e4e4c15a341c9248db5b
+- evidence_id: lead-25296102
+  kind: primary_source
+  reference: PMID:25296102
+  locator: Primary abstract via EuropePMC
+  accessed_at: '2026-10-21T08:48:44Z'
+  support: context_only
+  summary: Rat nephrotoxicity/alpha-lipoic acid; relevant drug context but not direct
+    bacterial target proof or an exact single-agent native MIC assertion.
+  snapshot_sha256: 4278cb0988d598bbfbac90b0c44d05537df7cc40144490e3012e3022fb0422a6
+- evidence_id: lead-25327505
+  kind: primary_source
+  reference: PMID:25327505
+  locator: Primary abstract via EuropePMC
+  accessed_at: '2026-10-21T08:48:45Z'
+  support: context_only
+  summary: Ventilator-associated-pneumonia combination-regimen pharmacokinetics; relevant
+    drug context but not direct bacterial target proof or an exact single-agent native
+    MIC assertion.
+  snapshot_sha256: c9ea785a177d0071b211af245f86b6836d7b4859c57724e1ab3615d5497ba4e0
+- evidence_id: lead-25630642
+  kind: primary_source
+  reference: PMID:25630642
+  locator: Primary abstract via EuropePMC
+  accessed_at: '2026-10-21T08:48:45Z'
+  support: context_only
+  summary: Imipenem/amikacin combination PK/PD; relevant drug context but not direct
+    bacterial target proof or an exact single-agent native MIC assertion.
+  snapshot_sha256: 26ac887406091f7f42142a696bed30f0b61f5b890c8dbdcd30d7fefe1c77aa07
+- evidence_id: review-10103173
+  kind: database
+  reference: PMID:10103173
+  locator: EuropePMC metadata/abstract
+  accessed_at: '2026-10-21T08:48:47Z'
+  support: context_only
+  summary: Aminoglycoside resistance/activity review cited by the adopted ARO definition;
+    not treated as a new primary assay.
+  snapshot_sha256: f7748ae50ab28834cb143679fe8fe1eaad05d80493fcf254470ffc33a596819b
+- evidence_id: review-11083623
+  kind: database
+  reference: PMID:11083623
+  locator: EuropePMC metadata/abstract
+  accessed_at: '2026-10-21T08:48:42Z'
+  support: context_only
+  summary: Aminoglycoside resistance/activity review cited by the adopted ARO definition;
+    not treated as a new primary assay.
+  snapshot_sha256: 1148961103fff4a5d2e10426de3c9c7b039dd51bb56a1e661ec1fc3e5a7fc9e7
+- evidence_id: review-8385262
+  kind: database
+  reference: PMID:8385262
+  locator: EuropePMC metadata/abstract
+  accessed_at: '2026-10-21T08:48:47Z'
+  support: context_only
+  summary: Aminoglycoside resistance/activity review cited by the adopted ARO definition;
+    not treated as a new primary assay.
+  snapshot_sha256: 3fc88e2cbf07ad0a65a809b1b0060acc15d15dac30863572191b2cf501caab1b
+- evidence_id: gates
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual focused commands in batch010
+  accessed_at: '2026-10-21T08:53:46Z'
+  support: supports
+  summary: Both commands exit0; strict checks one record with zero ERROR rows.
+  snapshot_sha256: 93cec255eb8d472a560e24259430a21f031c830fc9434e09ff5d6fdb48d27efb
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: Ignored-inclusive exact-record and owner search
+  accessed_at: '2026-10-21T08:56:43Z'
+  support: context_only
+  summary: Identifier,label and slug searched including ignored files; all native
+    blocks and maintained owners inspected. Free official identity, all cited-source
+    leads, exact CDC URLs, ARO ontology and focused primary follow-up were checked.
+    Additional HMDB/LINCS/MetaCyc/Reaxys access was limited; no claim that the literature
+    is exhaustive.
+  search_scope: prepare.py92 rg --no-ignore --hidden excluding.git/.venv; raw ChEBI/ARO/CRyPTIC
+    rows, source transform and evidence-review adapter; free ChEBI/GSRS/PubChem/ChEMBL/KEGG/DrugCentral/CDC/ENA/Zenodo/EuropePMC/PMC
+    and patent text.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact free-base structure
+  outcome: supported
+  summary: All major official structure authorities and independent calculations agree;
+    salts and formulations are not conflated.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - chebi
+  - gsrs
+  - pubchem
+  - chembl
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Parents,roles and identifiers
+  outcome: supported
+  summary: Four ChEBI parents and ARO aminoglycoside class are appropriately broader;
+    antibacterial roles are supported. Major registry links resolve; some secondary
+    xrefs remain source-asserted.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - chebi
+  - aro
+  - kegg
+  - drugcentral
+  - patent
+  - search
+- assessment_id: cdc
+  area: evidence
+  topic: 18 curator MIC observations
+  outcome: supported
+  summary: Exact source rows, strain identities, units, qualifiers, BioSamples and
+    historic interpretive standards agree; no strain-wide or genotype-causal generalization.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - cdc-comparison
+  - cdc-0497
+  - cdc-0346
+  - cdc-1153
+  - cdc-1155
+  - cdc-1156
+  - cdc-1157
+  - cdc-1158
+  - cdc-1159
+  - cdc-1161
+  - cdc-1163
+  - cdc-1268
+  - cdc-1269
+  - cdc-1270
+  - cdc-1328
+  - cdc-0083
+  - cdc-0078
+  - cdc-1332
+  - cdc-1333
+- assessment_id: cryptic
+  area: evidence
+  topic: 276 source-grouped observations and collection
+  outcome: supported
+  summary: Groups match adopted inputs, retain quality/method/censoring and MTBC label,
+    and link to a verified collection. Normalized inventory audit passes; raw release
+    is not reaggregated here.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - owners
+  - cryptic
+  - membership
+  - membership-target
+- assessment_id: resistance
+  area: evidence
+  topic: 102 CARD assertions
+  outcome: concern
+  summary: All102 term/edge claims resolve and remain database-level evidence. Eis
+    mechanism classification is scientifically wrong despite faithful import; source-scoped
+    resistance association itself is retained. Other entries were checked at database-definition
+    scope, not independently re-proven allele by allele.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - aro
+  - aro-compare
+  - extractor
+  - eis-biochemistry
+  - eis-epistasis
+  - eis-earlier
+- assessment_id: target
+  area: evidence
+  topic: 16S-rRNA direct binding
+  outcome: supported
+  summary: Native nucleic-acid target and evidence-needed status are correctly qualified;
+    inspected primary2023 work can support future explicit moiety-level upgrade, with
+    taxon/secondary-site boundaries.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - native
+  - aro
+  - ribosome
+- assessment_id: adapter
+  area: scope
+  topic: Structured gene cross-check
+  outcome: supported
+  summary: Covered dataset searches supplied gene identities only; no useful module
+    hit to summarize and no direct resistance inference.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - adapter
+- assessment_id: literature
+  area: completeness
+  topic: Primary evidence enrichment
+  outcome: unknown
+  summary: Strong ribosome/Eis/rrs leads are available, but precise preparation, variant
+    and assay scope must remain claim-specific. Host toxicity/PK and combination trials
+    are not missing single-agent mechanism evidence. No optional-field-only defect
+    is alleged.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - ribosome
+  - eis-biochemistry
+  - eis-epistasis
+  - rrs
+- assessment_id: provenance
+  area: provenance
+  topic: Owners,mints,history and status
+  outcome: supported
+  summary: All19 history events and both source identities remain unchanged; generated
+    and curator-owned blocks are distinguished. No review status promotion is authorized.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+- assessment_id: other
+  area: scope
+  topic: Producer,clinical-status,dataset and graph claims
+  outcome: not_applicable
+  summary: No native producer,clinical-status,transcriptomics dataset or causal-graph
+    assertion. Semisynthetic origin or a source microorganism alone would not establish
+    biosynthesis of this exact antibiotic.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - native
+  - patent
+- assessment_id: schema
+  area: schema
+  topic: Native validators
+  outcome: supported
+  summary: Focused schema/strict and independent chemistry pass; these do not detect
+    the scientific Eis classification defect.
+  target_ids:
+  - CHEBI:2637
+  evidence_ids:
+  - gates
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-2637-eis-drug-inactivation-misclassified-target-alteration
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Eis drug acetylation is classified as target alteration
+  description: resistance_mechanisms[101] assigns ANTIBIOTIC_TARGET_ALTERATION to
+    ARO3009333. The source extractor faithfully inherits CARD generic variant ancestry,
+    but purified Eis acetylates amikacin and clinical C-14T/LoF results depend on
+    functional Eis. This is antibiotic modification/inactivation, not modification
+    of the16S-rRNA target. Preserve the amikacin resistance association and its variant/assay
+    qualification; do not infer every eis mutation causes resistance or erase the
+    edge because earlier studies used different thresholds.
+  target_ids:
+  - CHEBI:2637
+  field_paths:
+  - resistance_mechanisms[101].mechanism_type
+  evidence_ids:
+  - native
+  - owners
+  - aro
+  - extractor
+  - eis-biochemistry
+  - eis-epistasis
+  - eis-earlier
+  rule_id: native-review-checklist:Resistance mechanisms;docs/HARMONIZATION.md
+  native_severity: major incorrect biochemical mechanism classification
+  normalization_reason: The imported enum changes the claimed mechanism despite schema
+    success and an accurate database provenance note; exact compound and resistance
+    determinant identity remain valid.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted Eis mechanism row344
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Nearest-ancestor mechanism derivation
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: ARO mechanism mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated resistance field
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Source-qualified annotation path; currently cannot alter enum
+actions:
+- action_id: A1
+  description: Adjudicate the Eis mechanism through an auditable source-qualified
+    mapping or overlay, preserve upstream provenance and regenerate the exact record.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:2637
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted Eis mechanism row344
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Nearest-ancestor mechanism derivation
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: ARO mechanism mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated resistance field
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Source-qualified annotation path; currently cannot alter enum
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - Represent Eis-mediated amikacin acetylation as ANTIBIOTIC_INACTIVATION, with explicit
+    primary support and retained upstream target-alteration provenance; do not globally
+    reinterpret all mutant nodes.
+  - Keep ARO3009333 resistance association, C-14T/promoter scope, functional-enzyme/LoF
+    qualification and method-dependent low-level AMK phenotype explicit.
+  - Existing card_evidence_reviews supports note qualification only; make any enum
+    correction reproducible in its actual maintained owner rather than applying a
+    non-reproducible native patch.
+  - Retain all294 activity observations,102 resistance entries and exact membership
+    identity/counts; no change to clinical or primary evidence status solely from
+    a database assertion.
+  - Run focused schema/strict, documented membership audit, source provenance/reproduction
+    and required corpus QC after authorized curation.
+limitations:
+- The dedicated membership audit checked complete normalized inventories and attached
+  collections; upstream release Parquet and generated publication pages were not independently
+  re-audited. Zenodo record was readable, but direct API/schema-file routes returned403.
+- All102 resistance entries were verified against current ARO definitions/edges; primary
+  follow-up focused on the disputed Eis classification and ribosomal mechanisms, not
+  independent reconstruction of every allele experiment.
+- HMDB returned403, LINCS500, MetaCyc exposed no usable identity content, and Reaxys/DE2234315
+  exact document text was not independently inspected; these remain current ChEBI
+  cross-reference assertions.
+- The2023 mechanism paper uses sulfate reagent and has an apparent catalog-number
+  ordering discrepancy; quantitative observations need preparation adjudication before
+  free-base/salt transfer.
+- CDC BioSample identifiers were verified on the authoritative isolate pages; the16
+  sequencing records and every CRyPTIC sample accession were not individually re-fetched.
+  No causal genotype link is inferred from these accession matches.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All captured input hashes rechecked unchanged; native records were not edited. Both
+  original helper output and corrected source-by-source mint comparison remain in
+  scratch.
+- Future primary target enrichment can cite the inspected2023 h44 study while preserving
+  RNA-complex target, species-specific B5 binding and lack of demonstrated inhibitory
+  function at the secondary P-site.
+- CRyPTIC assay text sometimes renders source method_cc=WHO as critical concentration
+  WHO mg/L; this is a nonnumeric source token, not a measured concentration, and should
+  be clarified if that display text is revised. No numeric MIC was invented from it.
+- Earlier eis studies reporting no AMK resistance and later C-14T low-level AMK findings
+  are retained with their original methods rather than treated as a universal contradiction.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:2637
+- https://zenodo.org/records/15680920
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC3116390/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC8522733/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC10400623/
+tags:
+- aminoglycoside
+- amikacin
+- CARD
+- CRyPTIC
+- resistance
+- Eis

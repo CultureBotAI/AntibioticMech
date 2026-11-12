@@ -1,0 +1,707 @@
+schema_version: 1.0.0
+review_id: 20261021T090122Z-anacardic-acid-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of anacardic acid
+started_at: '2026-10-21T08:50:08Z'
+finished_at: '2026-10-21T09:01:22Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Exact saturated structure and assay transcription supported; minor
+  missing primary assay qualifications
+scientific_review: true
+summary: The record denotes saturated C15:0 anacardic acid, not an unspecified cashew
+  mixture or unsaturated congener. Accessible chemical references and the BindingDB
+  ligand agree. Its recorded enzyme measurement is transcribed correctly but needs
+  the original assay-interference caveat and a precise protease-domain description.
+  Later mechanistic studies must retain their differing experimental scopes. Scientific
+  assessment retains the stated evidence limits; full verification is blocked by the
+  shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: curation/uniprot_protein_examples.yaml
+    sha256: 536ab4cc7ba9be95c80242bcc25321d67a5bdbfecbc50f3be5a449000abfe5f5
+    role: context
+  - path: data/antibiotics/antibacterial/anacardic-acid.yaml
+    sha256: 12659a95f910b2a54403fc10be0c615be28bb2dba480e6b389784bc089edca73
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/bindingdb_target_measurements.tsv
+    sha256: faccfe5634f467801aeb256e6560af09d193cdb53bdbf29dea195c9c0488c480
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: Entire SEEDED record, ten adopted ChEBI citation abstracts plus native
+    BindingDB citation, current chemical identities/classes/roles, reviewed protein
+    example, original and published target assay, later mechanistic reports and exact-congener
+    boundaries.
+  selection: Path-ordered queue index 097; exactly one target prepared before judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:2696
+targets:
+- target_id: CHEBI:2696
+  path: data/antibiotics/antibacterial/anacardic-acid.yaml
+  label: anacardic acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/bindingdb_target_measurements.tsv
+    role: Maintained ligand identity and target assay overlay
+checks:
+- check_id: schema
+  name: Documented per-record LinkML validation
+  status: passed
+  required: true
+  summary: Exit 0; no issues found.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/anacardic-acid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented closed-schema validation
+  status: passed
+  required: true
+  summary: Exit 0; one file and zero ERROR rows.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/anacardic-acid.yaml --out /private/tmp/am-review-session/097-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Native encoding and exact cross-reference chemistry
+  status: passed
+  required: false
+  summary: Exit 0; achiral saturated structure,formula,masses,charge,mint and accessible
+    source structures agree.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/097-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: source-check
+  name: Current ChEBI assertions
+  status: passed
+  required: false
+  summary: Exit 0; both chemical parents,three relevant roles,synonyms and normalized
+    xref namespace agree.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/097-source-check.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - source-check
+- check_id: target-check
+  name: Native measurement and primary table comparison
+  status: passed
+  required: false
+  summary: Exit 0; inventory transcription and primary numerical row agree; the check
+    also confirms the source table explicitly labels quenching compounds.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/097-target-check.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - target-check
+- check_id: imodulondb
+  name: Structured-source catalog before web research
+  status: passed
+  required: false
+  summary: Exit 0; catalog has no SARS-CoV-2 dataset, so no matching search or summarize
+    call applies.
+  target_ids:
+  - CHEBI:2696
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - imodulondb
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:2696
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/anacardic-acid.yaml
+  locator: Entire YAML and seven seed/reseed events
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: supports
+  summary: Read exact saturated identity,ten synonyms,two parents,two roles,explicit
+    source-derived viral mechanism warning,one target measurement,one reviewed protein
+    example and seven history events. No bacterial target,producer,MIC or direct-binding
+    assertion is present.
+- evidence_id: inventory
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/bindingdb_target_measurements.tsv;
+    scripts/seed_from_sources.py
+  locator: 097-chebi_antimicrobials-rows.json;097-bindingdb_target_measurements-rows.json;
+    bindingdb_row_supports_target_association/attach_bindingdb_targets
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: supports
+  summary: Maintained BindingDB row 844353 reproduces the native assay. The distinct
+    cell-based EC50 row 844354 is correctly absent from molecular_targets. ChEBI owns
+    generated identity/roles and mechanism template; BindingDB inventory/importer
+    plus curator-owned evidence notes own assay qualification.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:2696
+  locator: 097-ols.json;097-parents.json;097-role149553.json;097-role33282.json;097-role147285.json;097-chebi.html
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: supports
+  summary: Current nonobsolete identity,structure,definition,synonyms and two broad
+    chemical parents agree. Anticoronaviral,antibacterial and SARS-coronavirus-proteinase-inhibitor
+    role links resolve. The native filing is a priority classification and does not
+    forbid other activities.
+  snapshot_sha256: f8d31ec035958f391530e2366273833fb42a46d6763c228efbd558b10931ca27
+- evidence_id: chemical-xrefs
+  kind: database
+  reference: https://rest.kegg.jp/get/C10759/mol
+  locator: 097-kegg.mol;097-knapsack.html;097-chemspider.html;097-pubchem.json
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: supports
+  summary: KEGG C10759 graph,ChemSpider 146579 and KNApSAcK C00002635 encodings agree
+    with native ADFWQBGTDJIESE-UHFFFAOYSA-N. Supplemental PubChem 167551 agrees. CAS
+    16611-84-0 is corroborated, not independently registry-resolved. FooDB/HMDB requests
+    failed403 and LINCS HTTP500; those accessions remain independently unchecked.
+  snapshot_sha256: da6dae13994ad30f787ee944813242a357d2ec53a7989a57c57a3a86a4b236be
+- evidence_id: bindingdb
+  kind: database
+  reference: https://www.bindingdb.org/rwd/bind/chemsearch/marvin/MolStructure.jsp?monomerid=50240436
+  locator: 097-bindingdb-monomer.html
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: supports
+  summary: Current exact ligand SMILES/key match saturated C15:0. Reaction-set 844353,entry
+    8814,assay 1 and cited preprint resolve. An inconsistent pentadecenyl synonym
+    is upstream text, not the native graph or synonym list.
+  snapshot_sha256: a65d0549b8f0e92feab22d60e39f8fe8d1aafd047c9f82619423f072c9427cc1
+- evidence_id: protein
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P0DTD1.json
+  locator: 097-uniprot.json; Chain feature PRO_0000449623
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: supports
+  summary: Reviewed SARS-CoV-2 P0DTD1 is the parent replicase polyprotein. Its nsp5/3C-like
+    proteinase chain occupies residues 3264–3569. The accession is appropriate provenance,
+    while the assayed domain should be explicit rather than implying whole-polyprotein
+    inhibition.
+  snapshot_sha256: 7366d4fea701dfccea0226cbe43850961d5192cad95d0e7644cc0c16dec7e642
+- evidence_id: primary-assay
+  kind: primary_source
+  reference: PMID:32803196
+  locator: DOI:10.1101/2020.07.17.207019;097-primary2020.xml Methods,Results,Table2,Figure5
+    caption
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: partial
+  summary: Original preprint Table 2 gives anacardic acid IC50=11.04 µM, matching
+    11040 nM. It explicitly groups this compound among partial fluorescence quenchers.
+    Cell CPE EC50=3.98 µM and cytotoxicity CC50=14.13 µM are distinct endpoints. The
+    native assay description reproduces source text but omits this compound-specific
+    limitation.
+  snapshot_sha256: 7a86fc82d8e42311e98b8d441a861dcb581e13ab25f186d1c89df67a2adf723e
+- evidence_id: published-assay
+  kind: primary_source
+  reference: PMID:33062953
+  locator: DOI:10.1021/acsptsci.0c00108;097-primary2020-published.xml Results,Table2,Methods
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: partial
+  summary: Published version retains the same values and interference category. The
+    enzyme construct is recombinant MBP-tagged SARS-CoV-2 3CLpro. Keep this study-specific
+    caveat even if other experiments independently support protease inhibition.
+  snapshot_sha256: 08d1b86f2fc7c03ce46fb9d19c6c72f14d63ddfcf4bdc07d184947e094d207a9
+- evidence_id: later2021
+  kind: primary_source
+  reference: DOI:10.1186/s13578-021-00564-x
+  locator: 097-primary2021.html Results and Methods;097-primary2021-fig2.png
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: partial
+  summary: Inspected Figure 2c shows saturated anacardic acid separately from unsaturated
+    ginkgolic acid. The paper measures anacardic acid protease and cellular effects,
+    but detailed irreversibility kinetics and docking focus on ginkgolic acid. Its
+    broader covalent conclusion must not be converted into direct covalent proof for
+    anacardic acid.
+  snapshot_sha256: f587634edef25c0af2a17fca48024fdcff34048a87f580878c839688adafd298
+- evidence_id: later2022
+  kind: primary_source
+  reference: PMID:35590420
+  locator: DOI:10.1186/s13578-022-00806-6;097-primary2022.xml entire letter and Figure1
+    caption
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: partial
+  summary: A later paper reports anacardic acid inhibition in FP/FRET assays, no detected
+    covalent mass adduct, reversible mixed-type kinetics and weak SPR binding with
+    KD 6.21 mM. It explicitly disagrees with the prior covalent interpretation. The
+    letter does not provide a reagent catalog/structural certificate; exact-form transfer
+    therefore retains that limit.
+  snapshot_sha256: 0d60a5a7f386d897292a99d2bb5b09be85227402546c9ce292341192a8e132be
+- evidence_id: leads
+  kind: database
+  reference: Europe PMC indexed records for ten adopted ChEBI PMIDs and native primary
+    citation
+  locator: 097-core.json;097-lead-dispositions.json
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: context_only
+  summary: All ten ChEBI indexed abstracts were read. Most concern host effects; PMID29795261
+    explicitly uses 24:1n5, not C15:0. PMID32519201 concerns nanoparticles; PMID28012059
+    yeast Aif1-dependent apoptosis; PMID30642401 echinococcosis/host angiogenesis.
+    Neither host pathways nor formulations establish a bacterial target. Native preprint
+    resolved separately despite an empty EuropePMC PMID query.
+  snapshot_sha256: 38928b77a5173e3302f4b5f8754e80cae9c0d2ed907bbc410294af7bc5dc5f56
+- evidence_id: antibacterial-leads
+  kind: primary_source
+  reference: DOI:10.1021/jf034674f
+  locator: Publisher abstract; related DOI:10.1021/jf00030a036 and PMID8849640 leads
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: context_only
+  summary: The inspected 2003 publisher abstract concerns a congener series and emphasizes
+    C12:0 synergy. It does not justify transferring those numerical or membrane effects
+    to C15:0. Full 1993/1996 methods were not accessible in this pass; the native
+    antibacterial role remains a database assertion without a newly verified exact-congener
+    MIC.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit source chemistry comparison
+  locator: 097-chemistry.py;097-chemistry.json
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: supports
+  summary: Native encodings/formula/charge/masses,mint and KEGG molecular graph pass.
+    Accessible exact keys agree and no tetrahedral centers are present.
+  snapshot_sha256: b191433852424c3962d510b7b701fe3e183968a9b0aad618fe475bcc50eb2597
+- evidence_id: source-check
+  kind: validation
+  reference: Current ChEBI source assertions
+  locator: 097-source-check.py;097-source-check.json
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: supports
+  summary: Two chemical parents,retained roles,mechanism-role identity,all synonyms
+    and normalized FooDB namespace pass.
+  snapshot_sha256: 6aa9eb45c540404b52146af1869455032c882edd3da613c40872f461ac33aa90
+- evidence_id: target-check
+  kind: validation
+  reference: Exact assay/protein mapping check
+  locator: 097-target-check.py;097-target-check.json
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: supports
+  summary: Native measurement reproduces inventory and original table; reviewed accession,taxon
+    and protease-chain coordinates verified. CPE row is not misimported as a target
+    measurement.
+  snapshot_sha256: f306ed9cda593b6a2fab8242f69255c6b0e2bdc2de3f99b4521b4a4faed6c8fa
+- evidence_id: imodulondb
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: 097-imodulondb-datasets.txt
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: context_only
+  summary: Successful catalog read preceded web search; no SARS-CoV-2 dataset was
+    available. Lack of expression coverage is not negative target evidence.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual documented checks in batch010;097-strict.tsv
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: supports
+  summary: Both commands exited 0; strict scanned one file and zero ERROR rows.
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive exact-record and owner search
+  locator: 097-local-hits.txt;097-inspect.json
+  accessed_at: '2026-10-21T08:55:11Z'
+  support: context_only
+  summary: One exact record resolved and read; BindingDB/UniProt owner context captured
+    before source judgment. All14 captured inputs rechecked unchanged.
+  search_scope: prepare.py 97 used rg --no-ignore --hidden excluding .git/.venv. Maintained
+    ChEBI and BindingDB rows were inspected, and source-seeder ownership traced. Any
+    local absence finding is limited to that ignored-inclusive search scope.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Saturated C15:0 exact identity
+  outcome: supported
+  summary: Native graph and accessible exact mappings agree; 22:0 denotes total carbon
+    count while 15:0 denotes side chain. Mixtures and unsaturated congeners require
+    separate scope.
+  target_ids:
+  - CHEBI:2696
+  evidence_ids:
+  - record
+  - chebi
+  - chemical-xrefs
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical classes and activity roles
+  outcome: supported
+  summary: Both classes and retained roles are source-supported. Multiple activities
+    are compatible with the ANTIBACTERIAL filing.
+  target_ids:
+  - CHEBI:2696
+  evidence_ids:
+  - chebi
+  - source-check
+- assessment_id: assay
+  area: evidence
+  topic: Traceable measurement with primary caveat
+  outcome: concern
+  summary: Correct numerical transcription needs the source qualification preserved;
+    the record already uses a measured association rather than direct binding.
+  target_ids:
+  - CHEBI:2696
+  evidence_ids:
+  - primary-assay
+  - published-assay
+  - target-check
+- assessment_id: target
+  area: scope
+  topic: Parent accession and assayed domain
+  outcome: supported
+  summary: Reviewed protein and taxon are valid; specify the mature protease domain
+    in experimental context.
+  target_ids:
+  - CHEBI:2696
+  evidence_ids:
+  - protein
+  - published-assay
+- assessment_id: mechanism
+  area: evidence
+  topic: Covalent versus reversible interpretation
+  outcome: unknown
+  summary: Later reports differ in experimental scope and conclusions; retain the
+    conflict and avoid a categorical covalent mechanism.
+  target_ids:
+  - CHEBI:2696
+  evidence_ids:
+  - later2021
+  - later2022
+- assessment_id: antibacterial
+  area: evidence
+  topic: Exact-congener bacterial mechanism and natural abundance
+  outcome: unknown
+  summary: The role resolves, but source leads do not establish a new C15:0 bacterial
+    mechanism or its quantitative predominance in cashew liquid. Congener-series and
+    formulation results are bounded.
+  target_ids:
+  - CHEBI:2696
+  evidence_ids:
+  - leads
+  - antibacterial-leads
+  - record
+- assessment_id: ownership
+  area: ownership
+  topic: Generated source and history
+  outcome: supported
+  summary: Maintained source ownership identified; seven native history events and
+    SEEDED status are preserved.
+  target_ids:
+  - CHEBI:2696
+  evidence_ids:
+  - record
+  - inventory
+- assessment_id: schema
+  area: schema
+  topic: Focused validation
+  outcome: supported
+  summary: Both native checks pass.
+  target_ids:
+  - CHEBI:2696
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-2696-anacardic-acid-assay-interference-qualification
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Primary assay qualification is missing beside the imported measurement
+  description: The imported result is accurately transcribed, but its source-specific
+    interference caveat is absent. The parent protein accession also needs a precise
+    domain description and the published successor should be linked. These are bounded
+    evidence refinements, not proof the compound lacks protease activity.
+  target_ids:
+  - CHEBI:2696
+  field_paths:
+  - molecular_targets[0].experimental_context
+  - molecular_targets[0].measurements[0]
+  - molecular_targets[0].evidence
+  - mode_of_action_notes
+  - discussions
+  evidence_ids:
+  - primary-assay
+  - published-assay
+  - protein
+  - bindingdb
+  - target-check
+  rule_id: 'review-checklist: claim-level evidence and assay scope'
+  native_severity: minor nonblocking assay-provenance qualification
+  normalization_reason: Exact ligand/value/source are valid and relation is MEASURED_TARGET_ASSOCIATION;
+    no direct binding,clinical efficacy or exclusive antibacterial mechanism is asserted.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/bindingdb_target_measurements.tsv
+    role: Maintained source assay metadata
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated target-assay interpretation
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/anacardic-acid.yaml
+    role: Curator-owned evidence/discussions and precise experimental context
+actions:
+- action_id: A1
+  description: Preserve study-specific qualifications and domain scope alongside the
+    traceable measurement.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:2696
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/bindingdb_target_measurements.tsv
+    role: Maintained source assay metadata
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated target-assay interpretation
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/anacardic-acid.yaml
+    role: Curator-owned evidence/discussions and precise experimental context
+  acceptance_checks:
+  - Retain the reported value with its partial-quenching caveat; identify recombinant
+    3CLpro/nsp5 as the assay construct and link the published successor without rewriting
+    original provenance.
+  - Keep cell-based antiviral/cytotoxic endpoints separate from target measurements.
+    Do not recast the assay as direct binding.
+  - When enriching mechanism, preserve the different 2021/2022 experiments and unresolved
+    exact reagent scope; do not transfer ginkgolic-acid irreversibility to saturated
+    anacardic acid.
+  - Verify exact C15:0 structure/reagent and strain before adding antibacterial or
+    producer claims; host responses,other homologs and nanoparticle formulations cannot
+    fill those slots.
+  - Use maintained source annotations or curator-owned notes supported by the importer,regenerate
+    where appropriate,and run native schema,strict,term,reference,history and required
+    corpus checks under curation authorization.
+limitations:
+- All ten adopted ChEBI abstracts were inspected; most full articles were not. The
+  native BindingDB preprint and relevant published version sections were read. EuropePMC
+  PMID query returned zero, but PubMed and original PMC full text resolved the citation.
+- HMDB and FooDB returned HTTP403; LINCS returned HTTP500. An initial BindingDB search
+  URL returned HTTP404, while the exact monomer page successfully verified source
+  identity and native assay identifiers.
+- Exact-congener antibacterial numerical evidence remains bounded:1993/1996 full methods
+  were inaccessible; a guessed 2003 DOI failed and was excluded, then verified DOI10.1021/jf034674f
+  publisher abstract was inspected.
+- The2022 short paper lacks an exact reagent catalog/structural certificate. Its binding/inhibition
+  claims are described with that limitation; later evidence does not erase the original
+  measurement caveat.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Only scratch artifacts written; all 14 captured hashes unchanged. BindingDB inventory
+  and UniProt overlay context were added before scientific source judgment.
+- No SARS-CoV-2 expression dataset in the successful pre-web catalog; no inappropriate
+  bacterial expression-module proxy was queried.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:2696
+- https://doi.org/10.1101/2020.07.17.207019
+- https://doi.org/10.1021/acsptsci.0c00108
+- https://doi.org/10.1186/s13578-021-00564-x
+- https://doi.org/10.1186/s13578-022-00806-6
+tags:
+- record-review
+- anacardic-acid
+- assay-qualification
+- exact-congener

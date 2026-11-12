@@ -1,0 +1,1050 @@
+# Amoxicillin: supported chemistry and database assertions; disambiguate a patent link
+
+- Review: 20261021T090035Z-amoxicillin
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T08:42:04Z
+- Finished UTC: 2026-10-21T09:00:35Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Neutral stereospecific amoxicillin chemistry is independently supported. All 31 CARD resistance assertions and the PBP target reproduce the official ontology, with honest database provenance. Original experiments support antibacterial activity, PBP competition and selected resistance routes. One minor document-link ambiguity and one informational primary-evidence enrichment remain; some legacy identifiers and most determinant-specific primary experiments remain unverified. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole native record, exact adopted CHEBI/ARO rows and maintained mechanism owners; all eleven molecule-level citation abstracts; exact chemical links; all 31 official ARO resistance terms; selected original PBP, porin and beta-lactamase studies.
+
+Selection: Queue094, exact CHEBI:2676 at locked amoxicillin path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:2676 | data/antibiotics/antibacterial/amoxicillin.yaml | generated | amoxicillin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:2676 | Focused LinkML validator exited0. |
+| strict | passed | True | CHEBI:2676 | Focused strict scan exited0 with no ERROR rows. |
+| chemistry | passed | False | CHEBI:2676 | SMILES/InChI/formula/charge/masses and both source-specific mint identifiers agree. |
+| aro-comparison | passed | False | CHEBI:2676 | All31 source edge/name/mechanism lineage checks agree; KEGG/ChEMBL structures agree. |
+| imodulondb-pbp | passed | False | CHEBI:2676 | Read-only adapter request exited0; no module hits. |
+| imodulondb-blac | passed | False | CHEBI:2676 | Read-only adapter request exited0; no module hits. |
+| imodulondb-pbp2x | passed | False | CHEBI:2676 | Read-only adapter request exited0; no module hits. |
+| initial-supplemental-capture | failed | False | CHEBI:2676 | Initial supplemental inspect referenced nonexistent conf/aro_evidence_review.yaml and exited1 before capture. Corrected using discovered curation/card_evidence_reviews.json; successful supplemental capture retains actual ARO inputs. Initial13 hashes preserved. |
+| Authoritative full QC | failed | True | CHEBI:2676 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:2676 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:2676 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:2676 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:2676 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:2676 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:2676 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:2676 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:2676 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact amoxicillin identity
+
+identity: supported. Targets: CHEBI:2676.
+
+Official independent structures and source mints agree; hydrate,salt and combination boundaries preserved.
+
+### Imported target and resistance routes
+
+evidence: supported. Targets: CHEBI:2676.
+
+Every source term/edge/mapping verified against identical official OBO bytes; native provenance does not pretend primary evidence. Selected primary studies support binding and resistance with bounded contexts.
+
+### DE1942693 document resolution
+
+evidence: concern. Targets: CHEBI:2676.
+
+Bare accession resolves to unrelated utility-model document; explicit A1 resolves intended synthesis patent.
+
+### Antibacterial class and retained roles
+
+evidence: supported. Targets: CHEBI:2676.
+
+Accepted source roles are preserved; original amoxicillin antibacterial experiments corroborate filing. Web display of extra roles is not grounds to bypass extraction status filters.
+
+### Primary mechanism/activity and claim scope
+
+completeness: unknown. Targets: CHEBI:2676.
+
+No mode or quantified activity yet curated; concrete sources exist. Host haptenation,expression context and resistance routes require distinct representation; full primary grounding of all31 determinants was not performed.
+
+### Clinical,producer,datasets and graphs
+
+completeness: unknown. Targets: CHEBI:2676.
+
+No unsupported native optional assertions. Drug/product listings do not prove exact-form approval; semisynthesis does not establish a producer taxon. No transcriptomic dataset inferred from qPCR or reference gene modules.
+
+### Generated and curated owners
+
+ownership: supported. Targets: CHEBI:2676.
+
+Both ChEBI and ARO maintained owners captured; native path owns proposed curator additions. All19 captured hashes agree.
+
+### Focused deterministic gates
+
+schema: supported. Targets: CHEBI:2676.
+
+Focused native validators and chemistry pass; this is not REVIEWED promotion.
+
+## Findings
+
+### F1: Disambiguate the German patent document accession
+
+minor / open / confirmed; issue key: amoxicillin-patent-de1942693-kind-code-ambiguity.
+
+The exact schema-expanded patent:DE1942693 URL returns DE1942693U, an unrelated ceiling-fastener document. DE1942693A1 is the chemically relevant Beecham synthesis patent. Retain document classification while qualifying its publication kind through maintained source ownership.
+
+### F2: Add qualified primary PBP,activity and resistance context
+
+informational / open / confirmed; issue key: amoxicillin-primary-pbp-resistance-scope-enrichment.
+
+Primary PBP competition,porin loss/down-regulation and amoxicillin hydrolysis support optional enrichment. Preserve exact supplied form limits,assay endpoints,strains,altered-versus-wild-type proteins and database-versus-primary ownership. Increased MIC does not automatically mean clinical resistance; allergy haptenation is not the bacterial target mechanism.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Use a maintained source correction or documented source-specific normalization to preserve the intended patent kind code.
+
+- Confirm DE1942693A1 or a chemically relevant family publication against the exact primary patent; retain document_xrefs placement.
+- Preserve raw-source provenance; do not blanket-append A1 to all patents. Reseed through maintained ownership and verify emitted URL/title plus schema,strict and corpus reproduction.
+
+### A2
+
+Optionally curate narrow primary mechanism and activity evidence on the actual native record,with scope qualifications for imported resistance routes.
+
+- Retrieve complete PBP article/tables before detailed quantitative curation; preserve competition-binding IC50 versus catalytic inhibition versus MIC,and exact isolate/material context.
+- Keep CARD target provenance or add a separately literature-backed target; use family/function identity and supported organism examples,not automatic gene-module targets.
+- Describe M35 reduction/loss in its tested BRO-1 backgrounds,not wild-type M35 gain; preserve S.pyogenes reduced-susceptibility scope and all assay-method/table-prose conflicts.
+- Do not transfer AMZ-1 amoxicillin hydrolysis to ampicillin or use host allergy papers as antimicrobial-mechanism citations. No blanket upgrade of all31 resistance items from selected experiments.
+- Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/amoxicillin.yaml for any authorized future mutation; validate focused and shared gates; no status promotion from this read-only review.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/amoxicillin.yaml; Entire native YAML captured before judgment. | supports | SEEDED/EXACT neutral amoxicillin;24 synonyms,3 parents,2 activity roles,2 source concepts,31 resistance assertions and1 CARD PBP target with PRIMARY_EVIDENCE_NEEDED. Five seed/reseed history events. No native activity observations,producer,clinical assertion,dataset,graph or record-level primary evidence. Optional blanks are not schema defects. |
+| source | data/raw/chebi_antimicrobials.tsv; 094-raw.json: ChEBI line26; ARO molecule49,resistance1702–1732,target50; role-map30. | supports | Source rows and extractor/seeder logic reproduce the native record. ChEBI supplies identity and accepted roles; ARO supplies penicillin class and database mechanisms. Source mechanism roles are empty. Ten ChEBI and one ARO molecule-level citations are discovery leads intentionally not automatically seeded as claim evidence. Six additional maintained ARO inputs were successfully captured before their assessment; all19 final input hashes remain unchanged. |
+| identity | https://www.ebi.ac.uk/chebi/CHEBI:2676; 094-chebi.html/txt; complete chemical fields,ontology,names/xrefs; PubChem33613,ChEMBL1082,KEGG C06827/D07452 and VSDB1741 chemistry. | supports | Native neutral C16H19N3O5S,full key LSQZJLSUYDQPKJ-NJBDSQKTSA-N and four specified carbon centres match official sources. Parents17334 penicillin and88187 penicillin allergen are broader; activity roles33281 antimicrobial agent and36047 antibacterial drug reproduce the accepted source slice. Current web page displays additional roles but does not expose their extraction eligibility; their mere presence is not proof of dropped accepted roles. |
+| chemistry | Independent RDKit calculation; 094-chemistry.json and094-xref-chemistry.json. | supports | Native SMILES and InChI each give one neutral fragment,C16H19N3O5S,365.411 average mass,365.104541708 exact mass and matching full stereochemical key. Both source mints agree. Independently parsed KEGG MOL and ChEMBL SMILES yield the same full key. |
+| links | Chemical/drug/document cross-reference endpoints; 094-fetch-results.json,fetch2.log,research.log and downloaded exact pages. | partial | CAS26787-78-0 is corroborated by ChEBI/KEGG/VSDB,not registry-direct. HMDB403,DrugBank403,LINCS500/TLS and uninspected Reaxys limit independent verification. DrugCentral192 and KEGG D07452 correctly identify the drug; broader salt/product listings are permitted in drug_xrefs,not proof of clinical approval. VSDB identity structures match despite broader hydrate synonyms. GB1241844A,GB978178A,US3192198A are penicillin documents; Wikipedia resolves as a document. |
+| patent | https://www.google.com/patents/DE1942693; 094-patent-resolution.json,patent-native.html/txt andpatent-A1.html/txt. | refutes | The exact schema-expanded URL returns a page canonically identifying DE1942693U, a ceiling-fastener utility model. Explicit DE1942693A1 resolves the Beecham process for 6-[(-)-alpha-amino-p-hydroxyphenylacetamido]penicillanic acid. The bare source accession is ambiguous and the current resolver picks an unrelated document. This is a document-link defect,not a chemical identity or activity error. |
+| aro | https://purl.obolibrary.org/obo/aro.obo; 094-aro.obo; all35 extracted terms in094-aro-terms.txt; all31 comparisons in094-aro-comparison.json. | supports | Downloaded official ontology SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4 exactly matches MANIFEST. Every determinant name and amoxicillin resistance edge resolves; nearest mapped mechanism lineage agrees. Target3000749 explicitly targets amoxicillin;3009123 is below class3000008. Generic target and resistance routes are database assertions,not experimental subjects or MIC observations. |
+| citation-dispositions | Adopted eleven molecule-level PMID leads; 094-epmc.json and094-abstracts.txt; complete abstracts and DOI metadata inspected. | context_only | 10930630 polyamine IgE recognition;11431418 drug-specific T-cell clones;11906332 benzylpenicillin/allergen IgE culture;12569987 benzylpenicillin/cephalothin determinant cross-reaction;12833570 cephalosporin determinant synthesis;12850488 amoxicillin/benzylpenicillin memory T cells;16033609 penicillin-allergy cytokines;2083978 cephalosporin IgE assay;24595455 biotinylated amoxicillin host-protein haptenation;24631718 amoxicillin/benzylpenicillin bihapten IgE detection. These are allergy/immune contexts,not bacterial target experiments.19236222 is a safety review distinguishing amoxicillin from clavulanate combination,not primary mechanistic evidence. |
+| pbp-primary | DOI:10.1128/AAC.46.5.1273-1280.2002; PMID11959556; publisher abstract,introduction,full methods and results through affinity analysis inspected via public ASM page; PMID/DOI verified094-pbp-epmc.json. | supports | Eighteen clinical pneumococci underwent agar-dilution MIC testing and competition with radiolabeled benzylpenicillin for PBP1a,2x,2b. Amoxicillin from SmithKline Beecham was tested; supplied salt/hydrate was unspecified. IC50 means50% decrease in labeled PBP-band intensity,not enzyme catalytic IC50 or MIC. This supports bounded PBP-binding evidence and antibacterial activity; correlations with substitutions do not establish each mutation as causal. PMID18394970 additionally reports sequence-selection/MIC associations,not isolated-mutant validation. |
+| m35-primary | DOI:10.1093/jac/dkq312; PMID20801781,PMC2941675; full introduction,methods,results,discussion and Table1 in094-20801781.xml. | supports | Amoxicillin exposure reduces m35 RNA/protein in three BRO-1-positive M.catarrhalis backgrounds; knockouts have higher MICs in prior data repeated in Table1. This is reduced porin expression/absence,not resistance from simply possessing wild-type M35 or direct binding to M35.60mg/L high-inoculum exposure is not a standard MIC and permits later regrowth. Clinical treatment failure remains a hypothesis; no RNA-seq dataset is asserted. |
+| amz-primary | DOI:10.3389/fmicb.2023.1252427; PMID37808287,PMC10552758; full main article and Tables1–5 in094-37808287.xml. | supports | Cloned blaAMZ-1 in E.coli DH5alpha raises amoxicillin MIC128 versus2µg/mL vector control; purified enzyme hydrolyzes amoxicillin. Native Y3 MIC64 is a separate subject. Ampicillin MIC increase occurs with no detectable in-vitro hydrolysis,so substrates cannot be interchanged. Abstract calls agar dilution; Methods says broth dilution with MH agar,an unresolved assay-method inconsistency. Table5 reports amoxicillin kcat0.0947s−1 while later prose says0.01; retain table/prose conflict if quantifying. |
+| other-primary | Bounded primary resistance abstracts; 094-primary-epmc.json complete seven abstracts. | context_only | PMID18276599 describes H.pylori natural-transformation PBP combinations and256-fold increased MIC; its PBP2/PBP3 gene labels must be mapped carefully before assigning proteins.12384365 identifies TUS-1 in M.odoratus and MUS-1 in M.odoratimimus and purified hydrolysis.31630171 reports8-fold aminopenicillin MIC elevations in S.pyogenes isolates as reduced susceptibility/first resistance step.36374114 screens penicillin G/ceftriaxone,not direct amoxicillin assays. These selected abstracts do not upgrade all31 imported resistance items. |
+| adapter | iModulonDB structured source runner; Successful same-session055 inventory;094-imodulondb-pbp.txt,blac.txt,pbp2x.txt. | context_only | s_pneumoniae/precise718 resolves SP_0336/pbpX andSP_1673/pbp2b pluspbp2A/pbp1B; m_tuberculosis/modulome resolves Rv2068c/blaC. No module hits; s_pyogenes/modulome exact pbp2x query has no hits. These are gene-context results,not amoxicillin experiments or negative biological evidence. Inventory has no Moraxella,Helicobacter,Myroides,Achromobacter or M.abscessus dataset. |
+| search | CultureBotAI/AntibioticMech; 094-local-hits.txt,maintained-search.txt,patent-search.txt; bounded official and primary queries. | context_only | Ignored-inclusive searches locate source/queue and activity-drug-map context but no amoxicillin-specific curator overlay or CARD qualification. Combination exclusion is explicit. No absence of literature is claimed. The exact DE1942693 occurs only in adopted ChEBI row among searched maintained inputs. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Identity,equivalence,evidence,target,resistance,activity,audit;CLAUDE/HARMONIZATION/CURATION. | supports | Optional enrichment is not a required-field defect. Imported CARD claims retain database provenance and taxon-agnostic routes; primary experimental subjects and causal assertions require separate claim-level evidence. Document links must resolve to intended documents; producer and clinical claims cannot derive from precursor manufacture or drug listings. |
+| validation | Documented focused checks; 094-focused-results.json,094-schema.log,094-strict.log/tsv and094-chemistry.json. | supports | Schema,strict and independent chemistry all exit0; initial13 plus6 supplemental input hashes unchanged. |
+
+## Limits And Additional Notes
+
+- All eleven adopted molecule-level abstracts and DOIs inspected. Full main2010 M35 and2023 AMZ-1 articles read.2002 PBP publisher abstract,methods and initial results read; subsequent access403 and EuropePMC XML500 prevent claiming complete article/table inspection. Other selected resistance papers are abstract-only.
+- All31 imported ARO assertions are checked at source level using exact official snapshot bytes; most original determinant experiments were not individually reassessed. This is not full experimental grounding of every route.
+- HMDB and DrugBank direct pages403; LINCS500/TLS; Reaxys and CAS registry not directly inspected. Official accessible crosswalks corroborate these accessions but do not establish independent exact equivalence for every legacy endpoint.
+- Patents inspected for document identity and intended chemical relevance,not legal status or every experimental claim. Explicit A1 corrects the ambiguity without implying the parent amoxicillin structure is wrong.
+- No supplemental/raw omics reanalysis. Structured gene hits are context only; no hits or uncovered organisms do not refute biology. No modern clinical breakpoint/approval determination is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T090035Z-amoxicillin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Amoxicillin: supported chemistry and database assertions; disambiguate a patent
+  link'
+started_at: '2026-10-21T08:42:04Z'
+finished_at: '2026-10-21T09:00:35Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the record. Initial and supplemental maintained
+    input captures precede assessment; entire native record/source rows, relevant
+    transforms, official identifiers and bounded primary evidence inspected.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Neutral stereospecific amoxicillin chemistry is independently supported.
+  All 31 CARD resistance assertions and the PBP target reproduce the official ontology,
+  with honest database provenance. Original experiments support antibacterial activity,
+  PBP competition and selected resistance routes. One minor document-link ambiguity
+  and one informational primary-evidence enrichment remain; some legacy identifiers
+  and most determinant-specific primary experiments remain unverified. Scientific
+  assessment retains the stated evidence limits; full verification is blocked by the
+  shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/amoxicillin.yaml
+    sha256: 1b0c83e57bdf4638c6b39f98f2f498527d2608cd330df324c3367530d4ec5447
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+targets:
+- target_id: CHEBI:2676
+  path: data/antibiotics/antibacterial/amoxicillin.yaml
+  label: amoxicillin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity/classification
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relation/evidence status
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Optional pinned CARD evidence-scope qualifications
+scope:
+  description: Whole native record, exact adopted CHEBI/ARO rows and maintained mechanism
+    owners; all eleven molecule-level citation abstracts; exact chemical links; all
+    31 official ARO resistance terms; selected original PBP, porin and beta-lactamase
+    studies.
+  selection: Queue094, exact CHEBI:2676 at locked amoxicillin path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:2676
+  exclusions:
+  - target: Amoxicillin trihydrate, sodium salt, clavulanate combinations and biotinylated
+      amoxicillin
+    reason: Different chemical forms or mixtures; no identity/assay transfer without
+      explicit active-moiety qualification.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Focused LinkML validator exited0.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/amoxicillin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Focused strict scan exited0 with no ERROR rows.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/amoxicillin.yaml --out /private/tmp/am-review-session/094-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: SMILES/InChI/formula/charge/masses and both source-specific mint identifiers
+    agree.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/094-chemistry-check.py 94
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: aro-comparison
+  name: aro-comparison
+  status: passed
+  required: false
+  summary: All31 source edge/name/mechanism lineage checks agree; KEGG/ChEMBL structures
+    agree.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - aro
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/094-compare.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: imodulondb-pbp
+  name: imodulondb-pbp
+  status: passed
+  required: false
+  summary: Read-only adapter request exited0; no module hits.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism s_pneumoniae --dataset
+    precise718 --query pbp
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: imodulondb-blac
+  name: imodulondb-blac
+  status: passed
+  required: false
+  summary: Read-only adapter request exited0; no module hits.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism m_tuberculosis --dataset
+    modulome --query blaC
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: imodulondb-pbp2x
+  name: imodulondb-pbp2x
+  status: passed
+  required: false
+  summary: Read-only adapter request exited0; no module hits.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism s_pyogenes --dataset
+    modulome --query pbp2x
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: initial-supplemental-capture
+  name: initial-supplemental-capture
+  status: failed
+  required: false
+  summary: Initial supplemental inspect referenced nonexistent conf/aro_evidence_review.yaml
+    and exited1 before capture. Corrected using discovered curation/card_evidence_reviews.json;
+    successful supplemental capture retains actual ARO inputs. Initial13 hashes preserved.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - source
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    scripts/record_review.py inspect --targets /private/tmp/am-review-session/094-targets.yaml
+    --input data/raw/aro_antibiotics.tsv --input data/raw/aro_resistance_edges.tsv
+    --input data/raw/aro_target_edges.tsv --input conf/aro_target_roles.tsv --input
+    conf/aro_evidence_review.yaml
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:2676
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:2676
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:2676
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:2676
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:2676
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:2676
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:2676
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:2676
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:2676
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/amoxicillin.yaml
+  locator: Entire native YAML captured before judgment.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: supports
+  summary: SEEDED/EXACT neutral amoxicillin;24 synonyms,3 parents,2 activity roles,2
+    source concepts,31 resistance assertions and1 CARD PBP target with PRIMARY_EVIDENCE_NEEDED.
+    Five seed/reseed history events. No native activity observations,producer,clinical
+    assertion,dataset,graph or record-level primary evidence. Optional blanks are
+    not schema defects.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: '094-raw.json: ChEBI line26; ARO molecule49,resistance1702–1732,target50;
+    role-map30.'
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: supports
+  summary: Source rows and extractor/seeder logic reproduce the native record. ChEBI
+    supplies identity and accepted roles; ARO supplies penicillin class and database
+    mechanisms. Source mechanism roles are empty. Ten ChEBI and one ARO molecule-level
+    citations are discovery leads intentionally not automatically seeded as claim
+    evidence. Six additional maintained ARO inputs were successfully captured before
+    their assessment; all19 final input hashes remain unchanged.
+  snapshot_sha256: 85680bbe0e2388a10b6cee98cc92d55212efc26da1eca420942103c06bdc50c0
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:2676
+  locator: 094-chebi.html/txt; complete chemical fields,ontology,names/xrefs; PubChem33613,ChEMBL1082,KEGG
+    C06827/D07452 and VSDB1741 chemistry.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: supports
+  summary: Native neutral C16H19N3O5S,full key LSQZJLSUYDQPKJ-NJBDSQKTSA-N and four
+    specified carbon centres match official sources. Parents17334 penicillin and88187
+    penicillin allergen are broader; activity roles33281 antimicrobial agent and36047
+    antibacterial drug reproduce the accepted source slice. Current web page displays
+    additional roles but does not expose their extraction eligibility; their mere
+    presence is not proof of dropped accepted roles.
+  snapshot_sha256: 437b480fd89fed420208cb012258e5e1a15b49f155438db70bd92e446fdd2a13
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculation
+  locator: 094-chemistry.json and094-xref-chemistry.json.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: supports
+  summary: Native SMILES and InChI each give one neutral fragment,C16H19N3O5S,365.411
+    average mass,365.104541708 exact mass and matching full stereochemical key. Both
+    source mints agree. Independently parsed KEGG MOL and ChEMBL SMILES yield the
+    same full key.
+  snapshot_sha256: 9c504dc12d0d89f8b9af4fd076707659873086ccc1ed3252bdad0c775c3a342d
+- evidence_id: links
+  kind: database
+  reference: Chemical/drug/document cross-reference endpoints
+  locator: 094-fetch-results.json,fetch2.log,research.log and downloaded exact pages.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: partial
+  summary: CAS26787-78-0 is corroborated by ChEBI/KEGG/VSDB,not registry-direct. HMDB403,DrugBank403,LINCS500/TLS
+    and uninspected Reaxys limit independent verification. DrugCentral192 and KEGG
+    D07452 correctly identify the drug; broader salt/product listings are permitted
+    in drug_xrefs,not proof of clinical approval. VSDB identity structures match despite
+    broader hydrate synonyms. GB1241844A,GB978178A,US3192198A are penicillin documents;
+    Wikipedia resolves as a document.
+  snapshot_sha256: fb9567751b01cbf3a110b4222826d68e2a4c82843881266783f1ecbc0f70655c
+- evidence_id: patent
+  kind: primary_source
+  reference: https://www.google.com/patents/DE1942693
+  locator: 094-patent-resolution.json,patent-native.html/txt andpatent-A1.html/txt.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: refutes
+  summary: The exact schema-expanded URL returns a page canonically identifying DE1942693U,
+    a ceiling-fastener utility model. Explicit DE1942693A1 resolves the Beecham process
+    for 6-[(-)-alpha-amino-p-hydroxyphenylacetamido]penicillanic acid. The bare source
+    accession is ambiguous and the current resolver picks an unrelated document. This
+    is a document-link defect,not a chemical identity or activity error.
+  snapshot_sha256: 958655fe68a6c843f2efffb3e4feeb930ed5ee50940b14dd45684b67b981f90d
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: 094-aro.obo; all35 extracted terms in094-aro-terms.txt; all31 comparisons
+    in094-aro-comparison.json.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: supports
+  summary: Downloaded official ontology SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+    exactly matches MANIFEST. Every determinant name and amoxicillin resistance edge
+    resolves; nearest mapped mechanism lineage agrees. Target3000749 explicitly targets
+    amoxicillin;3009123 is below class3000008. Generic target and resistance routes
+    are database assertions,not experimental subjects or MIC observations.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: citation-dispositions
+  kind: primary_source
+  reference: Adopted eleven molecule-level PMID leads
+  locator: 094-epmc.json and094-abstracts.txt; complete abstracts and DOI metadata
+    inspected.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: context_only
+  summary: 10930630 polyamine IgE recognition;11431418 drug-specific T-cell clones;11906332
+    benzylpenicillin/allergen IgE culture;12569987 benzylpenicillin/cephalothin determinant
+    cross-reaction;12833570 cephalosporin determinant synthesis;12850488 amoxicillin/benzylpenicillin
+    memory T cells;16033609 penicillin-allergy cytokines;2083978 cephalosporin IgE
+    assay;24595455 biotinylated amoxicillin host-protein haptenation;24631718 amoxicillin/benzylpenicillin
+    bihapten IgE detection. These are allergy/immune contexts,not bacterial target
+    experiments.19236222 is a safety review distinguishing amoxicillin from clavulanate
+    combination,not primary mechanistic evidence.
+  snapshot_sha256: eb0839d6705c22657dda808cc56dab453de9787bb56ce704e13d59751cadbf70
+- evidence_id: pbp-primary
+  kind: primary_source
+  reference: DOI:10.1128/AAC.46.5.1273-1280.2002
+  locator: PMID11959556; publisher abstract,introduction,full methods and results
+    through affinity analysis inspected via public ASM page; PMID/DOI verified094-pbp-epmc.json.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: supports
+  summary: Eighteen clinical pneumococci underwent agar-dilution MIC testing and competition
+    with radiolabeled benzylpenicillin for PBP1a,2x,2b. Amoxicillin from SmithKline
+    Beecham was tested; supplied salt/hydrate was unspecified. IC50 means50% decrease
+    in labeled PBP-band intensity,not enzyme catalytic IC50 or MIC. This supports
+    bounded PBP-binding evidence and antibacterial activity; correlations with substitutions
+    do not establish each mutation as causal. PMID18394970 additionally reports sequence-selection/MIC
+    associations,not isolated-mutant validation.
+  snapshot_sha256: c4caa28f03b8800d59472aef2de0b5fdaeb3f0d4a347e6f0662cce5bef188ca1
+- evidence_id: m35-primary
+  kind: primary_source
+  reference: DOI:10.1093/jac/dkq312
+  locator: PMID20801781,PMC2941675; full introduction,methods,results,discussion and
+    Table1 in094-20801781.xml.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: supports
+  summary: Amoxicillin exposure reduces m35 RNA/protein in three BRO-1-positive M.catarrhalis
+    backgrounds; knockouts have higher MICs in prior data repeated in Table1. This
+    is reduced porin expression/absence,not resistance from simply possessing wild-type
+    M35 or direct binding to M35.60mg/L high-inoculum exposure is not a standard MIC
+    and permits later regrowth. Clinical treatment failure remains a hypothesis; no
+    RNA-seq dataset is asserted.
+  snapshot_sha256: 4874802731d9d38f2a86121ee45dc0cedffd50ff811574db7edcc3cfc7000d3f
+- evidence_id: amz-primary
+  kind: primary_source
+  reference: DOI:10.3389/fmicb.2023.1252427
+  locator: PMID37808287,PMC10552758; full main article and Tables1–5 in094-37808287.xml.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: supports
+  summary: Cloned blaAMZ-1 in E.coli DH5alpha raises amoxicillin MIC128 versus2µg/mL
+    vector control; purified enzyme hydrolyzes amoxicillin. Native Y3 MIC64 is a separate
+    subject. Ampicillin MIC increase occurs with no detectable in-vitro hydrolysis,so
+    substrates cannot be interchanged. Abstract calls agar dilution; Methods says
+    broth dilution with MH agar,an unresolved assay-method inconsistency. Table5 reports
+    amoxicillin kcat0.0947s−1 while later prose says0.01; retain table/prose conflict
+    if quantifying.
+  snapshot_sha256: 47d5c619cd335d6d422cff250193203e662b276277914318b9293463f8792d11
+- evidence_id: other-primary
+  kind: primary_source
+  reference: Bounded primary resistance abstracts
+  locator: 094-primary-epmc.json complete seven abstracts.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: context_only
+  summary: PMID18276599 describes H.pylori natural-transformation PBP combinations
+    and256-fold increased MIC; its PBP2/PBP3 gene labels must be mapped carefully
+    before assigning proteins.12384365 identifies TUS-1 in M.odoratus and MUS-1 in
+    M.odoratimimus and purified hydrolysis.31630171 reports8-fold aminopenicillin
+    MIC elevations in S.pyogenes isolates as reduced susceptibility/first resistance
+    step.36374114 screens penicillin G/ceftriaxone,not direct amoxicillin assays.
+    These selected abstracts do not upgrade all31 imported resistance items.
+  snapshot_sha256: 5c7006e10b1915089845b8784c045cba9b89b4b37689929090c66c3957c2a883
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB structured source runner
+  locator: Successful same-session055 inventory;094-imodulondb-pbp.txt,blac.txt,pbp2x.txt.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: context_only
+  summary: s_pneumoniae/precise718 resolves SP_0336/pbpX andSP_1673/pbp2b pluspbp2A/pbp1B;
+    m_tuberculosis/modulome resolves Rv2068c/blaC. No module hits; s_pyogenes/modulome
+    exact pbp2x query has no hits. These are gene-context results,not amoxicillin
+    experiments or negative biological evidence. Inventory has no Moraxella,Helicobacter,Myroides,Achromobacter
+    or M.abscessus dataset.
+  snapshot_sha256: f1e7c1ba743d05618b4a66f777724f304a915ea6184473d778c68936184fd33a
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 094-local-hits.txt,maintained-search.txt,patent-search.txt; bounded official
+    and primary queries.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: context_only
+  summary: Ignored-inclusive searches locate source/queue and activity-drug-map context
+    but no amoxicillin-specific curator overlay or CARD qualification. Combination
+    exclusion is explicit. No absence of literature is claimed. The exact DE1942693
+    occurs only in adopted ChEBI row among searched maintained inputs.
+  search_scope: rg --no-ignore --hidden for amoxicillin,CHEBI:2676,ARO:0000064,fullkey/mint
+    andDE1942693 across batch010 and maintained curation/conf/scripts/data/raw/src/reports/reviews,
+    excluding.git/.venv. PubMed/EuropePMC/ASM exact amoxicillin PBP and specific determinant
+    studies; official chemical databases/ARO/Google Patents. No paid sources.
+  snapshot_sha256: 129e6fed556cead851a4013400e238f57f26bdb9fc1813c00f01227720e14185
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity,equivalence,evidence,target,resistance,activity,audit;CLAUDE/HARMONIZATION/CURATION.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: supports
+  summary: Optional enrichment is not a required-field defect. Imported CARD claims
+    retain database provenance and taxon-agnostic routes; primary experimental subjects
+    and causal assertions require separate claim-level evidence. Document links must
+    resolve to intended documents; producer and clinical claims cannot derive from
+    precursor manufacture or drug listings.
+- evidence_id: validation
+  kind: validation
+  reference: Documented focused checks
+  locator: 094-focused-results.json,094-schema.log,094-strict.log/tsv and094-chemistry.json.
+  accessed_at: '2026-10-21T08:47:59Z'
+  support: supports
+  summary: Schema,strict and independent chemistry all exit0; initial13 plus6 supplemental
+    input hashes unchanged.
+  snapshot_sha256: 8ae483e870827455f873de485a3d66ba5aa733dec1d36969f54bc7d66f815541
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact amoxicillin identity
+  outcome: supported
+  summary: Official independent structures and source mints agree; hydrate,salt and
+    combination boundaries preserved.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - identity
+  - chemistry
+  - source
+- assessment_id: claims
+  area: evidence
+  topic: Imported target and resistance routes
+  outcome: supported
+  summary: Every source term/edge/mapping verified against identical official OBO
+    bytes; native provenance does not pretend primary evidence. Selected primary studies
+    support binding and resistance with bounded contexts.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - aro
+  - pbp-primary
+  - m35-primary
+  - amz-primary
+  - other-primary
+- assessment_id: patent
+  area: evidence
+  topic: DE1942693 document resolution
+  outcome: concern
+  summary: Bare accession resolves to unrelated utility-model document; explicit A1
+    resolves intended synthesis patent.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - patent
+  - source
+- assessment_id: roles
+  area: evidence
+  topic: Antibacterial class and retained roles
+  outcome: supported
+  summary: Accepted source roles are preserved; original amoxicillin antibacterial
+    experiments corroborate filing. Web display of extra roles is not grounds to bypass
+    extraction status filters.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - identity
+  - source
+  - pbp-primary
+- assessment_id: enrichment
+  area: completeness
+  topic: Primary mechanism/activity and claim scope
+  outcome: unknown
+  summary: No mode or quantified activity yet curated; concrete sources exist. Host
+    haptenation,expression context and resistance routes require distinct representation;
+    full primary grounding of all31 determinants was not performed.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - citation-dispositions
+  - pbp-primary
+  - m35-primary
+  - amz-primary
+  - other-primary
+  - adapter
+- assessment_id: other
+  area: completeness
+  topic: Clinical,producer,datasets and graphs
+  outcome: unknown
+  summary: No unsupported native optional assertions. Drug/product listings do not
+    prove exact-form approval; semisynthesis does not establish a producer taxon.
+    No transcriptomic dataset inferred from qPCR or reference gene modules.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - record
+  - links
+  - rubric
+  - m35-primary
+- assessment_id: ownership
+  area: ownership
+  topic: Generated and curated owners
+  outcome: supported
+  summary: Both ChEBI and ARO maintained owners captured; native path owns proposed
+    curator additions. All19 captured hashes agree.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - source
+  - search
+- assessment_id: gates
+  area: schema
+  topic: Focused deterministic gates
+  outcome: supported
+  summary: Focused native validators and chemistry pass; this is not REVIEWED promotion.
+  target_ids:
+  - CHEBI:2676
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: amoxicillin-patent-de1942693-kind-code-ambiguity
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Disambiguate the German patent document accession
+  description: The exact schema-expanded patent:DE1942693 URL returns DE1942693U,
+    an unrelated ceiling-fastener document. DE1942693A1 is the chemically relevant
+    Beecham synthesis patent. Retain document classification while qualifying its
+    publication kind through maintained source ownership.
+  target_ids:
+  - CHEBI:2676
+  field_paths:
+  - document_xrefs
+  evidence_ids:
+  - patent
+  - source
+  - search
+  - rubric
+  rule_id: 'native-review-checklist: Evidence/Equivalence'
+  native_severity: minor document-reference ambiguity
+  normalization_reason: A non-evidentiary document link is wrong at the current resolver,
+    but native identity and all mechanistic assertions are independently supported.
+    It is not a critical broken scientific reference.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity/classification
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relation/evidence status
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Optional pinned CARD evidence-scope qualifications
+- finding_id: F2
+  issue_key: amoxicillin-primary-pbp-resistance-scope-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Add qualified primary PBP,activity and resistance context
+  description: Primary PBP competition,porin loss/down-regulation and amoxicillin
+    hydrolysis support optional enrichment. Preserve exact supplied form limits,assay
+    endpoints,strains,altered-versus-wild-type proteins and database-versus-primary
+    ownership. Increased MIC does not automatically mean clinical resistance; allergy
+    haptenation is not the bacterial target mechanism.
+  target_ids:
+  - CHEBI:2676
+  field_paths:
+  - molecular_targets
+  - resistance_mechanisms
+  - mode_of_action
+  - activity_spectrum
+  - evidence
+  - discussions
+  evidence_ids:
+  - pbp-primary
+  - m35-primary
+  - amz-primary
+  - other-primary
+  - citation-dispositions
+  - adapter
+  - rubric
+  rule_id: 'native-review-checklist: Targets/Resistance/Activity/Evidence'
+  native_severity: informational optional primary enrichment
+  normalization_reason: No optional slot is asserted mandatory and no native database
+    assertion is treated as fabricated primary data.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/amoxicillin.yaml
+    role: Curator-owned evidence, activity, mechanism and discussions through validated
+      writer/history
+actions:
+- action_id: A1
+  description: Use a maintained source correction or documented source-specific normalization
+    to preserve the intended patent kind code.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:2676
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity/classification
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relation/evidence status
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Optional pinned CARD evidence-scope qualifications
+  acceptance_checks:
+  - Confirm DE1942693A1 or a chemically relevant family publication against the exact
+    primary patent; retain document_xrefs placement.
+  - Preserve raw-source provenance; do not blanket-append A1 to all patents. Reseed
+    through maintained ownership and verify emitted URL/title plus schema,strict and
+    corpus reproduction.
+- action_id: A2
+  description: Optionally curate narrow primary mechanism and activity evidence on
+    the actual native record,with scope qualifications for imported resistance routes.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:2676
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/amoxicillin.yaml
+    role: Curator-owned evidence, activity, mechanism and discussions through validated
+      writer/history
+  acceptance_checks:
+  - Retrieve complete PBP article/tables before detailed quantitative curation; preserve
+    competition-binding IC50 versus catalytic inhibition versus MIC,and exact isolate/material
+    context.
+  - Keep CARD target provenance or add a separately literature-backed target; use
+    family/function identity and supported organism examples,not automatic gene-module
+    targets.
+  - Describe M35 reduction/loss in its tested BRO-1 backgrounds,not wild-type M35
+    gain; preserve S.pyogenes reduced-susceptibility scope and all assay-method/table-prose
+    conflicts.
+  - Do not transfer AMZ-1 amoxicillin hydrolysis to ampicillin or use host allergy
+    papers as antimicrobial-mechanism citations. No blanket upgrade of all31 resistance
+    items from selected experiments.
+  - Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/amoxicillin.yaml
+    for any authorized future mutation; validate focused and shared gates; no status
+    promotion from this read-only review.
+limitations:
+- All eleven adopted molecule-level abstracts and DOIs inspected. Full main2010 M35
+  and2023 AMZ-1 articles read.2002 PBP publisher abstract,methods and initial results
+  read; subsequent access403 and EuropePMC XML500 prevent claiming complete article/table
+  inspection. Other selected resistance papers are abstract-only.
+- All31 imported ARO assertions are checked at source level using exact official snapshot
+  bytes; most original determinant experiments were not individually reassessed. This
+  is not full experimental grounding of every route.
+- HMDB and DrugBank direct pages403; LINCS500/TLS; Reaxys and CAS registry not directly
+  inspected. Official accessible crosswalks corroborate these accessions but do not
+  establish independent exact equivalence for every legacy endpoint.
+- Patents inspected for document identity and intended chemical relevance,not legal
+  status or every experimental claim. Explicit A1 corrects the ambiguity without implying
+  the parent amoxicillin structure is wrong.
+- No supplemental/raw omics reanalysis. Structured gene hits are context only; no
+  hits or uncovered organisms do not refute biology. No modern clinical breakpoint/approval
+  determination is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
