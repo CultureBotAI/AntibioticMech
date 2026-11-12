@@ -1,0 +1,1015 @@
+# Jadomycin B: supported antibacterial material with exact-reference stereo conflicts
+
+- Review: 20261021T191248Z-jadomycin-b-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T18:41:50Z
+- Finished UTC: 2026-10-21T19:12:48Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native structure is chemically valid and agrees with current ChEBI and PubChem. Primary experiments support production by Streptomyces venezuelae and antibacterial activity of isolated jadomycin B. Its documented interconversion between C3a diastereomers requires an explicit corpus-scope decision, rather than an invented single-isomer assignment. Independently parsed KEGG and KNApSAcK structures do not have the same stereochemical scope as the native exact references; KNApSAcK additionally conflicts at a defined sugar centre. One major exact-reference finding and one informational scope question are retained.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 568; one entire exact native record. All thirteen originally captured input hashes remain unchanged; the existing ChEBI inventory, extractor and seeder are the actual maintained owners.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:31738 | data/antibiotics/antibacterial/jadomycin-b.yaml | generated | jadomycin B |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema verification | passed | True | CHEBI:31738 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:31738 | Actual focused execution exited 0. |
+| Focused chemistry verification | passed | False | CHEBI:31738 | Actual focused execution exited 0. |
+| Independent chemical authority diagnostic | passed | False | CHEBI:31738 | Both native serializations and current ChEBI/PubChem agree. KEGG assigns C3aS; KNApSAcK has mutually inconsistent stereo serializations and a sugar-centre conflict. |
+| Independent chemical authority diagnostic | passed | False | CHEBI:31738 | Clearing only canonical C29 in the KEGG graph reproduces the native key. KNApSAcK InChI requires both clearing C29 and inverting canonical C14. These scratch diagnostics do not alter the native record. |
+| Authoritative full QC | failed | True | CHEBI:31738 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:31738 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:31738 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:31738 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:31738 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:31738 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:31738 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:31738 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:31738 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Native constitution, assigned stereo and dynamic form
+
+identity: supported. Targets: CHEBI:31738.
+
+The native valid serializations are mutually consistent and match ChEBI/PubChem. The systematic name and six fixed centres agree with the experimentally described B scaffold and sugar; C3a is deliberately unspecified. The explicit dynamic mixture requires a policy decision, not an automatic opposite-isomer or racemate allegation.
+
+### All five exact references and parent terms
+
+grounding: unknown. Targets: CHEBI:31738.
+
+CAS is corroborated; KEGG and KNApSAcK have positive stereo-scope conflicts. MetaCyc and Reaxys exact graphs remain unverified. The three chemical parents are broader and appropriate.
+
+### Glycoside, producer and interconversion description
+
+evidence: supported. Targets: CHEBI:31738.
+
+The definition is supported by primary culture/isolation and structural evidence. Its mixture language is scientifically meaningful; a future exact-structure policy must preserve the reversible chemistry rather than replacing it with unsupported purity.
+
+### Antibacterial filing and strain-specific assays
+
+evidence: supported. Targets: CHEBI:31738.
+
+Original isolated B material has direct bacterial-growth inhibition. No native quantitative result is asserted, so missing optional MIC objects are not defects. Future observations need exact strain, protocol and dynamic-material context.
+
+### Antibacterial versus host and cell-free mechanisms
+
+evidence: unknown. Targets: CHEBI:31738.
+
+The adopted host Aurora-B and copper-mediated plasmid experiments do not establish bacterial target causality. Biosynthetic proteins are not antimicrobial targets. A bounded literature search found relevant host follow-ups but does not prove that no antibacterial mechanism is known. The blank native target/mode fields are not themselves an error.
+
+### Source ownership, roles, citation placement and history
+
+provenance: supported. Targets: CHEBI:31738.
+
+All thirteen initial hashes are retained; native values reproduce the exact ChEBI inventory row. The extractor deliberately limits source leads and separates them from claim evidence. SEEDED status and source history remain honest.
+
+### All native fields and ten adopted references
+
+completeness: supported. Targets: CHEBI:31738.
+
+The whole record and every adopted citation were examined, with full primary or abstract/metadata boundaries stated individually. No optional enrichment omission is treated as a defect. Authority-access and dynamic-entity policy limits prevent unrestricted scientific sign-off.
+
+## Findings
+
+### F1: Resolve stereo conflicts in two exact chemical references
+
+major / open / confirmed; issue key: jadomycin-b-exact-xref-stereochemical-scope-conflicts.
+
+KEGG C12395 explicitly encodes the 3aS member, while the native graph and definition cover the interconverting C3a pair. KNApSAcK C00016835 is internally inconsistent: its InChI assigns 3aS and the opposite sugar C5″ configuration, while its SMILES leaves C3a and C5″ unspecified. Neither reproduces its displayed key or the native full key. These entries cannot currently serve as unqualified exact chemical equivalents. Preserve their useful associations through a documented non-equivalent relation if supported, or suppress the exact links until repaired; do not rewrite the native sugar or choose one dynamic C3a form merely to match a database.
+
+### F2: Document how the exact-structure corpus handles the dynamic C3a pair
+
+informational / open / confirmed; issue key: jadomycin-b-dynamic-diastereomer-corpus-scope.
+
+The native definition and original NMR experiments explicitly identify an inseparable, interconverting C3a pair. This is stronger than an inference from missing stereochemistry. The corpus unit is one chemical structure, but its stated exclusions do not directly adjudicate this reversible chemical equilibrium. A maintained scope decision should explain whether the C3a-unspecified ChEBI entity is retained as a documented dynamic entity or represented through another supported model. Do not automatically split it into supposedly stable pure assay materials, impose a universal ratio, delete its valid antibacterial evidence, or replace it with KEGG’s single 3aS graph.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the exact-reference semantics through the maintained source pipeline.
+
+- Independently parse each retained exact reference and compare constitution, all six fixed centres and C3a scope with the chosen native identity.
+- KNApSAcK’s defined sugar conflict and mutually inconsistent serializations must be resolved before treating it as an exact authority. KEGG may remain useful as a particular diastereomer association, with that relation explicit.
+- Preserve original source provenance and valid native chemistry; rerun schema, strict, chemistry and source-reproduction gates after any authorized correction.
+
+### A2
+
+Record an explicit policy decision for the experimentally interconverting entity.
+
+- Use the primary NMR evidence and current ChEBI scope to decide retention or another representation. A policy choice must be reproducible and must preserve the reported dynamic chemistry.
+- Do not treat 67:33 in acetone-d6 as a universal assay composition. Preserve pH/solvent-dependent open forms and avoid inventing pure 3aS or 3aR antibacterial measurements.
+
+### A3
+
+Keep optional biological enrichment tied to the exact material and experiment.
+
+- Separate Table 1 preliminary results from Table 2 reference-method MICs and retain strain, inoculum, medium and units.
+- Producer additions should identify S. venezuelae ISP5230 and the culture/stress conditions; biosynthetic enzymes are not antibacterial targets.
+- Do not promote human Aurora-B, human topoisomerases, reporter responses or Cu-dependent cell-free DNA cleavage into a direct bacterial target or causal mechanism without a relevant exact experiment.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/jadomycin-b.yaml; Entire native record: identity, definition, systematic synonym, three parents, role, all chemical properties, five exact xrefs, source concept and three history events. | supports | CHEBI:31738 is SEEDED and EXACT, with a valid neutral C30H31NO9 graph and key BSBSCJRAEMDCHC-LVOPHWFOSA-N. Six tetrahedral centres are assigned and C3a alone is unspecified. The definition explicitly describes a 3aS/3aR mixture. There are no native target, mode, resistance, quantitative activity, clinical, causal-graph, producer object or dataset assertions. The producer is named in the definition. |
+| owners | data/raw/chebi_antimicrobials.tsv:656; conf/sources.yaml; scripts/extract_source_inventory.py:176-334; scripts/seed_from_sources.py:569-578,792-811; Entire exact source row, relevant source configuration and extraction/emission branches; hidden/ignored-inclusive owner search. | supports | The row directly supplies the native definition, synonym, parents, antibacterial role, chemistry and exact xrefs. The ten PMID leads are deliberately retained in the inventory rather than automatically emitted as claim-level evidence. No exact matching ARO, PubChem fallback, target, resistance, FDA, MIBiG or BindingDB row was found in the maintained source inventories; ignored-inclusive overlay searches found the review queue. The stable source mint reproduces antibioticmech:chebi-1ed9e4cded. The three history entries correctly describe seeding, not scientific sign-off. |
+| chebi | CHEBI:31738; https://www.ebi.ac.uk/chebi/backend/api/public/compound/31738/; Complete current official JSON and independent parsing of both default structural strings. | supports | Current ChEBI reproduces the native graph, key, formula, charge, masses, systematic name, definition and five authority references. The native name correctly specifies C1S, side-chain stereochemistry and alpha-L-digitoxose while leaving C3a unspecified. Current additional non-antimicrobial roles do not automatically constitute omitted native antimicrobial roles. Current thirteen publication links are broader than the maintained ten-reference cap. |
+| terms | CHEBI:24400; CHEBI:38164; CHEBI:48217; CHEBI:33282; Official term names, definitions where supplied, and exact outgoing relations inspected in four JSON responses. | supports | The three parents are glycoside, organic heteropentacyclic compound and jadomycin. They are broader structural classes, not exact chemical equivalents. The antibacterial role means bacterial growth inhibition or killing and is supported by the exact-material primary experiment. No structural-class text or additional mechanism is asserted in the native record. |
+| pubchem-cas | PubChem CID46173799; CAS:149633-99-8; Complete official property response and independent CAS-name lookup. | supports | Both routes return the native C3a-unspecified Standard InChI and full key. The CAS association is corroborated through the official PubChem response and KEGG/ChEBI; an independent licensed CAS registry record was not accessed. Calculated formula, neutral charge, average mass 549.576 and monoisotopic mass 549.1998816 agree with stored precision. |
+| kegg | KEGG:C12395; https://rest.kegg.jp/get/C12395; https://rest.kegg.jp/get/C12395/mol; Complete official compound text and molfile, including explicit wedge bonds. | supports | The entry is named jadomycin B and matches formula and constitution. Its molfile specifies all seven tetrahedral centres, including C3aS, giving BSBSCJRAEMDCHC-FTERDKBNSA-N. Clearing only canonical atom C29, corresponding to C3a, reproduces the native key. Thus it represents a particular member of the native stereochemical scope rather than an unqualified exact equivalent. Its biosynthetic reaction/pathway links are not antibacterial targets. |
+| knapsack | KNApSAcK:C00016835; http://www.knapsackfamily.com/knapsack_core/information.php?word=C00016835; Complete public entry and independent parsing of its SMILES and InChI. | supports | The name, formula and CAS agree, but the InChI specifies C3aS and the opposite sugar C5″ configuration, yielding BSBSCJRAEMDCHC-ODRQHSIWSA-N. The SMILES instead leaves both C3a and sugar C5″ unassigned, yielding BSBSCJRAEMDCHC-GJPFBKPTSA-N. The displayed key BSBSCJRAEMDCHC-PZBFHOLONA-N is not reproduced by either string. These are positive stereo inconsistencies, not merely a different canonical ordering. The producer list is database context and is independently supported by primary cultivation. |
+| diagnostic | 568-authority-chemistry.json;568-stereo-diagnostic.json; Actual independent RDKit calculations, including one-centre clearing and two-site diagnostic comparison. | supports | All compared graphs have the same constitution. Native/current ChEBI/PubChem agree at all six assigned centres. KEGG differs only by assigning C3a. KNApSAcK InChI changes native canonical C14 from S to R and assigns C29S; reversing C14 and clearing C29 reproduces the native key. Canonical C14 is the sugar carbon bearing the terminal methyl, C5″, and C29 is the N/O-bound ring-junction C3a. This establishes exact-reference scope conflicts without selecting a supposedly pure natural C3a isomer. |
+| restricted-xrefs | MetaCyc:CPD-12934; Reaxys:9745667; MetaCyc public response inspected; native/current ChEBI reference association checked. | unknown | The MetaCyc request returned an account-creation page rather than the compound graph, so its exact structure remains unverified. Reaxys was not inspected behind licensed access. Their presence in the current ChEBI source is corroboration of provenance, not independent verification of exact chemical equivalence. |
+| dynamic2004 | PMID:15070349; DOI:10.1021/ja031724o; https://www.researchgate.net/publication/231520074_The_Dynamic_Structure_of_Jadomycin_B_and_the_Amino_Acid_Incorporation_Step_of_Its_Biosynthesis; Full two-page author-deposited main text read via public browser text; original main figures not independently downloaded. | supports | The authors report an inseparable pair differing at C3a, with assignments supported by NOESY and modeling. They interpret the two forms as interconverting through oxazolone opening. This supports the native mixture statement while distinguishing dynamic chemistry from a manufactured formulation or stable undefined congener mixture. It does not justify assigning the predominant form as the only identity. |
+| dynamic2004-si | PMID:15070349; DOI:10.1021/ja031724o.s001; https://acs.figshare.com/articles/journal_contribution/3343075; Official SI cultivation/isolation, exact B MS and both NMR tables, PDF pp 2-6; page 5 visually inspected. | supports | Ethanol-stressed S. venezuelae ISP5230 cultures with L-isoleucine yielded isolated jadomycin B. The reported C30H31NO9 mass data and alpha-L-digitoxose-containing structure support the native constitution. In acetone-d6 the NMR tables give 67% (1S,3aS,1′S) and 33% (1S,3aR,1′S). These percentages describe that measurement environment and are not a universal formulation ratio. Acid-sensitive purification fractions were promptly neutralized. |
+| dynamic2006 | PMID:16468745; DOI:10.1021/ol052814w; DOI:10.1021/ol052814w.s001; Complete original abstract and official SI pp 2-3,6-16 for B preparation, open-form assignments and exchange captions; Figure 1S visually inspected. | supports | The SI documents reversible closed/open jadomycin B species whose proportions depend on pH and solvent. Acidification and redissolution recover the original acetone spectrum; selective inversion and exchange spectra connect the closed forms with aldehydic intermediates. This supports a dynamic equilibrium rather than permanent impurity species. The SI also notes decomposition after extended high-pH exposure. No quantitative bacterial assay composition or universal 67:33 ratio follows from these NMR conditions. |
+| antibacterial | PMID:19075054; DOI:10.1128/AAC.00801-08; PMC2650534; Full original main text, both tables and Figure1/Figure2 images inspected. | supports | The exact B material is distinguished from other amino-acid congeners and was isolated from S. venezuelae ISP5230. Table 2 reports broth microdilution MICs of 8 µg/mL for MRSA S. aureus C623, 4 µg/mL for S. aureus 305 and 0.5 µg/mL for S. epidermidis C960/ATCC14990. The reference protocol uses cation-adjusted Mueller-Hinton broth and final 5×10^5 CFU/mL. The preliminary Table 1 method has a different inoculum and endpoint definition and must remain separate. No pure C3a-diastereomer activity was measured. The authors explicitly leave antibacterial mode and biological targets for further study; the host-cell structure/activity ranking differs. |
+| biosynthesis-leads | PMID:11932454 DOI:10.1099/00221287-148-4-1091; PMID:16568271 DOI:10.1007/s10295-006-0113-4; Complete indexed original abstracts for both adopted papers. | supports | The 2002 work uses insertional mutants, HPLC and NMR to investigate L-digitoxose assembly and transfer in S. venezuelae ISP5230. The 2006 work changes culture conditions to improve jadomycin B production. These support biosynthesis/producer context; the Jad proteins are not demonstrated antibacterial targets. Original full publisher routes returned 403, so detailed tables from those two papers are not claimed inspected. |
+| oxidative-lead | PMID:15776503; DOI:10.1002/cbic.200400395; Indexed bibliographic metadata and public publisher-indexed graphical-abstract lead; direct publisher page 403. | context_only | The adopted identifier resolves to the original oxidative ring-cleavage biosynthesis paper. PubMed/EuropePMC supplies no abstract. Publisher-indexed text is a discovery lead concerning biosynthetic oxygenases; the original main text was unavailable and no exact antibacterial mechanism or numerical result is inferred. |
+| host-copper-leads | PMID:18723485 DOI:10.1158/1535-7163.MCT-08-0035; PMID:21565515 DOI:10.1016/j.bmc.2011.04.043; Both complete indexed original abstracts. | supports | The Aurora-B paper reports yeast and purified recombinant human kinase experiments plus tumor-cell responses. This is eukaryotic/host biology, not a bacterial kinase target. The nuclease paper reports Cu(II)-dependent cleavage of plasmid DNA in buffered solution, with EC50 1.7 µM and half-time 0.75 h under its assay conditions; it argues against direct DNA binding from UV-visible observations. That cell-free, metal-dependent result cannot establish direct bacterial DNA binding or the cause of the native antibacterial role. |
+| derivative-synthesis-leads | PMID:22714025 DOI:10.1038/ja.2012.48; PMID:23670961 DOI:10.1002/chem.201301297; Both complete indexed original abstracts. | supports | The 2012 work compares six new amino-acid derivatives in tumor and normal human cell models; its pooled potency range and derivative selectivity cannot be assigned wholesale to B or to bacteria. The 2013 synthesis reports biomimetic core assembly and glycosylation for B and other jadomycins. Its abstract does not independently establish detailed B stereochemical assignment or an antibacterial endpoint. |
+| scope-search | 568-local-hits.txt;568-owner-hits.txt;568-literature.json;568-fetch-results.json through568-fetch4-results.json; Hidden/ignored-inclusive repository searches; bounded exact-name literature query and authority checks. | context_only | The exact-name literature query returned 215 hits, with the first 100 captured. Titles were screened for exact structural, activity and mechanism leads; the review does not claim to have read all 215 studies. Selected complete abstracts for PMID25729577,28904004 and39481122 concern human breast-cancer ROS or topoisomerase experiments, not bacterial gyrase causality. All ten adopted citations were dispositioned at their actual access depths. |
+| adapter-scope | 567-adapter-datasets.txt;567-adapter.json; Previously executed same-session official structured-adapter catalog inspected before any target-specific follow-up for this review. | context_only | The 28-dataset catalog does not include S. venezuelae or human/yeast kinase systems. The native record has no gene, pathway, stress-response or transcriptomic assertion needing a matching query. Structured target search is therefore not applicable. Other Streptomyces species or bacterial gyrB annotations must not substitute for the named producer or host-kinase evidence. |
+
+## Limits And Additional Notes
+
+- The 2004 original main was read in full as public author-deposited browser text; direct requests returned 403 and its original main figures were not separately downloaded. Official SI pp 2-6 were read for the exact B material and NMR tables, with page 5 viewed. Raw spectra were not reprocessed.
+- The 2006 ring-opening main was available only as a complete abstract. Its official free SI was inspected for cultivation, B structural data and exchange experiments at pp 2-3 and 6-16; Figure 1S was visually inspected. Unrelated dalomycin spectra were not individually audited.
+- The 2009 activity article was read in full, including both tables and the two original structure figures. Its isolated B material was not a separately measured pure C3a diastereomer. Assay composition cannot be reconstructed from the NMR studies alone.
+- Among the other seven adopted references, six complete original abstracts were inspected. PMID 15776503 had no indexed abstract; only metadata and a publisher-indexed graphical-abstract lead were accessible. No full-text experimental claims are attributed to that lead.
+- MetaCyc returned an account-creation page; Reaxys remained uninspected under the public-only boundary. CAS was corroborated through public authority associations rather than licensed registry access.
+- The bounded literature query captured the first 100 of 215 results; relevant titles and selected complete abstracts were inspected, not the entire literature. The absence of a native bacterial mechanism is not evidence that no such mechanism exists.
+- The exact native graph is valid and its properties agree. KNApSAcK’s displayed key is not reproduced by its own structural strings; KEGG is a defined C3a member. The findings do not establish a wrong native sugar or an opposite natural enantiomer.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All original input hashes are preserved, and public retrieval manifests record actual URLs, UTC timestamps, response status and content hashes. Dynamic chemical identity and exact-reference semantics are separate review questions.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T191248Z-jadomycin-b-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Jadomycin B: supported antibacterial material with exact-reference stereo
+  conflicts'
+started_at: '2026-10-21T18:41:50Z'
+finished_at: '2026-10-21T19:12:48Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native structure is chemically valid and agrees with current ChEBI and
+  PubChem. Primary experiments support production by Streptomyces venezuelae and antibacterial
+  activity of isolated jadomycin B. Its documented interconversion between C3a diastereomers
+  requires an explicit corpus-scope decision, rather than an invented single-isomer
+  assignment. Independently parsed KEGG and KNApSAcK structures do not have the same
+  stereochemical scope as the native exact references; KNApSAcK additionally conflicts
+  at a defined sugar centre. One major exact-reference finding and one informational
+  scope question are retained.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/jadomycin-b.yaml
+    sha256: 0521786ede2cd9dff248cb8fe16b08157504ae41f3b5405144a6841fa18fbcaf
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:31738
+  path: data/antibiotics/antibacterial/jadomycin-b.yaml
+  label: jadomycin B
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 568; one entire exact native record. All thirteen originally
+    captured input hashes remain unchanged; the existing ChEBI inventory, extractor
+    and seeder are the actual maintained owners.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:31738
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:31738
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/jadomycin-b.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:31738
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/jadomycin-b.yaml --out /private/tmp/am-review-session/568-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:31738
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 568
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-comparison
+  name: Independent chemical authority diagnostic
+  status: passed
+  required: false
+  summary: Both native serializations and current ChEBI/PubChem agree. KEGG assigns
+    C3aS; KNApSAcK has mutually inconsistent stereo serializations and a sugar-centre
+    conflict.
+  target_ids:
+  - CHEBI:31738
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/568-compare.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: stereo-diagnostic
+  name: Independent chemical authority diagnostic
+  status: passed
+  required: false
+  summary: Clearing only canonical C29 in the KEGG graph reproduces the native key.
+    KNApSAcK InChI requires both clearing C29 and inverting canonical C14. These scratch
+    diagnostics do not alter the native record.
+  target_ids:
+  - CHEBI:31738
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/568-stereo-diagnostic.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:31738
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:31738
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:31738
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:31738
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:31738
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:31738
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:31738
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:31738
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:31738
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/jadomycin-b.yaml
+  locator: 'Entire native record: identity, definition, systematic synonym, three
+    parents, role, all chemical properties, five exact xrefs, source concept and three
+    history events.'
+  accessed_at: '2026-10-21T19:10:46Z'
+  support: supports
+  summary: CHEBI:31738 is SEEDED and EXACT, with a valid neutral C30H31NO9 graph and
+    key BSBSCJRAEMDCHC-LVOPHWFOSA-N. Six tetrahedral centres are assigned and C3a
+    alone is unspecified. The definition explicitly describes a 3aS/3aR mixture. There
+    are no native target, mode, resistance, quantitative activity, clinical, causal-graph,
+    producer object or dataset assertions. The producer is named in the definition.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:656; conf/sources.yaml; scripts/extract_source_inventory.py:176-334;
+    scripts/seed_from_sources.py:569-578,792-811
+  locator: Entire exact source row, relevant source configuration and extraction/emission
+    branches; hidden/ignored-inclusive owner search.
+  accessed_at: '2026-10-21T19:10:46Z'
+  support: supports
+  summary: The row directly supplies the native definition, synonym, parents, antibacterial
+    role, chemistry and exact xrefs. The ten PMID leads are deliberately retained
+    in the inventory rather than automatically emitted as claim-level evidence. No
+    exact matching ARO, PubChem fallback, target, resistance, FDA, MIBiG or BindingDB
+    row was found in the maintained source inventories; ignored-inclusive overlay
+    searches found the review queue. The stable source mint reproduces antibioticmech:chebi-1ed9e4cded.
+    The three history entries correctly describe seeding, not scientific sign-off.
+  snapshot_sha256: 69a6978a840954caff1a6d3735d42b0fe4e760d1fe026d5d069978c90565f43c
+- evidence_id: chebi
+  kind: authority
+  reference: CHEBI:31738; https://www.ebi.ac.uk/chebi/backend/api/public/compound/31738/
+  locator: Complete current official JSON and independent parsing of both default
+    structural strings.
+  accessed_at: '2026-10-21T19:04:19Z'
+  support: supports
+  summary: Current ChEBI reproduces the native graph, key, formula, charge, masses,
+    systematic name, definition and five authority references. The native name correctly
+    specifies C1S, side-chain stereochemistry and alpha-L-digitoxose while leaving
+    C3a unspecified. Current additional non-antimicrobial roles do not automatically
+    constitute omitted native antimicrobial roles. Current thirteen publication links
+    are broader than the maintained ten-reference cap.
+  snapshot_sha256: 0e60097c1ccc69d315c499759a7619ce00f9d9d3409491f779b22bfb3c42ad29
+- evidence_id: terms
+  kind: authority
+  reference: CHEBI:24400; CHEBI:38164; CHEBI:48217; CHEBI:33282
+  locator: Official term names, definitions where supplied, and exact outgoing relations
+    inspected in four JSON responses.
+  accessed_at: '2026-10-21T19:04:20Z'
+  support: supports
+  summary: The three parents are glycoside, organic heteropentacyclic compound and
+    jadomycin. They are broader structural classes, not exact chemical equivalents.
+    The antibacterial role means bacterial growth inhibition or killing and is supported
+    by the exact-material primary experiment. No structural-class text or additional
+    mechanism is asserted in the native record.
+  snapshot_sha256: 0e793487fdd84c5857a25899d79a42117d50d09518b18bd1029b55820821560b
+- evidence_id: pubchem-cas
+  kind: authority
+  reference: PubChem CID46173799; CAS:149633-99-8
+  locator: Complete official property response and independent CAS-name lookup.
+  accessed_at: '2026-10-21T19:06:50Z'
+  support: supports
+  summary: Both routes return the native C3a-unspecified Standard InChI and full key.
+    The CAS association is corroborated through the official PubChem response and
+    KEGG/ChEBI; an independent licensed CAS registry record was not accessed. Calculated
+    formula, neutral charge, average mass 549.576 and monoisotopic mass 549.1998816
+    agree with stored precision.
+  snapshot_sha256: 9f8613322efe6c346d43f2a9b6600c32325f705239604462b9f6c1d95b95097d
+- evidence_id: kegg
+  kind: authority
+  reference: KEGG:C12395; https://rest.kegg.jp/get/C12395; https://rest.kegg.jp/get/C12395/mol
+  locator: Complete official compound text and molfile, including explicit wedge bonds.
+  accessed_at: '2026-10-21T19:04:20Z'
+  support: supports
+  summary: The entry is named jadomycin B and matches formula and constitution. Its
+    molfile specifies all seven tetrahedral centres, including C3aS, giving BSBSCJRAEMDCHC-FTERDKBNSA-N.
+    Clearing only canonical atom C29, corresponding to C3a, reproduces the native
+    key. Thus it represents a particular member of the native stereochemical scope
+    rather than an unqualified exact equivalent. Its biosynthetic reaction/pathway
+    links are not antibacterial targets.
+  snapshot_sha256: 04ee4ad16be27605a8faedbe1747ec2bb07b9212c46a7f1646e80ad2022f9578
+- evidence_id: knapsack
+  kind: authority
+  reference: KNApSAcK:C00016835; http://www.knapsackfamily.com/knapsack_core/information.php?word=C00016835
+  locator: Complete public entry and independent parsing of its SMILES and InChI.
+  accessed_at: '2026-10-21T19:04:19Z'
+  support: supports
+  summary: The name, formula and CAS agree, but the InChI specifies C3aS and the opposite
+    sugar C5″ configuration, yielding BSBSCJRAEMDCHC-ODRQHSIWSA-N. The SMILES instead
+    leaves both C3a and sugar C5″ unassigned, yielding BSBSCJRAEMDCHC-GJPFBKPTSA-N.
+    The displayed key BSBSCJRAEMDCHC-PZBFHOLONA-N is not reproduced by either string.
+    These are positive stereo inconsistencies, not merely a different canonical ordering.
+    The producer list is database context and is independently supported by primary
+    cultivation.
+  snapshot_sha256: 8f481ea14ed8fff1b95090269345a409e8a44279f50d895359f0ae68cc62a124
+- evidence_id: diagnostic
+  kind: database
+  reference: 568-authority-chemistry.json;568-stereo-diagnostic.json
+  locator: Actual independent RDKit calculations, including one-centre clearing and
+    two-site diagnostic comparison.
+  accessed_at: '2026-10-21T19:10:46Z'
+  support: supports
+  summary: All compared graphs have the same constitution. Native/current ChEBI/PubChem
+    agree at all six assigned centres. KEGG differs only by assigning C3a. KNApSAcK
+    InChI changes native canonical C14 from S to R and assigns C29S; reversing C14
+    and clearing C29 reproduces the native key. Canonical C14 is the sugar carbon
+    bearing the terminal methyl, C5″, and C29 is the N/O-bound ring-junction C3a.
+    This establishes exact-reference scope conflicts without selecting a supposedly
+    pure natural C3a isomer.
+  snapshot_sha256: 7732172165f21f842fa0d8ea7c29d98534245af52bbf3d0b11809998fae32fbb
+- evidence_id: restricted-xrefs
+  kind: authority
+  reference: MetaCyc:CPD-12934; Reaxys:9745667
+  locator: MetaCyc public response inspected; native/current ChEBI reference association
+    checked.
+  accessed_at: '2026-10-21T19:04:20Z'
+  support: unknown
+  summary: The MetaCyc request returned an account-creation page rather than the compound
+    graph, so its exact structure remains unverified. Reaxys was not inspected behind
+    licensed access. Their presence in the current ChEBI source is corroboration of
+    provenance, not independent verification of exact chemical equivalence.
+  snapshot_sha256: 6b34664ab1f259ff43e1f88b998e79e1382788b7ea3eb64a71b71fef5ff00e50
+- evidence_id: dynamic2004
+  kind: primary_source
+  reference: PMID:15070349; DOI:10.1021/ja031724o; https://www.researchgate.net/publication/231520074_The_Dynamic_Structure_of_Jadomycin_B_and_the_Amino_Acid_Incorporation_Step_of_Its_Biosynthesis
+  locator: Full two-page author-deposited main text read via public browser text;
+    original main figures not independently downloaded.
+  accessed_at: '2026-10-21T19:10:46Z'
+  support: supports
+  summary: The authors report an inseparable pair differing at C3a, with assignments
+    supported by NOESY and modeling. They interpret the two forms as interconverting
+    through oxazolone opening. This supports the native mixture statement while distinguishing
+    dynamic chemistry from a manufactured formulation or stable undefined congener
+    mixture. It does not justify assigning the predominant form as the only identity.
+  snapshot_sha256: a59deb2ebeb7c3ae23a1c6e4dba3c1edfefb253cdb2c260eb31625109d7d891a
+- evidence_id: dynamic2004-si
+  kind: primary_source
+  reference: PMID:15070349; DOI:10.1021/ja031724o.s001; https://acs.figshare.com/articles/journal_contribution/3343075
+  locator: Official SI cultivation/isolation, exact B MS and both NMR tables, PDF
+    pp 2-6; page 5 visually inspected.
+  accessed_at: '2026-10-21T19:07:33Z'
+  support: supports
+  summary: Ethanol-stressed S. venezuelae ISP5230 cultures with L-isoleucine yielded
+    isolated jadomycin B. The reported C30H31NO9 mass data and alpha-L-digitoxose-containing
+    structure support the native constitution. In acetone-d6 the NMR tables give 67%
+    (1S,3aS,1′S) and 33% (1S,3aR,1′S). These percentages describe that measurement
+    environment and are not a universal formulation ratio. Acid-sensitive purification
+    fractions were promptly neutralized.
+  snapshot_sha256: 7e69a490659d440c39f995ec5909c202d2619066aecfbe54dd6d44f4d7d2d34e
+- evidence_id: dynamic2006
+  kind: primary_source
+  reference: PMID:16468745; DOI:10.1021/ol052814w; DOI:10.1021/ol052814w.s001
+  locator: Complete original abstract and official SI pp 2-3,6-16 for B preparation,
+    open-form assignments and exchange captions; Figure 1S visually inspected.
+  accessed_at: '2026-10-21T19:07:33Z'
+  support: supports
+  summary: The SI documents reversible closed/open jadomycin B species whose proportions
+    depend on pH and solvent. Acidification and redissolution recover the original
+    acetone spectrum; selective inversion and exchange spectra connect the closed
+    forms with aldehydic intermediates. This supports a dynamic equilibrium rather
+    than permanent impurity species. The SI also notes decomposition after extended
+    high-pH exposure. No quantitative bacterial assay composition or universal 67:33
+    ratio follows from these NMR conditions.
+  snapshot_sha256: a5af38db4f4b8b2b902b778a42ce90f7eb8f29460d4f6ad9fa321ecda5bd11f7
+- evidence_id: antibacterial
+  kind: primary_source
+  reference: PMID:19075054; DOI:10.1128/AAC.00801-08; PMC2650534
+  locator: Full original main text, both tables and Figure1/Figure2 images inspected.
+  accessed_at: '2026-10-21T19:04:20Z'
+  support: supports
+  summary: The exact B material is distinguished from other amino-acid congeners and
+    was isolated from S. venezuelae ISP5230. Table 2 reports broth microdilution MICs
+    of 8 µg/mL for MRSA S. aureus C623, 4 µg/mL for S. aureus 305 and 0.5 µg/mL for
+    S. epidermidis C960/ATCC14990. The reference protocol uses cation-adjusted Mueller-Hinton
+    broth and final 5×10^5 CFU/mL. The preliminary Table 1 method has a different
+    inoculum and endpoint definition and must remain separate. No pure C3a-diastereomer
+    activity was measured. The authors explicitly leave antibacterial mode and biological
+    targets for further study; the host-cell structure/activity ranking differs.
+  snapshot_sha256: 4e90f67676608dd872219296f02feb39b0053f184f22495a30c9a91e73e3c544
+- evidence_id: biosynthesis-leads
+  kind: primary_source
+  reference: PMID:11932454 DOI:10.1099/00221287-148-4-1091; PMID:16568271 DOI:10.1007/s10295-006-0113-4
+  locator: Complete indexed original abstracts for both adopted papers.
+  accessed_at: '2026-10-21T19:04:19Z'
+  support: supports
+  summary: The 2002 work uses insertional mutants, HPLC and NMR to investigate L-digitoxose
+    assembly and transfer in S. venezuelae ISP5230. The 2006 work changes culture
+    conditions to improve jadomycin B production. These support biosynthesis/producer
+    context; the Jad proteins are not demonstrated antibacterial targets. Original
+    full publisher routes returned 403, so detailed tables from those two papers are
+    not claimed inspected.
+  snapshot_sha256: c3cea5bd4c21c543cf44d71a3f748d3105b8a910398b6a1f7fbe7de0ed80adba
+- evidence_id: oxidative-lead
+  kind: database
+  reference: PMID:15776503; DOI:10.1002/cbic.200400395
+  locator: Indexed bibliographic metadata and public publisher-indexed graphical-abstract
+    lead; direct publisher page 403.
+  accessed_at: '2026-10-21T19:10:46Z'
+  support: context_only
+  summary: The adopted identifier resolves to the original oxidative ring-cleavage
+    biosynthesis paper. PubMed/EuropePMC supplies no abstract. Publisher-indexed text
+    is a discovery lead concerning biosynthetic oxygenases; the original main text
+    was unavailable and no exact antibacterial mechanism or numerical result is inferred.
+  snapshot_sha256: 08f250074ddb12b919dd28d1c042ee0d3ae9ded77e4a3a6412f5f7ef41ed2d10
+- evidence_id: host-copper-leads
+  kind: primary_source
+  reference: PMID:18723485 DOI:10.1158/1535-7163.MCT-08-0035; PMID:21565515 DOI:10.1016/j.bmc.2011.04.043
+  locator: Both complete indexed original abstracts.
+  accessed_at: '2026-10-21T19:04:19Z'
+  support: supports
+  summary: The Aurora-B paper reports yeast and purified recombinant human kinase
+    experiments plus tumor-cell responses. This is eukaryotic/host biology, not a
+    bacterial kinase target. The nuclease paper reports Cu(II)-dependent cleavage
+    of plasmid DNA in buffered solution, with EC50 1.7 µM and half-time 0.75 h under
+    its assay conditions; it argues against direct DNA binding from UV-visible observations.
+    That cell-free, metal-dependent result cannot establish direct bacterial DNA binding
+    or the cause of the native antibacterial role.
+  snapshot_sha256: c3cea5bd4c21c543cf44d71a3f748d3105b8a910398b6a1f7fbe7de0ed80adba
+- evidence_id: derivative-synthesis-leads
+  kind: primary_source
+  reference: PMID:22714025 DOI:10.1038/ja.2012.48; PMID:23670961 DOI:10.1002/chem.201301297
+  locator: Both complete indexed original abstracts.
+  accessed_at: '2026-10-21T19:04:19Z'
+  support: supports
+  summary: The 2012 work compares six new amino-acid derivatives in tumor and normal
+    human cell models; its pooled potency range and derivative selectivity cannot
+    be assigned wholesale to B or to bacteria. The 2013 synthesis reports biomimetic
+    core assembly and glycosylation for B and other jadomycins. Its abstract does
+    not independently establish detailed B stereochemical assignment or an antibacterial
+    endpoint.
+  snapshot_sha256: c3cea5bd4c21c543cf44d71a3f748d3105b8a910398b6a1f7fbe7de0ed80adba
+- evidence_id: scope-search
+  kind: search
+  reference: 568-local-hits.txt;568-owner-hits.txt;568-literature.json;568-fetch-results.json
+    through568-fetch4-results.json
+  locator: Hidden/ignored-inclusive repository searches; bounded exact-name literature
+    query and authority checks.
+  accessed_at: '2026-10-21T19:04:19Z'
+  support: context_only
+  summary: The exact-name literature query returned 215 hits, with the first 100 captured.
+    Titles were screened for exact structural, activity and mechanism leads; the review
+    does not claim to have read all 215 studies. Selected complete abstracts for PMID25729577,28904004
+    and39481122 concern human breast-cancer ROS or topoisomerase experiments, not
+    bacterial gyrase causality. All ten adopted citations were dispositioned at their
+    actual access depths.
+  snapshot_sha256: 521c6754c61c26fd48853ac8538cf4b102027671c32a3b979a09dad14c8d2470
+  search_scope: 2026-10-21; jadomycin B, CHEBI:31738, CAS 149633-99-8 and exact native
+    key. Hidden and ignored local files included; public exact-name literature search
+    bounded to the retrieved page and selected primary follow-ups.
+- evidence_id: adapter-scope
+  kind: database
+  reference: 567-adapter-datasets.txt;567-adapter.json
+  locator: Previously executed same-session official structured-adapter catalog inspected
+    before any target-specific follow-up for this review.
+  accessed_at: '2026-10-21T19:10:46Z'
+  support: context_only
+  summary: The 28-dataset catalog does not include S. venezuelae or human/yeast kinase
+    systems. The native record has no gene, pathway, stress-response or transcriptomic
+    assertion needing a matching query. Structured target search is therefore not
+    applicable. Other Streptomyces species or bacterial gyrB annotations must not
+    substitute for the named producer or host-kinase evidence.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Native constitution, assigned stereo and dynamic form
+  outcome: supported
+  summary: The native valid serializations are mutually consistent and match ChEBI/PubChem.
+    The systematic name and six fixed centres agree with the experimentally described
+    B scaffold and sugar; C3a is deliberately unspecified. The explicit dynamic mixture
+    requires a policy decision, not an automatic opposite-isomer or racemate allegation.
+  target_ids:
+  - CHEBI:31738
+  evidence_ids:
+  - native
+  - chebi
+  - pubchem-cas
+  - dynamic2004
+  - dynamic2004-si
+  - dynamic2006
+- assessment_id: equivalence
+  area: grounding
+  topic: All five exact references and parent terms
+  outcome: unknown
+  summary: CAS is corroborated; KEGG and KNApSAcK have positive stereo-scope conflicts.
+    MetaCyc and Reaxys exact graphs remain unverified. The three chemical parents
+    are broader and appropriate.
+  target_ids:
+  - CHEBI:31738
+  evidence_ids:
+  - pubchem-cas
+  - kegg
+  - knapsack
+  - diagnostic
+  - restricted-xrefs
+  - terms
+- assessment_id: definition
+  area: evidence
+  topic: Glycoside, producer and interconversion description
+  outcome: supported
+  summary: The definition is supported by primary culture/isolation and structural
+    evidence. Its mixture language is scientifically meaningful; a future exact-structure
+    policy must preserve the reversible chemistry rather than replacing it with unsupported
+    purity.
+  target_ids:
+  - CHEBI:31738
+  evidence_ids:
+  - dynamic2004
+  - dynamic2004-si
+  - dynamic2006
+  - biosynthesis-leads
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial filing and strain-specific assays
+  outcome: supported
+  summary: Original isolated B material has direct bacterial-growth inhibition. No
+    native quantitative result is asserted, so missing optional MIC objects are not
+    defects. Future observations need exact strain, protocol and dynamic-material
+    context.
+  target_ids:
+  - CHEBI:31738
+  evidence_ids:
+  - antibacterial
+  - terms
+- assessment_id: mechanism
+  area: evidence
+  topic: Antibacterial versus host and cell-free mechanisms
+  outcome: unknown
+  summary: The adopted host Aurora-B and copper-mediated plasmid experiments do not
+    establish bacterial target causality. Biosynthetic proteins are not antimicrobial
+    targets. A bounded literature search found relevant host follow-ups but does not
+    prove that no antibacterial mechanism is known. The blank native target/mode fields
+    are not themselves an error.
+  target_ids:
+  - CHEBI:31738
+  evidence_ids:
+  - host-copper-leads
+  - biosynthesis-leads
+  - oxidative-lead
+  - scope-search
+  - adapter-scope
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership, roles, citation placement and history
+  outcome: supported
+  summary: All thirteen initial hashes are retained; native values reproduce the exact
+    ChEBI inventory row. The extractor deliberately limits source leads and separates
+    them from claim evidence. SEEDED status and source history remain honest.
+  target_ids:
+  - CHEBI:31738
+  evidence_ids:
+  - owners
+  - native
+  - chebi
+- assessment_id: coverage
+  area: completeness
+  topic: All native fields and ten adopted references
+  outcome: supported
+  summary: The whole record and every adopted citation were examined, with full primary
+    or abstract/metadata boundaries stated individually. No optional enrichment omission
+    is treated as a defect. Authority-access and dynamic-entity policy limits prevent
+    unrestricted scientific sign-off.
+  target_ids:
+  - CHEBI:31738
+  evidence_ids:
+  - scope-search
+  - restricted-xrefs
+  - derivative-synthesis-leads
+  - oxidative-lead
+  - owners
+findings:
+- finding_id: F1
+  issue_key: jadomycin-b-exact-xref-stereochemical-scope-conflicts
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Resolve stereo conflicts in two exact chemical references
+  description: 'KEGG C12395 explicitly encodes the 3aS member, while the native graph
+    and definition cover the interconverting C3a pair. KNApSAcK C00016835 is internally
+    inconsistent: its InChI assigns 3aS and the opposite sugar C5″ configuration,
+    while its SMILES leaves C3a and C5″ unspecified. Neither reproduces its displayed
+    key or the native full key. These entries cannot currently serve as unqualified
+    exact chemical equivalents. Preserve their useful associations through a documented
+    non-equivalent relation if supported, or suppress the exact links until repaired;
+    do not rewrite the native sugar or choose one dynamic C3a form merely to match
+    a database.'
+  target_ids:
+  - CHEBI:31738
+  field_paths:
+  - xrefs[1]
+  - xrefs[2]
+  evidence_ids:
+  - kegg
+  - knapsack
+  - diagnostic
+  - dynamic2004-si
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited exact chemical references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Authority-reference import and normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Exact-xref emission
+  rule_id: 'Native checklist: every xref denotes the same exact chemical structure'
+  native_severity: major
+  normalization_reason: Positive independently parsed stereo conflicts establish incorrect
+    unqualified equivalence. The principal native graph is valid and agrees with the
+    identity authority, so this is not a wrong-native-identity blocker.
+- finding_id: F2
+  issue_key: jadomycin-b-dynamic-diastereomer-corpus-scope
+  category: scope
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Document how the exact-structure corpus handles the dynamic C3a pair
+  description: The native definition and original NMR experiments explicitly identify
+    an inseparable, interconverting C3a pair. This is stronger than an inference from
+    missing stereochemistry. The corpus unit is one chemical structure, but its stated
+    exclusions do not directly adjudicate this reversible chemical equilibrium. A
+    maintained scope decision should explain whether the C3a-unspecified ChEBI entity
+    is retained as a documented dynamic entity or represented through another supported
+    model. Do not automatically split it into supposedly stable pure assay materials,
+    impose a universal ratio, delete its valid antibacterial evidence, or replace
+    it with KEGG’s single 3aS graph.
+  target_ids:
+  - CHEBI:31738
+  field_paths:
+  - definition
+  - chemical_structure
+  - grounding_status
+  evidence_ids:
+  - native
+  - dynamic2004
+  - dynamic2004-si
+  - dynamic2006
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: docs/HARMONIZATION.md
+    role: One-structure corpus scope and any documented dynamic-entity exception
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Source concept retain/exclude or scoped grounding decision
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible representation after a scope decision
+  rule_id: 'HARMONIZATION: one chemical structure per record; retain source scope
+    and conflicts'
+  native_severity: informational
+  normalization_reason: The chemistry is positively established and honestly disclosed.
+    The unresolved point is the corpus policy for a reversible dynamic entity, not
+    a proven incorrect molecular constitution or unsupported antibacterial role.
+actions:
+- action_id: A1
+  description: Correct the exact-reference semantics through the maintained source
+    pipeline.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:31738
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited exact chemical references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Authority-reference import and normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Exact-xref emission
+  acceptance_checks:
+  - Independently parse each retained exact reference and compare constitution, all
+    six fixed centres and C3a scope with the chosen native identity.
+  - KNApSAcK’s defined sugar conflict and mutually inconsistent serializations must
+    be resolved before treating it as an exact authority. KEGG may remain useful as
+    a particular diastereomer association, with that relation explicit.
+  - Preserve original source provenance and valid native chemistry; rerun schema,
+    strict, chemistry and source-reproduction gates after any authorized correction.
+- action_id: A2
+  description: Record an explicit policy decision for the experimentally interconverting
+    entity.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:31738
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: docs/HARMONIZATION.md
+    role: One-structure corpus scope and any documented dynamic-entity exception
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Source concept retain/exclude or scoped grounding decision
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible representation after a scope decision
+  acceptance_checks:
+  - Use the primary NMR evidence and current ChEBI scope to decide retention or another
+    representation. A policy choice must be reproducible and must preserve the reported
+    dynamic chemistry.
+  - Do not treat 67:33 in acetone-d6 as a universal assay composition. Preserve pH/solvent-dependent
+    open forms and avoid inventing pure 3aS or 3aR antibacterial measurements.
+- action_id: A3
+  description: Keep optional biological enrichment tied to the exact material and
+    experiment.
+  finding_ids: []
+  target_ids:
+  - CHEBI:31738
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/jadomycin-b.yaml
+    role: Curator-owned evidence, activity, producer or mechanism additions through
+      the validated writer
+  acceptance_checks:
+  - Separate Table 1 preliminary results from Table 2 reference-method MICs and retain
+    strain, inoculum, medium and units.
+  - Producer additions should identify S. venezuelae ISP5230 and the culture/stress
+    conditions; biosynthetic enzymes are not antibacterial targets.
+  - Do not promote human Aurora-B, human topoisomerases, reporter responses or Cu-dependent
+    cell-free DNA cleavage into a direct bacterial target or causal mechanism without
+    a relevant exact experiment.
+limitations:
+- The 2004 original main was read in full as public author-deposited browser text;
+  direct requests returned 403 and its original main figures were not separately downloaded.
+  Official SI pp 2-6 were read for the exact B material and NMR tables, with page
+  5 viewed. Raw spectra were not reprocessed.
+- The 2006 ring-opening main was available only as a complete abstract. Its official
+  free SI was inspected for cultivation, B structural data and exchange experiments
+  at pp 2-3 and 6-16; Figure 1S was visually inspected. Unrelated dalomycin spectra
+  were not individually audited.
+- The 2009 activity article was read in full, including both tables and the two original
+  structure figures. Its isolated B material was not a separately measured pure C3a
+  diastereomer. Assay composition cannot be reconstructed from the NMR studies alone.
+- Among the other seven adopted references, six complete original abstracts were inspected.
+  PMID 15776503 had no indexed abstract; only metadata and a publisher-indexed graphical-abstract
+  lead were accessible. No full-text experimental claims are attributed to that lead.
+- MetaCyc returned an account-creation page; Reaxys remained uninspected under the
+  public-only boundary. CAS was corroborated through public authority associations
+  rather than licensed registry access.
+- The bounded literature query captured the first 100 of 215 results; relevant titles
+  and selected complete abstracts were inspected, not the entire literature. The absence
+  of a native bacterial mechanism is not evidence that no such mechanism exists.
+- The exact native graph is valid and its properties agree. KNApSAcK’s displayed key
+  is not reproduced by its own structural strings; KEGG is a defined C3a member. The
+  findings do not establish a wrong native sugar or an opposite natural enantiomer.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All original input hashes are preserved, and public retrieval manifests record actual
+  URLs, UTC timestamps, response status and content hashes. Dynamic chemical identity
+  and exact-reference semantics are separate review questions.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

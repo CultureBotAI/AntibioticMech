@@ -1,0 +1,966 @@
+# Kaempferol: coherent aglycone identity; one concatenated synonym needs repair
+
+- Review: 20261021T191258Z-kaempferol-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T18:41:51Z
+- Finished UTC: 2026-10-21T19:12:58Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The neutral kaempferol graph and accessible chemical groundings agree, and exact primary literature supports a bounded antibacterial role alongside weak or absent activity in other conditions. All five adopted citation leads were dispositioned; the 2004 five-compound paper explicitly excludes kaempferol from its new bioassays, so its abstract potency range is not transferred. One minor correction is needed for a malformed concatenation of two chemical names. Legacy-link and clinical-interpretation boundaries remain explicit.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Assigned queue position 570; one exact native record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:28499 | data/antibiotics/antibacterial/kaempferol.yaml | generated | kaempferol |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:28499 | Actual focused execution exited 0. Executed against 057; chemistry used existing 019 RDKit, schema/strict used 057. |
+| Focused schema verification | passed | True | CHEBI:28499 | Actual focused execution exited 0. Executed against 057; chemistry used existing 019 RDKit, schema/strict used 057. |
+| Focused strict verification | passed | True | CHEBI:28499 | Actual focused execution exited 0. Executed against 057; chemistry used existing 019 RDKit, schema/strict used 057. |
+| Authoritative full QC | failed | True | CHEBI:28499 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:28499 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:28499 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:28499 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:28499 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:28499 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:28499 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:28499 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:28499 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral aglycone and hydroxyl positions
+
+identity: supported. Targets: CHEBI:28499.
+
+Native molecular identity, composition, charge, masses and source-derived mint are coherent. Sixteen independently parsed encodings agree; the compound has no stereocentres. One malformed synonym is a minor lexical defect while other identifiers and the graph continue to denote kaempferol.
+
+### Three structural parents, chemical links and drug/document semantics
+
+grounding: supported. Targets: CHEBI:28499.
+
+All three structural parents fit the actual3,5,7,4′-hydroxyflavone graph. Accessible KEGG/KNApSAcK/LIPID MAPS/CCD and HMDB-deposit identities agree. CAS, direct HMDB, LINCS, MetaCyc, DrugBank and Reaxys have the stated access boundaries. DrugBank is retained as drug-level association and Wikipedia as document context.
+
+### Antibacterial eligibility and distinct primary endpoints
+
+evidence: supported. Targets: CHEBI:28499.
+
+Companion original isolation and a later exact-compound study support bounded antibacterial activity. The adopted five-compound 2004 paper does not provide new kaempferol MICs, and the 2026 negative 250 µg/mL panel is preserved. Higher-concentration single-agent inhibition, combinations and other taxon/strain results are not collapsed into universal potency.
+
+### Antioxidant and investigational cancer wording
+
+evidence: unknown. Targets: CHEBI:28499.
+
+The structural definition is corroborated. The adopted nematode original supports an antioxidant phenotype in that host model. The tentative cancer sentence is interpreted as investigational background, not approval or demonstrated human efficacy; the inspected host screening and healthy-adult safety paper do not establish cancer treatment. A clinically precise or time-specific expansion would need separate primary evidence.
+
+### All adopted lead dispositions and optional mechanism/producer evidence
+
+completeness: unknown. Targets: CHEBI:28499.
+
+All five adopted abstracts were read. 2004 and 2017 were followed to inspected original text at the exact compound boundary; the other three remain abstract-level. Native contains no required direct target/quantitative observation to repair. Optional enrichment must preserve exact aglycone versus conjugates, strain and preparation; no glycoside, host pathway or combination mechanism is imported.
+
+### Actual source owners and all history events
+
+provenance: supported. Targets: CHEBI:28499.
+
+The complete source row and four chronological seed/reseed history events agree with the adopted generation path. Original 13 and expanded 21 hashes remain unchanged; no native/history/status alteration was made.
+
+## Findings
+
+### F1: One exact synonym concatenates two chemical names
+
+minor / open / confirmed; issue key: kaempferol-concatenated-systematic-synonym.
+
+Native synonyms[2] combines the unfinished registry-style 4H-1-benzopyran-4-one substituent name with5,7,4′-trihydroxyflavonol as one string. ChEBI retains this malformed string, while current KEGG lists the complete systematic name and short flavonol name separately. The corresponding valid names already exist elsewhere in native, so remove or normalize this duplicated concatenation through its source owner without changing molecular identity.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Repair the malformed source synonym while retaining the existing valid systematic and flavonol names.
+
+- Correct the upstream/adopted ChEBI synonym mapping or introduce a narrow maintained normalization; do not patch only the generated YAML.
+- The emitted synonym list no longer contains the joined name and retains the two independently valid names without redundant duplicates. Keep exact graph, identifier, roles and SEEDED history semantics.
+- Regenerate through maintained owners and rerun focused/schema/strict plus required shared corpus checks.
+
+### A2
+
+Optional literature enrichment and unresolved-link follow-up must preserve the exact evidence boundary.
+
+- Do not assign the adopted 2004 paper’s 25–50 µg/mL abstract range to kaempferol; it explicitly excluded that compound from its new assays.
+- Preserve 2022 high/censored single-agent MICs separately from colistin combinations, 2026 negative 250 µg/mL data and the qualitative 2004 isolation evidence. Record supplier, purity/solvent limitations, strains and media.
+- Keep antioxidant nematode/host evidence and investigational cancer context separate from bacterial mechanism and human clinical efficacy.
+- Resolve legacy molecular links from exact source content when accessible; neither HTTP200 account pages nor absence in the small HMS archive proves equivalence or invalidity.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/kaempferol.yaml; Entire record: 20 synonyms, three parents, role, all chemical fields, nine molecular links, drug/document links and four history events | supports | The SEEDED exact record denotes neutral achiral C15H10O6, key IYRMWMYZSQPJKC-UHFFFAOYSA-N, with hydroxyls at 3,5,7,4′. No native target, resistance, causal graph, quantitative activity, producer or product assertion is present. Synonym index2 joins an unfinished registry-style name directly to a second flavonol name. |
+| owners | data/raw/chebi_antimicrobials.tsv#CHEBI:28499; Complete adopted row 544, readiness row 1473 and exact source-owner searches | context_only | The ChEBI row supplies the definition, chemistry, synonyms, five PMID leads and eleven links subsequently separated into chemical/drug/document fields. Actual correction owners are adopted ChEBI inventory, extraction and seeding. Original 13 inputs were preserved and expanded to 21; no exact curator or decisions row was found. |
+| search | /private/tmp/am-review-session/570-context-search.txt; Initial plus follow-up searches including hidden and ignored files | context_only | Exact identifier, label, slug and owners were searched with gitignore-independent coverage. Free literature searches resolved the adopted leads and bounded original comparators; the broad public search result set was not exhaustively reviewed. |
+| adapter | /private/tmp/am-review-session/570-adapter-scope.json; Applicability assessed before open research | context_only | Native antioxidant/oxidative-stress wording names no organism, locus, regulator, protein or expression dataset. A structured bacterial expression lookup would not resolve this generic host/chemical definition. No unrelated bacterial dataset was substituted; later literature protein names are not existing native claims. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/28499/; Current CHEBI:28499 complete definition, names and molecular fields | supports | Current ChEBI reproduces native neutral graph, formula, charge, masses and definition. It also retains the malformed concatenated synonym, showing the issue is inherited rather than created by the local generator. Other historical spelling/name variants are preserved absent evidence that they denote a different compound. |
+| parents | https://www.ebi.ac.uk/chebi/backend/api/public/compound/28802/; Exact CHEBI:28802,38684,52267 definitions | supports | Flavonols require a 3-hydroxyflavone; tetrahydroxyflavone requires four hydroxyl substituents;7-hydroxyflavonol requires the 7-hydroxyl. The actual native graph satisfies all three, independently of the biological role. |
+| kegg | https://rest.kegg.jp/get/C05903/mol; C05903 molfile and paired current entry | supports | The exact KEGG molecular graph matches native; the entry names kaempferol and lists the complete benzopyranone systematic name and 5,7,4′-trihydroxyflavonol separately. |
+| knapsack | https://www.knapsackfamily.com/knapsack_core/information.php?word=C00004565; C00004565 exact molecular identity | supports | Current KNApSAcK supplies the same neutral kaempferol SMILES/InChI and full key. Its many plant associations remain database context, not independently verified producer assertions. |
+| lipidmaps | https://www.lipidmaps.org/rest/compound/lm_id/LMPK12110003/all/json; LMPK12110003 complete molecular response | supports | The current lipid record supplies the same graph, formula and full key. Flavonoid glycosides and derivatives are distinct chemical records. |
+| ccd | https://files.rcsb.org/ligands/download/KMP.cif; KMP chemical component descriptors | supports | All inspected KMP SMILES/InChI descriptors denote the native neutral molecule. A CCD ligand record is exact chemical identity evidence, not proof of any particular bacterial protein mechanism. |
+| hmdb-deposit | https://pubchem.ncbi.nlm.nih.gov/rest/pug/substance/sid/348276753/JSON; Official HMDB deposit mirrored in PubChem SID348276753; source metadata and paired SDF | supports | The substance provenance explicitly names HMDB0005801 as the external identifier and kaempferol as the supplied molecule. Its deposited SDF reproduces the native graph. Direct HMDB page/XML/mol routes returned 403, so this is a depositor-backed fallback rather than a claim to have read the current direct page. |
+| mapping | /private/tmp/am-review-session/570-map.py; 019 RDKit2026.03.5 executed against 057; sixteen encodings | supports | Native SMILES/InChI, ChEBI SMILES/InChI, KEGG molfile, KNApSAcK SMILES/InChI, LIPID MAPS SMILES/InChI, HMDB-deposited SDF and six CCD descriptors all reproduce the native full key, C15H10O6, zero charge, no tetrahedral centres and reciprocal chirality-aware graph matches. CCD coordinates were not separately reinterpreted. |
+| synonym | https://rest.kegg.jp/get/C05903; Current KEGG NAME entries versus native synonyms[2] | refutes | The current KEGG entry separates the complete 3,5,7-trihydroxy-2-(4-hydroxyphenyl)-4H-1-benzopyran-4-one from5,7,4′-trihydroxyflavonol. Native instead contains a malformed registry-style fragment immediately concatenated with the latter name, while the complete systematic synonym and the short flavonol synonym already appear independently. This is a lexical integrity problem, not a different native molecular graph. |
+| document | https://en.wikipedia.org/wiki/Kaempferol; Asserted Wikipedia document title and molecular identification | context_only | The document resolves to kaempferol and describes the same flavonol/CAS identity. It is a bibliographic document link and secondary context, not primary experimental evidence. |
+| legacy | /private/tmp/am-review-session/570-fetch1.json; All asserted accessions attempted; exact-content versus response-code distinction | context_only | CAS API returned401; direct HMDB and DrugBank returned 403; LINCS 5304 returned500. MetaCyc page and getxml routes returned200 account/search HTML without the exact compound, so CPD1F-90 is unresolved rather than verified. Reaxys was not independently accessible. DrugBank is a drug-level association, not an exact-parent/salt equivalence claim. These access limits do not by themselves prove bad accessions. |
+| lincs-archive | /private/tmp/am-review-session/570-lincs-archive-check.json; Exact term/key search in preserved official HMS 639-record SDF | context_only | No kaempferol/5304/native-key hit was found in this bounded archived subset. The search includes all bytes of that local archive, but the archive is not the full historical LINCS collection; absence does not invalidate LSM-5304. |
+| pmid-12592675 | PMID:12592675; DOI:10.1080/246-1071576021000016472; Complete adopted original abstract only | context_only | The original abstract reports human plasma/urine after blackcurrant juice and detects kaempferol glucuronides in a minority of subjects. This is dietary exposure/metabolism context, not a free-aglycone antibacterial or cancer-treatment experiment. |
+| pmid-17426744 | PMID:17426744; DOI:10.1038/sj.ejcn.1602744; Complete adopted original abstract only | context_only | The original abstract describes HPLC-ESI-MS-MS urinary dietary-polyphenol biomarkers in 154 participants. It supports exposure/metabolic context, not a direct bacterial mechanism or therapeutic efficacy. |
+| pmid-17551714 | PMID:17551714; DOI:10.1007/s00204-007-0215-4; Complete adopted original abstract only | context_only | The original C. elegans abstract reports reduced ROS/induced oxidative stress and altered thermotolerance with kaempferol; DAF-16 translocation is a host-signaling result. This supports bounded antioxidant context for the native wording but is not a bacterial target or human cancer treatment. Full publisher retrieval returned a client challenge. |
+| adopted2004 | PMID:15234754; DOI:10.1016/j.jep.2004.02.030; Original abstract plus publisher introduction excerpt inspected via web | context_only | Although the abstract lists kaempferol among seven previously isolated flavonoids and summarizes25–50 µg/mL activity, the introduction explicitly says kaempferol and apigenin were not included in the five-compound bioassays. No numerical activity from this paper is assigned to kaempferol. Full tables/figures were not accessible; local403 files are not treated as source text. |
+| adopted2017 | PMID:28166217; DOI:10.1038/ni.3679; Original author-deposited PDF selected main pp 4–5/9 and SupplementaryTables 1/3 pp 36/39, via web text | context_only | Kaempferol is explicitly included as the tetrahydroxyflavone with CAS520-18-3 in the host MR1/MAIT screening. This is not an antibacterial assay. The inspected main crystal-complex work concerns other named ligands; no kaempferol co-crystal, direct MR1 binding conclusion or cancer efficacy is inferred. Its table use-description is background annotation. Extracted concentration-unit ambiguity prevents numerical import. |
+| isolation2004 | DOI:10.1016/S0254-6299(15)30251-9; Complete author-deposited three-page original text pp 310–312; compound 7 paragraph and Figure 1 table text | supports | The companion paper reports bioassay-guided fractionation of C. erythrophyllum leaves from Pretoria National Botanic Gardens, voucher CL Bredenkamp1542. Acetone extraction/chloroform fraction, chromatography and recrystallisation yielded seven antibacterial flavonoids. Compound7 is kaempferol, with M+ 286, C15H10O6 and NMR lacking the methoxy group of its comparator. The report supports exact isolate/qualitative activity, but no strain-specific MIC is reconstructed from its bioautography description. |
+| web-provenance | /private/tmp/am-review-session/570-web-reading-notes.json; Explicit reviewer paraphrase notes for successful web text and failed downloads | context_only | These notes preserve exact source URLs, reading locators and boundaries for 2004/2017 originals accessible through web text. Their hash is a reviewer-note artifact, not the hash of downloaded original PDF bytes. Local PDF download403 and screenshot failures are retained; no unviewed figure pixels are claimed inspected. |
+| primary2022 | PMID:36314964; DOI:10.1128/spectrum.02265-22; Complete original scientific main, exact Table 1 and Methods | supports | Source Leaf Biotechnology kaempferol was tested in CAMHB with final 7.5e5 CFU/mL, 37 °C for 16–18 h and three repetitions. Single-agent MIC is 512 µg/mL for P. aeruginosa TL1671/TL2314/TL2902/TL3008/TL3086 and A. baumannii BM2370/BM2412/BM2431/BM2622; the remaining 15 of 24 clinical isolates exceed 512. This is weak and strain-dependent direct activity, not broad potent coverage. Catalog, purity and solvent/solubility details are not specified in the inspected main. |
+| primary2022-combination | PMID:36314964; Table 1 combination columns and Results/Discussion | context_only | Colistin combinations improve activity in most tested isolates, but combination concentrations, biofilm formation, established-biofilm results and larval survival are separate endpoints. The paper reports no clear mature-biofilm eradication in its assay. Source FICI formula/type and the classification of a 0.5 value are internally inconsistent, and censored monotherapy values complicate exact FICI arithmetic. No direct target or clinical efficacy is inferred, and figures were not independently examined pixel by pixel. |
+| primary2026-negative | PMID:41543238; DOI:10.1128/spectrum.02374-25; Already independently read full main and exact Tables1/4 kaempferol rows | context_only | The purchased Adooq A10495 &gt;98% kaempferol material has no inhibition at the 250 µg/mL tested ceiling in six E. coli/K. pneumoniae/S. aureus backgrounds. This is a genuine bounded negative panel; it does not refute higher-concentration activity or different strains. Orientin/isoorientin efflux and synergy data are not kaempferol evidence. |
+| clinical-boundary | PMID:37701215; DOI:10.1002/fsn3.3499; Original abstract, introduction and study purpose inspected | context_only | This randomized four-week study evaluates a kaempferol-aglycone-containing supplement in healthy adults, with 24 participants per group and 50 mg/day kaempferol. It is a safety study, not a cancer-treatment trial or antibacterial clinical-efficacy demonstration. Its background distinguishes preclinical antitumor observations from clinical evidence; no broad safety conclusion is adopted beyond this study scope. |
+
+## Limits And Additional Notes
+
+- All five adopted abstracts were read; the 2004 original introduction and 2017 selected main/SI table text were additionally inspected through web. Their complete experimental figure/table sets were not independently viewed, and local PDF downloads returned 403. The other three adopted originals remain abstract-level; the 2007 publisher route returned a client challenge.
+- The2004 Botany companion complete text was read, but actual figure pixels were not obtained. No exact antibacterial strain or MIC is reconstructed from its qualitative bioautographic isolation report.
+- The2022 entire scientific main/Table 1 was read, but actual figure pixels, raw data and supplement were not independently analyzed. Exact supplier catalog, purity, solvent/solubility and censored-MIC FICI arithmetic remain limitations.
+- The2026 full main/exact kaempferol rows were independently inspected; its negative ceiling is not universal inactivity. The2023 clinical paper was read only for abstract, introduction and study-purpose boundary and is not cancer or infection efficacy evidence.
+- Direct HMDB/DrugBank 403, CAS 401, LINCS 500, MetaCyc account/search responses and proprietary Reaxys limits remain explicit. The HMDB depositor record provides a valid chemical fallback; the bounded 639-record HMS archive does not resolve LSM 5304.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All original 13 and expanded 21 input hashes were rechecked unchanged before draft writing. No native/source/history/progress/saved-bundle/Git writes occurred.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T191258Z-kaempferol-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Kaempferol: coherent aglycone identity; one concatenated synonym needs repair'
+started_at: '2026-10-21T18:41:51Z'
+finished_at: '2026-10-21T19:12:58Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The neutral kaempferol graph and accessible chemical groundings agree, and
+  exact primary literature supports a bounded antibacterial role alongside weak or
+  absent activity in other conditions. All five adopted citation leads were dispositioned;
+  the 2004 five-compound paper explicitly excludes kaempferol from its new bioassays,
+  so its abstract potency range is not transferred. One minor correction is needed
+  for a malformed concatenation of two chemical names. Legacy-link and clinical-interpretation
+  boundaries remain explicit.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/kaempferol.yaml
+    sha256: 171e881326f4f5955dc80bb8bf3fdf1caa6951644b5f6db3e76f5552f0cad77e
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+targets:
+- target_id: CHEBI:28499
+  path: data/antibiotics/antibacterial/kaempferol.yaml
+  label: kaempferol
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 570; one exact native record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:28499
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Executed against 057; chemistry used
+    existing 019 RDKit, schema/strict used 057.
+  target_ids:
+  - CHEBI:28499
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    570
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against 057; chemistry used
+    existing 019 RDKit, schema/strict used 057.
+  target_ids:
+  - CHEBI:28499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/kaempferol.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against 057; chemistry used
+    existing 019 RDKit, schema/strict used 057.
+  target_ids:
+  - CHEBI:28499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/kaempferol.yaml --out /private/tmp/am-review-session/570-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:28499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:28499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:28499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:28499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:28499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:28499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:28499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:28499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:28499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/kaempferol.yaml
+  locator: 'Entire record: 20 synonyms, three parents, role, all chemical fields,
+    nine molecular links, drug/document links and four history events'
+  accessed_at: '2026-10-21T18:56:57Z'
+  support: supports
+  summary: The SEEDED exact record denotes neutral achiral C15H10O6, key IYRMWMYZSQPJKC-UHFFFAOYSA-N,
+    with hydroxyls at 3,5,7,4′. No native target, resistance, causal graph, quantitative
+    activity, producer or product assertion is present. Synonym index2 joins an unfinished
+    registry-style name directly to a second flavonol name.
+  snapshot_sha256: 171e881326f4f5955dc80bb8bf3fdf1caa6951644b5f6db3e76f5552f0cad77e
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv#CHEBI:28499
+  locator: Complete adopted row 544, readiness row 1473 and exact source-owner searches
+  accessed_at: '2026-10-21T18:56:57Z'
+  support: context_only
+  summary: The ChEBI row supplies the definition, chemistry, synonyms, five PMID leads
+    and eleven links subsequently separated into chemical/drug/document fields. Actual
+    correction owners are adopted ChEBI inventory, extraction and seeding. Original
+    13 inputs were preserved and expanded to 21; no exact curator or decisions row
+    was found.
+  snapshot_sha256: 342097b53924eceb1e60f550fc9806f86220293c6b37ef7e2941bb93ab850546
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/570-context-search.txt
+  locator: Initial plus follow-up searches including hidden and ignored files
+  accessed_at: '2026-10-21T18:56:57Z'
+  support: context_only
+  summary: Exact identifier, label, slug and owners were searched with gitignore-independent
+    coverage. Free literature searches resolved the adopted leads and bounded original
+    comparators; the broad public search result set was not exhaustively reviewed.
+  snapshot_sha256: 12d50ea580349bbb792f5521cc618ee24deb653a495fe54cd9f5e6f67cf47aa4
+  search_scope: 057 initial570-local-hits and rg --no-ignore --hidden owner follow-up;
+    public exact-compound/adopted DOI searches preserved in fetch manifests and web
+    reading notes.
+- evidence_id: adapter
+  kind: search
+  reference: /private/tmp/am-review-session/570-adapter-scope.json
+  locator: Applicability assessed before open research
+  accessed_at: '2026-10-21T18:56:57Z'
+  support: context_only
+  summary: Native antioxidant/oxidative-stress wording names no organism, locus, regulator,
+    protein or expression dataset. A structured bacterial expression lookup would
+    not resolve this generic host/chemical definition. No unrelated bacterial dataset
+    was substituted; later literature protein names are not existing native claims.
+  snapshot_sha256: 762a4454adaff6c151486385385cd4fa198e6cf8028c2e4ba31f821417d3ba72
+  search_scope: Complete native/source before public research; no named taxon/protein
+    or matching expression dataset asserted.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/28499/
+  locator: Current CHEBI:28499 complete definition, names and molecular fields
+  accessed_at: '2026-10-21T18:52:22.963658Z'
+  support: supports
+  summary: Current ChEBI reproduces native neutral graph, formula, charge, masses
+    and definition. It also retains the malformed concatenated synonym, showing the
+    issue is inherited rather than created by the local generator. Other historical
+    spelling/name variants are preserved absent evidence that they denote a different
+    compound.
+  snapshot_sha256: 4c6d4675c129941778b04ee7a98ce3738b2517ea69d3993b6e42c862f6dc5414
+- evidence_id: parents
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/28802/
+  locator: Exact CHEBI:28802,38684,52267 definitions
+  accessed_at: '2026-10-21T18:52:24.062733Z'
+  support: supports
+  summary: Flavonols require a 3-hydroxyflavone; tetrahydroxyflavone requires four
+    hydroxyl substituents;7-hydroxyflavonol requires the 7-hydroxyl. The actual native
+    graph satisfies all three, independently of the biological role.
+  snapshot_sha256: fa5c399d47f0ab8093251dddcc38f369bbfbf5d8041d9750f007782dff8498e2
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/C05903/mol
+  locator: C05903 molfile and paired current entry
+  accessed_at: '2026-10-21T18:52:22.963843Z'
+  support: supports
+  summary: The exact KEGG molecular graph matches native; the entry names kaempferol
+    and lists the complete benzopyranone systematic name and 5,7,4′-trihydroxyflavonol
+    separately.
+  snapshot_sha256: 2b65496d69e3e279e8c548e76d21f37dfc880369c281b58242786b2fa55229fa
+- evidence_id: knapsack
+  kind: authority
+  reference: https://www.knapsackfamily.com/knapsack_core/information.php?word=C00004565
+  locator: C00004565 exact molecular identity
+  accessed_at: '2026-10-21T18:52:22.963924Z'
+  support: supports
+  summary: Current KNApSAcK supplies the same neutral kaempferol SMILES/InChI and
+    full key. Its many plant associations remain database context, not independently
+    verified producer assertions.
+  snapshot_sha256: 363adf2402af63fe234572ef603b2a3b2c27af8449aa7c97d8507118fe2fffcc
+- evidence_id: lipidmaps
+  kind: authority
+  reference: https://www.lipidmaps.org/rest/compound/lm_id/LMPK12110003/all/json
+  locator: LMPK12110003 complete molecular response
+  accessed_at: '2026-10-21T18:52:23.502279Z'
+  support: supports
+  summary: The current lipid record supplies the same graph, formula and full key.
+    Flavonoid glycosides and derivatives are distinct chemical records.
+  snapshot_sha256: 222590b9397713d762d5727cea5a8ec16e9e49da2de3ffa6a5246a6312e5e971
+- evidence_id: ccd
+  kind: authority
+  reference: https://files.rcsb.org/ligands/download/KMP.cif
+  locator: KMP chemical component descriptors
+  accessed_at: '2026-10-21T18:52:23.583287Z'
+  support: supports
+  summary: All inspected KMP SMILES/InChI descriptors denote the native neutral molecule.
+    A CCD ligand record is exact chemical identity evidence, not proof of any particular
+    bacterial protein mechanism.
+  snapshot_sha256: 8dec4df4ae3a0bc3e62db515d50913f695e6b87af75e6ad96136fbac4f79b720
+- evidence_id: hmdb-deposit
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/substance/sid/348276753/JSON
+  locator: Official HMDB deposit mirrored in PubChem SID348276753; source metadata
+    and paired SDF
+  accessed_at: '2026-10-21T18:53:10.998275Z'
+  support: supports
+  summary: The substance provenance explicitly names HMDB0005801 as the external identifier
+    and kaempferol as the supplied molecule. Its deposited SDF reproduces the native
+    graph. Direct HMDB page/XML/mol routes returned 403, so this is a depositor-backed
+    fallback rather than a claim to have read the current direct page.
+  snapshot_sha256: e83de9ea844a62d5f11c1190919a0eae2057568193533945d7e568aab40bc3ce
+- evidence_id: mapping
+  kind: validation
+  reference: /private/tmp/am-review-session/570-map.py
+  locator: 019 RDKit2026.03.5 executed against 057; sixteen encodings
+  accessed_at: '2026-10-21T18:56:57Z'
+  support: supports
+  summary: Native SMILES/InChI, ChEBI SMILES/InChI, KEGG molfile, KNApSAcK SMILES/InChI,
+    LIPID MAPS SMILES/InChI, HMDB-deposited SDF and six CCD descriptors all reproduce
+    the native full key, C15H10O6, zero charge, no tetrahedral centres and reciprocal
+    chirality-aware graph matches. CCD coordinates were not separately reinterpreted.
+  snapshot_sha256: 751b5102a6834ffae937da2e046a4bd730ebcb7dc6d02725b7bd342295a28303
+- evidence_id: synonym
+  kind: authority
+  reference: https://rest.kegg.jp/get/C05903
+  locator: Current KEGG NAME entries versus native synonyms[2]
+  accessed_at: '2026-10-21T18:52:22.963742Z'
+  support: refutes
+  summary: The current KEGG entry separates the complete 3,5,7-trihydroxy-2-(4-hydroxyphenyl)-4H-1-benzopyran-4-one
+    from5,7,4′-trihydroxyflavonol. Native instead contains a malformed registry-style
+    fragment immediately concatenated with the latter name, while the complete systematic
+    synonym and the short flavonol synonym already appear independently. This is a
+    lexical integrity problem, not a different native molecular graph.
+  snapshot_sha256: 3c3825bd419370e7908cc665677a3624d7136862e0083b02a51322fee264a3fd
+- evidence_id: document
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Kaempferol
+  locator: Asserted Wikipedia document title and molecular identification
+  accessed_at: '2026-10-21T18:52:23.950691Z'
+  support: context_only
+  summary: The document resolves to kaempferol and describes the same flavonol/CAS
+    identity. It is a bibliographic document link and secondary context, not primary
+    experimental evidence.
+  snapshot_sha256: ed6ee274ac516c13a646a5d02a6879de04ad77c49957d99d4f20c9cf5d2f54bc
+- evidence_id: legacy
+  kind: validation
+  reference: /private/tmp/am-review-session/570-fetch1.json
+  locator: All asserted accessions attempted; exact-content versus response-code distinction
+  accessed_at: '2026-10-21T18:56:57Z'
+  support: context_only
+  summary: CAS API returned401; direct HMDB and DrugBank returned 403; LINCS 5304
+    returned500. MetaCyc page and getxml routes returned200 account/search HTML without
+    the exact compound, so CPD1F-90 is unresolved rather than verified. Reaxys was
+    not independently accessible. DrugBank is a drug-level association, not an exact-parent/salt
+    equivalence claim. These access limits do not by themselves prove bad accessions.
+  snapshot_sha256: 6f3c1289f90176f35f77a337dc7da1197cdab65f522a0c1076c779ea4d55ed8b
+- evidence_id: lincs-archive
+  kind: validation
+  reference: /private/tmp/am-review-session/570-lincs-archive-check.json
+  locator: Exact term/key search in preserved official HMS 639-record SDF
+  accessed_at: '2026-10-21T18:56:57Z'
+  support: context_only
+  summary: No kaempferol/5304/native-key hit was found in this bounded archived subset.
+    The search includes all bytes of that local archive, but the archive is not the
+    full historical LINCS collection; absence does not invalidate LSM-5304.
+  snapshot_sha256: c0edd720fe9b0fc327bb2c2293cae3a76bd32f8aa441fd6655186a0393de0ed8
+- evidence_id: pmid-12592675
+  kind: primary_source
+  reference: PMID:12592675; DOI:10.1080/246-1071576021000016472
+  locator: Complete adopted original abstract only
+  accessed_at: '2026-10-21T18:52:22.963157Z'
+  support: context_only
+  summary: The original abstract reports human plasma/urine after blackcurrant juice
+    and detects kaempferol glucuronides in a minority of subjects. This is dietary
+    exposure/metabolism context, not a free-aglycone antibacterial or cancer-treatment
+    experiment.
+  snapshot_sha256: 3f32b1a3c8ffa6b568802b054fafcaf9be1b838bcf940e02d2b97dea16dd06cd
+- evidence_id: pmid-17426744
+  kind: primary_source
+  reference: PMID:17426744; DOI:10.1038/sj.ejcn.1602744
+  locator: Complete adopted original abstract only
+  accessed_at: '2026-10-21T18:52:22.963157Z'
+  support: context_only
+  summary: The original abstract describes HPLC-ESI-MS-MS urinary dietary-polyphenol
+    biomarkers in 154 participants. It supports exposure/metabolic context, not a
+    direct bacterial mechanism or therapeutic efficacy.
+  snapshot_sha256: 3f32b1a3c8ffa6b568802b054fafcaf9be1b838bcf940e02d2b97dea16dd06cd
+- evidence_id: pmid-17551714
+  kind: primary_source
+  reference: PMID:17551714; DOI:10.1007/s00204-007-0215-4
+  locator: Complete adopted original abstract only
+  accessed_at: '2026-10-21T18:52:22.963157Z'
+  support: context_only
+  summary: The original C. elegans abstract reports reduced ROS/induced oxidative
+    stress and altered thermotolerance with kaempferol; DAF-16 translocation is a
+    host-signaling result. This supports bounded antioxidant context for the native
+    wording but is not a bacterial target or human cancer treatment. Full publisher
+    retrieval returned a client challenge.
+  snapshot_sha256: 3f32b1a3c8ffa6b568802b054fafcaf9be1b838bcf940e02d2b97dea16dd06cd
+- evidence_id: adopted2004
+  kind: primary_source
+  reference: PMID:15234754; DOI:10.1016/j.jep.2004.02.030
+  locator: Original abstract plus publisher introduction excerpt inspected via web
+  accessed_at: '2026-10-21T18:55:11Z'
+  support: context_only
+  summary: Although the abstract lists kaempferol among seven previously isolated
+    flavonoids and summarizes25–50 µg/mL activity, the introduction explicitly says
+    kaempferol and apigenin were not included in the five-compound bioassays. No numerical
+    activity from this paper is assigned to kaempferol. Full tables/figures were not
+    accessible; local403 files are not treated as source text.
+- evidence_id: adopted2017
+  kind: primary_source
+  reference: PMID:28166217; DOI:10.1038/ni.3679
+  locator: Original author-deposited PDF selected main pp 4–5/9 and SupplementaryTables
+    1/3 pp 36/39, via web text
+  accessed_at: '2026-10-21T18:55:11Z'
+  support: context_only
+  summary: Kaempferol is explicitly included as the tetrahydroxyflavone with CAS520-18-3
+    in the host MR1/MAIT screening. This is not an antibacterial assay. The inspected
+    main crystal-complex work concerns other named ligands; no kaempferol co-crystal,
+    direct MR1 binding conclusion or cancer efficacy is inferred. Its table use-description
+    is background annotation. Extracted concentration-unit ambiguity prevents numerical
+    import.
+- evidence_id: isolation2004
+  kind: primary_source
+  reference: DOI:10.1016/S0254-6299(15)30251-9
+  locator: Complete author-deposited three-page original text pp 310–312; compound
+    7 paragraph and Figure 1 table text
+  accessed_at: '2026-10-21T18:55:11Z'
+  support: supports
+  summary: The companion paper reports bioassay-guided fractionation of C. erythrophyllum
+    leaves from Pretoria National Botanic Gardens, voucher CL Bredenkamp1542. Acetone
+    extraction/chloroform fraction, chromatography and recrystallisation yielded seven
+    antibacterial flavonoids. Compound7 is kaempferol, with M+ 286, C15H10O6 and NMR
+    lacking the methoxy group of its comparator. The report supports exact isolate/qualitative
+    activity, but no strain-specific MIC is reconstructed from its bioautography description.
+- evidence_id: web-provenance
+  kind: validation
+  reference: /private/tmp/am-review-session/570-web-reading-notes.json
+  locator: Explicit reviewer paraphrase notes for successful web text and failed downloads
+  accessed_at: '2026-10-21T18:56:57Z'
+  support: context_only
+  summary: These notes preserve exact source URLs, reading locators and boundaries
+    for 2004/2017 originals accessible through web text. Their hash is a reviewer-note
+    artifact, not the hash of downloaded original PDF bytes. Local PDF download403
+    and screenshot failures are retained; no unviewed figure pixels are claimed inspected.
+  snapshot_sha256: 5684a51b6794fe7f803bb46c045050a662c698a992fbef432299c55333045e18
+- evidence_id: primary2022
+  kind: primary_source
+  reference: PMID:36314964; DOI:10.1128/spectrum.02265-22
+  locator: Complete original scientific main, exact Table 1 and Methods
+  accessed_at: '2026-10-21T18:53:10.914854Z'
+  support: supports
+  summary: Source Leaf Biotechnology kaempferol was tested in CAMHB with final 7.5e5
+    CFU/mL, 37 °C for 16–18 h and three repetitions. Single-agent MIC is 512 µg/mL
+    for P. aeruginosa TL1671/TL2314/TL2902/TL3008/TL3086 and A. baumannii BM2370/BM2412/BM2431/BM2622;
+    the remaining 15 of 24 clinical isolates exceed 512. This is weak and strain-dependent
+    direct activity, not broad potent coverage. Catalog, purity and solvent/solubility
+    details are not specified in the inspected main.
+  snapshot_sha256: 83c37533d69cb8d34c2395570e12c9c5ce69a1b980e38f3e572b590d05802c01
+- evidence_id: primary2022-combination
+  kind: primary_source
+  reference: PMID:36314964
+  locator: Table 1 combination columns and Results/Discussion
+  accessed_at: '2026-10-21T18:53:10.914854Z'
+  support: context_only
+  summary: Colistin combinations improve activity in most tested isolates, but combination
+    concentrations, biofilm formation, established-biofilm results and larval survival
+    are separate endpoints. The paper reports no clear mature-biofilm eradication
+    in its assay. Source FICI formula/type and the classification of a 0.5 value are
+    internally inconsistent, and censored monotherapy values complicate exact FICI
+    arithmetic. No direct target or clinical efficacy is inferred, and figures were
+    not independently examined pixel by pixel.
+  snapshot_sha256: 83c37533d69cb8d34c2395570e12c9c5ce69a1b980e38f3e572b590d05802c01
+- evidence_id: primary2026-negative
+  kind: primary_source
+  reference: PMID:41543238; DOI:10.1128/spectrum.02374-25
+  locator: Already independently read full main and exact Tables1/4 kaempferol rows
+  accessed_at: '2026-10-21T16:14:02Z'
+  support: context_only
+  summary: The purchased Adooq A10495 >98% kaempferol material has no inhibition at
+    the 250 µg/mL tested ceiling in six E. coli/K. pneumoniae/S. aureus backgrounds.
+    This is a genuine bounded negative panel; it does not refute higher-concentration
+    activity or different strains. Orientin/isoorientin efflux and synergy data are
+    not kaempferol evidence.
+  snapshot_sha256: e3f3cc81fbcbb83c68396688f660b3a652176996c9ebeaf5463d2691a3163d6c
+- evidence_id: clinical-boundary
+  kind: primary_source
+  reference: PMID:37701215; DOI:10.1002/fsn3.3499
+  locator: Original abstract, introduction and study purpose inspected
+  accessed_at: '2026-10-21T18:53:10.997153Z'
+  support: context_only
+  summary: This randomized four-week study evaluates a kaempferol-aglycone-containing
+    supplement in healthy adults, with 24 participants per group and 50 mg/day kaempferol.
+    It is a safety study, not a cancer-treatment trial or antibacterial clinical-efficacy
+    demonstration. Its background distinguishes preclinical antitumor observations
+    from clinical evidence; no broad safety conclusion is adopted beyond this study
+    scope.
+  snapshot_sha256: dd9a728a57de8692897bcf06fa1301d9be85ffe6d8db86bab125f927846b5f82
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral aglycone and hydroxyl positions
+  outcome: supported
+  summary: Native molecular identity, composition, charge, masses and source-derived
+    mint are coherent. Sixteen independently parsed encodings agree; the compound
+    has no stereocentres. One malformed synonym is a minor lexical defect while other
+    identifiers and the graph continue to denote kaempferol.
+  target_ids:
+  - CHEBI:28499
+  evidence_ids:
+  - native
+  - chebi
+  - mapping
+  - synonym
+- assessment_id: grounding
+  area: grounding
+  topic: Three structural parents, chemical links and drug/document semantics
+  outcome: supported
+  summary: All three structural parents fit the actual3,5,7,4′-hydroxyflavone graph.
+    Accessible KEGG/KNApSAcK/LIPID MAPS/CCD and HMDB-deposit identities agree. CAS,
+    direct HMDB, LINCS, MetaCyc, DrugBank and Reaxys have the stated access boundaries.
+    DrugBank is retained as drug-level association and Wikipedia as document context.
+  target_ids:
+  - CHEBI:28499
+  evidence_ids:
+  - parents
+  - kegg
+  - knapsack
+  - lipidmaps
+  - ccd
+  - hmdb-deposit
+  - legacy
+  - lincs-archive
+  - document
+- assessment_id: antibacterial
+  area: evidence
+  topic: Antibacterial eligibility and distinct primary endpoints
+  outcome: supported
+  summary: Companion original isolation and a later exact-compound study support bounded
+    antibacterial activity. The adopted five-compound 2004 paper does not provide
+    new kaempferol MICs, and the 2026 negative 250 µg/mL panel is preserved. Higher-concentration
+    single-agent inhibition, combinations and other taxon/strain results are not collapsed
+    into universal potency.
+  target_ids:
+  - CHEBI:28499
+  evidence_ids:
+  - adopted2004
+  - isolation2004
+  - primary2022
+  - primary2022-combination
+  - primary2026-negative
+- assessment_id: definition
+  area: evidence
+  topic: Antioxidant and investigational cancer wording
+  outcome: unknown
+  summary: The structural definition is corroborated. The adopted nematode original
+    supports an antioxidant phenotype in that host model. The tentative cancer sentence
+    is interpreted as investigational background, not approval or demonstrated human
+    efficacy; the inspected host screening and healthy-adult safety paper do not establish
+    cancer treatment. A clinically precise or time-specific expansion would need separate
+    primary evidence.
+  target_ids:
+  - CHEBI:28499
+  evidence_ids:
+  - chebi
+  - pmid-17551714
+  - adopted2017
+  - clinical-boundary
+- assessment_id: completeness
+  area: completeness
+  topic: All adopted lead dispositions and optional mechanism/producer evidence
+  outcome: unknown
+  summary: All five adopted abstracts were read. 2004 and 2017 were followed to inspected
+    original text at the exact compound boundary; the other three remain abstract-level.
+    Native contains no required direct target/quantitative observation to repair.
+    Optional enrichment must preserve exact aglycone versus conjugates, strain and
+    preparation; no glycoside, host pathway or combination mechanism is imported.
+  target_ids:
+  - CHEBI:28499
+  evidence_ids:
+  - pmid-12592675
+  - pmid-17426744
+  - pmid-17551714
+  - adopted2004
+  - adopted2017
+  - primary2022
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Actual source owners and all history events
+  outcome: supported
+  summary: The complete source row and four chronological seed/reseed history events
+    agree with the adopted generation path. Original 13 and expanded 21 hashes remain
+    unchanged; no native/history/status alteration was made.
+  target_ids:
+  - CHEBI:28499
+  evidence_ids:
+  - native
+  - owners
+  - search
+findings:
+- finding_id: F1
+  issue_key: kaempferol-concatenated-systematic-synonym
+  category: identity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: One exact synonym concatenates two chemical names
+  description: Native synonyms[2] combines the unfinished registry-style 4H-1-benzopyran-4-one
+    substituent name with5,7,4′-trihydroxyflavonol as one string. ChEBI retains this
+    malformed string, while current KEGG lists the complete systematic name and short
+    flavonol name separately. The corresponding valid names already exist elsewhere
+    in native, so remove or normalize this duplicated concatenation through its source
+    owner without changing molecular identity.
+  target_ids:
+  - CHEBI:28499
+  field_paths:
+  - synonyms[2].synonym_text
+  evidence_ids:
+  - native
+  - owners
+  - chebi
+  - synonym
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: 'review-yaml-record: identity and exact synonym integrity'
+  normalization_reason: Minor malformed/duplicated name; coherent graph and other
+    exact names preserve the correct compound identity.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:28499
+  description: Repair the malformed source synonym while retaining the existing valid
+    systematic and flavonol names.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  acceptance_checks:
+  - Correct the upstream/adopted ChEBI synonym mapping or introduce a narrow maintained
+    normalization; do not patch only the generated YAML.
+  - The emitted synonym list no longer contains the joined name and retains the two
+    independently valid names without redundant duplicates. Keep exact graph, identifier,
+    roles and SEEDED history semantics.
+  - Regenerate through maintained owners and rerun focused/schema/strict plus required
+    shared corpus checks.
+- action_id: A2
+  finding_ids: []
+  target_ids:
+  - CHEBI:28499
+  description: Optional literature enrichment and unresolved-link follow-up must preserve
+    the exact evidence boundary.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/kaempferol.yaml
+    role: Future primary evidence and activity annotations through validated curation
+  acceptance_checks:
+  - Do not assign the adopted 2004 paper’s 25–50 µg/mL abstract range to kaempferol;
+    it explicitly excluded that compound from its new assays.
+  - Preserve 2022 high/censored single-agent MICs separately from colistin combinations,
+    2026 negative 250 µg/mL data and the qualitative 2004 isolation evidence. Record
+    supplier, purity/solvent limitations, strains and media.
+  - Keep antioxidant nematode/host evidence and investigational cancer context separate
+    from bacterial mechanism and human clinical efficacy.
+  - Resolve legacy molecular links from exact source content when accessible; neither
+    HTTP200 account pages nor absence in the small HMS archive proves equivalence
+    or invalidity.
+limitations:
+- All five adopted abstracts were read; the 2004 original introduction and 2017 selected
+  main/SI table text were additionally inspected through web. Their complete experimental
+  figure/table sets were not independently viewed, and local PDF downloads returned
+  403. The other three adopted originals remain abstract-level; the 2007 publisher
+  route returned a client challenge.
+- The2004 Botany companion complete text was read, but actual figure pixels were not
+  obtained. No exact antibacterial strain or MIC is reconstructed from its qualitative
+  bioautographic isolation report.
+- The2022 entire scientific main/Table 1 was read, but actual figure pixels, raw data
+  and supplement were not independently analyzed. Exact supplier catalog, purity,
+  solvent/solubility and censored-MIC FICI arithmetic remain limitations.
+- The2026 full main/exact kaempferol rows were independently inspected; its negative
+  ceiling is not universal inactivity. The2023 clinical paper was read only for abstract,
+  introduction and study-purpose boundary and is not cancer or infection efficacy
+  evidence.
+- Direct HMDB/DrugBank 403, CAS 401, LINCS 500, MetaCyc account/search responses and
+  proprietary Reaxys limits remain explicit. The HMDB depositor record provides a
+  valid chemical fallback; the bounded 639-record HMS archive does not resolve LSM
+  5304.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All original 13 and expanded 21 input hashes were rechecked unchanged before draft
+  writing. No native/source/history/progress/saved-bundle/Git writes occurred.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

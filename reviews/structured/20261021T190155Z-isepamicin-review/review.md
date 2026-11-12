@@ -1,0 +1,873 @@
+# Review of isepamicin
+
+- Review: 20261021T190155Z-isepamicin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T18:41:46Z
+- Finished UTC: 2026-10-21T19:01:55Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The exact isepamicin free-base graph, aminoglycoside class and antibacterial role are supported by independent structures and original synthesis/activity studies. One minor definition typo needs source-owned correction. All fifteen resistance assertions remain explicitly at database level except for the separately inspected, context-specific primary support; the native 16S rRNA target appropriately retains PRIMARY_EVIDENCE_NEEDED.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position 562; original thirteen input hashes preserved and actual ARO/PubChem, target-role and evidence-qualification owners appended before judgment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-3116ad4253 | data/antibiotics/antibacterial/isepamicin.yaml | generated | isepamicin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | antibioticmech:aro-3116ad4253 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | antibioticmech:aro-3116ad4253 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | antibioticmech:aro-3116ad4253 | Actual focused execution exited 0. |
+| Independent authority check | passed | False | antibioticmech:aro-3116ad4253 | Eight encodings share the full key and mutually map after stereo-preserving tautomer normalization; the HAPA alpha carbon is S. The earlier unnormalized assertion failure is preserved separately. |
+| Independent ledger check | passed | False | antibioticmech:aro-3116ad4253 | Twenty-one input hashes, original thirteen preservation, four chronological history events, deterministic mint, fifteen current resistance edges and all lead dispositions verified. |
+| Structured bacterial gene discovery | passed | False | antibioticmech:aro-3116ad4253 | Actual structured query completed before primary mechanism follow-up; catalog absence is not a biological absence assertion. |
+| Structured bacterial gene discovery | passed | False | antibioticmech:aro-3116ad4253 | Actual structured query completed before primary mechanism follow-up; catalog absence is not a biological absence assertion. |
+| Structured bacterial gene discovery | passed | False | antibioticmech:aro-3116ad4253 | Actual structured query completed before primary mechanism follow-up; catalog absence is not a biological absence assertion. |
+| Authoritative full QC | failed | True | antibioticmech:aro-3116ad4253 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-3116ad4253 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-3116ad4253 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-3116ad4253 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-3116ad4253 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-3116ad4253 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-3116ad4253 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-3116ad4253 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-3116ad4253 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact isepamicin free-base constitution and stereochemistry
+
+identity: supported. Targets: antibioticmech:aro-3116ad4253.
+
+Independent graphs and the original N1 HAPA synthesis agree; the counterion/hydrate form of experimental sulfate is explicit. No stereo ambiguity or exact-xref defect is demonstrated.
+
+### Source definition spelling and comparative scope
+
+provenance: concern. Targets: antibioticmech:aro-3116ad4253.
+
+The parenthetical genamicin B is a confirmed typographic error. Comparative wording is supported only with explicit comparator/strain context in the inspected original evidence, and the adopted full main remains uninspected.
+
+### Aminoglycoside and antibacterial scope
+
+scope: supported. Targets: antibioticmech:aro-3116ad4253.
+
+The structural parent fits and original assays support antibacterial activity for the exact active moiety supplied as sulfate. No unsupported producer or clinical assertion is present.
+
+### Fifteen qualified resistance assertions
+
+evidence: supported. Targets: antibioticmech:aro-3116ad4253.
+
+All fifteen current exact ARO relations remain present. Selected rmtC/AAC29/AAC31 primary experiments support exact-drug phenotypes; other edges retain database-level uncertainty and explicit current-lead dispositions.
+
+### Generic 16S rRNA direct-target assertion
+
+evidence: unknown. Targets: antibioticmech:aro-3116ad4253.
+
+The target remains a source assertion marked PRIMARY_EVIDENCE_NEEDED. Exact isepamicin primary binding conditions were not established from the inspected model-RNA abstract; resistance methylation and family pharmacology do not substitute for that proof.
+
+### Complete native and maintained-source audit
+
+provenance: supported. Targets: antibioticmech:aro-3116ad4253.
+
+Original hashes, actual owners, deterministic mint, history, current edges and all adopted/current lead dispositions were checked. Absence searches included ignored files.
+
+## Findings
+
+### F1: Definition misspells gentamicin B in the precursor name
+
+minor / open / confirmed; issue key: isepamicin-definition-genamicin-spelling.
+
+The parenthetical hydroxyamino propionyl genamicin B drops the t from gentamicin. The same sentence correctly spells gentamicin outside the parenthesis, current ARO repeats the typo, and the original synthesis explicitly names gentamicin B. This is a wording defect, not evidence that the valid native structure is a different antibiotic.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct genamicin B to gentamicin B through the source-owned ARO definition/extraction lane, then regenerate the emitted record. If the definition is expanded, use the original 1-N-(S-3-amino-2-hydroxypropionyl) description and explicitly scoped comparative source rather than asserting universal aminoglycoside superiority. Preserve native chemical graph and database evidence status; an exact binding claim requires its own primary experiment.
+
+- Regenerated definition spells gentamicin B correctly and retains source provenance.
+- Valid free-base graph/full key, sulfate assay boundary and qualified target/resistance evidence remain intact.
+- Required schema, term/reference/history/corpus and full QC gates pass for eventual native curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/isepamicin.yaml; Entire native record, definition, synonyms, parent/class, chemical structure, three xrefs, fifteen resistance assertions, one target, source concept and four history events | supports | SEEDED/MINTED record has a valid neutral isepamicin graph. The definition misspells the precursor as genamicin B within its parenthesis. The two language synonyms and ARO parent resolve in the current source. Every resistance evidence note explicitly declares a database assertion; the generic 16S rRNA direct-target entry states unspecified organism/strain/assay and PRIMARY_EVIDENCE_NEEDED. No MIC, clinical, producer, document or causal-graph assertion is present. |
+| chemistry | pubchem.compound:3037209;chembl:CHEMBL272080;KEGG:D02545; 562-authority-chemistry.json and persistent562-authority-check.py; native two encodings, PubChem two, ChEMBL three and KEGG molfile | supports | All eight encodings yield UDIIBEDMEYAVNG-ZKFPOVNWSA-N, C22H43N5O12 and zero charge, with fifteen assigned tetrahedral centres. Stereo-preserving tautomer normalization gives reciprocal atom mappings; the native amide versus InChI-generated imidic acid is not a different-compound finding. The exact HAPA alpha carbon maps to S. Native masses agree at declared precision. Separate sulfate D01826 is a salt context, not an additional native exact xref. |
+| authority | ARO:3000652;ARO:0000016;ARO:3000755; 562-aro-blocks.json, shared official426-current-aro.obo and426-fetch2-results.json;562-fetch.json/562-fetch2.json | supports | Current official ARO repeats both source names, the definition typo, aminoglycoside parent and all fifteen exact resistance relations plus the target relation. PubChem3037209 and ChEMBL272080 agree on the exact free-base graph. The native molecule has aminated sugars attached to a dibasic cyclitol, consistent with the structural parent. Authority repetition does not repair the misspelled precursor. |
+| synthesis | PMID:690003;DOI:10.7164/antibiotics.31.681; 562-primary1978-synthesis.pdf, entire pp681–687; actual p681 structure panel and NMR/Table1/experimental Sch21420 paragraphs;562-fetch2.json | supports | The original synthesis identifies Sch21420 as 1-N-(S-3-amino-2-hydroxypropionyl)-gentamicin B and distinguishes Sch20287 with the longer HABA side chain. NMR acid/base shifts place acylation at N1. Purification/deionization yields Sch21420 before conversion to sulfate; final elemental analysis is hydrated disulfate. This supports native constitution and the S side chain without importing counterions or water into the free-base graph. |
+| activity | PMID:690004;DOI:10.7164/antibiotics.31.688; 562-primary1978-biology.pdf; original methods, Results/Discussion, Tables1–3 and5–8;562-fetch2.json | supports | Original work uses Sch21420 sulfate and reports activity as base equivalents. It defines agar MIC by fewer than six colonies and broth MIC by absence of visible growth, with stated inocula and Mueller-Hinton media. Exact compound activity and resistance-dependent comparator differences support ANTIBACTERIAL. Overall spectrum/potency is similar to amikacin in that panel; superiority is not universal. Mouse protection, pharmacokinetics and rat nephrotoxicity remain animal outcomes, not clinical efficacy or human safety claims. |
+| comparative | PMID:7875017;PMID:8622111; 562-extra-core.json and562-adopted-core.json complete abstracts | supports | The 1995 original comparison tests 817 isolates against amikacin and specifically reports greater inhibition of Serratia marcescens, Enterobacter and Klebsiella pneumoniae. The adopted PMID8622111 is a pharmacokinetic overview whose abstract supports activity against many resistant bacteria but does not independently establish the entire structural/comparative sentence. Full mains were not retrieved. Prefer explicit comparator and study scope if enriching the definition; no claim that the uninspected adopted main contains no such information. |
+| aac29 | PMID:11158753; 562-PMC90325.html; original susceptibility methods, recombinant-gene Results and actual Table3 | supports | AAC29a and AAC29b expressed separately in E. coli JM109 increase isepamicin MIC to 1 from &lt;0.12 micrograms/mL; combined pNOR2003 gives 16 and the clinical RON2 isolate 256. Agar dilution uses MH and 10^4 CFU/spot. This supports exact resistance phenotypes in defined genetic backgrounds, with modification-site inference; it is not a purified-isepamicin product-identification experiment. |
+| aac31 | PMID:17470660; 562-PMC1913225.html; original clinical methods, functional cloning Results and actual Table2 | supports | AAC31 expression from pIMPAR31 in E. coli DH5alpha increases isepamicin MIC from 0.12 to 4 micrograms/mL. The original clinical collection contains seven Acinetobacter isolates and one Pseudomonas putida isolate, while the functional experiment uses E. coli. Preserve that distinction; no purified exact-substrate kinetic constant is inferred. |
+| rmtc | PMID:16377684;DOI:10.1128/AAC.50.1.178-184.2006; Reused485-PMC1346777.html/.txt; original susceptibility/cloning/methylation methods and Table2 Results; reused fetch provenance in485-fetch2.json/485-fetch3.json | supports | Exact isepamicin from Asahi Kasei is tested by agar dilution. rmtC constructs in E. coli DH5alpha show MIC 1024 or &gt;1024 micrograms/mL versus 0.13 vector control; the original Proteus ARS68 strain exceeds 1024. Purified RmtC separately transfers radiolabelled methyl groups to 30S-associated 16S rRNA. This supports target-alteration resistance within those constructs, not an isepamicin-binding crystal or unspecified universal strain outcome. |
+| resistance-limits | PMID:12709326;PMID:20194115;PMID:14667745;PMID:1965106; 562-PMC153341.html selected methods/cloning/Results; reused485-PMC2896518.xml selected Sgm cofactor/footprinting/docking Results; complete original abstracts in562-current-core files | supports | ANT4IIb source lists isepamicin as supplied, but displayed experiments primarily concern amikacin/tobramycin and an introductory isepamicin claim cites earlier ANT4II work. Do not promote this to exact IIb kinetic proof. Sgm cofactor structures and footprinting concern methylase/rRNA interactions, not a drug-bound structure. The rmtA and earlier ANT4II original abstracts explicitly include isepamicin, but their full mains were not read. These limits do not refute the already-qualified native database assertions. |
+| leads | One adopted and twenty-seven current ARO PMID leads; 562-adopted-core.json;562-current-core-0.json/562-current-core-1.json;562-source-audit.json individual dispositions | supports | All 27 current MED metadata records and 25 available complete abstracts were read; reviews 10103173/11083623 have no indexed abstract. The adopted PMID8622111 is included. Full-main read depths are enumerated separately for selected primary studies. Clinical cooccurrence, enzyme sequence, family reviews and model RNA binding are not silently converted into exact-drug binding or isolated causal resistance experiments. |
+| search | Structured iModulonDB and bounded public isepamicin/SCH21420 primary discovery; 562-adapter-results.json;562-discovery.json;562-owners-search.json;562-source-audit.json | supports | E. coli precise1k rrsA/armA/rmtB queries ran before web follow-up and returned no catalog matches. The public query yielded 132 records with 100 retrieved as discovery leads; it was not an exhaustive full-main review. Two guessed PMC locators proved unrelated Candida articles and were excluded. Owner and identifier absence searches included ignored files. |
+| owners | ARO inventory, PubChem enrichment, target-role mapping and source-assertion qualification; 562-source-audit.json;562-raw-rows.json;562-owners-search.json;562-inspect.json | supports | All original thirteen input hashes remain intact within twenty-one captured inputs. Four chronological history events and one deterministic ARO mint agree. Actual extraction/seeding, PubChem enrichment, role mapping and evidence qualification owners were captured before judgment; no native or maintained source was changed. |
+
+## Limits And Additional Notes
+
+- All adopted/current available abstracts were read, but not every original main. Exact binding for the generic 16S target and several individual resistance enzymes remains unresolved; honest database assertions are not treated as proven primary experiments or refuted by missing abstract detail.
+- The original activity paper tests sulfate and reports base-equivalent bioactivity; final synthesis analysis describes a hydrated sulfate. Neither silently changes the native neutral free-base identity.
+- The initial unnormalized reciprocal-structure assertion failed because standard InChI reconstruction generated an imidic-acid tautomer. The original full key agreed; final stereo-preserving canonical-tautomer mapping passes all eight encodings. The initial failure is preserved in 562-authority-attempt1.json.
+- The selected 1978 activity table scope is stated; Table 4 mouse-protection values were not independently transcribed. Later clinical comparisons were inspected at complete-abstract depth, not represented as current clinical guidance.
+- Two guessed PMC requests returned unrelated Candida papers; they were identified and excluded, not used as evidence for missing or contradictory isepamicin studies.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native record, maintained source, saved bundle or Git/progress state was edited. Twenty-one inputs were verified, preserving all original thirteen hashes.
+- Standalone chemistry used the 019 interpreter against 057; schema, strict, ledger and contract used 057. Stable scratch draft is handed to root for ordered audit and saving.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T190155Z-isepamicin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of isepamicin
+started_at: '2026-10-21T18:41:46Z'
+finished_at: '2026-10-21T19:01:55Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The exact isepamicin free-base graph, aminoglycoside class and antibacterial
+  role are supported by independent structures and original synthesis/activity studies.
+  One minor definition typo needs source-owned correction. All fifteen resistance
+  assertions remain explicitly at database level except for the separately inspected,
+  context-specific primary support; the native 16S rRNA target appropriately retains
+  PRIMARY_EVIDENCE_NEEDED.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/isepamicin.yaml
+    sha256: be12d203b97d0c9396bc7dfbcda9a66bfe7919618025dc411cd5de6db424998a
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+targets:
+- target_id: antibioticmech:aro-3116ad4253
+  path: data/antibiotics/antibacterial/isepamicin.yaml
+  label: isepamicin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Exact ARO identity, definition, names and adopted lead
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Fifteen resistance database assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: 16S rRNA target database assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Exact PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Source structure enrichment owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Actual CARD/ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity, source assertions and enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relation and primary-evidence-needed policy
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Source-assertion qualification owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Source-assertion qualification application
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source scope and names/grounding policy
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained exact grounding decisions
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 562; original thirteen input hashes
+    preserved and actual ARO/PubChem, target-role and evidence-qualification owners
+    appended before judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-3116ad4253
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    562
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/isepamicin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/isepamicin.yaml --out /private/tmp/am-review-session/562-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent authority check
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/562-authority-check.py
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Eight encodings share the full key and mutually map after stereo-preserving
+    tautomer normalization; the HAPA alpha carbon is S. The earlier unnormalized assertion
+    failure is preserved separately.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+- check_id: ledger
+  name: Independent ledger check
+  command: .venv/bin/python /private/tmp/am-review-session/562-ledger.py > /private/tmp/am-review-session/562-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Twenty-one input hashes, original thirteen preservation, four chronological
+    history events, deterministic mint, fifteen current resistance edges and all lead
+    dispositions verified.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+- check_id: adapter-0
+  name: Structured bacterial gene discovery
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query rrsA
+    > /private/tmp/am-review-session/562-adapter-e_coli-rrsA.txt 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual structured query completed before primary mechanism follow-up; catalog
+    absence is not a biological absence assertion.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+- check_id: adapter-1
+  name: Structured bacterial gene discovery
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query armA
+    > /private/tmp/am-review-session/562-adapter-e_coli-armA.txt 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual structured query completed before primary mechanism follow-up; catalog
+    absence is not a biological absence assertion.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+- check_id: adapter-2
+  name: Structured bacterial gene discovery
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query rmtB
+    > /private/tmp/am-review-session/562-adapter-e_coli-rmtB.txt 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual structured query completed before primary mechanism follow-up; catalog
+    absence is not a biological absence assertion.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/isepamicin.yaml
+  locator: Entire native record, definition, synonyms, parent/class, chemical structure,
+    three xrefs, fifteen resistance assertions, one target, source concept and four
+    history events
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: SEEDED/MINTED record has a valid neutral isepamicin graph. The definition
+    misspells the precursor as genamicin B within its parenthesis. The two language
+    synonyms and ARO parent resolve in the current source. Every resistance evidence
+    note explicitly declares a database assertion; the generic 16S rRNA direct-target
+    entry states unspecified organism/strain/assay and PRIMARY_EVIDENCE_NEEDED. No
+    MIC, clinical, producer, document or causal-graph assertion is present.
+- evidence_id: chemistry
+  kind: validation
+  reference: pubchem.compound:3037209;chembl:CHEMBL272080;KEGG:D02545
+  locator: 562-authority-chemistry.json and persistent562-authority-check.py; native
+    two encodings, PubChem two, ChEMBL three and KEGG molfile
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: All eight encodings yield UDIIBEDMEYAVNG-ZKFPOVNWSA-N, C22H43N5O12 and
+    zero charge, with fifteen assigned tetrahedral centres. Stereo-preserving tautomer
+    normalization gives reciprocal atom mappings; the native amide versus InChI-generated
+    imidic acid is not a different-compound finding. The exact HAPA alpha carbon maps
+    to S. Native masses agree at declared precision. Separate sulfate D01826 is a
+    salt context, not an additional native exact xref.
+  snapshot_sha256: b71faadfc97781430127aaa00bc101b11fee1d6562a9a00f59d0a92d1fc31b3c
+- evidence_id: authority
+  kind: authority
+  reference: ARO:3000652;ARO:0000016;ARO:3000755
+  locator: 562-aro-blocks.json, shared official426-current-aro.obo and426-fetch2-results.json;562-fetch.json/562-fetch2.json
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: Current official ARO repeats both source names, the definition typo, aminoglycoside
+    parent and all fifteen exact resistance relations plus the target relation. PubChem3037209
+    and ChEMBL272080 agree on the exact free-base graph. The native molecule has aminated
+    sugars attached to a dibasic cyclitol, consistent with the structural parent.
+    Authority repetition does not repair the misspelled precursor.
+  snapshot_sha256: 224c4cf7192367392fb41340726f28266aba9b0abcc7f2b9b9a082b166bebf81
+- evidence_id: synthesis
+  kind: primary_source
+  reference: PMID:690003;DOI:10.7164/antibiotics.31.681
+  locator: 562-primary1978-synthesis.pdf, entire pp681–687; actual p681 structure
+    panel and NMR/Table1/experimental Sch21420 paragraphs;562-fetch2.json
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: The original synthesis identifies Sch21420 as 1-N-(S-3-amino-2-hydroxypropionyl)-gentamicin
+    B and distinguishes Sch20287 with the longer HABA side chain. NMR acid/base shifts
+    place acylation at N1. Purification/deionization yields Sch21420 before conversion
+    to sulfate; final elemental analysis is hydrated disulfate. This supports native
+    constitution and the S side chain without importing counterions or water into
+    the free-base graph.
+  snapshot_sha256: 2d85ddd7bcab88bda207c1fb2269a089860d071a565526fe03784e8ece00f806
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:690004;DOI:10.7164/antibiotics.31.688
+  locator: 562-primary1978-biology.pdf; original methods, Results/Discussion, Tables1–3
+    and5–8;562-fetch2.json
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: Original work uses Sch21420 sulfate and reports activity as base equivalents.
+    It defines agar MIC by fewer than six colonies and broth MIC by absence of visible
+    growth, with stated inocula and Mueller-Hinton media. Exact compound activity
+    and resistance-dependent comparator differences support ANTIBACTERIAL. Overall
+    spectrum/potency is similar to amikacin in that panel; superiority is not universal.
+    Mouse protection, pharmacokinetics and rat nephrotoxicity remain animal outcomes,
+    not clinical efficacy or human safety claims.
+  snapshot_sha256: 0bb1c7bb313a547fafaca557e1fe5afbed9edc6c853b9ad684b6bb455f6e6adb
+- evidence_id: comparative
+  kind: primary_source
+  reference: PMID:7875017;PMID:8622111
+  locator: 562-extra-core.json and562-adopted-core.json complete abstracts
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: The 1995 original comparison tests 817 isolates against amikacin and specifically
+    reports greater inhibition of Serratia marcescens, Enterobacter and Klebsiella
+    pneumoniae. The adopted PMID8622111 is a pharmacokinetic overview whose abstract
+    supports activity against many resistant bacteria but does not independently establish
+    the entire structural/comparative sentence. Full mains were not retrieved. Prefer
+    explicit comparator and study scope if enriching the definition; no claim that
+    the uninspected adopted main contains no such information.
+  snapshot_sha256: 213c9d27925a4903fe539ff18d380e0d47dc43fccd5ecc793a946e6c25f63fa8
+- evidence_id: aac29
+  kind: primary_source
+  reference: PMID:11158753
+  locator: 562-PMC90325.html; original susceptibility methods, recombinant-gene Results
+    and actual Table3
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: AAC29a and AAC29b expressed separately in E. coli JM109 increase isepamicin
+    MIC to 1 from <0.12 micrograms/mL; combined pNOR2003 gives 16 and the clinical
+    RON2 isolate 256. Agar dilution uses MH and 10^4 CFU/spot. This supports exact
+    resistance phenotypes in defined genetic backgrounds, with modification-site inference;
+    it is not a purified-isepamicin product-identification experiment.
+  snapshot_sha256: 6ca0e40a785e0c1330e49f2f36d882ccd0bccc9ebe2003cefb6d0989da90340e
+- evidence_id: aac31
+  kind: primary_source
+  reference: PMID:17470660
+  locator: 562-PMC1913225.html; original clinical methods, functional cloning Results
+    and actual Table2
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: AAC31 expression from pIMPAR31 in E. coli DH5alpha increases isepamicin
+    MIC from 0.12 to 4 micrograms/mL. The original clinical collection contains seven
+    Acinetobacter isolates and one Pseudomonas putida isolate, while the functional
+    experiment uses E. coli. Preserve that distinction; no purified exact-substrate
+    kinetic constant is inferred.
+  snapshot_sha256: ebd9b78beeb4f633dfd9f5bb4baeb6fde34284f539a333f36443868a64c5c539
+- evidence_id: rmtc
+  kind: primary_source
+  reference: PMID:16377684;DOI:10.1128/AAC.50.1.178-184.2006
+  locator: Reused485-PMC1346777.html/.txt; original susceptibility/cloning/methylation
+    methods and Table2 Results; reused fetch provenance in485-fetch2.json/485-fetch3.json
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: Exact isepamicin from Asahi Kasei is tested by agar dilution. rmtC constructs
+    in E. coli DH5alpha show MIC 1024 or >1024 micrograms/mL versus 0.13 vector control;
+    the original Proteus ARS68 strain exceeds 1024. Purified RmtC separately transfers
+    radiolabelled methyl groups to 30S-associated 16S rRNA. This supports target-alteration
+    resistance within those constructs, not an isepamicin-binding crystal or unspecified
+    universal strain outcome.
+  snapshot_sha256: 464cd006fbba54dbee90121cc8b11af75c58ddc39d055c32aa3fd8f0157c9e4d
+- evidence_id: resistance-limits
+  kind: primary_source
+  reference: PMID:12709326;PMID:20194115;PMID:14667745;PMID:1965106
+  locator: 562-PMC153341.html selected methods/cloning/Results; reused485-PMC2896518.xml
+    selected Sgm cofactor/footprinting/docking Results; complete original abstracts
+    in562-current-core files
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: ANT4IIb source lists isepamicin as supplied, but displayed experiments
+    primarily concern amikacin/tobramycin and an introductory isepamicin claim cites
+    earlier ANT4II work. Do not promote this to exact IIb kinetic proof. Sgm cofactor
+    structures and footprinting concern methylase/rRNA interactions, not a drug-bound
+    structure. The rmtA and earlier ANT4II original abstracts explicitly include isepamicin,
+    but their full mains were not read. These limits do not refute the already-qualified
+    native database assertions.
+  snapshot_sha256: d54d9fdab7d3ab98d604d52e7746699c47f00e99132a9180cb157e932e6dac27
+- evidence_id: leads
+  kind: database
+  reference: One adopted and twenty-seven current ARO PMID leads
+  locator: 562-adopted-core.json;562-current-core-0.json/562-current-core-1.json;562-source-audit.json
+    individual dispositions
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: All 27 current MED metadata records and 25 available complete abstracts
+    were read; reviews 10103173/11083623 have no indexed abstract. The adopted PMID8622111
+    is included. Full-main read depths are enumerated separately for selected primary
+    studies. Clinical cooccurrence, enzyme sequence, family reviews and model RNA
+    binding are not silently converted into exact-drug binding or isolated causal
+    resistance experiments.
+  snapshot_sha256: d54d9fdab7d3ab98d604d52e7746699c47f00e99132a9180cb157e932e6dac27
+- evidence_id: search
+  kind: search
+  reference: Structured iModulonDB and bounded public isepamicin/SCH21420 primary
+    discovery
+  locator: 562-adapter-results.json;562-discovery.json;562-owners-search.json;562-source-audit.json
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: E. coli precise1k rrsA/armA/rmtB queries ran before web follow-up and returned
+    no catalog matches. The public query yielded 132 records with 100 retrieved as
+    discovery leads; it was not an exhaustive full-main review. Two guessed PMC locators
+    proved unrelated Candida articles and were excluded. Owner and identifier absence
+    searches included ignored files.
+  search_scope: Exact ARO terms and all cited MED records, PubChem/ChEMBL/KEGG graphs,
+    original1978 synthesis/activity, selected exact resistance studies, and ignored-inclusive
+    local provenance searches.
+  snapshot_sha256: d54d9fdab7d3ab98d604d52e7746699c47f00e99132a9180cb157e932e6dac27
+- evidence_id: owners
+  kind: validation
+  reference: ARO inventory, PubChem enrichment, target-role mapping and source-assertion
+    qualification
+  locator: 562-source-audit.json;562-raw-rows.json;562-owners-search.json;562-inspect.json
+  accessed_at: '2026-10-21T18:51:03Z'
+  support: supports
+  summary: All original thirteen input hashes remain intact within twenty-one captured
+    inputs. Four chronological history events and one deterministic ARO mint agree.
+    Actual extraction/seeding, PubChem enrichment, role mapping and evidence qualification
+    owners were captured before judgment; no native or maintained source was changed.
+  snapshot_sha256: d54d9fdab7d3ab98d604d52e7746699c47f00e99132a9180cb157e932e6dac27
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact isepamicin free-base constitution and stereochemistry
+  outcome: supported
+  summary: Independent graphs and the original N1 HAPA synthesis agree; the counterion/hydrate
+    form of experimental sulfate is explicit. No stereo ambiguity or exact-xref defect
+    is demonstrated.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  evidence_ids:
+  - native
+  - chemistry
+  - synthesis
+  - authority
+- assessment_id: definition
+  area: provenance
+  topic: Source definition spelling and comparative scope
+  outcome: concern
+  summary: The parenthetical genamicin B is a confirmed typographic error. Comparative
+    wording is supported only with explicit comparator/strain context in the inspected
+    original evidence, and the adopted full main remains uninspected.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  evidence_ids:
+  - native
+  - synthesis
+  - authority
+  - comparative
+  - activity
+- assessment_id: roles
+  area: scope
+  topic: Aminoglycoside and antibacterial scope
+  outcome: supported
+  summary: The structural parent fits and original assays support antibacterial activity
+    for the exact active moiety supplied as sulfate. No unsupported producer or clinical
+    assertion is present.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  evidence_ids:
+  - chemistry
+  - synthesis
+  - activity
+  - authority
+- assessment_id: resistance
+  area: evidence
+  topic: Fifteen qualified resistance assertions
+  outcome: supported
+  summary: All fifteen current exact ARO relations remain present. Selected rmtC/AAC29/AAC31
+    primary experiments support exact-drug phenotypes; other edges retain database-level
+    uncertainty and explicit current-lead dispositions.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  evidence_ids:
+  - authority
+  - aac29
+  - aac31
+  - rmtc
+  - resistance-limits
+  - leads
+- assessment_id: target
+  area: evidence
+  topic: Generic 16S rRNA direct-target assertion
+  outcome: unknown
+  summary: The target remains a source assertion marked PRIMARY_EVIDENCE_NEEDED. Exact
+    isepamicin primary binding conditions were not established from the inspected
+    model-RNA abstract; resistance methylation and family pharmacology do not substitute
+    for that proof.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  evidence_ids:
+  - native
+  - authority
+  - leads
+  - resistance-limits
+- assessment_id: history
+  area: provenance
+  topic: Complete native and maintained-source audit
+  outcome: supported
+  summary: Original hashes, actual owners, deterministic mint, history, current edges
+    and all adopted/current lead dispositions were checked. Absence searches included
+    ignored files.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  evidence_ids:
+  - owners
+  - leads
+  - search
+findings:
+- finding_id: F1
+  issue_key: isepamicin-definition-genamicin-spelling
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Definition misspells gentamicin B in the precursor name
+  description: The parenthetical hydroxyamino propionyl genamicin B drops the t from
+    gentamicin. The same sentence correctly spells gentamicin outside the parenthesis,
+    current ARO repeats the typo, and the original synthesis explicitly names gentamicin
+    B. This is a wording defect, not evidence that the valid native structure is a
+    different antibiotic.
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - authority
+  - synthesis
+  rule_id: Record-review scientific accuracy and source-owned reproducibility
+  normalization_reason: Minor typographic defect; intended precursor and exact molecular
+    identity remain clear and independently supported.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source-owned definition spelling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Actual CARD/ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition and citation provenance
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-3116ad4253
+  description: Correct genamicin B to gentamicin B through the source-owned ARO definition/extraction
+    lane, then regenerate the emitted record. If the definition is expanded, use the
+    original 1-N-(S-3-amino-2-hydroxypropionyl) description and explicitly scoped
+    comparative source rather than asserting universal aminoglycoside superiority.
+    Preserve native chemical graph and database evidence status; an exact binding
+    claim requires its own primary experiment.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source-owned definition spelling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Actual CARD/ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition and citation provenance
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - Regenerated definition spells gentamicin B correctly and retains source provenance.
+  - Valid free-base graph/full key, sulfate assay boundary and qualified target/resistance
+    evidence remain intact.
+  - Required schema, term/reference/history/corpus and full QC gates pass for eventual
+    native curation.
+limitations:
+- All adopted/current available abstracts were read, but not every original main.
+  Exact binding for the generic 16S target and several individual resistance enzymes
+  remains unresolved; honest database assertions are not treated as proven primary
+  experiments or refuted by missing abstract detail.
+- The original activity paper tests sulfate and reports base-equivalent bioactivity;
+  final synthesis analysis describes a hydrated sulfate. Neither silently changes
+  the native neutral free-base identity.
+- The initial unnormalized reciprocal-structure assertion failed because standard
+  InChI reconstruction generated an imidic-acid tautomer. The original full key agreed;
+  final stereo-preserving canonical-tautomer mapping passes all eight encodings. The
+  initial failure is preserved in 562-authority-attempt1.json.
+- The selected 1978 activity table scope is stated; Table 4 mouse-protection values
+  were not independently transcribed. Later clinical comparisons were inspected at
+  complete-abstract depth, not represented as current clinical guidance.
+- Two guessed PMC requests returned unrelated Candida papers; they were identified
+  and excluded, not used as evidence for missing or contradictory isepamicin studies.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record, maintained source, saved bundle or Git/progress state was edited.
+  Twenty-one inputs were verified, preserving all original thirteen hashes.
+- Standalone chemistry used the 019 interpreter against 057; schema, strict, ledger
+  and contract used 057. Stable scratch draft is handed to root for ordered audit
+  and saving.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
