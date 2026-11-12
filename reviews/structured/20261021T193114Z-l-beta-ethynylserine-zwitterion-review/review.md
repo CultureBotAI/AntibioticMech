@@ -1,0 +1,625 @@
+# Review of L-β-ethynylserine zwitterion
+
+- Review: 20261021T193114Z-l-beta-ethynylserine-zwitterion-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T19:05:24Z
+- Finished UTC: 2026-10-21T19:31:14Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The exact (2S,3R) zwitterionic graph, amino-acid parent and antibacterial role are supported. The original isolation paper reports the relevant pKa values and a strain-specific inhibition experiment. Standard InChI proton-transfer normalization and incomplete access to the later biosynthesis main text are explicit limitations; no corrective native finding was established. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position 582; all thirteen original input hashes preserved, with actual ChEBI owners identified before judgment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:144729 | data/antibiotics/antibacterial/l-β-ethynylserine-zwitterion.yaml | generated | L-β-ethynylserine zwitterion |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:144729 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:144729 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:144729 | Actual focused execution exited 0. |
+| authority | passed | False | CHEBI:144729 | Nine native/current authority encodings share the complete Standard InChI key and neutralized stereochemistry; explicit zwitterion versus neutral charge placement is retained separately. |
+| ledger | passed | False | CHEBI:144729 | Thirteen unchanged input hashes, three chronological history events, one deterministic mint and both adopted lead dispositions verified. |
+| Authoritative full QC | failed | True | CHEBI:144729 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:144729 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:144729 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:144729 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:144729 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:144729 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:144729 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:144729 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:144729 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact L-β-ethynylserine zwitterion
+
+identity: supported. Targets: CHEBI:144729.
+
+The explicit charge-separated native graph and both configured centers agree with current exact authorities and the original compound assignment. Standard InChI normalization is handled explicitly.
+
+### Exact names and amino-acid parent
+
+nomenclature: supported. Targets: CHEBI:144729.
+
+The two names and L-alpha-amino-acid zwitterion parent fit the represented graph.
+
+### Antibacterial classification and source assay
+
+scope: supported. Targets: CHEBI:144729.
+
+The original strain-specific inhibition supports antibacterial-agent classification. No universal susceptibility, MIC or direct enzyme inhibition is inferred.
+
+### Predominant species near neutral pH
+
+evidence: supported. Targets: CHEBI:144729.
+
+Original macro-pKa measurements are consistent with the native pH description, with explicit microscopic-population and assay-medium limitations.
+
+### Adopted biosynthesis citation and mechanism boundary
+
+evidence: supported. Targets: CHEBI:144729.
+
+Both source leads concern the named compound; the later biosynthesis evidence is not promoted into a drug-action pathway.
+
+### Detailed microstates and later full-main access
+
+scope: unknown. Targets: CHEBI:144729.
+
+Exact microscopic populations and the subscription 2019 narrative were not independently established; these bounded limits do not demonstrate a native defect.
+
+### Read-only ownership and checks
+
+provenance: supported. Targets: CHEBI:144729.
+
+Maintained owners, original hashes, source mint, history and actual focused checks verify.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/l-β-ethynylserine-zwitterion.yaml; Entire native, definition, two exact names, parent, antibacterial role, chemical structure, source identity and three history events | supports | SEEDED/EXACT CHEBI:144729 explicitly represents the ammonium/carboxylate zwitterion with net charge zero. No chemical, drug or document cross-reference or separate target, resistance, MIC, clinical or producer object is asserted. |
+| chemistry | CHEBI:144729;pubchem.compound:139036266;pubchem.compound:127838; 582-authority-check.py/582-authority-chemistry.json;582-chebi-144729.json/.mol;582-pubchem-key.json;582-fetch.json | supports | Native and current ChEBI SMILES/molfile agree with the explicit zwitterion, C5H7NO3 and (2S,3R) configuration. Independent PubChem 139036266 agrees. Standard InChI normalizes proton transfer, so neutral PubChem 127838 shares RBWXRFBKVDBXEG-DMTCNVIQSA-N; the calculation preserves this raw-form distinction and compares stereochemistry after explicit neutralization. A shared key is not being used to erase the native zwitterionic definition. |
+| terms | CHEBI:59869;CHEBI:33282; 582-chebi-59869.json and582-chebi-33282.json current term definitions;582-fetch.json | supports | The parent denotes an L-alpha-amino-acid zwitterion with protonated amino and anionic carboxyl groups, matching the graph. The antibacterial-agent role denotes killing or slowing bacterial growth. Both source names, including the D-threo chain name and (2S,3R) name, are consistent with the configured amino acid. |
+| original | PMID:3082841;DOI:10.7164/antibiotics.39.304; 582-original1986.pdf, complete printed pp304–305; actual582-original1986-page304.png/page305.png;582-fetch.json | supports | The complete original report isolates material from Streptomyces cattleya NRRL 8057, removes the initially co-crystallized fluorothreonine by recrystallization, and identifies (2S,3R) ethynylserine by formula, spectroscopy and optical-rotation comparison. It reports pKa values 2.6 and 8.15. On Davis minimal medium, Pseudomonas aeruginosa MB-2835 has a 17.5 mm inhibition zone from 15 micrograms per disk. L-threonine reverses inhibition, with partial reversal by L-serine and L-alanine. These are disk-diffusion/antagonism observations, not MIC values or direct protein-target measurements. |
+| pH | Original pKa values and native pH 7.3 statement; 582-authority-chemistry.json acid_base_boundary;1986 original p304 | supports | The reported pKa values place pH 7.3 between the two macroscopic transitions and are consistent with a predominant net-neutral amino-acid state and conventional ammonium/carboxylate representation. This supports the direction of the native description. The calculation is not an independent measurement of microscopic zwitterion versus unionized populations, nor proof of identical speciation in every assay medium. |
+| biosynthesis | PMID:30867596;DOI:10.1038/s41586-019-1020-y; 582-adopted-core.json;582-nature2019.html/.txt abstract and Extended Data2/9 captions;582-nature2019-si-linked.pdf selected S3–S4 genetic methods and S11 TableS1;582-fetch2.json/582-fetch3.json | supports | The adopted 2019 source concerns biosynthesis from lysine, with product/intermediate detection and biosynthetic genetic/enzyme experiments. The actual SI identifies S.cattleya NRRL 8057 (ATCC 35852). Extended Data2 reports ethynylserine detection and complementation limits; Extended Data9 separates gamma-glutamyl propargylglycine/ethynylserine intermediates and BesA/BesE reactions. These biosynthetic proteins are not antibacterial targets. The subscription main narrative was not available; the abstract, public captions and selected real SI were read. |
+| provenance | Maintained ChEBI source and initial captures; 582-source-audit.json;582-raw-rows.json;582-owners-search.json;582-inspect.json | supports | Both adopted PMIDs were resolved at the stated depth. The native is reproduced by its exact ChEBI row and role mapping; all thirteen original input hashes, deterministic mint and three chronological history events verify. Searches for exact identifiers and ethynylserine across maintained inputs included ignored files. No bacterial gene/target/pathway assertion required an iModulonDB adapter query. |
+| search | Exact zwitterion authorities and both adopted originals; 582-fetch.json/582-fetch2.json/582-fetch3.json;582-owners-search.json | supports | Public exact-key lookup returned both protonation forms, prompting explicit charge-placement comparison. The original 1986 PDF and current publisher-linked 2019 supplement were retrieved. The obsolete supplement host failed DNS and the later main remains subscription preview; neither is reported as inspected full main. |
+
+## Limits And Additional Notes
+
+- The 1986 full two-page original was read and visually checked. The 2019 source was read at complete-abstract, public extended-caption and selected-SI depth; its subscription main was not retrieved.
+- Macroscopic pKa values and conventional amino-acid chemistry support the pH statement but do not provide an independently measured microscopic zwitterion fraction. The biological assay samples an equilibrium preparation rather than isolating one solution microstate.
+- The earlier 1977 fungal report supplies a comparison cited by the 1986 authors; its full original was not independently retrieved, so no new experimental claim from it is adopted.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Native and maintained-source files remain unchanged; all thirteen initial input hashes verify.
+- Standalone chemistry used the 019 environment against 059; focused native checks, ledger and contract used the 059 environment.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T193114Z-l-beta-ethynylserine-zwitterion-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of L-β-ethynylserine zwitterion
+started_at: '2026-10-21T19:05:24Z'
+finished_at: '2026-10-21T19:31:14Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The exact (2S,3R) zwitterionic graph, amino-acid parent and antibacterial
+  role are supported. The original isolation paper reports the relevant pKa values
+  and a strain-specific inhibition experiment. Standard InChI proton-transfer normalization
+  and incomplete access to the later biosynthesis main text are explicit limitations;
+  no corrective native finding was established. Scientific assessment retains the
+  stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/l-β-ethynylserine-zwitterion.yaml
+    sha256: 47fd878485531d412d09b5f9945872d9069ec6d0ca61fd2a83038784c0fe2aba
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:144729
+  path: data/antibiotics/antibacterial/l-β-ethynylserine-zwitterion.yaml
+  label: L-β-ethynylserine zwitterion
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Exact zwitterion structure, source names, parent and adopted citation
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: Antibacterial role term
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Actual ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated exact zwitterion fields
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-specific synonym and role policy
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained exact grounding decisions
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 582; all thirteen original input hashes
+    preserved, with actual ChEBI owners identified before judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:144729
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:144729
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    582
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:144729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/l-β-ethynylserine-zwitterion.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:144729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/l-β-ethynylserine-zwitterion.yaml --out /private/tmp/am-review-session/582-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: authority
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/582-authority-check.py
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Nine native/current authority encodings share the complete Standard InChI
+    key and neutralized stereochemistry; explicit zwitterion versus neutral charge
+    placement is retained separately.
+  target_ids:
+  - CHEBI:144729
+- check_id: ledger
+  name: ledger
+  command: .venv/bin/python /private/tmp/am-review-session/582-ledger.py > /private/tmp/am-review-session/582-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Thirteen unchanged input hashes, three chronological history events, one
+    deterministic mint and both adopted lead dispositions verified.
+  target_ids:
+  - CHEBI:144729
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:144729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:144729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:144729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:144729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:144729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:144729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:144729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:144729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:144729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/l-β-ethynylserine-zwitterion.yaml
+  locator: Entire native, definition, two exact names, parent, antibacterial role,
+    chemical structure, source identity and three history events
+  accessed_at: '2026-10-21T19:19:36Z'
+  support: supports
+  summary: SEEDED/EXACT CHEBI:144729 explicitly represents the ammonium/carboxylate
+    zwitterion with net charge zero. No chemical, drug or document cross-reference
+    or separate target, resistance, MIC, clinical or producer object is asserted.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:144729;pubchem.compound:139036266;pubchem.compound:127838
+  locator: 582-authority-check.py/582-authority-chemistry.json;582-chebi-144729.json/.mol;582-pubchem-key.json;582-fetch.json
+  accessed_at: '2026-10-21T19:19:36Z'
+  support: supports
+  summary: Native and current ChEBI SMILES/molfile agree with the explicit zwitterion,
+    C5H7NO3 and (2S,3R) configuration. Independent PubChem 139036266 agrees. Standard
+    InChI normalizes proton transfer, so neutral PubChem 127838 shares RBWXRFBKVDBXEG-DMTCNVIQSA-N;
+    the calculation preserves this raw-form distinction and compares stereochemistry
+    after explicit neutralization. A shared key is not being used to erase the native
+    zwitterionic definition.
+  snapshot_sha256: 5643dd24c68fcf0d11ba87ee7178fbbef6ffc000dad2b477324b88e171ae1578
+- evidence_id: terms
+  kind: authority
+  reference: CHEBI:59869;CHEBI:33282
+  locator: 582-chebi-59869.json and582-chebi-33282.json current term definitions;582-fetch.json
+  accessed_at: '2026-10-21T19:19:36Z'
+  support: supports
+  summary: The parent denotes an L-alpha-amino-acid zwitterion with protonated amino
+    and anionic carboxyl groups, matching the graph. The antibacterial-agent role
+    denotes killing or slowing bacterial growth. Both source names, including the
+    D-threo chain name and (2S,3R) name, are consistent with the configured amino
+    acid.
+  snapshot_sha256: 372a746b0b09e4bbe2270c063d35f8201b39146c9939b0126c3fb1eda4695d2c
+- evidence_id: original
+  kind: primary_source
+  reference: PMID:3082841;DOI:10.7164/antibiotics.39.304
+  locator: 582-original1986.pdf, complete printed pp304–305; actual582-original1986-page304.png/page305.png;582-fetch.json
+  accessed_at: '2026-10-21T19:19:36Z'
+  support: supports
+  summary: The complete original report isolates material from Streptomyces cattleya
+    NRRL 8057, removes the initially co-crystallized fluorothreonine by recrystallization,
+    and identifies (2S,3R) ethynylserine by formula, spectroscopy and optical-rotation
+    comparison. It reports pKa values 2.6 and 8.15. On Davis minimal medium, Pseudomonas
+    aeruginosa MB-2835 has a 17.5 mm inhibition zone from 15 micrograms per disk.
+    L-threonine reverses inhibition, with partial reversal by L-serine and L-alanine.
+    These are disk-diffusion/antagonism observations, not MIC values or direct protein-target
+    measurements.
+  snapshot_sha256: 914418d53f5d4c605e0f3b595ec29dffed66cb606e299a74c78cae68caf672db
+- evidence_id: pH
+  kind: validation
+  reference: Original pKa values and native pH 7.3 statement
+  locator: 582-authority-chemistry.json acid_base_boundary;1986 original p304
+  accessed_at: '2026-10-21T19:19:36Z'
+  support: supports
+  summary: The reported pKa values place pH 7.3 between the two macroscopic transitions
+    and are consistent with a predominant net-neutral amino-acid state and conventional
+    ammonium/carboxylate representation. This supports the direction of the native
+    description. The calculation is not an independent measurement of microscopic
+    zwitterion versus unionized populations, nor proof of identical speciation in
+    every assay medium.
+  snapshot_sha256: 5643dd24c68fcf0d11ba87ee7178fbbef6ffc000dad2b477324b88e171ae1578
+- evidence_id: biosynthesis
+  kind: primary_source
+  reference: PMID:30867596;DOI:10.1038/s41586-019-1020-y
+  locator: 582-adopted-core.json;582-nature2019.html/.txt abstract and Extended Data2/9
+    captions;582-nature2019-si-linked.pdf selected S3–S4 genetic methods and S11 TableS1;582-fetch2.json/582-fetch3.json
+  accessed_at: '2026-10-21T19:19:36Z'
+  support: supports
+  summary: The adopted 2019 source concerns biosynthesis from lysine, with product/intermediate
+    detection and biosynthetic genetic/enzyme experiments. The actual SI identifies
+    S.cattleya NRRL 8057 (ATCC 35852). Extended Data2 reports ethynylserine detection
+    and complementation limits; Extended Data9 separates gamma-glutamyl propargylglycine/ethynylserine
+    intermediates and BesA/BesE reactions. These biosynthetic proteins are not antibacterial
+    targets. The subscription main narrative was not available; the abstract, public
+    captions and selected real SI were read.
+  snapshot_sha256: 55d1f99c2e2b3fe24cac69779558e4a5c5ab09a68081d3e92175cba00c5d2197
+- evidence_id: provenance
+  kind: validation
+  reference: Maintained ChEBI source and initial captures
+  locator: 582-source-audit.json;582-raw-rows.json;582-owners-search.json;582-inspect.json
+  accessed_at: '2026-10-21T19:19:36Z'
+  support: supports
+  summary: Both adopted PMIDs were resolved at the stated depth. The native is reproduced
+    by its exact ChEBI row and role mapping; all thirteen original input hashes, deterministic
+    mint and three chronological history events verify. Searches for exact identifiers
+    and ethynylserine across maintained inputs included ignored files. No bacterial
+    gene/target/pathway assertion required an iModulonDB adapter query.
+  snapshot_sha256: daa2d3423c310803b91fa9f91f80fcd80358f8271d4fefdcb6b6fd2adce6e5f8
+- evidence_id: search
+  kind: search
+  reference: Exact zwitterion authorities and both adopted originals
+  locator: 582-fetch.json/582-fetch2.json/582-fetch3.json;582-owners-search.json
+  accessed_at: '2026-10-21T19:19:36Z'
+  support: supports
+  summary: Public exact-key lookup returned both protonation forms, prompting explicit
+    charge-placement comparison. The original 1986 PDF and current publisher-linked
+    2019 supplement were retrieved. The obsolete supplement host failed DNS and the
+    later main remains subscription preview; neither is reported as inspected full
+    main.
+  search_scope: Exact native identifier/key, source parent and role, both adopted
+    PMIDs, original pKa/identity/activity evidence and bounded later biosynthesis
+    context; local searches included ignored files.
+  snapshot_sha256: daa2d3423c310803b91fa9f91f80fcd80358f8271d4fefdcb6b6fd2adce6e5f8
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact L-β-ethynylserine zwitterion
+  outcome: supported
+  summary: The explicit charge-separated native graph and both configured centers
+    agree with current exact authorities and the original compound assignment. Standard
+    InChI normalization is handled explicitly.
+  target_ids:
+  - CHEBI:144729
+  evidence_ids:
+  - native
+  - chemistry
+  - original
+- assessment_id: names
+  area: nomenclature
+  topic: Exact names and amino-acid parent
+  outcome: supported
+  summary: The two names and L-alpha-amino-acid zwitterion parent fit the represented
+    graph.
+  target_ids:
+  - CHEBI:144729
+  evidence_ids:
+  - native
+  - chemistry
+  - terms
+- assessment_id: role
+  area: scope
+  topic: Antibacterial classification and source assay
+  outcome: supported
+  summary: The original strain-specific inhibition supports antibacterial-agent classification.
+    No universal susceptibility, MIC or direct enzyme inhibition is inferred.
+  target_ids:
+  - CHEBI:144729
+  evidence_ids:
+  - terms
+  - original
+- assessment_id: pH
+  area: evidence
+  topic: Predominant species near neutral pH
+  outcome: supported
+  summary: Original macro-pKa measurements are consistent with the native pH description,
+    with explicit microscopic-population and assay-medium limitations.
+  target_ids:
+  - CHEBI:144729
+  evidence_ids:
+  - original
+  - pH
+- assessment_id: sources
+  area: evidence
+  topic: Adopted biosynthesis citation and mechanism boundary
+  outcome: supported
+  summary: Both source leads concern the named compound; the later biosynthesis evidence
+    is not promoted into a drug-action pathway.
+  target_ids:
+  - CHEBI:144729
+  evidence_ids:
+  - original
+  - biosynthesis
+- assessment_id: limits
+  area: scope
+  topic: Detailed microstates and later full-main access
+  outcome: unknown
+  summary: Exact microscopic populations and the subscription 2019 narrative were
+    not independently established; these bounded limits do not demonstrate a native
+    defect.
+  target_ids:
+  - CHEBI:144729
+  evidence_ids:
+  - pH
+  - biosynthesis
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Read-only ownership and checks
+  outcome: supported
+  summary: Maintained owners, original hashes, source mint, history and actual focused
+    checks verify.
+  target_ids:
+  - CHEBI:144729
+  evidence_ids:
+  - provenance
+findings: []
+actions: []
+limitations:
+- The 1986 full two-page original was read and visually checked. The 2019 source was
+  read at complete-abstract, public extended-caption and selected-SI depth; its subscription
+  main was not retrieved.
+- Macroscopic pKa values and conventional amino-acid chemistry support the pH statement
+  but do not provide an independently measured microscopic zwitterion fraction. The
+  biological assay samples an equilibrium preparation rather than isolating one solution
+  microstate.
+- The earlier 1977 fungal report supplies a comparison cited by the 1986 authors;
+  its full original was not independently retrieved, so no new experimental claim
+  from it is adopted.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Native and maintained-source files remain unchanged; all thirteen initial input
+  hashes verify.
+- Standalone chemistry used the 019 environment against 059; focused native checks,
+  ledger and contract used the 059 environment.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

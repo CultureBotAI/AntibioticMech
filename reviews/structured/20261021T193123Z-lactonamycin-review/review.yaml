@@ -1,0 +1,729 @@
+schema_version: 1.0.0
+review_id: 20261021T193123Z-lactonamycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Lactonamycin: primary structure and antibacterial activity supported'
+started_at: '2026-10-21T19:05:26Z'
+finished_at: '2026-10-21T19:31:23Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The entire native record and maintained ChEBI row agree with current structural
+  authorities and the original natural-product evidence. The 1999 structure paper
+  supports the rhodinose-containing hexacyclic aglycone and absolute configuration;
+  apparent 14a descriptor differences reflect legacy versus accurate CIP labeling
+  of the same graph. Original assays establish antibacterial activity under defined
+  conditions. No confirmed native correction was identified. Registry access, the
+  fragment-only adopted synthesis lead and unresolved target mechanism remain bounded
+  limitations. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/lactonamycin.yaml
+    sha256: 551716d9d9d075756756118bb5ceef82b7496e242f9cb4841e843c360f180f5a
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+targets:
+- target_id: CHEBI:66553
+  path: data/antibiotics/antibacterial/lactonamycin.yaml
+  label: lactonamycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 584; one exact native record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:66553
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Executed against batch059; standalone
+    chemistry used existing batch019 RDKit, while schema/strict used batch059.
+  target_ids:
+  - CHEBI:66553
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    584
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against batch059; standalone
+    chemistry used existing batch019 RDKit, while schema/strict used batch059.
+  target_ids:
+  - CHEBI:66553
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/lactonamycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against batch059; standalone
+    chemistry used existing batch019 RDKit, while schema/strict used batch059.
+  target_ids:
+  - CHEBI:66553
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/lactonamycin.yaml --out /private/tmp/am-review-session/584-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:66553
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:66553
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:66553
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:66553
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:66553
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:66553
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:66553
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:66553
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:66553
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/lactonamycin.yaml
+  locator: Entire record, source concept, synonym and three seed/reseed history events
+  accessed_at: '2026-10-21T19:19:02Z'
+  support: supports
+  summary: The SEEDED record denotes neutral lactonamycin C28H27NO12 with six assigned
+    stereocentres, a stereochemical IUPAC synonym, four broader structural parents
+    and antibacterial/antimicrobial roles. The definition states S. rishiriensis production
+    and antibacterial activity. There are no separate structured target, resistance,
+    activity, producer, product or causal-graph objects; those absences do not invalidate
+    the record.
+  snapshot_sha256: 551716d9d9d075756756118bb5ceef82b7496e242f9cb4841e843c360f180f5a
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv#CHEBI:66553
+  locator: Complete exact row 1581 and readiness row 1499
+  accessed_at: '2026-10-21T19:19:02Z'
+  support: context_only
+  summary: The maintained ChEBI row supplies every imported identity, structure, parent,
+    role, registry link and both adopted PMID leads. No matching curator or decisions
+    row was found. Original 13 input hashes were preserved and expanded to21 contextual
+    inputs before detailed judgment; there is no inferred secondary structure owner.
+  snapshot_sha256: ed47271935415627d8decb4f96d2cde193456640fe9e410c4e9ba689b5b6f8ae
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/584-context-search.txt
+  locator: Preserved initial search plus ignored-inclusive owner follow-up
+  accessed_at: '2026-10-21T19:19:02Z'
+  support: context_only
+  summary: Exact identifier, label and slug were searched including hidden and ignored
+    files in the relevant inventories, curation, configuration and scripts. Readiness
+    recommends mechanism review but is not evidence that an established mechanism
+    is missing. The native record names no gene, protein, pathway or transcriptomics
+    accession requiring a record-specific expression-adapter query.
+  snapshot_sha256: c0a9459b4bf62a67e13cbeabe195b0b46e5efd2f9a715076747b20b7614bf090
+  search_scope: Initial preserved584-local-hits and rg --no-ignore --hidden for CHEBI:66553/lactonamycin
+    across curation, conf, scripts and data/raw.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/66553/
+  locator: Entire current CHEBI66553 response, including names, graph and provenance
+  accessed_at: '2026-10-21T19:14:36.939479Z'
+  support: supports
+  summary: Current ChEBI reproduces the native neutral graph and key XFQJOLWXLJXJSV-VUAGTGNDSA-N,
+    the stereochemical synonym, four structural parents and both activity roles. It
+    links producer S. rishiriensis MJ773-88K4 to the original 1996 paper and retains
+    CAS182234-02-2 and Reaxys8378497. Current optional metabolite and functional-parent
+    annotations do not create missing-required-field defects.
+  snapshot_sha256: 8a25dc6d87b898d7e9f4760c0cdeaee80dccba998bbdc4ee7c5116ebf16cdaee
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/lactonamycin/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass/JSON
+  locator: Exact name-query result CID10370774, used only as an independent comparator
+  accessed_at: '2026-10-21T19:14:36.944489Z'
+  support: supports
+  summary: PubChem matches all six native stereocentres, formula, neutral form and
+    full InChIKey. Its rounded mass 569.5 is consistent with native 569.519. This
+    is not a native asserted PubChem xref and is not proposed as a substitute for
+    unresolved registry evidence.
+  snapshot_sha256: fa8b521cc0b504b73e89888424862624ac3df3f1cd501a6a248d565b296bc4e4
+- evidence_id: term-33853
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/33853/
+  locator: Phenols definition
+  accessed_at: '2026-10-21T19:14:37.169271Z'
+  support: supports
+  summary: The native has two aryl hydroxy groups, satisfying the broader phenol term.
+  snapshot_sha256: 4236efb9147ebed90640b53d1b85f054605ca0813613bbf68b3b4fbaeb939cf4
+- evidence_id: term-37581
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/37581/
+  locator: Gamma-lactone term
+  accessed_at: '2026-10-21T19:14:37.300247Z'
+  support: supports
+  summary: The mapped five-membered cyclic ester in the aglycone supports gamma-lactone
+    classification.
+  snapshot_sha256: 428dcb85d1550a725868c00745aeaa879ad02efc495442ab2153e2b7c0940047
+- evidence_id: term-51914
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/51914/
+  locator: Organic heterohexacyclic compound term
+  accessed_at: '2026-10-21T19:14:37.889706Z'
+  support: supports
+  summary: The natural product has a six-ring fused heterocyclic aglycone and a separate
+    rhodinose ring. Current ChEBI asserts this class and also assigns it to glycosides
+    such as solanine; the term supplies no formal definition of total versus core
+    ring counting. Interpreting the class as the hexacyclic core is consistent with
+    that usage, but is an ontology-scope inference rather than a formal ring-count
+    rule.
+  snapshot_sha256: 4ef36f9208870723f00b037c610b80b45cca9b1fe1aec5d7d3344c4ddef0554a
+- evidence_id: term-63349
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/63349/
+  locator: Trideoxyhexose derivative definition
+  accessed_at: '2026-10-21T19:14:37.891194Z'
+  support: supports
+  summary: The glycosidic L-rhodinose moiety is a 2,3,6-trideoxyhexose derivative,
+    directly supported by the original hydrolysis/NMR study.
+  snapshot_sha256: 470adf97acf11564a61f20b30f3f7352780d4701d6816d57e33383d4fcd7e235
+- evidence_id: term-33281
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/33281/
+  locator: Antimicrobial agent definition
+  accessed_at: '2026-10-21T19:14:38.940411Z'
+  support: supports
+  summary: This broader role includes bacterial growth inhibition and is supported
+    by the original assays.
+  snapshot_sha256: 0f66df822d1a825c02531f80cc0fcc12783ac72a0c2f0482a9d9018db0dba9e1
+- evidence_id: term-33282
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/33282/
+  locator: Antibacterial agent definition
+  accessed_at: '2026-10-21T19:14:39.333536Z'
+  support: supports
+  summary: The original agar-dilution assays directly support bacterial growth inhibition;
+    this does not imply universal spectrum or clinical efficacy.
+  snapshot_sha256: 20d92ce7e00c204b1753184671c043160821d692438278344335446aadcd5082
+- evidence_id: registry-boundary
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/66553/
+  locator: Current CAS and Reaxys links; attempted independent public resolution
+  accessed_at: '2026-10-21T19:19:02Z'
+  support: partial
+  summary: ChEBI explicitly associates CAS182234-02-2 and Reaxys8378497 with this
+    exact record. Independent CAS API access returned 401 and the public page supplied
+    only an application shell; the attempted Reaxys route returned 403. Therefore
+    accession propagation is verified but independent registry-level stereochemical
+    equivalence remains unresolved, with no positive contradiction established.
+  snapshot_sha256: 4e9a5f6892f58328d5176d327e81a1b059f46c7cf39d2564f68ac0ad42f18ceb
+- evidence_id: adopted1996
+  kind: primary_source
+  reference: PMID:8931735; DOI:10.7164/antibiotics.49.953
+  locator: Complete original two pages953–954, actual Figure 1 and printed formula
+    viewed
+  accessed_at: '2026-10-21T19:15:13.486778Z'
+  support: supports
+  summary: Lactonamycin was isolated from S. rishiriensis MJ773-88K4, originally obtained
+    from Yokohama soil. Production at 27 °C for six days, acidified ethyl acetate
+    extraction and reverse-phase HPLC yielded the pale-yellow compound. The communication
+    reports Gram-positive activity including MRSA MIC 0.2–0.78 µg/mL with a referenced
+    Japanese standard method, but provides no exact strain table or detailed local
+    inoculum/incubation. It does not establish a molecular target.
+  snapshot_sha256: e391fc9ebaf1d4d5e9b9eeeb57ced1e45d87d879e6a82390109b23e9eae68bbe
+- evidence_id: primary-formula-conflict
+  kind: primary_source
+  reference: PMID:8931735; PMID:10348042; PMID:10348043
+  locator: Actual1996 p954 and1999 Part I Table 4/Part II crystal formula
+  accessed_at: '2026-10-21T19:15:13.486778Z'
+  support: context_only
+  summary: The 1996 communication actually prints C28H27O9N, despite its measured/calculated
+    [M+H]+570.1613/570.1612 and oxygen-rich drawing. Both 1999 originals explicitly
+    give C28H27NO12, and the crystal formula and native graph agree. This is a source
+    typographical conflict resolved by the fuller originals, not a native molecular-formula
+    defect.
+  snapshot_sha256: e391fc9ebaf1d4d5e9b9eeeb57ced1e45d87d879e6a82390109b23e9eae68bbe
+- evidence_id: adopted2004
+  kind: primary_source
+  reference: PMID:15606108; DOI:10.1021/ol047922h
+  locator: Complete adopted abstract; original SI contents, general methods and fragment5
+    experiment S7–S8
+  accessed_at: '2026-10-21T19:16:43.296668Z'
+  support: context_only
+  summary: The adopted paper concerns an enantiospecific AB-ring fragment synthesis
+    from dimethyl D-tartrate. The recovered SI identifies compound 5 as C11H14O9,
+    gives its synthesis/characterization and reports intermediate crystal studies.
+    It is not the C28 parent antibiotic and supplies no direct parent activity or
+    target experiment in the inspected material. The main publisher body returned
+    403.
+  snapshot_sha256: d1ce1db56985078783ea49ce66e8bcc508e8d0a631849c5ad9db8f2bcf780967
+- evidence_id: synthesis-cif
+  kind: primary_source
+  reference: https://ndownloader.figshare.com/files/5149651
+  locator: Original-linked CIF data5 formula and SI compound 5 drawing, actual S7
+    viewed
+  accessed_at: '2026-10-21T19:16:43.296567Z'
+  support: context_only
+  summary: The CIF data5 entry explicitly has C11H14O9 and mass290.22, confirming
+    that this crystal is the synthetic AB fragment. It must not be represented as
+    an independent crystal of the entire natural antibiotic. Other intermediate CIF
+    blocks and all spectral pages were not reanalyzed.
+  snapshot_sha256: 4a097829ac98b6e043672a35208d46542b3651279c9e39231751aafe8d47ea9b
+- evidence_id: primary1999-producer
+  kind: primary_source
+  reference: PMID:10348042; DOI:10.7164/antibiotics.52.269
+  locator: Complete Part I pp269–275; taxonomy, fermentation and isolation
+  accessed_at: '2026-10-21T19:15:13.490174Z'
+  support: supports
+  summary: Strain MJ773-88K4 was phenotypically compared with related Streptomyces
+    and designated S. rishiriensis; it was deposited as FERM P-14906. Seed culture
+    at 28 °C for 48h and production at 28 °C for 120h/220rpm preceded acidified extraction,
+    washes and preparative HPLC, yielding 97.5mg parent from 6.5L broth. The source
+    identifies one natural compound, without evidence that a defined salt or solvate
+    should replace the native neutral graph. The taxonomic assignment is the source’s
+    phenotypic identification, not a new genomic reassignment by this reviewer.
+  snapshot_sha256: 5e936ee50607f3cf8d866cc10f5c28c880e9eebbed88a7a6bde95b44b26ec5e8
+- evidence_id: primary1999-activity
+  kind: primary_source
+  reference: PMID:10348042
+  locator: Methods p270 and actual Tables 5–8 on pp273–274, fully inspected
+  accessed_at: '2026-10-21T19:15:13.490174Z'
+  support: supports
+  summary: MICs used serial agar dilution on Mueller-Hinton agar at 37 °C for 18h;
+    the mycobacterial test used nutrient agar with1% glycerol for 42h. Table 5 reports
+    S. aureus FDA209P/Smith0.39 µg/mL, MS9610 0.78, B. subtilis NRRL B-558 0.39 and
+    B. cereus ATCC10702 0.20. Listed Gram-negative strains, M. smegmatis ATCC607 and
+    C. albicans3147 exceeded100 µg/mL. Exact inoculum is not stated locally. These
+    findings support conditional antibacterial activity, not activity against every
+    microorganism.
+  snapshot_sha256: 5e936ee50607f3cf8d866cc10f5c28c880e9eebbed88a7a6bde95b44b26ec5e8
+- evidence_id: primary1999-resistant-panels
+  kind: primary_source
+  reference: PMID:10348042
+  locator: Actual Tables 6–8, exact strain and censoring boundaries
+  accessed_at: '2026-10-21T19:15:13.490174Z'
+  support: supports
+  summary: The later MRSA panel includes TY-01759 at 1.56 µg/mL and other entries0.39–0.78,
+    broader than the short1996 range. VRE entries include E. faecalis NCTC12201 at
+    0.20, NCTC12203 at 0.78 and E. faecium NCTC12202/12204 at 0.39/0.20 µg/mL. Table
+    6 contains S. pyogenes TY-5708 >100 despite other streptococcal rows0.20–0.78.
+    Resistant-to-methicillin/vancomycin status does not mean resistance to lactonamycin,
+    and the panels are not species-wide clinical breakpoints.
+  snapshot_sha256: 5e936ee50607f3cf8d866cc10f5c28c880e9eebbed88a7a6bde95b44b26ec5e8
+- evidence_id: primary1999-cytotoxicity
+  kind: primary_source
+  reference: PMID:10348042
+  locator: MTT Methods p270 and actual Table 9 p274
+  accessed_at: '2026-10-21T19:15:13.490174Z'
+  support: context_only
+  summary: Tumor-cell growth inhibition after two to three days gave IC50 values including
+    L1210 0.087, EL-4 0.064 and S180 3.300 µg/mL. A single intraperitoneal dose100mg/kg
+    did not cause death in the reported female ICR mice. These observations do not
+    establish anticancer clinical benefit, antimicrobial selectivity or general safety;
+    an optional cytotoxicity annotation would need this assay context.
+  snapshot_sha256: 5e936ee50607f3cf8d866cc10f5c28c880e9eebbed88a7a6bde95b44b26ec5e8
+- evidence_id: primary1999-structure
+  kind: primary_source
+  reference: PMID:10348043; DOI:10.7164/antibiotics.52.276
+  locator: Complete Part II pp276–280; actual Figure 2a/b p279
+  accessed_at: '2026-10-21T19:15:13.492973Z'
+  support: supports
+  summary: NMR/connectivity analysis identifies the glycosidic rhodinose and narrows
+    aglycone topology; single-crystal X-ray analysis establishes the complete relative
+    structure. Acid hydrolysis yields rhodinose whose negative optical rotation is
+    compared with authentic literature L-rhodinose, anchoring the absolute hand. The
+    crystal formula is C28H27NO12, space group C2, with reported refinement R 0.049.
+    This supports the parent molecular identity; raw diffraction was not independently
+    re-refined.
+  snapshot_sha256: 534512d71f3460dbb8ae070ac949cd2b391c572f82cb00d0f1d5c56ee79712e2
+- evidence_id: stereo-mapping
+  kind: validation
+  reference: /private/tmp/am-review-session/584-map.py
+  locator: Six native/current authority encodings, mapped primary Figure 2b and accurate
+    CIP labels
+  accessed_at: '2026-10-21T19:19:02Z'
+  support: supports
+  summary: Native, current ChEBI and current PubChem SMILES/InChI all give XFQJOLWXLJXJSV-VUAGTGNDSA-N
+    with reciprocal chirality-aware matches. Primary C3a/C5a/C14a map to native atoms
+    5/2/12; sugar C1prime/C4prime/C5prime map to0/36/38. The primary drawing agrees
+    with native methoxy-dash and two bridgehead oxygen-wedge relationships. Atom12
+    is S under legacy RDKit labeling but R under accurate CIPLabeler; native modern
+    synonym 14aR therefore does not encode an opposite stereoisomer to the original
+    printed 14aS. All other assigned centres remain S.
+  snapshot_sha256: 03f5ef4fa830a0290c6677373595f9715dc76601c6ffc3351b015618c4b179b4
+- evidence_id: biosynthesis2008
+  kind: primary_source
+  reference: PMID:18070976; DOI:10.1128/AAC.00717-07
+  locator: Exact S. rishiriensis fermentation, cluster analysis, resistance-candidate
+    paragraphs and Discussion
+  accessed_at: '2026-10-21T19:16:08.116059Z'
+  support: context_only
+  summary: The original reports low, unstable lactonamycin production from S. rishiriensis
+    MJ773-88K4 and small parent amounts isolated by HPLC. It cloned a homologous candidate
+    cluster, while decisive glycosyltransferase disruption/complementation and isotope
+    incorporation experiments used lactonamycin Z in S. sanglieri. Lct38 efflux and
+    Lct56 rRNA-methyltransferase self-resistance roles are predictions from sequence
+    similarity, not direct lactonamycin resistance assays or proof of a ribosomal
+    inhibition target. The later production difficulty does not negate the original
+    isolation.
+  snapshot_sha256: 26c6d0cd7b55350efe6247e23e54f31a84472e0bdd24fcf8fb0603adcd7544bb
+- evidence_id: access
+  kind: validation
+  reference: /private/tmp/am-review-session/584-fetch4.json
+  locator: Source retrieval and bounded reading ledger
+  accessed_at: '2026-10-21T19:19:02Z'
+  support: context_only
+  summary: Both adopted leads were resolved; the 1996 discovery was fully read and
+    the 2004 abstract plus exact fragment SI section inspected. Additional 1999 Parts
+    I/II were read completely with actual structure/activity figures/tables. The 2008
+    study was read only for the relevant producer, cluster and candidate-resistance
+    sections. The 2013 total-synthesis main returned 403 and contributes no experimental
+    conclusion. CAS/Reaxys access limits remain explicit.
+  snapshot_sha256: 00a6d617750a39798e4bcf73abdd907c5776fccb1b843d020301b58b33e03f7d
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact natural glycoside and stereochemical synonym
+  outcome: supported
+  summary: The neutral C28H27NO12 structure, six stereocentres, glycosidic L-rhodinose
+    and hexacyclic aglycone are supported by the original chemical analysis, hydrolysis
+    and crystallographic drawing. Current ChEBI/PubChem agree in six tested encodings.
+    The 14a descriptor discrepancy is explained by legacy versus accurate CIP calculation
+    on the same graph, while the 1996 oxygen-count typo is resolved by both 1999 originals.
+    Neither is a confirmed native defect.
+  target_ids:
+  - CHEBI:66553
+  evidence_ids:
+  - native
+  - chebi
+  - pubchem
+  - primary-formula-conflict
+  - primary1999-structure
+  - stereo-mapping
+- assessment_id: grounding
+  area: grounding
+  topic: Structural parents, roles and registry links
+  outcome: unknown
+  summary: The ChEBI identity and structural features agree; phenol, gamma-lactone
+    and trideoxyhexose-derivative parents are directly supported. The hexacyclic class
+    is consistent with core-based source usage, although its formal total-versus-core
+    ring-count semantics are undefined. Primary assays support both activity roles.
+    Current ChEBI confirms provenance of the two registry links, but independent CAS/Reaxys
+    structure-level verification could not be completed through public access. No
+    mismatching registry structure was observed, so the limitation does not justify
+    automatic removal.
+  target_ids:
+  - CHEBI:66553
+  evidence_ids:
+  - chebi
+  - term-33853
+  - term-37581
+  - term-51914
+  - term-63349
+  - term-33281
+  - term-33282
+  - registry-boundary
+- assessment_id: evidence
+  area: evidence
+  topic: Definition, exact producer and antibacterial activity
+  outcome: supported
+  summary: The adopted discovery and complete follow-up originals directly support
+    S. rishiriensis MJ773-88K4 production and conditional antibacterial activity of
+    isolated lactonamycin. Native makes no quantitative strain-wide or clinical claim
+    that overstates those assays. The second adopted lead is explicitly fragment synthesis
+    and is not used as activity or mechanism proof.
+  target_ids:
+  - CHEBI:66553
+  evidence_ids:
+  - adopted1996
+  - adopted2004
+  - primary1999-producer
+  - primary1999-activity
+  - primary1999-resistant-panels
+- assessment_id: completeness
+  area: completeness
+  topic: Optional activity, producer and mechanism annotations
+  outcome: unknown
+  summary: The record has no required missing structured field identified. Existing
+    sources can support bounded strain-level activity and producer annotations, but
+    the inspected work does not establish a specific inhibitory target. Biosynthetic
+    enzymes and sequence-predicted self-resistance proteins must not be converted
+    into direct antibiotic targets. Synthesis fragments, lactonamycin Z and tumor-cell
+    effects remain distinct.
+  target_ids:
+  - CHEBI:66553
+  evidence_ids:
+  - search
+  - adopted2004
+  - synthesis-cif
+  - primary1999-cytotoxicity
+  - biosynthesis2008
+- assessment_id: provenance
+  area: provenance
+  topic: Generated ownership and recorded scientific status
+  outcome: supported
+  summary: The exact maintained ChEBI row reproduces native fields and adopted leads,
+    and all three historical seed/reseed events are coherent. Original 13 and expanded
+    21 captured inputs remain unchanged. The native remains SEEDED; this read-only
+    review does not assert curation completion or promote status.
+  target_ids:
+  - CHEBI:66553
+  evidence_ids:
+  - owners
+  - native
+  - search
+  - chebi
+findings: []
+actions:
+- action_id: A1
+  finding_ids: []
+  target_ids:
+  - CHEBI:66553
+  description: Optional future enrichment can add exact producer and strain-specific
+    activity while preserving current evidence boundaries.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  acceptance_checks:
+  - Use the original 1999 producer MJ773-88K4/FERM P-14906 and stated fermentation
+    conditions; do not relabel S. sanglieri/lactonamycin Z experiments as lactonamycin.
+  - For activity_spectrum entries, retain exact strains, µg/mL units, serial agar-dilution
+    method, medium, incubation and >100 censoring. Record inoculum as unresolved rather
+    than inventing it.
+  - Keep compound 5 AB-fragment crystallography separate from the full parent; do
+    not infer a direct molecular target from Lct38/Lct56 predictions or biosynthetic
+    genes.
+  - Resolve CAS/Reaxys exact structure if lawful public data become available, while
+    preserving current source provenance and the unresolved-access status. No corrective
+    native edit is required by this review.
+limitations:
+- The 1996 adopted original and1999 Parts I/II were fully read; actual1996 Figures
+  1–3,1999 structure Figure 2 and activity Tables 4–9 were viewed. Raw NMR signals
+  and diffraction data were not independently reprocessed; the absolute assignment
+  retains the original chemical-correlation basis.
+- The 2004 adopted main returned 403. Its complete abstract, SI contents/general methods
+  and compound 5 experiment S7–S8 plus actual S7 drawing were read, and the CIF data5
+  formula checked. Remaining intermediate syntheses, spectra and crystal blocks were
+  not exhaustively analyzed. The separate2013 total-synthesis paper remained inaccessible
+  and is not relied upon.
+- The 2008 biosynthesis comparison was read for exact producer/cluster/resistance-prediction
+  passages, not every gene table or supplemental experiment. Its lactonamycin Z genetic
+  results and hypothetical self-resistance proteins are not direct parent-target evidence.
+  No claim is made that no mechanism exists anywhere beyond this bounded source review.
+- CAS API returned 401, its public page was only an application shell, and attempted
+  Reaxys resolution returned 403. ChEBI link provenance was verified, but independent
+  registry stereochemical equivalence remains unresolved.
+- The native has six fused aglycone rings plus a separate rhodinose ring. Core-based
+  interpretation of the current hexacyclic classification is consistent with source
+  usage but not supplied as a formal definition; the ring-system map and that ontology
+  boundary are retained.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All original 13 and expanded 21 input hashes were checked unchanged at draft writing.
+  No native/source/history/progress/saved-bundle/Git writes occurred.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
