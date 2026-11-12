@@ -1,0 +1,1004 @@
+# Azlocillin: exact identity and PBP target supported; qualified primary enrichment remains
+
+- Review: 20261021T100459Z-azlocillin
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:58:19Z
+- Finished UTC: 2026-10-21T10:04:59Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The stereospecified neutral azlocillin identity agrees across ChEBI, PubChem, ChEMBL and KEGG. The explicitly database-level PBP target is independently supported by an exact-compound Pseudomonas PBP3 acyl-complex study. An adopted primary paper demonstrates VIM-1 hydrolysis of azlocillin. Historical activity and clinical use are supported within studied contexts, while several source citations concern mixtures, analytical tools or host allergy. No confirmed native scientific error was found; one informational primary-evidence enrichment finding remains, with access and protein-grounding limits. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole merged ChEBI/ARO azlocillin record, including six names, four parents, roles, all chemical/drug/document xrefs, source mints, PBP target qualifier and five history events. All ten adopted ChEBI PMIDs and the ARO review were individually assessed.
+
+Selection: Queue 135, CHEBI:2956 at its locked exact path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:2956 | data/antibiotics/antibacterial/azlocillin.yaml | generated | azlocillin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:2956 | Actual focused command exited 0. Chemical consistency and schema success are separate from primary claim review. |
+| strict | passed | True | CHEBI:2956 | Actual focused command exited 0. Chemical consistency and schema success are separate from primary claim review. |
+| chemistry | passed | False | CHEBI:2956 | Actual focused command exited 0. Chemical consistency and schema success are separate from primary claim review. |
+| Authoritative full QC | failed | True | CHEBI:2956 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:2956 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:2956 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:2956 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:2956 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:2956 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:2956 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:2956 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:2956 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact structure and names
+
+identity: supported. Targets: CHEBI:2956.
+
+The neutral stereospecified acid and all six source-derived names are consistent. Salt and hydrolysis-product contexts remain distinct.
+
+### Parents, roles and filing
+
+grounding: supported. Targets: CHEBI:2956.
+
+Penicillin skeleton, semisynthetic class, antibacterial role and source allergen context are coherent. Generic clinical use is historically supported with species/assay limits.
+
+### Generic PBP assertion and exact primary support
+
+evidence: supported. Targets: CHEBI:2956.
+
+Native database status is honest. Exact P. aeruginosa PBP3 covalent binding is independently supported; no wrong target claim was found. More precise evidence can be added after construct/ProteinExample qualification.
+
+### VIM-1 hydrolysis follow-up
+
+completeness: supported. Targets: CHEBI:2956.
+
+An adopted primary source provides optional exact biochemical drug-inactivation evidence. It does not make VIM-1 the drug target or identify the resistance phenotype of every host carrying the gene.
+
+### All eleven adopted citation dispositions
+
+evidence: supported. Targets: CHEBI:2956.
+
+Each adopted citation was resolved: one full primary enzyme study, original abstracts for other available studies, two secondary reviews and one inaccessible spectrum article with no abstract. Mixed-agent, analytical, host and aztreonam scopes are retained.
+
+### Historical activity and clinical claims
+
+scope: supported. Targets: CHEBI:2956.
+
+Direct antibacterial studies and historical treatment studies support inclusion and use context. Detailed numerical strain-level AST and H. influenzae clinical efficacy were not fully audited.
+
+### Optional target/activity/resistance enrichment
+
+completeness: supported. Targets: CHEBI:2956.
+
+Useful primary additions exist. No producer is inferred for the semisynthetic product, no PANTA outcome is assigned to azlocillin alone, and no docking hypothesis is promoted to direct binding.
+
+### Source-owned target and curator-owned primary additions
+
+ownership: supported. Targets: CHEBI:2956.
+
+Generated imports remain owned by source tables and seeder; claim-level primary additions belong to the actual native azlocillin record through validated writers/history.
+
+### Focused checks and unchanged inputs
+
+schema: supported. Targets: CHEBI:2956.
+
+Schema, strict and independent chemistry pass; all 17 supplemental captured inputs and original hashes remain unchanged.
+
+## Findings
+
+### F1: Attach available primary PBP and drug-inactivation evidence with exact experimental scope
+
+informational / open / confirmed; issue key: azlocillin-qualified-pbp-vim-primary-enrichment.
+
+The broad PBP target is independently supported by exact azlocillin structural work, and an adopted primary paper demonstrates VIM-1 hydrolysis. Optional claim-level enrichment can make these evidence types explicit while retaining source qualifiers, construct boundaries and kinetic endpoint distinctions.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Curate the exact primary target and resistance evidence without widening its scope.
+
+- Attach PMID 26823174 to a qualified P. aeruginosa PBP3 covalent-binding example. Preserve soluble construct residues 35–579, S294 acylation, structural/thermal-shift assay type and expression-host distinction. The high-concentration crystal soak is not MIC or KD.
+- Resolve paper Rosetta 2(DE3) versus PDB BL21(DE3) host metadata before exact construct claims. Q51504 is currently unreviewed and must not automatically populate a reviewed ProteinExample. Do not import conflicting PDB glycosyltransferase labeling or replace the taxon-agnostic target with one unverified protein accession.
+- Use PMID 11036013 for VIM-1-mediated hydrolytic inactivation. Keep biochemical Km/kcat separate from binding affinity and whole-cell resistance; distinguish original enzyme context from E. coli expression host.
+- Inspect full assay tables before adding exact activity_spectrum observations from historical studies or the Bulgarian survey. Keep azlocillin versus mezlocillin, parent versus salt, MIC versus combination outcomes, and historical versus current clinical use separate.
+- Do not transfer PANTA/PANTAV culture outcomes to azlocillin alone, antibody/nanopore binding to antibacterial targets, or Borrelia Clp docking to demonstrated direct binding. No natural producer or exposure dataset follows from those sources.
+- Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/azlocillin.yaml for separately authorized curation; preserve curated evidence across reseeding, run focused/shared gates and retain SEEDED until all native review requirements are satisfied.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/azlocillin.yaml; Entire YAML and five seed/reseed events. | supports | SEEDED, EXACT neutral azlocillin with six correctly typed names, source-derived class/roles and one generic PBP target marked PRIMARY_EVIDENCE_NEEDED. No native quantitative activity, resistance object, producer, clinical indication object, dataset or causal graph is asserted. Optional absence alone is not an error. |
+| source | data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv; conf/aro_target_roles.tsv; 135-raw.json; complete ChEBI line 36, ARO line 138, target line 155; conf/sources.yaml and extraction/seeding branches. | supports | ChEBI supplies structure, systematic names, INNs, parent/role terms and ten citation leads. ARO supplies AZL, the nearest marked penicillin class, one review lead and the broad PBP edge. The seeder explicitly retains database provenance and primary-evidence-needed status. The adopted ARO resistance table has no exact azlocillin edge. Original captured hashes and all 17 supplementary maintained inputs remain unchanged. |
+| identity | ChEBI CHEBI:2956; PubChem CID 6479523; ChEMBL CHEMBL1537; KEGG C06839; 135-chemistry.json and 135-crosswalk-chemistry.json, independently parsed native and external structures. | supports | Native SMILES and InChI parse to one neutral C20H23N5O6S fragment with key JTWOMNBEOCYFNV-NFFDBFGFSA-N. Formula, mass precision and both source mints agree. Independently parsed PubChem, ChEMBL and KEGG molfile give the same full key. The specified side-chain stereochemistry agrees with the systematic names; the neutral acid remains separate from its sodium salt and anion. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:2956; 135-chebi.html/txt, full identity, names, ontology and xref sections. | supports | Official ChEBI reproduces the structure, all INNs/systematic names and definition. The native parents resolve as penicillin CHEBI:17334, semisynthetic derivative CHEBI:72588 and penicillin allergen CHEBI:88187. The antibacterial-drug role and inherited antimicrobial role are consistent. Azlocillin(1−), CHEBI:51863, is explicitly a separate conjugate-base entry. CAS 37091-66-0 and other imported crosswalks are source-attested. |
+| aro | https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo; 135-aro-terms.txt, complete azlocillin, extended-spectrum parent, marked class and PBP terms. | supports | Official ARO confirms ARO:3000638, AZL, all crosswalks and the direct antibiotic edge to ARO:3000749. ARO:3009123 is the immediate extended-spectrum parent; ARO:3000008 is the nearest explicitly marked class used by the seeder. The broad PBP assertion is not an exact species/protein assay and is appropriately qualified natively. |
+| xrefs | KEGG D02339; DrugCentral 277; DrugBank DB01061; LINCS LSM-15179; Reaxys 5785146; 135-kegg-drug.txt, 135-drugcentral.html/txt and ChEBI manual xrefs. | partial | KEGG confirms azlocillin identity and a PBP/cell-wall-synthesis mechanism. DrugCentral 277 resolves to the correct formula, CAS, ChEBI and DrugBank ID but includes sodium-salt synonyms; native drug_xrefs need not be exact neutral-form identifiers. DrugBank, LINCS and Reaxys were not independently inspected beyond source crosswalks. Wikipedia is a document link, not scientific support. |
+| patents | US3933795; CN101585844; FR2100682; 135-US3933795A.html/txt Examples 144 and 150; CN101585844A abstract/parent description; FR2100682A1 public metadata/abstract. | partial | US Example 144 describes the D side-chain azlocillin acid, and Example 150 separately converts it to sodium salt. The CN patent explicitly names the same stereochemical acid and describes its preparation before salification. The FR document resolves to the broad ureidopenicillin family; its exact examples were not audited. These are relevant document cross-references, not proof that every family member or assay is this exact neutral compound. |
+| adopted-vim | PMID:11036013; DOI:10.1128/AAC.44.11.3003-3007.2000; 135-VIM2000.html/txt, complete main Methods, Results, Tables 1–4 and Discussion. | supports | Purified VIM-1 from E. coli DH5α carrying pBCLL/39H hydrolyzes commercial Sigma azlocillin. Table 2 reports Km 123 ± 11 micromolar, kcat 1525 ± 125 per second and kcat/Km 1.2e7 per molar per second; values are enzyme kinetics, not MIC or binding KD. Hydrolysis was followed spectrophotometrically at 30 °C. This supports drug inactivation, not VIM-1 as an antibacterial target. The paper situates the determinant in P. aeruginosa clinical isolates, but the purified expression source is E. coli; do not transfer strain phenotypes or temocillin MICs to azlocillin. |
+| adopted-activity | PMID:19292999; DOI:10.1016/j.anaerobe.2009.03.002; 135-epmc.json, complete original abstract. | partial | A 25-year Bulgarian anaerobic-isolate survey includes azlocillin among drugs with comparatively good activity using agar dilution. The abstract does not supply exact azlocillin strain/MIC values or prove which enzyme causes each isolate phenotype. Full species-level tables were not inspected, so this is a qualified activity lead. |
+| adopted-spectrum-access | PMID:6212725; Official PubMed metadata and 135-epmc.json. | unknown | The 1982 Spanish article on mezlocillin/azlocillin antibacterial spectrum resolves, but no abstract is available in the inspected official record and no full paper was inspected. Metadata alone supplies no assay evidence. |
+| adopted-panta | PMID:21883661; DOI:10.1111/j.1469-0691.2011.03601.x; PMID:21219695; PMID:20363776; DOI:10.1128/AEM.02659-09; 135-epmc.json, all three complete original abstracts. | context_only | These studies use azlocillin as one component of PANTA or PANTAV culture/decontamination mixtures. They compare mycobacterial recovery and contaminant suppression, including replacement by phage lysin or altered mixture concentration. Outcomes cannot be assigned to azlocillin alone or used to call Mycobacterium a susceptible target. No azlocillin exposure transcriptome is described. |
+| adopted-analytical | PMID:21360610; DOI:10.1002/JMR.1038; PMID:11397088; DOI:10.1006/JMBI.2001.4663; 135-epmc.json, complete original abstracts. | context_only | The nanopore study distinguishes beta-lactams with a cyclodextrin/alpha-hemolysin analytical system; its residence times are detection measurements, not antibacterial target engagement. The antibody study characterizes anti-ampicillin scFv and analogue cross-reactivity, not an azlocillin antibacterial target. Neither supports transferring the detector/antibody as a native molecular target. |
+| adopted-allergy | PMID:2068466; DOI:10.1093/CLINIDS/13.SUPPLEMENT_7.S598; 135-epmc.json, complete original abstract. | context_only | The cystic-fibrosis study investigates aztreonam immunologic cross-reactivity and repeated-exposure reactions in patients with prior beta-lactam allergy. Its therapeutic and safety results are about aztreonam, not an azlocillin-only efficacy study. It is host-allergy context. |
+| adopted-reviews | PMID:6369480; DOI:10.1093/CLINIDS/6.1.13; PMID:29017833; DOI:10.1016/J.JAIP.2017.08.027; 135-epmc.json, both complete original abstracts and publication types. | context_only | The ARO acylampicillin citation is a clinical/activity review; it supports historical context but is not an individual primary assay. The newer beta-lactam allergy article is also a review. Neither is typed primary evidence here, and neither supplies exact azlocillin PBP binding experiments. |
+| pbp | PMID:26823174; DOI:10.1002/1873-3468.12054; 135-pbp2016.xml/txt, complete main text; Figure 1A/D visually inspected in 135-pbp2016-Figure1.jpg. | supports | The exact azlocillin structure is distinguished from its hydrolysis product. X-ray analysis of soluble P. aeruginosa PBP3 residues 35–579 shows ring-opened drug covalently acylating S294 at 2.0 angstrom resolution. A thermal-shift assay with S294A supports covalent stabilization. The protein was expressed in E. coli Rosetta 2(DE3); crystallization used a high-concentration soak, not an antibacterial potency assay. The paper provides no free-parent KD or direct whole-cell MIC experiment. Its cefoperazone noncovalent product structures and piperacillin comparisons are separate chemicals. |
+| pbp-archive | PDB:5DF7; UniProtKB:Q51504; 135-PDB5DF7.json, 135-PDB5DF7-protein.json and 135-UniProtQ51504.json. | partial | The official entry identifies the azlocillin PBP3 acyl complex and maps the protein to Q51504, currently unreviewed TrEMBL P. aeruginosa FtsI/PBP3. It must not be copied as a reviewed ProteinExample. PDB host metadata say E. coli BL21(DE3), while the paper says Rosetta 2(DE3), so preserve this difference pending construct-level checks. PDB EC annotations also include a glycosyltransferase label, whereas the paper describes a class B transpeptidase; do not import that conflicting function. Bound ring-opened drug is a reaction intermediate, not a new exact parent crosswalk. |
+| historical-activity | PMID:677860; DOI:10.1128/AAC.13.6.930; PMID:6818156; DOI:10.1007/BF01640680; 135-primary1978.html original abstract; official PubMed original abstract for the 1982 six-beta-lactam comparison. | partial | The 1978 study directly tests azlocillin against multiple bacterial groups and notes beta-lactamase susceptibility; its azlocillin results must be separated from mezlocillin. The 1982 study includes 47 H. influenzae isolates and supports antibacterial activity. Detailed assay tables and exact H. influenzae clinical efficacy were not independently inspected. The attempted 1978 PDF returned an HTML challenge, not paper content. |
+| clinical | PMID:6352599; DOI:10.1093/JAC/11.SUPPL_B.159; PMID:6352601; DOI:10.1093/JAC/11.SUPPL_B.183; PMID:7163781; Official original abstracts, inspected through PubMed. | partial | Historical comparative/observational clinical studies document azlocillin use for infections involving P. aeruginosa and, in the mixed serious-infection study, E. coli. These support historical clinical-use context, not current preferred therapy, universal susceptibility or unrestricted present-day availability. No numerical efficacy recommendation is proposed from abstract-only review. |
+| borrelia-boundary | DOI:10.1038/s41598-020-59600-4; Publisher indexed in silico section; direct downloaded 135-borrelia2020.html was a challenge page. | context_only | The inspected section proposes Borrelia PBP/Clp binding by homology modeling and docking. It is not direct binding evidence for Clp proteins and cannot substitute for the exact Pseudomonas PBP3 experiment. The current assessment does not claim a full review of its animal or persistence experiments. |
+| adapter | iModulonDB p_aeruginosa/precise364; 055-imodulondb-datasets-retry.txt inventory and 135-imodulondb-pbp.txt. | context_only | The structured check preceded open-ended web research and returned pbpC PA2272, pbpA PA4003, ftsI PA4418, mrcB PA4700 and ponA PA5045, with no module hit. These are gene-context matches, not proof of azlocillin activity or exact construct identity. No summarize was needed. |
+| adapter-command | Structured source runner; Actual command exited 0. | context_only | env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1 uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw kg-microbe-sources imodulondb --timeout 15 search --organism p_aeruginosa --dataset precise364 --query "penicillin-binding" |
+| search | CultureBotAI/AntibioticMech; 135-local-hits.txt and 135-maintained-search.txt. | context_only | Hidden- and ignored-inclusive searches found maintained ChEBI/ARO rows and generated/historical context but no exact adopted ARO resistance edge. Historical reports and search snippets were leads only. Bounded primary searches found exact PBP and enzyme-hydrolysis support. No claim is made that all clinical, resistance or transcriptomic studies were exhausted. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION.md; docs/HARMONIZATION.md; Exact chemical form, direct target, resistance, activity and primary evidence rules. | supports | Preserve neutral acid versus salt/product, inhibition versus hydrolytic inactivation, protein origin versus expression host, mixture versus single-agent activity and assay kinetics versus MIC. Optional omissions do not imply scientific errors. |
+| validation | Focused schema, strict and chemistry outputs; 135-focused-results.json, corresponding logs, strict TSV and chemistry JSON. | supports | All focused commands exited 0. Original and supplemental captured hashes were checked unchanged. |
+
+## Limits And Additional Notes
+
+- The entire record and maintained exact source rows were inspected. Initial capture was preserved and supplemented before judgment with ARO inputs/owners; all 17 captured input hashes remain unchanged.
+- All eleven adopted publication leads were resolved. PMID 11036013 was read in complete main text; the other available adopted studies were assessed through original abstracts. PMID 6212725 has no accessible abstract and its full Spanish article was not inspected. Reviews are typed as secondary context.
+- The exact 2016 PBP primary main text and chemical structure figure were inspected. Electron-density maps and raw diffraction data were not re-refined. PDB protein origin/host metadata were checked, with paper/deposition host and function-label discrepancies retained. Q51504 is unreviewed, limiting automatic ProteinExample use.
+- The older antibacterial and historical clinical studies were inspected at original abstracts. Their complete strain-level tables, current clinical availability and exact H. influenzae treatment evidence were not fully audited. No dose recommendation or quantitative clinical efficacy claim is proposed.
+- The downloaded 1978 PDF route and direct Nature Borrelia route returned HTML challenges, not full papers. The indexed Borrelia modeling section was inspected only to preserve the docking/direct-binding boundary.
+- DrugBank DB01061, LINCS LSM-15179 and Reaxys 5785146 remain source-attested crosswalks rather than fully independently inspected records. FR2100682 resolves but exact examples were not reviewed. Patent chemistry inspection does not validate all generic family claims.
+- No exhaustive resistance, producer or exposure-transcriptome survey is claimed. Semisynthesis, culture cocktails and analytical studies are not grounds to invent those optional annotations.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T100459Z-azlocillin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Azlocillin: exact identity and PBP target supported; qualified primary enrichment
+  remains'
+started_at: '2026-10-21T09:58:19Z'
+finished_at: '2026-10-21T10:04:59Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author this record. Preserved initial provenance capture,
+    added ARO maintained inputs and owners before scientific judgment, and read the
+    entire record and exact source rows. Checked all eleven adopted citation leads,
+    including one with no accessible abstract, and inspected exact primary PBP and
+    VIM-1 full text.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The stereospecified neutral azlocillin identity agrees across ChEBI, PubChem,
+  ChEMBL and KEGG. The explicitly database-level PBP target is independently supported
+  by an exact-compound Pseudomonas PBP3 acyl-complex study. An adopted primary paper
+  demonstrates VIM-1 hydrolysis of azlocillin. Historical activity and clinical use
+  are supported within studied contexts, while several source citations concern mixtures,
+  analytical tools or host allergy. No confirmed native scientific error was found;
+  one informational primary-evidence enrichment finding remains, with access and protein-grounding
+  limits. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/azlocillin.yaml
+    sha256: 0a729df3ec839d74bcbd263ece254773a59f89656bb971a7542db63c5d944ccd
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:2956
+  path: data/antibiotics/antibacterial/azlocillin.yaml
+  label: azlocillin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO identity, class and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: ARO imported PBP target
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: PBP target relation policy
+scope:
+  description: Whole merged ChEBI/ARO azlocillin record, including six names, four
+    parents, roles, all chemical/drug/document xrefs, source mints, PBP target qualifier
+    and five history events. All ten adopted ChEBI PMIDs and the ARO review were individually
+    assessed.
+  selection: Queue 135, CHEBI:2956 at its locked exact path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:2956
+  exclusions:
+  - target: Azlocillin sodium, hydrolyzed products, mezlocillin, other beta-lactams
+      and PANTA mixtures as exact azlocillin-only equivalents
+    reason: Chemical form, congener, mixture and experiment boundaries must be preserved.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0. Chemical consistency and schema success
+    are separate from primary claim review.
+  target_ids:
+  - CHEBI:2956
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/azlocillin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0. Chemical consistency and schema success
+    are separate from primary claim review.
+  target_ids:
+  - CHEBI:2956
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/azlocillin.yaml --out /private/tmp/am-review-session/135-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Actual focused command exited 0. Chemical consistency and schema success
+    are separate from primary claim review.
+  target_ids:
+  - CHEBI:2956
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 135
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:2956
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:2956
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:2956
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:2956
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:2956
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:2956
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:2956
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:2956
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:2956
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/azlocillin.yaml
+  locator: Entire YAML and five seed/reseed events.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: supports
+  summary: SEEDED, EXACT neutral azlocillin with six correctly typed names, source-derived
+    class/roles and one generic PBP target marked PRIMARY_EVIDENCE_NEEDED. No native
+    quantitative activity, resistance object, producer, clinical indication object,
+    dataset or causal graph is asserted. Optional absence alone is not an error.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv;
+    conf/aro_target_roles.tsv
+  locator: 135-raw.json; complete ChEBI line 36, ARO line 138, target line 155; conf/sources.yaml
+    and extraction/seeding branches.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: supports
+  summary: ChEBI supplies structure, systematic names, INNs, parent/role terms and
+    ten citation leads. ARO supplies AZL, the nearest marked penicillin class, one
+    review lead and the broad PBP edge. The seeder explicitly retains database provenance
+    and primary-evidence-needed status. The adopted ARO resistance table has no exact
+    azlocillin edge. Original captured hashes and all 17 supplementary maintained
+    inputs remain unchanged.
+  snapshot_sha256: df62190cece8bbd15eafdb863510051e274bea24b4731812811d8b00a6d13278
+- evidence_id: identity
+  kind: validation
+  reference: ChEBI CHEBI:2956; PubChem CID 6479523; ChEMBL CHEMBL1537; KEGG C06839
+  locator: 135-chemistry.json and 135-crosswalk-chemistry.json, independently parsed
+    native and external structures.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: supports
+  summary: Native SMILES and InChI parse to one neutral C20H23N5O6S fragment with
+    key JTWOMNBEOCYFNV-NFFDBFGFSA-N. Formula, mass precision and both source mints
+    agree. Independently parsed PubChem, ChEMBL and KEGG molfile give the same full
+    key. The specified side-chain stereochemistry agrees with the systematic names;
+    the neutral acid remains separate from its sodium salt and anion.
+  snapshot_sha256: 4834dc1f49b5dcd1778b04992ee6f50082d750823171f2e0cc64f5b69d832b45
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:2956
+  locator: 135-chebi.html/txt, full identity, names, ontology and xref sections.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: supports
+  summary: Official ChEBI reproduces the structure, all INNs/systematic names and
+    definition. The native parents resolve as penicillin CHEBI:17334, semisynthetic
+    derivative CHEBI:72588 and penicillin allergen CHEBI:88187. The antibacterial-drug
+    role and inherited antimicrobial role are consistent. Azlocillin(1−), CHEBI:51863,
+    is explicitly a separate conjugate-base entry. CAS 37091-66-0 and other imported
+    crosswalks are source-attested.
+  snapshot_sha256: 07c898fbd893dfd7ae15de1b0f96ab688f7270fdc1b94bb60c0b147ef51fe6e5
+- evidence_id: aro
+  kind: database
+  reference: https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo
+  locator: 135-aro-terms.txt, complete azlocillin, extended-spectrum parent, marked
+    class and PBP terms.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: supports
+  summary: Official ARO confirms ARO:3000638, AZL, all crosswalks and the direct antibiotic
+    edge to ARO:3000749. ARO:3009123 is the immediate extended-spectrum parent; ARO:3000008
+    is the nearest explicitly marked class used by the seeder. The broad PBP assertion
+    is not an exact species/protein assay and is appropriately qualified natively.
+  snapshot_sha256: 4f4ba4314ee5b845799f142a23dc3d05cfc5b73c7109fd30e59eb2e25c86ae5d
+- evidence_id: xrefs
+  kind: database
+  reference: KEGG D02339; DrugCentral 277; DrugBank DB01061; LINCS LSM-15179; Reaxys
+    5785146
+  locator: 135-kegg-drug.txt, 135-drugcentral.html/txt and ChEBI manual xrefs.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: partial
+  summary: KEGG confirms azlocillin identity and a PBP/cell-wall-synthesis mechanism.
+    DrugCentral 277 resolves to the correct formula, CAS, ChEBI and DrugBank ID but
+    includes sodium-salt synonyms; native drug_xrefs need not be exact neutral-form
+    identifiers. DrugBank, LINCS and Reaxys were not independently inspected beyond
+    source crosswalks. Wikipedia is a document link, not scientific support.
+  snapshot_sha256: 6f3225b07e822b5b46a18b85a5d746799115e498796bc25be333366bd2e9bad5
+- evidence_id: patents
+  kind: primary_source
+  reference: US3933795; CN101585844; FR2100682
+  locator: 135-US3933795A.html/txt Examples 144 and 150; CN101585844A abstract/parent
+    description; FR2100682A1 public metadata/abstract.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: partial
+  summary: US Example 144 describes the D side-chain azlocillin acid, and Example
+    150 separately converts it to sodium salt. The CN patent explicitly names the
+    same stereochemical acid and describes its preparation before salification. The
+    FR document resolves to the broad ureidopenicillin family; its exact examples
+    were not audited. These are relevant document cross-references, not proof that
+    every family member or assay is this exact neutral compound.
+  snapshot_sha256: 2bc70a765c15a49c8a6ef277297f27bdd213d1ee9694307cc64bf64890b9d8a6
+- evidence_id: adopted-vim
+  kind: primary_source
+  reference: PMID:11036013; DOI:10.1128/AAC.44.11.3003-3007.2000
+  locator: 135-VIM2000.html/txt, complete main Methods, Results, Tables 1–4 and Discussion.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: supports
+  summary: Purified VIM-1 from E. coli DH5α carrying pBCLL/39H hydrolyzes commercial
+    Sigma azlocillin. Table 2 reports Km 123 ± 11 micromolar, kcat 1525 ± 125 per
+    second and kcat/Km 1.2e7 per molar per second; values are enzyme kinetics, not
+    MIC or binding KD. Hydrolysis was followed spectrophotometrically at 30 °C. This
+    supports drug inactivation, not VIM-1 as an antibacterial target. The paper situates
+    the determinant in P. aeruginosa clinical isolates, but the purified expression
+    source is E. coli; do not transfer strain phenotypes or temocillin MICs to azlocillin.
+  snapshot_sha256: ba236529333639045358b7814ad47afb574149699262fdb19f6d4bda738283c8
+- evidence_id: adopted-activity
+  kind: primary_source
+  reference: PMID:19292999; DOI:10.1016/j.anaerobe.2009.03.002
+  locator: 135-epmc.json, complete original abstract.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: partial
+  summary: A 25-year Bulgarian anaerobic-isolate survey includes azlocillin among
+    drugs with comparatively good activity using agar dilution. The abstract does
+    not supply exact azlocillin strain/MIC values or prove which enzyme causes each
+    isolate phenotype. Full species-level tables were not inspected, so this is a
+    qualified activity lead.
+  snapshot_sha256: 2187df207774f39f35e126cb9ae1ffe996b8feeff33d07cf8492ddc08cb6da7f
+- evidence_id: adopted-spectrum-access
+  kind: database
+  reference: PMID:6212725
+  locator: Official PubMed metadata and 135-epmc.json.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: unknown
+  summary: The 1982 Spanish article on mezlocillin/azlocillin antibacterial spectrum
+    resolves, but no abstract is available in the inspected official record and no
+    full paper was inspected. Metadata alone supplies no assay evidence.
+  snapshot_sha256: 2187df207774f39f35e126cb9ae1ffe996b8feeff33d07cf8492ddc08cb6da7f
+- evidence_id: adopted-panta
+  kind: primary_source
+  reference: PMID:21883661; DOI:10.1111/j.1469-0691.2011.03601.x; PMID:21219695; PMID:20363776;
+    DOI:10.1128/AEM.02659-09
+  locator: 135-epmc.json, all three complete original abstracts.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: context_only
+  summary: These studies use azlocillin as one component of PANTA or PANTAV culture/decontamination
+    mixtures. They compare mycobacterial recovery and contaminant suppression, including
+    replacement by phage lysin or altered mixture concentration. Outcomes cannot be
+    assigned to azlocillin alone or used to call Mycobacterium a susceptible target.
+    No azlocillin exposure transcriptome is described.
+  snapshot_sha256: 2187df207774f39f35e126cb9ae1ffe996b8feeff33d07cf8492ddc08cb6da7f
+- evidence_id: adopted-analytical
+  kind: primary_source
+  reference: PMID:21360610; DOI:10.1002/JMR.1038; PMID:11397088; DOI:10.1006/JMBI.2001.4663
+  locator: 135-epmc.json, complete original abstracts.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: context_only
+  summary: The nanopore study distinguishes beta-lactams with a cyclodextrin/alpha-hemolysin
+    analytical system; its residence times are detection measurements, not antibacterial
+    target engagement. The antibody study characterizes anti-ampicillin scFv and analogue
+    cross-reactivity, not an azlocillin antibacterial target. Neither supports transferring
+    the detector/antibody as a native molecular target.
+  snapshot_sha256: 2187df207774f39f35e126cb9ae1ffe996b8feeff33d07cf8492ddc08cb6da7f
+- evidence_id: adopted-allergy
+  kind: primary_source
+  reference: PMID:2068466; DOI:10.1093/CLINIDS/13.SUPPLEMENT_7.S598
+  locator: 135-epmc.json, complete original abstract.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: context_only
+  summary: The cystic-fibrosis study investigates aztreonam immunologic cross-reactivity
+    and repeated-exposure reactions in patients with prior beta-lactam allergy. Its
+    therapeutic and safety results are about aztreonam, not an azlocillin-only efficacy
+    study. It is host-allergy context.
+  snapshot_sha256: 2187df207774f39f35e126cb9ae1ffe996b8feeff33d07cf8492ddc08cb6da7f
+- evidence_id: adopted-reviews
+  kind: database
+  reference: PMID:6369480; DOI:10.1093/CLINIDS/6.1.13; PMID:29017833; DOI:10.1016/J.JAIP.2017.08.027
+  locator: 135-epmc.json, both complete original abstracts and publication types.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: context_only
+  summary: The ARO acylampicillin citation is a clinical/activity review; it supports
+    historical context but is not an individual primary assay. The newer beta-lactam
+    allergy article is also a review. Neither is typed primary evidence here, and
+    neither supplies exact azlocillin PBP binding experiments.
+  snapshot_sha256: 2187df207774f39f35e126cb9ae1ffe996b8feeff33d07cf8492ddc08cb6da7f
+- evidence_id: pbp
+  kind: primary_source
+  reference: PMID:26823174; DOI:10.1002/1873-3468.12054
+  locator: 135-pbp2016.xml/txt, complete main text; Figure 1A/D visually inspected
+    in 135-pbp2016-Figure1.jpg.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: supports
+  summary: The exact azlocillin structure is distinguished from its hydrolysis product.
+    X-ray analysis of soluble P. aeruginosa PBP3 residues 35–579 shows ring-opened
+    drug covalently acylating S294 at 2.0 angstrom resolution. A thermal-shift assay
+    with S294A supports covalent stabilization. The protein was expressed in E. coli
+    Rosetta 2(DE3); crystallization used a high-concentration soak, not an antibacterial
+    potency assay. The paper provides no free-parent KD or direct whole-cell MIC experiment.
+    Its cefoperazone noncovalent product structures and piperacillin comparisons are
+    separate chemicals.
+  snapshot_sha256: b0874d9395ff177a55347592507d1ec2ec37e5e495c3cae1358adfa165cdcebd
+- evidence_id: pbp-archive
+  kind: database
+  reference: PDB:5DF7; UniProtKB:Q51504
+  locator: 135-PDB5DF7.json, 135-PDB5DF7-protein.json and 135-UniProtQ51504.json.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: partial
+  summary: The official entry identifies the azlocillin PBP3 acyl complex and maps
+    the protein to Q51504, currently unreviewed TrEMBL P. aeruginosa FtsI/PBP3. It
+    must not be copied as a reviewed ProteinExample. PDB host metadata say E. coli
+    BL21(DE3), while the paper says Rosetta 2(DE3), so preserve this difference pending
+    construct-level checks. PDB EC annotations also include a glycosyltransferase
+    label, whereas the paper describes a class B transpeptidase; do not import that
+    conflicting function. Bound ring-opened drug is a reaction intermediate, not a
+    new exact parent crosswalk.
+  snapshot_sha256: 8ba6a361bdea05214dcf7214ff542c8130b9ae022a6b166eec7b254162f3f3d7
+- evidence_id: historical-activity
+  kind: primary_source
+  reference: PMID:677860; DOI:10.1128/AAC.13.6.930; PMID:6818156; DOI:10.1007/BF01640680
+  locator: 135-primary1978.html original abstract; official PubMed original abstract
+    for the 1982 six-beta-lactam comparison.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: partial
+  summary: The 1978 study directly tests azlocillin against multiple bacterial groups
+    and notes beta-lactamase susceptibility; its azlocillin results must be separated
+    from mezlocillin. The 1982 study includes 47 H. influenzae isolates and supports
+    antibacterial activity. Detailed assay tables and exact H. influenzae clinical
+    efficacy were not independently inspected. The attempted 1978 PDF returned an
+    HTML challenge, not paper content.
+  snapshot_sha256: 824147fdc9cd3e99b0a26c2c14828097bb5db3cffdaa39c7f6e1eb66510e31c8
+- evidence_id: clinical
+  kind: primary_source
+  reference: PMID:6352599; DOI:10.1093/JAC/11.SUPPL_B.159; PMID:6352601; DOI:10.1093/JAC/11.SUPPL_B.183;
+    PMID:7163781
+  locator: Official original abstracts, inspected through PubMed.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: partial
+  summary: Historical comparative/observational clinical studies document azlocillin
+    use for infections involving P. aeruginosa and, in the mixed serious-infection
+    study, E. coli. These support historical clinical-use context, not current preferred
+    therapy, universal susceptibility or unrestricted present-day availability. No
+    numerical efficacy recommendation is proposed from abstract-only review.
+- evidence_id: borrelia-boundary
+  kind: primary_source
+  reference: DOI:10.1038/s41598-020-59600-4
+  locator: Publisher indexed in silico section; direct downloaded 135-borrelia2020.html
+    was a challenge page.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: context_only
+  summary: The inspected section proposes Borrelia PBP/Clp binding by homology modeling
+    and docking. It is not direct binding evidence for Clp proteins and cannot substitute
+    for the exact Pseudomonas PBP3 experiment. The current assessment does not claim
+    a full review of its animal or persistence experiments.
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB p_aeruginosa/precise364
+  locator: 055-imodulondb-datasets-retry.txt inventory and 135-imodulondb-pbp.txt.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: context_only
+  summary: The structured check preceded open-ended web research and returned pbpC
+    PA2272, pbpA PA4003, ftsI PA4418, mrcB PA4700 and ponA PA5045, with no module
+    hit. These are gene-context matches, not proof of azlocillin activity or exact
+    construct identity. No summarize was needed.
+  snapshot_sha256: 0295bedd8b9b21d3404e84385fef9a272f586a49e908e0fef4341d6d9f0f04ae
+- evidence_id: adapter-command
+  kind: validation
+  reference: Structured source runner
+  locator: Actual command exited 0.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: context_only
+  summary: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism p_aeruginosa --dataset
+    precise364 --query "penicillin-binding"
+  snapshot_sha256: 0295bedd8b9b21d3404e84385fef9a272f586a49e908e0fef4341d6d9f0f04ae
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 135-local-hits.txt and 135-maintained-search.txt.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: context_only
+  summary: Hidden- and ignored-inclusive searches found maintained ChEBI/ARO rows
+    and generated/historical context but no exact adopted ARO resistance edge. Historical
+    reports and search snippets were leads only. Bounded primary searches found exact
+    PBP and enzyme-hydrolysis support. No claim is made that all clinical, resistance
+    or transcriptomic studies were exhausted.
+  snapshot_sha256: e2df33870333816705d65d5256b3f24204d47752c8b8dbcc5a2bb48c8b3fb724
+  search_scope: rg --no-ignore --hidden for CHEBI:2956, ARO:3000638, azlocillin and
+    slug across worktree014, with .git and .venv excluded; focused maintained-tree
+    search and exact row filtering. Bounded official identifier, adopted PMID, PBP
+    structure and historical clinical/activity searches.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION.md;
+    docs/HARMONIZATION.md
+  locator: Exact chemical form, direct target, resistance, activity and primary evidence
+    rules.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: supports
+  summary: Preserve neutral acid versus salt/product, inhibition versus hydrolytic
+    inactivation, protein origin versus expression host, mixture versus single-agent
+    activity and assay kinetics versus MIC. Optional omissions do not imply scientific
+    errors.
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema, strict and chemistry outputs
+  locator: 135-focused-results.json, corresponding logs, strict TSV and chemistry
+    JSON.
+  accessed_at: '2026-10-21T10:03:03Z'
+  support: supports
+  summary: All focused commands exited 0. Original and supplemental captured hashes
+    were checked unchanged.
+  snapshot_sha256: 4fb2c3298c251510baa71021afbd7a7c3840e9b51f44b103505b9e72b79a8fda
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact structure and names
+  outcome: supported
+  summary: The neutral stereospecified acid and all six source-derived names are consistent.
+    Salt and hydrolysis-product contexts remain distinct.
+  target_ids:
+  - CHEBI:2956
+  evidence_ids:
+  - identity
+  - chebi
+  - aro
+  - patents
+- assessment_id: classification
+  area: grounding
+  topic: Parents, roles and filing
+  outcome: supported
+  summary: Penicillin skeleton, semisynthetic class, antibacterial role and source
+    allergen context are coherent. Generic clinical use is historically supported
+    with species/assay limits.
+  target_ids:
+  - CHEBI:2956
+  evidence_ids:
+  - chebi
+  - aro
+  - clinical
+  - historical-activity
+  - adopted-reviews
+- assessment_id: target
+  area: evidence
+  topic: Generic PBP assertion and exact primary support
+  outcome: supported
+  summary: Native database status is honest. Exact P. aeruginosa PBP3 covalent binding
+    is independently supported; no wrong target claim was found. More precise evidence
+    can be added after construct/ProteinExample qualification.
+  target_ids:
+  - CHEBI:2956
+  evidence_ids:
+  - pbp
+  - pbp-archive
+  - adapter
+  - source
+- assessment_id: resistance
+  area: completeness
+  topic: VIM-1 hydrolysis follow-up
+  outcome: supported
+  summary: An adopted primary source provides optional exact biochemical drug-inactivation
+    evidence. It does not make VIM-1 the drug target or identify the resistance phenotype
+    of every host carrying the gene.
+  target_ids:
+  - CHEBI:2956
+  evidence_ids:
+  - adopted-vim
+  - rubric
+- assessment_id: citations
+  area: evidence
+  topic: All eleven adopted citation dispositions
+  outcome: supported
+  summary: 'Each adopted citation was resolved: one full primary enzyme study, original
+    abstracts for other available studies, two secondary reviews and one inaccessible
+    spectrum article with no abstract. Mixed-agent, analytical, host and aztreonam
+    scopes are retained.'
+  target_ids:
+  - CHEBI:2956
+  evidence_ids:
+  - adopted-vim
+  - adopted-activity
+  - adopted-spectrum-access
+  - adopted-panta
+  - adopted-analytical
+  - adopted-allergy
+  - adopted-reviews
+- assessment_id: activity
+  area: scope
+  topic: Historical activity and clinical claims
+  outcome: supported
+  summary: Direct antibacterial studies and historical treatment studies support inclusion
+    and use context. Detailed numerical strain-level AST and H. influenzae clinical
+    efficacy were not fully audited.
+  target_ids:
+  - CHEBI:2956
+  evidence_ids:
+  - historical-activity
+  - clinical
+  - adopted-activity
+- assessment_id: completeness
+  area: completeness
+  topic: Optional target/activity/resistance enrichment
+  outcome: supported
+  summary: Useful primary additions exist. No producer is inferred for the semisynthetic
+    product, no PANTA outcome is assigned to azlocillin alone, and no docking hypothesis
+    is promoted to direct binding.
+  target_ids:
+  - CHEBI:2956
+  evidence_ids:
+  - pbp
+  - adopted-vim
+  - adopted-panta
+  - borrelia-boundary
+  - rubric
+- assessment_id: ownership
+  area: ownership
+  topic: Source-owned target and curator-owned primary additions
+  outcome: supported
+  summary: Generated imports remain owned by source tables and seeder; claim-level
+    primary additions belong to the actual native azlocillin record through validated
+    writers/history.
+  target_ids:
+  - CHEBI:2956
+  evidence_ids:
+  - source
+  - rubric
+- assessment_id: gates
+  area: schema
+  topic: Focused checks and unchanged inputs
+  outcome: supported
+  summary: Schema, strict and independent chemistry pass; all 17 supplemental captured
+    inputs and original hashes remain unchanged.
+  target_ids:
+  - CHEBI:2956
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: azlocillin-qualified-pbp-vim-primary-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Attach available primary PBP and drug-inactivation evidence with exact experimental
+    scope
+  description: The broad PBP target is independently supported by exact azlocillin
+    structural work, and an adopted primary paper demonstrates VIM-1 hydrolysis. Optional
+    claim-level enrichment can make these evidence types explicit while retaining
+    source qualifiers, construct boundaries and kinetic endpoint distinctions.
+  target_ids:
+  - CHEBI:2956
+  field_paths:
+  - molecular_targets
+  - mode_of_action
+  - resistance_mechanisms
+  - activity_spectrum
+  - evidence
+  - discussions
+  evidence_ids:
+  - pbp
+  - pbp-archive
+  - adopted-vim
+  - historical-activity
+  - rubric
+  rule_id: 'native-review-checklist: Qualified primary evidence and optional completeness'
+  native_severity: informational optional primary enrichment
+  normalization_reason: The existing target is accurately marked as a database assertion
+    and no unsupported primary promotion occurs. Missing optional resistance/AST details
+    are not native errors.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/azlocillin.yaml
+    role: Curator-owned exact primary target, activity and resistance evidence using
+      validated writer and curation history
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Preserve curated primary evidence alongside generated ARO target assertions
+actions:
+- action_id: A1
+  description: Curate the exact primary target and resistance evidence without widening
+    its scope.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:2956
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/azlocillin.yaml
+    role: Curator-owned exact primary target, activity and resistance evidence using
+      validated writer and curation history
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Preserve curated primary evidence alongside generated ARO target assertions
+  acceptance_checks:
+  - Attach PMID 26823174 to a qualified P. aeruginosa PBP3 covalent-binding example.
+    Preserve soluble construct residues 35–579, S294 acylation, structural/thermal-shift
+    assay type and expression-host distinction. The high-concentration crystal soak
+    is not MIC or KD.
+  - Resolve paper Rosetta 2(DE3) versus PDB BL21(DE3) host metadata before exact construct
+    claims. Q51504 is currently unreviewed and must not automatically populate a reviewed
+    ProteinExample. Do not import conflicting PDB glycosyltransferase labeling or
+    replace the taxon-agnostic target with one unverified protein accession.
+  - Use PMID 11036013 for VIM-1-mediated hydrolytic inactivation. Keep biochemical
+    Km/kcat separate from binding affinity and whole-cell resistance; distinguish
+    original enzyme context from E. coli expression host.
+  - Inspect full assay tables before adding exact activity_spectrum observations from
+    historical studies or the Bulgarian survey. Keep azlocillin versus mezlocillin,
+    parent versus salt, MIC versus combination outcomes, and historical versus current
+    clinical use separate.
+  - Do not transfer PANTA/PANTAV culture outcomes to azlocillin alone, antibody/nanopore
+    binding to antibacterial targets, or Borrelia Clp docking to demonstrated direct
+    binding. No natural producer or exposure dataset follows from those sources.
+  - Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/azlocillin.yaml
+    for separately authorized curation; preserve curated evidence across reseeding,
+    run focused/shared gates and retain SEEDED until all native review requirements
+    are satisfied.
+limitations:
+- The entire record and maintained exact source rows were inspected. Initial capture
+  was preserved and supplemented before judgment with ARO inputs/owners; all 17 captured
+  input hashes remain unchanged.
+- All eleven adopted publication leads were resolved. PMID 11036013 was read in complete
+  main text; the other available adopted studies were assessed through original abstracts.
+  PMID 6212725 has no accessible abstract and its full Spanish article was not inspected.
+  Reviews are typed as secondary context.
+- The exact 2016 PBP primary main text and chemical structure figure were inspected.
+  Electron-density maps and raw diffraction data were not re-refined. PDB protein
+  origin/host metadata were checked, with paper/deposition host and function-label
+  discrepancies retained. Q51504 is unreviewed, limiting automatic ProteinExample
+  use.
+- The older antibacterial and historical clinical studies were inspected at original
+  abstracts. Their complete strain-level tables, current clinical availability and
+  exact H. influenzae treatment evidence were not fully audited. No dose recommendation
+  or quantitative clinical efficacy claim is proposed.
+- The downloaded 1978 PDF route and direct Nature Borrelia route returned HTML challenges,
+  not full papers. The indexed Borrelia modeling section was inspected only to preserve
+  the docking/direct-binding boundary.
+- DrugBank DB01061, LINCS LSM-15179 and Reaxys 5785146 remain source-attested crosswalks
+  rather than fully independently inspected records. FR2100682 resolves but exact
+  examples were not reviewed. Patent chemistry inspection does not validate all generic
+  family claims.
+- No exhaustive resistance, producer or exposure-transcriptome survey is claimed.
+  Semisynthesis, culture cocktails and analytical studies are not grounds to invent
+  those optional annotations.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
