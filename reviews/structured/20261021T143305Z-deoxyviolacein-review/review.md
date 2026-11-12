@@ -1,0 +1,755 @@
+# Deoxyviolacein: repair indole SMILES and preserve exact-product evidence scope
+
+- Review: 20261021T143305Z-deoxyviolacein-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T14:11:41Z
+- Finished UTC: 2026-10-21T14:33:05Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native indole SMILES fails chemical parsing because it omits the pyrrolic hydrogen. A scratch-only correction reproduces the stored complete InChI/key and its E-configured double bond, matching independently parsed ChEBI, PubChem and KEGG structures. One major encoding finding is confirmed. Adopted biosynthesis studies distinguish pure deoxyviolacein from violacein mixtures; exact primary antimicrobial assay access remains limited.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position357; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:131915 | data/antibiotics/antibacterial/deoxyviolacein.yaml | generated | deoxyviolacein |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | failed | False | CHEBI:131915 | Actual focused execution exited 1. |
+| Focused schema verification | passed | True | CHEBI:131915 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:131915 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:131915 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:131915 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:131915 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:131915 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:131915 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:131915 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:131915 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:131915 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:131915 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral structure and E geometry
+
+identity: concern. Targets: CHEBI:131915.
+
+The retained InChI, formula, charge, masses and E alkene are coherent with independent structures. The exported SMILES is invalid and needs a narrowly scoped source correction.
+
+### Exact identifiers and systematic synonym
+
+grounding: supported. Targets: CHEBI:131915.
+
+The exact systematic name, complete InChI and KEGG structure agree. MetaCyc and Reaxys verification is limited to the declared access/source-attestation depth. No salt, racemate or different violacein congener is silently substituted.
+
+### Chemical classes and antimicrobial roles
+
+scope: supported. Targets: CHEBI:131915.
+
+Pyrrole-containing indole, oxindole and olefinic-compound parents are broader than the native graph. Antibacterial and antifungal roles reproduce explicit ChEBI assertions; this establishes source provenance, with primary assay depth bounded separately.
+
+### Exact-product antimicrobial evidence
+
+evidence: unknown. Targets: CHEBI:131915.
+
+Several adopted papers concern production, mixtures or antitumor activity. Additional exact antimicrobial originals were identified, but their complete quantitative methods/results were not recovered. This review neither deletes the database roles for lack of access nor promotes search snippets or violacein-mixture assays to exact deoxyviolacein measurements.
+
+### Optional target, resistance and causal graph
+
+completeness: unknown. Targets: CHEBI:131915.
+
+No native mechanism is asserted. Biosynthetic Vio enzymes identify production steps, not antibacterial targets. There is no native gene/locus/pathway assertion requiring a structured source adapter; optional mechanism enrichment requires new exact-compound primary evidence.
+
+### Optional organism and production evidence
+
+provenance: supported. Targets: CHEBI:131915.
+
+Citrobacter and E.coli papers describe engineered heterologous production, and later work distinguishes natural pigment producers. These sources cannot be converted automatically into wild-type strain-level production or exact pure-compound activity observations.
+
+### Four generated events and maintained ownership
+
+provenance: supported. Targets: CHEBI:131915.
+
+The source mint and four SEEDED/reseeded events reconcile. All seven adopted leads were individually disposed and original source hashes remain unchanged.
+
+## Findings
+
+### F1: The indole SMILES omits its required pyrrolic hydrogen
+
+major / open / confirmed; issue key: deoxyviolacein-indole-smiles-missing-pyrrolic-hydrogen.
+
+The native ChEBI-derived aromatic n fails kekulization. A scratch-only [nH] correction reproduces the stored full InChI/key, formula, charge and E geometry, independently matching valid ChEBI molfile, PubChem and KEGG encodings. Repair the maintained source string while preserving the supported exact structure.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Repair the maintained indole SMILES and verify complete structure consistency.
+
+- Retain explicit pyrrolic [nH] and the E exocyclic double bond; do not change to violacein or a hydroxylated analogue.
+- Require successful parsing and agreement among SMILES, full InChI/key, C20H13N3O2, neutral charge and masses.
+- Use source extraction/harmonization and canonical generation/history, then pass schema, strict, source reproduction and required QC.
+
+### A2
+
+Optionally complete exact antimicrobial assay curation from accessible original studies.
+
+- Obtain and inspect original methods/results for DOI10.1016/j.bej.2012.06.005 or the corrected2023 Janthinobacterium paper before importing exact MICs.
+- Preserve pure product versus pigment mixture, bacterial versus fungal species, producer strain, endpoint and assay conditions.
+- Keep production enzymes, tumor-cell effects and biosynthesis yields separate from antibacterial mechanism evidence.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/deoxyviolacein.yaml; entire YAML; exact systematic synonym, three parents, two activity roles, three xrefs, document and four history events | supports | CHEBI131915 denotes neutral C20H13N3O2 with the explicit E exocyclic double bond. No molecular target, resistance entry, clinical product, producer object, numerical activity_spectrum or causal graph is populated. The structural definition describes the intended connectivity and alkene configuration. |
+| owners | data/raw/chebi_antimicrobials.tsv; frozen row2489; exact local source/overlay searches and extraction/seeding path | supports | The adopted ChEBI row already contains the malformed indole SMILES and all native structural/role fields. Seven distinct adopted PMID leads were resolved. Initial captures were preserved; the maintained extractor and seeder own source-derived representation. Hidden and ignored files were included in the search. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/131915/; complete current entry, chemical structure, exact name, all native relations and accession metadata | supports | Current ChEBI repeats the defective aromatic string but retains a valid complete InChI/key. The actual molfile parses correctly. The current systematic name and definition identify the E alkene. All three structural parents and two activity-role identifiers resolve to the expected broader chemical or biological categories. |
+| chemistry | RDKit2026.03.5 / InChI1.07.3; native focused failure;036-root-chemistry.py;357-authority-chemistry.json | supports | Native aromatic c2cnc3 cannot kekulize. Changing only that token to c2c[nH]c3 in scratch yields OJUJNNKCVPCATE-QGOAFFKASA-N, matching native InChI, neutral C20H13N3O2, masses and explicit double-bond configuration. Current ChEBI molfile, PubChem9949283 and KEGG C21133 independently yield the same full key. Diagnostic assertions exit0, while the original native-chemistry failure remains recorded. |
+| xref | https://rest.kegg.jp/get/C21133; complete KEGG compound text and molfile; native MetaCyc and Reaxys routes | supports | KEGG C21133 independently matches the full graph. MetaCyc CPD14318 returned navigation/login content without usable compound detail and is not independently graph-verified. Reaxys10779335 remains attested by official ChEBI; its proprietary registry was not accessed. PubChem9949283 is an additional independent comparison, not an asserted native xref. |
+| adopted | PMID:21779844;22187076;22391969;23994489;24889673;25592762;26506462; all seven bibliographic records and complete indexed abstracts | supports | 21779844 is a review of violacein biosynthesis and does not independently prove deoxyviolacein activity.22187076 develops separation/quantification of the two pigments.22391969 engineers Citrobacter freundii with vioD disruption and measures antitumor activity.23994489,24889673 and26506462 engineer E.coli production, with24889673 reporting &gt;99.5% purification.25592762 explicitly studies crude violacein/deoxyviolacein mixture. These sources do not justify assigning every mixture phenotype, biosynthetic enzyme or tumor-cell result to exact-compound antibacterial action. |
+| mixture-primary | https://doi.org/10.1186/s12934-015-0192-x; PMID25592762/PMC4306242; relevant Introduction/Results/Discussion and Analytical method section | supports | The original distinguishes crude mixture production from pure-compound work. Its analytical method uses ethanol extraction, absorbance570 calibration, TOF LC/MS and HPLC composition separation. The reported bulk crude-pigment yields and tolerance observations are not pure-deoxyviolacein MICs. Supplementary chromatograms were not independently reprocessed. |
+| genochemical-primary | https://doi.org/10.1021/acschembio.1c00483; PMID34648268/PMC8609527; relevant main Introduction and Results, compound2 identity and pathway/analogue boundaries | supports | The original labels deoxyviolacein as compound2 and distinguishes it from violacein and halogenated derivatives generated by pathway manipulation. Its biosynthetic enzymes and VioA substrate assays concern production, not deoxyviolacein antibacterial binding targets. Main text was inspected; figure-image routes failed and no visual assignment from those images is claimed. |
+| patent | https://patents.google.com/patent/WO2010003304A1/en; title, technical abstract, production description and examples identifying engineered strains by chromatography | supports | The exact native document resolves as A1 to recombinant deoxyviolacein production in E.coli BL21-CodonPlus(DE3)-RIL and P.putida using a vioD-deleted cluster. The retrieved English text contains conspicuous translation/OCR artifacts. Its chromatographic production observations are not direct target or clinical-efficacy evidence. An initial guessed A2 route returned404 and was rejected. |
+| activity-followup | https://doi.org/10.1093/femsle/fnac119; PMID36477792; complete indexed abstract and publisher-exposed abstract; correction DOI10.1093/femsle/fnad132 inspected | supports | The study purifies violacein and deoxyviolacein from Janthinobacterium kumbetense and states that seven microorganisms were screened. Its complete assay results/methods were not recovered at the inspected depth, so no MIC or positive strain result is imported. The published correction documents unattributed textual overlap requiring rewritten sections and corrections to pigment-band references and strain DSM114233; retain that correction rather than relying on stale indexed strain text. |
+| activity-access | https://doi.org/10.1016/j.bej.2012.06.005; 2012 Biochemical Engineering Journal primary-study discovery, Crossref and official Elsevier metadata retrieval | context_only | The exact biosynthesis/antimicrobial study was identified and its DOI/title verified, but publisher routes returned403 and the official free API supplied metadata without abstract or body. Search-result activity snippets are leads only. The additional AGR IND44792024 entry proved to be the already adopted analytical-development paper, not this activity study. No exact fungal/bacterial assay conclusion is certified from inaccessible full text. |
+
+## Limits And Additional Notes
+
+- All seven adopted sources were read at complete indexed-abstract depth. The2015 mixture-production analytical methods and relevant main Results/Discussion were read, without reprocessing supplementary chromatograms.
+- The2021 GenoChemetic main text was inspected for compound and biosynthetic scope. The institutional PDF timed out and figure-image retrieval failed; no original figure visual inspection or raw spectral reassignment is claimed.
+- The2012 exact antimicrobial study was identified and its official metadata inspected, but body/abstract access was not obtained through the free publisher routes. Search snippets were not used as primary assay evidence.
+- The2023 Janthinobacterium abstract and published correction were inspected, but full assay methods/results were not recovered at review depth. No numerical activity is imported; the corrected strain accession and textual-overlap notice must accompany future use.
+- MetaCyc returned navigation/login content; Reaxys remains official-source attestation. The patent English text has translation/OCR defects and supplies production context only.
+- The initial ChEBI structure route returned SVG; the correct molfile route was fetched and independently parsed. A guessed patent A2 was rejected in favor of the exact A1 document. All failed accesses and native chemistry failure are preserved.
+- No exhaustive antimicrobial literature census, clinical-use survey, raw spectral reanalysis or native curation was performed. Optional empty domains are not automatically defects.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T143305Z-deoxyviolacein-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Deoxyviolacein: repair indole SMILES and preserve exact-product evidence scope'
+started_at: '2026-10-21T14:11:41Z'
+finished_at: '2026-10-21T14:33:05Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native indole SMILES fails chemical parsing because it omits the pyrrolic
+  hydrogen. A scratch-only correction reproduces the stored complete InChI/key and
+  its E-configured double bond, matching independently parsed ChEBI, PubChem and KEGG
+  structures. One major encoding finding is confirmed. Adopted biosynthesis studies
+  distinguish pure deoxyviolacein from violacein mixtures; exact primary antimicrobial
+  assay access remains limited.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/deoxyviolacein.yaml
+    sha256: f6c67c77b6af7b0d75df3ab4e5c36833f5914089429c89513fda751ba6920e5e
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+targets:
+- target_id: CHEBI:131915
+  path: data/antibiotics/antibacterial/deoxyviolacein.yaml
+  label: deoxyviolacein
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position357; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:131915
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: failed
+  required: false
+  summary: Actual focused execution exited 1.
+  target_ids:
+  - CHEBI:131915
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    357
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:131915
+  command: just validate data/antibiotics/antibacterial/deoxyviolacein.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:131915
+  command: just validate-strict data/antibiotics/antibacterial/deoxyviolacein.yaml
+    --out /private/tmp/am-review-session/357-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:131915
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:131915
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:131915
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:131915
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:131915
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:131915
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:131915
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:131915
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:131915
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/deoxyviolacein.yaml
+  locator: entire YAML; exact systematic synonym, three parents, two activity roles,
+    three xrefs, document and four history events
+  accessed_at: '2026-10-21T14:28:55Z'
+  support: supports
+  summary: CHEBI131915 denotes neutral C20H13N3O2 with the explicit E exocyclic double
+    bond. No molecular target, resistance entry, clinical product, producer object,
+    numerical activity_spectrum or causal graph is populated. The structural definition
+    describes the intended connectivity and alkene configuration.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: frozen row2489; exact local source/overlay searches and extraction/seeding
+    path
+  accessed_at: '2026-10-21T14:28:55Z'
+  support: supports
+  summary: The adopted ChEBI row already contains the malformed indole SMILES and
+    all native structural/role fields. Seven distinct adopted PMID leads were resolved.
+    Initial captures were preserved; the maintained extractor and seeder own source-derived
+    representation. Hidden and ignored files were included in the search.
+  snapshot_sha256: 99cce2690c317693bea43633091ee966d3417a25d25b973cf8a88824bd3bf716
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/131915/
+  locator: complete current entry, chemical structure, exact name, all native relations
+    and accession metadata
+  accessed_at: '2026-10-21T14:28:55Z'
+  support: supports
+  summary: Current ChEBI repeats the defective aromatic string but retains a valid
+    complete InChI/key. The actual molfile parses correctly. The current systematic
+    name and definition identify the E alkene. All three structural parents and two
+    activity-role identifiers resolve to the expected broader chemical or biological
+    categories.
+  snapshot_sha256: ee7c31e9f063b350f84395565add14397c5c8ad4bc20038438b37f5bfdf3803c
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit2026.03.5 / InChI1.07.3
+  locator: native focused failure;036-root-chemistry.py;357-authority-chemistry.json
+  accessed_at: '2026-10-21T14:28:55Z'
+  support: supports
+  summary: Native aromatic c2cnc3 cannot kekulize. Changing only that token to c2c[nH]c3
+    in scratch yields OJUJNNKCVPCATE-QGOAFFKASA-N, matching native InChI, neutral
+    C20H13N3O2, masses and explicit double-bond configuration. Current ChEBI molfile,
+    PubChem9949283 and KEGG C21133 independently yield the same full key. Diagnostic
+    assertions exit0, while the original native-chemistry failure remains recorded.
+  snapshot_sha256: 2a5aa944bef2696b6df9ae0e7dbf0d352f47ff254339c23de130e58418316173
+- evidence_id: xref
+  kind: authority
+  reference: https://rest.kegg.jp/get/C21133
+  locator: complete KEGG compound text and molfile; native MetaCyc and Reaxys routes
+  accessed_at: '2026-10-21T14:28:55Z'
+  support: supports
+  summary: KEGG C21133 independently matches the full graph. MetaCyc CPD14318 returned
+    navigation/login content without usable compound detail and is not independently
+    graph-verified. Reaxys10779335 remains attested by official ChEBI; its proprietary
+    registry was not accessed. PubChem9949283 is an additional independent comparison,
+    not an asserted native xref.
+  snapshot_sha256: b91d35610da7592c4404f7184e110477a271a0166cfd8ef0a9883cebb869fa25
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:21779844;22187076;22391969;23994489;24889673;25592762;26506462
+  locator: all seven bibliographic records and complete indexed abstracts
+  accessed_at: '2026-10-21T14:28:55Z'
+  support: supports
+  summary: 21779844 is a review of violacein biosynthesis and does not independently
+    prove deoxyviolacein activity.22187076 develops separation/quantification of the
+    two pigments.22391969 engineers Citrobacter freundii with vioD disruption and
+    measures antitumor activity.23994489,24889673 and26506462 engineer E.coli production,
+    with24889673 reporting >99.5% purification.25592762 explicitly studies crude violacein/deoxyviolacein
+    mixture. These sources do not justify assigning every mixture phenotype, biosynthetic
+    enzyme or tumor-cell result to exact-compound antibacterial action.
+  snapshot_sha256: e2f3996f3aace9aecc9583c574b8fc906351d4169398e6eb31462b015c236ff3
+- evidence_id: mixture-primary
+  kind: primary_source
+  reference: https://doi.org/10.1186/s12934-015-0192-x
+  locator: PMID25592762/PMC4306242; relevant Introduction/Results/Discussion and Analytical
+    method section
+  accessed_at: '2026-10-21T14:28:55Z'
+  support: supports
+  summary: The original distinguishes crude mixture production from pure-compound
+    work. Its analytical method uses ethanol extraction, absorbance570 calibration,
+    TOF LC/MS and HPLC composition separation. The reported bulk crude-pigment yields
+    and tolerance observations are not pure-deoxyviolacein MICs. Supplementary chromatograms
+    were not independently reprocessed.
+  snapshot_sha256: e1e55048b025b201e5d02a912cc62dd734280372f49cda495f71421052ccb634
+- evidence_id: genochemical-primary
+  kind: primary_source
+  reference: https://doi.org/10.1021/acschembio.1c00483
+  locator: PMID34648268/PMC8609527; relevant main Introduction and Results, compound2
+    identity and pathway/analogue boundaries
+  accessed_at: '2026-10-21T14:28:55Z'
+  support: supports
+  summary: The original labels deoxyviolacein as compound2 and distinguishes it from
+    violacein and halogenated derivatives generated by pathway manipulation. Its biosynthetic
+    enzymes and VioA substrate assays concern production, not deoxyviolacein antibacterial
+    binding targets. Main text was inspected; figure-image routes failed and no visual
+    assignment from those images is claimed.
+  snapshot_sha256: f3f1734597cd15b44fd4478cf173bc88936d82a930de619fc6eac385d58b4d41
+- evidence_id: patent
+  kind: primary_source
+  reference: https://patents.google.com/patent/WO2010003304A1/en
+  locator: title, technical abstract, production description and examples identifying
+    engineered strains by chromatography
+  accessed_at: '2026-10-21T14:28:55Z'
+  support: supports
+  summary: The exact native document resolves as A1 to recombinant deoxyviolacein
+    production in E.coli BL21-CodonPlus(DE3)-RIL and P.putida using a vioD-deleted
+    cluster. The retrieved English text contains conspicuous translation/OCR artifacts.
+    Its chromatographic production observations are not direct target or clinical-efficacy
+    evidence. An initial guessed A2 route returned404 and was rejected.
+  snapshot_sha256: 836e89aae0f640e5e21589d11342123689938760001a20d6f71c40df2efdf8f0
+- evidence_id: activity-followup
+  kind: primary_source
+  reference: https://doi.org/10.1093/femsle/fnac119
+  locator: PMID36477792; complete indexed abstract and publisher-exposed abstract;
+    correction DOI10.1093/femsle/fnad132 inspected
+  accessed_at: '2026-10-21T14:28:55Z'
+  support: supports
+  summary: The study purifies violacein and deoxyviolacein from Janthinobacterium
+    kumbetense and states that seven microorganisms were screened. Its complete assay
+    results/methods were not recovered at the inspected depth, so no MIC or positive
+    strain result is imported. The published correction documents unattributed textual
+    overlap requiring rewritten sections and corrections to pigment-band references
+    and strain DSM114233; retain that correction rather than relying on stale indexed
+    strain text.
+  snapshot_sha256: 42cb9722c88f715601e46e192943aa0658cf5844a806fcdef16e3909fd668d2d
+- evidence_id: activity-access
+  kind: search
+  reference: https://doi.org/10.1016/j.bej.2012.06.005
+  locator: 2012 Biochemical Engineering Journal primary-study discovery, Crossref
+    and official Elsevier metadata retrieval
+  accessed_at: '2026-10-21T14:28:55Z'
+  support: context_only
+  summary: The exact biosynthesis/antimicrobial study was identified and its DOI/title
+    verified, but publisher routes returned403 and the official free API supplied
+    metadata without abstract or body. Search-result activity snippets are leads only.
+    The additional AGR IND44792024 entry proved to be the already adopted analytical-development
+    paper, not this activity study. No exact fungal/bacterial assay conclusion is
+    certified from inaccessible full text.
+  snapshot_sha256: 635e3b8c49785a3a433acb864123150814e5dab7aae24353914f9bb05cc6f93a
+  search_scope: 2026-10-21; exact deoxyviolacein title/DOI searches in Europe PMC,
+    Crossref and public publisher routes, plus exact AGR accession resolution. Bounded
+    free-source retrieval, not an exhaustive antimicrobial evidence census.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral structure and E geometry
+  outcome: concern
+  summary: The retained InChI, formula, charge, masses and E alkene are coherent with
+    independent structures. The exported SMILES is invalid and needs a narrowly scoped
+    source correction.
+  target_ids:
+  - CHEBI:131915
+  evidence_ids:
+  - native
+  - chemistry
+  - chebi
+- assessment_id: grounding
+  area: grounding
+  topic: Exact identifiers and systematic synonym
+  outcome: supported
+  summary: The exact systematic name, complete InChI and KEGG structure agree. MetaCyc
+    and Reaxys verification is limited to the declared access/source-attestation depth.
+    No salt, racemate or different violacein congener is silently substituted.
+  target_ids:
+  - CHEBI:131915
+  evidence_ids:
+  - chebi
+  - chemistry
+  - xref
+- assessment_id: classification
+  area: scope
+  topic: Chemical classes and antimicrobial roles
+  outcome: supported
+  summary: Pyrrole-containing indole, oxindole and olefinic-compound parents are broader
+    than the native graph. Antibacterial and antifungal roles reproduce explicit ChEBI
+    assertions; this establishes source provenance, with primary assay depth bounded
+    separately.
+  target_ids:
+  - CHEBI:131915
+  evidence_ids:
+  - native
+  - chebi
+- assessment_id: activity
+  area: evidence
+  topic: Exact-product antimicrobial evidence
+  outcome: unknown
+  summary: Several adopted papers concern production, mixtures or antitumor activity.
+    Additional exact antimicrobial originals were identified, but their complete quantitative
+    methods/results were not recovered. This review neither deletes the database roles
+    for lack of access nor promotes search snippets or violacein-mixture assays to
+    exact deoxyviolacein measurements.
+  target_ids:
+  - CHEBI:131915
+  evidence_ids:
+  - adopted
+  - mixture-primary
+  - activity-followup
+  - activity-access
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional target, resistance and causal graph
+  outcome: unknown
+  summary: No native mechanism is asserted. Biosynthetic Vio enzymes identify production
+    steps, not antibacterial targets. There is no native gene/locus/pathway assertion
+    requiring a structured source adapter; optional mechanism enrichment requires
+    new exact-compound primary evidence.
+  target_ids:
+  - CHEBI:131915
+  evidence_ids:
+  - native
+  - adopted
+  - genochemical-primary
+- assessment_id: producer
+  area: provenance
+  topic: Optional organism and production evidence
+  outcome: supported
+  summary: Citrobacter and E.coli papers describe engineered heterologous production,
+    and later work distinguishes natural pigment producers. These sources cannot be
+    converted automatically into wild-type strain-level production or exact pure-compound
+    activity observations.
+  target_ids:
+  - CHEBI:131915
+  evidence_ids:
+  - adopted
+  - patent
+  - activity-followup
+- assessment_id: history
+  area: provenance
+  topic: Four generated events and maintained ownership
+  outcome: supported
+  summary: The source mint and four SEEDED/reseeded events reconcile. All seven adopted
+    leads were individually disposed and original source hashes remain unchanged.
+  target_ids:
+  - CHEBI:131915
+  evidence_ids:
+  - native
+  - owners
+  - adopted
+findings:
+- finding_id: F1
+  issue_key: deoxyviolacein-indole-smiles-missing-pyrrolic-hydrogen
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The indole SMILES omits its required pyrrolic hydrogen
+  description: The native ChEBI-derived aromatic n fails kekulization. A scratch-only
+    [nH] correction reproduces the stored full InChI/key, formula, charge and E geometry,
+    independently matching valid ChEBI molfile, PubChem and KEGG encodings. Repair
+    the maintained source string while preserving the supported exact structure.
+  target_ids:
+  - CHEBI:131915
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - native
+  - chemistry
+  - chebi
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: native-review-checklist:Identity
+  native_severity: major invalid chemical representation
+  normalization_reason: A valid independent InChI preserves the intended graph, but
+    the exported SMILES is unusable for ordinary chemical parsing despite passing
+    YAML gates.
+actions:
+- action_id: A1
+  description: Repair the maintained indole SMILES and verify complete structure consistency.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:131915
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  acceptance_checks:
+  - Retain explicit pyrrolic [nH] and the E exocyclic double bond; do not change to
+    violacein or a hydroxylated analogue.
+  - Require successful parsing and agreement among SMILES, full InChI/key, C20H13N3O2,
+    neutral charge and masses.
+  - Use source extraction/harmonization and canonical generation/history, then pass
+    schema, strict, source reproduction and required QC.
+- action_id: A2
+  description: Optionally complete exact antimicrobial assay curation from accessible
+    original studies.
+  finding_ids: []
+  target_ids:
+  - CHEBI:131915
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/deoxyviolacein.yaml
+    role: Curator-owned optional primary activity evidence and history
+  acceptance_checks:
+  - Obtain and inspect original methods/results for DOI10.1016/j.bej.2012.06.005 or
+    the corrected2023 Janthinobacterium paper before importing exact MICs.
+  - Preserve pure product versus pigment mixture, bacterial versus fungal species,
+    producer strain, endpoint and assay conditions.
+  - Keep production enzymes, tumor-cell effects and biosynthesis yields separate from
+    antibacterial mechanism evidence.
+limitations:
+- All seven adopted sources were read at complete indexed-abstract depth. The2015
+  mixture-production analytical methods and relevant main Results/Discussion were
+  read, without reprocessing supplementary chromatograms.
+- The2021 GenoChemetic main text was inspected for compound and biosynthetic scope.
+  The institutional PDF timed out and figure-image retrieval failed; no original figure
+  visual inspection or raw spectral reassignment is claimed.
+- The2012 exact antimicrobial study was identified and its official metadata inspected,
+  but body/abstract access was not obtained through the free publisher routes. Search
+  snippets were not used as primary assay evidence.
+- The2023 Janthinobacterium abstract and published correction were inspected, but
+  full assay methods/results were not recovered at review depth. No numerical activity
+  is imported; the corrected strain accession and textual-overlap notice must accompany
+  future use.
+- MetaCyc returned navigation/login content; Reaxys remains official-source attestation.
+  The patent English text has translation/OCR defects and supplies production context
+  only.
+- The initial ChEBI structure route returned SVG; the correct molfile route was fetched
+  and independently parsed. A guessed patent A2 was rejected in favor of the exact
+  A1 document. All failed accesses and native chemistry failure are preserved.
+- No exhaustive antimicrobial literature census, clinical-use survey, raw spectral
+  reanalysis or native curation was performed. Optional empty domains are not automatically
+  defects.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

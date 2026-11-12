@@ -1,0 +1,944 @@
+# Dichlorvos: exact structure and bounded bacterial/fungal activity
+
+- Review: 20261021T143959Z-dichlorvos-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T14:11:43Z
+- Finished UTC: 2026-10-21T14:39:59Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The neutral dichlorvos identity is internally coherent and matches current ChEBI, KEGG, PPDB and the readable HMDB structure. An original bacterial experiment supports growth inhibition and killing of two defined E. coli strains; fungal studies provide additional compound-specific activity context. The source-adopted papers concern analytical detection or animal toxicity. No confirmed native correction is established; unresolved access and mechanistic limits are preserved. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 360; one exact record. All 13 original hashes are preserved within 31 expanded owner/context inputs.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:34690 | data/antibiotics/antibacterial/dichlorvos.yaml | generated | dichlorvos |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Structured-source applicability | not_applicable | False | CHEBI:34690 | No native gene, protein, pathway, regulator or transcriptomic assertion is populated. No iModulon association is used to establish microbial activity or a direct target. |
+| Focused chemistry verification | passed | False | CHEBI:34690 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:34690 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:34690 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:34690 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:34690 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:34690 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:34690 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:34690 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:34690 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:34690 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:34690 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:34690 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral structure and nomenclature
+
+identity: supported. Targets: CHEBI:34690.
+
+All native encodings, definition and chemical synonyms denote dichlorvos, without a salt or stereochemical mismatch. Duplicate capitalization is harmless.
+
+### Chemical, drug and document cross-references
+
+grounding: unknown. Targets: CHEBI:34690.
+
+ChEBI, both KEGG entries, PPDB and readable HMDB descriptors agree. The encyclopedia document is relevant. MetaCyc requires an account and Reaxys was not independently read; those exact links remain qualified source assertions rather than conclusively revalidated graphs.
+
+### Antibacterial filing and retained antifungal role
+
+scope: supported. Targets: CHEBI:34690.
+
+Source roles are current and the original E. coli experiment directly supports bacterial growth inhibition/killing. Fungal growth and yeast cytotoxicity experiments provide independent activity context. Insecticidal use does not negate these microbial phenotypes; no therapeutic efficacy or clinical selectivity is inferred.
+
+### Absent mode and target fields
+
+completeness: unknown. Targets: CHEBI:34690.
+
+The record makes no mechanistic claim. DNA-repair sensitivity suggests a damage response, but does not identify DNA polymerase as a direct target. Cholinesterase inhibition in animal/insect contexts cannot be transferred to bacterial growth inhibition. Optional mechanism absence is not a schema defect.
+
+### Optional activity_spectrum
+
+completeness: supported. Targets: CHEBI:34690.
+
+Exact bacterial viability and disc-zone experiments are available, with defined strains and units. They should remain distinct from MICs, fungal morphology, yeast viability and insect microbiome observations. Original reagent details limit quantitative transfer.
+
+### Optional resistance and causal graph
+
+evidence: unknown. Targets: CHEBI:34690.
+
+No native resistance or graph claim exists. Repair-deficient bacterial hypersensitivity, fungal expression associations and insect survival are different evidence types and cannot be merged into a demonstrated direct-target or resistance-allele chain.
+
+### All three adopted publications
+
+evidence: supported. Targets: CHEBI:34690.
+
+Each adopted PMID resolves to an inspected original abstract. Their actual analytical or host-toxicology scope is explicit; none was counted as primary microbial efficacy.
+
+### Clinical products, producer and dataset assertions
+
+scope: not_applicable. Targets: CHEBI:34690.
+
+No such fields are populated. KEGG drug naming is not a jurisdiction-specific approval; biodegradation is not biosynthesis of dichlorvos. Additional transcriptomic papers are contextual leads, not native dataset assertions.
+
+### Source ownership and generated history
+
+provenance: supported. Targets: CHEBI:34690.
+
+The ChEBI source mint, source version, SEEDED status and four generated events are consistent. Initial inputs remain byte-identical, and source/configuration ownership is explicit.
+
+### Focused checks
+
+schema: supported. Targets: CHEBI:34690.
+
+All focused gates pass. Shared same-base corpus checks are attached by root; deterministic validation is not substituted for source reading.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Optionally curate original microbial activity with exact endpoint and material scope.
+
+- Use the 1973 original E. coli strains, HA/thymine medium and observed viability/disc-zone units; do not label either result MIC.
+- Retain missing purity/formulation and replicate details rather than inventing them.
+- Keep fungal growth/viability endpoints separate from bacterial activity and insect microbiome experiments.
+- Do not infer direct DNA-polymerase or microbial acetylcholinesterase binding from the inspected phenotype papers.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/dichlorvos.yaml; Entire87-line record; all eight synonyms, definition, four parents, two roles, structure, seven chemical/drug links, document link, source and four history events | supports | The SEEDED record denotes one neutral dichlorvos structure. Both antibacterial and antifungal source roles are retained. No mode of action, molecular targets, resistance, activity_spectrum, producer, clinical product, causal graph or dataset fields are populated. |
+| owners | data/raw/chebi_antimicrobials.tsv; Exact ChEBI row723; maintained extraction/classification/seeding inputs | supports | The source row supplies the exact chemical identity, all imported links and three literature leads. The antibacterial filing follows role priority while retaining the antifungal role. Initial input hashes remain unchanged; actual source/configuration context was appended before assessment. |
+| chemistry | Independent RDKit2026.03.5 using batch019 interpreter against batch036 cwd; 360-chemistry.json;360-xref-chemistry.json | supports | SMILES and InChI reproduce neutral C4H7Cl2O4P and OEBRKCOSUFCWJD-UHFFFAOYSA-N. Rounded masses and source mint agree. No stereocentre or alkene E/Z assignment is missing: the terminal alkene carbon bears two identical chlorines. Both KEGG molfile routes and PPDB descriptors reproduce the native graph. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/34690/; Current CHEBI:34690 full identity, names, structure, ontology relations and cross-references | supports | Current ChEBI agrees with the definition, chemical encodings, four parent classes and retained antibacterial/antifungal roles. Additional insecticidal and cholinesterase context does not negate microbial activity or establish a microbial direct target. |
+| kegg-compound | https://rest.kegg.jp/get/C14430; C14430 entry and companion360-kegg.mol | supports | KEGG compound entry agrees on formula, exact mass, CAS62-73-7 and ChEBI34690, and explicitly maps D03791 as the same substance. Its molfile reproduces the exact native key. |
+| kegg-drug | https://rest.kegg.jp/get/D03791; D03791 entry and companion360-kegg-drug.mol | supports | The drug entry is chemically identical to C14430. Its anthelmintic/cholinesterase annotations concern other biological uses and are not proof that bacterial growth inhibition is caused by acetylcholinesterase inhibition. No FDA approval assertion follows from a KEGG drug cross-reference. |
+| ppdb | https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/220.htm; University of Hertfordshire PPDB220 chemical identification and structure block | supports | PPDB names dichlorvos with CAS62-73-7, formula C4H7Cl2O4P, matching SMILES/InChI/key and no isomerism. This verifies chemical identity; pesticide safety/regulatory tables were not used as microbial mechanism evidence. |
+| hmdb | https://hmdb.ca/metabolites/HMDB0033956; Browser-readable HMDB5.0 record, SDF property block; subsequent page/XML requests blocked | supports | The successful initial browser response exposed HMDB0033956 with the native SMILES, InChI, key, neutral charge, formula and masses. The saved360-hmdb-reading-note.json is a reviewer observation of that readable response, not a saved original full-page copy. Subsequent opens and command-line HTML/XML routes returned 403. |
+| metacyc | https://biocyc.org/compound?orgid=META&amp;id=CPD-10185; CPD-10185 attempted exact compound page | context_only | The route returned a Create Account page rather than the compound record. Current ChEBI preserves this cross-reference, but its exact graph was not independently verified at MetaCyc. No access failure is treated as proof the reference is wrong. |
+| document | https://en.wikipedia.org/wiki/Dichlorvos; Dichlorvos encyclopedia page identity and primary-reference list | context_only | The document link resolves to the intended dichlorvos page. Its reference list led to the original 1973 bacterial paper; encyclopedia statements were not substituted for primary assay evidence. Reaxys1709141 remains an adopted/current ChEBI identifier without independent protected-record retrieval. |
+| adopted-24021659 | https://pubmed.ncbi.nlm.nih.gov/24021659/; Complete original abstract and metadata through Europe PMC core | context_only | The original abstract describes paper chromatography/chemiluminescence detection of dichlorvos in vegetables. Analytical concentration ranges and detection limits are not microbial activity measurements. |
+| adopted-24231740 | https://pubmed.ncbi.nlm.nih.gov/24231740/; Complete original abstract and metadata through Europe PMC core | context_only | The original abstract tests 30 micromolar dichlorvos in rat PC12 cells, studying oxidative stress, caspase inhibition and PARP1-dependent death. These host-cell findings do not establish an antibacterial target or microbial causal graph. |
+| adopted-24374570 | https://pubmed.ncbi.nlm.nih.gov/24374570/; Complete original abstract and metadata through Europe PMC core | context_only | The original abstract describes 90-day rat exposure and quercetin-associated metabolomic protection. It is animal toxicology, not an antibacterial assay, microbial producer or exact antimicrobial-resistance mechanism. |
+| bacteria1973 | https://pubmed.ncbi.nlm.nih.gov/4570270/; Original Cancer Research33:458-459, both actual pages/Tables1-2 viewed; archived publisher PDF | supports | Shell-supplied DDVP was tested against E. coli W3110 thy-minus and its DNA-polymerase-deficient derivative p3478. At 6.4 mM in HA medium plus 5 micrograms/mL thymine, viable counts fell over two hours, more strongly in the repair-deficient strain. Table2 used 0.06 micromole per disc, HA/thymine agar and 37 degrees C for 16 hours; inhibition zones were 21 mm and 26 mm respectively. These are viability and disc-zone endpoints, not MICs. The strain differential suggests DNA damage requiring repair, but does not prove direct inhibition of DNA polymerase. Reagent purity/formulation details and replicate statistics are not supplied. |
+| archive-access | https://web.archive.org/web/20210712125334/https://cancerres.aacrjournals.org/content/canres/33/3/458.full.pdf; Legitimate public archive of the publisher PDF; includes original pages458-459 and publisher cover | context_only | The direct publisher PDF and issue routes returned 403. The archived publisher PDF successfully returned the complete original article; its tables and methods were read from actual rendered pages, not a secondary paraphrase. |
+| fungi2018 | https://doi.org/10.1186/s12864-018-4960-y; PMID30089471 / PMC6083568; original full Methods, growth Results and Discussion | supports | Analytical-grade dichlorvos from Shanghai Pesticide Research Institute was tested on T. asperellum TJ01 using PDA and Burk plates at 0, 100, 500 and 1000 micrograms/mL, 28 degrees C for three days. The text reports good growth at 100 and progressively altered colony size/mycelial morphology at higher concentrations. This is a tolerant strain and a qualitative growth phenotype, not a measured MIC or proof of sterilization. Transcriptomic upregulation of transport/redox genes supplies associations; the authors propose, rather than directly prove, a resistance mechanism. No isolated-enzyme target assay is reported. |
+| yeast2019 | https://doi.org/10.1007/s13205-019-1634-7; PMID30800599; complete original abstract | supports | The original abstract reports dose-dependent cytotoxicity in S. cerevisiae and partial protection by astaxanthin, with oxidative-stress and viability endpoints. This supports yeast activity context, but the accessible abstract does not supply an exact strain, drug purity or a defensible numerical MIC. The full XML failed and the alternative PMC page returned a challenge. |
+| insect2019 | https://doi.org/10.1038/s41598-019-42843-1; PMID31015559 / PMC6478711; original Methods, Tables and microbiome Results | context_only | The study uses identified Sigma DDVP analytical standard, insect exposures and gut-community measurements. Antibiotic pretreatment creates the microbiota-depleted beetles; it is not a dichlorvos bacterial MIC experiment. Gut communities of control and DDVP-treated beetles were not significantly different in the reported comparisons. Insect survival and bacterial relative abundance do not establish strain-specific bacterial resistance, a DDVP-degrading allele or direct antimicrobial target. |
+| other-leads | https://www.ebi.ac.uk/europepmc/webservices/rest/search; 360-extra-core.json;360-old-core.json;360-yeast-core.json | context_only | PMID4200711 has metadata but no abstract for comparative bacterial/Drosophila mutagenicity. PMID3112756 tests insecticide/disinfectant mixtures; its abstract cannot isolate a dichlorvos-only bactericidal value. PMID378182 is a chemical-reactivity review. PMID30866272 is a review of mold inhibitors, and PMID322772 is a yeast-growth lead without an abstract. These leads were not promoted to original exact-compound quantitative evidence. |
+| search | Ignored-inclusive local search; Europe PMC and public primary-source follow-up; 358360-local-focused.txt;360-discovery.json;360-mutagenesis-search.json; fetch manifests | context_only | The bounded search recovered an accessible archived original bacterial paper and full original fungal/microbiome studies. Degradation studies, analytical assays, animal toxicity and mixtures were kept separate from compound-specific activity. The fungal Figure1 image route failed 404, so its colony measurements were not reconstructed from pixels. |
+| gates | Focused native gates and independent chemistry; 360-focused-results.json | supports | Schema, strict and standalone chemistry all exited 0. Native gates used batch036; the existing batch019 interpreter supplied RDKit against batch036 cwd. |
+
+## Limits And Additional Notes
+
+- All three adopted original abstracts were read. The 1973 bacterial paper was read in full from a legitimate archived publisher PDF, including both original tables; direct publisher routes remained blocked. Its reagent purity/formulation and statistical replication are not specified.
+- The 2018 fungal full Methods/growth Results/Discussion and 2019 insect study were read. Fungal Figure1 pixels were not retrieved, and no numerical colony-growth inhibition was reconstructed. The 2019 yeast study was inspected at original abstract depth because full-text routes failed.
+- HMDB descriptors were exposed once by the browser; subsequent retrievals returned 403. The retained HMDB snapshot is an explicit reviewer reading note, not a full original-page copy. MetaCyc returned an account page, and protected Reaxys was not independently accessed.
+- Compound-specific antimicrobial mechanisms remain unresolved within this bounded reading. Animal neurotoxicity, pesticide degradation and microbiome shifts were not converted into direct microbial targets or resistance alleles.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native/source/status/history was edited. Optional links, tags and notes were checked against dichlorvos.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T143959Z-dichlorvos-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Dichlorvos: exact structure and bounded bacterial/fungal activity'
+started_at: '2026-10-21T14:11:43Z'
+finished_at: '2026-10-21T14:39:59Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent reviewer read the complete 87-line native and exact
+    source row after verifying original captures, calculated identity, inspected current
+    chemical authorities, disposed all three adopted original abstracts, and read
+    original bacterial and fungal studies with bounded assay and target scope.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The neutral dichlorvos identity is internally coherent and matches current
+  ChEBI, KEGG, PPDB and the readable HMDB structure. An original bacterial experiment
+  supports growth inhibition and killing of two defined E. coli strains; fungal studies
+  provide additional compound-specific activity context. The source-adopted papers
+  concern analytical detection or animal toxicity. No confirmed native correction
+  is established; unresolved access and mechanistic limits are preserved. Scientific
+  assessment retains the stated evidence limits; full verification is blocked by the
+  shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/dichlorvos.yaml
+    sha256: 5da28a1592ee3b0a0355e19a3102488e60752b92f74df3b345846ad362e82c40
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_mibig_producers.py
+    sha256: a078cdf4c9b2d09999800ab7ae03f93d3972f29b7d2f460ebbbe7d7ec6b31c53
+    role: context
+targets:
+- target_id: CHEBI:34690
+  path: data/antibiotics/antibacterial/dichlorvos.yaml
+  label: dichlorvos
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 360; one exact record. All 13 original hashes are preserved
+    within 31 expanded owner/context inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:34690
+checks:
+- check_id: structured-adapter
+  name: Structured-source applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - CHEBI:34690
+  summary: No native gene, protein, pathway, regulator or transcriptomic assertion
+    is populated. No iModulon association is used to establish microbial activity
+    or a direct target.
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:34690
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/358360-focused.py
+    (cwd /private/tmp/antibioticmech-record-reviews-036)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:34690
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/dichlorvos.yaml (cwd /private/tmp/antibioticmech-record-reviews-036)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:34690
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/dichlorvos.yaml --out /private/tmp/am-review-session/360-strict.tsv
+    (cwd /private/tmp/antibioticmech-record-reviews-036)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:34690
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:34690
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:34690
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:34690
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:34690
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:34690
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:34690
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:34690
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:34690
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/dichlorvos.yaml
+  locator: Entire87-line record; all eight synonyms, definition, four parents, two
+    roles, structure, seven chemical/drug links, document link, source and four history
+    events
+  accessed_at: '2026-10-21T14:38:42Z'
+  support: supports
+  summary: The SEEDED record denotes one neutral dichlorvos structure. Both antibacterial
+    and antifungal source roles are retained. No mode of action, molecular targets,
+    resistance, activity_spectrum, producer, clinical product, causal graph or dataset
+    fields are populated.
+  snapshot_sha256: 65183770d185d35acd44f87bdb34e69c10a0c21e7d5dda438d2a98e2dda0afe2
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Exact ChEBI row723; maintained extraction/classification/seeding inputs
+  accessed_at: '2026-10-21T14:38:42Z'
+  support: supports
+  summary: The source row supplies the exact chemical identity, all imported links
+    and three literature leads. The antibacterial filing follows role priority while
+    retaining the antifungal role. Initial input hashes remain unchanged; actual source/configuration
+    context was appended before assessment.
+  snapshot_sha256: 65183770d185d35acd44f87bdb34e69c10a0c21e7d5dda438d2a98e2dda0afe2
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit2026.03.5 using batch019 interpreter against batch036
+    cwd
+  locator: 360-chemistry.json;360-xref-chemistry.json
+  accessed_at: '2026-10-21T14:38:42Z'
+  support: supports
+  summary: 'SMILES and InChI reproduce neutral C4H7Cl2O4P and OEBRKCOSUFCWJD-UHFFFAOYSA-N.
+    Rounded masses and source mint agree. No stereocentre or alkene E/Z assignment
+    is missing: the terminal alkene carbon bears two identical chlorines. Both KEGG
+    molfile routes and PPDB descriptors reproduce the native graph.'
+  snapshot_sha256: a275461893ffa05bae66eef6aee6986ce1274cb3ae1bbc005839d1dd235c63ea
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/34690/
+  locator: Current CHEBI:34690 full identity, names, structure, ontology relations
+    and cross-references
+  accessed_at: '2026-10-21T14:22:03.084309Z'
+  support: supports
+  summary: Current ChEBI agrees with the definition, chemical encodings, four parent
+    classes and retained antibacterial/antifungal roles. Additional insecticidal and
+    cholinesterase context does not negate microbial activity or establish a microbial
+    direct target.
+  snapshot_sha256: 8deb888f035ad77e2002b214e560be3a1e8418390446e77b1a00fd5d2c9cc2bd
+- evidence_id: kegg-compound
+  kind: authority
+  reference: https://rest.kegg.jp/get/C14430
+  locator: C14430 entry and companion360-kegg.mol
+  accessed_at: '2026-10-21T14:22:04.309273Z'
+  support: supports
+  summary: KEGG compound entry agrees on formula, exact mass, CAS62-73-7 and ChEBI34690,
+    and explicitly maps D03791 as the same substance. Its molfile reproduces the exact
+    native key.
+  snapshot_sha256: ef802c7d62dc1512988eb7f8a5e46c43ef10a78c82c6454c22bc4e9a1e5ae6b0
+- evidence_id: kegg-drug
+  kind: authority
+  reference: https://rest.kegg.jp/get/D03791
+  locator: D03791 entry and companion360-kegg-drug.mol
+  accessed_at: '2026-10-21T14:22:04.416641Z'
+  support: supports
+  summary: The drug entry is chemically identical to C14430. Its anthelmintic/cholinesterase
+    annotations concern other biological uses and are not proof that bacterial growth
+    inhibition is caused by acetylcholinesterase inhibition. No FDA approval assertion
+    follows from a KEGG drug cross-reference.
+  snapshot_sha256: ab2503c065395488bedc91193106bfa430ea9c76f6882f6e460cec9c689eb042
+- evidence_id: ppdb
+  kind: authority
+  reference: https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/220.htm
+  locator: University of Hertfordshire PPDB220 chemical identification and structure
+    block
+  accessed_at: '2026-10-21T14:22:04.714879Z'
+  support: supports
+  summary: PPDB names dichlorvos with CAS62-73-7, formula C4H7Cl2O4P, matching SMILES/InChI/key
+    and no isomerism. This verifies chemical identity; pesticide safety/regulatory
+    tables were not used as microbial mechanism evidence.
+  snapshot_sha256: f012d0d652d6632cd34e3f04e637d94f9a967160c78ac09dbfdfd4826626ee01
+- evidence_id: hmdb
+  kind: authority
+  reference: https://hmdb.ca/metabolites/HMDB0033956
+  locator: Browser-readable HMDB5.0 record, SDF property block; subsequent page/XML
+    requests blocked
+  accessed_at: '2026-10-21T14:38:42Z'
+  support: supports
+  summary: The successful initial browser response exposed HMDB0033956 with the native
+    SMILES, InChI, key, neutral charge, formula and masses. The saved360-hmdb-reading-note.json
+    is a reviewer observation of that readable response, not a saved original full-page
+    copy. Subsequent opens and command-line HTML/XML routes returned 403.
+  snapshot_sha256: d64e3941e05f38544cf856bbad771709cf16a01c5871c7c3f0256cc4cd473107
+- evidence_id: metacyc
+  kind: authority
+  reference: https://biocyc.org/compound?orgid=META&id=CPD-10185
+  locator: CPD-10185 attempted exact compound page
+  accessed_at: '2026-10-21T14:22:04.540628Z'
+  support: context_only
+  summary: The route returned a Create Account page rather than the compound record.
+    Current ChEBI preserves this cross-reference, but its exact graph was not independently
+    verified at MetaCyc. No access failure is treated as proof the reference is wrong.
+  snapshot_sha256: 24b2a5abdd8d3058fe1e7712b8b3184785d0d2e8b86ff8784e1e511f2bda41da
+- evidence_id: document
+  kind: authority
+  reference: https://en.wikipedia.org/wiki/Dichlorvos
+  locator: Dichlorvos encyclopedia page identity and primary-reference list
+  accessed_at: '2026-10-21T14:22:04.750280Z'
+  support: context_only
+  summary: The document link resolves to the intended dichlorvos page. Its reference
+    list led to the original 1973 bacterial paper; encyclopedia statements were not
+    substituted for primary assay evidence. Reaxys1709141 remains an adopted/current
+    ChEBI identifier without independent protected-record retrieval.
+  snapshot_sha256: d19253869e64d20756ca3aec3e7c0dc12ec55af00ce55a7a400101bf6b2667ff
+- evidence_id: adopted-24021659
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/24021659/
+  locator: Complete original abstract and metadata through Europe PMC core
+  accessed_at: '2026-10-21T14:22:05.109445Z'
+  support: context_only
+  summary: The original abstract describes paper chromatography/chemiluminescence
+    detection of dichlorvos in vegetables. Analytical concentration ranges and detection
+    limits are not microbial activity measurements.
+  snapshot_sha256: 0ec42dbc684612d51a8ba86e3a3ffe0ad5553221ad2bd33b4accd7180e802e1f
+- evidence_id: adopted-24231740
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/24231740/
+  locator: Complete original abstract and metadata through Europe PMC core
+  accessed_at: '2026-10-21T14:22:05.109445Z'
+  support: context_only
+  summary: The original abstract tests 30 micromolar dichlorvos in rat PC12 cells,
+    studying oxidative stress, caspase inhibition and PARP1-dependent death. These
+    host-cell findings do not establish an antibacterial target or microbial causal
+    graph.
+  snapshot_sha256: 0ec42dbc684612d51a8ba86e3a3ffe0ad5553221ad2bd33b4accd7180e802e1f
+- evidence_id: adopted-24374570
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/24374570/
+  locator: Complete original abstract and metadata through Europe PMC core
+  accessed_at: '2026-10-21T14:22:05.109445Z'
+  support: context_only
+  summary: The original abstract describes 90-day rat exposure and quercetin-associated
+    metabolomic protection. It is animal toxicology, not an antibacterial assay, microbial
+    producer or exact antimicrobial-resistance mechanism.
+  snapshot_sha256: 0ec42dbc684612d51a8ba86e3a3ffe0ad5553221ad2bd33b4accd7180e802e1f
+- evidence_id: bacteria1973
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/4570270/
+  locator: Original Cancer Research33:458-459, both actual pages/Tables1-2 viewed;
+    archived publisher PDF
+  accessed_at: '2026-10-21T14:36:07.797239Z'
+  support: supports
+  summary: Shell-supplied DDVP was tested against E. coli W3110 thy-minus and its
+    DNA-polymerase-deficient derivative p3478. At 6.4 mM in HA medium plus 5 micrograms/mL
+    thymine, viable counts fell over two hours, more strongly in the repair-deficient
+    strain. Table2 used 0.06 micromole per disc, HA/thymine agar and 37 degrees C
+    for 16 hours; inhibition zones were 21 mm and 26 mm respectively. These are viability
+    and disc-zone endpoints, not MICs. The strain differential suggests DNA damage
+    requiring repair, but does not prove direct inhibition of DNA polymerase. Reagent
+    purity/formulation details and replicate statistics are not supplied.
+  snapshot_sha256: 62d13005a18290c65df07c70c62701d4e32776f58af1c180c3210493dc0115b6
+- evidence_id: archive-access
+  kind: authority
+  reference: https://web.archive.org/web/20210712125334/https://cancerres.aacrjournals.org/content/canres/33/3/458.full.pdf
+  locator: Legitimate public archive of the publisher PDF; includes original pages458-459
+    and publisher cover
+  accessed_at: '2026-10-21T14:36:07.797239Z'
+  support: context_only
+  summary: The direct publisher PDF and issue routes returned 403. The archived publisher
+    PDF successfully returned the complete original article; its tables and methods
+    were read from actual rendered pages, not a secondary paraphrase.
+  snapshot_sha256: 62d13005a18290c65df07c70c62701d4e32776f58af1c180c3210493dc0115b6
+- evidence_id: fungi2018
+  kind: primary_source
+  reference: https://doi.org/10.1186/s12864-018-4960-y
+  locator: PMID30089471 / PMC6083568; original full Methods, growth Results and Discussion
+  accessed_at: '2026-10-21T14:35:16.670230Z'
+  support: supports
+  summary: Analytical-grade dichlorvos from Shanghai Pesticide Research Institute
+    was tested on T. asperellum TJ01 using PDA and Burk plates at 0, 100, 500 and
+    1000 micrograms/mL, 28 degrees C for three days. The text reports good growth
+    at 100 and progressively altered colony size/mycelial morphology at higher concentrations.
+    This is a tolerant strain and a qualitative growth phenotype, not a measured MIC
+    or proof of sterilization. Transcriptomic upregulation of transport/redox genes
+    supplies associations; the authors propose, rather than directly prove, a resistance
+    mechanism. No isolated-enzyme target assay is reported.
+  snapshot_sha256: 4715329b7dd8bd95a38f88d004fa0667721a97bdd5bbbae1c9611e701a2e59a9
+- evidence_id: yeast2019
+  kind: primary_source
+  reference: https://doi.org/10.1007/s13205-019-1634-7
+  locator: PMID30800599; complete original abstract
+  accessed_at: '2026-10-21T14:35:16.671521Z'
+  support: supports
+  summary: The original abstract reports dose-dependent cytotoxicity in S. cerevisiae
+    and partial protection by astaxanthin, with oxidative-stress and viability endpoints.
+    This supports yeast activity context, but the accessible abstract does not supply
+    an exact strain, drug purity or a defensible numerical MIC. The full XML failed
+    and the alternative PMC page returned a challenge.
+  snapshot_sha256: 1d15b881faaef6a6fac6d1e9f5ebe616fc4a8fb5a96de934a29f173c125ec4ed
+- evidence_id: insect2019
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41598-019-42843-1
+  locator: PMID31015559 / PMC6478711; original Methods, Tables and microbiome Results
+  accessed_at: '2026-10-21T14:22:50.875943Z'
+  support: context_only
+  summary: The study uses identified Sigma DDVP analytical standard, insect exposures
+    and gut-community measurements. Antibiotic pretreatment creates the microbiota-depleted
+    beetles; it is not a dichlorvos bacterial MIC experiment. Gut communities of control
+    and DDVP-treated beetles were not significantly different in the reported comparisons.
+    Insect survival and bacterial relative abundance do not establish strain-specific
+    bacterial resistance, a DDVP-degrading allele or direct antimicrobial target.
+  snapshot_sha256: 63ff9654e42df3e753109b589d41e231ed00073f750e6352f7b471e64e287d89
+- evidence_id: other-leads
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: 360-extra-core.json;360-old-core.json;360-yeast-core.json
+  accessed_at: '2026-10-21T14:22:50.868890Z'
+  support: context_only
+  summary: PMID4200711 has metadata but no abstract for comparative bacterial/Drosophila
+    mutagenicity. PMID3112756 tests insecticide/disinfectant mixtures; its abstract
+    cannot isolate a dichlorvos-only bactericidal value. PMID378182 is a chemical-reactivity
+    review. PMID30866272 is a review of mold inhibitors, and PMID322772 is a yeast-growth
+    lead without an abstract. These leads were not promoted to original exact-compound
+    quantitative evidence.
+  snapshot_sha256: b9442b31cea72500a87489af2966d14e9d81766a99c75ed4beafd44f06973236
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local search; Europe PMC and public primary-source
+    follow-up
+  locator: 358360-local-focused.txt;360-discovery.json;360-mutagenesis-search.json;
+    fetch manifests
+  accessed_at: '2026-10-21T14:22:05.861117Z'
+  support: context_only
+  summary: The bounded search recovered an accessible archived original bacterial
+    paper and full original fungal/microbiome studies. Degradation studies, analytical
+    assays, animal toxicity and mixtures were kept separate from compound-specific
+    activity. The fungal Figure1 image route failed 404, so its colony measurements
+    were not reconstructed from pixels.
+  snapshot_sha256: 62decc04a34debe3507be146278796a1f4acb2693e1ca0e28e5a1e40d884462b
+  search_scope: 2026-10-21; dichlorvos, DDVP, CHEBI:34690, all three adopted PMIDs
+    and primary bacterial/fungal activity leads. Exact local identifier/name searches
+    included ignored and hidden files. Public literature follow-up distinguished toxicity,
+    biotransformation, mixtures and genuine compound-specific microbial assays; no
+    exhaustive absence claim is made.
+- evidence_id: gates
+  kind: validation
+  reference: Focused native gates and independent chemistry
+  locator: 360-focused-results.json
+  accessed_at: '2026-10-21T14:38:42Z'
+  support: supports
+  summary: Schema, strict and standalone chemistry all exited 0. Native gates used
+    batch036; the existing batch019 interpreter supplied RDKit against batch036 cwd.
+  snapshot_sha256: 28ef8f299c907e00093c40670f87c73e4ca7a42275fc84799b5874f32f6c4d64
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral structure and nomenclature
+  outcome: supported
+  summary: All native encodings, definition and chemical synonyms denote dichlorvos,
+    without a salt or stereochemical mismatch. Duplicate capitalization is harmless.
+  target_ids:
+  - CHEBI:34690
+  evidence_ids:
+  - native
+  - chemistry
+  - chebi
+  - ppdb
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical, drug and document cross-references
+  outcome: unknown
+  summary: ChEBI, both KEGG entries, PPDB and readable HMDB descriptors agree. The
+    encyclopedia document is relevant. MetaCyc requires an account and Reaxys was
+    not independently read; those exact links remain qualified source assertions rather
+    than conclusively revalidated graphs.
+  target_ids:
+  - CHEBI:34690
+  evidence_ids:
+  - chebi
+  - kegg-compound
+  - kegg-drug
+  - ppdb
+  - hmdb
+  - metacyc
+  - document
+- assessment_id: classification
+  area: scope
+  topic: Antibacterial filing and retained antifungal role
+  outcome: supported
+  summary: Source roles are current and the original E. coli experiment directly supports
+    bacterial growth inhibition/killing. Fungal growth and yeast cytotoxicity experiments
+    provide independent activity context. Insecticidal use does not negate these microbial
+    phenotypes; no therapeutic efficacy or clinical selectivity is inferred.
+  target_ids:
+  - CHEBI:34690
+  evidence_ids:
+  - chebi
+  - bacteria1973
+  - fungi2018
+  - yeast2019
+  - owners
+- assessment_id: mode
+  area: completeness
+  topic: Absent mode and target fields
+  outcome: unknown
+  summary: The record makes no mechanistic claim. DNA-repair sensitivity suggests
+    a damage response, but does not identify DNA polymerase as a direct target. Cholinesterase
+    inhibition in animal/insect contexts cannot be transferred to bacterial growth
+    inhibition. Optional mechanism absence is not a schema defect.
+  target_ids:
+  - CHEBI:34690
+  evidence_ids:
+  - bacteria1973
+  - kegg-drug
+  - adopted-24231740
+  - fungi2018
+- assessment_id: activity
+  area: completeness
+  topic: Optional activity_spectrum
+  outcome: supported
+  summary: Exact bacterial viability and disc-zone experiments are available, with
+    defined strains and units. They should remain distinct from MICs, fungal morphology,
+    yeast viability and insect microbiome observations. Original reagent details limit
+    quantitative transfer.
+  target_ids:
+  - CHEBI:34690
+  evidence_ids:
+  - bacteria1973
+  - fungi2018
+  - yeast2019
+  - insect2019
+- assessment_id: resistance
+  area: evidence
+  topic: Optional resistance and causal graph
+  outcome: unknown
+  summary: No native resistance or graph claim exists. Repair-deficient bacterial
+    hypersensitivity, fungal expression associations and insect survival are different
+    evidence types and cannot be merged into a demonstrated direct-target or resistance-allele
+    chain.
+  target_ids:
+  - CHEBI:34690
+  evidence_ids:
+  - bacteria1973
+  - fungi2018
+  - insect2019
+- assessment_id: leads
+  area: evidence
+  topic: All three adopted publications
+  outcome: supported
+  summary: Each adopted PMID resolves to an inspected original abstract. Their actual
+    analytical or host-toxicology scope is explicit; none was counted as primary microbial
+    efficacy.
+  target_ids:
+  - CHEBI:34690
+  evidence_ids:
+  - adopted-24021659
+  - adopted-24231740
+  - adopted-24374570
+- assessment_id: other
+  area: scope
+  topic: Clinical products, producer and dataset assertions
+  outcome: not_applicable
+  summary: No such fields are populated. KEGG drug naming is not a jurisdiction-specific
+    approval; biodegradation is not biosynthesis of dichlorvos. Additional transcriptomic
+    papers are contextual leads, not native dataset assertions.
+  target_ids:
+  - CHEBI:34690
+  evidence_ids:
+  - native
+  - kegg-drug
+  - fungi2018
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership and generated history
+  outcome: supported
+  summary: The ChEBI source mint, source version, SEEDED status and four generated
+    events are consistent. Initial inputs remain byte-identical, and source/configuration
+    ownership is explicit.
+  target_ids:
+  - CHEBI:34690
+  evidence_ids:
+  - owners
+  - native
+  - chemistry
+- assessment_id: schema
+  area: schema
+  topic: Focused checks
+  outcome: supported
+  summary: All focused gates pass. Shared same-base corpus checks are attached by
+    root; deterministic validation is not substituted for source reading.
+  target_ids:
+  - CHEBI:34690
+  evidence_ids:
+  - gates
+findings: []
+actions:
+- action_id: A1
+  description: Optionally curate original microbial activity with exact endpoint and
+    material scope.
+  finding_ids: []
+  target_ids:
+  - CHEBI:34690
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/dichlorvos.yaml
+    role: Curator-owned primary evidence and history
+  acceptance_checks:
+  - Use the 1973 original E. coli strains, HA/thymine medium and observed viability/disc-zone
+    units; do not label either result MIC.
+  - Retain missing purity/formulation and replicate details rather than inventing
+    them.
+  - Keep fungal growth/viability endpoints separate from bacterial activity and insect
+    microbiome experiments.
+  - Do not infer direct DNA-polymerase or microbial acetylcholinesterase binding from
+    the inspected phenotype papers.
+limitations:
+- All three adopted original abstracts were read. The 1973 bacterial paper was read
+  in full from a legitimate archived publisher PDF, including both original tables;
+  direct publisher routes remained blocked. Its reagent purity/formulation and statistical
+  replication are not specified.
+- The 2018 fungal full Methods/growth Results/Discussion and 2019 insect study were
+  read. Fungal Figure1 pixels were not retrieved, and no numerical colony-growth inhibition
+  was reconstructed. The 2019 yeast study was inspected at original abstract depth
+  because full-text routes failed.
+- HMDB descriptors were exposed once by the browser; subsequent retrievals returned
+  403. The retained HMDB snapshot is an explicit reviewer reading note, not a full
+  original-page copy. MetaCyc returned an account page, and protected Reaxys was not
+  independently accessed.
+- Compound-specific antimicrobial mechanisms remain unresolved within this bounded
+  reading. Animal neurotoxicity, pesticide degradation and microbiome shifts were
+  not converted into direct microbial targets or resistance alleles.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native/source/status/history was edited. Optional links, tags and notes were
+  checked against dichlorvos.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:34690
+- https://pubmed.ncbi.nlm.nih.gov/4570270/
+- https://doi.org/10.1186/s12864-018-4960-y
+- https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/220.htm
+tags:
+- dichlorvos
+- DDVP
+- antibacterial
+- antifungal
+- assay-scope
+```
