@@ -1,0 +1,723 @@
+# Decanoic acid: separate neutral acid from decanoate grounding
+
+- Review: 20261021T142449Z-decanoic-acid-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T14:02:30Z
+- Finished UTC: 2026-10-21T14:24:49Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The neutral C10 fatty-acid graph and antibacterial eligibility are supported. One major finding groups the decanoate exact alias and ECMDB21204 exact xref, which identify or encode the negatively charged conjugate base. Accessible neutral-structure authorities agree; original fatty-acid assays preserve strain, pH and endpoint boundaries.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position345; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:30813 | data/antibiotics/antibacterial/decanoic-acid.yaml | generated | decanoic acid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:30813 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:30813 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:30813 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:30813 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:30813 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:30813 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:30813 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:30813 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:30813 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:30813 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:30813 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:30813 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Neutral C10 fatty acid
+
+identity: supported. Targets: CHEBI:30813.
+
+Native SMILES/InChI, formula, net charge, average/exact mass and achirality are coherent and supported by multiple parsed public authorities.
+
+### Exact acid/anion boundary
+
+grounding: concern. Targets: CHEBI:30813.
+
+Decanoate is an anion identity and ECMDB21204 explicitly encodes that anion. Other accessible graph xrefs agree with the neutral acid; restricted or navigation-only sources remain limitations.
+
+### All17 imported aliases
+
+representation: concern. Targets: CHEBI:30813.
+
+Chemical C10 acid names, translations and formula aliases are coherent. The Decanoate alias is charge-ambiguous in KEGG and is not safely exact to the neutral record in this corpus. Preserve source usage as qualified context or exclude its exact assertion.
+
+### Parents and antibacterial filing
+
+scope: supported. Targets: CHEBI:30813.
+
+Both native chemical parents are broader and the retained antibacterial role is independently supported by original capric-acid assays. Filing does not erase other possible activities.
+
+### Material-specific antibacterial observations
+
+evidence: supported. Targets: CHEBI:30813.
+
+Original activity supports eligibility, but solubility, pH, organism/strain and growth endpoints matter. C12/C16 MBC data and host anti-inflammatory readouts are not assigned to C10.
+
+### Target, mechanism, producer, resistance and clinical domains
+
+completeness: unknown. Targets: CHEBI:30813.
+
+No corresponding native claims are populated. Optional evidence enrichment requires exact material and primary methods; no direct protein target or clinical approval is inferred from source keywords or metabolic annotations.
+
+### Source mint, four history events and adopted leads
+
+provenance: supported. Targets: CHEBI:30813.
+
+All frozen-source fields and four generated history events reconcile; the four adopted leads were individually inspected. No native status promotion is implied.
+
+## Findings
+
+### F1: Neutral decanoic acid carries exact assertions for its decanoate conjugate base
+
+major / open / confirmed; issue key: decanoic-acid-decanoate-charge-conflation.
+
+The native acid has charge0 and key endingSA-N. ECMDB21204 explicitly represents charge−1 decanoate with key endingSA-M, independently matching CHEBI27689. The imported Decanoate exact synonym also omits that chemical distinction, despite KEGG using it loosely for a neutral representative. Preserve the neutral graph and repair exact-equivalence assertions through maintained source ownership.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Remove or qualify the anion exact xref and charge-ambiguous alias while preserving neutral decanoic acid.
+
+- Use the source-specific synonym exclusion path for Decanoate if no qualified synonym representation is introduced.
+- Adjudicate ECMDB21204 as the conjugate base and correct maintained inventory/extraction/seeding handling; do not silently change its identifier or the native acid graph.
+- Regenerate through the canonical writer and history workflow; schema, strict, full-key/charge comparison, source reproduction and required QC must pass.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/decanoic-acid.yaml; entire YAML,17 aliases, two parents, role,11 exact xrefs, drug link and four history events | supports | The native graph is neutral decanoic acid, C10H20O2, GHVNFZFCNZKVNT-UHFFFAOYSA-N. No primary target, mechanism, strain activity, producer or clinical claim is populated; these optional absences are not defects. |
+| owner | data/raw/chebi_antimicrobials.tsv; exact CHEBI30813 row613, source extraction and seeder; source-scoped synonym_exclusions in conf/sources.yaml | supports | The frozen row supplies the definition, aliases, graph, parents, role and four adopted citation leads. Current source handling preserves neutral-versus-anion identity but imports the Decanoate alias. Hidden/ignored files were included in owner/overlay searches. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/30813/; complete current entry; exact neutral structure, names, outgoing parents/role | supports | ChEBI confirms the native neutral structure and C10 straight-chain saturated-fatty-acid definition. Its two asserted parents resolve as broader medium-chain/straight-chain saturated fatty acids. The antibacterial-role term resolves; other current metabolite roles are outside the antimicrobial-role projection. |
+| anion | https://www.ebi.ac.uk/chebi/backend/api/public/compound/27689/; complete decanoate identity, conjugate-base relationship and charge | supports | CHEBI27689 defines decanoate as the conjugate base: C10H19O2, charge−1, key GHVNFZFCNZKVNT-UHFFFAOYSA-M. Its exact identity differs from the neutral native graph. KEGG uses the same word loosely for its neutral entry; that usage is not chemical charge equivalence. |
+| ecmdb | https://ecmdb.ca/compounds/ECMDB21204; official exact accession redirects to M2MDB001612; identity block and full structure | supports | ECMDB21204 is explicitly decanoate, with SMILES CCCCCCCCCC([O-])=O, InChI /p-1, formula C10H19O2 and charge-specific M key. This is a confirmed non-equivalent exact xref, not merely a spelling difference. |
+| chemistry | RDKit 2026.03.5 / InChI 1.07.3; 035-authority-chemistry.py and345-authority-chemistry.json | supports | Native, ChEBI molfile, PubChem2969, KEGG C01571, LipidMaps LMFA01010010, KNApSAcK C00001213, YMDB00677 and two RCSB DKA SMILES encodings regenerate the neutral full key. ECMDB21204 and ChEBI decanoate regenerate the negative-charge key. The explicit diagnostic assertions exited0; this is not a claim that all xrefs match. |
+| kegg | https://rest.kegg.jp/get/C01571; full KEGG text and molfile | supports | KEGG names Decanoic acid and Decanoate but encodes the neutral acid. Its exact graph agrees, while the imported charge-ambiguous alias needs source-scoped handling rather than changing the molecular graph. |
+| lipidmaps | https://www.lipidmaps.org/rest/compound/lm_id/LMFA01010010/all/json; full LipidMaps identity and structural response | supports | LipidMaps identifies capric/decanoic acid with the native graph and links HMDB0000511, KEGG C01571 and ChEBI30813. Independent HMDB access returned403; an indirect link is not a direct HMDB graph inspection. |
+| remaining-identifiers | https://www.rcsb.org/ligand/DKA;https://www.ymdb.ca/compounds/YMDB00677;https://www.knapsackfamily.com/knapsack_core/information.php?word=C00001213; official ligand descriptors and metabolite identity blocks; full current ChEBI accession list | supports | RCSB DKA, KNApSAcK and YMDB exact structures agree. CAS334-48-5 is corroborated by these public authorities, without proprietary-registry access. Beilstein1754556 and Gmelin69184 remain source-attested. DrugBankDB03600 returned403, and MetaCyc CPD3617 returned a login/navigation page without usable compound detail; neither was treated as independently verified. |
+| adopted | PMID:19168249;20661498;24284257;24357269; all four bibliographic records and complete indexed abstracts | supports | 19168249 studies fatty-acid biosynthesis responses in S.aureus; its alpha-linolenic-acid conclusion does not establish FabI as the exact capric-acid binding target.24284257 reports capric-acid antibacterial activity against P.acnes and separate host NF-kappaB/MAPK effects.20661498 uses decanoic acid in nanoparticle synthesis;24357269 profiles seed-oil fatty acids. Only the first two address antibacterial context. |
+| activity2019 | https://doi.org/10.5650/jos.ess18220; PMID30760667; original paper main text, Methods2.1–2.2, Results/Discussion and actual Figure2 p293 | supports | Purchased ≥99% capric acid is tested against S.aureus NBRC13276 and S.epidermidis NBRC12993 in beef-extract/polypeptone/NaCl medium with pH6 phosphate buffer and2% ethanol control. OD660 growth endpoints use37C24h/48h respectively. Figure2 places C10:0 near100 micrograms/mL for both species. MBC experiments and Table1 concern C12:0/C16:1, not C10:0. The graph is not digitized into an exact new MIC observation. |
+| activity2014 | https://doi.org/10.1016/j.jdermsci.2013.10.010; full indexed abstract and publisher-exposed Materials/results passage | supports | The publisher passage identifies P.acnes BCRC10723 in BHI plus1%glucose under anaerobic conditions. The complete assay methods were not recovered, so no numerical MIC is imported. Host-cell NF-kappaB/MAPK anti-inflammatory effects are not bacterial target binding. |
+
+## Limits And Additional Notes
+
+- The2019 main paper was read through conclusions and its actual Figure2 inspected. Figure-derived C10 potency is descriptive rather than a digitized exact numeric activity import; the paper reports MBC only for other fatty acids.
+- All four adopted sources were read at complete indexed-abstract depth; the2014 publisher-exposed materials/results passage was also read, but full2014/2009 assay details were not recovered.
+- HMDB and DrugBank returned403; MetaCyc returned login/navigation content. Beilstein and Gmelin remain source-attested without independent registry access.
+- An initially guessed ECMDB M2MDB000028 URL resolved to unrelated cysteinylglycine and was rejected. The finding uses the exact native ECMDB21204 route, which resolves to M2MDB001612 and contains the decanoate graph.
+- Structured gene/pathway adapters were not applicable to the native sparse chemical record; source metabolic annotations were not repurposed as antibiotic targets.
+- No exhaustive contemporary clinical/use survey or activity census was attempted. All original input hashes remain unchanged.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T142449Z-decanoic-acid-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Decanoic acid: separate neutral acid from decanoate grounding'
+started_at: '2026-10-21T14:02:30Z'
+finished_at: '2026-10-21T14:24:49Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The neutral C10 fatty-acid graph and antibacterial eligibility are supported.
+  One major finding groups the decanoate exact alias and ECMDB21204 exact xref, which
+  identify or encode the negatively charged conjugate base. Accessible neutral-structure
+  authorities agree; original fatty-acid assays preserve strain, pH and endpoint boundaries.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/decanoic-acid.yaml
+    sha256: 1e7029d7105689f3b78ecfdce889b410991b74cab71f9deb29f9c59e1e53361d
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+targets:
+- target_id: CHEBI:30813
+  path: data/antibiotics/antibacterial/decanoic-acid.yaml
+  label: decanoic acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position345; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:30813
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:30813
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    345
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:30813
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/decanoic-acid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:30813
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/decanoic-acid.yaml --out /private/tmp/am-review-session/345-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:30813
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:30813
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:30813
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:30813
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:30813
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:30813
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:30813
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:30813
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:30813
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/decanoic-acid.yaml
+  locator: entire YAML,17 aliases, two parents, role,11 exact xrefs, drug link and
+    four history events
+  accessed_at: '2026-10-21T14:13:56Z'
+  support: supports
+  summary: The native graph is neutral decanoic acid, C10H20O2, GHVNFZFCNZKVNT-UHFFFAOYSA-N.
+    No primary target, mechanism, strain activity, producer or clinical claim is populated;
+    these optional absences are not defects.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: exact CHEBI30813 row613, source extraction and seeder; source-scoped synonym_exclusions
+    in conf/sources.yaml
+  accessed_at: '2026-10-21T14:13:56Z'
+  support: supports
+  summary: The frozen row supplies the definition, aliases, graph, parents, role and
+    four adopted citation leads. Current source handling preserves neutral-versus-anion
+    identity but imports the Decanoate alias. Hidden/ignored files were included in
+    owner/overlay searches.
+  snapshot_sha256: 1909608f061a0629d266dcca5ba7e7d1dc71c3f2ef9d0fcba4d609dddf1990e3
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/30813/
+  locator: complete current entry; exact neutral structure, names, outgoing parents/role
+  accessed_at: '2026-10-21T14:13:56Z'
+  support: supports
+  summary: ChEBI confirms the native neutral structure and C10 straight-chain saturated-fatty-acid
+    definition. Its two asserted parents resolve as broader medium-chain/straight-chain
+    saturated fatty acids. The antibacterial-role term resolves; other current metabolite
+    roles are outside the antimicrobial-role projection.
+  snapshot_sha256: c2406007a0a72d8555214dd0cafe4d29cdf51cd3315cb59a6c260c1c7bdcf7be
+- evidence_id: anion
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/27689/
+  locator: complete decanoate identity, conjugate-base relationship and charge
+  accessed_at: '2026-10-21T14:13:56Z'
+  support: supports
+  summary: 'CHEBI27689 defines decanoate as the conjugate base: C10H19O2, charge−1,
+    key GHVNFZFCNZKVNT-UHFFFAOYSA-M. Its exact identity differs from the neutral native
+    graph. KEGG uses the same word loosely for its neutral entry; that usage is not
+    chemical charge equivalence.'
+  snapshot_sha256: 5bd3f3f1156988bcf55868daf847b39ddf12a85bbfb7f3ad0d7efdeee01034b9
+- evidence_id: ecmdb
+  kind: authority
+  reference: https://ecmdb.ca/compounds/ECMDB21204
+  locator: official exact accession redirects to M2MDB001612; identity block and full
+    structure
+  accessed_at: '2026-10-21T14:13:56Z'
+  support: supports
+  summary: ECMDB21204 is explicitly decanoate, with SMILES CCCCCCCCCC([O-])=O, InChI
+    /p-1, formula C10H19O2 and charge-specific M key. This is a confirmed non-equivalent
+    exact xref, not merely a spelling difference.
+  snapshot_sha256: b09b57ab7732bca440b51406a0ef4aec801761421cc11aa380af7142de8d401b
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit 2026.03.5 / InChI 1.07.3
+  locator: 035-authority-chemistry.py and345-authority-chemistry.json
+  accessed_at: '2026-10-21T14:13:56Z'
+  support: supports
+  summary: Native, ChEBI molfile, PubChem2969, KEGG C01571, LipidMaps LMFA01010010,
+    KNApSAcK C00001213, YMDB00677 and two RCSB DKA SMILES encodings regenerate the
+    neutral full key. ECMDB21204 and ChEBI decanoate regenerate the negative-charge
+    key. The explicit diagnostic assertions exited0; this is not a claim that all
+    xrefs match.
+  snapshot_sha256: 5ee13109c4deb2c1ebe43a54ba569b27b1754d7dcb6a94e89201d4a56266d791
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/C01571
+  locator: full KEGG text and molfile
+  accessed_at: '2026-10-21T14:13:56Z'
+  support: supports
+  summary: KEGG names Decanoic acid and Decanoate but encodes the neutral acid. Its
+    exact graph agrees, while the imported charge-ambiguous alias needs source-scoped
+    handling rather than changing the molecular graph.
+  snapshot_sha256: 3691ffdeae6542263cdb481bf2b395563a97c83078ce14f38369c80e26836413
+- evidence_id: lipidmaps
+  kind: authority
+  reference: https://www.lipidmaps.org/rest/compound/lm_id/LMFA01010010/all/json
+  locator: full LipidMaps identity and structural response
+  accessed_at: '2026-10-21T14:13:56Z'
+  support: supports
+  summary: LipidMaps identifies capric/decanoic acid with the native graph and links
+    HMDB0000511, KEGG C01571 and ChEBI30813. Independent HMDB access returned403;
+    an indirect link is not a direct HMDB graph inspection.
+  snapshot_sha256: 10a786180b6759790f9982d21446053c983e35b9539d2786d57215e4f564680a
+- evidence_id: remaining-identifiers
+  kind: authority
+  reference: https://www.rcsb.org/ligand/DKA;https://www.ymdb.ca/compounds/YMDB00677;https://www.knapsackfamily.com/knapsack_core/information.php?word=C00001213
+  locator: official ligand descriptors and metabolite identity blocks; full current
+    ChEBI accession list
+  accessed_at: '2026-10-21T14:13:56Z'
+  support: supports
+  summary: RCSB DKA, KNApSAcK and YMDB exact structures agree. CAS334-48-5 is corroborated
+    by these public authorities, without proprietary-registry access. Beilstein1754556
+    and Gmelin69184 remain source-attested. DrugBankDB03600 returned403, and MetaCyc
+    CPD3617 returned a login/navigation page without usable compound detail; neither
+    was treated as independently verified.
+  snapshot_sha256: 40c957c2795eaf8c6382f0441e85949855fde35eb2eb9250ab828fb43c7e4be2
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:19168249;20661498;24284257;24357269
+  locator: all four bibliographic records and complete indexed abstracts
+  accessed_at: '2026-10-21T14:13:56Z'
+  support: supports
+  summary: 19168249 studies fatty-acid biosynthesis responses in S.aureus; its alpha-linolenic-acid
+    conclusion does not establish FabI as the exact capric-acid binding target.24284257
+    reports capric-acid antibacterial activity against P.acnes and separate host NF-kappaB/MAPK
+    effects.20661498 uses decanoic acid in nanoparticle synthesis;24357269 profiles
+    seed-oil fatty acids. Only the first two address antibacterial context.
+  snapshot_sha256: 7011955597511bdf301f3850b5599579f3d6f82820d6fb0cea948db3b690767f
+- evidence_id: activity2019
+  kind: primary_source
+  reference: https://doi.org/10.5650/jos.ess18220
+  locator: PMID30760667; original paper main text, Methods2.1–2.2, Results/Discussion
+    and actual Figure2 p293
+  accessed_at: '2026-10-21T14:13:56Z'
+  support: supports
+  summary: Purchased ≥99% capric acid is tested against S.aureus NBRC13276 and S.epidermidis
+    NBRC12993 in beef-extract/polypeptone/NaCl medium with pH6 phosphate buffer and2%
+    ethanol control. OD660 growth endpoints use37C24h/48h respectively. Figure2 places
+    C10:0 near100 micrograms/mL for both species. MBC experiments and Table1 concern
+    C12:0/C16:1, not C10:0. The graph is not digitized into an exact new MIC observation.
+  snapshot_sha256: b9ad3b3b2c5b3083a2dbfe8d559ae261192ca947887a08eacfbdf1b297d09a83
+- evidence_id: activity2014
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.jdermsci.2013.10.010
+  locator: full indexed abstract and publisher-exposed Materials/results passage
+  accessed_at: '2026-10-21T14:13:56Z'
+  support: supports
+  summary: The publisher passage identifies P.acnes BCRC10723 in BHI plus1%glucose
+    under anaerobic conditions. The complete assay methods were not recovered, so
+    no numerical MIC is imported. Host-cell NF-kappaB/MAPK anti-inflammatory effects
+    are not bacterial target binding.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral C10 fatty acid
+  outcome: supported
+  summary: Native SMILES/InChI, formula, net charge, average/exact mass and achirality
+    are coherent and supported by multiple parsed public authorities.
+  target_ids:
+  - CHEBI:30813
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Exact acid/anion boundary
+  outcome: concern
+  summary: Decanoate is an anion identity and ECMDB21204 explicitly encodes that anion.
+    Other accessible graph xrefs agree with the neutral acid; restricted or navigation-only
+    sources remain limitations.
+  target_ids:
+  - CHEBI:30813
+  evidence_ids:
+  - anion
+  - ecmdb
+  - chemistry
+  - remaining-identifiers
+- assessment_id: aliases
+  area: representation
+  topic: All17 imported aliases
+  outcome: concern
+  summary: Chemical C10 acid names, translations and formula aliases are coherent.
+    The Decanoate alias is charge-ambiguous in KEGG and is not safely exact to the
+    neutral record in this corpus. Preserve source usage as qualified context or exclude
+    its exact assertion.
+  target_ids:
+  - CHEBI:30813
+  evidence_ids:
+  - native
+  - kegg
+  - anion
+- assessment_id: classification
+  area: scope
+  topic: Parents and antibacterial filing
+  outcome: supported
+  summary: Both native chemical parents are broader and the retained antibacterial
+    role is independently supported by original capric-acid assays. Filing does not
+    erase other possible activities.
+  target_ids:
+  - CHEBI:30813
+  evidence_ids:
+  - chebi
+  - activity2019
+  - adopted
+- assessment_id: activity
+  area: evidence
+  topic: Material-specific antibacterial observations
+  outcome: supported
+  summary: Original activity supports eligibility, but solubility, pH, organism/strain
+    and growth endpoints matter. C12/C16 MBC data and host anti-inflammatory readouts
+    are not assigned to C10.
+  target_ids:
+  - CHEBI:30813
+  evidence_ids:
+  - activity2019
+  - activity2014
+  - adopted
+- assessment_id: optional
+  area: completeness
+  topic: Target, mechanism, producer, resistance and clinical domains
+  outcome: unknown
+  summary: No corresponding native claims are populated. Optional evidence enrichment
+    requires exact material and primary methods; no direct protein target or clinical
+    approval is inferred from source keywords or metabolic annotations.
+  target_ids:
+  - CHEBI:30813
+  evidence_ids:
+  - native
+  - adopted
+  - activity2019
+- assessment_id: provenance
+  area: provenance
+  topic: Source mint, four history events and adopted leads
+  outcome: supported
+  summary: All frozen-source fields and four generated history events reconcile; the
+    four adopted leads were individually inspected. No native status promotion is
+    implied.
+  target_ids:
+  - CHEBI:30813
+  evidence_ids:
+  - native
+  - owner
+  - adopted
+findings:
+- finding_id: F1
+  issue_key: decanoic-acid-decanoate-charge-conflation
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Neutral decanoic acid carries exact assertions for its decanoate conjugate
+    base
+  description: The native acid has charge0 and key endingSA-N. ECMDB21204 explicitly
+    represents charge−1 decanoate with key endingSA-M, independently matching CHEBI27689.
+    The imported Decanoate exact synonym also omits that chemical distinction, despite
+    KEGG using it loosely for a neutral representative. Preserve the neutral graph
+    and repair exact-equivalence assertions through maintained source ownership.
+  target_ids:
+  - CHEBI:30813
+  field_paths:
+  - synonyms[5]
+  - xrefs[2]
+  evidence_ids:
+  - native
+  - anion
+  - ecmdb
+  - chemistry
+  - kegg
+  - owner
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-scoped synonym exclusions
+  rule_id: native-review-checklist:Equivalence
+  native_severity: major
+  normalization_reason: The core record is identified correctly, but a different charge
+    form is asserted as exact equivalence and can misjoin chemical data.
+actions:
+- action_id: A1
+  description: Remove or qualify the anion exact xref and charge-ambiguous alias while
+    preserving neutral decanoic acid.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:30813
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-scoped synonym exclusions
+  acceptance_checks:
+  - Use the source-specific synonym exclusion path for Decanoate if no qualified synonym
+    representation is introduced.
+  - Adjudicate ECMDB21204 as the conjugate base and correct maintained inventory/extraction/seeding
+    handling; do not silently change its identifier or the native acid graph.
+  - Regenerate through the canonical writer and history workflow; schema, strict,
+    full-key/charge comparison, source reproduction and required QC must pass.
+limitations:
+- The2019 main paper was read through conclusions and its actual Figure2 inspected.
+  Figure-derived C10 potency is descriptive rather than a digitized exact numeric
+  activity import; the paper reports MBC only for other fatty acids.
+- All four adopted sources were read at complete indexed-abstract depth; the2014 publisher-exposed
+  materials/results passage was also read, but full2014/2009 assay details were not
+  recovered.
+- HMDB and DrugBank returned403; MetaCyc returned login/navigation content. Beilstein
+  and Gmelin remain source-attested without independent registry access.
+- An initially guessed ECMDB M2MDB000028 URL resolved to unrelated cysteinylglycine
+  and was rejected. The finding uses the exact native ECMDB21204 route, which resolves
+  to M2MDB001612 and contains the decanoate graph.
+- Structured gene/pathway adapters were not applicable to the native sparse chemical
+  record; source metabolic annotations were not repurposed as antibiotic targets.
+- No exhaustive contemporary clinical/use survey or activity census was attempted.
+  All original input hashes remain unchanged.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
