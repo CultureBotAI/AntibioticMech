@@ -1,0 +1,1059 @@
+# Cephapirin: coherent acid with an incorrectly typed sodium-product brand
+
+- Review: 20261021T123206Z-cephapirin
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T12:20:00Z
+- Finished UTC: 2026-10-21T12:32:06Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One minor source-owned synonym-type correction: cefadyl is a sodium-product brand and should not assert exact molecular equivalence with the acid. Native complete acid identity and checked public chemical mappings agree. The PBP family edge honestly remains a database assertion, and original studies support bounded optional enrichment with explicit sodium/radiolabel and assay limits.
+
+## Scope And Provenance
+
+Whole-record review of the exact cephapirin free acid.
+
+Selection: Queue 272 in isolated batch 028; initial captures preserved and actual ARO owners appended before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:554446 | data/antibiotics/antibacterial/cephapirin.yaml | generated | cephapirin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema | passed | True | CHEBI:554446 | Actual focused command exited0. |
+| Focused strict | passed | True | CHEBI:554446 | Actual focused command exited0. |
+| Complete native molecular check | passed | False | CHEBI:554446 | Native encodings and source mints agree; separately inspected full external structures also agree. |
+| Authoritative full QC | failed | True | CHEBI:554446 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:554446 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:554446 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:554446 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:554446 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:554446 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:554446 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:554446 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:554446 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact acid and source identity
+
+identity: supported. Targets: CHEBI:554446.
+
+Full native structure, 6R,7R stereochemistry, formula, masses, neutral charge and both source mints agree. The definition correctly distinguishes use as sodium salt.
+
+### Cefadyl brand versus exact molecule
+
+identity: concern. Targets: CHEBI:554446.
+
+The ARO-derived brand is incorrectly emitted as EXACT_SYNONYM. Its valid product/active-moiety association needs brand semantics with sodium scope; other names and the native graph remain sound.
+
+### Exact chemical versus drug/document mappings
+
+grounding: unknown. Targets: CHEBI:554446.
+
+PubChem, CAS, ChEMBL, KEGG and VSDB full identities agree. DrugCentral/DrugBank are typed drug context and Wikipedia documentary. Complete HMDB entries and proprietary Beilstein/Reaxys content remain inaccessible; upstream listing alone is not independent structural verification.
+
+### Broader parents and antibacterial roles
+
+grounding: supported. Targets: CHEBI:554446.
+
+The cephalosporin graph and original antibacterial evidence support class and roles. Neither modern worldwide susceptibility nor exact acid-solid dosing is claimed.
+
+### Qualified database target and original PBP evidence
+
+evidence: supported. Targets: CHEBI:554446.
+
+The existing family target explicitly declares database origin and primary evidence needed. Additional B. subtilis primary evidence supports scoped enrichment while preserving the carboxypeptidase exception and reagent-form limits.
+
+### Sodium preparation and endpoint boundaries
+
+evidence: supported. Targets: CHEBI:554446.
+
+Original 1972 and adopted 2014 activity concern sodium preparations. MIC/MBC, disk zones, whole-cell binding and PK prediction remain distinct; no native quantitative measurement is present to correct.
+
+### All adopted citation dispositions
+
+evidence: supported. Targets: CHEBI:554446.
+
+All six adopted PMIDs were individually inspected. The 1972 original was read completely in scans and 2014 Methods/Results in public author text; remaining four leads were assessed at abstract depth. Environmental sorption, IgE assays, metabolites and reviews do not become bacterial target evidence.
+
+### Unpopulated optional assertions
+
+scope: not_applicable. Targets: CHEBI:554446.
+
+No native producer, resistance, clinical-status, causal-graph, dataset or discussion claim is populated. FDA brand evidence does not justify silently adding a free-acid regulatory assertion; optional absence is not a schema defect.
+
+### Maintained owners and unchanged original state
+
+provenance: supported. Targets: CHEBI:554446.
+
+Actual ChEBI/ARO owners and target-role map were captured and inspected. Original 13 and expanded 24 input hashes remain unchanged. SEEDED status and five source-history events remain intact.
+
+### Focused actual commands
+
+schema: supported. Targets: CHEBI:554446.
+
+Schema, strict and complete molecular checks pass. The brand typing issue is a semantic defect not detected by those validators.
+
+## Findings
+
+### F1: Cefadyl needs brand/product semantics instead of exact molecular equivalence
+
+minor / open / confirmed; issue key: chebi-554446-cephapirin-cefadyl-synonym-type.
+
+synonyms[10] emits cefadyl as EXACT_SYNONYM of the free acid. Official FDA product data identify CEFADYL as cephapirin sodium, with strengths expressed in active-base equivalents. Retain the legitimate brand association using BRAND_NAME or another supported product-context representation with explicit sodium scope. Preserve the valid native acid graph and exact chemical mappings.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the source-owned cefadyl alias to qualified brand/product semantics.
+
+- Retain the brand association as BRAND_NAME or another supported product-context type with cephapirin sodium scope.
+- Preserve CHEBI:554446, the full native acid key and valid chemical xrefs.
+- Make the correction persistent through maintained source ownership and reseeding; run native schema/strict and applicable reference/history/corpus gates after separately authorized curation.
+
+### A2
+
+Optionally add primary PBP or activity evidence with material and endpoint qualification.
+
+- Preserve CARD database provenance separately from any original experimental target item.
+- Resolve B. subtilis Marburg protein/taxon mapping; do not equate its bands to E. coli numbering or claim direct D-alanine carboxypeptidase binding.
+- Retain sodium preparation scope for 1972/2014 activity and unspecified solid form plus radiolabel scope for 1979 binding.
+- Do not turn PK-derived T&gt;MIC into clinical cure, mineral sorption into protein binding, or metabolite measurements into parent-drug MICs.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/cephapirin.yaml; Entire YAML | supports | Read identifier, free-acid label, filing/status/grounding, definition, eleven synonyms, two parents/two roles and class, complete chemical fields, all exact/drug/document xrefs, two source concepts, qualified CARD target and five history events. |
+| owners | data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv; conf/aro_target_roles.tsv; ChEBI row 2977; ARO molecule row 305; target row 241; role-map row 30 | supports | ChEBI owns the exact structure and five adopted PMID leads. ARO supplies HAP/cefadyl aliases, PMID 4208896 and the qualified target edge. The role map classifies the PBP target as protein/direct binding. No matched resistance inventory row was found in the ignored-inclusive owner check. Original captures retained and actual owners appended before assessment. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Identity/equivalence, clinical/form boundaries, evidence and source ownership | supports | A brand can be associated with an active moiety without being an exact molecular synonym. Free acid, sodium salt and metabolites remain separate. Optional unpopulated fields are not mandatory defects. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:554446; Current structure, definition, Names and xrefs | supports | Current ChEBI agrees on the free-acid graph, two R centres, full key, formula and source synonyms. Its definition already specifies use as the sodium salt. Both HMDB identifiers remain listed by ChEBI but their complete external records could not be independently inspected. |
+| aro | https://card.mcmaster.ca/aro/3004008; Synonyms, structure, target and publication | supports | CARD currently repeats cefadyl/HAP/cefapirin aliases and gives the matching acid structure and crosswalks. The cited 1972 sodium activity paper is not a direct target-binding experiment. The native target honestly retains database origin and primary evidence needed. |
+| aro-target | https://card.mcmaster.ca/aro/3000749; PBP definition and type | supports | The source identifies the beta-lactam-sensitive PBP family and notes that numbering varies by species. Its E. coli numbering cannot automatically identify B. subtilis experimental bands. |
+| chemistry | RDKit2026.03.5 native checks; 272-chemistry.json; chem272.py | supports | Both native encodings reproduce UQLLWWBDSUHNEB-CZUORRHYSA-N, C17H17N3O6S2, neutral charge, one component and two R centres. Average/exact masses and both source mints agree. |
+| xref-comparison | Independent complete structure comparison; 272-external-chemistry.json | supports | PubChem CID/CAS-resolved SMILES, ChEMBL SMILES and both KEGG molfiles independently reproduce the complete native acid key and formula. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/30699/property/InChI,InChIKey,MolecularFormula,SMILES,IUPACName/JSON; CID 30699 and separate CAS 21593-23-7 resolution | supports | Both public lookups identify the exact acid. CAS resolution is through PubChem, not proprietary Registry access. |
+| chembl | https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1599.json; molecule_structures | supports | Complete molecular structure agrees with native; drug/salt associations are not silently made exact graph equivalences. |
+| kegg | https://rest.kegg.jp/get/C06896; C06896 and D07636 full entries/molfiles | supports | Both native KEGG mappings identify the acid and reproduce its key. The sodium D00908 entry remains a separate preparation. Class/PBP annotations in KEGG are database evidence, not new primary measurements. |
+| vsdb | https://sitem.herts.ac.uk/aeru/vsdb/Reports/1845.htm; Chemical structure and identifiers; updated 2025-09-15 | supports | The actual VSDB page identifies cefapirin with matching full InChI, key, isomeric SMILES, formula and CAS. Broad environmental/regulatory/mechanism prose is not imported. An initial guessed vsdb.ca route failed DNS; the authoritative Herts route was successfully inspected. |
+| drugcentral | https://drugcentral.org/drugcard/575; Drug card, name/CAS/formula and related synonyms | supports | The card identifies cefapirin, CAS 21593-23-7 and acid formula, but groups sodium/benzathine names in drug context. Native drug_xrefs typing is appropriate; these grouped names do not establish exact salt equivalence. |
+| wiki | https://en.wikipedia.org/wiki/Cephapirin; Named documentary page | context_only | The link resolves to the cefapirin article. It is a documentary relationship and not primary evidence for activity or regulatory status. |
+| cefadyl | https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA061769&amp;limit=1; Official product rows 001-003, ingredient and strengths; current API updated 2026-10-20 | supports | FDA identifies CEFADYL as cephapirin sodium injectable products, with strengths expressed as active-base equivalents. The brand has a valid drug association with cephapirin but does not denote the exact unsalted molecular structure. This evidence is used only for product identity, not to create an acid-record approval claim. |
+| parents | CHEBI:23066; ARO:0000032; CHEBI:33281; CHEBI:36047; Current ChEBI role/class records and CARD classification | supports | Cephalosporin parents are broader than the exact acid and the graph fits. Antimicrobial/antibacterial-drug roles have original support with the sodium-use boundary already stated in the definition. |
+| adopted-4208896 | PMID:4208896; DOI 10.1128/AAC.1.4.303; original pp303-309, all seven scan pages and Figures 1-4 | partial | The original explicitly studies cephapirin sodium. Nutrient Broth dilution measures MIC/MBC; Nutrient Agar/Steers and 30-microgram discs are separate. MBC uses fewer than three viable colonies after approximately 0.005-mL subculture. Isolate panels show activity and pronounced inoculum dependence; penicillin-resistant S. aureus is not equated to MRSA. The 77-patient series is uncontrolled. This source supports antibacterial use of the active moiety as sodium, but not exact acid-solid doses or direct PBP binding. |
+| adopted-19246140 | PMID:19246140; DOI 10.1016/j.envpol.2009.01.017; complete abstract | context_only | Original Raman study examines pH-dependent sorption of cephapirin ionic species to quartz/feldspar. Mineral surface complexation is not antibacterial protein binding, and solution protonation states are not substitutes for the native neutral acid graph. |
+| adopted-2083978 | PMID:2083978; DOI 10.1159/000235177; complete abstract | context_only | An immunoassay uses solid-phase cephalothin to detect cephalosporin-reactive IgE and evaluates hapten cross-reactivity. Cephapirin is not singled out in the inspected abstract; the adopted association remains relevance-limited and supplies no bacterial target evidence. |
+| adopted-23948762 | PMID:23948762; DOI 10.1016/j.jpba.2013.07.023; complete abstract | context_only | Original LC-QqTOF analysis identifies desacetylcephapirin in chicken muscle and distinguishes it from cephapirin and other antibiotic transformation products. This is metabolism/analytical evidence, not a parent-drug MIC or bacterial mechanism experiment. |
+| adopted-29017833 | PMID:29017833; DOI 10.1016/j.jaip.2017.08.027; complete abstract | context_only | Secondary beta-lactam allergy review concerns immunological cross-reactivity and clinical safety. It is not an original cephapirin antimicrobial target experiment and is not converted into an unrequested native allergy claim. |
+| adopted-24224523 | PMID:24224523; DOI 10.1080/00480169.2013.865295; author full-text Methods/Results on original pp147-149; web snapshot 272-web-source-snapshot.json | partial | The author text specifies sodium salt for broth microdilution: Mueller-Hinton broth, 0.5 McFarland suspension, twofold dilutions, aerobic 37°C and ATCC 29213 control. Across the 41 S. aureus field isolates, MIC90 was 0.25 microgram/mL. Cefatron L treatment used 275 mg sodium/quarter twice 12 hours apart. These are sodium-specific activity/PK observations; T&gt;MIC predicts potential effectiveness rather than proving clinical cure. The metabolite was not tested for MIC. Full Methods/Results text was inspected through the web tool; raw publisher/author HTML and institutional PDF requests returned 403. The retained hash covers the web-tool source-text snapshot, not publisher PDF bytes. |
+| pbp-primary | PMID:106774; DOI 10.1128/AAC.15.2.204; all five original scan pages 204-208; Methods, Figures 1-4/Table 1 | partial | Bristol cephapirin and [14C]cephapirin were studied in growing B. subtilis Marburg. Binding saturated around 0.1 microgram/mL and correlated with cell death after 30 min. Competition implicated observed PBP components I-III; D-alanine carboxypeptidase band IV was not directly bound or catalytically inhibited. Its altered formation/release is an indirect phenotype. Proposed membrane effects remain interpretation. Salt/hydration is unspecified; radiolabeled binding and unlabeled competition are distinct preparations/endpoints. |
+| pbp-figure | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/3b17/352633/5a2fe132e32e/aac00272-0066.png; Original p206, Figure 2 and Results; all scan hashes in 271-scan-fetch-results.json | supports | Visual inspection confirms the competition pattern and band IV exception. This supports bounded PBP interaction without assigning an E. coli PBP number, universal direct carboxypeptidase inhibition, fitted Kd or exact acid-solid potency. |
+| adapter | kg-microbe-sources imodulondb; 272-adapter-search.txt; e_coli/precise1k; preceding 271 catalog | context_only | Covered penicillin-binding query completed before protein-source follow-up with zero genes and zero modules. Dataset catalog was reused from the immediately preceding same-session sodium review. These search results are not negative biological evidence and do not assign the study strain. |
+| local | Ignored-inclusive exact-record/source search; 272-local-hits.txt;272-owner-hits.txt | context_only | Hidden and ignored files were included outside .git/.venv. Actual owners, source crosswalks and optional resistance rows were checked. No absence of an optional native field is generalized to absence from the literature. |
+| gates | Actual native schema/strict checks; 272-focused-results.json | supports | Both focused native commands returned exit 0; native chemistry and complete external graph comparisons pass. Synonym semantics require independent scientific review. |
+
+## Limits And Additional Notes
+
+- Both HMDB XML and HTML endpoints returned 403; the web tool briefly displayed HMDB0015270 but its complete structural content could not be inspected. Both exact HMDB mappings therefore remain independently unverified. Proprietary Beilstein/Reaxys content and direct DrugBank page were unavailable.
+- Four adopted leads were inspected at complete abstract depth. The 2014 author Methods/Results were read through the web tool; publisher/author direct HTML and institutional PDF requests returned 403, and figure pixels were not inspected.
+- The 1979 paper does not explicitly specify salt/hydration of Bristol material; the 1972 method does not restate all incubation details from cited protocols.
+- The initial guessed vsdb.ca address was incorrect; authoritative Herts VSDB 1845 was then retrieved and structurally verified. This retrieval correction is not a native identifier defect.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Original and expanded input hashes preserved and rechecked; no native/source/status/history edits.
+- Native gates used batch 028; standalone RDKit 2026.03.5 used existing batch 019 interpreter against batch 028 cwd.
+- Optional links, tags and notes were independently checked for cephapirin and contain no unrelated compound identifiers.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T123206Z-cephapirin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cephapirin: coherent acid with an incorrectly typed sodium-product brand'
+started_at: '2026-10-21T12:20:00Z'
+finished_at: '2026-10-21T12:32:06Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Entire record and actual ChEBI/ARO owners read independently;
+    all six adopted leads inspected at declared depth; complete native/external structure
+    checks; original 1972/1979 scans read in full and 2014 author Methods/Results
+    inspected; official FDA brand identity verified.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'One minor source-owned synonym-type correction: cefadyl is a sodium-product
+  brand and should not assert exact molecular equivalence with the acid. Native complete
+  acid identity and checked public chemical mappings agree. The PBP family edge honestly
+  remains a database assertion, and original studies support bounded optional enrichment
+  with explicit sodium/radiolabel and assay limits.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cephapirin.yaml
+    sha256: 69d83436efcdb8143754921963e98efe87e8a130a580ccd16e6e5470817c0b83
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:554446
+  path: data/antibiotics/antibacterial/cephapirin.yaml
+  label: cephapirin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted CARD identity, aliases and citations
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported target edge
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Resistance inventory scope check
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Imported target type and relation mapping
+scope:
+  description: Whole-record review of the exact cephapirin free acid.
+  selection: Queue 272 in isolated batch 028; initial captures preserved and actual
+    ARO owners appended before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:554446
+  exclusions:
+  - target: Sodium/benzathine salts, desacetyl metabolite and radiolabeled material
+      as exact native identities
+    reason: Related preparations, metabolites and experimental tracers retain their
+      molecular and assay boundaries.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual focused command exited0.
+  target_ids:
+  - CHEBI:554446
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cephapirin.yaml (cwd /private/tmp/antibioticmech-record-reviews-028)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual focused command exited0.
+  target_ids:
+  - CHEBI:554446
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cephapirin.yaml --out /private/tmp/am-review-session/272-validation.tsv
+    (cwd /private/tmp/antibioticmech-record-reviews-028)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Complete native molecular check
+  status: passed
+  required: false
+  summary: Native encodings and source mints agree; separately inspected full external
+    structures also agree.
+  target_ids:
+  - CHEBI:554446
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/chem272.py
+    (cwd /private/tmp/antibioticmech-record-reviews-028)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+  - xref-comparison
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:554446
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:554446
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:554446
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:554446
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:554446
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:554446
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:554446
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:554446
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:554446
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cephapirin.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T12:29:46Z'
+  support: supports
+  summary: Read identifier, free-acid label, filing/status/grounding, definition,
+    eleven synonyms, two parents/two roles and class, complete chemical fields, all
+    exact/drug/document xrefs, two source concepts, qualified CARD target and five
+    history events.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv;
+    conf/aro_target_roles.tsv
+  locator: ChEBI row 2977; ARO molecule row 305; target row 241; role-map row 30
+  accessed_at: '2026-10-21T12:29:46Z'
+  support: supports
+  summary: ChEBI owns the exact structure and five adopted PMID leads. ARO supplies
+    HAP/cefadyl aliases, PMID 4208896 and the qualified target edge. The role map
+    classifies the PBP target as protein/direct binding. No matched resistance inventory
+    row was found in the ignored-inclusive owner check. Original captures retained
+    and actual owners appended before assessment.
+  snapshot_sha256: 84cf5a5f689e77ac70a95521f5c9dc612a5cb26cb637db00624229fa02901dd6
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity/equivalence, clinical/form boundaries, evidence and source ownership
+  accessed_at: '2026-10-21T12:29:46Z'
+  support: supports
+  summary: A brand can be associated with an active moiety without being an exact
+    molecular synonym. Free acid, sodium salt and metabolites remain separate. Optional
+    unpopulated fields are not mandatory defects.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:554446
+  locator: Current structure, definition, Names and xrefs
+  accessed_at: '2026-10-21T12:24:53.432534Z'
+  support: supports
+  summary: Current ChEBI agrees on the free-acid graph, two R centres, full key, formula
+    and source synonyms. Its definition already specifies use as the sodium salt.
+    Both HMDB identifiers remain listed by ChEBI but their complete external records
+    could not be independently inspected.
+  snapshot_sha256: ea78ee45ddc603121e473024fc72c5a8d6746ca863f33abb41403590483d2a93
+- evidence_id: aro
+  kind: authority
+  reference: https://card.mcmaster.ca/aro/3004008
+  locator: Synonyms, structure, target and publication
+  accessed_at: '2026-10-21T12:24:53.433073Z'
+  support: supports
+  summary: CARD currently repeats cefadyl/HAP/cefapirin aliases and gives the matching
+    acid structure and crosswalks. The cited 1972 sodium activity paper is not a direct
+    target-binding experiment. The native target honestly retains database origin
+    and primary evidence needed.
+  snapshot_sha256: ebfdc21a32861897651ddc6a7e552aeaa14803106508e7f4951a86cf2e54ab7f
+- evidence_id: aro-target
+  kind: authority
+  reference: https://card.mcmaster.ca/aro/3000749
+  locator: PBP definition and type
+  accessed_at: '2026-10-21T12:24:53.433197Z'
+  support: supports
+  summary: The source identifies the beta-lactam-sensitive PBP family and notes that
+    numbering varies by species. Its E. coli numbering cannot automatically identify
+    B. subtilis experimental bands.
+  snapshot_sha256: 10f7be4ae253e07ffdf3bb4f64ec603dd63f52c96d8b1f357d875439dadab52d
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit2026.03.5 native checks
+  locator: 272-chemistry.json; chem272.py
+  accessed_at: '2026-10-21T12:29:46Z'
+  support: supports
+  summary: Both native encodings reproduce UQLLWWBDSUHNEB-CZUORRHYSA-N, C17H17N3O6S2,
+    neutral charge, one component and two R centres. Average/exact masses and both
+    source mints agree.
+  snapshot_sha256: dd9e9db98c6e70e1353d81e435037ed588f03016a8d207477f63b368fa52f3a5
+- evidence_id: xref-comparison
+  kind: validation
+  reference: Independent complete structure comparison
+  locator: 272-external-chemistry.json
+  accessed_at: '2026-10-21T12:29:46Z'
+  support: supports
+  summary: PubChem CID/CAS-resolved SMILES, ChEMBL SMILES and both KEGG molfiles independently
+    reproduce the complete native acid key and formula.
+  snapshot_sha256: 39dfe356d357cc906dd2f83f07a2df33f6f07a526b4c7d866207fd6dc6062ada
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/30699/property/InChI,InChIKey,MolecularFormula,SMILES,IUPACName/JSON
+  locator: CID 30699 and separate CAS 21593-23-7 resolution
+  accessed_at: '2026-10-21T12:24:53.433321Z'
+  support: supports
+  summary: Both public lookups identify the exact acid. CAS resolution is through
+    PubChem, not proprietary Registry access.
+  snapshot_sha256: 720dead779710322c23e38812c03c8366d3c68ff053cd415417938e27b9ffce8
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1599.json
+  locator: molecule_structures
+  accessed_at: '2026-10-21T12:24:53.433541Z'
+  support: supports
+  summary: Complete molecular structure agrees with native; drug/salt associations
+    are not silently made exact graph equivalences.
+  snapshot_sha256: e33766743d15a6a7ec5114f0be5be1be4ab5c5f254ef6277c610aa4378168711
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/C06896
+  locator: C06896 and D07636 full entries/molfiles
+  accessed_at: '2026-10-21T12:24:53.433630Z'
+  support: supports
+  summary: Both native KEGG mappings identify the acid and reproduce its key. The
+    sodium D00908 entry remains a separate preparation. Class/PBP annotations in KEGG
+    are database evidence, not new primary measurements.
+  snapshot_sha256: a67c11c0ce67125aaa6b03c5d6998a382801f53866152fb8268a3aa2ebaee92a
+- evidence_id: vsdb
+  kind: database
+  reference: https://sitem.herts.ac.uk/aeru/vsdb/Reports/1845.htm
+  locator: Chemical structure and identifiers; updated 2025-09-15
+  accessed_at: '2026-10-21T12:27:18.897012Z'
+  support: supports
+  summary: The actual VSDB page identifies cefapirin with matching full InChI, key,
+    isomeric SMILES, formula and CAS. Broad environmental/regulatory/mechanism prose
+    is not imported. An initial guessed vsdb.ca route failed DNS; the authoritative
+    Herts route was successfully inspected.
+  snapshot_sha256: 89f19bf63f297daad237d664b441069d34cbacd531d80d5c65c9c5350a57b560
+- evidence_id: drugcentral
+  kind: database
+  reference: https://drugcentral.org/drugcard/575
+  locator: Drug card, name/CAS/formula and related synonyms
+  accessed_at: '2026-10-21T12:24:54.318925Z'
+  support: supports
+  summary: The card identifies cefapirin, CAS 21593-23-7 and acid formula, but groups
+    sodium/benzathine names in drug context. Native drug_xrefs typing is appropriate;
+    these grouped names do not establish exact salt equivalence.
+  snapshot_sha256: b91a3162cc559a2728ed2cb1a996f73a2f73601340eee09db4541a6dee2658a3
+- evidence_id: wiki
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Cephapirin
+  locator: Named documentary page
+  accessed_at: '2026-10-21T12:24:54.384937Z'
+  support: context_only
+  summary: The link resolves to the cefapirin article. It is a documentary relationship
+    and not primary evidence for activity or regulatory status.
+  snapshot_sha256: e9a1642c049dcb0d398297af27e5c980b84c19e19dcb3e0dcea3c5261ec28803
+- evidence_id: cefadyl
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA061769&limit=1
+  locator: Official product rows 001-003, ingredient and strengths; current API updated
+    2026-10-20
+  accessed_at: '2026-10-21T12:23:12.164010Z'
+  support: supports
+  summary: FDA identifies CEFADYL as cephapirin sodium injectable products, with strengths
+    expressed as active-base equivalents. The brand has a valid drug association with
+    cephapirin but does not denote the exact unsalted molecular structure. This evidence
+    is used only for product identity, not to create an acid-record approval claim.
+  snapshot_sha256: fd6ee1a356131228c036bd6fa8609d225712cf6052fc6961902891f476fd89d2
+- evidence_id: parents
+  kind: authority
+  reference: CHEBI:23066; ARO:0000032; CHEBI:33281; CHEBI:36047
+  locator: Current ChEBI role/class records and CARD classification
+  accessed_at: '2026-10-21T12:23:13.640297Z'
+  support: supports
+  summary: Cephalosporin parents are broader than the exact acid and the graph fits.
+    Antimicrobial/antibacterial-drug roles have original support with the sodium-use
+    boundary already stated in the definition.
+  snapshot_sha256: 5899a4d62399e2d67457c6db325271701c3262cb8c07b5bb4ad88f012e814f89
+- evidence_id: adopted-4208896
+  kind: primary_source
+  reference: PMID:4208896
+  locator: DOI 10.1128/AAC.1.4.303; original pp303-309, all seven scan pages and Figures
+    1-4
+  accessed_at: '2026-10-21T12:23:55.727115Z'
+  support: partial
+  summary: The original explicitly studies cephapirin sodium. Nutrient Broth dilution
+    measures MIC/MBC; Nutrient Agar/Steers and 30-microgram discs are separate. MBC
+    uses fewer than three viable colonies after approximately 0.005-mL subculture.
+    Isolate panels show activity and pronounced inoculum dependence; penicillin-resistant
+    S. aureus is not equated to MRSA. The 77-patient series is uncontrolled. This
+    source supports antibacterial use of the active moiety as sodium, but not exact
+    acid-solid doses or direct PBP binding.
+  snapshot_sha256: 461d6cb69f9482f96d0cc2f184c2d10988a2f4c357a7f3962e2064c951f7347f
+- evidence_id: adopted-19246140
+  kind: primary_source
+  reference: PMID:19246140
+  locator: DOI 10.1016/j.envpol.2009.01.017; complete abstract
+  accessed_at: '2026-10-21T12:25:16.660695Z'
+  support: context_only
+  summary: Original Raman study examines pH-dependent sorption of cephapirin ionic
+    species to quartz/feldspar. Mineral surface complexation is not antibacterial
+    protein binding, and solution protonation states are not substitutes for the native
+    neutral acid graph.
+  snapshot_sha256: 6d5b69709a0e2010e149de07b106d9ecf7283d475c13ca1b0be26abc92932a59
+- evidence_id: adopted-2083978
+  kind: primary_source
+  reference: PMID:2083978
+  locator: DOI 10.1159/000235177; complete abstract
+  accessed_at: '2026-10-21T12:25:16.660695Z'
+  support: context_only
+  summary: An immunoassay uses solid-phase cephalothin to detect cephalosporin-reactive
+    IgE and evaluates hapten cross-reactivity. Cephapirin is not singled out in the
+    inspected abstract; the adopted association remains relevance-limited and supplies
+    no bacterial target evidence.
+  snapshot_sha256: 6d5b69709a0e2010e149de07b106d9ecf7283d475c13ca1b0be26abc92932a59
+- evidence_id: adopted-23948762
+  kind: primary_source
+  reference: PMID:23948762
+  locator: DOI 10.1016/j.jpba.2013.07.023; complete abstract
+  accessed_at: '2026-10-21T12:25:16.660695Z'
+  support: context_only
+  summary: Original LC-QqTOF analysis identifies desacetylcephapirin in chicken muscle
+    and distinguishes it from cephapirin and other antibiotic transformation products.
+    This is metabolism/analytical evidence, not a parent-drug MIC or bacterial mechanism
+    experiment.
+  snapshot_sha256: 6d5b69709a0e2010e149de07b106d9ecf7283d475c13ca1b0be26abc92932a59
+- evidence_id: adopted-29017833
+  kind: primary_source
+  reference: PMID:29017833
+  locator: DOI 10.1016/j.jaip.2017.08.027; complete abstract
+  accessed_at: '2026-10-21T12:25:16.660695Z'
+  support: context_only
+  summary: Secondary beta-lactam allergy review concerns immunological cross-reactivity
+    and clinical safety. It is not an original cephapirin antimicrobial target experiment
+    and is not converted into an unrequested native allergy claim.
+  snapshot_sha256: 6d5b69709a0e2010e149de07b106d9ecf7283d475c13ca1b0be26abc92932a59
+- evidence_id: adopted-24224523
+  kind: primary_source
+  reference: PMID:24224523
+  locator: DOI 10.1080/00480169.2013.865295; author full-text Methods/Results on original
+    pp147-149; web snapshot 272-web-source-snapshot.json
+  accessed_at: '2026-10-21T12:29:46Z'
+  support: partial
+  summary: 'The author text specifies sodium salt for broth microdilution: Mueller-Hinton
+    broth, 0.5 McFarland suspension, twofold dilutions, aerobic 37°C and ATCC 29213
+    control. Across the 41 S. aureus field isolates, MIC90 was 0.25 microgram/mL.
+    Cefatron L treatment used 275 mg sodium/quarter twice 12 hours apart. These are
+    sodium-specific activity/PK observations; T>MIC predicts potential effectiveness
+    rather than proving clinical cure. The metabolite was not tested for MIC. Full
+    Methods/Results text was inspected through the web tool; raw publisher/author
+    HTML and institutional PDF requests returned 403. The retained hash covers the
+    web-tool source-text snapshot, not publisher PDF bytes.'
+  snapshot_sha256: b97a622295c39d1c1b75c0e0600687ef2d8bc9326a7a0fd634169b0165f412fb
+- evidence_id: pbp-primary
+  kind: primary_source
+  reference: PMID:106774
+  locator: DOI 10.1128/AAC.15.2.204; all five original scan pages 204-208; Methods,
+    Figures 1-4/Table 1
+  accessed_at: '2026-10-21T12:23:55.727557Z'
+  support: partial
+  summary: Bristol cephapirin and [14C]cephapirin were studied in growing B. subtilis
+    Marburg. Binding saturated around 0.1 microgram/mL and correlated with cell death
+    after 30 min. Competition implicated observed PBP components I-III; D-alanine
+    carboxypeptidase band IV was not directly bound or catalytically inhibited. Its
+    altered formation/release is an indirect phenotype. Proposed membrane effects
+    remain interpretation. Salt/hydration is unspecified; radiolabeled binding and
+    unlabeled competition are distinct preparations/endpoints.
+  snapshot_sha256: 9ced396bbeb9e7e713c4a1ab482ad0b64330989ed5f22b31fcb13c7d5d88f924
+- evidence_id: pbp-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/3b17/352633/5a2fe132e32e/aac00272-0066.png
+  locator: Original p206, Figure 2 and Results; all scan hashes in 271-scan-fetch-results.json
+  accessed_at: '2026-10-21T12:24:13.221181Z'
+  support: supports
+  summary: Visual inspection confirms the competition pattern and band IV exception.
+    This supports bounded PBP interaction without assigning an E. coli PBP number,
+    universal direct carboxypeptidase inhibition, fitted Kd or exact acid-solid potency.
+  snapshot_sha256: c98b13346212284f3126d3140ac9fbf14dda892d6e895e5427c07bfcb1d5ba37
+- evidence_id: adapter
+  kind: search
+  reference: kg-microbe-sources imodulondb
+  locator: 272-adapter-search.txt; e_coli/precise1k; preceding 271 catalog
+  accessed_at: '2026-10-21T12:29:46Z'
+  support: context_only
+  summary: Covered penicillin-binding query completed before protein-source follow-up
+    with zero genes and zero modules. Dataset catalog was reused from the immediately
+    preceding same-session sodium review. These search results are not negative biological
+    evidence and do not assign the study strain.
+  snapshot_sha256: 4579e797a42aabaffec9bd033c2ad8bb12bb21241c88476e8b6a2abe01936003
+  search_scope: 2026-10-21; isolated batch 028; rg --no-ignore --hidden outside .git/.venv,
+    covered e_coli/precise1k query before protein web research, all six adopted abstracts,
+    selected primary full texts and official chemical/product sources.
+- evidence_id: local
+  kind: search
+  reference: Ignored-inclusive exact-record/source search
+  locator: 272-local-hits.txt;272-owner-hits.txt
+  accessed_at: '2026-10-21T12:29:46Z'
+  support: context_only
+  summary: Hidden and ignored files were included outside .git/.venv. Actual owners,
+    source crosswalks and optional resistance rows were checked. No absence of an
+    optional native field is generalized to absence from the literature.
+  snapshot_sha256: b180397a0db04ce55ed885bcea16c5a2b00fef7dc1ef85a1787d7f793f3c226f
+  search_scope: 2026-10-21; isolated batch 028; rg --no-ignore --hidden outside .git/.venv,
+    covered e_coli/precise1k query before protein web research, all six adopted abstracts,
+    selected primary full texts and official chemical/product sources.
+- evidence_id: gates
+  kind: validation
+  reference: Actual native schema/strict checks
+  locator: 272-focused-results.json
+  accessed_at: '2026-10-21T12:29:46Z'
+  support: supports
+  summary: Both focused native commands returned exit 0; native chemistry and complete
+    external graph comparisons pass. Synonym semantics require independent scientific
+    review.
+  snapshot_sha256: 3ffa1b8af3d2207bffcd72e07061a45f8b02f8e3a2cb3beb152e32a852d4c656
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact acid and source identity
+  outcome: supported
+  summary: Full native structure, 6R,7R stereochemistry, formula, masses, neutral
+    charge and both source mints agree. The definition correctly distinguishes use
+    as sodium salt.
+  target_ids:
+  - CHEBI:554446
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - xref-comparison
+- assessment_id: synonyms
+  area: identity
+  topic: Cefadyl brand versus exact molecule
+  outcome: concern
+  summary: The ARO-derived brand is incorrectly emitted as EXACT_SYNONYM. Its valid
+    product/active-moiety association needs brand semantics with sodium scope; other
+    names and the native graph remain sound.
+  target_ids:
+  - CHEBI:554446
+  evidence_ids:
+  - owners
+  - aro
+  - cefadyl
+  - rubric
+- assessment_id: xrefs
+  area: grounding
+  topic: Exact chemical versus drug/document mappings
+  outcome: unknown
+  summary: PubChem, CAS, ChEMBL, KEGG and VSDB full identities agree. DrugCentral/DrugBank
+    are typed drug context and Wikipedia documentary. Complete HMDB entries and proprietary
+    Beilstein/Reaxys content remain inaccessible; upstream listing alone is not independent
+    structural verification.
+  target_ids:
+  - CHEBI:554446
+  evidence_ids:
+  - xref-comparison
+  - chebi
+  - pubchem
+  - chembl
+  - kegg
+  - vsdb
+  - drugcentral
+  - wiki
+- assessment_id: classification
+  area: grounding
+  topic: Broader parents and antibacterial roles
+  outcome: supported
+  summary: The cephalosporin graph and original antibacterial evidence support class
+    and roles. Neither modern worldwide susceptibility nor exact acid-solid dosing
+    is claimed.
+  target_ids:
+  - CHEBI:554446
+  evidence_ids:
+  - parents
+  - native
+  - adopted-4208896
+- assessment_id: target
+  area: evidence
+  topic: Qualified database target and original PBP evidence
+  outcome: supported
+  summary: The existing family target explicitly declares database origin and primary
+    evidence needed. Additional B. subtilis primary evidence supports scoped enrichment
+    while preserving the carboxypeptidase exception and reagent-form limits.
+  target_ids:
+  - CHEBI:554446
+  evidence_ids:
+  - native
+  - owners
+  - aro-target
+  - pbp-primary
+  - pbp-figure
+- assessment_id: activity
+  area: evidence
+  topic: Sodium preparation and endpoint boundaries
+  outcome: supported
+  summary: Original 1972 and adopted 2014 activity concern sodium preparations. MIC/MBC,
+    disk zones, whole-cell binding and PK prediction remain distinct; no native quantitative
+    measurement is present to correct.
+  target_ids:
+  - CHEBI:554446
+  evidence_ids:
+  - adopted-4208896
+  - adopted-24224523
+  - pbp-primary
+- assessment_id: leads
+  area: evidence
+  topic: All adopted citation dispositions
+  outcome: supported
+  summary: All six adopted PMIDs were individually inspected. The 1972 original was
+    read completely in scans and 2014 Methods/Results in public author text; remaining
+    four leads were assessed at abstract depth. Environmental sorption, IgE assays,
+    metabolites and reviews do not become bacterial target evidence.
+  target_ids:
+  - CHEBI:554446
+  evidence_ids:
+  - adopted-4208896
+  - adopted-19246140
+  - adopted-2083978
+  - adopted-23948762
+  - adopted-24224523
+  - adopted-29017833
+- assessment_id: optional
+  area: scope
+  topic: Unpopulated optional assertions
+  outcome: not_applicable
+  summary: No native producer, resistance, clinical-status, causal-graph, dataset
+    or discussion claim is populated. FDA brand evidence does not justify silently
+    adding a free-acid regulatory assertion; optional absence is not a schema defect.
+  target_ids:
+  - CHEBI:554446
+  evidence_ids:
+  - native
+  - rubric
+  - cefadyl
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained owners and unchanged original state
+  outcome: supported
+  summary: Actual ChEBI/ARO owners and target-role map were captured and inspected.
+    Original 13 and expanded 24 input hashes remain unchanged. SEEDED status and five
+    source-history events remain intact.
+  target_ids:
+  - CHEBI:554446
+  evidence_ids:
+  - native
+  - owners
+  - rubric
+- assessment_id: validation
+  area: schema
+  topic: Focused actual commands
+  outcome: supported
+  summary: Schema, strict and complete molecular checks pass. The brand typing issue
+    is a semantic defect not detected by those validators.
+  target_ids:
+  - CHEBI:554446
+  evidence_ids:
+  - gates
+  - chemistry
+  - xref-comparison
+findings:
+- finding_id: F1
+  issue_key: chebi-554446-cephapirin-cefadyl-synonym-type
+  category: identity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Cefadyl needs brand/product semantics instead of exact molecular equivalence
+  description: synonyms[10] emits cefadyl as EXACT_SYNONYM of the free acid. Official
+    FDA product data identify CEFADYL as cephapirin sodium, with strengths expressed
+    in active-base equivalents. Retain the legitimate brand association using BRAND_NAME
+    or another supported product-context representation with explicit sodium scope.
+    Preserve the valid native acid graph and exact chemical mappings.
+  target_ids:
+  - CHEBI:554446
+  field_paths:
+  - synonyms[10].synonym_type
+  evidence_ids:
+  - native
+  - owners
+  - aro
+  - cefadyl
+  - rubric
+  rule_id: native-review-checklist:Identity and Equivalence
+  native_severity: minor bounded trade-name typing error
+  normalization_reason: The brand association is valid but its exact molecular type
+    omits the sodium preparation boundary. The native acid identity is coherent; this
+    is not a wrong-structure blocker or a separate covalent-prodrug conflation.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source-owned cefadyl alias
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: CARD/ARO alias extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated synonym type
+actions:
+- action_id: A1
+  description: Correct the source-owned cefadyl alias to qualified brand/product semantics.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:554446
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source-owned cefadyl alias
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: CARD/ARO alias extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated synonym type
+  acceptance_checks:
+  - Retain the brand association as BRAND_NAME or another supported product-context
+    type with cephapirin sodium scope.
+  - Preserve CHEBI:554446, the full native acid key and valid chemical xrefs.
+  - Make the correction persistent through maintained source ownership and reseeding;
+    run native schema/strict and applicable reference/history/corpus gates after separately
+    authorized curation.
+- action_id: A2
+  description: Optionally add primary PBP or activity evidence with material and endpoint
+    qualification.
+  finding_ids: []
+  target_ids:
+  - CHEBI:554446
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cephapirin.yaml
+    role: Curator-owned molecular_targets and activity_spectrum via validated writer
+  acceptance_checks:
+  - Preserve CARD database provenance separately from any original experimental target
+    item.
+  - Resolve B. subtilis Marburg protein/taxon mapping; do not equate its bands to
+    E. coli numbering or claim direct D-alanine carboxypeptidase binding.
+  - Retain sodium preparation scope for 1972/2014 activity and unspecified solid form
+    plus radiolabel scope for 1979 binding.
+  - Do not turn PK-derived T>MIC into clinical cure, mineral sorption into protein
+    binding, or metabolite measurements into parent-drug MICs.
+limitations:
+- Both HMDB XML and HTML endpoints returned 403; the web tool briefly displayed HMDB0015270
+  but its complete structural content could not be inspected. Both exact HMDB mappings
+  therefore remain independently unverified. Proprietary Beilstein/Reaxys content
+  and direct DrugBank page were unavailable.
+- Four adopted leads were inspected at complete abstract depth. The 2014 author Methods/Results
+  were read through the web tool; publisher/author direct HTML and institutional PDF
+  requests returned 403, and figure pixels were not inspected.
+- The 1979 paper does not explicitly specify salt/hydration of Bristol material; the
+  1972 method does not restate all incubation details from cited protocols.
+- The initial guessed vsdb.ca address was incorrect; authoritative Herts VSDB 1845
+  was then retrieved and structurally verified. This retrieval correction is not a
+  native identifier defect.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Original and expanded input hashes preserved and rechecked; no native/source/status/history
+  edits.
+- Native gates used batch 028; standalone RDKit 2026.03.5 used existing batch 019
+  interpreter against batch 028 cwd.
+- Optional links, tags and notes were independently checked for cephapirin and contain
+  no unrelated compound identifiers.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:554446
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC444212/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC352633/
+- https://sitem.herts.ac.uk/aeru/vsdb/Reports/1845.htm
+tags:
+- cephapirin
+- brand-salt-boundary
+- PBP-evidence
+- assay-material-scope
+```
