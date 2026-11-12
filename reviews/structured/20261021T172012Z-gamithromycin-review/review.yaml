@@ -1,0 +1,622 @@
+schema_version: 1.0.0
+review_id: 20261021T172012Z-gamithromycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Gamithromycin: incorrect footrot pathogen and inconsistent VSDB exact grounding'
+started_at: '2026-10-21T16:59:19Z'
+finished_at: '2026-10-21T17:20:12Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The native gamithromycin graph agrees with ChEBI, PubChem, ChEMBL and ChemSpider.
+  Two source-owned findings remain: the definition misnames the Fusobacterium footrot
+  pathogen, and the linked VSDB entry carries incompatible forward structures despite
+  matching name/formula text. Veterinary activity and automatic mechanism scope are
+  assessed with explicit preparation and access limits.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/gamithromycin.yaml
+    sha256: 1024e78e7b408b4bfd2892a8471bafcc118694d3ae43915d19d8c7c1f523458e
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    role: context
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+targets:
+- target_id: CHEBI:195437
+  path: data/antibiotics/antibacterial/gamithromycin.yaml
+  label: gamithromycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, structure, ontology, xrefs and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI and ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated native field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO antibiotic/class source
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position487; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:195437
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:195437
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    487
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:195437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/gamithromycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:195437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/gamithromycin.yaml --out /private/tmp/am-review-session/487-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:195437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:195437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:195437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:195437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:195437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:195437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:195437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:195437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:195437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/gamithromycin.yaml
+  locator: Entire native YAML, every asserted field and chronological history
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: The SEEDED, EXACT record denotes C40H76N2O12 and full key VWAMTBXLZPEDQO-UZSBJOJWSA-N.
+    All 4 history events, names, parents, activity roles and exact/drug/document links
+    were read. No quantitative activity observation, molecular-target object, resistance
+    object, producer object or causal graph is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: 487-source-rows.json; conf/sources.yaml; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: Complete exact maintained source row and actual source/configuration/extraction/emission
+    ownership
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: ChEBI supplies the native structure, definition, names, ontology and adopted
+    citation leads. ARO additionally supplies macrolide class and merged identifiers.
+    The automatic protein-synthesis annotation restates CHEBI:48001 through the role
+    mapping; its HOST_SHARED_TARGET scope explicitly does not establish organism selectivity.
+    Original thirteen hashes were preserved; actual additional owners were captured
+    where applicable.
+  snapshot_sha256: 6363a33f39a74e727103f0e44ff0a09652203806f2648baf29c92ea38ee62c08
+- evidence_id: search
+  kind: search
+  reference: 487-local-hits.txt; 049-root-fetch1-manifest.json through 049-root-fetch7-manifest.json
+  locator: Ignored-inclusive initial local search and bounded public chemical/primary-literature
+    retrievals
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: context_only
+  summary: The local target search included hidden and ignored files. Current chemical
+    entries and adopted citation abstracts were inspected, with original full-text
+    follow-up at the specifically stated depths. Unsuccessful endpoints are access
+    limits, not proof of absence.
+  search_scope: 2026-10-21; rg --no-ignore --hidden in own049 checkout; current ChEBI,
+    PubChem and asserted public authority lookups; Europe PMC exact adopted PMID and
+    TITLE_ABS:gamithromycin searches; bounded exact-compound original-paper follow-up.
+  snapshot_sha256: 4903f0a0174f41fdd337ae3b2ea9b8dae359ab9f7b07950a9a46ebf66cceab00
+- evidence_id: chemistry
+  kind: validation
+  reference: 049-root-authority-chemistry.json
+  locator: Independent native and current-authority forward graph parsing with existing019
+    RDKit interpreter
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: Native SMILES/InChI, current ChEBI, name-resolved and exact CID59364992
+    PubChem, and CHEMBL2107342 all reproduce the full native key, neutral C40H76N2O12
+    graph and eighteen assigned centres. ChemSpider28530824 InChI was separately parsed
+    and agrees. VSDB is the exception documented separately.
+  snapshot_sha256: 708b390e6a3a9b13adf021f4f7291c2bf9623e2db88a5b188c1c6d9533361d36
+- evidence_id: gates
+  kind: validation
+  reference: 487-focused-results.json; 487-chemistry.json
+  locator: Actual chemistry, schema and strict outputs
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: Focused checks all exit0. Independent formula, charge, masses, full key
+    and source mint are internally consistent. These checks do not establish the truth
+    of every external-source assertion.
+  snapshot_sha256: 01cf92b27cb5381a1826e658726e8c3f9edff8483f01adb137382163096e8312
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:195437; CHEBI:25105,63367,33281,36047,48001; ARO:3007761; drugbank:DB11416;
+    kegg.drug:D06598
+  locator: Current compound/class/role entries and public drug associations
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: The15-membered macrolide and monosaccharide-derivative classifications
+    fit the graph. Exact PubChem, ChEMBL and ChemSpider encodings agree. ARO names
+    the matching compound; KEGG D06598 and DrugBank DB11416 resolve to gamithromycin
+    and the matching formula/CAS. Zactran is already correctly BRAND_NAME. The generic
+    protein-synthesis role is source-qualified and is not a claim of demonstrated
+    host selectivity.
+  snapshot_sha256: 891c54b3af32e79cf195a09566bdd15fd243047d72578fe5c61df55155942f02
+- evidence_id: vsdb
+  kind: authority
+  reference: https://sitem.herts.ac.uk/aeru/vsdb/Reports/1934.htm
+  locator: Current VSDB1934 identity panel, isomeric SMILES and standard InChI; independent
+    parsing
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: The entry is labelled gamithromycin and states CAS145435-72-9 and C40H76N2O12.
+    However, both its isomeric SMILES and InChI independently encode C41H78N2O12,
+    full key IMIKDFRXJJEHPP-KXHBJKOVSA-N. Native and other inspected authorities instead
+    encode C40H76N2O12, VWAMTBXLZPEDQO-UZSBJOJWSA-N. This is an internally inconsistent
+    linked authority, not evidence that the native graph should be changed to its
+    extra-carbon structure.
+  snapshot_sha256: 59c37e1a5826bd5e029a67614fb90d45afcfc2d359d24ba5844980e8345b6367
+- evidence_id: xref-check
+  kind: validation
+  reference: 487-additional-xref-chemistry.json
+  locator: Independent VSDB SMILES/InChI and ChemSpider JSON-LD InChI calculation
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: Both VSDB forward structures yield the same incompatible formula/key. ChemSpider28530824
+    forward InChI yields the exact native formula/key. The VSDB conflict is not merely
+    an incorrectly displayed InChIKey or a stereochemical formatting difference.
+  snapshot_sha256: 2852ea196bdd463578ced89854752cc88ca09baf7c6b3a2589b146e3a5dc0e9d
+- evidence_id: label
+  kind: authority
+  reference: https://www.vmd.defra.gov.uk/productinformationdatabase/files/QRD_Documents/QRD-Auth_2043804.PDF
+  locator: Official Zactran label amended May2026; package leaflet page10, sections1–4
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: Zactran150mg/mL identifies gamithromycin and lists sheep footrot associated
+    with virulent Dichelobacter nodosus and Fusobacterium necrophorum requiring systemic
+    treatment. The native definition instead says Fusobacterium nodosus. The official
+    UK document confirms the organism spelling; it is not treated as an independent
+    current EU authorization record. The EU product record for600000004160 resolves
+    to Zactran, but its document-download endpoint returned an anti-spam HTML form,
+    not the product PDF.
+  snapshot_sha256: 95f5b06b37aa2ba3a4f68829423b31d075323676a17e2f028b7f53540702be94
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:20557439,25241389,25619521,26547885,26679821,26964715,27171615,28317153,29239016,31680940
+  locator: All ten complete indexed original abstracts
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: 20557439 addresses cattle pulmonary PK;25241389 sheep plasma/skin PK;25619521
+    a121-foal comparative clinical study with treatment and adverse-event boundaries;26547885
+    pig LPS/cytokines with in-vitro but no in-vivo anti-inflammatory effect;26679821
+    and26964715 calf LPS challenge without benefit;27171615 an experimentally infected
+    turkey study with route-specific effects;28317153 foal IVPK;29239016 foal rifampin
+    interaction and human OATP transport;31680940 mouse P.multocida PK/PD. These are
+    not interchangeable species, approval, target-binding or dosage evidence.
+  snapshot_sha256: ef1205f3767ab0b4cbffdde036234918bfc16de6366d6e1058ad1c97f00df1a3
+- evidence_id: primary2019
+  kind: primary_source
+  reference: PMID:31680940; DOI:10.3389/fphar.2019.01090; PMC6798029
+  locator: Original complete Methods, Results, Discussion and Conclusion; not all
+    Introduction text
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: 98.6% gamithromycin standard was tested against bovine-origin P.multocida
+    strains using broth and serum matrices, then a neutropenic female ICR mouse lung
+    model. For strain NM5-7, MICs were0.5µg/mL in Mueller-Hinton broth,0.0313 in bovine
+    serum and0.15 in mouse serum. The marked matrix effect limits transport of numerical
+    potency between assays. Mouse exposure/CFU modeling supports antibacterial activity
+    but does not directly establish ribosome binding or a cattle treatment dose.
+  snapshot_sha256: 49cd0578bb38a8cd0c297ad7aae46c7a33a637b1039ebf777879218ae40713d8
+- evidence_id: conference
+  kind: primary_source
+  reference: PMC8902991; Comparison of Tulathromycin and Gamithromycin as Metaphylactic
+    Treatments
+  locator: Entire available conference abstract only
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: The78-calf comparison reports similar performance/efficacy between treatment
+    groups with a cost difference. The fetched PMC content is a conference abstract,
+    not a full experimental paper; it adds bounded field-use context without independently
+    resolving molecular mechanism.
+  snapshot_sha256: a1ad6bc4cbb695c58a8795891f2becc7a720d1e997910c99123b7eb73de3e9b7
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Native graph and exact chemical scope
+  outcome: supported
+  summary: The coherent native molecule and most directly parsed authorities agree
+    at complete constitutional and stereochemical levels. No salt, extra carbon or
+    opposite stereoisomer is inferred for the native graph.
+  target_ids:
+  - CHEBI:195437
+  evidence_ids:
+  - native
+  - chemistry
+  - authority
+  - xref-check
+- assessment_id: xref
+  area: grounding
+  topic: VSDB linked chemical representation
+  outcome: concern
+  summary: VSDB1934 is named for this compound but its two machine-readable structures
+    encode an extra carbon. Exact-grounding reliability needs source reconciliation
+    or an explicit non-equivalent association treatment.
+  target_ids:
+  - CHEBI:195437
+  evidence_ids:
+  - vsdb
+  - xref-check
+  - owners
+- assessment_id: definition
+  area: consistency
+  topic: Footrot pathogen wording
+  outcome: concern
+  summary: The definition uses Fusobacterium nodosus where the official Zactran leaflet
+    identifies Fusobacterium necrophorum. This changes the biological entity; the
+    adjacent repeated of is a secondary editorial defect.
+  target_ids:
+  - CHEBI:195437
+  evidence_ids:
+  - native
+  - label
+  - owners
+- assessment_id: activity
+  area: evidence
+  topic: Veterinary antibacterial and automatic protein-synthesis annotation
+  outcome: supported
+  summary: Exact-drug experimental and clinical studies support veterinary antibacterial
+    use. The automatic role statement explicitly remains a source assertion; host
+    PK/transport and anti-inflammatory experiments do not prove bacterial target binding
+    or selectivity.
+  target_ids:
+  - CHEBI:195437
+  evidence_ids:
+  - adopted
+  - primary2019
+  - conference
+  - authority
+  - owners
+- assessment_id: provenance
+  area: provenance
+  topic: Source merge, names and chronology
+  outcome: supported
+  summary: Both source concepts and all four history events were inspected; native
+    Zactran naming is correct. Original hashes are preserved and all focused gates
+    pass despite the external/source-prose conflicts.
+  target_ids:
+  - CHEBI:195437
+  evidence_ids:
+  - native
+  - owners
+  - gates
+- assessment_id: completeness
+  area: completeness
+  topic: Optional mechanism/adapter applicability
+  outcome: unknown
+  summary: No exact named gene/protein, pathway or expression dataset is asserted.
+    The covered-dataset catalog does not include the principal respiratory-pathogen
+    taxa examined here; no unavailable adapter result is treated as biological absence.
+    Further mechanism enrichment needs direct bacterial target evidence.
+  target_ids:
+  - CHEBI:195437
+  evidence_ids:
+  - native
+  - adopted
+  - primary2019
+findings:
+- finding_id: F1
+  issue_key: gamithromycin-footrot-fusobacterium-species
+  category: consistency
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Correct the Fusobacterium organism in the footrot definition
+  description: The native definition says Fusobacterium nodosus. The official Zactran
+    leaflet names Fusobacterium necrophorum alongside Dichelobacter nodosus. Source
+    copying has therefore retained an incorrect biological entity, even though drug
+    identity is intact.
+  target_ids:
+  - CHEBI:195437
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - owners
+  - label
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition and VSDB exact link
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated native field emission
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained grounding decisions
+  rule_id: Scientific definition and taxon accuracy
+  native_severity: major
+  normalization_reason: The error changes an asserted infection-associated organism
+    rather than just typographic presentation.
+- finding_id: F2
+  issue_key: gamithromycin-vsdb1934-extra-carbon-structure
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Resolve the internally inconsistent VSDB exact chemical grounding
+  description: VSDB1934 names gamithromycin and gives its expected formula, but both
+    forward structural encodings calculate C41H78N2O12 and IMIKDFRXJJEHPP-KXHBJKOVSA-N.
+    They conflict with the native C40H76N2O12 graph and independently agreeing authorities.
+    The mismatch concerns linked-source chemical representation and does not justify
+    replacing the native structure.
+  target_ids:
+  - CHEBI:195437
+  field_paths:
+  - xrefs
+  evidence_ids:
+  - native
+  - vsdb
+  - xref-check
+  - chemistry
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition and VSDB exact link
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated native field emission
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained grounding decisions
+  rule_id: Exact chemical grounding and cross-authority identity
+  native_severity: major
+  normalization_reason: Confirmed external forward-graph disagreement impairs exact
+    grounding; the native constitution remains coherent and independently corroborated.
+actions:
+- action_id: A1
+  description: Correct the maintained definition and reconcile the VSDB chemical link
+    through source ownership.
+  finding_ids:
+  - F1
+  - F2
+  target_ids:
+  - CHEBI:195437
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition and VSDB exact link
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated native field emission
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained grounding decisions
+  acceptance_checks:
+  - Use Fusobacterium necrophorum for the stated Zactran footrot organism and remove
+    repeated of; preserve jurisdiction and historical/current authorization boundaries.
+  - Resolve the contradictory VSDB structure with inspectable source evidence. Preserve
+    the independently corroborated native graph; if the source cannot provide equivalent
+    encodings, remove or qualify the exact link using supported association semantics.
+  - Regenerate through maintained source handling and verify complete chemical keys,
+    formula, names and retained exact links; run schema, strict, reproduction and
+    required QC gates.
+limitations:
+- All ten adopted papers were read at full abstract level; the2019 original was read
+  in complete Methods/Results/Discussion/Conclusion sections. PMC8902991 is conference-abstract
+  evidence only.
+- The official UK label establishes the organism spelling and listed product uses
+  at its stated date; the current EU document download was blocked by an anti-spam
+  form. An older EMA download was a referral notice, not substantive product evidence.
+- VSDB is internally inconsistent. This review identifies the positive forward-graph
+  conflict without assuming which upstream edit is appropriate or alleging that the
+  native gamithromycin structure is wrong.
+- The original mouse serum/MHB MIC and PK/PD results have matrix, strain and model
+  scope. Clinical, host transport and LPS studies are not direct target-binding proof
+  or current treatment recommendations.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

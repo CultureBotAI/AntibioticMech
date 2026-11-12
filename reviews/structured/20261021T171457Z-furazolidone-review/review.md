@@ -1,0 +1,977 @@
+# Furazolidone: exact stereochemical references and trade-name typing
+
+- Review: 20261021T171457Z-furazolidone-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T16:59:13Z
+- Finished UTC: 2026-10-21T17:14:57Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native neutral furazolidone graph, source identity and broad antibacterial/antiprotozoal roles are supported. Two corrections are warranted: exact PubChem and ChEMBL references specify E imine geometry absent from the native structure, and Furoxone is typed as an exact chemical synonym although an official FDA table identifies it as a trademark. Primary activity evidence was assessed with strain, assay, combination-treatment and stereochemical limits. Focused schema, strict and chemistry checks pass.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 483; one complete native record. All thirteen original captured input hashes were verified unchanged; the actual ARO inventory owner was appended before assessment, giving fourteen inputs.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:5195 | data/antibiotics/antibacterial/furazolidone.yaml | generated | furazolidone |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema verification | passed | True | CHEBI:5195 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:5195 | Actual focused execution exited 0. |
+| Focused chemistry verification | passed | False | CHEBI:5195 | Actual focused execution exited 0. |
+| Independent native and authority stereochemical comparison | passed | False | CHEBI:5195 | All twelve encodings parse. Native, current ChEBI and CID 3435 leave imine geometry unassigned; ChEMBL 1103, CID 5323714 and the KEGG molfile encode E geometry. Successful execution detects a grounding conflict rather than certifying equivalence. |
+| Authoritative full QC | failed | True | CHEBI:5195 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:5195 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:5195 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:5195 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:5195 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:5195 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:5195 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:5195 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:5195 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Native structure, quantities and source identity
+
+identity: supported. Targets: CHEBI:5195.
+
+The native constitution, charge, mass and unassigned imine representation are mutually consistent and agree with current ChEBI and CID 3435. The E crystal does not authorize an automatic native replacement or a mixture claim.
+
+### Exact and drug-level reference scope
+
+grounding: concern. Targets: CHEBI:5195.
+
+Explicit E PubChem/ChEMBL structures are not exact matches to the unassigned native graph; the KEGG drawing adds related evidence. Broad drug links are valid associations. HMDB, LINCS and Reaxys remain independently unresolved.
+
+### Chemical names and product names
+
+nomenclature: concern. Targets: CHEBI:5195.
+
+The structural names agree in constitution, but Furoxone/furoxone are product names and need the available BRAND_NAME type. The source-provided spelling should remain searchable.
+
+### Filing class, roles and use wording
+
+evidence: supported. Targets: CHEBI:5195.
+
+Exact furazolidone experiments support broad antibacterial and antiprotozoal activity and the stated history of giardiasis/cholera treatment. Antitrichomonal activity has direct in vitro support. Combination therapy, resistant isolates, negative single-dose results and material stereochemistry limit generalization.
+
+### Mechanism, host binding and optional coverage
+
+scope: not_applicable. Targets: CHEBI:5195.
+
+The native record asserts no protein/gene/pathway, molecular target, resistance, producer or causal graph. Structured transcriptomic adapter searching was therefore not applicable to native assertions. Raw ARO monoamine-oxidase wording, antibody binding and metabolite immunoassays are not antibacterial-target evidence. Missing optional mechanistic or numerical slots are not added as defects.
+
+### Generated ownership, history and source fidelity
+
+provenance: supported. Targets: CHEBI:5195.
+
+All native fields and source rows were read, with exact owners and original hashes preserved. Source concept IDs, class terms, roles, document links and history are coherent. SEEDED remains appropriate; deterministic passing checks do not promote scientific status.
+
+## Findings
+
+### F1: Resolve exact E references on the imine-unspecified native structure
+
+major / open / confirmed; issue key: furazolidone-exact-xrefs-specify-unassigned-imine-geometry.
+
+Native CHEBI:5195 and its SMILES/InChI leave hydrazone geometry unassigned, key PLHJDBGFXBMTGZ-UHFFFAOYSA-N. Exact ChEMBL1103 and PubChem5323714 instead specify E geometry, key PLHJDBGFXBMTGZ-WEVVVXLNSA-N, independently verified from both forward encodings. KEGG C07999 also draws E geometry in its molfile. These mappings require explicit source-level scope resolution. This does not establish that the native graph is the opposite isomer, a mixture or an incorrect constitution, and the 2021 E crystal alone does not justify replacing ChEBI identity.
+
+### F2: Retain Furoxone with trade-name semantics
+
+minor / open / confirmed; issue key: furazolidone-furoxone-trade-name-typed-exact.
+
+Furoxone and furoxone at native synonym indices 11 and 17 are EXACT_SYNONYM. An official FDA table identifies Furoxone as the trademark corresponding to generic furazolidone, and KEGG labels it TN. Preserve both source spellings as searchable aliases while assigning BRAND_NAME rather than exact chemical-name equivalence.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Adjudicate the unassigned-versus-E identity boundary in maintained source mapping before regeneration.
+
+- Compare complete graphs and explicit stereo scope for current ChEBI5195, ChEMBL1103, PubChem5323714 and KEGGC07999. CID3435 is a verified candidate for the existing unassigned graph; confirm the intended source registration before adoption.
+- Correct or qualify non-equivalent exact xrefs through maintained extraction/override/decision logic. Retain valid broad drug-level associations. Do not silently replace the ChEBI graph, infer a mixture, or collapse an explicitly E record without documented identity policy.
+- Regenerate the exact record and require graph/xref agreement, focused schema/strict checks and corpus reproduction.
+
+### A2
+
+Correct imported Furoxone name typing through maintained source or seeder logic.
+
+- Retain Furoxone/furoxone with BRAND_NAME type and original provenance after regeneration. Confirm no unrelated chemical synonyms are recategorized.
+- Run focused validation and reproducibility checks after any separately authorized curation.
+
+### A3
+
+If quantitative activity enrichment is undertaken, resolve the exact assay and material limits before adding observations.
+
+- Do not transfer combination-treatment results into monotherapy, MLC into MIC, or a single strain result into universal activity. Resolve the D. fragilis abstract/Table2 discrepancy before recording its concentration.
+- Retain unknown historic material E/Z composition; use the 2021 crystal only for the measured solid form. Any future mechanism object needs its own exact primary evidence, independent of host MAO or antibody interactions.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/furazolidone.yaml; Entire YAML, including all nineteen synonyms, three parents, three roles, chemical fields, eight exact xrefs, three drug xrefs, five document xrefs, two source concepts and four history events. | supports | CHEBI:5195 is SEEDED and EXACT with neutral C8H7N3O5 and key PLHJDBGFXBMTGZ-UHFFFAOYSA-N. The imine geometry is unassigned; this alone does not establish a mixture or an opposite isomer. No molecular target, resistance object, numerical activity, producer, clinical-status assertion, dataset or causal graph is present. History records seeding/reseeding rather than scientific sign-off. |
+| owners | data/raw/chebi_antimicrobials.tsv:170; data/raw/aro_antibiotics.tsv:184; conf/sources.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Complete two matching source rows, applicable source configuration, reviewed-role/name filtering, xref extraction and seeder precedence/merge branches. | supports | ChEBI supplies the native structure, definition, names, role/parent terms and most xrefs. ARO supplies the nitrofuran class, three additional names and exact ChEMBL/PubChem references. The ARO raw definition mentions monoamine oxidase, but the native ChEBI definition and empty mechanism fields do not adopt that assertion. It must not be transferred into an antibacterial-target claim. Both source mints reproduce. Future source-owned corrections require maintained extraction/override/decision logic and regeneration. |
+| chemical | CHEBI:5195; cas:67-45-8; pubchem.compound:3435; Current complete ChEBI entry and current PubChem properties; independent SMILES/InChI parsing and quantities. | supports | Native SMILES and InChI agree with each other, current ChEBI and separately retrieved CID 3435: one neutral component, C8H7N3O5, average mass 225.16 and exact mass 225.038570324 within native rounding. The full key leaves imine geometry unassigned. Systematic native names describe the same constitution and do not claim E/Z geometry. CAS 67-45-8 is associated with furazolidone in ChEBI, KEGG and PubChem, but those associations do not independently resolve the stereochemical registration boundary. |
+| xref-stereo | chembl:CHEMBL1103; pubchem.compound:5323714; kegg.compound:C07999; Complete official ChEMBL entry including canonical SMILES, InChI and molfile; PubChem properties with explicit E IUPAC name; KEGG compound entry and downloaded molfile. | refutes | ChEMBL 1103 and CID 5323714 specify the E hydrazone with key PLHJDBGFXBMTGZ-WEVVVXLNSA-N and InChI stereolayer /b9-5+. Both encodings independently reproduce that distinction from native PLHJDBGFXBMTGZ-UHFFFAOYSA-N. KEGG C07999 has the same constitution and its two-dimensional molfile is interpreted as E by RDKit; its text label does not explicitly state E. The two explicit stereochemical authorities establish a bounded exact-reference conflict without requiring a decision to replace the ChEBI graph. |
+| crystal | DOI:10.3390/molecules26113444; https://pmc.ncbi.nlm.nih.gov/articles/PMC8201255/; CCDC:2079637; Results 2.1, Materials 3.1/Table 6, single-crystal method 3.6 and Figure 2a, including direct visual inspection of the downloaded figure. | partial | The 2021 study used commercial furazolidone CAS 67-45-8 and grew crystals from acetone. The orthorhombic crystal is C8H7N3O5, with the saturated oxazolidinone ring and E imine arrangement visible in Figure 2a. This is positive support for a measured E solid form. It does not prove that every furazolidone preparation, the historic clinical materials or the unassigned ChEBI registration denotes a pure E substance. No opposite-isomer or mixture claim is inferred. |
+| brand | https://www.accessdata.fda.gov/drugsatfda_docs/label/2007/011961s039lbl.pdf; kegg.drug:D00830; FDA Marplan label page 3, table headed Generic Name and Trademark (Manufacturer); complete KEGG drug entry. | refutes | The official FDA interaction table lists generic furazolidone beside Furoxone as a Roberts Laboratories trademark. This is not a furazolidone product label and is not used to infer its current approval or exact formulation. KEGG D00830 independently marks Furoxone as TN. Native Furoxone and furoxone are instead EXACT_SYNONYM, so their searchable names should be retained with product-name semantics. |
+| classification | CHEBI:38329; CHEBI:87230; CHEBI:33281; CHEBI:36047; CHEBI:50685; ARO:3004116; ARO:3000688; Complete current ChEBI parent/role entries and current exact ARO compound/class stanzas. | supports | The parents resolve to oxazolidines and nitrofuran antibiotic classes, broader than the native molecule. The roles are antimicrobial agent, antibacterial drug and antitrichomonal drug. ANTIBACTERIAL follows the source-priority filing rule while preserving the antiprotozoal role. Current ARO retains the two mismatching exact chemical references and furoxone exact synonym, locating their upstream provenance rather than excusing the normalized conflict. |
+| other-xrefs | drugbank:DB00614; drugcentral:1257; kegg.drug:D00830; hmdb:HMDB0014752; lincs.smallmolecule:LSM-6543; reaxys:384794; Public DrugBank page through the web reader, DrugCentral identity/indication page and full KEGG drug entry; bounded remaining exact-source retrieval. | partial | All three drug entries resolve to furazolidone. DrugBank displays an E structure while also linking CID 3435; drug_xrefs permit broader stereoisomer/product associations and do not assert exact graph equivalence. DrugCentral identifies the expected formula, mass, CAS and name; its host-target and adverse-event summaries are not adopted as antibacterial mechanism. HMDB requests returned 403, the exact LINCS identifier could not be independently resolved through the public search/resolver routes used, and Reaxys was not inspected through a free source. These references remain source-supported but not independently verified here. |
+| documents | patent:GB735136; patent:US2742462; patent:US2759931; patent:US2927110; wikipedia.en:Furazolidone; Patent bibliographic identity and inspected relevant original abstract/description/examples; Wikipedia identity page only. | context_only | GB735136A abstract describes the nitrofuryl oxazolidone family and exact unsubstituted product in example 1. US2742462A describes the family and identifies the unsubstituted furazolidone compound as preferred. US2759931A gives its improved preparation. US2927110A includes furazolidone preparation in examples X–XIII among other nitrofuran azomethines. These are relevant document links, not claims that every patent member or derivative is the exact native structure. Wikipedia resolves the intended subject but is not primary activity or stereochemical evidence. |
+| adopted | PMID:10735922; PMID:14500876; PMID:15666977; PMID:16225499; PMID:17422910; PMID:21817887; PMID:22024820; PMID:22177019; PMID:22221615; PMID:22226073; PMID:3514312; All eleven adopted citation identities and complete available indexed abstracts, with selected original follow-up separately identified. | context_only | 10735922, 16225499 and 22221615 study H. pylori combination regimens; they do not isolate a furazolidone-only causal effect. 14500876 studies antibody multispecificity, not an antibacterial target; 15666977 is an AOZ metabolite immunoassay. 17422910 reports limited effects in piglet Isospora suis, with failure to prevent several infection endpoints. 21817887 is a review of metronidazole alternatives, and 3514312 is a historical Furoxone review; neither is primary mechanism evidence. 22024820 studies D. fragilis in vitro. 22177019 concerns cyanobacterial mixture toxicity, not clinical susceptibility. 22226073 is a yak-milk E. coli resistance survey, not producer proof. No numerical result, producer or molecular target is transferred across these distinct scopes. |
+| trichomonas | DOI:10.3412/jsb.17.196; https://www.jstage.jst.go.jp/article/jsb1944/17/3/17_3_196/_article; Complete publisher English abstract and selected original Japanese Methods text in the four-page PDF; quantitative tables not independently reconstructed. | supports | The original experiment tested chemically pure furazolidone against two Trichomonas vaginalis strains in bacteria-free cysteine bouillon-serum medium and reports inhibition. This directly supports antitrichomonal activity. Rat and human treatment results concern Trichofuron containing furazolidone plus nifuroxime, so those outcomes are not evidence of clinical furazolidone monotherapy. The bulk E/Z composition was not established in the inspected text. |
+| clinical-primary | PMID:869108; PMID:4873660; PMID:2684006; PMID:1952859; Complete indexed original abstracts for giardiasis and three controlled cholera studies; no claim of complete original scanned-paper review. | supports | The giardiasis comparison reports clinical use of furazolidone and differing cure rates among drugs and untreated controls. The 1968 cholera trial reports reduced stool volume/duration, with slower vibrio clearance than tetracycline. The 1989 adult single-dose study found no benefit over placebo, whereas the 1991 paediatric study reported benefits under different regimens and excluded twelve patients with resistant organisms from its efficacy analysis. Together these support the definition’s treatment-use history while precluding universal efficacy, current treatment recommendations or interchangeable regimens. |
+| dfragilis | PMID:22024820; DOI:10.1128/AAC.05125-11; https://pmc.ncbi.nlm.nih.gov/articles/PMC3256011/; Complete abstract and Methods, relevant Results including all of Table 2 and furazolidone bacterial-flora section, and corresponding Discussion; other drug tables were not completely reanalysed. | partial | Four genotype-1 D. fragilis clinical strains were tested in cultures containing bacteria on Loeffler slopes. Furazolidone powder was dissolved in ethanol, exposures were duplicated and trophozoites followed over four days. MLC means no observed trophozoites during this period, not a conventional MIC or proven sterilization after recovery. The abstract/results summary reports 250–500 micrograms/mL, whereas Table 2 shows zero post-baseline counts at 125 for strains A/M and 250 for V/E. That internal inconsistency and possible bacterial-food effects require resolution before numerical curation. This source-quality limit does not contradict a native numerical assertion, because none exists. |
+| policy | src/antibioticmech/schema/antibioticmech.yaml; docs/HARMONIZATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md; Exact-xref versus drug-xref semantics, synonym types, source ownership and scientific sign-off criteria. | supports | Exact xrefs require the same chemical form; broad drug_xrefs allow parent/salt/stereoisomer associations. BRAND_NAME is available. Unspecified geometry is not sufficient evidence of a mixture. A seeded record is not required to populate every optional field, and source membership does not substitute for exact primary mechanism evidence. |
+| search | 483-inclusive-hits.txt; exact-source web searches and public citation retrieval; Hidden- and ignored-inclusive local search across records, maintained inputs, configurations, code, documentation, review and report directories. | context_only | The exact native identity and actual source owners were located. This review makes no absence-based scientific defect claim. Additional searches were bounded to asserted identifiers and exact-compound primary activity/structure leads; an unsuccessful LINCS/HMDB retrieval is recorded as an access limit rather than proof the identifier is invalid. |
+| checks | 483-focused-results.json; 483-chemistry.json; 483-authority-chemistry.json; Actual focused schema/strict/internal chemistry and independent authority comparison; captured hash recheck. | supports | All focused commands exited 0. The internal structure, quantities and source mints agree; authority comparison identifies the explicit stereochemical xref conflict. Original thirteen captured hashes remain unchanged within fourteen total inputs. Deterministic success does not resolve the scientific findings. |
+
+## Limits And Additional Notes
+
+- HMDB0014752 was not independently inspected because public page/structure requests returned 403. Exact LINCS LSM-6543 remained unresolved in the bounded public search/resolver attempts; an earlier malformed PubChem source query is not evidence of source absence. Reaxys was not inspected through paid access. These limits are not invalid-identifier findings.
+- All eleven adopted leads were dispositioned from their complete available indexed abstracts. Most historical clinical sources remain abstract-depth; the downloaded 1968 cholera wrapper is not a completed scan review. No current clinical recommendation or product approval assertion is made.
+- The 1962 Trichomonas publisher English abstract and selected original Japanese Methods were read; the full numerical tables were not independently reconstructed. Rat/human treatment used a combination preparation.
+- The D. fragilis article was inspected in Methods, relevant Results/Table2 and corresponding Discussion, not every other-drug table. Its MLC summary and Table2 conflict, bacterial flora may affect the phenotype, and no recovery experiment establishes sterilization.
+- The 2021 crystal paper was inspected in the specified structural/material/method sections and Figure2a. CIF refinement and all raw diffraction data were not reprocessed; the measured E crystal does not establish bulk or historic clinical preparation geometry.
+- Patent review is limited to bibliographic identity and relevant original abstract/descriptions/examples, not a legal scope analysis. Wikipedia is retained only as a relevant document link. Broad drug database pages are not treated as primary mechanism evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Current ARO snapshot reused and its complete exact compound/class stanzas inspected: /private/tmp/am-review-session/473-current-aro.obo, fetched 2026-10-21T16:49:32Z from https://purl.obolibrary.org/obo/aro.obo, SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4.
+- Figure2 original image inspected visually: /private/tmp/am-review-session/483-crystal-fig2.jpg, fetched 2026-10-21T17:05:39Z, SHA256 237c803cff1c3875e7a733430dc434ee410be76ae263814465cbccd34fd5ed7e.
+- The direct DrugBank client returned 403; its public page was successfully inspected through the web reader. No paid endpoint was used.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T171457Z-furazolidone-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Furazolidone: exact stereochemical references and trade-name typing'
+started_at: '2026-10-21T16:59:13Z'
+finished_at: '2026-10-21T17:14:57Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The native neutral furazolidone graph, source identity and broad antibacterial/antiprotozoal
+  roles are supported. Two corrections are warranted: exact PubChem and ChEMBL references
+  specify E imine geometry absent from the native structure, and Furoxone is typed
+  as an exact chemical synonym although an official FDA table identifies it as a trademark.
+  Primary activity evidence was assessed with strain, assay, combination-treatment
+  and stereochemical limits. Focused schema, strict and chemistry checks pass.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/furazolidone.yaml
+    sha256: 7174199268fa344d7a72b06a86036ac139856acf91004c42c9ff43d1d9e48d8c
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:5195
+  path: data/antibiotics/antibacterial/furazolidone.yaml
+  label: furazolidone
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 483; one complete native record. All thirteen original
+    captured input hashes were verified unchanged; the actual ARO inventory owner
+    was appended before assessment, giving fourteen inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:5195
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/furazolidone.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/furazolidone.yaml --out /private/tmp/am-review-session/483-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 483
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: Independent native and authority stereochemical comparison
+  status: passed
+  required: false
+  summary: All twelve encodings parse. Native, current ChEBI and CID 3435 leave imine
+    geometry unassigned; ChEMBL 1103, CID 5323714 and the KEGG molfile encode E geometry.
+    Successful execution detects a grounding conflict rather than certifying equivalence.
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/483-authority-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:5195
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/furazolidone.yaml
+  locator: Entire YAML, including all nineteen synonyms, three parents, three roles,
+    chemical fields, eight exact xrefs, three drug xrefs, five document xrefs, two
+    source concepts and four history events.
+  accessed_at: '2026-10-21T17:09:52Z'
+  support: supports
+  summary: CHEBI:5195 is SEEDED and EXACT with neutral C8H7N3O5 and key PLHJDBGFXBMTGZ-UHFFFAOYSA-N.
+    The imine geometry is unassigned; this alone does not establish a mixture or an
+    opposite isomer. No molecular target, resistance object, numerical activity, producer,
+    clinical-status assertion, dataset or causal graph is present. History records
+    seeding/reseeding rather than scientific sign-off.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:170; data/raw/aro_antibiotics.tsv:184;
+    conf/sources.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  locator: Complete two matching source rows, applicable source configuration, reviewed-role/name
+    filtering, xref extraction and seeder precedence/merge branches.
+  accessed_at: '2026-10-21T17:09:52Z'
+  support: supports
+  summary: ChEBI supplies the native structure, definition, names, role/parent terms
+    and most xrefs. ARO supplies the nitrofuran class, three additional names and
+    exact ChEMBL/PubChem references. The ARO raw definition mentions monoamine oxidase,
+    but the native ChEBI definition and empty mechanism fields do not adopt that assertion.
+    It must not be transferred into an antibacterial-target claim. Both source mints
+    reproduce. Future source-owned corrections require maintained extraction/override/decision
+    logic and regeneration.
+  snapshot_sha256: d6fe5eb4639f245000fc3792cfbe49d1fb59b373ee2fdd573c34ee7978b36575
+- evidence_id: chemical
+  kind: authority
+  reference: CHEBI:5195; cas:67-45-8; pubchem.compound:3435
+  locator: Current complete ChEBI entry and current PubChem properties; independent
+    SMILES/InChI parsing and quantities.
+  accessed_at: '2026-10-21T17:09:52Z'
+  support: supports
+  summary: 'Native SMILES and InChI agree with each other, current ChEBI and separately
+    retrieved CID 3435: one neutral component, C8H7N3O5, average mass 225.16 and exact
+    mass 225.038570324 within native rounding. The full key leaves imine geometry
+    unassigned. Systematic native names describe the same constitution and do not
+    claim E/Z geometry. CAS 67-45-8 is associated with furazolidone in ChEBI, KEGG
+    and PubChem, but those associations do not independently resolve the stereochemical
+    registration boundary.'
+  snapshot_sha256: 825383a3d1d67e2a2f964b52f4d84a9387c054e3f7ba4833512059d6ef4b0b16
+- evidence_id: xref-stereo
+  kind: authority
+  reference: chembl:CHEMBL1103; pubchem.compound:5323714; kegg.compound:C07999
+  locator: Complete official ChEMBL entry including canonical SMILES, InChI and molfile;
+    PubChem properties with explicit E IUPAC name; KEGG compound entry and downloaded
+    molfile.
+  accessed_at: '2026-10-21T17:09:52Z'
+  support: refutes
+  summary: ChEMBL 1103 and CID 5323714 specify the E hydrazone with key PLHJDBGFXBMTGZ-WEVVVXLNSA-N
+    and InChI stereolayer /b9-5+. Both encodings independently reproduce that distinction
+    from native PLHJDBGFXBMTGZ-UHFFFAOYSA-N. KEGG C07999 has the same constitution
+    and its two-dimensional molfile is interpreted as E by RDKit; its text label does
+    not explicitly state E. The two explicit stereochemical authorities establish
+    a bounded exact-reference conflict without requiring a decision to replace the
+    ChEBI graph.
+  snapshot_sha256: 825383a3d1d67e2a2f964b52f4d84a9387c054e3f7ba4833512059d6ef4b0b16
+- evidence_id: crystal
+  kind: primary_source
+  reference: DOI:10.3390/molecules26113444; https://pmc.ncbi.nlm.nih.gov/articles/PMC8201255/;
+    CCDC:2079637
+  locator: Results 2.1, Materials 3.1/Table 6, single-crystal method 3.6 and Figure
+    2a, including direct visual inspection of the downloaded figure.
+  accessed_at: '2026-10-21T17:04:14Z'
+  support: partial
+  summary: The 2021 study used commercial furazolidone CAS 67-45-8 and grew crystals
+    from acetone. The orthorhombic crystal is C8H7N3O5, with the saturated oxazolidinone
+    ring and E imine arrangement visible in Figure 2a. This is positive support for
+    a measured E solid form. It does not prove that every furazolidone preparation,
+    the historic clinical materials or the unassigned ChEBI registration denotes a
+    pure E substance. No opposite-isomer or mixture claim is inferred.
+  snapshot_sha256: 7a6c7a8c05f3b0ec87dd9d125ec4b707049588f28500a8917f0f9231d61ffd69
+- evidence_id: brand
+  kind: authority
+  reference: https://www.accessdata.fda.gov/drugsatfda_docs/label/2007/011961s039lbl.pdf;
+    kegg.drug:D00830
+  locator: FDA Marplan label page 3, table headed Generic Name and Trademark (Manufacturer);
+    complete KEGG drug entry.
+  accessed_at: '2026-10-21T17:04:14Z'
+  support: refutes
+  summary: The official FDA interaction table lists generic furazolidone beside Furoxone
+    as a Roberts Laboratories trademark. This is not a furazolidone product label
+    and is not used to infer its current approval or exact formulation. KEGG D00830
+    independently marks Furoxone as TN. Native Furoxone and furoxone are instead EXACT_SYNONYM,
+    so their searchable names should be retained with product-name semantics.
+  snapshot_sha256: c649f1af261b1f2bfc87cddb57e4a5ad98882a4d7af619519e536169750528be
+- evidence_id: classification
+  kind: authority
+  reference: CHEBI:38329; CHEBI:87230; CHEBI:33281; CHEBI:36047; CHEBI:50685; ARO:3004116;
+    ARO:3000688
+  locator: Complete current ChEBI parent/role entries and current exact ARO compound/class
+    stanzas.
+  accessed_at: '2026-10-21T17:09:52Z'
+  support: supports
+  summary: The parents resolve to oxazolidines and nitrofuran antibiotic classes,
+    broader than the native molecule. The roles are antimicrobial agent, antibacterial
+    drug and antitrichomonal drug. ANTIBACTERIAL follows the source-priority filing
+    rule while preserving the antiprotozoal role. Current ARO retains the two mismatching
+    exact chemical references and furoxone exact synonym, locating their upstream
+    provenance rather than excusing the normalized conflict.
+  snapshot_sha256: f69dfa44450005f847c0922e9553276ff8b0b9ba62a80e0c705ac6e8151cf95e
+- evidence_id: other-xrefs
+  kind: authority
+  reference: drugbank:DB00614; drugcentral:1257; kegg.drug:D00830; hmdb:HMDB0014752;
+    lincs.smallmolecule:LSM-6543; reaxys:384794
+  locator: Public DrugBank page through the web reader, DrugCentral identity/indication
+    page and full KEGG drug entry; bounded remaining exact-source retrieval.
+  accessed_at: '2026-10-21T17:03:20Z'
+  support: partial
+  summary: All three drug entries resolve to furazolidone. DrugBank displays an E
+    structure while also linking CID 3435; drug_xrefs permit broader stereoisomer/product
+    associations and do not assert exact graph equivalence. DrugCentral identifies
+    the expected formula, mass, CAS and name; its host-target and adverse-event summaries
+    are not adopted as antibacterial mechanism. HMDB requests returned 403, the exact
+    LINCS identifier could not be independently resolved through the public search/resolver
+    routes used, and Reaxys was not inspected through a free source. These references
+    remain source-supported but not independently verified here.
+  snapshot_sha256: d1ab2e5c85e839f0424ce1a6da5a7b9bf68f6bf67ddee0f8d4aa0ef64470aacb
+- evidence_id: documents
+  kind: database
+  reference: patent:GB735136; patent:US2742462; patent:US2759931; patent:US2927110;
+    wikipedia.en:Furazolidone
+  locator: Patent bibliographic identity and inspected relevant original abstract/description/examples;
+    Wikipedia identity page only.
+  accessed_at: '2026-10-21T17:03:21Z'
+  support: context_only
+  summary: GB735136A abstract describes the nitrofuryl oxazolidone family and exact
+    unsubstituted product in example 1. US2742462A describes the family and identifies
+    the unsubstituted furazolidone compound as preferred. US2759931A gives its improved
+    preparation. US2927110A includes furazolidone preparation in examples X–XIII among
+    other nitrofuran azomethines. These are relevant document links, not claims that
+    every patent member or derivative is the exact native structure. Wikipedia resolves
+    the intended subject but is not primary activity or stereochemical evidence.
+  snapshot_sha256: 4def3f4d3584c7e9f0d0a3337468ef3fac0cf214fe1d9eb86b8147786a3874bf
+- evidence_id: adopted
+  kind: database
+  reference: PMID:10735922; PMID:14500876; PMID:15666977; PMID:16225499; PMID:17422910;
+    PMID:21817887; PMID:22024820; PMID:22177019; PMID:22221615; PMID:22226073; PMID:3514312
+  locator: All eleven adopted citation identities and complete available indexed abstracts,
+    with selected original follow-up separately identified.
+  accessed_at: '2026-10-21T17:03:20Z'
+  support: context_only
+  summary: 10735922, 16225499 and 22221615 study H. pylori combination regimens; they
+    do not isolate a furazolidone-only causal effect. 14500876 studies antibody multispecificity,
+    not an antibacterial target; 15666977 is an AOZ metabolite immunoassay. 17422910
+    reports limited effects in piglet Isospora suis, with failure to prevent several
+    infection endpoints. 21817887 is a review of metronidazole alternatives, and 3514312
+    is a historical Furoxone review; neither is primary mechanism evidence. 22024820
+    studies D. fragilis in vitro. 22177019 concerns cyanobacterial mixture toxicity,
+    not clinical susceptibility. 22226073 is a yak-milk E. coli resistance survey,
+    not producer proof. No numerical result, producer or molecular target is transferred
+    across these distinct scopes.
+  snapshot_sha256: 820268371d9da743dc3d8875f4181797d755ab0bdc69409e8f2772296575c575
+- evidence_id: trichomonas
+  kind: primary_source
+  reference: DOI:10.3412/jsb.17.196; https://www.jstage.jst.go.jp/article/jsb1944/17/3/17_3_196/_article
+  locator: Complete publisher English abstract and selected original Japanese Methods
+    text in the four-page PDF; quantitative tables not independently reconstructed.
+  accessed_at: '2026-10-21T17:04:14Z'
+  support: supports
+  summary: The original experiment tested chemically pure furazolidone against two
+    Trichomonas vaginalis strains in bacteria-free cysteine bouillon-serum medium
+    and reports inhibition. This directly supports antitrichomonal activity. Rat and
+    human treatment results concern Trichofuron containing furazolidone plus nifuroxime,
+    so those outcomes are not evidence of clinical furazolidone monotherapy. The bulk
+    E/Z composition was not established in the inspected text.
+  snapshot_sha256: 99633862d9fb251899e7199a1e9b3b4513bded54ae4125c029b0fc68e2b00bc5
+- evidence_id: clinical-primary
+  kind: primary_source
+  reference: PMID:869108; PMID:4873660; PMID:2684006; PMID:1952859
+  locator: Complete indexed original abstracts for giardiasis and three controlled
+    cholera studies; no claim of complete original scanned-paper review.
+  accessed_at: '2026-10-21T17:04:14Z'
+  support: supports
+  summary: The giardiasis comparison reports clinical use of furazolidone and differing
+    cure rates among drugs and untreated controls. The 1968 cholera trial reports
+    reduced stool volume/duration, with slower vibrio clearance than tetracycline.
+    The 1989 adult single-dose study found no benefit over placebo, whereas the 1991
+    paediatric study reported benefits under different regimens and excluded twelve
+    patients with resistant organisms from its efficacy analysis. Together these support
+    the definition’s treatment-use history while precluding universal efficacy, current
+    treatment recommendations or interchangeable regimens.
+  snapshot_sha256: d49ec5d3aaedf35ac05c42f24f08f575878bd542f2e7295680f2d3400aa16032
+- evidence_id: dfragilis
+  kind: primary_source
+  reference: PMID:22024820; DOI:10.1128/AAC.05125-11; https://pmc.ncbi.nlm.nih.gov/articles/PMC3256011/
+  locator: Complete abstract and Methods, relevant Results including all of Table
+    2 and furazolidone bacterial-flora section, and corresponding Discussion; other
+    drug tables were not completely reanalysed.
+  accessed_at: '2026-10-21T17:05:02Z'
+  support: partial
+  summary: Four genotype-1 D. fragilis clinical strains were tested in cultures containing
+    bacteria on Loeffler slopes. Furazolidone powder was dissolved in ethanol, exposures
+    were duplicated and trophozoites followed over four days. MLC means no observed
+    trophozoites during this period, not a conventional MIC or proven sterilization
+    after recovery. The abstract/results summary reports 250–500 micrograms/mL, whereas
+    Table 2 shows zero post-baseline counts at 125 for strains A/M and 250 for V/E.
+    That internal inconsistency and possible bacterial-food effects require resolution
+    before numerical curation. This source-quality limit does not contradict a native
+    numerical assertion, because none exists.
+  snapshot_sha256: c68bead0a8dfcc40ff1ab21bd842b888a060e77bece5c2e0b0cbdd8ad2dce97f
+- evidence_id: policy
+  kind: record_content
+  reference: src/antibioticmech/schema/antibioticmech.yaml; docs/HARMONIZATION.md;
+    .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Exact-xref versus drug-xref semantics, synonym types, source ownership
+    and scientific sign-off criteria.
+  accessed_at: '2026-10-21T17:09:52Z'
+  support: supports
+  summary: Exact xrefs require the same chemical form; broad drug_xrefs allow parent/salt/stereoisomer
+    associations. BRAND_NAME is available. Unspecified geometry is not sufficient
+    evidence of a mixture. A seeded record is not required to populate every optional
+    field, and source membership does not substitute for exact primary mechanism evidence.
+- evidence_id: search
+  kind: search
+  reference: 483-inclusive-hits.txt; exact-source web searches and public citation
+    retrieval
+  locator: Hidden- and ignored-inclusive local search across records, maintained inputs,
+    configurations, code, documentation, review and report directories.
+  accessed_at: '2026-10-21T17:09:52Z'
+  support: context_only
+  summary: The exact native identity and actual source owners were located. This review
+    makes no absence-based scientific defect claim. Additional searches were bounded
+    to asserted identifiers and exact-compound primary activity/structure leads; an
+    unsuccessful LINCS/HMDB retrieval is recorded as an access limit rather than proof
+    the identifier is invalid.
+  search_scope: 2026-10-21; rg --no-ignore --hidden across data, curation, conf, scripts,
+    src, docs, .claude, reviews and reports for furazolidone, CHEBI:5195, ARO:3000688,
+    the native key and exact CID; public exact LSM-6543 search/resolver; adopted-PMID
+    and exact activity/structure retrieval.
+  snapshot_sha256: 0298c2fc2686a470226e366a9662a6a3197e256b5e25ef8fc088b924eda3d746
+- evidence_id: checks
+  kind: validation
+  reference: 483-focused-results.json; 483-chemistry.json; 483-authority-chemistry.json
+  locator: Actual focused schema/strict/internal chemistry and independent authority
+    comparison; captured hash recheck.
+  accessed_at: '2026-10-21T17:09:52Z'
+  support: supports
+  summary: All focused commands exited 0. The internal structure, quantities and source
+    mints agree; authority comparison identifies the explicit stereochemical xref
+    conflict. Original thirteen captured hashes remain unchanged within fourteen total
+    inputs. Deterministic success does not resolve the scientific findings.
+  snapshot_sha256: fbb90a744e8ff1e0f4e0d64f56ee997a1a789aa8c8d7283be41b9ecd7637d264
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Native structure, quantities and source identity
+  outcome: supported
+  summary: The native constitution, charge, mass and unassigned imine representation
+    are mutually consistent and agree with current ChEBI and CID 3435. The E crystal
+    does not authorize an automatic native replacement or a mixture claim.
+  target_ids:
+  - CHEBI:5195
+  evidence_ids:
+  - native
+  - chemical
+  - crystal
+- assessment_id: equivalence
+  area: grounding
+  topic: Exact and drug-level reference scope
+  outcome: concern
+  summary: Explicit E PubChem/ChEMBL structures are not exact matches to the unassigned
+    native graph; the KEGG drawing adds related evidence. Broad drug links are valid
+    associations. HMDB, LINCS and Reaxys remain independently unresolved.
+  target_ids:
+  - CHEBI:5195
+  evidence_ids:
+  - xref-stereo
+  - chemical
+  - other-xrefs
+  - policy
+- assessment_id: names
+  area: nomenclature
+  topic: Chemical names and product names
+  outcome: concern
+  summary: The structural names agree in constitution, but Furoxone/furoxone are product
+    names and need the available BRAND_NAME type. The source-provided spelling should
+    remain searchable.
+  target_ids:
+  - CHEBI:5195
+  evidence_ids:
+  - native
+  - brand
+  - owners
+  - policy
+- assessment_id: activity
+  area: evidence
+  topic: Filing class, roles and use wording
+  outcome: supported
+  summary: Exact furazolidone experiments support broad antibacterial and antiprotozoal
+    activity and the stated history of giardiasis/cholera treatment. Antitrichomonal
+    activity has direct in vitro support. Combination therapy, resistant isolates,
+    negative single-dose results and material stereochemistry limit generalization.
+  target_ids:
+  - CHEBI:5195
+  evidence_ids:
+  - classification
+  - trichomonas
+  - clinical-primary
+  - adopted
+  - dfragilis
+- assessment_id: mechanism
+  area: scope
+  topic: Mechanism, host binding and optional coverage
+  outcome: not_applicable
+  summary: The native record asserts no protein/gene/pathway, molecular target, resistance,
+    producer or causal graph. Structured transcriptomic adapter searching was therefore
+    not applicable to native assertions. Raw ARO monoamine-oxidase wording, antibody
+    binding and metabolite immunoassays are not antibacterial-target evidence. Missing
+    optional mechanistic or numerical slots are not added as defects.
+  target_ids:
+  - CHEBI:5195
+  evidence_ids:
+  - native
+  - owners
+  - adopted
+  - policy
+- assessment_id: provenance
+  area: provenance
+  topic: Generated ownership, history and source fidelity
+  outcome: supported
+  summary: All native fields and source rows were read, with exact owners and original
+    hashes preserved. Source concept IDs, class terms, roles, document links and history
+    are coherent. SEEDED remains appropriate; deterministic passing checks do not
+    promote scientific status.
+  target_ids:
+  - CHEBI:5195
+  evidence_ids:
+  - native
+  - owners
+  - documents
+  - classification
+  - checks
+  - search
+findings:
+- finding_id: F1
+  issue_key: furazolidone-exact-xrefs-specify-unassigned-imine-geometry
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Resolve exact E references on the imine-unspecified native structure
+  description: Native CHEBI:5195 and its SMILES/InChI leave hydrazone geometry unassigned,
+    key PLHJDBGFXBMTGZ-UHFFFAOYSA-N. Exact ChEMBL1103 and PubChem5323714 instead specify
+    E geometry, key PLHJDBGFXBMTGZ-WEVVVXLNSA-N, independently verified from both
+    forward encodings. KEGG C07999 also draws E geometry in its molfile. These mappings
+    require explicit source-level scope resolution. This does not establish that the
+    native graph is the opposite isomer, a mixture or an incorrect constitution, and
+    the 2021 E crystal alone does not justify replacing ChEBI identity.
+  target_ids:
+  - CHEBI:5195
+  field_paths:
+  - xrefs[6]
+  - xrefs[7]
+  - xrefs[3]
+  evidence_ids:
+  - native
+  - chemical
+  - xref-stereo
+  - crystal
+  - owners
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Imported exact PubChem and ChEMBL mappings
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: ChEBI identity and KEGG reference
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and scoped mapping override
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Identity precedence and xref merge
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained identity resolution when needed
+  rule_id: Exact references require matching stereochemical scope
+  native_severity: major
+  normalization_reason: Two explicitly configured authority graphs positively conflict
+    with an exact-equivalence assertion on an unassigned native representation. This
+    is a bounded incorrect grounding, not a demonstrated wrong native molecule.
+- finding_id: F2
+  issue_key: furazolidone-furoxone-trade-name-typed-exact
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Retain Furoxone with trade-name semantics
+  description: Furoxone and furoxone at native synonym indices 11 and 17 are EXACT_SYNONYM.
+    An official FDA table identifies Furoxone as the trademark corresponding to generic
+    furazolidone, and KEGG labels it TN. Preserve both source spellings as searchable
+    aliases while assigning BRAND_NAME rather than exact chemical-name equivalence.
+  target_ids:
+  - CHEBI:5195
+  field_paths:
+  - synonyms[11].synonym_type
+  - synonyms[17].synonym_type
+  evidence_ids:
+  - native
+  - brand
+  - owners
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Furoxone source synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: furoxone source synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Preserved source name semantics
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Synonym typing and any maintained override
+  rule_id: Distinguish product names from exact chemical synonyms
+  native_severity: minor
+  normalization_reason: A bounded name-type error does not invalidate the correct
+    native constitution, activity role or product association.
+actions:
+- action_id: A1
+  description: Adjudicate the unassigned-versus-E identity boundary in maintained
+    source mapping before regeneration.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:5195
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Imported exact PubChem and ChEMBL mappings
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: ChEBI identity and KEGG reference
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and scoped mapping override
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Identity precedence and xref merge
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained identity resolution when needed
+  acceptance_checks:
+  - Compare complete graphs and explicit stereo scope for current ChEBI5195, ChEMBL1103,
+    PubChem5323714 and KEGGC07999. CID3435 is a verified candidate for the existing
+    unassigned graph; confirm the intended source registration before adoption.
+  - Correct or qualify non-equivalent exact xrefs through maintained extraction/override/decision
+    logic. Retain valid broad drug-level associations. Do not silently replace the
+    ChEBI graph, infer a mixture, or collapse an explicitly E record without documented
+    identity policy.
+  - Regenerate the exact record and require graph/xref agreement, focused schema/strict
+    checks and corpus reproduction.
+- action_id: A2
+  description: Correct imported Furoxone name typing through maintained source or
+    seeder logic.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:5195
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Furoxone source synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: furoxone source synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Preserved source name semantics
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Synonym typing and any maintained override
+  acceptance_checks:
+  - Retain Furoxone/furoxone with BRAND_NAME type and original provenance after regeneration.
+    Confirm no unrelated chemical synonyms are recategorized.
+  - Run focused validation and reproducibility checks after any separately authorized
+    curation.
+- action_id: A3
+  description: If quantitative activity enrichment is undertaken, resolve the exact
+    assay and material limits before adding observations.
+  finding_ids: []
+  target_ids:
+  - CHEBI:5195
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/furazolidone.yaml
+    role: Curator-owned activity additions through the validated writer
+  acceptance_checks:
+  - Do not transfer combination-treatment results into monotherapy, MLC into MIC,
+    or a single strain result into universal activity. Resolve the D. fragilis abstract/Table2
+    discrepancy before recording its concentration.
+  - Retain unknown historic material E/Z composition; use the 2021 crystal only for
+    the measured solid form. Any future mechanism object needs its own exact primary
+    evidence, independent of host MAO or antibody interactions.
+limitations:
+- HMDB0014752 was not independently inspected because public page/structure requests
+  returned 403. Exact LINCS LSM-6543 remained unresolved in the bounded public search/resolver
+  attempts; an earlier malformed PubChem source query is not evidence of source absence.
+  Reaxys was not inspected through paid access. These limits are not invalid-identifier
+  findings.
+- All eleven adopted leads were dispositioned from their complete available indexed
+  abstracts. Most historical clinical sources remain abstract-depth; the downloaded
+  1968 cholera wrapper is not a completed scan review. No current clinical recommendation
+  or product approval assertion is made.
+- The 1962 Trichomonas publisher English abstract and selected original Japanese Methods
+  were read; the full numerical tables were not independently reconstructed. Rat/human
+  treatment used a combination preparation.
+- The D. fragilis article was inspected in Methods, relevant Results/Table2 and corresponding
+  Discussion, not every other-drug table. Its MLC summary and Table2 conflict, bacterial
+  flora may affect the phenotype, and no recovery experiment establishes sterilization.
+- The 2021 crystal paper was inspected in the specified structural/material/method
+  sections and Figure2a. CIF refinement and all raw diffraction data were not reprocessed;
+  the measured E crystal does not establish bulk or historic clinical preparation
+  geometry.
+- Patent review is limited to bibliographic identity and relevant original abstract/descriptions/examples,
+  not a legal scope analysis. Wikipedia is retained only as a relevant document link.
+  Broad drug database pages are not treated as primary mechanism evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- 'Current ARO snapshot reused and its complete exact compound/class stanzas inspected:
+  /private/tmp/am-review-session/473-current-aro.obo, fetched 2026-10-21T16:49:32Z
+  from https://purl.obolibrary.org/obo/aro.obo, SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4.'
+- 'Figure2 original image inspected visually: /private/tmp/am-review-session/483-crystal-fig2.jpg,
+  fetched 2026-10-21T17:05:39Z, SHA256 237c803cff1c3875e7a733430dc434ee410be76ae263814465cbccd34fd5ed7e.'
+- The direct DrugBank client returned 403; its public page was successfully inspected
+  through the web reader. No paid endpoint was used.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

@@ -1,0 +1,1023 @@
+# Furaltadone: coherent free-base graph with a source definition locant error
+
+- Review: 20261021T171145Z-furaltadone-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T16:59:08Z
+- Finished UTC: 2026-10-21T17:11:45Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The stored neutral furaltadone graph, formula, masses and source mint are internally coherent. The source definition incorrectly attaches the hydrazone substituent at oxazolidinone position 1 rather than N3 and contains a spelling/bracket error. Patents support free-base versus hydrochloride material boundaries. Adopted analytical IC50 values are not antibacterial potency; trans/racemate/enantiomer results and unresolved historical clinical and legacy-link scope are retained explicitly.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 481; original thirteen hashes preserved within twenty-one inputs, with readiness and seven guidance/contract inputs appended.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:74803 | data/antibiotics/antibacterial/furaltadone.yaml | generated | furaltadone |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:74803 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:74803 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:74803 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:74803 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:74803 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:74803 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:74803 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:74803 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:74803 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:74803 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:74803 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:74803 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Neutral free base and unassigned stereochemistry
+
+identity: supported. Targets: CHEBI:74803.
+
+The record consistently encodes neutral furaltadone connectivity. No salt or resolved enantiomer is silently substituted. The N1 prose locant is inconsistent with its otherwise coherent N3 graph and exact synonyms.
+
+### Parents, drug association and chemical accession boundaries
+
+grounding: unknown. Targets: CHEBI:74803.
+
+Four structural parents and antibacterial-drug role resolve appropriately. KEGG is a valid broad drug association. CAS has database corroboration but authoritative stereo scope is not verified; LINCS and Reaxys remain inaccessible. The auxiliary PubChem E-imine lookup is not a native exact xref.
+
+### All adopted citations and exact antibacterial material
+
+evidence: supported. Targets: CHEBI:74803.
+
+All seven adopted leads were disposed individually. Analytical antibody-response IC50, parent/metabolite residue persistence and algal growth effects are separated from antibacterial endpoints. Historical drug context and 2026 original antibacterial assays support eligibility, while numerical or enantiomer-specific transfer remains bounded.
+
+### Historical oral use, toxicity and topical hydrochloride wording
+
+scope: unknown. Targets: CHEBI:74803.
+
+Original previews support historical oral antibacterial use and toxicity. Formal withdrawal scope and the undated topical-ear indication were not independently established. The native definition explicitly distinguishes hydrochloride use from the stored free base. No current clinical recommendation or approval assertion is inferred.
+
+### Mechanism and resistance follow-up
+
+evidence: unknown. Targets: CHEBI:74803.
+
+No native target or resistance assertion requires correction. NfsA/NfsB gene annotations and nitrofurantoin experiments cannot establish furaltadone-specific activation, protein targeting or resistance. Optional direct mechanism curation requires exact-drug evidence.
+
+### Both adopted patent identifiers
+
+provenance: supported. Targets: CHEBI:74803.
+
+US2802002 describes exact free-base synthesis and a separate hydrochloride; CN101497609 concerns related hydrochloride hydrate manufacture. Both are relevant document associations, with no borrowed family-wide MIC or salt-equivalence claim.
+
+### Optional collections and unresolved access
+
+completeness: unknown. Targets: CHEBI:74803.
+
+Optional mechanism, activity_spectrum, clinical and resistance collections are not required merely because leads exist. Material/form, geometric-isomer and endpoint boundaries must precede quantitative enrichment. No producer, dataset or causal claim is asserted.
+
+### Source owner, generated status and history
+
+provenance: supported. Targets: CHEBI:74803.
+
+The complete native/raw rows, actual source ownership and all four history events were inspected. Twenty-one captured input hashes preserve the original thirteen; SEEDED status remains unchanged.
+
+### Focused integrity
+
+schema: supported. Targets: CHEBI:74803.
+
+Focused schema, strict, chemistry and source-mint checks pass. Scientific definition review identifies a source-owned wording defect despite those passes.
+
+## Findings
+
+### F1: The definition uses position 1 instead of N3 and contains spelling/bracket errors
+
+minor / open / confirmed; issue key: furaltadone-definition-n3-locant-and-spelling.
+
+The imported definition says the hydrazone substituent is at position 1 of 1,3-oxazolidin-2-one. Position 1 is oxygen; the actual bond is at ring nitrogen 3, as shown by the stored graph, all three exact systematic synonyms and US2802002 Example IV. The same text contains oraly instead of orally and an unmatched closing bracket in the substituent name. These are localized source wording errors; the stored molecule and identifiers are otherwise internally coherent.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the source-owned definition to N3 substitution and repair its spelling/brackets.
+
+- Use position 3 for the hydrazone substituent, consistent with the ring topology and exact systematic synonym. Correct oraly to orally and balance the substituent brackets.
+- Preserve free-base versus hydrochloride wording and do not add E geometry or a defined enantiomer merely from an auxiliary database lookup.
+- Regenerate reproducibly through maintained ChEBI source handling; run focused schema/strict and required corpus, chemical, term/reference/history and QC gates.
+
+### A2
+
+Optional future evidence curation should resolve exact material and historical clinical scope before adding measurements.
+
+- Obtain the 2026 main numerical results before importing MICs; retain individual isolate, racemate/R/S, trans/cis, medium and incubation scope. Do not use analytical IC50 values as potency.
+- If revising clinical prose, verify jurisdiction/date and the topical hydrochloride product independently; historical case-report toxicity is not formal withdrawal documentation.
+- Revisit CAS/LINCS/Reaxys only with inspectable authority evidence; missing access and absence from one HMS subset do not prove a bad identifier.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/furaltadone.yaml; Entire native record, all synonyms, identifiers and four seed/reseed events | supports | CHEBI:74803 is a SEEDED, EXACT antibacterial free base, C13H16N4O6, charge zero, with no assigned tetrahedral or imine stereochemistry. Altafur is correctly typed BRAND_NAME; the three exact systematic synonyms place the substituent at N3. Four structural parents and one antibacterial-drug role are present. No target, mechanism, causal graph, activity observation, resistance, producer, FDA product or dataset collection is asserted. |
+| owner | data/raw/chebi_antimicrobials.tsv; curation/record_review_queue.tsv; Entire exact ChEBI raw row 1902 and readiness row 1281 | supports | The ChEBI raw row reproduces native fields, including the definition errors, and adopts seven PMID leads. Actual source/configuration/extraction/seeding ownership and readiness context were read. The original thirteen hashes remain intact in the expanded capture. |
+| search | 481-local-hits.txt; Initial ignored-inclusive worktree search and exact maintained TSV inspection | context_only | The search included hidden and ignored worktree files except .git and .venv. Exact label/identifier matches in maintained source/readiness inputs were inspected; complete curator and decision tables contained no exact target row. Rendered pages and historical research ledgers were discovery leads only. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/74803/; Current CHEBI:74803 definition, structures, synonyms, relations and links | supports | Current ChEBI agrees with native unspecified-stereo neutral graph and key YVQVOQKFMFRVGR-UHFFFAOYSA-N. It retains the incorrect position 1 description and the spelling oraly. Source agreement establishes provenance, not correctness of this wording. |
+| chemistry | 481-chemistry.json; RDKit 2026.03.5; existing 019 interpreter against 049 cwd | supports | SMILES and InChI independently reproduce formula, charge, one fragment, both masses, stored key and source mint. One tetrahedral centre is unassigned. An unspecified graph is not an assertion of a racemic preparation. |
+| mapping | 481482-xref-check.json; Independent native ring topology and current authority graphs | supports | Native atom 2 is the oxazolidinone ring nitrogen attached to the exocyclic hydrazone nitrogen; ring atoms 12(O),13(carbonyl C),2(N),3(C),4(C) correspond to positions 1–5. Thus the substitution is N3, not O1. PubChem name/CAS resolution and KEGG D02510 molfile encode E imine, key YVQVOQKFMFRVGR-VGOFMYFVSA-N. PubChem is not a native xref and KEGG is a drug-level association, so this is a material/representation qualification, not a proven bad native exact link. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/furaltadone/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON; Name query CID 9553856 | supports | The name resolves to the same connectivity with an assigned E imine and an unassigned tetrahedral centre. This auxiliary lookup does not silently replace the source graph or establish a racemic material. |
+| cas-corrob | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/139-91-3/property/InChI,InChIKey/JSON; CAS 139-91-3 lookup in PubChem | context_only | The asserted CAS string resolves to CID 9553856 with the same E-imine graph as the name query. This is database corroboration of the identifier/name association; direct CAS authority access returned 401, so its exact stereochemical registration scope remains unresolved. |
+| kegg | https://rest.kegg.jp/get/D02510; KEGG drug D02510 whole entry and molfile | supports | The drug entry identifies furaltadone, INN and Altafur trade name, neutral formula, CAS 139-91-3 and CHEBI:74803. Its drug-level association is appropriate under the native drug_xrefs contract even though the molecular drawing specifies E imine. |
+| term-24129 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/24129/; CHEBI:24129 current label and definition | supports | The asserted term resolves to furans. Its structural or activity scope is consistent with the graph and historical antibacterial-drug context; no additional parent or role defect was identified. |
+| term-35716 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/35716/; CHEBI:35716 current label and definition | supports | The asserted term resolves to C-nitro compound. Its structural or activity scope is consistent with the graph and historical antibacterial-drug context; no additional parent or role defect was identified. |
+| term-38785 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/38785/; CHEBI:38785 current label and definition | supports | The asserted term resolves to morpholines. Its structural or activity scope is consistent with the graph and historical antibacterial-drug context; no additional parent or role defect was identified. |
+| term-55374 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/55374/; CHEBI:55374 current label and definition | supports | The asserted term resolves to oxazolidinone. Its structural or activity scope is consistent with the graph and historical antibacterial-drug context; no additional parent or role defect was identified. |
+| term-36047 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/36047/; CHEBI:36047 current label and definition | supports | The asserted term resolves to antibacterial drug. Its structural or activity scope is consistent with the graph and historical antibacterial-drug context; no additional parent or role defect was identified. |
+| patent-us | https://patentimages.storage.googleapis.com/ea/bd/fe/cca1477c45730c/US2802002.pdf; Original patent full text; actual scan PDF page 3, printed columns 5–6, Example IV A/B | supports | Example IV synthesizes the morpholinyl compound and depicts its hydrazone at ring N3. The free base is precipitated with sodium carbonate, then a separate hydrochloride is formed in alcoholic HCl. Neither a stereochemically resolved preparation nor an antibacterial MIC for this exact example is established. General family therapeutic claims and the piperidyl penicillin-G salt example cannot be transferred as quantitative furaltadone activity. |
+| patent-cn | https://patents.google.com/patent/CN101497609A/en; Full description, Examples 1–3 and claims | supports | The document concerns furaltadone hydrochloride manufacture and explicitly gives C13H16N4O6.HCl.H2O. This is a related hydrochloride hydrate preparation, not the native free base. Its synthetic yields and process conditions are not antibacterial assay results. The document association is relevant and does not assert exact salt equivalence. |
+| adopted | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A%2813689146%20OR%2021109284%20OR%2022011291%20OR%2022486660%20OR%2023200392%20OR%2023445479%20OR%2023810835%29%20AND%20SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; All seven adopted leads: complete available abstracts and bibliographic metadata | supports | PMID 13689146 is the 1961 Burn/Coleman clinical and bacteriological Altafur report; metadata resolves but no abstract/full text was recovered. PMID 21109284 (DOI 10.1016/j.chemosphere.2010.10.067) tests non-target Ulva lactuca growth/uptake, not bacteria. PMID 22011291 (10.1021/jf2029384) and 22486660 (10.1021/jf205186y) concern poultry/egg parent and metabolite residues. PMID 23200392 (10.1016/j.talanta.2012.10.059), 23445479 (10.2174/1386207311316060010) and 23810835 (10.1016/j.jim.2013.06.006) are immunoassay/detection studies involving furaltadone, AMOZ or derivatized NPAMOZ. Their analytical IC50 values do not measure bacterial inhibition or enzyme inhibition. |
+| historical | https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/565983; https://jamanetwork.com/journals/jama/article-abstract/331210; Inspected publisher previews: DOI 10.1001/archinte.1961.03620060063008 and10.1001/jama.1961.63040220008017 | context_only | The original 1961 activity-paper preview identifies Altafur/NF260 as furaltadone and describes historical oral antibacterial use. Its detailed experiments were not accessible. The original neuropathy-case preview reports severe cranial nerve toxicity beginning after about four weeks and recovery after discontinuation. These support historical drug/toxicity context, not a verified withdrawal jurisdiction/date or present-day topical ear indication. |
+| stereo-abstract | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE_ABS%3Afuraltadone&amp;format=json&amp;resultType=core&amp;pageSize=100; Complete original PMID 42616431 abstract; DOI 10.1021/acs.jafc.6c05774, August 2026 | supports | The original study reports separate R and S furaltadone/AMOZ pharmacokinetics and greater in-vitro antibacterial activity of R than S. No strain-specific numerical MIC is provided by the inspected abstract. This does not assign the native unspecified centre or justify transferring one enantiomer result to all forms. |
+| stereo-si | https://ndownloader.figshare.com/files/67302204; Original SI S3 susceptibility methods at S28 and S4 geometric-isomer study S29–31 | supports | The study tests racemic, R and S furaltadone against 12 clinical E. coli and 17 Salmonella isolates using broth microdilution in Mueller-Hinton broth, final inoculum approximately 5×10^5 CFU/mL, 37°C for 18 h and visible-growth MIC endpoint. The tested concentration range is 0.5–256 µg/mL; the SI gives methods but no corresponding isolate MIC table. S4 explicitly distinguishes a trans reference sample from UV-generated cis material. It does not measure general antibacterial efficacy for every stereochemical interpretation of the native unassigned graph. Mouse albumin/chiral-selector docking is not a bacterial mechanism experiment. |
+| nft-boundary | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12554031/fullTextXML; Full 2025 original text; methods and furaltadone mentions | context_only | This study measures nitrofurantoin resistance in poultry-associated E. coli and discusses historical furaltadone use as possible selective context. Its MICs and NfsA/NfsB clone conclusions are not direct furaltadone measurements. No cross-drug resistance mechanism or activity value is imported. |
+| adapter | kg-microbe-sources imodulondb search --organism e_coli --dataset precise1k --query nitroreductase; iModulonDB e_coli/precise1k search nitroreductase, after covered-dataset catalog | context_only | The successful public read returned nfsB/b0578 and nfsA/b0851 with zero iModulons. This was run before open mechanism follow-up; the initial sandbox attempt failed DNS. Covered-gene annotations do not prove furaltadone activation or resistance, and there is no native named protein claim. |
+| lincs | 481-hms-audit.json; Official LSM-5034 direct response and complete 639-record HMS 2020-06-24 downloadable archive inspection | context_only | The direct official LSM-5034 page returned 500. The complete available 639-record archive was searched for furaltadone, LSM-5034, the key backbone and CAS 139-91-3 with no match. That archive is not the entire LINCS registry, so this is an unresolved legacy accession rather than evidence that the identifier is wrong. |
+| access | 481482-fetch1.json; Actual public authority and primary retrieval outcomes | context_only | Common Chemistry API returned 401, Reaxys 363627 returned 403 and LINCS returned 500. Historical JAMA PDF retrieval returned 403 while publisher preview text was readable through the browser. The seven adopted leads were assessed at the stated abstract/metadata depths; no full-text claim is made for inaccessible papers. |
+| gates | 481-focused-results.json; Actual chemistry, schema and strict executions | supports | All three focused checks exited 0; schema/strict used the 049 own environment, chemistry used existing 019 RDKit interpreter with 049 cwd. Molecular consistency does not detect the source definition wording error. |
+
+## Limits And Additional Notes
+
+- Root attaches shared required corpus/QC/contract regression checks for the unchanged base; this draft records actual focused checks only.
+- Seven adopted leads were read at complete available abstract depth, except PMID 13689146 which has metadata only. The historical JAMA papers were inspected as publisher previews, not full experiments; withdrawal jurisdiction/date and current topical-ear use remain unresolved.
+- The2026 original abstract and SI susceptibility/geometric-isomer sections were read. Its numerical isolate MIC table and full main paper were not available. Native unspecified stereochemistry is neither an asserted racemate nor an assigned trans/R/S preparation.
+- US2802002 full text and actual Example IV scan were inspected; CN101497609 full HTML description/examples/claims were read. Family therapeutic statements and related salts do not provide exact free-base MICs.
+- Common Chemistry 401, Reaxys 403 and LINCS 500 prevent independent authoritative resolution of those exact accession scopes. The complete 639-record HMS archive has no match but is only a subset.
+- The 2025 primary study is about nitrofurantoin; its furaltadone mentions provide historical context only. No target, mutation or resistance phenotype is transferred between these drugs.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native or maintained file was edited. All twenty-one inputs and original thirteen capture hashes are preserved; optional links/tags/notes are target-specific.
+- Primary public retrieval manifests and snapshot hashes retain both successes and failures. The initial adapter sandbox DNS failure was followed by a successful public read; no iModulon was found to summarize.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T171145Z-furaltadone-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Furaltadone: coherent free-base graph with a source definition locant error'
+started_at: '2026-10-21T16:59:08Z'
+finished_at: '2026-10-21T17:11:45Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The stored neutral furaltadone graph, formula, masses and source mint are
+  internally coherent. The source definition incorrectly attaches the hydrazone substituent
+  at oxazolidinone position 1 rather than N3 and contains a spelling/bracket error.
+  Patents support free-base versus hydrochloride material boundaries. Adopted analytical
+  IC50 values are not antibacterial potency; trans/racemate/enantiomer results and
+  unresolved historical clinical and legacy-link scope are retained explicitly.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/furaltadone.yaml
+    sha256: d4e17f0966b29b0385bf98d2afbf694803ce175e422a5fd48bb509c85afc5723
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+targets:
+- target_id: CHEBI:74803
+  path: data/antibiotics/antibacterial/furaltadone.yaml
+  label: furaltadone
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 481; original thirteen hashes preserved within twenty-one
+    inputs, with readiness and seven guidance/contract inputs appended.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:74803
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:74803
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    481
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:74803
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/furaltadone.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:74803
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/furaltadone.yaml --out /private/tmp/am-review-session/481-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:74803
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:74803
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:74803
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:74803
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:74803
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:74803
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:74803
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:74803
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:74803
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/furaltadone.yaml
+  locator: Entire native record, all synonyms, identifiers and four seed/reseed events
+  accessed_at: '2026-10-21T17:10:57Z'
+  support: supports
+  summary: CHEBI:74803 is a SEEDED, EXACT antibacterial free base, C13H16N4O6, charge
+    zero, with no assigned tetrahedral or imine stereochemistry. Altafur is correctly
+    typed BRAND_NAME; the three exact systematic synonyms place the substituent at
+    N3. Four structural parents and one antibacterial-drug role are present. No target,
+    mechanism, causal graph, activity observation, resistance, producer, FDA product
+    or dataset collection is asserted.
+  snapshot_sha256: 13df9437441817082a0a569eaf628e7c9a0c6d052006129a62b7a03ac5ad3b19
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; curation/record_review_queue.tsv
+  locator: Entire exact ChEBI raw row 1902 and readiness row 1281
+  accessed_at: '2026-10-21T17:10:57Z'
+  support: supports
+  summary: The ChEBI raw row reproduces native fields, including the definition errors,
+    and adopts seven PMID leads. Actual source/configuration/extraction/seeding ownership
+    and readiness context were read. The original thirteen hashes remain intact in
+    the expanded capture.
+  snapshot_sha256: 9c3db41e4e7b72e7a11ef4745a8e64bf575c460d144ddae9ebc16284254e4454
+- evidence_id: search
+  kind: search
+  reference: 481-local-hits.txt
+  locator: Initial ignored-inclusive worktree search and exact maintained TSV inspection
+  accessed_at: '2026-10-21T17:10:57Z'
+  support: context_only
+  summary: The search included hidden and ignored worktree files except .git and .venv.
+    Exact label/identifier matches in maintained source/readiness inputs were inspected;
+    complete curator and decision tables contained no exact target row. Rendered pages
+    and historical research ledgers were discovery leads only.
+  search_scope: Initial rg --no-ignore --hidden target search across the 049 worktree,
+    excluding .git and .venv; complete TSV exact-row inspection in 481482-context.py.
+  snapshot_sha256: 19c9a6ad75a7196c06307798f525100c05b886a20362a4ee2639bfcce7a92002
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/74803/
+  locator: Current CHEBI:74803 definition, structures, synonyms, relations and links
+  accessed_at: '2026-10-21T17:03:09.445784Z'
+  support: supports
+  summary: Current ChEBI agrees with native unspecified-stereo neutral graph and key
+    YVQVOQKFMFRVGR-UHFFFAOYSA-N. It retains the incorrect position 1 description and
+    the spelling oraly. Source agreement establishes provenance, not correctness of
+    this wording.
+  snapshot_sha256: 9b04dad4d3ea3e5dd98f04ae20ccbc7786ff92c988623da9461a93f0cae406eb
+- evidence_id: chemistry
+  kind: validation
+  reference: 481-chemistry.json
+  locator: RDKit 2026.03.5; existing 019 interpreter against 049 cwd
+  accessed_at: '2026-10-21T17:10:57Z'
+  support: supports
+  summary: SMILES and InChI independently reproduce formula, charge, one fragment,
+    both masses, stored key and source mint. One tetrahedral centre is unassigned.
+    An unspecified graph is not an assertion of a racemic preparation.
+  snapshot_sha256: f3201b61193b8346fd2bc0598b42d6bd9317d566b40fc0698321943a6d5c5fcf
+- evidence_id: mapping
+  kind: validation
+  reference: 481482-xref-check.json
+  locator: Independent native ring topology and current authority graphs
+  accessed_at: '2026-10-21T17:10:57Z'
+  support: supports
+  summary: Native atom 2 is the oxazolidinone ring nitrogen attached to the exocyclic
+    hydrazone nitrogen; ring atoms 12(O),13(carbonyl C),2(N),3(C),4(C) correspond
+    to positions 1–5. Thus the substitution is N3, not O1. PubChem name/CAS resolution
+    and KEGG D02510 molfile encode E imine, key YVQVOQKFMFRVGR-VGOFMYFVSA-N. PubChem
+    is not a native xref and KEGG is a drug-level association, so this is a material/representation
+    qualification, not a proven bad native exact link.
+  snapshot_sha256: 93d7e8c8cd70dba30f52290b24c9cddb59d03e90749a677a4fd5d49f779735e0
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/furaltadone/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: Name query CID 9553856
+  accessed_at: '2026-10-21T17:03:09.446000Z'
+  support: supports
+  summary: The name resolves to the same connectivity with an assigned E imine and
+    an unassigned tetrahedral centre. This auxiliary lookup does not silently replace
+    the source graph or establish a racemic material.
+  snapshot_sha256: 5642fbbe87129c54fa9d44c5fb46ed598d9f89d96c94a5ca38fa35a1918f4351
+- evidence_id: cas-corrob
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/139-91-3/property/InChI,InChIKey/JSON
+  locator: CAS 139-91-3 lookup in PubChem
+  accessed_at: '2026-10-21T17:08:43.878638Z'
+  support: context_only
+  summary: The asserted CAS string resolves to CID 9553856 with the same E-imine graph
+    as the name query. This is database corroboration of the identifier/name association;
+    direct CAS authority access returned 401, so its exact stereochemical registration
+    scope remains unresolved.
+  snapshot_sha256: 1f2f46ba9af196716d737640f46e3b882f789ea01aa422a8348eb28207d26c7b
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/D02510
+  locator: KEGG drug D02510 whole entry and molfile
+  accessed_at: '2026-10-21T17:03:12.691449Z'
+  support: supports
+  summary: The drug entry identifies furaltadone, INN and Altafur trade name, neutral
+    formula, CAS 139-91-3 and CHEBI:74803. Its drug-level association is appropriate
+    under the native drug_xrefs contract even though the molecular drawing specifies
+    E imine.
+  snapshot_sha256: 05313420ccdad8be94283751e7cee9d1065d79304959d53158606c95c3b255b2
+- evidence_id: term-24129
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/24129/
+  locator: CHEBI:24129 current label and definition
+  accessed_at: '2026-10-21T17:03:09.447996Z'
+  support: supports
+  summary: The asserted term resolves to furans. Its structural or activity scope
+    is consistent with the graph and historical antibacterial-drug context; no additional
+    parent or role defect was identified.
+  snapshot_sha256: 8c858461d85a54d1a026e69145d46e933aa5f5e66ca557042679136115443707
+- evidence_id: term-35716
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/35716/
+  locator: CHEBI:35716 current label and definition
+  accessed_at: '2026-10-21T17:03:09.826135Z'
+  support: supports
+  summary: The asserted term resolves to C-nitro compound. Its structural or activity
+    scope is consistent with the graph and historical antibacterial-drug context;
+    no additional parent or role defect was identified.
+  snapshot_sha256: cd34bbaa16056c9e2b12f0c38a118f7a4047a55cf5ed8e4dca01ccbd7fdd0073
+- evidence_id: term-38785
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/38785/
+  locator: CHEBI:38785 current label and definition
+  accessed_at: '2026-10-21T17:03:10.177766Z'
+  support: supports
+  summary: The asserted term resolves to morpholines. Its structural or activity scope
+    is consistent with the graph and historical antibacterial-drug context; no additional
+    parent or role defect was identified.
+  snapshot_sha256: ec6aa4ac21d0d35133d1186b10c8abdbb08b0a95e30d87b00ff95f1e39d2c21d
+- evidence_id: term-55374
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/55374/
+  locator: CHEBI:55374 current label and definition
+  accessed_at: '2026-10-21T17:03:10.312818Z'
+  support: supports
+  summary: The asserted term resolves to oxazolidinone. Its structural or activity
+    scope is consistent with the graph and historical antibacterial-drug context;
+    no additional parent or role defect was identified.
+  snapshot_sha256: 06babf5aa868ef2301a5f6332db5475e25a407d688bb4c85bd2ae293c743f5d1
+- evidence_id: term-36047
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/36047/
+  locator: CHEBI:36047 current label and definition
+  accessed_at: '2026-10-21T17:03:10.606384Z'
+  support: supports
+  summary: The asserted term resolves to antibacterial drug. Its structural or activity
+    scope is consistent with the graph and historical antibacterial-drug context;
+    no additional parent or role defect was identified.
+  snapshot_sha256: cd02b5e95a759d9be8d1b3a51657d5d536a2f53d43647448b69caf4de6bd737f
+- evidence_id: patent-us
+  kind: primary_source
+  reference: https://patentimages.storage.googleapis.com/ea/bd/fe/cca1477c45730c/US2802002.pdf
+  locator: Original patent full text; actual scan PDF page 3, printed columns 5–6,
+    Example IV A/B
+  accessed_at: '2026-10-21T17:04:21.323847Z'
+  support: supports
+  summary: Example IV synthesizes the morpholinyl compound and depicts its hydrazone
+    at ring N3. The free base is precipitated with sodium carbonate, then a separate
+    hydrochloride is formed in alcoholic HCl. Neither a stereochemically resolved
+    preparation nor an antibacterial MIC for this exact example is established. General
+    family therapeutic claims and the piperidyl penicillin-G salt example cannot be
+    transferred as quantitative furaltadone activity.
+  snapshot_sha256: 049e2abef25f5482be6594ed2455ec825008dcecaf6960a6f975966959e833c9
+- evidence_id: patent-cn
+  kind: primary_source
+  reference: https://patents.google.com/patent/CN101497609A/en
+  locator: Full description, Examples 1–3 and claims
+  accessed_at: '2026-10-21T17:03:13.767839Z'
+  support: supports
+  summary: The document concerns furaltadone hydrochloride manufacture and explicitly
+    gives C13H16N4O6.HCl.H2O. This is a related hydrochloride hydrate preparation,
+    not the native free base. Its synthetic yields and process conditions are not
+    antibacterial assay results. The document association is relevant and does not
+    assert exact salt equivalence.
+  snapshot_sha256: 11c25697d9f4f9b749be54ee322c359a0637497b9ee12c3e37e6427c20ddbf48
+- evidence_id: adopted
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A%2813689146%20OR%2021109284%20OR%2022011291%20OR%2022486660%20OR%2023200392%20OR%2023445479%20OR%2023810835%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: 'All seven adopted leads: complete available abstracts and bibliographic
+    metadata'
+  accessed_at: '2026-10-21T17:03:09.447613Z'
+  support: supports
+  summary: PMID 13689146 is the 1961 Burn/Coleman clinical and bacteriological Altafur
+    report; metadata resolves but no abstract/full text was recovered. PMID 21109284
+    (DOI 10.1016/j.chemosphere.2010.10.067) tests non-target Ulva lactuca growth/uptake,
+    not bacteria. PMID 22011291 (10.1021/jf2029384) and 22486660 (10.1021/jf205186y)
+    concern poultry/egg parent and metabolite residues. PMID 23200392 (10.1016/j.talanta.2012.10.059),
+    23445479 (10.2174/1386207311316060010) and 23810835 (10.1016/j.jim.2013.06.006)
+    are immunoassay/detection studies involving furaltadone, AMOZ or derivatized NPAMOZ.
+    Their analytical IC50 values do not measure bacterial inhibition or enzyme inhibition.
+  snapshot_sha256: ae4a639587453883ed282fc16c271c290c09b59595635376a57591241ea005da
+- evidence_id: historical
+  kind: primary_source
+  reference: https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/565983;
+    https://jamanetwork.com/journals/jama/article-abstract/331210
+  locator: 'Inspected publisher previews: DOI 10.1001/archinte.1961.03620060063008
+    and10.1001/jama.1961.63040220008017'
+  accessed_at: '2026-10-21T17:10:57Z'
+  support: context_only
+  summary: The original 1961 activity-paper preview identifies Altafur/NF260 as furaltadone
+    and describes historical oral antibacterial use. Its detailed experiments were
+    not accessible. The original neuropathy-case preview reports severe cranial nerve
+    toxicity beginning after about four weeks and recovery after discontinuation.
+    These support historical drug/toxicity context, not a verified withdrawal jurisdiction/date
+    or present-day topical ear indication.
+  snapshot_sha256: daa7eb1f302c472f6866978d06ca6db5b429c3e6a5ecee102cb5988d8fa5f956
+- evidence_id: stereo-abstract
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE_ABS%3Afuraltadone&format=json&resultType=core&pageSize=100
+  locator: Complete original PMID 42616431 abstract; DOI 10.1021/acs.jafc.6c05774,
+    August 2026
+  accessed_at: '2026-10-21T17:03:09.447914Z'
+  support: supports
+  summary: The original study reports separate R and S furaltadone/AMOZ pharmacokinetics
+    and greater in-vitro antibacterial activity of R than S. No strain-specific numerical
+    MIC is provided by the inspected abstract. This does not assign the native unspecified
+    centre or justify transferring one enantiomer result to all forms.
+  snapshot_sha256: 304d6f671eb2843f41541bd393fec7116d7272ddecd8cd31125b179b3e26a703
+- evidence_id: stereo-si
+  kind: primary_source
+  reference: https://ndownloader.figshare.com/files/67302204
+  locator: Original SI S3 susceptibility methods at S28 and S4 geometric-isomer study
+    S29–31
+  accessed_at: '2026-10-21T17:07:16.867136Z'
+  support: supports
+  summary: The study tests racemic, R and S furaltadone against 12 clinical E. coli
+    and 17 Salmonella isolates using broth microdilution in Mueller-Hinton broth,
+    final inoculum approximately 5×10^5 CFU/mL, 37°C for 18 h and visible-growth MIC
+    endpoint. The tested concentration range is 0.5–256 µg/mL; the SI gives methods
+    but no corresponding isolate MIC table. S4 explicitly distinguishes a trans reference
+    sample from UV-generated cis material. It does not measure general antibacterial
+    efficacy for every stereochemical interpretation of the native unassigned graph.
+    Mouse albumin/chiral-selector docking is not a bacterial mechanism experiment.
+  snapshot_sha256: 06e51bfda600f4d4f44d6bb96f503be0aa521348b498214016e8f87af536a7d8
+- evidence_id: nft-boundary
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12554031/fullTextXML
+  locator: Full 2025 original text; methods and furaltadone mentions
+  accessed_at: '2026-10-21T17:04:21.325337Z'
+  support: context_only
+  summary: This study measures nitrofurantoin resistance in poultry-associated E.
+    coli and discusses historical furaltadone use as possible selective context. Its
+    MICs and NfsA/NfsB clone conclusions are not direct furaltadone measurements.
+    No cross-drug resistance mechanism or activity value is imported.
+  snapshot_sha256: 8af0bb3b6c57b9ad8c328a84ef195f1509144108f44f46aa9e761335f1bdc1b1
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb search --organism e_coli --dataset precise1k
+    --query nitroreductase
+  locator: iModulonDB e_coli/precise1k search nitroreductase, after covered-dataset
+    catalog
+  accessed_at: '2026-10-21T17:10:57Z'
+  support: context_only
+  summary: The successful public read returned nfsB/b0578 and nfsA/b0851 with zero
+    iModulons. This was run before open mechanism follow-up; the initial sandbox attempt
+    failed DNS. Covered-gene annotations do not prove furaltadone activation or resistance,
+    and there is no native named protein claim.
+  snapshot_sha256: 0e776bd0c53f22e4b4db8ff5d74c4bd2e444198a123f6ae30094705397213929
+- evidence_id: lincs
+  kind: search
+  reference: 481-hms-audit.json
+  locator: Official LSM-5034 direct response and complete 639-record HMS 2020-06-24
+    downloadable archive inspection
+  accessed_at: '2026-10-21T17:10:57Z'
+  support: context_only
+  summary: The direct official LSM-5034 page returned 500. The complete available
+    639-record archive was searched for furaltadone, LSM-5034, the key backbone and
+    CAS 139-91-3 with no match. That archive is not the entire LINCS registry, so
+    this is an unresolved legacy accession rather than evidence that the identifier
+    is wrong.
+  search_scope: Direct official page plus whole https://lincs.hms.harvard.edu/_static/db/prod-20200624/small_molecules.sdf;
+    fetched 2026-10-21T17:06:50Z, SHA256 07d0f372f351425b90c0d264e4b68e05cb57d8ec75d6c5beba4d77d2a3b3a33e.
+  snapshot_sha256: c93f1d9c325cd28c99641ded9d2285fc1256afcebd4edd8a4090d58180fa8f3b
+- evidence_id: access
+  kind: search
+  reference: 481482-fetch1.json
+  locator: Actual public authority and primary retrieval outcomes
+  accessed_at: '2026-10-21T17:10:57Z'
+  support: context_only
+  summary: Common Chemistry API returned 401, Reaxys 363627 returned 403 and LINCS
+    returned 500. Historical JAMA PDF retrieval returned 403 while publisher preview
+    text was readable through the browser. The seven adopted leads were assessed at
+    the stated abstract/metadata depths; no full-text claim is made for inaccessible
+    papers.
+  search_scope: Free ChEBI, PubChem, KEGG, CAS, Reaxys, LINCS/HMS, patent, EPMC, publisher
+    and Figshare retrievals; manifests 481482-fetch1.json through 481482-fetch6.json
+    preserve actual UTC times, statuses and hashes.
+  snapshot_sha256: 2b5ec071c05425bb906af285342cec3d446af0e64eef6945b152f18647a1f22e
+- evidence_id: gates
+  kind: validation
+  reference: 481-focused-results.json
+  locator: Actual chemistry, schema and strict executions
+  accessed_at: '2026-10-21T17:10:57Z'
+  support: supports
+  summary: All three focused checks exited 0; schema/strict used the 049 own environment,
+    chemistry used existing 019 RDKit interpreter with 049 cwd. Molecular consistency
+    does not detect the source definition wording error.
+  snapshot_sha256: 4059c1d168c99be98dfa44fcee5ad88a8a580cb36fae672fa35b687333607e1f
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral free base and unassigned stereochemistry
+  outcome: supported
+  summary: The record consistently encodes neutral furaltadone connectivity. No salt
+    or resolved enantiomer is silently substituted. The N1 prose locant is inconsistent
+    with its otherwise coherent N3 graph and exact synonyms.
+  target_ids:
+  - CHEBI:74803
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - mapping
+  - patent-us
+- assessment_id: grounding
+  area: grounding
+  topic: Parents, drug association and chemical accession boundaries
+  outcome: unknown
+  summary: Four structural parents and antibacterial-drug role resolve appropriately.
+    KEGG is a valid broad drug association. CAS has database corroboration but authoritative
+    stereo scope is not verified; LINCS and Reaxys remain inaccessible. The auxiliary
+    PubChem E-imine lookup is not a native exact xref.
+  target_ids:
+  - CHEBI:74803
+  evidence_ids:
+  - chebi
+  - mapping
+  - pubchem
+  - cas-corrob
+  - kegg
+  - lincs
+  - access
+  - term-24129
+  - term-35716
+  - term-38785
+  - term-55374
+  - term-36047
+- assessment_id: evidence
+  area: evidence
+  topic: All adopted citations and exact antibacterial material
+  outcome: supported
+  summary: All seven adopted leads were disposed individually. Analytical antibody-response
+    IC50, parent/metabolite residue persistence and algal growth effects are separated
+    from antibacterial endpoints. Historical drug context and 2026 original antibacterial
+    assays support eligibility, while numerical or enantiomer-specific transfer remains
+    bounded.
+  target_ids:
+  - CHEBI:74803
+  evidence_ids:
+  - adopted
+  - historical
+  - stereo-abstract
+  - stereo-si
+- assessment_id: clinical
+  area: scope
+  topic: Historical oral use, toxicity and topical hydrochloride wording
+  outcome: unknown
+  summary: Original previews support historical oral antibacterial use and toxicity.
+    Formal withdrawal scope and the undated topical-ear indication were not independently
+    established. The native definition explicitly distinguishes hydrochloride use
+    from the stored free base. No current clinical recommendation or approval assertion
+    is inferred.
+  target_ids:
+  - CHEBI:74803
+  evidence_ids:
+  - native
+  - historical
+  - patent-cn
+  - access
+- assessment_id: mechanism
+  area: evidence
+  topic: Mechanism and resistance follow-up
+  outcome: unknown
+  summary: No native target or resistance assertion requires correction. NfsA/NfsB
+    gene annotations and nitrofurantoin experiments cannot establish furaltadone-specific
+    activation, protein targeting or resistance. Optional direct mechanism curation
+    requires exact-drug evidence.
+  target_ids:
+  - CHEBI:74803
+  evidence_ids:
+  - native
+  - adapter
+  - nft-boundary
+- assessment_id: documents
+  area: provenance
+  topic: Both adopted patent identifiers
+  outcome: supported
+  summary: US2802002 describes exact free-base synthesis and a separate hydrochloride;
+    CN101497609 concerns related hydrochloride hydrate manufacture. Both are relevant
+    document associations, with no borrowed family-wide MIC or salt-equivalence claim.
+  target_ids:
+  - CHEBI:74803
+  evidence_ids:
+  - patent-us
+  - patent-cn
+- assessment_id: completeness
+  area: completeness
+  topic: Optional collections and unresolved access
+  outcome: unknown
+  summary: Optional mechanism, activity_spectrum, clinical and resistance collections
+    are not required merely because leads exist. Material/form, geometric-isomer and
+    endpoint boundaries must precede quantitative enrichment. No producer, dataset
+    or causal claim is asserted.
+  target_ids:
+  - CHEBI:74803
+  evidence_ids:
+  - native
+  - search
+  - adopted
+  - stereo-si
+  - access
+- assessment_id: provenance
+  area: provenance
+  topic: Source owner, generated status and history
+  outcome: supported
+  summary: The complete native/raw rows, actual source ownership and all four history
+    events were inspected. Twenty-one captured input hashes preserve the original
+    thirteen; SEEDED status remains unchanged.
+  target_ids:
+  - CHEBI:74803
+  evidence_ids:
+  - native
+  - owner
+  - search
+  - gates
+- assessment_id: validation
+  area: schema
+  topic: Focused integrity
+  outcome: supported
+  summary: Focused schema, strict, chemistry and source-mint checks pass. Scientific
+    definition review identifies a source-owned wording defect despite those passes.
+  target_ids:
+  - CHEBI:74803
+  evidence_ids:
+  - gates
+  - chemistry
+  - mapping
+findings:
+- finding_id: F1
+  issue_key: furaltadone-definition-n3-locant-and-spelling
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The definition uses position 1 instead of N3 and contains spelling/bracket
+    errors
+  description: The imported definition says the hydrazone substituent is at position
+    1 of 1,3-oxazolidin-2-one. Position 1 is oxygen; the actual bond is at ring nitrogen
+    3, as shown by the stored graph, all three exact systematic synonyms and US2802002
+    Example IV. The same text contains oraly instead of orally and an unmatched closing
+    bracket in the substituent name. These are localized source wording errors; the
+    stored molecule and identifiers are otherwise internally coherent.
+  target_ids:
+  - CHEBI:74803
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - owner
+  - chebi
+  - mapping
+  - patent-us
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI definition and identity row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction and assertion handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-yaml-record:Workflow:consistency
+  native_severity: minor
+  normalization_reason: Localized definitional nomenclature and spelling defects are
+    minor here because the molecular graph, exact synonyms and intended drug identity
+    remain unambiguous; no opposite structure is stored.
+actions:
+- action_id: A1
+  description: Correct the source-owned definition to N3 substitution and repair its
+    spelling/brackets.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:74803
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI definition and identity row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction and assertion handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Use position 3 for the hydrazone substituent, consistent with the ring topology
+    and exact systematic synonym. Correct oraly to orally and balance the substituent
+    brackets.
+  - Preserve free-base versus hydrochloride wording and do not add E geometry or a
+    defined enantiomer merely from an auxiliary database lookup.
+  - Regenerate reproducibly through maintained ChEBI source handling; run focused
+    schema/strict and required corpus, chemical, term/reference/history and QC gates.
+- action_id: A2
+  description: Optional future evidence curation should resolve exact material and
+    historical clinical scope before adding measurements.
+  finding_ids: []
+  target_ids:
+  - CHEBI:74803
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/furaltadone.yaml
+    role: Future curator-owned activity_spectrum and bounded discussion annotations
+  acceptance_checks:
+  - Obtain the 2026 main numerical results before importing MICs; retain individual
+    isolate, racemate/R/S, trans/cis, medium and incubation scope. Do not use analytical
+    IC50 values as potency.
+  - If revising clinical prose, verify jurisdiction/date and the topical hydrochloride
+    product independently; historical case-report toxicity is not formal withdrawal
+    documentation.
+  - Revisit CAS/LINCS/Reaxys only with inspectable authority evidence; missing access
+    and absence from one HMS subset do not prove a bad identifier.
+limitations:
+- Root attaches shared required corpus/QC/contract regression checks for the unchanged
+  base; this draft records actual focused checks only.
+- Seven adopted leads were read at complete available abstract depth, except PMID
+  13689146 which has metadata only. The historical JAMA papers were inspected as publisher
+  previews, not full experiments; withdrawal jurisdiction/date and current topical-ear
+  use remain unresolved.
+- The2026 original abstract and SI susceptibility/geometric-isomer sections were read.
+  Its numerical isolate MIC table and full main paper were not available. Native unspecified
+  stereochemistry is neither an asserted racemate nor an assigned trans/R/S preparation.
+- US2802002 full text and actual Example IV scan were inspected; CN101497609 full
+  HTML description/examples/claims were read. Family therapeutic statements and related
+  salts do not provide exact free-base MICs.
+- Common Chemistry 401, Reaxys 403 and LINCS 500 prevent independent authoritative
+  resolution of those exact accession scopes. The complete 639-record HMS archive
+  has no match but is only a subset.
+- The 2025 primary study is about nitrofurantoin; its furaltadone mentions provide
+  historical context only. No target, mutation or resistance phenotype is transferred
+  between these drugs.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native or maintained file was edited. All twenty-one inputs and original thirteen
+  capture hashes are preserved; optional links/tags/notes are target-specific.
+- Primary public retrieval manifests and snapshot hashes retain both successes and
+  failures. The initial adapter sandbox DNS failure was followed by a successful public
+  read; no iModulon was found to summarize.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:74803
+- https://patents.google.com/patent/US2802002A/en
+- https://doi.org/10.1021/acs.jafc.6c05774
+tags:
+- furaltadone
+- definition-locant
+- material-scope
+```

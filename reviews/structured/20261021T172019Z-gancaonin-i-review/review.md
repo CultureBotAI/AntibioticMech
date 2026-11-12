@@ -1,0 +1,556 @@
+# Gancaonin I: coherent benzofuran identity with exact-isolate antibacterial evidence
+
+- Review: 20261021T172019Z-gancaonin-i-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T16:59:21Z
+- Finished UTC: 2026-10-21T17:20:19Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The entire record is chemically coherent. Original licorice isolation and Enterococcus assays support the source definition and antibacterial-agent role, with exact preparation, isolate and endpoint boundaries. No confirmed corrective finding is identified; legacy registry access and mechanism specificity remain limited. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position488; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:69099 | data/antibiotics/antibacterial/gancaonin-i.yaml | generated | gancaonin I |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:69099 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:69099 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:69099 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:69099 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:69099 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:69099 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:69099 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:69099 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:69099 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:69099 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:69099 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:69099 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact chemical identity and nomenclature
+
+identity: supported. Targets: CHEBI:69099.
+
+Native/current graphs and systematic synonym agree. The structural parents accurately describe the molecule and no stereochemical or salt substitution is implied.
+
+### Botanical origin and antibacterial role
+
+evidence: supported. Targets: CHEBI:69099.
+
+Exact compound17 from original G.uralensis material inhibits the two specifically tested Enterococcus isolates; the adopted H.pylori abstract is additional bounded activity evidence. The native record asserts no numerical MIC or universal spectrum.
+
+### Exact external link scope
+
+grounding: unknown. Targets: CHEBI:69099.
+
+LIPIDMAPS is verified at forward-graph level. HMDB is corroborated by linked authoritative databases, but direct HTML/XML/SDF requests returned403. Reaxys and exact CAS registry scope were not independently inspected; failed access is not a confirmed mismatch.
+
+### Source ownership and history
+
+provenance: supported. Targets: CHEBI:69099.
+
+The exact maintained source row and all three history entries were read; both adopted leads are dispositioned at their actual access depths. Native SEEDED status is retained.
+
+### Optional target and structured-adapter applicability
+
+completeness: unknown. Targets: CHEBI:69099.
+
+No native named gene/protein, pathway or expression dataset requires an adapter query. MIC experiments do not supply a molecular mechanism; absence of optional target or producer objects is not by itself a defect.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/gancaonin-i.yaml; Entire native YAML, every asserted field and chronological history | supports | The SEEDED, EXACT record denotes C21H22O5 and full key DKVBYQAVNNRVNN-UHFFFAOYSA-N. All 3 history events, names, parents, activity roles and exact/drug/document links were read. No quantitative activity observation, molecular-target object, resistance object, producer object or causal graph is asserted. |
+| owners | 488-source-rows.json; conf/sources.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Complete exact maintained source row and actual source/configuration/extraction/emission ownership | supports | ChEBI supplies the native structure, definition, names, ontology and adopted citation leads. There is one ChEBI source concept. Exact chemical links, broader drug associations and document links have different schema semantics. Original thirteen hashes were preserved; actual additional owners were captured where applicable. |
+| search | 488-local-hits.txt; 049-root-fetch1-manifest.json through 049-root-fetch7-manifest.json; Ignored-inclusive initial local search and bounded public chemical/primary-literature retrievals | context_only | The local target search included hidden and ignored files. Current chemical entries and adopted citation abstracts were inspected, with original full-text follow-up at the specifically stated depths. Unsuccessful endpoints are access limits, not proof of absence. |
+| chemistry | 049-root-authority-chemistry.json; Independent native and current-authority forward graph parsing with existing019 RDKit interpreter | supports | Eight independently parsed native, ChEBI, PubChem name-resolved CID480777 and LIPIDMAPS encodings reproduce neutral achiral C21H22O5 and DKVBYQAVNNRVNN-UHFFFAOYSA-N. The prenyl alkene does not carry E/Z stereochemistry because one carbon has two methyl groups. |
+| gates | 488-focused-results.json; 488-chemistry.json; Actual chemistry, schema and strict outputs | supports | Focused checks all exit0. Independent formula, charge, masses, full key and source mint are internally consistent. These checks do not establish the truth of every external-source assertion. |
+| authority | CHEBI:69099; CHEBI:33572,35618,38830,33282; lipidmaps:LMPK12160046; Complete compound and parent/role entries plus LIPIDMAPS structures and identifiers | supports | The graph contains the stated 4,6-dimethoxy-5-prenyl-2-(2,4-dihydroxyphenyl)benzofuran. Resorcinols, aromatic ether and benzofuran parents fit. The role is antibacterial agent, not a clinical-drug claim. LIPIDMAPS agrees at full graph level and cross-references HMDB0038756 and PubChem480777. CAS126716-36-7 has cross-database corroboration; Reaxys3630169 remains source-attributed. |
+| adopted | PMID:12127165; DOI:10.1016/S0024-3205(02)01864-7; PMID:22074222; DOI:10.1021/np2004775; Both complete indexed original abstracts | supports | The2002 study explicitly includes gancaonin I among licorice compounds with weaker Helicobacter pylori activity than its leading compounds; the abstract supplies no gancaonin-I MIC. The2011 oral-pathogen study emphasizes licoricidin and licorisoflavan/quinone congeners; its abstract is not exact gancaonin-I potency evidence. Neither establishes a named bacterial binding target. |
+| primary2014 | PMID:24686577; DOI:10.3390/molecules19043883; PMC6270663; Entire original main text, including all Methods, Results, Tables1/2, Discussion and Conclusions; figure captions but not raw figure images | supports | Commercial Glycyrrhiza uralensis root/stolon material, voucher GU07112011 and lot002009037, yielded compound17 identified as gancaonin I,5.9mg after chromatographic isolation. Broth microdilution used Mueller-Hinton broth,37C24h without shaking, twofold dilution, approximately10^5CFU as printed, and triplicate visual no-growth endpoint. Table2 gives compound17 MICs8 and16µg/mL against vancomycin-resistant E.faecium FN1 and E.faecalis NCTC12201 respectively. This directly supports antibacterial eligibility and botanical isolation, not a universal species phenotype, new absolute-structure assignment or direct protein mechanism. The paper’s occasional class-name inconsistency is not transferred to the native benzofuran structure. |
+
+## Limits And Additional Notes
+
+- The two adopted publications were assessed at full abstract level. The2014 original main text and tables were read completely; raw structure figure images were not visually inspected and the prior original structure-elucidation publication was not recovered.
+- HMDB direct requests were forbidden and Reaxys registry content was not independently inspected. LIPIDMAPS/PubChem cross-references corroborate identifiers but do not replace inaccessible authority graph inspection.
+- The2014 MICs apply to isolated compound17 and the stated strains/conditions. Neither a direct binding mechanism nor clinical efficacy is demonstrated. The printed inoculum statement is retained without inventing a missing per-volume unit.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T172019Z-gancaonin-i-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Gancaonin I: coherent benzofuran identity with exact-isolate antibacterial
+  evidence'
+started_at: '2026-10-21T16:59:21Z'
+finished_at: '2026-10-21T17:20:19Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The entire record is chemically coherent. Original licorice isolation and
+  Enterococcus assays support the source definition and antibacterial-agent role,
+  with exact preparation, isolate and endpoint boundaries. No confirmed corrective
+  finding is identified; legacy registry access and mechanism specificity remain limited.
+  Scientific assessment retains the stated evidence limits; full verification is blocked
+  by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/gancaonin-i.yaml
+    sha256: 039a6a03395a8f7e4dc5d0eb9161b636817288e24eb452ff16788c27cad40b4f
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:69099
+  path: data/antibiotics/antibacterial/gancaonin-i.yaml
+  label: gancaonin I
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, structure, ontology, xrefs and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI and ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated native field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion decisions
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position488; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:69099
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69099
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    488
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69099
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/gancaonin-i.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69099
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/gancaonin-i.yaml --out /private/tmp/am-review-session/488-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:69099
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:69099
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:69099
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:69099
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:69099
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:69099
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:69099
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:69099
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:69099
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/gancaonin-i.yaml
+  locator: Entire native YAML, every asserted field and chronological history
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: The SEEDED, EXACT record denotes C21H22O5 and full key DKVBYQAVNNRVNN-UHFFFAOYSA-N.
+    All 3 history events, names, parents, activity roles and exact/drug/document links
+    were read. No quantitative activity observation, molecular-target object, resistance
+    object, producer object or causal graph is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: 488-source-rows.json; conf/sources.yaml; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: Complete exact maintained source row and actual source/configuration/extraction/emission
+    ownership
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: ChEBI supplies the native structure, definition, names, ontology and adopted
+    citation leads. There is one ChEBI source concept. Exact chemical links, broader
+    drug associations and document links have different schema semantics. Original
+    thirteen hashes were preserved; actual additional owners were captured where applicable.
+  snapshot_sha256: 06fb988ff84f13bb8cc70bdc7a2971072a3cf48fb696f18a564bde6149112e4f
+- evidence_id: search
+  kind: search
+  reference: 488-local-hits.txt; 049-root-fetch1-manifest.json through 049-root-fetch7-manifest.json
+  locator: Ignored-inclusive initial local search and bounded public chemical/primary-literature
+    retrievals
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: context_only
+  summary: The local target search included hidden and ignored files. Current chemical
+    entries and adopted citation abstracts were inspected, with original full-text
+    follow-up at the specifically stated depths. Unsuccessful endpoints are access
+    limits, not proof of absence.
+  search_scope: 2026-10-21; rg --no-ignore --hidden in own049 checkout; current ChEBI,
+    PubChem and asserted public authority lookups; Europe PMC exact adopted PMID and
+    TITLE_ABS:gancaonin I searches; bounded exact-compound original-paper follow-up.
+  snapshot_sha256: 67211849eb92a8bcb720d74cc3177a7780179aa0b7661e8d8f2895c2904aad0e
+- evidence_id: chemistry
+  kind: validation
+  reference: 049-root-authority-chemistry.json
+  locator: Independent native and current-authority forward graph parsing with existing019
+    RDKit interpreter
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: Eight independently parsed native, ChEBI, PubChem name-resolved CID480777
+    and LIPIDMAPS encodings reproduce neutral achiral C21H22O5 and DKVBYQAVNNRVNN-UHFFFAOYSA-N.
+    The prenyl alkene does not carry E/Z stereochemistry because one carbon has two
+    methyl groups.
+  snapshot_sha256: 708b390e6a3a9b13adf021f4f7291c2bf9623e2db88a5b188c1c6d9533361d36
+- evidence_id: gates
+  kind: validation
+  reference: 488-focused-results.json; 488-chemistry.json
+  locator: Actual chemistry, schema and strict outputs
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: Focused checks all exit0. Independent formula, charge, masses, full key
+    and source mint are internally consistent. These checks do not establish the truth
+    of every external-source assertion.
+  snapshot_sha256: 1fb5a1818b745136813d36ccc2c510e8114bf5a8f1c274e7b4584e4c37937236
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:69099; CHEBI:33572,35618,38830,33282; lipidmaps:LMPK12160046
+  locator: Complete compound and parent/role entries plus LIPIDMAPS structures and
+    identifiers
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: The graph contains the stated 4,6-dimethoxy-5-prenyl-2-(2,4-dihydroxyphenyl)benzofuran.
+    Resorcinols, aromatic ether and benzofuran parents fit. The role is antibacterial
+    agent, not a clinical-drug claim. LIPIDMAPS agrees at full graph level and cross-references
+    HMDB0038756 and PubChem480777. CAS126716-36-7 has cross-database corroboration;
+    Reaxys3630169 remains source-attributed.
+  snapshot_sha256: 0136c23559dd5ad2f4423989486173ae8ae7cb0c328a131517e8cc834f8b7db6
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:12127165; DOI:10.1016/S0024-3205(02)01864-7; PMID:22074222; DOI:10.1021/np2004775
+  locator: Both complete indexed original abstracts
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: The2002 study explicitly includes gancaonin I among licorice compounds
+    with weaker Helicobacter pylori activity than its leading compounds; the abstract
+    supplies no gancaonin-I MIC. The2011 oral-pathogen study emphasizes licoricidin
+    and licorisoflavan/quinone congeners; its abstract is not exact gancaonin-I potency
+    evidence. Neither establishes a named bacterial binding target.
+  snapshot_sha256: 59705f749b0cd1afbfd0ae9ef65996291411318a0568d043fad6237489393408
+- evidence_id: primary2014
+  kind: primary_source
+  reference: PMID:24686577; DOI:10.3390/molecules19043883; PMC6270663
+  locator: Entire original main text, including all Methods, Results, Tables1/2, Discussion
+    and Conclusions; figure captions but not raw figure images
+  accessed_at: '2026-10-21T17:14:10Z'
+  support: supports
+  summary: Commercial Glycyrrhiza uralensis root/stolon material, voucher GU07112011
+    and lot002009037, yielded compound17 identified as gancaonin I,5.9mg after chromatographic
+    isolation. Broth microdilution used Mueller-Hinton broth,37C24h without shaking,
+    twofold dilution, approximately10^5CFU as printed, and triplicate visual no-growth
+    endpoint. Table2 gives compound17 MICs8 and16µg/mL against vancomycin-resistant
+    E.faecium FN1 and E.faecalis NCTC12201 respectively. This directly supports antibacterial
+    eligibility and botanical isolation, not a universal species phenotype, new absolute-structure
+    assignment or direct protein mechanism. The paper’s occasional class-name inconsistency
+    is not transferred to the native benzofuran structure.
+  snapshot_sha256: 59ba8b45ef1592b0e2c4bf5e534d254f8565abc027520c06432f5bf49a0e2bb0
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact chemical identity and nomenclature
+  outcome: supported
+  summary: Native/current graphs and systematic synonym agree. The structural parents
+    accurately describe the molecule and no stereochemical or salt substitution is
+    implied.
+  target_ids:
+  - CHEBI:69099
+  evidence_ids:
+  - native
+  - chemistry
+  - authority
+- assessment_id: activity
+  area: evidence
+  topic: Botanical origin and antibacterial role
+  outcome: supported
+  summary: Exact compound17 from original G.uralensis material inhibits the two specifically
+    tested Enterococcus isolates; the adopted H.pylori abstract is additional bounded
+    activity evidence. The native record asserts no numerical MIC or universal spectrum.
+  target_ids:
+  - CHEBI:69099
+  evidence_ids:
+  - primary2014
+  - adopted
+  - authority
+- assessment_id: grounding
+  area: grounding
+  topic: Exact external link scope
+  outcome: unknown
+  summary: LIPIDMAPS is verified at forward-graph level. HMDB is corroborated by linked
+    authoritative databases, but direct HTML/XML/SDF requests returned403. Reaxys
+    and exact CAS registry scope were not independently inspected; failed access is
+    not a confirmed mismatch.
+  target_ids:
+  - CHEBI:69099
+  evidence_ids:
+  - authority
+  - chemistry
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership and history
+  outcome: supported
+  summary: The exact maintained source row and all three history entries were read;
+    both adopted leads are dispositioned at their actual access depths. Native SEEDED
+    status is retained.
+  target_ids:
+  - CHEBI:69099
+  evidence_ids:
+  - native
+  - owners
+  - adopted
+  - gates
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional target and structured-adapter applicability
+  outcome: unknown
+  summary: No native named gene/protein, pathway or expression dataset requires an
+    adapter query. MIC experiments do not supply a molecular mechanism; absence of
+    optional target or producer objects is not by itself a defect.
+  target_ids:
+  - CHEBI:69099
+  evidence_ids:
+  - native
+  - primary2014
+findings: []
+actions: []
+limitations:
+- The two adopted publications were assessed at full abstract level. The2014 original
+  main text and tables were read completely; raw structure figure images were not
+  visually inspected and the prior original structure-elucidation publication was
+  not recovered.
+- HMDB direct requests were forbidden and Reaxys registry content was not independently
+  inspected. LIPIDMAPS/PubChem cross-references corroborate identifiers but do not
+  replace inaccessible authority graph inspection.
+- The2014 MICs apply to isolated compound17 and the stated strains/conditions. Neither
+  a direct binding mechanism nor clinical efficacy is demonstrated. The printed inoculum
+  statement is retained without inventing a missing per-volume unit.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
