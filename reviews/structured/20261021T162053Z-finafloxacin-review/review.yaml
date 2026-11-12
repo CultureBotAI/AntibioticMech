@@ -1,0 +1,918 @@
+schema_version: 1.0.0
+review_id: 20261021T162053Z-finafloxacin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Finafloxacin: coherent neutral identity and FDA product assertion with preparation-specific
+  primary evidence'
+started_at: '2026-10-21T15:56:44Z'
+finished_at: '2026-10-21T16:20:53Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The neutral stereodefined graph, checked exact chemical identifiers and current
+  FDA product assertion agree. All ten adopted PMID leads were reviewed, with deeper
+  primary reading of acid-pH activity studies. Hydrochloride preparations, unspecified
+  manufacturer powders and formulated otic product evidence remain distinct; no confirmed
+  native correction is established. Scientific assessment retains the stated evidence
+  limits; full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/finafloxacin.yaml
+    sha256: 6662b43283e6f514aa8743818932655508c4b008a59c1973d229c0ae5c1c06b8
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+targets:
+- target_id: CHEBI:85176
+  path: data/antibiotics/antibacterial/finafloxacin.yaml
+  label: finafloxacin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual adopted ARO definition/classification and citation owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Actual FDA product assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: FDA assertion extractor
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 440; original thirteen input hashes preserved within twenty-three
+    expanded inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:85176
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:85176
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/439440-focused.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:85176
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/finafloxacin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:85176
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/finafloxacin.yaml --out /private/tmp/am-review-session/440-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:85176
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:85176
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:85176
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:85176
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:85176
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:85176
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:85176
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:85176
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:85176
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/finafloxacin.yaml
+  locator: Entire native YAML, all six history events and the sole FDA assertion
+  accessed_at: '2026-10-21T16:20:09Z'
+  support: supports
+  summary: The record asserts a neutral (4aS,7aS) fluoroquinolone, antibacterial roles,
+    coherent systematic name, Xtoro as BRAND_NAME and one FDA product assertion. It
+    has no molecular target, mode, resistance, activity_spectrum or causal graph assertion
+    to promote from class-level evidence.
+- evidence_id: owners
+  kind: record_content
+  reference: 439440-raw-rows.json; 440-inputs-expanded.json
+  locator: Complete exact ChEBI row 2279, ARO row 361 and FDA row 742; actual source
+    owners
+  accessed_at: '2026-10-21T16:20:09Z'
+  support: supports
+  summary: Original input hashes were verified and actual ARO/FDA raw owners plus
+    the FDA extractor were appended before detailed judgment. The source rows account
+    for identity, roles, citation leads and the product assertion. No exact curator
+    override was identified in the searched inputs.
+  snapshot_sha256: 0c8a997220cc1b1e189f51da0c4b8967db647150ccdc471508cf01e4059fc2f3
+- evidence_id: local-search
+  kind: search
+  reference: 439440-all-local-paths.txt
+  locator: Ignored-inclusive local search
+  accessed_at: '2026-10-21T16:20:09Z'
+  support: context_only
+  summary: Hidden and ignored files were included under data, curation, conf, scripts,
+    src, reports and reviews. Exact source owners and native fields were read. Absence
+    of optional mechanistic and susceptibility collections is not treated as invalid
+    schema.
+  search_scope: rg --no-ignore --hidden -il 'fidaxomicin|finafloxacin|CHEBI:68590|CHEBI:85176|ARO:3001319|ARO:3004732'
+    data curation conf scripts src reports reviews
+  snapshot_sha256: a2e8eb9abebe0d6bbda23f95cbac75009ba2e2bf6dafe4fdd700c39dbf965a9d
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/85176/
+  locator: Current CHEBI:85176 structure, names, parents and roles
+  accessed_at: '2026-10-21T16:09:14.591273Z'
+  support: supports
+  summary: Current ChEBI agrees with the native neutral C20H19FN4O4 graph, two assigned
+    S centres and key FYMHQCNFKNMJAV-HOTGVXAUSA-N. The systematic name, quinolone
+    scaffold and antimicrobial roles are coherent.
+  snapshot_sha256: cdf87561ff430bbfd6d6d571722eb16a522685d5e8b41dbb0cf04e25e49167e4
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/11567473/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: PubChem CID11567473 exact molecular properties
+  accessed_at: '2026-10-21T16:09:15.013697Z'
+  support: supports
+  summary: The referenced PubChem structure independently reproduces the native complete
+    InChIKey, formula and charge.
+  snapshot_sha256: 3e6929cd7a61ebcb39484001750cd13578e86f2bedf35104ae77e16e923a799d
+- evidence_id: chembl
+  kind: authority
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1908370.json
+  locator: CHEMBL1908370 molecular structure
+  accessed_at: '2026-10-21T16:09:15.026669Z'
+  support: supports
+  summary: The linked ChEMBL molecule has the same full stereochemical graph as the
+    native neutral compound.
+  snapshot_sha256: 444cad9aba33e339d1d050ccd5a810abc3e0e64c01edb67b8a092a0831362e61
+- evidence_id: aro
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004732
+  locator: ARO3004732 definition, exact identity links and adopted citations
+  accessed_at: '2026-10-21T16:09:15.841634Z'
+  support: supports
+  summary: The ARO entry resolves to finafloxacin and links the same chemical identifiers.
+    Its enhanced activity at acid pH is a conditional observation supported by the
+    adopted studies, not a claim of universal susceptibility.
+  snapshot_sha256: ee492788648c716d24a069670c26e370ef0f847b061d82f726436041233c4902
+- evidence_id: aro-class
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_0000001
+  locator: ARO0000001 fluoroquinolone class
+  accessed_at: '2026-10-21T16:09:16.201478Z'
+  support: supports
+  summary: The assigned fluoroquinolone class is consistent with the native fluorinated
+    quinolone-3-carboxylate graph. Class-level topoisomerase descriptions are not
+    used as direct finafloxacin/protein experimental evidence.
+  snapshot_sha256: ceebdd24972521132cd1c2d060e338eb7dc8b9002fa5b0dc511c20e1c6eda371
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/D10575
+  locator: KEGG drug D10575 identity and associated molfile
+  accessed_at: '2026-10-21T16:09:15.044135Z'
+  support: supports
+  summary: D10575 resolves to finafloxacin; its molfile independently gives the same
+    complete graph. This remains a drug-level association under schema semantics,
+    even when structures happen to match.
+  snapshot_sha256: 4ac4a1dba73fdd97bc733cf86368a49c19d343a2846df15ed43139ca37621e63
+- evidence_id: drugcentral
+  kind: authority
+  reference: https://drugcentral.org/drugcard/4920
+  locator: DrugCentral 4920 card and associated molecular download
+  accessed_at: '2026-10-21T16:09:16.354152Z'
+  support: supports
+  summary: The drug card resolves to finafloxacin and its downloaded molfile reproduces
+    the native graph. This is a drug-level association, not an asserted exact-structure
+    namespace.
+  snapshot_sha256: e8bd0483ee4ef69c6aa75bdaac31f6c8b40da6dcc083698fc339460b65d1674a
+- evidence_id: chemistry
+  kind: record_content
+  reference: 440-chemistry.json; 439440-xref-chemistry.json; 439440-additional-chemistry.json
+  locator: Independent RDKit2026.03.5 using batch019 interpreter against batch044
+    cwd
+  accessed_at: '2026-10-21T16:20:09Z'
+  support: supports
+  summary: Native SMILES/InChI, neutral charge, formula, masses and source mints agree.
+    ChEBI, PubChem, ChEMBL, KEGG drug, DrugCentral and current GSRS molecular structures
+    reproduce FYMHQCNFKNMJAV-HOTGVXAUSA-N with both S centres assigned.
+  snapshot_sha256: ae32c45ab1d207778baf7fde012d0daee4e4c442f11582d25896558ee2629b4c
+- evidence_id: fda
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:NDA206307&limit=10
+  locator: Current Drugs@FDA application NDA206307, product 001 and original submission
+  accessed_at: '2026-10-21T16:09:16.642872Z'
+  support: supports
+  summary: The exact application, product number, XTORO brand, FINAFLOXACIN ingredient,
+    FONSECA BIOSCIENCES sponsor, Prescription marketing category and original AP date
+    2014-12-17 match the stored assertion. A later labeling supplement does not change
+    the original approval date. This is a timestamped database-state observation,
+    not proof of retail stock.
+  snapshot_sha256: e1190eb69839b401037528fd09e8ae24000be7b8979b541a740d48aca2ab3679
+- evidence_id: gsrs
+  kind: authority
+  reference: https://gsrs.ncats.nih.gov/api/v1/substances/search?q=root_approvalID:D26OSN9Q4R
+  locator: UNII D26OSN9Q4R, current record version 34
+  accessed_at: '2026-10-21T16:09:16.488800Z'
+  support: supports
+  summary: Current GSRS names FINAFLOXACIN and supplies the same neutral, absolutely
+    stereodefined graph. The native version 31 records its historical retrieval; current
+    version 34 does not by itself make that historical provenance incorrect.
+  snapshot_sha256: 860899e152444b44d88c405c9390eac37a943d12fbf0e0a00667551db9a2866c
+- evidence_id: label
+  kind: authority
+  reference: https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/206307s004lbl.pdf
+  locator: Current official label; section 11 actual PDF page 4 viewed, sections 1/12.4/14
+    text
+  accessed_at: '2026-10-21T16:10:20.671339Z'
+  support: supports
+  summary: The label explicitly names the neutral (4aS,7aS) acid, CAS 209342-40-5
+    and molecular weight 398.4; its actual structure drawing agrees. XTORO 0.3% is
+    a formulated otic suspension. Hydrochloric acid/sodium hydroxide used for pH adjustment
+    do not establish a pure hydrochloride molecular identity. The indication covers
+    acute otitis externa caused by susceptible P. aeruginosa or S. aureus; clinical
+    formulation outcomes are not direct binding assays.
+  snapshot_sha256: f4b84ad797d8ae3496de20648eda2efb63380935b381b666716fce569425c056
+- evidence_id: label-figure
+  kind: authority
+  reference: https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/206307s004lbl.pdf
+  locator: 'Rendered original label page 4: 440-label-page 4.png'
+  accessed_at: '2026-10-21T16:10:20.671339Z'
+  support: supports
+  summary: Actual structure and ingredient paragraph were visually inspected. The
+    drawing contains the neutral acid and both specified ring-fusion stereocentres;
+    hydrochloric acid is listed as a possible pH-adjusting ingredient, not part of
+    the drawn active molecular formula.
+  snapshot_sha256: 7a917082a9557c087d8c70bf6e5523c73c4e810193cdec58481729ad1136946c
+- evidence_id: acid2011
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3165343/?pdf=render
+  locator: PMID21709094 / DOI10.1128/AAC.00833-10; original main Methods, Results
+    and Figure 1 caption
+  accessed_at: '2026-10-21T16:10:20.103309Z'
+  support: partial
+  summary: Manufacturer-supplied finafloxacin was tested by CLSI broth microdilution
+    across six reference strains and a larger 445-isolate, 19-species collection.
+    Optimal activity was observed around pH 5–6, with the magnitude differing by species.
+    Broth acidification and testing pH are experimental conditions, not evidence that
+    the isolated reagent was hydrochloride. The inspected methods do not give an exact
+    salt/purity certificate, so numeric neutral-compound transfer is deferred.
+  snapshot_sha256: a8a8a1f40687dff62ee7328c1d1b80aa8a4e3512e6c976280f2a0eb916a12cdd
+- evidence_id: acid2011-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/f56b/3165343/4354f2e17536/zac9991001630001.jpg
+  locator: Actual Figure 1 viewed with original key and caption
+  accessed_at: '2026-10-21T16:14:48.162392Z'
+  support: partial
+  summary: The six panels compare finafloxacin with ciprofloxacin/levofloxacin across
+    pH in E. coli, K. pneumoniae, P. aeruginosa and S. aureus, including the stated
+    gyrA-mutant and MRSA backgrounds. Curves show condition-specific MIC shifts; they
+    are not purified target binding or universal clinical susceptibility measurements.
+  snapshot_sha256: e4c4cb0f95550660b622d0826973f3fb07a28b88f4b80ba6ad90be50ff187b65
+- evidence_id: acinetobacter2010
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2849356/?pdf=render
+  locator: PMID20100879 / DOI10.1128/AAC.01637-09; original methods paragraph, Table
+    2 headings and Results/Discussion
+  accessed_at: '2026-10-21T16:10:20.105135Z'
+  support: partial
+  summary: The study examines 68 characterized A. baumannii isolates using agar dilution
+    at pH 7.2 and 5.8 and manufacturer powders. Wild-type versus gyrA/parC-substitution
+    groups differ; the acidic condition lowers finafloxacin MICs in the reported groups.
+    AdeB-associated observations are bounded, and the authors explicitly leave the
+    cause of the pH effect unresolved. This does not prove direct inhibition of AdeB
+    or isolate a purified target mechanism. Figure 1 identifies finafloxacin HCl.
+  snapshot_sha256: 327665527ecbd9785359d154950e9968f113483a306a3606385b3fe015a2e545
+- evidence_id: acinetobacter-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/91f0/2849356/60c7cdc1d84e/zac9991088710001.jpg
+  locator: Actual Figure 1 viewed; caption explicitly finafloxacin HCl
+  accessed_at: '2026-10-21T16:18:29.361584Z'
+  support: partial
+  summary: The original drawing visibly includes HCl alongside stereodefined finafloxacin.
+    It is a salt/material boundary for this source; no native neutral-compound MIC
+    is imported by treating this preparation as an exact identical molecular graph.
+  snapshot_sha256: 1a1dce8f876ccafafa83c41f6231a25f6b7ee6645ea2388eb8cf0c93e30175f7
+- evidence_id: burkholderia2017
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5487660/fullTextXML
+  locator: PMID28438936 / DOI10.1128/AAC.00082-17; original reagent descriptions,
+    Table 1, relevant Results and endpoint definitions
+  accessed_at: '2026-10-21T16:11:21.483274Z'
+  support: partial
+  summary: The study reports finafloxacin activity in two B. pseudomallei reference
+    strains under distinct pH conditions and a separate intracellular experiment using
+    an efflux-deficient derivative. Manufacturer powder and a potency-adjusted preparation
+    are described without an unambiguous isolated salt specification. MIC, MBC, intracellular
+    effects and murine efficacy are different endpoints; the animal result is not
+    a human indication or direct target-binding experiment. Its introductory topoisomerase
+    claim cites another source and is not an enzyme assay performed in this paper.
+  snapshot_sha256: 468bc09dca4cc2caf0610aa896a458916d4b188e7de2ae124b319d8d7135445e
+- evidence_id: patent
+  kind: primary_source
+  reference: https://patents.google.com/patent/WO2011003091/en
+  locator: WO2011003091A1; exact-compound definition, preferred form and Examples
+    8–9 scope
+  accessed_at: '2026-10-21T16:09:15.563191Z'
+  support: partial
+  summary: The cited patent is relevant to finafloxacin-containing ophthalmic/otic/nasal
+    compositions. It gives the exact stereodefined chemical name but prefers the monohydrochloride
+    and broadly includes derivatives, hydrates and formulations. The inspected pH-dependent
+    susceptibility and animal-otic sections do not make every tested formulation identical
+    to neutral finafloxacin. The document link is valid; no broad patent claim is
+    promoted into a pure-compound quantitative observation.
+  snapshot_sha256: 7967915fff86925781f0ae245d797048fe9f4bc03c7716a044ecf0926f1441fb
+- evidence_id: lead-28438936
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/28438936/
+  locator: Complete original abstract in 440-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.502827Z'
+  support: context_only
+  summary: Original preclinical activity paper. Valid full XML read for reagent, assay
+    endpoints and relevant results; preparation and pathogen-model scope retained
+    separately.
+  snapshot_sha256: c9d7442abd0220bdc400ef5a8f61a8a4f46f8c3fa6d6d849be88a317d7b9cbeb
+- evidence_id: lead-25264128
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25264128/
+  locator: Complete original abstract in 440-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.502827Z'
+  support: context_only
+  summary: Original 114-anaerobe study; complete abstract read. Broth microdilution
+    and selected B. fragilis pH comparisons are bounded strain/condition observations;
+    exact isolated salt/purity unresolved at abstract depth.
+  snapshot_sha256: c9d7442abd0220bdc400ef5a8f61a8a4f46f8c3fa6d6d849be88a317d7b9cbeb
+- evidence_id: lead-21948963
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/21948963/
+  locator: Complete original abstract in 440-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.502827Z'
+  support: context_only
+  summary: Original staphylococcal normal/small-colony-variant comparison; complete
+    abstract read. Etest at pH 5.8/7.2 and paired isolate phenotypes are not a purified-protein
+    experiment.
+  snapshot_sha256: c9d7442abd0220bdc400ef5a8f61a8a4f46f8c3fa6d6d849be88a317d7b9cbeb
+- evidence_id: lead-21709093
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/21709093/
+  locator: Complete original abstract in 440-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.502827Z'
+  support: context_only
+  summary: Original healthy-volunteer pharmacokinetic/safety study; complete abstract
+    read. No antibacterial target or infection efficacy is inferred from healthy-person
+    exposure data. Attempted full routes yielded a challenge page or server error.
+  snapshot_sha256: c9d7442abd0220bdc400ef5a8f61a8a4f46f8c3fa6d6d849be88a317d7b9cbeb
+- evidence_id: lead-21709094
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/21709094/
+  locator: Complete original abstract in 440-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.502827Z'
+  support: context_only
+  summary: Original pH/activity study; main assay methods, relevant results and actual
+    Figure 1 read separately. Salt/purity not specified in inspected methods.
+  snapshot_sha256: c9d7442abd0220bdc400ef5a8f61a8a4f46f8c3fa6d6d849be88a317d7b9cbeb
+- evidence_id: lead-21596526
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/21596526/
+  locator: Complete original abstract in 440-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.502827Z'
+  support: context_only
+  summary: Original extracellular/intracellular S. aureus, L. monocytogenes and L.
+    pneumophila activity study; complete abstract read. Cell context, pH and accumulation
+    effects are not direct isolated-target evidence; no exact reagent form established.
+  snapshot_sha256: c9d7442abd0220bdc400ef5a8f61a8a4f46f8c3fa6d6d849be88a317d7b9cbeb
+- evidence_id: lead-21358200
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/21358200/
+  locator: Complete original abstract in 440-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.502827Z'
+  support: context_only
+  summary: Original healthy-volunteer urinary pharmacokinetics and bactericidal-titer
+    study; complete abstract read. Ex vivo urine activity is distinct from clinical
+    infection cure and purified target inhibition.
+  snapshot_sha256: c9d7442abd0220bdc400ef5a8f61a8a4f46f8c3fa6d6d849be88a317d7b9cbeb
+- evidence_id: lead-21245444
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/21245444/
+  locator: Complete original abstract in 440-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.502827Z'
+  support: context_only
+  summary: Original selected 34-strain Mueller-Hinton/synthetic-urine comparison;
+    complete abstract read. Medium and pH differences are essential. Full routes returned
+    a challenge page or server error, so full methods/material claims remain unverified.
+  snapshot_sha256: c9d7442abd0220bdc400ef5a8f61a8a4f46f8c3fa6d6d849be88a317d7b9cbeb
+- evidence_id: lead-20940181
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/20940181/
+  locator: Complete original abstract in 440-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.502827Z'
+  support: context_only
+  summary: Original isogenic E. coli resistance-background study; complete abstract
+    read. gyrA/parC/marR and plasmid-mediated determinant combinations qualify the
+    observed MICs; altered whole-cell susceptibility is not direct ligand binding.
+  snapshot_sha256: c9d7442abd0220bdc400ef5a8f61a8a4f46f8c3fa6d6d849be88a317d7b9cbeb
+- evidence_id: lead-20100879
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/20100879/
+  locator: Complete original abstract in 440-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.502827Z'
+  support: context_only
+  summary: Original 68-isolate A. baumannii study; methods, relevant results and actual
+    HCl structure figure read separately. Salt-specific material and pH limitations
+    remain explicit.
+  snapshot_sha256: c9d7442abd0220bdc400ef5a8f61a8a4f46f8c3fa6d6d849be88a317d7b9cbeb
+- evidence_id: reaxys-access
+  kind: search
+  reference: https://www.reaxys.com/#/search/quick?context=R&query=RX.RN%3D14830297
+  locator: Reaxys 14830297 public access attempt
+  accessed_at: '2026-10-21T16:09:16.961980Z'
+  support: unknown
+  summary: The request returned 403; exact Reaxys registry-graph equivalence remains
+    unresolved rather than inferred from matching other databases.
+  snapshot_sha256: a33a584371e7e5daf815d8d910bf0eebfe4605a75c73a9c06e03f5e89c8854b0
+  search_scope: Exact native Reaxys accession via public access only.
+- evidence_id: fulltext-access
+  kind: search
+  reference: 439440-fetch2.json; 439440-fetch3.json
+  locator: Exact original PMC3067158 and PMC3165282 full-text routes
+  accessed_at: '2026-10-21T16:20:09Z'
+  support: context_only
+  summary: PMC returned challenge HTML despite HTTP 200, and Europe PMC fullTextXML
+    returned 500. Those files were not treated as valid full papers. Their complete
+    indexed original abstracts were available and read. The 2017 paper instead yielded
+    valid XML and was inspected.
+  search_scope: Exact PMC and Europe PMC full-text routes for adopted originals; no
+    paid or restricted-source bypass.
+  snapshot_sha256: aa0741b1fc323923a7f5f0d633892aa715c48832dcb340665eab7a686c3e94ca
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB
+  locator: 439440-adapter-results.json; pre-web catalog
+  accessed_at: '2026-10-21T16:20:09Z'
+  support: context_only
+  summary: The structured catalog was consulted before protein follow-up. The native
+    finafloxacin record asserts no named target or pathway requiring an exact native
+    protein query. No class-level or abstract-only target assertion was added.
+  snapshot_sha256: 215a6327c9299c7dc2314fd136a687e5cb3d4af53bbfab11e9f388f307286495
+- evidence_id: gates
+  kind: record_content
+  reference: 440-focused-results.json
+  locator: Actual focused chemistry/schema/strict executions
+  accessed_at: '2026-10-21T16:20:09Z'
+  support: supports
+  summary: All three focused checks exit 0; source-mint, formula, mass and structure
+    consistency checks pass on the unchanged record.
+  snapshot_sha256: f9128de4fded3f40b45179f7c4e67b4351159251ed547a6175cce85f0de3f9db
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral stereodefined finafloxacin
+  outcome: supported
+  summary: Native identity, systematic name, two assigned S centres, charge, formula
+    and masses agree with current chemical authorities. Xtoro is correctly classified
+    as a brand, not an exact chemical synonym.
+  target_ids:
+  - CHEBI:85176
+  evidence_ids:
+  - native
+  - chebi
+  - pubchem
+  - chembl
+  - chemistry
+  - label
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical and drug identifiers
+  outcome: supported
+  summary: Checked exact PubChem and ChEMBL structures match. ARO resolves to the
+    same named compound. KEGG and DrugCentral are broader drug associations and also
+    happen to give matching graphs. Reaxys remains an explicit limited-access gap.
+  target_ids:
+  - CHEBI:85176
+  evidence_ids:
+  - chebi
+  - pubchem
+  - chembl
+  - aro
+  - kegg
+  - drugcentral
+  - chemistry
+  - reaxys-access
+- assessment_id: classification
+  area: scope
+  topic: Chemical class, antimicrobial roles and definition
+  outcome: supported
+  summary: Fluoroquinolone classification and antibacterial roles are coherent. The
+    definition treatment context agrees with the official otic-product indication;
+    this does not assert every strain is susceptible. No natural producer is asserted
+    for this synthetic drug.
+  target_ids:
+  - CHEBI:85176
+  evidence_ids:
+  - native
+  - chebi
+  - aro-class
+  - label
+  - acid2011
+- assessment_id: clinical
+  area: evidence
+  topic: Single FDA product assertion
+  outcome: supported
+  summary: Application 206307/product 001, sponsor, ingredient, brand, original approval
+    date, AP status and Prescription marketing category reconcile with the current
+    official response. GSRS graph and official label identify neutral finafloxacin.
+    Historical GSRS version 31 is preserved as provenance, not silently replaced by
+    current version 34.
+  target_ids:
+  - CHEBI:85176
+  evidence_ids:
+  - fda
+  - gsrs
+  - label
+  - label-figure
+  - owners
+  - chemistry
+- assessment_id: activity
+  area: evidence
+  topic: Exact preparation and assay context
+  outcome: supported
+  summary: Original studies support antibacterial finafloxacin preparations with enhanced
+    activity at particular acidic pH values. Explicit HCl material, unnamed manufacturer
+    powder and clinical suspension remain distinct. No unqualified MIC, MBC, resistance
+    phenotype or clinical-breakpoint assertion is imported into the neutral graph.
+  target_ids:
+  - CHEBI:85176
+  evidence_ids:
+  - acid2011
+  - acid2011-figure
+  - acinetobacter2010
+  - acinetobacter-figure
+  - burkholderia2017
+  - label
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional direct target and mode annotation
+  outcome: unknown
+  summary: The official label and paper introductions describe DNA gyrase/topoisomerase
+    IV at class/drug level. The inspected susceptibility/genetic studies are not themselves
+    direct binding experiments. A future primary mechanism annotation would need the
+    exact tested enzyme/taxon and material; the empty optional fields are not a defect.
+  target_ids:
+  - CHEBI:85176
+  evidence_ids:
+  - native
+  - aro-class
+  - lead-20940181
+  - burkholderia2017
+  - label
+  - adapter
+- assessment_id: resistance
+  area: completeness
+  topic: Optional resistance and activity_spectrum collections
+  outcome: unknown
+  summary: The adopted originals contain pH-dependent strain and resistance-background
+    observations, but no native resistance edge or quantitative collection is asserted.
+    Exact allele, strain, preparation, medium and endpoint would be required for later
+    enrichment.
+  target_ids:
+  - CHEBI:85176
+  evidence_ids:
+  - native
+  - local-search
+  - lead-20940181
+  - lead-21948963
+  - acinetobacter2010
+  - acid2011
+- assessment_id: documents
+  area: provenance
+  topic: Document and citation dispositions
+  outcome: supported
+  summary: The patent resolves to relevant finafloxacin formulations and all ten adopted
+    PMID leads have explicit reading-depth dispositions. Wikipedia is resolved only
+    as a document link. Reviews or class descriptions are not substituted for original
+    experimental evidence.
+  target_ids:
+  - CHEBI:85176
+  evidence_ids:
+  - patent
+  - owners
+  - lead-28438936
+  - lead-25264128
+  - lead-21948963
+  - lead-21709093
+  - lead-21709094
+  - lead-21596526
+  - lead-21358200
+  - lead-21245444
+  - lead-20940181
+  - lead-20100879
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership and seed history
+  outcome: supported
+  summary: All six seed/reseed events, source concepts and actual source rows were
+    read. Original inputs remain unchanged; FDA and ARO owners were appended before
+    judgment. No substantive native correction is established.
+  target_ids:
+  - CHEBI:85176
+  evidence_ids:
+  - native
+  - owners
+  - gates
+- assessment_id: validation
+  area: schema
+  topic: Focused native checks
+  outcome: supported
+  summary: Native schema, strict and independent chemistry checks pass. External-source
+    limits remain explicit rather than being treated as automatic validation.
+  target_ids:
+  - CHEBI:85176
+  evidence_ids:
+  - gates
+  - chemistry
+findings: []
+actions:
+- action_id: A1
+  description: If enriching optional mechanism or activity fields, resolve exact preparation
+    and experimental endpoint before transferring the available primary results.
+  finding_ids: []
+  target_ids:
+  - CHEBI:85176
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual adopted ARO definition/classification and citation owner
+  acceptance_checks:
+  - Keep neutral finafloxacin, explicitly drawn HCl preparations and formulated XTORO
+    distinct; document potency basis if a numeric assay is curated.
+  - Retain assay medium/pH, exact strain or allele and MIC/MBC/intracellular/clinical
+    endpoint; do not infer direct binding from susceptibility shifts.
+  - Use a directly inspected original protein experiment for any primary molecular
+    target, retaining organism and experimental material.
+  - Missing optional fields alone do not require curation or change the current verdict.
+limitations:
+- All ten adopted PMID leads were read at complete original abstract depth. The 2010
+  A. baumannii and 2011 pH-spectrum originals were read for methods/relevant results
+  and actual figures; the 2017 original was inspected through valid full XML for preparation
+  and endpoint scope. Other adopted originals remain at abstract depth.
+- Full routes for PMC3067158 and PMC3165282 returned challenge HTML or server errors.
+  These failures do not establish absence of full text elsewhere, and uninspected
+  methods were not inferred.
+- Every numeric table cell and raw dataset was not independently reanalyzed. The 2017
+  pathogen-model paper is used only for published material and endpoint boundaries;
+  no experimental protocol or clinical recommendation is generated.
+- The patent HTML was inspected for relevant definition, preferred salt and example
+  scope; its 37-page scanned PDF was retrieved, with only one contextual page visually
+  inspected. No uninspected patent structural figure or every formulation claim is
+  asserted as verified.
+- Reaxys 14830297 returned 403. CAS 209342-40-5 agrees with the official FDA label,
+  but an independent CAS registry graph was not obtained.
+- Current Drugs@FDA and GSRS are timestamped observations. They corroborate the stored
+  product assertion without proving retail availability or making the historical GSRS
+  record version erroneous.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Native files, maintained owners and immutable reviews were not edited. Original
+  hashes were retained and all expanded inputs rechecked. Optional links, tags and
+  notes were checked specifically for finafloxacin.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206307
+- https://doi.org/10.1128/AAC.00833-10
+- https://doi.org/10.1128/AAC.01637-09
+tags:
+- finafloxacin
+- fluoroquinolone
+- fda-product
+- assay-material
