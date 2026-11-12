@@ -1,0 +1,611 @@
+schema_version: 1.0.0
+review_id: 20261021T193811Z-lascufloxacin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Lascufloxacin: supported native identity and antibacterial classification'
+started_at: '2026-10-21T19:16:36Z'
+finished_at: '2026-10-21T19:38:11Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: No confirmed defect was found in the native record. The neutral (3S,4S) graph
+  agrees with its adopted PubChem source, current ChEBI and the official WHO INN description.
+  The sole cited primary study supports the fluoroquinolone antibacterial classification
+  and provides enzyme and susceptibility evidence, but its structure figure explicitly
+  depicts the hydrochloride. Optional quantitative enrichment must preserve that material
+  boundary. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/lascufloxacin.yaml
+    sha256: ec708ed5d823e1ee0cf050b6b0c70efaaced5893f0672f4dcd74c7a1c35673a5
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-65024a8863
+  path: data/antibiotics/antibacterial/lascufloxacin.yaml
+  label: lascufloxacin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Actual maintained source input for the record
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 594; one entire native record. Thirteen initial hashes
+    were verified unchanged before assessment, and actual ARO/PubChem source owners
+    were appended, producing sixteen captured inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-65024a8863
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/lascufloxacin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/lascufloxacin.yaml --out /private/tmp/am-review-session/594-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 594
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-comparison
+  name: Independent authority chemistry comparison
+  status: passed
+  required: false
+  summary: All six independently parsed native, PubChem and ChEBI SMILES/InChI representations
+    agree on the same neutral formula, full key and two S stereocentres.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/594-compare.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/lascufloxacin.yaml
+  locator: Complete native file, including source concept, structural fields, two
+    exact xrefs and all three history events.
+  accessed_at: '2026-10-21T19:31:18Z'
+  support: supports
+  summary: The SEEDED MINTED ARO record is neutral C21H24F3N3O4, key ZFIOCUITTUUVPV-MEDUHNTESA-N.
+    Its definition states only that lascufloxacin is a fluoroquinolone antibiotic.
+    The parent and structural class both use ARO0000001. No specific target, mode,
+    MIC, resistance, clinical, producer, dataset or causal-graph object is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv:372; data/raw/pubchem_structures.tsv:127;
+    conf/sources.yaml; scripts/extract_source_inventory.py; scripts/enrich_pubchem_structures.py;
+    scripts/seed_from_sources.py
+  locator: Exact maintained rows and applicable extraction, PubChem fallback, class
+    and definition/reference seeding branches.
+  accessed_at: '2026-10-21T19:31:18Z'
+  support: supports
+  summary: ARO3007024 supplies the definition, parent and sole PMID28320717. PubChem71528768
+    supplies every native structural property and retrieval date. No adopted ChEBI
+    row supplies this source concept. The minted identifier is reproducible and all
+    initial hashes were retained before actual owners were appended.
+  snapshot_sha256: 8278e003f7268ce5f36a2094f4ff8a72739719a19ae5417b9eb6bc067a2d1de9
+- evidence_id: local-search
+  kind: search
+  reference: /private/tmp/am-review-session/594-local-hits.txt
+  locator: Identifier, label and slug search including ignored and hidden files; all
+    returned paths inspected as an inventory.
+  accessed_at: '2026-10-21T19:31:18Z'
+  support: context_only
+  summary: Matches include source/native/generated material and historical research
+    ledgers. These ledgers were not used as primary scientific support. Whole-native
+    and exact-row inspection establish the present claim inventory and absence of
+    optional objects.
+  snapshot_sha256: de77c6aaae5c1157c711f498dfe244e91541b150601764a94bf8ff95118436b6
+  search_scope: 2026-10-21; exact lascufloxacin, ARO3007024, CID71528768, native slug
+    and key. Local searches included ignored and hidden files. Europe PMC exact-label
+    plus mechanism/gyrase/structure/KRP-AM1977 query returned six records; all abstracts
+    inspected. Bounded official naming follow-up.
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Current ARO3007024 and ARO0000001 terms independently extracted and fully
+    read.
+  accessed_at: '2026-10-21T15:57:42Z'
+  support: supports
+  summary: Current ARO reproduces the exact compound definition, sole citation and
+    PubChem association. ARO0000001 is the broader fluoroquinolone class. Its class-level
+    mechanism prose is not a native direct-subunit binding assertion. Shared snapshot
+    retrieved 2026-10-21T15:57:42Z.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/71528768
+  locator: Complete current structure response and independent graph parsing.
+  accessed_at: '2026-10-21T19:29:09Z'
+  support: supports
+  summary: Both current PubChem serializations reproduce the native neutral two-centre
+    graph. Formula, charge, average mass at source precision, monoisotopic mass and
+    minted identity pass focused chemistry checks.
+  snapshot_sha256: 641fb44877b4cf6f5c5c95d591a0bc3d5d3a51bd95e212f3f0967019b8b86279
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/759924/
+  locator: Complete current official entry and both structure strings.
+  accessed_at: '2026-10-21T19:29:09Z'
+  support: supports
+  summary: The current two-star ChEBI entry matches the native graph and antibacterial
+    role. It is not in the adopted three-star source inventory and does not retroactively
+    make the historical minted grounding erroneous. Any future grounding change needs
+    a maintained source adoption decision.
+  snapshot_sha256: 823b4abc4613d5312b80b54dd3ab1ed78717e7dba0741e214aa59791b8a2a0fe
+- evidence_id: diagnostic
+  kind: validation
+  reference: /private/tmp/am-review-session/594-authority-chemistry.json
+  locator: Independent comparison of six structural serializations.
+  accessed_at: '2026-10-21T19:31:18Z'
+  support: supports
+  summary: Native, PubChem and ChEBI SMILES/InChI all give ZFIOCUITTUUVPV-MEDUHNTESA-N
+    and two S centres. The graph has no chloride component, consistent with the free
+    compound rather than the hydrochloride.
+  snapshot_sha256: 78480db983283e955c08cb3717c66099255eebbd8c2c9cc3171525da4c4fb649
+- evidence_id: official-identity
+  kind: authority
+  reference: https://www.pmda.go.jp/drugs/2020/P20201124002/230109000_30200AMX00957_B100_1.pdf
+  locator: Selected section 1.9 naming text and reproduced WHO Drug Information 29(3),2015,
+    INN List 74 pp405-406; PDF pages 83-84, with page 84 viewed.
+  accessed_at: '2026-10-21T19:30:00Z'
+  support: supports
+  summary: The WHO INN description explicitly identifies neutral lascufloxacin as
+    the (3S,4S) pyrrolidine-substituted quinoline carboxylic acid, formula C21H24F3N3O4.
+    The dossier separately names JAN lascufloxacin hydrochloride as the monohydrochloride.
+    This corroborates exact native identity without importing formulation status or
+    clinical claims into the neutral record.
+  snapshot_sha256: a6201c92ed06ccaaa09f9c71a3d54253e666c00c59cd1ba3e4d4fba7b3b4aa3b
+- evidence_id: primary-material
+  kind: primary_source
+  reference: PMID:28320717; DOI:10.1128/AAC.00120-17; PMC5444182
+  locator: Entire original main article read, including all four tables; original
+    Figure 1 visually inspected.
+  accessed_at: '2026-10-21T19:30:00Z'
+  support: supports
+  summary: Kyorin synthesized the study material. Figure 1 explicitly shows the (3S,4S)
+    skeleton with ·HCl, while the text uses lascufloxacin as the active-compound name.
+    The paper directly supports the broad antibacterial classification, but its quantitative
+    results should retain the hydrochloride material context rather than be described
+    as a separately tested neutral solid.
+  snapshot_sha256: 9107cba242e62805c7293fd44bff4f5e198eb838d76fca23dfe03a599cfb04f7
+- evidence_id: primary-activity
+  kind: primary_source
+  reference: PMID:28320717; DOI:10.1128/AAC.00120-17
+  locator: Original methods and complete Table 1.
+  accessed_at: '2026-10-21T19:29:25Z'
+  support: supports
+  summary: The study tested 600 Japanese clinical isolates collected 2013-2015, using
+    CLSI agar or broth dilution and a modified broth method for Mycoplasma pneumoniae.
+    MRSA n=100 had a 0.03-2 µg/mL range and MIC90 2 µg/mL; E. coli n=30 and P. aeruginosa
+    n=30 each had MIC90 >16 µg/mL. These population statistics support a qualified
+    spectrum, not uniform susceptibility, an individual-strain MIC or a clinical outcome.
+  snapshot_sha256: 688284456d227a26a950fdb2eaf36b5a41b0b0c3b9e0ee5ffb6a23c545f7d967
+- evidence_id: primary-resistance
+  kind: primary_source
+  reference: PMID:28320717; DOI:10.1128/AAC.00120-17
+  locator: Original Tables 2-3, methods and discussion.
+  accessed_at: '2026-10-21T19:29:25Z'
+  support: supports
+  summary: Sequential S. aureus, S. pneumoniae and E. coli mutants show increased
+    MICs with gyrA/parC mutations. Incomplete cross-resistance means reduced susceptibility
+    is still present. Table 3 reports single-step selection limits after approximately
+    70 h at 4, 8 and 16 times MIC; no selected colonies is not proof that resistance
+    cannot evolve. No native resistance claim needs correction.
+  snapshot_sha256: 688284456d227a26a950fdb2eaf36b5a41b0b0c3b9e0ee5ffb6a23c545f7d967
+- evidence_id: primary-enzymes
+  kind: primary_source
+  reference: PMID:28320717; DOI:10.1128/AAC.00120-17
+  locator: Original Table 4, footnotes and enzymatic methods.
+  accessed_at: '2026-10-21T19:29:25Z'
+  support: supports
+  summary: Purified recombinant S. aureus gyrase and topoisomerase IV assays give
+    wild-type IC50 values 1.7±0.4 and 0.73±0.06 µg/mL, respectively; GyrA Ser84Leu
+    and ParC Ser80Phe enzymes give 17±3 and 2.8±0.3 µg/mL. Human topoisomerase II
+    IC50 is >2400 µg/mL. These are enzyme-reaction inhibition measurements, not Kd
+    values or proof of direct binding to every purified subunit. They support bacterial
+    type II topoisomerase inhibition at the tested complex scope.
+  snapshot_sha256: 688284456d227a26a950fdb2eaf36b5a41b0b0c3b9e0ee5ffb6a23c545f7d967
+- evidence_id: later-leads
+  kind: primary_source
+  reference: PMID:33867268; PMID:37789839; PMID:30718243; PMID:36827005
+  locator: Complete original abstracts inspected in the bounded search; full later
+    papers not read for this record.
+  accessed_at: '2026-10-21T19:29:09Z'
+  support: context_only
+  summary: The 2021 anaerobe study supports additional spectrum. The 2023 repeated-exposure
+    study detects E. coli resistance after prolonged exposure and does not negate
+    the bounded 2017 single-step result. The 2019 epithelial-lining-fluid study concerns
+    host transport and phospholipid binding, not the antibacterial target. The 2023
+    NHCAP article is a study protocol involving hydrochloride, not proof of a completed
+    neutral-material efficacy trial.
+  snapshot_sha256: d3be9995a0ce0cdfddfe455b32af0ebeaa56ddfd355ed2e6ea083f36eb0f746e
+- evidence_id: review-lead
+  kind: database
+  reference: PMID:34452252; DOI:10.3390/pharmaceutics13081289
+  locator: Complete review abstract inspected as a secondary discovery lead only.
+  accessed_at: '2026-10-21T19:29:09Z'
+  support: context_only
+  summary: The 2021 review describes quinolone classification and formulation context.
+    It was not used as primary proof of an exact antibacterial target, clinical effect
+    or stereochemistry.
+  snapshot_sha256: d3be9995a0ce0cdfddfe455b32af0ebeaa56ddfd355ed2e6ea083f36eb0f746e
+- evidence_id: search
+  kind: search
+  reference: Europe PMC and bounded official-source search,2026-10-21
+  locator: Six exact lascufloxacin mechanism/structure search results; all titles
+    and complete abstracts read, with the adopted original obtained in full.
+  accessed_at: '2026-10-21T19:29:09Z'
+  support: context_only
+  summary: The search found the adopted antibacterial study plus five later primary/review
+    leads. Official naming documents were inspected to separate free lascufloxacin
+    from hydrochloride. The search was bounded and does not claim exhaustive absence
+    of later evidence.
+  snapshot_sha256: d3be9995a0ce0cdfddfe455b32af0ebeaa56ddfd355ed2e6ea083f36eb0f746e
+  search_scope: 2026-10-21; exact lascufloxacin, ARO3007024, CID71528768, native slug
+    and key. Local searches included ignored and hidden files. Europe PMC exact-label
+    plus mechanism/gyrase/structure/KRP-AM1977 query returned six records; all abstracts
+    inspected. Bounded official naming follow-up.
+- evidence_id: adapter-scope
+  kind: database
+  reference: Structured-source applicability for the native claim inventory
+  locator: Native review before mechanism follow-up.
+  accessed_at: '2026-10-21T19:31:18Z'
+  support: context_only
+  summary: No native gene, protein target, locus, pathway, stress response or transcriptomic
+    dataset is asserted. The broad chemical class alone did not require a matched
+    iModulon query. Literature-derived enzymology is assessed directly at its experiment
+    scope, without constructing a new target or transcriptomic assertion.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral exact compound and salt boundary
+  outcome: supported
+  summary: The native neutral (3S,4S) structure agrees across authorities and official
+    INN naming. The original activity figure depicts hydrochloride; that does not
+    invalidate the neutral compound identity or its broad antibacterial classification,
+    but must qualify any new quantitative assay curation.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  evidence_ids:
+  - native
+  - pubchem
+  - chebi
+  - diagnostic
+  - official-identity
+  - primary-material
+- assessment_id: grounding
+  area: grounding
+  topic: Exact references, broader parent and minted rationale
+  outcome: supported
+  summary: Both native exact xrefs resolve to the intended compound. The class parent
+    is broader. Current two-star ChEBI agreement is useful corroboration, not an automatic
+    requirement to replace the adopted minted identity.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  evidence_ids:
+  - aro
+  - pubchem
+  - chebi
+  - owners
+- assessment_id: activity
+  area: evidence
+  topic: Definition and antibacterial class
+  outcome: supported
+  summary: The sole cited original directly identifies and tests lascufloxacin as
+    a fluoroquinolone antibacterial agent. The native definition does not overstate
+    clinical efficacy, uniform susceptibility or resistance protection.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  evidence_ids:
+  - primary-material
+  - primary-activity
+  - primary-resistance
+  - native
+- assessment_id: mechanism
+  area: evidence
+  topic: Compound-specific target experiments and scope
+  outcome: supported
+  summary: The primary study supports inhibition of bacterial gyrase and topoisomerase
+    IV complexes. No native direct-subunit binding assertion exists. Optional mode
+    and target enrichment is supportable with material, species and assay qualifications;
+    its absence alone is not a defect.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  evidence_ids:
+  - primary-enzymes
+  - adapter-scope
+  - later-leads
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership and history
+  outcome: supported
+  summary: ARO and PubChem rows reproduce the native identity, definition and source
+    dates. All three history events are consistent with seeding; no review status
+    is claimed. Actual owner captures were appended without changing initial hashes.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  evidence_ids:
+  - native
+  - owners
+  - local-search
+- assessment_id: coverage
+  area: completeness
+  topic: Complete asserted-field audit and optional enrichment
+  outcome: supported
+  summary: The whole record, all asserted chemical/class references and the sole adopted
+    primary citation were inspected. The original full article and its decisive structure
+    figure were read. Optional MIC, target, resistance and clinical objects are not
+    required to call the current simple definition supported.
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  evidence_ids:
+  - native
+  - primary-material
+  - primary-activity
+  - primary-enzymes
+  - search
+findings: []
+actions:
+- action_id: A1
+  description: Preserve experimental and material scope in any optional biological
+    enrichment.
+  finding_ids: []
+  target_ids:
+  - antibioticmech:aro-65024a8863
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/lascufloxacin.yaml
+    role: Curator-owned mechanism and activity evidence through the validated writer
+  acceptance_checks:
+  - Represent the hydrochloride shown in the 2017 Figure 1 when attaching quantitative
+    results; do not silently assert a separately tested neutral solid.
+  - Keep Table 1 population MIC50/MIC90 statistics distinct from individual strains;
+    preserve censored values and methods.
+  - Use enzyme-reaction inhibition at gyrase/topoisomerase IV complex scope, not Kd
+    or direct binding to each subunit. Preserve the limited selection duration and
+    detection limits for resistance observations.
+limitations:
+- The complete 2017 primary main text and all four tables were read, with Figure 1
+  viewed. The figure explicitly depicts hydrochloride; exact purity and free-versus-salt
+  mass normalization are not specified in the inspected main text.
+- The official 115-page dossier was read only at selected naming sections and reproduced
+  WHO INN pages 83-84; no complete clinical or regulatory audit is claimed because
+  the native record contains no such assertion.
+- Later studies were read at complete-abstract depth only, and the 2021 review was
+  a secondary lead. Their quantitative findings were not converted into native data.
+- The native record remains SEEDED. Optional mechanism, activity and clinical enrichment
+  was not performed, and a successful deterministic check does not promote scientific
+  status.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All initial thirteen hashes are preserved; actual ARO/PubChem owners give sixteen
+  captured inputs. Fetch manifests retain actual timestamps, URLs, statuses and SHA256
+  values. Europe PMC full XML returned 500, while the public PMC main HTML was retrieved
+  and read successfully.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
