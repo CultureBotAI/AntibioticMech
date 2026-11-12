@@ -1,0 +1,900 @@
+schema_version: 1.0.0
+review_id: 20261021T194850Z-licoricidin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Licoricidin: wrong LIPID MAPS exact link and malformed inherited synonyms'
+started_at: '2026-10-21T19:32:07Z'
+finished_at: '2026-10-21T19:48:50Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The complete native record and actual source owner were reviewed. The native
+  3R, 5-methoxy structure is positively supported by the original 1988 structural
+  revision and agrees with current ChEBI, PubChem and KEGG. The asserted LIPID MAPS
+  accession instead encodes a different constitution and undefined C3 stereochemistry.
+  Two inherited exact synonyms contain malformed locant/stereo text. Primary antibacterial
+  activity is supported; PBP2′ inhibition remains a hypothesis rather than a demonstrated
+  binding target.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/licoricidin.yaml
+    sha256: 7f36b9e9161f3075b04ef9f553996e51c01797b91384b8ff33052bbd8b00bf77
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+targets:
+- target_id: CHEBI:69082
+  path: data/antibiotics/antibacterial/licoricidin.yaml
+  label: licoricidin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 601; one exact native record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:69082
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Executed in batch061; chemistry used
+    the existing batch019 RDKit interpreter and native validators used batch061.
+  target_ids:
+  - CHEBI:69082
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    601
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed in batch061; chemistry used
+    the existing batch019 RDKit interpreter and native validators used batch061.
+  target_ids:
+  - CHEBI:69082
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/licoricidin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed in batch061; chemistry used
+    the existing batch019 RDKit interpreter and native validators used batch061.
+  target_ids:
+  - CHEBI:69082
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/licoricidin.yaml --out /private/tmp/am-review-session/601-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:69082
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:69082
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:69082
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:69082
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:69082
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:69082
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:69082
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:69082
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:69082
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/licoricidin.yaml
+  locator: Entire native, all synonyms, parents, role, four chemical xrefs, source
+    and three history events
+  accessed_at: '2026-10-21T19:40:03Z'
+  support: supports
+  summary: Native is an exact neutral C26H32O5 3R isoflavan with 5-methoxy, 7/2′/4′-hydroxy
+    and 6/3′-prenyl substitution, SEEDED from CHEBI:69082. The definition asserts
+    G. uralensis isolation and antibacterial activity. No separate structured target,
+    resistance, activity spectrum, producer, product or causal graph objects are present.
+    Two of three exact synonyms contain problematic 7′ and E notation.
+  snapshot_sha256: 7f36b9e9161f3075b04ef9f553996e51c01797b91384b8ff33052bbd8b00bf77
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Complete row 1750 and readiness row 1534
+  accessed_at: '2026-10-21T19:40:03Z'
+  support: context_only
+  summary: The ChEBI row owns native identity, structure, parents, role, all four
+    exact chemical links, synonyms and five adopted PMID leads. Source extraction
+    and seeding own generated fields. All original 13 hashes were preserved; actual/readiness/guidance
+    context was expanded to 21 before detailed judgment. No exact decisions override
+    was identified.
+  snapshot_sha256: 671259d4a2ee8dcaa06793a03d1d1c9acdd05d0185c1130ecb2dd6fb4a98ca92
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/601-context-search.txt
+  locator: Preserved initial search and exact ignored-inclusive owner search
+  accessed_at: '2026-10-21T19:40:03Z'
+  support: context_only
+  summary: Searches included hidden and ignored curation, configuration, scripts and
+    raw inventories for CHEBI:69082 and licoricidin. Related licorisoflavan A rows
+    were discovery context, not substituted for the exact target.
+  snapshot_sha256: c2b8f4ed5431581fb58d33af739c0d70d0aec7e20e14060bcc281894f0a126d4
+  search_scope: Initial601-local-hits plus rg --no-ignore --hidden for exact identifier
+    and label across curation, conf, scripts and data/raw.
+- evidence_id: adapter
+  kind: search
+  reference: kg-microbe-sources imodulondb
+  locator: Applicability of native claim content
+  accessed_at: '2026-10-21T19:40:03Z'
+  support: context_only
+  summary: Native contains no named gene, protein, pathway, regulator or transcriptomic
+    assertion. Structured source querying is not applicable to the native claims;
+    literature-only PBP and host-cell observations are independently qualified below.
+  snapshot_sha256: f499e628cd7d71c66f837f7adf0f5818951f45a9d23f25bd9c368521f8866023
+  search_scope: Entire native definition and structured fields inspected for skill
+    triggers; no applicable native named molecular claim.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/69082/
+  locator: Complete current compound, names, structure, roles and citations
+  accessed_at: '2026-10-21T19:35:47.505041Z'
+  support: partial
+  summary: Current ChEBI reproduces native full key GBRZTUJCDFSIHM-KRWDZBQOSA-N and
+    both problematic synonym strings. The ChemIDplus-derived synonym adds an E descriptor
+    to 3-methylbut-2-enyl, although that alkene terminus has two identical methyl
+    substituents. The other uses 7′ where native requires unprimed ring position7.
+    The correctly specified first IUPAC synonym agrees with the graph.
+  snapshot_sha256: f50843c226b45d8a62d2911d704672d7ff9709993ba95aacf11f0bd74fa3fa58
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/licoricidin/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass/JSON
+  locator: Independent name lookup CID480865, full property response
+  accessed_at: '2026-10-21T19:35:47.508244Z'
+  support: supports
+  summary: The additional PubChem comparator supplies the native 3R graph, formula
+    and full key. PubChem is not itself an asserted native xref, so no unasserted
+    lookup is treated as a native grounding defect.
+  snapshot_sha256: 9c8ba23f4ec37d910b11298c017dbc7b41c9007aca1e187c8dd6bf04c379db4c
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/C16986
+  locator: Complete C16986 entry and downloaded molfile
+  accessed_at: '2026-10-21T19:35:47.508507Z'
+  support: supports
+  summary: KEGG resolves licoricidin, C26H32O5 and CAS30508-27-1, and its molfile
+    independently reconstructs the same 3R native graph. Its cross-link to LIPID MAPS
+    does not validate the latter graph. The KEGG PubChem database link is not assumed
+    to be an exact CID merely from its number.
+  snapshot_sha256: 60d75e8cef58ef1c6e9c0b8ed4075285d7c6d87d29ad38a7f33c93831c1644fd
+- evidence_id: kegg-mol
+  kind: authority
+  reference: https://rest.kegg.jp/get/C16986/mol
+  locator: Full current molfile including stereobond
+  accessed_at: '2026-10-21T19:35:47.513052Z'
+  support: supports
+  summary: The original molfile independently yields GBRZTUJCDFSIHM-KRWDZBQOSA-N and
+    a single R centre.
+  snapshot_sha256: 114c6beea8166bdab3029df7ef6ae856eef3c345066e52ffc27330ac18b8647f
+- evidence_id: lipidmaps
+  kind: authority
+  reference: https://www.lipidmaps.org/rest/compound/lm_id/LMPK12080045/all/json
+  locator: Complete asserted LMPK12080045 SMILES/InChI and systematic name
+  accessed_at: '2026-10-21T19:35:47.505413Z'
+  support: refutes
+  summary: The asserted accession returns HWJXKLRHGKKFBY-SOFGYWHQSA-N. Both encodings
+    place methoxy at 7 and hydroxyl at 5, shift the B-ring side chain to aryl–CH=CH–CH(CH3)2
+    with E geometry, and omit C3 absolute stereochemistry. This is a different constitutional
+    graph from native aryl–CH2–CH=C(CH3)2 with 5-methoxy/7-hydroxy substitution. Equal
+    formula and mass do not establish exact equivalence.
+  snapshot_sha256: 69e326b8d7888b6d66100d102b00340b7b185aec5cf14fc74f08a4e459e06d0d
+- evidence_id: map
+  kind: validation
+  reference: /private/tmp/am-review-session/601-authority-map.json
+  locator: Independent nine-encoding RDKit comparison, with actual mapped diagram601-authority-map.png
+    viewed
+  accessed_at: '2026-10-21T19:40:03Z'
+  support: supports
+  summary: Native, ChEBI and PubChem SMILES/InChI plus KEGG molfile all give the native
+    full key and one R centre. LIPID MAPS SMILES and InChI agree with each other on
+    the different full key and one undefined centre. The mapped graph verifies changes
+    in methoxy/hydroxy placement and B-ring side-chain double-bond position. Native
+    SMILES atoms 8–9 and 22–23 are prenyl alkenes with duplicate methyl substituents;
+    neither can carry E/Z.
+  snapshot_sha256: e40db9c8aa09f9a075fbe62b81e1cda1fd0dd33450ad09472734f25639a477d3
+- evidence_id: term-76250
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/76250/
+  locator: Complete current parent definition
+  accessed_at: '2026-10-21T19:35:48.092807Z'
+  support: supports
+  summary: Hydroxyisoflavans require ring hydroxyl substitution on the isoflavan skeleton;
+    native has three such groups.
+  snapshot_sha256: 0d7e9b8682af888a75f1ce4c32de0fb41f42f062e049d7d3050dc6c9ca0e50b9
+- evidence_id: term-77002
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/77002/
+  locator: Complete current parent definition
+  accessed_at: '2026-10-21T19:35:48.105608Z'
+  support: supports
+  summary: Methoxyisoflavans require ring methoxy substitution on the isoflavan skeleton;
+    native has C5 methoxy.
+  snapshot_sha256: 0762ec96ccb2263ef73d1e9b648438ecbdbf83e70c5bff7c824c738e7cb2eb67
+- evidence_id: term-35618
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/35618/
+  locator: Previously retrieved current aromatic ether definition
+  accessed_at: '2026-10-21T19:24:41Z'
+  support: supports
+  summary: The aryl methoxy group satisfies the aromatic ether definition. This source
+    was retained from the actual earlier timestamp, not described as a new retrieval.
+  snapshot_sha256: 313f535b9f2b86e55b4da02cdd6f05e29bea628f236abdb72d96bee2d1900891
+- evidence_id: term-33282
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/33282/
+  locator: Previously retrieved antibacterial role definition
+  accessed_at: '2026-10-21T19:24:36Z'
+  support: supports
+  summary: The role covers killing or slowing bacterial growth; exact MRSA observations
+    directly support it.
+  snapshot_sha256: 20d92ce7e00c204b1753184671c043160821d692438278344335446aadcd5082
+- evidence_id: registry-limits
+  kind: authority
+  reference: CAS:30508-27-1; Reaxys:5362788
+  locator: Current ChEBI/KEGG associations and access ledger
+  accessed_at: '2026-10-21T19:40:03Z'
+  support: unknown
+  summary: The CAS number is consistently associated by current ChEBI and KEGG, but
+    the Common Chemistry detail endpoint returned 401. Reaxys returned 403. Their
+    exact registry contents were not independently reconciled; failed access is not
+    evidence of a mismatch.
+  snapshot_sha256: e20a34badce709d28ab4cbe9f38f37ecbf5b49bcb2f10f8f5163b83829a593c9
+- evidence_id: '1968'
+  kind: primary_source
+  reference: PMID:5710927; DOI:10.1248/cpb.16.1932
+  locator: Actual original first page 1932
+  accessed_at: '2026-10-21T19:36:14.178505Z'
+  support: context_only
+  summary: The original publication reported positive rotation and proposed 7-methoxy/5-hydroxy
+    licoricidin from commercial licorice. This is retained as the historical proposal,
+    not mistaken for current structural support. The later authentic-material structural
+    revision explicitly supersedes that assignment. Only the initial page was read
+    for this historical comparison.
+  snapshot_sha256: c6d5bd9edd499f80fba550715bbe7011b0b1c2fe63decd3118b0469b4cfe1aa8
+- evidence_id: revision1988
+  kind: primary_source
+  reference: DOI:10.3987/COM-88-4650
+  locator: Full five-page original; actual Figure 1/Table 1 p2310 and NOE/CD text
+    p2312 viewed
+  accessed_at: '2026-10-21T19:37:40.280461Z'
+  support: supports
+  summary: The authors isolated 500 mg from 4.8 kg Sipei licorice and established
+    identity with authentic licoricidin by mixed melting point and proton NMR comparison.
+    They explicitly revised 7-methoxy to 5-methoxy using methoxy carbon shift, long-range
+    selective proton decoupling and triacetate NOEs. Figure 1 compound 1 has 7/2′/4′
+    hydroxyls and both normal prenyl groups. The text explicitly assigns 3R from CD.
+    This original directly supports native constitution and stereo while explaining
+    the obsolete methoxy placement in older naming.
+  snapshot_sha256: c236deedbda5e415a3cff2f759042cfd2fe2907614df8487992f7df75ccd5149
+- evidence_id: 2011-structure
+  kind: primary_source
+  reference: PMID:22074222; DOI:10.1021/np2004775
+  locator: Official SI actual FigureS1 page 1; Isolation pages16–17; complete abstract
+  accessed_at: '2026-10-21T19:32:56.874396Z'
+  support: supports
+  summary: The actual SI drawing for compound 1 (R = H in its substituent legend)
+    has native 5-methoxy/7-hydroxy constitution and the corresponding 3R stereobond.
+    Compound 2 is the additional 7-O-methyl derivative, not licoricidin. Multiple
+    isolation procedures explicitly recover compound 1 from the G. uralensis extract.
+    The copper oxidation scheme is a purification-artifact explanation, not an antibacterial
+    mechanism. Main article remained 403.
+  snapshot_sha256: bb2e36884535f43f6ec19e1dcb47c7b4fb9c512fdbae1332eb78eb6a044f967b
+- evidence_id: mrsa
+  kind: primary_source
+  reference: PMID:10993226; DOI:10.1248/cpb.48.1286
+  locator: Exact compound 33 in actual Chart 2 p1289 and Table 1 p1288; isolation
+    and full antibacterial sections
+  accessed_at: '2026-10-21T19:25:36Z'
+  support: supports
+  summary: The isolated material is licoricidin 33; the actual drawing has 5-methoxy,7-hydroxy,
+    two normal prenyl groups and native-compatible 3R stereochemistry. Its yield was
+    0.15% of the ethyl acetate extract; source plant was tentatively G. uralensis
+    based on phenolic profile. MIC was 16 µg/mL for MRSA OM481/OM505/OM584/OM623 and
+    MSSA 209P, and >128 µg/mL for E. coli K12/P. aeruginosa PAO1. The liquid dilution
+    screen used 10^4 CFU/well in 96-well plates, with additional generic details deferred
+    to a cited method.
+  snapshot_sha256: de3c10db9636ec3839014bd0994bf5f72af7509eec44e400418b5b5096d73563
+- evidence_id: oxacillin
+  kind: primary_source
+  reference: PMID:10993226; DOI:10.1248/cpb.48.1286
+  locator: Actual Table 2/Figures 2–3 p1290; relevant Results/Methods pp1289–1291
+  accessed_at: '2026-10-21T19:25:36Z'
+  support: partial
+  summary: Adding licoricidin 8 µg/mL reduced oxacillin MICs from 512/64/256/512 to
+    <0.5 µg/mL in the four MRSA strains; at 4 µg/mL licoricidin, values were 16/8/16/16
+    µg/mL. PBP2′ remained detectable by antibody-latex agglutination in OM481. This
+    demonstrates phenotypic potentiation without loss of detectable PBP2′, not purified
+    enzyme inhibition or direct binding. The body discusses an uncertain PBP-function
+    hypothesis and alternative affinity effects. Figure 2 caption specifies oxacillin
+    1 µg/mL, whereas Results prose says 10 µg/mL; that source inconsistency prevents
+    unqualified quantitative transfer of its time-course condition.
+  snapshot_sha256: de3c10db9636ec3839014bd0994bf5f72af7509eec44e400418b5b5096d73563
+- evidence_id: adopted2002
+  kind: primary_source
+  reference: PMID:12127165; DOI:10.1016/S0024-3205(02)01864-7
+  locator: Complete original abstract; publisher full body returned 403
+  accessed_at: '2026-10-21T19:35:48.037679Z'
+  support: partial
+  summary: The abstract identifies licoricidin from G. uralensis among pure compounds
+    inhibiting H. pylori, including a clarithromycin/amoxicillin-resistant strain.
+    The exact strain names, numerical MICs, reagent stereochemical characterization
+    and full assay conditions were not recovered. Activity of the new gancaonols and
+    other isolated compounds is not transferred to licoricidin.
+  snapshot_sha256: 56358233eb2d9bb6f4c6b90af6e588be9705ed75629bae601cf302b71a6c10ac
+- evidence_id: adopted2010host
+  kind: primary_source
+  reference: PMID:20487583; DOI:10.1017/S0007114510002114
+  locator: Accessible full publisher text; exact isolation, NMR data, licoricidin-specific
+    results and Methods
+  accessed_at: '2026-10-21T19:36:14.179101Z'
+  support: context_only
+  summary: The original separated licoricidin from a G. uralensis hexane–ethanol extract,
+    using chromatography and recrystallization, and compared proton/carbon NMR and
+    MS against the 1988 revision. Figure 5 caption gives exact spectral assignments,
+    including four prenyl methyl singlets and two olefinic protons. Pure-compound
+    DU145 migration/protein-response experiments are distinct from extract HEGU assays
+    and concern host cancer cells. They do not provide a bacterial target or antimicrobial
+    endpoint. Full comparator-extract plots were not independently digitized.
+  snapshot_sha256: 848e7e451e139aacbf4efaa693a885dc05a868a684c43be9f3b524de20e90162
+- evidence_id: adopted2010macrophage
+  kind: primary_source
+  reference: PMID:20722535; DOI:10.1902/jop.2010.100342
+  locator: Complete original abstract; full publisher page returned 403
+  accessed_at: '2026-10-21T19:35:48.037679Z'
+  support: context_only
+  summary: Licoricidin and licorisoflavan A were tested in human macrophages stimulated
+    by A. actinomycetemcomitans LPS. Cytokine/MMP secretion and NF-κB/AP-1 measurements
+    are host-response assays. LPS stimulation does not mean a live-bacterium inhibition
+    assay, and reduced secretion does not establish direct binding to each named protein.
+    No such target is asserted natively.
+  snapshot_sha256: 56358233eb2d9bb6f4c6b90af6e588be9705ed75629bae601cf302b71a6c10ac
+- evidence_id: adopted2011review
+  kind: database
+  reference: PMID:21851508; DOI:10.1111/j.1601-0825.2011.01842.x
+  locator: Complete indexed abstract and publication type; main returned 403
+  accessed_at: '2026-10-21T19:35:48.037679Z'
+  support: context_only
+  summary: This is a secondary review of licorice/orodental studies. It is treated
+    as a discovery/context lead, not independent primary evidence for licoricidin-specific
+    activity, clinical efficacy or mechanism.
+  snapshot_sha256: 56358233eb2d9bb6f4c6b90af6e588be9705ed75629bae601cf302b71a6c10ac
+- evidence_id: adopted2011activity
+  kind: primary_source
+  reference: PMID:22074222; DOI:10.1021/np2004775
+  locator: Complete abstract, with independently mapped compound 1 in official SI
+  accessed_at: '2026-10-21T19:35:48.037679Z'
+  support: partial
+  summary: The abstract reports compound 1 licoricidin and compound 2 licorisoflavan
+    A among the more active oral-pathogen inhibitors. Licoricidin concentrations associated
+    with marked growth inhibition were 10 µg/mL for S. mutans/S. sobrinus and 5 µg/mL
+    for P. gingivalis/P. intermedia. These abstract descriptions are not silently
+    relabeled MICs; strain and full method details remained inaccessible in the main
+    article.
+  snapshot_sha256: 56358233eb2d9bb6f4c6b90af6e588be9705ed75629bae601cf302b71a6c10ac
+- evidence_id: oral2021
+  kind: primary_source
+  reference: PMID:33562595; DOI:10.3390/antibiotics10020163
+  locator: Full main XML read, including Methods and Tables 1–2; plot captions, not
+    digitized image data
+  accessed_at: '2026-10-21T19:36:14.178854Z'
+  support: partial
+  summary: Commercial EMMX licoricidin was dissolved in DMSO; catalog number, purity
+    and independent enantiomeric verification were not supplied. Table 1 gives MIC
+    6.25 µg/mL in S. mutans ATCC 25175,12A,33A,INB,T8; MBCs were 25,6.25,12.5,12.5,25
+    µg/mL, respectively. General growth conditions were aerobic37 °C BHI with 0.5%
+    glucose; the MIC/MBC procedure refers to NCCLS. Triplicates were run in three
+    independent experiments with a representative dataset presented. The authors explicitly
+    did not investigate antibacterial mechanism. Licoricidin did not significantly
+    reduce dextran production in the tested condition; glabridin permeability evidence
+    is not assigned to licoricidin.
+  snapshot_sha256: ae97e96a528f587b3b138a27dadd208bbf5d064221ef8682614c0e1c95abd209
+- evidence_id: stereoboundary2015
+  kind: primary_source
+  reference: PMID:25963162; DOI:10.1016/j.fitote.2015.05.003
+  locator: Complete indexed abstract and author institutional abstract
+  accessed_at: '2026-10-21T19:35:48.059828Z'
+  support: context_only
+  summary: The G. iconica paper explicitly calls its compound 3 (3S)-licoricidin and
+    reports ECD assignment. That material is not silently equated with native 3R licoricidin.
+    No numerical activity or source transfer from this enantiomer is used; the full
+    experimental ECD comparison was not inspected. The independently read1988 original
+    supports native 3R material.
+  snapshot_sha256: 7605f5dac80c47fb782077253b329c39f29f95c77b92671c19a162e8f5bf2451
+- evidence_id: access
+  kind: validation
+  reference: /private/tmp/am-review-session/601-fetch2.json
+  locator: Exact access outcomes and bounded additional source follow-up
+  accessed_at: '2026-10-21T19:40:03Z'
+  support: context_only
+  summary: The adopted2002 antibacterial and 2010 macrophage mains returned 403; the
+    2010 cancer-cell publisher full text was available. The adopted2011 review main
+    returned 403 and remains secondary context. Shared2011 main access failed but
+    official SI supplied exact structure/isolation. CLOCKSS served the complete1988
+    PDF despite its scratch .html extension. CAS401 and Reaxys403 were preserved.
+  snapshot_sha256: e20a34badce709d28ab4cbe9f38f37ecbf5b49bcb2f10f8f5163b83829a593c9
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Primary-established3R licoricidin and malformed aliases
+  outcome: concern
+  summary: Native structure, formula, masses and single3R centre are positively supported
+    by the 1988 authentic-material structural revision and later original drawings.
+    The core identity needs no replacement. Two exact synonym strings contain a misplaced
+    prime and impossible alkene stereo descriptor; these require a narrow source-owned
+    nomenclature correction. The 3S G. iconica material remains distinct.
+  target_ids:
+  - CHEBI:69082
+  evidence_ids:
+  - native
+  - chebi
+  - map
+  - revision1988
+  - 2011-structure
+  - mrsa
+  - stereoboundary2015
+- assessment_id: grounding
+  area: grounding
+  topic: Exact chemical links and ontology classes
+  outcome: concern
+  summary: The asserted KEGG graph and additional PubChem comparator match native.
+    LIPID MAPS encodes a different constitution and unassigned C3, so exact linkage
+    is false despite matching formula/name. The three parent terms fit native chemistry
+    and antibacterial role is experimentally supported. CAS/Reaxys content access
+    remains limited.
+  target_ids:
+  - CHEBI:69082
+  evidence_ids:
+  - kegg
+  - kegg-mol
+  - pubchem
+  - lipidmaps
+  - map
+  - term-76250
+  - term-77002
+  - term-35618
+  - term-33282
+  - registry-limits
+- assessment_id: evidence
+  area: evidence
+  topic: Compound-specific antibacterial activity and producer statement
+  outcome: supported
+  summary: The 2000 exact licoricidin 33 assay supports MRSA/MSSA inhibition and potentiation
+    of oxacillin. The 1988 revision,2010 exact isolation and 2011 SI support material
+    identity/origin; the latter two support G. uralensis. Adopted H. pylori/oral-pathogen
+    abstracts provide bounded corroboration. Neither host-cell studies nor phenotypic
+    potentiation establish a direct bacterial target.
+  target_ids:
+  - CHEBI:69082
+  evidence_ids:
+  - revision1988
+  - mrsa
+  - oxacillin
+  - adopted2002
+  - adopted2010host
+  - 2011-structure
+  - adopted2011activity
+  - adopted2010macrophage
+- assessment_id: completeness
+  area: completeness
+  topic: Optional activity/mechanism enrichment
+  outcome: unknown
+  summary: No required absent structured field was identified. Exact strain-specific
+    MIC and oxacillin-potentiation observations could be added with material and assay
+    qualifications. Direct PBP2′ inhibition is not demonstrated by the inspected source.
+    Commercial2021 material lacks a catalog/stereo assay, and source time-course dose
+    disagreement must not be flattened.
+  target_ids:
+  - CHEBI:69082
+  evidence_ids:
+  - search
+  - adapter
+  - mrsa
+  - oxacillin
+  - oral2021
+  - adopted2011review
+  - access
+- assessment_id: provenance
+  area: provenance
+  topic: Actual ChEBI ownership and full adopted-lead dispositions
+  outcome: supported
+  summary: All five adopted citations were resolved and read at stated depths, distinguishing
+    the secondary review. The actual source row propagates the malformed synonyms
+    and LIPID MAPS link, with extraction/seeding owners identified. Original13 and
+    expanded 21 hashes remain unchanged; native SEEDED history is retained.
+  target_ids:
+  - CHEBI:69082
+  evidence_ids:
+  - owners
+  - native
+  - chebi
+  - adopted2002
+  - adopted2010host
+  - adopted2010macrophage
+  - adopted2011review
+  - adopted2011activity
+findings:
+- finding_id: F1
+  issue_key: licoricidin-lipidmaps-wrong-constitutional-graph
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The asserted LIPID MAPS accession denotes a different graph
+  description: Native xrefs[2] asserts LMPK12080045 as exact chemical equivalence.
+    Current SMILES and InChI instead encode 7-methoxy/5-hydroxy substitution, an aryl-adjacent
+    E side-chain alkene and undefined C3, full key HWJXKLRHGKKFBY-SOFGYWHQSA-N. Native
+    and primary-revised 3R licoricidin have 5-methoxy/7-hydroxy, normal prenyl side
+    chains and key GBRZTUJCDFSIHM-KRWDZBQOSA-N. The historical 1968 proposal explains
+    only the methoxy placement, not exact equivalence. Preserve the supported native
+    graph and adjudicate the source link.
+  target_ids:
+  - CHEBI:69082
+  field_paths:
+  - xrefs[2]
+  evidence_ids:
+  - native
+  - owners
+  - lipidmaps
+  - map
+  - revision1988
+  - '1968'
+  - kegg-mol
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: 'review-yaml-record: exact chemical grounding'
+  normalization_reason: Major wrong ontology/chemical grounding. The native molecular
+    graph is independently supported, so this is not a wrong-identity blocker for
+    the record itself.
+- finding_id: F2
+  issue_key: licoricidin-malformed-exact-synonym-locant-stereo
+  category: identity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Two inherited exact synonyms contain invalid locant or stereo text
+  description: synonyms[1] says 2′,4′,7′-trihydroxy where native and the revised original
+    require 2′,4′,7-trihydroxy. synonyms[2] adds (E) to 3-methylbut-2-enyl, whose
+    alkene terminus has two identical methyl substituents and cannot have E/Z geometry.
+    Both strings are propagated by current ChEBI; the first native IUPAC synonym is
+    coherent.
+  target_ids:
+  - CHEBI:69082
+  field_paths:
+  - synonyms[1].synonym_text
+  - synonyms[2].synonym_text
+  evidence_ids:
+  - native
+  - owners
+  - chebi
+  - map
+  - revision1988
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: 'review-yaml-record: synonym accuracy'
+  normalization_reason: Minor malformed inherited nomenclature; the primary name,
+    definition, correct IUPAC synonym and native graph still unambiguously identify
+    the supported compound. This does not justify replacing its chemistry.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:69082
+  description: Adjudicate the LIPID MAPS exact link through maintained source ownership
+    while retaining the primary-supported native graph.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  acceptance_checks:
+  - Compare both actual LIPID MAPS encodings to the native and 1988 revised structure,
+    retaining the methoxy-position, side-chain alkene andC3 differences.
+  - Remove or qualify the false exact link through maintained curation/source logic
+    unless an upstream corrected accession is independently verified; do not substitute
+    the old LIPID MAPS graph.
+  - Regenerate and verify all retained exact xrefs, the 3R centre, both prenyl groups,
+    formula/masses and required native gates. Preserve the old source association
+    as provenance where appropriate.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:69082
+  description: Repair or omit malformed inherited exact synonym strings through source-level
+    handling.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  acceptance_checks:
+  - Correct the unprimed7 hydroxyl locant and remove the impossibleE descriptor while
+    preserving explicit source provenance; do not introduce a new unverified enantiomeric
+    label.
+  - Retain the existing correct 3R IUPAC synonym and ensure the repaired names map
+    to the same exact native constitution.
+  - Regenerate and validate; do not patch only the generated YAML.
+- action_id: A3
+  finding_ids: []
+  target_ids:
+  - CHEBI:69082
+  description: Optional primary enrichment may capture exact antibacterial and potentiation
+    observations without a forced direct target.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  acceptance_checks:
+  - Preserve exact strains, units, censoring, licoricidin concentrations and oxacillin
+    comparator values from Tables 1–2.
+  - Record PBP2′ detection as an antibody-latex endpoint, not enzyme inhibition; preserve
+    the 1 versus10 µg/mL growth-curve source disagreement.
+  - Keep3S G. iconica material separate from native 3R, and qualify commercial 2021
+    material and inaccessible original methods.
+limitations:
+- CAS Common Chemistry returned 401 and Reaxys403. Current ChEBI/KEGG support the
+  registry associations, but registry structural content was not independently inspected.
+- The 1988 five-page structural revision was fully read; actual Figure 1/Table 1 and
+  NOE/CD page were inspected. The 1968 original was read only at its first-page historical
+  proposal. Neither raw NMR nor ECD data were computationally reprocessed.
+- The 2000 antibacterial original was read for exact isolation, compound 33, complete
+  antibacterial/mechanistic Results and Methods, with actual Tables 1–2, Chart 2 and
+  Figures 2–3 viewed. Unrelated new-compound elucidation was not exhaustively reassessed.
+  Its growth-curve oxacillin dose differs between caption and prose.
+- The adopted2002 H. pylori and 2010 macrophage mains, and 2011 secondary review main,
+  were unavailable after recorded403 responses. Complete abstracts were read. The
+  2010 host-cell original was read for exact isolation/spectral characterization and
+  licoricidin-specific experiments, not every extract-comparator plot.
+- The 2011 original main remained 403; its complete abstract and official SI structure/isolation
+  sections were read, including actual FigureS1. Abstract growth-inhibition concentrations
+  are not treated as complete MIC/strain observations.
+- The 2021 full main XML and both tables were read, with figure captions; plots were
+  not independently digitized and commercial reagent stereopurity was not verified.
+  The 2015 G. iconica primary was read only at complete abstract/institutional abstract
+  level and its 3S material was not merged with native 3R.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Original13 and expanded 21 captured hashes were verified unchanged. Only scratch
+  evidence and an unsaved draft were produced; no native/source/history/progress/Git
+  changes occurred.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
