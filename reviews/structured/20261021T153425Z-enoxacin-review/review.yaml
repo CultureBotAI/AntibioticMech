@@ -1,0 +1,1039 @@
+schema_version: 1.0.0
+review_id: 20261021T153425Z-enoxacin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Enoxacin: definition and imported commercial aliases require correction'
+started_at: '2026-10-21T15:03:53Z'
+finished_at: '2026-10-21T15:34:25Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent whole-record review after initial input capture,
+    actual maintained-row inspection, authority comparisons, independent chemistry
+    and bounded original-paper review. No native or source record was authored or
+    modified by this reviewer.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The exact neutral enoxacin graph, antibacterial eligibility, bounded gyrase
+  mechanism, source qualifications and two historical FDA products are supported.
+  The definition incorrectly places fluorine at position 5. Enroxil is an ambiguous
+  cross-compound commercial alias requiring disambiguation, and Penetrex is a product
+  brand rather than a chemical exact synonym. All 22 resistance assertions retain
+  their explicit database evidence boundary; selected originals do not justify unqualified
+  transfer of every taxon or allele result.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/enoxacin.yaml
+    sha256: f19a07208438b3e59d9168ca31c64aeb2856ae5b2c68f24c0499b8e9d84d921a
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+targets:
+- target_id: CHEBI:157175
+  path: data/antibiotics/antibacterial/enoxacin.yaml
+  label: enoxacin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, aliases, hierarchy and bibliography
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported target assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target type and relation mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Maintained Salmonella parE evidence qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Qualified CARD assertion transform
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Exact imported FDA products and GSRS identity
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: FDA product and GSRS identity extraction
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 398; one exact record. Original thirteen input hashes
+    retained within 28 expanded inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:157175
+checks:
+- check_id: structured-adapter
+  name: Structured catalog and covered gene queries before open protein research
+  status: passed
+  required: false
+  target_ids:
+  - CHEBI:157175
+  evidence_ids:
+  - adapter
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets; exact search commands in 398400-adapter-results.json
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Catalog succeeded after a sandbox DNS failure; all 16 exact documented
+    gene-query commands succeeded. This is read-only computational context.
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:157175
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/398400-focused.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:157175
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/enoxacin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:157175
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/enoxacin.yaml --out /private/tmp/am-review-session/398-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:157175
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:157175
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:157175
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:157175
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:157175
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:157175
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:157175
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:157175
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:157175
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/enoxacin.yaml
+  locator: Entire exact native YAML including all history and evidence entries
+  accessed_at: '2026-10-21T15:21:53Z'
+  support: supports
+  summary: Whole record read; all populated domains assessed. No inference that SEEDED
+    metadata constitutes primary scientific review.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_resistance_edges.tsv;
+    scripts/seed_from_sources.py
+  locator: Exact row subsets in 398 section of 398400-raw-rows.json; expanded owner
+    hashes
+  accessed_at: '2026-10-21T15:21:53Z'
+  support: supports
+  summary: Actual ChEBI and ARO rows, target-role mapping and seeder inspected. Source-faithful
+    reproduction is distinguished from scientific support. Original input hashes are
+    preserved.
+  snapshot_sha256: 8e0f1aeddec6d1b55194ef2df8114fa981abf21ab5a0b7445b3d50fe12f60e9f
+- evidence_id: search
+  kind: search
+  reference: Local ignored-inclusive exact-ID/name/slug search
+  locator: 398400-all-local-paths.txt and original target local-hits file
+  accessed_at: '2026-10-21T15:21:53Z'
+  support: context_only
+  summary: Search included hidden and gitignored content across data, curation, conf,
+    scripts, src, reports and reviews. No exact curator override or extra native activity
+    collection was identified; no absence of external research is inferred.
+  search_scope: rg --no-ignore --hidden using exact compound labels and CHEBI/ARO
+    identifiers, with complete relevant native and source-row reads.
+  snapshot_sha256: 2f693d2b2e2161e3fec1a87d15df57d907d6b45dcd3c3ec3946e49690abc5318
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/157175/
+  locator: Current compound identity, names, graph, roles, outgoing hierarchy and
+    cross-references
+  accessed_at: '2026-10-21T15:10:48.439734Z'
+  support: supports
+  summary: Current ChEBI agrees with the adopted exact neutral graph and the listed
+    structural parents/roles. Current source text is checked separately from experimental
+    evidence.
+  snapshot_sha256: 3bebe647b796e141eda731e6be16a789dd62412bd2a54d5a716a2e96995ed6d3
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/3229/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: Exact native CID properties
+  accessed_at: '2026-10-21T15:10:48.440691Z'
+  support: supports
+  summary: Current PubChem formula, charge, InChI and InChIKey match the native graph.
+  snapshot_sha256: 36b12e4564357d000b948feb2ada7c0a8633e03a885c9f22216d7072c99697a8
+- evidence_id: chembl
+  kind: authority
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL826.json
+  locator: Exact native ChEMBL molecule structure
+  accessed_at: '2026-10-21T15:10:48.440892Z'
+  support: supports
+  summary: ChEMBL molecule structure independently reproduces the native graph.
+  snapshot_sha256: 42b2513e1c9313bafdf3757f4656b4acaf70eab2732100dabbe746e4bd5e7c66
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/D00310/mol
+  locator: Exact KEGG drug molfile and companion text
+  accessed_at: '2026-10-21T15:10:48.448471Z'
+  support: supports
+  summary: Independent parsing agrees with the native formula, charge and InChIKey;
+    no hydrate or salt is substituted.
+  snapshot_sha256: 5093f0527de40d70f2e3b27c0c32a5d226d8c440cdea2453f32d62be20330093
+- evidence_id: vsdb
+  kind: database
+  reference: https://sitem.herts.ac.uk/aeru/vsdb/Reports/1896.htm
+  locator: Exact native VSDB identifier; compound identifiers
+  accessed_at: '2026-10-21T15:10:48.720005Z'
+  support: supports
+  summary: The current VSDB chemical identifiers agree with the native CAS, InChI
+    and key. Secondary efficacy prose is not used as primary mechanism evidence.
+  snapshot_sha256: 188c60492374b109078248c27b644a6eb93e4519a2d203b8c5a3b5a1d4fb8cf2
+- evidence_id: chemistry
+  kind: validation
+  reference: 398-chemistry.json; 398400-chemical-xrefs.json
+  locator: RDKit2026.03.5 from batch019 interpreter against batch040 cwd
+  accessed_at: '2026-10-21T15:21:53Z'
+  support: supports
+  summary: Native SMILES and InChI reproduce formula, masses, charge and key; no stereocentres
+    are specified or required. Source-mint SHA256 calculations agree. Independent
+    live graph comparisons are preserved.
+  snapshot_sha256: bd2847371ca6c3ce715e4b76ad8c84e582922f0c5097f7dfa8172b168923dd1a
+- evidence_id: gates
+  kind: validation
+  reference: 398-focused-results.json
+  locator: Actual focused schema, strict and chemistry commands/logs
+  accessed_at: '2026-10-21T15:21:53Z'
+  support: supports
+  summary: All three focused checks exited 0. The own batch040 environment ran native
+    validators; the existing batch019 interpreter supplied RDKit against batch040
+    cwd. Deterministic success does not test synonym semantics or primary mechanism
+    attribution.
+  snapshot_sha256: 42fa3c8ecd5239a65ec20a2426a577c60fd39196436971c3e9a33313ff27bd60
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB via kg-microbe-sources
+  locator: 398400-adapter-catalog.txt; 398400-adapter-results.json; query outputs
+  accessed_at: '2026-10-21T15:21:53Z'
+  support: context_only
+  summary: Catalog and exact protein/gene searches preceded open protein research.
+    Covered species yielded gene context; uncovered species are not negative biological
+    evidence. Expression-module context is not a primary MIC or mutation-causality
+    experiment.
+  snapshot_sha256: 9796772e5dab527773e429fb3655ab4c9a12d6e66b36de6fc4bff0f3cf554182
+- evidence_id: adopted-abstracts
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A16644219%20OR%20EXT_ID%3A8741236%20OR%20EXT_ID%3A15914491%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: All adopted ChEBI and source ARO definition PMID metadata and original
+    abstracts
+  accessed_at: '2026-10-21T15:10:50.243678Z'
+  support: context_only
+  summary: Every adopted literature lead has an explicit original-abstract disposition.
+    Reviews, analogue studies, analytical assays and original antibacterial experiments
+    are kept distinct.
+  snapshot_sha256: 49c764d3b8ed857a29a718c0ea9015239164dbebee4605044c6827412939f29a
+- evidence_id: adopted-dispositions
+  kind: record_content
+  reference: 398-adopted-dispositions.json
+  locator: Per-PMID reading depth and source-specific disposition
+  accessed_at: '2026-10-21T15:21:53Z'
+  support: context_only
+  summary: All adopted bibliography leads were resolved and inspected at the stated
+    depth; inaccessible full methods and unverified exact-material assignments remain
+    explicit.
+  snapshot_sha256: c88308c9fad98b51a14408ab8bfd15d2815201abb8bdc20fb391febacd6353e5
+- evidence_id: drugcentral
+  kind: authority
+  reference: https://drugcentral.org/drug/1013/molfile
+  locator: DrugCentral1013 molfile
+  accessed_at: '2026-10-21T15:10:48.448081Z'
+  support: supports
+  summary: DrugCentral1013 independently parses to the exact neutral enoxacin key.
+  snapshot_sha256: 629455afbe3cbcd29446f7fff6af929c1e8f188d88dc903780374ce1fdff53f2
+- evidence_id: kegg-compound
+  kind: authority
+  reference: https://rest.kegg.jp/get/C06979/mol
+  locator: KEGG C06979 molfile
+  accessed_at: '2026-10-21T15:10:49.891823Z'
+  support: supports
+  summary: The separate KEGG compound entry matches the exact neutral native graph.
+  snapshot_sha256: fe3b91b0e183346fd232bc79b85bc23cae000c65f7f237a6a6692cbabe394b64
+- evidence_id: drugbank
+  kind: authority
+  reference: https://go.drugbank.com/drugs/DB00467
+  locator: Official public page identity and structure sections; web fallback
+  accessed_at: '2026-10-21T15:21:53Z'
+  support: supports
+  summary: Public DrugBank DB00467 matches name, CAS74011-58-8, formula, UNII325OGW249P
+    and exact key. Direct HTTP 403 was bypassed through the public web reader; no
+    account or paid access was used.
+  snapshot_sha256: c93801024282d0b83d01608fb9d8704a1a9795bc646dbdc0500ce61255cfcb10
+- evidence_id: gsrs
+  kind: authority
+  reference: https://gsrs.ncats.nih.gov/api/v1/substances/search?q=root_approvalID:325OGW249P
+  locator: UNII325OGW249P current record version 37
+  accessed_at: '2026-10-21T15:10:50.125108Z'
+  support: supports
+  summary: Current GSRS version 37 parses to the native graph. The record explicitly
+    preserves historical version 36 and retrieval dates; a newer authority version
+    alone is not an incorrect historical assertion.
+  snapshot_sha256: b75f0e8a3c357aa62f4ff4810650ae083e11e77d4104fef2ed1cc52421197b68
+- evidence_id: fda
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:NDA019616&limit=100
+  locator: NDA019616 products004/005 and original approval submission
+  accessed_at: '2026-10-21T15:10:50.129823Z'
+  support: supports
+  summary: Live FDA matches SANOFI AVENTIS US, PENETREX enoxacin200/400 mg tablets,
+    original AP approval1991-12-31 and Discontinued marketing status. Native currently_marketed:false
+    and historical approval assertions remain coherent; this is not evidence of current
+    marketing.
+  snapshot_sha256: b2e3d6fbe5332de75ae49c756f5ccd3e94e70aa0e71500a12f094cc2b5a0ccd3
+- evidence_id: enroxil
+  kind: authority
+  reference: https://www.vmd.defra.gov.uk/productinformationdatabase/files/SPC_Documents/SPC_150614.PDF
+  locator: Official UKVMD SPC page 1, Enroxil100 mg/ml solution; May 2024 revision
+  accessed_at: '2026-10-21T15:11:38.955091Z'
+  support: refutes
+  summary: This official Enroxil veterinary product contains enrofloxacin100 mg/mL,
+    a different molecular graph. The unqualified native exact enoxacin alias therefore
+    has a documented name collision. This does not establish that no historical or
+    regional enoxacin product ever used the same trade name.
+  snapshot_sha256: 25c1f577f14265a5e4ff1901aa05c9c285c7c24d404156960c76593085111725
+- evidence_id: numbering
+  kind: validation
+  reference: 398-numbered-map.json
+  locator: Native SMILES ring numbering and zero-based RDKit atom inventory
+  accessed_at: '2026-10-21T15:21:53Z'
+  support: refutes
+  summary: The N1–C2–C3–C4–C4a–C5–C6–C7–N8–C8a ring maps to atoms2,3,4,8,10,11,12,14,21,22.
+    Fluorine atom13 is attached to C6 atom12. All three native systematic synonyms
+    and original patent compound 1 also say6-fluoro.
+  snapshot_sha256: b2782e3fd2b614fadeb170bea0997044c8398a181afa66b0dcfae087a413244c
+- evidence_id: patent-ep
+  kind: primary_source
+  reference: https://patents.google.com/patent/EP0009425A1/en
+  locator: Title and Example 1 preparation of compound 1 and acid-addition salts
+  accessed_at: '2026-10-21T15:11:38.960744Z'
+  support: supports
+  summary: The original document describes 1-ethyl-6-fluoro-4-oxo-7-piperazinyl naphthyridine
+    carboxylic acid and separately prepares hydrochloride, methanesulfonate and acetate
+    salts. The native document reference is relevant; salts and adjacent derivatives
+    are not exact chemical equivalents or transferred MIC evidence. EP9425 resolves
+    after normalizing to EP0009425A1.
+  snapshot_sha256: c41648a9a15ef3b058d419e624927d084d45a7794657fd992ecab457434681a8
+- evidence_id: patent-us1
+  kind: primary_source
+  reference: https://patents.google.com/patent/US4352803/en
+  locator: Title and Example 1 preparation of compound 1 and acid-addition salts
+  accessed_at: '2026-10-21T15:10:50.516853Z'
+  support: supports
+  summary: The original document describes 1-ethyl-6-fluoro-4-oxo-7-piperazinyl naphthyridine
+    carboxylic acid and separately prepares hydrochloride, methanesulfonate and acetate
+    salts. The native document reference is relevant; salts and adjacent derivatives
+    are not exact chemical equivalents or transferred MIC evidence. EP9425 resolves
+    after normalizing to EP0009425A1.
+  snapshot_sha256: 9dbd508817d0dc0c00dc3e955ee729269a7713fb638d4408ed1878085ce57a2f
+- evidence_id: patent-us2
+  kind: primary_source
+  reference: https://patents.google.com/patent/US4359578/en
+  locator: Title and Example 1 preparation of compound 1 and acid-addition salts
+  accessed_at: '2026-10-21T15:10:50.531380Z'
+  support: supports
+  summary: The original document describes 1-ethyl-6-fluoro-4-oxo-7-piperazinyl naphthyridine
+    carboxylic acid and separately prepares hydrochloride, methanesulfonate and acetate
+    salts. The native document reference is relevant; salts and adjacent derivatives
+    are not exact chemical equivalents or transferred MIC evidence. EP9425 resolves
+    after normalizing to EP0009425A1.
+  snapshot_sha256: 053e004fd077caf28909ca2aacc1c010ddd2acb7f2a23381e17c89ece6990f5f
+- evidence_id: wikipedia
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Enoxacin
+  locator: Exact document link and commercial alias context
+  accessed_at: '2026-10-21T15:11:38.867337Z'
+  support: context_only
+  summary: The document resolves to enoxacin and repeats the Enroxil name. That secondary
+    repetition does not resolve the official veterinary product collision.
+  snapshot_sha256: 1754ed0767aca9aa686275174ede395624e4d9d1c52550ea5909cc37474416c5
+- evidence_id: gyrase-original
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC187778/?pdf=1
+  locator: PMID8388200, DOI10.1128/aac.37.4.839; actual scanned pp 839–844, Methods,
+    Tables 1/3, Figs 3–5
+  accessed_at: '2026-10-21T15:12:54.804323Z'
+  support: supports
+  summary: Original Dainippon enoxacin and Amersham tritiated enoxacin experiments
+    used purified reconstituted E. coli gyrase. Binding was appreciable to the gyrase–DNA
+    complex, not enzyme or DNA alone. GyrA S83L and GyrB D426N/K447E complexes altered
+    functional response. Table 3 enoxacin supercoiling ID50 values are enzyme endpoints,
+    not MICs; some Table 1 MICs are attributed to earlier references. This supports
+    bounded bacterial gyrase mechanism without asserting isolated-GyrA binding or
+    an atomic binding site.
+  snapshot_sha256: e905fa2c16cb72e8c8c681f4471250fe2be112dc37baf82e3d2356014ded4067
+- evidence_id: gyrase-table
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/84e3/187778/b7d775b5f0c1/aac00026-0250.png
+  locator: Actual p 842, Table 3 and Fig. 3
+  accessed_at: '2026-10-21T15:13:41.096458Z'
+  support: supports
+  summary: 'Table 3 reports enoxacin ID50 in micrograms/mL for two plasmid substrates:
+    WT 3.13/6.25, GyrA mutant 25/25, GyrB type 1 mutant 25/50, GyrB type 2 mutant
+    1.56/3.13. Fig. 3 distinguishes enzyme–DNA complex from isolated components; exact
+    construct/assay context must accompany any later curation.'
+  snapshot_sha256: 31177905c2b114ceda54bf129c12e80a5ad8bf2c0bbb23f00d48ac50b8aa77e9
+- evidence_id: nora-original
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC210814/?pdf=1
+  locator: PMID2174864, DOI10.1128/jb.172.12.6942-6949.1990; actual scanned pp 6942–6948,
+    Methods, Table 1 and Fig. 5
+  accessed_at: '2026-10-21T15:12:54.805430Z'
+  support: supports
+  summary: norA cloned from S. aureus TK2566 increased enoxacin resistance in S. aureus
+    and E. coli hosts. Original Table 1 gives SA113 enoxacin MIC 0.39 versus 25 micrograms/mL
+    with pTUS20. Radiolabel uptake used10 micrograms/mL enoxacin at 37 °C; CCCP 0.1
+    mM restored accumulation. This supports energy-dependent efflux at these hosts
+    and constructs, not a generic resistance threshold or all strains.
+  snapshot_sha256: 89241e2d2d81db7b2215196a081d08d811a720ced82434c09f2200a87676e13d
+- evidence_id: nora-table
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/b560/210814/a0ac68ff9334/jbacter00166-0346.png
+  locator: Actual p 6944 Table 1
+  accessed_at: '2026-10-21T15:13:41.237995Z'
+  support: supports
+  summary: The enoxacin row distinguishes S. aureus SA113 and plasmid-bearing derivatives
+    from E. coli HB101 controls. Exact table values support antibacterial activity
+    and the cloned norA phenotype; uptake and MIC are separate endpoints.
+  snapshot_sha256: 3df81531cf1e57edf25a141da45f7d687ce917b3959c1ad1c65a709e955479a7
+- evidence_id: mtb-original
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1346799/?pdf=1
+  locator: PMID16377674, DOI10.1128/aac.50.1.104-112.2006; Methods, Tables2/3, enzyme
+    Results and Discussion
+  accessed_at: '2026-10-21T15:17:44.805869Z'
+  support: supports
+  summary: Sigma enoxacin was tested using the 1% proportion method on 7H11 agar with
+    10% OADC, with MIC defined as inhibition of more than 99% growth. Table 2 H37Rv
+    enoxacin MIC 8 micrograms/mL contrasts with clinical A90V isolate64 and N510D
+    isolate>64; other mutations show hypersusceptibility and background dependence.
+    Purified recombinant gyrase experiments distinguish resistant from hypersusceptible
+    mutations. Some comparator rows derive from prior literature; no clinical breakpoint
+    or all-mutation resistance generalization is made. Table3 separates enoxacin supercoiling
+    IC50 values (WT140, T80A200, A90G35 and double mutant10 micrograms/mL) from the
+    resistant-mutant enzyme entries marked ND. Its cleavage panel does not include
+    enoxacin. The clinical MIC associations therefore must not be expanded into unmeasured
+    enoxacin enzyme results.
+  snapshot_sha256: a3b9dbd9f062a6c84b7b1704f4fe88825c4db991922e7a55da5a6901ce02d690
+- evidence_id: salmonella-original
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2650546/?pdf=1
+  locator: PMID19104017, DOI10.1128/aac.01005-08; Methods, target-complementation
+    Results and Discussion
+  accessed_at: '2026-10-21T15:13:41.453877Z'
+  support: supports
+  summary: The study selected ciprofloxacin-resistant serovar Enteritidis derivatives104-cip
+    and5408-cip. Restoring wild-type parE in5408-cip did not alter quinolone MICs;
+    an indirect contribution was not excluded. The native row-specific qualification
+    faithfully preserves this result and background limit. No enoxacin assay was reported
+    in the inspected Methods; do not convert it into direct enoxacin ParE proof.
+  snapshot_sha256: 65c46e1c5e4cb049eef828c5436474c995a6df2e1bf42830938d512e05067ae6
+- evidence_id: resistance-ledger
+  kind: record_content
+  reference: 398-resistance-dispositions.json; 398400-aro-leads.json
+  locator: All current native determinant/target ontology references;38 unique PubMed
+    leads
+  accessed_at: '2026-10-21T15:21:53Z'
+  support: context_only
+  summary: All 38 original metadata/abstract records were inspected, with full source
+    sections or actual scans for selected exact claims. PMID15282231 has no abstract.
+    Many ontology references concern other quinolones, mixed resistance backgrounds
+    or reviews; this does not upgrade the native explicitly database-only assertions
+    to verified exact-enoxacin allele evidence. Current WHO catalog reference was
+    identified but not independently read.
+  snapshot_sha256: f6c0615c00ba582e140e8508ac2637624ad07073ed293219ef7c9dd4dda3da0c
+- evidence_id: aro-target
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000733
+  locator: Current generic fluoroquinolone-sensitive DNA gyrase subunit A ontology
+    term
+  accessed_at: '2026-10-21T15:10:53.885164Z'
+  support: supports
+  summary: Current ARO target definition and review references resolve. Native PRIMARY_EVIDENCE_NEEDED
+    and unspecified organism/assay caveats are retained; the new original experiment
+    supports the gyrase–DNA complex without proving binding to isolated GyrA.
+  snapshot_sha256: f798d605e22cedfe4f22d4e036ab5aeec7a5756296996e45631c1a36f79633af
+- evidence_id: access-boundaries
+  kind: search
+  reference: 398400-fetch1.json through398400-fetch5.json
+  locator: Per-request URLs, timestamps, HTTP results and SHA256 values
+  accessed_at: '2026-10-21T15:22:42Z'
+  support: context_only
+  summary: Exact legacy identifier and original-source requests were attempted. The
+    retained retrieval manifests distinguish inaccessible pages from inspected alternatives;
+    HTTP failure is not chemical refutation.
+  snapshot_sha256: 52fc06aa2b7f7ade218b1575a41da2385286556f8343cd5a9994eb30896ef2e8
+  search_scope: Exact native chemical identifiers and cited primary-source URLs; direct
+    authority pages, source-provided PDF links and public PMC alternatives. No paid
+    source access.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact free-acid graph
+  outcome: supported
+  summary: All native graph encodings, formula, masses and source mints agree. PubChem,
+    ChEMBL, DrugCentral, KEGG, DrugBank, GSRS and VSDB support the same neutral enoxacin
+    identity. The definition and aliases need separate annotation corrections.
+  target_ids:
+  - CHEBI:157175
+  evidence_ids:
+  - native
+  - chemistry
+  - chebi
+  - pubchem
+  - chembl
+  - drugcentral
+  - kegg
+  - kegg-compound
+  - drugbank
+  - gsrs
+  - vsdb
+- assessment_id: definition-synonyms
+  area: identity
+  topic: Regiochemical wording and commercial aliases
+  outcome: concern
+  summary: The definition says5-fluoro despite an unambiguous6-fluoro graph. Enroxil
+    collides with an official enrofloxacin product; Penetrex is an FDA product brand.
+    INN and systematic synonyms otherwise fit the graph.
+  target_ids:
+  - CHEBI:157175
+  evidence_ids:
+  - numbering
+  - patent-ep
+  - patent-us1
+  - patent-us2
+  - enroxil
+  - fda
+  - native
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical and ontology cross-references
+  outcome: supported
+  summary: Accessible chemical groundings and broader structural parents/roles are
+    coherent. The patents resolve to relevant exact-acid/salt/analogue documents,
+    not three chemical identity equivalences. LINCS and Reaxys remain access-limited.
+  target_ids:
+  - CHEBI:157175
+  evidence_ids:
+  - chebi
+  - pubchem
+  - chembl
+  - kegg
+  - kegg-compound
+  - vsdb
+  - drugcentral
+  - drugbank
+  - patent-ep
+  - patent-us1
+  - patent-us2
+  - access-boundaries
+- assessment_id: classification
+  area: scope
+  topic: Antibacterial eligibility and DNA-synthesis mode
+  outcome: supported
+  summary: Exact enoxacin growth and gyrase experiments support antibacterial filing
+    and DNA-synthesis inhibition. HOST_SHARED_TARGET is explicitly the seeded shared-process
+    qualifier from ChEBI59517, not proof of equal host sensitivity. The generic target
+    remains marked PRIMARY_EVIDENCE_NEEDED rather than being promoted from review
+    references.
+  target_ids:
+  - CHEBI:157175
+  evidence_ids:
+  - native
+  - gyrase-original
+  - nora-original
+  - mtb-original
+  - aro-target
+- assessment_id: resistance
+  area: evidence
+  topic: Twenty-two source-qualified resistance entries
+  outcome: supported
+  summary: The22 assertions reproduce actual ARO rows and remain labeled database
+    evidence. NorA and selected gyrase originals provide bounded exact-enoxacin support;
+    the Salmonella ParE caveat is scientifically sound. This review does not independently
+    certify every taxon, mutation, mechanism or compound-specific primary experiment
+    represented by the ontology.
+  target_ids:
+  - CHEBI:157175
+  evidence_ids:
+  - native
+  - owners
+  - resistance-ledger
+  - nora-original
+  - mtb-original
+  - salmonella-original
+  - adapter
+- assessment_id: clinical
+  area: evidence
+  topic: Two historical FDA product assertions
+  outcome: supported
+  summary: Both application/product identities, ingredients, sponsor, AP date, discontinued
+    status and historical GSRS join are coherent. A later GSRS version does not invalidate
+    the recorded historical source version.
+  target_ids:
+  - CHEBI:157175
+  evidence_ids:
+  - fda
+  - gsrs
+  - owners
+  - native
+- assessment_id: completeness
+  area: completeness
+  topic: Optional activity and exact target enrichment
+  outcome: unknown
+  summary: Original MIC, uptake and gyrase results are useful bounded curation leads.
+    Optional activity_spectrum and richer primary target fields are not schema requirements,
+    and neither isotope binding nor enzyme ID50 is interchangeable with a bacterial
+    MIC. No independent producer, causal-graph or activity-collection assertion is
+    present.
+  target_ids:
+  - CHEBI:157175
+  evidence_ids:
+  - native
+  - search
+  - gyrase-original
+  - nora-original
+  - mtb-original
+  - adopted-dispositions
+- assessment_id: provenance
+  area: provenance
+  topic: Generated owners and eight history events
+  outcome: supported
+  summary: Actual ChEBI/ARO/FDA inputs and the row-specific CARD evidence-review owner
+    were inspected. All eight history events are consistent with seeding/reseeding
+    and the preserved ParE qualification; SEEDED status is unchanged.
+  target_ids:
+  - CHEBI:157175
+  evidence_ids:
+  - native
+  - owners
+  - gates
+  - salmonella-original
+- assessment_id: validation
+  area: schema
+  topic: Focused native gates
+  outcome: supported
+  summary: Focused chemistry, schema and strict checks pass. They do not detect wrong
+    definition numbering or commercial-alias ambiguity.
+  target_ids:
+  - CHEBI:157175
+  evidence_ids:
+  - gates
+  - chemistry
+  - numbering
+findings:
+- finding_id: F1
+  issue_key: enoxacin-definition-fluorine-position
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The definition places fluorine at the wrong ring position
+  description: The adopted and current ChEBI prose says5-position, while the exact
+    native graph, three systematic synonyms and original compound 1 synthesis all
+    specify6-fluoro. Correct the textual definition through the maintained source/override
+    route; retain the validated graph.
+  target_ids:
+  - CHEBI:157175
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - chebi
+  - numbering
+  - patent-us1
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-checklist:Identity
+  native_severity: major
+  normalization_reason: A wrong locant describes a different positional isomer, but
+    the record identifier and graph remain the correct compound. This is a major definition
+    error rather than a blocker affecting the whole graph.
+- finding_id: F2
+  issue_key: enoxacin-enroxil-ambiguous-exact-alias
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Enroxil needs product-specific disambiguation
+  description: The native ARO-derived exact synonym Enroxil conflicts with an official
+    UKVMD Enroxil product whose active ingredient is enrofloxacin. Preserve the source
+    conflict and resolve the intended jurisdiction/product before retaining an enoxacin
+    identity alias. The inspected sources do not establish that every historical or
+    regional use of this name denotes enrofloxacin.
+  target_ids:
+  - CHEBI:157175
+  field_paths:
+  - synonyms[8]
+  evidence_ids:
+  - native
+  - owners
+  - enroxil
+  - wikipedia
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, aliases, hierarchy and bibliography
+  rule_id: review-checklist:Identity
+  native_severity: major
+  normalization_reason: An unqualified commercial name demonstrably resolves to another
+    antibiotic structure; this creates a material identity-retrieval ambiguity even
+    though the native molecular graph is correct.
+- finding_id: F3
+  issue_key: enoxacin-penetrex-brand-synonym-type
+  category: identity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Penetrex is a product brand
+  description: FDA identifies PENETREX as the branded enoxacin tablet product. Preserve
+    the useful association in a brand-appropriate representation, rather than asserting
+    it as a chemical exact synonym.
+  target_ids:
+  - CHEBI:157175
+  field_paths:
+  - synonyms[9].synonym_type
+  evidence_ids:
+  - native
+  - fda
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, aliases, hierarchy and bibliography
+  rule_id: review-checklist:Identity
+  native_severity: minor
+  normalization_reason: 'Non-blocking synonym typing: the product contains the correct
+    enoxacin ingredient, and the molecular identity is unaffected.'
+actions:
+- action_id: A1
+  description: Correct the source-owned definition locant.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:157175
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Definition and systematic names must agree on6-fluoro; preserve native InChIKey
+    and graph.
+  - Record the current ChEBI text conflict and correction provenance; regenerate and
+    run focused schema/strict and corpus reproduction checks.
+- action_id: A2
+  description: Adjudicate commercial aliases and represent supported brands at product
+    scope.
+  finding_ids:
+  - F2
+  - F3
+  target_ids:
+  - CHEBI:157175
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, aliases, hierarchy and bibliography
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Resolve Enroxil by primary product/jurisdiction evidence; remove or qualify an
+    unsupported exact enoxacin alias without inferring worldwide brand exclusivity.
+  - Retain Penetrex as a brand/product association while preserving the two valid
+    FDA product assertions.
+  - Verify extraction/seed behavior and rerun identity, focused and provenance gates.
+limitations:
+- LINCS LSM-5848 returned 500 and Reaxys3628995 returned 403; these legacy exact mappings
+  remain unverified. DrugBank direct 403 was resolved through inspected official public
+  web text.
+- All adopted bibliography original abstracts were read, but most subscription full
+  texts and all 38 resistance-reference full texts were not obtained. The exact reading-depth
+  ledger distinguishes metadata-only PMID15282231, selected full experiments, reviews
+  and other-drug comparators. No exhaustive allele validation is claimed.
+- Original 1993 and 1990 scans were read through their experimental Results/Discussion
+  pages and key actual tables/figures; their final reference-only pages and every
+  raw trace were not independently reprocessed. The2006 and 2009 full texts were read
+  for the relevant Methods/Results/table scope, not every unrelated comparator.
+- No salt/hydrate equivalence is inferred from patent acid-addition salts or labeled-tracer
+  assays. No current clinical susceptibility breakpoint, clinical treatment recommendation
+  or worldwide product-name exclusivity is established.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native, source, status or history field was edited. Original thirteen input hashes
+  were retained and all expanded inputs were checked unchanged before output. Optional
+  links, tags and notes were checked against this exact compound.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:157175
+- https://doi.org/10.1128/aac.37.4.839
+- https://doi.org/10.1128/jb.172.12.6942-6949.1990
+tags:
+- enoxacin
+- chemical-definition
+- commercial-aliases
+- source-qualified-resistance
