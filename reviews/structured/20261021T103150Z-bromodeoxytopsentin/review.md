@@ -1,0 +1,1097 @@
+# Bromodeoxytopsentin: supported measured PK association, invalid inherited SMILES
+
+- Review: 20261021T103150Z-bromodeoxytopsentin
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T10:11:05Z
+- Finished UTC: 2026-10-21T10:31:50Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The exact neutral bromodeoxytopsentin identity, antibacterial activity and measured MRSA pyruvate-kinase association are supported. The record correctly avoids transferring a related compound's cocrystal. One major representation error remains: its inherited SMILES fails chemical parsing although its independently valid InChI, formula and identifiers agree. Two informational follow-ups concern exact quantitative evidence and the unresolved specificity of the inherited Mediterranean sponge-isolation sentence.
+
+## Scope And Provenance
+
+Whole reviewed CHEBI144087 record, including two exact synonyms, four parents, activity and mechanism, protein/taxon association, structures and masses, both xrefs, source mint, evidence and four history events; all five maintained source citation leads.
+
+Selection: Queue 172; exact path and initial capture supplied by coordinator before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:144087 | data/antibiotics/antibacterial/bromodeoxytopsentin.yaml | generated | bromodeoxytopsentin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:144087 | Actual focused command exited 0. |
+| strict | passed | True | CHEBI:144087 | Actual focused command exited 0. |
+| chemistry | failed | False | CHEBI:144087 | Actual focused command exited 1. Native SMILES cannot be kekulized. Independent InChI parses with the exact key, formula, charge and masses; source mint reproduces. This is an unresolved native representation failure. |
+| Independent official alternative structure diagnostic | passed | False | CHEBI:144087 | PubChem and KNApSAcK strings both parse to the exact native InChIKey, formula and charge. This establishes a reviewable repair candidate; the native SMILES failure remains unresolved. |
+| Structured pyruvate-kinase source cross-check | passed | False | CHEBI:144087 | Actual structured adapter exited 0 before open-ended web research. One USA300 gene hit and no iModulon hit; this is expression-context indexing, not target binding or exact MRSA252 evidence. |
+| Authoritative full QC | failed | True | CHEBI:144087 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:144087 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:144087 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:144087 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:144087 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:144087 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:144087 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:144087 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:144087 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact molecule versus representation
+
+identity: concern. Targets: CHEBI:144087.
+
+All independent identifiers and valid InChI identify one neutral monobrominated structure, but the native SMILES cannot be used as a chemical representation.
+
+### Names, parents, role and taxon
+
+grounding: supported. Targets: CHEBI:144087.
+
+Official ontology, synonyms and xrefs agree with the exact molecule and antibacterial scope. The target taxon is correctly S. aureus.
+
+### Exact antibacterial and enzyme evidence
+
+evidence: supported. Targets: CHEBI:144087.
+
+Compound D is explicitly identified and has measured PK inhibition and strain-specific MICs. Native notes correctly preserve biochemical association rather than exact direct binding.
+
+### Energy metabolism, structural binding and host selectivity
+
+scope: supported. Targets: CHEBI:144087.
+
+Energy-metabolism inhibition is supported at the purified PK level. The record correctly excludes C's cocrystal; no D cellular ATP-killing chain or mammalian-cell selectivity result should be inferred.
+
+### Exact Mediterranean sponge sentence
+
+provenance: unknown. Targets: CHEBI:144087.
+
+The sentence is faithfully inherited from ChEBI but was not established by inspected exact primary text. Other reported collection contexts and internal 2011 extraction ambiguity warrant a bounded source follow-up, not a confirmed wrong-producer allegation.
+
+### Five adopted citation dispositions
+
+provenance: supported. Targets: CHEBI:144087.
+
+Three original research abstracts and two review abstracts were inspected; the exact 2011 main text was read in full. Analogue, host-cell and review context is kept separate.
+
+### Quantitative evidence and optional fields
+
+completeness: unknown. Targets: CHEBI:144087.
+
+Exact IC50 and MIC enrichments are available but optional, with a PEP unit conflict to preserve. No missing producer, resistance mechanism or causal graph is asserted as an error. The existing UniProt hold is recognized.
+
+### Source representation versus curated mechanism
+
+ownership: supported. Targets: CHEBI:144087.
+
+Inherited structure belongs to the ChEBI source/extraction pipeline; independently curated target notes and future primary additions belong to the actual record. Initial and supplemental input hashes are retained.
+
+### Required gates and chemistry failure
+
+schema: concern. Targets: CHEBI:144087.
+
+Required schema/strict checks pass but do not detect the chemically invalid SMILES. Prior REVIEWED history does not resolve this independently reproduced failure.
+
+## Findings
+
+### F1: Repair the inherited chemically invalid aromatic SMILES
+
+major / open / confirmed; issue key: bromodeoxytopsentin-invalid-aromatic-smiles.
+
+The native and current ChEBI SMILES cannot be kekulized. Their unbracketed aromatic nitrogens omit the required pyrrolic [nH] representation. Native InChI independently parses to the asserted exact identity, and official KNApSAcK/PubChem strings provide a chemically valid matching candidate. Schema and strict gates pass despite the defect.
+
+### F2: Optionally replace grouped potency context with exact compound D values
+
+informational / open / confirmed; issue key: bromodeoxytopsentin-exact-activity-context-enrichment.
+
+The native 16–60 nM range is explicitly grouped and not false, but D-specific IC50 and strain-specific MICs are available. The primary paper has a PEP concentration discrepancy, and C-only binding/cytotoxicity results must remain excluded.
+
+### F3: Verify the exact primary source behind the Mediterranean isolation sentence
+
+informational / open / provisional; issue key: bromodeoxytopsentin-mediterranean-isolation-followup.
+
+ChEBI attests the sentence, but the inspected primary material covers South African T. pachastrelloides and the 1999 abstract reports Korean S. genitrix. The older Mediterranean topsentin-family abstract does not identify the exact molecule in accessible text. This is an unresolved source-support question, not proof of false occurrence or biosynthesis by another organism.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the exact source-owned SMILES through a reproducible maintained normalization.
+
+- Verify the valid KNApSAcK candidate O=C(c1ncc(-c2c[nH]c3cc(Br)ccc23)[nH]1)c1c[nH]c2ccccc12 against the original compound D drawing, independent InChI and current PubChem identity. Preserve the exact bromine position and imidazole tautomer boundary.
+- Implement a documented exact-source correction or upstream-source fix in the maintained pipeline; do not merely hand-patch a generated structure. Regenerate through the documented workflow while preserving the curated mechanism and evidence.
+- Require both structure strings to parse and agree on full key RMAWSNVDVKZXDX-UHFFFAOYSA-N, formula C20H13BrN4O, neutral charge and masses. Repeat focused gates and applicable shared checks, then record the scientific curation/review event through the native validated writer.
+
+### A2
+
+Curate optional exact potency observations with assay and compound boundaries intact.
+
+- Use compound D IC50 0.060±0.003 micromolar for purified MRSA252 PK; retain the human-isoform comparison as enzyme selectivity. Do not assign compound C's 16 nM value, cocrystal or HEK293T selectivity index to D.
+- If adding activity_spectrum, preserve Table 3 MIC 6.25 micrograms/mL for each RN4220 and MRSA252 strain, the BHI broth microdilution and complete-growth-inhibition endpoint; do not relabel these as MBC or population breakpoints.
+- Preserve the 10 millimolar versus 10 micromolar PEP conflict until resolved from original assay information. Do not add exact cellular target occupancy, ATP depletion or a complete killing graph without matching evidence.
+- For any proposed protein example, resolve the actual MRSA252 sequence and reviewed accession and explicitly adjudicate the existing maintained hold; do not substitute the USA300 adapter hit. Use the validated writer and curation history for changes to data/antibiotics/antibacterial/bromodeoxytopsentin.yaml.
+
+### A3
+
+Resolve the exact isolation provenance only if primary compound mapping becomes available.
+
+- Inspect the original 1987/1999 structures or another exact isolation paper and map the native bromodeoxytopsentin structure before affirming or changing the Mediterranean sentence. Taxonomic synonymy and spelling require explicit evidence, not inference from geographic differences.
+- If the sentence is a family-level transfer, correct the maintained ChEBI-derived definition with an exact primary citation. If it remains inaccessible, preserve that limitation rather than claiming a confirmed false producer.
+- Any future producer object requires biosynthetic evidence. The 2011 report describes associated sponges and has separated-versus-mixture extraction wording; isolation alone is not proof of sole-species biosynthesis.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/bromodeoxytopsentin.yaml; Entire record, including molecular target, evidence and four history entries. | supports | REVIEWED/EXACT record with curator-owned ENERGY_METABOLISM_INHIBITION and a microbial MEASURED_TARGET_ASSOCIATION for pyruvate kinase. Its notes explicitly exclude direct-binding classification because the cocrystal belongs to a related bis-indole. No quantitative AST, biosynthetic producer, resistance mechanism or causal graph is asserted. |
+| source | data/raw/chebi_antimicrobials.tsv; conf/sources.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Exact row 2657; maintained source classification, role/parent filters, structure import and curated-field preservation. | supports | The ChEBI row reproduces the native definition, invalid SMILES, valid InChI and two xrefs. All five adopted citation leads were inspected at least as original abstracts. Curated mechanism and target evidence are owned by the actual native record. Initial captures remain intact; the supplemental inspection adds the existing UniProt hold context without refreshing original hashes. All 14 captured inputs remain unchanged. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:144087; Complete official page and embedded structure, ontology, synonym and xref data. | supports | Current ChEBI repeats the same invalid SMILES but gives the valid native InChI, RMAWSNVDVKZXDX-UHFFFAOYSA-N, C20H13BrN4O, neutral charge and masses. The two 4/5-position imidazole names are source exact synonyms consistent with tautomeric naming, not evidence of two opposite isomers. Parents CHEBI24780, CHEBI38958, CHEBI52514 and CHEBI76224 are imidazoles, indole alkaloid, bromoindole and aromatic ketone. CHEBI33282 is antibacterial agent. Current additional PK-inhibitor role CHEBI143909 is consistent with the independently curated mechanism; its absence from the older raw role field is not a separate scientific error. |
+| knapsack | http://www.knapsackfamily.com/knapsack_core/information.php?word=C00026966; Complete official compound page. | supports | The exact name, CAS 180633-55-0, formula and full InChIKey agree. Its valid aromatic string includes three [nH] atoms: O=C(c1ncc(-c2c[nH]c3cc(Br)ccc23)[nH]1)c1c[nH]c2ccccc12. Organism entries describe reported occurrence; listed predicted biosynthetic precursors do not prove a producer or pathway. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/400452; Official PUG REST property response. | supports | CID400452 independently matches the native exact InChI, key, formula, monoisotopic mass and neutral charge. Its nonaromatic SMILES parses to the same canonical aromatic representation as KNApSAcK. Average molecular-weight reporting precision differs without implying a different composition. |
+| chemistry | 172-chemistry.json; 172-alternative-chemistry.json; Independent native and alternative structure parsing. | refutes | Native SMILES fails RDKit kekulization, while native InChI gives the exact full key, C20H13BrN4O, charge zero, one fragment, no stereocentres, average mass 405.255 and monoisotopic mass 404.027273136. Both independently checked official alternative strings parse to this same structure. The initial failure is retained and is a real representation error, not a formula-formatting or mass-convention issue. |
+| primary2011 | PMID:22030393; DOI:10.1074/jbc.M111.289033; https://pmc.ncbi.nlm.nih.gov/articles/PMC3248012/; Complete main text, Methods, Tables 1–3, Results and Discussion; original Figures 2 and 5 visually inspected. | supports | Figure 2 explicitly identifies bromodeoxytopsentin as compound D with the exact monobrominated bis-indole structure. Purified recombinant MRSA252/NRS71 PK assays report D IC50 0.060±0.003 micromolar, at least 166-fold selectivity versus human PK isoforms. Table 3 reports D MIC 6.25 micrograms/mL, 15.4 micromolar, against both RN4220 and MRSA252 by BHI broth microdilution and complete growth-inhibition endpoint. Figure 5B supports the D concentration-response experiment. These support antibacterial inclusion and biochemical PK inhibition. |
+| primary-scope | PMID:22030393; DOI:10.1074/jbc.M111.289033; Crystal, cytotoxicity, assay-condition and source-isolation sections. | partial | The 3.3-angstrom cocrystal and HEK293T cytotoxicity/selectivity index experiments concern compound C, not D. D has no exact cocrystal or demonstrated cellular target occupancy, ATP depletion or rescue chain in this paper. The PEP concentration is 10 millimolar in the assay description but 10 micromolar in the Figure 5 caption; preserve that discrepancy before quantitative assay enrichment. Sponge Methods first say the two associated sponges were separated and only T. pachastrelloides analyzed, then describe extraction of their lyophilized mixture. This supports reported isolation context with an internal ambiguity, not sole-species biosynthesis. |
+| taxon | https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1280; Official taxonomy browser scientific-name and lineage. | supports | NCBITaxon1280 resolves to Staphylococcus aureus. Native species-level association is compatible with the experimentally named MRSA252/NRS71 strain; it does not assert a universal strain MIC. |
+| adopted1999 | PMID:10217734; DOI:10.1021/np980507b; Complete original abstract inspected in Europe PMC, PubMed and ACS publisher landing text. | partial | The 1999 New Bis(Indole) Alkaloids of the Topsentin Class paper reports two new brominated compounds among four isolated from Spongosorites genitrix collected near Jaeju Island, Korea, with moderate K562 cytotoxicity. Its abstract does not establish the exact compound-number mapping or the native Mediterranean shallow-water isolation sentence. The full article was not available through inspected free routes; it is not used to infer biosynthesis or exact antibacterial mechanism. |
+| adopted2014 | PMID:25372480; DOI:10.1021/np500755v; Complete original abstract. | context_only | The 2014 study concerns synthetic deoxytopsentin analogues, including six dihalogenated derivatives. Its biochemical and modeling results cannot be transferred wholesale to the native monobrominated compound, and a modeled pocket is not an exact-compound cocrystal. |
+| adopted-reviews | PMID:24995289; DOI:10.1155/2014/375423; PMID:26473891; DOI:10.3390/md13106366; Complete original abstracts and publication metadata. | context_only | These two adopted articles are secondary reviews of marine indole alkaloids and South African marine drug discovery. Their abstracts provide research context and primary-paper leads, not independent original experiments proving a producer, binding event or quantitative susceptibility. |
+| isolation-boundary | DOI:10.1139/v87-352; https://cir.nii.ac.jp/crid/1363951794914602368; Bibliographic service reproduction of the 1987 original abstract; publisher route returned 403. | context_only | The 1987 Topsentins paper reports topsentin A, B1 and B2 from Mediterranean Topsentia genitrix. Without its full structures, this does not independently establish the exact bromodeoxytopsentin isolation claim. Inspected modern primary evidence concerns South African T. pachastrelloides material; the 1999 abstract concerns Korean S. genitrix. No conclusion that Mediterranean occurrence is impossible or that a spelling/taxonomic synonym denotes a different species is made. |
+| adapter | iModulonDB s_aureus/staph_precise108; s_aureus/staph_precise108/USA300HOU_RS09005; Dataset catalog and actual structured search before open-ended web search; 172-adapter-pyk.txt. | context_only | The covered USA300 gene pyK is annotated pyruvate kinase; no iModulon component matched the query. This is a different strain from MRSA252 and gives no chemical phenotype or direct-binding evidence. A summarize command was not applicable because no component hit was used. |
+| protein-hold | curation/uniprot_protein_examples.yaml; Held exact bromodeoxytopsentin record near line 1079. | supports | The existing maintained hold defers a single-UniProt example pending strain/subunit-specific resolution. Thus the absence of a protein example is a documented curation boundary, not an undiscovered required-field omission. The primary paper names MRSA252 and can inform a future exact reviewed-protein check, but the adapter USA300 hit must not be substituted. |
+| validation | 172-focused-results.json; 172-schema.log; 172-strict.log; 172-chemistry.log; Actual per-record documented schema and strict gates plus independent chemistry. | supports | Both required focused gates exit 0. Optional chemistry exits 1 for invalid SMILES. The passing alternative diagnostic does not erase or repair that failure. |
+| search | 172-local-hits.txt; 172-maintained-search.txt; Identifier, label, slug and exact key searches including hidden and ignored files. | context_only | Searches cover the worktree corpus, raw sources, maintained curation/configuration/code and available review context while excluding only .git and .venv internals. Existing protein-example hold was found. Native optional-field absence is assessed from the entire record, not inferred from a partial projection. Historical reports are leads only. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; docs/record-review-profile.md; docs/record-reviews.md; CLAUDE.md; Native review rubric, evidence boundaries, required validation and immutable review contract. | supports | Scientific REVIEWED status requires a sound chemical representation and narrow primary support. Missing optional spectra, graphs and protein examples are not automatically errors; related-compound and host effects must remain separate. |
+
+## Limits And Additional Notes
+
+- The complete native record, maintained source row/configuration/code and existing protein-example hold were inspected; all original input hashes plus the supplemental hold-input hash remain unchanged.
+- All five adopted abstracts were read. The exact 2011 main text was read completely, with Figures 2 and 5 visually inspected; original spectral data stated to be available on request were not accessed, and not every figure image or raw assay datum was reanalyzed.
+- The 1999 original isolation article and 2014 analogue article were inspected at abstract scope only. The two secondary review abstracts were context only, not primary evidence.
+- The 1987 Mediterranean-family abstract was inspected through bibliographic reproduction; its official publisher route returned 403 and complete primary structure mapping remains unverified. The definition's occurrence sentence is therefore an informational source-support question.
+- The 2011 PEP unit conflict and separated-versus-mixture sponge extraction ambiguity remain explicit. Human-cell safety and exact direct binding were not established for compound D.
+- CAS identity is corroborated by official chemical databases; a standalone subscription registry entry was not inspected. The species taxon and native paper identifiers resolve.
+- The structured adapter returned a USA300 pyK gene, not a matched MRSA252 experiment or informative iModulon. No exhaustive resistance, producer, mechanism or public-dataset inventory is claimed.
+- The existing REVIEWED event remains unchanged. Passing schema and strict validation does not resolve the independently demonstrated invalid SMILES.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T103150Z-bromodeoxytopsentin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Bromodeoxytopsentin: supported measured PK association, invalid inherited
+  SMILES'
+started_at: '2026-10-21T10:11:05Z'
+finished_at: '2026-10-21T10:31:50Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the record. Preserved the initial capture and
+    independently inspected the entire reviewed record, maintained source provenance,
+    official identities, all five adopted citation abstracts, and the complete primary
+    PK study main text and selected original figures.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The exact neutral bromodeoxytopsentin identity, antibacterial activity and
+  measured MRSA pyruvate-kinase association are supported. The record correctly avoids
+  transferring a related compound''s cocrystal. One major representation error remains:
+  its inherited SMILES fails chemical parsing although its independently valid InChI,
+  formula and identifiers agree. Two informational follow-ups concern exact quantitative
+  evidence and the unresolved specificity of the inherited Mediterranean sponge-isolation
+  sentence.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: curation/uniprot_protein_examples.yaml
+    sha256: 536ab4cc7ba9be95c80242bcc25321d67a5bdbfecbc50f3be5a449000abfe5f5
+    role: context
+  - path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
+    sha256: 91b79cd17a12412cb1058a5f8e771445b9a072137da815d220423a095e43af50
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:144087
+  path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
+  label: bromodeoxytopsentin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
+    role: Curator-owned reviewed mechanism, measured target association, evidence
+      and review history
+scope:
+  description: Whole reviewed CHEBI144087 record, including two exact synonyms, four
+    parents, activity and mechanism, protein/taxon association, structures and masses,
+    both xrefs, source mint, evidence and four history events; all five maintained
+    source citation leads.
+  selection: Queue 172; exact path and initial capture supplied by coordinator before
+    assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:144087
+  exclusions:
+  - target: Bromotopsentin, cis-3,4-dihydrohamacanthin B, other halogenated topsentin
+      analogues, sponge extracts and human PK isoforms as exact equivalents
+    reason: These are distinct compounds, compositions or proteins. Their crystallographic,
+      cytotoxicity or activity results cannot transfer to the exact compound.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - validation
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - validation
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/bromodeoxytopsentin.yaml --out /private/tmp/am-review-session/172-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: failed
+  required: false
+  summary: Actual focused command exited 1. Native SMILES cannot be kekulized. Independent
+    InChI parses with the exact key, formula, charge and masses; source mint reproduces.
+    This is an unresolved native representation failure.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - validation
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 172
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: alternative-chemistry
+  name: Independent official alternative structure diagnostic
+  status: passed
+  required: false
+  summary: PubChem and KNApSAcK strings both parse to the exact native InChIKey, formula
+    and charge. This establishes a reviewable repair candidate; the native SMILES
+    failure remains unresolved.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - chemistry
+  - knapsack
+  - pubchem
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/172-alternative-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-pyk
+  name: Structured pyruvate-kinase source cross-check
+  status: passed
+  required: false
+  summary: Actual structured adapter exited 0 before open-ended web research. One
+    USA300 gene hit and no iModulon hit; this is expression-context indexing, not
+    target binding or exact MRSA252 evidence.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run --project
+    /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw kg-microbe-sources
+    imodulondb --timeout 15 search --organism s_aureus --dataset staph_precise108
+    --query pyruvate kinase
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:144087
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:144087
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:144087
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:144087
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:144087
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:144087
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:144087
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:144087
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:144087
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
+  locator: Entire record, including molecular target, evidence and four history entries.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: supports
+  summary: REVIEWED/EXACT record with curator-owned ENERGY_METABOLISM_INHIBITION and
+    a microbial MEASURED_TARGET_ASSOCIATION for pyruvate kinase. Its notes explicitly
+    exclude direct-binding classification because the cocrystal belongs to a related
+    bis-indole. No quantitative AST, biosynthetic producer, resistance mechanism or
+    causal graph is asserted.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; conf/sources.yaml; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: Exact row 2657; maintained source classification, role/parent filters,
+    structure import and curated-field preservation.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: supports
+  summary: The ChEBI row reproduces the native definition, invalid SMILES, valid InChI
+    and two xrefs. All five adopted citation leads were inspected at least as original
+    abstracts. Curated mechanism and target evidence are owned by the actual native
+    record. Initial captures remain intact; the supplemental inspection adds the existing
+    UniProt hold context without refreshing original hashes. All 14 captured inputs
+    remain unchanged.
+  snapshot_sha256: a15c44ef537a53c9c8c920c3e96c26bf0eb556a3e2cea0a7f9c9a515a8b49e63
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:144087
+  locator: Complete official page and embedded structure, ontology, synonym and xref
+    data.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: supports
+  summary: Current ChEBI repeats the same invalid SMILES but gives the valid native
+    InChI, RMAWSNVDVKZXDX-UHFFFAOYSA-N, C20H13BrN4O, neutral charge and masses. The
+    two 4/5-position imidazole names are source exact synonyms consistent with tautomeric
+    naming, not evidence of two opposite isomers. Parents CHEBI24780, CHEBI38958,
+    CHEBI52514 and CHEBI76224 are imidazoles, indole alkaloid, bromoindole and aromatic
+    ketone. CHEBI33282 is antibacterial agent. Current additional PK-inhibitor role
+    CHEBI143909 is consistent with the independently curated mechanism; its absence
+    from the older raw role field is not a separate scientific error.
+  snapshot_sha256: 3610054b78c951aaddc5c8f2073134f0575b6952ee4b711fa898a1cd29920aac
+- evidence_id: knapsack
+  kind: database
+  reference: http://www.knapsackfamily.com/knapsack_core/information.php?word=C00026966
+  locator: Complete official compound page.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: supports
+  summary: 'The exact name, CAS 180633-55-0, formula and full InChIKey agree. Its
+    valid aromatic string includes three [nH] atoms: O=C(c1ncc(-c2c[nH]c3cc(Br)ccc23)[nH]1)c1c[nH]c2ccccc12.
+    Organism entries describe reported occurrence; listed predicted biosynthetic precursors
+    do not prove a producer or pathway.'
+  snapshot_sha256: 50f237a18c1db7c9af6a528695177620c9b35079401a267a28fe4ff724cf1acf
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/400452
+  locator: Official PUG REST property response.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: supports
+  summary: CID400452 independently matches the native exact InChI, key, formula, monoisotopic
+    mass and neutral charge. Its nonaromatic SMILES parses to the same canonical aromatic
+    representation as KNApSAcK. Average molecular-weight reporting precision differs
+    without implying a different composition.
+  snapshot_sha256: 0941ddd88f3c2a7127a561fe7c207c7b9fd1ffce4ba1018252d56530e956b3af
+- evidence_id: chemistry
+  kind: validation
+  reference: 172-chemistry.json; 172-alternative-chemistry.json
+  locator: Independent native and alternative structure parsing.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: refutes
+  summary: Native SMILES fails RDKit kekulization, while native InChI gives the exact
+    full key, C20H13BrN4O, charge zero, one fragment, no stereocentres, average mass
+    405.255 and monoisotopic mass 404.027273136. Both independently checked official
+    alternative strings parse to this same structure. The initial failure is retained
+    and is a real representation error, not a formula-formatting or mass-convention
+    issue.
+  snapshot_sha256: b5b7df5c224c93e949bee2ee26731bf2e3291489057a3879ce381261ae52b50c
+- evidence_id: primary2011
+  kind: primary_source
+  reference: PMID:22030393; DOI:10.1074/jbc.M111.289033; https://pmc.ncbi.nlm.nih.gov/articles/PMC3248012/
+  locator: Complete main text, Methods, Tables 1–3, Results and Discussion; original
+    Figures 2 and 5 visually inspected.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: supports
+  summary: Figure 2 explicitly identifies bromodeoxytopsentin as compound D with the
+    exact monobrominated bis-indole structure. Purified recombinant MRSA252/NRS71
+    PK assays report D IC50 0.060±0.003 micromolar, at least 166-fold selectivity
+    versus human PK isoforms. Table 3 reports D MIC 6.25 micrograms/mL, 15.4 micromolar,
+    against both RN4220 and MRSA252 by BHI broth microdilution and complete growth-inhibition
+    endpoint. Figure 5B supports the D concentration-response experiment. These support
+    antibacterial inclusion and biochemical PK inhibition.
+  snapshot_sha256: 9d8a0758f790a91fd053206710d5bf3333c0bffa84ade1676da71df51d5d7b81
+- evidence_id: primary-scope
+  kind: primary_source
+  reference: PMID:22030393; DOI:10.1074/jbc.M111.289033
+  locator: Crystal, cytotoxicity, assay-condition and source-isolation sections.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: partial
+  summary: The 3.3-angstrom cocrystal and HEK293T cytotoxicity/selectivity index experiments
+    concern compound C, not D. D has no exact cocrystal or demonstrated cellular target
+    occupancy, ATP depletion or rescue chain in this paper. The PEP concentration
+    is 10 millimolar in the assay description but 10 micromolar in the Figure 5 caption;
+    preserve that discrepancy before quantitative assay enrichment. Sponge Methods
+    first say the two associated sponges were separated and only T. pachastrelloides
+    analyzed, then describe extraction of their lyophilized mixture. This supports
+    reported isolation context with an internal ambiguity, not sole-species biosynthesis.
+  snapshot_sha256: b565508eebd4a9f19cd9d34de9c0e7c37e105cc6282bd25895f083d01d5ded23
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1280
+  locator: Official taxonomy browser scientific-name and lineage.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: supports
+  summary: NCBITaxon1280 resolves to Staphylococcus aureus. Native species-level association
+    is compatible with the experimentally named MRSA252/NRS71 strain; it does not
+    assert a universal strain MIC.
+- evidence_id: adopted1999
+  kind: primary_source
+  reference: PMID:10217734; DOI:10.1021/np980507b
+  locator: Complete original abstract inspected in Europe PMC, PubMed and ACS publisher
+    landing text.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: partial
+  summary: The 1999 New Bis(Indole) Alkaloids of the Topsentin Class paper reports
+    two new brominated compounds among four isolated from Spongosorites genitrix collected
+    near Jaeju Island, Korea, with moderate K562 cytotoxicity. Its abstract does not
+    establish the exact compound-number mapping or the native Mediterranean shallow-water
+    isolation sentence. The full article was not available through inspected free
+    routes; it is not used to infer biosynthesis or exact antibacterial mechanism.
+  snapshot_sha256: 343f4654a6a55976cdf42da2d98445cb0a9dce2a5d5ac0933416cb35b7b61dc1
+- evidence_id: adopted2014
+  kind: primary_source
+  reference: PMID:25372480; DOI:10.1021/np500755v
+  locator: Complete original abstract.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: context_only
+  summary: The 2014 study concerns synthetic deoxytopsentin analogues, including six
+    dihalogenated derivatives. Its biochemical and modeling results cannot be transferred
+    wholesale to the native monobrominated compound, and a modeled pocket is not an
+    exact-compound cocrystal.
+  snapshot_sha256: 343f4654a6a55976cdf42da2d98445cb0a9dce2a5d5ac0933416cb35b7b61dc1
+- evidence_id: adopted-reviews
+  kind: database
+  reference: PMID:24995289; DOI:10.1155/2014/375423; PMID:26473891; DOI:10.3390/md13106366
+  locator: Complete original abstracts and publication metadata.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: context_only
+  summary: These two adopted articles are secondary reviews of marine indole alkaloids
+    and South African marine drug discovery. Their abstracts provide research context
+    and primary-paper leads, not independent original experiments proving a producer,
+    binding event or quantitative susceptibility.
+  snapshot_sha256: 343f4654a6a55976cdf42da2d98445cb0a9dce2a5d5ac0933416cb35b7b61dc1
+- evidence_id: isolation-boundary
+  kind: database
+  reference: DOI:10.1139/v87-352; https://cir.nii.ac.jp/crid/1363951794914602368
+  locator: Bibliographic service reproduction of the 1987 original abstract; publisher
+    route returned 403.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: context_only
+  summary: The 1987 Topsentins paper reports topsentin A, B1 and B2 from Mediterranean
+    Topsentia genitrix. Without its full structures, this does not independently establish
+    the exact bromodeoxytopsentin isolation claim. Inspected modern primary evidence
+    concerns South African T. pachastrelloides material; the 1999 abstract concerns
+    Korean S. genitrix. No conclusion that Mediterranean occurrence is impossible
+    or that a spelling/taxonomic synonym denotes a different species is made.
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB s_aureus/staph_precise108; s_aureus/staph_precise108/USA300HOU_RS09005
+  locator: Dataset catalog and actual structured search before open-ended web search;
+    172-adapter-pyk.txt.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: context_only
+  summary: The covered USA300 gene pyK is annotated pyruvate kinase; no iModulon component
+    matched the query. This is a different strain from MRSA252 and gives no chemical
+    phenotype or direct-binding evidence. A summarize command was not applicable because
+    no component hit was used.
+  snapshot_sha256: b0b952a24bdee2a4a7f3f62961653af03524c8da16e71a7f297073053ee368fd
+- evidence_id: protein-hold
+  kind: record_content
+  reference: curation/uniprot_protein_examples.yaml
+  locator: Held exact bromodeoxytopsentin record near line 1079.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: supports
+  summary: The existing maintained hold defers a single-UniProt example pending strain/subunit-specific
+    resolution. Thus the absence of a protein example is a documented curation boundary,
+    not an undiscovered required-field omission. The primary paper names MRSA252 and
+    can inform a future exact reviewed-protein check, but the adapter USA300 hit must
+    not be substituted.
+- evidence_id: validation
+  kind: validation
+  reference: 172-focused-results.json; 172-schema.log; 172-strict.log; 172-chemistry.log
+  locator: Actual per-record documented schema and strict gates plus independent chemistry.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: supports
+  summary: Both required focused gates exit 0. Optional chemistry exits 1 for invalid
+    SMILES. The passing alternative diagnostic does not erase or repair that failure.
+  snapshot_sha256: 2107ad06a6ecb541b33feb98b00131940e3643984e6ece63f8878f35091604f5
+- evidence_id: search
+  kind: search
+  reference: 172-local-hits.txt; 172-maintained-search.txt
+  locator: Identifier, label, slug and exact key searches including hidden and ignored
+    files.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: context_only
+  summary: Searches cover the worktree corpus, raw sources, maintained curation/configuration/code
+    and available review context while excluding only .git and .venv internals. Existing
+    protein-example hold was found. Native optional-field absence is assessed from
+    the entire record, not inferred from a partial projection. Historical reports
+    are leads only.
+  snapshot_sha256: 686edfe313859c5da0bc69fdc1c94f5ea6067bdcd4a7f613b9b49be71914decc
+  search_scope: Identifier, label, slug and key across data, curation, conf, scripts,
+    src, docs, .claude and reviews, including hidden and ignored files; only .git
+    and .venv internals excluded.
+- evidence_id: rubric
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/record-review-profile.md;
+    docs/record-reviews.md; CLAUDE.md
+  locator: Native review rubric, evidence boundaries, required validation and immutable
+    review contract.
+  accessed_at: '2026-10-21T10:29:19Z'
+  support: supports
+  summary: Scientific REVIEWED status requires a sound chemical representation and
+    narrow primary support. Missing optional spectra, graphs and protein examples
+    are not automatically errors; related-compound and host effects must remain separate.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact molecule versus representation
+  outcome: concern
+  summary: All independent identifiers and valid InChI identify one neutral monobrominated
+    structure, but the native SMILES cannot be used as a chemical representation.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - record
+  - chebi
+  - knapsack
+  - pubchem
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Names, parents, role and taxon
+  outcome: supported
+  summary: Official ontology, synonyms and xrefs agree with the exact molecule and
+    antibacterial scope. The target taxon is correctly S. aureus.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - chebi
+  - knapsack
+  - taxon
+- assessment_id: activity
+  area: evidence
+  topic: Exact antibacterial and enzyme evidence
+  outcome: supported
+  summary: Compound D is explicitly identified and has measured PK inhibition and
+    strain-specific MICs. Native notes correctly preserve biochemical association
+    rather than exact direct binding.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - primary2011
+  - primary-scope
+- assessment_id: mechanism
+  area: scope
+  topic: Energy metabolism, structural binding and host selectivity
+  outcome: supported
+  summary: Energy-metabolism inhibition is supported at the purified PK level. The
+    record correctly excludes C's cocrystal; no D cellular ATP-killing chain or mammalian-cell
+    selectivity result should be inferred.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - record
+  - primary2011
+  - primary-scope
+  - adapter
+- assessment_id: isolation
+  area: provenance
+  topic: Exact Mediterranean sponge sentence
+  outcome: unknown
+  summary: The sentence is faithfully inherited from ChEBI but was not established
+    by inspected exact primary text. Other reported collection contexts and internal
+    2011 extraction ambiguity warrant a bounded source follow-up, not a confirmed
+    wrong-producer allegation.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - chebi
+  - adopted1999
+  - primary-scope
+  - isolation-boundary
+- assessment_id: citations
+  area: provenance
+  topic: Five adopted citation dispositions
+  outcome: supported
+  summary: Three original research abstracts and two review abstracts were inspected;
+    the exact 2011 main text was read in full. Analogue, host-cell and review context
+    is kept separate.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - adopted1999
+  - primary2011
+  - adopted2014
+  - adopted-reviews
+- assessment_id: completeness
+  area: completeness
+  topic: Quantitative evidence and optional fields
+  outcome: unknown
+  summary: Exact IC50 and MIC enrichments are available but optional, with a PEP unit
+    conflict to preserve. No missing producer, resistance mechanism or causal graph
+    is asserted as an error. The existing UniProt hold is recognized.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - primary2011
+  - primary-scope
+  - protein-hold
+  - rubric
+- assessment_id: ownership
+  area: ownership
+  topic: Source representation versus curated mechanism
+  outcome: supported
+  summary: Inherited structure belongs to the ChEBI source/extraction pipeline; independently
+    curated target notes and future primary additions belong to the actual record.
+    Initial and supplemental input hashes are retained.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - source
+  - record
+- assessment_id: validation
+  area: schema
+  topic: Required gates and chemistry failure
+  outcome: concern
+  summary: Required schema/strict checks pass but do not detect the chemically invalid
+    SMILES. Prior REVIEWED history does not resolve this independently reproduced
+    failure.
+  target_ids:
+  - CHEBI:144087
+  evidence_ids:
+  - validation
+  - chemistry
+  - rubric
+findings:
+- finding_id: F1
+  issue_key: bromodeoxytopsentin-invalid-aromatic-smiles
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Repair the inherited chemically invalid aromatic SMILES
+  description: The native and current ChEBI SMILES cannot be kekulized. Their unbracketed
+    aromatic nitrogens omit the required pyrrolic [nH] representation. Native InChI
+    independently parses to the asserted exact identity, and official KNApSAcK/PubChem
+    strings provide a chemically valid matching candidate. Schema and strict gates
+    pass despite the defect.
+  target_ids:
+  - CHEBI:144087
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - source
+  - chebi
+  - chemistry
+  - knapsack
+  - pubchem
+  - primary2011
+  - validation
+  rule_id: 'native-review-checklist: exact parsable chemical identity and internal
+    structure agreement'
+  native_severity: major invalid chemical representation
+  normalization_reason: 'This is not evidence that the intended molecule or grounding
+    is wrong: independent InChI, identifiers and primary structure agree. Nevertheless
+    one supplied machine-readable representation is unusable and requires correction
+    before renewed scientific sign-off.'
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted source structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source structure validation and exact normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source adjudication policy if needed
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible structure import while preserving curated evidence
+- finding_id: F2
+  issue_key: bromodeoxytopsentin-exact-activity-context-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Optionally replace grouped potency context with exact compound D values
+  description: The native 16–60 nM range is explicitly grouped and not false, but
+    D-specific IC50 and strain-specific MICs are available. The primary paper has
+    a PEP concentration discrepancy, and C-only binding/cytotoxicity results must
+    remain excluded.
+  target_ids:
+  - CHEBI:144087
+  field_paths:
+  - molecular_targets[0].experimental_context
+  - activity_spectrum
+  - evidence
+  evidence_ids:
+  - primary2011
+  - primary-scope
+  - protein-hold
+  rule_id: 'native-review-checklist: narrow experimental claim and optional quantitative
+    enrichment'
+  native_severity: informational optional enrichment
+  normalization_reason: Existing target relation and antibacterial inclusion are supported;
+    absent optional numerical fields do not invalidate them.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
+    role: Curator-owned primary evidence, exact experimental context and history
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Existing held protein example, only if exact strain/protein evidence resolves
+      it
+- finding_id: F3
+  issue_key: bromodeoxytopsentin-mediterranean-isolation-followup
+  category: provenance
+  severity: informational
+  status: open
+  certainty: provisional
+  title: Verify the exact primary source behind the Mediterranean isolation sentence
+  description: ChEBI attests the sentence, but the inspected primary material covers
+    South African T. pachastrelloides and the 1999 abstract reports Korean S. genitrix.
+    The older Mediterranean topsentin-family abstract does not identify the exact
+    molecule in accessible text. This is an unresolved source-support question, not
+    proof of false occurrence or biosynthesis by another organism.
+  target_ids:
+  - CHEBI:144087
+  field_paths:
+  - definition
+  evidence_ids:
+  - chebi
+  - adopted1999
+  - primary-scope
+  - isolation-boundary
+  rule_id: 'native-review-checklist: exact chemical and biological source scope'
+  native_severity: informational bounded source follow-up
+  normalization_reason: No native producer object exists, and bounded access limitations
+    prevent a confirmed contradictory-isolation finding.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted source structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source structure validation and exact normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source adjudication policy if needed
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible structure import while preserving curated evidence
+actions:
+- action_id: A1
+  description: Correct the exact source-owned SMILES through a reproducible maintained
+    normalization.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:144087
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted source structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source structure validation and exact normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source adjudication policy if needed
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible structure import while preserving curated evidence
+  acceptance_checks:
+  - Verify the valid KNApSAcK candidate O=C(c1ncc(-c2c[nH]c3cc(Br)ccc23)[nH]1)c1c[nH]c2ccccc12
+    against the original compound D drawing, independent InChI and current PubChem
+    identity. Preserve the exact bromine position and imidazole tautomer boundary.
+  - Implement a documented exact-source correction or upstream-source fix in the maintained
+    pipeline; do not merely hand-patch a generated structure. Regenerate through the
+    documented workflow while preserving the curated mechanism and evidence.
+  - Require both structure strings to parse and agree on full key RMAWSNVDVKZXDX-UHFFFAOYSA-N,
+    formula C20H13BrN4O, neutral charge and masses. Repeat focused gates and applicable
+    shared checks, then record the scientific curation/review event through the native
+    validated writer.
+- action_id: A2
+  description: Curate optional exact potency observations with assay and compound
+    boundaries intact.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:144087
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
+    role: Curator-owned primary evidence, exact experimental context and history
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Existing held protein example, only if exact strain/protein evidence resolves
+      it
+  acceptance_checks:
+  - Use compound D IC50 0.060±0.003 micromolar for purified MRSA252 PK; retain the
+    human-isoform comparison as enzyme selectivity. Do not assign compound C's 16
+    nM value, cocrystal or HEK293T selectivity index to D.
+  - If adding activity_spectrum, preserve Table 3 MIC 6.25 micrograms/mL for each
+    RN4220 and MRSA252 strain, the BHI broth microdilution and complete-growth-inhibition
+    endpoint; do not relabel these as MBC or population breakpoints.
+  - Preserve the 10 millimolar versus 10 micromolar PEP conflict until resolved from
+    original assay information. Do not add exact cellular target occupancy, ATP depletion
+    or a complete killing graph without matching evidence.
+  - For any proposed protein example, resolve the actual MRSA252 sequence and reviewed
+    accession and explicitly adjudicate the existing maintained hold; do not substitute
+    the USA300 adapter hit. Use the validated writer and curation history for changes
+    to data/antibiotics/antibacterial/bromodeoxytopsentin.yaml.
+- action_id: A3
+  description: Resolve the exact isolation provenance only if primary compound mapping
+    becomes available.
+  finding_ids:
+  - F3
+  target_ids:
+  - CHEBI:144087
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted source structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source structure validation and exact normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source adjudication policy if needed
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible structure import while preserving curated evidence
+  acceptance_checks:
+  - Inspect the original 1987/1999 structures or another exact isolation paper and
+    map the native bromodeoxytopsentin structure before affirming or changing the
+    Mediterranean sentence. Taxonomic synonymy and spelling require explicit evidence,
+    not inference from geographic differences.
+  - If the sentence is a family-level transfer, correct the maintained ChEBI-derived
+    definition with an exact primary citation. If it remains inaccessible, preserve
+    that limitation rather than claiming a confirmed false producer.
+  - Any future producer object requires biosynthetic evidence. The 2011 report describes
+    associated sponges and has separated-versus-mixture extraction wording; isolation
+    alone is not proof of sole-species biosynthesis.
+limitations:
+- The complete native record, maintained source row/configuration/code and existing
+  protein-example hold were inspected; all original input hashes plus the supplemental
+  hold-input hash remain unchanged.
+- All five adopted abstracts were read. The exact 2011 main text was read completely,
+  with Figures 2 and 5 visually inspected; original spectral data stated to be available
+  on request were not accessed, and not every figure image or raw assay datum was
+  reanalyzed.
+- The 1999 original isolation article and 2014 analogue article were inspected at
+  abstract scope only. The two secondary review abstracts were context only, not primary
+  evidence.
+- The 1987 Mediterranean-family abstract was inspected through bibliographic reproduction;
+  its official publisher route returned 403 and complete primary structure mapping
+  remains unverified. The definition's occurrence sentence is therefore an informational
+  source-support question.
+- The 2011 PEP unit conflict and separated-versus-mixture sponge extraction ambiguity
+  remain explicit. Human-cell safety and exact direct binding were not established
+  for compound D.
+- CAS identity is corroborated by official chemical databases; a standalone subscription
+  registry entry was not inspected. The species taxon and native paper identifiers
+  resolve.
+- The structured adapter returned a USA300 pyK gene, not a matched MRSA252 experiment
+  or informative iModulon. No exhaustive resistance, producer, mechanism or public-dataset
+  inventory is claimed.
+- The existing REVIEWED event remains unchanged. Passing schema and strict validation
+  does not resolve the independently demonstrated invalid SMILES.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

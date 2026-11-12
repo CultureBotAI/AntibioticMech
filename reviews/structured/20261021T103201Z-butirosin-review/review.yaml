@@ -1,0 +1,682 @@
+schema_version: 1.0.0
+review_id: 20261021T103201Z-butirosin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of butirosin
+started_at: '2026-10-21T10:11:08Z'
+finished_at: '2026-10-21T10:32:01Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: 'Identity blocker: mixture/family concept assigned a stereochemically
+  incorrect single graph'
+scientific_review: true
+summary: Butirosin is an A/B antibiotic complex, while the generated record assigns
+  one neutral PubChem structure with an R-AHBA side chain instead of the natural S
+  configuration. Its mixture CAS identifier, family ChEBI xref and exact sulfate synonyms
+  cannot all denote that graph. Exact butirosin A and B records already exist. Exclude
+  the broad ARO concept through maintained decisions and reassess any component-specific
+  evidence separately.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/butirosin.yaml
+    sha256: 79f34cec214113009f070e7d1433f4e15b7c9a274549ff9958cf442f2105fb09
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: data/antibiotics/unspecified/butirosin-a.yaml
+    sha256: 0518107c95631a6acf7cc13aac4450ecff85f09a95f584fe78320ae1a40de744
+    role: context
+  - path: data/antibiotics/unspecified/butirosin-b.yaml
+    sha256: 9f2573b9875aed8f824a8f30479005b01cc6dff47298497f6ed56522393f0d16
+    role: context
+scope:
+  description: Entire SEEDED record and four history events; ARO/PubChem identity,
+    target and seven resistance assertions; current mixture authority and ChEBI family/components;
+    all twelve adopted/ontology PMID leads plus four original identity/biosynthesis/activity
+    leads; existing A/B records inspected solely as identity context.
+  selection: Queue index174; root initial13 input hashes preserved; four source tables
+    and two contextual sibling records hashed before detailed inspection.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-63094b52cf
+targets:
+- target_id: antibioticmech:aro-63094b52cf
+  path: data/antibiotics/antibacterial/butirosin.yaml
+  label: butirosin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO/PubChem identity or assertion owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted ARO/PubChem identity or assertion owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted ARO/PubChem identity or assertion owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted ARO/PubChem identity or assertion owner
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit0.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/butirosin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit0;zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/butirosin.yaml --out /private/tmp/am-review-session/174-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Supplemental chemical identity assertions
+  status: passed
+  required: false
+  summary: Exit0; internal graph consistency and exact PubChem match pass, while explicit
+    component comparisons confirm the identity conflict.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/174-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: adapter-catalog
+  name: Native iModulonDB catalog
+  status: passed
+  required: false
+  summary: Exit0 before protein web research.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/174-imodulondb-datasets.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-search
+  name: Native aph contextual lookup
+  status: passed
+  required: false
+  summary: Exit0;three gene hits,zero iModulons;none proves the imported enzyme-specific
+    butirosin claim.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism p_aeruginosa --dataset precise364 --query
+    aph > /private/tmp/am-review-session/174-imodulondb-aph.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/butirosin.yaml
+  locator: Entire YAML and four history events
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: supports
+  summary: One neutral fully configured structure is assigned to broad butirosin,
+    with two sulfate exact synonyms, mixture CAS12772-35-9 and family CHEBI65109.
+    Seven resistance mechanisms and16S-rRNA target remain explicitly CARD database
+    assertions; target is marked PRIMARY_EVIDENCE_NEEDED. No numerical MIC or producer
+    is asserted.
+- evidence_id: chemistry
+  kind: validation
+  reference: PubChem:72393;CHEBI:65110;CHEBI:65112
+  locator: 174-chemistry.py;174-chemistry.json;174-pubchem.json;174-children.json
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: refutes
+  summary: SMILES/InChI/key/formula/mass are internally coherent and match current
+    CID72393. However, native XEQLFNPSYWZPOW-NUOYRARPSA-N has R-AHBA, whereas both
+    component graphs have S-AHBA. In standard InChI numbering, native differs from
+    both at8 and21; A additionally differs at14. Native is neither A (SVRMBHBBSA-N)
+    nor B (HBYCGHPUSA-N). Existing local A/B records agree with the corresponding
+    current ChEBI graphs.
+  snapshot_sha256: d22ff7e0f2bb49de24746e1f9fafb4b0af259e36983055de5d1544352d83eb20
+- evidence_id: mixture
+  kind: authority
+  reference: FDA/NCATS GSRS UNII:8S52KR0L58;CAS:12772-35-9
+  locator: 174-fda.json;substanceClass,mixture.components,names,codes
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: refutes
+  summary: Authority identifies butirosin as a mixture requiring both A and B; one
+    name describes80–85% A and15–20% B. The same entry carries CAS12772-35-9 and ChEMBL3549904.
+    This supports mixture scope, not a fixed graph for either component.
+  snapshot_sha256: 94e764455ce324330c3aa37cfd93ea8f98f616a1982391d4c5c17d5aa571a356
+- evidence_id: family
+  kind: database
+  reference: CHEBI:65109
+  locator: 174-ols.json;174-children.json
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: refutes
+  summary: Current ChEBI family has no exact formula/structure and has butirosin A,B
+    and gamma-L-glutamylbutirosin B children. It is a broader parent concept, not
+    an exact identity xref for the native graph.
+  snapshot_sha256: fed60f8204f937532b491fee6265d300bf28e064b8a28475722c4725f1c735a5
+- evidence_id: isolation
+  kind: primary_source
+  reference: PMID:4670491
+  locator: DOI:10.1128/AAC.2.2.84;174-extra-core.json complete abstract
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: refutes
+  summary: Original1972 isolation paper explicitly resolves the butirosin complex
+    into isomeric A/B components and discusses their free bases and tetraacetyl derivatives
+    separately. It independently establishes that the name of the complex does not
+    denote one stereoisomer.
+  snapshot_sha256: cb0b60fedbc84ca684bed9faa725875a4f375855fc856d1781f0918d0a260764
+- evidence_id: biosynthesis
+  kind: primary_source
+  reference: PMID:17462573
+  locator: DOI:10.1016/j.chembiol.2007.02.005;174-extra-core.json complete abstract
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: refutes
+  summary: Original enzymatic biosynthesis paper specifies the natural (S)-4-amino-2-hydroxybutyrate
+    side chain, transfer from BtrI to ribostamycin by BtrH and deprotection by BtrG.
+    This directly conflicts with the native R side chain; it is biosynthetic evidence,
+    not a ribosomal target assay.
+  snapshot_sha256: cb0b60fedbc84ca684bed9faa725875a4f375855fc856d1781f0918d0a260764
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:4207954;PMID:4670492
+  locator: DOI:10.1128/AAC.2.2.79;DOI:10.1128/AAC.2.2.89;174-extra-core.json complete
+    abstracts
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: partial
+  summary: The original fermentation and antibacterial studies concern the complex,
+    including bacterial in-vitro activity and mouse infection experiments. Fermentation
+    titers in micrograms of base per mL are not MIC values. These reports do not establish
+    clinical treatment efficacy or activity of the native R epimer.
+  snapshot_sha256: cb0b60fedbc84ca684bed9faa725875a4f375855fc856d1781f0918d0a260764
+- evidence_id: resistance-exact
+  kind: primary_source
+  reference: PMID:17088477;PMID:14638496
+  locator: 174-core.json complete original abstracts
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: partial
+  summary: AphIIc expression in E.coli increases butirosin MICs and disruption in
+    S.maltophilia K279a decreases them; reagent A/B composition is unresolved at abstract
+    depth. The IIb/HpaA study names butirosin among resistance substrates, but its4-HPA-induced
+    wild-type/mutant experiment is neomycin-specific. Do not transfer that induction
+    assay to butirosin.
+  snapshot_sha256: 96ff66c6f5e9c101ee3690a3ad9d1111d710675522db38c33110fffb7f319ea0
+- evidence_id: other-enzyme-leads
+  kind: primary_source
+  reference: PMID:6295884;PMID:6313476;PMID:3006668;PMID:2846986;PMID:2848443;PMID:10984043
+  locator: 174-core.json complete abstracts
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: context_only
+  summary: These report Tn5 neo sequence, APHIIIa sequence/kanamycin resistance, B.circulans
+    APH cloning, aphA6 sequence/kanamycin-amikacin resistance, pRPG101 phosphotransferase,
+    and PAO1 genome respectively. Abstracts do not demonstrate activity of the native
+    butirosin stereoisomer. For pRPG101, broad clinical-isolate resistance differs
+    from the cloned-gene amikacin/kanamycin phenotype.
+  snapshot_sha256: 96ff66c6f5e9c101ee3690a3ad9d1111d710675522db38c33110fffb7f319ea0
+- evidence_id: target-lead
+  kind: primary_source
+  reference: PMID:9662506
+  locator: 174-core.json complete abstract
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: context_only
+  summary: Surface-plasmon-resonance experiments concern model A-site RNA and multiple
+    aminoglycoside classes; the abstract does not identify an exact butirosin component
+    or the native epimer. Native CARD attribution/primary-evidence-needed status is
+    appropriate, but its substance scope remains limited by F1.
+  snapshot_sha256: 96ff66c6f5e9c101ee3690a3ad9d1111d710675522db38c33110fffb7f319ea0
+- evidence_id: review-leads
+  kind: database
+  reference: PMID:10103173;PMID:11083623;PMID:8385262
+  locator: 174-core.json;174-fetch2-results.json
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: context_only
+  summary: All three resolve as broad aminoglycoside reviews.8385262 has a complete
+    class-level abstract;10103173 and11083623 have no Europe PMC abstract and full-text
+    retrieval failed. The native definition cites10103173; its clinical-use wording
+    was not independently verified from source body.
+- evidence_id: owners
+  kind: record_content
+  reference: curation/decisions.tsv;data/raw/aro_antibiotics.tsv;data/raw/pubchem_structures.tsv;scripts/seed_from_sources.py
+  locator: Adopted ARO0000024 rows;decision EXCLUDE semantics;contextual A/B records
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: supports
+  summary: The generated graph follows the adopted PubChem row. EXCLUDE acts before
+    merging at seed time. Ignored-inclusive searches of curation,data/antibiotics
+    and conf found existing A/B records and no existing exclusion for the broad minted
+    concept.
+  search_scope: rg --no-ignore --hidden over curation,data/antibiotics,conf plus explicit
+    identity-policy documents; exact label,CURIE and accession variants searched.
+    Siblings are identity context, not additional reviewed targets.
+- evidence_id: adapter
+  kind: validation
+  reference: p_aeruginosa/precise364/PA4119
+  locator: 174-imodulondb-datasets.txt;174-imodulondb-aph.txt
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: context_only
+  summary: Catalog/search preceded web follow-up. Three gene hits and zero modules
+    returned. PA4119 is labelled aph but annotated aminoglycoside3-N-acetyltransferase
+    by the adapter; this is not a resolved APHIIb protein crosswalk. The other hits
+    are unrelated hydrolases. No expression or phenotype claim is imported.
+- evidence_id: aro-cache
+  kind: database
+  reference: External ARO cache
+  locator: /Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/downloads/aro.obo;174-aro-cache-hash.json;174-aro-stanzas.txt
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: context_only
+  summary: Relevant compound,parent,target and seven enzyme stanzas checked after
+    hashing; exact adopted edge attribution retained.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema/strict checks
+  locator: 174-strict.tsv
+  accessed_at: '2026-10-21T10:25:22Z'
+  support: supports
+  summary: Both focused gates pass; passing serialization/shape checks do not resolve
+    chemical entity scope.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Mixture versus exact structure
+  outcome: concern
+  summary: Mixture/family/salt identifiers cannot denote the single native graph,
+    which also has the wrong natural AHBA stereochemistry.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  evidence_ids:
+  - record
+  - mixture
+  - family
+  - chemistry
+  - isolation
+  - biosynthesis
+- assessment_id: activity
+  area: grounding
+  topic: Antibacterial scope
+  outcome: concern
+  summary: Complex activity is supported, but cannot be transferred to the different
+    native stereoisomer.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  evidence_ids:
+  - activity
+  - chemistry
+- assessment_id: claims
+  area: evidence
+  topic: Target and resistance provenance
+  outcome: supported
+  summary: Imported assertions honestly identify CARD and preserve primary-evidence-needed
+    target status. Their transfer to any exact component requires reagent-specific
+    review.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  evidence_ids:
+  - record
+  - resistance-exact
+  - other-enzyme-leads
+  - target-lead
+- assessment_id: definition
+  area: completeness
+  topic: Clinical-use wording and review source
+  outcome: unknown
+  summary: The cited class review body was unavailable; broad clinical-use language
+    is not independently verified, and mouse infection activity alone would not establish
+    it.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  evidence_ids:
+  - review-leads
+  - activity
+- assessment_id: provenance
+  area: provenance
+  topic: History and source ownership
+  outcome: supported
+  summary: Four history events, maintained ARO/PubChem owners and all twelve adopted/ontology
+    PMID records checked at declared depths.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  evidence_ids:
+  - record
+  - owners
+  - review-leads
+  - aro-cache
+- assessment_id: schema
+  area: schema
+  topic: Focused checks
+  outcome: supported
+  summary: Schema/strict pass; supplementary assertions positively detect the identity
+    conflict.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: aro-0000024-butirosin-mixture-wrong-stereoisomer
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: Butirosin complex is represented as the wrong exact stereoisomer
+  description: The original isolation paper and GSRS identify butirosin as an A/B
+    complex; CHEBI65109 is a family, and sulfate synonyms are salts. Native CID72393
+    instead specifies one neutral graph with an R-AHBA side chain, contrary to the
+    primary natural S assignment and both component structures. It is not authentic
+    A or B. Existing exact A/B records preclude solving this by adding duplicates
+    or relabelling the wrong graph.
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  field_paths:
+  - identifier
+  - label
+  - chemical_structure
+  - xrefs
+  - synonyms
+  evidence_ids:
+  - record
+  - chemistry
+  - mixture
+  - family
+  - isolation
+  - biosynthesis
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exclude the mixture/family ARO source concept from exact-structure corpus
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted incorrect exact-graph mapping retained as source provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Apply maintained exclusion through normal validated regeneration
+  rule_id: 'CLAUDE.md: a record is a structure; xref means same structure; salt/stereoisomer
+    boundaries'
+  native_severity: blocker wrong chemical entity
+  normalization_reason: 'This is not merely a missing stereochemical annotation: the
+    represented entity differs from the mixture identifiers and both natural components,
+    so the record denotes the wrong thing.'
+actions:
+- action_id: A1
+  description: Exclude the broad butirosin source concept and keep future component
+    evidence tied to existing exact records.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-63094b52cf
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exclude the mixture/family ARO source concept from exact-structure corpus
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted incorrect exact-graph mapping retained as source provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Apply maintained exclusion through normal validated regeneration
+  acceptance_checks:
+  - Add a documented EXCLUDE decision for minted antibioticmech:aro-63094b52cf / ARO:0000024
+    with the original complex evidence and graph conflict; do not GROUND it to A or
+    B or rename the current graph.
+  - Use the documented canary and full seed/prune workflow only after separate curation
+    authorization; retain immutable review history and source provenance. Verify the
+    broad source concept cannot reintroduce the wrong graph.
+  - Retain existing CHEBI:65112 butirosin A and CHEBI:65110 butirosin B as separate
+    exact structures. Confirm S-AHBA and their distinct xylo/ribofuranosyl configurations
+    before any component enrichment.
+  - Do not copy broad-complex resistance, target, quantitative activity or sulfate
+    identifiers into either component without exact reagent evidence. CHEBI65109 belongs
+    as a broader parent, not an exact xref.
+  - Run focused schema/strict and documented reference/history, regeneration and full
+    QC gates; confirm no duplicate exact component and no accidental removal of existing
+    A/B records.
+limitations:
+- All twelve adopted/ontology PMID records resolved:ten complete abstracts were read;10103173
+  and11083623 supplied metadata but no abstract. Their full-text XML requests returned500
+  and PMC web rendering was challenged; the bodies and the native clinical-use wording
+  remain unverified.
+- Four supplemental original identity,biosynthesis and activity studies were read
+  at complete-abstract depth. The1972 isolation XML request also returned500. No raw
+  spectra or original full stereochemical elucidation was reanalyzed; the explicit
+  primary S-AHBA assignment, authority mixture definition and component graph comparisons
+  suffice for the bounded identity finding.
+- The native PubChem mapping is current and internally consistent. Its agreement does
+  not establish biological identity; the R-AHBA and pentose-anomer conflicts are preserved,
+  not silently corrected.
+- ChEMBL3549904 API returned404; GSRS still lists that accession at mixture scope.
+  This was not treated as proof the accession is invalid. Licensed CAS/Reaxys registries
+  were not accessed; public GSRS resolves the adopted CAS to the complex.
+- AphIIb/IIc full XML requests returned500. Abstract-level butirosin resistance does
+  not resolve component or sulfate composition, and other enzyme/genome abstracts
+  do not establish the native epimer substrate.
+- The adapter PA4119 annotation does not resolve a phosphotransferase crosswalk. No
+  exact UniProt example, iModulon phenotype or causal mechanism is inferred from it.
+- This is a one-target review. Existing A/B records were inspected only to establish
+  nonduplication and structural context; their complete scientific correctness is
+  not certified. Focused checks do not establish full-corpus success or promote SEEDED
+  status.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 19 repository input hashes and the external ARO cache remain unchanged; no native
+  or saved-bundle edits.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1128/AAC.2.2.84
+- https://doi.org/10.1016/j.chembiol.2007.02.005
+- https://gsrs.ncats.nih.gov/api/v1/substances(8S52KR0L58)?view=full
+tags:
+- record-review
+- butirosin
+- identity
+- mixture
+- stereochemistry
