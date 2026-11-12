@@ -1,0 +1,936 @@
+# Review of holomycin
+
+- Review: 20261021T182704Z-holomycin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T18:00:59Z
+- Finished UTC: 2026-10-21T18:27:04Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Holomycin is correctly identified by its InChI and current authoritative structures, but the inherited SMILES is invalid and conflicts with its REVIEWED structure gate. A scratch [nH] repair reproduces the exact compound. The curated downstream transcription process and both producer links are supported; qualify the imported RNA-polymerase wording while preserving evidence for weak high-concentration inhibition and reductive activation.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position 536; original 13 input hashes retained and six actual producer, overlay and curator-writer owners appended before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:156451 | data/antibiotics/antibacterial/holomycin.yaml | generated | holomycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | failed | False | CHEBI:156451 | Actual focused execution exited 1. |
+| Focused schema verification | passed | True | CHEBI:156451 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:156451 | Actual focused execution exited 0. |
+| Independent chemical authority and scratch repair comparison | passed | False | CHEBI:156451 | Confirmed native/current ChEBI parse failure and demonstrated exact repair against native InChI, official molfile and PubChem; native failure remains open. |
+| Source, citation, input and history audit | passed | False | CHEBI:156451 | 19 unchanged inputs, original13 retained, all12 adopted lead dispositions, two versioned MIBiG joins and six ordered history events. |
+| Structured public dataset discovery | passed | False | CHEBI:156451 | Public dataset catalogue read before primary mechanism follow-up. |
+| Initial RelA structured lookup | failed | False | CHEBI:156451 | Actual attempted key returned adapter validation error: imodulons[0].regulator must be a JSON list, got NoneType. |
+| Catalogue-key RelA structured lookup | failed | False | CHEBI:156451 | Actual lookup failed response validation for null regulator; no expression module evidence was used. |
+| Authoritative full QC | failed | True | CHEBI:156451 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:156451 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:156451 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:156451 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:156451 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:156451 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:156451 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:156451 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:156451 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact holomycin identity and encoding
+
+identity: concern. Targets: CHEBI:156451.
+
+The InChI, formula, official molfile and PubChem agree, but the native SMILES is invalid. Scratch replacement of the pyrrolic n by[nH] restores the exact supported compound.
+
+### Antibacterial, antifungal and tumour-cell scope
+
+scope: supported. Targets: CHEBI:156451.
+
+Exact original assays support the retained bacterial and fungal activity roles. Antitumour wording is supported at cultured-cell cytotoxicity scope and does not establish selectivity or clinical efficacy. The tested fungal negatives are retained without extrapolation.
+
+### Downstream transcription versus primary RNAP targeting
+
+consistency: concern. Targets: CHEBI:156451.
+
+The curated biological-process relation and notes accurately match the2001 experiment. The unqualified definition is less precise than that context and newer metal-homeostasis findings; qualifying it is warranted, while weak high-concentration RNAP inhibition is not denied.
+
+### Exact MIBiG producer mapping
+
+provenance: supported. Targets: CHEBI:156451.
+
+Both source versions and exact compounds map to the native producer entries and original genetic/chemical experiments. Inherited-reference cautions remain honest; no attribution defect is established.
+
+### REVIEWED structure criterion
+
+consistency: concern. Targets: CHEBI:156451.
+
+The six events are chronological and the curator event is LLM-disclosed, but REVIEWED cannot be reaffirmed while the chemical representation fails. This is linked to the structure blocker rather than duplicated as a separate finding.
+
+## Findings
+
+### F1: Holomycin SMILES is invalid because pyrrolic hydrogen is omitted
+
+blocker / open / confirmed; issue key: holomycin-invalid-pyrrolic-n-smiles.
+
+The native and live ChEBI SMILES cannot be kekulized. Its aromatic pyrrolic n needs the supported hydrogen representation. A scratch[nH] repair exactly reproduces the native InChIKey/formula and official molfile/PubChem molecule. The source-owned SMILES must be repaired reproducibly before the structure criterion of REVIEWED can pass; no salt, tautomer-identity or scaffold replacement is proposed.
+
+### F2: Imported RNAP wording needs the qualification already present in the curated mechanism
+
+minor / open / confirmed; issue key: holomycin-definition-rnap-qualification.
+
+The definition calls holomycin an RNA-polymerase inhibitor without the experimentally important qualification retained in its own curated notes. Original2001 supports weak high-concentration purified-enzyme inhibition and downstream cellular transcription effects;2007/2017 and2023 evidence favor metal-homeostasis/metalloenzyme disruption rather than established primary RNAP targeting. Qualify the definition without denying weak inhibition, deleting the valid downstream-process relation or claiming one universally proven target.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Repair the exact ChEBI source representation through the maintained inventory/extraction lane, using a validated encoding such as CC(=O)Nc1c2sscc-2[nH]c1=O or the equivalent official molfile-derived nonaromatic SMILES. Reseed and reassess the native REVIEWED structure gate with a curation event through the validated writer; never rewrite historical events.
+
+- The emitted SMILES parses and yields HBUNPJGMNVQSBX-UHFFFAOYSA-N, C7H6N2O2S2 and zero charge.
+- Preserve exact holomycin identity, valid curated downstream-process evidence and both producer scopes.
+- Do not reaffirm REVIEWED until identity/structure/roles/mechanism criteria and required native gates pass.
+- Run focused schema/strict, reference/history/corpus and full QC for eventual native changes.
+
+### A2
+
+Qualify the maintained source-owned definition to describe observed transcription inhibition while distinguishing weak purified RNAP effects from an established primary target. If enriching the mechanism, cite exact2017/2023 holomycin material, reductive activation and metalloenzyme results through the curator lane; preserve the older valid process observation.
+
+- Definition and curated notes consistently distinguish cellular transcription from direct primary RNAP targeting.
+- No reduced-form cell-free result is presented as unactivated holomycin direct binding or whole-cell carbapenem synergy.
+- Every new mechanistic object has its own exact primary evidence and a validated curation event.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/holomycin.yaml; Entire native record, including seven synonyms, roles, two producers, curated process target, six history events and REVIEWED status | supports | The imported definition calls holomycin an RNA-polymerase inhibitor. Curated notes explicitly retain an unresolved direct target and the molecular target is a downstream biological process. The native bare-n SMILES differs in validity from its matching InChI/formula. Both producer citations already carry inherited-reference cautions. |
+| chemistry | CHEBI:156451;pubchem.compound:10262683; 536-authority-chemistry.json;536-chebi-156451.json/.mol;536-pubchem.json;536-focused-run.log | supports | Native/current ChEBI SMILES CC(=O)Nc1c2sscc-2nc1=O fails kekulization. Scratch CC(=O)Nc1c2sscc-2[nH]c1=O parses and converges with native InChI, official ChEBI mol/InChI and PubChem to HBUNPJGMNVQSBX-UHFFFAOYSA-N, C7H6N2O2S2 and zero charge. No stereocentres or salt fragments are involved; native bytes were not changed. |
+| terms | CHEBI:156449;CHEBI:22160;CHEBI:33281;CHEBI:33282;CHEBI:35718; 536-chebi-*.json official snapshots, retrieval manifest536-fetch.json | supports | The parent terms denote dithiolopyrrolone antibiotics and acetamides; each is broader than holomycin and fits the authoritative graph. Retained roles are antimicrobial, antibacterial and antifungal. The current class parent inherits antibiotic-antifungal classification; source assertion and exact experimental fungal spectrum are distinguished. |
+| xrefs | cas:488-04-0;metacyc.compound:CPD-17940;reaxys:188430; Current536-chebi-156451.json and public PubChem identity page;536-metacyc.html;536-fetch3.json | supports | Current ChEBI reproduces all seven exact aliases and three native xrefs. The N-demethylthiolutin name agrees with original2001 Figure1 (R=H for holomycin, methyl for thiolutin). PubChem independently maps CAS488-04-0 to the same InChI. Direct CAS API returned401, MetaCyc required an account, and a direct Reaxys structure was not obtained; the latter mappings remain source-level assertions. |
+| primary2001 | PMID:11158751;DOI:10.1128/AAC.45.2.532-539.2001; 536-PMC90323.html/.txt; complete main and Tables1/2 read; actual Figure1 and Figure6 viewed | supports | S.clavuligerus IT1 holomycin inhibited E.coli whole-cell RNA synthesis, including the relA-null comparator. Beta-galactosidase kinetics supported an elongation phenotype. Purified RNAP inhibition was weak and required concentrations above growth inhibition; the authors left direct targeting unresolved. This supports the native downstream-process relation and bounded MIC-panel antibacterial activity, not an established primary RNAP target. |
+| primary2007 | PMID:17606690;DOI:10.1128/AAC.00343-07; 536-PMC2043205.html/.txt; complete main and Table1 read | supports | Commercial holomycin was tested against S.epidermidis RP62A. Broth MIC12.5µg/mL and MBC50µg/mL differ from transcription IC50&gt;100µg/mL in toluene-permeabilized cells. These are cellular transcription and biofilm experiments, not purified RNAP binding measurements. They reinforce qualification of the imported enzyme-inhibitor wording. |
+| primary2017 | PMID:28209778;DOI:10.1073/pnas.1612810114; 536-PMC5347557.html/.txt; complete main; Results sections on prodrug, RNAP/FbaA, NDM1 and model; detailed supplementary assays not inspected | supports | Reduced holomycin chelated metals and inhibited selected metalloenzymes. Purified E.coli RNAP showed less than20% inhibition through100µM reduced compound; transcription was interpreted as a downstream effect. The NDM1 experiments used reduced holomycin in vitro; whole-cell carbapenem effects were additive. Keep oxidized uptake-form versus reduced chelator, model versus direct biochemical result and cellular versus cell-free scope distinct. |
+| primary2023 | PMID:37561838;DOI:10.1021/acschembio.3c00360; 536-PMC10569480.html/.txt; complete main, protein-abundance/ABPP Results and FumA validation; SI not read | supports | Holomycin-treated E.coli showed metal-homeostasis and cysteine-reactivity changes. FumA purified from treated cells lacked activity and its Fe-S signal. This supports selected metalloenzyme disruption; profiling hits alone are not direct-binding targets. Carbonic-anhydrase zinc was not significantly removed in the separate cell-free test. These results do not invalidate the older downstream transcription phenotype. |
+| activity2017 | PMID:28740758;DOI:10.7717/peerj.3601; 536-PMC5520960.html/.txt; exact compound identification, antimicrobial and MTT methods/results, Table4 and Figure6 caption | supports | The isolated second compound was identified as holomycin by chromatography, MS and NMR. Purified and commercial material produced zones against two Fusarium species but not A.niger in an agar-well panel. MTT results showed cancer-cell cytotoxicity and also effects on293T cells. This supports bounded antifungal and antitumour-description scope without clinical efficacy or tumour selectivity; earlier yeast negatives concern different organisms and assays. |
+| mibig | BGC0002091.3;BGC0002412.2; 536-BGC0002091-annotations.json and536-BGC0002412-annotations.json; official versioned pages | supports | Both active, questionable-quality MIBiG entries reproduce the native organism taxon IDs, exact holomycin structure and locus-level evidence types. The native compound-specific join is based on the exact molecule and single compound/structure in each record; legacy citation warnings are preserved rather than silently upgraded. |
+| producer2013 | PMID:23572522;DOI:10.1074/jbc.M112.448415; 536-PMC3663494.html/.txt; complete abstract and producer-specific methods/results/discussion inspected | supports | Y.ruckeri ATCC29473 produced isolated holomycin supported by NMR/MS; hom6 disruption abolished production. The Discussion transposes the strain as29743 once, whereas the main strain/table/genome context agrees with29473. This supports the native producer link. Hom12 resistance and RNA methylation do not establish direct RNAP binding by holomycin. |
+| producer2021 | PMID:33771780;DOI:10.1128/AEM.00169-21; 536-PMC8208159.html/.txt; abstract, BGC11/hlmE production Results and chemical/genetic methods, biofilm context | supports | P.galatheae S2753 lost holomycin production after hlmE deletion, verified by chromatographic/HRMS profiling, and complementation restored the associated activity. The paper supports the producer link, with S2753 more specific than the native taxon-only entry. Subinhibitory biofilm stimulation is a separate ecological response, not the antimicrobial target or a contradiction of antibacterial classification. |
+| ledger | 536-source-audit.json; 536-adopted-core.json; all12 MED source abstracts read; per-lead dispositions and owner search; six chronological history events | supports | All ten adopted ChEBI leads and two MIBiG citations were resolved and assessed. Remaining abstracts concern biosynthesis, regulation or production and were not converted into direct-target evidence. Source hashes and original captures remain unchanged. The REVIEWED structure claim is contradicted by the present parse failure, without alleging a historical author action beyond the recorded events. |
+| search | Bounded holomycin mechanism, identity and activity discovery; 536-discovery.json;69 titles inspected;536-owners-search.json; adapter logs | supports | Ignored-inclusive exact label/identifier/key searches covered maintained raw inventories, curator inputs, conf, scripts and src. Structured adapter discovery succeeded but both RelA queries failed response validation; no module membership was inferred. Exact public primary sources were then inspected, distinguishing holomycin from thiolutin, reduced holomycin and methylated analogues. |
+
+## Limits And Additional Notes
+
+- Direct MetaCyc structure access required an account; direct CAS returned401 and Reaxys structure was not accessed. Current ChEBI reproduces these identifiers, and PubChem independently maps the CAS; exact gated-provider verification remains limited.
+- All12 adopted source abstracts were read; full-depth reading was reserved for native mechanism, exact producer passages and relevant independent activity/metal-homeostasis originals. Detailed2017/2023 supplementary methods and all69 discovery abstracts were not read.
+- The structured adapter was executed before primary mechanism follow-up: catalogue0, both RelA queries2 due null-regulator validation failures. These are failed checks, not evidence of absent RelA or module membership.
+- The2013 producer paper has one transposed ATCC number in Discussion; table/main genome and current MIBiG consistently identify29473. No producer correction follows that isolated source typo.
+- The19-owner capture script itself completed; its enclosing shell call ended126 after an accidental standalone directory invocation. Captured hashes were independently verified by the successful ledger rather than refreshed.
+- Native chemistry fails1 while schema/strict pass0. The successful scratch repair comparison demonstrates a future correction and does not make the unchanged native structure pass.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native, maintained-source or saved immutable bundle was changed. Original13 captures were preserved and six actual owners appended; standalone chemistry019 ran against054.
+- The existing source warning about legacy MIBiG references was preserved; independently read primary passages support the actual producer links.
+- The invalid representation and REVIEWED structure issue share one blocker. RNAP wording is separately minor because the structured claim is already accurately qualified.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T182704Z-holomycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of holomycin
+started_at: '2026-10-21T18:00:59Z'
+finished_at: '2026-10-21T18:27:04Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Holomycin is correctly identified by its InChI and current authoritative
+  structures, but the inherited SMILES is invalid and conflicts with its REVIEWED
+  structure gate. A scratch [nH] repair reproduces the exact compound. The curated
+  downstream transcription process and both producer links are supported; qualify
+  the imported RNA-polymerase wording while preserving evidence for weak high-concentration
+  inhibition and reductive activation.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/holomycin.yaml
+    sha256: 4979a76d25ee21ce1535f55be56b0735a0aee386ebeece64e3a436496146ae45
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+  - path: scripts/extract_mibig_producers.py
+    sha256: a078cdf4c9b2d09999800ab7ae03f93d3972f29b7d2f460ebbbe7d7ec6b31c53
+    role: context
+  - path: curation/uniprot_protein_examples.yaml
+    sha256: 536ab4cc7ba9be95c80242bcc25321d67a5bdbfecbc50f3be5a449000abfe5f5
+    role: context
+  - path: scripts/curate_uniprot_protein_examples.py
+    sha256: 3399882f3f23e95f717eb94081666022545e1ed999e99b5425d1a3c95bf9e54e
+    role: context
+  - path: src/antibioticmech/curate/curation_event.py
+    sha256: d080b25ad399a054d2f86636c1e9dc6847099ef4417dcd8f50e57661448f95a6
+    role: context
+  - path: src/antibioticmech/validation/write_validated.py
+    sha256: 7e75d39582e3a8c6d816c7927126b39948fbd2bf7650b579a71e93d912d659db
+    role: context
+targets:
+- target_id: CHEBI:156451
+  path: data/antibiotics/antibacterial/holomycin.yaml
+  label: holomycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Exact identity, synonyms, definition, roles, groundings and source leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: Activity role terminology
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/mibig_producers.tsv
+    role: Exact compound producer inventory
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_mibig_producers.py
+    role: MIBiG compound joins and evidence scope
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated fields and preservation of curator assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Explicit process-target protein-example exclusion
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/curate_uniprot_protein_examples.py
+    role: Protein-example audit overlay
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source priority and role policy
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusions
+  - repository: CultureBotAI/AntibioticMech
+    path: src/antibioticmech/curate/curation_event.py
+    role: Future curator-owned mechanism or status correction
+  - repository: CultureBotAI/AntibioticMech
+    path: src/antibioticmech/validation/write_validated.py
+    role: Validated native writer
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 536; original 13 input hashes retained
+    and six actual producer, overlay and curator-writer owners appended before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:156451
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: failed
+  required: false
+  summary: Actual focused execution exited 1.
+  target_ids:
+  - CHEBI:156451
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    536
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:156451
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/holomycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:156451
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/holomycin.yaml --out /private/tmp/am-review-session/536-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent chemical authority and scratch repair comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/536-authority-check.py
+    > /private/tmp/am-review-session/536-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Confirmed native/current ChEBI parse failure and demonstrated exact repair
+    against native InChI, official molfile and PubChem; native failure remains open.
+  target_ids:
+  - CHEBI:156451
+- check_id: ledger
+  name: Source, citation, input and history audit
+  command: .venv/bin/python /private/tmp/am-review-session/536-ledger.py > /private/tmp/am-review-session/536-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 unchanged inputs, original13 retained, all12 adopted lead dispositions,
+    two versioned MIBiG joins and six ordered history events.
+  target_ids:
+  - CHEBI:156451
+- check_id: adapter-datasets
+  name: Structured public dataset discovery
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/536-adapter-datasets.txt
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Public dataset catalogue read before primary mechanism follow-up.
+  target_ids:
+  - CHEBI:156451
+- check_id: adapter-first
+  name: Initial RelA structured lookup
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1 --query relA
+    > /private/tmp/am-review-session/536-adapter-relA.txt 2>&1
+  status: failed
+  required: false
+  exit_code: 2
+  expected_exit_code: 0
+  summary: 'Actual attempted key returned adapter validation error: imodulons[0].regulator
+    must be a JSON list, got NoneType.'
+  target_ids:
+  - CHEBI:156451
+- check_id: adapter-relA
+  name: Catalogue-key RelA structured lookup
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset modulome --query relA
+    > /private/tmp/am-review-session/536-adapter-relA-modulome.txt 2>&1
+  status: failed
+  required: false
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Actual lookup failed response validation for null regulator; no expression
+    module evidence was used.
+  target_ids:
+  - CHEBI:156451
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:156451
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:156451
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:156451
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:156451
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:156451
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:156451
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:156451
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:156451
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:156451
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/holomycin.yaml
+  locator: Entire native record, including seven synonyms, roles, two producers, curated
+    process target, six history events and REVIEWED status
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: The imported definition calls holomycin an RNA-polymerase inhibitor. Curated
+    notes explicitly retain an unresolved direct target and the molecular target is
+    a downstream biological process. The native bare-n SMILES differs in validity
+    from its matching InChI/formula. Both producer citations already carry inherited-reference
+    cautions.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:156451;pubchem.compound:10262683
+  locator: 536-authority-chemistry.json;536-chebi-156451.json/.mol;536-pubchem.json;536-focused-run.log
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: Native/current ChEBI SMILES CC(=O)Nc1c2sscc-2nc1=O fails kekulization.
+    Scratch CC(=O)Nc1c2sscc-2[nH]c1=O parses and converges with native InChI, official
+    ChEBI mol/InChI and PubChem to HBUNPJGMNVQSBX-UHFFFAOYSA-N, C7H6N2O2S2 and zero
+    charge. No stereocentres or salt fragments are involved; native bytes were not
+    changed.
+  snapshot_sha256: 81a10b0095aa4d4110642bb34cd1dc9cc3c056e8545985cd5cad2699e187d0fc
+- evidence_id: terms
+  kind: authority
+  reference: CHEBI:156449;CHEBI:22160;CHEBI:33281;CHEBI:33282;CHEBI:35718
+  locator: 536-chebi-*.json official snapshots, retrieval manifest536-fetch.json
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: The parent terms denote dithiolopyrrolone antibiotics and acetamides; each
+    is broader than holomycin and fits the authoritative graph. Retained roles are
+    antimicrobial, antibacterial and antifungal. The current class parent inherits
+    antibiotic-antifungal classification; source assertion and exact experimental
+    fungal spectrum are distinguished.
+  snapshot_sha256: 7c97234e5e1ee25ca5b5225040d0e25bce8b5fcf410fb8da375c5dc5a52fd3d9
+- evidence_id: xrefs
+  kind: authority
+  reference: cas:488-04-0;metacyc.compound:CPD-17940;reaxys:188430
+  locator: Current536-chebi-156451.json and public PubChem identity page;536-metacyc.html;536-fetch3.json
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: Current ChEBI reproduces all seven exact aliases and three native xrefs.
+    The N-demethylthiolutin name agrees with original2001 Figure1 (R=H for holomycin,
+    methyl for thiolutin). PubChem independently maps CAS488-04-0 to the same InChI.
+    Direct CAS API returned401, MetaCyc required an account, and a direct Reaxys structure
+    was not obtained; the latter mappings remain source-level assertions.
+  snapshot_sha256: f645c8dea8e780f5e92a3f81cfa96ad651fa1e8c0c314c2989dcd2cd2f5027eb
+- evidence_id: primary2001
+  kind: primary_source
+  reference: PMID:11158751;DOI:10.1128/AAC.45.2.532-539.2001
+  locator: 536-PMC90323.html/.txt; complete main and Tables1/2 read; actual Figure1
+    and Figure6 viewed
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: S.clavuligerus IT1 holomycin inhibited E.coli whole-cell RNA synthesis,
+    including the relA-null comparator. Beta-galactosidase kinetics supported an elongation
+    phenotype. Purified RNAP inhibition was weak and required concentrations above
+    growth inhibition; the authors left direct targeting unresolved. This supports
+    the native downstream-process relation and bounded MIC-panel antibacterial activity,
+    not an established primary RNAP target.
+  snapshot_sha256: ee1fe1bb9d5676175c9f9099afde0f4c18d2bb0487c8b819ce37e7da06fb1a11
+- evidence_id: primary2007
+  kind: primary_source
+  reference: PMID:17606690;DOI:10.1128/AAC.00343-07
+  locator: 536-PMC2043205.html/.txt; complete main and Table1 read
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: Commercial holomycin was tested against S.epidermidis RP62A. Broth MIC12.5µg/mL
+    and MBC50µg/mL differ from transcription IC50>100µg/mL in toluene-permeabilized
+    cells. These are cellular transcription and biofilm experiments, not purified
+    RNAP binding measurements. They reinforce qualification of the imported enzyme-inhibitor
+    wording.
+  snapshot_sha256: 80ea6071d0034fae304a7aa523eacd0671f40bc8e776739f68372f2682fc270b
+- evidence_id: primary2017
+  kind: primary_source
+  reference: PMID:28209778;DOI:10.1073/pnas.1612810114
+  locator: 536-PMC5347557.html/.txt; complete main; Results sections on prodrug, RNAP/FbaA,
+    NDM1 and model; detailed supplementary assays not inspected
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: Reduced holomycin chelated metals and inhibited selected metalloenzymes.
+    Purified E.coli RNAP showed less than20% inhibition through100µM reduced compound;
+    transcription was interpreted as a downstream effect. The NDM1 experiments used
+    reduced holomycin in vitro; whole-cell carbapenem effects were additive. Keep
+    oxidized uptake-form versus reduced chelator, model versus direct biochemical
+    result and cellular versus cell-free scope distinct.
+  snapshot_sha256: 82c8e4e016efc344b65004e33a919fe19b6a2c8a0dfe3754aec4d9c162262b56
+- evidence_id: primary2023
+  kind: primary_source
+  reference: PMID:37561838;DOI:10.1021/acschembio.3c00360
+  locator: 536-PMC10569480.html/.txt; complete main, protein-abundance/ABPP Results
+    and FumA validation; SI not read
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: Holomycin-treated E.coli showed metal-homeostasis and cysteine-reactivity
+    changes. FumA purified from treated cells lacked activity and its Fe-S signal.
+    This supports selected metalloenzyme disruption; profiling hits alone are not
+    direct-binding targets. Carbonic-anhydrase zinc was not significantly removed
+    in the separate cell-free test. These results do not invalidate the older downstream
+    transcription phenotype.
+  snapshot_sha256: 9a3c340a3764bc2ca6482d7b49f703d3cf4eb1acda7905fbc2e3e111d671cbc9
+- evidence_id: activity2017
+  kind: primary_source
+  reference: PMID:28740758;DOI:10.7717/peerj.3601
+  locator: 536-PMC5520960.html/.txt; exact compound identification, antimicrobial
+    and MTT methods/results, Table4 and Figure6 caption
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: The isolated second compound was identified as holomycin by chromatography,
+    MS and NMR. Purified and commercial material produced zones against two Fusarium
+    species but not A.niger in an agar-well panel. MTT results showed cancer-cell
+    cytotoxicity and also effects on293T cells. This supports bounded antifungal and
+    antitumour-description scope without clinical efficacy or tumour selectivity;
+    earlier yeast negatives concern different organisms and assays.
+  snapshot_sha256: 9d71b4f2e396bbff21c0404bb81aff84bf6842137c2a013aca599b3e0e461fc0
+- evidence_id: mibig
+  kind: database
+  reference: BGC0002091.3;BGC0002412.2
+  locator: 536-BGC0002091-annotations.json and536-BGC0002412-annotations.json; official
+    versioned pages
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: Both active, questionable-quality MIBiG entries reproduce the native organism
+    taxon IDs, exact holomycin structure and locus-level evidence types. The native
+    compound-specific join is based on the exact molecule and single compound/structure
+    in each record; legacy citation warnings are preserved rather than silently upgraded.
+  snapshot_sha256: ca3072551e397bc07ce4fee5f8c230857a6073a92e1bdc88c8793b5507e6025d
+- evidence_id: producer2013
+  kind: primary_source
+  reference: PMID:23572522;DOI:10.1074/jbc.M112.448415
+  locator: 536-PMC3663494.html/.txt; complete abstract and producer-specific methods/results/discussion
+    inspected
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: Y.ruckeri ATCC29473 produced isolated holomycin supported by NMR/MS; hom6
+    disruption abolished production. The Discussion transposes the strain as29743
+    once, whereas the main strain/table/genome context agrees with29473. This supports
+    the native producer link. Hom12 resistance and RNA methylation do not establish
+    direct RNAP binding by holomycin.
+  snapshot_sha256: 1d5d994e89f60185359a8991ab752816bca5159dc8c68fc5a77c8d75f6f09220
+- evidence_id: producer2021
+  kind: primary_source
+  reference: PMID:33771780;DOI:10.1128/AEM.00169-21
+  locator: 536-PMC8208159.html/.txt; abstract, BGC11/hlmE production Results and chemical/genetic
+    methods, biofilm context
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: P.galatheae S2753 lost holomycin production after hlmE deletion, verified
+    by chromatographic/HRMS profiling, and complementation restored the associated
+    activity. The paper supports the producer link, with S2753 more specific than
+    the native taxon-only entry. Subinhibitory biofilm stimulation is a separate ecological
+    response, not the antimicrobial target or a contradiction of antibacterial classification.
+  snapshot_sha256: ce6a7327f71899dd80cd2a5aea6580b8a3f02bb1d03716de0a60670232cfcf4d
+- evidence_id: ledger
+  kind: validation
+  reference: 536-source-audit.json
+  locator: 536-adopted-core.json; all12 MED source abstracts read; per-lead dispositions
+    and owner search; six chronological history events
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: All ten adopted ChEBI leads and two MIBiG citations were resolved and assessed.
+    Remaining abstracts concern biosynthesis, regulation or production and were not
+    converted into direct-target evidence. Source hashes and original captures remain
+    unchanged. The REVIEWED structure claim is contradicted by the present parse failure,
+    without alleging a historical author action beyond the recorded events.
+  snapshot_sha256: 3d69acffa1ae96cf683a05ffe907acf601b91138c64a56d91ebf06fdaad94a8e
+- evidence_id: search
+  kind: search
+  reference: Bounded holomycin mechanism, identity and activity discovery
+  locator: 536-discovery.json;69 titles inspected;536-owners-search.json; adapter
+    logs
+  accessed_at: '2026-10-21T18:13:50Z'
+  support: supports
+  summary: Ignored-inclusive exact label/identifier/key searches covered maintained
+    raw inventories, curator inputs, conf, scripts and src. Structured adapter discovery
+    succeeded but both RelA queries failed response validation; no module membership
+    was inferred. Exact public primary sources were then inspected, distinguishing
+    holomycin from thiolutin, reduced holomycin and methylated analogues.
+  search_scope: TITLE_ABS:holomycin EuropePMC69 hits, all titles and selected abstracts/originals;
+    exact current chemical xrefs, source terms and versioned MIBiG; ignored-inclusive
+    maintained-input search.
+  snapshot_sha256: eb742477a757b52d0e5d07ff79e72ef901dd8eafdd0b645630a8bd8d0701943a
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact holomycin identity and encoding
+  outcome: concern
+  summary: The InChI, formula, official molfile and PubChem agree, but the native
+    SMILES is invalid. Scratch replacement of the pyrrolic n by[nH] restores the exact
+    supported compound.
+  target_ids:
+  - CHEBI:156451
+  evidence_ids:
+  - native
+  - chemistry
+  - xrefs
+- assessment_id: activity
+  area: scope
+  topic: Antibacterial, antifungal and tumour-cell scope
+  outcome: supported
+  summary: Exact original assays support the retained bacterial and fungal activity
+    roles. Antitumour wording is supported at cultured-cell cytotoxicity scope and
+    does not establish selectivity or clinical efficacy. The tested fungal negatives
+    are retained without extrapolation.
+  target_ids:
+  - CHEBI:156451
+  evidence_ids:
+  - terms
+  - primary2001
+  - activity2017
+- assessment_id: mechanism
+  area: consistency
+  topic: Downstream transcription versus primary RNAP targeting
+  outcome: concern
+  summary: The curated biological-process relation and notes accurately match the2001
+    experiment. The unqualified definition is less precise than that context and newer
+    metal-homeostasis findings; qualifying it is warranted, while weak high-concentration
+    RNAP inhibition is not denied.
+  target_ids:
+  - CHEBI:156451
+  evidence_ids:
+  - native
+  - primary2001
+  - primary2007
+  - primary2017
+  - primary2023
+- assessment_id: producer
+  area: provenance
+  topic: Exact MIBiG producer mapping
+  outcome: supported
+  summary: Both source versions and exact compounds map to the native producer entries
+    and original genetic/chemical experiments. Inherited-reference cautions remain
+    honest; no attribution defect is established.
+  target_ids:
+  - CHEBI:156451
+  evidence_ids:
+  - mibig
+  - producer2013
+  - producer2021
+- assessment_id: history
+  area: consistency
+  topic: REVIEWED structure criterion
+  outcome: concern
+  summary: The six events are chronological and the curator event is LLM-disclosed,
+    but REVIEWED cannot be reaffirmed while the chemical representation fails. This
+    is linked to the structure blocker rather than duplicated as a separate finding.
+  target_ids:
+  - CHEBI:156451
+  evidence_ids:
+  - native
+  - chemistry
+  - ledger
+findings:
+- finding_id: F1
+  issue_key: holomycin-invalid-pyrrolic-n-smiles
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: Holomycin SMILES is invalid because pyrrolic hydrogen is omitted
+  description: The native and live ChEBI SMILES cannot be kekulized. Its aromatic
+    pyrrolic n needs the supported hydrogen representation. A scratch[nH] repair exactly
+    reproduces the native InChIKey/formula and official molfile/PubChem molecule.
+    The source-owned SMILES must be repaired reproducibly before the structure criterion
+    of REVIEWED can pass; no salt, tautomer-identity or scaffold replacement is proposed.
+  target_ids:
+  - CHEBI:156451
+  field_paths:
+  - chemical_structure.smiles
+  - curation_status
+  evidence_ids:
+  - native
+  - chemistry
+  - primary2001
+  - ledger
+  rule_id: 'review-checklist: mutually consistent valid structure; REVIEWED criteria1–2'
+  normalization_reason: Invalid chemical representation is blocker under the local
+    rubric even though other encodings identify the intended molecule.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited exact structure and definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ChEBI representation/wording correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native regeneration
+- finding_id: F2
+  issue_key: holomycin-definition-rnap-qualification
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Imported RNAP wording needs the qualification already present in the curated
+    mechanism
+  description: The definition calls holomycin an RNA-polymerase inhibitor without
+    the experimentally important qualification retained in its own curated notes.
+    Original2001 supports weak high-concentration purified-enzyme inhibition and downstream
+    cellular transcription effects;2007/2017 and2023 evidence favor metal-homeostasis/metalloenzyme
+    disruption rather than established primary RNAP targeting. Qualify the definition
+    without denying weak inhibition, deleting the valid downstream-process relation
+    or claiming one universally proven target.
+  target_ids:
+  - CHEBI:156451
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - primary2001
+  - primary2007
+  - primary2017
+  - primary2023
+  rule_id: 'review-checklist: precise mode-of-action wording and source conflict preservation'
+  normalization_reason: 'Bounded wording inconsistency is minor: native structured
+    relation and notes already preserve uncertainty, and weak enzyme inhibition was
+    actually measured.'
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited exact structure and definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ChEBI representation/wording correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native regeneration
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:156451
+  description: Repair the exact ChEBI source representation through the maintained
+    inventory/extraction lane, using a validated encoding such as CC(=O)Nc1c2sscc-2[nH]c1=O
+    or the equivalent official molfile-derived nonaromatic SMILES. Reseed and reassess
+    the native REVIEWED structure gate with a curation event through the validated
+    writer; never rewrite historical events.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited exact structure and definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ChEBI representation/wording correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native regeneration
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py;
+    native validated writer for any curator status action
+  acceptance_checks:
+  - The emitted SMILES parses and yields HBUNPJGMNVQSBX-UHFFFAOYSA-N, C7H6N2O2S2 and
+    zero charge.
+  - Preserve exact holomycin identity, valid curated downstream-process evidence and
+    both producer scopes.
+  - Do not reaffirm REVIEWED until identity/structure/roles/mechanism criteria and
+    required native gates pass.
+  - Run focused schema/strict, reference/history/corpus and full QC for eventual native
+    changes.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:156451
+  description: Qualify the maintained source-owned definition to describe observed
+    transcription inhibition while distinguishing weak purified RNAP effects from
+    an established primary target. If enriching the mechanism, cite exact2017/2023
+    holomycin material, reductive activation and metalloenzyme results through the
+    curator lane; preserve the older valid process observation.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited exact structure and definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ChEBI representation/wording correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native regeneration
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - Definition and curated notes consistently distinguish cellular transcription from
+    direct primary RNAP targeting.
+  - No reduced-form cell-free result is presented as unactivated holomycin direct
+    binding or whole-cell carbapenem synergy.
+  - Every new mechanistic object has its own exact primary evidence and a validated
+    curation event.
+limitations:
+- Direct MetaCyc structure access required an account; direct CAS returned401 and
+  Reaxys structure was not accessed. Current ChEBI reproduces these identifiers, and
+  PubChem independently maps the CAS; exact gated-provider verification remains limited.
+- All12 adopted source abstracts were read; full-depth reading was reserved for native
+  mechanism, exact producer passages and relevant independent activity/metal-homeostasis
+  originals. Detailed2017/2023 supplementary methods and all69 discovery abstracts
+  were not read.
+- 'The structured adapter was executed before primary mechanism follow-up: catalogue0,
+  both RelA queries2 due null-regulator validation failures. These are failed checks,
+  not evidence of absent RelA or module membership.'
+- The2013 producer paper has one transposed ATCC number in Discussion; table/main
+  genome and current MIBiG consistently identify29473. No producer correction follows
+  that isolated source typo.
+- The19-owner capture script itself completed; its enclosing shell call ended126 after
+  an accidental standalone directory invocation. Captured hashes were independently
+  verified by the successful ledger rather than refreshed.
+- Native chemistry fails1 while schema/strict pass0. The successful scratch repair
+  comparison demonstrates a future correction and does not make the unchanged native
+  structure pass.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native, maintained-source or saved immutable bundle was changed. Original13 captures
+  were preserved and six actual owners appended; standalone chemistry019 ran against054.
+- The existing source warning about legacy MIBiG references was preserved; independently
+  read primary passages support the actual producer links.
+- The invalid representation and REVIEWED structure issue share one blocker. RNAP
+  wording is separately minor because the structured claim is already accurately qualified.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

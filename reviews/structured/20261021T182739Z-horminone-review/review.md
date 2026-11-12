@@ -1,0 +1,890 @@
+# Horminone: primary crystal configuration and bounded antibacterial activity support the record
+
+- Review: 20261021T182739Z-horminone-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T18:01:02Z
+- Finished UTC: 2026-10-21T18:27:39Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The neutral 7α-hydroxy abietane quinone graph is supported by current ChEBI and an independent reconstruction of the original crystal coordinates, including all three stereocentres. Five adopted original abstracts and selected additional primary experiments were reviewed. Exact horminone activity supports the antibacterial role without importing host-cell toxicity, congener mechanisms or quantitative values outside their assay scope. No required native correction was established. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Assigned queue position 539; one exact native record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:73128 | data/antibiotics/antibacterial/horminone.yaml | generated | horminone |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:73128 | Actual focused execution exited 0. Executed against worktree 054; chemistry used existing 019 RDKit and native schema/strict checks used the 054 environment. |
+| Focused schema verification | passed | True | CHEBI:73128 | Actual focused execution exited 0. Executed against worktree 054; chemistry used existing 019 RDKit and native schema/strict checks used the 054 environment. |
+| Focused strict verification | passed | True | CHEBI:73128 | Actual focused execution exited 0. Executed against worktree 054; chemistry used existing 019 RDKit and native schema/strict checks used the 054 environment. |
+| Authoritative full QC | failed | True | CHEBI:73128 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:73128 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:73128 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:73128 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:73128 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:73128 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:73128 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:73128 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:73128 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact 7α-horminone structure and stereochemistry
+
+identity: supported. Targets: CHEBI:73128.
+
+The neutral composition, 7α definition and both chemical names are coherent. The original crystal coordinate model independently reproduces native C5S/C7R/C10S and full key; actual structure figures agree. The PubChem name comparator is an unasserted tautomer and is explicitly qualified.
+
+### Exact authority and four broader parents
+
+grounding: supported. Targets: CHEBI:73128.
+
+Current ChEBI and primary structure evidence support exact identity. Hydroxyquinone, p-quinone, secondary alcohol and abietane diterpenoid classes fit the native graph. CAS/Reaxys independent access remains limited without a demonstrated wrong accession.
+
+### Qualitative antibacterial role with exact-compound bounds
+
+evidence: supported. Targets: CHEBI:73128.
+
+The adopted 2001 abstract explicitly attributes bacterial activity to horminone, and the inspected 2021 compound 3 experiment adds strain-, medium- and time-specific mycobacterial support. Neither host-cell cytotoxicity nor congener results are needed to justify the broad native role. No native quantitative or mechanistic overclaim is present.
+
+### Adopted bibliography and optional mechanisms/observations
+
+completeness: unknown. Targets: CHEBI:73128.
+
+All five adopted original abstracts were read. The 2010 crystal main and supplementary prose/tables and selected 2021 primary sections were read beyond abstracts. Exact antibacterial mechanism remains unresolved; theoretical metal/rRNA models and human topoisomerase/cancer endpoints do not supply a direct bacterial target. Missing optional biological fields are not a native defect.
+
+### Source ownership, history and unchanged inputs
+
+provenance: supported. Targets: CHEBI:73128.
+
+The whole native, complete source row and all three chronological seed/reseed events were inspected. Original 13 and expanded 21 input hashes remain unchanged. Source extraction/seeding owns imported content; review does not promote SEEDED status or mutate scientific history.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Optional literature enrichment must retain exact material, organism, endpoint and evidence tier.
+
+- If adding activity, inspect the full adopted 2001 experimental table and preserve the exact horminone row; for the 2021 assay retain H37Rv GFP strain, medium, day, µg/mL units and 90% growth-inhibition definition.
+- Do not assign the 2021 compound 2 crystal or acetyl-derivative potency to free horminone; distinguish the 2019 starting epimeric mixture and derivative-specific VCD experiments.
+- Do not add bacterial topoisomerase or rRNA mechanism from host-cell assays or theoretical coordination models without direct exact-compound experimental evidence.
+- Preserve the primary-supported native quinone/stereo graph; do not substitute the unasserted PubChem tautomer automatically. Resolve CAS/Reaxys registry access before claiming universal independent xref verification.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/horminone.yaml; Entire native record: definition, two synonyms, four parents, role, structure, two xrefs and three history events | supports | The SEEDED exact CHEBI:73128 record is neutral C20H28O4 with key YVSUCPNWDPTGKM-JGRMJRGVSA-N. It defines the 7α-hydroxy form and contains no target, resistance, activity_spectrum, producer, clinical-product or causal graph assertion. All three tetrahedral centres are configured. |
+| owners | data/raw/chebi_antimicrobials.tsv#CHEBI:73128; Complete adopted row 1873, readiness row 1388 and exact curator/decision searches | context_only | The source row supplies the native identity, roles, names, chemistry and five PMID leads. No exact curator or decision override was found. Original 13 input hashes are preserved and expanded to 21 owner/context inputs. |
+| search | /private/tmp/am-review-session/539-context-search.txt; Initial whole-tree and owner follow-up searches | context_only | Identifier, label and slug searches included hidden and ignored files. The bounded external discovery search returned 95 entries, whose titles were screened for relevant original identity, antibacterial and mechanistic leads; this is not an exhaustive review of all 95 papers. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/73128/; Current CHEBI:73128 complete identity response | supports | Current ChEBI reproduces the native definition, names, SMILES, InChI/key, composition, charge and CAS/Reaxys associations. Its additional non-antimicrobial roles were not treated as required omissions. |
+| mapping | /private/tmp/am-review-session/539-map.py; 019 RDKit 2026.03.5 against cwd 054; authority and original-coordinate comparison | supports | Native and ChEBI encodings match. Original 2010 fractional coordinates, orthorhombic unit cell and geometry table were mapped to every native heavy atom and bond; native stereo was erased before coordinate-based assignment. Reconstructed C5=S, C7=R and C10=S at native atom indices 0,2,16 give the exact native full key. This checks the published coordinate model, not the underlying diffraction refinement. |
+| primary2010 | PMID:21587809; DOI:10.1107/S1600536810020544; Full scientific main, supplementary Comment/Experimental/Refinement, coordinate and bond tables | supports | The original isolates horminone from Premna obtusifolia roots from southern Thailand and redetermines its absolute configuration using Cu Kα radiation. It assigns abietane C5/C7/C10 as S/R/S, equivalent to phenanthrene 8a/10/4b. The reported Flack parameter is 0.13(16), with 970 Friedel pairs. This is direct identity evidence; statements citing older biological studies are not new antibacterial assays. |
+| primary2010-figure | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/33eb/3006754/32b83af485b3/e-66-o1566-fig1.jpg; Actual original numbered ellipsoid Figure 1 and separately retrieved Scheme 1 viewed | supports | The actual ellipsoid drawing establishes the atom labels used in the independent coordinate mapping. Scheme 1 explicitly depicts the trans ring junction and 10R hydroxyl-bearing centre in its phenanthrene numbering, matching native 7α-horminone. The complete mapped atom/bond correspondence is retained in 539-authority-map.json. |
+| primary2019-figure | DOI:10.1177/1934578X19862650; Actual original Figure 1 and selected public publisher Introduction/configurational discussion | context_only | The original distinguishes horminone 1 from its C7 epimer taxoquinone 2 and shows the 7-OH dashed for horminone. Its discussion concerns an isolated epimeric mixture followed by separately studied acetyl derivatives and VCD assignments. These derivative experiments are not falsely described as a new crystal determination of free horminone, and their mixture is not imposed on the native exact record. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/horminone/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,Charge/JSON; Unasserted additional CID2751795 name comparator | context_only | PubChem returns a different hydroxyquinone tautomer, key WAZYPYJGZYLHHT-JGRMJRGVSA-N, with the same composition and configured stereocentres. It is not a native asserted xref. A stereo-preserving tautomer normalization gives the same representation, but the stored exact encodings are not claimed identical. The primary crystal supports the native quinone placement; no PubChem replacement is recommended. |
+| tautomer | /private/tmp/am-review-session/539-tautomer.py; RDKit tautomer normalization with removal of sp3 stereo disabled | context_only | Native and additional PubChem graphs converge to the same normalized representation while retaining all three centre assignments. This is a computational explanation of the unasserted comparator difference, not evidence that the experimental isolate adopts the normalized tautomer. |
+| term132130 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/132130/; Current CHEBI:132130 definition | supports | hydroxyquinone: Any quinone in which one or more of the carbons making up the quinone moiety is substituted by a hydroxy group. The native quinone ring, hydroxyl groups and abietane skeleton satisfy this broader class. |
+| term25830 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/25830/; Current CHEBI:25830 definition | supports | p-quinones: A quinone in which the two oxo groups of the quinone are located para to each other on the 6-membered quinonoid ring. The native quinone ring, hydroxyl groups and abietane skeleton satisfy this broader class. |
+| term35681 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/35681/; Current CHEBI:35681 definition | supports | secondary alcohol: A secondary alcohol is a compound in which a hydroxy group, ‒OH, is attached to a saturated carbon atom which has two other carbon atoms attached to it. The native quinone ring, hydroxyl groups and abietane skeleton satisfy this broader class. |
+| term36762 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/36762/; Current CHEBI:36762 definition | supports | abietane diterpenoid: A diterpenoid based on an  abietane skeleton. The native quinone ring, hydroxyl groups and abietane skeleton satisfy this broader class. |
+| role | https://www.ebi.ac.uk/chebi/backend/api/public/compound/33282/; Current antibacterial-agent role; shared official snapshot | supports | This qualitative growth-inhibition/killing role does not require clinical approval, a potency cutoff or a demonstrated molecular target. |
+| registry | https://commonchemistry.cas.org/api/detail?cas_rn=21887-01-4; CAS21887-01-4 exact registry attempt and Reaxys2062542 boundary | context_only | CAS returned 401; independent Reaxys registry content was unavailable through the free routes. Their source associations are preserved, without treating ChEBI agreement as independent verification of those registry records. No contradictory registry identity was established. |
+| pmid11325249 | PMID:11325249; DOI 10.1021/np0004956; complete original abstract read | supports | The original names horminone as compound 9 isolated from Salvia blepharochlaena roots and explicitly reports its antibacterial activity against S. aureus ATCC6538P, S. epidermidis ATCC12226, B. subtilis ATCC6633 and E. faecalis ATCC29212. The abstract does not supply a numerical assay table or complete material/method details. The publisher PDF attempt returned 403; no original MIC table was claimed read. |
+| pmid21615011 | PMID:21615011; DOI 10.1177/1934578x1100600501; complete original abstract read | context_only | The original studies Salvia extracts and isolates horminone among constituents of S. ringens, with concentration-dependent antiproliferative effects on human tumor-cell assays. It does not establish an antibacterial mechanism or pure-compound bacterial MIC. |
+| pmid22436445 | PMID:22436445; DOI 10.1016/j.phytochem.2012.02.015; complete original abstract read | context_only | The original compares five diterpenes in human pancreatic MIA PaCa-2 cells, alkylation chemistry and human topoisomerase assays. Horminone alkylating behavior and host-cell DNA effects are not bacterial topoisomerase evidence; the strongest named topoisomerase results concern other compounds. |
+| pmid3236010 | PMID:3236010; DOI 10.1021/np50060a021; complete original abstract read | context_only | The original identifies horminone among diterpenes from Salvia hypargeia roots. Its abstract attributes antibacterial and antimycobacterial results to newly isolated hypargenins, not automatically to horminone. |
+| pmid9324001 | PMID:9324001; DOI 10.1016/s0378-8741(97)00073-1; complete original abstract read | context_only | The original concerns host hepatic monooxygenase/glutathione endpoints after horminone administration. It is not antibacterial evidence. The indexed title specifies Wistar rat while one abstract sentence says mice; that source inconsistency is not silently resolved into a native organism or safety claim. |
+| primary2021 | PMID:33477744; DOI:10.3390/plants10010175; Selected original Sections 2.1–2.2 and 3.1–3.5, actual Figure 1, Tables 1–4 | supports | The original isolates horminone as compound 3 from Plectranthus madagascariensis aerial material, voucher K-3,2018, and compares its spectroscopic data with literature. The actual Figure 1 distinguishes compound 3 from hydroxy/acetoxy congeners. The paper performs X-ray analysis on compound 2, not horminone. It yields 13.5 mg of isolated compound 3; exact purity and raw spectra were not independently reanalyzed. |
+| primary2021-assay | PMID:33477744; Table 3 exact compound 3 row; Methods 3.3.1 and 3.5 | supports | GFP-tagged M. tuberculosis H37Rv pMSp12::GFP is tested in broth with fluorescence at excitation485/emission520 nm. Table 3 reports horminone MIC90 of 14.34 and 3.96 µg/mL at 7 and 14 days in 7H9/casitone/glucose/tyloxapol, versus &gt;125 µg/mL at both times in 7H9/ADC/glucose/Tween80. Here MIC90 is modeled 90% growth inhibition, not a population percentile or proof of killing. Media and 5% DMSO are negative controls, rifampicin positive. Supplementary response curves and exact inoculum details remain unverified; protein binding is proposed as one possible medium effect, not directly measured. |
+| primary2021-figure | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/a445/7832401/dab516e13f9f/plants-10-00175-g001.jpg; Actual original Figure 1, compound 3 | supports | The actual structure panel shows the C7 hydroxy form as compound 3, separate from 6β-hydroxy and acetoxy derivatives. Its quinone constitution and C7 orientation agree with native horminone; the separate 2010 crystal supplies direct absolute-configuration support. |
+| additional-activity | PMID:16492530; PMID:7931371; Original complete abstracts read in bounded discovery response | context_only | The 2006 original identifies horminone among active abietanes against MRSA/VRE, but its abstract pools potency ranges across compounds; no compound-specific numeric value is transferred. The 1994 original explicitly identifies horminone 1 and reports activity against named bacterial species and Candida, without enough abstract-level strain/method detail for quantitative curation. |
+| mechanism | PMID:16571064; DOI:10.1021/jp0565812; Original complete abstract: theoretical coordination study | context_only | This original uses density-functional calculations of horminone with hydrated magnesium/calcium and phosphate models. Its membrane/rRNA/protein-synthesis interpretation is model-based and does not establish an experimentally demonstrated bacterial target. It does not justify adding an unqualified molecular-target or causal edge. |
+| adapter | /private/tmp/am-review-session/539-adapter-scope.json; Native applicability checked before open-web research | context_only | No native gene, protein, pathway or transcriptomic assertion is present. The shared catalog therefore produced no applicable native query; unrelated host-cell targets or later theoretical leads do not become native claims. |
+| access | /private/tmp/am-review-session/539-fetch2.json; Fetch response manifests 539-fetch1 through 539-fetch5 | context_only | The adopted 2001 publisher PDF and attempted IUCr PDF/CIF routes returned 403. Open PMC full XML and alternate HTML supplied the actual crystallographic text/tables and image URLs. The Sage PDF/direct HTML downloads returned 403, while the public web reader exposed selected text and the original Figure 1 image was retrieved successfully. No raw diffraction or unavailable original antibacterial table is claimed inspected. |
+
+## Limits And Additional Notes
+
+- All five adopted references were read at complete abstract depth; the original 2001 antibacterial table could not be retrieved from the attempted free publisher PDF route. Other adopted full experimental details were not exhaustively reviewed.
+- The 2010 published coordinate model and geometry were independently mapped, but raw diffraction was not re-refined. Its reported Flack uncertainty remains 0.13(16). The 2019 source was read selectively through the public browser text and actual Figure 1; the PDF download failed.
+- For the 2021 original, exact compound 3 isolation/structure, activity methods, tables and Figure 1 were inspected, but raw NMR spectra and supplementary dose-response curves were not reanalyzed. The main does not independently establish a directly measured protein-binding mechanism; numerical values are not inserted into native activity_spectrum.
+- CAS returned 401 and independent Reaxys content remained unavailable. The additional PubChem tautomer is not a native xref and does not create a confirmed native mismatch.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All original 13 and expanded 21 input hashes were rechecked unchanged before draft writing. No native/source/history/progress/saved-bundle/Git writes occurred.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T182739Z-horminone-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Horminone: primary crystal configuration and bounded antibacterial activity
+  support the record'
+started_at: '2026-10-21T18:01:02Z'
+finished_at: '2026-10-21T18:27:39Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The neutral 7α-hydroxy abietane quinone graph is supported by current ChEBI
+  and an independent reconstruction of the original crystal coordinates, including
+  all three stereocentres. Five adopted original abstracts and selected additional
+  primary experiments were reviewed. Exact horminone activity supports the antibacterial
+  role without importing host-cell toxicity, congener mechanisms or quantitative values
+  outside their assay scope. No required native correction was established. Scientific
+  assessment retains the stated evidence limits; full verification is blocked by the
+  shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/horminone.yaml
+    sha256: 7ac8f77f202da4569205e01adc26be970ef0f558434b4b6e8cefb74c7eb67690
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+targets:
+- target_id: CHEBI:73128
+  path: data/antibiotics/antibacterial/horminone.yaml
+  label: horminone
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 539; one exact native record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:73128
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Executed against worktree 054; chemistry
+    used existing 019 RDKit and native schema/strict checks used the 054 environment.
+  target_ids:
+  - CHEBI:73128
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    539
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against worktree 054; chemistry
+    used existing 019 RDKit and native schema/strict checks used the 054 environment.
+  target_ids:
+  - CHEBI:73128
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/horminone.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against worktree 054; chemistry
+    used existing 019 RDKit and native schema/strict checks used the 054 environment.
+  target_ids:
+  - CHEBI:73128
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/horminone.yaml --out /private/tmp/am-review-session/539-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:73128
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:73128
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:73128
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:73128
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:73128
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:73128
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:73128
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:73128
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:73128
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/horminone.yaml
+  locator: 'Entire native record: definition, two synonyms, four parents, role, structure,
+    two xrefs and three history events'
+  accessed_at: '2026-10-21T18:21:34Z'
+  support: supports
+  summary: The SEEDED exact CHEBI:73128 record is neutral C20H28O4 with key YVSUCPNWDPTGKM-JGRMJRGVSA-N.
+    It defines the 7α-hydroxy form and contains no target, resistance, activity_spectrum,
+    producer, clinical-product or causal graph assertion. All three tetrahedral centres
+    are configured.
+  snapshot_sha256: 7ac8f77f202da4569205e01adc26be970ef0f558434b4b6e8cefb74c7eb67690
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv#CHEBI:73128
+  locator: Complete adopted row 1873, readiness row 1388 and exact curator/decision
+    searches
+  accessed_at: '2026-10-21T18:21:34Z'
+  support: context_only
+  summary: The source row supplies the native identity, roles, names, chemistry and
+    five PMID leads. No exact curator or decision override was found. Original 13
+    input hashes are preserved and expanded to 21 owner/context inputs.
+  snapshot_sha256: 92f8640fb142ae54d977823aa52d03320d53a172a051b8f41e2add25fdeb16e7
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/539-context-search.txt
+  locator: Initial whole-tree and owner follow-up searches
+  accessed_at: '2026-10-21T18:21:34Z'
+  support: context_only
+  summary: Identifier, label and slug searches included hidden and ignored files.
+    The bounded external discovery search returned 95 entries, whose titles were screened
+    for relevant original identity, antibacterial and mechanistic leads; this is not
+    an exhaustive review of all 95 papers.
+  snapshot_sha256: 5daeab3265de55d52fac423fca10d3d60fe9bdf7fa55b1372b2c309996545962
+  search_scope: Worktree 054 initial539-local-hits.txt and rg --no-ignore --hidden
+    across curation/conf/scripts/data/raw; Europe PMC exact name search 539-search.json.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/73128/
+  locator: Current CHEBI:73128 complete identity response
+  accessed_at: '2026-10-21T18:17:59.696951Z'
+  support: supports
+  summary: Current ChEBI reproduces the native definition, names, SMILES, InChI/key,
+    composition, charge and CAS/Reaxys associations. Its additional non-antimicrobial
+    roles were not treated as required omissions.
+  snapshot_sha256: c2c36b86882c1d513bebecd68ab66488c0fd22f93191e73a2d877e4aaab51794
+- evidence_id: mapping
+  kind: validation
+  reference: /private/tmp/am-review-session/539-map.py
+  locator: 019 RDKit 2026.03.5 against cwd 054; authority and original-coordinate
+    comparison
+  accessed_at: '2026-10-21T18:21:34Z'
+  support: supports
+  summary: Native and ChEBI encodings match. Original 2010 fractional coordinates,
+    orthorhombic unit cell and geometry table were mapped to every native heavy atom
+    and bond; native stereo was erased before coordinate-based assignment. Reconstructed
+    C5=S, C7=R and C10=S at native atom indices 0,2,16 give the exact native full
+    key. This checks the published coordinate model, not the underlying diffraction
+    refinement.
+  snapshot_sha256: df9509fb325f67c832b713db2258490cbb7466aabd6f8de548c9cb9443a51aec
+- evidence_id: primary2010
+  kind: primary_source
+  reference: PMID:21587809; DOI:10.1107/S1600536810020544
+  locator: Full scientific main, supplementary Comment/Experimental/Refinement, coordinate
+    and bond tables
+  accessed_at: '2026-10-21T18:18:20.062384Z'
+  support: supports
+  summary: The original isolates horminone from Premna obtusifolia roots from southern
+    Thailand and redetermines its absolute configuration using Cu Kα radiation. It
+    assigns abietane C5/C7/C10 as S/R/S, equivalent to phenanthrene 8a/10/4b. The
+    reported Flack parameter is 0.13(16), with 970 Friedel pairs. This is direct identity
+    evidence; statements citing older biological studies are not new antibacterial
+    assays.
+  snapshot_sha256: 34ec0ddd1cd20c5ed4f1466cbfb1b0452cb9c6d12be560e39e49716887787d1a
+- evidence_id: primary2010-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/33eb/3006754/32b83af485b3/e-66-o1566-fig1.jpg
+  locator: Actual original numbered ellipsoid Figure 1 and separately retrieved Scheme
+    1 viewed
+  accessed_at: '2026-10-21T18:19:40.331167Z'
+  support: supports
+  summary: The actual ellipsoid drawing establishes the atom labels used in the independent
+    coordinate mapping. Scheme 1 explicitly depicts the trans ring junction and 10R
+    hydroxyl-bearing centre in its phenanthrene numbering, matching native 7α-horminone.
+    The complete mapped atom/bond correspondence is retained in 539-authority-map.json.
+  snapshot_sha256: 4695c9238c111361d11ac6b5436cfc313935088b9f610acb4183e3d752f30468
+- evidence_id: primary2019-figure
+  kind: primary_source
+  reference: DOI:10.1177/1934578X19862650
+  locator: Actual original Figure 1 and selected public publisher Introduction/configurational
+    discussion
+  accessed_at: '2026-10-21T18:18:52.152093Z'
+  support: context_only
+  summary: The original distinguishes horminone 1 from its C7 epimer taxoquinone 2
+    and shows the 7-OH dashed for horminone. Its discussion concerns an isolated epimeric
+    mixture followed by separately studied acetyl derivatives and VCD assignments.
+    These derivative experiments are not falsely described as a new crystal determination
+    of free horminone, and their mixture is not imposed on the native exact record.
+  snapshot_sha256: 88646dae91b96efb3fea26ee4dabc0a2c79f2db7761dae572365dddcc9b025e0
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/horminone/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,Charge/JSON
+  locator: Unasserted additional CID2751795 name comparator
+  accessed_at: '2026-10-21T18:17:59.706846Z'
+  support: context_only
+  summary: PubChem returns a different hydroxyquinone tautomer, key WAZYPYJGZYLHHT-JGRMJRGVSA-N,
+    with the same composition and configured stereocentres. It is not a native asserted
+    xref. A stereo-preserving tautomer normalization gives the same representation,
+    but the stored exact encodings are not claimed identical. The primary crystal
+    supports the native quinone placement; no PubChem replacement is recommended.
+  snapshot_sha256: de6ca5acf9df54913190325be2b9009d209cb65b6dedbea8bc127d1191758608
+- evidence_id: tautomer
+  kind: validation
+  reference: /private/tmp/am-review-session/539-tautomer.py
+  locator: RDKit tautomer normalization with removal of sp3 stereo disabled
+  accessed_at: '2026-10-21T18:21:34Z'
+  support: context_only
+  summary: Native and additional PubChem graphs converge to the same normalized representation
+    while retaining all three centre assignments. This is a computational explanation
+    of the unasserted comparator difference, not evidence that the experimental isolate
+    adopts the normalized tautomer.
+  snapshot_sha256: 908fa847df97ad84460fab00faf44ce2b2de5c8d6e3166c29a2c5f0bb79c717d
+- evidence_id: term132130
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/132130/
+  locator: Current CHEBI:132130 definition
+  accessed_at: '2026-10-21T18:18:00.736419Z'
+  support: supports
+  summary: 'hydroxyquinone: Any quinone in which one or more of the carbons making
+    up the quinone moiety is substituted by a hydroxy group. The native quinone ring,
+    hydroxyl groups and abietane skeleton satisfy this broader class.'
+  snapshot_sha256: 2998c9d1f0e21a75b266847174994a4a2684d50572dc170f94f2185da61b2039
+- evidence_id: term25830
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/25830/
+  locator: Current CHEBI:25830 definition
+  accessed_at: '2026-10-21T18:18:01.103109Z'
+  support: supports
+  summary: 'p-quinones: A quinone in which the two oxo groups of the quinone are located
+    para to each other on the 6-membered quinonoid ring. The native quinone ring,
+    hydroxyl groups and abietane skeleton satisfy this broader class.'
+  snapshot_sha256: 7495a40f0a83fbe356efc710464af86550ee83587dfb75e01234167163aa0a6d
+- evidence_id: term35681
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/35681/
+  locator: Current CHEBI:35681 definition
+  accessed_at: '2026-10-21T18:18:01.320096Z'
+  support: supports
+  summary: 'secondary alcohol: A secondary alcohol is a compound in which a hydroxy
+    group, ‒OH, is attached to a saturated carbon atom which has two other carbon
+    atoms attached to it. The native quinone ring, hydroxyl groups and abietane skeleton
+    satisfy this broader class.'
+  snapshot_sha256: 6c7bb094d5cee846fd3474aa3cd1e0060b4505ea5c6c91bce5934f9568866694
+- evidence_id: term36762
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/36762/
+  locator: Current CHEBI:36762 definition
+  accessed_at: '2026-10-21T18:18:01.630729Z'
+  support: supports
+  summary: 'abietane diterpenoid: A diterpenoid based on an  abietane skeleton. The
+    native quinone ring, hydroxyl groups and abietane skeleton satisfy this broader
+    class.'
+  snapshot_sha256: c2a944dad4a9189a35a5b2eb351b7487715f4c7550d15425d061fe81fbfda9cf
+- evidence_id: role
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/33282/
+  locator: Current antibacterial-agent role; shared official snapshot
+  accessed_at: '2026-10-21T18:21:34Z'
+  support: supports
+  summary: This qualitative growth-inhibition/killing role does not require clinical
+    approval, a potency cutoff or a demonstrated molecular target.
+  snapshot_sha256: 20d92ce7e00c204b1753184671c043160821d692438278344335446aadcd5082
+- evidence_id: registry
+  kind: authority
+  reference: https://commonchemistry.cas.org/api/detail?cas_rn=21887-01-4
+  locator: CAS21887-01-4 exact registry attempt and Reaxys2062542 boundary
+  accessed_at: '2026-10-21T18:18:00.722442Z'
+  support: context_only
+  summary: CAS returned 401; independent Reaxys registry content was unavailable through
+    the free routes. Their source associations are preserved, without treating ChEBI
+    agreement as independent verification of those registry records. No contradictory
+    registry identity was established.
+  snapshot_sha256: 3e7db788e384631f8a9f299d1797e6f8af6d16d643a1c91f9e83ae15212de45c
+- evidence_id: pmid11325249
+  kind: primary_source
+  reference: PMID:11325249
+  locator: DOI 10.1021/np0004956; complete original abstract read
+  accessed_at: '2026-10-21T18:17:59.702093Z'
+  support: supports
+  summary: The original names horminone as compound 9 isolated from Salvia blepharochlaena
+    roots and explicitly reports its antibacterial activity against S. aureus ATCC6538P,
+    S. epidermidis ATCC12226, B. subtilis ATCC6633 and E. faecalis ATCC29212. The
+    abstract does not supply a numerical assay table or complete material/method details.
+    The publisher PDF attempt returned 403; no original MIC table was claimed read.
+  snapshot_sha256: 5f70d0f9cb534b29377685dbdb4ac7cd99e84d722d2126b43ab132f5eb6927e1
+- evidence_id: pmid21615011
+  kind: primary_source
+  reference: PMID:21615011
+  locator: DOI 10.1177/1934578x1100600501; complete original abstract read
+  accessed_at: '2026-10-21T18:17:59.702093Z'
+  support: context_only
+  summary: The original studies Salvia extracts and isolates horminone among constituents
+    of S. ringens, with concentration-dependent antiproliferative effects on human
+    tumor-cell assays. It does not establish an antibacterial mechanism or pure-compound
+    bacterial MIC.
+  snapshot_sha256: 5f70d0f9cb534b29377685dbdb4ac7cd99e84d722d2126b43ab132f5eb6927e1
+- evidence_id: pmid22436445
+  kind: primary_source
+  reference: PMID:22436445
+  locator: DOI 10.1016/j.phytochem.2012.02.015; complete original abstract read
+  accessed_at: '2026-10-21T18:17:59.702093Z'
+  support: context_only
+  summary: The original compares five diterpenes in human pancreatic MIA PaCa-2 cells,
+    alkylation chemistry and human topoisomerase assays. Horminone alkylating behavior
+    and host-cell DNA effects are not bacterial topoisomerase evidence; the strongest
+    named topoisomerase results concern other compounds.
+  snapshot_sha256: 5f70d0f9cb534b29377685dbdb4ac7cd99e84d722d2126b43ab132f5eb6927e1
+- evidence_id: pmid3236010
+  kind: primary_source
+  reference: PMID:3236010
+  locator: DOI 10.1021/np50060a021; complete original abstract read
+  accessed_at: '2026-10-21T18:17:59.702093Z'
+  support: context_only
+  summary: The original identifies horminone among diterpenes from Salvia hypargeia
+    roots. Its abstract attributes antibacterial and antimycobacterial results to
+    newly isolated hypargenins, not automatically to horminone.
+  snapshot_sha256: 5f70d0f9cb534b29377685dbdb4ac7cd99e84d722d2126b43ab132f5eb6927e1
+- evidence_id: pmid9324001
+  kind: primary_source
+  reference: PMID:9324001
+  locator: DOI 10.1016/s0378-8741(97)00073-1; complete original abstract read
+  accessed_at: '2026-10-21T18:17:59.702093Z'
+  support: context_only
+  summary: The original concerns host hepatic monooxygenase/glutathione endpoints
+    after horminone administration. It is not antibacterial evidence. The indexed
+    title specifies Wistar rat while one abstract sentence says mice; that source
+    inconsistency is not silently resolved into a native organism or safety claim.
+  snapshot_sha256: 5f70d0f9cb534b29377685dbdb4ac7cd99e84d722d2126b43ab132f5eb6927e1
+- evidence_id: primary2021
+  kind: primary_source
+  reference: PMID:33477744; DOI:10.3390/plants10010175
+  locator: Selected original Sections 2.1–2.2 and 3.1–3.5, actual Figure 1, Tables
+    1–4
+  accessed_at: '2026-10-21T18:18:20.244333Z'
+  support: supports
+  summary: The original isolates horminone as compound 3 from Plectranthus madagascariensis
+    aerial material, voucher K-3,2018, and compares its spectroscopic data with literature.
+    The actual Figure 1 distinguishes compound 3 from hydroxy/acetoxy congeners. The
+    paper performs X-ray analysis on compound 2, not horminone. It yields 13.5 mg
+    of isolated compound 3; exact purity and raw spectra were not independently reanalyzed.
+  snapshot_sha256: 6461a15383f81a39c53a0951e55a2fb1d2e57e9caeafb1cc59bed32ec7fb8fc2
+- evidence_id: primary2021-assay
+  kind: primary_source
+  reference: PMID:33477744
+  locator: Table 3 exact compound 3 row; Methods 3.3.1 and 3.5
+  accessed_at: '2026-10-21T18:18:20.244333Z'
+  support: supports
+  summary: GFP-tagged M. tuberculosis H37Rv pMSp12::GFP is tested in broth with fluorescence
+    at excitation485/emission520 nm. Table 3 reports horminone MIC90 of 14.34 and
+    3.96 µg/mL at 7 and 14 days in 7H9/casitone/glucose/tyloxapol, versus >125 µg/mL
+    at both times in 7H9/ADC/glucose/Tween80. Here MIC90 is modeled 90% growth inhibition,
+    not a population percentile or proof of killing. Media and 5% DMSO are negative
+    controls, rifampicin positive. Supplementary response curves and exact inoculum
+    details remain unverified; protein binding is proposed as one possible medium
+    effect, not directly measured.
+  snapshot_sha256: 6461a15383f81a39c53a0951e55a2fb1d2e57e9caeafb1cc59bed32ec7fb8fc2
+- evidence_id: primary2021-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/a445/7832401/dab516e13f9f/plants-10-00175-g001.jpg
+  locator: Actual original Figure 1, compound 3
+  accessed_at: '2026-10-21T18:19:14.413614Z'
+  support: supports
+  summary: The actual structure panel shows the C7 hydroxy form as compound 3, separate
+    from 6β-hydroxy and acetoxy derivatives. Its quinone constitution and C7 orientation
+    agree with native horminone; the separate 2010 crystal supplies direct absolute-configuration
+    support.
+  snapshot_sha256: c60df9f917a4ec4a1d52738254577ee080fdbf380f1c946f1191d4c48f7b9ca1
+- evidence_id: additional-activity
+  kind: primary_source
+  reference: PMID:16492530; PMID:7931371
+  locator: Original complete abstracts read in bounded discovery response
+  accessed_at: '2026-10-21T18:17:59.704759Z'
+  support: context_only
+  summary: The 2006 original identifies horminone among active abietanes against MRSA/VRE,
+    but its abstract pools potency ranges across compounds; no compound-specific numeric
+    value is transferred. The 1994 original explicitly identifies horminone 1 and
+    reports activity against named bacterial species and Candida, without enough abstract-level
+    strain/method detail for quantitative curation.
+  snapshot_sha256: 863136f071193a66716798b6c85fec637ab48f34ee8067acfdc76fda0dd6f506
+- evidence_id: mechanism
+  kind: primary_source
+  reference: PMID:16571064; DOI:10.1021/jp0565812
+  locator: 'Original complete abstract: theoretical coordination study'
+  accessed_at: '2026-10-21T18:17:59.704759Z'
+  support: context_only
+  summary: This original uses density-functional calculations of horminone with hydrated
+    magnesium/calcium and phosphate models. Its membrane/rRNA/protein-synthesis interpretation
+    is model-based and does not establish an experimentally demonstrated bacterial
+    target. It does not justify adding an unqualified molecular-target or causal edge.
+  snapshot_sha256: 863136f071193a66716798b6c85fec637ab48f34ee8067acfdc76fda0dd6f506
+- evidence_id: adapter
+  kind: search
+  reference: /private/tmp/am-review-session/539-adapter-scope.json
+  locator: Native applicability checked before open-web research
+  accessed_at: '2026-10-21T18:21:34Z'
+  support: context_only
+  summary: No native gene, protein, pathway or transcriptomic assertion is present.
+    The shared catalog therefore produced no applicable native query; unrelated host-cell
+    targets or later theoretical leads do not become native claims.
+  snapshot_sha256: 06fae7b8375875c0a93e2614ce2cb4ec0ee6f37734b983cbb4fe30863d52a351
+  search_scope: Entire native539 and preserved catalog456460-adapter-catalog.txt assessed
+    before web follow-up.
+- evidence_id: access
+  kind: validation
+  reference: /private/tmp/am-review-session/539-fetch2.json
+  locator: Fetch response manifests 539-fetch1 through 539-fetch5
+  accessed_at: '2026-10-21T18:21:34Z'
+  support: context_only
+  summary: The adopted 2001 publisher PDF and attempted IUCr PDF/CIF routes returned
+    403. Open PMC full XML and alternate HTML supplied the actual crystallographic
+    text/tables and image URLs. The Sage PDF/direct HTML downloads returned 403, while
+    the public web reader exposed selected text and the original Figure 1 image was
+    retrieved successfully. No raw diffraction or unavailable original antibacterial
+    table is claimed inspected.
+  snapshot_sha256: ac0d69f651c7ea924d6acd026d953ee4348e2272607071a6b823d3d4b41e0161
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact 7α-horminone structure and stereochemistry
+  outcome: supported
+  summary: The neutral composition, 7α definition and both chemical names are coherent.
+    The original crystal coordinate model independently reproduces native C5S/C7R/C10S
+    and full key; actual structure figures agree. The PubChem name comparator is an
+    unasserted tautomer and is explicitly qualified.
+  target_ids:
+  - CHEBI:73128
+  evidence_ids:
+  - native
+  - chebi
+  - mapping
+  - primary2010
+  - primary2010-figure
+  - primary2019-figure
+  - pubchem
+  - tautomer
+- assessment_id: grounding
+  area: grounding
+  topic: Exact authority and four broader parents
+  outcome: supported
+  summary: Current ChEBI and primary structure evidence support exact identity. Hydroxyquinone,
+    p-quinone, secondary alcohol and abietane diterpenoid classes fit the native graph.
+    CAS/Reaxys independent access remains limited without a demonstrated wrong accession.
+  target_ids:
+  - CHEBI:73128
+  evidence_ids:
+  - chebi
+  - mapping
+  - term132130
+  - term25830
+  - term35681
+  - term36762
+  - registry
+- assessment_id: activity
+  area: evidence
+  topic: Qualitative antibacterial role with exact-compound bounds
+  outcome: supported
+  summary: The adopted 2001 abstract explicitly attributes bacterial activity to horminone,
+    and the inspected 2021 compound 3 experiment adds strain-, medium- and time-specific
+    mycobacterial support. Neither host-cell cytotoxicity nor congener results are
+    needed to justify the broad native role. No native quantitative or mechanistic
+    overclaim is present.
+  target_ids:
+  - CHEBI:73128
+  evidence_ids:
+  - role
+  - pmid11325249
+  - primary2021
+  - primary2021-assay
+  - primary2021-figure
+  - additional-activity
+- assessment_id: completeness
+  area: completeness
+  topic: Adopted bibliography and optional mechanisms/observations
+  outcome: unknown
+  summary: All five adopted original abstracts were read. The 2010 crystal main and
+    supplementary prose/tables and selected 2021 primary sections were read beyond
+    abstracts. Exact antibacterial mechanism remains unresolved; theoretical metal/rRNA
+    models and human topoisomerase/cancer endpoints do not supply a direct bacterial
+    target. Missing optional biological fields are not a native defect.
+  target_ids:
+  - CHEBI:73128
+  evidence_ids:
+  - pmid21615011
+  - pmid22436445
+  - pmid3236010
+  - pmid9324001
+  - primary2010
+  - primary2021-assay
+  - mechanism
+  - adapter
+  - access
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership, history and unchanged inputs
+  outcome: supported
+  summary: The whole native, complete source row and all three chronological seed/reseed
+    events were inspected. Original 13 and expanded 21 input hashes remain unchanged.
+    Source extraction/seeding owns imported content; review does not promote SEEDED
+    status or mutate scientific history.
+  target_ids:
+  - CHEBI:73128
+  evidence_ids:
+  - native
+  - owners
+  - search
+findings: []
+actions:
+- action_id: A1
+  description: Optional literature enrichment must retain exact material, organism,
+    endpoint and evidence tier.
+  finding_ids: []
+  target_ids:
+  - CHEBI:73128
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/horminone.yaml
+    role: Future validated curator-owned primary-literature annotation
+  acceptance_checks:
+  - If adding activity, inspect the full adopted 2001 experimental table and preserve
+    the exact horminone row; for the 2021 assay retain H37Rv GFP strain, medium, day,
+    µg/mL units and 90% growth-inhibition definition.
+  - Do not assign the 2021 compound 2 crystal or acetyl-derivative potency to free
+    horminone; distinguish the 2019 starting epimeric mixture and derivative-specific
+    VCD experiments.
+  - Do not add bacterial topoisomerase or rRNA mechanism from host-cell assays or
+    theoretical coordination models without direct exact-compound experimental evidence.
+  - Preserve the primary-supported native quinone/stereo graph; do not substitute
+    the unasserted PubChem tautomer automatically. Resolve CAS/Reaxys registry access
+    before claiming universal independent xref verification.
+limitations:
+- All five adopted references were read at complete abstract depth; the original 2001
+  antibacterial table could not be retrieved from the attempted free publisher PDF
+  route. Other adopted full experimental details were not exhaustively reviewed.
+- The 2010 published coordinate model and geometry were independently mapped, but
+  raw diffraction was not re-refined. Its reported Flack uncertainty remains 0.13(16).
+  The 2019 source was read selectively through the public browser text and actual
+  Figure 1; the PDF download failed.
+- For the 2021 original, exact compound 3 isolation/structure, activity methods, tables
+  and Figure 1 were inspected, but raw NMR spectra and supplementary dose-response
+  curves were not reanalyzed. The main does not independently establish a directly
+  measured protein-binding mechanism; numerical values are not inserted into native
+  activity_spectrum.
+- CAS returned 401 and independent Reaxys content remained unavailable. The additional
+  PubChem tautomer is not a native xref and does not create a confirmed native mismatch.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All original 13 and expanded 21 input hashes were rechecked unchanged before draft
+  writing. No native/source/history/progress/saved-bundle/Git writes occurred.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

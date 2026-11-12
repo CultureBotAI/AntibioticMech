@@ -1,0 +1,848 @@
+# Methenamine: exact neutral identity and antibacterial context supported; preserve bridge locants
+
+- Review: 20261021T181732Z-hexamethylenetetramine-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T18:00:56Z
+- Finished UTC: 2026-10-21T18:17:32Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The neutral hexamethylenetetramine graph agrees with current ChEBI, PubChem, KEGG and NIST. Original experiments support acid-dependent formaldehyde release and antibacterial effects while distinguishing conversion, pH, flow and combination treatment. One minor naming issue concerns loss of superscript bridge-locant formatting in a systematic synonym. The adopted literature leads and broader salt/product associations do not establish exact neutral-form clinical status or direct bacterial protein binding.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 532; one whole exact native record. All thirteen original input hashes were verified and preserved. Actual-owner inspection confirmed ChEBI supplies this record without another adopted source lane.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:6824 | data/antibiotics/antibacterial/hexamethylenetetramine.yaml | generated | hexamethylenetetramine |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema verification | passed | True | CHEBI:6824 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:6824 | Actual focused execution exited 0. |
+| Focused chemistry verification | passed | False | CHEBI:6824 | Actual focused execution exited 0. |
+| Independent exact chemical authority comparison | passed | False | CHEBI:6824 | Eight native and authority encodings reproduce the same full neutral key, formula and charge. |
+| Native structured-source applicability | not_applicable | False | CHEBI:6824 | The native record names no gene, protein, pathway, regulator, stress response or transcriptomics dataset. Urease in the subsequently inspected combination study is the target of acetohydroxamic acid, not a native methenamine target assertion. |
+| Authoritative full QC | failed | True | CHEBI:6824 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:6824 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:6824 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:6824 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:6824 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:6824 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:6824 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:6824 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:6824 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral cage and aliases
+
+identity: supported. Targets: CHEBI:6824.
+
+The native formula, graph, charge, masses, chemical definition and primary name agree with independent authorities. Typed product names and broader drug associations do not redefine the neutral graph as a salt or formulation.
+
+### Systematic bridge-locant formatting
+
+consistency: concern. Targets: CHEBI:6824.
+
+Removing the original superscript without preserving a delimiter creates [3.3.1.13,7] in one exact synonym. ChEBI provides an unambiguous ASCII spelling with (3,7). This is a bounded naming-format issue, not a wrong molecular structure.
+
+### Broader parents and antibacterial-drug filing
+
+grounding: supported. Targets: CHEBI:6824.
+
+All three parents fit the cage with four tertiary nitrogens, and the antibacterial-drug role maps correctly. Primary experiments independently support antibacterial effects under conversion-permitting conditions, with salt, pH and endpoint boundaries retained.
+
+### Conversion-mediated action and optional target scope
+
+evidence: supported. Targets: CHEBI:6824.
+
+The original studies support acid-dependent formaldehyde release and show why urine pH, flow and residence time matter. They do not establish a specific direct bacterial protein target of intact methenamine. Acetohydroxamic-acid urease inhibition must remain distinct.
+
+### Unresolved registry and adopted-paper depth
+
+grounding: unknown. Targets: CHEBI:6824.
+
+The core exact chemistry and accessible drug/document references agree. HMDB, LINCS, Gmelin and Reaxys were not independently checked at complete-source depth, and the 1954 adopted paper remains metadata only. No unsupported claim is filled from those unavailable sources.
+
+### Source ownership and history
+
+provenance: supported. Targets: CHEBI:6824.
+
+All thirteen original hashes were preserved; the exact source row and actual extraction/seeding logic were inspected. Four source history events are consistent with SEEDED status. Current-source additions are not silently merged into the frozen seed.
+
+### Optional data objects and material boundaries
+
+completeness: supported. Targets: CHEBI:6824.
+
+No missing optional activity, target, clinical, resistance, producer or graph field is itself a defect. Clinical trials of hippurate/mandelate and combination products do not automatically establish exact neutral-form approvals or MICs; synthetic manufacture does not establish a natural producer.
+
+## Findings
+
+### F1: Preserve the bridge locants in the plain-text systematic synonym
+
+minor / open / confirmed; issue key: hexamethylenetetramine-bridge-locant-synonym-format.
+
+The native exact synonym 1,3,5,7-tetraazatricyclo[3.3.1.13,7]decane concatenates the final bridge length 1 with the superscript locants 3,7. The inspected ChEBI source retains superscript markup and supplies the ASCII form [3.3.1.1(3,7)]. The extractor strips markup without a replacement delimiter. Preserve the source bridge-locant distinction in plain text while keeping the corroborated molecular graph unchanged.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Preserve unambiguous bridge-locant notation through the maintained synonym-normalization path.
+
+- The generated synonym retains the distinction between the last bridge length and its 3,7 locants, for example the authority-provided ASCII [3.3.1.1(3,7)].
+- Keep the full native chemical graph, formula, charge, identifier and other supported aliases unchanged. Check normalization on this exact source row before any wider regeneration.
+- Regenerate through maintained inputs and pass focused schema/strict and corpus reproduction checks.
+
+### A2
+
+If adding optional mechanism or activity evidence, retain conversion, material and experimental boundaries.
+
+- Distinguish intact methenamine from generated formaldehyde and retain pH, temperature, exposure duration and flow/residual-volume context. A formaldehyde threshold is not a methenamine MIC.
+- Do not transfer acetohydroxamic-acid urease inhibition to methenamine or combination culture-clearance outcomes to monotherapy.
+- Keep neutral parent, hippurate, mandelate and multicomponent products separate; do not infer a current exact-neutral clinical status solely from broader drug cards.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/hexamethylenetetramine.yaml; Entire native YAML: definition, sixteen synonyms, three parents, antibacterial-drug role, chemistry, all exact/drug/document references, source concept and four history events. | supports | CHEBI:6824 denotes neutral hexamethylenetetramine, also methenamine, with C6H12N4 and VKYKSIONXSXAKP-UHFFFAOYSA-N. Grounding is EXACT and status SEEDED. The definition correctly describes replacement of the four adamantane bridgehead carbons by nitrogen. No mode, target, quantitative activity, resistance, producer, clinical assertion, causal graph, dataset or discussion is populated. |
+| owners | data/raw/chebi_antimicrobials.tsv:223; conf/sources.yaml; scripts/extract_source_inventory.py:127; scripts/seed_from_sources.py:785; curation/decisions.tsv; Complete exact ChEBI row, source configuration, relevant reviewed-edge/synonym extraction and seeding code, and actual-owner scan across eight maintained source lanes. | supports | The row supplies all native identity, structure, role and citation leads. CHEBI:36047 maps to ANTIBACTERIAL at priority 2. No exact ARO, PubChem enrichment, FDA, MIBiG or BindingDB row contributes. The extractor removes small/sup markup with flat(), which explains the flattened bridge locants. Source citations are intentionally retained as leads rather than blanket record evidence. Hidden/ignored-inclusive searches found no applicable exact curator addition or decision; the captured thirteen source hashes remain unchanged. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/6824/; Complete current official term, including reviewed aliases, structure, outgoing relations and cross-reference metadata. | supports | Current ChEBI agrees on the neutral graph, formula, masses, INNs and brand-name typing. The systematic synonym retains superscript 3,7 in the displayed name and explicitly provides the ASCII spelling 1,3,5,7-tetraazatricyclo[3.3.1.1(3,7)]decane. The native plain-text synonym instead concatenates those locants into [3.3.1.13,7]. Newer citation/role entries in the current API are not silently treated as adopted frozen inputs. |
+| chemistry | CHEBI:6824; pubchem.compound:4101; cas:100-97-0; KEGG:D00393; https://webbook.nist.gov/cgi/cbook.cgi?ID=100-97-0&amp;Units=SI; Complete available structure responses and independent parsing of native, ChEBI, PubChem, KEGG molfile and NIST InChI. | supports | All eight encodings reproduce the exact neutral full key, C6H12N4 and zero charge. A separate CAS lookup returns the same CID4101. The focused diagnostic passes both native masses; NIST uses a slightly different rounded average-mass convention without an identity conflict. No hippurate, mandelate, metal complex or protonated salt component is part of this native graph. |
+| classes | CHEBI:33640; CHEBI:39166; CHEBI:39474; CHEBI:36047; Complete current official parent and role definitions, with exact compound outgoing relationships. | supports | Polycyclic cage, tetramine and polyazaalkane are compatible strictly broader structural classes. The graph contains four tertiary nitrogen centres. The retained role is antibacterial drug, not prodrug; the antibacterial filing follows the actual source mapping. Acid-dependent activation is assessed from primary experiments without changing the role label. |
+| xrefs | HMDB:HMDB0029598; LINCS:LSM-5440; Gmelin:26964; Reaxys:2018; https://drugcentral.org/drugcard/3344; KEGG:D00393; Complete accessible DrugCentral identity, synonym and product sections; KEGG drug entry and graph; ChEBI registry attribution. Direct HMDB and LINCS failures retained. | context_only | DrugCentral matches methenamine, CAS and formula but also groups hippurate, mandelate and combination-product context, appropriately represented as drug_xrefs rather than exact equivalence. KEGG D00393 matches the neutral graph and separately links salt products. Direct HMDB returned 403 and LINCS 500; indexed official HMDB text was a discovery lead, not a complete independent registry inspection. Gmelin and Reaxys were corroborated through ChEBI attribution only. No universal clinical status or exact product-form claim is inferred. |
+| patents | https://patents.google.com/patent/US2762799A/en; https://patents.google.com/patent/US2762800A/en; Complete original description, examples and claims in both public patent transcriptions read; raw scanned drawings were not reanalysed. | supports | Both 1956 patents concern manufacture of hexamethylenetetramine from formaldehyde and ammonia, with reaction heat and evaporation used to isolate solid product or concentrated solution. They support document relevance and synthetic identity, not natural biosynthesis or an antibacterial target. The references remain document_xrefs rather than molecular equivalence assertions. |
+| document | https://en.wikipedia.org/wiki/Methenamine; Document identity and introductory chemical/medical-use context inspected; treated as a lead only. | context_only | The document concerns methenamine and distinguishes neutral compound from medicinal acid salts. No quantitative efficacy, safety or regulatory conclusion relies on this secondary page. |
+| adopted | PMID:13186006; PMID:22365691; DOI:10.1016/j.talanta.2012.01.038; PMID:24641608; DOI:10.1111/jocd.12078; Complete indexed abstracts for the 2012 analytical and 2014 contact-sensitization studies; bibliographic record only for the 1954 pharmacology paper, which has no indexed abstract. | context_only | The 1954 title concerns sympathicoplegic/coagulant pharmacology; exact claim support cannot be established without its text. The 2012 paper produces hexamethylenetetramine from formaldehyde/ammonium for analytical detection and does not establish antibacterial action or natural production. The 2014 study reports contact sensitization to hexamethylenetetramine in a patch-test series; that is host allergy evidence, not a microbial mechanism or activity assay. These are relevant compound leads, not evidence for every native role. |
+| release1974 | PMID:4451344; DOI:10.1128/AAC.6.6.708; https://pmc.ncbi.nlm.nih.gov/articles/PMC444724/; All four original scanned pages 708-711 independently viewed, including Methods, Results, Discussion and Figures 1-3. | supports | The paper explicitly gives the neutral cage formula N4(CH2)6 and its acid-dependent conversion to ammonia and formaldehyde. Methenamine in aqueous solution was added to synthetic urine at 0.6-1.7 mg/mL, with pH and flow controlled at 37 degrees C. Formulation salt, supplier/lot and purity are not explicitly established. Formaldehyde generation rises with acidity, concentration and residence time. Separate formaldehyde-exposure experiments demonstrate delayed bacterial regrowth;25 µg/mL is a formaldehyde concentration, not a methenamine MIC. In a separate infected-urine experiment, 1 mg/mL methenamine at pH 5.7 lowered Klebsiella counts after 5 h versus control. The six source isolates lacked modern strain accessions. The primary supports conversion-mediated antibacterial context without proving direct binding of intact methenamine or universal clinical effectiveness. |
+| combination1974 | PMID:4840424; DOI:10.1128/AAC.5.2.101; https://pmc.ncbi.nlm.nih.gov/articles/PMC428928/; All five original scanned pages 101-105 independently viewed, including synthetic-urine composition, static/dynamic Methods and Figures 1-5. | supports | The study uses four urinary clinical isolates under the historical names Proteus mirabilis, vulgaris, morganii and rettgeri. Static experiments used 0.9 mg/mL methenamine, 1.9 mg/mL acetohydroxamic acid, or both, in synthetic urine with 5% BHI at 37 degrees C. The combination suppressed alkalinization and bacterial growth more strongly than either agent. In the dynamic system, methenamine alone allowed substantial alkalinization and persistent counts, while the combination reached the reported culture-negative endpoint. Urease inhibition belongs to acetohydroxamic acid; it is not evidence that methenamine directly inhibits urease. Exact starting material salt/purity was not stated, and combination outcomes are not pure-methenamine MICs. |
+| followup | PMID:1254431; PMID:4988376; PMID:22194678; PMID:23571415; PMID:34846885; PMID:37468498; PMID:38318365; PMID:894678; Complete indexed abstracts where present; PMID4988376 had bibliographic metadata only. These were discovery/context checks rather than complete independent full-text assay audits. | context_only | The 1976 original abstract reinforces flow and residual-volume dependence; the 1970 urine-level study remains metadata only. Newer current-ChEBI leads include host pharmacology, drug-safety prediction, secondary screening and an ex vivo gut-microbiome study, while the 1977 lead addresses physicochemical structure-activity methodology. None is automatically promoted into an exact microbial protein target, producer or resistance mechanism. Later host-target and mixture-product observations remain outside the native asserted claim set. |
+| search | 532-local-hits.txt; 532-owner-hits.txt; 532-literature.json; 532-fetch-results.json through532-fetch4-results.json; Hidden/ignored-inclusive repository exact-ID/name/slug and owner searches; public Europe PMC and exact-name primary discovery, with targeted original-paper follow-up. | context_only | The broad methenamine/hexamethylenetetramine plus antibacterial/formaldehyde query reported 251 hits and returned the first 100, many concerning materials chemistry or salt products. Exact original urinary studies were separately retrieved and inspected. A bounded search for the 1954 title/author did not recover its text. Initial PMC responses were challenge HTML and Europe PMC XML failed; ordinary public PMC alternate views supplied the original page-image links. No absence of further studies is inferred. |
+
+## Limits And Additional Notes
+
+- The 1954 adopted citation was available only as bibliographic metadata and title; no abstract or public full text was recovered in the bounded search. The two later adopted studies were read at complete abstract depth only and do not establish antibacterial mechanism.
+- Both 1974 primary papers were independently read in full from original page images. The experiments name methenamine and the neutral cage formula, but do not establish supplier, lot, purity or commercial bulk counterion for every preparation. No modern strain accession or standardized MIC was inferred.
+- HMDB direct HTML/XML/molfile routes failed 403 and LINCS failed 500. Gmelin and Reaxys were inspected only through authoritative source attribution. These access limits preclude a claim that every exact registry record was independently verified.
+- The broad literature search returned the first 100 of 251 results. Newer current-ChEBI citations were checked at abstract or metadata depth for context, not as a comprehensive audit of all optional host targets or microbiome experiments.
+- DrugCentral combines neutral-parent, acid-salt and combination-product information. Its product listings and secondary approval date were not promoted into exact neutral-form clinical assertions. No clinical recommendation or exhaustive regulatory review is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Actual source fetch manifests record URLs, UTC retrieval times, hashes and unsuccessful responses. All original source input hashes were rechecked before draft output.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T181732Z-hexamethylenetetramine-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Methenamine: exact neutral identity and antibacterial context supported; preserve
+  bridge locants'
+started_at: '2026-10-21T18:00:56Z'
+finished_at: '2026-10-21T18:17:32Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The neutral hexamethylenetetramine graph agrees with current ChEBI, PubChem,
+  KEGG and NIST. Original experiments support acid-dependent formaldehyde release
+  and antibacterial effects while distinguishing conversion, pH, flow and combination
+  treatment. One minor naming issue concerns loss of superscript bridge-locant formatting
+  in a systematic synonym. The adopted literature leads and broader salt/product associations
+  do not establish exact neutral-form clinical status or direct bacterial protein
+  binding.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/hexamethylenetetramine.yaml
+    sha256: ee289fe18420da1bacc0305429119eaf287b6d97ee28364baf563c145cf1d51b
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:6824
+  path: data/antibiotics/antibacterial/hexamethylenetetramine.yaml
+  label: hexamethylenetetramine
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 532; one whole exact native record. All thirteen original
+    input hashes were verified and preserved. Actual-owner inspection confirmed ChEBI
+    supplies this record without another adopted source lane.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:6824
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:6824
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/hexamethylenetetramine.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:6824
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/hexamethylenetetramine.yaml --out /private/tmp/am-review-session/532-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:6824
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 532
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: Independent exact chemical authority comparison
+  status: passed
+  required: false
+  summary: Eight native and authority encodings reproduce the same full neutral key,
+    formula and charge.
+  target_ids:
+  - CHEBI:6824
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/532-authority-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: structured-adapter
+  name: Native structured-source applicability
+  status: not_applicable
+  required: false
+  summary: The native record names no gene, protein, pathway, regulator, stress response
+    or transcriptomics dataset. Urease in the subsequently inspected combination study
+    is the target of acetohydroxamic acid, not a native methenamine target assertion.
+  target_ids:
+  - CHEBI:6824
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:6824
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:6824
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:6824
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:6824
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:6824
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:6824
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:6824
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:6824
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:6824
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/hexamethylenetetramine.yaml
+  locator: 'Entire native YAML: definition, sixteen synonyms, three parents, antibacterial-drug
+    role, chemistry, all exact/drug/document references, source concept and four history
+    events.'
+  accessed_at: '2026-10-21T18:16:57Z'
+  support: supports
+  summary: CHEBI:6824 denotes neutral hexamethylenetetramine, also methenamine, with
+    C6H12N4 and VKYKSIONXSXAKP-UHFFFAOYSA-N. Grounding is EXACT and status SEEDED.
+    The definition correctly describes replacement of the four adamantane bridgehead
+    carbons by nitrogen. No mode, target, quantitative activity, resistance, producer,
+    clinical assertion, causal graph, dataset or discussion is populated.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:223; conf/sources.yaml; scripts/extract_source_inventory.py:127;
+    scripts/seed_from_sources.py:785; curation/decisions.tsv
+  locator: Complete exact ChEBI row, source configuration, relevant reviewed-edge/synonym
+    extraction and seeding code, and actual-owner scan across eight maintained source
+    lanes.
+  accessed_at: '2026-10-21T18:16:57Z'
+  support: supports
+  summary: The row supplies all native identity, structure, role and citation leads.
+    CHEBI:36047 maps to ANTIBACTERIAL at priority 2. No exact ARO, PubChem enrichment,
+    FDA, MIBiG or BindingDB row contributes. The extractor removes small/sup markup
+    with flat(), which explains the flattened bridge locants. Source citations are
+    intentionally retained as leads rather than blanket record evidence. Hidden/ignored-inclusive
+    searches found no applicable exact curator addition or decision; the captured
+    thirteen source hashes remain unchanged.
+  snapshot_sha256: b842f2258ad5e33bf133f70719090963d7b604d36aac20e38f3126764364de3d
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/6824/
+  locator: Complete current official term, including reviewed aliases, structure,
+    outgoing relations and cross-reference metadata.
+  accessed_at: '2026-10-21T18:13:57Z'
+  support: supports
+  summary: Current ChEBI agrees on the neutral graph, formula, masses, INNs and brand-name
+    typing. The systematic synonym retains superscript 3,7 in the displayed name and
+    explicitly provides the ASCII spelling 1,3,5,7-tetraazatricyclo[3.3.1.1(3,7)]decane.
+    The native plain-text synonym instead concatenates those locants into [3.3.1.13,7].
+    Newer citation/role entries in the current API are not silently treated as adopted
+    frozen inputs.
+  snapshot_sha256: bbe4d29f2a8eb9f97e001260245217071e864e33956e9f03db2d5268a40491c4
+- evidence_id: chemistry
+  kind: authority
+  reference: CHEBI:6824; pubchem.compound:4101; cas:100-97-0; KEGG:D00393; https://webbook.nist.gov/cgi/cbook.cgi?ID=100-97-0&Units=SI
+  locator: Complete available structure responses and independent parsing of native,
+    ChEBI, PubChem, KEGG molfile and NIST InChI.
+  accessed_at: '2026-10-21T18:16:57Z'
+  support: supports
+  summary: All eight encodings reproduce the exact neutral full key, C6H12N4 and zero
+    charge. A separate CAS lookup returns the same CID4101. The focused diagnostic
+    passes both native masses; NIST uses a slightly different rounded average-mass
+    convention without an identity conflict. No hippurate, mandelate, metal complex
+    or protonated salt component is part of this native graph.
+  snapshot_sha256: 0b6027dbf7c87e7e99acf95115b5bbecb3b7f9126b7e66bf7b4fc3d4c52347e3
+- evidence_id: classes
+  kind: authority
+  reference: CHEBI:33640; CHEBI:39166; CHEBI:39474; CHEBI:36047
+  locator: Complete current official parent and role definitions, with exact compound
+    outgoing relationships.
+  accessed_at: '2026-10-21T18:13:57Z'
+  support: supports
+  summary: Polycyclic cage, tetramine and polyazaalkane are compatible strictly broader
+    structural classes. The graph contains four tertiary nitrogen centres. The retained
+    role is antibacterial drug, not prodrug; the antibacterial filing follows the
+    actual source mapping. Acid-dependent activation is assessed from primary experiments
+    without changing the role label.
+  snapshot_sha256: 627686a00c807759ac212601b44a1c2d8e24cd05667545fb9617edd8fc1f0b3a
+- evidence_id: xrefs
+  kind: database
+  reference: HMDB:HMDB0029598; LINCS:LSM-5440; Gmelin:26964; Reaxys:2018; https://drugcentral.org/drugcard/3344;
+    KEGG:D00393
+  locator: Complete accessible DrugCentral identity, synonym and product sections;
+    KEGG drug entry and graph; ChEBI registry attribution. Direct HMDB and LINCS failures
+    retained.
+  accessed_at: '2026-10-21T18:13:58Z'
+  support: context_only
+  summary: DrugCentral matches methenamine, CAS and formula but also groups hippurate,
+    mandelate and combination-product context, appropriately represented as drug_xrefs
+    rather than exact equivalence. KEGG D00393 matches the neutral graph and separately
+    links salt products. Direct HMDB returned 403 and LINCS 500; indexed official
+    HMDB text was a discovery lead, not a complete independent registry inspection.
+    Gmelin and Reaxys were corroborated through ChEBI attribution only. No universal
+    clinical status or exact product-form claim is inferred.
+  snapshot_sha256: 310d4114d4597326d15cd9d2f26871efc66594842b48bdba63b537efeaf2b4f7
+- evidence_id: patents
+  kind: primary_source
+  reference: https://patents.google.com/patent/US2762799A/en; https://patents.google.com/patent/US2762800A/en
+  locator: Complete original description, examples and claims in both public patent
+    transcriptions read; raw scanned drawings were not reanalysed.
+  accessed_at: '2026-10-21T18:13:58Z'
+  support: supports
+  summary: Both 1956 patents concern manufacture of hexamethylenetetramine from formaldehyde
+    and ammonia, with reaction heat and evaporation used to isolate solid product
+    or concentrated solution. They support document relevance and synthetic identity,
+    not natural biosynthesis or an antibacterial target. The references remain document_xrefs
+    rather than molecular equivalence assertions.
+  snapshot_sha256: 4af02cd87c7230eca2894ee75f6b8b231aeb8c7e9ee86171973ad2e7d4248a71
+- evidence_id: document
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Methenamine
+  locator: Document identity and introductory chemical/medical-use context inspected;
+    treated as a lead only.
+  accessed_at: '2026-10-21T18:13:58Z'
+  support: context_only
+  summary: The document concerns methenamine and distinguishes neutral compound from
+    medicinal acid salts. No quantitative efficacy, safety or regulatory conclusion
+    relies on this secondary page.
+  snapshot_sha256: e9ca004b6a7f2cbd5f7a13859a9bbf34fce832c9b1e7fa0f1abb7eafe0a29765
+- evidence_id: adopted
+  kind: database
+  reference: PMID:13186006; PMID:22365691; DOI:10.1016/j.talanta.2012.01.038; PMID:24641608;
+    DOI:10.1111/jocd.12078
+  locator: Complete indexed abstracts for the 2012 analytical and 2014 contact-sensitization
+    studies; bibliographic record only for the 1954 pharmacology paper, which has
+    no indexed abstract.
+  accessed_at: '2026-10-21T18:13:59Z'
+  support: context_only
+  summary: The 1954 title concerns sympathicoplegic/coagulant pharmacology; exact
+    claim support cannot be established without its text. The 2012 paper produces
+    hexamethylenetetramine from formaldehyde/ammonium for analytical detection and
+    does not establish antibacterial action or natural production. The 2014 study
+    reports contact sensitization to hexamethylenetetramine in a patch-test series;
+    that is host allergy evidence, not a microbial mechanism or activity assay. These
+    are relevant compound leads, not evidence for every native role.
+  snapshot_sha256: e5d227d0b0cabeda19a3252d8e71c72e603cad0c4d81a03eb28f336ce4847189
+- evidence_id: release1974
+  kind: primary_source
+  reference: PMID:4451344; DOI:10.1128/AAC.6.6.708; https://pmc.ncbi.nlm.nih.gov/articles/PMC444724/
+  locator: All four original scanned pages 708-711 independently viewed, including
+    Methods, Results, Discussion and Figures 1-3.
+  accessed_at: '2026-10-21T18:15:23Z'
+  support: supports
+  summary: The paper explicitly gives the neutral cage formula N4(CH2)6 and its acid-dependent
+    conversion to ammonia and formaldehyde. Methenamine in aqueous solution was added
+    to synthetic urine at 0.6-1.7 mg/mL, with pH and flow controlled at 37 degrees
+    C. Formulation salt, supplier/lot and purity are not explicitly established. Formaldehyde
+    generation rises with acidity, concentration and residence time. Separate formaldehyde-exposure
+    experiments demonstrate delayed bacterial regrowth;25 µg/mL is a formaldehyde
+    concentration, not a methenamine MIC. In a separate infected-urine experiment,
+    1 mg/mL methenamine at pH 5.7 lowered Klebsiella counts after 5 h versus control.
+    The six source isolates lacked modern strain accessions. The primary supports
+    conversion-mediated antibacterial context without proving direct binding of intact
+    methenamine or universal clinical effectiveness.
+  snapshot_sha256: d2ba77c6a0375361daad87d42c97135af8452118616a44700620d655a43d44a4
+- evidence_id: combination1974
+  kind: primary_source
+  reference: PMID:4840424; DOI:10.1128/AAC.5.2.101; https://pmc.ncbi.nlm.nih.gov/articles/PMC428928/
+  locator: All five original scanned pages 101-105 independently viewed, including
+    synthetic-urine composition, static/dynamic Methods and Figures 1-5.
+  accessed_at: '2026-10-21T18:15:10Z'
+  support: supports
+  summary: The study uses four urinary clinical isolates under the historical names
+    Proteus mirabilis, vulgaris, morganii and rettgeri. Static experiments used 0.9
+    mg/mL methenamine, 1.9 mg/mL acetohydroxamic acid, or both, in synthetic urine
+    with 5% BHI at 37 degrees C. The combination suppressed alkalinization and bacterial
+    growth more strongly than either agent. In the dynamic system, methenamine alone
+    allowed substantial alkalinization and persistent counts, while the combination
+    reached the reported culture-negative endpoint. Urease inhibition belongs to acetohydroxamic
+    acid; it is not evidence that methenamine directly inhibits urease. Exact starting
+    material salt/purity was not stated, and combination outcomes are not pure-methenamine
+    MICs.
+  snapshot_sha256: 794334d0202ac6e037a1bdca0e9202dc1d0c1d5c2958386590688dbcdcbb2000
+- evidence_id: followup
+  kind: database
+  reference: PMID:1254431; PMID:4988376; PMID:22194678; PMID:23571415; PMID:34846885;
+    PMID:37468498; PMID:38318365; PMID:894678
+  locator: Complete indexed abstracts where present; PMID4988376 had bibliographic
+    metadata only. These were discovery/context checks rather than complete independent
+    full-text assay audits.
+  accessed_at: '2026-10-21T18:14:35Z'
+  support: context_only
+  summary: The 1976 original abstract reinforces flow and residual-volume dependence;
+    the 1970 urine-level study remains metadata only. Newer current-ChEBI leads include
+    host pharmacology, drug-safety prediction, secondary screening and an ex vivo
+    gut-microbiome study, while the 1977 lead addresses physicochemical structure-activity
+    methodology. None is automatically promoted into an exact microbial protein target,
+    producer or resistance mechanism. Later host-target and mixture-product observations
+    remain outside the native asserted claim set.
+  snapshot_sha256: cd9ddfdf90cf060bc2f0d946a7a4f506dd157ba8756e6a18d72d3d52d18574b6
+- evidence_id: search
+  kind: search
+  reference: 532-local-hits.txt; 532-owner-hits.txt; 532-literature.json; 532-fetch-results.json
+    through532-fetch4-results.json
+  locator: Hidden/ignored-inclusive repository exact-ID/name/slug and owner searches;
+    public Europe PMC and exact-name primary discovery, with targeted original-paper
+    follow-up.
+  accessed_at: '2026-10-21T18:13:59Z'
+  support: context_only
+  summary: The broad methenamine/hexamethylenetetramine plus antibacterial/formaldehyde
+    query reported 251 hits and returned the first 100, many concerning materials
+    chemistry or salt products. Exact original urinary studies were separately retrieved
+    and inspected. A bounded search for the 1954 title/author did not recover its
+    text. Initial PMC responses were challenge HTML and Europe PMC XML failed; ordinary
+    public PMC alternate views supplied the original page-image links. No absence
+    of further studies is inferred.
+  snapshot_sha256: 1b981f340e1393f332cc045185ed6a34560312f74c032d9184cbc8e21680b127
+  search_scope: 2026-10-21; hidden and ignored files included in exact repository
+    searches; bounded public Europe PMC title/abstract queries and exact-name/title/author
+    web searches. First100 of 251 broad results returned, with exact primary follow-up
+    and explicit registry/full-text limits.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral cage and aliases
+  outcome: supported
+  summary: The native formula, graph, charge, masses, chemical definition and primary
+    name agree with independent authorities. Typed product names and broader drug
+    associations do not redefine the neutral graph as a salt or formulation.
+  target_ids:
+  - CHEBI:6824
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - xrefs
+- assessment_id: name-format
+  area: consistency
+  topic: Systematic bridge-locant formatting
+  outcome: concern
+  summary: Removing the original superscript without preserving a delimiter creates
+    [3.3.1.13,7] in one exact synonym. ChEBI provides an unambiguous ASCII spelling
+    with (3,7). This is a bounded naming-format issue, not a wrong molecular structure.
+  target_ids:
+  - CHEBI:6824
+  evidence_ids:
+  - native
+  - chebi
+  - owners
+- assessment_id: grounding
+  area: grounding
+  topic: Broader parents and antibacterial-drug filing
+  outcome: supported
+  summary: All three parents fit the cage with four tertiary nitrogens, and the antibacterial-drug
+    role maps correctly. Primary experiments independently support antibacterial effects
+    under conversion-permitting conditions, with salt, pH and endpoint boundaries
+    retained.
+  target_ids:
+  - CHEBI:6824
+  evidence_ids:
+  - classes
+  - release1974
+  - combination1974
+- assessment_id: mechanism
+  area: evidence
+  topic: Conversion-mediated action and optional target scope
+  outcome: supported
+  summary: The original studies support acid-dependent formaldehyde release and show
+    why urine pH, flow and residence time matter. They do not establish a specific
+    direct bacterial protein target of intact methenamine. Acetohydroxamic-acid urease
+    inhibition must remain distinct.
+  target_ids:
+  - CHEBI:6824
+  evidence_ids:
+  - release1974
+  - combination1974
+  - followup
+- assessment_id: reference-access
+  area: grounding
+  topic: Unresolved registry and adopted-paper depth
+  outcome: unknown
+  summary: The core exact chemistry and accessible drug/document references agree.
+    HMDB, LINCS, Gmelin and Reaxys were not independently checked at complete-source
+    depth, and the 1954 adopted paper remains metadata only. No unsupported claim
+    is filled from those unavailable sources.
+  target_ids:
+  - CHEBI:6824
+  evidence_ids:
+  - xrefs
+  - adopted
+  - patents
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership and history
+  outcome: supported
+  summary: All thirteen original hashes were preserved; the exact source row and actual
+    extraction/seeding logic were inspected. Four source history events are consistent
+    with SEEDED status. Current-source additions are not silently merged into the
+    frozen seed.
+  target_ids:
+  - CHEBI:6824
+  evidence_ids:
+  - native
+  - owners
+  - chebi
+- assessment_id: coverage
+  area: completeness
+  topic: Optional data objects and material boundaries
+  outcome: supported
+  summary: No missing optional activity, target, clinical, resistance, producer or
+    graph field is itself a defect. Clinical trials of hippurate/mandelate and combination
+    products do not automatically establish exact neutral-form approvals or MICs;
+    synthetic manufacture does not establish a natural producer.
+  target_ids:
+  - CHEBI:6824
+  evidence_ids:
+  - native
+  - xrefs
+  - patents
+  - release1974
+  - combination1974
+findings:
+- finding_id: F1
+  issue_key: hexamethylenetetramine-bridge-locant-synonym-format
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Preserve the bridge locants in the plain-text systematic synonym
+  description: The native exact synonym 1,3,5,7-tetraazatricyclo[3.3.1.13,7]decane
+    concatenates the final bridge length 1 with the superscript locants 3,7. The inspected
+    ChEBI source retains superscript markup and supplies the ASCII form [3.3.1.1(3,7)].
+    The extractor strips markup without a replacement delimiter. Preserve the source
+    bridge-locant distinction in plain text while keeping the corroborated molecular
+    graph unchanged.
+  target_ids:
+  - CHEBI:6824
+  field_paths:
+  - synonyms[7].synonym_text
+  evidence_ids:
+  - native
+  - chebi
+  - owners
+  - chemistry
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted exact synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Plain-text normalization of superscript markup
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated synonym emission
+  rule_id: 'Native checklist: accurate chemical nomenclature and maintained-source
+    normalization'
+  native_severity: minor
+  normalization_reason: The error affects one text representation of an otherwise
+    independently corroborated exact identity. It is a non-blocking formatting defect,
+    not evidence for a different molecule.
+actions:
+- action_id: A1
+  description: Preserve unambiguous bridge-locant notation through the maintained
+    synonym-normalization path.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:6824
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted exact synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Plain-text normalization of superscript markup
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated synonym emission
+  acceptance_checks:
+  - The generated synonym retains the distinction between the last bridge length and
+    its 3,7 locants, for example the authority-provided ASCII [3.3.1.1(3,7)].
+  - Keep the full native chemical graph, formula, charge, identifier and other supported
+    aliases unchanged. Check normalization on this exact source row before any wider
+    regeneration.
+  - Regenerate through maintained inputs and pass focused schema/strict and corpus
+    reproduction checks.
+- action_id: A2
+  description: If adding optional mechanism or activity evidence, retain conversion,
+    material and experimental boundaries.
+  finding_ids: []
+  target_ids:
+  - CHEBI:6824
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/hexamethylenetetramine.yaml
+    role: Optional curator-owned scientific additions through the validated writer
+  acceptance_checks:
+  - Distinguish intact methenamine from generated formaldehyde and retain pH, temperature,
+    exposure duration and flow/residual-volume context. A formaldehyde threshold is
+    not a methenamine MIC.
+  - Do not transfer acetohydroxamic-acid urease inhibition to methenamine or combination
+    culture-clearance outcomes to monotherapy.
+  - Keep neutral parent, hippurate, mandelate and multicomponent products separate;
+    do not infer a current exact-neutral clinical status solely from broader drug
+    cards.
+limitations:
+- The 1954 adopted citation was available only as bibliographic metadata and title;
+  no abstract or public full text was recovered in the bounded search. The two later
+  adopted studies were read at complete abstract depth only and do not establish antibacterial
+  mechanism.
+- Both 1974 primary papers were independently read in full from original page images.
+  The experiments name methenamine and the neutral cage formula, but do not establish
+  supplier, lot, purity or commercial bulk counterion for every preparation. No modern
+  strain accession or standardized MIC was inferred.
+- HMDB direct HTML/XML/molfile routes failed 403 and LINCS failed 500. Gmelin and
+  Reaxys were inspected only through authoritative source attribution. These access
+  limits preclude a claim that every exact registry record was independently verified.
+- The broad literature search returned the first 100 of 251 results. Newer current-ChEBI
+  citations were checked at abstract or metadata depth for context, not as a comprehensive
+  audit of all optional host targets or microbiome experiments.
+- DrugCentral combines neutral-parent, acid-salt and combination-product information.
+  Its product listings and secondary approval date were not promoted into exact neutral-form
+  clinical assertions. No clinical recommendation or exhaustive regulatory review
+  is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Actual source fetch manifests record URLs, UTC retrieval times, hashes and unsuccessful
+  responses. All original source input hashes were rechecked before draft output.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
