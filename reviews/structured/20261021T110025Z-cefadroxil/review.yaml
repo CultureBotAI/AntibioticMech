@@ -1,0 +1,881 @@
+schema_version: 1.0.0
+review_id: 20261021T110025Z-cefadroxil
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cefadroxil: exact anhydrous identity and organism-specific PBP evidence'
+started_at: '2026-10-21T10:44:46Z'
+finished_at: '2026-10-21T11:00:25Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent complete native/actual ARO and ChEBI owner review,
+    structured adapter before web, live exact-reference checks, all ten adopted PMID
+    abstracts, and complete original 1980 PBP papers.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: No confirmed native defect. The anhydrous cefadroxil graph, exact public
+  structure references, source mints, cephalosporin classification and antibacterial
+  roles agree. The imported PBP assertion is transparently marked PRIMARY_EVIDENCE_NEEDED;
+  two inspected primary studies support optional organism-specific evidence enrichment.
+  Their PBP rankings differ by organism and assay and do not establish one universal
+  killing target. Some registry mappings remain independently unverified. Scientific
+  assessment retains the stated evidence limits; full verification is blocked by the
+  shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefadroxil.yaml
+    sha256: 746f7c941f357b9f4715b2e0d86e06ca811fdda4307517ede283d5b52419274d
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:3479
+  path: data/antibiotics/antibacterial/cefadroxil.yaml
+  label: cefadroxil
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted exact ChEBI identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, class and xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported ARO target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target role mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Source claim review decisions
+scope:
+  description: Whole-record review of exact anhydrous cefadroxil.
+  selection: Queue 205 in isolated batch 021; initial capture preserved and actual
+    ARO/target owners appended before detailed judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:3479
+  exclusions:
+  - target: Cefadroxil hydrates, cephalexin, cefaclor and model antigenic haptens
+    reason: Distinct chemical forms or comparator entities; biological observations
+      are not silently transferred between them.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual focused command passed with zero errors.
+  target_ids:
+  - CHEBI:3479
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefadroxil.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual focused command passed with zero errors.
+  target_ids:
+  - CHEBI:3479
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefadroxil.yaml --out /private/tmp/am-review-session/205-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Independent encodings and source mints
+  status: passed
+  required: true
+  summary: Both molecular encodings, formula, charge, masses, stereochemistry and
+    both source mints agree.
+  target_ids:
+  - CHEBI:3479
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/check199200.py
+    205 (cwd /private/tmp/antibioticmech-record-reviews-021)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: structured-source
+  name: PBP and peptidoglycan structured-source check before web
+  status: passed
+  required: true
+  summary: Live dataset catalog and three searches returned gene annotations and zero
+    iModulons. An initial sandbox DNS failure was resolved by permitted public-network
+    execution; no component summaries were applicable.
+  target_ids:
+  - CHEBI:3479
+  command: 'env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+
+    env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query penicillin
+
+    env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism s_aureus --dataset staph_precise108
+    --query penicillin
+
+    env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query peptidoglycan'
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:3479
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:3479
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:3479
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:3479
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:3479
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:3479
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:3479
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:3479
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:3479
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefadroxil.yaml
+  locator: Entire native YAML
+  accessed_at: '2026-10-21T10:57:58Z'
+  support: supports
+  summary: Read exact identity, definition, INN/systematic and source synonyms, two
+    parents, two roles, structural class, full structure, eight exact xrefs, three
+    drug references, five document references, both source concepts, the imported
+    PBP claim and all five seed events. No curated mode, activity_spectrum, resistance,
+    producer, clinical or graph blocks.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv
+  locator: Exact CHEBI:3479/ARO:3000642 rows; target-edge row 159 and conf/aro_target_roles.tsv
+    row 30
+  accessed_at: '2026-10-21T10:57:58Z'
+  support: supports
+  summary: Actual ARO inventory and target-edge owners, role mapping and card_evidence_reviews.json
+    were captured before judgment. ChEBI supplies nine citation leads and ARO one.
+    Hidden/ignored-inclusive search found no exact curator override or claim decision.
+    Original captured hashes were preserved.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:3479
+  locator: Current structure, definition, roles, identifiers
+  accessed_at: '2026-10-21T10:51:26Z'
+  support: supports
+  summary: Current ChEBI agrees with neutral anhydrous C16H17N3O5S, full key BOEGTKLJZSQCCD-UEKVPHQBSA-N
+    and the 3-methyl, 7-(R)-amino-p-hydroxyphenylacetamido cephalosporin definition.
+    The cephalosporin parent and retained antibiotic/antibacterial-drug context are
+    coherent.
+  snapshot_sha256: fb9a0139a08655d3d42eca515f33c7a51c123f1bb9f4681eb5d9176d54bade2f
+- evidence_id: aro
+  kind: authority
+  reference: https://card.mcmaster.ca/aro/3000642
+  locator: Current cefadroxil identity and class
+  accessed_at: '2026-10-21T10:51:27Z'
+  support: supports
+  summary: ARO resolves to cefadroxil and the cephalosporin class. Its retained source
+    PMID 3542485 is a review of pharmacology and therapeutic properties, not an original
+    PBP experiment.
+  snapshot_sha256: a76fc386f3a42125b2110d069db4e0669fe9e9a08df79d89e9e69e2e953f838c
+- evidence_id: aro-target
+  kind: authority
+  reference: https://card.mcmaster.ca/aro/3000749
+  locator: Current target definition and targeted_by_antibiotic cefadroxil edge
+  accessed_at: '2026-10-21T10:51:28Z'
+  support: supports
+  summary: The live PBP-family term explicitly links cefadroxil and warns that PBP
+    numbering varies between species. Native evidence is accurately identified as
+    a database assertion with no strain or assay, and PRIMARY_EVIDENCE_NEEDED preserves
+    that boundary. The page cites review PMID 3055170; its retrieved abstract discusses
+    the class mechanism rather than a cefadroxil-specific experiment.
+  snapshot_sha256: 6c499b952a9de5ad3226c77ec5e6cd48388c209cb19983e117ddba8ec1ebf803
+- evidence_id: target-review
+  kind: database
+  reference: https://pubmed.ncbi.nlm.nih.gov/3055170/
+  locator: Current ARO target citation metadata/abstract
+  accessed_at: '2026-10-21T10:56:25Z'
+  support: context_only
+  summary: The 1988 paper is a review of Gram-negative PBPs. It provides class context
+    for peptidoglycan-synthesis enzymes but is not used as exact-compound primary
+    binding evidence.
+  snapshot_sha256: 239623a1f0c5b0875c17308c278459735358f8e7a9ddaad5b3ffee3787b7f84f
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit 2026.03.5 check
+  locator: 205-chemistry.json; source-aware mint validation
+  accessed_at: '2026-10-21T10:50:47Z'
+  support: supports
+  summary: SMILES and InChI independently reproduce one neutral fragment, C16H17N3O5S,
+    full key, average/exact masses and three R stereocentres. Both source mints independently
+    match their ARO and ChEBI identifiers.
+  snapshot_sha256: 83e79f0816627661baa2c907e2406d55d6903478be6ae634cb872f30092461a5
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/47965
+  locator: Current full PUG record
+  accessed_at: '2026-10-21T10:51:29Z'
+  support: supports
+  summary: CID 47965 has the same anhydrous formula and complete stereochemical key
+    as native.
+  snapshot_sha256: b77ec5788164c40e60b6c3cf41e07eb747a1bf910724db091cf8f5b5021dc080
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1644.json
+  locator: Current exact ChEMBL structure
+  accessed_at: '2026-10-21T10:51:29Z'
+  support: supports
+  summary: CHEMBL1644 independently matches the anhydrous graph and full InChIKey.
+    It is not a hydrate-form mismatch.
+  snapshot_sha256: 9f0baca5164a7325408623ad7cd368d417062b0b7d8b32c44dd5309e8c679c37
+- evidence_id: cas
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/50370-12-2/property/InChIKey/JSON
+  locator: CAS-name structure query
+  accessed_at: '2026-10-21T10:52:01Z'
+  support: supports
+  summary: CAS 50370-12-2 resolves to CID 47965 and the exact native InChIKey, consistent
+    with the source authority.
+  snapshot_sha256: e96b35640a7ffc5b4738a888313f82c692ef8eca4c148abd1a83abf4f758ca71
+- evidence_id: kegg-compound
+  kind: database
+  reference: https://rest.kegg.jp/get/C06878
+  locator: Current COMPOUND record and MOL
+  accessed_at: '2026-10-21T10:51:29Z'
+  support: supports
+  summary: C06878 denotes cefadroxil with C16H17N3O5S. Independent parsing of its
+    MOL reproduces the exact complete native key and one fragment; detailed result
+    is retained in 205-kegg-chemistry.json.
+  snapshot_sha256: 6b2ec3e1e09272335b35075c4ec22e02b3161c532602c73cc05ffe6857dbe966
+- evidence_id: remaining-exact
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:3479
+  locator: Beilstein 5933893, Reaxys 5393893 and LINCS LSM-5722 mappings
+  accessed_at: '2026-10-21T10:51:26Z'
+  support: partial
+  summary: The live authority retains these identifiers. Independent registry contents
+    were not inspected; the LINCS resolver route failed. The differing Beilstein/Reaxys
+    numbers alone do not prove either is a typo or a wrong compound.
+  snapshot_sha256: fb9a0139a08655d3d42eca515f33c7a51c123f1bb9f4681eb5d9176d54bade2f
+- evidence_id: kegg-drug
+  kind: database
+  reference: https://rest.kegg.jp/get/D00257
+  locator: Current KEGG DRUG identity
+  accessed_at: '2026-10-21T10:51:30Z'
+  support: supports
+  summary: D00257 is cefadroxil, C16H17N3O5S, with the corresponding C06878 compound
+    link. This is appropriately a drug reference, not evidence of current regulatory
+    approval.
+  snapshot_sha256: 81c0acbccc7172eec620b090bb519035f0ee2718e159015d75341efeb022f688
+- evidence_id: drugcentral
+  kind: database
+  reference: https://drugcentral.org/drugcard/526
+  locator: Current drug card
+  accessed_at: '2026-10-21T10:51:30Z'
+  support: partial
+  summary: DrugCentral 526 resolves to cefadroxil with CAS 50370-12-2 and the same
+    formula. Drug-level synonyms and formulation scope are permitted by drug_xrefs;
+    no current approval or exact hydrate assertion is copied. DrugBank DB01140 returned
+    HTTP 403 and remains source-asserted.
+  snapshot_sha256: bd920c92b01e1733a1b9698eb6a00a5cfec907e8620aaa918f4437a3792c8a0b
+- evidence_id: patent-us
+  kind: primary_source
+  reference: https://patents.google.com/patent/US3489752A/en
+  locator: Description and Example 7
+  accessed_at: '2026-10-21T10:52:00Z'
+  support: context_only
+  summary: The patent covers 7-aminocephalosporanic/decephalosporanic derivatives
+    and Example 7 names the D-amino-p-hydroxyphenylacetamido decephalosporanic product.
+    This supports document relevance, without treating all derivatives or formulations
+    in the patent as one exact entity.
+  snapshot_sha256: 677e37dae8a09b6e9b0c9479171eaa9fde8213fb674ba0007e1b601a743d0db5
+- evidence_id: patent-nl
+  kind: primary_source
+  reference: https://patents.google.com/patent/NL6812382A/en
+  locator: Document metadata and family listing
+  accessed_at: '2026-10-21T10:52:00Z'
+  support: context_only
+  summary: NL6812382 resolves with sparse textual metadata and lists the US3489752
+    family member. No independent experimental or exact-compound claim is inferred
+    from the sparse page.
+  snapshot_sha256: aed2545eab32461fef6c423ace9983387f3e815a5860da3982b33fcdfac4671d
+- evidence_id: patent-de
+  kind: primary_source
+  reference: https://patents.google.com/patent/DE2216113A1/en
+  locator: Description of enzymatic cephalosporin synthesis
+  accessed_at: '2026-10-21T10:52:00Z'
+  support: context_only
+  summary: The document covers cephalosporin synthesis and includes p-hydroxyphenylglycine
+    among substrates. Broad microbial enzyme-assisted synthesis is not evidence of
+    a natural cefadroxil producer.
+  snapshot_sha256: ec4e1b1c544d0a923a53c8d671ccfd325446c2292402d54b6d72368671ec27ef
+- evidence_id: patent-process
+  kind: primary_source
+  reference: https://patents.google.com/patent/US3816253A/en
+  locator: Description of cephalosporin production
+  accessed_at: '2026-10-21T10:52:00Z'
+  support: context_only
+  summary: This retained patent resolves to enzymatic cephalosporin production with
+    multiple precursor/substrate choices. Document relevance does not transfer every
+    example, organism or assay to cefadroxil.
+  snapshot_sha256: 9945f7b6abf2b77ce804117d81272d5607d53872eefd6e4acbf1f99b57f9b01c
+- evidence_id: wiki
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Cefadroxil
+  locator: Resolved document link
+  accessed_at: '2026-10-21T10:51:30Z'
+  support: context_only
+  summary: The document reference resolves to cefadroxil and is not used as primary
+    experiment evidence.
+  snapshot_sha256: 1b132635250d5ba5b3e8ac5c42aaac82553cd77b9059f2b3499b7114cd30eb87
+- evidence_id: adopted-references
+  kind: database
+  reference: Europe PMC MED core records
+  locator: All ten adopted PMID titles and abstracts
+  accessed_at: '2026-10-21T10:51:26Z'
+  support: context_only
+  summary: PMIDs 12833570, 21425867 and 9131470 concern antigenic haptens/IgE recognition,
+    23224978 and 23959853 host PepT1 absorption, 24080658 inflammation and renal disposition,
+    24412692 LC-MS/rat pharmacokinetics, and 24667741 a CRPS case report. PMIDs 29017833
+    and 3542485 are reviews. These are not direct bacterial PBP experiments; host
+    transporters and model haptens must not become antibacterial targets or exact-parent
+    activity measurements.
+  snapshot_sha256: f58cd4488940d6ba8df5b898ebbea5f9dadd9973cb8daf11df92eebf33824854
+- evidence_id: ecoli-pbp
+  kind: primary_source
+  reference: https://doi.org/10.11250/chemotherapy1953.28.Supplement2_51
+  locator: 1980 Chemotherapy 28 supplement 2, pp.51–56; methods p.51, Figure 2 p.52,
+    English abstract p.56
+  accessed_at: '2026-10-21T10:52:23Z'
+  support: supports
+  summary: E. coli NIHJ JC-2 membranes were preincubated with cefadroxil at 1, 5 or
+    25 µg/mL before 14C-penicillin G labeling and electrophoresis/fluorography. Reported
+    affinity order is 1a, 1b, 3, 2, 4. This is direct competition evidence, not a
+    universal PBP3 assignment or purified catalytic IC50. The compound is named; an
+    anhydrous-versus-hydrate reagent specification is not established in the inspected
+    methods.
+  snapshot_sha256: ec0fac9c8f57a87542a5e48e0181ef1cdc6fee49136200144dd8e429dd9536be
+- evidence_id: ecoli-stability
+  kind: primary_source
+  reference: https://doi.org/10.11250/chemotherapy1953.28.Supplement2_51
+  locator: Figures 6–7, Table 3 and discussion pp.54–56
+  accessed_at: '2026-10-21T10:52:23Z'
+  support: supports
+  summary: Cefadroxil showed low relative hydrolysis by the tested penicillinase and
+    Ia cephalosporinase preparations; Proteus vulgaris Ic enzyme did hydrolyze it.
+    The source cautions that enzyme amount and substrate affinity also affect resistance.
+    These are bounded stability/kinetic observations, not universal beta-lactamase
+    resistance or antibacterial-target binding constants.
+  snapshot_sha256: ec0fac9c8f57a87542a5e48e0181ef1cdc6fee49136200144dd8e429dd9536be
+- evidence_id: pneumo-method
+  kind: primary_source
+  reference: https://doi.org/10.1128/aac.18.4.629
+  locator: PMID 7447421; original pp.629–630 Materials and Methods
+  accessed_at: '2026-10-21T10:55:32Z'
+  support: supports
+  summary: The study names cefadroxil BL-S578 from Bristol and uses S. pneumoniae
+    R6 and autolysis-deficient CW1. MIC methods use C medium with yeast extract, about
+    6 × 10^4 CFU/mL, 16 h at 37 °C. Whole-cell PBP competition uses 10-min drug pretreatment
+    followed by 3H-benzylpenicillin. Hydration state is not specified, and the table
+    is not split into two strain-specific rows.
+  snapshot_sha256: ece9b8c3ea0c601ee207be339505f8afa4e0f2b0b63059d25f950fe9723d2da9
+- evidence_id: pneumo-results
+  kind: primary_source
+  reference: https://doi.org/10.1128/aac.18.4.629
+  locator: Original Table 1 p.632, Table 2 p.634, discussion pp.635–636; full nine-page
+    paper inspected
+  accessed_at: '2026-10-21T10:55:32Z'
+  support: supports
+  summary: Table 1 reports cefadroxil MIC 4.3 nmol/mL and PBP competition I50 values
+    4.6, 8.0, 1.3, 12.0 and <0.14 nmol/mL for 1a, 1b, 2a, 2b and 3 respectively. At
+    MIC, labeling inhibition is 48%, 32%, 77%, 31%, 89%. The authors explicitly find
+    no consistent equation of strongest PBP affinity with growth inhibition. Preserve
+    original units, assay and unresolved reagent hydration; these are not Kd values
+    or clinical breakpoints.
+  snapshot_sha256: adbc36dd58c9812e2bff439446e20b4827e7a4681d8eca1ca49d796a5738d25e
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB structured source runner
+  locator: 205206-adapter-results.json; catalog then three searches before web
+  accessed_at: '2026-10-21T10:51:07Z'
+  support: context_only
+  summary: E. coli precise1k penicillin search returned b2430/yfeW; peptidoglycan
+    returned ten annotations including b0084/ftsI and b0149/mrcB. S. aureus staph_precise108
+    returned five annotations, including USA300HOU_RS08285/pbp2B and resistance enzyme
+    RS14765/blaZ. All searches returned zero iModulons. These annotations provide
+    terminology context, not cefadroxil binding or resistance proof.
+  snapshot_sha256: 22dc6dcb5b4853d51fafa06115acf9fd86afa0a07fc55d37e096b6255e263985
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive repository search and free public follow-up
+  locator: 205-owner-hits.txt; exact label, identifier and structure key
+  accessed_at: '2026-10-21T10:50:47Z'
+  support: context_only
+  summary: The search covered hidden and ignored source/native/generated references
+    outside .git/.venv. Historical reports were discovery leads only. Public follow-up
+    distinguished exact drug, hydrates, class reviews, host transporters and compound-specific
+    PBP experiments.
+  snapshot_sha256: a8a5aab224418f5caa82470d6b2a7c4cdb42712de659fde4fd382201709efa51
+  search_scope: rg --no-ignore --hidden across isolated batch 021 outside .git/.venv;
+    exact identifier/label/slug/key. Free live authority/database references, EPMC
+    metadata, J-STAGE original PDF and original PMC scanned pages accessed 2026-10-21.
+- evidence_id: gates
+  kind: validation
+  reference: Actual focused checks
+  locator: 205-focused-results.json; 205-validation.tsv
+  accessed_at: '2026-10-21T10:50:47Z'
+  support: supports
+  summary: Schema and strict pass on the single target; source-aware chemistry also
+    passes. All 24 expanded captured input hashes were rechecked unchanged.
+  snapshot_sha256: 045297314e6d8f63c1ea27011f836b8dd6490ef54039d1201b1ab402314a0159
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact anhydrous form
+  outcome: supported
+  summary: Native structure, stereochemical descriptors, formula, charge, masses and
+    both source identities agree. Public ChEBI, ARO, PubChem, ChEMBL and KEGG support
+    the anhydrous graph.
+  target_ids:
+  - CHEBI:3479
+  evidence_ids:
+  - native
+  - chebi
+  - aro
+  - chemistry
+  - pubchem
+  - chembl
+  - kegg-compound
+- assessment_id: grounding
+  area: grounding
+  topic: Class and antibacterial context
+  outcome: supported
+  summary: Cephalosporin parents are broader than the exact molecule and match its
+    graph. Primary cefadroxil growth inhibition supports antibacterial filing and
+    retained antibiotic/drug context.
+  target_ids:
+  - CHEBI:3479
+  evidence_ids:
+  - chebi
+  - aro
+  - pneumo-method
+  - pneumo-results
+- assessment_id: xrefs
+  area: grounding
+  topic: Exact, drug and document scopes
+  outcome: unknown
+  summary: Public exact structural references match. Drug and document reference placement
+    is coherent. Beilstein, Reaxys, LINCS and DrugBank remain partly authority-asserted
+    due to uninspected registry content; no mismatch was established.
+  target_ids:
+  - CHEBI:3479
+  evidence_ids:
+  - pubchem
+  - chembl
+  - cas
+  - kegg-compound
+  - remaining-exact
+  - kegg-drug
+  - drugcentral
+  - patent-us
+  - patent-nl
+  - patent-de
+  - patent-process
+  - wiki
+- assessment_id: definition
+  area: evidence
+  topic: Structural description
+  outcome: supported
+  summary: Native definition is a minimal chemical description consistent with the
+    complete graph and current ChEBI. It does not assert an experimental strain or
+    universal PBP subtype.
+  target_ids:
+  - CHEBI:3479
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+- assessment_id: mechanism
+  area: evidence
+  topic: Imported PBP assertion and primary enrichment
+  outcome: supported
+  summary: The native CARD assertion is transparently database-sourced with PRIMARY_EVIDENCE_NEEDED.
+    Direct cefadroxil competition studies now provide optional primary support, with
+    different PBP rankings in E. coli membranes and whole pneumococci. Neither study
+    justifies naming the highest-affinity PBP as the sole lethal target.
+  target_ids:
+  - CHEBI:3479
+  evidence_ids:
+  - aro-target
+  - ecoli-pbp
+  - pneumo-method
+  - pneumo-results
+- assessment_id: activity
+  area: evidence
+  topic: Compound-specific assay scope
+  outcome: supported
+  summary: Primary whole-cell growth inhibition supports antibacterial activity. Any
+    numeric activity_spectrum entry must preserve the historical assay, unsplit strain
+    context and unspecified reagent hydration. Clinical susceptibility or global species
+    spectrum cannot be inferred.
+  target_ids:
+  - CHEBI:3479
+  evidence_ids:
+  - pneumo-method
+  - pneumo-results
+- assessment_id: resistance
+  area: evidence
+  topic: Beta-lactamase stability versus target binding
+  outcome: supported
+  summary: The enzyme panel supports bounded hydrolysis behavior, with a Proteus Ic
+    exception. It does not support universal beta-lactamase resistance, and hydrolyzing
+    enzymes are not antibacterial targets. Native resistance fields are empty.
+  target_ids:
+  - CHEBI:3479
+  evidence_ids:
+  - ecoli-stability
+  - native
+- assessment_id: adapter-scope
+  area: scope
+  topic: Gene annotation context
+  outcome: supported
+  summary: Required structured source checks preceded open web follow-up. Gene hits
+    and zero component hits do not prove or refute compound-specific mechanism or
+    phenotype.
+  target_ids:
+  - CHEBI:3479
+  evidence_ids:
+  - adapter
+- assessment_id: optional-domains
+  area: scope
+  topic: Host, clinical, producer and causal-graph boundaries
+  outcome: not_applicable
+  summary: Native makes no host target, current approval, natural producer, dataset
+    or causal-graph assertion. Host PepT1, IgE/hapten studies and enzymatic synthesis
+    patents remain separate from bacterial targets and natural biosynthesis.
+  target_ids:
+  - CHEBI:3479
+  evidence_ids:
+  - native
+  - adopted-references
+  - patent-de
+  - patent-process
+- assessment_id: history
+  area: provenance
+  topic: Source ownership and seeded status
+  outcome: supported
+  summary: Both source concepts/mints, imported target provenance and five seed events
+    are coherent. SEEDED and PRIMARY_EVIDENCE_NEEDED are not promoted by this read-only
+    review.
+  target_ids:
+  - CHEBI:3479
+  evidence_ids:
+  - owners
+  - native
+  - chemistry
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary annotation
+  outcome: supported
+  summary: Exact primary PBP evidence offers a concrete enrichment route, but optional
+    absent mode/activity fields alone are not defects. Preserve family/function groundings
+    and bounded organism examples.
+  target_ids:
+  - CHEBI:3479
+  evidence_ids:
+  - ecoli-pbp
+  - pneumo-method
+  - pneumo-results
+- assessment_id: schema
+  area: schema
+  topic: Focused gates
+  outcome: supported
+  summary: Schema, strict and independent chemistry passed. Scientific assessment
+    also checked source scope and material boundaries.
+  target_ids:
+  - CHEBI:3479
+  evidence_ids:
+  - gates
+  - chemistry
+findings: []
+actions:
+- action_id: A1
+  description: Optionally curate primary PBP evidence and bounded cefadroxil activity.
+  finding_ids: []
+  target_ids:
+  - CHEBI:3479
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Adjudication of imported source claim
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefadroxil.yaml
+    role: Curator-owned mode, primary molecular_targets and activity_spectrum through
+      validated writer
+  acceptance_checks:
+  - Preserve the imported CARD assertion separately; use the maintained claim-review
+    mechanism rather than manually rewriting source-owned target metadata.
+  - Attach DOI 10.11250/chemotherapy1953.28.Supplement2_51 and PMID 7447421 to their
+    exact organism, preparation and radioligand competition contexts. Do not treat
+    I50 as Kd or identify one universal PBP3 killing target.
+  - If adding CELL_WALL_SYNTHESIS_INHIBITION, use MICROBIAL_TARGET scope and taxon-agnostic
+    PBP family/function grounding; specific proteins remain independently verified
+    examples.
+  - Before numeric activity adoption, resolve or explicitly qualify cefadroxil reagent
+    hydration and the Table 1 unsplit R6/CW1 context; retain nmol/mL, C medium, inoculum
+    and incubation.
+  - Keep beta-lactamase hydrolysis, host PepT1 transport and IgE recognition separate
+    from antibacterial target evidence.
+  - Run native schema/strict, evidence/term/reference/history and applicable corpus
+    checks after separately authorized curation.
+- action_id: A2
+  description: Optionally corroborate the remaining source-asserted registry mappings.
+  finding_ids: []
+  target_ids:
+  - CHEBI:3479
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source exact and drug-reference mappings
+  acceptance_checks:
+  - Verify Beilstein 5933893, Reaxys 5393893 and LINCS LSM-5722 against the complete
+    anhydrous graph when permissible public content is available.
+  - Check DrugBank DB01140 at drug-reference scope when accessible; do not delete
+    source mappings merely because access failed.
+  - Keep drug-level salt/hydrate relationships distinct from exact xrefs and preserve
+    document-reference scope.
+limitations:
+- Beilstein/Reaxys registry content and LINCS LSM-5722 were not independently inspected;
+  DrugBank DB01140 returned HTTP 403. Current source mappings are retained as authority-asserted,
+  without claiming exact registry verification.
+- All ten adopted PMID abstracts and current target review PMID 3055170 were inspected.
+  Complete primary papers were read for the two 1980 PBP experiments, not every host-disposition,
+  immunochemistry or clinical lead.
+- The primary PBP studies name cefadroxil but do not resolve anhydrous-versus-hydrate
+  reagent composition in the inspected methods. Their quantitative assays must retain
+  that material qualification.
+- Pneumococcal Table 1 is not split by R6 versus CW1; do not fabricate separate strain
+  MIC rows. Historical MICs and competition measurements do not establish clinical
+  breakpoints or one universally lethal PBP.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Original 13-input capture preserved; actual ARO/target owners and guidance expanded
+  provenance to 24 files before assessment. All hashes unchanged. No native/source/status/history
+  edits.
+- Schema/strict used batch 021; chemistry used existing locked batch 019 RDKit 2026.03.5
+  against batch 021 cwd.
+- The original PNG pages 631/633 were fetched after a parser initially selected duplicate
+  figure thumbnails; final evidence uses corrected full-page hashes, with both retrieval
+  logs retained.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:3479
+- https://doi.org/10.11250/chemotherapy1953.28.Supplement2_51
+- https://doi.org/10.1128/aac.18.4.629
+tags:
+- cefadroxil
+- pbp
+- exact-identity
+- material-boundary

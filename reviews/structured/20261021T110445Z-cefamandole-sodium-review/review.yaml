@@ -1,0 +1,561 @@
+schema_version: 1.0.0
+review_id: 20261021T110445Z-cefamandole-sodium-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review cefamandole sodium exact identity and activity scope
+started_at: '2026-10-21T10:44:48Z'
+finished_at: '2026-10-21T11:04:45Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: No confirmed native defect. The hydroxy cefamandole sodium structure, salt
+  definition and public chemical references agree. A primary sodium-salt study supports
+  antibacterial activity, while lithium and nafate comparisons remain distinct material
+  contexts. Optional activity enrichment must preserve historical assay, inoculum
+  and population scope. Scientific assessment retains the stated evidence limits;
+  full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefamandole-sodium.yaml
+    sha256: fdf7209c55c29c4ad78ef194d9d9e455692545c13f22cb18cc754a5936af6f0c
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:34614
+  path: data/antibiotics/antibacterial/cefamandole-sodium.yaml
+  label: cefamandole sodium
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position210; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:34614
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:34614
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    210
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:34614
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefamandole-sodium.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:34614
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefamandole-sodium.yaml --out /private/tmp/am-review-session/210-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:34614
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:34614
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:34614
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:34614
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:34614
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:34614
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:34614
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:34614
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:34614
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefamandole-sodium.yaml
+  locator: Entire native YAML, provenance and history
+  accessed_at: '2026-10-21T11:03:00Z'
+  support: supports
+  summary: The complete exact sodium-salt record, all names, source concept, chemical
+    structure, cross-reference placements and history were read. Native SEEDED status
+    is unchanged. No primary molecular target, activity_spectrum, resistance mechanism
+    or causal graph is populated.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: Exact ChEBI source row, maintained extraction/seeding and initial input
+    capture
+  accessed_at: '2026-10-21T11:03:00Z'
+  support: supports
+  summary: The exact ChEBI row supplies identity, synonyms, structure, ontology context
+    and links. Initial captured input hashes remain intact. Hidden and ignored files
+    were included in the bounded local owner/reference search, excluding .git and
+    .venv.
+  search_scope: rg --no-ignore --hidden exact label, ChEBI identifier and full structural
+    key in isolated batch021; actual owners captured before assessment.
+- evidence_id: authority
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:34614
+  locator: 210-ols.json; current term and chemical annotations
+  accessed_at: '2026-10-21T11:03:00Z'
+  support: supports
+  summary: Current ChEBI agrees with the native sodium-containing formula, full stereochemical
+    key and definition. The organic sodium salt parent and antibacterial-drug role
+    are appropriate. This is chemical and ontology context, not a primary PBP experiment
+    or current regulatory approval.
+  snapshot_sha256: bf03598043cae5bac1f9cfb3683bd0a0df763ce3aa7e08f442e22b664e25cb1f
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit 2026.03.5 calculations
+  locator: 210-chemistry.json;209-210-external-chemistry.json
+  accessed_at: '2026-10-21T11:03:00Z'
+  support: supports
+  summary: Native SMILES and InChI reproduce two fragments, net charge zero, three
+    configured R centres, complete key, formula and source-precision masses. The ChEBI
+    source mint matches. Independent parsing of the live KEGG MOL reproduces the exact
+    native key.
+  snapshot_sha256: af8f186795250732a3e47ae52c851f3768e6198fc13cc86ed06dd7f364b97635
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/23672568
+  locator: 210-pubchem-cas.json
+  accessed_at: '2026-10-21T11:03:00Z'
+  support: supports
+  summary: The public CAS-name query resolves to the exact sodium salt with the complete
+    native stereochemical key and formula. It corroborates the authority mapping without
+    implying a direct CAS registry inspection.
+  snapshot_sha256: 6cce028638a5cb93ac8d245245b66f03cceea6e54868ea2a74c9c2479ad868e8
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/C13968
+  locator: 210-kegg.txt/.mol;210-keggdrug.txt
+  accessed_at: '2026-10-21T11:03:00Z'
+  support: supports
+  summary: The compound and drug entries distinguish the appropriate sodium form;
+    the MOL matches exactly. Drug-level PBP/peptidoglycan annotations remain database
+    context. No exact parent-binding claim is copied from those annotations.
+  snapshot_sha256: f08075758797e835285116d098b4eadb39db68ca14d3bba585574d7434d1abda
+- evidence_id: adapter
+  kind: search
+  reference: Native mechanism scope
+  locator: Complete native text before public literature follow-up
+  accessed_at: '2026-10-21T11:03:00Z'
+  support: context_only
+  summary: Neither native record asserts a named gene/protein, pathway or stress mechanism.
+    An adapter lookup was therefore not applicable to the native claims. Protein names
+    in a later combination paper or KEGG drug classification are not silently adopted
+    as native targets.
+  search_scope: Complete native mechanism/definition/target/resistance/graph review
+    before web follow-up.
+- evidence_id: monograph
+  kind: authority
+  reference: https://jpdb.nihs.go.jp/jp14e/14data/Part-I/Cefalexin.pdf
+  locator: Japanese Pharmacopoeia XIV, printed p317; cefamandole sodium entry visually
+    inspected
+  accessed_at: '2026-10-21T11:03:00Z'
+  support: supports
+  summary: The official historical monograph gives C18H17N6NaO5S2, CAS30034-03-8 and
+    monosodium(6R,7R)/(2R) hydroxy side-chain structure, matching native. It supports
+    chemical identity and historical compendial context, not current regulatory approval
+    or a primary susceptibility endpoint.
+  snapshot_sha256: 326a4df0b6917d734399e3358c6440f0c71e64ebf0fc90c6a26b57d8d0c89f5b
+- evidence_id: sodium-activity
+  kind: primary_source
+  reference: https://doi.org/10.11250/chemotherapy1953.27.Supplement5_253
+  locator: Miki et al.1979; original pp253–254 Methods/Results and Table1 visually
+    inspected; complete English abstract
+  accessed_at: '2026-10-21T11:03:00Z'
+  support: supports
+  summary: The report explicitly studies cefamandole sodium. Heart infusion agar dilution
+    uses undiluted overnight Trypticase soy broth culture and its100-fold dilution.
+    S. aureus209P JC MIC is0.2ug/mL undiluted and≤0.1ug/mL diluted; E. coli NIH JC-2
+    is1.56 and0.78ug/mL. Table1 separately gives distributions for29 S. aureus,29
+    E. coli,27 Klebsiella and30 Proteus isolates; modal values are not individual-strain
+    MICs or MIC90. This is direct sodium-salt antibacterial evidence, with no PBP-binding
+    assay.
+  snapshot_sha256: 79011e4529515f749310bd006373ee2abfca86774ed99d55ce27bf5f2e7b5588
+- evidence_id: material-boundary
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.12.1.67
+  locator: PMID18988; complete original pp67–72, especially Materials p67 and Tables1–4
+  accessed_at: '2026-10-21T11:03:00Z'
+  support: context_only
+  summary: The comparison material is cefamandole lithium, whereas nafate is sodium
+    O-formyl ester. Their apparent standard-assay equivalence is influenced by nafate
+    hydrolysis. These experiments support cefamandole active-moiety context but do
+    not provide unqualified exact sodium-salt MICs.
+  snapshot_sha256: eb8554ddb4d0ed63f3e1cec5632d806b081fc49a7dc1ddb88543c51dc7db97d7
+- evidence_id: search
+  kind: search
+  reference: Exact cefamandole sodium public literature follow-up
+  locator: Current ChEBI/KEGG/PubChem, official JP monograph and J-STAGE primary paper
+  accessed_at: '2026-10-21T11:03:00Z'
+  support: context_only
+  summary: The native source row has no adopted PMID lead. Exact sodium-name searches
+    located the original1979 study. Neutral cefamandole, lithium salt and nafate were
+    considered related forms and kept separate. No record-specific producer or direct
+    molecular target is established by these bounded sources.
+  search_scope: Exact cefamandole sodium and penicillin-binding terms in free public
+    search; official monograph; direct original J-STAGE activity paper; no paid provider.
+- evidence_id: sodium1973
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.3.6.657
+  locator: PMID4790616; original pp657–658 Materials/Methods and Figure1/Table1, visually
+    inspected
+  accessed_at: '2026-10-21T11:03:00Z'
+  support: supports
+  summary: The original paper explicitly identifies cefamandole sodium salt and tests
+    1,213 clinical isolates. MIC is defined by no visible growth after 18h at37C on
+    Oxoid DST agar; inoculum and larger-inoculum comparisons are specified. MBC uses
+    a distinct broth/subculture procedure and, for staphylococci, a99% killing criterion.
+    Figure1 draws the neutral moiety but does not override explicit sodium-material
+    prose. Table1 gives cumulative susceptible-isolate percentages, not independent
+    strain MIC rows. This independently supports exact sodium-salt activity without
+    direct PBP engagement.
+  snapshot_sha256: bdfbdda184c50d534c3bc3176679c9c6922adc11ff8cf1f39f13ff8a73488f9b
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact sodium form
+  outcome: supported
+  summary: The native graph, formula, charge, stereo descriptors and source mint agree
+    with current ChEBI, PubChem and independently parsed KEGG. The sodium salt must
+    remain distinct from the neutral acid, other counterions and the O-formyl prodrug.
+  target_ids:
+  - CHEBI:34614
+  evidence_ids:
+  - native
+  - authority
+  - chemistry
+  - pubchem
+  - kegg
+- assessment_id: grounding
+  area: grounding
+  topic: Parent, role and definition
+  outcome: supported
+  summary: The organic sodium salt parent and antibacterial-drug role fit the graph
+    and primary pharmacological context. Broad classification does not substitute
+    for exact material or current clinical status.
+  target_ids:
+  - CHEBI:34614
+  evidence_ids:
+  - authority
+  - chemistry
+  - kegg
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained ownership and seed history
+  outcome: supported
+  summary: Source concept and dated seed history are coherent. Review-only output
+    preserves native status and original hashes; proposed fixes or enrichment belong
+    to maintained owners.
+  target_ids:
+  - CHEBI:34614
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+- assessment_id: optional
+  area: completeness
+  topic: Unpopulated scientific domains
+  outcome: supported
+  summary: Absent optional producer, target, causal graph or activity fields are not
+    defects by themselves. Any additions require exact material, strain, endpoint
+    and evidence scope.
+  target_ids:
+  - CHEBI:34614
+  evidence_ids:
+  - native
+- assessment_id: gates
+  area: schema
+  topic: Focused checks
+  outcome: supported
+  summary: Schema and strict checks pass in batch021. Independent chemistry used the
+    existing batch019 RDKit interpreter against unchanged batch021 inputs; shared
+    corpus gates remain separate.
+  target_ids:
+  - CHEBI:34614
+  evidence_ids:
+  - chemistry
+- assessment_id: xref
+  area: grounding
+  topic: Exact and drug-reference scope
+  outcome: supported
+  summary: ChEBI, PubChem CAS resolution, KEGG C13968/D02191 and the official monograph
+    support the sodium structure. Reaxys remains authority-asserted. Kefdole is correctly
+    a brand synonym rather than another molecular graph.
+  target_ids:
+  - CHEBI:34614
+  evidence_ids:
+  - authority
+  - pubchem
+  - kegg
+  - monograph
+- assessment_id: activity
+  area: evidence
+  topic: Exact sodium antibacterial evidence
+  outcome: supported
+  summary: Original material identity and agar susceptibility data establish sodium-cefamandole
+    activity. Preserve standard strains, censoring, medium and the two inoculum conditions;
+    isolate distributions are population observations.
+  target_ids:
+  - CHEBI:34614
+  evidence_ids:
+  - sodium-activity
+- assessment_id: mechanism
+  area: scope
+  topic: Mechanism and related-form boundaries
+  outcome: unknown
+  summary: No native primary PBP claim is populated. KEGG mechanism labels are database
+    context, and growth inhibition alone is not direct binding. Lithium/nafate conversion
+    results cannot be reassigned as exact sodium measurements.
+  target_ids:
+  - CHEBI:34614
+  evidence_ids:
+  - native
+  - kegg
+  - sodium-activity
+  - material-boundary
+- assessment_id: clinical
+  area: evidence
+  topic: Historical compendium versus current status
+  outcome: not_applicable
+  summary: The native has no clinical status assertion. The historical monograph and
+    small clinical report do not establish current approval, present-day recommended
+    use or population safety.
+  target_ids:
+  - CHEBI:34614
+  evidence_ids:
+  - native
+  - monograph
+  - sodium-activity
+findings: []
+actions:
+- action_id: A1
+  description: Optionally curate exact sodium-salt antibacterial observations from
+    the original study.
+  finding_ids: []
+  target_ids:
+  - CHEBI:34614
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefamandole-sodium.yaml
+    role: Curator-owned activity and evidence through validated writer
+  acceptance_checks:
+  - Use DOI10.11250/chemotherapy1953.27.Supplement5_253 with cefamandole sodium material
+    explicitly recorded. Preserve S. aureus209P JC and E. coli NIH JC-2 names, historical
+    agar method, inoculum dilution and≤ censoring.
+  - Keep Table1 clinical-isolate distributions separate from single-strain measurements
+    and do not infer current susceptibility breakpoints or MIC90 from a modal bin.
+  - Do not copy lithium-cefamandole or hydrolysing nafate MICs as direct sodium-salt
+    experiments. Do not infer a molecular target from growth inhibition alone.
+  - Run native schema/strict, evidence/reference/history and applicable corpus gates
+    after separately authorized enrichment.
+limitations:
+- No exhaustive producer, clinical, resistance or taxonomic survey was undertaken.
+  Historical susceptibility assays do not establish present-day breakpoints.
+- Focused schema/strict checks pass; independent chemistry used the batch019 interpreter
+  because the locked batch021 environment lacks RDKit. Required shared corpus checks
+  are inserted before save.
+- Reaxys4901274 was not directly inspected. CAS was corroborated by public authorities
+  and the original official monograph rather than a direct registry response.
+- The1979 sodium paper was inspected at complete English abstract, original pp253–254
+  antibacterial Methods/Results and Table1 scope. The remaining clinical case tables
+  were not independently audited. Temperature/duration should be recovered from the
+  referenced historical standard before a fully specified numeric activity record
+  is adopted.
+- The1977 lithium/nafate original was read in full and is used for material boundaries,
+  not exact sodium MIC transfer. No current clinical approval, recommendation or primary
+  PBP engagement is inferred.
+- The additional1973 sodium study was inspected at original pp657–658 material/method/first-table
+  scope; remaining result tables were not independently audited by the coordinator.
+  No numerical population-spectrum extraction is proposed from that bounded read.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
