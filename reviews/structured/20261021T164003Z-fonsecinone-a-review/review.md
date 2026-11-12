@@ -1,0 +1,787 @@
+# Fonsecinone A: identity and antibacterial activity supported; qualify first-isolation wording
+
+- Review: 20261021T164003Z-fonsecinone-a-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T16:22:23Z
+- Finished UTC: 2026-10-21T16:40:03Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The complete native record and maintained ChEBI source agree, and six independently parsed structure encodings reproduce the native graph. The adopted 2016 original directly supports antibacterial activity and biochemical FabI interaction. One provisional minor historical-provenance finding concerns the definition’s unqualified first-isolation wording; optional mechanism and axial-stereochemistry enrichment are not treated as defects.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 453; one complete record in batch 046. All thirteen original input hashes were verified before judgment and preserved; actual maintained owners were confirmed.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:133759 | data/antibiotics/antibacterial/fonsecinone-a.yaml | generated | fonsecinone A |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema verification | passed | True | CHEBI:133759 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:133759 | Actual focused execution exited 0. |
+| Focused chemistry verification | passed | False | CHEBI:133759 | Actual focused execution exited 0. |
+| Independent exact authority graph comparison | passed | False | CHEBI:133759 | Native SMILES/InChI, official ChEBI molfile, CAS-resolved PubChem and KNApSAcK SMILES/InChI all yield the native full key. The comparison does not resolve axial chirality. |
+| Authoritative full QC | failed | True | CHEBI:133759 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:133759 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:133759 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:133759 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:133759 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:133759 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:133759 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:133759 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:133759 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact constitution, names and asserted groundings
+
+identity: supported. Targets: CHEBI:133759.
+
+All native structure encodings and current chemical authorities agree. The original drawings and analytical descriptions support this exact planar congener, distinct from hydrated fonsecinone C. Axial representation remains a bounded material-identity limitation, not proof of a mixture or opposite configuration.
+
+### Antibacterial role and filing
+
+evidence: supported. Targets: CHEBI:133759.
+
+Direct original whole-cell results support the narrow role. Newer negative results and source strain-label inconsistencies limit quantitative or universal extrapolation but do not refute the existence of antibacterial activity.
+
+### Originally isolated from A. niger wording
+
+provenance: concern. Targets: CHEBI:133759.
+
+Isolation from A. niger is supported by original studies. First-isolation priority is less secure: the discovery citation, authority origin entry and later historical account point to A. fonsecaeus. Because the 1984 full text and historical strain reidentification are unresolved, the proposed correction is a provisional wording qualification.
+
+### Mechanism and optional biological representations
+
+completeness: supported. Targets: CHEBI:133759.
+
+The native record asserts no protein, gene, pathway, stress-response or transcriptomic dataset, so no adapter-first target query is triggered. Direct E. coli FabI binding/inhibition is a concrete optional curation lead, with docking and whole-cell causality kept separate. Absence of MIC, producer, resistance, clinical and graph objects is not independently defective.
+
+### Maintained source ownership and complete citation disposition
+
+provenance: supported. Targets: CHEBI:133759.
+
+All native fields, exact maintained row, applicable emitting logic and seven adopted leads were assessed. The source history is reproducible and does not claim reviewed status.
+
+## Findings
+
+### F1: Qualify the historical first-isolation wording
+
+minor / open / provisional; issue key: fonsecinone-a-first-isolation-wording.
+
+The definition says originally isolated from Aspergillus niger. Later isolation from A. niger is well supported, but the cited1984 discovery trail names A. fonsecaeus NRRL67, and no inspected evidence establishes that the historical strain/name should be rewritten as A. niger. The 1984 full text was unavailable, so this is a bounded provenance qualification rather than a confirmed taxonomic reassignment. Removing originally would retain the supported A. niger association without claiming unverified priority.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Resolve or qualify the maintained first-isolation wording.
+
+- Inspect the original 1984 experimental source and any authoritative NRRL67 reidentification before retaining a first-isolation claim under the name A. niger. Alternatively use the supported wording isolated from A. niger and cite an inspected isolation study.
+- Make the correction through maintained source ownership or an explicit reproducible definition override, regenerate, and rerun focused schema/strict and corpus reproduction. Preserve the exact congener key and the supported antibacterial role.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/fonsecinone-a.yaml; Entire native YAML, all structure/name/ontology fields, cross-references, source concept and three source-history events. | supports | The SEEDED, EXACT ChEBI record asserts a neutral C32H26O10 dimeric naphthopyran, a precise systematic synonym, six structural parents and an antibacterial-agent role. Its definition says originally isolated from Aspergillus niger. It has no native mode, molecular target, MIC, resistance, producer object, clinical assertion, dataset or causal graph. Its three source events are initial seeding and reseeding, not scientific sign-off. |
+| owners | data/raw/chebi_antimicrobials.tsv:2524; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; conf/sources.yaml; curation/decisions.tsv; Complete exact ChEBI row, extraction lines 180–337 and applicable role/classification, identity, synonym and source-history generation. | supports | The maintained row supplies all native identity fields and the antibacterial role, and retains seven citation leads. Its mechanism-role column is empty, so absence of a generated mechanism is reproducible. No additional exact ARO, target/resistance, FDA, PubChem-enrichment or MIBiG row was found in the actual-source scan. The source mint antibioticmech:chebi-ef468d847f reproduces. Source citation leads are not automatically claim-level evidence. |
+| identity | CHEBI:133759; https://www.ebi.ac.uk/chebi/backend/api/public/compound/133759/; cas:95152-75-3; PubChem:10325700; knapsack:C00034519; Entire current ChEBI entry/molfile, CAS-resolved PubChem properties and KNApSAcK entry; independent six-encoding comparison. | supports | All inspected chemical authorities agree with the native constitution, exact systematic name, neutral C32H26O10 and full key FFNPXDMNZBCNMN-UHFFFAOYSA-N. Calculated average mass 570.55 and monoisotopic mass 570.152597 agree with the native rounding. KNApSAcK explicitly associates CAS95152-75-3 and the same SMILES/InChI/key with fonsecinone A. Reaxys5206196 is repeated in the official ChEBI registry metadata, but its underlying record was not inspected. The key and absence of tetrahedral stereocentres do not identify an axial enantiomer or establish achirality. |
+| groundings | CHEBI:26195; CHEBI:35618; CHEBI:3992; CHEBI:64459; CHEBI:64542; CHEBI:76224; CHEBI:33282; Current official term definitions and relation names. | supports | The six parents denote polyphenol, aromatic ether, cyclic ketone, biaryl, naphtho-gamma-pyrone and aromatic ketone; all fit the represented structure. The sole activity role means antibacterial agent. Filing ANTIBACTERIAL correctly follows that role, and the precise A congener is distinct from the hydrated C sibling. |
+| activity2016 | PMID:27063778; DOI:10.1038/srep24291; https://pmc.ncbi.nlm.nih.gov/articles/PMC4827027/; Complete main original article, all Results/Discussion and Methods, Tables 1–3; Figure 1 and Figure 3 independently viewed. | supports | Fonsecinone A is compound 2, isolated from Aspergillus sp. Z120, with stated HPLC purity at least 95%, NMR characterization and the correct dimer constitution in Figure 1. Table 1 reports MICs in µg/mL of 4.26 for E. coli ATCC35218, 2.13 for E. coli ATCC25922, 17.04 for P. aeruginosa ATCC27853, at least 100 for K. pneumoniae ATCC700603, 34.08 for S. aureus ATCC43300 and 4.26 for E. faecalis ATCC29212. These are broth microdilution measurements in Mueller-Hinton broth, stated 10^5 cells/mL, serial twofold dilution, triplicate, 24 hours at 30°C, with MIC defined as complete growth inhibition by OD600. The positive and negative tested organisms remain distinct; no universal spectrum or clinical efficacy is inferred. |
+| mechanism2016 | PMID:27063778; DOI:10.1038/srep24291; Complete FabI results, Tables 2–3, MST figure and cloning/assay methods. | supports | The source goes beyond docking: recombinant E. coli K-12 MG1655 FabI expressed in BL21(DE3) is tested by MST and substrate/cofactor enzyme assays. Table 3 reports compound 2 Kd 215.0±28.8 µM and IC50 2.7 µM; the prose gives 2.78 µM. Figure 3 instead labels the A fit 215±3.4 µM, so uncertainty values require reconciliation. The assay uses crotonoyl-CoA and NADH; its IC50 is not a binding constant. The study does not provide whole-cell target engagement, genetic resistance mapping or rescue proving FabI causally explains activity in every tested species. Optional future mechanism curation should retain direct biochemical evidence separately from predicted pose and whole-cell causality. |
+| source-limits | PMID:27063778; DOI:10.1038/srep24291; https://www.atcc.org/products/35218; Original table/figure/text cross-comparison and official ATCC strain page. | context_only | The paper labels ATCC35218 as an ESBL producer; the inspected ATCC page identifies strain 1532 and ampicillin-containing culture medium but does not independently validate that ESBL designation. The main text also mislabels E. coli with ATCC29212 in one sentence while Table 1 correctly separates E. coli25922 and E. faecalis29212. Figure 3’s caption calls compound 3 fonsecinone B, but the plotted panel and tables identify C; A is consistently compound 2. The source’s reported A mass peak/ion annotation is internally inconsistent with the theoretical exact mass, whereas other original characterization and authorities agree on C32H26O10. These source defects are retained as enrichment limits, not imported into the native record. |
+| adopted-other | PMID:12542363; PMID:15556711; PMID:16038560; PMID:16155971; PMID:21176790; PMID:24708541; Complete indexed abstracts for all six additional adopted leads; relevant original Results/Methods of PMC3118676 also read. | context_only | 12542363 isolates known fonsecinone A as compound 4 from A. niger JV-33-48 and reports Taq-polymerase inhibition; that assay is not automatically an antibacterial mechanism. 15556711 isolates A from A. niger IFB-E003 and describes microbial inhibition across four naphthopyrones, without enough abstract detail to assign every exact MIC. 16038560 concerns an aspernigrin A structural revision and coproduction of fonsecinone A, not a revision of fonsecinone A. 16155971 supplies complete NMR-assignment work and first isolation from A. aculeatus, not the first discovery of A. 21176790 characterizes fungal polyketide production; relevant full text identifies stable fonsecinone A as compound 10, notes isolation interconversion and supports production in A. niger ATCC11414. Its biosynthetic proteins are not antibacterial targets. 24708541 directly identifies A as compound 3 with reported antibacterial MIC range 25–100 µM and antifungal range 6.25–50 µM; full strain-level tables were not obtained. |
+| origin | DOI:10.1016/S0040-4020(01)88792-5; CHEBI:133759 compound_origins; PMID:34443650 introduction; GBIF:5489011; Original 1984 publisher/Crossref title and metadata, current ChEBI origin provenance, fully read 2021 introduction and current GBIF exact-name response. | context_only | The 1984 discovery source is titled New naphthopyrones from Aspergillus fonsecaeus. Current ChEBI explicitly maps A. fonsecaeus NRRL67 to that DOI, and the 2021 article states that fonsecinone A was first isolated from A. fonsecaeus in 1984. GBIF currently treats that name as an accepted species, not an explicit synonym of A. niger; NCBI exact-name lookup returns no hit. The 1984 full text was not obtained, so its experimental wording and any strain reidentification remain unresolved. Later A. niger isolation is directly supported, but the native historical priority wording is not established by the inspected evidence. |
+| later2021 | PMID:34443650; DOI:10.3390/molecules26165061; https://pmc.ncbi.nlm.nih.gov/articles/PMC8399357/; Complete 2021 original main text and Table 2; Figures 1 and 3 visually inspected. | supports | The source identifies fonsecinone A as compound 1 from A. niger L14 and reports MIC 2 µg/mL against both H. pylori G27 and clinical strain 159. Broth microdilution uses BHI with 10% fetal calf serum, 5×10^5 CFU/mL, 37°C microaerophilic incubation for two days and visually absent turbidity, in triplicate. The paper assigns the axial configuration Ra using ECD and crystallographic discussion. However, its listed A crystal is centrosymmetric P-1 and solvated with ethanol/water, and its radiation statements are inconsistent; the claimed unambiguous crystallographic absolute-hand proof is therefore not adopted uncritically. Figure 1 agrees with native planar connectivity. This does not establish that the unsolvated native graph is a racemate or require attaching the crystallization solvent to the record. |
+| later-boundaries | PMID:32575731; DOI:10.3390/md18060324; PMID:32163284; DOI:10.1021/acs.jnatprod.9b00560; 2020 Marine Drugs selected exact-compound identification, activity Results and complete antimicrobial Methods; complete indexed abstract of the separate 2020 atropisomer paper. | context_only | The Marine Drugs paper identifies fonsecinone A as compound 7 and reports MIC at least 100 µM against its E. coli, S. aureus and Candida panel. Its media, source material and assay differ from the adopted positive study, and this negative result is preserved rather than generalized to universal inactivity. The separate JNP abstract reports an aS-fonsecinone A atropisomer from Chaetomium nigricolor with host-cell anti-inflammatory activity. That specific axial identity and host response must not be transferred to every material sharing the planar key. Its full text was not inspected. |
+| search | 453-inclusive-hits.txt; 453-adopted.json; 453-literature.json; 453-fetch-results.json through 453-fetch4-results.json; Hidden- and ignored-inclusive exact local search and bounded primary/authority follow-up. | context_only | The inclusive search locates the exact source/native entries, the distinct C congener, generated maps and readiness entries. A historical report on hydroxybutanenitrile merely mentions the shared 2014 source and is not evidence for this review. No additional exact native evidence object was found in the searched surface. All seven adopted citations resolve and their complete abstracts were read; the 2016 main original and relevant2011 original sections were additionally inspected. Bounded newer literature supplied direct positive and negative activity and axial-identity context, without claiming an exhaustive target survey. |
+| checks | 453-focused-results.json; 453-chemistry.json; 453-authority-chemistry.json; Actual focused schema, strict, standalone chemistry and authority comparisons. | supports | All focused executions exit 0, with correct formula, mass, charge, source mint and chemical key. All thirteen initial hashes remain unchanged. Deterministic checks do not validate first-discovery wording, axial hand or the causal interpretation of biological assays. |
+
+## Limits And Additional Notes
+
+- The 1984 discovery full text and several adopted non-open papers were unavailable. Complete indexed abstracts were read for every adopted PMID, but exact tables or spectra from those unavailable papers are not claimed as inspected.
+- The 2016 and2021 supplement routes returned download-preparation HTML, not valid PDF/ZIP files; their additional spectra, raw ECD data and deposited CIF files were not inspected. The main articles and named figures were read.
+- Native and authority encodings omit axial configuration. The 2016 ECD assignment and2021 Ra conclusion do not justify claiming every material with the planar key is the same atropisomer; the later aS paper is abstract-only here. The 2021 centrosymmetric crystallographic description also limits its claimed absolute-hand proof.
+- Reaxys5206196 was verified as an adopted/current ChEBI registry association only, without paid access to its underlying record.
+- The 2016 source has inconsistent strain labels, MST uncertainty values and mass annotations. Quantitative enrichment or a full causal graph would require resolving these details and preserving biochemical versus whole-cell evidence scope.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No source role, mechanistic target or activity observation was transferred between fonsecinone A and C. The shared literature was mapped by its exact compound number.
+- All thirteen initial input hashes remain unchanged. Optional FabI and MIC enrichment is a future curation opportunity, not a missing-required-field finding.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T164003Z-fonsecinone-a-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Fonsecinone A: identity and antibacterial activity supported; qualify first-isolation
+  wording'
+started_at: '2026-10-21T16:22:23Z'
+finished_at: '2026-10-21T16:40:03Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The complete native record and maintained ChEBI source agree, and six independently
+  parsed structure encodings reproduce the native graph. The adopted 2016 original
+  directly supports antibacterial activity and biochemical FabI interaction. One provisional
+  minor historical-provenance finding concerns the definition’s unqualified first-isolation
+  wording; optional mechanism and axial-stereochemistry enrichment are not treated
+  as defects.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/fonsecinone-a.yaml
+    sha256: cada8c120c8b3fad0f163d024d67cf01e73d85b45e2f2a02a5c9ed6b9a4f076f
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:133759
+  path: data/antibiotics/antibacterial/fonsecinone-a.yaml
+  label: fonsecinone A
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 453; one complete record in batch 046. All thirteen original
+    input hashes were verified before judgment and preserved; actual maintained owners
+    were confirmed.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:133759
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/fonsecinone-a.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/fonsecinone-a.yaml --out /private/tmp/am-review-session/453-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 453
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: Independent exact authority graph comparison
+  status: passed
+  required: false
+  summary: Native SMILES/InChI, official ChEBI molfile, CAS-resolved PubChem and KNApSAcK
+    SMILES/InChI all yield the native full key. The comparison does not resolve axial
+    chirality.
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/453-authority-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:133759
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/fonsecinone-a.yaml
+  locator: Entire native YAML, all structure/name/ontology fields, cross-references,
+    source concept and three source-history events.
+  accessed_at: '2026-10-21T16:27:33Z'
+  support: supports
+  summary: The SEEDED, EXACT ChEBI record asserts a neutral C32H26O10 dimeric naphthopyran,
+    a precise systematic synonym, six structural parents and an antibacterial-agent
+    role. Its definition says originally isolated from Aspergillus niger. It has no
+    native mode, molecular target, MIC, resistance, producer object, clinical assertion,
+    dataset or causal graph. Its three source events are initial seeding and reseeding,
+    not scientific sign-off.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:2524; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py; conf/sources.yaml; curation/decisions.tsv
+  locator: Complete exact ChEBI row, extraction lines 180–337 and applicable role/classification,
+    identity, synonym and source-history generation.
+  accessed_at: '2026-10-21T16:27:33Z'
+  support: supports
+  summary: The maintained row supplies all native identity fields and the antibacterial
+    role, and retains seven citation leads. Its mechanism-role column is empty, so
+    absence of a generated mechanism is reproducible. No additional exact ARO, target/resistance,
+    FDA, PubChem-enrichment or MIBiG row was found in the actual-source scan. The
+    source mint antibioticmech:chebi-ef468d847f reproduces. Source citation leads
+    are not automatically claim-level evidence.
+  snapshot_sha256: 3f7181590f8566b069cb37364d6a96b3da9ac59e52a7215695b34306afbd7aca
+- evidence_id: identity
+  kind: authority
+  reference: CHEBI:133759; https://www.ebi.ac.uk/chebi/backend/api/public/compound/133759/;
+    cas:95152-75-3; PubChem:10325700; knapsack:C00034519
+  locator: Entire current ChEBI entry/molfile, CAS-resolved PubChem properties and
+    KNApSAcK entry; independent six-encoding comparison.
+  accessed_at: '2026-10-21T16:27:33Z'
+  support: supports
+  summary: All inspected chemical authorities agree with the native constitution,
+    exact systematic name, neutral C32H26O10 and full key FFNPXDMNZBCNMN-UHFFFAOYSA-N.
+    Calculated average mass 570.55 and monoisotopic mass 570.152597 agree with the
+    native rounding. KNApSAcK explicitly associates CAS95152-75-3 and the same SMILES/InChI/key
+    with fonsecinone A. Reaxys5206196 is repeated in the official ChEBI registry metadata,
+    but its underlying record was not inspected. The key and absence of tetrahedral
+    stereocentres do not identify an axial enantiomer or establish achirality.
+  snapshot_sha256: a74812094185510c950a65304320a4baccd72c81a68954836942234b24f7e47f
+- evidence_id: groundings
+  kind: authority
+  reference: CHEBI:26195; CHEBI:35618; CHEBI:3992; CHEBI:64459; CHEBI:64542; CHEBI:76224;
+    CHEBI:33282
+  locator: Current official term definitions and relation names.
+  accessed_at: '2026-10-21T16:23:14Z'
+  support: supports
+  summary: The six parents denote polyphenol, aromatic ether, cyclic ketone, biaryl,
+    naphtho-gamma-pyrone and aromatic ketone; all fit the represented structure. The
+    sole activity role means antibacterial agent. Filing ANTIBACTERIAL correctly follows
+    that role, and the precise A congener is distinct from the hydrated C sibling.
+  snapshot_sha256: 7bbee27848391b4cd3f39d6eb106f9d659fc970b72f6e7b60ddcc0b4c13755fb
+- evidence_id: activity2016
+  kind: primary_source
+  reference: PMID:27063778; DOI:10.1038/srep24291; https://pmc.ncbi.nlm.nih.gov/articles/PMC4827027/
+  locator: Complete main original article, all Results/Discussion and Methods, Tables
+    1–3; Figure 1 and Figure 3 independently viewed.
+  accessed_at: '2026-10-21T16:23:48Z'
+  support: supports
+  summary: Fonsecinone A is compound 2, isolated from Aspergillus sp. Z120, with stated
+    HPLC purity at least 95%, NMR characterization and the correct dimer constitution
+    in Figure 1. Table 1 reports MICs in µg/mL of 4.26 for E. coli ATCC35218, 2.13
+    for E. coli ATCC25922, 17.04 for P. aeruginosa ATCC27853, at least 100 for K.
+    pneumoniae ATCC700603, 34.08 for S. aureus ATCC43300 and 4.26 for E. faecalis
+    ATCC29212. These are broth microdilution measurements in Mueller-Hinton broth,
+    stated 10^5 cells/mL, serial twofold dilution, triplicate, 24 hours at 30°C, with
+    MIC defined as complete growth inhibition by OD600. The positive and negative
+    tested organisms remain distinct; no universal spectrum or clinical efficacy is
+    inferred.
+  snapshot_sha256: 67710e9ffcac1df267995a1d80f2b3fea59ff33d5ff7a16d77dda14d2a149d91
+- evidence_id: mechanism2016
+  kind: primary_source
+  reference: PMID:27063778; DOI:10.1038/srep24291
+  locator: Complete FabI results, Tables 2–3, MST figure and cloning/assay methods.
+  accessed_at: '2026-10-21T16:23:48Z'
+  support: supports
+  summary: 'The source goes beyond docking: recombinant E. coli K-12 MG1655 FabI expressed
+    in BL21(DE3) is tested by MST and substrate/cofactor enzyme assays. Table 3 reports
+    compound 2 Kd 215.0±28.8 µM and IC50 2.7 µM; the prose gives 2.78 µM. Figure 3
+    instead labels the A fit 215±3.4 µM, so uncertainty values require reconciliation.
+    The assay uses crotonoyl-CoA and NADH; its IC50 is not a binding constant. The
+    study does not provide whole-cell target engagement, genetic resistance mapping
+    or rescue proving FabI causally explains activity in every tested species. Optional
+    future mechanism curation should retain direct biochemical evidence separately
+    from predicted pose and whole-cell causality.'
+  snapshot_sha256: 67710e9ffcac1df267995a1d80f2b3fea59ff33d5ff7a16d77dda14d2a149d91
+- evidence_id: source-limits
+  kind: primary_source
+  reference: PMID:27063778; DOI:10.1038/srep24291; https://www.atcc.org/products/35218
+  locator: Original table/figure/text cross-comparison and official ATCC strain page.
+  accessed_at: '2026-10-21T16:23:48Z'
+  support: context_only
+  summary: The paper labels ATCC35218 as an ESBL producer; the inspected ATCC page
+    identifies strain 1532 and ampicillin-containing culture medium but does not independently
+    validate that ESBL designation. The main text also mislabels E. coli with ATCC29212
+    in one sentence while Table 1 correctly separates E. coli25922 and E. faecalis29212.
+    Figure 3’s caption calls compound 3 fonsecinone B, but the plotted panel and tables
+    identify C; A is consistently compound 2. The source’s reported A mass peak/ion
+    annotation is internally inconsistent with the theoretical exact mass, whereas
+    other original characterization and authorities agree on C32H26O10. These source
+    defects are retained as enrichment limits, not imported into the native record.
+  snapshot_sha256: 67710e9ffcac1df267995a1d80f2b3fea59ff33d5ff7a16d77dda14d2a149d91
+- evidence_id: adopted-other
+  kind: database
+  reference: PMID:12542363; PMID:15556711; PMID:16038560; PMID:16155971; PMID:21176790;
+    PMID:24708541
+  locator: Complete indexed abstracts for all six additional adopted leads; relevant
+    original Results/Methods of PMC3118676 also read.
+  accessed_at: '2026-10-21T16:23:17Z'
+  support: context_only
+  summary: 12542363 isolates known fonsecinone A as compound 4 from A. niger JV-33-48
+    and reports Taq-polymerase inhibition; that assay is not automatically an antibacterial
+    mechanism. 15556711 isolates A from A. niger IFB-E003 and describes microbial
+    inhibition across four naphthopyrones, without enough abstract detail to assign
+    every exact MIC. 16038560 concerns an aspernigrin A structural revision and coproduction
+    of fonsecinone A, not a revision of fonsecinone A. 16155971 supplies complete
+    NMR-assignment work and first isolation from A. aculeatus, not the first discovery
+    of A. 21176790 characterizes fungal polyketide production; relevant full text
+    identifies stable fonsecinone A as compound 10, notes isolation interconversion
+    and supports production in A. niger ATCC11414. Its biosynthetic proteins are not
+    antibacterial targets. 24708541 directly identifies A as compound 3 with reported
+    antibacterial MIC range 25–100 µM and antifungal range 6.25–50 µM; full strain-level
+    tables were not obtained.
+  snapshot_sha256: 33595c0b971db129d8625248e1b7e060b197fd05979bcbcc84009fdda0d9d555
+- evidence_id: origin
+  kind: database
+  reference: DOI:10.1016/S0040-4020(01)88792-5; CHEBI:133759 compound_origins; PMID:34443650
+    introduction; GBIF:5489011
+  locator: Original 1984 publisher/Crossref title and metadata, current ChEBI origin
+    provenance, fully read 2021 introduction and current GBIF exact-name response.
+  accessed_at: '2026-10-21T16:24:42Z'
+  support: context_only
+  summary: The 1984 discovery source is titled New naphthopyrones from Aspergillus
+    fonsecaeus. Current ChEBI explicitly maps A. fonsecaeus NRRL67 to that DOI, and
+    the 2021 article states that fonsecinone A was first isolated from A. fonsecaeus
+    in 1984. GBIF currently treats that name as an accepted species, not an explicit
+    synonym of A. niger; NCBI exact-name lookup returns no hit. The 1984 full text
+    was not obtained, so its experimental wording and any strain reidentification
+    remain unresolved. Later A. niger isolation is directly supported, but the native
+    historical priority wording is not established by the inspected evidence.
+  snapshot_sha256: 03d7718a8b2775020475a43558df60c1ad12ebc97e1ccb9eb348e0b327e66b58
+- evidence_id: later2021
+  kind: primary_source
+  reference: PMID:34443650; DOI:10.3390/molecules26165061; https://pmc.ncbi.nlm.nih.gov/articles/PMC8399357/
+  locator: Complete 2021 original main text and Table 2; Figures 1 and 3 visually
+    inspected.
+  accessed_at: '2026-10-21T16:23:48Z'
+  support: supports
+  summary: The source identifies fonsecinone A as compound 1 from A. niger L14 and
+    reports MIC 2 µg/mL against both H. pylori G27 and clinical strain 159. Broth
+    microdilution uses BHI with 10% fetal calf serum, 5×10^5 CFU/mL, 37°C microaerophilic
+    incubation for two days and visually absent turbidity, in triplicate. The paper
+    assigns the axial configuration Ra using ECD and crystallographic discussion.
+    However, its listed A crystal is centrosymmetric P-1 and solvated with ethanol/water,
+    and its radiation statements are inconsistent; the claimed unambiguous crystallographic
+    absolute-hand proof is therefore not adopted uncritically. Figure 1 agrees with
+    native planar connectivity. This does not establish that the unsolvated native
+    graph is a racemate or require attaching the crystallization solvent to the record.
+  snapshot_sha256: 10e0122f3f93930c8bbdc812be484a8501911f9cec954c89f64a97ba3526d79a
+- evidence_id: later-boundaries
+  kind: primary_source
+  reference: PMID:32575731; DOI:10.3390/md18060324; PMID:32163284; DOI:10.1021/acs.jnatprod.9b00560
+  locator: 2020 Marine Drugs selected exact-compound identification, activity Results
+    and complete antimicrobial Methods; complete indexed abstract of the separate
+    2020 atropisomer paper.
+  accessed_at: '2026-10-21T16:23:48Z'
+  support: context_only
+  summary: The Marine Drugs paper identifies fonsecinone A as compound 7 and reports
+    MIC at least 100 µM against its E. coli, S. aureus and Candida panel. Its media,
+    source material and assay differ from the adopted positive study, and this negative
+    result is preserved rather than generalized to universal inactivity. The separate
+    JNP abstract reports an aS-fonsecinone A atropisomer from Chaetomium nigricolor
+    with host-cell anti-inflammatory activity. That specific axial identity and host
+    response must not be transferred to every material sharing the planar key. Its
+    full text was not inspected.
+  snapshot_sha256: 9d98127129e59d4e71e0f5e2c6716a3e9632b407563a07ce4f6eb9f70b810fc8
+- evidence_id: search
+  kind: search
+  reference: 453-inclusive-hits.txt; 453-adopted.json; 453-literature.json; 453-fetch-results.json
+    through 453-fetch4-results.json
+  locator: Hidden- and ignored-inclusive exact local search and bounded primary/authority
+    follow-up.
+  accessed_at: '2026-10-21T16:27:33Z'
+  support: context_only
+  summary: The inclusive search locates the exact source/native entries, the distinct
+    C congener, generated maps and readiness entries. A historical report on hydroxybutanenitrile
+    merely mentions the shared 2014 source and is not evidence for this review. No
+    additional exact native evidence object was found in the searched surface. All
+    seven adopted citations resolve and their complete abstracts were read; the 2016
+    main original and relevant2011 original sections were additionally inspected.
+    Bounded newer literature supplied direct positive and negative activity and axial-identity
+    context, without claiming an exhaustive target survey.
+  search_scope: 2026-10-21; rg --no-ignore --hidden across data, curation, conf, scripts,
+    src, docs, .claude, reviews and reports for CHEBI:133759, fonsecinone, FFNPXDMNZBCNMN,
+    95152-75-3, C00034519 and chebi-ef468d847f. Europe PMC all seven adopted PMIDs
+    and TITLE_ABS:fonsecinone; current chemical authorities and bounded original-discovery/taxonomy
+    follow-up.
+  snapshot_sha256: e32f45d8d76cdb0af72872e133d91bb3e5cd9b42e1e7151f7e4030e937aba12c
+- evidence_id: checks
+  kind: validation
+  reference: 453-focused-results.json; 453-chemistry.json; 453-authority-chemistry.json
+  locator: Actual focused schema, strict, standalone chemistry and authority comparisons.
+  accessed_at: '2026-10-21T16:27:33Z'
+  support: supports
+  summary: All focused executions exit 0, with correct formula, mass, charge, source
+    mint and chemical key. All thirteen initial hashes remain unchanged. Deterministic
+    checks do not validate first-discovery wording, axial hand or the causal interpretation
+    of biological assays.
+  snapshot_sha256: 410050cd2925fe35eee3362f140593d95868f705428b79b1644a7a77342d10c8
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact constitution, names and asserted groundings
+  outcome: supported
+  summary: All native structure encodings and current chemical authorities agree.
+    The original drawings and analytical descriptions support this exact planar congener,
+    distinct from hydrated fonsecinone C. Axial representation remains a bounded material-identity
+    limitation, not proof of a mixture or opposite configuration.
+  target_ids:
+  - CHEBI:133759
+  evidence_ids:
+  - native
+  - identity
+  - groundings
+  - activity2016
+  - later2021
+  - later-boundaries
+  - checks
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and filing
+  outcome: supported
+  summary: Direct original whole-cell results support the narrow role. Newer negative
+    results and source strain-label inconsistencies limit quantitative or universal
+    extrapolation but do not refute the existence of antibacterial activity.
+  target_ids:
+  - CHEBI:133759
+  evidence_ids:
+  - activity2016
+  - source-limits
+  - adopted-other
+  - later2021
+  - later-boundaries
+- assessment_id: history
+  area: provenance
+  topic: Originally isolated from A. niger wording
+  outcome: concern
+  summary: 'Isolation from A. niger is supported by original studies. First-isolation
+    priority is less secure: the discovery citation, authority origin entry and later
+    historical account point to A. fonsecaeus. Because the 1984 full text and historical
+    strain reidentification are unresolved, the proposed correction is a provisional
+    wording qualification.'
+  target_ids:
+  - CHEBI:133759
+  evidence_ids:
+  - native
+  - adopted-other
+  - origin
+- assessment_id: completeness
+  area: completeness
+  topic: Mechanism and optional biological representations
+  outcome: supported
+  summary: The native record asserts no protein, gene, pathway, stress-response or
+    transcriptomic dataset, so no adapter-first target query is triggered. Direct
+    E. coli FabI binding/inhibition is a concrete optional curation lead, with docking
+    and whole-cell causality kept separate. Absence of MIC, producer, resistance,
+    clinical and graph objects is not independently defective.
+  target_ids:
+  - CHEBI:133759
+  evidence_ids:
+  - native
+  - mechanism2016
+  - adopted-other
+  - source-limits
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained source ownership and complete citation disposition
+  outcome: supported
+  summary: All native fields, exact maintained row, applicable emitting logic and
+    seven adopted leads were assessed. The source history is reproducible and does
+    not claim reviewed status.
+  target_ids:
+  - CHEBI:133759
+  evidence_ids:
+  - owners
+  - native
+  - adopted-other
+  - search
+  - checks
+findings:
+- finding_id: F1
+  issue_key: fonsecinone-a-first-isolation-wording
+  category: provenance
+  severity: minor
+  status: open
+  certainty: provisional
+  title: Qualify the historical first-isolation wording
+  description: The definition says originally isolated from Aspergillus niger. Later
+    isolation from A. niger is well supported, but the cited1984 discovery trail names
+    A. fonsecaeus NRRL67, and no inspected evidence establishes that the historical
+    strain/name should be rewritten as A. niger. The 1984 full text was unavailable,
+    so this is a bounded provenance qualification rather than a confirmed taxonomic
+    reassignment. Removing originally would retain the supported A. niger association
+    without claiming unverified priority.
+  target_ids:
+  - CHEBI:133759
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - adopted-other
+  - origin
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained imported definition and exact compound provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible native definition generation
+  rule_id: Claim-level source support and precise provenance wording
+  native_severity: minor
+  normalization_reason: Exact chemical identity and antibacterial activity are supported.
+    The uncertainty concerns one historical modifier, not the existence of fungal
+    production or antimicrobial scope.
+actions:
+- action_id: A1
+  description: Resolve or qualify the maintained first-isolation wording.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:133759
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained imported definition and exact compound provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible native definition generation
+  acceptance_checks:
+  - Inspect the original 1984 experimental source and any authoritative NRRL67 reidentification
+    before retaining a first-isolation claim under the name A. niger. Alternatively
+    use the supported wording isolated from A. niger and cite an inspected isolation
+    study.
+  - Make the correction through maintained source ownership or an explicit reproducible
+    definition override, regenerate, and rerun focused schema/strict and corpus reproduction.
+    Preserve the exact congener key and the supported antibacterial role.
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+limitations:
+- The 1984 discovery full text and several adopted non-open papers were unavailable.
+  Complete indexed abstracts were read for every adopted PMID, but exact tables or
+  spectra from those unavailable papers are not claimed as inspected.
+- The 2016 and2021 supplement routes returned download-preparation HTML, not valid
+  PDF/ZIP files; their additional spectra, raw ECD data and deposited CIF files were
+  not inspected. The main articles and named figures were read.
+- Native and authority encodings omit axial configuration. The 2016 ECD assignment
+  and2021 Ra conclusion do not justify claiming every material with the planar key
+  is the same atropisomer; the later aS paper is abstract-only here. The 2021 centrosymmetric
+  crystallographic description also limits its claimed absolute-hand proof.
+- Reaxys5206196 was verified as an adopted/current ChEBI registry association only,
+  without paid access to its underlying record.
+- The 2016 source has inconsistent strain labels, MST uncertainty values and mass
+  annotations. Quantitative enrichment or a full causal graph would require resolving
+  these details and preserving biochemical versus whole-cell evidence scope.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No source role, mechanistic target or activity observation was transferred between
+  fonsecinone A and C. The shared literature was mapped by its exact compound number.
+- All thirteen initial input hashes remain unchanged. Optional FabI and MIC enrichment
+  is a future curation opportunity, not a missing-required-field finding.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
