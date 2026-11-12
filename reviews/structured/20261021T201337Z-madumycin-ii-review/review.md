@@ -1,0 +1,814 @@
+# Madumycin II: chemical history, ribosomal target and resistance review
+
+- Review: 20261021T201337Z-madumycin-ii-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T19:52:52Z
+- Finished UTC: 2026-10-21T20:13:37Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The native all-E syn-diol structure and A2315A synonym are corroborated by independent syntheses. Historical nomenclature and the later ribosome model contain conflicts that do not justify replacing the native graph. The 23S-rRNA target and all 26 resistance relations retain their explicit CARD evidence tier. Exact-compound support for several resistance assertions remains unresolved. No confirmed native correction was established. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position620; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-59524d78a3 | data/antibiotics/antibacterial/madumycin-ii.yaml | generated | madumycin II |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | antibioticmech:aro-59524d78a3 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | antibioticmech:aro-59524d78a3 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | antibioticmech:aro-59524d78a3 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | antibioticmech:aro-59524d78a3 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-59524d78a3 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-59524d78a3 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-59524d78a3 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-59524d78a3 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-59524d78a3 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-59524d78a3 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-59524d78a3 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-59524d78a3 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### All-E syn-diol and historical naming
+
+identity: supported. Targets: antibioticmech:aro-59524d78a3.
+
+Independent synthesis evidence corroborates the native structure and A2315A name. Historical monoketone wording and inconsistent later model/drawing do not justify a native substitution.
+
+### Exact references, source mint and class
+
+grounding: supported. Targets: antibioticmech:aro-59524d78a3.
+
+Current PubChem and ARO resolve the native entity and broad streptogramin class; the chemical scaffold and original synthesis support streptogramin A membership. No model accession is presently asserted as a native exact xref.
+
+### Qualified nucleic-acid binding target
+
+evidence: supported. Targets: antibioticmech:aro-59524d78a3.
+
+CARD attribution, target type and PRIMARY_EVIDENCE_NEEDED are accurate. Original named-material experiments support qualitative PTC/23S-rRNA action. Stereospecific model contacts and exact preparation identity require further reconciliation before primary evidence promotion.
+
+### Twenty-six source-qualified relations
+
+evidence: unknown. Targets: antibioticmech:aro-59524d78a3.
+
+All direct ARO edges reproduce, but exact-drug experimental support remains unresolved, particularly for Erm. Mixture and related-congener results do not validate isolated madumycin; absence from a limited panel does not refute resistance.
+
+### Maintained owners, adopted citation and history
+
+provenance: supported. Targets: antibioticmech:aro-59524d78a3.
+
+Entire native/source content and four seed events were read. The sole adopted review citation is explicitly metadata-only; independent primary follow-up supplies bounded support. All21 inputs preserve original13 hashes and no scientific status was changed.
+
+### Optional numerical/structural enrichment and access limits
+
+completeness: unknown. Targets: antibioticmech:aro-59524d78a3.
+
+No optional absent field is a mandatory defect. Exact-drug resistance, source-specific stereo reconciliation and appropriate material/assay parameters must be resolved before stronger structured assertions. No MIC is inferred from translation IC50 or combination drugs.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/madumycin-ii.yaml; Entire native record, exact adopted source rows and all four history events | supports | The SEEDED/MINTED record has one neutral C26H37N3O7 structure, two names, broader streptogramin class, two exact references, one nucleic-acid target and 26 resistance objects. Every mechanism entry explicitly cites a database assertion; the target separately says PRIMARY_EVIDENCE_NEEDED and does not name a taxon or strain. No numerical activity, producer, clinical, dataset or causal-graph object is asserted. |
+| owners | data/raw/aro_antibiotics.tsv:170; data/raw/aro_target_edges.tsv:188; data/raw/aro_resistance_edges.tsv:3466; data/raw/pubchem_structures.tsv:39; Entire exact inventory rows and applicable extraction, enrichment, target-role, claim-review and seeding branches | supports | ARO supplies the named concept/class, sole adopted PMID, target and resistance relations; the PubChem fallback supplies native chemical fields. Source mints and generated attribution reproduce. Original thirteen captured inputs remain unchanged within twenty-one actual inputs. The generic initial ChEBI owner description is replaced by actual ARO/PubChem owners without changing captured bytes. |
+| local | /private/tmp/am-review-session/620-local-hits.txt; Ignored-inclusive and hidden-inclusive exact identity/label/slug inventory; maintained source scans | context_only | The complete native and actual source rows establish the assertion set. Generated pages and historical research records were leads, not independent experiments. No optional absent field is scored as a defect. |
+| chemistry | PubChem:6441077; 620-authority-chemistry.json; 620-tautomer-diagnostic.json; Four actual native/current PubChem encodings independently parsed | supports | All four encodings give SAQNYTQFLPVTNJ-PPIFFTIDSA-N, five assigned tetrahedral centres and three E alkenes. Native and PubChem SMILES match directly. InChI import produces two imidic-acid groups; stereochemistry-preserving tautomer normalization restores reciprocal chirality-aware graph matching without changing any of the five tetrahedral tags. Formula, charge, masses and source mint pass. |
+| aro | https://purl.obolibrary.org/obo/aro.obo; Current drug ARO:3000672, class ARO:0000026, target ARO:3000754 and all 26 exact resistance terms | supports | Current ARO resolves the native drug, broader streptogramin class and 23S peptidyl-transferase target. All 26 resistance edges are direct current confers_resistance_to_antibiotic assertions: 20 Erm and five Cfr-family target-alteration entries plus one vat inactivation entry. Their presence validates source attribution, not exact-compound experimental proof. |
+| adopted | PMID:15700955; DOI:10.1021/cr030110z; Resolved title/metadata of the sole adopted publication | context_only | The citation is the review Streptogramins, oxazolidinones, and other inhibitors of bacterial protein synthesis. No indexed abstract or complete main text was obtained; it was not represented as a read primary experiment. Independent original chemistry and ribosome studies below supply bounded support for the class/identity/target context. |
+| isolation1977 | PMID:405354; DOI:10.7164/antibiotics.30.197; Complete five-page original text; original first-page chemical drawing inspected | partial | A2315A is the neutral C26H37N3O7 diol isolated from Actinoplanes philippinensis, with chemical/NMR derivatization and predominantly Gram-positive activity stated. The article later calls reported madumycin II a more oxidized nonallylic monoketone. That historical nomenclature conflicts with subsequent original synthesis comparisons; the inaccessible Russian reports and formal correction history were not reconstructed. It does not justify oxidizing the modern native diol. |
+| synthesis1996 | DOI:10.1021/ja954312r; Complete original two-page article, rendered schemes and footnotes11/26; original PDF retrieved from third-party host | supports | The synthesis explicitly identifies madumycin II with A2315A, establishes a syn C13/C15 diol and E,E diene plus the separate E alkene, and compares synthetic material with authentic Eli Lilly-derived material. The reported alkene impurity arose during final deprotection and was reproduced from authentic-derived protected material; it is not evidence of a naturally occurring stereoisomer mixture. The lengthy supplement was not recovered. |
+| synthesis1997 | PMID:11671887; DOI:10.1021/jo971616i; https://ndownloader.figshare.com/files/5798769; Official ACS SI general methods, selected experimental passages, final product pp20–21 and actual natural/synthetic comparison p22 (PDFp23) | supports | Both natural and synthetic structures display the all-E syn-diol graph matching native. The original spectra comparison supports the authors identity assignment, with no independent raw-spectrum reprocessing. Final product characterization includes negative rotation and approximately16-Hz alkene couplings. The main article was unavailable; publication year is1997. |
+| synthesis2017 | DOI:10.1021/jacs.7b08577; https://ndownloader.figshare.com/files/9338665; Official ACS SI S15 final preparation/drawing; complete S24–25 comparison table and S54 references; S15/S24 viewed | supports | The original reduces monoketo madumycin I to syn-diol madumycin II on a1-g scale. Its all-E product drawing and [M+H]+ C26H38N3O7 agree with the neutral native molecule. Comparison tables explicitly align the product with the1996/1997 syntheses and1977 A2315A isolation. Main article was available only as its indexed abstract; the literature comparison is not a newly measured authentic sample. |
+| model-conflict | DOI:10.1093/nar/gkx413; PDB:5VP2; CCD:M2D; Actual Figure1A and current RCSB M2D encodings; independent mapped comparison620-peer-comparison.json | partial | The2017 ribosome-paper drawing shows all-E alkenes but an anti diol. M2D further changes the paper C8=C9 alkene to Z and gives key SAQNYTQFLPVTNJ-YHZICBGDSA-N. Relative to native, the model changes that alkene and the nonallylic OH centre (native SMILES atom14, InChI atom20); other assigned stereo and constitution agree. These external discrepancies do not prove the experimental vial changed configuration on binding, and the synthesis-supported native graph should not be replaced by the model. |
+| ribosome2017 | PMID:28505372; DOI:10.1093/nar/gkx413; PMC5499580; Complete original main/Methods, all25 extracted paragraphs; actual Figure1 viewed | partial | Interbioscreen-provided named madumycin II inhibits E.coli S30 luciferase synthesis, IC50 0.30±0.03 micromolar, and inhibits first fMet-Phe formation in purified70S assays. Toeprinting places stalls near the initiation codon; preformed dipeptidyl-tRNA elongation is much less affected. The2.8-Angstrom T.thermophilus70S structure places the ligand in the23S-rRNA PTC, perturbs A/P-tRNA termini and rearranges U2506/U2585. This supports qualitative ribosomal inhibition for the named material. Sample stereopurity/lot were not reported, and exact atom-contact/stereochemical transfer must retain the drawing/model discrepancy. The structure contains deacylated tRNAs in its reported bound state; no bacterial MIC or human efficacy is inferred from cell-free IC50. |
+| resistance-bibliography | Current ARO cited literature; 620-resistance-audit.json; All48 current-term citation titles/metadata and47 available complete abstracts; selected originals below | partial | Most Erm leads establish MLSB or narrower macrolide/lincosamide phenotypes. Their failure to mention exact madumycin at abstract depth is not a negative experiment. Cfr-family and vat leads provide positive streptogramin-A context, but other congeners and A/B combinations are not isolated madumycin II. The native explicitly retains the database tier; no wholesale false-resistance finding is justified. |
+| erm2002 | PMID:12019067; DOI:10.1128/AAC.46.6.1629-1633.2002; Complete main through Discussion, Tables1/2 and Methods MIC panel | context_only | ErmE/ErmN expression in E.coli AS19 and its RrmA-negative derivative is tested against macrolides, lincosamides and pristinamycin IA, a streptogramin B. The panel does not test madumycin II; it neither validates exact-A resistance nor demonstrates susceptibility to it. |
+| clb2012 | PMID:22547628; DOI:10.1128/AAC.00673-12; Main Methods, Results/Discussion and Tables1/2; gel captions only | partial | ClbA/B/C expression in E.coli AS19 raises Synercid A/B-mixture MIC from4 to32 micrograms/mL, with separate A2503-modification experiments. This is functional Cfr-like context in engineered cells, not exact madumycin susceptibility or proof for every native homolog. |
+| clpa2013 | PMID:23752511; DOI:10.1128/AAC.00448-13; All Methods, exact Table2 and selected ClPa/ClCs/RNA-modification Results | partial | The original clpa/ClPa entry corresponds to current ARO cipA. Codon-adapted ClPa in E.coli AS19 gives quinupristin-dalfopristin MIC4–8 versus4 micrograms/mL vector; the table requires more than twofold for significance. Other drug shifts and m8A2503 evidence support Cfr-like function. This borderline combination result is not exact madumycin proof; separate ClCs results must not be transferred. |
+| cfr2024 | PMID:38238495; DOI:10.1038/s41589-023-01525-w; Selected Results on expression/PTC/resistance/drug engagement; actual Figure4d and caption | partial | Planifilum fulgidum Cfr expressed in T.thermophilus changes the PTC. Figure4d superposes earlier madumycin-bound5VP2 onto the modified ribosome and marks a0.9-Angstrom overlap. This is structural interference context, not a new Cfr–madumycin co-complex, an exact-drug MIC experiment or proof for five homologs. Its use of5VP2 also inherits the noted ligand-encoding limits. Supplement retrieval returned HTML and was not read. |
+| adapter | kg-microbe-sources iModulonDB s_aureus/staph_precise108; Dataset catalog and23S/erm/vat query outputs read before deeper mechanism research | context_only | 23S queries return housekeeping methylases; erm/vat substring queries return unrelated products. No relevant component supplied a drug-specific result. These outputs provide neither resistance evidence nor proof that the genes are absent; no unsupported target follows from expression-module membership. |
+| discovery | Europe PMC TITLE_ABS madumycin query; exact chemical-history and current-ARO follow-up; All five initial titles and available abstracts; later exact original chemical and resistance leads | context_only | The1976 aeration abstract concerns production by Actinomadura flava strains in historical nomenclature; no native producer object is inferred. The1991 gastrin paper concerns other virginiamycin analogues and madumycin I, not an exact-native bacterial assay. Exact synthesis and ribosome sources were followed at the stated depths. Literature search remains bounded. |
+
+## Limits And Additional Notes
+
+- The sole adopted review PMID15700955 has no retrieved abstract/full main. It resolves bibliographically but is not claimed as a read primary experiment.
+- The1977 original and1996 short synthesis were read completely. Original Russian madumycin reports, a formal historical nomenclature correction,1996 full SI and1997 main were not obtained. The1997 official SI and2017 synthesis SI were inspected only at the exact sections listed; raw spectra were not reprocessed.
+- The2017 ribosome main was read completely and actual Figure1 viewed; diffraction data were not re-refined. Its drawing and M2D disagree with synthesis-supported stereochemistry. Do not infer a binding-induced chemical inversion or assign exact model equivalence to the native graph.
+- All48 current-ARO citation metadata records and47 available abstracts were assessed by the independent resistance reviewer; only four selected resistance originals were inspected beyond abstract depth at recorded scopes. This is not an exhaustive absence-of-resistance survey.
+- The2024 Cfr supplementary response was HTML, not a PDF. Model superposition and mixture MICs cannot establish exact-drug resistance for every homolog.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native, source, status or history file was edited. Two independent peer audits of chemistry/history and resistance informed root review; their complete substantive reports were read and decisive original drawings independently viewed by root.
+- Initial13 source hashes are retained within21 inputs. Standalone RDKit used019 against062; native schema/strict and review-contract commands use062.
+- Optional follow-up should reconcile original material, published figure and deposited ligand before importing stereospecific contacts; retain the source-qualified CARD target and resistance tiers meanwhile.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T201337Z-madumycin-ii-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Madumycin II: chemical history, ribosomal target and resistance review'
+started_at: '2026-10-21T19:52:52Z'
+finished_at: '2026-10-21T20:13:37Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The native all-E syn-diol structure and A2315A synonym are corroborated by
+  independent syntheses. Historical nomenclature and the later ribosome model contain
+  conflicts that do not justify replacing the native graph. The 23S-rRNA target and
+  all 26 resistance relations retain their explicit CARD evidence tier. Exact-compound
+  support for several resistance assertions remains unresolved. No confirmed native
+  correction was established. Scientific assessment retains the stated evidence limits;
+  full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/madumycin-ii.yaml
+    sha256: bdc3da307d56c3e082ffe40ef962fa231a69e2c0f4ce1d1fc413a604cefbd895
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+targets:
+- target_id: antibioticmech:aro-59524d78a3
+  path: data/antibiotics/antibacterial/madumycin-ii.yaml
+  label: madumycin II
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted identity, names, class and definition citation
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted target relation
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted resistance relations
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target role/type mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Exact PubChem structure fallback
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure selection and retrieval
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO inventory extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field and evidence-tier emission
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Maintained claim adjudications
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Evidence-review mapping application
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding/exclusion adjudication
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position620; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-59524d78a3
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    620
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/madumycin-ii.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/madumycin-ii.yaml --out /private/tmp/am-review-session/620-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/madumycin-ii.yaml
+  locator: Entire native record, exact adopted source rows and all four history events
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: supports
+  summary: The SEEDED/MINTED record has one neutral C26H37N3O7 structure, two names,
+    broader streptogramin class, two exact references, one nucleic-acid target and
+    26 resistance objects. Every mechanism entry explicitly cites a database assertion;
+    the target separately says PRIMARY_EVIDENCE_NEEDED and does not name a taxon or
+    strain. No numerical activity, producer, clinical, dataset or causal-graph object
+    is asserted.
+  snapshot_sha256: 631cd815e5ad3c1af1085e0d579ec447d9a408da4a71b8960642f2e0a3d04854
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv:170; data/raw/aro_target_edges.tsv:188;
+    data/raw/aro_resistance_edges.tsv:3466; data/raw/pubchem_structures.tsv:39
+  locator: Entire exact inventory rows and applicable extraction, enrichment, target-role,
+    claim-review and seeding branches
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: supports
+  summary: ARO supplies the named concept/class, sole adopted PMID, target and resistance
+    relations; the PubChem fallback supplies native chemical fields. Source mints
+    and generated attribution reproduce. Original thirteen captured inputs remain
+    unchanged within twenty-one actual inputs. The generic initial ChEBI owner description
+    is replaced by actual ARO/PubChem owners without changing captured bytes.
+  snapshot_sha256: 631cd815e5ad3c1af1085e0d579ec447d9a408da4a71b8960642f2e0a3d04854
+- evidence_id: local
+  kind: search
+  reference: /private/tmp/am-review-session/620-local-hits.txt
+  locator: Ignored-inclusive and hidden-inclusive exact identity/label/slug inventory;
+    maintained source scans
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: context_only
+  summary: The complete native and actual source rows establish the assertion set.
+    Generated pages and historical research records were leads, not independent experiments.
+    No optional absent field is scored as a defect.
+  search_scope: Initial rg --no-ignore --hidden exact madumycin II/native slug/identifier
+    inventory and exact maintained-row scans; no exhaustive literature-absence claim.
+  snapshot_sha256: 99a662eb361aacac0e8835d222d2854d57bf05fe373cad45a001f95afb2bab12
+- evidence_id: chemistry
+  kind: validation
+  reference: PubChem:6441077; 620-authority-chemistry.json; 620-tautomer-diagnostic.json
+  locator: Four actual native/current PubChem encodings independently parsed
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: supports
+  summary: All four encodings give SAQNYTQFLPVTNJ-PPIFFTIDSA-N, five assigned tetrahedral
+    centres and three E alkenes. Native and PubChem SMILES match directly. InChI import
+    produces two imidic-acid groups; stereochemistry-preserving tautomer normalization
+    restores reciprocal chirality-aware graph matching without changing any of the
+    five tetrahedral tags. Formula, charge, masses and source mint pass.
+  snapshot_sha256: 021feb8786a78eaf8ee503a88234a4cc48f1ea06961f2a93fc66e71756529ae1
+- evidence_id: aro
+  kind: authority
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Current drug ARO:3000672, class ARO:0000026, target ARO:3000754 and all
+    26 exact resistance terms
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: supports
+  summary: 'Current ARO resolves the native drug, broader streptogramin class and
+    23S peptidyl-transferase target. All 26 resistance edges are direct current confers_resistance_to_antibiotic
+    assertions: 20 Erm and five Cfr-family target-alteration entries plus one vat
+    inactivation entry. Their presence validates source attribution, not exact-compound
+    experimental proof.'
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:15700955; DOI:10.1021/cr030110z
+  locator: Resolved title/metadata of the sole adopted publication
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: context_only
+  summary: The citation is the review Streptogramins, oxazolidinones, and other inhibitors
+    of bacterial protein synthesis. No indexed abstract or complete main text was
+    obtained; it was not represented as a read primary experiment. Independent original
+    chemistry and ribosome studies below supply bounded support for the class/identity/target
+    context.
+  snapshot_sha256: 4aa0cae33795e49060314eed5779a39f52f4a9b57beb8c45e31acc069e7511ba
+- evidence_id: isolation1977
+  kind: primary_source
+  reference: PMID:405354; DOI:10.7164/antibiotics.30.197
+  locator: Complete five-page original text; original first-page chemical drawing
+    inspected
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: partial
+  summary: A2315A is the neutral C26H37N3O7 diol isolated from Actinoplanes philippinensis,
+    with chemical/NMR derivatization and predominantly Gram-positive activity stated.
+    The article later calls reported madumycin II a more oxidized nonallylic monoketone.
+    That historical nomenclature conflicts with subsequent original synthesis comparisons;
+    the inaccessible Russian reports and formal correction history were not reconstructed.
+    It does not justify oxidizing the modern native diol.
+  snapshot_sha256: baf943c35f63fce2fba5f2d783986ffbc09a42748ab958bf953c65cdc9dd9b2b
+- evidence_id: synthesis1996
+  kind: primary_source
+  reference: DOI:10.1021/ja954312r
+  locator: Complete original two-page article, rendered schemes and footnotes11/26;
+    original PDF retrieved from third-party host
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: supports
+  summary: The synthesis explicitly identifies madumycin II with A2315A, establishes
+    a syn C13/C15 diol and E,E diene plus the separate E alkene, and compares synthetic
+    material with authentic Eli Lilly-derived material. The reported alkene impurity
+    arose during final deprotection and was reproduced from authentic-derived protected
+    material; it is not evidence of a naturally occurring stereoisomer mixture. The
+    lengthy supplement was not recovered.
+  snapshot_sha256: 6a59ddc143f913866bdefcd0629b14dc6d44274af1ae8920ec93c70d6fdc1dac
+- evidence_id: synthesis1997
+  kind: primary_source
+  reference: PMID:11671887; DOI:10.1021/jo971616i; https://ndownloader.figshare.com/files/5798769
+  locator: Official ACS SI general methods, selected experimental passages, final
+    product pp20–21 and actual natural/synthetic comparison p22 (PDFp23)
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: supports
+  summary: Both natural and synthetic structures display the all-E syn-diol graph
+    matching native. The original spectra comparison supports the authors identity
+    assignment, with no independent raw-spectrum reprocessing. Final product characterization
+    includes negative rotation and approximately16-Hz alkene couplings. The main article
+    was unavailable; publication year is1997.
+  snapshot_sha256: 00078f713975a15cdc8899b4f1f2c79ffe751eff6661683d15fc79b7b21aa759
+- evidence_id: synthesis2017
+  kind: primary_source
+  reference: DOI:10.1021/jacs.7b08577; https://ndownloader.figshare.com/files/9338665
+  locator: Official ACS SI S15 final preparation/drawing; complete S24–25 comparison
+    table and S54 references; S15/S24 viewed
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: supports
+  summary: The original reduces monoketo madumycin I to syn-diol madumycin II on a1-g
+    scale. Its all-E product drawing and [M+H]+ C26H38N3O7 agree with the neutral
+    native molecule. Comparison tables explicitly align the product with the1996/1997
+    syntheses and1977 A2315A isolation. Main article was available only as its indexed
+    abstract; the literature comparison is not a newly measured authentic sample.
+  snapshot_sha256: 631a9d2fa17a762f58276b0b320ad7ddb6716a785630577011d9f376fbcca1af
+- evidence_id: model-conflict
+  kind: primary_source
+  reference: DOI:10.1093/nar/gkx413; PDB:5VP2; CCD:M2D
+  locator: Actual Figure1A and current RCSB M2D encodings; independent mapped comparison620-peer-comparison.json
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: partial
+  summary: The2017 ribosome-paper drawing shows all-E alkenes but an anti diol. M2D
+    further changes the paper C8=C9 alkene to Z and gives key SAQNYTQFLPVTNJ-YHZICBGDSA-N.
+    Relative to native, the model changes that alkene and the nonallylic OH centre
+    (native SMILES atom14, InChI atom20); other assigned stereo and constitution agree.
+    These external discrepancies do not prove the experimental vial changed configuration
+    on binding, and the synthesis-supported native graph should not be replaced by
+    the model.
+  snapshot_sha256: c70ac3399951206245153cff0f882ec9cb7c9b07950ac127dc4613aedd264249
+- evidence_id: ribosome2017
+  kind: primary_source
+  reference: PMID:28505372; DOI:10.1093/nar/gkx413; PMC5499580
+  locator: Complete original main/Methods, all25 extracted paragraphs; actual Figure1
+    viewed
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: partial
+  summary: Interbioscreen-provided named madumycin II inhibits E.coli S30 luciferase
+    synthesis, IC50 0.30±0.03 micromolar, and inhibits first fMet-Phe formation in
+    purified70S assays. Toeprinting places stalls near the initiation codon; preformed
+    dipeptidyl-tRNA elongation is much less affected. The2.8-Angstrom T.thermophilus70S
+    structure places the ligand in the23S-rRNA PTC, perturbs A/P-tRNA termini and
+    rearranges U2506/U2585. This supports qualitative ribosomal inhibition for the
+    named material. Sample stereopurity/lot were not reported, and exact atom-contact/stereochemical
+    transfer must retain the drawing/model discrepancy. The structure contains deacylated
+    tRNAs in its reported bound state; no bacterial MIC or human efficacy is inferred
+    from cell-free IC50.
+  snapshot_sha256: fd093a9a60c80f5bf563ea5110d703f6ca4486007bb72e74363cf993abc3fda5
+- evidence_id: resistance-bibliography
+  kind: primary_source
+  reference: Current ARO cited literature; 620-resistance-audit.json
+  locator: All48 current-term citation titles/metadata and47 available complete abstracts;
+    selected originals below
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: partial
+  summary: Most Erm leads establish MLSB or narrower macrolide/lincosamide phenotypes.
+    Their failure to mention exact madumycin at abstract depth is not a negative experiment.
+    Cfr-family and vat leads provide positive streptogramin-A context, but other congeners
+    and A/B combinations are not isolated madumycin II. The native explicitly retains
+    the database tier; no wholesale false-resistance finding is justified.
+  snapshot_sha256: 4aa0cae33795e49060314eed5779a39f52f4a9b57beb8c45e31acc069e7511ba
+- evidence_id: erm2002
+  kind: primary_source
+  reference: PMID:12019067; DOI:10.1128/AAC.46.6.1629-1633.2002
+  locator: Complete main through Discussion, Tables1/2 and Methods MIC panel
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: context_only
+  summary: ErmE/ErmN expression in E.coli AS19 and its RrmA-negative derivative is
+    tested against macrolides, lincosamides and pristinamycin IA, a streptogramin
+    B. The panel does not test madumycin II; it neither validates exact-A resistance
+    nor demonstrates susceptibility to it.
+  snapshot_sha256: d6b551ff3a32d4a744273ea1194c247b366518f3ca82cd245263a434c03ee84f
+- evidence_id: clb2012
+  kind: primary_source
+  reference: PMID:22547628; DOI:10.1128/AAC.00673-12
+  locator: Main Methods, Results/Discussion and Tables1/2; gel captions only
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: partial
+  summary: ClbA/B/C expression in E.coli AS19 raises Synercid A/B-mixture MIC from4
+    to32 micrograms/mL, with separate A2503-modification experiments. This is functional
+    Cfr-like context in engineered cells, not exact madumycin susceptibility or proof
+    for every native homolog.
+  snapshot_sha256: 564c9aed4fc982b7cc65e1dbe63f3591e2fb6870adfdc10469a952ab999258b6
+- evidence_id: clpa2013
+  kind: primary_source
+  reference: PMID:23752511; DOI:10.1128/AAC.00448-13
+  locator: All Methods, exact Table2 and selected ClPa/ClCs/RNA-modification Results
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: partial
+  summary: The original clpa/ClPa entry corresponds to current ARO cipA. Codon-adapted
+    ClPa in E.coli AS19 gives quinupristin-dalfopristin MIC4–8 versus4 micrograms/mL
+    vector; the table requires more than twofold for significance. Other drug shifts
+    and m8A2503 evidence support Cfr-like function. This borderline combination result
+    is not exact madumycin proof; separate ClCs results must not be transferred.
+  snapshot_sha256: bf80f6a88f5de24faa443ee6b29cad76a585f93e28f28ba3a4de5430fe3b6fc2
+- evidence_id: cfr2024
+  kind: primary_source
+  reference: PMID:38238495; DOI:10.1038/s41589-023-01525-w
+  locator: Selected Results on expression/PTC/resistance/drug engagement; actual Figure4d
+    and caption
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: partial
+  summary: Planifilum fulgidum Cfr expressed in T.thermophilus changes the PTC. Figure4d
+    superposes earlier madumycin-bound5VP2 onto the modified ribosome and marks a0.9-Angstrom
+    overlap. This is structural interference context, not a new Cfr–madumycin co-complex,
+    an exact-drug MIC experiment or proof for five homologs. Its use of5VP2 also inherits
+    the noted ligand-encoding limits. Supplement retrieval returned HTML and was not
+    read.
+  snapshot_sha256: 79a35822295ce2ef2ddf0b354db50ad1cfaff405143bc8f2b381ab0861e4415f
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources iModulonDB s_aureus/staph_precise108
+  locator: Dataset catalog and23S/erm/vat query outputs read before deeper mechanism
+    research
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: context_only
+  summary: 23S queries return housekeeping methylases; erm/vat substring queries return
+    unrelated products. No relevant component supplied a drug-specific result. These
+    outputs provide neither resistance evidence nor proof that the genes are absent;
+    no unsupported target follows from expression-module membership.
+  snapshot_sha256: 76c7520815a39cb62316f0aff9cd7579771ea34eced270b95e91dc1e3f74b527
+- evidence_id: discovery
+  kind: search
+  reference: Europe PMC TITLE_ABS madumycin query; exact chemical-history and current-ARO
+    follow-up
+  locator: All five initial titles and available abstracts; later exact original chemical
+    and resistance leads
+  accessed_at: '2026-10-21T20:13:36Z'
+  support: context_only
+  summary: The1976 aeration abstract concerns production by Actinomadura flava strains
+    in historical nomenclature; no native producer object is inferred. The1991 gastrin
+    paper concerns other virginiamycin analogues and madumycin I, not an exact-native
+    bacterial assay. Exact synthesis and ribosome sources were followed at the stated
+    depths. Literature search remains bounded.
+  search_scope: Five initial EuropePMC title/abstract results; exact adopted PMID15700955;
+    targeted original syntheses and current-ARO citations; local hidden/ignored files
+    included in the initial identity inventory.
+  snapshot_sha256: 63178389d6d858b4d953302ef6677946491f87b6fdea4c674bc1daf2545eeb00
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: All-E syn-diol and historical naming
+  outcome: supported
+  summary: Independent synthesis evidence corroborates the native structure and A2315A
+    name. Historical monoketone wording and inconsistent later model/drawing do not
+    justify a native substitution.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  evidence_ids:
+  - chemistry
+  - isolation1977
+  - synthesis1996
+  - synthesis1997
+  - synthesis2017
+  - model-conflict
+- assessment_id: grounding
+  area: grounding
+  topic: Exact references, source mint and class
+  outcome: supported
+  summary: Current PubChem and ARO resolve the native entity and broad streptogramin
+    class; the chemical scaffold and original synthesis support streptogramin A membership.
+    No model accession is presently asserted as a native exact xref.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  evidence_ids:
+  - native
+  - chemistry
+  - aro
+  - synthesis2017
+- assessment_id: target
+  area: evidence
+  topic: Qualified nucleic-acid binding target
+  outcome: supported
+  summary: CARD attribution, target type and PRIMARY_EVIDENCE_NEEDED are accurate.
+    Original named-material experiments support qualitative PTC/23S-rRNA action. Stereospecific
+    model contacts and exact preparation identity require further reconciliation before
+    primary evidence promotion.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  evidence_ids:
+  - native
+  - aro
+  - ribosome2017
+  - model-conflict
+- assessment_id: resistance
+  area: evidence
+  topic: Twenty-six source-qualified relations
+  outcome: unknown
+  summary: All direct ARO edges reproduce, but exact-drug experimental support remains
+    unresolved, particularly for Erm. Mixture and related-congener results do not
+    validate isolated madumycin; absence from a limited panel does not refute resistance.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  evidence_ids:
+  - aro
+  - resistance-bibliography
+  - erm2002
+  - clb2012
+  - clpa2013
+  - cfr2024
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained owners, adopted citation and history
+  outcome: supported
+  summary: Entire native/source content and four seed events were read. The sole adopted
+    review citation is explicitly metadata-only; independent primary follow-up supplies
+    bounded support. All21 inputs preserve original13 hashes and no scientific status
+    was changed.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  evidence_ids:
+  - native
+  - owners
+  - adopted
+  - local
+- assessment_id: completeness
+  area: completeness
+  topic: Optional numerical/structural enrichment and access limits
+  outcome: unknown
+  summary: No optional absent field is a mandatory defect. Exact-drug resistance,
+    source-specific stereo reconciliation and appropriate material/assay parameters
+    must be resolved before stronger structured assertions. No MIC is inferred from
+    translation IC50 or combination drugs.
+  target_ids:
+  - antibioticmech:aro-59524d78a3
+  evidence_ids:
+  - ribosome2017
+  - model-conflict
+  - resistance-bibliography
+  - discovery
+findings: []
+actions: []
+limitations:
+- The sole adopted review PMID15700955 has no retrieved abstract/full main. It resolves
+  bibliographically but is not claimed as a read primary experiment.
+- The1977 original and1996 short synthesis were read completely. Original Russian
+  madumycin reports, a formal historical nomenclature correction,1996 full SI and1997
+  main were not obtained. The1997 official SI and2017 synthesis SI were inspected
+  only at the exact sections listed; raw spectra were not reprocessed.
+- The2017 ribosome main was read completely and actual Figure1 viewed; diffraction
+  data were not re-refined. Its drawing and M2D disagree with synthesis-supported
+  stereochemistry. Do not infer a binding-induced chemical inversion or assign exact
+  model equivalence to the native graph.
+- All48 current-ARO citation metadata records and47 available abstracts were assessed
+  by the independent resistance reviewer; only four selected resistance originals
+  were inspected beyond abstract depth at recorded scopes. This is not an exhaustive
+  absence-of-resistance survey.
+- The2024 Cfr supplementary response was HTML, not a PDF. Model superposition and
+  mixture MICs cannot establish exact-drug resistance for every homolog.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native, source, status or history file was edited. Two independent peer audits
+  of chemistry/history and resistance informed root review; their complete substantive
+  reports were read and decisive original drawings independently viewed by root.
+- Initial13 source hashes are retained within21 inputs. Standalone RDKit used019 against062;
+  native schema/strict and review-contract commands use062.
+- Optional follow-up should reconcile original material, published figure and deposited
+  ligand before importing stereospecific contacts; retain the source-qualified CARD
+  target and resistance tiers meanwhile.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

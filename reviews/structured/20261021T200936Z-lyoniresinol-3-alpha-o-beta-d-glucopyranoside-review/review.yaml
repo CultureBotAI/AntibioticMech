@@ -1,0 +1,842 @@
+schema_version: 1.0.0
+review_id: 20261021T200936Z-lyoniresinol-3-alpha-o-beta-d-glucopyranoside-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Lyoniresinol monoglucoside: pteleifoside G conflation and plant-part provenance'
+started_at: '2026-10-21T19:52:49Z'
+finished_at: '2026-10-21T20:09:36Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The entire native record and exact adopted source row were reviewed. Its
+  neutral, stereodefined monoglucoside is internally coherent and agrees with current
+  ChEBI and an additional PubChem comparator. Original literature distinguishes pteleifoside
+  G as a diglucoside, so its exact-synonym assertion is a major error. The definition
+  also misstates Stemmadenia stem bark as root bark, a minor provenance correction.
+  The original antibacterial paper supports exact-isolate MRSA activity with assay-method
+  and material limits preserved.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/lyoniresinol-3-α-o-β-d-glucopyranoside.yaml
+    sha256: d4022b9fa88ae5eb46d5a80e9488d40429d38a90d4a63bdea7f975ca76377359
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+targets:
+- target_id: CHEBI:66606
+  path: data/antibiotics/antibacterial/lyoniresinol-3-α-o-β-d-glucopyranoside.yaml
+  label: (+)-lyoniresinol-3-α-O-β-D-glucopyranoside
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 615; one exact native record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:66606
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Actual batch 062 execution; chemistry
+    used the existing 019 RDKit environment and schema/strict used the 062 environment.
+  target_ids:
+  - CHEBI:66606
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    615
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Actual batch 062 execution; chemistry
+    used the existing 019 RDKit environment and schema/strict used the 062 environment.
+  target_ids:
+  - CHEBI:66606
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/lyoniresinol-3-α-o-β-d-glucopyranoside.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Actual batch 062 execution; chemistry
+    used the existing 019 RDKit environment and schema/strict used the 062 environment.
+  target_ids:
+  - CHEBI:66606
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/lyoniresinol-3-α-o-β-d-glucopyranoside.yaml --out
+    /private/tmp/am-review-session/615-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:66606
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:66606
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:66606
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:66606
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:66606
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:66606
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:66606
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:66606
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:66606
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/lyoniresinol-3-α-o-β-d-glucopyranoside.yaml
+  locator: Entire native record, all synonyms, xrefs and history
+  accessed_at: '2026-10-21T20:08:11Z'
+  support: supports
+  summary: The record denotes (+)-lyoniresinol-3-alpha-O-beta-D-glucopyranoside, with
+    C28H38O13, eight assigned centres, two chemical xrefs, three exact synonyms, seven
+    parents and antibacterial/antifungal roles. The definition names two plant sources
+    but describes both as root bark. All three seed/history events were read. No separate
+    structured molecular target, resistance, activity spectrum, producer, product
+    or causal graph objects occur; definition claims are assessed below.
+  snapshot_sha256: d4022b9fa88ae5eb46d5a80e9488d40429d38a90d4a63bdea7f975ca76377359
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Exact source row 1596 and readiness row 15
+  accessed_at: '2026-10-21T20:08:11Z'
+  support: context_only
+  summary: ChEBI supplies the adopted chemistry, definition, names, roles, parents,
+    xrefs and two PMIDs. The original 13 captures were verified unchanged, with context
+    expanded to 21 inputs before detailed judgment. The extractor and seeder own generated
+    propagation.
+  snapshot_sha256: 2d054a6947f88e9f8c57e85b075ea0d8cc02adc7022d3c3bbfa15f1667212ee2
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/615-context-search.txt
+  locator: Ignored-inclusive exact ID and lyoniresinol search
+  accessed_at: '2026-10-21T20:08:11Z'
+  support: context_only
+  summary: The search included hidden and ignored files in curation, conf, scripts
+    and data/raw. No exact curator or decisions override was found within that scope;
+    preserved initial local hits were also available.
+  snapshot_sha256: b60751cf035014b95022a05619dad72e9ba32729709d43156b3e9e2e6b9e59ba
+  search_scope: rg --no-ignore --hidden -n -i CHEBI:66606|lyoniresinol in curation,
+    conf, scripts and data/raw, plus initial captured local hits.
+- evidence_id: adapter
+  kind: search
+  reference: Native structured-source applicability assessment
+  locator: Complete native fields and definition before open research
+  accessed_at: '2026-10-21T20:08:11Z'
+  support: context_only
+  summary: No native protein, gene, regulator, pathway or transcriptomic claim is
+    named. Structured protein/pathway search is not applicable. The fungal stress
+    phenotype located in the primary paper is not converted into a bacterial molecular
+    target.
+  snapshot_sha256: d4022b9fa88ae5eb46d5a80e9488d40429d38a90d4a63bdea7f975ca76377359
+  search_scope: Entire native record and definition; no named molecular-mechanism
+    assertion.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/66606/
+  locator: Complete current CHEBI:66606 response
+  accessed_at: '2026-10-21T20:04:06.794589Z'
+  support: partial
+  summary: Current ChEBI retains native encodings, full key PQQRNPDHSJDAGV-HQSXISOASA-N,
+    formula, mass, names and xrefs. Its prose repeats the root-bark error, but its
+    origin objects explicitly distinguish Lycium root from Stemmadenia stem and retain
+    the prior stem-bark label. The pteleifoside G alias is propagated source state,
+    not independent chemical equivalence.
+  snapshot_sha256: b7175e0b4e752ab9d4ff0c8e79755a83eee3b06105b0e18ef81480dae7d5d272
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/PQQRNPDHSJDAGV-HQSXISOASA-N/property/InChI,InChIKey,CanonicalSMILES,IsomericSMILES,MolecularFormula,MolecularWeight/JSON
+  locator: Additional exact-key comparator CID10483388
+  accessed_at: '2026-10-21T20:04:06.794809Z'
+  support: context_only
+  summary: Current PubChem supplies the same full key and molecular composition. Both
+    actual encodings were independently parsed. This is an additional comparator,
+    not an asserted native PubChem xref.
+  snapshot_sha256: 288752daafed3c184a673e987d4e1d534f38f3d72bbe186eba57d59b009c351e
+- evidence_id: chemistry
+  kind: validation
+  reference: /private/tmp/am-review-session/615-authority-map.json
+  locator: Six actual native/current authority encodings and atom neighbourhoods
+  accessed_at: '2026-10-21T20:08:11Z'
+  support: supports
+  summary: Native SMILES/InChI, current ChEBI SMILES/InChI and PubChem SMILES/InChI
+    all give the same full key, C28H38O13 and reciprocal chirality-aware matches.
+    Eight tetrahedral centres are assigned. The native tetralin positions 1/2/3 correspond
+    to SMILES atoms 5/21/18 with S/R/R, consistent with its systematic synonym. One
+    glucose is attached through CH2 atom22 and O23; the other hydroxymethyl arm remains
+    free. Formula, charge, masses and source mint pass.
+  snapshot_sha256: 60299a4fef115c373694a2bc059a88bdadd5cec290f3638bc3c956023058a08e
+- evidence_id: term-15734
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/15734/
+  locator: Current term definition compared with native graph or primary endpoint
+  accessed_at: '2026-10-21T20:04:06.906486Z'
+  support: supports
+  summary: The graph has free primary-alcohol hydroxymethyl groups on the aglycone
+    and glucose.
+  snapshot_sha256: 65634f82228203f66e1734ac2a57db2e158bf589836f240006c87d66db3c7fcb
+- evidence_id: term-22798
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/22798/
+  locator: Current term definition compared with native graph or primary endpoint
+  accessed_at: '2026-10-21T20:04:07.240804Z'
+  support: supports
+  summary: The assigned sugar encodes beta-D-glucopyranose.
+  snapshot_sha256: c9f6874a041d360803b7860b411033c9188da6a512aa100004b52ea8137598a3
+- evidence_id: term-25036
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/25036/
+  locator: Current term definition compared with native graph or primary endpoint
+  accessed_at: '2026-10-21T20:04:07.650404Z'
+  support: supports
+  summary: The aryltetralin skeleton is a cyclized lignan framework; the primary isolation
+    paper identifies the material as a lignan monoglucoside.
+  snapshot_sha256: 972e2d475e310547373e62496bdd1015824f82befba19700bb42c2817851ea31
+- evidence_id: term-26195
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/26195/
+  locator: Current term definition compared with native graph or primary endpoint
+  accessed_at: '2026-10-21T20:04:07.693802Z'
+  support: supports
+  summary: Two benzene rings each bear a free phenolic hydroxy group, satisfying the
+    exact polyphenol definition.
+  snapshot_sha256: c0e8c956eae32deb6344f042dd56b0a4cd5ac428a15eb683b11ac6b791069bab
+- evidence_id: term-36786
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/36786/
+  locator: Current term definition compared with native graph or primary endpoint
+  accessed_at: '2026-10-21T20:04:07.981715Z'
+  support: supports
+  summary: The graph contains a tetralin skeleton.
+  snapshot_sha256: cb76d68c250ec4c46c0226140e00867cc711e01d041cf7ca03dde54633112871
+- evidence_id: term-51681
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/51681/
+  locator: Current term definition compared with native graph or primary endpoint
+  accessed_at: '2026-10-21T20:04:08.283212Z'
+  support: supports
+  summary: Both aromatic rings carry two methoxy substituents.
+  snapshot_sha256: 4c02147bd472260a035885947f0d99869fdf80aebe85ad1ad2b7963b0b682867
+- evidence_id: term-63367
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/63367/
+  locator: Current term definition compared with native graph or primary endpoint
+  accessed_at: '2026-10-21T20:04:08.561290Z'
+  support: supports
+  summary: The graph contains one substituted glucose residue, consistent with a monosaccharide
+    derivative.
+  snapshot_sha256: 0b04a92aa07a125e19aeb6870f4a96fbf5687c3ea9369a76f0b446386274ecb1
+- evidence_id: term-33282
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/33282/
+  locator: Current term definition compared with native graph or primary endpoint
+  accessed_at: '2026-10-21T20:04:08.648357Z'
+  support: supports
+  summary: The original MRSA growth assay supports the antibacterial role within its
+    measured conditions.
+  snapshot_sha256: 20d92ce7e00c204b1753184671c043160821d692438278344335446aadcd5082
+- evidence_id: term-35718
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/35718/
+  locator: Current term definition compared with native graph or primary endpoint
+  accessed_at: '2026-10-21T20:04:08.911041Z'
+  support: supports
+  summary: The original fungal growth assays support the antifungal role; fungal stress
+    and morphology results are not bacterial target evidence.
+  snapshot_sha256: 7f56c810697e29ebf26829b2fc896e43b7a5e35241e7130921f858ed7a565f2f
+- evidence_id: restricted-xrefs
+  kind: authority
+  reference: HMDB:HMDB0038922; Reaxys:6168345
+  locator: Both asserted chemical xrefs individually disposed
+  accessed_at: '2026-10-21T20:08:11Z'
+  support: unknown
+  summary: HMDB XML and HTML returned 403, as did the direct Reaxys route. Current
+    ChEBI retains both associations, but independent exact registry structures were
+    not inspected. Neither source propagation nor the additional PubChem match is
+    treated as verification of those inaccessible xrefs.
+  snapshot_sha256: de263ea21b3992ae0343dd648807cf32491ea7ff28c12e9eef68863361fa0d87
+- evidence_id: adopted1992
+  kind: primary_source
+  reference: PMID:17226467; DOI:10.1055/s-2006-961451
+  locator: Complete original abstract; actual publication June 1992
+  accessed_at: '2026-10-21T20:04:06.795033Z'
+  support: partial
+  summary: The study explicitly reinvestigates polar fractions of Stemmadenia minima
+    stem bark, yielding two known and four new lignan glucosides. The abstract does
+    not identify all individual structures. Both attempted publisher routes returned
+    challenge HTML. Exact compound mapping is additionally supported by the 2005 original,
+    which cites this isolation for the named glycoside; the 1992 full structure figure
+    was not recovered.
+  snapshot_sha256: b9d715961726746051e8c6112f7257597c1dfb5226a3f3159b3d2dba2b00338b
+- evidence_id: adopted2005-abstract
+  kind: primary_source
+  reference: PMID:16212233; DOI:10.1007/BF02977397
+  locator: Complete original abstract, followed by author-posted main
+  accessed_at: '2026-10-21T20:04:06.795033Z'
+  support: partial
+  summary: The adopted paper names the exact glycoside isolated from Lycium chinense
+    root bark and reports antibacterial and antifungal experiments. It does not establish
+    clinical efficacy.
+  snapshot_sha256: b9d715961726746051e8c6112f7257597c1dfb5226a3f3159b3d2dba2b00338b
+- evidence_id: adopted2005-main
+  kind: primary_source
+  reference: https://www.researchgate.net/profile/Hyun-Jun-Jung/publication/7554024_Antimicrobial_property_of_-lyoniresinol-3a-O-b-d-Glucopyranoside_isolated_from_the_root_bark_ofLycium_chinense_Miller_against_human_pathogenic_microorganisms/links/567b25a708ae1e63f1df9065/Antimicrobial-property-of-lyoniresinol-3a-O-b-d-Glucopyranoside-isolated-from-the-root-bark-ofLycium-chinense-Miller-against-human-pathogenic-microorganisms.pdf
+  locator: 'Original pp1032–1035: material, methods, structure discussion and extracted
+    Tables I–III'
+  accessed_at: '2026-10-21T20:08:11Z'
+  support: partial
+  summary: 'Compound 1: 7.40 mg isolated from 0.8 kg authenticated root bark, voucher
+    893-16; NMR/MS and rotation +26.0 (MeOH) support its reported identity. Table
+    I gives MRSA 1–4 MICs 5, 2.5–5, 2.5, 2.5 micrograms/mL; cefotaxime is above 40
+    throughout. Methods use 10^6 cells/well, 37 °C, 6 h and OD 620. The methods specify
+    LB, while the table footnote also says YPD; that inconsistency remains unresolved.
+    Table II reports fungal MICs 5, 5–10 and 10 for C. albicans TIMM 1768, S. cerevisiae
+    KCTC 7296 and T. beigelii KCTC 7707. Trehalose and hyphal experiments concern
+    Candida, not a bacterial target. No broad safety inference is drawn from the limited
+    erythrocyte assay.'
+  snapshot_sha256: 7187f03b778fe3efb2796e3c08d6554d89673e7c0c1510f541308fa3598c7bb5
+- evidence_id: 2005-material-boundary
+  kind: validation
+  reference: /private/tmp/am-review-session/615-web-reading-provenance.json
+  locator: Actual retrieval and visual-inspection boundary
+  accessed_at: '2026-10-21T20:08:11Z'
+  support: context_only
+  summary: The complete relevant main text and extracted tables were readable through
+    the public author PDF in the web tool. Local PDF download remained 403. Screenshot
+    calls did not return inspectable figure pixels, so Figure 1 absolute stereobonds
+    and table layout were not independently viewed. NMR assignments were read, not
+    raw spectra reprocessed; an exact purity or enantiomeric-excess percentage was
+    not recovered.
+  snapshot_sha256: 9bcc18cb8376070a51739f33a6b446cd4f110d93940a61cf795c4d466ae801d1
+- evidence_id: pteleifoside2012
+  kind: primary_source
+  reference: DOI:10.1016/j.carres.2012.08.011; https://www.sciencedirect.com/science/article/abs/pii/S0008621512003588;
+    https://www.lookchem.com/FreePDFArticle_3615-41-6_35303852.htm
+  locator: Original introduction and compound7 elucidation, pp114 and117–118; public
+    original-text mirror
+  accessed_at: '2026-10-21T20:08:11Z'
+  support: refutes
+  summary: The original distinguishes pteleifoside G 7 from known (+)-lyoniresinol
+    monoglucoside 10. G has C34H48O18, two beta-glucose units and a 1-to-3 interglycosidic
+    linkage, supported by two anomeric signals and HMBC correlations. Compound 10
+    has one glucose. The study separately isolated 77 mg of 7 and 34 mg of 10 from
+    Melicope roots/rhizomes. Thus the native monoglucoside cannot bear G as an exact
+    synonym. This isolation paper supplies no antibacterial result for G.
+  snapshot_sha256: 8a88fd6a0fdd7391fce8cd03e865de1a14dd32e5a1aee354d198bd0d114cb034
+- evidence_id: pteleifoside2012-initial
+  kind: primary_source
+  reference: https://www.lookchem.com/FreePDFArticle_3615-41-6_35303852.htm
+  locator: Original introduction, explicit compounds7 versus10
+  accessed_at: '2026-10-21T20:08:11Z'
+  support: refutes
+  summary: The introduction names seven new diglycosides A–G and separately lists
+    known (+)-lyoniresinol 9-prime-O-beta-D-glucopyranoside10. The publisher-rendered
+    introduction and the original-text mirror agree on that distinction.
+  snapshot_sha256: 6fcba04ea64c4e33712a20cecea67a7a7b25faee27cfaedc0298e0ee6f9d48e8
+- evidence_id: pteleifoside-figure
+  kind: primary_source
+  reference: https://file1.lookchem.com/html/freearticle/2022081107/35303852/img_03.png
+  locator: Actual retrieved Figure1 background layer, page116
+  accessed_at: '2026-10-21T20:06:34.934342Z'
+  support: context_only
+  summary: The retrieved image visibly contains the glycoside skeletons but omits
+    the overlaid text and heteroatom labels. It was inspected but is not represented
+    as a complete structure figure or used for independent absolute-configuration
+    assignment. The exact-name finding relies on explicit original structure-elucidation
+    text.
+  snapshot_sha256: 825a4aad4185aa41721ddcf8e19af9c23364262ca36e029b7b42c3db19e999b7
+- evidence_id: additional2001
+  kind: primary_source
+  reference: https://shoyaku.hiroshima-u.ac.jp/member/yamasaki/Pub/LignanFernandoa.pdf;
+    DOI:10.1016/S0031-9422(01)00212-6
+  locator: Original pp1245–1247, exact compound11 discussion and isolation only
+  accessed_at: '2026-10-21T20:08:11Z'
+  support: context_only
+  summary: The author-hosted original identifies known (+)-lyoniresinol 3-alpha-O-beta-glucoside
+    11 by physical and spectroscopic comparison with the 1992 work. It isolates 160
+    mg from Fernandoa adenophylla leaves/branches and distinguishes the acylated new
+    fernandoside 8. This is additional identity/isolation context, not antibacterial
+    activity or a basis to substitute the derivative. Local download timed out; relevant
+    original text was read through the web PDF.
+  snapshot_sha256: aeedd49e8241f2d04d3d5fbf28afd3ea3f07ca3fa4ae91c6d8bb4656fc96c48c
+- evidence_id: additional2024
+  kind: primary_source
+  reference: PMID:38921556; DOI:10.3390/md22060245; https://pmc.ncbi.nlm.nih.gov/articles/PMC11204750/
+  locator: Only exact lyoniresinol mention and relevant reagent/method paragraphs
+  accessed_at: '2026-10-21T20:05:41.527121Z'
+  support: context_only
+  summary: This citrate-lyase screening paper mentions lyoniresinol glycoside antibacterial
+    activity in its introduction by citing earlier work. The inspected passage does
+    not establish a new purified-glycoside bacterial target experiment. No citrate-lyase
+    target is transferred from herbal/compound-library screening to this record. The
+    complete unrelated library was not adjudicated.
+  snapshot_sha256: 5ca39965ff01ef46c94be16906dcdf0d0a2383cfd39e5faba59d71dd8949b2ae
+- evidence_id: access
+  kind: validation
+  reference: /private/tmp/am-review-session/615-fetch1.json; /private/tmp/am-review-session/615-fetch2.json;
+    /private/tmp/am-review-session/615-fetch3.json; /private/tmp/am-review-session/615-fetch4.json;
+    /private/tmp/am-review-session/615-fetch5.json
+  locator: Actual public retrieval manifests and bounded discovery
+  accessed_at: '2026-10-21T20:08:11Z'
+  support: context_only
+  summary: Springer and Thieme returned challenge HTML despite HTTP 200. HMDB/Reaxys
+    and local ResearchGate downloads returned 403. Author-hosted 2001 downloads timed
+    out. The web reader recovered 2005 and 2001 original text and 2012 original-text
+    passages; downloaded 2012 image backgrounds are incomplete. Broad discovery returned
+    192 hits with only 100 in the stored page; titles and selected exact leads were
+    inspected, not every paper.
+  snapshot_sha256: ddf847937e5a51d22cb066c746415e15630b364e86af41eeb81f6aa67b590594
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Coherent monoglucoside and erroneous diglucoside synonym
+  outcome: concern
+  summary: The native graph consistently represents one beta-D-glucose on the assigned
+    (+)-lyoniresinol framework. Current graph agreement and original named-material
+    NMR support this identity at the inspected depth; full original stereochemical
+    figures were not independently reconstructed. Pteleifoside G is explicitly a different
+    diglucoside in the original 2012 paper, while the 9-prime monoglucoside synonym
+    remains compatible with the native attachment.
+  target_ids:
+  - CHEBI:66606
+  evidence_ids:
+  - native
+  - chemistry
+  - chebi
+  - adopted2005-main
+  - pteleifoside2012
+  - pteleifoside2012-initial
+- assessment_id: grounding
+  area: grounding
+  topic: Exact structures, ontology and inaccessible registries
+  outcome: supported
+  summary: All six parsed native/authority encodings agree, and all seven parents
+    fit the graph. The additional PubChem match does not validate HMDB or Reaxys,
+    whose exact contents remain inaccessible. No xref defect is asserted solely from
+    that access limitation.
+  target_ids:
+  - CHEBI:66606
+  evidence_ids:
+  - chemistry
+  - pubchem
+  - chebi
+  - restricted-xrefs
+  - term-15734
+  - term-22798
+  - term-25036
+  - term-26195
+  - term-36786
+  - term-51681
+  - term-63367
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial and antifungal assay scope
+  outcome: supported
+  summary: The original exact isolate supports antibacterial and antifungal roles.
+    Reported MICs remain study-specific with the internal bacterial-medium conflict
+    retained. Clinical isolate labels do not supply resistance genotypes or justify
+    a molecular resistance mechanism. Candida stress and morphology results do not
+    establish a bacterial protein target or clinical efficacy.
+  target_ids:
+  - CHEBI:66606
+  evidence_ids:
+  - adopted2005-abstract
+  - adopted2005-main
+  - 2005-material-boundary
+  - term-33282
+  - term-35718
+- assessment_id: producer
+  area: evidence
+  topic: Plant identity and organ provenance
+  outcome: concern
+  summary: Lycium root-bark provenance is supported by the adopted original material/voucher
+    section. The Stemmadenia source explicitly concerns stem bark; current ChEBI origin
+    metadata agrees despite its contradictory definition prose. Only that plant-part
+    wording requires correction; no plant-species replacement is inferred.
+  target_ids:
+  - CHEBI:66606
+  evidence_ids:
+  - native
+  - chebi
+  - adopted1992
+  - adopted2005-main
+- assessment_id: completeness
+  area: completeness
+  topic: Optional enrichment and mechanism boundaries
+  outcome: unknown
+  summary: No missing optional field is treated as a defect. Quantitative enrichment
+    should retain exact clinical-isolate labels and unresolved medium details. Absolute
+    structure figures, raw spectra and material ee were not reprocessed. Additional
+    derivative, herbal and citrate-lyase contexts do not justify new bacterial molecular
+    targets.
+  target_ids:
+  - CHEBI:66606
+  evidence_ids:
+  - adapter
+  - 2005-material-boundary
+  - pteleifoside-figure
+  - additional2001
+  - additional2024
+  - access
+- assessment_id: provenance
+  area: provenance
+  topic: Adopted sources and generated ownership
+  outcome: supported
+  summary: Both adopted PMIDs were read as complete abstracts. The 2005 original main
+    was additionally inspected; the 1992 full paper remained inaccessible. Entire
+    native history and original 13/expanded 21 source hashes remain unchanged. Definition
+    and synonym corrections belong in maintained ChEBI source handling and regenerated
+    YAML.
+  target_ids:
+  - CHEBI:66606
+  evidence_ids:
+  - native
+  - owners
+  - search
+  - adopted1992
+  - adopted2005-main
+  - access
+findings:
+- finding_id: F1
+  issue_key: lyoniresinol-monoglucoside-pteleifoside-g-exact-synonym
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Pteleifoside G is a diglucoside, not an exact synonym of the native monoglucoside
+  description: The 2012 original assigns pteleifoside G to compound 7, C34H48O18,
+    with a second beta-D-glucose linked 1-to-3 to the first. It explicitly distinguishes
+    known (+)-lyoniresinol 9-prime-O-beta-D-glucopyranoside10. Native CHEBI:66606
+    has C28H38O13 and one glucose. Its exact pteleifoside G alias therefore conflates
+    distinct compounds, despite propagation in current ChEBI.
+  target_ids:
+  - CHEBI:66606
+  field_paths:
+  - synonyms[2]
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - pteleifoside2012
+  - pteleifoside2012-initial
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: 'review-yaml-record: exact synonym identity scope'
+  normalization_reason: Major identity ambiguity from an exact alias for a different
+    glycosylation product. The native main label and graph remain a coherent primary-supported
+    monoglucoside, so the entire record is not classified as a wrong-identity blocker.
+- finding_id: F2
+  issue_key: lyoniresinol-stemmadenia-stem-versus-root-bark
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The definition misstates the Stemmadenia source tissue
+  description: The adopted 1992 original explicitly describes Stemmadenia minima stem
+    bark, also retained in current ChEBI origin metadata. Native definition prose
+    instead groups it with Lycium chinense as root bark. The Lycium root-bark statement
+    is independently correct.
+  target_ids:
+  - CHEBI:66606
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - chebi
+  - adopted1992
+  - adopted2005-main
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: 'review-yaml-record: exact source provenance'
+  normalization_reason: A narrow plant-part provenance error; it does not change the
+    plant identity, compound graph or experimentally supported antimicrobial eligibility.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:66606
+  description: Correct the pteleifoside G exact-synonym association in maintained
+    ChEBI source handling and regenerate.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  acceptance_checks:
+  - Remove or explicitly qualify pteleifoside G so it no longer asserts exact equivalence
+    with the one-glucose native graph.
+  - Preserve the coherent native monoglucoside and supported 9-prime-O-beta-D-glucose
+    name; do not substitute the diglucoside or transfer its assays.
+  - Retain the original compound 7 versus10 distinction and inspect complete original
+    structure figures before any broader stereochemical replacement.
+  - Regenerate and rerun focused and required shared validators.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:66606
+  description: Correct the definition to distinguish Stemmadenia stem bark from Lycium
+    root bark through maintained source ownership.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  acceptance_checks:
+  - Retain Stemmadenia minima as the reported plant while changing its source organ
+    to stem bark, with PMID17226467 provenance.
+  - Preserve Lycium chinense root bark and the original voucher/material context from
+    PMID16212233.
+  - Regenerate the definition and confirm no unrelated identity, activity or history
+    fields change.
+limitations:
+- HMDB and Reaxys exact structures were inaccessible. Their current ChEBI associations
+  remain recorded without independent chemical verification.
+- The 1992 adopted paper was available only as its complete original abstract. The
+  2005 original main, methods and extracted tables were read through the author-posted
+  PDF; local download was 403 and screenshot calls did not return inspectable figure
+  pixels. Raw spectra, exact purity and ee were not independently determined.
+- The 2005 bacterial methods specify LB while Table I also names YPD. Its quantitative
+  results are retained with that unresolved conflict; no standardized clinical breakpoint
+  or broad safety conclusion was inferred.
+- The 2012 original introduction and compound 7/10 elucidation were readable through
+  publisher text and an original-text mirror. Retrieved figure backgrounds lack text/heteroatom
+  labels, so they were not treated as complete stereochemical drawings. Other new
+  pteleifosides and raw spectra were not exhaustively adjudicated.
+- The additional 2001 paper was read only for exact compound 11 identification and
+  isolation. The 2024 citrate-lyase paper was read only for the relevant glycoside
+  mention and reagent/method context; no new target or extract activity was transferred.
+  Broad discovery was selective and not an exhaustive review of all 192 hits.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Original 13 and expanded 21 input hashes remain unchanged. Native/source records
+  and history were not edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

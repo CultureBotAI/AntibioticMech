@@ -1,0 +1,744 @@
+schema_version: 1.0.0
+review_id: 20261021T200956Z-lys228-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'LYS228: inherited oxime-isomer identity conflict'
+started_at: '2026-10-21T19:52:50Z'
+finished_at: '2026-10-21T20:09:56Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The complete ARO/PubChem seed is reproducible and passes focused schema,
+  strict and chemistry checks. Its native SMILES and InChI nevertheless encode the
+  E oxime, whereas both original 2018 LYS228 figures, the 2020 synthesis supplement
+  and independently parsed official NCATS/KEGG structures specify Z. One blocker covers
+  this source mapping and exact-structure conflict. The named compound has primary
+  antibacterial and PBP3 evidence, with explicit strain and beta-lactamase limitations;
+  those results do not validate the native E isomer.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/lys228.yaml
+    sha256: 3b1257a53ae2512d63b9c7736cbc8eb1e9f93ae0a467283feea86d7f35251928
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-00a588048a
+  path: data/antibiotics/antibacterial/lys228.yaml
+  label: LYS228
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Actual maintained source input for the record
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 616; the entire exact native record was read after verification
+    of all thirteen original capture hashes. Three actual ARO/PubChem owner inputs
+    were appended without replacing those hashes.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-00a588048a
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    616
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/lys228.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/lys228.yaml --out /private/tmp/am-review-session/616-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-comparison
+  name: Independent oxime and authority graph comparison
+  status: passed
+  required: false
+  summary: Both native serializations and current PubChem 118380292 agree on E. Changing
+    only the oxime geometry to Z produces the full key independently reproduced from
+    NCATS GSRS 29H7N9XI1B, KEGG D12187 and PubChem 118379834; both tetrahedral centres
+    remain 3S,4R.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/616-compare.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/lys228.yaml
+  locator: Entire native record, including chemical structure, two exact xrefs, one
+    source concept and all three curation-history events.
+  accessed_at: '2026-10-21T20:06:44Z'
+  support: supports
+  summary: LYS228 is a SEEDED, MINTED ARO record, filed ANTIBACTERIAL with monobactam
+    parent/class ARO:0000004. Its valid neutral C16H18N6O10S2 structure has two assigned
+    tetrahedral centres and one specified oxime bond. The definition cites PMID:30038040.
+    There are no native synonyms, drug associations, activity roles, target, resistance,
+    numeric activity, clinical, producer, causal-graph, dataset or discussion objects.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv:359; data/raw/pubchem_structures.tsv:120;
+    conf/sources.yaml; scripts/extract_source_inventory.py; scripts/enrich_pubchem_structures.py;
+    scripts/seed_from_sources.py
+  locator: Exact complete source rows; ARO extraction, PubChem fallback, class/definition
+    selection, source-concept and mint branches.
+  accessed_at: '2026-10-21T20:06:44Z'
+  support: supports
+  summary: The ARO row supplies the label, definition, sole adopted PMID, class and
+    PubChem:118380292 association. The PubChem row supplies all stored structure fields.
+    The extractor uses the nearest marked ARO drug class, the enrichment step retrieves
+    the first linked PubChem CID when no adopted ChEBI structure exists, and the seeder
+    reproduces the resulting fields. The source-derived mint was independently reproduced.
+    All thirteen initial hashes remain unchanged; actual ARO inventory, PubChem inventory
+    and enrichment script were appended before scientific assessment.
+  snapshot_sha256: 521f1c6d6b65c908107c028875757813cf61c44b474e9ae691c2506dc942cd19
+- evidence_id: local-search
+  kind: validation
+  reference: /private/tmp/am-review-session/616-local-hits.txt; /private/tmp/am-review-session/616-owner-append.log
+  locator: Ignored-inclusive and hidden-inclusive label, slug and exact identifier
+    search, followed by exact maintained-source row scans.
+  accessed_at: '2026-10-21T20:06:44Z'
+  support: context_only
+  summary: Search coverage included ignored and hidden files. Native/raw/generated
+    records and historical research ledgers were found; historical prose was used
+    only as discovery context. The whole native record establishes its actual assertion
+    set. Missing optional curation fields are not defects.
+  snapshot_sha256: 3e7fe7c89ecbf0d89bd5f78c4ff81751bbd94cd9039fea7110809a87608ea63a
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Official snapshot terms ARO:3004729 and ARO:0000004; exact extracted text
+    in 616-current-aro.txt.
+  accessed_at: '2026-10-21T15:57:42Z'
+  support: supports
+  summary: Current ARO repeats the same LYS228 definition, PMID, PubChem 118380292
+    link and monobactam parent. The class identifies an unfused monocyclic beta-lactam,
+    consistent with the scaffold. ARO agreement confirms source reproduction but does
+    not resolve the contradictory exact oxime identity.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: pubchem-native
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/118380292
+  locator: Complete current PUG REST structure properties and synonym response.
+  accessed_at: '2026-10-21T20:02:11Z'
+  support: supports
+  summary: Current PubChem 118380292 matches the native E graph and FWTGYTRQUBRVDW-UWGJAOEXSA-N
+    key exactly. Formula, neutral charge and both masses match at published precision.
+    Its deposited synonym list contains a Z systematic name and the NRABZWKMSA key,
+    which disagree with its graph; those strings alone are not the experimental basis
+    for the finding.
+  snapshot_sha256: d9b4bb2f4673dc886537485bbd6cee81afa2c67efd39c8aa28174255594adb41
+- evidence_id: gsrs
+  kind: database
+  reference: https://gsrs.ncats.nih.gov/api/v1/substances(d6db6697-7523-4290-a2b6-84f0ebd85bb5)?view=full
+  locator: Official complete NCATS GSRS record version 22, UNII 29H7N9XI1B; names,
+    molfile, structure and solvate relationships inspected.
+  accessed_at: '2026-10-21T20:04:49Z'
+  support: supports
+  summary: The record explicitly links LYS-228 and BOS-228 to ancremonam and a Z systematic
+    name. Its independently parsed molfile yields neutral C16H18N6O10S2, 3S,4R and
+    FWTGYTRQUBRVDW-NRABZWKMSA-N. Ancremonam trihydrate is a separately related substance.
+    GSRS approved status is substance-registry status and is not used as evidence
+    of a therapeutic approval.
+  snapshot_sha256: 935eff723f6f67d44ae5a35dfe5a1057920bd1a66484fae107b99bcc085cd5ba
+- evidence_id: alternate-authorities
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/118379834; https://rest.kegg.jp/get/D12187
+  locator: Alternate exact PubChem structure and synonyms, plus KEGG D12187 text/molfile.
+  accessed_at: '2026-10-21T20:03:50Z'
+  support: supports
+  summary: PubChem 118379834 explicitly names LYS228/ancremonam/BOS-228 and supplies
+    the Z graph. Its SMILES and InChI and the KEGG ancremonam molfile independently
+    reproduce the same NRABZWKMSA key as NCATS. These are corroborating sources and
+    a candidate corrected association; the original experimental figures determine
+    which oxime is named LYS228.
+  snapshot_sha256: 31251f20b508cc04bf5f9bf56cb9439e4f599f286dccbe44958c6afea247d780
+- evidence_id: mapping
+  kind: validation
+  reference: /private/tmp/am-review-session/616-compare.py; /private/tmp/am-review-session/616-authority-chemistry.json;
+    /private/tmp/am-review-session/616-Z-authority-chemistry.json; /private/tmp/am-review-session/616-oxime-diagnostic.json
+  locator: Independent parsing and specific bond comparison; diagnostic rendering
+    in 616-oxime-comparison.png.
+  accessed_at: '2026-10-21T20:06:44Z'
+  support: supports
+  summary: Native SMILES atom 7=N and atom 8=C define the oxime; its CIP reference
+    atoms are O6 and carbonyl C15, and RDKit assigns E. Native Standard InChI encodes
+    this as /b20-9+. The original drawings put N-O and the adjacent amide-carbonyl
+    substituent on the same side, corresponding to Z. A scratch inversion of only
+    that double bond changes the key to NRABZWKMSA and /b20-9-, preserving constitution
+    and both tetrahedral configurations. Independently parsed official Z encodings
+    corroborate the complete structure. The InChI reader can choose an amide/imidic-acid
+    tautomer, but that does not explain or erase the opposite oxime stereolayer.
+  snapshot_sha256: b1374b6bd0dc7608f1f8e3077416cb55ce68ceef912505067645c995d3b33f47
+- evidence_id: activity2018
+  kind: primary_source
+  reference: PMID:30038040; DOI:10.1128/AAC.00552-18; https://pmc.ncbi.nlm.nih.gov/articles/PMC6153794/
+  locator: Complete main abstract, Introduction, Results/Discussion, Tables 1-5 and
+    Methods read; Figure 1 separately viewed.
+  accessed_at: '2026-10-21T20:02:29Z'
+  support: supports
+  summary: Novartis-synthesized LYS228 was tested by CLSI broth microdilution against
+    271 clinical isolates. MIC90 values were 1 microgram/mL overall, 1 for 37 ESBL
+    producers and 4 for 77 carbapenem-resistant isolates. These are panel summaries,
+    not species-wide MICs or clinical breakpoints. The main reports VEB-1-associated
+    and PBP3-insertion high-MIC exceptions; Table 2 explicitly lacks LYS228 susceptibility
+    breakpoints. Time-kill assays used CAMHB and 10^6 CFU/mL at 35 C. MBC/MIC and
+    killing endpoints remain distinct from MIC. The study supports the bounded majority-of-tested-strains
+    wording for its named material, whose bulk salt/purity is not specified.
+  snapshot_sha256: 33bc714e276bf7e81cf7764514c4571be61a749145eb6bca14915613871f98af
+- evidence_id: activity-figure
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6153794/figure/F1/
+  locator: Original 2018 Figure 1, downloaded from the PMC image link and visually
+    inspected.
+  accessed_at: '2026-10-21T20:02:57Z'
+  support: refutes
+  summary: The chemical drawing labeled LYS228 shows the Z oxime and cis substituted
+    beta-lactam ring consistent with 3S,4R. The N-O substituent and adjacent amide
+    carbonyl are on the same side of C=N. This positively contradicts the stored E
+    geometry; it is not merely a missing stereochemical assignment.
+  snapshot_sha256: 0d4b32b162809610977ada3b83c5edd073ea113915ac403afca575450d9d19ac
+- evidence_id: moa2018
+  kind: primary_source
+  reference: PMID:30061293; DOI:10.1128/AAC.01200-18; https://pmc.ncbi.nlm.nih.gov/articles/PMC6153799/
+  locator: Abstract/Introduction, PBP3 Results, Table 1, strain table, selected resistance
+    results/conclusion and complete main Methods read; Figures 1-3 visually inspected.
+    Supplement detailed kinetics unavailable.
+  accessed_at: '2026-10-21T20:02:29Z'
+  support: supports
+  summary: The independent Figure 1 again depicts Z-LYS228. Crude E. coli NB27001
+    membranes show BOCILLIN competition preferentially at PBP3; microscopy shows filamentation
+    with segregated DNA after 2 h at 0.5 microgram/mL. Purified truncated E. coli
+    PBP3 stopped-flow experiments report k2 162.4/s, Kd 441.9 micromolar and k2/Kd
+    367504 per M per s; these are distinct quantities, not a MIC or one interchangeable
+    affinity number. The paper supports PBP3-mediated cell-division inhibition for
+    named LYS228, while describing exceptions involving VEB/PER, OXA-181 and DHA-1.
+    No target or resistance object is presently asserted in the native record.
+  snapshot_sha256: 13656864ed1444403aa9643c6613cb35cba075e41010611ab0a1c0a4c8b4aaf9
+- evidence_id: dha2018
+  kind: primary_source
+  reference: PMID:30061296; DOI:10.1128/AAC.01202-18; https://pmc.ncbi.nlm.nih.gov/articles/PMC6153798/
+  locator: Complete main text, Table 1 and Figure 1 caption read. The plotted image
+    itself was not independently examined.
+  accessed_at: '2026-10-21T20:02:29Z'
+  support: partial
+  summary: Among 23 blaDHA-1-bearing K. pneumoniae isolates, 9 had LYS228 MIC at least
+    8 microgram/mL. Selected mpl/ampD mutants and increased blaDHA-1 expression support
+    a context-dependent resistance route; avibactam restores activity in tested comparisons.
+    The authors leave the detailed Mpl-to-expression mechanism unresolved. This is
+    not proof that LYS228 is universally stable to all serine beta-lactamases, nor
+    does it negate the native bounded majority-of-strains claim.
+  snapshot_sha256: d44428c157b1dbaee4d7016c2bb8efe8470870630d279a8bb262f2c47c197625
+- evidence_id: synthesis2020
+  kind: primary_source
+  reference: PMID:32408741; DOI:10.1021/acs.joc.9b01916; DOI:10.1021/acs.joc.9b01916.s001
+  locator: Complete indexed main abstract; official ACS Figshare supplement contents
+    inspected and S15 Figure S11 viewed at physical PDF page 16.
+  accessed_at: '2026-10-21T20:04:25Z'
+  support: supports
+  summary: The Novartis synthesis supplement explicitly labels its proton/carbon NMR
+    figure LYS228 and depicts the same Z oxime with 3S,4R beta-lactam geometry. This
+    independent original chemical source corroborates the 2018 figures. The spectrum
+    was viewed with the drawing; peak assignments and stereochemical derivation were
+    not independently reprocessed, and the complete synthetic main article was not
+    read.
+  snapshot_sha256: baeb3d937d1c0aa4cc204a521a7047c44d95d1858d016219c1609460386658b9
+- evidence_id: literature-bound
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE_ABS%3ALYS228%20OR%20TITLE_ABS%3A%22LYS-228%22%20OR%20TITLE_ABS%3A%22BOS-228%22&format=json
+  locator: All 39 returned titles screened; selected exact-drug complete indexed abstracts
+    and erratum metadata read.
+  accessed_at: '2026-10-21T20:02:11Z'
+  support: context_only
+  summary: PMID:29336873 identifies LYS228 as compound 31 but its discovery full text
+    was not obtained. PMID:30642927 concerns murine infection efficacy; PMID:30325447
+    concerns murine PK/PD and has a linked erratum PMID:30412250, not quantitatively
+    adopted here. PMID:31061156 concerns healthy-volunteer safety/PK, not clinical
+    infection efficacy or current approval. PMID:32408741 has the original synthesis
+    supplement separately inspected. Many other hits concern a protein residue called
+    Lys228 and are irrelevant. The sole native adopted PMID is 30038040, which was
+    read at full-main depth.
+  snapshot_sha256: ad76538eed6a407f0763a51c847c0b9950701d8d7a6e67c78e1c803a61d3ed8f
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/precise1k/b4150
+  locator: Actual dataset catalog and beta-lactamase/carbapenem searches before mechanism
+    web research; command/UTC/output hashes in 616-adapter.json.
+  accessed_at: '2026-10-21T20:06:44Z'
+  support: context_only
+  summary: The 28-dataset catalog was read. The E. coli beta-lactamase search resolved
+    ampC/b4150 but no iModulons; carbapenem returned no genes or modules. Klebsiella
+    pneumoniae was not covered in the catalog. These results are naming context only
+    and establish no LYS228 binding, hydrolysis, phenotype or transcriptomic response.
+  snapshot_sha256: f5b01df35a76cb69e1270c6b7bb875974ee22a222b977964f1a336691d5c1ee7
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact structure and oxime stereochemistry
+  outcome: concern
+  summary: Both native encodings are internally valid, but their E oxime denotes a
+    different stereoisomer from the named compound in three original figures and independent
+    official Z structures. Formula, charge, masses and 3S,4R ring centres are otherwise
+    consistent.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  evidence_ids:
+  - native
+  - pubchem-native
+  - mapping
+  - activity-figure
+  - moa2018
+  - synthesis2020
+  - gsrs
+  - alternate-authorities
+- assessment_id: grounding
+  area: grounding
+  topic: Mint, two exact xrefs and monobactam parent/class
+  outcome: concern
+  summary: The source-derived mint, ARO concept and strictly broader monobactam class
+    reproduce correctly. The inherited PubChem 118380292 mapping is the E-isomer source
+    of the identity defect; source agreement alone is not exact LYS228 equivalence.
+    No ChEBI grounding is asserted or required merely because the identifier is minted.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  evidence_ids:
+  - owners
+  - aro
+  - pubchem-native
+  - mapping
+- assessment_id: definition
+  area: evidence
+  topic: Antibacterial activity and beta-lactamase stability wording
+  outcome: supported
+  summary: The cited paper directly supports the definition for named LYS228 and already
+    bounds potency to most tested strains. Its high-MIC exceptions and companion enzyme-expression
+    studies prevent extrapolation to every enzyme or isolate. No separate wording
+    defect is manufactured from the existence of those documented exceptions. Experimental
+    biological claims remain conditional on resolving the native E/Z identity.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  evidence_ids:
+  - activity2018
+  - dha2018
+  - moa2018
+  - activity-figure
+- assessment_id: mechanism
+  area: evidence
+  topic: Checked mode of action and possible target enrichment
+  outcome: supported
+  summary: Compound-specific primary PBP3 competition, stopped-flow and morphology
+    experiments support the named Z compound mechanism. They are appropriate future
+    claim-level evidence with exact taxon and construct details. Absence of optional
+    MOA/target/graph objects is not a corrective finding; direct cellular target binding
+    is not inferred from iModulon context.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  evidence_ids:
+  - moa2018
+  - adapter
+  - mapping
+- assessment_id: provenance
+  area: provenance
+  topic: Generated ownership, dates and history
+  outcome: supported
+  summary: The maintained ARO/PubChem inputs, extractor/enricher and seeder account
+    for all native assertions. All three history events are seeding events, not a
+    claim of scientific review. The source date and PubChem retrieval date remain
+    historical source metadata. The exact input hashes were preserved, and the whole
+    native file was inspected.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  evidence_ids:
+  - native
+  - owners
+  - aro
+  - local-search
+- assessment_id: coverage
+  area: completeness
+  topic: Entire native assertion set and sole adopted citation
+  outcome: supported
+  summary: Identity, all structure fields, class/parent, definition/citation, both
+    xrefs, source concept and complete history were assessed. The only adopted publication
+    was read fully at main-article depth. Optional activity, clinical, producer, resistance,
+    dataset and graph slots are not defects merely because they are empty. Later clinical
+    and in vivo leads were not turned into unsupported native assertions.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  evidence_ids:
+  - native
+  - activity2018
+  - literature-bound
+  - local-search
+findings:
+- finding_id: F1
+  issue_key: lys228-oxime-e-versus-z-identity
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: Resolve the inherited E-oxime substitution for Z-LYS228
+  description: Native SMILES and Standard InChI encode the oxime as E, with key FWTGYTRQUBRVDW-UWGJAOEXSA-N.
+    The cited 2018 activity Figure 1, companion PBP3 Figure 1 and 2020 synthesis Figure
+    S11 depict Z; independent NCATS GSRS, KEGG and PubChem 118379834 encodings corroborate
+    key FWTGYTRQUBRVDW-NRABZWKMSA-N. Inverting only this oxime bond reproduces the
+    complete corroborating key while retaining both 3S,4R centres. The imported ARO
+    link to PubChem 118380292 drives the wrong stereoisomer into the exact structure.
+    Correct the maintained association and regenerate the entire mutually consistent
+    structure block after independent bond review. Do not replace it with a hydrate
+    or infer that the E isomer lacks antibacterial activity.
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  field_paths:
+  - chemical_structure.smiles
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  - xrefs[1]
+  evidence_ids:
+  - owners
+  - aro
+  - pubchem-native
+  - mapping
+  - activity-figure
+  - moa2018
+  - synthesis2020
+  - gsrs
+  - alternate-authorities
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Inherited ARO-to-PubChem exact compound association
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact chemical structure fallback
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained upstream association extraction/adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem selection and property retrieval
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible exact-reference and structure emission
+  rule_id: 'Native checklist: exact identity, structure and equivalent xrefs; REVIEWED
+    gate 1'
+  native_severity: blocker
+  normalization_reason: A positively identified different stereoisomer makes the record
+    denote the wrong exact compound even when parsing, masses and source reproduction
+    pass. The xref and graph share one source cause and are reported as one finding.
+actions:
+- action_id: A1
+  description: Repair the source-owned LYS228 association and exact oxime structure
+    reproducibly.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Inherited ARO-to-PubChem exact compound association
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact chemical structure fallback
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained upstream association extraction/adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem selection and property retrieval
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible exact-reference and structure emission
+  acceptance_checks:
+  - Independently map native C=N atoms and the original drawings; confirm Z with both
+    3S,4R centres unchanged. Current candidate PubChem 118379834, NCATS UNII 29H7N9XI1B
+    and KEGG D12187 agree on NRABZWKMSA-N.
+  - Reconcile the inherited ARO-to-PubChem link using a maintained adjudication, then
+    refresh the structure fallback and regenerate. Retain exact source attribution,
+    retrieval dates and the validated neutral-versus-solvate boundary.
+  - Ensure SMILES, Standard InChI, key and every retained exact xref denote the selected
+    complete structure. Re-run documented schema/strict, chemistry and source-reproduction
+    checks; review all inherited biological claims against that exact identity.
+- action_id: A2
+  description: If enriching the record after identity repair, preserve the original
+    assay and mechanism boundaries.
+  finding_ids: []
+  target_ids:
+  - antibioticmech:aro-00a588048a
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/lys228.yaml
+    role: Curator-owned optional mechanism, target, activity and resistance evidence
+      through the validated writer
+  acceptance_checks:
+  - Use separate primary evidence for bacterial PBP3 engagement, cellular filamentation,
+    panel MIC summaries and resistance selection. Do not turn MIC90 into a strain
+    MIC or use comparator clinical breakpoints for LYS228.
+  - Retain enzyme-expression and strain exceptions rather than claiming universal
+    stability. Read the unavailable detailed kinetic supplement before encoding its
+    experimental parameters.
+  - Do not infer current clinical approval, a producer organism, or E-isomer activity
+    from the synthesis, healthy-volunteer or named-drug studies.
+limitations:
+- The cited 2018 activity main article was read in full, including every table and
+  its sole figure. The companion PBP3 main was inspected at the selected sections
+  stated above, not all resistance table rows; its detailed kinetic supplement returned
+  an HTML preparation page, and the publisher supplement route returned 403. No missing
+  supplement method is invented.
+- The 2020 synthesis main article was available only as a complete indexed abstract.
+  The official 20-page supplement was inspected through its contents and the exact
+  LYS228 Figure S11 at printed S15/physical page 16; spectra and intermediate pages
+  were not exhaustively reassigned. The original 2018 discovery article was read only
+  as a complete indexed abstract; full-text routes failed.
+- The native linked PubChem record remains internally inconsistent between its E graph
+  and Z deposited name/key strings. The identity finding rests on original figures
+  plus independently parsed official structures, not a vendor or depositor synonym
+  alone. The neutral molecular drawing does not establish the exact bulk salt, hydration
+  state or purity of every experimental preparation.
+- Initial public fetch attempts included a mistaken CARD numeric page that resolved
+  to Massilia and empty ACS landing responses; these were excluded from evidence.
+  The official ARO OBO terms and the correctly resolved ACS Figshare API/supplement
+  were inspected instead. Europe PMC XML endpoints returned 500; complete PMC HTML
+  succeeded for the three 2018 papers.
+- An exploratory authority helper initially exited 1 only after successful chemical
+  comparisons when printing a missing top-level names field from the abbreviated NCATS
+  response. The actual error was retained, the full record was retrieved, and the
+  corrected comparison exited 0. All required focused native validators and the standalone
+  native chemistry check exited 0.
+- The bounded literature query returned 39 titles, including irrelevant protein-residue
+  matches. It is not an exhaustive literature census or proof that the E isomer is
+  inactive. No present native clinical, producer or resistance assertion was inferred
+  from optional discovery leads.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All thirteen original capture hashes were verified unchanged; three actual source
+  inputs were appended before assessment. Public fetch manifests retain actual URLs,
+  UTC timestamps, response status and hashes. The current ARO snapshot was independently
+  inspected for the two exact terms and retains its original shared retrieval time.
+- The structure conflict takes priority over scientific sign-off. The record should
+  remain SEEDED until its exact identity and any subsequent curated biological assertions
+  satisfy the repository gates.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
