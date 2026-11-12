@@ -1,0 +1,1060 @@
+# L-DON: wrong PubChem namespace and scoped primary inhibition evidence
+
+- Review: 20261021T081108Z-6-diazo-5-oxo-l-norleucine-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T07:52:52Z
+- Finished UTC: 2026-10-21T08:11:08Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native L-DON structure is coherent, but its PubChem compound xref identifies an unrelated molecule. The same numerical accession is a PubChem substance that resolves to the correct CID9087. A minor source grammar defect and specific primary activity/mechanism enrichment remain. Bacterial, viral, host and biosynthetic contexts require separate evidence.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position060; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:138889 | data/antibiotics/antibacterial/6-diazo-5-oxo-l-norleucine.yaml | generated | 6-diazo-5-oxo-L-norleucine |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema verification | passed | True | CHEBI:138889 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:138889 | Actual focused execution exited 0. |
+| Focused chemistry verification | passed | False | CHEBI:138889 | Actual focused execution exited 0. |
+| Structured source datasets | passed | False | CHEBI:138889 | Actual free read-only command exited0; returned context described in adapter evidence. |
+| Structured source ctps | passed | False | CHEBI:138889 | Actual free read-only command exited0; returned context described in adapter evidence. |
+| Structured source pyrg | passed | False | CHEBI:138889 | Actual free read-only command exited0; returned context described in adapter evidence. |
+| Authoritative full QC | failed | True | CHEBI:138889 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:138889 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:138889 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:138889 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:138889 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:138889 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:138889 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:138889 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:138889 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Native exact L-DON chemistry
+
+identity: supported. Targets: CHEBI:138889.
+
+Complete structures, alpha-S configuration, formula, masses and neutral charge agree. Wrong external mapping does not invalidate the independently supported native molecule.
+
+### PubChem identity mapping
+
+grounding: concern. Targets: CHEBI:138889.
+
+The compound xref points to an unrelated entity; SID interpretation resolves the provenance and supplies exact CID9087. Other external access limits are separate.
+
+### Parents and activity roles
+
+grounding: supported. Targets: CHEBI:138889.
+
+Structural parents fit. Direct bacterial and cultured-cell antiviral primary results support both roles with their assay contexts.
+
+### Definition grammar and biochemical scope
+
+representation: concern. Targets: CHEBI:138889.
+
+The generic glutamine-enzyme inhibition clause is supported; It is as inhibitor is a source-inherited grammatical error.
+
+### Multiple inhibited enzymes and downstream phenotypes
+
+evidence: supported. Targets: CHEBI:138889.
+
+Direct purified-enzyme structural evidence supports qualified targets. Historical rescue, host immune modulation and viral maturation are different evidence types and do not prove one universal lethal mechanism.
+
+### Exact primary activity and target follow-up
+
+completeness: concern. Targets: CHEBI:138889.
+
+Specific assays and structural target evidence are available for curator disposition. Modern TB drug combinations, host enzyme kinetics and prodrug outcomes must not be merged into free-DON claims.
+
+### Biosynthetic and resistance scope
+
+representation: unknown. Targets: CHEBI:138889.
+
+No native producer or resistance object is asserted. Alazopeptin pathways, carrier intermediates and N-acetyl-DON production require exact-product qualification. Historical selected resistance has no sequenced determinant.
+
+### Clinical, graph and dataset annotations
+
+scope: not_applicable. Targets: CHEBI:138889.
+
+No optional object is inherently required. Purified-enzyme binding, cultured-cell virus inhibition and prodrug mouse studies do not establish clinical safety/efficacy or a complete causal graph.
+
+### Source and history
+
+ownership: supported. Targets: CHEBI:138889.
+
+Maintained source, mint and four history events reproduce. Correct generated fields through maintained input handling and new scientific annotations through validated writer/history.
+
+## Findings
+
+### F1: Replace the unrelated PubChem compound mapping
+
+major / open / confirmed; issue key: chebi-138889-pubchem-substance-compound-namespace.
+
+Native pubchem.compound:24893639 denotes an unrelated C20H34O3 entity.24893639 is the source substance accession; PubChem resolves SID24893639 to exact CID9087. Current ChEBI repeats the wrong compound namespace.
+
+### F2: Correct source-inherited definition grammar
+
+minor / open / confirmed; issue key: chebi-138889-definition-as-inhibitor-grammar.
+
+The phrase It is as inhibitor should use an inhibitor. The scientific biochemical clause is supported; this is a wording defect.
+
+### F3: Curate the verified primary assays and enzyme targets with context
+
+minor / open / confirmed; issue key: chebi-138889-primary-activity-target-disposition.
+
+Exact DON bacterial assays, cultured-cell antiviral observations and purified-enzyme binding structures are available for specific curation. Preserve distinct organisms, assays, selected resistance, prodrug boundaries and structural-versus-cellular inference.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the maintained PubChem mapping to CID9087 and source grammar, then regenerate imported fields.
+
+- Retain the evidence that24893639 was a substance accession; replace the compound identity mapping with verified pubchem.compound:9087. Do not change correct native InChI/key/formula or insert a substance identifier as an unqualified exact compound equivalence.
+- Implement the correction through maintained source refresh or reviewed source-specific normalization so reseeding reproduces it; retain truthful source origin/version and the original mapping provenance.
+- Correct It is as inhibitor to It is an inhibitor while preserving its scientifically supported scope. Run focused schema/strict, reproduction, full-corpus integrity and required QC.
+
+### A2
+
+Curate or explicitly disposition exact primary activity and enzyme evidence with assay-level scope.
+
+- Preserve historical E.coli ATCC9637 medium, inoculum and plate/broth endpoints. Selected growth at100microgram/mL and single-step frequency are not a clinical breakpoint or identified genetic resistance determinant.
+- Keep DON H37Rv Alamar Blue MIC1-2microgram/mL separate from JHU083 MBC32microgram/mL, glutamine supplementation and mouse efficacy. Verify source methods before assigning final assay metadata.
+- For E.coli CTPS and Pseudomonas7A glutaminase-asparaginase, represent purified-enzyme structural interaction with exact protein/taxon grounding, without claiming a uniquely proven cellular killing target. PDB modified ligand DO2 is not an exact free-DON xref; host GGT1 stays separate.
+- Preserve virus/cell/glutamine dependence and abstract-level access for older antiviral studies. Sindbis immune protection delays clearance and cannot be rewritten as direct viral inhibition in that model.
+- Verify original production experiments before producer annotation; distinguish free DON,N-acetyl-DON,carrier-bound DON and alazopeptin. Use validated writer/history and required gates without automatic native status promotion.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/6-diazo-5-oxo-l-norleucine.yaml; Every native YAML field | supports | Read definition, three synonyms, three structural parents, antiviral and antibacterial roles, complete chemical structure, three identity xrefs, one Wikipedia document link, source concept and four seed/reseed events. Native SEEDED/EXACT remains unchanged. The general definition refers to glutamine-utilising enzyme inhibition and contains the phrase It is as inhibitor; no specific target, assay, producer, resistance, graph or clinical object is asserted. |
+| owner | data/raw/chebi_antimicrobials.tsv; Entire CHEBI:138889 row; MANIFEST, source configuration, extract_chebi database-accession handling and normalize_xref | supports | The adopted row reproduces the xref and grammar defect. ChEBI extraction uses the source table prefix and accession directly; the seeder passes bioregistry-style ChEBI prefixes unchanged. ARO PubChem aliases are handled separately and do not explain this ChEBI row. Ten PMID leads are discovery inputs, not ten automatically attached primary mechanism claims. Version2026-08-30 and native mint antibioticmech:chebi-d532f764d2 reproduce. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:138889; Entire current visible entry and actual PubChem hyperlink;060-chebi.html/visible.txt | supports | Current ChEBI agrees with native L/S chemistry, all three synonyms, formula, masses and net charge. Parents17087 ketone,39444 diazo compound and83822 non-proteinogenic L-alpha-amino acid fit. Roles22587 antiviral and33282 antibacterial are separated from structural parents. The current PubChem anchor explicitly uses bioregistry pubchem.compound:24893639 and the same grammar typo, so neither is a generated-record-only divergence. |
+| chemistry | Independent RDKit calculation; chem005.py60;060-chemistry.json | supports | Both native encodings give YCWQAMGASJSUIP-YFKPBYRVSA-N, C6H9N3O3, net charge0, one fragment, average mass171.156 and exact mass171.064391148, with the alpha centre S. Formal opposite diazo charges sum to zero; this is not a salt. The source mint matches. |
+| wrong-cid | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/24893639/property/InChI,InChIKey,MolecularFormula,MolecularWeight,Charge/JSON; 060-pubchem.json; actual CID properties | refutes | CID24893639 is C20H34O3, average mass322.5 and keyCINFXKCUQDROKC-AVSUADBLSA-N. It is not L-DON, so the native identity xref is materially wrong even though it resolves. |
+| sid-mapping | https://pubchem.ncbi.nlm.nih.gov/rest/pug/substance/sid/24893639/cids/JSON; 060-pubchem-sid.json and060-pubchem-name.json | supports | The PubChem substance accession SID24893639 resolves to CID9087. Independently retrieved exact-name compound properties identify CID9087 with the complete native Standard InChI, keyYCWQAMGASJSUIP-YFKPBYRVSA-N and formulaC6H9N3O3. The supported compound-xref correction is pubchem.compound:9087, while retaining the original SID provenance rather than changing correct native chemistry. |
+| xref-audit | Independent second-agent CID/SID audit; 060-independent-mapping-audit.json; cached response assertions and independent InChI calculation | supports | A second reviewer read the native record and independently confirmed the unrelated CID24893639, SID24893639 to CID9087 mapping, and full native structure agreement with CID9087. This is a source-owned wrong identity mapping, not unresolved L-DON molecular identity. |
+| xref-limits | metacyc.compound:CPD0-1627;cas:157-03-9;wikipedia.en:6-Diazo-5-oxo-L-norleucine; Current ChEBI assertions;060-metacyc.html; linked Wikipedia document identity | context_only | MetaCyc returned an account-access page rather than readable compound details, so its exact target remains unverified. CAS is corroborated in current ChEBI and the public L-DON identity context but was not independently resolved through a registry. The Wikipedia document resolves to L-DON and is used only to verify document relevance and discover primary leads; it is not mechanism evidence. |
+| adopted | Europe PMC core citation records; 060-epmc.json; all ten records checked and all available abstracts read | context_only | PMIDs1412455,28454342 concern cancer/diet/combination experiments;2108451 and26425550 are reviews.25584882 is bioanalytical assay development;27560860 and28759224 concern distinct DON prodrugs and CNS delivery;28552037 concerns genotoxicity, not antibacterial efficacy.27489275 studies host protection in Sindbis encephalomyelitis.909432 is Glutamine binding sites, with no available abstract. These contexts do not justify one universal microbial target or clinical antimicrobial use. |
+| bacteria1965 | PMID:14293024; DOI10.1128/jb.89.5.1348-1353.1965; all six scanned pages1348-1353 OCR-read, pages1348/1350 visually checked;060-1965-all.txt and original PNGs | supports | Exact DON was tested in E.coli ATCC9637 in glucose-minimal salts medium at37C. The paper reports minimal inhibitory concentrations1.0microgram/mL on spread plates and0.1microgram/mL in broth at10^7 viable cells/mL. A serially selected strain grew at100microgram/mL; single-step selection at10microgram/mL gave4.5x10^-5 resistant cells per viable cell, not a sequenced determinant. Inosine plus D-glucosamine prevented inhibition, supporting purine/hexosamine pathway involvement; no specific binding site was measured in this experiment. Morphological changes, growth lag and viable counts have separate endpoints. These historical method-specific observations are not modern clinical breakpoints. |
+| tb2023 | PMID:37973991; DOI10.1038/s41467-023-43304-0; PMC10654700 ResultsSec3/Sec4, MIC/MBC and macrophage Methods; original Figure1 visually inspected | supports | Both DON and its distinct prodrug JHU083 have Mtb H37Rv MIC1-2microgram/mL in the Alamar Blue assay, defined as90% growth inhibition after7days at37C plus overnight dye incubation in7H9. The paper measures DON separately, so that activity is not inferred from the prodrug. MBC32microgram/mL and glutamine-supplementation results concern JHU083 and must not transfer to DON. In-vivo immune/metabolomic and survival outcomes also concern JHU083 treatment. No exclusive DON GlnA1 target engagement follows from the paper hypothesis. |
+| tb-figure | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2695/10654700/1d37e4ae4aa1/41467_2023_43304_Fig1_HTML.jpg; Original Figure1 panelsa-f visual verification | supports | Panelc explicitly lists DON MIC1-2microgram/mL. Panela distinguishes S-DON from its prodrug; panelsd/e label JHU083 supplementation/MBC. This supports exact material mapping and prevents transfer of the prodrug32microgram/mL MBC to DON. |
+| ctps2024 | PMID:38948148; DOI10.1002/mlf2.12119; PMC11211670 complete body, ResultsFigure4 and Methods read | supports | Purified E.coli CTP synthase, linked to UniProtP0A7E5, was examined with0.58mM DON,1mM CTP,0.5mM NADH and10mM MgCl2. The cryo-EM structure reports covalent DON attachment at C379. This is direct structural target evidence in purified enzyme, not proof that CTPS alone causes whole-cell killing. Ammonia-tunnel accessibility is a computational structural interpretation. The paper biochemical dose comparisons involve CTP/NADH/adenine; those are not a DON IC50. Protein filaments are distinct from bacterial cell filamentation in1965. |
+| pga2000 | PMID:10684596; DOI10.1021/bi991797d official abstract; RCSB1DJP entry and060-1DJP.json | supports | The original abstract reports DON and DONV covalent inhibition of Pseudomonas7A glutaminase-asparaginase with electron density connecting inhibitor to Thr20 and Tyr34. PDB1DJP is the DON complex;1DJO concerns DONV. The bound reacted ligand DO2 lacks the original diazo group and is not an exact chemical-equivalence xref for free DON. The entry identifies Pseudomonas sp.7A and UniProtP10182. Full original experimental text was not inspected; bacterial purified-enzyme evidence does not establish that this enzyme mediates all antibacterial activity. |
+| enzyme-boundaries | PMID:3707592;PMID:28378915; Complete official abstracts060-additional-epmc.json | context_only | The1986 P.aurantiaca glutamin(asparagin)ase experiment supports active-site inactivation and substrate protection, but essential threonine hydroxyl involvement was a proposal. The2017 GGT1 study is human enzyme with a distinct two-bond Thr381 mechanism. Host GGT1 is not a bacterial antimicrobial target and its kinetics cannot be assigned to CTPS or the Pseudomonas enzyme. |
+| antiviral | PMID:9037373;PMID:1968085;PMID:7710273;PMID:6208320; Complete official abstracts;060-antiviral-epmc.json | supports | Direct L-DON experiments support the antiviral role in cultured cells. The1997 HSV1 study in Vero cells reports50% plaque-production inhibition7.9-16microM at0.5mM glutamine and99% infectious-yield inhibition40microM; activity decreases with increasing glutamine. Other primary abstracts address HPIV2/mumps/VSV, RSV and poliovirus. Glycoprotein, RNA and maturation phenotypes are virus/cell-system dependent and are not proof of direct binding to a viral protein. No clinical antiviral efficacy is inferred. |
+| sindbis | PMID:27489275; DOI10.1128/JVI.01045-16; adopted complete abstract and PMC5044826 abstract/importance | context_only | DON delays paralysis/death by reducing the inflammatory immune response in NSV-infected mice, while delaying viral clearance; disease develops after withdrawal. This host-protection study cannot be described as direct antiviral suppression in that mouse model or as clinical efficacy. It does not negate the separate cultured-cell antiviral results. |
+| biosynthesis | PMID:33624374;PMID:35132756;PMID:39960436; 2021/2022 complete abstracts and2025 original introduction/Figure1 caption;060-additional-epmc.json,060-antiviral-epmc.json,060-biosynthesis2025.xml | context_only | The2021 work elucidates DON as a lysine-derived intermediate in alazopeptin biosynthesis; heterologous Streptomyces albus product is N-acetyl-DON, not automatically free DON. The2022 study assays carrier-tethered amino acids in AzpM dipeptide formation. The2025 paper retrospectively names S.griseoplanus/K.azatica alazopeptin producers and studies upstream lysine hydroxylases. These are specific production leads, not antimicrobial targets or proof that every host supplies free DON. No native producer claim needs correction. |
+| adapter | https://imodulondb.org/api/datasets; 060-imodulondb-datasets.txt before broad web research;060-imodulondb-ctps.txt and060-imodulondb-pyrG.txt | context_only | Dataset inventory was retrieved first. In covered e_coli/precise1k, descriptive CTP synthase query returned no genes/modules; the exact gene query pyrG returned b2780, product CTP synthetase, and zero modules. No component summary applies. This confirms gene-context naming only, not a DON-response dataset, target engagement or an antimicrobial causal chain. Exact Pseudomonas7A/aurantiaca and human enzyme contexts are not covered. |
+| search | Ignored-inclusive local and bounded free primary discovery; 060-local-hits.txt;060-maintained-search.txt; original citation/structure routes | context_only | No matching maintained override was found outside the readiness queue in the focused ignored-inclusive search. Free primary discovery found exact bacterial assays, structural enzyme studies, antiviral reports and biosynthetic leads. MetaCyc access and some EuropePMC fullTextXML requests were unavailable; PMC scans/HTML and alternate primary abstracts were used with access levels retained. |
+
+## Limits And Additional Notes
+
+- All ten adopted citation records were checked; available complete abstracts were read, but PMID909432 has no abstract. Most adopted host/prodrug reports were not inspected in full.
+- The1965 bacterial report was read as OCR of all six original pages; pages1348/1350 were visually inspected for organism, conditions, MIC and selection frequencies. No other graph was digitized.
+- The2024 CTPS original body was read in full. The2023 TB exact DON Results, related Methods and Figure1 were inspected; the remaining prodrug immunology/metabolomics sections were not fully audited.
+- The2000/1986 enzyme studies and older antiviral studies were inspected at full-abstract level; the2000 deposited1DJP structure record was additionally read. Primary whole-cell target causality is not inferred.
+- Biosynthetic studies were inspected at2021/2022 abstract level and2025 introduction/Figure1 scope only. No new producer determination is asserted.
+- MetaCyc entry access was unavailable; CAS registry detail was not independently resolved. The PubChem mismatch and correct CID mapping were directly checked and independently audited.
+- No native edit, paid research or contact occurred. Bounded discovery does not establish absence of further mechanisms, clinical studies or production evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T081108Z-6-diazo-5-oxo-l-norleucine-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'L-DON: wrong PubChem namespace and scoped primary inhibition evidence'
+started_at: '2026-10-21T07:52:52Z'
+finished_at: '2026-10-21T08:11:08Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native L-DON structure is coherent, but its PubChem compound xref identifies
+  an unrelated molecule. The same numerical accession is a PubChem substance that
+  resolves to the correct CID9087. A minor source grammar defect and specific primary
+  activity/mechanism enrichment remain. Bacterial, viral, host and biosynthetic contexts
+  require separate evidence.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/6-diazo-5-oxo-l-norleucine.yaml
+    sha256: 86549f6726579091ff33f182ad4040cefa7d6e3782f0a179958a3e43138a2cc8
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:138889
+  path: data/antibiotics/antibacterial/6-diazo-5-oxo-l-norleucine.yaml
+  label: 6-diazo-5-oxo-L-norleucine
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position060; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:138889
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:138889
+  command: just validate data/antibiotics/antibacterial/6-diazo-5-oxo-l-norleucine.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:138889
+  command: just validate-strict data/antibiotics/antibacterial/6-diazo-5-oxo-l-norleucine.yaml
+    --out /private/tmp/am-review-session/060-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:138889
+  command: .venv/bin/python /private/tmp/am-review-session/chem005.py 60
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-datasets
+  name: Structured source datasets
+  status: passed
+  required: false
+  summary: Actual free read-only command exited0; returned context described in adapter
+    evidence.
+  target_ids:
+  - CHEBI:138889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-ctps
+  name: Structured source ctps
+  status: passed
+  required: false
+  summary: Actual free read-only command exited0; returned context described in adapter
+    evidence.
+  target_ids:
+  - CHEBI:138889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism e_coli --dataset
+    precise1k --query 'CTP synthase'
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-pyrg
+  name: Structured source pyrg
+  status: passed
+  required: false
+  summary: Actual free read-only command exited0; returned context described in adapter
+    evidence.
+  target_ids:
+  - CHEBI:138889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism e_coli --dataset
+    precise1k --query pyrG
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:138889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:138889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:138889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:138889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:138889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:138889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:138889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:138889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:138889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/6-diazo-5-oxo-l-norleucine.yaml
+  locator: Every native YAML field
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: supports
+  summary: Read definition, three synonyms, three structural parents, antiviral and
+    antibacterial roles, complete chemical structure, three identity xrefs, one Wikipedia
+    document link, source concept and four seed/reseed events. Native SEEDED/EXACT
+    remains unchanged. The general definition refers to glutamine-utilising enzyme
+    inhibition and contains the phrase It is as inhibitor; no specific target, assay,
+    producer, resistance, graph or clinical object is asserted.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Entire CHEBI:138889 row; MANIFEST, source configuration, extract_chebi
+    database-accession handling and normalize_xref
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: supports
+  summary: The adopted row reproduces the xref and grammar defect. ChEBI extraction
+    uses the source table prefix and accession directly; the seeder passes bioregistry-style
+    ChEBI prefixes unchanged. ARO PubChem aliases are handled separately and do not
+    explain this ChEBI row. Ten PMID leads are discovery inputs, not ten automatically
+    attached primary mechanism claims. Version2026-08-30 and native mint antibioticmech:chebi-d532f764d2
+    reproduce.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:138889
+  locator: Entire current visible entry and actual PubChem hyperlink;060-chebi.html/visible.txt
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: supports
+  summary: Current ChEBI agrees with native L/S chemistry, all three synonyms, formula,
+    masses and net charge. Parents17087 ketone,39444 diazo compound and83822 non-proteinogenic
+    L-alpha-amino acid fit. Roles22587 antiviral and33282 antibacterial are separated
+    from structural parents. The current PubChem anchor explicitly uses bioregistry
+    pubchem.compound:24893639 and the same grammar typo, so neither is a generated-record-only
+    divergence.
+  snapshot_sha256: 7243ccf9316d7f389aa8262f5a7c88c665f91ed1d07e47e857d1c9cab8013eb0
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculation
+  locator: chem005.py60;060-chemistry.json
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: supports
+  summary: Both native encodings give YCWQAMGASJSUIP-YFKPBYRVSA-N, C6H9N3O3, net charge0,
+    one fragment, average mass171.156 and exact mass171.064391148, with the alpha
+    centre S. Formal opposite diazo charges sum to zero; this is not a salt. The source
+    mint matches.
+  snapshot_sha256: a1212bae986224eb95407063a3cb9d8cf1448c0d9b139f45780eebabdc911ea8
+- evidence_id: wrong-cid
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/24893639/property/InChI,InChIKey,MolecularFormula,MolecularWeight,Charge/JSON
+  locator: 060-pubchem.json; actual CID properties
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: refutes
+  summary: CID24893639 is C20H34O3, average mass322.5 and keyCINFXKCUQDROKC-AVSUADBLSA-N.
+    It is not L-DON, so the native identity xref is materially wrong even though it
+    resolves.
+  snapshot_sha256: 794a06789c5980cb42d9a0fd8aaab0c0d5cbe9094fc82a15a8f00687fa210290
+- evidence_id: sid-mapping
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/substance/sid/24893639/cids/JSON
+  locator: 060-pubchem-sid.json and060-pubchem-name.json
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: supports
+  summary: The PubChem substance accession SID24893639 resolves to CID9087. Independently
+    retrieved exact-name compound properties identify CID9087 with the complete native
+    Standard InChI, keyYCWQAMGASJSUIP-YFKPBYRVSA-N and formulaC6H9N3O3. The supported
+    compound-xref correction is pubchem.compound:9087, while retaining the original
+    SID provenance rather than changing correct native chemistry.
+  snapshot_sha256: 710cfcd852201ca715ae2aa05335a5773271ab48ad198369f5d019e9febb8925
+- evidence_id: xref-audit
+  kind: validation
+  reference: Independent second-agent CID/SID audit
+  locator: 060-independent-mapping-audit.json; cached response assertions and independent
+    InChI calculation
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: supports
+  summary: A second reviewer read the native record and independently confirmed the
+    unrelated CID24893639, SID24893639 to CID9087 mapping, and full native structure
+    agreement with CID9087. This is a source-owned wrong identity mapping, not unresolved
+    L-DON molecular identity.
+  snapshot_sha256: 668437a509a7a2afe413d4bc3729eee9f343b5ac05cb148aab850e7d10f4b244
+- evidence_id: xref-limits
+  kind: database
+  reference: metacyc.compound:CPD0-1627;cas:157-03-9;wikipedia.en:6-Diazo-5-oxo-L-norleucine
+  locator: Current ChEBI assertions;060-metacyc.html; linked Wikipedia document identity
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: context_only
+  summary: MetaCyc returned an account-access page rather than readable compound details,
+    so its exact target remains unverified. CAS is corroborated in current ChEBI and
+    the public L-DON identity context but was not independently resolved through a
+    registry. The Wikipedia document resolves to L-DON and is used only to verify
+    document relevance and discover primary leads; it is not mechanism evidence.
+- evidence_id: adopted
+  kind: database
+  reference: Europe PMC core citation records
+  locator: 060-epmc.json; all ten records checked and all available abstracts read
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: context_only
+  summary: PMIDs1412455,28454342 concern cancer/diet/combination experiments;2108451
+    and26425550 are reviews.25584882 is bioanalytical assay development;27560860 and28759224
+    concern distinct DON prodrugs and CNS delivery;28552037 concerns genotoxicity,
+    not antibacterial efficacy.27489275 studies host protection in Sindbis encephalomyelitis.909432
+    is Glutamine binding sites, with no available abstract. These contexts do not
+    justify one universal microbial target or clinical antimicrobial use.
+  snapshot_sha256: 5fc9d00528f936332e64ab6a0ebcd2d6b671f6c2ddcd326c318cf176cc978615
+- evidence_id: bacteria1965
+  kind: primary_source
+  reference: PMID:14293024
+  locator: DOI10.1128/jb.89.5.1348-1353.1965; all six scanned pages1348-1353 OCR-read,
+    pages1348/1350 visually checked;060-1965-all.txt and original PNGs
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: supports
+  summary: Exact DON was tested in E.coli ATCC9637 in glucose-minimal salts medium
+    at37C. The paper reports minimal inhibitory concentrations1.0microgram/mL on spread
+    plates and0.1microgram/mL in broth at10^7 viable cells/mL. A serially selected
+    strain grew at100microgram/mL; single-step selection at10microgram/mL gave4.5x10^-5
+    resistant cells per viable cell, not a sequenced determinant. Inosine plus D-glucosamine
+    prevented inhibition, supporting purine/hexosamine pathway involvement; no specific
+    binding site was measured in this experiment. Morphological changes, growth lag
+    and viable counts have separate endpoints. These historical method-specific observations
+    are not modern clinical breakpoints.
+  snapshot_sha256: 706b982722b267568a61df838f74fb8ce4139ae4ca5e0b490b73d1f26f83e40f
+- evidence_id: tb2023
+  kind: primary_source
+  reference: PMID:37973991
+  locator: DOI10.1038/s41467-023-43304-0; PMC10654700 ResultsSec3/Sec4, MIC/MBC and
+    macrophage Methods; original Figure1 visually inspected
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: supports
+  summary: Both DON and its distinct prodrug JHU083 have Mtb H37Rv MIC1-2microgram/mL
+    in the Alamar Blue assay, defined as90% growth inhibition after7days at37C plus
+    overnight dye incubation in7H9. The paper measures DON separately, so that activity
+    is not inferred from the prodrug. MBC32microgram/mL and glutamine-supplementation
+    results concern JHU083 and must not transfer to DON. In-vivo immune/metabolomic
+    and survival outcomes also concern JHU083 treatment. No exclusive DON GlnA1 target
+    engagement follows from the paper hypothesis.
+  snapshot_sha256: f5aec004d804a35a64c989aa141fe828f6eea2dc5d3be8a8540a057c75a2ab48
+- evidence_id: tb-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2695/10654700/1d37e4ae4aa1/41467_2023_43304_Fig1_HTML.jpg
+  locator: Original Figure1 panelsa-f visual verification
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: supports
+  summary: Panelc explicitly lists DON MIC1-2microgram/mL. Panela distinguishes S-DON
+    from its prodrug; panelsd/e label JHU083 supplementation/MBC. This supports exact
+    material mapping and prevents transfer of the prodrug32microgram/mL MBC to DON.
+  snapshot_sha256: c281e68e8da2bfa843d55f2ea69d508f7b4c2d5976faaf3c59357f162a55daee
+- evidence_id: ctps2024
+  kind: primary_source
+  reference: PMID:38948148
+  locator: DOI10.1002/mlf2.12119; PMC11211670 complete body, ResultsFigure4 and Methods
+    read
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: supports
+  summary: Purified E.coli CTP synthase, linked to UniProtP0A7E5, was examined with0.58mM
+    DON,1mM CTP,0.5mM NADH and10mM MgCl2. The cryo-EM structure reports covalent DON
+    attachment at C379. This is direct structural target evidence in purified enzyme,
+    not proof that CTPS alone causes whole-cell killing. Ammonia-tunnel accessibility
+    is a computational structural interpretation. The paper biochemical dose comparisons
+    involve CTP/NADH/adenine; those are not a DON IC50. Protein filaments are distinct
+    from bacterial cell filamentation in1965.
+  snapshot_sha256: afc26d9c95e7a20a6e87516f2f0381e81f74ca9131dd76629c046e81c2a6478a
+- evidence_id: pga2000
+  kind: primary_source
+  reference: PMID:10684596
+  locator: DOI10.1021/bi991797d official abstract; RCSB1DJP entry and060-1DJP.json
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: supports
+  summary: The original abstract reports DON and DONV covalent inhibition of Pseudomonas7A
+    glutaminase-asparaginase with electron density connecting inhibitor to Thr20 and
+    Tyr34. PDB1DJP is the DON complex;1DJO concerns DONV. The bound reacted ligand
+    DO2 lacks the original diazo group and is not an exact chemical-equivalence xref
+    for free DON. The entry identifies Pseudomonas sp.7A and UniProtP10182. Full original
+    experimental text was not inspected; bacterial purified-enzyme evidence does not
+    establish that this enzyme mediates all antibacterial activity.
+  snapshot_sha256: 8019699669ae4b2c44cefbbcb714b0ae39cf75ff0171448c3eb1db5cd370e84c
+- evidence_id: enzyme-boundaries
+  kind: primary_source
+  reference: PMID:3707592;PMID:28378915
+  locator: Complete official abstracts060-additional-epmc.json
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: context_only
+  summary: The1986 P.aurantiaca glutamin(asparagin)ase experiment supports active-site
+    inactivation and substrate protection, but essential threonine hydroxyl involvement
+    was a proposal. The2017 GGT1 study is human enzyme with a distinct two-bond Thr381
+    mechanism. Host GGT1 is not a bacterial antimicrobial target and its kinetics
+    cannot be assigned to CTPS or the Pseudomonas enzyme.
+  snapshot_sha256: e8c06444891c4add21614ded0bcad7bc61fba3a0be1bfb29814069b48ee29437
+- evidence_id: antiviral
+  kind: primary_source
+  reference: PMID:9037373;PMID:1968085;PMID:7710273;PMID:6208320
+  locator: Complete official abstracts;060-antiviral-epmc.json
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: supports
+  summary: Direct L-DON experiments support the antiviral role in cultured cells.
+    The1997 HSV1 study in Vero cells reports50% plaque-production inhibition7.9-16microM
+    at0.5mM glutamine and99% infectious-yield inhibition40microM; activity decreases
+    with increasing glutamine. Other primary abstracts address HPIV2/mumps/VSV, RSV
+    and poliovirus. Glycoprotein, RNA and maturation phenotypes are virus/cell-system
+    dependent and are not proof of direct binding to a viral protein. No clinical
+    antiviral efficacy is inferred.
+  snapshot_sha256: 898bbcbc705fcf9bb25d030fed2a6726b2048ed0beb7b6cc4379249cbbd3cd74
+- evidence_id: sindbis
+  kind: primary_source
+  reference: PMID:27489275
+  locator: DOI10.1128/JVI.01045-16; adopted complete abstract and PMC5044826 abstract/importance
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: context_only
+  summary: DON delays paralysis/death by reducing the inflammatory immune response
+    in NSV-infected mice, while delaying viral clearance; disease develops after withdrawal.
+    This host-protection study cannot be described as direct antiviral suppression
+    in that mouse model or as clinical efficacy. It does not negate the separate cultured-cell
+    antiviral results.
+  snapshot_sha256: 07578248db77561866593d0b90dbf8fb6bb4b21b7920723416716027dd972f2f
+- evidence_id: biosynthesis
+  kind: primary_source
+  reference: PMID:33624374;PMID:35132756;PMID:39960436
+  locator: 2021/2022 complete abstracts and2025 original introduction/Figure1 caption;060-additional-epmc.json,060-antiviral-epmc.json,060-biosynthesis2025.xml
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: context_only
+  summary: The2021 work elucidates DON as a lysine-derived intermediate in alazopeptin
+    biosynthesis; heterologous Streptomyces albus product is N-acetyl-DON, not automatically
+    free DON. The2022 study assays carrier-tethered amino acids in AzpM dipeptide
+    formation. The2025 paper retrospectively names S.griseoplanus/K.azatica alazopeptin
+    producers and studies upstream lysine hydroxylases. These are specific production
+    leads, not antimicrobial targets or proof that every host supplies free DON. No
+    native producer claim needs correction.
+  snapshot_sha256: 4743caef0c3aab1738d2aeca6365d9f832f1fc96e40559cae8dee6cfcda3ff00
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: 060-imodulondb-datasets.txt before broad web research;060-imodulondb-ctps.txt
+    and060-imodulondb-pyrG.txt
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: context_only
+  summary: Dataset inventory was retrieved first. In covered e_coli/precise1k, descriptive
+    CTP synthase query returned no genes/modules; the exact gene query pyrG returned
+    b2780, product CTP synthetase, and zero modules. No component summary applies.
+    This confirms gene-context naming only, not a DON-response dataset, target engagement
+    or an antimicrobial causal chain. Exact Pseudomonas7A/aurantiaca and human enzyme
+    contexts are not covered.
+  snapshot_sha256: 09f679255e60abd934304a852bcb8343e922d20113ca5f0ae21f73462d16cff3
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local and bounded free primary discovery
+  locator: 060-local-hits.txt;060-maintained-search.txt; original citation/structure
+    routes
+  accessed_at: '2026-10-21T08:06:49Z'
+  support: context_only
+  summary: No matching maintained override was found outside the readiness queue in
+    the focused ignored-inclusive search. Free primary discovery found exact bacterial
+    assays, structural enzyme studies, antiviral reports and biosynthetic leads. MetaCyc
+    access and some EuropePMC fullTextXML requests were unavailable; PMC scans/HTML
+    and alternate primary abstracts were used with access levels retained.
+  search_scope: prepare.py60 used rg --no-ignore --hidden across batch006 excluding.git/.venv.
+    Focused search covered curation,conf,reviews,reports/yaml_record_review excluding
+    record_review_queue.tsv for CHEBI:138889,full key,exact L-DON name and24893639.
+    Web discovery used exact name with Escherichia,glutaminase,antiviral,replication
+    and biosynthesis; sources were official PubMed/EuropePMC,PMC,publishers,RCSB,PubChem
+    and ChEBI. No global absence claim.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Native exact L-DON chemistry
+  outcome: supported
+  summary: Complete structures, alpha-S configuration, formula, masses and neutral
+    charge agree. Wrong external mapping does not invalidate the independently supported
+    native molecule.
+  target_ids:
+  - CHEBI:138889
+  evidence_ids:
+  - record
+  - chebi
+  - chemistry
+  - sid-mapping
+- assessment_id: xref
+  area: grounding
+  topic: PubChem identity mapping
+  outcome: concern
+  summary: The compound xref points to an unrelated entity; SID interpretation resolves
+    the provenance and supplies exact CID9087. Other external access limits are separate.
+  target_ids:
+  - CHEBI:138889
+  evidence_ids:
+  - wrong-cid
+  - sid-mapping
+  - xref-audit
+  - owner
+  - xref-limits
+- assessment_id: parents
+  area: grounding
+  topic: Parents and activity roles
+  outcome: supported
+  summary: Structural parents fit. Direct bacterial and cultured-cell antiviral primary
+    results support both roles with their assay contexts.
+  target_ids:
+  - CHEBI:138889
+  evidence_ids:
+  - chebi
+  - bacteria1965
+  - tb2023
+  - antiviral
+- assessment_id: definition
+  area: representation
+  topic: Definition grammar and biochemical scope
+  outcome: concern
+  summary: The generic glutamine-enzyme inhibition clause is supported; It is as inhibitor
+    is a source-inherited grammatical error.
+  target_ids:
+  - CHEBI:138889
+  evidence_ids:
+  - record
+  - chebi
+  - ctps2024
+  - pga2000
+- assessment_id: mechanism
+  area: evidence
+  topic: Multiple inhibited enzymes and downstream phenotypes
+  outcome: supported
+  summary: Direct purified-enzyme structural evidence supports qualified targets.
+    Historical rescue, host immune modulation and viral maturation are different evidence
+    types and do not prove one universal lethal mechanism.
+  target_ids:
+  - CHEBI:138889
+  evidence_ids:
+  - ctps2024
+  - pga2000
+  - enzyme-boundaries
+  - bacteria1965
+  - sindbis
+  - adapter
+- assessment_id: completeness
+  area: completeness
+  topic: Exact primary activity and target follow-up
+  outcome: concern
+  summary: Specific assays and structural target evidence are available for curator
+    disposition. Modern TB drug combinations, host enzyme kinetics and prodrug outcomes
+    must not be merged into free-DON claims.
+  target_ids:
+  - CHEBI:138889
+  evidence_ids:
+  - record
+  - bacteria1965
+  - tb2023
+  - ctps2024
+  - pga2000
+  - antiviral
+- assessment_id: producer
+  area: representation
+  topic: Biosynthetic and resistance scope
+  outcome: unknown
+  summary: No native producer or resistance object is asserted. Alazopeptin pathways,
+    carrier intermediates and N-acetyl-DON production require exact-product qualification.
+    Historical selected resistance has no sequenced determinant.
+  target_ids:
+  - CHEBI:138889
+  evidence_ids:
+  - record
+  - biosynthesis
+  - bacteria1965
+- assessment_id: other
+  area: scope
+  topic: Clinical, graph and dataset annotations
+  outcome: not_applicable
+  summary: No optional object is inherently required. Purified-enzyme binding, cultured-cell
+    virus inhibition and prodrug mouse studies do not establish clinical safety/efficacy
+    or a complete causal graph.
+  target_ids:
+  - CHEBI:138889
+  evidence_ids:
+  - record
+  - ctps2024
+  - antiviral
+  - tb2023
+- assessment_id: provenance
+  area: ownership
+  topic: Source and history
+  outcome: supported
+  summary: Maintained source, mint and four history events reproduce. Correct generated
+    fields through maintained input handling and new scientific annotations through
+    validated writer/history.
+  target_ids:
+  - CHEBI:138889
+  evidence_ids:
+  - owner
+  - record
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-138889-pubchem-substance-compound-namespace
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Replace the unrelated PubChem compound mapping
+  description: Native pubchem.compound:24893639 denotes an unrelated C20H34O3 entity.24893639
+    is the source substance accession; PubChem resolves SID24893639 to exact CID9087.
+    Current ChEBI repeats the wrong compound namespace.
+  target_ids:
+  - CHEBI:138889
+  field_paths:
+  - xrefs
+  evidence_ids:
+  - wrong-cid
+  - sid-mapping
+  - xref-audit
+  - chebi
+  - owner
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI assertions; preserve source provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source prefix/accession and definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated cross-reference/definition normalization and reproducible seeding
+  rule_id: native-review-checklist:Identity, Evidence, Definition and Activity
+  native_severity: major wrong exact-identity cross-reference
+  normalization_reason: Severity reflects the specific asserted error or verified
+    primary enrichment, not schema success or empty optional fields alone.
+- finding_id: F2
+  issue_key: chebi-138889-definition-as-inhibitor-grammar
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct source-inherited definition grammar
+  description: The phrase It is as inhibitor should use an inhibitor. The scientific
+    biochemical clause is supported; this is a wording defect.
+  target_ids:
+  - CHEBI:138889
+  field_paths:
+  - definition
+  evidence_ids:
+  - record
+  - chebi
+  - owner
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI assertions; preserve source provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source prefix/accession and definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated cross-reference/definition normalization and reproducible seeding
+  rule_id: native-review-checklist:Identity, Evidence, Definition and Activity
+  native_severity: minor presentation defect
+  normalization_reason: Severity reflects the specific asserted error or verified
+    primary enrichment, not schema success or empty optional fields alone.
+- finding_id: F3
+  issue_key: chebi-138889-primary-activity-target-disposition
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Curate the verified primary assays and enzyme targets with context
+  description: Exact DON bacterial assays, cultured-cell antiviral observations and
+    purified-enzyme binding structures are available for specific curation. Preserve
+    distinct organisms, assays, selected resistance, prodrug boundaries and structural-versus-cellular
+    inference.
+  target_ids:
+  - CHEBI:138889
+  field_paths:
+  - evidence
+  - molecular_targets
+  - activity_spectrum
+  - mode_of_action_notes
+  evidence_ids:
+  - bacteria1965
+  - tb2023
+  - ctps2024
+  - pga2000
+  - antiviral
+  - sindbis
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/6-diazo-5-oxo-l-norleucine.yaml
+    role: Curator-owned primary evidence, targets and activity through validated writer/history
+  rule_id: native-review-checklist:Identity, Evidence, Definition and Activity
+  native_severity: minor concrete primary-evidence completeness follow-up
+  normalization_reason: Severity reflects the specific asserted error or verified
+    primary enrichment, not schema success or empty optional fields alone.
+actions:
+- action_id: A1
+  description: Correct the maintained PubChem mapping to CID9087 and source grammar,
+    then regenerate imported fields.
+  finding_ids:
+  - F1
+  - F2
+  target_ids:
+  - CHEBI:138889
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI assertions; preserve source provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source prefix/accession and definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated cross-reference/definition normalization and reproducible seeding
+  acceptance_checks:
+  - Retain the evidence that24893639 was a substance accession; replace the compound
+    identity mapping with verified pubchem.compound:9087. Do not change correct native
+    InChI/key/formula or insert a substance identifier as an unqualified exact compound
+    equivalence.
+  - Implement the correction through maintained source refresh or reviewed source-specific
+    normalization so reseeding reproduces it; retain truthful source origin/version
+    and the original mapping provenance.
+  - Correct It is as inhibitor to It is an inhibitor while preserving its scientifically
+    supported scope. Run focused schema/strict, reproduction, full-corpus integrity
+    and required QC.
+- action_id: A2
+  description: Curate or explicitly disposition exact primary activity and enzyme
+    evidence with assay-level scope.
+  finding_ids:
+  - F3
+  target_ids:
+  - CHEBI:138889
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/6-diazo-5-oxo-l-norleucine.yaml
+    role: Curator-owned primary evidence, targets and activity through validated writer/history
+  acceptance_checks:
+  - Preserve historical E.coli ATCC9637 medium, inoculum and plate/broth endpoints.
+    Selected growth at100microgram/mL and single-step frequency are not a clinical
+    breakpoint or identified genetic resistance determinant.
+  - Keep DON H37Rv Alamar Blue MIC1-2microgram/mL separate from JHU083 MBC32microgram/mL,
+    glutamine supplementation and mouse efficacy. Verify source methods before assigning
+    final assay metadata.
+  - For E.coli CTPS and Pseudomonas7A glutaminase-asparaginase, represent purified-enzyme
+    structural interaction with exact protein/taxon grounding, without claiming a
+    uniquely proven cellular killing target. PDB modified ligand DO2 is not an exact
+    free-DON xref; host GGT1 stays separate.
+  - Preserve virus/cell/glutamine dependence and abstract-level access for older antiviral
+    studies. Sindbis immune protection delays clearance and cannot be rewritten as
+    direct viral inhibition in that model.
+  - Verify original production experiments before producer annotation; distinguish
+    free DON,N-acetyl-DON,carrier-bound DON and alazopeptin. Use validated writer/history
+    and required gates without automatic native status promotion.
+limitations:
+- All ten adopted citation records were checked; available complete abstracts were
+  read, but PMID909432 has no abstract. Most adopted host/prodrug reports were not
+  inspected in full.
+- The1965 bacterial report was read as OCR of all six original pages; pages1348/1350
+  were visually inspected for organism, conditions, MIC and selection frequencies.
+  No other graph was digitized.
+- The2024 CTPS original body was read in full. The2023 TB exact DON Results, related
+  Methods and Figure1 were inspected; the remaining prodrug immunology/metabolomics
+  sections were not fully audited.
+- The2000/1986 enzyme studies and older antiviral studies were inspected at full-abstract
+  level; the2000 deposited1DJP structure record was additionally read. Primary whole-cell
+  target causality is not inferred.
+- Biosynthetic studies were inspected at2021/2022 abstract level and2025 introduction/Figure1
+  scope only. No new producer determination is asserted.
+- MetaCyc entry access was unavailable; CAS registry detail was not independently
+  resolved. The PubChem mismatch and correct CID mapping were directly checked and
+  independently audited.
+- No native edit, paid research or contact occurred. Bounded discovery does not establish
+  absence of further mechanisms, clinical studies or production evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

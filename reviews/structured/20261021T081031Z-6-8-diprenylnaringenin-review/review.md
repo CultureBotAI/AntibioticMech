@@ -1,0 +1,700 @@
+# 6,8-Diprenylnaringenin: exact S identity and qualified antibacterial evidence
+
+- Review: 20261021T081031Z-6-8-diprenylnaringenin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T07:52:50Z
+- Finished UTC: 2026-10-21T08:10:31Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The stereodefined neutral flavanone is chemically coherent and the broad antibacterial role is supported by the adopted lonchocarpol A primary abstract. One informational follow-up concerns optional primary activity evidence. Recent synthetic-material results cannot be assigned automatically to this exact S enantiomer; no direct antibacterial target is established. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position059; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:2156 | data/antibiotics/antibacterial/6-8-diprenylnaringenin.yaml | generated | 6,8-diprenylnaringenin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema verification | passed | True | CHEBI:2156 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:2156 | Actual focused execution exited 0. |
+| Focused chemistry verification | passed | False | CHEBI:2156 | Actual focused execution exited 0. |
+| Structured expression-context applicability | not_applicable | False | CHEBI:2156 | The native record names no gene, protein, regulator, pathway, stress response or transcriptomic dataset. Host PTP1B occurs only as a rejected literature transfer. |
+| Authoritative full QC | failed | True | CHEBI:2156 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:2156 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:2156 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:2156 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:2156 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:2156 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:2156 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:2156 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:2156 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral S flavanone
+
+identity: supported. Targets: CHEBI:2156.
+
+Definition, synonyms, native encodings and KEGG Molfile agree on the stereodefined S entity. Synthetic constitution-only material is not treated as an exact stereochemical match.
+
+### Parents and external identifiers
+
+grounding: supported. Targets: CHEBI:2156.
+
+Three structural parents fit. KEGG corroborates complete structure and CAS. KNApSAcK structures match despite its internally inconsistent displayed key; Reaxys remains source-asserted.
+
+### Broad antibacterial role
+
+evidence: supported. Targets: CHEBI:2156.
+
+The1998 exact-name primary abstract supports the role, with mouse-plasma antagonism and no demonstrated in-vivo efficacy retained. Numerical strain-specific reuse requires full methods and identity verification.
+
+### Antibacterial target scope
+
+evidence: unknown. Targets: CHEBI:2156.
+
+No native target is asserted. Nondifferential macromolecular inhibition, host PTP1B results for other compounds and synthetic-material family comparisons do not establish a selective molecular target.
+
+### Producer, resistance, clinical and graph fields
+
+representation: not_applicable. Targets: CHEBI:2156.
+
+Optional blanks alone are not errors. Natural isolation is occurrence evidence; neither whole-plant reports nor HIV/host studies establish clinical antibacterial efficacy or resistance determinants.
+
+### Source reproduction and status
+
+ownership: supported. Targets: CHEBI:2156.
+
+Source fields, mint and three history events are coherent. New scientific annotations require validated writer/history and do not follow automatically from review.
+
+## Findings
+
+### F1: Optional activity enrichment must preserve exact stereochemistry and assay limits
+
+informational / open / confirmed; issue key: chebi-2156-primary-activity-stereochemical-scope.
+
+The1998 primary abstract offers qualitative evidence suitable for explicit citation. Recent prepared-material assays provide additional leads, but their stereochemical scope has not been shown to match the native S entity. No current false numerical measurement or target is asserted.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+If selected for curation, add bounded primary activity evidence and verify assayed stereochemistry before quantitative transfer.
+
+- Use the1998 primary abstract only for qualitative exact-name antibacterial support until full methods establish strains, endpoints and material identity. Preserve plasma antagonism and lack of in-vivo activity.
+- Resolve the2025 prepared material absolute configuration and purity before assigning its MIC/MBC to this S record; do not assume a racemate or alter correct native stereochemistry to accommodate ambiguous material.
+- Keep host PTP1B and HIV experiments separate; nondifferential synthesis inhibition is not a selective molecular target. Plant isolation does not prove biosynthesis.
+- Use validated writer/history and focused schema/strict, corpus reproduction and required QC; retain native status until sign-off criteria are satisfied.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/6-8-diprenylnaringenin.yaml; Entire YAML | supports | Read definition, three exact synonyms, three structural parents, antibacterial role, all chemical fields, four xrefs, source concept and three seed/reseed events. The definition expressly specifies (S)-naringenin. No numerical activity, mechanism, molecular target, producer, resistance, clinical, graph or dataset annotation is asserted. SEEDED/EXACT status remains unchanged. |
+| owner | data/raw/chebi_antimicrobials.tsv; Entire CHEBI:2156 row; raw MANIFEST, source configuration, extractor and seeder | supports | The maintained row reproduces the native fields and three adopted PMID leads. Mechanism-role list is empty. Source version2026-08-30 and SHA256-derived mint antibioticmech:chebi-a0a64e8e12 agree. Imported identity corrections would need source handling; new scientific evidence belongs to curator-owned native annotations. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:2156; Entire visible current entry;059-chebi.html/visible.txt | supports | Current ChEBI confirms the S stereochemistry, all three synonyms, structure, formula/masses and four xref strings. Parents140331 4-prime-hydroxyflavanones,140377 (2S)-flavan-4-ones and38739 trihydroxyflavanone fit the structure. Antibacterial33282 is an activity role. No generic flavonoid target is inferred. |
+| chemistry | RDKit calculation; chem005.py59;059-chemistry.json | supports | Native SMILES and InChI independently give HCNLDGTUMBOHKT-NRFANRHFSA-N, C25H28O5, charge0, one fragment, average mass408.494 and exact mass408.193673996. The single tetrahedral centre is S; both prenyl terminal alkenes have equivalent methyl substituents and do not require E/Z labels. Mint reproduces. |
+| kegg | https://rest.kegg.jp/get/C09724; Complete compound text and Molfile;059-kegg.txt/mol | supports | KEGG C09724 names6,8-diprenylnaringenin and corroborates CAS68236-11-3 and formula. Independent Molfile parsing gives the same complete native key and S centre. This verifies the chemical xref, not a target or biological producer. |
+| knapsack | https://www.knapsackfamily.com/knapsack_core/information.php?word=C00000954; Complete identity and occurrence table;059-knapsack.html | partial | KNApSAcK names the compound and supplies matching complete InChI and stereochemical SMILES. Its displayed key HCNLDGTUMBOHKT-RNZRUAGMNA-N differs from the key regenerated from those structures, HCNLDGTUMBOHKT-NRFANRHFSA-N. This is an internal external-database inconsistency; matching structures do not justify asserting that every displayed key agrees. Listed plant occurrences are not proof of biosynthetic production. |
+| primary1998 | PMID:9599265; DOI10.1021/np9703961; official ACS abstract and complete Europe PMC abstract in059-epmc.json | supports | The original lonchocarpol A abstract reports inhibition of methicillin-resistant S.aureus and vancomycin-resistant E.faecium in vitro, antagonism by mouse plasma and lack of in-vivo activity. Macromolecular incorporation experiments did not distinguish RNA, DNA, cell-wall and protein synthesis inhibition. The abstract supports broad antibacterial filing but neither a selective molecular target nor exact strain-resolved MICs. Full methods, strain identifiers and absolute-configuration characterization were not accessible. |
+| other-adopted | PMID:11325248;PMID:16972201; DOI10.1021/np0005457 and10.1055/s-2006-946674; all three adopted records/abstracts read | context_only | The2001 Monotes africanus study names lonchocarpol A as compound6 and corrects its13C-NMR assignments; its HIV/cell-cytotoxicity context is separate from antibacterial mechanism. The2006 PTP1B study names senegalensin as compound2, while the reported active compounds are1,5 and6. Its host enzyme results cannot be transferred to compound2 or used as a bacterial target. Plant isolation is not direct biosynthesis evidence. |
+| synthetic2025 | PMID:40827787; DOI10.1021/acs.jnatprod.5c00540; PMC12481577 Table1, compound8 and Experimental Section; full article already inspected, target-specific mapping rechecked | context_only | This study synthesized6,8-diprenylnaringenin8 and reports MRSA18HN MIC6&lt;MIC&lt;=13microgram/mL and MBC13microgram/mL. These are observations on its prepared material, whose exact S enantiomeric identity was not established in the inspected source. They remain scoped discovery context and are not normalized onto the native S record. The study includes different phenolics with different membrane responses; family-level permeabilization does not establish the native exact compound target. |
+| synthetic-si | https://api.figshare.com/v2/articles/29940876; Official np5c00540_si_001.pdf; Materials and synthesis/analysis pp4-8, TablesS1/S2 pp9/12, p20 visual NMR; complete extracted text searched for stereo/enantiomer/rotation terms | context_only | Compound8 is made by prenylating purchased naringenin, followed by ordinary C18 separation. TableS1 gives C25H28O5, UV purity81% and NMR purity85%; TableS2 and FiguresS11/S12 support constitution. The inspected methods do not specify naringenin enantiopurity or establish product absolute configuration. NMR in achiral acetone and constitutional matching alone do not prove the native S identity. Unassigned stereochemistry is not assumed to mean racemate. |
+| search | Ignored-inclusive local and bounded primary discovery; 059-local-hits.txt;059-maintained-search.txt; public exact-name and DOI retrieval | context_only | Focused maintained-path searches returned no matching target override outside the readiness queue, with ignored files included. Exact-name/alias searches recovered the adopted primary abstract and recent synthesis paper. ACS full-page/PDF routes for1998/2001 returned403. The PMC supplement route returned HTML rather than PDF; official Figshare supplied the valid supplement. Reaxys6940246 was not independently inspected. |
+
+## Limits And Additional Notes
+
+- The1998 and2001 primary full texts were unavailable through attempted free ACS routes; all three adopted records and complete abstracts were read. Original assay tables, absolute-configuration experiments and full2001 NMR corrections were not inspected.
+- The2025 main article was inspected in full during the closely related review and compound8 mapping was rechecked here. Its relevant supplementary synthesis/analysis sections and tables were read, with p20 NMR visual verification; other-compound supplementary figures were not exhaustively reinterpreted.
+- KNApSAcK has an internally inconsistent displayed key despite matching full InChI/SMILES. Reaxys detail was not independently inspected.
+- No native edit or paid research occurred. Bounded discovery does not prove absence of further exact-compound mechanism or activity evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T081031Z-6-8-diprenylnaringenin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: '6,8-Diprenylnaringenin: exact S identity and qualified antibacterial evidence'
+started_at: '2026-10-21T07:52:50Z'
+finished_at: '2026-10-21T08:10:31Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The stereodefined neutral flavanone is chemically coherent and the broad
+  antibacterial role is supported by the adopted lonchocarpol A primary abstract.
+  One informational follow-up concerns optional primary activity evidence. Recent
+  synthetic-material results cannot be assigned automatically to this exact S enantiomer;
+  no direct antibacterial target is established. Scientific assessment retains the
+  stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/6-8-diprenylnaringenin.yaml
+    sha256: bd96f127a23934a715bf19acbdba40e9bd761b22076ab41b1f97e01492639641
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:2156
+  path: data/antibiotics/antibacterial/6-8-diprenylnaringenin.yaml
+  label: 6,8-diprenylnaringenin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position059; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:2156
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:2156
+  command: just validate data/antibiotics/antibacterial/6-8-diprenylnaringenin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:2156
+  command: just validate-strict data/antibiotics/antibacterial/6-8-diprenylnaringenin.yaml
+    --out /private/tmp/am-review-session/059-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:2156
+  command: .venv/bin/python /private/tmp/am-review-session/chem005.py 59
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter
+  name: Structured expression-context applicability
+  status: not_applicable
+  required: false
+  summary: The native record names no gene, protein, regulator, pathway, stress response
+    or transcriptomic dataset. Host PTP1B occurs only as a rejected literature transfer.
+  target_ids:
+  - CHEBI:2156
+  evidence_ids:
+  - record
+  - other-adopted
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:2156
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:2156
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:2156
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:2156
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:2156
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:2156
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:2156
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:2156
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:2156
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/6-8-diprenylnaringenin.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T08:03:49Z'
+  support: supports
+  summary: Read definition, three exact synonyms, three structural parents, antibacterial
+    role, all chemical fields, four xrefs, source concept and three seed/reseed events.
+    The definition expressly specifies (S)-naringenin. No numerical activity, mechanism,
+    molecular target, producer, resistance, clinical, graph or dataset annotation
+    is asserted. SEEDED/EXACT status remains unchanged.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Entire CHEBI:2156 row; raw MANIFEST, source configuration, extractor and
+    seeder
+  accessed_at: '2026-10-21T08:03:49Z'
+  support: supports
+  summary: The maintained row reproduces the native fields and three adopted PMID
+    leads. Mechanism-role list is empty. Source version2026-08-30 and SHA256-derived
+    mint antibioticmech:chebi-a0a64e8e12 agree. Imported identity corrections would
+    need source handling; new scientific evidence belongs to curator-owned native
+    annotations.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:2156
+  locator: Entire visible current entry;059-chebi.html/visible.txt
+  accessed_at: '2026-10-21T08:03:49Z'
+  support: supports
+  summary: Current ChEBI confirms the S stereochemistry, all three synonyms, structure,
+    formula/masses and four xref strings. Parents140331 4-prime-hydroxyflavanones,140377
+    (2S)-flavan-4-ones and38739 trihydroxyflavanone fit the structure. Antibacterial33282
+    is an activity role. No generic flavonoid target is inferred.
+  snapshot_sha256: f82fc533648b6d6b39ebc914cf8235d474cc3d5ce95f0209db33c2154cff6f2c
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit calculation
+  locator: chem005.py59;059-chemistry.json
+  accessed_at: '2026-10-21T08:03:49Z'
+  support: supports
+  summary: Native SMILES and InChI independently give HCNLDGTUMBOHKT-NRFANRHFSA-N,
+    C25H28O5, charge0, one fragment, average mass408.494 and exact mass408.193673996.
+    The single tetrahedral centre is S; both prenyl terminal alkenes have equivalent
+    methyl substituents and do not require E/Z labels. Mint reproduces.
+  snapshot_sha256: 9513d1e3226855d0310a90238efcc0d9e4abb0798cb7ecc42790d1f4a03669ed
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/C09724
+  locator: Complete compound text and Molfile;059-kegg.txt/mol
+  accessed_at: '2026-10-21T08:03:49Z'
+  support: supports
+  summary: KEGG C09724 names6,8-diprenylnaringenin and corroborates CAS68236-11-3
+    and formula. Independent Molfile parsing gives the same complete native key and
+    S centre. This verifies the chemical xref, not a target or biological producer.
+  snapshot_sha256: 0229e67d2b185a6f27d9dc466e4d2e1588c3926881bc9768d995d1ec3ca55e50
+- evidence_id: knapsack
+  kind: database
+  reference: https://www.knapsackfamily.com/knapsack_core/information.php?word=C00000954
+  locator: Complete identity and occurrence table;059-knapsack.html
+  accessed_at: '2026-10-21T08:03:49Z'
+  support: partial
+  summary: KNApSAcK names the compound and supplies matching complete InChI and stereochemical
+    SMILES. Its displayed key HCNLDGTUMBOHKT-RNZRUAGMNA-N differs from the key regenerated
+    from those structures, HCNLDGTUMBOHKT-NRFANRHFSA-N. This is an internal external-database
+    inconsistency; matching structures do not justify asserting that every displayed
+    key agrees. Listed plant occurrences are not proof of biosynthetic production.
+  snapshot_sha256: 8c859d6c5f2c3c144bd1453c85668bde71a2e82afcd619d8bb5f19035d76f8f6
+- evidence_id: primary1998
+  kind: primary_source
+  reference: PMID:9599265
+  locator: DOI10.1021/np9703961; official ACS abstract and complete Europe PMC abstract
+    in059-epmc.json
+  accessed_at: '2026-10-21T08:03:49Z'
+  support: supports
+  summary: The original lonchocarpol A abstract reports inhibition of methicillin-resistant
+    S.aureus and vancomycin-resistant E.faecium in vitro, antagonism by mouse plasma
+    and lack of in-vivo activity. Macromolecular incorporation experiments did not
+    distinguish RNA, DNA, cell-wall and protein synthesis inhibition. The abstract
+    supports broad antibacterial filing but neither a selective molecular target nor
+    exact strain-resolved MICs. Full methods, strain identifiers and absolute-configuration
+    characterization were not accessible.
+  snapshot_sha256: 303a6ba724b46c2e00fdfc2d6990c409319652b39fdfbed7dbbcbfdc4bd55e61
+- evidence_id: other-adopted
+  kind: primary_source
+  reference: PMID:11325248;PMID:16972201
+  locator: DOI10.1021/np0005457 and10.1055/s-2006-946674; all three adopted records/abstracts
+    read
+  accessed_at: '2026-10-21T08:03:49Z'
+  support: context_only
+  summary: The2001 Monotes africanus study names lonchocarpol A as compound6 and corrects
+    its13C-NMR assignments; its HIV/cell-cytotoxicity context is separate from antibacterial
+    mechanism. The2006 PTP1B study names senegalensin as compound2, while the reported
+    active compounds are1,5 and6. Its host enzyme results cannot be transferred to
+    compound2 or used as a bacterial target. Plant isolation is not direct biosynthesis
+    evidence.
+  snapshot_sha256: 303a6ba724b46c2e00fdfc2d6990c409319652b39fdfbed7dbbcbfdc4bd55e61
+- evidence_id: synthetic2025
+  kind: primary_source
+  reference: PMID:40827787
+  locator: DOI10.1021/acs.jnatprod.5c00540; PMC12481577 Table1, compound8 and Experimental
+    Section; full article already inspected, target-specific mapping rechecked
+  accessed_at: '2026-10-21T08:03:49Z'
+  support: context_only
+  summary: This study synthesized6,8-diprenylnaringenin8 and reports MRSA18HN MIC6<MIC<=13microgram/mL
+    and MBC13microgram/mL. These are observations on its prepared material, whose
+    exact S enantiomeric identity was not established in the inspected source. They
+    remain scoped discovery context and are not normalized onto the native S record.
+    The study includes different phenolics with different membrane responses; family-level
+    permeabilization does not establish the native exact compound target.
+  snapshot_sha256: b8d923e419e4ade70db9d9a4102da00a81a0a50e5bab26a578bfd746e3f84d4e
+- evidence_id: synthetic-si
+  kind: primary_source
+  reference: https://api.figshare.com/v2/articles/29940876
+  locator: Official np5c00540_si_001.pdf; Materials and synthesis/analysis pp4-8,
+    TablesS1/S2 pp9/12, p20 visual NMR; complete extracted text searched for stereo/enantiomer/rotation
+    terms
+  accessed_at: '2026-10-21T08:03:49Z'
+  support: context_only
+  summary: Compound8 is made by prenylating purchased naringenin, followed by ordinary
+    C18 separation. TableS1 gives C25H28O5, UV purity81% and NMR purity85%; TableS2
+    and FiguresS11/S12 support constitution. The inspected methods do not specify
+    naringenin enantiopurity or establish product absolute configuration. NMR in achiral
+    acetone and constitutional matching alone do not prove the native S identity.
+    Unassigned stereochemistry is not assumed to mean racemate.
+  snapshot_sha256: 2fac7566954804c1f362bb09cd6cb601bf8ff946cc0b2e9bbca6f085f0577b3d
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local and bounded primary discovery
+  locator: 059-local-hits.txt;059-maintained-search.txt; public exact-name and DOI
+    retrieval
+  accessed_at: '2026-10-21T08:03:49Z'
+  support: context_only
+  summary: Focused maintained-path searches returned no matching target override outside
+    the readiness queue, with ignored files included. Exact-name/alias searches recovered
+    the adopted primary abstract and recent synthesis paper. ACS full-page/PDF routes
+    for1998/2001 returned403. The PMC supplement route returned HTML rather than PDF;
+    official Figshare supplied the valid supplement. Reaxys6940246 was not independently
+    inspected.
+  search_scope: prepare.py59 used rg --no-ignore --hidden across batch006 excluding.git/.venv.
+    Follow-up searched curation,conf,reviews,reports/yaml_record_review excluding
+    record_review_queue.tsv for CHEBI:2156,full key,lonchocarpol A,Senegalensin and
+    exact label. Free discovery used exact names,1998 title and original DOI; source
+    checks used ChEBI,KEGG,KNApSAcK,EuropePMC,ACS and official Figshare. Bounded,
+    not a global absence search.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral S flavanone
+  outcome: supported
+  summary: Definition, synonyms, native encodings and KEGG Molfile agree on the stereodefined
+    S entity. Synthetic constitution-only material is not treated as an exact stereochemical
+    match.
+  target_ids:
+  - CHEBI:2156
+  evidence_ids:
+  - record
+  - chebi
+  - chemistry
+  - kegg
+  - synthetic-si
+- assessment_id: xref
+  area: grounding
+  topic: Parents and external identifiers
+  outcome: supported
+  summary: Three structural parents fit. KEGG corroborates complete structure and
+    CAS. KNApSAcK structures match despite its internally inconsistent displayed key;
+    Reaxys remains source-asserted.
+  target_ids:
+  - CHEBI:2156
+  evidence_ids:
+  - chebi
+  - kegg
+  - knapsack
+- assessment_id: activity
+  area: evidence
+  topic: Broad antibacterial role
+  outcome: supported
+  summary: The1998 exact-name primary abstract supports the role, with mouse-plasma
+    antagonism and no demonstrated in-vivo efficacy retained. Numerical strain-specific
+    reuse requires full methods and identity verification.
+  target_ids:
+  - CHEBI:2156
+  evidence_ids:
+  - primary1998
+  - record
+- assessment_id: mechanism
+  area: evidence
+  topic: Antibacterial target scope
+  outcome: unknown
+  summary: No native target is asserted. Nondifferential macromolecular inhibition,
+    host PTP1B results for other compounds and synthetic-material family comparisons
+    do not establish a selective molecular target.
+  target_ids:
+  - CHEBI:2156
+  evidence_ids:
+  - primary1998
+  - other-adopted
+  - synthetic2025
+- assessment_id: optional
+  area: representation
+  topic: Producer, resistance, clinical and graph fields
+  outcome: not_applicable
+  summary: Optional blanks alone are not errors. Natural isolation is occurrence evidence;
+    neither whole-plant reports nor HIV/host studies establish clinical antibacterial
+    efficacy or resistance determinants.
+  target_ids:
+  - CHEBI:2156
+  evidence_ids:
+  - record
+  - other-adopted
+  - knapsack
+- assessment_id: provenance
+  area: ownership
+  topic: Source reproduction and status
+  outcome: supported
+  summary: Source fields, mint and three history events are coherent. New scientific
+    annotations require validated writer/history and do not follow automatically from
+    review.
+  target_ids:
+  - CHEBI:2156
+  evidence_ids:
+  - record
+  - owner
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-2156-primary-activity-stereochemical-scope
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Optional activity enrichment must preserve exact stereochemistry and assay
+    limits
+  description: The1998 primary abstract offers qualitative evidence suitable for explicit
+    citation. Recent prepared-material assays provide additional leads, but their
+    stereochemical scope has not been shown to match the native S entity. No current
+    false numerical measurement or target is asserted.
+  target_ids:
+  - CHEBI:2156
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - mode_of_action_notes
+  evidence_ids:
+  - record
+  - primary1998
+  - synthetic2025
+  - synthetic-si
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/6-8-diprenylnaringenin.yaml
+    role: Curator-owned evidence, activity and qualified discussion through validated
+      writer and history
+  rule_id: native-review-checklist:Identity, Evidence and Activity
+  native_severity: informational optional evidence enrichment
+  normalization_reason: Identity and broad antibacterial role are supported; empty
+    optional fields alone are not a defect.
+actions:
+- action_id: A1
+  description: If selected for curation, add bounded primary activity evidence and
+    verify assayed stereochemistry before quantitative transfer.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:2156
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/6-8-diprenylnaringenin.yaml
+    role: Curator-owned evidence, activity and qualified discussion through validated
+      writer and history
+  acceptance_checks:
+  - Use the1998 primary abstract only for qualitative exact-name antibacterial support
+    until full methods establish strains, endpoints and material identity. Preserve
+    plasma antagonism and lack of in-vivo activity.
+  - Resolve the2025 prepared material absolute configuration and purity before assigning
+    its MIC/MBC to this S record; do not assume a racemate or alter correct native
+    stereochemistry to accommodate ambiguous material.
+  - Keep host PTP1B and HIV experiments separate; nondifferential synthesis inhibition
+    is not a selective molecular target. Plant isolation does not prove biosynthesis.
+  - Use validated writer/history and focused schema/strict, corpus reproduction and
+    required QC; retain native status until sign-off criteria are satisfied.
+limitations:
+- The1998 and2001 primary full texts were unavailable through attempted free ACS routes;
+  all three adopted records and complete abstracts were read. Original assay tables,
+  absolute-configuration experiments and full2001 NMR corrections were not inspected.
+- The2025 main article was inspected in full during the closely related review and
+  compound8 mapping was rechecked here. Its relevant supplementary synthesis/analysis
+  sections and tables were read, with p20 NMR visual verification; other-compound
+  supplementary figures were not exhaustively reinterpreted.
+- KNApSAcK has an internally inconsistent displayed key despite matching full InChI/SMILES.
+  Reaxys detail was not independently inspected.
+- No native edit or paid research occurred. Bounded discovery does not prove absence
+  of further exact-compound mechanism or activity evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
