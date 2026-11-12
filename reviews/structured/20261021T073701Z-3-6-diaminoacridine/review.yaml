@@ -1,0 +1,952 @@
+schema_version: 1.0.0
+review_id: 20261021T073701Z-3-6-diaminoacridine
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Proflavine free base: primary salt boundary in the imported viral protease
+  assay'
+started_at: '2026-10-21T07:29:52Z'
+finished_at: '2026-10-21T07:37:01Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not create the target. Entire native record, generated
+    owners, live identifiers, primary assay text and exact supplementary rows were
+    independently inspected; agent review is not human scientific sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'Native free-base identity, cross-reference placement and focused validators
+  are sound. One major evidence-scope finding concerns the populated BindingDB 830
+  nM protease result: the matching primary table names proflavine hemisulfate, although
+  the database represents it by the free-base structure. The numeric measurement and
+  viral target are preserved; exact-preparation applicability and DTT context need
+  correction.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/antibiotics/antibacterial/3-6-diaminoacridine.yaml
+    sha256: b9a16e51eabccf6219393a1ac6189afe2598dfba8f8ea8d9ba1c763ffdd6cc34
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/bindingdb_target_measurements.tsv
+    sha256: faccfe5634f467801aeb256e6560af09d193cdb53bdbf29dea195c9c0488c480
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: scripts/evaluate_bindingdb_targets.py
+    sha256: 99e00765305d1c890abb489d154d15ddb585a05dd36c1c9b5e25abeb55638db2
+    role: context
+  - path: scripts/extract_bindingdb_targets.py
+    sha256: 9914a61b93326808b9800f3680dc935af2abcfa1e9925d6c3dd39180dbc78a2d
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:8452
+  path: data/antibiotics/antibacterial/3-6-diaminoacridine.yaml
+  label: 3,6-diaminoacridine
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO identity, classification and citation owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/bindingdb_target_measurements.tsv
+    role: BindingDB quantitative target and protein-example owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_bindingdb_targets.py
+    role: BindingDB extraction and mapping owner
+scope:
+  description: Full exact-record review of identity, all native claims, source owners,
+    target evidence and bounded literature follow-up.
+  selection: Queue index 032, exactly CHEBI:8452 in batch004.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:8452
+  exclusions:
+  - target: Proflavine salt records, acriflavine mixtures, other compounds in screening
+      tables and other BindingDB monomer measurements
+    reason: Boundary context only; this review does not audit or curate those separate
+      records or expand the imported target inventory.
+checks:
+- check_id: schema
+  name: Focused schema validation
+  status: passed
+  required: true
+  summary: Actual focused gate passed with zero errors.
+  target_ids:
+  - CHEBI:8452
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/3-6-diaminoacridine.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  summary: Actual focused gate passed with zero errors.
+  target_ids:
+  - CHEBI:8452
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/3-6-diaminoacridine.yaml --out /private/tmp/am-review-session/032-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Exact free-base chemical identity
+  status: passed
+  required: true
+  summary: Native free-base structure and official identity agree.
+  target_ids:
+  - CHEBI:8452
+  evidence_ids:
+  - chebi
+  - chemistry
+  - pubchem
+  - nist
+- check_id: bindingdb-source
+  name: Primary assay and tested-material cross-check
+  status: failed
+  required: true
+  summary: Database value is reproduced, but its primary matching row names proflavine
+    hemisulfate rather than the neutral free-base preparation represented by the record.
+  target_ids:
+  - CHEBI:8452
+  evidence_ids:
+  - bindingdb-reaction
+  - primary-screen
+  - primary-table
+- check_id: structured-adapter
+  name: Structured dataset inventory applicability
+  status: passed
+  required: true
+  summary: Free adapter retrieval succeeded after sandbox DNS failure; no covered
+    SARS-CoV-2 dataset was returned.
+  target_ids:
+  - CHEBI:8452
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb datasets
+  exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: reaxys-access
+  name: Direct Reaxys verification
+  status: unavailable
+  required: false
+  summary: Official ChEBI assertion inspected; direct Reaxys record unavailable.
+  target_ids:
+  - CHEBI:8452
+  evidence_ids:
+  - registry-limit
+  - chebi
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:8452
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:8452
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:8452
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:8452
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:8452
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:8452
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:8452
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:8452
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:8452
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/3-6-diaminoacridine.yaml
+  locator: Complete YAML, including the sole molecular_targets object and all seven
+    history events
+  accessed_at: '2026-10-21T07:36:30Z'
+  support: supports
+  summary: The EXACT/SEEDED antibacterial record denotes neutral free-base 3,6-diaminoacridine,
+    with merged ARO and ChEBI identity. Its one BindingDB target associates a SARS-CoV-2
+    protein with an IC50 of 830 nM without DTT. Target-level evidence and a reviewed
+    P0DTD1 protein example are present. There is no native antibacterial mechanism,
+    activity_spectrum, resistance, producer, clinical, dataset or causal graph annotation.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/bindingdb_target_measurements.tsv
+  locator: ChEBI row 281, ARO row 450, BindingDB row 176; PATHS row 2508; MANIFEST/config,
+    extractor/evaluator and seeder
+  accessed_at: '2026-10-21T07:36:30Z'
+  support: supports
+  summary: All native generated values reproduce their adopted owners, including both
+    source concepts, typed xref groups and BindingDB identifiers 902206/9114_1/12590.
+    The ChEBI row has nine PMID leads and ARO adds PMID:36240541. The BindingDB importer
+    requires a matching reported/recomputed ligand key, but that key reflects the
+    database representation and does not independently preserve a commercial salt
+    named in the primary table.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:8452
+  locator: Official entry; scratch 032-chebi.html
+  accessed_at: '2026-10-21T07:31:30Z'
+  support: supports
+  summary: The live source agrees on the free-base identity, definition, source names,
+    aminoacridine parent CHEBI:51803, antibacterial role CHEBI:33282, formula C13H11N3,
+    charge 0, masses, structure strings and key WDVSHHCDHLJJJR-UHFFFAOYSA-N. It resolves
+    the adopted registry/drug/document references. Extra intercalator and other roles
+    are source assertions; generic intercalator is deliberately not mapped automatically
+    to a mechanism.
+  snapshot_sha256: b6c5aca8f58ca38eb5742eb69548288756b3b46b33c5fcd301a14a8451fab14b
+- evidence_id: aro
+  kind: database
+  reference: https://card.mcmaster.ca/ontology/46303
+  locator: Official ARO:3007532 entry; scratch 032-card.html
+  accessed_at: '2026-10-21T07:32:07Z'
+  support: supports
+  summary: CARD gives the same free-base SMILES, CAS 92-62-6, CHEBI:8452, ChEMBL55400
+    and PubChem 7099. It classifies proflavine under ARO:3005386, disinfecting agents
+    and antiseptics. Its cited 2022 publication concerns acriflavine and proflavine
+    hemisulfate, which must not be mistaken for a free-base antibacterial mechanism
+    experiment.
+  snapshot_sha256: 233b721947dae2a43937460d2b2cdcfc734e737f208c80a13ac6b5de708cf74f
+- evidence_id: aro-parent
+  kind: authority
+  reference: https://card.mcmaster.ca/ontology/43746
+  locator: ARO:3005386 definition and child list; scratch 032-card-parent.html
+  accessed_at: '2026-10-21T07:32:07Z'
+  support: supports
+  summary: The parent is the broad drug class disinfecting agents and antiseptics,
+    with proflavine among its children. The native structural_class wording is the
+    reproduced source class, not an independently curated molecular scaffold or proof
+    of a resistance mechanism.
+  snapshot_sha256: dcd2589b411f30bc537e410d6dfc4c947f7686c425b8f6f2df7a5c719c66c4d4
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit independent chemistry calculation
+  locator: Both native structure encodings; scratch 032-chemistry.json
+  accessed_at: '2026-10-21T07:32:09Z'
+  support: supports
+  summary: SMILES and InChI reproduce the same free-base key. The calculated formula
+    is C13H11N3, charge 0, one fragment, average mass 209.252 and exact mass 209.095297352.
+    No native structure, mass or charge inconsistency is supported.
+  snapshot_sha256: 1e9b89acd7868ac3ecb7fc6c73f4c75662ba6b43b0504317a9867fb95134fd63
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/7099
+  locator: PUG-View identity and CAS sections; scratch 032-pubchem.json
+  accessed_at: '2026-10-21T07:31:28Z'
+  support: supports
+  summary: CID 7099 matches the complete free-base InChI/key, formula and SMILES.
+    CAS 92-62-6 is present with a CAS Common Chemistry attribution. Salt names or
+    pharmacological statements elsewhere in an aggregated record are not used as exact
+    preparation evidence.
+  snapshot_sha256: 5f1ae1b71c194cb9aed77087490f53ea02cea7a9a6177d5ede13c2550547f567
+- evidence_id: nist
+  kind: authority
+  reference: https://webbook.nist.gov/cgi/cbook.cgi?ID=C92626&Units=SI
+  locator: NIST WebBook identity section; scratch 032-nist.html
+  accessed_at: '2026-10-21T07:32:06Z'
+  support: supports
+  summary: NIST independently associates CAS 92-62-6 with the same free-base formula
+    and complete InChI/key.
+  snapshot_sha256: 54b8c82177911f0c8854f697b3f4405925df954f65adb5be2a39d234360d1ab8
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/C11181
+  locator: Complete official compound text; scratch 032-kegg.txt
+  accessed_at: '2026-10-21T07:31:27Z'
+  support: supports
+  summary: KEGG C11181 denotes proflavine with formula C13H11N3 and matching heavy-atom
+    connectivity, CAS 92-62-6, ChEBI 8452 and PDB-CCD PRL. Its PubChem link uses KEGG
+    source semantics and was not added as a different native compound identifier.
+  snapshot_sha256: dfe0a62024b4d2b0c37f0f3851a51941890cef3c9d3674fd4da01e4041258b70
+- evidence_id: pdb
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/chemcomp/PRL
+  locator: Official CCD chemical descriptors and mappings; scratch 032-pdb.json
+  accessed_at: '2026-10-21T07:31:27Z'
+  support: supports
+  summary: PRL is non-polymer proflavin with charge 0 and matching SMILES, InChI/key
+    and formula. Its structure-key mapping corroborates DB01123 and PubChem 7099.
+    Ligand-component identity does not by itself prove every listed protein is an
+    antibacterial target.
+  snapshot_sha256: e592dff7a05f19a0c3bd3a226b5a369c3464b4b7ebba8cae79493aa7f2094e3a
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL55400.json
+  locator: Official molecule structures and properties; scratch 032-chembl.json
+  accessed_at: '2026-10-21T07:31:28Z'
+  support: supports
+  summary: ChEMBL55400 resolves to proflavine with the exact free-base SMILES, InChI/key
+    and formula.
+  snapshot_sha256: 2ecfc997c7710b72ecdd8ee0b95db342ad8e2456ca3e437ed8c46d024fd66215
+- evidence_id: drugbank
+  kind: database
+  reference: https://go.drugbank.com/drugs/DB01123
+  locator: Public web-rendered identity/structure section
+  accessed_at: '2026-10-21T07:36:30Z'
+  support: supports
+  summary: The public page resolves DB01123 to proflavine and the exact free-base
+    formula and structure key, with links to ChEBI, PubChem and CAS. The direct command-line
+    page request returned 403, but the web tool rendered its public text. The typed
+    drug_xref is supported; no approval or product claim is inferred from this database
+    link.
+- evidence_id: drugcentral
+  kind: database
+  reference: https://drugcentral.org/drugcard/2277
+  locator: Public identity and external-reference sections; scratch 032-drugcentral.html
+  accessed_at: '2026-10-21T07:31:28Z'
+  support: supports
+  summary: DrugCentral 2277 is proflavine with the free-base formula, CAS and ChEBI/PubChem
+    links. It also aggregates salt names and products. Its placement in drug_xrefs
+    is appropriate and does not establish equivalence of every listed salt or current
+    clinical status.
+  snapshot_sha256: b8e1d59e8c582d51a25668c0f40f3c78c7a215ca5eddb49d166ed0fa3f270519
+- evidence_id: document
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Proflavine
+  locator: Document title and identity box only; scratch 032-wikipedia.html
+  accessed_at: '2026-10-21T07:31:29Z'
+  support: context_only
+  summary: The document reference resolves to the expected proflavine subject. It
+    was used only to verify the document link; scientific mechanism and activity conclusions
+    rely on other inspected sources.
+  snapshot_sha256: 89aab36acfd7a91cf7062c06eac35ee4ec41c59d6e39c2041ced269d3c18fad6
+- evidence_id: registry-limit
+  kind: authority
+  reference: https://www.reaxys.com/
+  locator: Direct public link for Reaxys 166050
+  accessed_at: '2026-10-21T07:36:30Z'
+  support: partial
+  summary: The public Reaxys detail URL was unavailable through the web tool. The
+    number is verified as an official ChEBI assertion, without claiming direct Reaxys
+    substance-record inspection.
+- evidence_id: bindingdb
+  kind: database
+  reference: https://www.bindingdb.org/rwd/bind/chemsearch/marvin/MolStructure.jsp?monomerid=12590
+  locator: Live monomer page, exact 830 nM entry and link to reactant 902206; scratch
+    032-bindingdb.html
+  accessed_at: '2026-10-21T07:31:28Z'
+  support: supports
+  summary: BindingDB represents monomer 12590 with the free-base key and reports 830
+    nM for the native viral target. The exact row links to entry 9114, reactant 902206
+    and the native preprint DOI. Thus the native value faithfully reproduces the database,
+    while the primary preparation boundary requires separate inspection.
+  snapshot_sha256: eea00ce897f10cfcdacd4b8c0044a034492084e96c571c0e5bc7d775822ff7ac
+- evidence_id: bindingdb-reaction
+  kind: database
+  reference: https://www.bindingdb.org/rwd/jsp/dbsearch/Summary_ki.jsp?entryid=9114&ki_result_id=904476&reactant_set_id=902206
+  locator: Live reaction details; scratch 032-bindingdb-reaction.html
+  accessed_at: '2026-10-21T07:33:57Z'
+  support: supports
+  summary: Reaction 902206 reports IC50 830 nM, monomer 12590, no-DTT hit profiling
+    and the Kuzikov et al. preprint. P0DTD1 denotes the polyprotein containing the
+    assayed protease. It supplies no primary-table commercial salt name in the displayed
+    ligand identity.
+  snapshot_sha256: 254addfd166ede0cbb599590c6fdfbce206133ea836b0f2e31df4e93e11b7d95
+- evidence_id: bindingdb-assay
+  kind: database
+  reference: https://www.bindingdb.org/rwd/jsp/dbsearch/assay.jsp?assayid=1&entryid=9114
+  locator: Assay name and description; scratch 032-bindingdb-assay.html
+  accessed_at: '2026-10-21T07:33:57Z'
+  support: supports
+  summary: The source assay page matches the native no-DTT FRET description, including
+    generic X-ray profiling wording. This database prose must not be read as proflavine-specific
+    crystallographic evidence; the inspected paper reports a myricetin crystal complex.
+  snapshot_sha256: d66dfa127fc0eff5d714f81f9f079edda569fc1d6556d90fe715dfb7c17f1d42
+- evidence_id: uniprot
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P0DTD1.json
+  locator: Accession, reviewed status, organism and processed-chain features; scratch
+    032-uniprot.json
+  accessed_at: '2026-10-21T07:31:28Z'
+  support: supports
+  summary: P0DTD1 is reviewed Swiss-Prot Replicase polyprotein 1ab from SARS-CoV-2,
+    taxon 2697049. The annotated nsp5/3C-like protease spans residues 3264–3569, matching
+    the paper construct. The accession and native taxon are valid; the measured activity
+    concerns that processed protease, not every function of the 7096-residue polyprotein.
+  snapshot_sha256: 7366d4fea701dfccea0226cbe43850961d5192cad95d0e7644cc0c16dec7e642
+- evidence_id: primary-screen
+  kind: primary_source
+  reference: DOI:10.1021/acsptsci.0c00216
+  locator: PMID:35287429; https://pmc.ncbi.nlm.nih.gov/articles/PMC7986981/ ; published
+    counterpart of DOI 10.1101/2020.12.16.422677; Methods and hit-profiling Results;
+    scratch 032-final.xml
+  accessed_at: '2026-10-21T07:31:29Z'
+  support: partial
+  summary: The paper uses purified 3CL protease and a quenched FRET substrate. Compounds
+    were preincubated for 60 min at 37 °C; endpoint measurement followed 15 min with
+    substrate. Dose responses were run without DTT, and a subset with 1 mM DTT. It
+    separates biochemical inhibition from cell-based antiviral assays and removes
+    flagged optical interferents. The crystal complex is myricetin. The native relation
+    MEASURED_TARGET_ASSOCIATION is appropriately cautious; the paper does not establish
+    proflavine direct binding or an antibacterial mode.
+  snapshot_sha256: 3e2dbec226612010f393db1008c1f0d964774a823d08267c4be2f7491ee4c9b7
+- evidence_id: primary-table
+  kind: primary_source
+  reference: DOI:10.1021/acsptsci.0c00216.s002
+  locator: ACS Table S3 XLSX https://ndownloader.figshare.com/files/26786317 ; SuppT3-HP
+    cells A61:J61, SuppT3-HC row 247 versus row 18, SuppT3-PS rows 3235 and 18; scratch
+    032-pt0c00216_si_002.xlsx
+  accessed_at: '2026-10-21T07:32:31Z'
+  support: refutes
+  summary: The 0.83 µM no-DTT IC50 belongs to SPE_K68408467, explicitly named PROFLAVINE
+    HEMISULFATE, and is marked DTT sensitive. Its confirmation inhibition is 76.547%
+    without DTT versus 20.411% with DTT at 20 µM; the +DTT IC50 cell is blank. A separate
+    DOM_SIM_502 row named Proflavine has 19.547% confirmation inhibition and no 0.83
+    µM hit-profiling row. Both preparations share normalized CID 7099/free-base SMILES
+    in the source workbook. This materially limits the free-base record applicability
+    of the stored value.
+  snapshot_sha256: 173015ca26d387d7ad27d69adccc356d74be6ace3bd34ff302a08276dacdd78a
+- evidence_id: supplement-metadata
+  kind: database
+  reference: https://api.figshare.com/v2/articles/14204413
+  locator: Official ACS supplement metadata; scratch 032-figshare-14204413.json
+  accessed_at: '2026-10-21T07:32:29Z'
+  support: supports
+  summary: The supplement is linked to resource DOI 10.1021/acsptsci.0c00216, with
+    the title and downloadable XLSX corresponding to Table S3. Worksheet relationship
+    mapping and header-based extraction were checked; scratch 032-supp-rows.json preserves
+    the exact inspected rows.
+  snapshot_sha256: 841bd57e4933738e507ca751bda2a3a885a2254be3910de20b7d898cf0400b04
+- evidence_id: aro-primary
+  kind: primary_source
+  reference: PMID:36240541
+  locator: DOI 10.1016/j.bioorg.2022.106185; https://pmc.ncbi.nlm.nih.gov/articles/PMC9540699/
+    ; Methods and compound-specific Results; scratch 032-aro-primary.xml
+  accessed_at: '2026-10-21T07:32:18Z'
+  support: context_only
+  summary: The ARO lead explicitly studies proflavine hemisulfate and acriflavine.
+    It reports enzyme, thermophoresis and cellular antiviral experiments for those
+    preparations. Its hemisulfate IC50 and affinity values cannot be used as independent
+    exact-free-base evidence without a justified active-moiety interpretation. It
+    is not an antibacterial mechanism experiment.
+  snapshot_sha256: b2b64a569caf9d0b13f979f733ae3c548b907dae40303a88640f42f705e2a71c
+- evidence_id: other-leads
+  kind: primary_source
+  reference: PMID:11960666; PMID:20178341; PMID:21435875; PMID:2242050; PMID:22555876;
+    PMID:22978751; PMID:6987510; PMID:8579793
+  locator: Primary abstracts and complete identifier metadata in Europe PMC core response;
+    scratch 032-epmc.json
+  accessed_at: '2026-10-21T07:31:29Z'
+  support: partial
+  summary: All eight identifiers resolve. They concern, respectively, a hybrid Tröger-base
+    derivative; force spectroscopy of proflavine-stabilized DNA; amyloid-imaging derivatives;
+    mouse-cell microwave/mutagenicity interaction; photocatalytic NADH regeneration;
+    metadynamics of intercalation; strain-specific Salmonella mutagenicity with light/metabolic
+    activation; and DNA-binding competition spectroscopy. Full reagent identities
+    and experiment bodies were not inspected for these eight leads. Their abstracts
+    are not converted into a free-base antibacterial MIC, direct protein binding,
+    biosynthetic producer or causal killing chain.
+  snapshot_sha256: 763bda71aa8ce37e6c64e66d9f76ebd6ec1eec90ab2a0bc8cdbb7d0773abc797
+- evidence_id: iarc
+  kind: authority
+  reference: https://inchem.org/documents/iarc/vol24/proflavin.html
+  locator: Adopted PMID:7009393; official historical summary and metadata; scratch
+    031-iarc.html
+  accessed_at: '2026-10-21T07:27:00Z'
+  support: context_only
+  summary: The ninth ChEBI PMID resolves to the IARC review of free base and multiple
+    salts. The official summary keeps monohydrochloride hemihydrate and other salts
+    separate. It does not supply an exact-free-base antibacterial mechanism or current
+    regulatory conclusion.
+  snapshot_sha256: a872b773c77a326cb89311ecd1b1de9389530046eb463cf8cff380726f2d66cf
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Installed kg-microbe-sources imodulondb datasets, prior to open-ended target
+    follow-up; scratch 032-imodulondb-escalated.json
+  accessed_at: '2026-10-21T07:31:03Z'
+  support: context_only
+  summary: The initial sandbox call exited 2 with DNS failure. Repeating the same
+    free read-only adapter with network escalation exited 0 and returned 28 datasets,
+    none for SARS-CoV-2. No covered organism/dataset matched the native viral protein,
+    so gene search and component summarization were not applicable. This coverage
+    result is not negative experimental evidence.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: local-search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: Ignored-inclusive exact-ID, key, minted-ID, xref and slug searches
+  accessed_at: '2026-10-21T07:36:30Z'
+  support: context_only
+  summary: The raw owner rows and PATHS agree. Focused curation/decision/config searches
+    found no exact-target override. The review/report search returned the separately
+    reviewed monohydrochloride because the free-base slug is its prefix; that sibling
+    review is not prior evidence for the present free-base target.
+  search_scope: prepare.py 32 used rg --no-ignore --hidden across batch004 excluding
+    .git/.venv. Focused searches covered raw, curation, conf and PATHS for CHEBI:8452,
+    ARO:3007532, key, 902206 and 9114_1; maintained decisions, curator table, reviews
+    and historical reports were searched for exact identifiers, key, CAS and slug
+    excluding JSON and queue-named files. Hidden and ignored files were included.
+- evidence_id: rubric
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: 'Native checklist: exact chemical form, narrow evidence, measured target
+    association and optional fields'
+  accessed_at: '2026-10-21T07:36:30Z'
+  support: supports
+  summary: A source-normalized free-base key does not by itself verify the physical
+    salt reported in a primary experiment. Target evidence must retain exact material
+    and assay scope or an explicit justified applicability rationale. Optional absence
+    alone is not a defect; measured inhibition is not automatically direct binding,
+    antibacterial action or clinical efficacy.
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual focused batch004 executions; scratch 032-validation.tsv
+  accessed_at: '2026-10-21T07:30:23Z'
+  support: supports
+  summary: Both documented focused validators exited 0. LinkML found no issues and
+    strict reported zero ERROR rows for the single target. These deterministic checks
+    do not detect the source-preparation mismatch.
+  snapshot_sha256: b184ed5450b968070bb6c75648407e388f41a1eaf7017890723cf560999fc3f7
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral free-base identity and exact xrefs
+  outcome: supported
+  summary: The native structure denotes one neutral proflavine free base. ChEBI, ARO,
+    PubChem, KEGG, ChEMBL, CCD and independent chemistry agree. CAS is independently
+    verified in NIST. The target itself has no wrong-identity or formula defect.
+  target_ids:
+  - CHEBI:8452
+  evidence_ids:
+  - record
+  - chebi
+  - aro
+  - chemistry
+  - pubchem
+  - nist
+  - kegg
+  - chembl
+  - pdb
+- assessment_id: typed-links
+  area: grounding
+  topic: Drug/document link placement and parent classes
+  outcome: supported
+  summary: DrugBank/DrugCentral links belong in drug_xrefs, and Wikipedia is a document
+    link. Parent and class values reproduce their authorities; they do not imply current
+    approval or every salt being exactly equivalent. Reaxys remains source-asserted.
+  target_ids:
+  - CHEBI:8452
+  evidence_ids:
+  - record
+  - chebi
+  - aro-parent
+  - drugbank
+  - drugcentral
+  - document
+  - registry-limit
+- assessment_id: target-identity
+  area: evidence
+  topic: Viral target and protein example
+  outcome: supported
+  summary: P0DTD1 and taxon 2697049 are valid reviewed viral-protein groundings. The
+    assay description identifies 3CL protease/nsp5, a processed part of the polyprotein.
+    The MEASURED_TARGET_ASSOCIATION relation is appropriately weaker than direct binding.
+  target_ids:
+  - CHEBI:8452
+  evidence_ids:
+  - record
+  - bindingdb-reaction
+  - bindingdb-assay
+  - uniprot
+  - primary-screen
+- assessment_id: target-material
+  area: evidence
+  topic: Exact tested preparation behind the 830 nM measurement
+  outcome: concern
+  summary: The native row and live BindingDB agree numerically, and 0.83 µM correctly
+    converts to 830 nM. However, the primary row explicitly belongs to a hemisulfate
+    preparation and separates another Proflavine row. The imported free-base key cannot
+    justify unqualified exact-material transfer. DTT-sensitive behavior further bounds
+    interpretation.
+  target_ids:
+  - CHEBI:8452
+  evidence_ids:
+  - record
+  - owners
+  - bindingdb-reaction
+  - primary-table
+  - rubric
+- assessment_id: antibacterial-mechanism
+  area: completeness
+  topic: Antibacterial mechanism versus biochemical and viral assays
+  outcome: unknown
+  summary: No native antibacterial mode is asserted. DNA-interaction, mutagenicity
+    and derivative leads require their own material/assay review; the viral protease
+    result cannot explain antibacterial action. Database intercalator descriptions
+    are not primary lethal-pathway evidence.
+  target_ids:
+  - CHEBI:8452
+  evidence_ids:
+  - record
+  - other-leads
+  - primary-screen
+  - aro-primary
+  - rubric
+- assessment_id: activity
+  area: evidence
+  topic: Activity and susceptibility endpoint scope
+  outcome: unknown
+  summary: No antibacterial activity_spectrum observation is asserted or independently
+    established here. The native IC50 is a biochemical assay value, not MIC or clinical
+    antiviral efficacy. Cell-based and biochemical results remain separate, as do
+    salt preparations.
+  target_ids:
+  - CHEBI:8452
+  evidence_ids:
+  - record
+  - primary-table
+  - primary-screen
+  - other-leads
+- assessment_id: other-fields
+  area: scope
+  topic: Resistance, producer, clinical status, datasets and graphs
+  outcome: not_applicable
+  summary: No native claims in these optional categories need correction. A drug database
+    card is not product approval evidence, and a bacterium used in a mutagenicity
+    experiment is not a biosynthetic producer. No new target, resistance route or
+    causal edge is inferred.
+  target_ids:
+  - CHEBI:8452
+  evidence_ids:
+  - record
+  - drugcentral
+  - other-leads
+  - rubric
+- assessment_id: provenance
+  area: provenance
+  topic: Generated ownership and source-normalized join
+  outcome: concern
+  summary: The record faithfully reproduces adopted data and all history events. The
+    issue lies in scientific applicability of the imported exact-key join, not a hand-edited
+    YAML discrepancy. Fixes must preserve source observations while making tested
+    salt and interpretation reproducible upstream.
+  target_ids:
+  - CHEBI:8452
+  evidence_ids:
+  - record
+  - owners
+  - bindingdb
+  - primary-table
+- assessment_id: schema
+  area: schema
+  topic: Focused validation
+  outcome: supported
+  summary: Both focused validators pass; scientific source comparison reveals a distinct
+    scope issue.
+  target_ids:
+  - CHEBI:8452
+  evidence_ids:
+  - validation
+  - primary-table
+findings:
+- finding_id: F1
+  issue_key: chebi-8452-bindingdb-902206-tested-salt-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The imported 830 nM result omits its reported hemisulfate preparation
+  description: The free-base record imports an apparently exact quantitative target
+    association through BindingDB monomer 12590. In the published primary Table S3,
+    the matching 0.83 µM result is explicitly SPE_K68408467 PROFLAVINE HEMISULFATE,
+    while a separate Proflavine preparation has different confirmation results. Both
+    source rows carry a normalized free-base structure, so structure-key agreement
+    alone cannot establish tested-form identity. Preserve the valid measured datum
+    and correct its applicability through explicit reported-material provenance, an
+    independently justified active-moiety interpretation or an appropriate exact-salt
+    placement. This finding does not assert that the free base lacks activity.
+  target_ids:
+  - CHEBI:8452
+  field_paths:
+  - molecular_targets[0].measurements[0]
+  - molecular_targets[0].experimental_context
+  - molecular_targets[0].evidence
+  evidence_ids:
+  - record
+  - owners
+  - bindingdb-reaction
+  - primary-table
+  - rubric
+  rule_id: native-review-checklist:Exact chemical form, Evidence standard and Molecular
+    targets
+  native_severity: major unqualified exact-material evidence transfer
+  normalization_reason: A populated claim-level quantitative association lacks a material
+    preparation boundary exposed by the primary source. This is evidence-scope inflation
+    rather than a missing optional annotation or a wrong native chemical identity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/bindingdb_target_measurements.tsv
+    role: Imported target measurement and exact-material provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_bindingdb_targets.py
+    role: BindingDB source interpretation and assertion mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible generated molecular-target representation
+actions:
+- action_id: A1
+  description: Reassess reactant 902206 against the primary supplement and preserve
+    its explicitly reported hemisulfate preparation. Correct the upstream measurement
+    representation so this free-base record either carries a justified active-moiety
+    interpretation with source conditions or no longer presents the salt experiment
+    as an unqualified exact-form association.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:8452
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/bindingdb_target_measurements.tsv
+    role: Imported target measurement and exact-material provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_bindingdb_targets.py
+    role: BindingDB source interpretation and assertion mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible generated molecular-target representation
+  acceptance_checks:
+  - Retain the original BindingDB IDs, DOI, value 830 nM and primary Table S3 compound
+    SPE_K68408467; do not substitute the DOM_SIM_502 Proflavine row.
+  - Explicitly record reported hemisulfate identity and justify any cross-form applicability;
+    do not infer an anhydrous free-base preparation from CID 7099 or the normalized
+    SMILES.
+  - Retain no-DTT conditions and the DTT-sensitive classification. A blank +DTT IC50
+    cell must remain unmeasured rather than zero or a negative assay result.
+  - Scope the protein measurement to 3CL protease/nsp5, retaining P0DTD1 as the valid
+    viral protein example. Keep MEASURED_TARGET_ASSOCIATION unless separate direct-binding
+    evidence is inspected.
+  - Clarify that generic assay text mentioning X-ray profiling does not establish
+    a proflavine crystal complex; the inspected crystal experiment used myricetin.
+  - Keep enzyme IC50, cell-based antiviral endpoints and antibacterial MIC separate.
+    Do not infer antibacterial mode or clinical efficacy from this assay.
+  - Implement through maintained inventory/extractor/seeder owners and rerun focused
+    validation, reproducibility, provenance and corpus gates; preserve native scientific
+    status until sign-off criteria are met.
+limitations:
+- The native preprint DOI resolves through the live BindingDB citation; its direct
+  bioRxiv body was inaccessible. The corresponding published primary article and official
+  ACS Table S3 were inspected, including the exact matching 0.83 µM row. No claim
+  is made to have compared every preprint version.
+- Eight additional ChEBI primary leads were assessed at abstract/metadata level only.
+  Exact reagent and full assay details remain unresolved for those leads; the IARC
+  review and the accessible ARO hemisulfate paper were explicitly kept within their
+  form and endpoint scopes.
+- Direct Reaxys substance detail was unavailable. DrugBank public identity text was
+  accessible via the web tool despite a failed direct command-line request. No paid
+  or authenticated access was used.
+- The source table reports a hemisulfate preparation but uses normalized free-base
+  CID/SMILES; solution speciation and active-moiety equivalence were not independently
+  established. The finding calls for explicit applicability, not a claim of free-base
+  inactivity.
+- Structured adapter succeeded after network escalation and supplied no viral dataset.
+  Bounded public searches are not an exhaustive absence proof. No native edits occurred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Capture preceded scientific judgment; original hashes were preserved and provenance
+  was expanded to 24 inputs, including ARO and BindingDB owners and transforms.
+- Ignored and hidden files were included in all local absence searches.
+- Native SEEDED status remains unchanged. A measured-association relation is not criticized
+  merely for lacking direct-binding proof; the finding concerns the tested preparation
+  of an existing quantitative claim.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:8452
+- https://card.mcmaster.ca/ontology/46303
+- https://www.bindingdb.org/rwd/jsp/dbsearch/Summary_ki.jsp?entryid=9114&ki_result_id=904476&reactant_set_id=902206
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC7986981/
+- https://acs.figshare.com/articles/dataset/14204413
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC9540699/
+tags:
+- antibacterial
+- proflavine
+- free-base
+- bindingdb
+- salt-boundary
+- viral-protease
