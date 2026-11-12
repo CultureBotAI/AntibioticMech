@@ -1,0 +1,833 @@
+# Review of benzylpenicillin
+
+- Review: 20261021T102341Z-benzylpenicillin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:53:31Z
+- Finished UTC: 2026-10-21T10:23:41Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The neutral benzylpenicillin identity, exact public structure mappings, broader classes and antibacterial filing are supported. One database-derived resistance entry needs qualification: the original LAQ-1 paper claims penicillin G resistance in its abstract but reports a lower recombinant MIC than its vector control, with no penicillin G hydrolysis measurement. This contradicts the apparent support for that exact determinant–drug assertion without proving the enzyme cannot act on the drug.
+
+## Scope And Provenance
+
+Entire SEEDED record and five history events; adopted ChEBI and ARO identity/target/resistance owners; all 25 resolved adopted or ontology-linked literature records; selected primary experimental methods/results and current exact-structure databases.
+
+Selection: Queue index 154: coordinator captured initial timestamps and 13 input hashes before judgment; four additional repository owners and external ARO cache were hashed before inspection.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:18208 | data/antibiotics/antibacterial/benzylpenicillin.yaml | generated | benzylpenicillin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema check | passed | True | CHEBI:18208 | Exit 0. |
+| Documented strict check | passed | True | CHEBI:18208 | Exit 0; zero ERROR rows. |
+| Supplemental literal synonym comparison | failed | False | CHEBI:18208 | Exit 1 after successful graph checks: current OLS transliterates Greek letters and an accent, so literal synonym equality failed. |
+| Supplemental bounded normalization check | passed | False | CHEBI:18208 | Exit 0. Only synonym comparison normalizes alpha/beta lettering and accents; graph stereochemistry and identifiers remain exact comparisons. |
+| Native iModulonDB catalog | passed | False | CHEBI:18208 | Exit 0 before protein web follow-up. |
+| Native iModulonDB protein search | passed | False | CHEBI:18208 | Exit 0; one yfeW/PBP4B gene hit and zero iModulons, so no module-detail follow-up applied. |
+| Authoritative full QC | failed | True | CHEBI:18208 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:18208 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:18208 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:18208 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:18208 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:18208 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:18208 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:18208 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:18208 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact free-acid identity
+
+identity: supported. Targets: CHEBI:18208.
+
+Neutral parent identity and parsed public same-structure mappings agree. Salt/formulation or protein-adduct observations remain separate.
+
+### Classes, roles and minting
+
+grounding: supported. Targets: CHEBI:18208.
+
+Penicillin class, penicillin-allergen parent and antimicrobial roles are consistent with adopted/current ontology and checked literature scope.
+
+### Exact determinant–drug support
+
+evidence: concern. Targets: CHEBI:18208.
+
+LAQ-1 has an unresolved primary-data contradiction; other inspected routes retain their assay and database qualifiers.
+
+### PBP-family database target
+
+evidence: supported. Targets: CHEBI:18208.
+
+The explicit primary-evidence-needed flag accurately limits the native assertion; enterococcal primary acyl structures support optional narrower enrichment.
+
+### Source placement and history
+
+provenance: supported. Targets: CHEBI:18208.
+
+All cited lead records were resolved with access depth recorded. Generated provenance and five-event history are consistent.
+
+### Required source correction versus optional enrichment
+
+completeness: concern. Targets: CHEBI:18208.
+
+Correct the LAQ-1 conflict before scientific sign-off. Protein examples, MICs and producer enrichment are optional and require exact material/strain/method scope.
+
+### Focused gates
+
+schema: supported. Targets: CHEBI:18208.
+
+Schema and strict validation pass; the supplemental typo-normalization rerun has an explicit prior failure.
+
+## Findings
+
+### F1: Resolve the LAQ-1 penicillin G resistance attribution against the primary tables
+
+major / open / confirmed; issue key: chebi-18208-laq1-resistance-primary-table-conflict.
+
+The native LAQ-1 ANTIBIOTIC_INACTIVATION entry faithfully repeats CARD/ARO, but the linked original paper contains a material internal conflict. Its abstract claims resistance while the clone has MIC4 versus vector16 micrograms/mL, and purified-enzyme kinetics do not include penicillin G. The high MIC of the multidrug-resistant source isolate cannot establish LAQ-1 causation. This finding concerns the evidence and certainty of the exact determinant–drug assertion; it does not demonstrate that LAQ-1 cannot hydrolyze penicillin G under any conditions.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Maintain an explicit source-owned correction or qualification for the LAQ-1–benzylpenicillin edge.
+
+- Seek a published correction, corrected primary table or independent compound-specific cloning/hydrolysis evidence that resolves the discrepancy. Do not infer resolution from the abstract alone, generic AmpC class membership or source-isolate resistance.
+- Until resolved, suppress the unqualified exact edge from structured resistance output or attach an explicit controversy/limitation through a maintained supported representation, retaining database provenance and the contradictory primary citation. If the current pipeline lacks a per-edge correction path, implement a narrow auditable path rather than editing only generated YAML.
+- Do not delete LAQ-1 as an enzyme, remove its other drug edges, or assert universal lack of penicillin G hydrolysis. Scope the exception to ARO3007438 → ARO3000632 and document the source/table evidence.
+- Canary reseeding must reproduce the corrected exact edge behavior without changing unrelated determinants. Check generated output, schema/strict/reference/history and corpus gates; use validated history-bearing writes for any later native change.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/benzylpenicillin.yaml; Whole YAML; five history events | supports | Exact neutral free acid, ten explicitly database-derived resistance entries and a PBP-family target marked PRIMARY_EVIDENCE_NEEDED. The record does not assert compound-specific MICs, protein examples or causal graphs. History retains SEEDED status. |
+| chemistry | CHEBI:18208;PubChem:5904;ChEMBL:CHEMBL29;KEGG:C05551;KEGG:D02336;DrugCentral:2082;PDB-CCD:PNN; 154-chemistry-normalized.py;154-chemistry.json and downloaded database artifacts | supports | Native SMILES/InChI, formula C16H18N2O4S, charge, masses, three configured centers and minted identities agree. All six independently parsed external structures yield full key JGSARLDLIJGVTE-MBNYWOFBSA-N. PNN is the intact parent, not the ring-opened protein adduct. Current ChEBI definition/parents and adopted roles agree; synonym differences are typographic transliteration. |
+| laq-conflict | PMID:36504772; DOI:10.3389/fmicb.2022.990736;154-laq.xml;154-laq.pdf visually inspected pages6/8 Tables3/4; Methods and cloning/kinetic Results | refutes | The abstract claims penicillin G resistance. Table3 instead gives vector-control MIC16 and LAQ-1 clone MIC4 micrograms/mL. Table4 has nine substrates but no penicillin G hydrolysis result. The resistant source isolate also carries other resistance genes, including TEM-1. These data do not establish the attributed determinant-specific resistance/inactivation, and leave an internal source conflict requiring resolution. |
+| aro | ARO:3000632;ARO:3007438;ARO:3000749; 154-aro-stanzas.json;154-card-current.html;data/raw/aro_resistance_edges.tsv;data/raw/aro_target_edges.tsv | partial | The adopted determinant edge and LAQ-1 ontology stanza lead to PMID36504772. The extractor maps determinant ancestry to inactivation and the seeder emits the exact drug edge. Database attribution is accurately labeled, but labeling alone does not resolve the contradictory primary data. PBP family remains broader than organism-specific target evidence. |
+| aro-cache | Cached ARO ontology; 154-aro-cache-hash.json; external cache /Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/downloads/aro.obo | context_only | External cache hashed before the relevant stanzas were read and rechecked at draft construction; it is evidence rather than a repository input. |
+| porins | PMID:27645385;PMID:24788109; 154-omp35.html/txt;154-omp38.xml/txt; experimental Methods and porin Results/Table3 | partial | OmpK35 loss and uptake experiments support a permeability route in specified Klebsiella/E. coli backgrounds. Omp38 penicillin G MIC differences in the heterologous assay are reported only with clavulanate: all entries exceed2048 micrograms/mL without it. Any primary enrichment must preserve these controls, the loss/variant relationship and host context; porin presence alone must not be treated as universal resistance. |
+| other-enzymes | PMID:34975778;PMID:35862995;PMID:37529328;PMID:37808287; 154-prc.xml;154-kbl.html;154-psz.xml;154-amz.xml; cloned-host comparisons and purified-enzyme kinetic tables | supports | Selected original Methods/Results support penicillin G resistance and hydrolysis for PRC-1, KBL-1, PSZ-1 and AMZ-1. These are determinant/assay-specific observations, not clinical breakpoints. PSZ-1 prose and table differ for a kinetic-efficiency value; no quantitative value is imported here. |
+| pbp | PMID:30355734; DOI:10.1074/jbc.ra118.006052;154-pbp.html/txt; PBP4/PBP5 structure Results and crystallization Methods | supports | Benzylpenicillin acyl complexes directly support binding to specific enterococcal PBP4/PBP5 proteins under the reported crystallographic conditions. This is an optional route to qualified target enrichment; neither thermal shifts nor high-excess crystallization establish universal affinity or clinical susceptibility. |
+| leads | All 25 adopted/ontology-linked PMID records; 154-core.json;154-pmids.json;154-lead-dispositions.json | context_only | All 25 records resolved;22 complete abstracts read and3 metadata-only records identified explicitly. Ten ChEBI leads concern allergy/immunology or a clinical penicillin G regimen. Additional ARO leads cover target reviews and the exact resistance determinants. No unread metadata-only paper is treated as primary experimental verification. |
+| patent | patent:US3024169; 154-patent.html; production description and Example1 | context_only | The adopted patent is relevant document context: it describes penicillin G fermentation with P. chrysogenum Q176, phenylacetic precursor and medium additives. It is not used as an exact structure or modern assay measurement. |
+| adapter | Native iModulonDB CLI; 154-imodulondb-datasets.txt;154-imodulondb-pbp.txt | context_only | The pre-web catalog and query returned one E. coli yfeW/PBP4B gene and zero iModulons. Exact species for the listed resistance determinants were not covered; a different Pseudomonas species was not substituted. Expression membership would not adjudicate direct drug binding or enzyme hydrolysis. |
+| validation | Focused native validators; 154-strict.tsv | supports | Schema and strict checks passed; optional initial synonym assertion failed and a bounded typographic-normalization check then passed. Neither result resolves the LAQ-1 biological conflict. |
+| owners | ARO extraction and seeding owners; scripts/extract_source_inventory.py mechanism_for and resistance edge extraction;scripts/seed_from_sources.py resistance emission;data/raw/aro_resistance_edges.tsv | context_only | The problematic native entry is generated from an adopted exact determinant–drug edge. Correction must be maintained in the source/edge integration path and survive reseeding; a one-off native deletion would not repair its owner. |
+
+## Limits And Additional Notes
+
+- Three linked records had no abstract:PMID18550213(LAP-2),3889939(class review),4610013(neurotoxicity review). Their metadata were resolved, but original text was inaccessible. LAP-2 is not independently primary-verified; it remains a labeled database assertion.
+- PMID17116662(LAP-1) and2783689(R. sphaeroides AmpC) were read as complete abstracts, not full original methods. The first guessed LAP-1 PMC page resolved to an unrelated article and was rejected; the correct page gave a browser challenge and its XML request returned500.
+- The full LAQ-1 PDF tables and relevant main Methods/Results were checked against XML. A bounded correction search did not resolve the contradiction; this is not an exhaustive claim that no correction exists.
+- Public graph comparisons cover six structural mappings. HMDB local requests returned403, although the public web page resolved to penicillin G. The guessed LINCS page was generic, not compound verification. Reaxys/Gmelin and DrugBank were not independently structure-verified; no inaccessible mapping was promoted to an exact-comparison result.
+- The current ChEBI page adds eight citation leads beyond the adopted ten. Those later/additional leads were not exhaustively researched. The review covers all adopted and inspected ARO-linked leads, not all penicillin literature.
+- Salt or formulation details in clinical and biochemical papers were not converted into an exact free-acid dosing claim. Porin results require their host/variant and beta-lactamase-inhibitor qualifiers; optional quantitative PSZ-1 kinetics need source-value reconciliation.
+- Initial network attempts required permitted retry. Focused gates do not establish full-corpus success.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 17 captured repository input hashes and the external ARO cache are unchanged. No native record or maintained source was edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T102341Z-benzylpenicillin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of benzylpenicillin
+started_at: '2026-10-21T09:53:31Z'
+finished_at: '2026-10-21T10:23:41Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Exact parent identity supported; LAQ-1 resistance attribution has
+  an unresolved primary-data conflict
+scientific_review: true
+summary: 'The neutral benzylpenicillin identity, exact public structure mappings,
+  broader classes and antibacterial filing are supported. One database-derived resistance
+  entry needs qualification: the original LAQ-1 paper claims penicillin G resistance
+  in its abstract but reports a lower recombinant MIC than its vector control, with
+  no penicillin G hydrolysis measurement. This contradicts the apparent support for
+  that exact determinant–drug assertion without proving the enzyme cannot act on the
+  drug.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/benzylpenicillin.yaml
+    sha256: f1ff4843aba6b5b3ab935eeb17487097fe1ee20cafc719a5198d5a1c6f76c9ab
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+scope:
+  description: Entire SEEDED record and five history events; adopted ChEBI and ARO
+    identity/target/resistance owners; all 25 resolved adopted or ontology-linked
+    literature records; selected primary experimental methods/results and current
+    exact-structure databases.
+  selection: 'Queue index 154: coordinator captured initial timestamps and 13 input
+    hashes before judgment; four additional repository owners and external ARO cache
+    were hashed before inspection.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:18208
+targets:
+- target_id: CHEBI:18208
+  path: data/antibiotics/antibacterial/benzylpenicillin.yaml
+  label: benzylpenicillin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO/PubChem assertion owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted ARO/PubChem assertion owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted ARO/PubChem assertion owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted ARO target owner
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/benzylpenicillin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit 0; zero ERROR rows.
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/benzylpenicillin.yaml --out /private/tmp/am-review-session/154-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry-literal
+  name: Supplemental literal synonym comparison
+  status: failed
+  required: false
+  summary: 'Exit 1 after successful graph checks: current OLS transliterates Greek
+    letters and an accent, so literal synonym equality failed.'
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/154-chemistry.py
+  exit_code: 1
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: chemistry
+  name: Supplemental bounded normalization check
+  status: passed
+  required: false
+  summary: Exit 0. Only synonym comparison normalizes alpha/beta lettering and accents;
+    graph stereochemistry and identifiers remain exact comparisons.
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/154-chemistry-normalized.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: adapter-catalog
+  name: Native iModulonDB catalog
+  status: passed
+  required: false
+  summary: Exit 0 before protein web follow-up.
+  target_ids:
+  - CHEBI:18208
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-search
+  name: Native iModulonDB protein search
+  status: passed
+  required: false
+  summary: Exit 0; one yfeW/PBP4B gene hit and zero iModulons, so no module-detail
+    follow-up applied.
+  target_ids:
+  - CHEBI:18208
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset modulome --query penicillin
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:18208
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/benzylpenicillin.yaml
+  locator: Whole YAML; five history events
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: supports
+  summary: Exact neutral free acid, ten explicitly database-derived resistance entries
+    and a PBP-family target marked PRIMARY_EVIDENCE_NEEDED. The record does not assert
+    compound-specific MICs, protein examples or causal graphs. History retains SEEDED
+    status.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:18208;PubChem:5904;ChEMBL:CHEMBL29;KEGG:C05551;KEGG:D02336;DrugCentral:2082;PDB-CCD:PNN
+  locator: 154-chemistry-normalized.py;154-chemistry.json and downloaded database
+    artifacts
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: supports
+  summary: Native SMILES/InChI, formula C16H18N2O4S, charge, masses, three configured
+    centers and minted identities agree. All six independently parsed external structures
+    yield full key JGSARLDLIJGVTE-MBNYWOFBSA-N. PNN is the intact parent, not the
+    ring-opened protein adduct. Current ChEBI definition/parents and adopted roles
+    agree; synonym differences are typographic transliteration.
+  snapshot_sha256: f2ffe64098e6a23eb4730ccea1d1736d94826fb3db0fad8efe95d6cabf099d16
+- evidence_id: laq-conflict
+  kind: primary_source
+  reference: PMID:36504772
+  locator: DOI:10.3389/fmicb.2022.990736;154-laq.xml;154-laq.pdf visually inspected
+    pages6/8 Tables3/4; Methods and cloning/kinetic Results
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: refutes
+  summary: The abstract claims penicillin G resistance. Table3 instead gives vector-control
+    MIC16 and LAQ-1 clone MIC4 micrograms/mL. Table4 has nine substrates but no penicillin
+    G hydrolysis result. The resistant source isolate also carries other resistance
+    genes, including TEM-1. These data do not establish the attributed determinant-specific
+    resistance/inactivation, and leave an internal source conflict requiring resolution.
+  snapshot_sha256: 8fecc3365bc86729a377ed5697f4a8eb3150b541d981eac59f215e35b3d9176a
+- evidence_id: aro
+  kind: database
+  reference: ARO:3000632;ARO:3007438;ARO:3000749
+  locator: 154-aro-stanzas.json;154-card-current.html;data/raw/aro_resistance_edges.tsv;data/raw/aro_target_edges.tsv
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: partial
+  summary: The adopted determinant edge and LAQ-1 ontology stanza lead to PMID36504772.
+    The extractor maps determinant ancestry to inactivation and the seeder emits the
+    exact drug edge. Database attribution is accurately labeled, but labeling alone
+    does not resolve the contradictory primary data. PBP family remains broader than
+    organism-specific target evidence.
+  snapshot_sha256: f11f09ef2c691b026d97a2a466b0e92c0ff468259d94ba2b33d442f137797c2a
+- evidence_id: aro-cache
+  kind: database
+  reference: Cached ARO ontology
+  locator: 154-aro-cache-hash.json; external cache /Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/downloads/aro.obo
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: context_only
+  summary: External cache hashed before the relevant stanzas were read and rechecked
+    at draft construction; it is evidence rather than a repository input.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: porins
+  kind: primary_source
+  reference: PMID:27645385;PMID:24788109
+  locator: 154-omp35.html/txt;154-omp38.xml/txt; experimental Methods and porin Results/Table3
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: partial
+  summary: 'OmpK35 loss and uptake experiments support a permeability route in specified
+    Klebsiella/E. coli backgrounds. Omp38 penicillin G MIC differences in the heterologous
+    assay are reported only with clavulanate: all entries exceed2048 micrograms/mL
+    without it. Any primary enrichment must preserve these controls, the loss/variant
+    relationship and host context; porin presence alone must not be treated as universal
+    resistance.'
+  snapshot_sha256: e145c8185e66da7e102fc9b3f02dc947a71ce1af7d15967973c86d037fb21bd2
+- evidence_id: other-enzymes
+  kind: primary_source
+  reference: PMID:34975778;PMID:35862995;PMID:37529328;PMID:37808287
+  locator: 154-prc.xml;154-kbl.html;154-psz.xml;154-amz.xml; cloned-host comparisons
+    and purified-enzyme kinetic tables
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: supports
+  summary: Selected original Methods/Results support penicillin G resistance and hydrolysis
+    for PRC-1, KBL-1, PSZ-1 and AMZ-1. These are determinant/assay-specific observations,
+    not clinical breakpoints. PSZ-1 prose and table differ for a kinetic-efficiency
+    value; no quantitative value is imported here.
+- evidence_id: pbp
+  kind: primary_source
+  reference: PMID:30355734
+  locator: DOI:10.1074/jbc.ra118.006052;154-pbp.html/txt; PBP4/PBP5 structure Results
+    and crystallization Methods
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: supports
+  summary: Benzylpenicillin acyl complexes directly support binding to specific enterococcal
+    PBP4/PBP5 proteins under the reported crystallographic conditions. This is an
+    optional route to qualified target enrichment; neither thermal shifts nor high-excess
+    crystallization establish universal affinity or clinical susceptibility.
+  snapshot_sha256: 14e7843e3f336277ddaf7dd1265da02be35f98b4f8a867f41b92016e9cb3b8cf
+- evidence_id: leads
+  kind: search
+  reference: All 25 adopted/ontology-linked PMID records
+  locator: 154-core.json;154-pmids.json;154-lead-dispositions.json
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: context_only
+  summary: All 25 records resolved;22 complete abstracts read and3 metadata-only records
+    identified explicitly. Ten ChEBI leads concern allergy/immunology or a clinical
+    penicillin G regimen. Additional ARO leads cover target reviews and the exact
+    resistance determinants. No unread metadata-only paper is treated as primary experimental
+    verification.
+  snapshot_sha256: 0058cb99bd24b566f13e27d57097eaa1e38481a384cd11f4e2cd409b7abb5a6a
+  search_scope: All ten adopted ChEBI citations plus ARO compound, class, target and
+    ten determinant citation leads. Supplemental PBP primary paper is separate. Eight
+    additional citations in current ChEBI were outside the adopted snapshot and were
+    not exhaustively followed.
+- evidence_id: patent
+  kind: primary_source
+  reference: patent:US3024169
+  locator: 154-patent.html; production description and Example1
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: context_only
+  summary: 'The adopted patent is relevant document context: it describes penicillin
+    G fermentation with P. chrysogenum Q176, phenylacetic precursor and medium additives.
+    It is not used as an exact structure or modern assay measurement.'
+  snapshot_sha256: c25468867d4c7791f47df423317d2ed643d149ba775f9b272827e16f5465afeb
+- evidence_id: adapter
+  kind: validation
+  reference: Native iModulonDB CLI
+  locator: 154-imodulondb-datasets.txt;154-imodulondb-pbp.txt
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: context_only
+  summary: The pre-web catalog and query returned one E. coli yfeW/PBP4B gene and
+    zero iModulons. Exact species for the listed resistance determinants were not
+    covered; a different Pseudomonas species was not substituted. Expression membership
+    would not adjudicate direct drug binding or enzyme hydrolysis.
+- evidence_id: validation
+  kind: validation
+  reference: Focused native validators
+  locator: 154-strict.tsv
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: supports
+  summary: Schema and strict checks passed; optional initial synonym assertion failed
+    and a bounded typographic-normalization check then passed. Neither result resolves
+    the LAQ-1 biological conflict.
+- evidence_id: owners
+  kind: record_content
+  reference: ARO extraction and seeding owners
+  locator: scripts/extract_source_inventory.py mechanism_for and resistance edge extraction;scripts/seed_from_sources.py
+    resistance emission;data/raw/aro_resistance_edges.tsv
+  accessed_at: '2026-10-21T10:00:42Z'
+  support: context_only
+  summary: The problematic native entry is generated from an adopted exact determinant–drug
+    edge. Correction must be maintained in the source/edge integration path and survive
+    reseeding; a one-off native deletion would not repair its owner.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact free-acid identity
+  outcome: supported
+  summary: Neutral parent identity and parsed public same-structure mappings agree.
+    Salt/formulation or protein-adduct observations remain separate.
+  target_ids:
+  - CHEBI:18208
+  evidence_ids:
+  - record
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Classes, roles and minting
+  outcome: supported
+  summary: Penicillin class, penicillin-allergen parent and antimicrobial roles are
+    consistent with adopted/current ontology and checked literature scope.
+  target_ids:
+  - CHEBI:18208
+  evidence_ids:
+  - chemistry
+  - leads
+- assessment_id: resistance
+  area: evidence
+  topic: Exact determinant–drug support
+  outcome: concern
+  summary: LAQ-1 has an unresolved primary-data contradiction; other inspected routes
+    retain their assay and database qualifiers.
+  target_ids:
+  - CHEBI:18208
+  evidence_ids:
+  - laq-conflict
+  - aro
+  - porins
+  - other-enzymes
+  - leads
+- assessment_id: target
+  area: evidence
+  topic: PBP-family database target
+  outcome: supported
+  summary: The explicit primary-evidence-needed flag accurately limits the native
+    assertion; enterococcal primary acyl structures support optional narrower enrichment.
+  target_ids:
+  - CHEBI:18208
+  evidence_ids:
+  - record
+  - pbp
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Source placement and history
+  outcome: supported
+  summary: All cited lead records were resolved with access depth recorded. Generated
+    provenance and five-event history are consistent.
+  target_ids:
+  - CHEBI:18208
+  evidence_ids:
+  - record
+  - leads
+  - owners
+- assessment_id: completeness
+  area: completeness
+  topic: Required source correction versus optional enrichment
+  outcome: concern
+  summary: Correct the LAQ-1 conflict before scientific sign-off. Protein examples,
+    MICs and producer enrichment are optional and require exact material/strain/method
+    scope.
+  target_ids:
+  - CHEBI:18208
+  evidence_ids:
+  - laq-conflict
+  - pbp
+  - patent
+- assessment_id: schema
+  area: schema
+  topic: Focused gates
+  outcome: supported
+  summary: Schema and strict validation pass; the supplemental typo-normalization
+    rerun has an explicit prior failure.
+  target_ids:
+  - CHEBI:18208
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-18208-laq1-resistance-primary-table-conflict
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Resolve the LAQ-1 penicillin G resistance attribution against the primary
+    tables
+  description: The native LAQ-1 ANTIBIOTIC_INACTIVATION entry faithfully repeats CARD/ARO,
+    but the linked original paper contains a material internal conflict. Its abstract
+    claims resistance while the clone has MIC4 versus vector16 micrograms/mL, and
+    purified-enzyme kinetics do not include penicillin G. The high MIC of the multidrug-resistant
+    source isolate cannot establish LAQ-1 causation. This finding concerns the evidence
+    and certainty of the exact determinant–drug assertion; it does not demonstrate
+    that LAQ-1 cannot hydrolyze penicillin G under any conditions.
+  target_ids:
+  - CHEBI:18208
+  field_paths:
+  - resistance_mechanisms[aro_id=ARO:3007438].mechanism_type
+  - resistance_mechanisms[aro_id=ARO:3007438].evidence
+  evidence_ids:
+  - laq-conflict
+  - aro
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted ARO/PubChem assertion owner
+  rule_id: 'review-checklist: claim-level evidence and exact assay scope'
+  native_severity: major unsupported determinant–drug inference with internally conflicting
+    primary source
+  normalization_reason: This is a material resistance-mechanism attribution. Accurate
+    database provenance does not remove the contradictory experimental evidence; the
+    defect is limited to this exact edge.
+actions:
+- action_id: A1
+  description: Maintain an explicit source-owned correction or qualification for the
+    LAQ-1–benzylpenicillin edge.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:18208
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted ARO/PubChem assertion owner
+  acceptance_checks:
+  - Seek a published correction, corrected primary table or independent compound-specific
+    cloning/hydrolysis evidence that resolves the discrepancy. Do not infer resolution
+    from the abstract alone, generic AmpC class membership or source-isolate resistance.
+  - Until resolved, suppress the unqualified exact edge from structured resistance
+    output or attach an explicit controversy/limitation through a maintained supported
+    representation, retaining database provenance and the contradictory primary citation.
+    If the current pipeline lacks a per-edge correction path, implement a narrow auditable
+    path rather than editing only generated YAML.
+  - Do not delete LAQ-1 as an enzyme, remove its other drug edges, or assert universal
+    lack of penicillin G hydrolysis. Scope the exception to ARO3007438 → ARO3000632
+    and document the source/table evidence.
+  - Canary reseeding must reproduce the corrected exact edge behavior without changing
+    unrelated determinants. Check generated output, schema/strict/reference/history
+    and corpus gates; use validated history-bearing writes for any later native change.
+limitations:
+- Three linked records had no abstract:PMID18550213(LAP-2),3889939(class review),4610013(neurotoxicity
+  review). Their metadata were resolved, but original text was inaccessible. LAP-2
+  is not independently primary-verified; it remains a labeled database assertion.
+- PMID17116662(LAP-1) and2783689(R. sphaeroides AmpC) were read as complete abstracts,
+  not full original methods. The first guessed LAP-1 PMC page resolved to an unrelated
+  article and was rejected; the correct page gave a browser challenge and its XML
+  request returned500.
+- The full LAQ-1 PDF tables and relevant main Methods/Results were checked against
+  XML. A bounded correction search did not resolve the contradiction; this is not
+  an exhaustive claim that no correction exists.
+- Public graph comparisons cover six structural mappings. HMDB local requests returned403,
+  although the public web page resolved to penicillin G. The guessed LINCS page was
+  generic, not compound verification. Reaxys/Gmelin and DrugBank were not independently
+  structure-verified; no inaccessible mapping was promoted to an exact-comparison
+  result.
+- The current ChEBI page adds eight citation leads beyond the adopted ten. Those later/additional
+  leads were not exhaustively researched. The review covers all adopted and inspected
+  ARO-linked leads, not all penicillin literature.
+- Salt or formulation details in clinical and biochemical papers were not converted
+  into an exact free-acid dosing claim. Porin results require their host/variant and
+  beta-lactamase-inhibitor qualifiers; optional quantitative PSZ-1 kinetics need source-value
+  reconciliation.
+- Initial network attempts required permitted retry. Focused gates do not establish
+  full-corpus success.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 17 captured repository input hashes and the external ARO cache are unchanged.
+  No native record or maintained source was edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:18208
+- https://doi.org/10.3389/fmicb.2022.990736
+- https://doi.org/10.1074/jbc.ra118.006052
+- https://card.mcmaster.ca/ontology/36976
+tags:
+- record-review
+- benzylpenicillin
+- penicillin-g
+- laq-1
+- resistance-evidence
+```

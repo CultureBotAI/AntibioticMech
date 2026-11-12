@@ -1,0 +1,853 @@
+schema_version: 1.0.0
+review_id: 20261021T102007Z-benzalkonium-chloride
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Benzalkonium chloride: generic chloride concept collapsed onto a single tridecyl
+  cation'
+started_at: '2026-10-21T09:53:26Z'
+finished_at: '2026-10-21T10:20:07Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author this record. Preserved the initial capture and
+    added actual ARO/PubChem ownership and source inputs before assessment. Read the
+    complete native record and maintained rows, inspected official chemical representations
+    and original resistance evidence, and ran actual focused gates.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'One confirmed identity blocker: the label, CAS/ChEBI/KEGG concept and generic
+  resistance assertions concern benzalkonium chloride, whereas the imported structure
+  is one chloride-free tridecyl cation. ChEMBL adds a third scope: the corresponding
+  specific chloride salt. This conflict is reproduced from current official sources
+  and maintained inputs; successful schema checks do not resolve it. The six resistance
+  entries accurately retain database-level provenance and primary studies support
+  benzalkonium preparations, but those results cannot automatically become evidence
+  for this exact cation.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/benzalkonium-chloride.yaml
+    sha256: e9cdb974aa0f3a97f483d45704f3d644efc718d73c7e0ef0e03158cb7b04bb88
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-34500a4f2b
+  path: data/antibiotics/antibacterial/benzalkonium-chloride.yaml
+  label: benzalkonium chloride
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted name, definition, class and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Exact charged structure fallback; requires class-versus-homologue and salt-scope
+      validation
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source policies and determinant lineage mechanism map
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source transform
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding/exclusion overrides
+scope:
+  description: 'Whole generated record: generic name and exact synonyms, five xrefs,
+    charged structure, source mint, class and roles, all six resistance assertions,
+    one adopted ARO citation and ten contextual ChEBI citation leads, five history
+    events.'
+  selection: Queue 151; one resolved native path and ARO source concept.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-34500a4f2b
+  exclusions:
+  - target: Other benzalkonium chain lengths, their counterion salts, commercial mixtures,
+      combination formulations and benzethonium chloride
+    reason: They are distinct chemical forms or compositions; their efficacy, dose
+      and resistance evidence cannot be assigned as exact C13-cation observations.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  evidence_ids:
+  - validation
+  - mass-conventions
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/benzalkonium-chloride.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  evidence_ids:
+  - validation
+  - mass-conventions
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/benzalkonium-chloride.yaml --out /private/tmp/am-review-session/151-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: failed
+  required: false
+  summary: Actual focused command exited 1. The custom chemistry diagnostic fails
+    its monoisotopic-mass tolerance; a separate successful calculation explains the
+    one-electron-mass difference between RDKit and the imported/current PubChem value.
+    This does not resolve the independent class/cation identity blocker.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  evidence_ids:
+  - validation
+  - mass-conventions
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 151
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: chemistry-conventions
+  name: Independent representation and charged-mass diagnostic
+  status: passed
+  required: false
+  summary: Exited 0. The two native structures agree with current CID2330. Atomic
+    isotope mass sum reproduces PubChem; RDKit subtracts one electron mass. Chemical
+    scope is evaluated separately.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  evidence_ids:
+  - mass-conventions
+  - pubchem
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/151-chemistry-conventions.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/benzalkonium-chloride.yaml
+  locator: Complete YAML including five history events.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: supports
+  summary: SEEDED/MINTED antibacterial record with generic benzalkonium chloride definition,
+    CAS/name/KEGG exact synonyms, five xrefs, C22H40N+ single cation, six ANTIBIOTIC_EFFLUX
+    entries and honest database-assertion evidence notes. No native molecular target,
+    quantitative AST, natural producer, dataset or causal graph is asserted.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; data/raw/chebi_antimicrobials.tsv;
+    data/raw/aro_resistance_edges.tsv
+  locator: ARO line 275; PubChem line 96; ChEBI line 45; resistance lines 3956–3961;
+    complete exact rows and source config/extractor/seeder.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: supports
+  summary: ARO3003823 supplies generic chloride name, PMID9079913, CAS8001-54-5, CHEBI3020,
+    CHEMBL502109 and CID2330. ChEBI3020 has a variable R-group chloride class with
+    no standard key, so PubChem fallback supplies a specific C13 cation. Seeder also
+    borrows the class roles independently of exact structure. Its name/CAS conflict
+    gate does not reject this case because names and CAS agree despite incompatible
+    chemical scopes. All initial hashes were preserved and all 18 initial/supplemental
+    inputs remain unchanged.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:3020
+  locator: Official definition, formula, SMILES, roles, parents and CAS/KEGG references.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: refutes
+  summary: ChEBI3020 explicitly denotes a class of quaternary ammonium chlorides with
+    variable even-numbered alkyl chains. Its formula is C9H13ClNR and its SMILES contains
+    an R-group and chloride; charge is zero. It supports the generic CAS8001-54-5
+    and KEGG D00857 context, not an exact chloride-free C13 chain structure. Imported
+    antibacterial and disinfectant roles are faithful class-level assertions, not
+    proof of exact homologue activity.
+  snapshot_sha256: 111048da7339717ca2fcbc21f528ce3e25b8d8e813904daa857c6450bdcfc8c9
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/2330/property/MolecularFormula,MolecularWeight,MonoisotopicMass,Charge,SMILES,InChI,InChIKey,IUPACName/JSON
+  locator: Current official CID2330 REST properties and independently parsed native
+    structures.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: supports
+  summary: CID2330 is benzyl-dimethyl-tridecylazanium, C22H40N+, charge +1, with a
+    13-carbon alkyl substituent and no counterion. Both native representations yield
+    VVZBFOKBSDGVGZ-UHFFFAOYSA-N and one fragment, agreeing exactly with current source.
+    This establishes faithful import but also the mismatch with the generic chloride
+    concept.
+  snapshot_sha256: 92e33e54397c4134f02636809e5a20e876523a6e2ce4f06a84067a3ae6924795
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL502109.json
+  locator: Official molecule structure and parent hierarchy.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: refutes
+  summary: CHEMBL502109 is C22H40ClN with explicit chloride and key XIWFQDBQMCDYJT-UHFFFAOYSA-M;
+    its active parent is CHEMBL1187417. Thus the adopted xref describes a specific
+    C13 chloride salt, not the native bare cation and not a variable-chain mixture.
+    Changing only the native structure to this salt would leave the generic source-concept
+    mismatch unresolved.
+  snapshot_sha256: d0e584be61c52c3f3a020b4eaa4e07ad991b05d7e8df353bdd4d73dc8cc0185c
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/D00857
+  locator: Official drug definition, formula, comment and crossrefs.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: refutes
+  summary: D00857 describes benzalkonium chloride/Zephiran chloride with variable
+    R-group formula C9H13NR.Cl and links CAS8001-54-5 and CHEBI3020. It is not an
+    exact synonym for the native C13 cation.
+  snapshot_sha256: c0cdae5cf7f5d6a45169ce33d9e103e2ca435b56ea536c379c11624a492416bd
+- evidence_id: mass-conventions
+  kind: validation
+  reference: Independent isotope-mass calculation and current PubChem CID2330
+  locator: 151-chemistry-conventions.py/json and retained initial 151-chemistry.json.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: supports
+  summary: Summing the isotope atomic masses for C22H40N gives 318.31607528, exactly
+    native/current PubChem. RDKit ExactMolWt is 318.31552670009, smaller by 0.00054857991,
+    one electron mass for +1. The initial tolerance failure does not establish an
+    erroneous source mass or inconsistent native structures. Both exact keys/formulas/charges
+    and the source mint reproduce.
+  snapshot_sha256: 9e4a04eb31fbd1483ca25691f5c61bf1c312b0692691c6e0be27f0ead4543d62
+- evidence_id: aro
+  kind: database
+  reference: https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo
+  locator: '151-aro-terms.txt: source, class, mechanism ancestor and all six determinant
+    terms.'
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: supports
+  summary: Current ARO confirms source/class identifiers and the six confers_resistance_to_antibiotic
+    edges to generic ARO3003823. Determinant lineage supports ANTIBIOTIC_EFFLUX. ARO3005386
+    is the broader disinfecting-agents/antiseptics class, and configured antibacterial
+    role priority explains the folder/classification; biocide use alone is not a classification
+    error.
+  snapshot_sha256: e902fd55702ab4aa765d1826e098a2722225389961d57212fbb4a669969bd3c6
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB structured adapter
+  locator: 151-adapter-results.json and five individual outputs; 055-imodulondb-datasets-retry.txt
+    catalog.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: context_only
+  summary: All five actual searches exited 0 before open web research. e_coli/precise_mg1655
+    found b0842 mdfA; p_aeruginosa/precise364 found PA1361 PmpM, without module hits
+    informing the verdict. a_baumannii/precise139 AbuO and s_aureus/staph_precise108
+    qacJ/qacG returned no hits. Klebsiella is not covered in the inspected catalog.
+    These are computational context only; neither hits nor misses establish transport
+    of an exact chemical, susceptibility or resistance.
+  snapshot_sha256: 9ce50e9aea08d89884d8044711b69828871da9945865e293806cf7e91f448365
+- evidence_id: mdfa1997
+  kind: primary_source
+  reference: PMID:9079913; DOI:10.1128/JB.179.7.2274-2280.1997
+  locator: Complete original abstract and PMC178964 landing page.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: partial
+  summary: Multicopy mdfA expression increases E. coli resistance to benzalkonium
+    among several agents; transport experiments support proton-gradient-driven multidrug
+    efflux. The inspected abstract does not specify a purified C13 cation or support
+    every industrial-use clause in the imported definition. Scanned main-paper PDF
+    retrieval returned an HTML challenge, so reagent composition and the linked erratum
+    were not resolved from full text.
+  snapshot_sha256: ad2309e362912d24122651e71a8bcd3b207cb48d8cc9584b8408f5458ef65221
+- evidence_id: mdfa-other
+  kind: primary_source
+  reference: PMID:26238402; PMID:12578981; PMID:9811673
+  locator: All three original abstracts; PMC4559816 introduction, ligand-structure
+    and binding-method sections.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: partial
+  summary: The 2015 structures are MdfA complexes with chloramphenicol, deoxycholate
+    and LDAO, not benzalkonium. The 2003 electrogenicity paper concerns chloramphenicol/thiamphenicol
+    and cationic reporter substrates; the 1998 cmlA study concerns IPTG exclusion
+    and spectinomycin hypersensitivity. These establish determinant context, not exact
+    C13-cation structural transport evidence.
+  snapshot_sha256: 00b98cb366764a1f5805111a45987bc28d3ea0dba7ff71963df345b44f7a7e26
+- evidence_id: pmpm
+  kind: primary_source
+  reference: PMID:14679249; DOI:10.1128/JB.186.1.262-265.2004
+  locator: Complete PMC303449 main text, Tables 1–2 and figure captions.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: supports
+  summary: PmpM expression in E. coli KAM32 raises the benzalkonium chloride MIC from
+    1.2 to 37.5 micrograms/mL. P. aeruginosa PMX52, pmpM-deleted PMX6 and complemented
+    cells have MICs of 20, 5 and 40 micrograms/mL. The paper separately measures benzalkonium-triggered
+    H+ movement in everted vesicles and ethidium efflux. It supports generic preparation
+    resistance/antiport, while no exact alkyl composition is established in the inspected
+    paper. It does not make PmpM the antimicrobial target.
+  snapshot_sha256: 1c3f262871e26911063a20afbfeae3b196b670a4da74358a6051e9b3b2ad5a07
+- evidence_id: abuo
+  kind: primary_source
+  reference: PMID:25512405; DOI:10.1128/AAC.03626-14
+  locator: PMC4335886 original abstract, Methods and relevant Results including Figure
+    6 caption.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: partial
+  summary: In A. baumannii AYE, deletion/complementation supports an AbuO-associated
+    benzalkonium chloride survival phenotype. The 6.4 micrograms/mL observation is
+    a survival comparison, not an MIC. Fluorescent accumulation assays use ethidium/ciprofloxacin;
+    direct purified AbuO transport of the native C13 cation was not measured. RT-PCR
+    of mutant cultures is not a benzalkonium-exposure transcriptome or evidence of
+    drug binding to the response proteins.
+  snapshot_sha256: 9f5bfc6250b80c8d0538a9d6f28401f3e41d1f9246530acccf1cf130a4d80c9e
+- evidence_id: kpnef
+  kind: primary_source
+  reference: PMID:23836167; DOI:10.1128/AAC.02284-12
+  locator: PMC3754300 original abstract, Methods and relevant Results/Figure 6 caption.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: partial
+  summary: KpnEF coexpression increases generic benzalkonium chloride MIC in E. coli;
+    kpnE or kpnF alone does not. K. pneumoniae mutant/complementation stress experiments
+    support a broader resistance interpretation, but the reported 8.05-fold CFU difference
+    at 25.6 micrograms/mL has P=0.05154 in the text, despite a caption describing
+    significant differences at P<0.05. Other-strain susceptibility wording is internally
+    inconsistent. Preserve these limitations; do not promote every survival comparison
+    to a significant MIC phenotype or exact homologue transport.
+  snapshot_sha256: 142c92a942d78946d9f6bba4520bee40528425ed6e9cf890cb53f997f60d074f
+- evidence_id: qac
+  kind: primary_source
+  reference: PMID:14506007; DOI:10.1128/AAC.47.10.3046-3052.2003; PMID:10196743; DOI:10.1046/J.1365-2672.1999.00672.X
+  locator: qacJ original abstract, Methods, recombinant MIC table and relevant Results/Discussion
+    in PMC201118; qacG complete original abstract.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: partial
+  summary: Plasmid curing and qacJ recombinant comparisons support benzalkonium chloride
+    resistance in staphylococci; the qacJ paper also directly compares qacG recombinants.
+    qacG original abstract reports proton-dependent efflux. These studies concern
+    named preparations, not verified C13-cation formulations. CTAB exposure in horses
+    is a selection hypothesis for qacJ, not evidence of benzalkonium exposure in those
+    animals.
+  snapshot_sha256: 1358708ee4616f2d13a66993f8449ef2a46176ad70e3658fb2b36c355fe9148a
+- evidence_id: chebi-activity
+  kind: primary_source
+  reference: PMID:23682619; PMID:23651563; PMID:23439005; PMID:23102555; PMID:23519403
+  locator: Complete original abstracts in 151-epmc.json, with PMIDs individually resolved.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: partial
+  summary: 23682619 tests benzalkonium plus ultrasound against Listeria biofilms;
+    23651563 studies Pseudomonas adaptation proteomics; 23439005 tests antiseptic-loaded
+    hydrogels/gauzes against bacteria and biofilms. 23102555 is filamentous-fungal
+    susceptibility, with panel MIC50/MIC90 rather than individual bacterial MICs.
+    23519403 is antiacanthamoebal activity, not antibacterial activity. All are contextual
+    ChEBI citation leads and do not resolve exact C13 chemical composition. Combination,
+    delivery and response-protein results must retain their scope.
+  snapshot_sha256: 0405d68cca50b3908046c19a71235ec418c956d34993b57e70ba7fc1da452daa
+- evidence_id: chebi-host
+  kind: primary_source
+  reference: PMID:17660979; PMID:22692451; PMID:23078159; PMID:23278376
+  locator: Complete original abstracts in 151-epmc.json.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: context_only
+  summary: 17660979 examines chromosome aberrations in human dental-pulp cells; 22692451
+    examines murine conjunctival immune tolerance and epithelial signaling; 23078159
+    examines human adipocyte/pre-adipocyte cytotoxicity; 23278376 examines safety
+    of a multi-ingredient sanitizing formulation. These do not establish exact-cation
+    antibacterial targets, natural producers or bacterial AST.
+  snapshot_sha256: 0405d68cca50b3908046c19a71235ec418c956d34993b57e70ba7fc1da452daa
+- evidence_id: chebi-review
+  kind: database
+  reference: PMID:23542350; DOI:10.1097/ICU.0b013e32835c8aba
+  locator: Complete original review abstract.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: context_only
+  summary: This is a secondary review of glaucoma therapy and ocular surface disease,
+    useful for host toxicity context only. It is not primary antibacterial evidence
+    and is not typed as a primary source.
+  snapshot_sha256: 0405d68cca50b3908046c19a71235ec418c956d34993b57e70ba7fc1da452daa
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 151-local-hits.txt and 151-maintained-search.txt; bounded exact-identity
+    literature search.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: context_only
+  summary: Hidden- and ignored-inclusive searches identified the source ownership
+    and no separate maintained exact-C13 curator evidence in the searched scope. Historical
+    reports were leads only. Bounded searches for the exact IUPAC name, tridecyl identity
+    and CAS1641-93-6 did not yield an inspected original study resolving this exact-cation
+    evidence gap; vendor summaries were not used as proof. This is not evidence that
+    the cation is inactive.
+  snapshot_sha256: ed1e6d1d8dd2316cd9ef2578202fa04e72c9df870a444cbf8353ca2a3ceda9e8
+  search_scope: rg --no-ignore --hidden for benzalkonium chloride, slug, ARO:3003823,
+    CHEBI:3020 and VVZBFOKBSDGVGZ in batch016 excluding .git/.venv; focused maintained
+    curation/conf/scripts/data/raw/src/reports/reviews. Official PubChem, ChEBI, ChEMBL,
+    KEGG, ARO, Europe PMC and PubMed sources; exact benzyl-dimethyl-tridecylazanium
+    and CAS1641-93-6 antibacterial queries.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/HARMONIZATION.md;
+    conf/sources.yaml
+  locator: Exact chemical identity, generic-class exclusion, source priority and evidence
+    scope criteria.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: supports
+  summary: A record must denote one exact eligible antimicrobial structure. Source
+    labels, salts, classes and mixtures cannot be collapsed by name coincidence. Curator
+    evidence must remain narrow; resistance determinants are not automatically antibacterial
+    targets, and expression responses are not binding measurements.
+- evidence_id: validation
+  kind: validation
+  reference: Focused record gates and custom chemical diagnostics
+  locator: 151-focused-results.json, strict TSV and diagnostic artifacts.
+  accessed_at: '2026-10-21T10:18:08Z'
+  support: supports
+  summary: Required schema and strict commands exited 0. The original optional chemistry
+    command exited 1; a separate convention-aware command exited 0 and explains the
+    mass-only discrepancy. Identity conflict is independently established by official
+    structures despite deterministic validation. Initial and supplemental input hashes
+    remain unchanged.
+  snapshot_sha256: f4c76fe4d9efa1f550a356a545150619dcf3a57a44ca1558d49702dcecfe3347
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Generic mixture/class versus exact cation and salt
+  outcome: concern
+  summary: CHEBI3020 and KEGG describe a variable-chain chloride concept, native PubChem
+    is a specific C13 bare cation, and ChEMBL is the C13 chloride salt. These are
+    not exact identities.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  evidence_ids:
+  - record
+  - source
+  - chebi
+  - pubchem
+  - chembl
+  - kegg
+- assessment_id: grounding
+  area: grounding
+  topic: Source mint, broad class and role placement
+  outcome: concern
+  summary: The mint reproduces correctly and broad class/role policy is faithfully
+    applied. It does not cure source-concept scope mismatch or establish exact-cation
+    activity.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  evidence_ids:
+  - source
+  - aro
+  - rubric
+- assessment_id: resistance
+  area: evidence
+  topic: Six imported resistance edges
+  outcome: concern
+  summary: All six are genuine database assertions with honest provenance; primary
+    support exists for generic preparations. None of the inspected evidence resolves
+    direct transfer to this exact native C13 cation.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  evidence_ids:
+  - aro
+  - mdfa1997
+  - mdfa-other
+  - pmpm
+  - abuo
+  - kpnef
+  - qac
+  - adapter
+- assessment_id: citations
+  area: provenance
+  topic: Adopted and borrowed-source citation dispositions
+  outcome: supported
+  summary: The adopted ARO PMID and ten ChEBI leads were each inspected at original
+    abstract or beyond. Extra ARO determinant references were resolved; secondary
+    review, host toxicity, formulation, fungal and protozoan contexts remain distinct.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  evidence_ids:
+  - mdfa1997
+  - mdfa-other
+  - pmpm
+  - abuo
+  - kpnef
+  - qac
+  - chebi-activity
+  - chebi-host
+  - chebi-review
+- assessment_id: completeness
+  area: completeness
+  topic: Optional mechanism, activity and dataset additions
+  outcome: unknown
+  summary: Settle identity before enriching scientific fields. No exact primary mechanism,
+    natural producer, clinical indication or exposure dataset was established for
+    the native cation. Optional absence itself is not an error.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  evidence_ids:
+  - record
+  - search
+  - rubric
+  - adapter
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained inputs and transformation
+  outcome: supported
+  summary: The reproducible error spans the ARO source concept, PubChem fallback and
+    seeding scope gate. Fixes belong to maintained source/decision/transform owners,
+    with any independently supported exact-cation curation owned by the actual native
+    record.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  evidence_ids:
+  - source
+  - rubric
+- assessment_id: schema
+  area: schema
+  topic: Focused gates and mass-convention diagnostic
+  outcome: supported
+  summary: Required focused checks pass. The retained optional chemistry failure is
+    explained by electron-mass conventions, not used to manufacture a second identity
+    finding.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  evidence_ids:
+  - validation
+  - mass-conventions
+findings:
+- finding_id: F1
+  issue_key: benzalkonium-generic-chloride-c13-cation-identity-collapse
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: Resolve the generic chloride concept, specific C13 cation and chloride-salt
+    mismatch
+  description: The record is labeled benzalkonium chloride and carries generic CAS8001-54-5/CHEBI3020/KEGG
+    D00857 context, but its only structure is the chloride-free C13 cation C22H40N+.
+    Current official ChEMBL instead represents the specific C13 chloride salt. The
+    source import is mechanically reproducible yet does not denote one coherent chemical
+    entity. Generic benzalkonium activity and six resistance edges cannot automatically
+    validate the exact cation. This is a wrong-identity blocker, not a claim that
+    the C13 cation lacks activity.
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  field_paths:
+  - label
+  - definition
+  - synonyms
+  - chemical_structure
+  - xrefs
+  - activity_roles
+  - source_concepts
+  - resistance_mechanisms
+  evidence_ids:
+  - source
+  - chebi
+  - pubchem
+  - chembl
+  - kegg
+  - aro
+  - pmpm
+  - rubric
+  rule_id: 'native-review-checklist: one exact structure and salt/class/mixture scope'
+  native_severity: blocker for wrong chemical identity
+  normalization_reason: Independent official sources and exact parsed structures confirm
+    incompatible scopes, even though schema, strict checks and source mint pass.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exclude or explicitly resolve the generic ARO concept under exact-structure
+      policy
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted generic concept and conflicting xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Specific cation fallback structure
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Identity acceptance and class/mixture policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem mapping and chemical-form verification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source scope transform
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Prevent generic or salt-level claims being assigned to an unrelated exact
+      fallback structure
+actions:
+- action_id: A1
+  description: Resolve source chemical scope before retaining or enriching this exact
+    record.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-34500a4f2b
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exclude or explicitly resolve the generic ARO concept under exact-structure
+      policy
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted generic concept and conflicting xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Specific cation fallback structure
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Identity acceptance and class/mixture policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem mapping and chemical-form verification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source scope transform
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Prevent generic or salt-level claims being assigned to an unrelated exact
+      fallback structure
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/benzalkonium-chloride.yaml
+    role: Any separately supported exact-cation primary curation through the validated
+      writer and history
+  acceptance_checks:
+  - Decide whether ARO3003823 is a generic chloride class/mixture that should be excluded
+    under the exact-structure rule. Record a maintained exclusion/grounding decision
+    if appropriate; do not delete a generated file as an isolated fix.
+  - If retaining a specific homologue, independently verify its exact chain length,
+    charge/counterion, full structure key, identifiers and compound-specific antimicrobial
+    evidence. Do not simply substitute the ChEMBL C13 chloride salt or one common
+    even-chain member for the generic concept. Keep cation, salt, mixture and class
+    relationships explicitly non-equivalent.
+  - Reassess all exact synonyms/xrefs and all six inherited resistance entries after
+    identity resolution. Keep ARO assertions distinguishable from primary observations
+    and do not transfer mixture/formulation tests to a specific homologue without
+    material composition evidence.
+  - For any optional primary evidence, preserve strain/genotype, expression-host versus
+    native-host distinctions, drug preparation and concentration units. Distinguish
+    MIC, CFU survival, efflux reporter and proton-antiport assays. Reconcile the KpnEF
+    text/caption statistical inconsistency before reporting quantitative significance.
+  - Attach direct references to the specific definition clauses they establish. PMID9079913
+    supports MdfA resistance context at inspected abstract scope, not every surfactant/phase-transfer
+    use clause. Host toxicity, fungal/protozoan assays, combination formulations and
+    secondary reviews must not become exact antibacterial target evidence.
+  - Add an appropriate maintained scope gate for generic R-group/mixture identities
+    and incompatible cation/salt xrefs; verify that matching names and CAS alone cannot
+    bypass it. Regenerate only through the documented source pipeline during separately
+    authorized curation.
+  - Use the validated writer and record_curation_event for any authorized native additions,
+    preserve source decisions across reseeding, and run focused/shared identity, reference,
+    history and strict checks. Keep SEEDED until all native review criteria are met.
+limitations:
+- The target and actual maintained inputs were inspected after initial capture. Original
+  capture files were preserved; actual ARO/PubChem ownership was added in a supplemental
+  capture. All 18 input hashes remain unchanged.
+- All adopted/borrowed source citation abstracts and additional ARO determinant abstracts
+  were inspected. PmpM main text, tables and captions were read completely. AbuO,
+  KpnEF, qacJ and the 2015 MdfA paper were inspected in relevant Methods/Results/Discussion
+  sections; not all supplemental files or raw figures were examined.
+- The original 1997 MdfA paper is scanned; its attempted free PDF returned HTML challenge
+  content. Its full reagent description and linked erratum remain unassessed. qacG
+  was assessed through the original abstract. These access limits do not affect the
+  official chemical-scope contradiction.
+- CAS Common Chemistry pages were inaccessible through the attempted route. CAS8001-54-5
+  was checked through official ChEBI/KEGG and the adopted source rather than independent
+  CAS full text.
+- No inspected primary study specifically established antibacterial activity or each
+  determinant interaction for the exact chloride-free C13 cation. Bounded searching
+  is not exhaustive and does not prove inactivity. Class/mixture exclusion or specific-homologue
+  retention remains a curation decision requiring coherent scope and evidence.
+- The custom chemistry failure is retained and separately explained by the one-electron-mass
+  convention difference. It is not treated as a second native data error.
+- iModulonDB hits/misses supplied only computational context. No public exposure transcriptome,
+  complete resistance inventory, clinical breakpoint or clinical-use assessment is
+  claimed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
