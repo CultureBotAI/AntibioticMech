@@ -1,0 +1,868 @@
+schema_version: 1.0.0
+review_id: 20261021T180901Z-helvolic-acid-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Helvolic acid: coherent structure with two incompatible exact chemical names'
+started_at: '2026-10-21T17:48:33Z'
+finished_at: '2026-10-21T18:09:01Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The stored neutral helvolic acid graph agrees with current ChEBI, LIPID MAPS
+  and independently inspected primary figures. One exact synonym omits the C-6 acetate
+  and another assigns a tetrahedral descriptor at an alkene carbon. These source-owned
+  nomenclature defects require correction; the graph itself is supported. All eight
+  adopted references were assessed at explicit reading depths, with primary whole-cell
+  activity distinguished from biosynthesis and host-cell studies.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/helvolic-acid.yaml
+    sha256: 03e75200631e515827f25f71eeaf317c79e528d7a5453f5c317ee59767ad45ac
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+targets:
+- target_id: CHEBI:62460
+  path: data/antibiotics/antibacterial/helvolic-acid.yaml
+  label: helvolic acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 526; one exact native record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:62460
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Executed against worktree 053; chemistry
+    used existing 019 RDKit and native validators used 053.
+  target_ids:
+  - CHEBI:62460
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    526
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against worktree 053; chemistry
+    used existing 019 RDKit and native validators used 053.
+  target_ids:
+  - CHEBI:62460
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/helvolic-acid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against worktree 053; chemistry
+    used existing 019 RDKit and native validators used 053.
+  target_ids:
+  - CHEBI:62460
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/helvolic-acid.yaml --out /private/tmp/am-review-session/526-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:62460
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:62460
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:62460
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:62460
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:62460
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:62460
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:62460
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:62460
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:62460
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/helvolic-acid.yaml
+  locator: Entire native YAML, all five synonyms, four parents, one role, four xrefs
+    and three history events
+  accessed_at: '2026-10-21T18:04:19Z'
+  support: supports
+  summary: The SEEDED exact record has neutral C33H44O8, key MDFZYGLOIJNNRM-OAJDADRGSA-N,
+    nine assigned tetrahedral centres, two acetate esters and a Z exocyclic alkene.
+    No native molecular target, resistance, activity_spectrum, producer, clinical
+    product or causal graph is asserted.
+  snapshot_sha256: 03e75200631e515827f25f71eeaf317c79e528d7a5453f5c317ee59767ad45ac
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv#CHEBI:62460
+  locator: Exact adopted row 1082 and readiness row 1365
+  accessed_at: '2026-10-21T18:04:19Z'
+  support: context_only
+  summary: The full source row reproduces the native identity, definition, synonyms,
+    terms, xrefs and eight PMID leads. All original 13 input hashes were preserved
+    and expanded to 21 owner/context inputs. No exact curator or decision override
+    was found.
+  snapshot_sha256: 7eb21372483fe46cd9caf17779aebe4f863ccf2bdc8a977a46340e1cf21d89a4
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/526-context-search.txt
+  locator: Initial whole-tree capture plus exact source-owner follow-up
+  accessed_at: '2026-10-21T18:04:19Z'
+  support: context_only
+  summary: Identifier, label and slug searches included hidden and gitignored files.
+    No absence claim relies on a default gitignore-sensitive search.
+  snapshot_sha256: 84bc3fcb7f745a88b938aa9b38ac45c8f0c9cbaab76383b71c4a896b65d7adb6
+  search_scope: Isolated worktree053; original526-local-hits.txt and rg --no-ignore
+    --hidden in curation/conf/scripts/data/raw.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/62460/
+  locator: CHEBI:62460 current graph, definition, names and xrefs
+  accessed_at: '2026-10-21T17:59:03.015922Z'
+  support: supports
+  summary: Current ChEBI reproduces the native graph and names, including the incomplete
+    16-acetoxy-only synonym. Faithful source transcription does not resolve the chemically
+    different name.
+  snapshot_sha256: 1f86ef29b55274d64977b42f2337e6135e23ce8ca967a7a6ca959c24fa95b381
+- evidence_id: lipidmaps
+  kind: authority
+  reference: https://www.lipidmaps.org/rest/compound/lm_id/LMPR0106080005/all/json
+  locator: LMPR0106080005 structure and name
+  accessed_at: '2026-10-21T17:59:03.021239Z'
+  support: supports
+  summary: Both current SMILES and InChI agree exactly with the native graph. Its
+    printed systematic name also carries the inappropriate 17β descriptor, showing
+    that the nomenclature issue is propagated rather than a graph discrepancy.
+  snapshot_sha256: fbf70500ab120e1d491d5f4c5d9e5d08d92004ce6349371cf597fe712dd05858
+- evidence_id: knapsack
+  kind: database
+  reference: https://www.knapsackfamily.com/knapsack_core/information.php?word=C00023904
+  locator: C00023904 displayed Standard InChI, SMILES and InChIKey
+  accessed_at: '2026-10-21T17:59:03.584860Z'
+  support: context_only
+  summary: The displayed Standard InChI reconstructs the native exact key. Its SMILES
+    lacks the exocyclic alkene geometry and reconstructs MDFZYGLOIJNNRM-HYNRAYKSSA-N,
+    while the page prints a third key ending UOABJHMYNA-N. This internal authority
+    inconsistency prevents certifying every field, but the exact matching InChI means
+    the xref is not established to identify a different compound.
+  snapshot_sha256: 34c62a899ac266d11b885a15e39c029ec791760587690d39ca63d00fc8e3afab
+- evidence_id: chemistry
+  kind: validation
+  reference: /private/tmp/am-review-session/526-authority-chemistry.json
+  locator: 019 RDKit2026.03.5 against cwd053; exact authority graph comparisons
+  accessed_at: '2026-10-21T18:04:19Z'
+  support: supports
+  summary: Native SMILES/InChI, current LIPID MAPS and KNAPSACK InChI have reciprocal
+    chirality-aware graph agreement. Focused formula, masses, charge, mint and internal
+    structure checks pass. KNAPSACK SMILES disagreement is specifically missing alkene
+    stereochemistry. The primary numbered figures independently locate the C-6 and
+    C-16 acetates.
+  snapshot_sha256: 6a77e35112a38df440882d95889eae3b62a5accb0de47b51a67c7b7c78c51b2d
+- evidence_id: pubchem-comparison
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/3002143/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,IUPACName/JSON
+  locator: CID3002143 property response, additional comparison only
+  accessed_at: '2026-10-21T17:59:43.708846Z'
+  support: context_only
+  summary: Current PubChem independently returns the native complete key and composition.
+    This is an external comparator, not an asserted native PubChem xref.
+  snapshot_sha256: 6a05dd7ca06ca45f069d74c2a898d6773b6f9564a7df147085f8da3c7df25213
+- evidence_id: registry-limits
+  kind: authority
+  reference: https://commonchemistry.cas.org/api/detail?cas_rn=29400-42-8
+  locator: CAS29400-42-8 and Beilstein3230584 resolution boundary
+  accessed_at: '2026-10-21T17:59:43.706390Z'
+  support: context_only
+  summary: The CAS public page returned an application shell and its detail API returned
+    401. ChEBI and other current records carry the same CAS identifier, but the review
+    did not independently resolve the registry structure or a freely accessible exact
+    Beilstein entry. These limits do not establish wrong native xrefs.
+  snapshot_sha256: 3e7db788e384631f8a9f299d1797e6f8af6d16d643a1c91f9e83ae15212de45c
+- evidence_id: term20156
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/20156/
+  locator: CHEBI:20156 current name and definition
+  accessed_at: '2026-10-21T17:56:13.004239Z'
+  support: supports
+  summary: 'Resolved term: 3-oxo-Δ<small><sup>1</small></sup> steroid. The graph is
+    compatible with this broader structural class.'
+  snapshot_sha256: 1f22bb798ac2f9e3272a1c2c9b10755dbeb5805c65d3402cf02f41ff9d7eb4f5
+- evidence_id: term25384
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/25384/
+  locator: CHEBI:25384 current name and definition
+  accessed_at: '2026-10-21T17:59:04.137218Z'
+  support: supports
+  summary: 'Resolved term: monocarboxylic acid. The graph is compatible with this
+    broader structural class.'
+  snapshot_sha256: 342f6e158d906689ac0ad191f2377556d04e221b83c9e43521fb4ceb1a4e2cc4
+- evidence_id: term47622
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/47622/
+  locator: CHEBI:47622 current name and definition
+  accessed_at: '2026-10-21T17:56:13.411812Z'
+  support: supports
+  summary: 'Resolved term: acetate ester. The graph is compatible with this broader
+    structural class.'
+  snapshot_sha256: 920adf6e3ca4fd81d4289410e249bcd5893dadac27014a9f753d82df2883a005
+- evidence_id: term47891
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/47891/
+  locator: CHEBI:47891 current name and definition
+  accessed_at: '2026-10-21T17:59:05.172317Z'
+  support: supports
+  summary: 'Resolved term: steroid acid. The graph is compatible with this broader
+    structural class.'
+  snapshot_sha256: 446fb544107a9165b094fcb4d72d21cad9e323e7e9c607d73f0893e9903f0ece
+- evidence_id: term33282
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/33282/
+  locator: CHEBI:33282 current name and definition
+  accessed_at: '2026-10-21T17:56:13.503383Z'
+  support: supports
+  summary: 'Resolved term: antibacterial agent. The exact primary whole-cell assays
+    support the qualitative antibacterial role.'
+  snapshot_sha256: 20d92ce7e00c204b1753184671c043160821d692438278344335446aadcd5082
+- evidence_id: primary2017
+  kind: primary_source
+  reference: PMID:29158519
+  locator: DOI10.1038/s41467-017-01813-9; selected Results, compound 1 characterization,
+    Table 2 and antibacterial Methods
+  accessed_at: '2026-10-21T17:59:43.711309Z'
+  support: supports
+  summary: The original study reconstructs the nine-gene Aspergillus fumigatus Af293
+    pathway in A. oryzae NSAR1 and characterizes isolated helvolic acid 1 by NMR and
+    HRESIMS. Table 2 reports compound 1 MIC 2 µg/mL against S. aureus 209P; more active
+    intermediates are distinct compounds. The stated assay uses twofold dilution,37
+    °C for 24 h and absence of visible growth. A stock-concentration/first-well inconsistency
+    in the printed method limits literal quantitative protocol reproduction. Biosynthetic
+    enzyme experiments are not antibacterial target assays.
+  snapshot_sha256: 5bcb43970cd0594da16f63f0038af2f3d6903338d993525caab709ebb7911990
+- evidence_id: primary2017-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/37f5/5696383/ec588dd35356/41467_2017_1813_Fig1_HTML.jpg
+  locator: Actual original Fig 1, numbered helvolic acid 1
+  accessed_at: '2026-10-21T18:00:43.661360Z'
+  support: supports
+  summary: The original numbered steroid drawing explicitly places acetate esters
+    at C-6 and C-16, keto groups at C-3 and C-7 and the specified exocyclic alkene.
+    This independently supports the native constitution and rejects the 16-acetoxy-only
+    exact synonym.
+  snapshot_sha256: 7dce9d99a6c3f40f1ef0d4a036737b3863bd83f842e7437e36fae7f720f65d32
+- evidence_id: primary2021
+  kind: primary_source
+  reference: PMID:33805102
+  locator: DOI10.3390/molecules26071828; selected structure/SAR Results, Table 3 and
+    antibacterial Methods
+  accessed_at: '2026-10-21T17:59:43.823549Z'
+  support: supports
+  summary: The original natural-isolation study identifies helvolic acid as compound
+    4 from Sarocladium oryzae DX-THL3. Table 3 reports MIC 8 µg/mL against S. aureus
+    ATCC 29213 and >128 µg/mL against B. subtilis ATCC 7508, E. coli ATCC 25922 and
+    X. oryzae pv.oryzicola. The method uses twofold dilutions,37 °C for 24 h and growth
+    readout. These are strain/preparation-specific results, not clinical breakpoints
+    or a direct-target experiment.
+  snapshot_sha256: ad6b1c5015e3cec9d75e5d1c03bb22b0a70e1679634ce17bb9dcdeef57339ff0
+- evidence_id: primary2021-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6872/8037696/34b63fd57168/molecules-26-01828-g001.jpg
+  locator: Actual original Fig 1, compounds 4–6
+  accessed_at: '2026-10-21T18:00:43.663357Z'
+  support: supports
+  summary: Helvolic acid 4 is drawn with R=OAc at C-6, alongside the distinct R=OH
+    and R=H analogues5 and 6. The native incomplete exact name describes the deacetoxy
+    constitution of6 rather than helvolic acid 4. This compound comparison makes the
+    missing substituent chemically consequential.
+  snapshot_sha256: 96e648592bc0adce8041413568659457f5491f1861fdc17d3a40b7271a5c1b3f
+- evidence_id: pmid19216560
+  kind: primary_source
+  reference: PMID:19216560
+  locator: DOI10.1021/ol802696a; original abstract
+  accessed_at: '2026-10-21T17:59:03.017965Z'
+  support: context_only
+  summary: The protostadienol cyclase and LaeA-regulated cluster study concerns A.
+    fumigatus biosynthesis. It supports a pathway lead, not inhibition of that enzyme
+    by helvolic acid or antibacterial mechanism.
+  snapshot_sha256: 599ef84b07483d4a2daabc50b9e3aab3a162ec35e95bf2f70ea21753ac5a5350
+- evidence_id: pmid27604096
+  kind: primary_source
+  reference: PMID:27604096
+  locator: DOI10.1177/1535370216668051; original abstract and selected full-main introduction
+  accessed_at: '2026-10-21T17:59:03.017965Z'
+  support: context_only
+  summary: This is a mouse S180 tumour/cyclophosphamide combination study using Cordyceps-associated
+    helvolic acid. Host Wnt/β-catenin discussion and combination tumour effects do
+    not establish a bacterial target or antibacterial efficacy.
+  snapshot_sha256: 599ef84b07483d4a2daabc50b9e3aab3a162ec35e95bf2f70ea21753ac5a5350
+- evidence_id: pmid30070829
+  kind: primary_source
+  reference: PMID:30070829
+  locator: DOI10.1021/acs.jnatprod.8b00382; original abstract
+  accessed_at: '2026-10-21T17:59:03.017965Z'
+  support: context_only
+  summary: Exact helvolic acid is compound 10, distinct from newly characterized analogues6
+    and 7. The original abstract reports S. agalactiae MICs16,2 and 8 µg/mL for6,7
+    and 10 respectively. Main/SI access failed, so strain and complete assay details
+    remain unresolved; the new-analogue C-24 stereochemical revision is not transferred
+    to parent 10.
+  snapshot_sha256: 599ef84b07483d4a2daabc50b9e3aab3a162ec35e95bf2f70ea21753ac5a5350
+- evidence_id: pmid30341897
+  kind: primary_source
+  reference: PMID:30341897
+  locator: DOI10.1002/jcp.27385; original abstract
+  accessed_at: '2026-10-21T17:59:03.017965Z'
+  support: context_only
+  summary: RANKL-induced osteoclastogenesis and NFATc1 signalling are host-cell endpoints.
+    They do not supply a direct antibacterial target.
+  snapshot_sha256: 599ef84b07483d4a2daabc50b9e3aab3a162ec35e95bf2f70ea21753ac5a5350
+- evidence_id: pmid30822136
+  kind: primary_source
+  reference: PMID:30822136
+  locator: DOI10.1080/14786419.2018.1488706; original abstract
+  accessed_at: '2026-10-21T17:59:03.017965Z'
+  support: context_only
+  summary: The study isolates new aspergilolide1 and known helvolic acid 2 from Aspergillus
+    sp. MBL1612. Cytotoxicity attributed to the new compound is not transferred to
+    helvolic acid.
+  snapshot_sha256: 599ef84b07483d4a2daabc50b9e3aab3a162ec35e95bf2f70ea21753ac5a5350
+- evidence_id: pmid30972287
+  kind: primary_source
+  reference: PMID:30972287
+  locator: DOI10.1016/j.apsb.2018.10.007; original abstract and selected full-main
+    helvolic comparison
+  accessed_at: '2026-10-21T17:59:03.017965Z'
+  support: context_only
+  summary: The fusidic-acid biosynthesis paper compares shared intermediates and divergent
+    post-modifications with helvolic acid. Background EF-G statements are not a new
+    direct helvolic-acid target assay.
+  snapshot_sha256: 599ef84b07483d4a2daabc50b9e3aab3a162ec35e95bf2f70ea21753ac5a5350
+- evidence_id: pmid31660859
+  kind: primary_source
+  reference: PMID:31660859
+  locator: DOI10.1186/s12864-019-6095-1; original abstract and selected BGC Results/Discussion
+  accessed_at: '2026-10-21T17:59:03.017965Z'
+  support: context_only
+  summary: Comparative genomics predicts a helvolic-acid-related cluster in S. oryzae
+    JCM12450 and its absence in the compared S. brachiariae strain. Prediction and
+    homology are distinct from chemical demonstration of production or antibacterial
+    mechanism.
+  snapshot_sha256: 599ef84b07483d4a2daabc50b9e3aab3a162ec35e95bf2f70ea21753ac5a5350
+- evidence_id: full27604096
+  kind: primary_source
+  reference: PMID:27604096
+  locator: Selected primary main-text sections identified in the paired PMID evidence
+    entry
+  accessed_at: '2026-10-21T18:00:12.966384Z'
+  support: context_only
+  summary: The full-main snapshot was accessed, but only the stated helvolic-acid
+    sections were read. This is not a claim of complete reading or direct exact-compound
+    mechanism adjudication.
+  snapshot_sha256: f28c3b1a900c30d617114e3934d765d75b6b9df6e4c8f728dccf20cbaaa3220a
+- evidence_id: full30972287
+  kind: primary_source
+  reference: PMID:30972287
+  locator: Selected primary main-text sections identified in the paired PMID evidence
+    entry
+  accessed_at: '2026-10-21T17:59:44.564335Z'
+  support: context_only
+  summary: The full-main snapshot was accessed, but only the stated helvolic-acid
+    sections were read. This is not a claim of complete reading or direct exact-compound
+    mechanism adjudication.
+  snapshot_sha256: 073badd6f6ad888a84c933e0160eaef8571ceef52baef295745fa0460364c63d
+- evidence_id: full31660859
+  kind: primary_source
+  reference: PMID:31660859
+  locator: Selected primary main-text sections identified in the paired PMID evidence
+    entry
+  accessed_at: '2026-10-21T17:59:44.959135Z'
+  support: context_only
+  summary: The full-main snapshot was accessed, but only the stated helvolic-acid
+    sections were read. This is not a claim of complete reading or direct exact-compound
+    mechanism adjudication.
+  snapshot_sha256: c4dd2050a628197cc8ff547ff8aa22b161795bdf3e2d4b5f8e617aa4353050a5
+- evidence_id: pmid31091673
+  kind: primary_source
+  reference: PMID:31091673
+  locator: DOI10.3390/md17050289; selected compound 7 characterization, Table 2 and
+    Methods
+  accessed_at: '2026-10-21T17:59:44.266149Z'
+  support: supports
+  summary: Helvolic acid 7 has reported MIC 0.78 µg/mL against S. aureus ATCC 6538
+    and a row labelled MRSA ATCC 29213. The assay uses Mueller-Hinton broth, approximately
+    10^4 CFU/mL,37 °C for 16 h and absence of visible growth. The second label conflicts
+    with independent characterization of ATCC 29213 as methicillin-sensitive, so this
+    cannot safely become an MRSA observation. The exact compound is separated from
+    other metabolites and from the distinct BCG fluorescence assay.
+  snapshot_sha256: 9b50d1be4b7d4fff95f9293a0a7a55a512588bfd03499ba5be579aa2d26f13e0
+- evidence_id: strain-primary
+  kind: primary_source
+  reference: PMID:26404610
+  locator: DOI10.1128/genomeA.01095-15; complete short original main text
+  accessed_at: '2026-10-21T18:02:50.178689Z'
+  support: context_only
+  summary: The original genome report explicitly identifies ATCC 29213 as a methicillin-sensitive
+    quality-control clinical isolate obtained from ATCC. This provides a concrete
+    caution about the 2019 assay label; the review does not guess which strain the
+    2019 authors actually used.
+  snapshot_sha256: 868a502e5af527c13fffb7bd9fa0cbd2c3e455358a7edeaf1f84287e3951a358
+- evidence_id: archaeal-target
+  kind: primary_source
+  reference: PMID:12475236
+  locator: DOI10.1021/bi026743+; original abstract
+  accessed_at: '2026-10-21T17:59:43.710745Z'
+  support: context_only
+  summary: The exact mechanism lead tests helvolic acid against Sulfolobus solfataricus
+    archaeal EF-2, including polyphenylalanine synthesis, ribosome-dependent GTPase
+    and an L452R mutant. Direct weak EF-2 binding is proposed, with a role for ribosomes.
+    This does not establish a bacterial EF-G target or permit taxon transfer. Full
+    original methods were not retrieved.
+  snapshot_sha256: 278420a7bd4f182d52dac3caab5b7469d5ff7945a5139ec69fedc5986295c699
+- evidence_id: historical1964
+  kind: primary_source
+  reference: PMID:14185744
+  locator: DOI10.1248/cpb.12.121; original four-page communication read, actual p122
+    inspected
+  accessed_at: '2026-10-21T18:00:13.039189Z'
+  support: context_only
+  summary: This original revises earlier skeletal proposals and establishes C33H44O8
+    with a separate methyl ester C34H46O8. Its proposed 7-acetoxy/6-oxo placement
+    and explicit statement that stereochemistry remained under investigation are historical,
+    not the current final structure. It is not used to replace the modern C-6 acetate/C-7
+    ketone or to prove absolute stereochemistry.
+  snapshot_sha256: 8a4e1d81fa3b66e7f35359cf90fb80a8c12387f540acad9bbcf1d80f4495077d
+- evidence_id: historical-fumigacin
+  kind: primary_source
+  reference: PMID:13018119
+  locator: DOI10.1042/bj0510538; selected original p539, previously inspected actual
+    scan
+  accessed_at: '2026-10-21T17:56:47.135287Z'
+  support: context_only
+  summary: The original notes that early material called fumigacin contained gliotoxin
+    and helvolic acid. Modern authorities nevertheless use Fumigacin as a helvolic-acid
+    synonym. This historical material boundary prevents transferring early preparation
+    activity wholesale; it does not by itself prove the modern synonym must be deleted.
+  snapshot_sha256: ffaf5d6d2224fa5ce87060ba2a3b392e118a720cff6f2783f05c1ad45f673ae1
+- evidence_id: adapter
+  kind: search
+  reference: /private/tmp/am-review-session/526-adapter-scope.json
+  locator: 'Before open-web follow-up: native claim applicability and preserved catalog'
+  accessed_at: '2026-10-21T18:04:19Z'
+  support: context_only
+  summary: No native named protein, gene, regulator, pathway or expression-module
+    claim is present. No structured gene query was required; discovery of archaeal
+    EF-2 literature does not create a native bacterial target assertion.
+  snapshot_sha256: 807be8457cade46e1c5a028754fcf3c535878ddbff4de13b147cfa2cc1377f8a
+  search_scope: Entire native526 plus preserved structured catalog456460-adapter-catalog.txt;
+    no applicable native gene/protein claim.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral helvolic acid graph and material boundary
+  outcome: supported
+  summary: The graph is coherent and independently corroborated by modern primary
+    figures. The parent acid, methyl ester, deacetoxy derivative and biosynthetic
+    intermediates are distinct. No wrong graph or stereoisomer was established.
+  target_ids:
+  - CHEBI:62460
+  evidence_ids:
+  - native
+  - chemistry
+  - chebi
+  - primary2017-figure
+  - primary2021-figure
+- assessment_id: grounding
+  area: grounding
+  topic: Exact synonyms, xrefs and broader classes
+  outcome: concern
+  summary: The 16-acetoxy-only exact synonym denotes another constitution; the 17β
+    descriptor is incompatible with the indicated alkene. Other systematic names and
+    broader parents agree. LIPID MAPS matches exactly. KNAPSACK has internally inconsistent
+    fields but a matching InChI, while CAS and Beilstein remain access-limited. Those
+    unresolved authority details are not additional confirmed xref defects.
+  target_ids:
+  - CHEBI:62460
+  evidence_ids:
+  - native
+  - chebi
+  - lipidmaps
+  - knapsack
+  - chemistry
+  - registry-limits
+  - term20156
+  - term25384
+  - term47622
+  - term47891
+  - primary2021-figure
+- assessment_id: evidence
+  area: evidence
+  topic: Antibacterial eligibility and primary assay boundaries
+  outcome: supported
+  summary: Independent original whole-cell assays support the qualitative antibacterial
+    filing and role. Reported values vary with material and assay. The 2019 MRSA label
+    is unresolved and must not become a strain-resistance assertion. No host tumour,
+    osteoclast or biosynthetic endpoint is promoted to antibacterial mechanism.
+  target_ids:
+  - CHEBI:62460
+  evidence_ids:
+  - term33282
+  - primary2017
+  - primary2021
+  - pmid30070829
+  - pmid31091673
+  - strain-primary
+  - pmid27604096
+  - pmid30341897
+- assessment_id: completeness
+  area: completeness
+  topic: All adopted leads and optional enrichment
+  outcome: supported
+  summary: All eight adopted abstracts were read; four primary full texts were additionally
+    inspected in specified sections. Additional2017/2021 primary structure and assay
+    sources were inspected. Absent targets, resistance, activity_spectrum and producer
+    fields are optional; the archaeal EF-2 abstract does not justify a bacterial target
+    edge.
+  target_ids:
+  - CHEBI:62460
+  evidence_ids:
+  - owners
+  - pmid19216560
+  - pmid27604096
+  - pmid30070829
+  - pmid30341897
+  - pmid30822136
+  - pmid30972287
+  - pmid31091673
+  - pmid31660859
+  - archaeal-target
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership, history and review coverage
+  outcome: supported
+  summary: Entire native content, source row and three historical seed/reseed events
+    were read. Original 13 hashes and expanded 21 inputs are preserved. The source-owned
+    naming issue requires maintained source handling rather than a direct generated-YAML
+    patch.
+  target_ids:
+  - CHEBI:62460
+  evidence_ids:
+  - native
+  - owners
+  - search
+findings:
+- finding_id: F1
+  issue_key: helvolic-acid-incompatible-exact-systematic-names
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Two exact systematic synonyms are chemically incompatible
+  description: synonyms[3] names only the C-16 acetoxy group on a 3,7-dioxo-29-nordammara
+    skeleton and therefore omits the C-6 acetate present in helvolic acid. The inspected2021
+    primary figure explicitly separates helvolic acid 4 from its C-6 deacetoxy analogue
+    6. Separately, synonyms[2] includes 17β even though its17(20) double bond makes
+    C-17 trigonal; the supported geometry is17Z. The stored graph is correct, so this
+    finding concerns source-owned exact names, not an instruction to remove a substituent
+    or alter the structure.
+  target_ids:
+  - CHEBI:62460
+  field_paths:
+  - synonyms[3].synonym_text
+  - synonyms[3].synonym_type
+  - synonyms[2].synonym_text
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - primary2017-figure
+  - primary2021-figure
+  - lipidmaps
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-yaml-record:Workflow:identity
+  native_severity: major
+  normalization_reason: A fully systematic exact synonym encodes a different constitution;
+    this is substantive identity metadata. The supported native graph and intended
+    compound remain intact, so this is not a wrong-graph blocker. The invalid alkene
+    descriptor is included in the same nomenclature correction.
+actions:
+- action_id: A1
+  description: Correct or exclude the incompatible source-derived exact names while
+    preserving the supported graph.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:62460
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - 'Adjudicate the ChEBI naming source: require the C-6 and C-16 acetates in any
+    complete exact systematic name and use an appropriate Z descriptor rather than17β
+    at C-17.'
+  - Preserve neutral C33H44O8, native complete key, nine tetrahedral centres and the
+    primary-supported graph; do not substitute the deacetoxy analogue. The definition
+    may be clarified to mention both acetates without treating its nonexclusive omission
+    as a separate confirmed defect.
+  - Regenerate from maintained owners and run exact-name/graph comparison, schema/strict,
+    reference/history and required corpus reproduction checks.
+- action_id: A2
+  description: Optional literature enrichment and authority reconciliation after nomenclature
+    correction.
+  finding_ids: []
+  target_ids:
+  - CHEBI:62460
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/helvolic-acid.yaml
+    role: Future validated curator-owned literature annotation
+  acceptance_checks:
+  - Preserve exact compound numbers, strains, medium, incubation, MIC endpoint and
+    assay units. Do not import the 2019 ATCC 29213 row as confirmed MRSA without resolving
+    the original material label.
+  - Do not convert biosynthetic genes, host-cell signalling or archaeal EF-2 into
+    a direct bacterial target claim.
+  - Resolve KNAPSACK field disagreement and free CAS/Beilstein structure access before
+    claiming every external field independently verified; do not remove matching mappings
+    merely because one authority representation is incomplete.
+limitations:
+- Required shared full-corpus gates are incorporated separately by root before finalization;
+  actual focused checks are recorded here.
+- 'All eight adopted abstracts were read, but full experimental reading was selective:
+  compound characterization, helvolic comparison and assay/BGC sections where stated.
+  The 2018 ACS main/SI were inaccessible, and the 2009,2018 osteoclast and2019 aspergilolide
+  leads remain abstract-depth. This is not exhaustive full-text reading of every adopted
+  paper.'
+- The 2017 printed MIC method contains inconsistent stock/first-well concentrations.
+  Its reported table is retained as reported, without silently repairing the recipe.
+  The 2019 ATCC 29213 MRSA label conflicts with the independent original strain characterization,
+  and its actual tested material remains unresolved.
+- CAS detail API returned 401 and the public page was an application shell; no freely
+  accessible independent Beilstein exact-structure authority was resolved. KNAPSACK
+  contains mutually inconsistent displayed structural fields, including one exact-matching
+  InChI.
+- The 1964 source is a historical skeletal revision, not final absolute-configuration
+  evidence. The review inspected modern primary depictions but did not independently
+  reprocess original spectral data or infer new natural-product absolute assignments.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 13 original input hashes and all 21 expanded hashes were rechecked before writing.
+  No native/source/history/progress/saved-bundle/Git edits were made.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
