@@ -1,0 +1,693 @@
+# 1-carbapenem-3-carboxylic acid: exact structure and primary evidence review
+
+- Review: 20261021T064439Z-1-carbapenem-3-carboxylic-acid
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T06:38:55Z
+- Finished UTC: 2026-10-21T06:44:39Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Neutral (5R) compound CHEBI:615 is structurally consistent and is supported as an antibacterial by exact SQ27,860 literature. Two minor findings concern a charge-ambiguous exact synonym and uncurated primary biological context. No molecular target is established by this review; biosynthetic and resistance proteins must not be treated as drug targets.
+
+## Scope And Provenance
+
+All fields of the single generated compound, source-owned identity and bounded exact-compound primary literature.
+
+Selection: Third unreviewed path in sorted data/antibiotics/**/*.yaml; original population2939, eight already targeted by validated structured bundles. This bundle covers one record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:615 | data/antibiotics/antibacterial/1-carbapenem-3-carboxylic-acid.yaml | generated | 1-carbapenem-3-carboxylic acid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema record validation | passed | True | CHEBI:615 | Actual execution exited0; one target, no validation errors. |
+| strict record validation | passed | True | CHEBI:615 | Actual execution exited0; one target, no validation errors. |
+| Structured expression adapter applicability | not_applicable | False | CHEBI:615 | No gene, regulator, protein or expression dataset is asserted in the target. New paper leads are not record groundings and expression membership cannot prove chemical identity. |
+| Authoritative full QC | failed | True | CHEBI:615 | Exited2 at test collection: pinned SciPy1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This is not a scientific failure of this record. |
+| Generated corpus reproduction | passed | True | CHEBI:615 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:615 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Full closed-schema validation | passed | True | CHEBI:615 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:615 | Exited1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:615 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:615 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:615 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. No invented per-record validator. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral stereochemical structure
+
+identity: supported. Targets: CHEBI:615.
+
+The compound is one neutral (5R) structure, distinct from other carbapenems and the conjugate-base entry. Independent computed and database structures agree.
+
+### Parents, roles and external identity links
+
+grounding: supported. Targets: CHEBI:615.
+
+ChEBI parents are broader, both antimicrobial roles are retained and antibacterial filing is justified. KEGG and CAS are independently corroborated; MetaCyc and Reaxys are provenance-level only.
+
+### Charge-qualified synonym precision
+
+nomenclature: concern. Targets: CHEBI:615.
+
+The EXACT_SYNONYM (5R)-Carbapenem-3-carboxylate can denote the separately modeled anion while the target structure is neutral. The record identity itself remains unambiguous.
+
+### Exact-compound antibacterial and producer context
+
+evidence: supported. Targets: CHEBI:615.
+
+The original paper directly supports antibacterial activity and producer context, while its eluate assay prevents treating zones as MICs or purified-compound potency.
+
+### Target, mechanism and resistance scope
+
+completeness: unknown. Targets: CHEBI:615.
+
+No mode or molecular target is asserted. CarF/CarG literature supports a resistance-follow-up lead, not a drug target; exact compound mechanism remains unresolved in the inspected scope.
+
+### Other optional claims
+
+scope: not_applicable. Targets: CHEBI:615.
+
+No clinical, dataset or graph claims require validation. No quantified assay was fabricated from broad antibacterial classification.
+
+### Native scientific status and field ownership
+
+provenance: supported. Targets: CHEBI:615.
+
+Three seed/reseed events and SEEDED status describe the actual record. A reviewed mechanism remains necessary before native promotion; curated additions require validated writing and an event.
+
+## Findings
+
+### synonym-charge: Exact synonym obscures acid versus anion distinction
+
+minor / open / provisional; issue key: chebi-615-carboxylate-exact-synonym.
+
+The acid record inherits a carboxylate exact synonym, although ChEBI models its conjugate base separately. This is a bounded terminology ambiguity, not evidence the main structure is wrong. Review whether this synonym should be related or source-excluded.
+
+### primary-gap: Exact primary biological evidence is not represented
+
+minor / open / confirmed; issue key: chebi-615-primary-biology-gap.
+
+The record lacks evidence-backed producer/activity context available in the discovery paper and a scoped intrinsic-resistance lead. These are useful optional additions, not schema-required fields; the existing role-only representation is honest.
+
+## Recommended Actions And Acceptance Checks
+
+### clarify-synonym
+
+Resolve the charge meaning of the inherited synonym against the separate anion entry and source naming policy; if misleading, use a scoped source exclusion or appropriate synonym type without changing the neutral structure.
+
+- Neutral structure and conjugate-base identity remain distinct.
+- Re-seed using the canary workflow after separately authorized source changes; verify-corpus and closed-schema checks pass.
+
+### curate-primary-context
+
+Review exact producer strain grounding and add claim-local evidence. Preserve diffusion assay concentration uncertainty; assess CarF/CarG primary results before representing resistance. Document the unresolved target instead of inferring one from the drug family.
+
+- Retain source organism/strain names, tested preparation and measurement units; do not convert diffusion zones to MIC.
+- Do not confuse precursor synthesis or resistance proteins with antibacterial targets.
+- Use native validated writer and curation event for separately authorized additions; run target validation, verify-corpus and QC.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/1-carbapenem-3-carboxylic-acid.yaml; entire YAML | supports | Read identity, seven synonyms, two parents and roles, chemical structure, four xrefs, single source concept and three seed/reseed history events. No target, activity, resistance, producer, clinical, dataset, mechanism or graph object is asserted. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:615; Properties, names, ontology, manual xrefs and registries | supports | Live source matches neutral C7H7NO3 and BSIMZHVOQZIAOY-SCSAIBSYSA-N. Parents CHEBI:46634/79020 are broader chemical classes; CHEBI:33281/33282 support antimicrobial/antibacterial filing. The source both lists a carboxylate synonym and distinguishes conjugate-base CHEBI:73943. |
+| kegg | https://www.kegg.jp/entry/C06669; Formula, names, structure and ChEBI backlink | supports | C06669 gives C7H7NO3, mass153.0426 and ChEBI615. Its names mix acid and carboxylate, so names alone cannot settle charge. The corresponding chemical formula supports the neutral source representation. |
+| jglobal | https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=200907057902170016; Chemical identity, InChIKey, CAS and KEGG links | supports | Japan Science and Technology Agency entry independently associates SQ27860, CAS82768-37-4 and KEGG C06669 with the exact stored InChIKey and neutral formula. |
+| seed | data/raw/chebi_antimicrobials.tsv; CHEBI:615 row; source priority and mode_of_action_from_roles in seeder | supports | Adopted three-star row agrees with all source-owned fields and contains no literature citations or mechanism role. Existing synonyms are inherited from ChEBI; conf/sources.yaml includes a scoped synonym-exclusion mechanism. Native SEEDED history accurately reflects generated provenance. |
+| chemistry | RDKit2026.3.5; /private/tmp/am-review-session/003-chemistry.json | supports | Parsing both stored representations produces the same recorded key. Formula C7H7NO3, charge0, (R) stereocenter, mean153.137 and exact153.042593084 masses agree. |
+| parker | https://www.jstage.jst.go.jp/article/antibiotics1968/35/6/35_6_653/_pdf; DOI10.7164/antibiotics.35.653; pp653–658, Table5 visually checked | supports | SQ27,860 was produced by Serratia SC11482 and two Erwinia isolates; instability required ester derivatization for characterization. Table5 measures inhibition zones using60µL column eluate on6mm discs, not MIC or known pure-drug mass. TEM-positive E.coli SC10404 lacked inhibition under that assay. It does not establish a direct molecular target. |
+| carg | https://pubmed.ncbi.nlm.nih.gov/24583229/; Abstract, DOI and figure legends; DOI10.1016/j.jmb.2014.02.016 | supports | The paper identifies CarF/CarG-mediated intrinsic resistance in producer lineages, explicitly with an unknown mechanism, and determines a Serratia39006 CarG structure. A resistance protein is not a target of the antibiotic. No molecular mechanism is assigned from structural similarity. |
+| search | repository and bounded public-source searches; 003-local-hits.txt; exact compound/SQ27860/CarG queries | context_only | Ignored-inclusive local search located the record, adopted row, projections, queues and historical report. Public searches found primary discovery and resistance papers; no exhaustive absence of target literature is claimed. |
+| historical | reports/yaml_record_review/20260925T095948Z-1-carbapenem-3-carboxylic-acid.md; Historical source leads | context_only | Read as a lead; conclusions and command results were not treated as current evidence. |
+
+## Limits And Additional Notes
+
+- MetaCyc CPD-9377 could not be independently retrieved; Reaxys8832318 was verified only as a ChEBI registry assertion. Neither limitation establishes a wrong xref.
+- The 1982 source was inspected in full including Table5 visually; the 2014 CarG source was inspected as PubMed abstract and figure legends. PMC/EuropePMC full-text routes encountered access failures.
+- No exact molecular target or current clinical status was established. Primary biosynthesis and self-resistance context does not establish antibacterial target binding.
+- Historical organism names and strain labels require current taxonomic resolution before a future producer or resistance entry is grounded.
+- Authoritative just qc failed during collection because the pinned SciPy1.15.3 native library has an invalid Mach-O section on this platform; identical pinned version also failed under Python3.10. No dependency versions were changed. Full closed-schema, reproduction and corpus-integrity gates passed independently; these do not replace full QC.
+- No record, curation history or native scientific status was changed.
+- Optional-field gaps are proposed curation opportunities; missing causal graphs or MICs are not treated as invalid SEEDED representation.
+- Bundle completion is partial because full repository QC is not available on this runtime; the selected record was read and assessed in full. A saved review does not promote scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T064439Z-1-carbapenem-3-carboxylic-acid
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: '1-carbapenem-3-carboxylic acid: exact structure and primary evidence review'
+started_at: '2026-10-21T06:38:55Z'
+finished_at: '2026-10-21T06:44:39Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author or curate the generated record. Current
+    source and primary-paper checks were performed anew; historical prose supplied
+    discovery leads only.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Neutral (5R) compound CHEBI:615 is structurally consistent and is supported
+  as an antibacterial by exact SQ27,860 literature. Two minor findings concern a charge-ambiguous
+  exact synonym and uncurated primary biological context. No molecular target is established
+  by this review; biosynthetic and resistance proteins must not be treated as drug
+  targets.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/1-carbapenem-3-carboxylic-acid.yaml
+    sha256: 0101f92594422c5a7e9682cf152200be02f07ddb5c0c961192460904418788e6
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: reports/yaml_record_review/20260925T095948Z-1-carbapenem-3-carboxylic-acid.md
+    sha256: 398f03c5144294bf004d82f38960917501aa50fc78744e443ae7b32ecd57ede2
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:615
+  path: data/antibiotics/antibacterial/1-carbapenem-3-carboxylic-acid.yaml
+  label: 1-carbapenem-3-carboxylic acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: All fields of the single generated compound, source-owned identity
+    and bounded exact-compound primary literature.
+  selection: Third unreviewed path in sorted data/antibiotics/**/*.yaml; original
+    population2939, eight already targeted by validated structured bundles. This bundle
+    covers one record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:615
+checks:
+- check_id: schema
+  name: schema record validation
+  status: passed
+  required: true
+  summary: Actual execution exited0; one target, no validation errors.
+  target_ids:
+  - CHEBI:615
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/1-carbapenem-3-carboxylic-acid.yaml
+  exit_code: 0
+  evidence_ids:
+  - record
+- check_id: strict
+  name: strict record validation
+  status: passed
+  required: true
+  summary: Actual execution exited0; one target, no validation errors.
+  target_ids:
+  - CHEBI:615
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/1-carbapenem-3-carboxylic-acid.yaml --out /private/tmp/am-review-session/003-strict.tsv
+  exit_code: 0
+  evidence_ids:
+  - record
+- check_id: imodulondb
+  name: Structured expression adapter applicability
+  status: not_applicable
+  required: false
+  summary: No gene, regulator, protein or expression dataset is asserted in the target.
+    New paper leads are not record groundings and expression membership cannot prove
+    chemical identity.
+  target_ids:
+  - CHEBI:615
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited2 at test collection: pinned SciPy1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This is not a scientific
+    failure of this record.'
+  target_ids:
+  - CHEBI:615
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:615
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:615
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:615
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:615
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:615
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:615
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references. No invented per-record validator.
+  target_ids:
+  - CHEBI:615
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/1-carbapenem-3-carboxylic-acid.yaml
+  locator: entire YAML
+  accessed_at: '2026-10-21T06:43:20Z'
+  support: supports
+  summary: Read identity, seven synonyms, two parents and roles, chemical structure,
+    four xrefs, single source concept and three seed/reseed history events. No target,
+    activity, resistance, producer, clinical, dataset, mechanism or graph object is
+    asserted.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:615
+  locator: Properties, names, ontology, manual xrefs and registries
+  accessed_at: '2026-10-21T06:43:20Z'
+  support: supports
+  summary: Live source matches neutral C7H7NO3 and BSIMZHVOQZIAOY-SCSAIBSYSA-N. Parents
+    CHEBI:46634/79020 are broader chemical classes; CHEBI:33281/33282 support antimicrobial/antibacterial
+    filing. The source both lists a carboxylate synonym and distinguishes conjugate-base
+    CHEBI:73943.
+- evidence_id: kegg
+  kind: database
+  reference: https://www.kegg.jp/entry/C06669
+  locator: Formula, names, structure and ChEBI backlink
+  accessed_at: '2026-10-21T06:43:20Z'
+  support: supports
+  summary: C06669 gives C7H7NO3, mass153.0426 and ChEBI615. Its names mix acid and
+    carboxylate, so names alone cannot settle charge. The corresponding chemical formula
+    supports the neutral source representation.
+- evidence_id: jglobal
+  kind: database
+  reference: https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=200907057902170016
+  locator: Chemical identity, InChIKey, CAS and KEGG links
+  accessed_at: '2026-10-21T06:43:20Z'
+  support: supports
+  summary: Japan Science and Technology Agency entry independently associates SQ27860,
+    CAS82768-37-4 and KEGG C06669 with the exact stored InChIKey and neutral formula.
+- evidence_id: seed
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: CHEBI:615 row; source priority and mode_of_action_from_roles in seeder
+  accessed_at: '2026-10-21T06:43:20Z'
+  support: supports
+  summary: Adopted three-star row agrees with all source-owned fields and contains
+    no literature citations or mechanism role. Existing synonyms are inherited from
+    ChEBI; conf/sources.yaml includes a scoped synonym-exclusion mechanism. Native
+    SEEDED history accurately reflects generated provenance.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit2026.3.5
+  locator: /private/tmp/am-review-session/003-chemistry.json
+  accessed_at: '2026-10-21T06:43:20Z'
+  support: supports
+  summary: Parsing both stored representations produces the same recorded key. Formula
+    C7H7NO3, charge0, (R) stereocenter, mean153.137 and exact153.042593084 masses
+    agree.
+- evidence_id: parker
+  kind: primary_source
+  reference: https://www.jstage.jst.go.jp/article/antibiotics1968/35/6/35_6_653/_pdf
+  locator: DOI10.7164/antibiotics.35.653; pp653–658, Table5 visually checked
+  accessed_at: '2026-10-21T06:43:20Z'
+  support: supports
+  summary: SQ27,860 was produced by Serratia SC11482 and two Erwinia isolates; instability
+    required ester derivatization for characterization. Table5 measures inhibition
+    zones using60µL column eluate on6mm discs, not MIC or known pure-drug mass. TEM-positive
+    E.coli SC10404 lacked inhibition under that assay. It does not establish a direct
+    molecular target.
+  snapshot_sha256: 285e55535a68f0dddf45803ab63b8f63b086ea235ff9f570f031f789c922e774
+- evidence_id: carg
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/24583229/
+  locator: Abstract, DOI and figure legends; DOI10.1016/j.jmb.2014.02.016
+  accessed_at: '2026-10-21T06:43:20Z'
+  support: supports
+  summary: The paper identifies CarF/CarG-mediated intrinsic resistance in producer
+    lineages, explicitly with an unknown mechanism, and determines a Serratia39006
+    CarG structure. A resistance protein is not a target of the antibiotic. No molecular
+    mechanism is assigned from structural similarity.
+- evidence_id: search
+  kind: search
+  reference: repository and bounded public-source searches
+  locator: 003-local-hits.txt; exact compound/SQ27860/CarG queries
+  accessed_at: '2026-10-21T06:43:20Z'
+  support: context_only
+  summary: Ignored-inclusive local search located the record, adopted row, projections,
+    queues and historical report. Public searches found primary discovery and resistance
+    papers; no exhaustive absence of target literature is claimed.
+  search_scope: rg --no-ignore --hidden exact identifier CHEBI:615, full label and
+    slug across isolated clone except .git and .venv. Free web exact name/SQ27860/CPD-9377
+    and CarG queries; inspected ChEBI, KEGG, J-GLOBAL, J-STAGE and PubMed sources.
+    Failed MetaCyc and PMC/EuropePMC retrieval retained as limits.
+- evidence_id: historical
+  kind: prior_review
+  reference: reports/yaml_record_review/20260925T095948Z-1-carbapenem-3-carboxylic-acid.md
+  locator: Historical source leads
+  accessed_at: '2026-10-21T06:43:20Z'
+  support: context_only
+  summary: Read as a lead; conclusions and command results were not treated as current
+    evidence.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral stereochemical structure
+  outcome: supported
+  summary: The compound is one neutral (5R) structure, distinct from other carbapenems
+    and the conjugate-base entry. Independent computed and database structures agree.
+  target_ids:
+  - CHEBI:615
+  evidence_ids:
+  - record
+  - chebi
+  - jglobal
+  - chemistry
+- assessment_id: xref
+  area: grounding
+  topic: Parents, roles and external identity links
+  outcome: supported
+  summary: ChEBI parents are broader, both antimicrobial roles are retained and antibacterial
+    filing is justified. KEGG and CAS are independently corroborated; MetaCyc and
+    Reaxys are provenance-level only.
+  target_ids:
+  - CHEBI:615
+  evidence_ids:
+  - chebi
+  - kegg
+  - jglobal
+  - seed
+- assessment_id: synonym
+  area: nomenclature
+  topic: Charge-qualified synonym precision
+  outcome: concern
+  summary: The EXACT_SYNONYM (5R)-Carbapenem-3-carboxylate can denote the separately
+    modeled anion while the target structure is neutral. The record identity itself
+    remains unambiguous.
+  target_ids:
+  - CHEBI:615
+  evidence_ids:
+  - record
+  - chebi
+  - kegg
+- assessment_id: primary
+  area: evidence
+  topic: Exact-compound antibacterial and producer context
+  outcome: supported
+  summary: The original paper directly supports antibacterial activity and producer
+    context, while its eluate assay prevents treating zones as MICs or purified-compound
+    potency.
+  target_ids:
+  - CHEBI:615
+  evidence_ids:
+  - parker
+  - record
+- assessment_id: mechanism
+  area: completeness
+  topic: Target, mechanism and resistance scope
+  outcome: unknown
+  summary: No mode or molecular target is asserted. CarF/CarG literature supports
+    a resistance-follow-up lead, not a drug target; exact compound mechanism remains
+    unresolved in the inspected scope.
+  target_ids:
+  - CHEBI:615
+  evidence_ids:
+  - record
+  - carg
+  - parker
+- assessment_id: other
+  area: scope
+  topic: Other optional claims
+  outcome: not_applicable
+  summary: No clinical, dataset or graph claims require validation. No quantified
+    assay was fabricated from broad antibacterial classification.
+  target_ids:
+  - CHEBI:615
+  evidence_ids:
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Native scientific status and field ownership
+  outcome: supported
+  summary: Three seed/reseed events and SEEDED status describe the actual record.
+    A reviewed mechanism remains necessary before native promotion; curated additions
+    require validated writing and an event.
+  target_ids:
+  - CHEBI:615
+  evidence_ids:
+  - record
+  - seed
+findings:
+- finding_id: synonym-charge
+  issue_key: chebi-615-carboxylate-exact-synonym
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: provisional
+  title: Exact synonym obscures acid versus anion distinction
+  description: The acid record inherits a carboxylate exact synonym, although ChEBI
+    models its conjugate base separately. This is a bounded terminology ambiguity,
+    not evidence the main structure is wrong. Review whether this synonym should be
+    related or source-excluded.
+  target_ids:
+  - CHEBI:615
+  field_paths:
+  - synonyms[2]
+  evidence_ids:
+  - record
+  - chebi
+  - kegg
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Scoped source synonym exclusions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source synonym type generation
+  rule_id: 'Review checklist: Identity/Equivalence'
+- finding_id: primary-gap
+  issue_key: chebi-615-primary-biology-gap
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Exact primary biological evidence is not represented
+  description: The record lacks evidence-backed producer/activity context available
+    in the discovery paper and a scoped intrinsic-resistance lead. These are useful
+    optional additions, not schema-required fields; the existing role-only representation
+    is honest.
+  target_ids:
+  - CHEBI:615
+  field_paths:
+  - evidence
+  - producer_organisms
+  - activity_spectrum
+  - resistance_mechanisms
+  - discussions
+  evidence_ids:
+  - record
+  - parker
+  - carg
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/1-carbapenem-3-carboxylic-acid.yaml
+    role: Curator-owned evidence, activity, producer and resistance additions via
+      validated writer and event
+  rule_id: 'Review checklist: Evidence/Producer/Activity/Resistance'
+actions:
+- action_id: clarify-synonym
+  description: Resolve the charge meaning of the inherited synonym against the separate
+    anion entry and source naming policy; if misleading, use a scoped source exclusion
+    or appropriate synonym type without changing the neutral structure.
+  finding_ids:
+  - synonym-charge
+  target_ids:
+  - CHEBI:615
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Scoped source synonym exclusions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source synonym type generation
+  acceptance_checks:
+  - Neutral structure and conjugate-base identity remain distinct.
+  - Re-seed using the canary workflow after separately authorized source changes;
+    verify-corpus and closed-schema checks pass.
+  generator: scripts/seed_from_sources.py
+- action_id: curate-primary-context
+  description: Review exact producer strain grounding and add claim-local evidence.
+    Preserve diffusion assay concentration uncertainty; assess CarF/CarG primary results
+    before representing resistance. Document the unresolved target instead of inferring
+    one from the drug family.
+  finding_ids:
+  - primary-gap
+  target_ids:
+  - CHEBI:615
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/1-carbapenem-3-carboxylic-acid.yaml
+    role: Curator-owned evidence, activity, producer and resistance additions via
+      validated writer and event
+  acceptance_checks:
+  - Retain source organism/strain names, tested preparation and measurement units;
+    do not convert diffusion zones to MIC.
+  - Do not confuse precursor synthesis or resistance proteins with antibacterial targets.
+  - Use native validated writer and curation event for separately authorized additions;
+    run target validation, verify-corpus and QC.
+limitations:
+- MetaCyc CPD-9377 could not be independently retrieved; Reaxys8832318 was verified
+  only as a ChEBI registry assertion. Neither limitation establishes a wrong xref.
+- The 1982 source was inspected in full including Table5 visually; the 2014 CarG source
+  was inspected as PubMed abstract and figure legends. PMC/EuropePMC full-text routes
+  encountered access failures.
+- No exact molecular target or current clinical status was established. Primary biosynthesis
+  and self-resistance context does not establish antibacterial target binding.
+- Historical organism names and strain labels require current taxonomic resolution
+  before a future producer or resistance entry is grounded.
+- Authoritative just qc failed during collection because the pinned SciPy1.15.3 native
+  library has an invalid Mach-O section on this platform; identical pinned version
+  also failed under Python3.10. No dependency versions were changed. Full closed-schema,
+  reproduction and corpus-integrity gates passed independently; these do not replace
+  full QC.
+notes:
+- No record, curation history or native scientific status was changed.
+- Optional-field gaps are proposed curation opportunities; missing causal graphs or
+  MICs are not treated as invalid SEEDED representation.
+- Bundle completion is partial because full repository QC is not available on this
+  runtime; the selected record was read and assessed in full. A saved review does
+  not promote scientific status.
+```

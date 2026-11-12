@@ -1,0 +1,580 @@
+schema_version: 1.0.0
+review_id: 20261021T065352Z-1beta-methylcarbapenem-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of CHEBI:46764 (1beta-methylcarbapenem)
+started_at: '2026-10-21T06:46:12Z'
+finished_at: '2026-10-21T06:53:52Z'
+reviewer:
+  identity: Codex agent review002
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring this generated
+    record, using an isolated clone.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: SEEDED identity and ontology roles supported; exact-scaffold activity
+  and mechanism remain unresolved
+scientific_review: true
+summary: The exact neutral C7H9NO structure, two synonyms, broader class and ontology
+  roles match official ChEBI. Both documented per-record validators and independent
+  structure reconstruction pass. No unsupported MIC or mechanism is asserted. The
+  inspected primary article concerns substantially substituted derivatives, so it
+  does not establish activity of this minimal scaffold. This is an evidence limitation
+  rather than a demonstrated record error. Scientific content is supported within
+  stated limits; full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/antibiotics/antibacterial/1β-methylcarbapenem.yaml
+    sha256: 061731a4c11495635fba01183d2ae37b1ceae7c72d1216d7f1f348ab176a409a
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: Every selected record field, maintained source row/configuration and
+    generator ownership, official term identity, and bounded primary-literature suitability
+    assessment.
+  selection: Tenth path-ordered unreviewed target assigned by the parent task.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:46764
+targets:
+- target_id: CHEBI:46764
+  path: data/antibiotics/antibacterial/1β-methylcarbapenem.yaml
+  label: 1β-methylcarbapenem
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained ChEBI inventory; exact CHEBI:46764 row
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Role classification and source policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record seeding
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Identity and exclusion decisions
+checks:
+- check_id: schema
+  name: Documented per-record LinkML validation
+  status: passed
+  required: true
+  summary: Exit 0; No issues found.
+  target_ids:
+  - CHEBI:46764
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/1β-methylcarbapenem.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented per-record closed-schema validation
+  status: passed
+  required: true
+  summary: Exit 0; one file scanned; zero ERROR rows.
+  target_ids:
+  - CHEBI:46764
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/1β-methylcarbapenem.yaml --out /private/tmp/am-review-session/010-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Independent RDKit structure and internal identifier consistency
+  status: passed
+  required: false
+  summary: SMILES and InChI reproduce the recorded key, formula, charge and masses;
+    two assigned S stereocenters and one fragment; minted ID reproduced.
+  target_ids:
+  - CHEBI:46764
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/010-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: imodulondb
+  name: Structured expression-module adapter applicability
+  status: not_applicable
+  required: false
+  summary: No named gene, protein, regulator, pathway, stress response or expression
+    dataset is present. iModulonDB is not applicable and its non-use is not negative
+    evidence.
+  target_ids:
+  - CHEBI:46764
+  evidence_ids:
+  - record
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at test collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This is not a scientific
+    failure of this record.'
+  target_ids:
+  - CHEBI:46764
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:46764
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:46764
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:46764
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:46764
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:46764
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:46764
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references. No invented per-record validator.
+  target_ids:
+  - CHEBI:46764
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/1β-methylcarbapenem.yaml
+  locator: Entire generated AntibioticRecord
+  accessed_at: '2026-10-21T06:49:08Z'
+  support: supports
+  summary: Read identity, two synonyms, one parent, two activity roles, structure,
+    source concept and all three seed/reseed history events. No definition, cross-reference,
+    evidence, mechanism, target, MIC, resistance, producer, clinical, graph or dataset
+    assertion is represented.
+- evidence_id: inventory
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Complete CHEBI:46764 row and header
+  accessed_at: '2026-10-21T06:49:08Z'
+  support: supports
+  summary: The 3-star in-scope source row supplies the exact structure, synonyms,
+    parent and roles. Definition, cross-references, citations and mechanism-role columns
+    are empty. Maintained decision and curator tables contain no matching override
+    in the inclusive search.
+- evidence_id: ownership
+  kind: record_content
+  reference: scripts/seed_from_sources.py
+  locator: mint, structure_from_chebi, build_concepts and build_record; scripts/extract_source_inventory.py;
+    conf/sources.yaml; data/raw/MANIFEST.yaml
+  accessed_at: '2026-10-21T06:49:08Z'
+  support: supports
+  summary: Inspected extraction/seeding retain source chemical identity and roles;
+    CHEBI:33282 has ANTIBACTERIAL filing priority. The source version agrees with
+    the 2026-08-30 retrieval metadata. The SHA-256 minted identifier joins maintained
+    decisions to the exact source concept.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:46764
+  locator: Entire official entry, accessed via incoming link on CHEBI:46633 after
+    direct requests failed
+  accessed_at: '2026-10-21T06:49:08Z'
+  support: supports
+  summary: Official structure, formula, charge, masses, both synonyms and broader
+    carbapenems relation match. The page displays antibacterial and antimicrobial
+    roles. It provides no assay or citation. A functional-parent relation to CHEBI:46765
+    is additional source context, not an identity synonym or required missing representation.
+- evidence_id: parent
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:46633
+  locator: Term definition, generic structure and incoming CHEBI:46764 relation
+  accessed_at: '2026-10-21T06:49:08Z'
+  support: supports
+  summary: The parent is the broader carbapenems class and explicitly lists this child.
+    Its variable-substituent representation is distinct from the fully specified child;
+    class-level activity must not be treated as an exact-compound experiment.
+- evidence_id: role-antibacterial
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:33282
+  locator: Definition and outgoing parent role
+  accessed_at: '2026-10-21T06:49:08Z'
+  support: supports
+  summary: Identifier resolves to antibacterial agent, a subtype of antimicrobial
+    agent. This supports term semantics, not an exact-scaffold assay.
+- evidence_id: role-antimicrobial
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:33281
+  locator: Definition
+  accessed_at: '2026-10-21T06:49:08Z'
+  support: supports
+  summary: Identifier resolves to antimicrobial agent; its broad meaning is consistent
+    with retaining the narrower antibacterial role alongside it.
+- evidence_id: primary-derivatives
+  kind: primary_source
+  reference: DOI:10.7164/antibiotics.49.199
+  locator: J-STAGE publisher abstract and metadata, https://www.jstage.jst.go.jp/article/antibiotics1968/49/2/49_2_199/_article
+  accessed_at: '2026-10-21T06:49:08Z'
+  support: context_only
+  summary: The 1996 paper A Novel 1beta-Methylcarbapenem Antibiotic, S-4661 describes
+    antibacterial testing of pyrrolidinylthio- and hydroxyethyl-substituted methylcarbapenem
+    carboxylic acids. The named tested structures differ from the C7H9NO record. Their
+    activity cannot validate this scaffold or supply its MIC/mechanism.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit and hashlib local calculation
+  locator: /private/tmp/am-review-session/010-structure.json
+  accessed_at: '2026-10-21T06:49:08Z'
+  support: supports
+  summary: Both encodings yield YKMONJZIUAOVEM-WDSKDSINSA-N; C7H9NO; charge 0; average
+    mass 123.155; exact mass 123.068413908; one fragment and two assigned S stereocenters.
+    Minted ID antibioticmech:chebi-fe486ebf7b agrees.
+  snapshot_sha256: d4fec91f589b6ab254994c9a293eb9309b2b2ad1f675d3e9acc916bb654963bd
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: /private/tmp/am-review-session/010-validate.log; 010-strict.log; 010-strict.tsv
+  accessed_at: '2026-10-21T06:49:08Z'
+  support: supports
+  summary: Both documented per-record checks exited 0; strict validator scanned one
+    file with no error rows.
+- evidence_id: search
+  kind: search
+  reference: Inclusive repository and bounded free literature searches
+  locator: /private/tmp/am-review-session/010-inclusive-search.txt; 010-owner-search.txt;
+    web search on review date
+  accessed_at: '2026-10-21T06:49:08Z'
+  support: context_only
+  summary: Exact name, structure key and systematic synonym searches yielded databases
+    and substituted-derivative literature, without inspected exact-scaffold antibacterial
+    evidence. No matching curated override was found. These bounded results do not
+    establish inactivity or exhaustive literature absence.
+  search_scope: Local rg --no-ignore --hidden searches included hidden and ignored
+    working files, excluding only .git and .venv; searched CHEBI:46764, YKMONJZIUAOVEM,
+    Greek/ASCII compound name and maintained-table minted ID. Free web queries included
+    CHEBI:46764; YKMONJZIUAOVEM antibacterial; 1beta-methylcarbapenem C7H9NO; the
+    full (4S,5S) systematic synonym; and Greek-name antibacterial searches. Search
+    snippets, patents' automatic chemical tags and database repeats were leads only.
+    J-STAGE primary abstract was inspected; ASM full-page and PubMed access attempts
+    failed.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact chemical entity, names and stereochemistry
+  outcome: supported
+  summary: The record denotes a single specified neutral structure. Official identity
+    and independent parsing agree; it is not a salt, a variable R-group class, or
+    any of the substituted clinical carbapenems.
+  target_ids:
+  - CHEBI:46764
+  evidence_ids:
+  - record
+  - inventory
+  - chebi
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Exact source identifier and broader parent
+  outcome: supported
+  summary: CHEBI:46764 resolves and the official parent explicitly contains it. The
+    broader CHEBI:46633 relationship is faithfully imported. The internal minted identifier
+    is reproducible.
+  target_ids:
+  - CHEBI:46764
+  evidence_ids:
+  - chebi
+  - parent
+  - chemistry
+- assessment_id: classification
+  area: evidence
+  topic: Ontology roles versus independent exact-scaffold activity
+  outcome: unknown
+  summary: ANTIBACTERIAL filing follows the maintained ontology role. Independent
+    activity for this exact scaffold remains unresolved; the inspected primary paper
+    tests different substituted structures. No contradiction or proof of inactivity
+    was established.
+  target_ids:
+  - CHEBI:46764
+  evidence_ids:
+  - inventory
+  - ownership
+  - chebi
+  - role-antibacterial
+  - role-antimicrobial
+  - primary-derivatives
+  - search
+- assessment_id: mechanism
+  area: completeness
+  topic: Mode of action and molecular targets
+  outcome: unknown
+  summary: No mechanism or target is asserted or established for the exact structure.
+    Class membership alone does not justify a PBP target or cell-wall mechanism. Native
+    REVIEWED criteria are not fulfilled.
+  target_ids:
+  - CHEBI:46764
+  evidence_ids:
+  - record
+  - inventory
+  - primary-derivatives
+  - search
+- assessment_id: optional
+  area: representation
+  topic: Assays, resistance, producer, clinical status, graph and datasets
+  outcome: not_applicable
+  summary: These optional objects are absent. No exact evidence was found to populate
+    them, and omission is not a schema defect. Derivative MICs and clinical attributes
+    must not be imported.
+  target_ids:
+  - CHEBI:46764
+  evidence_ids:
+  - record
+  - primary-derivatives
+  - search
+- assessment_id: provenance
+  area: ownership
+  topic: Source ownership and history
+  outcome: supported
+  summary: SEEDED status and the three seed/reseed events accurately distinguish provenance
+    from scientific review. Future changes belong in maintained inputs and the seeder,
+    or the native curated writer for scientific additions.
+  target_ids:
+  - CHEBI:46764
+  evidence_ids:
+  - record
+  - inventory
+  - ownership
+- assessment_id: validation-assessment
+  area: schema
+  topic: Per-record gates and chemistry consistency
+  outcome: supported
+  summary: Both documented validators and independent chemistry checks pass. These
+    checks do not resolve the exact-compound biological-evidence limitation.
+  target_ids:
+  - CHEBI:46764
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-46764-exact-scaffold-activity-followup
+  category: evidence
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Exact-scaffold activity remains an evidence follow-up
+  description: The source record has ontology roles but no primary assay citation.
+    The inspected methylcarbapenem paper concerns different substituted structures.
+    This identifies an unresolved exact-structure evidence question, not a demonstrated
+    erroneous role or a missing required optional field.
+  target_ids:
+  - CHEBI:46764
+  field_paths:
+  - activity_roles
+  - antimicrobial_class
+  - activity_spectrum
+  - mode_of_action
+  evidence_ids:
+  - record
+  - inventory
+  - chebi
+  - primary-derivatives
+  - search
+  rule_id: 'review-checklist: exact identity, evidence standard, mode of action; record-review-profile
+    native REVIEWED gate'
+  native_severity: informational bounded evidence follow-up
+  normalization_reason: The maintained ontology supports the seeded representation
+    and no inspected source refutes it. More evidence is needed for scientific promotion;
+    a missing optional mechanism or MIC alone is not a major defect.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained ChEBI inventory; exact CHEBI:46764 row
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Role classification and source policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record seeding
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Identity and exclusion decisions
+actions:
+- action_id: A1
+  description: During a separately authorized curation pass, locate a primary experiment
+    explicitly matching C7H9NO and YKMONJZIUAOVEM-WDSKDSINSA-N. Preserve the distinction
+    from substituted methylcarbapenem antibiotics. If exact evidence resolves a source
+    scope problem, implement the disposition through maintained inventory/decisions
+    and the seeder; otherwise retain SEEDED and record the bounded uncertainty.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:46764
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained ChEBI inventory; exact CHEBI:46764 row
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Role classification and source policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record seeding
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Identity and exclusion decisions
+  acceptance_checks:
+  - Any activity or mechanism assertion has an inspected exact-structure primary citation
+    and retains assay/organism scope.
+  - No derivative or class-level MIC, target, clinical status or DHP stability is
+    attributed to this scaffold.
+  - Any separately authorized data change uses the maintained owner or native validated
+    writer and passes just validate, just validate-strict, just verify-corpus --summary
+    and just qc before native promotion.
+  generator: scripts/seed_from_sources.py
+limitations:
+- Exact-compound activity and mechanism remain unresolved. Bounded free searches do
+  not prove inactivity or that no supporting publication exists.
+- The inspected primary derivative source was its publisher abstract; no detailed
+  assay values were extracted. Several other publisher/PubMed requests failed. Official
+  exact ChEBI text ultimately succeeded through the parent link.
+- Authoritative just qc failed during collection because the pinned SciPy 1.15.3 native
+  library has an invalid Mach-O section on this platform; identical pinned version
+  also failed under Python 3.10. No dependency versions were changed. Full closed-schema,
+  reproduction and corpus-integrity gates passed independently; these do not replace
+  full QC.
+notes:
+- No source record, maintained input, generated product or history event was modified.
+  No scientific status promotion occurred.
+- Bundle completion is partial because full repository QC is not available on this
+  runtime; the selected record was read and assessed in full. A saved review does
+  not promote scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:46764
+- https://www.ebi.ac.uk/chebi/CHEBI:46633
+- https://doi.org/10.7164/antibiotics.49.199
+tags:
+- record-review
+- carbapenem
+- exact-structure-scope
