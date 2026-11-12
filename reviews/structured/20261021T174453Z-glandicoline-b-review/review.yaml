@@ -1,0 +1,673 @@
+schema_version: 1.0.0
+review_id: 20261021T174453Z-glandicoline-b-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of glandicoline B
+started_at: '2026-10-21T17:27:39Z'
+finished_at: '2026-10-21T17:44:53Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'Glandicoline B has a confirmed blocker representation defect: the native
+  and current ChEBI SMILES omit an explicit imidazole N–H and cannot be kekulized.
+  The native InChI, official ChEBI molfile, PubChem and a scratch-only repair agree
+  at the expected molecular identity. Original papers support fungal biosynthesis
+  and antibacterial activity at bounded assay scope. Exact MetaCyc equivalence and
+  direct antimicrobial target remain unresolved; printed stereochemical labels in
+  one primary source are retained as a source discrepancy without changing its consistent
+  wedge geometry.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/glandicoline-b.yaml
+    sha256: 537515d421eedfeb22e379dbbad16d8e8291e5dad4e760cf466f5a9253512470
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+  - path: scripts/extract_mibig_producers.py
+    sha256: a078cdf4c9b2d09999800ab7ae03f93d3972f29b7d2f460ebbbe7d7ec6b31c53
+    role: context
+targets:
+- target_id: CHEBI:134347
+  path: data/antibiotics/antibacterial/glandicoline-b.yaml
+  label: glandicoline B
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted exact identity, structure, roles and literature leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: Role term names
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Class priority and role mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/mibig_producers.tsv
+    role: Nearby producer evidence and exact-structure exclusion boundary
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_mibig_producers.py
+    role: MIBiG compound evidence extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native generation
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion decisions
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 503; original 13 input hashes preserved
+    and two actual MIBiG source/extractor inputs appended before detailed scientific
+    judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:134347
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: failed
+  required: false
+  summary: Native SMILES fails RDKit kekulization at the imidazole ring; helper exits
+    1 before running later gates. Schema and strict checks were then executed independently
+    and both passed.
+  target_ids:
+  - CHEBI:134347
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    503
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:134347
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/glandicoline-b.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:134347
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/glandicoline-b.yaml --out /private/tmp/am-review-session/503-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent official structure and scratch-repair comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/503-authority-check.py
+    > /private/tmp/am-review-session/503-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native/current ChEBI SMILES failure reproduced; six valid authority/repair
+    encodings agree at exact InChIKey, formula, charge and masses. This diagnostic
+    success does not make the native representation pass.
+  target_ids:
+  - CHEBI:134347
+- check_id: ledger
+  name: Input, term, source, adopted-lead and history audit
+  command: .venv/bin/python /private/tmp/am-review-session/503-ledger.py > /private/tmp/am-review-session/503-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 15 hashes unchanged, original 13 preserved; all four adopted leads, seven
+    exact terms and three chronological events checked.
+  target_ids:
+  - CHEBI:134347
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:134347
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:134347
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:134347
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:134347
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:134347
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:134347
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:134347
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:134347
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:134347
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/glandicoline-b.yaml
+  locator: Entire native record including all three history events
+  accessed_at: '2026-10-21T17:42:52Z'
+  support: supports
+  summary: The SEEDED/EXACT record denotes CHEBI:134347 glandicoline B, has one systematic
+    exact synonym, six broader parents, one antibacterial role, one MetaCyc xref and
+    neutral C22H21N5O4 chemistry. It asserts no quantitative MIC, molecular target,
+    resistance mechanism, structured producer, clinical product or causal graph.
+- evidence_id: structure
+  kind: validation
+  reference: CHEBI:134347; PubChem:124079399
+  locator: 503-authority-chemistry.json;503-focused-run.log;503-chebi-134347.json;503-chebi-official.mol;503-pc-key.json
+  accessed_at: '2026-10-21T17:42:52Z'
+  support: supports
+  summary: Both native and current ChEBI SMILES fail kekulization because c4cncn4
+    has no explicit pyrrolic N–H. The official molfile, native/current InChI and PubChem
+    encodings are valid. Replacing that imidazole substring with c4c[nH]cn4 in scratch
+    yields the expected YEVSOYBNHBOQJZ-GCTRCSCRSA-N, C22H21N5O4, zero charge and correct
+    masses. Standard InChI normalizes mobile-H imidazole and lactam tautomers, so
+    direct bond-form graph matching is separately recorded and not falsely claimed
+    universal.
+  snapshot_sha256: f276f2faa158ce094f0e79a7047df5f2e162355488f1d1e686e4d2e6ab2aec54
+- evidence_id: terms
+  kind: authority
+  reference: CHEBI:24780;CHEBI:24995;CHEBI:33823;CHEBI:38163;CHEBI:38958;CHEBI:78840;CHEBI:33282
+  locator: 503-chebi-<id>.json;503-source-audit.json terms;503-fetch.json
+  accessed_at: '2026-10-21T17:42:52Z'
+  support: supports
+  summary: Current term identities and outgoing relationships match all six native
+    parents and the antibacterial role. The valid graph contains imidazole, lactam,
+    enol, an indole-derived scaffold and olefin; it has a fused tetracyclic core plus
+    a separate imidazole ring. Total ring count five alone does not refute the tetracyclic-core
+    definition. Organic heterotetracyclic compound has no supplied textual definition.
+    Upstream mycotoxin/metabolite annotations are not additional configured antimicrobial
+    roles.
+  snapshot_sha256: 340d09ef299fd4d328b042dc8d1dd98725aaffc6956ea60fd2193186f875a6ae
+- evidence_id: primary2012
+  kind: primary_source
+  reference: DOI:10.1590/S0100-40422012000400022
+  locator: 503-2012.html/.txt; complete main, actual Figures1–3 in503-2012-image2.jpg,-image3.jpg,-image0.jpg;503-fetch2/4.json
+  accessed_at: '2026-10-21T17:42:52Z'
+  support: supports
+  summary: Compound 1 was isolated from cultured Penicillium sp. PBR.2.2.2, identified
+    by NMR/MS and reported active at 100 micrograms/ml against S. aureus, M. luteus
+    and E. coli. Methods describe MHB microbroth dilution, resazurin, 37°C/24 h and
+    agar subculture. No strain accessions, complete MIC table or kill kinetics are
+    adopted. The host palm is the fungus source, not a proven compound producer. Absolute
+    configuration was inferred from meleagrin crystallography rather than directly
+    determined for glandicoline B.
+  snapshot_sha256: ae0b4f6fc04c2d8db326e1c9ea38a3a0c1eebc2cc94367738da12824f45c866d
+- evidence_id: source-stereo
+  kind: primary_source
+  reference: DOI:10.1590/S0100-40422012000400022
+  locator: Actual Figure1 compound 1,503-2012-image2.jpg, compared with mapped official
+    molfile503-chebi-map.png
+  accessed_at: '2026-10-21T17:42:52Z'
+  support: supports
+  summary: The paper prints C2S/C3R whereas current molfile CIP assignments at mapped
+    C2(atom0)/C3(atom2) are R/S. Actual dashed-bond placement and circular ordering
+    of neighboring groups were independently inspected by reviewer and coordinator
+    and agree. Printed labels alone therefore do not justify inversion of the native
+    graph; the annotation discrepancy and indirect absolute-assignment basis remain
+    explicit limitations.
+  snapshot_sha256: 376081e34c78cfd2f136143abe23f3e70959644311ebd000fffe64a50dd70095
+- evidence_id: primary2013
+  kind: primary_source
+  reference: PMID:23776469; DOI:10.1371/journal.pone.0065328
+  locator: 503-PMC3680398.xml; complete original main and supporting-file captions
+  accessed_at: '2026-10-21T17:42:52Z'
+  support: supports
+  summary: P. chrysogenum DS54555 deletion/metabolite experiments identify glandicoline
+    B as compound 6, with isolation and NMR confirmation. Deletion of roqN increases
+    6 while meleagrin is lost. This supports fungal biosynthesis and broad isolation
+    wording. The disputed intermediate/enzyme assignments are biosynthetic, not antibacterial
+    targets; supporting raw spectral files were not independently reprocessed.
+  snapshot_sha256: 074869682ee3d7378970b76663c549b70d9f27dbc44b10e2a061ca9aea28ec78
+- evidence_id: adopted
+  kind: database
+  reference: PMID:22118684;PMID:23776469;PMID:25998659;PMID:26668029
+  locator: 503-adopted-core.json;503-source-audit.json adopted_leads
+  accessed_at: '2026-10-21T17:42:52Z'
+  support: supports
+  summary: All four adopted MED records and complete supplied abstracts were read.
+    The 2011 RNAi study supports glandicoline B accumulation in P. chrysogenum. The
+    2015 original concerns a shortened pathway in three P. roqueforti strains and
+    does not refute P. chrysogenum production. The 2015/2016 cluster-evolution review
+    is secondary context, including P. chrysogenum/P. rubens nomenclature. Full 2011
+    and 2015 original main texts were not read.
+  snapshot_sha256: 85f22b99681ef77e4a807bbf3986727de40ef9e45da9fe4bc2c52b3886bb7b1d
+- evidence_id: mechanism
+  kind: primary_source
+  reference: PMID:30141817; DOI:10.1039/c8ob01565a
+  locator: 503-PMC6134404.html; abstract, glandicoline-related introduction, reconstitution
+    Results, ligand-density/docking caveat, isolation and kinetic Methods; Figures1–2
+    viewed
+  accessed_at: '2026-10-21T17:42:52Z'
+  support: supports
+  summary: The original reconstitutes glandicoline B methylation by OxaG/RoqN and
+    downstream OxaC reactions. These are substrate-biosynthesis experiments. No glandicoline
+    B electron density was obtained in the methyltransferase crystals; modeled poses
+    are docking. The introductory FabI discussion concerns meleagrin, glandicoline
+    A, oxaline and derivatives, and is not direct B target evidence.
+  snapshot_sha256: bb32cb880565fffc881959c9628b8f6c3edfd9ef87758fb8d2bc614f7ffc6455
+- evidence_id: antifouling
+  kind: primary_source
+  reference: DOI:10.1177/1934578X1300800313
+  locator: Publisher PDF text through web provider; pages329–331, compound list, Results/Table2
+    and isolation; local PDF request 403 in503-fetch2.json
+  accessed_at: '2026-10-21T17:42:52Z'
+  support: supports
+  summary: Glandicoline B is compound 4 isolated from Penicillium SCSIO00258. Selected
+    positive MIC and larval-response rows concern other numbered compounds, including
+    meleagrin 3. They cannot be transferred to B. No quantitative B result or universal
+    inactivity conclusion is adopted; local full-PDF snapshot was unavailable.
+- evidence_id: xref
+  kind: authority
+  reference: metacyc.compound:CPD-17390
+  locator: 503-metacyc.html and503-metacyc-xml.xml;503-fetch.json and503-fetch3.json
+  accessed_at: '2026-10-21T17:42:52Z'
+  support: supports
+  summary: Current ChEBI asserts this exact xref, but both official compound and getxml
+    endpoints returned account/login HTML rather than a structure. Exact MetaCyc equivalence
+    remains unresolved; no account, subscription or paid access was used.
+  snapshot_sha256: 385fd1f98685f2c60871bbf71973a35a971183e5c280e829d5fa98a424d849dc
+- evidence_id: mibig
+  kind: database
+  reference: MIBiG:BGC0000420
+  locator: 503-raw-rows.json; adopted data/raw/mibig_producers.tsv row
+  accessed_at: '2026-10-21T17:42:52Z'
+  support: supports
+  summary: The nearby version 5 row is questionable, has knockout-study provenance,
+    and contains a stereo-unspecified core with full key YEVSOYBNHBOQJZ-CXUHLZMHSA-N.
+    It is not an exact full-key match to this configured record. No structured producer
+    object is present, and no forced producer transfer or status upgrade is justified
+    from the common name alone.
+  snapshot_sha256: a374e9083b9d7ad66cccdaab6e7651908123d81ab2b1f9249cc6a431c157d846
+- evidence_id: owners
+  kind: validation
+  reference: Maintained ChEBI/MIBiG inputs and extractor/seeder
+  locator: 503-inspect.json;503-owners-search.json;503-source-audit.json
+  accessed_at: '2026-10-21T17:42:52Z'
+  support: supports
+  summary: All original 13 and two appended hashes remain unchanged. Exact source
+    rows and three chronological events were checked. Ignored-inclusive searches cover
+    data/raw,curation,conf,scripts,src and establish source/extractor ownership. The
+    invalid SMILES is inherited from current ChEBI, while its official molfile remains
+    valid.
+  snapshot_sha256: 340d09ef299fd4d328b042dc8d1dd98725aaffc6956ea60fd2193186f875a6ae
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Configured glandicoline B molecular identity
+  outcome: supported
+  summary: Native InChI, official ChEBI molfile and PubChem identify the same configured
+    neutral molecule. Original isolation and biosynthesis support the named compound;
+    the separate serialized SMILES defect is confirmed.
+  target_ids:
+  - CHEBI:134347
+  evidence_ids:
+  - structure
+  - primary2012
+  - primary2013
+- assessment_id: representation
+  area: representation
+  topic: Invalid imidazole SMILES
+  outcome: concern
+  summary: The native aromatic nitrogen encoding cannot be parsed. A scratch-only
+    explicit-NH repair reproduces existing identity and validates the concrete repair
+    path without native edits.
+  target_ids:
+  - CHEBI:134347
+  evidence_ids:
+  - structure
+  - owners
+- assessment_id: class
+  area: nomenclature
+  topic: Broader classes and antibacterial role
+  outcome: supported
+  summary: Current source terms and structural features support broader parents; original
+    bacterial activity supports ANTIBACTERIAL filing. The tetracyclic core is distinct
+    from total ring count.
+  target_ids:
+  - CHEBI:134347
+  evidence_ids:
+  - terms
+  - primary2012
+- assessment_id: stereo
+  area: consistency
+  topic: Printed source CIP annotation versus wedge geometry
+  outcome: unknown
+  summary: The 2012 printed stereodescriptors differ from current assigned labels,
+    but actual pictured parity agrees on independent visual inspection. Preserve the
+    source discrepancy and indirect assignment basis without inverting graph.
+  target_ids:
+  - CHEBI:134347
+  evidence_ids:
+  - source-stereo
+  - structure
+- assessment_id: xref
+  area: grounding
+  topic: Exact MetaCyc chemical equivalence
+  outcome: unknown
+  summary: Current ChEBI asserts CPD-17390, but official external structure retrieval
+    was blocked by account gating. A source assertion is retained without claiming
+    independent graph verification.
+  target_ids:
+  - CHEBI:134347
+  evidence_ids:
+  - xref
+- assessment_id: activity
+  area: evidence
+  topic: Original activity and assay scope
+  outcome: supported
+  summary: The isolated compound has reported activity at 100 micrograms/ml against
+    three named bacteria under described broth conditions. Detailed strain/MIC or
+    bactericidal kinetics should not be invented or copied from a different numbered
+    congener.
+  target_ids:
+  - CHEBI:134347
+  evidence_ids:
+  - primary2012
+  - antifouling
+- assessment_id: producer
+  area: provenance
+  topic: Fungal isolation and producer specificity
+  outcome: supported
+  summary: Original culture/genetic evidence supports the broad fungal-source definition;
+    host palm and lower-stereo MIBiG record are kept separate. No exact unsupported
+    strain object is asserted.
+  target_ids:
+  - CHEBI:134347
+  evidence_ids:
+  - primary2012
+  - primary2013
+  - adopted
+  - mibig
+- assessment_id: mechanism
+  area: completeness
+  topic: Exact antimicrobial molecular target
+  outcome: unknown
+  summary: No native target is asserted. Biosynthetic methyltransferase substrates
+    and docking do not establish an antibiotic target; the inspected FabI discussion
+    concerns other compounds. Optional target enrichment remains unresolved.
+  target_ids:
+  - CHEBI:134347
+  evidence_ids:
+  - record
+  - mechanism
+  - adopted
+- assessment_id: ownership
+  area: ownership
+  topic: Input and history integrity
+  outcome: supported
+  summary: Maintained owners, preserved input hashes and three chronological source
+    events are verified; scientific status remains SEEDED.
+  target_ids:
+  - CHEBI:134347
+  evidence_ids:
+  - owners
+findings:
+- finding_id: F1
+  issue_key: glandicoline-b-invalid-imidazole-smiles-missing-nh
+  category: representation
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: The native imidazole SMILES omits a required explicit N–H
+  description: The native and current ChEBI SMILES contain c4cncn4, causing imidazole
+    kekulization failure. The native InChI and official molfile remain valid. In scratch,
+    c4c[nH]cn4 restores parseability and the existing exact InChIKey/formula/charge
+    without changing the configured identity. Correct the reproducible source serialization/normalization,
+    not only the generated YAML.
+  target_ids:
+  - CHEBI:134347
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - record
+  - structure
+  - owners
+  rule_id: 'docs/record-reviews.md: invalid representation blocker; CLAUDE.md: generated
+    source ownership'
+  normalization_reason: Blocker for invalid machine-readable molecular representation.
+    Successful schema/strict checks do not detect chemical kekulization failure.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI structure serialization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated structure field
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:134347
+  description: Correct the ChEBI-derived SMILES through the maintained extraction/source
+    path using the official molfile or a verified explicit imidazole N–H encoding.
+    Preserve stereo, alkene geometry, neutral composition and current identity; distinguish
+    acceptable mobile-H tautomers from stereochemical changes. Re-seed only through
+    the documented validated workflow.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI structure serialization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated structure field
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - Parse the regenerated SMILES successfully and reproduce YEVSOYBNHBOQJZ-GCTRCSCRSA-N,
+    C22H21N5O4, charge 0 and expected masses.
+  - Compare to official molfile and native InChI without altering stereochemistry
+    based solely on inconsistent printed source CIP labels.
+  - Run focused schema/strict, native reference/history/corpus checks and full QC;
+    retain honest failures rather than treating contract validation as chemistry validation.
+limitations:
+- MetaCyc official compound/getxml routes returned login HTML; exact external structure
+  equivalence remains unresolved.
+- All four adopted abstracts were read, but only the 2013 adopted original main text
+  was read fully. The 2011 author-repository route returned an anti-bot page; the
+  2015 original and 2015/2016 review remain abstract-level.
+- The 2012 paper inferred absolute configuration from related meleagrin crystallography;
+  its printed C2/C3 descriptors conflict with current CIP labels despite matching
+  pictured wedge parity. Raw supplemental spectra and an independent absolute-configuration
+  experiment were not reanalyzed.
+- The 2012 reported active concentration is retained without inventing a complete
+  MIC table, strain accessions, kill kinetics or certified compliance with the paper’s
+  stated NCCLS protocol.
+- The 2018 biosynthetic original was read at the specified selected sections/Figures1–2,
+  not all supplemental crystallographic/refinement files. Its docking and substrate
+  conversions do not establish antimicrobial inhibition.
+- The 2013 antifouling publisher PDF text was inspected through the web tool, but
+  local download 403 prevented a local PDF snapshot. No quantitative glandicoline
+  B result is adopted from its selected-compound table.
+- A guessed ChEBI structure/mol URL returned JSON rather than molfile; the correct
+  official public/molfile endpoint succeeded and is separately preserved. Two EuropePMC
+  XML calls failed 500 and their full HTML alternatives succeeded.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native gene, target, pathway object, regulator or transcriptomic dataset triggers
+  a structured adapter. Discovered fungal biosynthetic enzymes are not native antibacterial
+  targets.
+- Standalone chemistry used batch019 against batch051; native schema/strict, ledger
+  and contract used batch051. No native/source bytes or scientific status were changed.
+- An initial append script stopped on an incorrect guessed conf/roles.yaml path before
+  any writes; actual conf/sources.yaml was used on the successful attempt, preserving
+  every original hash.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:134347
+- https://pubchem.ncbi.nlm.nih.gov/compound/124079399
+- https://doi.org/10.1590/S0100-40422012000400022
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC3680398/
+tags:
+- record-review
+- glandicoline-b
+- invalid-smiles

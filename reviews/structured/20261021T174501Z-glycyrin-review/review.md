@@ -1,0 +1,784 @@
+# Glycyrin: corroborated coumarin identity with an incompatible parent and one malformed synonym
+
+- Review: 20261021T174501Z-glycyrin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T17:27:40Z
+- Finished UTC: 2026-10-21T17:45:01Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Primary isolation and activity data corroborate exact glycyrin. Its hydroxyisoflavan parent conflicts with the coumarin graph, and one exact synonym places the prenyl substituent at an impossible coumarin position. The antibacterial role is supported; source-table unit inconsistency and extract-versus-pure-compound boundaries constrain optional enrichment.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position504; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:69086 | data/antibiotics/antibacterial/glycyrin.yaml | generated | glycyrin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:69086 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:69086 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:69086 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:69086 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:69086 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:69086 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:69086 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:69086 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:69086 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:69086 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:69086 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:69086 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact glycyrin graph and structural naming
+
+identity: supported. Targets: CHEBI:69086.
+
+Native and independent graphs agree with the original Figure1 and later synthesis. This is one achiral neutral coumarin, with no supported reason to alter the graph.
+
+### Hydroxyisoflavan classification
+
+grounding: concern. Targets: CHEBI:69086.
+
+The hydroxyisoflavan parent requires a different reduced ring skeleton. Correct this imported scientific class while retaining valid coumarin and aromatic-ether parents.
+
+### Exact synonym prenyl locant
+
+consistency: concern. Targets: CHEBI:69086.
+
+The second synonym says 2-isopentenylcoumarin, but C2 is the coumarin carbonyl centre. Definition, three other exact synonyms, external structure and original Figure1 all place the substituent at C6.
+
+### Purified antibacterial evidence and source units
+
+evidence: supported. Targets: CHEBI:69086.
+
+Exact-compound original assays support the qualitative role. Numerical enrichment must preserve strain/media/inoculum detail and explicitly resolve the printed table-unit discrepancy.
+
+### Optional exact target and causal-chain enrichment
+
+completeness: unknown. Targets: CHEBI:69086.
+
+The FtsZ abstract is a useful compound-specific lead, but neither its other-compound MIC nor mixed-extract quorum observations can fill glycyrin activity or causal claims. Current absence of optional objects is not itself a defect.
+
+### Owner, all adopted citations and history
+
+provenance: supported. Targets: CHEBI:69086.
+
+Exact source ownership and all four history entries are coherent. All five adopted PMIDs are resolved. Native import fidelity does not remove the source-level parent/name errors.
+
+## Findings
+
+### F1: Remove the structurally incompatible hydroxyisoflavan parent
+
+major / open / confirmed; issue key: glycyrin-incompatible-hydroxyisoflavan-parent.
+
+parent_compounds includes CHEBI76250, whose required isoflavan core is incompatible with the independently verified coumarin lactone and unsaturated C3/C4 bond. The current upstream source repeats the relation, but the original isolation Figure1 and synthesis support the native coumarin graph. Correct the maintained classification without converting glycyrin into an isoflavan.
+
+### F2: Correct the prenyl locant in the second exact synonym
+
+minor / open / confirmed; issue key: glycyrin-malformed-prenyl-locant-synonym.
+
+The second exact synonym labels the compound 2-isopentenylcoumarin. The native definition, other exact synonyms, original Figure1 and corroborated graph place prenyl at C6; C2 is the coumarin carbonyl carbon. Correct or retire this malformed imported synonym while preserving the valid names.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct source-owned glycyrin classification and the malformed synonym, then regenerate.
+
+- Remove the incompatible CHEBI76250 parent through maintained source/override ownership; preserve valid coumarin and aromatic-ether classes and the exact native graph.
+- Correct the erroneous 2-isopentenyl locant to a verified C6-prenyl name or remove that duplicate malformed synonym.
+- Run focused schema/strict, source reproduction and required QC. If enriching activity, document Table1 mg/mL versus Methods micrograms/mL and incomplete inoculum standardization; do not silently normalize source conflicts.
+
+### A2
+
+For optional mechanism enrichment, obtain the2017 glycyrin FtsZ original and preserve assay-specific scope.
+
+- Separate glycyrin compound3 enzyme results from gancaonin I compound1 MIC. Distinguish mutant-enzyme/docking inference from direct binding.
+- Do not transfer extract quorum, host cytokine or metabolic-model results to a glycyrin antibacterial causal chain.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/glycyrin.yaml; Entire native record, all names, groundings, chemical properties and chronological history | supports | The exact SEEDED ChEBI record denotes neutral C22H22O6 with full key FWWGXZYUURXJLK-UHFFFAOYSA-N. All 4 history entries were read. No molecular target, resistance claim, quantitative activity observation, producer object or causal graph is asserted. The botanical isolation sentence is narrower than a de novo biosynthetic-producer claim. |
+| owners | 504-source-rows.json; conf/sources.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Complete exact adopted row and applicable extraction, precedence and emission logic | supports | The native imported content reproduces the maintained ChEBI row. Its antibacterial role determines the ANTIBACTERIAL category. Original thirteen captured inputs cover the actual owners and remain unchanged; no additional owner was required. Seed/reseed history is not scientific sign-off. |
+| chemistry | 051-root-authority-chemistry.json; Independent forward parsing of native and external SMILES/InChI encodings | supports | 8 encodings from native, current ChEBI and PubChem and LIPID MAPS reproduce the same full key, formula and neutral charge. No tetrahedral stereocentre is present; UHFFFAOY is not evidence of missing configuration in these graphs. Focused internal formula, masses, charge and key checks also pass. |
+| authorities | CHEBI:69086; CHEBI:23403; CHEBI:35618; CHEBI:76250; CHEBI:33282; Complete current compound entry and relevant official parent/role definitions | supports | Current ChEBI agrees with the native chemical graph and imported content. The individual structural-parent semantics were checked against the actual graph, not accepted solely because the current source repeats a relation. Antibacterial-agent status is assessed using exact purified-compound experiments. |
+| gates | 504-focused-results.json; Actual focused schema, strict and chemistry executions | supports | All three focused commands exit 0. These checks establish internal consistency and schema conformance, not scientific correctness of every imported class or name. |
+| search | 504-local-hits.txt; 051-root-fetch1.json through 051-root-fetch5.json; Ignored- and hidden-inclusive local search; bounded current-authority, adopted-PMID and primary-literature retrieval | context_only | Local searches included ignored files. Every adopted PMID was resolved and its indexed abstract read. Exact accessible originals were inspected at the depths stated below. PubMed search result lists are discovery inventories, not claims that every returned paper was read. No native gene/protein/pathway/dataset claim requires a transcriptomic-adapter query; newly encountered mechanism leads remain bounded. |
+| parent | CHEBI:76250; CHEBI:72572; CHEBI:23403; CHEBI:35618; Complete hydroxyisoflavan definition, its isoflavan parent definition/wildcard structure, and coumarin/aromatic-ether definitions | supports | Hydroxyisoflavans are hydroxy-substituted isoflavans; their parent requires a 3,4-dihydro-3-aryl-2H-1-benzopyran skeleton. Glycyrin instead contains a coumarin C2 lactone carbonyl and unsaturated C3/C4 bond. Coumarins and aromatic ethers fit. Current ChEBI repeats the incompatible hydroxyisoflavan relation, so simple source reproduction cannot resolve it. |
+| original2001 | PMID:11575586; DOI:10.3177/jnsv.47.270; https://www.jstage.jst.go.jp/article/jnsv1973/47/4/47_4_270/_pdf; All four original pages 270–273, visually inspected including Figure1, Table1, Methods and Discussion | supports | Commercial G. uralensis roots yielded purified glycyrin, compound4 (5 mg). Figure1 shows the native C6-prenyl, 5,7-dimethoxy, 3-(2,4-dihydroxyphenyl)coumarin. Twofold broth dilution used 37 degrees C for24 h and change in turbidity at660 nm. Table1 reports glycyrin MIC25 against S. pyogenes ATCC12344 and H. influenzae ATCC33391, and50 against M. catarrhalis ATCC25238. Methods and dilution footnote support micrograms/mL, whereas the Table1 unit footnote prints mg/mL; retain this source inconsistency. H. influenzae used supplemented Mueller-Hinton medium, the other strains glucose/peptone/yeast medium. The inoculum is specified as50 microlitres of3–4-day culture without CFU standardization. Licoricidin activity and penicillin-binding-protein discussion concern compound1, not glycyrin. |
+| synthesis2024 | PMID:39203020; https://pmc.ncbi.nlm.nih.gov/articles/PMC11357431/; Selected glycyrin synthesis Results, entire Table2, section3.2.15, host-cell Methods, cytokine Results and Conclusions; figure captions, not raw figures or supplement | supports | Synthetic glycyrin compound2 is produced through a coumarin-forming condensation and deacetylation. Its reported proton/carbon spectra and Table2 comparison agree with natural glycyrin, including the lactone carbon and two methoxy groups. The selected biological work measures LPS-stimulated RAW264.7 macrophage nitrite and cytokine transcripts; it is anti-inflammatory host-cell evidence rather than bacterial growth inhibition or direct cytokine binding. |
+| adopted | PMID:11575586,12127165,14608046,14643306,22074222; All five complete adopted indexed abstracts; 2001 original additionally inspected in full | supports | PMID12127165 explicitly lists glycyrin among weaker anti-H. pylori compounds, without extract-wide potency transfer. PMID14608046 tests a licorice extract in metabolic models; PMID14643306 additionally names isolated glycyrin in a PPAR-gamma reporter/fractionation and diabetic-mouse context. Neither establishes an antibacterial PPAR-gamma mechanism. PMID22074222 discusses isolation of coumarins/isoflavonoids and strongest oral-pathogen results for licoricidin and licorisoflavan A; those values cannot be assigned to glycyrin from the abstract. |
+| mechanism-leads | PMID:28196701; DOI:10.1016/j.bmcl.2017.01.095; PMID:26582430; DOI:10.2217/fmb.15.107; Both complete indexed abstracts; publisher2017 full-text route returned403; bounded exact-DOI search found abstract/repository metadata | partial | The2017 original explicitly tests glycyrin compound3 against B. subtilis FtsZ GTPase. Mutant-enzyme assays and docking suggest a binding site; the abstract MIC5 micromolar is for gancaonin I compound1, not glycyrin. This is a specific target-enrichment lead, with full assay/material and binding evidence still needed. The2015 study tests a partially purified licorice fraction containing several candidate flavonoids; its abaI expression/quorum effects cannot be assigned uniquely to pure glycyrin. |
+| links | lipidmaps:LMPK12160017; hmdb:HMDB0033712; cas:66056-18-6; reaxys:1667250; patent:WO2004064830; Complete LIPID MAPS identity/structure and crosslinks; current ChEBI/PubChem entries; patent abstract and selected formulation descriptions | supports | LIPID MAPS independently reproduces the native graph and points to the same HMDB accession. Direct HMDB XML returned403; direct CAS registry/Reaxys entries were not inspected, so these remain source-attributed rather than independently certified. WO2004064830 is a fat-formulation patent naming glycyrin among constituents for metabolic uses; machine-translated names are inconsistent. It is a relevant document association, not an exact chemical-equivalence identifier or proof of antibacterial efficacy. |
+
+## Limits And Additional Notes
+
+- The2001 original was read on all four page images, including Figure1 and Table1. Its printed mg/mL footnote conflicts with Methods and assay concentration footnote in micrograms/mL; native quantitative activity is absent, so this is a source limitation rather than an existing native MIC error.
+- All five adopted abstracts were read; only the2001 adopted paper was read in full. The2024 synthesis was inspected in selected glycyrin synthesis, Table2 and host-cell sections, not every precursor experiment or raw spectrum.
+- The2017 FtsZ and2015 quorum papers remain abstract-level. Bounded DOI/title searches and publisher access did not provide full2017 text; no target-binding certainty or exact glycyrin MIC is manufactured from the abstract.
+- HMDB direct XML was blocked; direct Reaxys/CAS registry inspection was unavailable. Patent review was limited to document/selected formulation context and does not validate its efficacy claims.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T174501Z-glycyrin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Glycyrin: corroborated coumarin identity with an incompatible parent and one
+  malformed synonym'
+started_at: '2026-10-21T17:27:40Z'
+finished_at: '2026-10-21T17:45:01Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Primary isolation and activity data corroborate exact glycyrin. Its hydroxyisoflavan
+  parent conflicts with the coumarin graph, and one exact synonym places the prenyl
+  substituent at an impossible coumarin position. The antibacterial role is supported;
+  source-table unit inconsistency and extract-versus-pure-compound boundaries constrain
+  optional enrichment.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/glycyrin.yaml
+    sha256: 2685521a666391b20d0a785c2061d0a24d714bfed93d21832bb160146fb0083d
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:69086
+  path: data/antibiotics/antibacterial/glycyrin.yaml
+  label: glycyrin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position504; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:69086
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69086
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    504
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69086
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/glycyrin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69086
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/glycyrin.yaml --out /private/tmp/am-review-session/504-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:69086
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:69086
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:69086
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:69086
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:69086
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:69086
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:69086
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:69086
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:69086
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/glycyrin.yaml
+  locator: Entire native record, all names, groundings, chemical properties and chronological
+    history
+  accessed_at: '2026-10-21T17:38:49Z'
+  support: supports
+  summary: The exact SEEDED ChEBI record denotes neutral C22H22O6 with full key FWWGXZYUURXJLK-UHFFFAOYSA-N.
+    All 4 history entries were read. No molecular target, resistance claim, quantitative
+    activity observation, producer object or causal graph is asserted. The botanical
+    isolation sentence is narrower than a de novo biosynthetic-producer claim.
+- evidence_id: owners
+  kind: record_content
+  reference: 504-source-rows.json; conf/sources.yaml; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: Complete exact adopted row and applicable extraction, precedence and emission
+    logic
+  accessed_at: '2026-10-21T17:38:49Z'
+  support: supports
+  summary: The native imported content reproduces the maintained ChEBI row. Its antibacterial
+    role determines the ANTIBACTERIAL category. Original thirteen captured inputs
+    cover the actual owners and remain unchanged; no additional owner was required.
+    Seed/reseed history is not scientific sign-off.
+  snapshot_sha256: 6f5dd596c83424ad1513300c74a462639407d80f99771e7d6f0cb07af7bbe32f
+- evidence_id: chemistry
+  kind: validation
+  reference: 051-root-authority-chemistry.json
+  locator: Independent forward parsing of native and external SMILES/InChI encodings
+  accessed_at: '2026-10-21T17:38:49Z'
+  support: supports
+  summary: 8 encodings from native, current ChEBI and PubChem and LIPID MAPS reproduce
+    the same full key, formula and neutral charge. No tetrahedral stereocentre is
+    present; UHFFFAOY is not evidence of missing configuration in these graphs. Focused
+    internal formula, masses, charge and key checks also pass.
+  snapshot_sha256: b5dad6916ddb9942a19121928dfc22f54a2f0408f81ab485447441ae1882a8bb
+- evidence_id: authorities
+  kind: authority
+  reference: CHEBI:69086; CHEBI:23403; CHEBI:35618; CHEBI:76250; CHEBI:33282
+  locator: Complete current compound entry and relevant official parent/role definitions
+  accessed_at: '2026-10-21T17:38:49Z'
+  support: supports
+  summary: Current ChEBI agrees with the native chemical graph and imported content.
+    The individual structural-parent semantics were checked against the actual graph,
+    not accepted solely because the current source repeats a relation. Antibacterial-agent
+    status is assessed using exact purified-compound experiments.
+  snapshot_sha256: a3597d9345ae5b1c138b9e416b5b9750eec6987531ed59baa7798bd775364e49
+- evidence_id: gates
+  kind: validation
+  reference: 504-focused-results.json
+  locator: Actual focused schema, strict and chemistry executions
+  accessed_at: '2026-10-21T17:38:49Z'
+  support: supports
+  summary: All three focused commands exit 0. These checks establish internal consistency
+    and schema conformance, not scientific correctness of every imported class or
+    name.
+  snapshot_sha256: 0ac29ec1a8fa5955a33152978bdb59797badf03530a57b8d7370d601c6750a08
+- evidence_id: search
+  kind: search
+  reference: 504-local-hits.txt; 051-root-fetch1.json through 051-root-fetch5.json
+  locator: Ignored- and hidden-inclusive local search; bounded current-authority,
+    adopted-PMID and primary-literature retrieval
+  accessed_at: '2026-10-21T17:38:49Z'
+  support: context_only
+  summary: Local searches included ignored files. Every adopted PMID was resolved
+    and its indexed abstract read. Exact accessible originals were inspected at the
+    depths stated below. PubMed search result lists are discovery inventories, not
+    claims that every returned paper was read. No native gene/protein/pathway/dataset
+    claim requires a transcriptomic-adapter query; newly encountered mechanism leads
+    remain bounded.
+  search_scope: 2026-10-21; own051 worktree rg --no-ignore --hidden; exact glycyrin
+    and ChEBI identifiers, all adopted PMIDs, EuropePMC name search, official ChEBI/PubChem
+    and linked source pages.
+  snapshot_sha256: f530130c2dd0f8b60fe09a332128dd141562a46bbbad060c9b6acec19075bb8f
+- evidence_id: parent
+  kind: authority
+  reference: CHEBI:76250; CHEBI:72572; CHEBI:23403; CHEBI:35618
+  locator: Complete hydroxyisoflavan definition, its isoflavan parent definition/wildcard
+    structure, and coumarin/aromatic-ether definitions
+  accessed_at: '2026-10-21T17:38:49Z'
+  support: supports
+  summary: Hydroxyisoflavans are hydroxy-substituted isoflavans; their parent requires
+    a 3,4-dihydro-3-aryl-2H-1-benzopyran skeleton. Glycyrin instead contains a coumarin
+    C2 lactone carbonyl and unsaturated C3/C4 bond. Coumarins and aromatic ethers
+    fit. Current ChEBI repeats the incompatible hydroxyisoflavan relation, so simple
+    source reproduction cannot resolve it.
+  snapshot_sha256: 2d857f3fc600e270a465528aa3544f06a95fcf651acf3bfec5f4a8432c208a82
+- evidence_id: original2001
+  kind: primary_source
+  reference: PMID:11575586; DOI:10.3177/jnsv.47.270; https://www.jstage.jst.go.jp/article/jnsv1973/47/4/47_4_270/_pdf
+  locator: All four original pages 270–273, visually inspected including Figure1,
+    Table1, Methods and Discussion
+  accessed_at: '2026-10-21T17:38:49Z'
+  support: supports
+  summary: Commercial G. uralensis roots yielded purified glycyrin, compound4 (5 mg).
+    Figure1 shows the native C6-prenyl, 5,7-dimethoxy, 3-(2,4-dihydroxyphenyl)coumarin.
+    Twofold broth dilution used 37 degrees C for24 h and change in turbidity at660
+    nm. Table1 reports glycyrin MIC25 against S. pyogenes ATCC12344 and H. influenzae
+    ATCC33391, and50 against M. catarrhalis ATCC25238. Methods and dilution footnote
+    support micrograms/mL, whereas the Table1 unit footnote prints mg/mL; retain this
+    source inconsistency. H. influenzae used supplemented Mueller-Hinton medium, the
+    other strains glucose/peptone/yeast medium. The inoculum is specified as50 microlitres
+    of3–4-day culture without CFU standardization. Licoricidin activity and penicillin-binding-protein
+    discussion concern compound1, not glycyrin.
+  snapshot_sha256: 62c3ba402050d5e203029d59334ddd8e21e76d48fac31772d9cf7284aa1ee671
+- evidence_id: synthesis2024
+  kind: primary_source
+  reference: PMID:39203020; https://pmc.ncbi.nlm.nih.gov/articles/PMC11357431/
+  locator: Selected glycyrin synthesis Results, entire Table2, section3.2.15, host-cell
+    Methods, cytokine Results and Conclusions; figure captions, not raw figures or
+    supplement
+  accessed_at: '2026-10-21T17:38:49Z'
+  support: supports
+  summary: Synthetic glycyrin compound2 is produced through a coumarin-forming condensation
+    and deacetylation. Its reported proton/carbon spectra and Table2 comparison agree
+    with natural glycyrin, including the lactone carbon and two methoxy groups. The
+    selected biological work measures LPS-stimulated RAW264.7 macrophage nitrite and
+    cytokine transcripts; it is anti-inflammatory host-cell evidence rather than bacterial
+    growth inhibition or direct cytokine binding.
+  snapshot_sha256: b465115c004cff4bff935fac95319eb93a0ea01b525b5aaeedbf66c95127586e
+- evidence_id: adopted
+  kind: database
+  reference: PMID:11575586,12127165,14608046,14643306,22074222
+  locator: All five complete adopted indexed abstracts; 2001 original additionally
+    inspected in full
+  accessed_at: '2026-10-21T17:38:49Z'
+  support: supports
+  summary: PMID12127165 explicitly lists glycyrin among weaker anti-H. pylori compounds,
+    without extract-wide potency transfer. PMID14608046 tests a licorice extract in
+    metabolic models; PMID14643306 additionally names isolated glycyrin in a PPAR-gamma
+    reporter/fractionation and diabetic-mouse context. Neither establishes an antibacterial
+    PPAR-gamma mechanism. PMID22074222 discusses isolation of coumarins/isoflavonoids
+    and strongest oral-pathogen results for licoricidin and licorisoflavan A; those
+    values cannot be assigned to glycyrin from the abstract.
+  snapshot_sha256: fadf35832454835b255cc1d240665fc978d35c7909d10e61ed0b724539c7114c
+- evidence_id: mechanism-leads
+  kind: primary_source
+  reference: PMID:28196701; DOI:10.1016/j.bmcl.2017.01.095; PMID:26582430; DOI:10.2217/fmb.15.107
+  locator: Both complete indexed abstracts; publisher2017 full-text route returned403;
+    bounded exact-DOI search found abstract/repository metadata
+  accessed_at: '2026-10-21T17:38:49Z'
+  support: partial
+  summary: The2017 original explicitly tests glycyrin compound3 against B. subtilis
+    FtsZ GTPase. Mutant-enzyme assays and docking suggest a binding site; the abstract
+    MIC5 micromolar is for gancaonin I compound1, not glycyrin. This is a specific
+    target-enrichment lead, with full assay/material and binding evidence still needed.
+    The2015 study tests a partially purified licorice fraction containing several
+    candidate flavonoids; its abaI expression/quorum effects cannot be assigned uniquely
+    to pure glycyrin.
+  snapshot_sha256: 6a39d46f89924888a8c4279a0f73c2d56112c77efe7aa5824ed3453249a2146d
+- evidence_id: links
+  kind: authority
+  reference: lipidmaps:LMPK12160017; hmdb:HMDB0033712; cas:66056-18-6; reaxys:1667250;
+    patent:WO2004064830
+  locator: Complete LIPID MAPS identity/structure and crosslinks; current ChEBI/PubChem
+    entries; patent abstract and selected formulation descriptions
+  accessed_at: '2026-10-21T17:38:49Z'
+  support: supports
+  summary: LIPID MAPS independently reproduces the native graph and points to the
+    same HMDB accession. Direct HMDB XML returned403; direct CAS registry/Reaxys entries
+    were not inspected, so these remain source-attributed rather than independently
+    certified. WO2004064830 is a fat-formulation patent naming glycyrin among constituents
+    for metabolic uses; machine-translated names are inconsistent. It is a relevant
+    document association, not an exact chemical-equivalence identifier or proof of
+    antibacterial efficacy.
+  snapshot_sha256: 1141804eccd35766a7b5c1d7155efa2a45d770139f265c22740787eb186d4a5f
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact glycyrin graph and structural naming
+  outcome: supported
+  summary: Native and independent graphs agree with the original Figure1 and later
+    synthesis. This is one achiral neutral coumarin, with no supported reason to alter
+    the graph.
+  target_ids:
+  - CHEBI:69086
+  evidence_ids:
+  - native
+  - chemistry
+  - original2001
+  - synthesis2024
+- assessment_id: parent
+  area: grounding
+  topic: Hydroxyisoflavan classification
+  outcome: concern
+  summary: The hydroxyisoflavan parent requires a different reduced ring skeleton.
+    Correct this imported scientific class while retaining valid coumarin and aromatic-ether
+    parents.
+  target_ids:
+  - CHEBI:69086
+  evidence_ids:
+  - parent
+  - authorities
+  - chemistry
+  - original2001
+- assessment_id: synonym
+  area: consistency
+  topic: Exact synonym prenyl locant
+  outcome: concern
+  summary: The second synonym says 2-isopentenylcoumarin, but C2 is the coumarin carbonyl
+    centre. Definition, three other exact synonyms, external structure and original
+    Figure1 all place the substituent at C6.
+  target_ids:
+  - CHEBI:69086
+  evidence_ids:
+  - native
+  - authorities
+  - original2001
+  - links
+- assessment_id: activity
+  area: evidence
+  topic: Purified antibacterial evidence and source units
+  outcome: supported
+  summary: Exact-compound original assays support the qualitative role. Numerical
+    enrichment must preserve strain/media/inoculum detail and explicitly resolve the
+    printed table-unit discrepancy.
+  target_ids:
+  - CHEBI:69086
+  evidence_ids:
+  - original2001
+  - adopted
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional exact target and causal-chain enrichment
+  outcome: unknown
+  summary: The FtsZ abstract is a useful compound-specific lead, but neither its other-compound
+    MIC nor mixed-extract quorum observations can fill glycyrin activity or causal
+    claims. Current absence of optional objects is not itself a defect.
+  target_ids:
+  - CHEBI:69086
+  evidence_ids:
+  - mechanism-leads
+  - synthesis2024
+  - adopted
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Owner, all adopted citations and history
+  outcome: supported
+  summary: Exact source ownership and all four history entries are coherent. All five
+    adopted PMIDs are resolved. Native import fidelity does not remove the source-level
+    parent/name errors.
+  target_ids:
+  - CHEBI:69086
+  evidence_ids:
+  - native
+  - owners
+  - adopted
+  - gates
+findings:
+- finding_id: F1
+  issue_key: glycyrin-incompatible-hydroxyisoflavan-parent
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Remove the structurally incompatible hydroxyisoflavan parent
+  description: parent_compounds includes CHEBI76250, whose required isoflavan core
+    is incompatible with the independently verified coumarin lactone and unsaturated
+    C3/C4 bond. The current upstream source repeats the relation, but the original
+    isolation Figure1 and synthesis support the native coumarin graph. Correct the
+    maintained classification without converting glycyrin into an isoflavan.
+  target_ids:
+  - CHEBI:69086
+  field_paths:
+  - parent_compounds[2]
+  evidence_ids:
+  - native
+  - parent
+  - chemistry
+  - original2001
+  - synthesis2024
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained ChEBI definition, names and structural parents
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source relation and name extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned field regeneration
+  rule_id: Structural parents must be compatible strictly broader classes
+  native_severity: major
+  normalization_reason: The asserted chemical-family relation is scientifically false
+    and changes ontology membership, while the exact native molecule remains correct.
+- finding_id: F2
+  issue_key: glycyrin-malformed-prenyl-locant-synonym
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the prenyl locant in the second exact synonym
+  description: The second exact synonym labels the compound 2-isopentenylcoumarin.
+    The native definition, other exact synonyms, original Figure1 and corroborated
+    graph place prenyl at C6; C2 is the coumarin carbonyl carbon. Correct or retire
+    this malformed imported synonym while preserving the valid names.
+  target_ids:
+  - CHEBI:69086
+  field_paths:
+  - synonyms[1].synonym_text
+  evidence_ids:
+  - native
+  - original2001
+  - authorities
+  - chemistry
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained ChEBI definition, names and structural parents
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source relation and name extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned field regeneration
+  rule_id: Exact chemical synonyms must describe the native graph
+  native_severity: minor
+  normalization_reason: A localized locant error in one redundant synonym does not
+    undermine the corroborated native molecular identity.
+actions:
+- action_id: A1
+  description: Correct source-owned glycyrin classification and the malformed synonym,
+    then regenerate.
+  finding_ids:
+  - F1
+  - F2
+  target_ids:
+  - CHEBI:69086
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained ChEBI definition, names and structural parents
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source relation and name extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned field regeneration
+  acceptance_checks:
+  - Remove the incompatible CHEBI76250 parent through maintained source/override ownership;
+    preserve valid coumarin and aromatic-ether classes and the exact native graph.
+  - Correct the erroneous 2-isopentenyl locant to a verified C6-prenyl name or remove
+    that duplicate malformed synonym.
+  - Run focused schema/strict, source reproduction and required QC. If enriching activity,
+    document Table1 mg/mL versus Methods micrograms/mL and incomplete inoculum standardization;
+    do not silently normalize source conflicts.
+- action_id: A2
+  description: For optional mechanism enrichment, obtain the2017 glycyrin FtsZ original
+    and preserve assay-specific scope.
+  finding_ids: []
+  target_ids:
+  - CHEBI:69086
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/glycyrin.yaml
+    role: Optional evidence-backed molecular-target and activity curation
+  acceptance_checks:
+  - Separate glycyrin compound3 enzyme results from gancaonin I compound1 MIC. Distinguish
+    mutant-enzyme/docking inference from direct binding.
+  - Do not transfer extract quorum, host cytokine or metabolic-model results to a
+    glycyrin antibacterial causal chain.
+limitations:
+- The2001 original was read on all four page images, including Figure1 and Table1.
+  Its printed mg/mL footnote conflicts with Methods and assay concentration footnote
+  in micrograms/mL; native quantitative activity is absent, so this is a source limitation
+  rather than an existing native MIC error.
+- All five adopted abstracts were read; only the2001 adopted paper was read in full.
+  The2024 synthesis was inspected in selected glycyrin synthesis, Table2 and host-cell
+  sections, not every precursor experiment or raw spectrum.
+- The2017 FtsZ and2015 quorum papers remain abstract-level. Bounded DOI/title searches
+  and publisher access did not provide full2017 text; no target-binding certainty
+  or exact glycyrin MIC is manufactured from the abstract.
+- HMDB direct XML was blocked; direct Reaxys/CAS registry inspection was unavailable.
+  Patent review was limited to document/selected formulation context and does not
+  validate its efficacy claims.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
