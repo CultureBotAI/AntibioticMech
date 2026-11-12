@@ -1,0 +1,827 @@
+# Review of comazaphilone C
+
+- Review: 20261021T134223Z-comazaphilone-c-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T13:22:54Z
+- Finished UTC: 2026-10-21T13:42:23Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Comazaphilone C is supported as an antibacterial azaphilone isolated from Penicillium commune QSD-17. Its constitutional structure, E side chain, formula and source identifiers reconcile. One major representation finding concerns the unqualified absolute stereochemistry encoded by SMILES/InChI beside a relative stereochemical name, despite unsuccessful absolute-assignment experiments in the adopted original source. This is not evidence of an inverted structure, a racemate or a mixture. Focused native checks pass; original quantitative assay details and independent Reaxys verification remain unavailable.
+
+## Scope And Provenance
+
+Entire SEEDED, EXACT record: definition, relative systematic synonym, five parents, antibacterial role, all chemical fields, one Reaxys link, one source concept and three history events.
+
+Selection: Queue 320 in isolated batch 032. Initial thirteen input hashes preserved; the already captured role-label inventory is identified as an actual owner.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:70012 | data/antibiotics/antibacterial/comazaphilone-c.yaml | generated | comazaphilone C |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema validation | passed | True | CHEBI:70012 | Exit 0. |
+| Documented strict validation | passed | True | CHEBI:70012 | Exit 0; no ERROR rows. |
+| Native molecular consistency | passed | False | CHEBI:70012 | Exit 0; composition, charge, masses, standard keys and deterministic source mint agree. |
+| Authority graph and stereochemical comparison | passed | False | CHEBI:70012 | Exit 0; five encodings agree by mutual chirality-aware atom mapping. This checks representation consistency, not experimental absolute assignment. |
+| Preserved inputs and source reconciliation | passed | False | CHEBI:70012 | Exit 0; thirteen hashes, three history events and the sole adopted PMID lead reconcile. |
+| Authoritative full QC | failed | True | CHEBI:70012 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:70012 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:70012 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:70012 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:70012 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:70012 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:70012 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:70012 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:70012 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Constitution, congener identity and molecular composition
+
+identity: supported. Targets: CHEBI:70012.
+
+C is the C-7 ester with the specified aromatic oxygenation and E side chain; it is not D or E. The source identity and machine encodings agree.
+
+### Relative evidence versus absolute serialization
+
+representation: concern. Targets: CHEBI:70012.
+
+The original failed absolute-assignment result and relative name need explicit treatment beside the absolute R,R graph; agreement among database encodings does not settle this scientific limitation.
+
+### Antibacterial role and isolation claim
+
+evidence: supported. Targets: CHEBI:70012.
+
+The original abstract supports C antibacterial activity and P. commune QSD-17 isolation. Quantitative MICs, tested strain details and method are not adopted without the original assay text.
+
+### Structural parents and source-exact ontology mapping
+
+grounding: supported. Targets: CHEBI:70012.
+
+The five parents and antibacterial role agree with current ChEBI and molecular features. EXACT remains a source-identity enum, distinct from experimental validation.
+
+### Reaxys registry mapping
+
+identity: unknown. Targets: CHEBI:70012.
+
+Current and frozen ChEBI retain Reaxys 21312868; its independent registry record was unavailable, so no wrong-accession finding is made.
+
+### Optional mechanism, quantitative activity and producer enrichment
+
+completeness: unknown. Targets: CHEBI:70012.
+
+No exact microbial molecular mechanism was established in the inspected source scope. Optional empty fields are not defects, and host ferroptosis evidence is not substituted for an antimicrobial target.
+
+### Inputs, sole adopted lead and history
+
+provenance: supported. Targets: CHEBI:70012.
+
+All thirteen hashes, one adopted PMID and three history events reconcile without native changes.
+
+### Focused native validation
+
+schema: supported. Targets: CHEBI:70012.
+
+Schema and strict checks pass while leaving the scientific stereo question unresolved.
+
+## Findings
+
+### F1: Relative stereochemical evidence is serialized as an unqualified absolute enantiomer
+
+major / open / confirmed; issue key: chebi-70012-relative-evidence-absolute-stereo-qualification.
+
+The sole systematic synonym is rel-(6R,7R), and the adopted original explicitly reports unsuccessful absolute-configuration experiments. Plain SMILES and Standard InChI nevertheless select absolute R,R without an accompanying scientific qualification. Current ChEBI repeats this representation, so this is an inherited evidence/representation issue, not a mistaken accession or demonstrated opposite enantiomer. Later inspected text does not establish a new exact-C absolute assignment. No racemate or mixture is inferred.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+In separately authorized curation, document the original relative-only assignment and failed absolute determination using curator-owned grounding_notes, evidence and a concrete discussion. Seek exact-C primary support before treating R,R as experimentally established. If an actual structural correction or relative-stereo representation is warranted, implement it through the maintained ChEBI inventory/extractor/seeder and a representation that retains the known relative relationship and E geometry; do not silently invert centers, erase all stereo or infer a mixture. No existing generic relative-stereo override is assumed.
+
+- A consumer can distinguish source-selected absolute serialization from experimentally supported relative configuration, with PMID:21226488 and the exact limitation attached.
+- Any absolute resolution cites an exact-C experiment; otherwise preserve the unresolved qualification and relative relationship without asserting a racemate or a new enantiomer.
+- If machine fields change, regenerate through the actual maintained source owner, check atom-mapped stereo, all molecular identifiers/formula/charge, documented schema/strict validation and required corpus gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/comazaphilone-c.yaml; Entire YAML | supports | The record inherits ChEBI structure and antibacterial classification, a rel-(6R,7R) synonym and Reaxys 21312868. It contains no molecular target, mechanism, MIC, clinical assertion, producer object or causal graph. Grounding EXACT means source-asserted ontology identity, not completed scientific sign-off. |
+| chemistry | CHEBI:70012; PubChem exact-InChIKey query; 320-authority-chemistry.json; 320-chemistry.py/.log; 320-chebi.mol; 320-pubchem.json | supports | Native SMILES/InChI, official ChEBI molfile and PubChem SMILES/InChI yield BVPLOPDDUJTCFL-JBAXFHHXSA-N, C22H24O8, charge 0 and two R centers, with mutual chirality-aware atom mappings. The E side chain, ester linkage, formula and masses agree. Ordinary SMILES has no relative stereo group and the Standard InChI uses /s1. Diagnostic inversion of both centers gives the opposite absolute enantiomer with unchanged connectivity; this demonstrates the distinction but is not a proposed replacement or proof of sample composition. |
+| authority | https://www.ebi.ac.uk/chebi/CHEBI:70012; 320-chebi.json: complete entry, names, relations, structure, origins and accessions | supports | Current ChEBI repeats the relative systematic name and absolute molecular serialization, lists all five native structural parents and the antibacterial role, and connects origin to P. commune strain QSD 17 through PMID 21226488. The catechol, aromatic ether, benzoate ester, isochromene and azaphilone classifications agree with the graph. ChEBI retains Reaxys 21312868. Matching databases do not independently resolve the source stereochemical uncertainty. |
+| original | PMID:21226488; DOI:10.1021/np100788h; 320-lead.json: complete original abstract; publisher DOI metadata | supports | The original abstract reports isolation of six comazaphilones from marine sediment-derived P. commune QSD-17, identifies compounds 3–5 as antibacterial, and expressly reports unsuccessful Mosher attempts to establish absolute configuration. It supports the scoped activity and origin, but not selection of one absolute enantiomer. The original main article and quantitative assay table were not obtained. |
+| si | DOI:10.1021/np100788h.s001; 320-si.pdf: contents, S4 Scheme S1 and visually inspected C spectra S17, S18 and S22; metadata 320-si-metadata.json | supports | The official supporting information identifies C as compound 3 and depicts its C-7 aromatic ester, C-6 hydroxyl, oxygenation and E side chain, distinguishing it from D/E with a C-6 ester. The drawings provide relative orientation in the context of the stated failed absolute assignment. Spectra are verified as the C dataset; no new absolute assignment is derived from an uncalibrated visual NMR interpretation. |
+| later2024 | DOI:10.20307/nps.2024.30.1.59; 320-2025.pdf is the 2024 paper, not a 2025 publication; all main pages 59–63 read, particularly compound 7 on page 61 and Figure 1 on page 62 | supports | The later primary isolation study identifies comazaphilone C as compound 7 from Talaromyces sp. FB15, reports its proton NMR and mass spectrum, and references the original assignment. Figure 1 agrees with the constitutional and relative configuration. It does not report a new absolute-configuration experiment for C or an antibacterial assay; it is corroborative identity evidence, not a new microbial mechanism. |
+| later-scope | DOI:10.1002/cbdv.71678; PMID:40550259; Public Wiley main text inspected through Results/Discussion and early Experimental sections; PubMed 2025 abstract inspected | context_only | The 2026 primary study identifies C as known compound 6 by comparison of NMR, MS and optical rotation; its explicit absolute ECD analysis concerns the new tyramine compound 1. Its C/E ferroptosis result is a host-cell phenotype, not microbial target evidence. The 2025 Talaromyces variabilis abstract announces ECD/DP4 methods for a mixed new/known-compound study, but no exact-C absolute reassignment was verified from accessible text. Neither source is used to claim a definitive global absence of later stereochemical evidence. |
+| leads | Frozen ChEBI citation PMID:21226488; 320-lead-dispositions.json and 320-lead.json | supports | The sole adopted PMID resolves to the exact original paper. Its abstract was read in full and its official supporting information inspected at the stated scope. No secondary MIC values or citation-list fragments were promoted to original assay evidence. |
+| owners | ChEBI inventory, extractor, role labels and seeder; 320-source-audit.json; 320-inspect.json; 315-320-local-hits.txt; SEEDED_FIELDS/CURATOR_FIELDS in scripts/seed_from_sources.py | supports | All thirteen captured inputs remain unchanged. The entire native source-owned projection and three ordered history events reconcile. Structure corrections belong in the maintained ChEBI input/transform and regeneration. grounding_notes, record-level evidence and non-collision discussions are curator-owned and survive reseeding; no existing generic relative-stereo override is assumed. |
+| validation | Documented schema/strict commands and supplemental consistency checks; 320-focused-results.json; 320-schema.log; 320-strict.log; 320-chemistry.log; 320-source-audit.json | supports | All executed focused checks exit 0. They verify syntax, internal molecular consistency and provenance, not experimental absolute stereochemical proof. Required corpus-wide checks remain separately recorded. |
+| search | Ignored-inclusive source discovery and bounded exact-compound literature search; Local rg --no-ignore --hidden for label, CHEBI:70012 and slug in the worktree; exact comazaphilone C/DOI/absolute-configuration searches on 2026-10-21 | context_only | Ignored local files were included. The original main body remains inaccessible through the tried ACS routes and ResearchGate offers no full text. The free official SI was retrieved successfully. Independent Reaxys registry content was not obtained. No native gene/protein/pathway or transcriptomics claim triggers an iModulonDB adapter query. |
+
+## Limits And Additional Notes
+
+- The original 2011 main article and quantitative antibacterial table were not obtained: ACS requests returned 403 and ResearchGate exposed the abstract/reference fragments only. Complete original abstract and free publisher SI are available. No numerical MIC, exact strain panel or mechanism is adopted from secondary summaries.
+- Later exact-C searching was bounded. The 2024 main article was read; its supplementary spectra were not independently reinterpreted to determine absolute stereochemistry. The 2026 relevant public main-text sections were inspected through the web tool, but a local full HTML fetch returned 403. The 2025 abstract was read without accessible full main article/SI; it may warrant focused follow-up before any machine-structure replacement.
+- The supporting-information diagrams and achiral-solvent NMR do not select an absolute enantiomer. Database agreement and optical-rotation comparison without a validated absolute reference are not independent proof of that assignment.
+- Reaxys 21312868 is source-concordant but not independently resolved through the registry. No paid access was attempted.
+- The file named 320-2025.pdf contains the 2024 DOI:10.20307/nps.2024.30.1.59 article; its actual publication year is used throughout the assessment.
+- Focused native checks do not substitute for the separately recorded required full-corpus gates or authorize REVIEWED status.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Native records, maintained sources and curation history remain unchanged.
+- Standalone chemistry used the batch 019 RDKit interpreter against batch 032 paths; documented schema/strict checks used the batch 032 environment.
+- The exact-C review is separate from later D/E reviews even though the original publication and SI cover all congeners.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T134223Z-comazaphilone-c-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of comazaphilone C
+started_at: '2026-10-21T13:22:54Z'
+finished_at: '2026-10-21T13:42:23Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Whole native record compared independently with frozen/current
+    ChEBI, official molecular encodings, the original abstract and publisher supporting
+    information, and later primary isolation text.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Antibacterial azaphilone identity supported; absolute stereochemical
+  assignment needs explicit qualification
+scientific_review: true
+summary: Comazaphilone C is supported as an antibacterial azaphilone isolated from
+  Penicillium commune QSD-17. Its constitutional structure, E side chain, formula
+  and source identifiers reconcile. One major representation finding concerns the
+  unqualified absolute stereochemistry encoded by SMILES/InChI beside a relative stereochemical
+  name, despite unsuccessful absolute-assignment experiments in the adopted original
+  source. This is not evidence of an inverted structure, a racemate or a mixture.
+  Focused native checks pass; original quantitative assay details and independent
+  Reaxys verification remain unavailable.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/comazaphilone-c.yaml
+    sha256: b1d01573cadb378487af2dc0f4e00c20337868f30412da55a4eb3500ebfadf17
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: 'Entire SEEDED, EXACT record: definition, relative systematic synonym,
+    five parents, antibacterial role, all chemical fields, one Reaxys link, one source
+    concept and three history events.'
+  selection: Queue 320 in isolated batch 032. Initial thirteen input hashes preserved;
+    the already captured role-label inventory is identified as an actual owner.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:70012
+targets:
+- target_id: CHEBI:70012
+  path: data/antibiotics/antibacterial/comazaphilone-c.yaml
+  label: comazaphilone C
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: Adopted antibacterial role
+checks:
+- check_id: schema
+  name: Documented schema validation
+  status: passed
+  required: true
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/comazaphilone-c.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict validation
+  status: passed
+  required: true
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/comazaphilone-c.yaml --out /private/tmp/am-review-session/320-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; no ERROR rows.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - validation
+- check_id: native-chemistry
+  name: Native molecular consistency
+  status: passed
+  required: false
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    320 > /private/tmp/am-review-session/320-focused-run.log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; composition, charge, masses, standard keys and deterministic source
+    mint agree.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: authority-chemistry
+  name: Authority graph and stereochemical comparison
+  status: passed
+  required: false
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/320-chemistry.py
+    > /private/tmp/am-review-session/320-chemistry.log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; five encodings agree by mutual chirality-aware atom mapping. This
+    checks representation consistency, not experimental absolute assignment.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - chemistry
+- check_id: source-ledger
+  name: Preserved inputs and source reconciliation
+  status: passed
+  required: false
+  command: .venv/bin/python /private/tmp/am-review-session/320-ledger.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; thirteen hashes, three history events and the sole adopted PMID
+    lead reconcile.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - owners
+  - leads
+  - validation
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:70012
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:70012
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:70012
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:70012
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:70012
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:70012
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:70012
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:70012
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:70012
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/comazaphilone-c.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T13:41:57Z'
+  support: supports
+  summary: The record inherits ChEBI structure and antibacterial classification, a
+    rel-(6R,7R) synonym and Reaxys 21312868. It contains no molecular target, mechanism,
+    MIC, clinical assertion, producer object or causal graph. Grounding EXACT means
+    source-asserted ontology identity, not completed scientific sign-off.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:70012; PubChem exact-InChIKey query
+  locator: 320-authority-chemistry.json; 320-chemistry.py/.log; 320-chebi.mol; 320-pubchem.json
+  accessed_at: '2026-10-21T13:41:57Z'
+  support: supports
+  summary: Native SMILES/InChI, official ChEBI molfile and PubChem SMILES/InChI yield
+    BVPLOPDDUJTCFL-JBAXFHHXSA-N, C22H24O8, charge 0 and two R centers, with mutual
+    chirality-aware atom mappings. The E side chain, ester linkage, formula and masses
+    agree. Ordinary SMILES has no relative stereo group and the Standard InChI uses
+    /s1. Diagnostic inversion of both centers gives the opposite absolute enantiomer
+    with unchanged connectivity; this demonstrates the distinction but is not a proposed
+    replacement or proof of sample composition.
+  snapshot_sha256: 71018f8dfe365364f3bf3cbb5b6ad8a143a19deb00e1ac436e09dc9a8f27f1ed
+- evidence_id: authority
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:70012
+  locator: '320-chebi.json: complete entry, names, relations, structure, origins and
+    accessions'
+  accessed_at: '2026-10-21T13:37:19.006301Z'
+  support: supports
+  summary: Current ChEBI repeats the relative systematic name and absolute molecular
+    serialization, lists all five native structural parents and the antibacterial
+    role, and connects origin to P. commune strain QSD 17 through PMID 21226488. The
+    catechol, aromatic ether, benzoate ester, isochromene and azaphilone classifications
+    agree with the graph. ChEBI retains Reaxys 21312868. Matching databases do not
+    independently resolve the source stereochemical uncertainty.
+  snapshot_sha256: 8de777ee519e38ffd86dcbb6eb46b13ec47d511624afff02389c7aa253959012
+- evidence_id: original
+  kind: primary_source
+  reference: PMID:21226488; DOI:10.1021/np100788h
+  locator: '320-lead.json: complete original abstract; publisher DOI metadata'
+  accessed_at: '2026-10-21T13:37:19.007257Z'
+  support: supports
+  summary: The original abstract reports isolation of six comazaphilones from marine
+    sediment-derived P. commune QSD-17, identifies compounds 3–5 as antibacterial,
+    and expressly reports unsuccessful Mosher attempts to establish absolute configuration.
+    It supports the scoped activity and origin, but not selection of one absolute
+    enantiomer. The original main article and quantitative assay table were not obtained.
+  snapshot_sha256: b953df908b1998da3d548003148f8c08346a383d6a82296180d3e9caa13a4713
+- evidence_id: si
+  kind: primary_source
+  reference: DOI:10.1021/np100788h.s001
+  locator: '320-si.pdf: contents, S4 Scheme S1 and visually inspected C spectra S17,
+    S18 and S22; metadata 320-si-metadata.json'
+  accessed_at: '2026-10-21T13:38:28.480893Z'
+  support: supports
+  summary: The official supporting information identifies C as compound 3 and depicts
+    its C-7 aromatic ester, C-6 hydroxyl, oxygenation and E side chain, distinguishing
+    it from D/E with a C-6 ester. The drawings provide relative orientation in the
+    context of the stated failed absolute assignment. Spectra are verified as the
+    C dataset; no new absolute assignment is derived from an uncalibrated visual NMR
+    interpretation.
+  snapshot_sha256: 797b2f5a91be450acfde3bf2fc122476911314adc880362a8d37ac6a07b73053
+- evidence_id: later2024
+  kind: primary_source
+  reference: DOI:10.20307/nps.2024.30.1.59
+  locator: 320-2025.pdf is the 2024 paper, not a 2025 publication; all main pages
+    59–63 read, particularly compound 7 on page 61 and Figure 1 on page 62
+  accessed_at: '2026-10-21T13:37:19.007706Z'
+  support: supports
+  summary: The later primary isolation study identifies comazaphilone C as compound
+    7 from Talaromyces sp. FB15, reports its proton NMR and mass spectrum, and references
+    the original assignment. Figure 1 agrees with the constitutional and relative
+    configuration. It does not report a new absolute-configuration experiment for
+    C or an antibacterial assay; it is corroborative identity evidence, not a new
+    microbial mechanism.
+  snapshot_sha256: e850a57924d36969cd014455a01ae93777f5192b6596493a66d7babb2c4d29e1
+- evidence_id: later-scope
+  kind: primary_source
+  reference: DOI:10.1002/cbdv.71678; PMID:40550259
+  locator: Public Wiley main text inspected through Results/Discussion and early Experimental
+    sections; PubMed 2025 abstract inspected
+  accessed_at: '2026-10-21T13:41:57Z'
+  support: context_only
+  summary: The 2026 primary study identifies C as known compound 6 by comparison of
+    NMR, MS and optical rotation; its explicit absolute ECD analysis concerns the
+    new tyramine compound 1. Its C/E ferroptosis result is a host-cell phenotype,
+    not microbial target evidence. The 2025 Talaromyces variabilis abstract announces
+    ECD/DP4 methods for a mixed new/known-compound study, but no exact-C absolute
+    reassignment was verified from accessible text. Neither source is used to claim
+    a definitive global absence of later stereochemical evidence.
+- evidence_id: leads
+  kind: database
+  reference: Frozen ChEBI citation PMID:21226488
+  locator: 320-lead-dispositions.json and 320-lead.json
+  accessed_at: '2026-10-21T13:41:57Z'
+  support: supports
+  summary: The sole adopted PMID resolves to the exact original paper. Its abstract
+    was read in full and its official supporting information inspected at the stated
+    scope. No secondary MIC values or citation-list fragments were promoted to original
+    assay evidence.
+  snapshot_sha256: ecb17246abddd703a690cfc06fbbd1523da93b7af80488a093d2f88c9ec56e21
+- evidence_id: owners
+  kind: database
+  reference: ChEBI inventory, extractor, role labels and seeder
+  locator: 320-source-audit.json; 320-inspect.json; 315-320-local-hits.txt; SEEDED_FIELDS/CURATOR_FIELDS
+    in scripts/seed_from_sources.py
+  accessed_at: '2026-10-21T13:41:57Z'
+  support: supports
+  summary: All thirteen captured inputs remain unchanged. The entire native source-owned
+    projection and three ordered history events reconcile. Structure corrections belong
+    in the maintained ChEBI input/transform and regeneration. grounding_notes, record-level
+    evidence and non-collision discussions are curator-owned and survive reseeding;
+    no existing generic relative-stereo override is assumed.
+  snapshot_sha256: b0d0d15830de10db994c893a15f8fd543ae3093bb8fb515bf9ca4d746df4b8ad
+- evidence_id: validation
+  kind: validation
+  reference: Documented schema/strict commands and supplemental consistency checks
+  locator: 320-focused-results.json; 320-schema.log; 320-strict.log; 320-chemistry.log;
+    320-source-audit.json
+  accessed_at: '2026-10-21T13:41:57Z'
+  support: supports
+  summary: All executed focused checks exit 0. They verify syntax, internal molecular
+    consistency and provenance, not experimental absolute stereochemical proof. Required
+    corpus-wide checks remain separately recorded.
+  snapshot_sha256: 2bda212c95743082dbe330329c9c61736f9e0daf2389e88da5877ad640d36744
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive source discovery and bounded exact-compound literature
+    search
+  locator: Local rg --no-ignore --hidden for label, CHEBI:70012 and slug in the worktree;
+    exact comazaphilone C/DOI/absolute-configuration searches on 2026-10-21
+  accessed_at: '2026-10-21T13:41:57Z'
+  support: context_only
+  summary: Ignored local files were included. The original main body remains inaccessible
+    through the tried ACS routes and ResearchGate offers no full text. The free official
+    SI was retrieved successfully. Independent Reaxys registry content was not obtained.
+    No native gene/protein/pathway or transcriptomics claim triggers an iModulonDB
+    adapter query.
+  snapshot_sha256: 3e411a4b9f420cea8b98c15502643d8baeb312e3dcc0d400ee006e8ca24dc0bb
+  search_scope: Local rg --no-ignore --hidden for label, CHEBI:70012 and slug in the
+    worktree; exact comazaphilone C/DOI/absolute-configuration searches on 2026-10-21
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Constitution, congener identity and molecular composition
+  outcome: supported
+  summary: C is the C-7 ester with the specified aromatic oxygenation and E side chain;
+    it is not D or E. The source identity and machine encodings agree.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - record
+  - chemistry
+  - authority
+  - si
+- assessment_id: stereo
+  area: representation
+  topic: Relative evidence versus absolute serialization
+  outcome: concern
+  summary: The original failed absolute-assignment result and relative name need explicit
+    treatment beside the absolute R,R graph; agreement among database encodings does
+    not settle this scientific limitation.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - record
+  - chemistry
+  - original
+  - si
+  - later2024
+  - later-scope
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and isolation claim
+  outcome: supported
+  summary: The original abstract supports C antibacterial activity and P. commune
+    QSD-17 isolation. Quantitative MICs, tested strain details and method are not
+    adopted without the original assay text.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - original
+  - authority
+  - si
+- assessment_id: terms
+  area: grounding
+  topic: Structural parents and source-exact ontology mapping
+  outcome: supported
+  summary: The five parents and antibacterial role agree with current ChEBI and molecular
+    features. EXACT remains a source-identity enum, distinct from experimental validation.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - authority
+  - chemistry
+  - record
+- assessment_id: xref
+  area: identity
+  topic: Reaxys registry mapping
+  outcome: unknown
+  summary: Current and frozen ChEBI retain Reaxys 21312868; its independent registry
+    record was unavailable, so no wrong-accession finding is made.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - authority
+  - search
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional mechanism, quantitative activity and producer enrichment
+  outcome: unknown
+  summary: No exact microbial molecular mechanism was established in the inspected
+    source scope. Optional empty fields are not defects, and host ferroptosis evidence
+    is not substituted for an antimicrobial target.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - record
+  - original
+  - later-scope
+- assessment_id: provenance
+  area: provenance
+  topic: Inputs, sole adopted lead and history
+  outcome: supported
+  summary: All thirteen hashes, one adopted PMID and three history events reconcile
+    without native changes.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - owners
+  - leads
+  - validation
+- assessment_id: schema
+  area: schema
+  topic: Focused native validation
+  outcome: supported
+  summary: Schema and strict checks pass while leaving the scientific stereo question
+    unresolved.
+  target_ids:
+  - CHEBI:70012
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-70012-relative-evidence-absolute-stereo-qualification
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Relative stereochemical evidence is serialized as an unqualified absolute
+    enantiomer
+  description: The sole systematic synonym is rel-(6R,7R), and the adopted original
+    explicitly reports unsuccessful absolute-configuration experiments. Plain SMILES
+    and Standard InChI nevertheless select absolute R,R without an accompanying scientific
+    qualification. Current ChEBI repeats this representation, so this is an inherited
+    evidence/representation issue, not a mistaken accession or demonstrated opposite
+    enantiomer. Later inspected text does not establish a new exact-C absolute assignment.
+    No racemate or mixture is inferred.
+  target_ids:
+  - CHEBI:70012
+  field_paths:
+  - chemical_structure.smiles
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  - synonyms[0].synonym_text
+  - grounding_notes
+  - discussions
+  evidence_ids:
+  - record
+  - chemistry
+  - authority
+  - original
+  - si
+  - later2024
+  - later-scope
+  rule_id: 'review-checklist: Identity, Structure and preservation of disagreements'
+  native_severity: Major unsupported stereochemical specificity requiring qualification
+    or exact primary support
+  normalization_reason: The concern affects interpretation of the molecular stereochemical
+    identity, while constitution and source-exact ontology grounding remain supported.
+    It does not justify automatic inversion, deletion of all stereochemistry or changing
+    the ontology mapping solely because absolute assignment is unresolved.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted absolute structure and relative name
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated chemical structure and preservation of curator qualifications
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/comazaphilone-c.yaml
+    role: Curator-owned grounding_notes, evidence and discussions only
+actions:
+- action_id: A1
+  description: In separately authorized curation, document the original relative-only
+    assignment and failed absolute determination using curator-owned grounding_notes,
+    evidence and a concrete discussion. Seek exact-C primary support before treating
+    R,R as experimentally established. If an actual structural correction or relative-stereo
+    representation is warranted, implement it through the maintained ChEBI inventory/extractor/seeder
+    and a representation that retains the known relative relationship and E geometry;
+    do not silently invert centers, erase all stereo or infer a mixture. No existing
+    generic relative-stereo override is assumed.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:70012
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted absolute structure and relative name
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated chemical structure and preservation of curator qualifications
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/comazaphilone-c.yaml
+    role: Curator-owned grounding_notes, evidence and discussions only
+  acceptance_checks:
+  - A consumer can distinguish source-selected absolute serialization from experimentally
+    supported relative configuration, with PMID:21226488 and the exact limitation
+    attached.
+  - Any absolute resolution cites an exact-C experiment; otherwise preserve the unresolved
+    qualification and relative relationship without asserting a racemate or a new
+    enantiomer.
+  - If machine fields change, regenerate through the actual maintained source owner,
+    check atom-mapped stereo, all molecular identifiers/formula/charge, documented
+    schema/strict validation and required corpus gates.
+limitations:
+- 'The original 2011 main article and quantitative antibacterial table were not obtained:
+  ACS requests returned 403 and ResearchGate exposed the abstract/reference fragments
+  only. Complete original abstract and free publisher SI are available. No numerical
+  MIC, exact strain panel or mechanism is adopted from secondary summaries.'
+- Later exact-C searching was bounded. The 2024 main article was read; its supplementary
+  spectra were not independently reinterpreted to determine absolute stereochemistry.
+  The 2026 relevant public main-text sections were inspected through the web tool,
+  but a local full HTML fetch returned 403. The 2025 abstract was read without accessible
+  full main article/SI; it may warrant focused follow-up before any machine-structure
+  replacement.
+- The supporting-information diagrams and achiral-solvent NMR do not select an absolute
+  enantiomer. Database agreement and optical-rotation comparison without a validated
+  absolute reference are not independent proof of that assignment.
+- Reaxys 21312868 is source-concordant but not independently resolved through the
+  registry. No paid access was attempted.
+- The file named 320-2025.pdf contains the 2024 DOI:10.20307/nps.2024.30.1.59 article;
+  its actual publication year is used throughout the assessment.
+- Focused native checks do not substitute for the separately recorded required full-corpus
+  gates or authorize REVIEWED status.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Native records, maintained sources and curation history remain unchanged.
+- Standalone chemistry used the batch 019 RDKit interpreter against batch 032 paths;
+  documented schema/strict checks used the batch 032 environment.
+- The exact-C review is separate from later D/E reviews even though the original publication
+  and SI cover all congeners.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pubmed.ncbi.nlm.nih.gov/21226488/
+- https://acs.figshare.com/articles/journal_contribution/2689426
+- https://e-nps.or.kr/xml/40340/40340.pdf
+tags:
+- record-review
+- comazaphilone-c
+- relative-stereochemistry
+- primary-source-scope
+```

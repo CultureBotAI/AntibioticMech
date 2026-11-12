@@ -1,0 +1,688 @@
+schema_version: 1.0.0
+review_id: 20261021T133459Z-clometocillin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Clometocillin: coherent source graph but explicitly defined epimer mixture
+  requires corpus-scope adjudication'
+started_at: '2026-10-21T13:22:49Z'
+finished_at: '2026-10-21T13:34:59Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the seed. Preserved all initial hashes, appended
+    the actual ARO compound owner before assessment, read the complete native and
+    maintained rows, independently parsed official chemical structures, and read the
+    original patent including both page images. All adopted literature leads were
+    resolved with explicit access depth.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The native graph, formula, masses, source identifiers and independently
+  inspected xrefs agree. Named clometocillin has original antibacterial evidence,
+  with material and assay-depth limits. One major scope finding remains: the native
+  and authoritative ChEBI definition explicitly describe an epimer mixture, whereas
+  this corpus requires an individual structure. This is not a claim that an unspecified
+  stereocentre alone proves a mixture, nor evidence that clometocillin lacks antibacterial
+  activity.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/clometocillin.yaml
+    sha256: 1c08261a20e334eb6d2718be9d5e1ea95bc6c488f4bc752a95a9270d6dc0981e
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:131732
+  path: data/antibiotics/antibacterial/clometocillin.yaml
+  label: clometocillin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+scope:
+  description: 'Entire native record: definition, nine synonyms, four parents, two
+    activity roles, penicillin structural class, chemical structure and properties,
+    five chemical xrefs, two drug xrefs, two document links, two source concepts and
+    four history events. All three adopted publication leads and the cited original
+    patent were examined at the stated access depth.'
+  selection: Queue312, exact CHEBI:131732. Initial thirteen input hashes retained;
+    actual data/raw/aro_antibiotics.tsv ownership appended before assessment, for
+    fourteen inputs total.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:131732
+  exclusions:
+  - target: Individual side-chain epimers, potassium and amine salts, the mono-chloro
+      patent analogue and similarly named penicillin combinations
+    reason: None is substituted for the source-defined clometocillin concept. Drug-name
+      antibacterial evidence is not assigned to a selected epimer or exact salt without
+      inspected material characterization.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: No schema issues.
+  target_ids:
+  - CHEBI:131732
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/clometocillin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: One file; zero errors.
+  target_ids:
+  - CHEBI:131732
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/clometocillin.yaml --out /private/tmp/am-review-session/312-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: SMILES and InChI agree with formula, neutral charge, masses and full key.
+    Three penam centres are assigned and one methoxy-bearing side-chain centre is
+    unspecified. Both source mints reproduce.
+  target_ids:
+  - CHEBI:131732
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 312
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: external-chemistry
+  name: external-chemistry
+  status: passed
+  required: false
+  summary: Seven independently parsed PubChem, ChEMBL, KEGG and DrugCentral representations
+    agree with the native full key.
+  target_ids:
+  - CHEBI:131732
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/312-xref-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:131732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:131732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:131732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:131732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:131732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:131732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:131732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:131732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:131732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/clometocillin.yaml
+  locator: Complete native YAML.
+  accessed_at: '2026-10-21T13:33:41Z'
+  support: supports
+  summary: SEEDED/EXACT/ANTIBACTERIAL. The definition explicitly describes a mixture
+    of epimers at the methoxy-bearing carbon. The graph is neutral C17H18Cl2N2O5S
+    with full key JKXQBIZCQJLVOS-GSNLGQFWSA-N and an unspecified side-chain centre.
+    No target, mode of action, activity measurement, resistance determinant, producer,
+    clinical-status assertion or causal graph is present.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; conf/sources.yaml;
+    data/raw/MANIFEST.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py;
+    curation/decisions.tsv
+  locator: Full ChEBI row2482 and ARO row588; relevant extraction, identity merge,
+    source-role mapping and seeder logic.
+  accessed_at: '2026-10-21T13:33:41Z'
+  support: supports
+  summary: ChEBI supplies the exact mixture definition, molecular graph, chemical
+    properties, names, parents, roles and three citation leads. ARO supplies the matching
+    compound concept, chemical xrefs and penicillin class. No matching ARO target/resistance,
+    FDA, PubChem-enrichment or MIBiG row was found in the inspected maintained tables.
+    The generated record faithfully reproduces its sources; a scope correction belongs
+    in maintained decisions/source handling, not a manual native graph edit.
+  snapshot_sha256: cbbe6cff6bddbaeb76f82d54a81d696b606dd9bd897538f8d64a9f29a41321fb
+- evidence_id: chebi-identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:131732
+  locator: 'Complete official chemical entry: definition, structure, names, xrefs,
+    roles and parents.'
+  accessed_at: '2026-10-21T13:31:04Z'
+  support: supports
+  summary: The current authoritative entry explicitly calls clometocillin a mixture
+    of epimers at the methoxy-bearing carbon. All nine native aliases and the neutral
+    graph are source-attested. CAS1926-49-4, Reaxys13779003, DrugCentral699, KEGG
+    D07236 and patentUS3007920 are linked by ChEBI. The mixture description is direct
+    source text; it is not deduced from absent stereochemical assignment.
+  snapshot_sha256: 87d12f5b9996e2f23df52395d8c29ebd31151963874096c8e0d857e63b805466
+- evidence_id: external-identity
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/71807; https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2106548;
+    https://www.genome.jp/entry/D07236; https://drugcentral.org/drugcard/699; https://card.mcmaster.ca/aro/3009129
+  locator: Official entries and complete molecular encodings.
+  accessed_at: '2026-10-21T13:33:41Z'
+  support: supports
+  summary: PubChem71807, ChEMBL2106548, KEGG D07236 and DrugCentral699 independently
+    parse to the same full key as native. ARO3009129 has the same name, graph and
+    CAS and cross-references the same entries. No inspected xref selects a particular
+    side-chain epimer. Consistent partial-stereo database graphs do not settle whether
+    the explicitly described mixture is an admissible corpus unit.
+  snapshot_sha256: f286e3d45b184051ff81df3e9169a14ef0d11b3d1405df374cedd8f94458473b
+- evidence_id: parents-roles
+  kind: database
+  reference: CHEBI:17334; CHEBI:23697; CHEBI:72588; CHEBI:33281; CHEBI:36047; ARO:3000008;
+    ARO:3009124
+  locator: Official term definitions and outgoing relations.
+  accessed_at: '2026-10-21T13:31:06Z'
+  support: supports
+  summary: The penicillin, dichlorobenzene and semisynthetic-derivative parents fit
+    the source graph; ARO penicillin beta-lactam is broader. ChEBI antimicrobial-agent
+    and antibacterial-drug roles are source-supported. ARO places clometocillin under
+    beta-lactamase-sensitive penicillins, but the native record does not turn that
+    family placement into an exact enzyme experiment or resistance-mechanism claim.
+  snapshot_sha256: dace22fa38875cd6bb439b575194f30cd97ef20d36d084f357e0b4844238db04
+- evidence_id: unit-rule
+  kind: record_content
+  reference: docs/HARMONIZATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: The unit of the corpus is a structure; Mixtures and combination products;
+    identity review criterion.
+  accessed_at: '2026-10-21T13:33:41Z'
+  support: refutes
+  summary: The repository requires one individual structure per AntibioticRecord and
+    explains that a content-bearing InChIKey does not by itself establish an admissible
+    single chemical concept. Its mixture workflow retains source provenance while
+    excluding out-of-scope concepts through decisions and the excluded queue. No epimer-mixture
+    exception or exact clometocillin scope decision was found in the ignored-inclusive
+    policy/decision search. This rule is applied to the explicit native/source mixture
+    claim, not to every graph with unassigned stereochemistry.
+  snapshot_sha256: b27a9c8a762cfc559201b8d4c8ac925686000d55aa40a0145c661f07056ddfb8
+- evidence_id: patent
+  kind: primary_source
+  reference: US3007920A; https://patents.google.com/patent/US3007920A/en
+  locator: Entire original two-page patent visually read; column2 stereochemistry
+    paragraph, Example1 and claim3.
+  accessed_at: '2026-10-21T13:31:37Z'
+  support: supports
+  summary: The patent identifies the side-chain asymmetric carbon and says epimers
+    can be obtained by resolution or optically active starting material. Example1
+    prepares the exact dichloro compound as potassium salt and then its free acid;
+    claim3 depicts the dichloro connectivity. Other examples include the mono-chloro
+    sibling and amine salts. It reports broad antimicrobial/physiological properties
+    without a strain-resolved MIC table or isolated-epimer comparison, and supplies
+    no mixture ratio or chosen side-chain configuration.
+  snapshot_sha256: 527621f9eb2d2bec68341d18966d40b1fdcb0d43b5e9a5971f22ed967dc82182
+- evidence_id: adopted-1998
+  kind: primary_source
+  reference: PMID:9578165; DOI:10.1093/jac/41.3.381; https://pubmed.ncbi.nlm.nih.gov/9578165/
+  locator: Complete original indexed and publisher abstract.
+  accessed_at: '2026-10-21T13:31:08Z'
+  support: supports
+  summary: The original study used agar dilution on 283 penicillin-susceptible, 122
+    intermediate and 23 resistant S. pneumoniae isolates. It reports named clometocillin
+    as the most active tested penicillin against intermediate/resistant groups. This
+    supports bounded antibacterial activity, without establishing an exact isolated
+    epimer, bulk salt, strain-specific MIC or direct PBP binding. Full methods and
+    numerical tables were not accessible through the inspected public publisher routes.
+  snapshot_sha256: 027ca1cb5f599216a7b2058d9646f969c427a10cd844aebb40d25818460f8eea
+- evidence_id: adopted-1963
+  kind: database
+  reference: PMID:14128892; https://pubmed.ncbi.nlm.nih.gov/14128892/
+  locator: Original bibliographic metadata and indexing; no abstract available.
+  accessed_at: '2026-10-21T13:31:08Z'
+  support: unknown
+  summary: Betourne and Hayem, Gazette medicale de France70:2762–2763, September25
+    1963, is the exact Rixapen/3,4-dichloro-alpha-methoxybenzylpenicillin therapeutic
+    report cited by ARO. No original abstract or full article was inspected, so its
+    title/indexing does not establish clinical outcome numbers, a formulation certificate
+    or a mechanism. Local HTTP retrieval returned a challenge page; the bibliographic
+    record was inspected through the public indexed source.
+  snapshot_sha256: 027ca1cb5f599216a7b2058d9646f969c427a10cd844aebb40d25818460f8eea
+- evidence_id: adopted-1974
+  kind: database
+  reference: PMID:4218940; https://pubmed.ncbi.nlm.nih.gov/4218940/
+  locator: Original bibliographic metadata and indexing; no indexed abstract supplied.
+  accessed_at: '2026-10-21T13:31:08Z'
+  support: unknown
+  summary: Rudzit et al., Antibiotiki19(10):887–890, 1974, concerns clomethacillin
+    synthesis and antibacterial properties. Although indexed with the publication
+    type English Abstract, neither the inspected EuropePMC response nor PubMed provided
+    that abstract text. Full original text was not found on the bounded free routes;
+    commercial delivery offers were not used. No assay details are reconstructed from
+    the title or MeSH terms.
+  snapshot_sha256: 027ca1cb5f599216a7b2058d9646f969c427a10cd844aebb40d25818460f8eea
+- evidence_id: literature-context
+  kind: database
+  reference: EuropePMC exact-name/synonym search; PMID:404958; PMID:14145726
+  locator: Bounded discovery results and original abstract for PMID404958.
+  accessed_at: '2026-10-21T13:31:08Z'
+  support: context_only
+  summary: The animal distribution study PMID404958 compares clometacillin circulation
+    and tissue penetration with other penicillins; it is pharmacokinetic context without
+    an isolated-epimer antibacterial experiment. PMID14145726 is a pediatric-use bibliographic
+    lead without an inspected abstract. The broader synonym search also returns unrelated
+    Optocillin/Rectocillin combination studies, which are excluded. Secondary chromatography
+    descriptions were leads only, not independent primary proof of an exact clometocillin
+    mixture composition.
+  snapshot_sha256: b89cb92e84f699f48d6bf6f823e160fed4170976345fd614d8d09ccc67b07867
+- evidence_id: adapter-scope
+  kind: database
+  reference: Structured source applicability assessment
+  locator: Native fields and maintained target/resistance rows inspected before open
+    web research.
+  accessed_at: '2026-10-21T13:33:41Z'
+  support: context_only
+  summary: No native gene, protein, regulator, pathway, stress response or transcriptomic
+    dataset is asserted, and no maintained target/resistance edge matches this compound.
+    An iModulonDB query would not resolve its chemical mixture scope or named-drug
+    antibacterial activity; the adapter was not applicable. Generic penicillin PBPs
+    were not imported as exact compound targets.
+- evidence_id: inclusive-search
+  kind: search
+  reference: 312-inclusive-hits.txt; 312-mixture-policy-search.txt
+  locator: Hidden- and ignored-inclusive local searches plus bounded exact-name public
+    research.
+  accessed_at: '2026-10-21T13:33:41Z'
+  support: context_only
+  summary: Local matches comprise the exact source/native/worklist and generated content.
+    No exact curator override, evidence overlay or epimer-mixture policy exception
+    was found in the searched scope. Public searches resolved the three adopted leads
+    and original patent but did not yield full 1963/1974 papers or 1998 methods/tables
+    through the inspected free routes. This is an access limit, not a claim that those
+    sources or further studies do not exist.
+  snapshot_sha256: 16e49924afbe1a8810a94ae14a89d512ead2ec552ce00a4de93227851c0dd4ab
+  search_scope: rg --no-ignore --hidden -n -F for CHEBI:131732, clometocillin, clometacillin,
+    clomethacillin, JKXQBIZCQJLVOS-GSNLGQFWSA-N and ARO:3009129 across data, curation,
+    conf, scripts, src, docs, .claude, reviews and reports. Additional ignored-inclusive
+    policy search for epimers/racemates/stereoisomer mixtures across docs, .claude,
+    conf, decisions and seeder. Public exact-name, PMID, DOI and epimer queries on
+    2026-10-21.
+- evidence_id: validation
+  kind: validation
+  reference: 312-schema.log; 312-strict.log; 312-chemistry.json; 312-xref-chemistry.json
+  locator: Actual focused checks and independent molecular diagnostics.
+  accessed_at: '2026-10-21T13:33:41Z'
+  support: supports
+  summary: Schema, strict validation and native/external molecular checks pass. All
+    fourteen captured input hashes, including the original thirteen, remain unchanged.
+    These deterministic passes do not adjudicate the explicit mixture-versus-individual-structure
+    policy conflict.
+  snapshot_sha256: c4b279b3cea61a3eca4db01a6184104a597de8576ee1d675c64770ac7dde06c7
+assessments:
+- assessment_id: graph
+  area: identity
+  topic: Partial-stereo graph and exact source equivalence
+  outcome: supported
+  summary: The native structure, formula, neutral charge, masses, source mints and
+    inspected xrefs agree. No selected epimer is justified by these graphs. Reaxys
+    remains source-attested without paid independent graph access.
+  target_ids:
+  - CHEBI:131732
+  evidence_ids:
+  - native
+  - chebi-identity
+  - external-identity
+  - validation
+- assessment_id: unit
+  area: scope
+  topic: Explicit epimer-mixture concept versus corpus unit
+  outcome: concern
+  summary: The record faithfully imports ChEBI, but both call the entity an epimer
+    mixture. The documented individual-structure requirement therefore needs a maintained
+    scope decision. The patent corroborates the chemically distinct epimer boundary
+    without measuring a mixture ratio or proving a specific assay lot composition.
+  target_ids:
+  - CHEBI:131732
+  evidence_ids:
+  - native
+  - chebi-identity
+  - unit-rule
+  - patent
+- assessment_id: activity
+  area: evidence
+  topic: Named-drug antibacterial role and evidence depth
+  outcome: supported
+  summary: The 1998 original abstract supports clometocillin activity against pneumococci
+    at the named-drug level; the patent supplies historical antimicrobial and synthetic
+    context. Neither establishes quantitative activity for a selected epimer. The
+    two older adopted papers are resolved but their substantive results remain unavailable.
+  target_ids:
+  - CHEBI:131732
+  evidence_ids:
+  - parents-roles
+  - adopted-1998
+  - patent
+  - adopted-1963
+  - adopted-1974
+- assessment_id: mechanism
+  area: evidence
+  topic: No exact molecular mechanism assertion
+  outcome: unknown
+  summary: The native record does not claim a particular target or causal pathway.
+    Family-level beta-lactam/PBP expectations and inaccessible primary text are insufficient
+    reasons to add a specific binding edge or to flag its optional absence as a defect.
+  target_ids:
+  - CHEBI:131732
+  evidence_ids:
+  - owners
+  - parents-roles
+  - adapter-scope
+- assessment_id: completeness
+  area: completeness
+  topic: Scope resolution precedes optional enrichment
+  outcome: unknown
+  summary: Missing activity measurements, molecular targets, producer, causal graph
+    and clinical status are optional gaps, not additional defects. Resolve the material
+    entity before importing exact-form biological measurements; preserve unresolved
+    older literature access honestly.
+  target_ids:
+  - CHEBI:131732
+  evidence_ids:
+  - unit-rule
+  - adopted-1998
+  - adopted-1963
+  - adopted-1974
+  - literature-context
+findings:
+- finding_id: F1
+  issue_key: clometocillin-explicit-epimer-mixture-corpus-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Adjudicate the explicitly defined epimer mixture under the individual-structure
+    rule
+  description: 'The native definition and current ChEBI131732 explicitly describe
+    clometocillin as a mixture of epimers at the methoxy-bearing carbon. The source
+    graph consistently leaves that centre unspecified and is not a selected epimer.
+    docs/HARMONIZATION.md and the identity checklist require one individual structure
+    per record and provide maintained exclusions for mixture concepts. Resolve this
+    scope conflict through a source-concept decision: exclude the mixture under the
+    current rule, or document a separately justified corpus-policy/representation
+    resolution before retaining it. Do not silently erase the mixture wording, assign
+    one epimer arbitrarily, or transfer the named-drug activity to both epimers. No
+    inference of equal proportions or lack of antibacterial activity is made.'
+  target_ids:
+  - CHEBI:131732
+  field_paths:
+  - definition
+  - grounding_status
+  - chemical_structure
+  - source_concepts
+  evidence_ids:
+  - native
+  - chebi-identity
+  - unit-rule
+  - patent
+  - external-identity
+  rule_id: 'docs/HARMONIZATION.md: The unit of the corpus is a structure; Mixtures
+    and combination products; native-review-checklist: Identity'
+  native_severity: major
+  normalization_reason: Confirmed mismatch between the expressly described source
+    concept and the required corpus unit. The imported graph is internally correct,
+    so this is a scope-adjudication problem rather than a fabricated structural parse
+    or stereochemical error.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Adjudicate retained or excluded source-concept scope
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Preserve authoritative mixture definition and source provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Keep merged ARO concept aligned with the scope decision
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Apply the maintained scope decision reproducibly
+actions:
+- action_id: A1
+  description: Resolve both merged source concepts against the documented individual-structure
+    policy, preserving their provenance.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:131732
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Adjudicate retained or excluded source-concept scope
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Preserve authoritative mixture definition and source provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Keep merged ARO concept aligned with the scope decision
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Apply the maintained scope decision reproducibly
+  acceptance_checks:
+  - Make a maintained decision for CHEBI131732 and merged ARO3009129 using their stable
+    source identifiers/mints. Under the current mixture rule, exclude the source-defined
+    mixture through the normal decision/seeder workflow while retaining it in the
+    excluded-source backlog.
+  - If retaining a differently scoped individual structure, independently establish
+    that entity and its exact identity rather than repurposing the mixture CURIE or
+    arbitrarily assigning the side-chain centre. Any policy exception must be explicit
+    and reviewed.
+  - Preserve the original definition, patent and named-drug literature provenance.
+    Do not infer a 1:1 mixture, exact salt, or isolated-epimer MIC. Rerun source reproduction,
+    focused validation and applicable corpus gates after the authorized decision.
+- action_id: A2
+  description: If an admissible exact entity is established, inspect original material
+    characterization before adding quantitative activity or molecular targets.
+  finding_ids: []
+  target_ids:
+  - CHEBI:131732
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/clometocillin.yaml
+    role: Curator-owned primary literature additions after scope resolution
+  acceptance_checks:
+  - Obtain the original 1998 methods/tables through a free legitimate route and establish
+    tested material, epimer scope, medium and isolate-level or population endpoint
+    before curating MIC values.
+  - Keep unavailable 1963/1974 results marked uninspected; do not infer measured PBP
+    binding, exact clinical formulation, producer or current approval from their titles
+    or the penicillin family.
+limitations:
+- The original 1963 and 1974 adopted papers were resolved bibliographically but no
+  indexed abstract text or free full text was inspected. PubMed HTML requests returned
+  challenge content; public indexed records supplied metadata. No commercial document
+  delivery was used.
+- PMID9578165 was read at complete original-abstract depth. Publisher full-text routes
+  returned403/429 or failed, so numerical MIC tables, exact test material and epimer
+  composition were not verified.
+- US3007920 was read completely as original page images and text. It distinguishes
+  epimers and salt/free-acid forms but supplies no measured mixture ratio or individual-epimer
+  antibacterial comparison.
+- Reaxys13779003 is source-attested but was not independently inspected through paid
+  access. All other native chemical/drug xrefs with accessible graph encodings agree.
+- The scope finding rests on explicit native and authoritative ChEBI mixture language
+  plus the repository rule. An unspecified stereocentre or matching Standard InChIKey
+  alone is not proof of a mixture, and no epimer ratio or stereochemical replacement
+  is proposed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

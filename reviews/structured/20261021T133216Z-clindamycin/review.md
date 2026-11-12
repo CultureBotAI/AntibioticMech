@@ -1,0 +1,929 @@
+# Clindamycin: coherent neutral identity, supported CDC observations and rRNA target; qualify product brands
+
+- Review: 20261021T133216Z-clindamycin
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T13:22:47Z
+- Finished UTC: 2026-10-21T13:32:16Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The neutral clindamycin identity is internally coherent and matches multiple official chemical representations. All three CDC isolate MIC observations, BioSample links and inducible-resistance notes are reproduced by their cited sources. All 62 resistance assertions retain the explicit database qualification and agree with current CARD relations and mechanism categories. Original crystallography supports clindamycin binding to bacterial 23S rRNA. One minor finding concerns Cleocin and Sobelin product brands typed as exact chemical synonyms; no structural, activity or target contradiction was established.
+
+## Scope And Provenance
+
+Whole record: definition, sixteen typed synonyms, six parents, antimicrobial role, structural class, three activity observations, chemical graph, eight chemical xrefs, three drug xrefs, document link, two source concepts, sixty-two database resistance assertions, one database molecular target and seven history events. All four adopted literature leads were dispositioned.
+
+Selection: Queue 311, exact CHEBI:3745. Initial thirteen input hashes preserved; four actual ARO input/config owners appended before assessment. The native file owns the three curated activity observations.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:3745 | data/antibiotics/antibacterial/clindamycin.yaml | generated | clindamycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:3745 | No schema issues. |
+| strict | passed | True | CHEBI:3745 | One file; zero errors. |
+| chemistry | passed | False | CHEBI:3745 | SMILES and InChI parse to the same full key, neutral one-component graph and nine assigned tetrahedral stereocentres; both source mints reproduce. Formula and masses are calculated diagnostics, not asserted native fields. |
+| external-chemistry | passed | False | CHEBI:3745 | Nine independently parsed encodings from PubChem, ChEMBL, KEGG, PDB CCD and DrugCentral reproduce the native full key. |
+| Authoritative full QC | failed | True | CHEBI:3745 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:3745 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:3745 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:3745 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:3745 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:3745 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:3745 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:3745 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:3745 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Neutral identity, stereochemistry and source identifiers
+
+identity: supported. Targets: CHEBI:3745.
+
+The graph and exact chemical/drug xrefs inspected are coherent. Registry access limitations are bounded and do not become inferred contradictions. Chemical parents and semisynthetic definition are appropriate.
+
+### Typed aliases versus product brands
+
+identity: concern. Targets: CHEBI:3745.
+
+Most aliases are source-attested chemical names or abbreviations; Cleocin (TN), Cleocin and Sobelin require explicit brand typing to preserve product/material scope.
+
+### Three exact CDC isolate observations
+
+evidence: supported. Targets: CHEBI:3745.
+
+All source values, units, modal-method descriptions, CLSI version, strain/species/BioSample links and induction notes match. In particular 0.5 mg/L with induced resistance is faithfully reported, not corrected using a context-free numerical breakpoint. No specific resistance gene or bulk salt is inferred.
+
+### Sixty-two qualified CARD assertions
+
+evidence: supported. Targets: CHEBI:3745.
+
+Every native database relation and mechanism category agrees with its current source. This is provenance validation at database evidence depth, with no blanket promotion to primary mechanistic proof or linkage to the CDC strains.
+
+### Bacterial 23S rRNA binding
+
+evidence: supported. Targets: CHEBI:3745.
+
+The database assertion is correctly typed as nucleic acid and honestly flags primary evidence needed. The independently inspected original structure supports a future qualified primary target entry; no protein target is substituted for catalytic rRNA. Structural tRNA-interference inference and other-drug footprinting remain distinct.
+
+### Optional mechanism and activity enrichment
+
+completeness: unknown. Targets: CHEBI:3745.
+
+Missing optional formula/masses, mode-of-action prose, causal graph, producer and regulatory fields do not independently constitute defects in this SEEDED record. Original rRNA structural evidence is a concrete optional enrichment opportunity. All four adopted publication leads have explicit dispositions and read depths.
+
+## Findings
+
+### F1: Type Cleocin and Sobelin as product brands
+
+minor / open / confirmed; issue key: clindamycin-product-brands-exact-synonym-type.
+
+synonyms[4], synonyms[10] and synonyms[15] type Cleocin (TN), Cleocin and Sobelin as EXACT_SYNONYM. Official manufacturer documents identify these as brands covering hydrochloride and ester formulations, with strengths expressed as clindamycin equivalents. Retain their discoverability and provenance using BRAND_NAME or an equivalently explicit product-context representation through the maintained source/seeder path. The neutral clindamycin graph is correct and should not be replaced by a salt or a product mixture.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Preserve the three brand aliases with explicit product scope through the maintained generation path.
+
+- Cleocin (TN), Cleocin and Sobelin remain searchable and source-attributed but are typed BRAND_NAME or equivalently qualified as product names.
+- Do not collapse hydrochloride, phosphate or palmitate formulations into the neutral chemical graph. Reseed through the validated workflow and rerun focused schema/strict and source-reproduction checks.
+
+### A2
+
+Optionally attach the original clindamycin-bound rRNA structure as qualified primary mechanism evidence.
+
+- Use PMID20876128 and retain E. coli MRE600, crystal-soaking material/context and the bound-rRNA observation. Keep structurally inferred A-site interference separate from a directly measured biochemical endpoint.
+- Do not transfer the telithromycin/erythromycin footprinting experiment or infer bulk clindamycin salt composition. Preserve the database provenance and update evidence status only with the appropriate native writer and checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/clindamycin.yaml; Complete 631-line native YAML. | supports | SEEDED/EXACT/ANTIBACTERIAL neutral clindamycin, full key KDLRVYVGXIQJDK-AWPVFWJPSA-N. The 62 resistance edges say database assertion, not primary citation. The 23S rRNA target is typed NUCLEIC_ACID and PRIMARY_EVIDENCE_NEEDED. Three CDC observations retain individual strain, BioSample, modal MIC, versioned interpretation and induction notes. No causal graph, producer or regulatory status is asserted. |
+| owners | data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv; data/raw/aro_resistance_edges.tsv; conf/aro_target_roles.tsv; conf/sources.yaml; data/raw/MANIFEST.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Full ChEBI row 117, ARO compound row 51, target row 52 and resistance rows 1777–1838; source configuration, manifest, extraction and assembly logic. | supports | ChEBI owns identity, definition, chemical parents and role. ARO supplies its concept, class, aliases and typed target/resistance relations. The seeder converts generic ChEBI synonyms and all ARO aliases to EXACT_SYNONYM, while supporting BRAND_NAME for explicitly typed source names. It preserves activity_spectrum as curator-owned. Blank formula/mass columns explain optional native omissions. The maintained target map explicitly identifies rRNA rather than a protein. |
+| identity | https://www.ebi.ac.uk/chebi/CHEBI:3745; https://pubchem.ncbi.nlm.nih.gov/compound/446598; https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1753; https://www.genome.jp/entry/C06914; https://www.genome.jp/entry/D00277; https://www.rcsb.org/ligand/CLY; https://drugcentral.org/drugcard/678; Official identity pages and complete molecular encodings independently parsed. | supports | All inspected graphs agree with the native full stereochemical InChIKey and neutral C18H33ClN2O5S structure. CAS18323-44-9 is cross-attested. PDB CCD CLY is the clindamycin ligand, not an organism or resistance gene. DrugCentral includes broader salt aliases, but its actual graph is neutral clindamycin; those external aliases are not transferred as native exact identities. |
+| xref-limits | https://www.hmdb.ca/metabolites/HMDB0015321; https://go.drugbank.com/drugs/DB01190; reaxys:5624049; Source attribution and independent access attempts. | unknown | HMDB and DrugBank returned 403. Reaxys was not accessed through paid services. These xrefs remain ChEBI-attested without an independently inspected exact registry graph. Wikipedia is a topic document link, not a primary chemical or mechanistic source. No mismatch is inferred from access limits. |
+| parents-role | CHEBI:23007; CHEBI:35275; CHEBI:36683; CHEBI:46770; CHEBI:72588; CHEBI:33281; ARO:0000017; Official ChEBI definitions/outgoing relations and current ARO class definition. | supports | The carbohydrate-containing antibiotic, S-glycosyl compound, organochlorine compound, pyrrolidinecarboxamide and semisynthetic derivative parents fit the graph and source definition. The ARO lincosamide class and antimicrobial-agent role are appropriate. The original ribosome study and CDC measurements support antibacterial scope without implying every strain is susceptible. |
+| brands-cleocin | https://labeling.pfizer.com/showlabeling.aspx?id=625; https://www.pfizer.com/products/product-detail/cleocin; Manufacturer label Description and official product-family page. | partial | CLEOCIN HCl capsules contain the hydrated hydrochloride salt expressed as clindamycin equivalent. Pfizer lists distinct CLEOCIN HCl, Pediatric, Phosphate and topical/vaginal products. Thus Cleocin and Cleocin (TN) are useful brand aliases but do not denote an exact neutral chemical structure. The label also corroborates the semisynthetic 7(S)-chloro substitution of lincomycin. |
+| brands-sobelin | https://www.fachinfo.de/fi/detail/002592; https://www.fachinfo.de/fi/detail/002595/sobelin-r-300-mg; Manufacturer-authored July 2026 Fachinformation, sections 1 and 2. | partial | Pfizer Sobelin Granulat contains clindamycin palmitate hydrochloride, while Sobelin 300 mg capsules contain hydrochloride monohydrate; strengths are expressed as clindamycin equivalents. The public original manufacturer documents establish Sobelin as a brand spanning material forms. Older Pfizer URLs redirect to a product index; the ingredient conclusion uses the inspected Fachinfo text, not a search snippet. |
+| cdc-701 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=701&amp;PanelID=1125; Full isolate entry, clindamycin row, method paragraph and footnote 3. | supports | AR Bank 0701, TLZD-01, Staphylococcus aureus, SAMN11953851: clindamycin modal MIC 0.5 micrograms/mL, interpretation R, broth microdilution, CLSI2025 M100S35. Inducible clindamycin resistance was detected. Native mg/L is numerically equivalent. The site describes ordinary one-dilution variability and separates propagation conditions from AST methods. It does not identify the bulk test-material salt or a causal clindamycin-resistance gene. |
+| cdc-729 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=729&amp;PanelID=1125; Full isolate entry, clindamycin row, method paragraph and footnote 3. | supports | AR Bank 0729, TLZD-29, Staphylococcus haemolyticus, SAMN11953879: clindamycin modal MIC 2 micrograms/mL, interpretation R, broth microdilution, CLSI2025 M100S35. Inducible clindamycin resistance was detected. Native mg/L is numerically equivalent. The site describes ordinary one-dilution variability and separates propagation conditions from AST methods. It does not identify the bulk test-material salt or a causal clindamycin-resistance gene. |
+| cdc-730 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=730&amp;PanelID=1125; Full isolate entry, clindamycin row, method paragraph and footnote 3. | supports | AR Bank 0730, TLZD-30, Staphylococcus haemolyticus, SAMN11953880: clindamycin modal MIC 2 micrograms/mL, interpretation R, broth microdilution, CLSI2025 M100S35. Inducible clindamycin resistance was not detected. Native mg/L is numerically equivalent. The site describes ordinary one-dilution variability and separates propagation conditions from AST methods. It does not identify the bulk test-material salt or a causal clindamycin-resistance gene. |
+| biosamples | https://www.ebi.ac.uk/ena/browser/api/xml/SAMN11953851; https://www.ebi.ac.uk/ena/browser/api/xml/SAMN11953879; https://www.ebi.ac.uk/ena/browser/api/xml/SAMN11953880; Complete INSDC sample XML entries. | supports | The three accessions independently resolve to panel IDs TLZD-01, TLZD-29 and TLZD-30. Species/taxon IDs are respectively S. aureus/1280 and S. haemolyticus/1283 twice. These corroborate the exact CDC linkage; missing sample metadata is not replaced with assumptions. |
+| adapter | iModulonDB m_tuberculosis/modulome/Rv1988; e_coli/precise1k; s_aureus/staph_precise108; Actual catalog discovery and four searches before web research. | context_only | erm(37) resolves to M. tuberculosis Rv1988 with no matching iModulon; rrl returns no gene or module in the three queried datasets. These are representative gene-context checks, not the CDC isolates or physical binding/phenotype evidence. S. haemolyticus has no applicable catalog dataset. No negative biological conclusion follows from absent hits. |
+| card-resistance | https://card.mcmaster.ca/aro/0000066 and all 62 determinant URLs enumerated in 311-card-audit.json; Every determinant definition, clindamycin parent relation and mechanism category inspected; raw/native rows compared. | supports | All 62 determinant pages explicitly assert clindamycin resistance and reproduce the native alteration, protection or inactivation category. This validates database provenance, not each underlying primary experiment. Erm/Cfr methylation and rRNA mutations are distinguished from ABC-F protection and Lnu inactivation. No determinant is assigned to a CDC isolate from these generic relations. The source label Clostridium perfringes cplR retains an upstream spelling error, while its sequence organism says C. perfringens; its stable accession is unambiguous. Several generic Erm descriptions are templated, so they do not establish detailed individual enzymology. |
+| card-target | https://card.mcmaster.ca/aro/3000754; https://card.mcmaster.ca/aro/0000066; https://card.mcmaster.ca/ontology/35999; Complete target/compound entries and canonical target-protection term. | supports | ARO3000754 denotes bacterial 23S rRNA peptidyl-transferase activity and the source compound points to it via targeted_by_antibiotic. The canonical protection page confirms ARO0001003. An attempted numeric /aro/0001003 resolver instead returned UBERON0001003 epidermis; that namespace collision is excluded and does not demonstrate a native or maintained mapping defect. |
+| ribosome-primary | PMID:20876128; DOI:10.1073/pnas.1007988107; https://pmc.ncbi.nlm.nih.gov/articles/PMC2951456/; Complete main article read through Experimental Procedures; Figures 1 and 4 visually inspected. | supports | E. coli MRE600 ribosome crystals were soaked overnight with Sigma clindamycin at 100 micromolar after DMSO stock dilution. The original structure directly locates clindamycin at 23S rRNA, with specific contacts and electron density in Figure4; PDB3OFZ is the clindamycin-bound 50S model. Interference with A-site aminoacyl-tRNA is a structural inference from steric overlap, not a measured clindamycin-tRNA association constant. Telithromycin/erythromycin footprinting is a separate experiment. The main article does not certify the bulk clindamycin salt. |
+| adopted-exotoxin | PMID:11691576; DOI:10.1016/S0924-8579(01)00413-7; Complete original indexed abstract. | context_only | The study tested sub- and suprainhibitory antibiotic concentrations in fourteen susceptible S. pyogenes isolates and measured pyrogenic exotoxin A/B production. It supports bounded antibacterial and toxin-production context, not a direct toxin-binding target, exact salt identification or a universal clinical superiority claim. Full methods/tables were not inspected. |
+| adopted-induction | PMID:18695329; DOI:10.4103/0255-0857.42041; Complete original indexed abstract. | context_only | The original study collected 522 clinical Gram-positive isolates during November2006–April2007 and examined erythromycin resistance and inducible clindamycin resistance, with relatively frequent induction in MRSA. Its local clinical recommendation is not generalized to all countries, all staphylococci or the three CDC isolates. Full methods/tables were not inspected. |
+| adopted-sewage | PMID:24310902; DOI:10.1007/s11356-013-2333-2; Complete original indexed abstract. | context_only | The analytical sewage study measured clindamycin and clindamycin sulfoxide and rejected its proposed back-transformation explanation after finding the metabolite stable. It is environmental-analysis context, not a producer, bacterial target or exact antimicrobial assay. Full text was not inspected. |
+| inclusive-search | 311-inclusive-hits.txt; Ignored-inclusive local identifier, label, full key and ARO searches. | context_only | The searched native/source/config/curation/docs/review/report scope contains the native rows, worklist and an unrelated AST active-moiety map/context. No exact curator override or separate maintained evidence overlay was found for this record in that scope. This does not exclude other public literature. |
+| validation | 311-schema.log; 311-strict.log; 311-chemistry.json; 311-xref-chemistry.json; Actual focused checks and independent molecular diagnostics. | supports | Schema and strict validation pass. Native and official molecular graphs match. The optional absent formula/mass fields are not treated as errors. All seventeen captured input hashes, including the original thirteen, remain unchanged. |
+
+## Limits And Additional Notes
+
+- HMDB and DrugBank direct access returned 403; the Reaxys graph was not accessed through paid services. Those xrefs remain source-attested. Multiple independent official chemical graphs corroborate the native identity.
+- All four adopted original abstracts were read. PMID20876128 main full text and Figures1/4 were inspected; its supporting information was not read. The other three adopted studies remain at indexed-abstract depth.
+- All sixty-two CARD determinant definitions, clindamycin relations and mechanism classes were inspected, but the complete underlying experimental literature for each determinant was not re-audited. Native database qualifications are preserved.
+- CDC reports drug-name-level modal MICs and versioned interpretations without an exact bulk salt certificate, complete AST preparation protocol or demonstrated clindamycin-resistance gene for these isolates. Propagation conditions are not substituted for AST conditions.
+- The original crystallographic paper identifies Sigma clindamycin and the bound active molecule, but not a bulk-material counterion certificate. No exact clinical formulation, natural producer or universal bacterial susceptibility is inferred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T133216Z-clindamycin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Clindamycin: coherent neutral identity, supported CDC observations and rRNA
+  target; qualify product brands'
+started_at: '2026-10-21T13:22:47Z'
+finished_at: '2026-10-21T13:32:16Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the native record. Preserved the initial thirteen
+    hashes and appended actual ARO ownership before assessment; independently read
+    the entire native record, maintained rows, all four adopted abstracts, original
+    ribosome full text and official chemical, CARD, CDC and BioSample records.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The neutral clindamycin identity is internally coherent and matches multiple
+  official chemical representations. All three CDC isolate MIC observations, BioSample
+  links and inducible-resistance notes are reproduced by their cited sources. All
+  62 resistance assertions retain the explicit database qualification and agree with
+  current CARD relations and mechanism categories. Original crystallography supports
+  clindamycin binding to bacterial 23S rRNA. One minor finding concerns Cleocin and
+  Sobelin product brands typed as exact chemical synonyms; no structural, activity
+  or target contradiction was established.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/clindamycin.yaml
+    sha256: 042c20cb84653c1aa1357fbc742c00835bca1ab71f79c95131c71ad5589bb8e7
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:3745
+  path: data/antibiotics/antibacterial/clindamycin.yaml
+  label: clindamycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/clindamycin.yaml
+    role: Curator-owned three CDC activity observations and BioSample annotations
+scope:
+  description: 'Whole record: definition, sixteen typed synonyms, six parents, antimicrobial
+    role, structural class, three activity observations, chemical graph, eight chemical
+    xrefs, three drug xrefs, document link, two source concepts, sixty-two database
+    resistance assertions, one database molecular target and seven history events.
+    All four adopted literature leads were dispositioned.'
+  selection: Queue 311, exact CHEBI:3745. Initial thirteen input hashes preserved;
+    four actual ARO input/config owners appended before assessment. The native file
+    owns the three curated activity observations.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:3745
+  exclusions:
+  - target: Clindamycin hydrochloride, phosphate, palmitate hydrochloride, lincomycin
+      and individual commercial formulations
+    reason: Related material forms and products are distinguished from the neutral
+      chemical graph. No exact salt composition, clinical efficacy, producer or isolate-specific
+      resistance gene is inferred from a shared active moiety or a database family
+      relation.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: No schema issues.
+  target_ids:
+  - CHEBI:3745
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/clindamycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: One file; zero errors.
+  target_ids:
+  - CHEBI:3745
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/clindamycin.yaml --out /private/tmp/am-review-session/311-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: SMILES and InChI parse to the same full key, neutral one-component graph
+    and nine assigned tetrahedral stereocentres; both source mints reproduce. Formula
+    and masses are calculated diagnostics, not asserted native fields.
+  target_ids:
+  - CHEBI:3745
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/311-chemistry-check.py 311
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: external-chemistry
+  name: external-chemistry
+  status: passed
+  required: false
+  summary: Nine independently parsed encodings from PubChem, ChEMBL, KEGG, PDB CCD
+    and DrugCentral reproduce the native full key.
+  target_ids:
+  - CHEBI:3745
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/311-xref-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:3745
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:3745
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:3745
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:3745
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:3745
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:3745
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:3745
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:3745
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:3745
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/clindamycin.yaml
+  locator: Complete 631-line native YAML.
+  accessed_at: '2026-10-21T13:30:30Z'
+  support: supports
+  summary: SEEDED/EXACT/ANTIBACTERIAL neutral clindamycin, full key KDLRVYVGXIQJDK-AWPVFWJPSA-N.
+    The 62 resistance edges say database assertion, not primary citation. The 23S
+    rRNA target is typed NUCLEIC_ACID and PRIMARY_EVIDENCE_NEEDED. Three CDC observations
+    retain individual strain, BioSample, modal MIC, versioned interpretation and induction
+    notes. No causal graph, producer or regulatory status is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv;
+    data/raw/aro_resistance_edges.tsv; conf/aro_target_roles.tsv; conf/sources.yaml;
+    data/raw/MANIFEST.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  locator: Full ChEBI row 117, ARO compound row 51, target row 52 and resistance rows
+    1777–1838; source configuration, manifest, extraction and assembly logic.
+  accessed_at: '2026-10-21T13:30:30Z'
+  support: supports
+  summary: ChEBI owns identity, definition, chemical parents and role. ARO supplies
+    its concept, class, aliases and typed target/resistance relations. The seeder
+    converts generic ChEBI synonyms and all ARO aliases to EXACT_SYNONYM, while supporting
+    BRAND_NAME for explicitly typed source names. It preserves activity_spectrum as
+    curator-owned. Blank formula/mass columns explain optional native omissions. The
+    maintained target map explicitly identifies rRNA rather than a protein.
+  snapshot_sha256: 509e2a1a4c757be54d3714dd78dc28d853e1f8c474c2733f1a0ab64a6d7f7be0
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:3745; https://pubchem.ncbi.nlm.nih.gov/compound/446598;
+    https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1753; https://www.genome.jp/entry/C06914;
+    https://www.genome.jp/entry/D00277; https://www.rcsb.org/ligand/CLY; https://drugcentral.org/drugcard/678
+  locator: Official identity pages and complete molecular encodings independently
+    parsed.
+  accessed_at: '2026-10-21T13:30:30Z'
+  support: supports
+  summary: All inspected graphs agree with the native full stereochemical InChIKey
+    and neutral C18H33ClN2O5S structure. CAS18323-44-9 is cross-attested. PDB CCD
+    CLY is the clindamycin ligand, not an organism or resistance gene. DrugCentral
+    includes broader salt aliases, but its actual graph is neutral clindamycin; those
+    external aliases are not transferred as native exact identities.
+  snapshot_sha256: e84b25077648c78a19696b3219d122191b56a05203bdecffcc7d7b0cf32e3146
+- evidence_id: xref-limits
+  kind: database
+  reference: https://www.hmdb.ca/metabolites/HMDB0015321; https://go.drugbank.com/drugs/DB01190;
+    reaxys:5624049
+  locator: Source attribution and independent access attempts.
+  accessed_at: '2026-10-21T13:30:30Z'
+  support: unknown
+  summary: HMDB and DrugBank returned 403. Reaxys was not accessed through paid services.
+    These xrefs remain ChEBI-attested without an independently inspected exact registry
+    graph. Wikipedia is a topic document link, not a primary chemical or mechanistic
+    source. No mismatch is inferred from access limits.
+  snapshot_sha256: 3c558430ed0a710e8c36a41ee52d0c9257e43247ebc6cdfd04298119024ccfe9
+- evidence_id: parents-role
+  kind: database
+  reference: CHEBI:23007; CHEBI:35275; CHEBI:36683; CHEBI:46770; CHEBI:72588; CHEBI:33281;
+    ARO:0000017
+  locator: Official ChEBI definitions/outgoing relations and current ARO class definition.
+  accessed_at: '2026-10-21T13:26:35Z'
+  support: supports
+  summary: The carbohydrate-containing antibiotic, S-glycosyl compound, organochlorine
+    compound, pyrrolidinecarboxamide and semisynthetic derivative parents fit the
+    graph and source definition. The ARO lincosamide class and antimicrobial-agent
+    role are appropriate. The original ribosome study and CDC measurements support
+    antibacterial scope without implying every strain is susceptible.
+  snapshot_sha256: 3ad247e9bbe9bacf9f8011c2f6fdb86b2f37a5d6a29d64a861a026cb05b4f590
+- evidence_id: brands-cleocin
+  kind: primary_source
+  reference: https://labeling.pfizer.com/showlabeling.aspx?id=625; https://www.pfizer.com/products/product-detail/cleocin
+  locator: Manufacturer label Description and official product-family page.
+  accessed_at: '2026-10-21T13:27:03Z'
+  support: partial
+  summary: CLEOCIN HCl capsules contain the hydrated hydrochloride salt expressed
+    as clindamycin equivalent. Pfizer lists distinct CLEOCIN HCl, Pediatric, Phosphate
+    and topical/vaginal products. Thus Cleocin and Cleocin (TN) are useful brand aliases
+    but do not denote an exact neutral chemical structure. The label also corroborates
+    the semisynthetic 7(S)-chloro substitution of lincomycin.
+  snapshot_sha256: 58c11d653119143fb67c16178ac68280b6662f11d1e947e4bb4b497533fd4ca6
+- evidence_id: brands-sobelin
+  kind: primary_source
+  reference: https://www.fachinfo.de/fi/detail/002592; https://www.fachinfo.de/fi/detail/002595/sobelin-r-300-mg
+  locator: Manufacturer-authored July 2026 Fachinformation, sections 1 and 2.
+  accessed_at: '2026-10-21T13:28:12Z'
+  support: partial
+  summary: Pfizer Sobelin Granulat contains clindamycin palmitate hydrochloride, while
+    Sobelin 300 mg capsules contain hydrochloride monohydrate; strengths are expressed
+    as clindamycin equivalents. The public original manufacturer documents establish
+    Sobelin as a brand spanning material forms. Older Pfizer URLs redirect to a product
+    index; the ingredient conclusion uses the inspected Fachinfo text, not a search
+    snippet.
+  snapshot_sha256: c557d5a1e1224b9885e1c5763593a75257c384cdb03d559c92d4cab0e03fe690
+- evidence_id: cdc-701
+  kind: database
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=701&PanelID=1125
+  locator: Full isolate entry, clindamycin row, method paragraph and footnote 3.
+  accessed_at: '2026-10-21T13:26:58Z'
+  support: supports
+  summary: 'AR Bank 0701, TLZD-01, Staphylococcus aureus, SAMN11953851: clindamycin
+    modal MIC 0.5 micrograms/mL, interpretation R, broth microdilution, CLSI2025 M100S35.
+    Inducible clindamycin resistance was detected. Native mg/L is numerically equivalent.
+    The site describes ordinary one-dilution variability and separates propagation
+    conditions from AST methods. It does not identify the bulk test-material salt
+    or a causal clindamycin-resistance gene.'
+  snapshot_sha256: f95feb4c0c7bafc05fefffab8f8a8cb0c0481720cbe8ea1e268a1871d81cdf0d
+- evidence_id: cdc-729
+  kind: database
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=729&PanelID=1125
+  locator: Full isolate entry, clindamycin row, method paragraph and footnote 3.
+  accessed_at: '2026-10-21T13:26:58Z'
+  support: supports
+  summary: 'AR Bank 0729, TLZD-29, Staphylococcus haemolyticus, SAMN11953879: clindamycin
+    modal MIC 2 micrograms/mL, interpretation R, broth microdilution, CLSI2025 M100S35.
+    Inducible clindamycin resistance was detected. Native mg/L is numerically equivalent.
+    The site describes ordinary one-dilution variability and separates propagation
+    conditions from AST methods. It does not identify the bulk test-material salt
+    or a causal clindamycin-resistance gene.'
+  snapshot_sha256: 6c512be94f60c0edd6d7eede2d48bf5c0dc0b148e2966516fc02b7bf066d3478
+- evidence_id: cdc-730
+  kind: database
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=730&PanelID=1125
+  locator: Full isolate entry, clindamycin row, method paragraph and footnote 3.
+  accessed_at: '2026-10-21T13:26:58Z'
+  support: supports
+  summary: 'AR Bank 0730, TLZD-30, Staphylococcus haemolyticus, SAMN11953880: clindamycin
+    modal MIC 2 micrograms/mL, interpretation R, broth microdilution, CLSI2025 M100S35.
+    Inducible clindamycin resistance was not detected. Native mg/L is numerically
+    equivalent. The site describes ordinary one-dilution variability and separates
+    propagation conditions from AST methods. It does not identify the bulk test-material
+    salt or a causal clindamycin-resistance gene.'
+  snapshot_sha256: 2295a2629a8148d6d5a567fa616320f4b68c28c8d04a0bf63bfc074cf4998e05
+- evidence_id: biosamples
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/browser/api/xml/SAMN11953851; https://www.ebi.ac.uk/ena/browser/api/xml/SAMN11953879;
+    https://www.ebi.ac.uk/ena/browser/api/xml/SAMN11953880
+  locator: Complete INSDC sample XML entries.
+  accessed_at: '2026-10-21T13:26:59Z'
+  support: supports
+  summary: The three accessions independently resolve to panel IDs TLZD-01, TLZD-29
+    and TLZD-30. Species/taxon IDs are respectively S. aureus/1280 and S. haemolyticus/1283
+    twice. These corroborate the exact CDC linkage; missing sample metadata is not
+    replaced with assumptions.
+  snapshot_sha256: 4f9ba5f3a5cac639a805109d38211ec29d397d26f13cfd4d60e71191063551fa
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB m_tuberculosis/modulome/Rv1988; e_coli/precise1k; s_aureus/staph_precise108
+  locator: Actual catalog discovery and four searches before web research.
+  accessed_at: '2026-10-21T13:30:30Z'
+  support: context_only
+  summary: erm(37) resolves to M. tuberculosis Rv1988 with no matching iModulon; rrl
+    returns no gene or module in the three queried datasets. These are representative
+    gene-context checks, not the CDC isolates or physical binding/phenotype evidence.
+    S. haemolyticus has no applicable catalog dataset. No negative biological conclusion
+    follows from absent hits.
+  snapshot_sha256: b86babdb4d73a757508c483a9d3507b3eb12916486161c64da09d987cab26afb
+- evidence_id: card-resistance
+  kind: database
+  reference: https://card.mcmaster.ca/aro/0000066 and all 62 determinant URLs enumerated
+    in 311-card-audit.json
+  locator: Every determinant definition, clindamycin parent relation and mechanism
+    category inspected; raw/native rows compared.
+  accessed_at: '2026-10-21T13:30:30Z'
+  support: supports
+  summary: All 62 determinant pages explicitly assert clindamycin resistance and reproduce
+    the native alteration, protection or inactivation category. This validates database
+    provenance, not each underlying primary experiment. Erm/Cfr methylation and rRNA
+    mutations are distinguished from ABC-F protection and Lnu inactivation. No determinant
+    is assigned to a CDC isolate from these generic relations. The source label Clostridium
+    perfringes cplR retains an upstream spelling error, while its sequence organism
+    says C. perfringens; its stable accession is unambiguous. Several generic Erm
+    descriptions are templated, so they do not establish detailed individual enzymology.
+  snapshot_sha256: bdcfe1758dae2093c8ac25edc5a61c605332e5378fc7bfa64ef28ee931bc4043
+- evidence_id: card-target
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3000754; https://card.mcmaster.ca/aro/0000066;
+    https://card.mcmaster.ca/ontology/35999
+  locator: Complete target/compound entries and canonical target-protection term.
+  accessed_at: '2026-10-21T13:28:58.683620Z'
+  support: supports
+  summary: ARO3000754 denotes bacterial 23S rRNA peptidyl-transferase activity and
+    the source compound points to it via targeted_by_antibiotic. The canonical protection
+    page confirms ARO0001003. An attempted numeric /aro/0001003 resolver instead returned
+    UBERON0001003 epidermis; that namespace collision is excluded and does not demonstrate
+    a native or maintained mapping defect.
+  snapshot_sha256: 43d0e6438711e041edfb56cf844cd58f98f459ef3e0dd4c80877356029b0057e
+- evidence_id: ribosome-primary
+  kind: primary_source
+  reference: PMID:20876128; DOI:10.1073/pnas.1007988107; https://pmc.ncbi.nlm.nih.gov/articles/PMC2951456/
+  locator: Complete main article read through Experimental Procedures; Figures 1 and
+    4 visually inspected.
+  accessed_at: '2026-10-21T13:27:35Z'
+  support: supports
+  summary: E. coli MRE600 ribosome crystals were soaked overnight with Sigma clindamycin
+    at 100 micromolar after DMSO stock dilution. The original structure directly locates
+    clindamycin at 23S rRNA, with specific contacts and electron density in Figure4;
+    PDB3OFZ is the clindamycin-bound 50S model. Interference with A-site aminoacyl-tRNA
+    is a structural inference from steric overlap, not a measured clindamycin-tRNA
+    association constant. Telithromycin/erythromycin footprinting is a separate experiment.
+    The main article does not certify the bulk clindamycin salt.
+  snapshot_sha256: d7aa8eb290aa7cea4677ac459a762ca02337d8b544dbb97a3048bd9e40a4b0b5
+- evidence_id: adopted-exotoxin
+  kind: primary_source
+  reference: PMID:11691576; DOI:10.1016/S0924-8579(01)00413-7
+  locator: Complete original indexed abstract.
+  accessed_at: '2026-10-21T13:27:00Z'
+  support: context_only
+  summary: The study tested sub- and suprainhibitory antibiotic concentrations in
+    fourteen susceptible S. pyogenes isolates and measured pyrogenic exotoxin A/B
+    production. It supports bounded antibacterial and toxin-production context, not
+    a direct toxin-binding target, exact salt identification or a universal clinical
+    superiority claim. Full methods/tables were not inspected.
+  snapshot_sha256: 40230ee960dea390263e79281c2119c3ce738a58bd2a02c5ea0734e4e95f598b
+- evidence_id: adopted-induction
+  kind: primary_source
+  reference: PMID:18695329; DOI:10.4103/0255-0857.42041
+  locator: Complete original indexed abstract.
+  accessed_at: '2026-10-21T13:27:00Z'
+  support: context_only
+  summary: The original study collected 522 clinical Gram-positive isolates during
+    November2006–April2007 and examined erythromycin resistance and inducible clindamycin
+    resistance, with relatively frequent induction in MRSA. Its local clinical recommendation
+    is not generalized to all countries, all staphylococci or the three CDC isolates.
+    Full methods/tables were not inspected.
+  snapshot_sha256: 40230ee960dea390263e79281c2119c3ce738a58bd2a02c5ea0734e4e95f598b
+- evidence_id: adopted-sewage
+  kind: primary_source
+  reference: PMID:24310902; DOI:10.1007/s11356-013-2333-2
+  locator: Complete original indexed abstract.
+  accessed_at: '2026-10-21T13:27:00Z'
+  support: context_only
+  summary: The analytical sewage study measured clindamycin and clindamycin sulfoxide
+    and rejected its proposed back-transformation explanation after finding the metabolite
+    stable. It is environmental-analysis context, not a producer, bacterial target
+    or exact antimicrobial assay. Full text was not inspected.
+  snapshot_sha256: 40230ee960dea390263e79281c2119c3ce738a58bd2a02c5ea0734e4e95f598b
+- evidence_id: inclusive-search
+  kind: search
+  reference: 311-inclusive-hits.txt
+  locator: Ignored-inclusive local identifier, label, full key and ARO searches.
+  accessed_at: '2026-10-21T13:30:30Z'
+  support: context_only
+  summary: The searched native/source/config/curation/docs/review/report scope contains
+    the native rows, worklist and an unrelated AST active-moiety map/context. No exact
+    curator override or separate maintained evidence overlay was found for this record
+    in that scope. This does not exclude other public literature.
+  snapshot_sha256: 8637fe01af3c273a87630db1b3bd0774784f4f27801f7c8fbd849598010ccf0e
+  search_scope: rg --no-ignore --hidden -n -F for CHEBI:3745, clindamycin, KDLRVYVGXIQJDK-AWPVFWJPSA-N
+    and ARO:0000066 across data, curation, conf, scripts, src, docs, .claude, reviews
+    and reports. Public exact-compound official and primary sources inspected on 2026-10-21.
+- evidence_id: validation
+  kind: validation
+  reference: 311-schema.log; 311-strict.log; 311-chemistry.json; 311-xref-chemistry.json
+  locator: Actual focused checks and independent molecular diagnostics.
+  accessed_at: '2026-10-21T13:30:30Z'
+  support: supports
+  summary: Schema and strict validation pass. Native and official molecular graphs
+    match. The optional absent formula/mass fields are not treated as errors. All
+    seventeen captured input hashes, including the original thirteen, remain unchanged.
+  snapshot_sha256: d2ff4c55bc423d9c808c3dbb6535538fd94d0dd28577b35270de617345835380
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral identity, stereochemistry and source identifiers
+  outcome: supported
+  summary: The graph and exact chemical/drug xrefs inspected are coherent. Registry
+    access limitations are bounded and do not become inferred contradictions. Chemical
+    parents and semisynthetic definition are appropriate.
+  target_ids:
+  - CHEBI:3745
+  evidence_ids:
+  - native
+  - identity
+  - xref-limits
+  - parents-role
+  - validation
+- assessment_id: names
+  area: identity
+  topic: Typed aliases versus product brands
+  outcome: concern
+  summary: Most aliases are source-attested chemical names or abbreviations; Cleocin
+    (TN), Cleocin and Sobelin require explicit brand typing to preserve product/material
+    scope.
+  target_ids:
+  - CHEBI:3745
+  evidence_ids:
+  - owners
+  - brands-cleocin
+  - brands-sobelin
+- assessment_id: activity
+  area: evidence
+  topic: Three exact CDC isolate observations
+  outcome: supported
+  summary: All source values, units, modal-method descriptions, CLSI version, strain/species/BioSample
+    links and induction notes match. In particular 0.5 mg/L with induced resistance
+    is faithfully reported, not corrected using a context-free numerical breakpoint.
+    No specific resistance gene or bulk salt is inferred.
+  target_ids:
+  - CHEBI:3745
+  evidence_ids:
+  - cdc-701
+  - cdc-729
+  - cdc-730
+  - biosamples
+- assessment_id: resistance
+  area: evidence
+  topic: Sixty-two qualified CARD assertions
+  outcome: supported
+  summary: Every native database relation and mechanism category agrees with its current
+    source. This is provenance validation at database evidence depth, with no blanket
+    promotion to primary mechanistic proof or linkage to the CDC strains.
+  target_ids:
+  - CHEBI:3745
+  evidence_ids:
+  - owners
+  - card-resistance
+  - card-target
+  - adapter
+- assessment_id: target
+  area: evidence
+  topic: Bacterial 23S rRNA binding
+  outcome: supported
+  summary: The database assertion is correctly typed as nucleic acid and honestly
+    flags primary evidence needed. The independently inspected original structure
+    supports a future qualified primary target entry; no protein target is substituted
+    for catalytic rRNA. Structural tRNA-interference inference and other-drug footprinting
+    remain distinct.
+  target_ids:
+  - CHEBI:3745
+  evidence_ids:
+  - card-target
+  - ribosome-primary
+  - adapter
+- assessment_id: completeness
+  area: completeness
+  topic: Optional mechanism and activity enrichment
+  outcome: unknown
+  summary: Missing optional formula/masses, mode-of-action prose, causal graph, producer
+    and regulatory fields do not independently constitute defects in this SEEDED record.
+    Original rRNA structural evidence is a concrete optional enrichment opportunity.
+    All four adopted publication leads have explicit dispositions and read depths.
+  target_ids:
+  - CHEBI:3745
+  evidence_ids:
+  - owners
+  - ribosome-primary
+  - adopted-exotoxin
+  - adopted-induction
+  - adopted-sewage
+findings:
+- finding_id: F1
+  issue_key: clindamycin-product-brands-exact-synonym-type
+  category: identity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Type Cleocin and Sobelin as product brands
+  description: synonyms[4], synonyms[10] and synonyms[15] type Cleocin (TN), Cleocin
+    and Sobelin as EXACT_SYNONYM. Official manufacturer documents identify these as
+    brands covering hydrochloride and ester formulations, with strengths expressed
+    as clindamycin equivalents. Retain their discoverability and provenance using
+    BRAND_NAME or an equivalently explicit product-context representation through
+    the maintained source/seeder path. The neutral clindamycin graph is correct and
+    should not be replaced by a salt or a product mixture.
+  target_ids:
+  - CHEBI:3745
+  field_paths:
+  - synonyms[4].synonym_type
+  - synonyms[10].synonym_type
+  - synonyms[15].synonym_type
+  evidence_ids:
+  - owners
+  - brands-cleocin
+  - brands-sobelin
+  - identity
+  rule_id: 'native-review-checklist: chemical identity and synonym scope; review-yaml-record:
+    preserve scope'
+  native_severity: minor
+  normalization_reason: 'A bounded alias typing issue: official products span distinct
+    material forms, while the stable native chemical identity and scientific assertions
+    remain coherent.'
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source alias type for Cleocin (TN)
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source alias context for Cleocin and Sobelin
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintain source-aware alias semantics
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproduce explicit brand typing
+actions:
+- action_id: A1
+  description: Preserve the three brand aliases with explicit product scope through
+    the maintained generation path.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:3745
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source alias type for Cleocin (TN)
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source alias context for Cleocin and Sobelin
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintain source-aware alias semantics
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproduce explicit brand typing
+  acceptance_checks:
+  - Cleocin (TN), Cleocin and Sobelin remain searchable and source-attributed but
+    are typed BRAND_NAME or equivalently qualified as product names.
+  - Do not collapse hydrochloride, phosphate or palmitate formulations into the neutral
+    chemical graph. Reseed through the validated workflow and rerun focused schema/strict
+    and source-reproduction checks.
+- action_id: A2
+  description: Optionally attach the original clindamycin-bound rRNA structure as
+    qualified primary mechanism evidence.
+  finding_ids: []
+  target_ids:
+  - CHEBI:3745
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/clindamycin.yaml
+    role: Curator-owned primary literature evidence additions
+  acceptance_checks:
+  - Use PMID20876128 and retain E. coli MRE600, crystal-soaking material/context and
+    the bound-rRNA observation. Keep structurally inferred A-site interference separate
+    from a directly measured biochemical endpoint.
+  - Do not transfer the telithromycin/erythromycin footprinting experiment or infer
+    bulk clindamycin salt composition. Preserve the database provenance and update
+    evidence status only with the appropriate native writer and checks.
+limitations:
+- HMDB and DrugBank direct access returned 403; the Reaxys graph was not accessed
+  through paid services. Those xrefs remain source-attested. Multiple independent
+  official chemical graphs corroborate the native identity.
+- All four adopted original abstracts were read. PMID20876128 main full text and Figures1/4
+  were inspected; its supporting information was not read. The other three adopted
+  studies remain at indexed-abstract depth.
+- All sixty-two CARD determinant definitions, clindamycin relations and mechanism
+  classes were inspected, but the complete underlying experimental literature for
+  each determinant was not re-audited. Native database qualifications are preserved.
+- CDC reports drug-name-level modal MICs and versioned interpretations without an
+  exact bulk salt certificate, complete AST preparation protocol or demonstrated clindamycin-resistance
+  gene for these isolates. Propagation conditions are not substituted for AST conditions.
+- The original crystallographic paper identifies Sigma clindamycin and the bound active
+  molecule, but not a bulk-material counterion certificate. No exact clinical formulation,
+  natural producer or universal bacterial susceptibility is inferred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
