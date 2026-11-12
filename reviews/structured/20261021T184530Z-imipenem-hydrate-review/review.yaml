@@ -1,0 +1,520 @@
+schema_version: 1.0.0
+review_id: 20261021T184530Z-imipenem-hydrate-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of imipenem hydrate
+started_at: '2026-10-21T18:07:39Z'
+finished_at: '2026-10-21T18:45:30Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The exact monohydrate identity, configured stereochemistry, carbapenem classification
+  and antibacterial role are supported by independent chemical, pharmacopeial and
+  regulatory sources. Original patent documents concern the crystalline monohydrate.
+  Native INN usage is broader than hydration-specific identity, and combination-product
+  and active-moiety evidence remain explicitly scoped. No confirmed native defect
+  was established. Scientific assessment retains the stated evidence limits; full
+  verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/imipenem-hydrate.yaml
+    sha256: bcf102425264d03a417b81a59aa45146a1c55d25fbed71c32db0b14478983525
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:51799
+  path: data/antibiotics/antibacterial/imipenem-hydrate.yaml
+  label: imipenem hydrate
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Exact identity, definition, synonyms, parents, roles and adopted lead
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: Role labels
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record and role policy
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Class and role configuration
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 549; all original 13 captured inputs
+    preserved. Actual ChEBI owners identified before assessment were already captured.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:51799
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:51799
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    549
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:51799
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/imipenem-hydrate.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:51799
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/imipenem-hydrate.yaml --out /private/tmp/am-review-session/549-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent exact chemical authority comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/549-authority-check.py
+    > /private/tmp/am-review-session/549-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Nine encodings preserve complete key, aggregate formula, one water and
+    three configured stereocentres; explicit protonation/tautomer normalization permits
+    reciprocal chirality-aware mapping.
+  target_ids:
+  - CHEBI:51799
+- check_id: ledger
+  name: Source, history and input audit
+  command: .venv/bin/python /private/tmp/am-review-session/549-ledger.py > /private/tmp/am-review-session/549-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All original 13 hashes unchanged; four chronological history events, deterministic
+    source mint, zero adopted PMIDs and all four document links checked.
+  target_ids:
+  - CHEBI:51799
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:51799
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:51799
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:51799
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:51799
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:51799
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:51799
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:51799
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:51799
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:51799
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/imipenem-hydrate.yaml
+  locator: Entire native record, all synonyms, parent, roles, structure, two chemical
+    xrefs, four document links, source concept and history
+  accessed_at: '2026-10-21T18:26:13Z'
+  support: supports
+  summary: The SEEDED/EXACT record represents imipenem monohydrate with two configured
+    core centres and a configured hydroxyethyl centre. It has no definition, native
+    molecular target, pathway, MIC, resistance, clinical assertion, producer object
+    or causal graph. Plain imipenem is specifically typed INN; the two other names
+    specify monohydrate or acid-water 1:1.
+- evidence_id: identity
+  kind: validation
+  reference: CHEBI:51799;pubchem.compound:5282372;pubchem.compound:168341515
+  locator: 549-authority-chemistry.json; current ChEBI JSON/mol and PubChem key/CAS
+    lookups; manifests549-fetch.json
+  accessed_at: '2026-10-21T18:26:13Z'
+  support: supports
+  summary: Nine native/current encodings agree at GSOSVVULSKVSLQ-JJVRHELESA-N, aggregate
+    C12H19N3O5S and net zero charge. Both PubChem CIDs preserve one water and three
+    stereocentres; one encodes a zwitterionic amidine/carboxylate representation.
+    Raw graphs differ, but explicit uncharging plus tautomer canonicalization retaining
+    tetrahedral and bond stereo gives reciprocal chirality-aware matches. Native masses
+    agree at declared precision.
+  snapshot_sha256: c1f2073362706ed1c02cb733962b150babe8cef0c08eac79c9882181275148d2
+- evidence_id: terms
+  kind: database
+  reference: CHEBI:46633;CHEBI:33281;CHEBI:33282;CAS:74431-23-5;beilstein:8174596
+  locator: 549-chebi-46633.json;549-chebi-51799.json;549-pubchem-cas.json
+  accessed_at: '2026-10-21T18:26:13Z'
+  support: supports
+  summary: Current carbapenems definition fits the substituted carbapenem skeleton;
+    antibacterial and antimicrobial role definitions resolve. CAS74431-23-5 agrees
+    with exact hydrate structures and pharmacopeial identification. Current ChEBI
+    reproduces Beilstein8174596; the licensed registry structure was not independently
+    accessed.
+  snapshot_sha256: 985b1f0b750bc1ea1d2e028f86103dd802412e36a54b761c4c0b1bcfd09e0528
+- evidence_id: patents
+  kind: primary_source
+  reference: patent:EP6639;patent:IE48356;patent:JP55009090
+  locator: 549-EP6639.pdf, complete converted description, Example1 and claim; actual
+    page2 structure viewed;549-IE48356.html description/Example1/claim;549-JP55009090.html
+    abstract/family metadata
+  accessed_at: '2026-10-21T18:26:13Z'
+  support: supports
+  summary: EP0006639A1 and IE48356 describe crystalline N-formimidoyl thienamycin
+    monohydrate, powder diffraction identification and preparation by crystallization.
+    The EP planar diagram is not an independent absolute stereochemical assignment.
+    JP55009090 resolves to the same invention as JPS559090A, but only its abstract/family
+    metadata were read. These are relevant document links; therapeutic boilerplate
+    is not a new antibacterial assay or a current approved regimen.
+  snapshot_sha256: 268cd684e059d15d84feca7d097d479912dca662cd986f65b4073e6834354390
+- evidence_id: pharmacopeia
+  kind: primary_source
+  reference: Japanese Pharmacopoeia XVI Imipenem Hydrate;USP Imipenem2019 preview
+  locator: 549-pmda.pdf printedp952/PDF640, full exact monograph page visually inspected;549-usp.html
+    public preview;549-fetch2.json
+  accessed_at: '2026-10-21T18:26:13Z'
+  support: supports
+  summary: The official Japanese monograph explicitly gives 5R,6S and hydroxyethyl1R,
+    formula C12H17N3O4S.H2O and CAS74431-23-5; its diagram and water specification
+    support the exact hydrate. Potency is expressed as anhydrous imipenem. The public
+    USP preview is titled Imipenem but distinguishes monohydrate from anhydrous formula/CAS;
+    the current full licensed monograph was not read.
+  snapshot_sha256: ec9387026e4dac9571d0db98db46909f53faf91cf6426a063da14e37eaf29f2e
+- evidence_id: naming
+  kind: primary_source
+  reference: WHO Recommended INN List24;FDA UNII71OTZ9ZE0A
+  locator: 549-who-rl24.pdf printedp6 actual page viewed;549-gsrs.html;549-fetch2.json/549-fetch3.json
+  accessed_at: '2026-10-21T18:26:13Z'
+  support: supports
+  summary: WHO gives imipenem the anhydrous formula C12H17N3O4S. FDA substance naming
+    uses preferred IMIPENEM for the monohydrate identity and distinguishes hydrate
+    aliases. The native INN annotation is therefore read as a drug-naming convention,
+    not as an exact hydration equivalence; no EXACT_SYNONYM misclassification is asserted
+    for that field.
+  snapshot_sha256: fd64a741109977e38b09496d877b86be6f8f9c99c42a59ea170546c6b6edd8eb
+- evidence_id: regulatory
+  kind: primary_source
+  reference: DailyMed setid46f54df9-5afe-430c-aa19-0d84c2044b0b
+  locator: 549-spl.html Description and mechanism/microbiology passages inspected;549-fetch2.json
+  accessed_at: '2026-10-21T18:26:13Z'
+  support: supports
+  summary: The label describes imipenem monohydrate and supplies500mg anhydrous imipenem
+    equivalent as530mg monohydrate in a combination with cilastatin sodium and bicarbonate.
+    This supports the hydrated antibacterial ingredient and distinguishes it from
+    the whole formulation. Label PBP/cell-wall statements concern imipenem active-moiety
+    pharmacology; thienamycin ancestry is not evidence that an organism biosynthesizes
+    this semisynthetic hydrate.
+  snapshot_sha256: 90cafec2de230e5432bb634a4cb5abb7b88325344d4c0cccbc52a5f1d65fea1e
+- evidence_id: documents
+  kind: database
+  reference: wikipedia.en:Imipenem
+  locator: 549-wikipedia.html opening, identifiers, synthesis and cilastatin context
+    read
+  accessed_at: '2026-10-21T18:26:13Z'
+  support: supports
+  summary: The link resolves to a broader drug article that discusses imipenem and
+    its clinical combination. It is retained at document scope and is not used to
+    settle exact hydration, product equivalence or primary molecular-target evidence.
+  snapshot_sha256: d9ea41c2143b6a6e1157289c43f95a7d3aaf13b7aee23691da9a872e24b62511
+- evidence_id: owners
+  kind: validation
+  reference: data/raw/chebi_antimicrobials.tsv;data/raw/chebi_role_names.tsv;scripts/extract_source_inventory.py;scripts/seed_from_sources.py;curation/decisions.tsv;conf/sources.yaml
+  locator: 549-raw-rows.json;549-owners-search.json;549-source-audit.json
+  accessed_at: '2026-10-21T18:26:13Z'
+  support: supports
+  summary: Exact native ChEBI row and actual owners were read. All original13 source
+    hashes are unchanged; four chronological history events and deterministic minted
+    identifier agree. No PMID is adopted in the native record or source row.
+  snapshot_sha256: db606cc10857420214ca264a3534cf66f23dc321d23edc25a5a9c257e190ca53
+- evidence_id: search
+  kind: search
+  reference: Exact imipenem-monohydrate public-source discovery
+  locator: 549-discovery.json;549-fetch*.json;549-source-audit.json
+  accessed_at: '2026-10-21T18:26:13Z'
+  support: supports
+  summary: The12-result exact hydrate query was screened by title and original patent
+    and exact pharmacopeial/regulatory sources followed. Native document links were
+    each resolved at the declared depth. This bounded search does not establish absence
+    of additional hydrate experiments or mechanisms.
+  search_scope: Ignored-inclusive owner label, key and identifier search; EuropePMC
+    exact imipenem-monohydrate query; original patent families; exact official ChEBI/PubChem,
+    WHO, PMDA, USP preview, FDA substance and DailyMed routes.
+  snapshot_sha256: db606cc10857420214ca264a3534cf66f23dc321d23edc25a5a9c257e190ca53
+assessments:
+- assessment_id: chemical
+  area: identity
+  topic: Exact monohydrate constitution and configured stereochemistry
+  outcome: supported
+  summary: Native graph, independent current chemical encodings and official monograph
+    agree. Charge/tautomer representation differences preserve one water and all configured
+    carbon stereochemistry.
+  target_ids:
+  - CHEBI:51799
+  evidence_ids:
+  - identity
+  - pharmacopeia
+  - patents
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical names, structural parent and identifiers
+  outcome: supported
+  summary: The hydration-specific exact names, carbapenem parent and CAS agree. INN
+    is explicitly distinguished from exact-form naming; direct Beilstein verification
+    remains limited to current source attribution.
+  target_ids:
+  - CHEBI:51799
+  evidence_ids:
+  - record
+  - terms
+  - naming
+  - pharmacopeia
+- assessment_id: activity
+  area: scope
+  topic: Hydrated antibacterial ingredient versus combination formulation
+  outcome: supported
+  summary: Regulatory description and pharmacology support the retained qualitative
+    roles. Product doses are expressed in active imipenem equivalents; no combination-product
+    approval, quantitative MIC or clinical regimen is transferred to the isolated
+    exact structure.
+  target_ids:
+  - CHEBI:51799
+  evidence_ids:
+  - regulatory
+  - record
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional exact-form molecular-target detail
+  outcome: unknown
+  summary: No target is natively asserted. Regulatory PBP context is not promoted
+    to new primary experimental target evidence. No protein-specific primary follow-up
+    was undertaken, so the structured bacterial adapter was not triggered.
+  target_ids:
+  - CHEBI:51799
+  evidence_ids:
+  - record
+  - regulatory
+  - search
+- assessment_id: producer
+  area: scope
+  topic: Semisynthetic lineage versus biosynthesis
+  outcome: supported
+  summary: The native record does not claim a producer. Label reference to thienamycin
+    from Streptomyces cattleya is not transferred to imipenem-hydrate biosynthesis.
+  target_ids:
+  - CHEBI:51799
+  evidence_ids:
+  - record
+  - regulatory
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained sources and complete native document disposition
+  outcome: supported
+  summary: All13 inputs, source mint and four history events remain consistent. The
+    three patent links are related exact-monohydrate documents; Wikipedia is a broader
+    document. There are no adopted PMID leads requiring disposition.
+  target_ids:
+  - CHEBI:51799
+  evidence_ids:
+  - owners
+  - patents
+  - documents
+findings: []
+actions: []
+limitations:
+- Direct licensed Beilstein8174596 and the current full USP monograph were not accessed.
+  The public2019 USP preview and official Japanese Pharmacopoeia XVI were inspected
+  at the stated depth.
+- The Japanese patent was read only at abstract and family-metadata depth. Irish patent
+  text was read through its public transcription; the EP original PDF supplied the
+  inspected primary preparation and claim. Numerical diffraction peaks were not independently
+  transcribed or reanalysed.
+- WHO INN imipenem names the anhydrous active moiety, whereas some pharmacopeial/FDA
+  naming conventions use Imipenem for hydrate material. The native INN type is not
+  treated as an exact-form equivalence assertion.
+- The DailyMed description and mechanism/microbiology portions were inspected, not
+  every clinical trial, warning or dosing passage. No original protein-binding experiment
+  or hydrate-specific quantitative antimicrobial assay was adopted.
+- Discovery was bounded and does not establish absence of later exact-form evidence.
+  PubChem neutral/zwitterion encodings were compared through explicit normalization
+  while preserving raw structures, water stoichiometry and stereochemistry.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record, maintained source or saved review was edited. All original13 captured
+  input hashes remain unchanged.
+- Standalone chemistry uses the019 interpreter against055; native schema, strict and
+  ledger checks use055.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
