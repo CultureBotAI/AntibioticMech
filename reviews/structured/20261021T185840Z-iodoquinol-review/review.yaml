@@ -1,0 +1,892 @@
+schema_version: 1.0.0
+review_id: 20261021T185840Z-iodoquinol-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Iodoquinol: supported exact identity with an overbroad clinical-use sentence'
+started_at: '2026-10-21T18:21:48Z'
+finished_at: '2026-10-21T18:58:40Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The neutral 5,7-diiodoquinolin-8-ol graph and accessible asserted chemical
+  groundings agree. Original pure-compound antibacterial experiments and a separately
+  inspected protozoal experiment support the retained roles. One minor definition
+  correction should qualify the broad drug-of-choice wording by its intraluminal treatment
+  context. All ten adopted leads resolve, but nine historical items remain metadata-level;
+  the adopted 2008 formulation study was read in full and is not misrepresented as
+  isolated-compound proof.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/iodoquinol.yaml
+    sha256: 76050340cc005efff8489268f3cbfdfe8b6b615bf1db1c8728800b20e59122e6
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+targets:
+- target_id: CHEBI:5950
+  path: data/antibiotics/antibacterial/iodoquinol.yaml
+  label: iodoquinol
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 553; one exact native record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:5950
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Executed against 056; chemistry used
+    existing 019 RDKit, while schema/strict used 056.
+  target_ids:
+  - CHEBI:5950
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    553
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against 056; chemistry used
+    existing 019 RDKit, while schema/strict used 056.
+  target_ids:
+  - CHEBI:5950
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/iodoquinol.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against 056; chemistry used
+    existing 019 RDKit, while schema/strict used 056.
+  target_ids:
+  - CHEBI:5950
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/iodoquinol.yaml --out /private/tmp/am-review-session/553-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:5950
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:5950
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:5950
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:5950
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:5950
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:5950
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:5950
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:5950
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:5950
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/iodoquinol.yaml
+  locator: 'Entire native record: definition, all 35 synonyms, two parents, two roles,
+    structure, five chemical links, three drug links, document link and four history
+    events'
+  accessed_at: '2026-10-21T18:44:21Z'
+  support: supports
+  summary: CHEBI:5950 is EXACT, SEEDED and ANTIBACTERIAL. It denotes neutral achiral
+    C9H5I2NO, key UXZFQZANDVDGMM-UHFFFAOYSA-N. Twenty historical names are explicitly
+    BRAND_NAME rather than exact chemical synonyms. No molecular target, resistance,
+    quantitative activity_spectrum, causal graph, producer or clinical-product object
+    is asserted.
+  snapshot_sha256: 76050340cc005efff8489268f3cbfdfe8b6b615bf1db1c8728800b20e59122e6
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv#CHEBI:5950
+  locator: Complete ChEBI row 196, readiness row 1430 and exact curator/decision lookups
+  accessed_at: '2026-10-21T18:44:21Z'
+  support: context_only
+  summary: The ChEBI row supplies all identity, synonym, role and cross-reference
+    fields plus ten literature leads. No exact curator or decision override was found.
+    Original 13 captures were preserved and expanded to 21 context/owner inputs before
+    judgment. The definition is source-owned; future correction belongs in maintained
+    extraction/inventory handling and regeneration.
+  snapshot_sha256: f3f2ba47942c43dc3147357d0dad7b91dc6953153010ec66e0e8c9965f56ab77
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/553-context-search.txt
+  locator: Ignored-inclusive initial and owner-follow-up searches; bounded public
+    discovery
+  accessed_at: '2026-10-21T18:44:21Z'
+  support: context_only
+  summary: Identifier, label and slug searches included hidden and ignored files.
+    Exact-compound Europe PMC discovery found additional original antibacterial and
+    protozoal leads. Search results were used for discovery, not as substitutes for
+    inspected experimental text.
+  snapshot_sha256: 9bfd6caa991019d060181e392bb9067da24f724b563b8824a20989299421da77
+  search_scope: Initial 553-local-hits.txt plus rg --no-ignore --hidden follow-up
+    in worktree 056; exact public queries in 553-fetch1/5 manifests.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/5950/
+  locator: Complete current CHEBI:5950 response
+  accessed_at: '2026-10-21T18:38:36.831955Z'
+  support: supports
+  summary: Current ChEBI reproduces the native chemical graph, names, roles, parents
+    and broad clinical-use wording. This establishes provenance; an ontology definition
+    is not independently sufficient to make a time-independent treatment-preference
+    statement.
+  snapshot_sha256: b1c9ebc31425aad5959016849ec1a4062efb5b0328f83dbe6eba07190b315e52
+- evidence_id: chemspider
+  kind: authority
+  reference: https://www.chemspider.com/Chemical-Structure.3597.html
+  locator: Current ChemSpider 3597 structured identity and molecular encodings
+  accessed_at: '2026-10-21T18:38:37.575215Z'
+  support: supports
+  summary: The page denotes diiodohydroxyquinoline and supplies the native Standard
+    InChI/key and SMILES. Its separately labeled nonstandard InChIKey is not mistaken
+    for a different standard structure.
+  snapshot_sha256: 857d83ddac425f80957a0c5ac0670eabd168d66505d96e0c0fc18b9623c2c8e2
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/C07636/mol
+  locator: C07636 molecular graph and complete linked entry
+  accessed_at: '2026-10-21T18:38:36.837206Z'
+  support: supports
+  summary: The KEGG compound molfile reproduces the exact native graph. D00581 is
+    separately retained as a drug-level association and names iodoquinol/diiodohydroxyquinoline
+    and the trade name Yodoxin.
+  snapshot_sha256: ae90dfb8ca95a9a2f600ef94c7e40846b8a7c61c914c08d5e8f165eede070b58
+- evidence_id: drugcentral
+  kind: authority
+  reference: https://drugcentral.org/drugcard/1457
+  locator: DrugCentral 1457 complete identity section and correct molfile endpoint
+  accessed_at: '2026-10-21T18:39:24.170675Z'
+  support: supports
+  summary: The current drug card denotes iodoquinol and lists the matching molecular
+    identity and CAS. Its downloaded molfile also agrees, although drug_xrefs semantics
+    do not require exact structural equivalence. Incorrect guessed API paths returned
+    404 before the proper card and /drug/1457/molfile endpoints were retrieved.
+  snapshot_sha256: de890f20931ccad2ebd8e3cd35698f695c6d7f025b3ecdfc233cde109bcee4dc
+- evidence_id: mapping
+  kind: validation
+  reference: /private/tmp/am-review-session/553-map.py
+  locator: 019 RDKit 2026.03.5 executed against 056; native and authority graphs
+  accessed_at: '2026-10-21T18:44:21Z'
+  support: supports
+  summary: Native SMILES/InChI, current ChEBI SMILES/InChI, ChemSpider Standard InChI,
+    KEGG C07636 and DrugCentral 1457 molfile all yield the same full key, formula,
+    zero charge and reciprocal chirality-aware matches. No tetrahedral stereocentre
+    is present. The systematic 5,7-diiodo-8-hydroxyquinoline names fit the retained
+    substitution pattern.
+  snapshot_sha256: 12e4317a1b463d3bca5505ad30ef8c9a8e19ee592f7586bc302dcc197e362d7f
+- evidence_id: term37142
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/37142/
+  locator: Current CHEBI:37142 term definition
+  accessed_at: '2026-10-21T18:38:37.807823Z'
+  support: supports
+  summary: 'organoiodine compound: An organoiodine compound is a compound containing
+    at least one carbon-iodine bond. The two carbon-iodine bonds and single hydroxyquinoline
+    group support the broader parent.'
+  snapshot_sha256: d66c90d4e6649f525ade520f188508dd51e9dc6aa180dc141a149414081ff73b
+- evidence_id: term38775
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/38775/
+  locator: Current CHEBI:38775 term definition
+  accessed_at: '2026-10-21T18:38:37.815387Z'
+  support: supports
+  summary: 'monohydroxyquinoline: A hydroxyquinoline carrying a single hydroxy substituent.
+    The two carbon-iodine bonds and single hydroxyquinoline group support the broader
+    parent.'
+  snapshot_sha256: 784b56669a60d17e84bb15755705d7bda027e81a251cee262afe281067ba6c7f
+- evidence_id: term33282
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/33282/
+  locator: Current CHEBI:33282 term definition
+  accessed_at: '2026-10-21T18:38:38.067066Z'
+  support: supports
+  summary: 'antibacterial agent: A substance (or active part thereof) that kills or
+    slows the growth of bacteria. Activity is checked separately against exact-compound
+    experimental or clinical evidence.'
+  snapshot_sha256: 20d92ce7e00c204b1753184671c043160821d692438278344335446aadcd5082
+- evidence_id: term35820
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/35820/
+  locator: Current CHEBI:35820 term definition
+  accessed_at: '2026-10-21T18:38:38.087521Z'
+  support: supports
+  summary: 'antiprotozoal drug: Any antimicrobial drug which is used to treat or prevent
+    protozoal infections. Activity is checked separately against exact-compound experimental
+    or clinical evidence.'
+  snapshot_sha256: cb962280a1ab188520b5a1f1227c072ada2c9033f914703219c4b025d3280714
+- evidence_id: lincs
+  kind: validation
+  reference: /private/tmp/am-review-session/553-authority-map.json
+  locator: Exact LSM-25652/HMSL25652 lookup in the preserved official 639-record HMS
+    archive
+  accessed_at: '2026-10-21T18:44:21Z'
+  support: context_only
+  summary: The direct legacy LINCS accession returned 500. No exact identifier was
+    found in the limited official HMS archive, whose hash and original retrieval manifest
+    are recorded. This is not an exhaustive LINCS inventory and does not establish
+    an invalid native link; independent exact verification remains unavailable.
+  snapshot_sha256: 12e4317a1b463d3bca5505ad30ef8c9a8e19ee592f7586bc302dcc197e362d7f
+- evidence_id: pmid1090898
+  kind: database
+  reference: PMID:1090898
+  locator: 'Adopted original metadata/title inspected: Letter: Diiodohydroxyquin and
+    optic atrophy.'
+  accessed_at: '2026-10-21T18:38:36.826070Z'
+  support: context_only
+  summary: 1975 letter; safety context only, no indexed abstract or inspected original
+    text.
+  snapshot_sha256: 75abcffcef53d8769f2b24b70e60f07c49a6210c89efe4d868633e0b94715aab
+- evidence_id: pmid122845
+  kind: database
+  reference: PMID:122845
+  locator: 'Adopted original metadata/title inspected: Letter: Diiodohydroxyquin warning.'
+  accessed_at: '2026-10-21T18:38:36.826070Z'
+  support: context_only
+  summary: 1975 letter; no indexed abstract or inspected original text. It does not
+    become experimental antimicrobial-mechanism evidence.
+  snapshot_sha256: 75abcffcef53d8769f2b24b70e60f07c49a6210c89efe4d868633e0b94715aab
+- evidence_id: pmid126030
+  kind: database
+  reference: PMID:126030
+  locator: 'Adopted original metadata/title inspected: A simple method for the determination
+    of 5,7-diiodoquinolin-8-ol and 5-chloro-7-iodoquinolin-8-ol (clioquinol).'
+  accessed_at: '2026-10-21T18:38:36.826070Z'
+  support: context_only
+  summary: 1975 analytical-method lead, DOI 10.1039/an9750000696; publisher 403. Title
+    distinguishes iodoquinol from clioquinol, but no assay or analytical detail is
+    inferred.
+  snapshot_sha256: 75abcffcef53d8769f2b24b70e60f07c49a6210c89efe4d868633e0b94715aab
+- evidence_id: pmid13513741
+  kind: database
+  reference: PMID:13513741
+  locator: 'Adopted original metadata/title inspected: The effect of diiodohydroxyquin
+    (floraquin) vaginal suppositories on the level of serum protein-bound iodine.'
+  accessed_at: '2026-10-21T18:38:36.826070Z'
+  support: context_only
+  summary: 1958 formulated-product/iodine study, DOI 10.1210/jcem-18-4-417; publisher
+    403. The title corroborates a historical Floraquin association but cannot establish
+    current product status.
+  snapshot_sha256: 75abcffcef53d8769f2b24b70e60f07c49a6210c89efe4d868633e0b94715aab
+- evidence_id: pmid13568180
+  kind: database
+  reference: PMID:13568180
+  locator: 'Adopted original metadata/title inspected: Medical therapy of amebiasis;
+    general aspects; results of diiodohydroxyquinoline.'
+  accessed_at: '2026-10-21T18:38:36.826070Z'
+  support: context_only
+  summary: 1958 historical therapy lead; no indexed abstract or inspected original
+    text. No efficacy estimate or modern treatment ranking is inferred.
+  snapshot_sha256: 75abcffcef53d8769f2b24b70e60f07c49a6210c89efe4d868633e0b94715aab
+- evidence_id: pmid13867524
+  kind: database
+  reference: PMID:13867524
+  locator: 'Adopted original metadata/title inspected: Diiodohydroxyquin in seborrheic
+    dermatitis.'
+  accessed_at: '2026-10-21T18:38:36.826070Z'
+  support: context_only
+  summary: 1962 clinical lead, DOI 10.1097/00007611-196207000-00020; DOI route ended
+    at an expired login page rather than article content.
+  snapshot_sha256: 75abcffcef53d8769f2b24b70e60f07c49a6210c89efe4d868633e0b94715aab
+- evidence_id: pmid14493155
+  kind: database
+  reference: PMID:14493155
+  locator: 'Adopted original metadata/title inspected: Treatment of intestinal amebiasis
+    with 5,7-diiodo-8-hydroxyquinoline and chloroquine biphosphate.'
+  accessed_at: '2026-10-21T18:38:36.826070Z'
+  support: context_only
+  summary: 1961 combination-treatment lead; no indexed abstract or inspected original.
+    It is not evidence for iodoquinol monotherapy.
+  snapshot_sha256: 75abcffcef53d8769f2b24b70e60f07c49a6210c89efe4d868633e0b94715aab
+- evidence_id: pmid2146587
+  kind: database
+  reference: PMID:2146587
+  locator: 'Adopted original metadata/title inspected: American Academy of Pediatrics
+    Committee on Drugs: Clioquinol (iodochlorhydroxyquin, vioform) and iodoquinol
+    (diiodohydroxyquin): blindness and neuropathy.'
+  accessed_at: '2026-10-21T18:38:36.826070Z'
+  support: context_only
+  summary: 1990 committee guideline, not a new primary antibacterial experiment; publisher
+    403 and no indexed abstract. Safety conclusions are not reconstructed from secondary
+    quotations.
+  snapshot_sha256: 75abcffcef53d8769f2b24b70e60f07c49a6210c89efe4d868633e0b94715aab
+- evidence_id: pmid22650
+  kind: database
+  reference: PMID:22650
+  locator: 'Adopted original metadata/title inspected: Effect of some surfactants
+    on the solubility and dissolution rate of clioquinol and di-iodohydroxyquinoline
+    [proceedings].'
+  accessed_at: '2026-10-21T18:38:36.826070Z'
+  support: context_only
+  summary: 1977 physicochemical proceedings, DOI 10.1111/j.2042-7158.1977.tb11489.x;
+    publisher 403 and no indexed abstract. Clioquinol remains a distinct comparator.
+  snapshot_sha256: 75abcffcef53d8769f2b24b70e60f07c49a6210c89efe4d868633e0b94715aab
+- evidence_id: adopted2008
+  kind: primary_source
+  reference: PMID:19055171; Cutis 82:273–280
+  locator: Entire original main text and table read; actual Figure 1 page 276 viewed
+  accessed_at: '2026-10-21T18:39:24.165074Z'
+  support: context_only
+  summary: This experiment purchased a retail gel containing iodoquinol 1%, hydrocortisone
+    acetate 2%, aloe and several vehicle ingredients, and compared it with different
+    commercial creams. It did not test purified iodoquinol or a matched vehicle-only
+    formulation. The authors explicitly shorten the combination’s label to iodoquinol
+    in Results. Consequently, product CFU reductions cannot be attributed quantitatively
+    to the isolated native molecule.
+  snapshot_sha256: 4cf5b641adde4ec0333b37be79b9cfe62d4d80b85b164f170a17054304b0ee54
+- evidence_id: adopted2008-assay
+  kind: primary_source
+  reference: PMID:19055171
+  locator: Methods pp 274–275, Figure 1 p 276 and discussion pp 278–279
+  accessed_at: '2026-10-21T18:39:24.165074Z'
+  support: context_only
+  summary: The assay inoculated 20 mL product or PBS with 0.2 mL bacterial suspension
+    to approximately 10^5 CFU/mL, sampled at 1/5 min, neutralized/diluted and plated,
+    with triplicate tests. Figure 1 supports the reported activity of the formulation
+    against MRSA ATCC 700698, among other strains, but PBS is not a matched vehicle
+    control. The paper calls the exact mechanism largely unknown and discusses chelation
+    by analogy; it establishes no direct iodoquinol protein target.
+  snapshot_sha256: 4cf5b641adde4ec0333b37be79b9cfe62d4d80b85b164f170a17054304b0ee54
+- evidence_id: primary2018
+  kind: primary_source
+  reference: PMID:30233282; DOI:10.17179/excli2018-1602
+  locator: Full original scientific main text; actual Figure 1 and Table 1 viewed
+  accessed_at: '2026-10-21T18:39:24.156249Z'
+  support: supports
+  summary: Iodoquinol is purchased from Sigma-Aldrich and explicitly compound 5, 5,7-diiodo-8-hydroxyquinoline,
+    distinct from clioquinol and other derivatives. Figure 1 confirms the neutral
+    native constitution. GC agar dilution with 1% growth supplement, ≤1% DMSO, 0.5
+    McFarland suspension and 36±1 °C/5% CO2 incubation for 20–24 h gives complete-visible-growth
+    MICs. Reagent catalog/purity and exact final CFU per spot are not specified in
+    the inspected main.
+  snapshot_sha256: 1921b6d93dd92cdd38dc16e50787fc5c713bff3e55b9073fed27c84ff2abf1a5
+- evidence_id: primary2018-table
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9059/6141828/1452241029df/EXCLI-17-840-t-001.jpg
+  locator: Actual Table 1 compound 5 column and compound mapping in Figure 1
+  accessed_at: '2026-10-21T18:41:44.647454Z'
+  support: supports
+  summary: The table reports iodoquinol MIC 0.08 µM for ATCC 49226 and WHO K/L/O/P,
+    and an overall range 0.08–0.15 µM across 40 tested isolates/strains, including
+    phenotype-grouped clinical isolates. These printed molar units are not confused
+    with the paper’s mass-unit preparation series. In-vitro potency and a separate
+    cell-line selectivity estimate do not establish clinical gonorrhoea efficacy or
+    general safety.
+  snapshot_sha256: 975dfee9e40b66d7d0d5cf2a991309ec40cfd19e2be4ffb109803e7cf4638113
+- evidence_id: primary2020
+  kind: primary_source
+  reference: PMID:32253206; DOI:10.1128/AAC.02115-19
+  locator: Selected original Methods, Tables 1/2/5 and Discussion; actual Figure 1
+    viewed
+  accessed_at: '2026-10-21T18:40:37.639565Z'
+  support: supports
+  summary: Commercial DIHQ from Tokyo Chemical Industry was tested in BHIS broth at
+    approximately 5×10^5 CFU/mL, anaerobically at 37 °C for 48 h; MIC is complete
+    visible growth inhibition. Table 2 includes DIHQ MIC/MBC 1/1 µg/mL for C. difficile
+    ATCC BAA-1870 and 0.5/0.5 µg/mL for ATCC 43255. These pure-reagent assays independently
+    support antibacterial activity; catalog/purity and in-vivo efficacy remain unresolved.
+  snapshot_sha256: 75a0736ff02db3d561470431f9c37db609f32d78edd1c8b604a7c0ac465b0048
+- evidence_id: primary2020-boundaries
+  kind: primary_source
+  reference: PMID:32253206
+  locator: Source consistency and mechanism/endpoint scope in inspected main
+  accessed_at: '2026-10-21T18:40:37.639565Z'
+  support: context_only
+  summary: The Discussion prints MIC50=1 µg/mL whereas Results/Table 2 report 0.5
+    µg/mL; its adult-dose text also contains an apparent unit error and is not adopted.
+    Figure 1 was visually inspected, but no curve-derived numerical time-kill endpoint
+    is imported. Toxin/spore effects are phenotypic and do not establish direct protein
+    binding. Neither the broad microbiota-sparing discussion nor clinical treatment
+    claims are generalized from the bounded panel.
+  snapshot_sha256: 75a0736ff02db3d561470431f9c37db609f32d78edd1c8b604a7c0ac465b0048
+- evidence_id: primary1994
+  kind: primary_source
+  reference: PMID:8067755; DOI:10.1128/AAC.38.5.1157
+  locator: All four original scanned pages 1157–1160 viewed and read; actual Tables
+    1/2
+  accessed_at: '2026-10-21T18:41:44.650468Z'
+  support: supports
+  summary: Searle-supplied iodoquinol was suspended in 10% ethanol stock and tested
+    against Dientamoeba fragilis ATCC 30948 in TYGM-9 rice-starch medium with K. pneumoniae
+    and B. vulgatus supporting bacteria at 35 °C. The reported minimal amoebicidal
+    concentration is 128 µg/mL over three days. Parallel bacterial agar tests found
+    MIC >128 µg/mL, limiting a simple antibacterial-depletion explanation, but the
+    authors retain mixed-culture and single-isolate limitations. This is protozoal
+    activity, not an E. histolytica clinical-preference trial.
+  snapshot_sha256: fd85e592d51883580b433c96883977f637ad622ad94e35fd4087bad570558f67
+- evidence_id: excluded2025
+  kind: primary_source
+  reference: PMID:40768666; DOI:10.1002/cbdv.202501892
+  locator: Selected original introduction and compound-series scope
+  accessed_at: '2026-10-21T18:39:24.164822Z'
+  support: context_only
+  summary: The paper names iodoquinol in historical background but studies separately
+    synthesized QD derivatives. Their activity is not transferred to this native molecule.
+    It was inspected for exact-compound scope, not fully audited as an iodoquinol
+    assay paper.
+  snapshot_sha256: 7db6c448fea23f5e04bf8d57531a47b3147e6cda86ebdbf099a8280ada0aac23
+- evidence_id: clinical
+  kind: authority
+  reference: https://www.cdc.gov/yellow-book/hcp/post-travel-evaluation/post-travel-diarrhea.html
+  locator: CDC Yellow Book, Table 10.4.1 protozoa row/footnotes 6–7 and Amebiasis
+    subsection; page dated 2025-04-23
+  accessed_at: '2026-10-21T18:40:52.428573Z'
+  support: refutes
+  summary: For symptomatic E. histolytica intestinal illness, CDC describes a nitroimidazole
+    followed by an intraluminal agent and names iodoquinol among the latter. The native
+    unqualified statement that it is the drug of choice for asymptomatic or moderate
+    forms omits this clinically important role/context. A bounded luminal-use description
+    is preferable to a broad treatment ranking. The snapshot is a labeled reviewer
+    paraphrase of the successfully inspected web page, not raw HTML; direct curl returned
+    403.
+  snapshot_sha256: 51e0d1633c1ad03a10a6f7b06eb5c565ffff165287fa54d7fae0330772bb1ff3
+- evidence_id: adapter
+  kind: search
+  reference: /private/tmp/am-review-session/553-adapter-scope.json
+  locator: Applicability recorded before public literature discovery
+  accessed_at: '2026-10-21T18:44:21Z'
+  support: context_only
+  summary: The fully read native has no named gene, protein, regulator, pathway or
+    transcriptomic claim, so no structured iModulonDB query applies. Later mechanism
+    hypotheses are not silently added to native.
+  snapshot_sha256: 0b818a01ff8d2f01735643b6a4ff2172669c052cbeb0f3dfacf2ca725a145f67
+  search_scope: Entire 553 native assessed before open literature follow-up; no matching
+    native structured claim.
+- evidence_id: access
+  kind: validation
+  reference: /private/tmp/am-review-session/553-fetch1.json
+  locator: Actual retrieval logs 553-fetch1 through553-fetch6
+  accessed_at: '2026-10-21T18:44:21Z'
+  support: context_only
+  summary: CAS 401, DrugBank 403, legacy LINCS 500 and unavailable independent Reaxys
+    content limit registry verification. Historical publisher routes were 403 or an
+    expired login. Some PMC query URLs returned browser-challenge HTML despite 200,
+    while normal article URLs later supplied the actual 2018/2020 text. Europe PMC
+    image 403 was resolved through the article’s legitimate NCBI CDN links. No challenge
+    page is treated as full text. Wikipedia resolves only as a document reference.
+  snapshot_sha256: 2cc1e3c4b61461996dd5ca15aba8265062751cdbc86df491438728e63c5e9f99
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral iodoquinol graph and synonym types
+  outcome: supported
+  summary: The retained 5,7-diiodoquinolin-8-ol identity, composition, charge, masses
+    and source mint are coherent and corroborated by multiple authority encodings
+    and an original structure figure. Brand names are already typed separately; their
+    historical association is not a claim of current marketed products.
+  target_ids:
+  - CHEBI:5950
+  evidence_ids:
+  - native
+  - chebi
+  - chemspider
+  - mapping
+  - primary2018
+- assessment_id: grounding
+  area: grounding
+  topic: Exact xrefs, broader parents and drug-level associations
+  outcome: supported
+  summary: ChEBI, ChemSpider and KEGG molecular graphs agree; both parents are broader.
+    DrugCentral and KEGG drug links denote the correct drug and retain their drug-level
+    semantics. CAS, Reaxys and legacy LINCS remain independently access-limited rather
+    than falsely verified or automatically removed.
+  target_ids:
+  - CHEBI:5950
+  evidence_ids:
+  - chebi
+  - chemspider
+  - kegg
+  - drugcentral
+  - mapping
+  - term37142
+  - term38775
+  - lincs
+  - access
+- assessment_id: roles
+  area: evidence
+  topic: Antibacterial and antiprotozoal activity
+  outcome: supported
+  summary: Exact purchased iodoquinol has original gonococcal and C. difficile activity,
+    independently of the adopted multi-ingredient topical formulation. The scanned
+    D. fragilis experiment supports antiprotozoal activity with a mixed-culture caveat.
+    Neither strain-specific inhibition nor traditional use establishes universal spectrum
+    or a direct molecular target.
+  target_ids:
+  - CHEBI:5950
+  evidence_ids:
+  - term33282
+  - term35820
+  - primary2018
+  - primary2018-table
+  - primary2020
+  - primary1994
+  - adopted2008
+- assessment_id: definition
+  area: evidence
+  topic: Clinical-use wording in the imported definition
+  outcome: concern
+  summary: 'The chemical portion is sound. The drug-of-choice phrase for moderate
+    amoebiasis is insufficiently qualified: current guidance separates tissue-active
+    treatment from a subsequent luminal agent such as iodoquinol. The record should
+    state its bounded luminal role without implying a general treatment preference.'
+  target_ids:
+  - CHEBI:5950
+  evidence_ids:
+  - native
+  - chebi
+  - clinical
+  - primary1994
+- assessment_id: completeness
+  area: completeness
+  topic: All adopted citation dispositions and optional mechanism enrichment
+  outcome: unknown
+  summary: All ten adopted identifiers resolve and their available metadata were read.
+    The 2008 full original is formulation-specific; nine older leads lack inspected
+    original experimental text. Additional primary experiments provide bounded role
+    support, but chelation analogies and toxin/spore phenotypes do not identify a
+    directly validated bacterial target. Missing optional mechanism/AST fields are
+    not a required correction.
+  target_ids:
+  - CHEBI:5950
+  evidence_ids:
+  - adopted2008
+  - adopted2008-assay
+  - pmid1090898
+  - pmid122845
+  - pmid126030
+  - pmid13513741
+  - pmid13568180
+  - pmid13867524
+  - pmid14493155
+  - pmid2146587
+  - pmid22650
+  - primary2020-boundaries
+  - excluded2025
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Source-owned fields, full history and unchanged inputs
+  outcome: supported
+  summary: The complete native source concept and four seed/reseed history events
+    were read alongside the actual ChEBI row and generator ownership. Original 13
+    and expanded 21 hashes remain unchanged. No reviewed-status promotion or native
+    mutation occurred.
+  target_ids:
+  - CHEBI:5950
+  evidence_ids:
+  - native
+  - owners
+  - search
+findings:
+- finding_id: F1
+  issue_key: iodoquinol-definition-unqualified-amebiasis-treatment-preference
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the definition’s broad treatment-preference statement
+  description: The imported definition calls iodoquinol the drug of choice for asymptomatic
+    or moderate amoebiasis without the luminal-treatment boundary. Current CDC guidance
+    for symptomatic E. histolytica illness places iodoquinol among intraluminal agents
+    following a nitroimidazole. Replace or qualify the broad ranking with a precise
+    luminal-use statement, retaining the chemical definition and antiprotozoal role.
+    This is a bounded wording correction, not a denial of activity or a new clinical-product
+    claim.
+  target_ids:
+  - CHEBI:5950
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - owners
+  - chebi
+  - clinical
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Actual imported ChEBI definition owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and source-definition adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition owner
+  rule_id: review-checklist:Evidence standard
+  native_severity: minor
+  normalization_reason: Identity and activity remain supported; the defect is an overbroad,
+    non-essential clinical-use phrase requiring context rather than a wrong molecule
+    or invalid role.
+actions:
+- action_id: A1
+  description: Qualify the source-owned definition through maintained extraction/inventory
+    handling and regenerate the field.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:5950
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Actual imported ChEBI definition owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and source-definition adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition owner
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  acceptance_checks:
+  - Retain the exact 5,7-diiodoquinolin-8-ol identity and both supported activity
+    roles.
+  - Describe iodoquinol as an intraluminal antiprotozoal agent used in amoebiasis,
+    or otherwise explicitly delimit the historical ranking by disease context and
+    source date. Do not imply standalone preferred treatment of symptomatic invasive
+    disease.
+  - Keep chemical identities distinct from multi-ingredient topical products and current
+    regulatory/marketing status.
+  - Rerun schema/strict and required source reproducibility, reference and history
+    gates; demonstrate that regeneration preserves the source adjudication.
+- action_id: A2
+  description: Optional primary activity or mechanism enrichment must retain exact
+    experimental boundaries.
+  finding_ids: []
+  target_ids:
+  - CHEBI:5950
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/iodoquinol.yaml
+    role: Future validated curator-owned primary annotations
+  acceptance_checks:
+  - Keep the 2008 hydrocortisone/aloe gel and vehicle effects separate from purchased
+    pure-compound assays.
+  - Retain original µM versus µg/mL units, exact strains, media, inoculum and endpoint;
+    do not import cell-line selectivity as clinical safety.
+  - Resolve the 2020 source’s numerical discrepancies before importing affected values;
+    no protein target follows from antibacterial, toxin or sporulation phenotypes
+    alone.
+  - Maintain the 1994 D. fragilis mixed-culture/single-isolate limitation, rather
+    than transferring its amebicidal concentration to E. histolytica treatment.
+limitations:
+- All ten adopted leads were resolved. Nine historical items had no indexed abstract
+  and remain metadata/title-level after the bounded free-source attempts; no historical
+  dose, mechanism or efficacy estimate was reconstructed.
+- The 2008 main and actual bacterial Figure 1 were inspected; Figure 2 was read through
+  caption/prose only. The formulation contains hydrocortisone, aloe and multiple vehicle
+  ingredients and lacks a matched vehicle-only control.
+- The 2018 full scientific main, structure Figure 1 and Table 1 were inspected. The
+  2020 original was read selectively for Methods, MIC/MBC Tables 1/2, microbiota Table
+  5 and Discussion, plus actual Figure 1. Other figures and SI were not independently
+  audited; source discrepancies remain explicit.
+- All four 1994 scanned pages and both tables were inspected. Its dixenic protozoal
+  culture does not prove clinical effectiveness or a precise molecular target, even
+  though parallel supporting-bacteria tests help bound interpretation.
+- CAS 401, DrugBank 403, legacy LINCS 500 and unavailable independent Reaxys content
+  remain unresolved. The small HMS archive is not an exhaustive registry. Historical
+  brand names were checked as typed source assertions, not as current product claims.
+- The CDC source was successfully read through web.run; raw curl access was403. The
+  preserved JSON is explicitly a reviewer paraphrase and locator capture, not a claimed
+  original HTML snapshot.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All original 13 and expanded 21 input hashes were rechecked unchanged before draft
+  writing. No native/source/history/progress/saved-bundle/Git writes occurred.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
