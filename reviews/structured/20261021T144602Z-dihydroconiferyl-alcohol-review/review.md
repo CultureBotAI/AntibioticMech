@@ -1,0 +1,676 @@
+# Dihydroconiferyl alcohol: incorrect eugenol parent
+
+- Review: 20261021T144602Z-dihydroconiferyl-alcohol-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T14:27:12Z
+- Finished UTC: 2026-10-21T14:46:02Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native neutral chemical graph is coherent, but CHEBI:4917 is eugenol, a different exact compound, rather than a strictly broader parent. That inherited relationship also supplies misleading antimicrobial-role provenance. The inspected exact-compound study reports weak bacterial growth effects, not eugenol activity or a demonstrated microbial target.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position364; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:4559 | data/antibiotics/antibacterial/dihydroconiferyl-alcohol.yaml | generated | dihydroconiferyl alcohol |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:4559 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:4559 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:4559 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:4559 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:4559 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:4559 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:4559 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:4559 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:4559 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:4559 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:4559 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:4559 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Neutral structure and five synonyms
+
+identity: supported. Targets: CHEBI:4559.
+
+All names describe the same saturated guaiacyl propanol; independent encodings, masses and source mint agree.
+
+### Strictly broader parent and inherited role
+
+grounding: concern. Targets: CHEBI:4559.
+
+The eugenol is_a edge violates the schema and chemical identity. Repair the maintained edge and separately reassess inherited eligibility rather than assuming either eugenol potency or complete inactivity.
+
+### Exact-compound antibacterial evidence
+
+evidence: unknown. Targets: CHEBI:4559.
+
+The adopted sources do not demonstrate antibacterial activity. The2025 original shows weak growth effects with an incompletely stated screening concentration; no robust potency or molecular target follows. The native role is source-derived, not primary evidence.
+
+### Six external exact identifiers
+
+grounding: supported. Targets: CHEBI:4559.
+
+Accessible graph-bearing KEGG and KNApSAcK agree, and NIST confirms CAS identity. LINCS, MetaCyc and licensed Reaxys remain explicitly unverified at independent graph depth.
+
+### Mechanism, assays and producer enrichment
+
+completeness: unknown. Targets: CHEBI:4559.
+
+No optional field is wrong merely because absent. Any future assay must specify compound2, material and concentration; plant isolation is separate from a microbial producer and docking of3/4 is not this compound’s target.
+
+### Generated ownership and history
+
+provenance: supported. Targets: CHEBI:4559.
+
+Frozen exact source and all fourteen captured input hashes remain unchanged; three seed/reseed events and source mint reproduce. Both adopted leads have explicit dispositions.
+
+## Findings
+
+### F1: Eugenol is a different exact molecule, not a broader parent
+
+major / open / confirmed; issue key: dihydroconiferyl-alcohol-eugenol-parent.
+
+CHEBI:4917 is exact eugenol with an allyl side chain. Native dihydroconiferyl alcohol has a saturated hydroxypropyl group. The inherited is_a assertion violates parent_compounds semantics and also affects source-derived antibacterial-role provenance. Correct the upstream relationship in a reproducible maintained path and independently qualify exact-compound antimicrobial eligibility.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Repair the maintained parent relationship and re-evaluate inherited antibacterial scope with exact-compound evidence.
+
+- Preserve the supported native neutral graph and valid primary-alcohol parent.
+- Replace or suppress the exact-eugenol is_a edge through maintained source handling and regenerate with canonical history.
+- Document the independent antibacterial basis or explicitly unresolved role; do not infer inactivity solely from low effects in one assay.
+- Run schema, strict, chemical equivalence, source reproduction and required QC.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/dihydroconiferyl-alcohol.yaml; entire YAML: definition, five aliases, two parents, role, structure, six exact xrefs, source and three history events | supports | CHEBI:4559 is neutral C10H14O3, achiral, with a saturated hydroxypropyl chain. There is no quantitative activity, target, resistance, clinical product, producer object or causal graph. SEEDED history does not imply scientific sign-off. |
+| owners | data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; source row143; extractor is_a and role inheritance code; source-schema parent_compounds semantics | supports | The frozen row reproduces both parents and antibacterial role. The extractor emits is_a parents and inherits antimicrobial roles from ancestors. The schema requires strictly broader parent classes. All thirteen original hashes were retained and the matching readiness-queue context was appended. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/4559/; complete names, structure, database links and outgoing relations | supports | Current ChEBI repeats an is_a edge to eugenol and a valid primary-alcohol parent. Its direct role is plant metabolite, while eugenol supplies antibacterial context through the imported inheritance route. This confirms source provenance, not correctness of the is_a edge. |
+| parent | https://www.ebi.ac.uk/chebi/backend/api/public/compound/4917/; complete eugenol identity and current OLS parent definitions | supports | CHEBI:4917 is exact eugenol, C10H12O2, with an allyl group and key RRAFCDWBNXTKKO-UHFFFAOYSA-N. Dihydroconiferyl alcohol has a saturated three-carbon alcohol chain and an extra oxygen. Eugenol is neither the same molecule nor a general structural class. CHEBI:15734 correctly denotes primary alcohol. |
+| chemistry | Independent RDKit2026.03.5 / InChI1.07.3; 037-root-chemistry.py;364-authority-chemistry.json | supports | Native SMILES/InChI, ChEBI molfile, PubChem16822, KEGG C10448 and KNApSAcK C00002736 independently reproduce MWOMNLDJNQWJMK-UHFFFAOYSA-N. Formula, charge, masses and absence of stereocentres agree. Eugenol is independently parsed as a distinct graph and does not match as a complete substructure. Assertions exit0. |
+| groundings | https://rest.kegg.jp/get/C10448; http://www.knapsackfamily.com/knapsack_core/information.php?word=C00002736; https://webbook.nist.gov/cgi/cbook.cgi?ID=2305-13-7; KEGG text/molfile, full KNApSAcK identity fields and NIST identity section | supports | KEGG, KNApSAcK and NIST support the CAS2305-13-7 identity and neutral graph. MetaCyc CPD-94 timed out and the queried LINCS page returned500. Reaxys2048960 remains ChEBI-attested without proprietary register access. These access limits do not establish wrong identifiers. |
+| adopted2011 | https://doi.org/10.1016/j.biortech.2011.05.040; PMID21664814 complete indexed abstract | supports | The original study concerns catalytic hydrogenolysis of Pinus radiata lignin, producing dihydroconiferyl alcohol and 4-n-propylguaiacol. It supplies chemical-production context, not an antibacterial experiment or a microbial molecular target. |
+| adopted2013 | https://doi.org/10.4268/cjcmm20130812; PMID23944031 complete indexed abstract | supports | The Isatis indigotica isolation paper assigns dihydroconiferyl alcohol as compound24. Its antiviral activity belongs to compound19; the other tested compounds were inactive at the reported screen concentration. This is not proof of general antibacterial inactivity, and the antiviral result is not transferred to24. |
+| activity2025 | https://doi.org/10.3390/plants14162558; PMID40872183/PMC12389104; full relevant Results2.1–2.3, Methods3.3/3.5/3.6 and Table3 | supports | Dihydroconiferyl alcohol is compound2, isolated as0.9mg from Sambucus williamsii. Table3 reports only12.3±5.8% and4.0±0.9% growth inhibition for strains51 and26695; its table does not state the tested concentration. Brucella broth with10% horse serum,37°C,24h and OD600 are specified. The strong compounds, urease experiments and docking are3/4, not2. These bounded weak effects do not justify importing a MIC or transferring eugenol potency. |
+| search | Ignored-inclusive local search and exact-name public follow-up; 364-owners-search.json;037-root-fetch.json;037-root-more-fetch.json | supports | Both adopted abstracts were read. A newer exact-compound primary study was read for material, assay and table scope. No native protein/regulator/transcriptomic claim makes the structured gene adapter applicable; newly encountered docking of other compounds is not native mechanism evidence. |
+
+## Limits And Additional Notes
+
+- The two adopted papers were read at complete-abstract depth; their full experimental data were not independently recovered.
+- The2025 original relevant main text and Table3 were inspected. Supplemental compound2 spectra and Figure2 pixels were not independently reprocessed; the table does not state the tested concentration. No numerical MIC or urease mechanism is inferred.
+- The source eugenol edge and inheritance code establish the classification defect. Weak exact-compound growth effects leave antibacterial-role strength unresolved; absence of stronger inspected evidence is not proof of inactivity.
+- MetaCyc timed out; LINCS returned500. Reaxys was source-attested only. No source/reference is declared absent from inaccessible pages.
+- No native/source record, status or scientific field was edited. Shared whole-corpus gates retain their actual outcomes.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T144602Z-dihydroconiferyl-alcohol-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Dihydroconiferyl alcohol: incorrect eugenol parent'
+started_at: '2026-10-21T14:27:12Z'
+finished_at: '2026-10-21T14:46:02Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native neutral chemical graph is coherent, but CHEBI:4917 is eugenol,
+  a different exact compound, rather than a strictly broader parent. That inherited
+  relationship also supplies misleading antimicrobial-role provenance. The inspected
+  exact-compound study reports weak bacterial growth effects, not eugenol activity
+  or a demonstrated microbial target.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/dihydroconiferyl-alcohol.yaml
+    sha256: 0936a939e34f916e8c88a356c59ce97fd0d55c7da6e147483a98c6e9ed2cf1bd
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+targets:
+- target_id: CHEBI:4559
+  path: data/antibiotics/antibacterial/dihydroconiferyl-alcohol.yaml
+  label: dihydroconiferyl alcohol
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position364; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:4559
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:4559
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    364
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:4559
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/dihydroconiferyl-alcohol.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:4559
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/dihydroconiferyl-alcohol.yaml --out /private/tmp/am-review-session/364-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:4559
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:4559
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:4559
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:4559
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:4559
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:4559
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:4559
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:4559
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:4559
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/dihydroconiferyl-alcohol.yaml
+  locator: 'entire YAML: definition, five aliases, two parents, role, structure, six
+    exact xrefs, source and three history events'
+  accessed_at: '2026-10-21T14:36:32Z'
+  support: supports
+  summary: CHEBI:4559 is neutral C10H14O3, achiral, with a saturated hydroxypropyl
+    chain. There is no quantitative activity, target, resistance, clinical product,
+    producer object or causal graph. SEEDED history does not imply scientific sign-off.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: source row143; extractor is_a and role inheritance code; source-schema
+    parent_compounds semantics
+  accessed_at: '2026-10-21T14:36:32Z'
+  support: supports
+  summary: The frozen row reproduces both parents and antibacterial role. The extractor
+    emits is_a parents and inherits antimicrobial roles from ancestors. The schema
+    requires strictly broader parent classes. All thirteen original hashes were retained
+    and the matching readiness-queue context was appended.
+  snapshot_sha256: 8747d9d2d35364d99fac403a2c4e0586adbf7ae4d25ed9e8363e7dbeda10d3d1
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/4559/
+  locator: complete names, structure, database links and outgoing relations
+  accessed_at: '2026-10-21T14:36:32Z'
+  support: supports
+  summary: Current ChEBI repeats an is_a edge to eugenol and a valid primary-alcohol
+    parent. Its direct role is plant metabolite, while eugenol supplies antibacterial
+    context through the imported inheritance route. This confirms source provenance,
+    not correctness of the is_a edge.
+  snapshot_sha256: 3ab968f2f9baa0f57cad090951756f007ad9b06d2d81fbe461dfeaa7ec431956
+- evidence_id: parent
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/4917/
+  locator: complete eugenol identity and current OLS parent definitions
+  accessed_at: '2026-10-21T14:36:32Z'
+  support: supports
+  summary: CHEBI:4917 is exact eugenol, C10H12O2, with an allyl group and key RRAFCDWBNXTKKO-UHFFFAOYSA-N.
+    Dihydroconiferyl alcohol has a saturated three-carbon alcohol chain and an extra
+    oxygen. Eugenol is neither the same molecule nor a general structural class. CHEBI:15734
+    correctly denotes primary alcohol.
+  snapshot_sha256: b94b06476f9d48cb9256e492d8bd8c872409bb7fe79404098a63b337bdc90692
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit2026.03.5 / InChI1.07.3
+  locator: 037-root-chemistry.py;364-authority-chemistry.json
+  accessed_at: '2026-10-21T14:36:32Z'
+  support: supports
+  summary: Native SMILES/InChI, ChEBI molfile, PubChem16822, KEGG C10448 and KNApSAcK
+    C00002736 independently reproduce MWOMNLDJNQWJMK-UHFFFAOYSA-N. Formula, charge,
+    masses and absence of stereocentres agree. Eugenol is independently parsed as
+    a distinct graph and does not match as a complete substructure. Assertions exit0.
+  snapshot_sha256: b3304bb6e069f8eb155caed7097ad5078b931fdd8a533d6510f7cef1cd181ceb
+- evidence_id: groundings
+  kind: authority
+  reference: https://rest.kegg.jp/get/C10448; http://www.knapsackfamily.com/knapsack_core/information.php?word=C00002736;
+    https://webbook.nist.gov/cgi/cbook.cgi?ID=2305-13-7
+  locator: KEGG text/molfile, full KNApSAcK identity fields and NIST identity section
+  accessed_at: '2026-10-21T14:36:32Z'
+  support: supports
+  summary: KEGG, KNApSAcK and NIST support the CAS2305-13-7 identity and neutral graph.
+    MetaCyc CPD-94 timed out and the queried LINCS page returned500. Reaxys2048960
+    remains ChEBI-attested without proprietary register access. These access limits
+    do not establish wrong identifiers.
+  snapshot_sha256: 83ac86e0a5b4e00c34b62eaa589809701f0fbcb6880477e916bee233df3eb114
+- evidence_id: adopted2011
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.biortech.2011.05.040
+  locator: PMID21664814 complete indexed abstract
+  accessed_at: '2026-10-21T14:36:32Z'
+  support: supports
+  summary: The original study concerns catalytic hydrogenolysis of Pinus radiata lignin,
+    producing dihydroconiferyl alcohol and 4-n-propylguaiacol. It supplies chemical-production
+    context, not an antibacterial experiment or a microbial molecular target.
+  snapshot_sha256: 612dee46d132dc9f1a2e7755cfc0617db1d51fc2be4c223b03fa419d73a712d8
+- evidence_id: adopted2013
+  kind: primary_source
+  reference: https://doi.org/10.4268/cjcmm20130812
+  locator: PMID23944031 complete indexed abstract
+  accessed_at: '2026-10-21T14:36:32Z'
+  support: supports
+  summary: The Isatis indigotica isolation paper assigns dihydroconiferyl alcohol
+    as compound24. Its antiviral activity belongs to compound19; the other tested
+    compounds were inactive at the reported screen concentration. This is not proof
+    of general antibacterial inactivity, and the antiviral result is not transferred
+    to24.
+  snapshot_sha256: 612dee46d132dc9f1a2e7755cfc0617db1d51fc2be4c223b03fa419d73a712d8
+- evidence_id: activity2025
+  kind: primary_source
+  reference: https://doi.org/10.3390/plants14162558
+  locator: PMID40872183/PMC12389104; full relevant Results2.1–2.3, Methods3.3/3.5/3.6
+    and Table3
+  accessed_at: '2026-10-21T14:36:32Z'
+  support: supports
+  summary: Dihydroconiferyl alcohol is compound2, isolated as0.9mg from Sambucus williamsii.
+    Table3 reports only12.3±5.8% and4.0±0.9% growth inhibition for strains51 and26695;
+    its table does not state the tested concentration. Brucella broth with10% horse
+    serum,37°C,24h and OD600 are specified. The strong compounds, urease experiments
+    and docking are3/4, not2. These bounded weak effects do not justify importing
+    a MIC or transferring eugenol potency.
+  snapshot_sha256: 89a0d060a7ab0adbf3000d322fe90470b2bbb0603be76546c78628cf6dfe158b
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local search and exact-name public follow-up
+  locator: 364-owners-search.json;037-root-fetch.json;037-root-more-fetch.json
+  accessed_at: '2026-10-21T14:36:32Z'
+  support: supports
+  summary: Both adopted abstracts were read. A newer exact-compound primary study
+    was read for material, assay and table scope. No native protein/regulator/transcriptomic
+    claim makes the structured gene adapter applicable; newly encountered docking
+    of other compounds is not native mechanism evidence.
+  search_scope: 2026-10-21; rg --no-ignore --hidden across curation, conf, scripts,
+    data/raw and .claude, plus the initial repository inspection; exact name, CHEBI:4559
+    and full key. Public exact adopted PMID queries and antibacterial-name search;
+    not an exhaustive absence claim.
+  snapshot_sha256: 729ad72af3b0bf2c2ba422bba77d1a48010c792ffb7acf878a3405c04a6c9adf
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral structure and five synonyms
+  outcome: supported
+  summary: All names describe the same saturated guaiacyl propanol; independent encodings,
+    masses and source mint agree.
+  target_ids:
+  - CHEBI:4559
+  evidence_ids:
+  - native
+  - chemistry
+  - groundings
+- assessment_id: parent
+  area: grounding
+  topic: Strictly broader parent and inherited role
+  outcome: concern
+  summary: The eugenol is_a edge violates the schema and chemical identity. Repair
+    the maintained edge and separately reassess inherited eligibility rather than
+    assuming either eugenol potency or complete inactivity.
+  target_ids:
+  - CHEBI:4559
+  evidence_ids:
+  - owners
+  - parent
+  - chebi
+  - activity2025
+- assessment_id: activity
+  area: evidence
+  topic: Exact-compound antibacterial evidence
+  outcome: unknown
+  summary: The adopted sources do not demonstrate antibacterial activity. The2025
+    original shows weak growth effects with an incompletely stated screening concentration;
+    no robust potency or molecular target follows. The native role is source-derived,
+    not primary evidence.
+  target_ids:
+  - CHEBI:4559
+  evidence_ids:
+  - adopted2011
+  - adopted2013
+  - activity2025
+  - chebi
+- assessment_id: xrefs
+  area: grounding
+  topic: Six external exact identifiers
+  outcome: supported
+  summary: Accessible graph-bearing KEGG and KNApSAcK agree, and NIST confirms CAS
+    identity. LINCS, MetaCyc and licensed Reaxys remain explicitly unverified at independent
+    graph depth.
+  target_ids:
+  - CHEBI:4559
+  evidence_ids:
+  - groundings
+  - chemistry
+- assessment_id: optional
+  area: completeness
+  topic: Mechanism, assays and producer enrichment
+  outcome: unknown
+  summary: No optional field is wrong merely because absent. Any future assay must
+    specify compound2, material and concentration; plant isolation is separate from
+    a microbial producer and docking of3/4 is not this compound’s target.
+  target_ids:
+  - CHEBI:4559
+  evidence_ids:
+  - native
+  - activity2025
+  - adopted2013
+- assessment_id: provenance
+  area: provenance
+  topic: Generated ownership and history
+  outcome: supported
+  summary: Frozen exact source and all fourteen captured input hashes remain unchanged;
+    three seed/reseed events and source mint reproduce. Both adopted leads have explicit
+    dispositions.
+  target_ids:
+  - CHEBI:4559
+  evidence_ids:
+  - native
+  - owners
+  - adopted2011
+  - adopted2013
+findings:
+- finding_id: F1
+  issue_key: dihydroconiferyl-alcohol-eugenol-parent
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Eugenol is a different exact molecule, not a broader parent
+  description: CHEBI:4917 is exact eugenol with an allyl side chain. Native dihydroconiferyl
+    alcohol has a saturated hydroxypropyl group. The inherited is_a assertion violates
+    parent_compounds semantics and also affects source-derived antibacterial-role
+    provenance. Correct the upstream relationship in a reproducible maintained path
+    and independently qualify exact-compound antimicrobial eligibility.
+  target_ids:
+  - CHEBI:4559
+  field_paths:
+  - parent_compounds[1]
+  - activity_roles
+  - source_concepts[0].role_terms
+  evidence_ids:
+  - native
+  - owners
+  - chebi
+  - parent
+  - chemistry
+  - activity2025
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: native-review-checklist:Identity; schema:parent_compounds
+  native_severity: major incorrect ontology parent
+  normalization_reason: The exact graph is coherent, but a false is_a relationship
+    changes classification and supplies inherited activity provenance.
+actions:
+- action_id: A1
+  description: Repair the maintained parent relationship and re-evaluate inherited
+    antibacterial scope with exact-compound evidence.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:4559
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  acceptance_checks:
+  - Preserve the supported native neutral graph and valid primary-alcohol parent.
+  - Replace or suppress the exact-eugenol is_a edge through maintained source handling
+    and regenerate with canonical history.
+  - Document the independent antibacterial basis or explicitly unresolved role; do
+    not infer inactivity solely from low effects in one assay.
+  - Run schema, strict, chemical equivalence, source reproduction and required QC.
+limitations:
+- The two adopted papers were read at complete-abstract depth; their full experimental
+  data were not independently recovered.
+- The2025 original relevant main text and Table3 were inspected. Supplemental compound2
+  spectra and Figure2 pixels were not independently reprocessed; the table does not
+  state the tested concentration. No numerical MIC or urease mechanism is inferred.
+- The source eugenol edge and inheritance code establish the classification defect.
+  Weak exact-compound growth effects leave antibacterial-role strength unresolved;
+  absence of stronger inspected evidence is not proof of inactivity.
+- MetaCyc timed out; LINCS returned500. Reaxys was source-attested only. No source/reference
+  is declared absent from inaccessible pages.
+- No native/source record, status or scientific field was edited. Shared whole-corpus
+  gates retain their actual outcomes.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

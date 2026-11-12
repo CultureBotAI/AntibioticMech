@@ -1,0 +1,916 @@
+schema_version: 1.0.0
+review_id: 20261021T145203Z-doripenem-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Doripenem: supported structure and isolate data; qualify aliases, comparison
+  and regulatory history'
+started_at: '2026-10-21T14:27:17Z'
+finished_at: '2026-10-21T14:52:03Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The exact anhydrous doripenem structure, six curated CDC isolate MICs, and
+  qualified PBP/CARD assertions are supported at their stated scopes. One major finding
+  concerns the missing 2018 withdrawal event for the two represented FDA products.
+  Two minor findings concern exact-synonym typing of a hydrate/product name and an
+  unbounded comparative-activity sentence derived from historical panels. Historical
+  approval evidence and active-moiety mapping remain valid and should be preserved.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/doripenem.yaml
+    sha256: e32ebbf36f0120e3217df31283b7a83f010bae656b92e67f4881c23a99bdabde
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:135928
+  path: data/antibiotics/antibacterial/doripenem.yaml
+  label: doripenem
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/doripenem.yaml
+    role: Curator-owned resistant-isolate observations and activity history
+scope:
+  description: 'Entire native YAML: definition and its citation, all three synonyms,
+    two parents, two roles, class, six activity observations and every qualifier/strain/BioSample/evidence
+    note, all structure fields, five exact xrefs, one drug link, both source concepts
+    and mints, all three resistance assertions, the molecular target and its qualification,
+    both FDA assertions and all thirteen history events. Both adopted compound citation
+    leads were inspected. Additional primary and official follow-up is bounded below.'
+  selection: Queue position 370. All thirteen initial input hashes are preserved;
+    six actual ARO/FDA/mapping inputs were appended before assessment, for nineteen
+    inputs. The native record is also identified as owner of its curator-added isolate
+    observations.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:135928
+  exclusions:
+  - target: Doripenem monohydrate and marketed Doribax formulations
+    reason: Separate hydrate identity and product context are retained. FDA activity
+      expressed on an anhydrous active-moiety basis does not make the hydrate an exact
+      synonym of the water-free graph.
+  - target: Doravirine abbreviated DOR in HIVDB
+    reason: The maintained HIVDB mapping explicitly distinguishes this unrelated drug;
+      an ambiguous abbreviation alone does not merge the structures.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused schema validation passed.
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/doripenem.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: One file scanned; zero strict errors.
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/doripenem.yaml --out /private/tmp/am-review-session/370-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: SMILES and InChI agree on full key, formula, neutral charge, six assigned
+    centres, masses and both source mints.
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 370
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: external-chemistry
+  name: external-chemistry
+  status: passed
+  required: false
+  summary: Five exact native encodings agree. Three independently parsed hydrate encodings
+    agree with one another and differ by one water component; their largest component
+    matches the native graph.
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/370-xref-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:135928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/doripenem.yaml
+  locator: Entire native YAML, including all six observations and thirteen history
+    events.
+  accessed_at: '2026-10-21T14:49:54Z'
+  support: supports
+  summary: CHEBI:135928/ARO:3000640 denotes neutral anhydrous doripenem, C15H24N4O6S2,
+    AVAACINZEOAHHE-VFZPANTDSA-N. It is SEEDED with EXACT grounding. All six MICs preserve
+    a greater-than qualifier; all resistance entries explicitly retain database-assertion
+    notes, and the PBP entry is PRIMARY_EVIDENCE_NEEDED. Both FDA assertions name
+    the same NDA and distinguish discontinued marketing from original approval. No
+    producer, causal graph, or quantitative PBP-binding result is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv;
+    data/raw/aro_resistance_edges.tsv; data/raw/fda_clinical_status.tsv; conf/aro_target_roles.tsv;
+    scripts/extract_source_inventory.py; scripts/seed_from_sources.py; scripts/extract_fda_clinical_status.py
+  locator: 'Complete exact rows: ChEBI 2569, ARO 140, target 157, resistance 3030–3032,
+    FDA 178–179; relevant source transforms and seeder code.'
+  accessed_at: '2026-10-21T14:49:54Z'
+  support: supports
+  summary: Identity, aliases, roles, target and resistance relations reproduce their
+    maintained sources. ARO has two definition references, while the seeded definition_source
+    selects PMID:15047550. The role map explicitly makes PBPs a protein direct-binding
+    target and the seeder retains evidence-needed qualification. FDA extraction selects
+    the earliest original AP event; seeding emits APPROVED without later-event handling.
+    The six isolate additions and later BioSample structuring are curator-owned in
+    the native record. No exact corrective overlay was found in the ignored-inclusive
+    search.
+  snapshot_sha256: e09f8482c900e365925d19ff7761cc9e0721334ecd1480c7991277ff47066f2f
+- evidence_id: identity
+  kind: authority
+  reference: CHEBI:135928; PubChem:73303; CHEMBL491571; UNII:BHV525JOBH; DrugCentral:4149
+  locator: Official identity entries, exact chemical descriptors and independent graph
+    comparisons.
+  accessed_at: '2026-10-21T14:43:37Z'
+  support: supports
+  summary: ChEBI, PubChem, ChEMBL molfile, GSRS version 32 molfile and DrugCentral
+    SMILES independently reproduce the full native InChIKey and six-centre graph.
+    Formula, charge and masses agree within displayed precision. CAS 148016-81-3 is
+    attested consistently. The structure is a carbapenem and supports the broader
+    CHEBI:46633/ARO:0000020 parents. Current ChEBI role definitions support both antibacterial
+    and antimicrobial roles. HMDB0041883 is attested by ChEBI/PubChem, but its own
+    page returned 403 and its graph was not independently inspected.
+  snapshot_sha256: 6559fb398c960eda444324c88741b763bf2829d2217b38f61faee10bb3796fa3
+- evidence_id: hydrate
+  kind: authority
+  reference: CHEBI:31518; PubChem:636377; UNII:4B035T6NKT; FDA Doribax label 022106s015lbl
+  locator: Complete official hydrate entries and independent parsing; FDA label sections
+    11 and 12, with page 12 structure visually inspected.
+  accessed_at: '2026-10-21T14:45:01Z'
+  support: refutes
+  summary: The monohydrate has formula C15H26N4O7S2 and key NTUBEBXBDGKBTJ-WGLOMNHJSA-N,
+    consisting of the native doripenem component plus water. FDA describes Doribax
+    as doripenem monohydrate, with vial strength and activity expressed on an anhydrous
+    active-moiety basis. GSRS separately types DORIBAX as a brand name; ChEMBL also
+    types it TRADE_NAME. Thus the native exact-synonym list conflates related hydrate
+    and product naming with the water-free structure, although the underlying drug
+    identity and active-moiety relationship are sound.
+  snapshot_sha256: a89ef64fa08ba6632c7132b329c70730d6187f5547a848d02ff91066502aa38c
+- evidence_id: cdc
+  kind: authority
+  reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=297&PanelID=1;
+    https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=347&PanelID=10;
+    https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=348&PanelID=10;
+    https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=33&PanelID=1227;
+    https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=78&PanelID=1227;
+    https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=83&PanelID=1227
+  locator: All six exact isolate identity headers, doripenem rows, assay statements
+    and interpretation footnotes read; snapshots 370-cdc297/347/348/33/78/83.html.
+  accessed_at: '2026-10-21T14:43:38Z'
+  support: supports
+  summary: Each source reports modal broth-microdilution doripenem MIC >8 micrograms/mL
+    and interpretation R. Conversion to >8 mg/L is exact. Isolates 0297, 0033, 0078
+    and 0083 are A. baumannii; 0347 is K. pneumoniae; 0348 is E. coli. Study IDs,
+    BioSamples and the native source/MLST notes agree. The versioned footnotes are
+    respectively CLSI 2024, 2025, 2025, none on isolate 0033, 2024 and 2020; the native
+    text preserves these distinctions. Propagation conditions are not substituted
+    for the MIC assay. Detected resistance genes on these pages are not automatically
+    assigned as causes of each MIC.
+  snapshot_sha256: 2945ad43ec0992814501e786261eb10116213199753c1406e6fb8d16915375f0
+- evidence_id: accessions
+  kind: authority
+  reference: NCBITaxon:470; NCBITaxon:573; NCBITaxon:562; SAMN04901687; SAMN11953775;
+    SAMN11953776; SAMN04014874; SAMN04014919; SAMN04014924
+  locator: NCBI taxonomy and all six BioSample identity records read against the CDC
+    linkage.
+  accessed_at: '2026-10-21T14:45:02Z'
+  support: supports
+  summary: All three taxonomy IDs resolve to the native species. Every BioSample resolves
+    and has the same organism as its linked CDC isolate. BioSample strain attributes
+    explicitly include FDA-CDC-AR_0297, AR_0078 and AR_0083 where supplied; other
+    sample identity is anchored by the CDC accession linkage. Missing BioSample isolation-source
+    fields do not refute the more specific CDC page metadata.
+  snapshot_sha256: 4cb648b1d2ec0af1470372ac1c7bf6765adffa426244c0de36b568b2e1df64ea
+- evidence_id: adopted2004
+  kind: primary_source
+  reference: PMID:15047550; DOI:10.1128/AAC.48.4.1384-1396.2004; PMC375337
+  locator: Complete abstract and all original main prose read, including methods,
+    results, discussion and figure captions; not every Table 1 cell or figure image
+    was independently inspected.
+  accessed_at: '2026-10-21T14:45:01Z'
+  support: supports
+  summary: 'This study tests 815 selected US clinical isolates collected during 1999–2003
+    using NCCLS broth microdilution. It supports broad, phenotype-dependent antibacterial
+    activity. The actual study panel is not a Pseudomonas comparison: its antipseudomonal
+    statement cites other reports. The paper does not establish an unrestricted ranking
+    against every beta-lactam or all later isolate populations. It also does not supply
+    the direct PBP competition experiment used in the later follow-up.'
+  snapshot_sha256: e24c1687592c38a3b23a7fa0caacc5df5eb554723d03d50ae6c189c3b30c2f8d
+- evidence_id: adopted2005
+  kind: primary_source
+  reference: PMID:16307551; DOI:10.1111/j.1469-0691.2005.01271.x; https://onlinelibrary.wiley.com/doi/full/10.1111/j.1469-0691.2005.01271.x
+  locator: Complete indexed abstract and publisher-rendered introduction, methods
+    and early results read; later full tables not completely retrieved.
+  accessed_at: '2026-10-21T14:43:39Z'
+  support: supports
+  summary: The 2003 surveillance project tested 16,008 isolates. Its 829 P. aeruginosa
+    isolates and contemporary comparator panel support the historical doripenem/meropenem
+    ranking. Methods describe reference broth microdilution and manufacturer-provided
+    standard powder. This is a bounded in-vitro comparison, not a timeless claim about
+    every beta-lactam or clinical efficacy.
+  snapshot_sha256: 7c1d026c5ef8354b4c4f173cb2cf1b7781e3d2ae7d2d733870edec611ed96a7b
+- evidence_id: pbp2008
+  kind: primary_source
+  reference: PMID:18250190; DOI:10.1128/AAC.01529-07; PMC2292531
+  locator: Entire original main article and complete Table 1 read, including methods
+    and morphology figure caption; image itself not independently assessed.
+  accessed_at: '2026-10-21T14:45:01Z'
+  support: supports
+  summary: Membrane preparations from E. coli MC4100 and P. aeruginosa PAO1/ATCC 27853
+    were tested by Bocillin FL competition. Doripenem preferentially inhibited labeling
+    of essential PBP2 in E. coli and PBP2/PBP3 in P. aeruginosa, supporting the general
+    PBP target. These IC50 values are competition endpoints, not equilibrium Kd measurements
+    or whole-cell MICs. Separate broth MICs and morphology experiments were reported;
+    their association does not isolate every contribution to killing. Exact bulk hydrate
+    status is not specified. Optional claim-level primary enrichment can preserve
+    species and assay scope without treating the current evidence-needed qualification
+    as an error.
+  snapshot_sha256: 66aa2ec851ad5f936bd0ff7e1a06282d11c20a968f51e72c2fa0942128b1d4fa
+- evidence_id: card
+  kind: database
+  reference: https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo
+  locator: 'Complete relevant current blocks: compound, drug class, PBP target, VCC-1,
+    CAM-1 and PAM-1.'
+  accessed_at: '2026-10-21T14:43:38Z'
+  support: supports
+  summary: All three native resistance identifiers, labels and direct confers_resistance_to_antibiotic
+    relations to ARO:3000640 agree with the current official ontology. The PBP target
+    relation also agrees. These remain database assertions, and the organism-unspecified
+    native entries do not claim that every host background crosses a clinical resistance
+    breakpoint.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: vcc
+  kind: primary_source
+  reference: PMID:26824956; DOI:10.1128/AAC.02812-15; PMC4775928
+  locator: Complete original main prose and Tables 1–2 read; sequence and genomic
+    figures not independently reprocessed.
+  accessed_at: '2026-10-21T14:46:30Z'
+  support: supports
+  summary: Table 1 gives doripenem Etest MICs >32 for V. cholerae N14-02106, 2 for
+    E. coli TOP10 carrying pVCC-1 and 0.032 micrograms/mL for TOP10. The clone therefore
+    raises MIC but is described as intermediate for doripenem in this paper. Purified-enzyme
+    Table 2 measures imipenem and meropenem kinetics, not doripenem kinetics. These
+    results support a resistance contribution with host dependence; they must not
+    become a doripenem-specific catalytic constant or prove resistance in all hosts.
+  snapshot_sha256: 3b01024d801282dd299be6b48996b472275d804de726854749fc3140b35a2ad0
+- evidence_id: other-resistance
+  kind: primary_source
+  reference: PMID:30789204; DOI:10.1093/jac/dkz066; PMID:24356301; DOI:10.1093/jac/dkt498
+  locator: Complete indexed CAM-1 abstract and PAM-1 publisher extract read; original
+    complete tables not obtained.
+  accessed_at: '2026-10-21T14:45:02Z'
+  support: context_only
+  summary: CAM-1 was characterized from four related clinical P. aeruginosa isolates
+    and its cloned gene conferred carbapenem resistance in E. coli TOP10. The abstract
+    does not give a doripenem-specific endpoint. PAM-1 has no indexed abstract; the
+    available publisher extract identifies the B3 enzyme in P. alcaligenes MRY13-0052.
+    These bounded readings supplement, but do not upgrade, the exact drug-specific
+    CARD assertions. ResearchGate search fragments were treated only as leads.
+  snapshot_sha256: ef487d4837da81cb9c6092cb1a5d0975e9ca3b08c37db30e413b4db8e2df2c03
+- evidence_id: fda-history
+  kind: authority
+  reference: FDA NDA022106 products 001 and 002; UNII:BHV525JOBH; FDA label 022106s015lbl
+  locator: Complete current openFDA application/products and GSRS identity read; label
+    sections 1, 11 and 12.4 inspected.
+  accessed_at: '2026-10-21T14:43:37Z'
+  support: supports
+  summary: Both product numbers, sponsor, brand, ingredient, original 2007-10-12 approval/AP
+    and discontinued marketing match. GSRS version 32 encodes the exact anhydrous
+    active moiety. The physical product is monohydrate, and its label explicitly normalizes
+    activity to the active doripenem moiety. This supports the ingredient-level identity
+    join while requiring product-form qualification. Approved historical indications
+    do not imply an indication for every organism or ventilator-associated pneumonia.
+  snapshot_sha256: bd253db44253d7bbdd68eea1d152c55e469827f767b1af7f5d7680b666247696
+- evidence_id: withdrawal2018
+  kind: authority
+  reference: https://www.govinfo.gov/content/pkg/FR-2018-07-12/pdf/2018-14935.pdf
+  locator: 'Official notice at 83 FR 32305–32306: effective date, exact NDA022106
+    row and operative clause read; page 32305 visually inspected.'
+  accessed_at: '2026-10-21T14:46:30Z'
+  support: refutes
+  summary: The notice withdraws approval of NDA022106, Doribax for injection 250 mg/vial
+    and 500 mg/vial, Shionogi, effective 2018-08-13, including amendments and supplements.
+    Holders requested withdrawal because the products were no longer marketed. This
+    is a formal approval event beyond the discontinued-marketing facts already present.
+    It does not erase original approval or establish worldwide withdrawal of all doripenem
+    products.
+  snapshot_sha256: 951d5597c47a603c29ac9891f8cdf9d90ade0c690fccb8ffec638b4d30f2b01c
+- evidence_id: determination2022
+  kind: authority
+  reference: https://www.govinfo.gov/content/pkg/FR-2022-08-09/pdf/2022-17056.pdf
+  locator: Notice summary, exact NDA022106 row and operative determination read.
+  accessed_at: '2026-10-21T14:45:01Z'
+  support: context_only
+  summary: FDA determined that the listed Doribax strengths were not withdrawn from
+    sale for safety or effectiveness reasons. The notice retains the discontinued
+    products as references, leaves relevant approved ANDAs unaffected and permits
+    additional ANDAs satisfying applicable requirements. It does not rescind the 2018
+    withdrawal of this NDA. No safety-based withdrawal or universal absence of generic
+    approvals is inferred.
+  snapshot_sha256: 17d4736643b3223dac04475bca5eb39fa40a5041cb9dd6329121b3adaf51321d
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB p_aeruginosa/precise364
+  locator: Dataset catalog and penicillin search executed before web mechanism follow-up.
+  accessed_at: '2026-10-21T14:49:54Z'
+  support: context_only
+  summary: Five gene hits identify PA2272/pbpC, PA4003/pbpA, PA4418/ftsI, PA4700/mrcB
+    and PA5045/ponA; no iModulon hit warranted summarize. These supply bounded protein
+    context, not direct doripenem binding or phenotype proof. An initial search mistakenly
+    used the P. putida dataset name precise321 under P. aeruginosa and returned zero;
+    that result is discarded, and the catalog-listed precise364 search supplies the
+    assessment.
+  snapshot_sha256: 2c8b68e036f7dd6356f01aa9d0ed98a02f40edc7dda56d9b40628ec59c9c88f6
+- evidence_id: search
+  kind: search
+  reference: 370-inclusive-hits.txt; 370-curation-hits.txt; 370-literature.json
+  locator: Ignored-inclusive exact name, CHEBI, ARO, InChIKey and application search;
+    bounded public literature and official-identity/regulatory follow-up.
+  accessed_at: '2026-10-21T14:49:54Z'
+  support: context_only
+  summary: The maintained source rows and curator additions are present. No exact
+    corrective overlay was found; the HIVDB mapping explicitly warns that its DOR
+    means doravirine. Public searches resolved both adopted papers and original target/resistance
+    studies with stated access limits. No absence claim is based on an ordinary ignored-aware
+    search.
+  search_scope: 2026-10-21; rg --no-ignore --hidden across data, curation, conf, scripts,
+    src, docs, .claude, reviews and reports for doripenem, CHEBI:135928, ARO:3000640,
+    AVAACINZEOAHHE and 022106. Additional exact identifier/name searches covered curation
+    and conf. Public searches used adopted PMIDs/DOIs, doripenem plus PBP/VCC-1/CAM-1/PAM-1,
+    exact FDA application withdrawal, hydrate identities and official chemical accessions.
+  snapshot_sha256: 9e4a6d3729dad2199e59a81b70956a0b56c48c7d5a17171f67dfb17f540fc09c
+- evidence_id: validation
+  kind: validation
+  reference: 370-schema.log; 370-strict.log; 370-chemistry.json; 370-xref-chemistry.json
+  locator: Actual focused checks and unchanged-input hash recheck.
+  accessed_at: '2026-10-21T14:49:54Z'
+  support: supports
+  summary: Focused schema and strict gates pass, as do native chemistry and all eight
+    expected authority comparisons. The original thirteen hashes remain unchanged
+    in the expanded nineteen-input capture. Direct HMDB and some publisher routes
+    returned 403; two guessed DrugCentral structure routes returned 404 before the
+    actual linked /drug/4149/smiles endpoint succeeded. A guessed 2005 publisher path
+    was not used as evidence. None of these retrieval failures is a native validation
+    failure.
+  snapshot_sha256: 1b2fdc1b3968fa2a4d5ea47fbcf7ae0a9125eb638488f155edcbe484dece6240
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact structure, aliases and product form
+  outcome: concern
+  summary: All inspected exact chemical encodings agree with the water-free six-centre
+    graph. The minor alias concern is limited to typing of Doribax and doripenem hydrate,
+    not replacement of the native identity. Official product normalization supports
+    active-moiety mapping while preserving the separate hydrate.
+  target_ids:
+  - CHEBI:135928
+  evidence_ids:
+  - native
+  - identity
+  - hydrate
+  - fda-history
+  - validation
+- assessment_id: activity
+  area: evidence
+  topic: Six curated resistant-isolate observations
+  outcome: supported
+  summary: All six MIC values, greater-than qualifiers, units, taxon/strain/BioSample
+    identifiers, assay notes and breakpoint-edition qualifications agree with current
+    official pages. Their low susceptibility does not refute broad activity in other
+    strains, and their source gene detections are not causal proof.
+  target_ids:
+  - CHEBI:135928
+  evidence_ids:
+  - cdc
+  - accessions
+  - native
+- assessment_id: definition
+  area: evidence
+  topic: Broad activity and historical comparative ranking
+  outcome: concern
+  summary: Broad antibacterial activity is supported. The superlative is traceable
+    to a 2003 surveillance panel in the second adopted paper, while the selected 2004
+    citation discusses Pseudomonas via other studies. Preserve that historical result
+    but qualify its comparator, population and date.
+  target_ids:
+  - CHEBI:135928
+  evidence_ids:
+  - owners
+  - adopted2004
+  - adopted2005
+- assessment_id: mechanism
+  area: evidence
+  topic: Qualified PBP and three resistance assertions
+  outcome: supported
+  summary: The database relations reproduce their source, and the exact-compound PBP
+    competition study supports the general target without requiring automatic primary
+    promotion. VCC-1 genetic effects are host-dependent and its published enzyme table
+    does not measure doripenem kinetics. CAM-1 and PAM-1 read depth remains explicitly
+    bounded.
+  target_ids:
+  - CHEBI:135928
+  evidence_ids:
+  - card
+  - pbp2008
+  - vcc
+  - other-resistance
+  - adapter
+- assessment_id: clinical
+  area: evidence
+  topic: Product identity, historical approval and later withdrawal
+  outcome: concern
+  summary: Both represented FDA products retain accurate original approval and marketing
+    data, but the 2018 withdrawal of their exact NDA is missing from the regulatory
+    summary. The 2022 nonsafety determination concerns sale/reference status and generic
+    eligibility, not reinstatement. Any compound-wide summary must retain application-specific
+    scope rather than assume all other approvals are withdrawn.
+  target_ids:
+  - CHEBI:135928
+  evidence_ids:
+  - fda-history
+  - withdrawal2018
+  - determination2022
+  - owners
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership, curator history and completeness
+  outcome: supported
+  summary: Both adopted compound citation leads, all source concepts/mints and every
+    history event were checked. Maintained generated ownership is separated from curator-owned
+    isolate observations. Absence of optional primary PBP enrichment, producer or
+    causal graph is not itself a defect.
+  target_ids:
+  - CHEBI:135928
+  evidence_ids:
+  - owners
+  - adopted2004
+  - adopted2005
+  - search
+  - validation
+findings:
+- finding_id: F1
+  issue_key: doripenem-fda-022106-withdrawn-approval-qualification
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Retain the 2018 withdrawal event for the represented FDA application
+  description: The standalone clinical_status and both product assertions present
+    APPROVED without later-event qualification, although FDA formally withdrew NDA022106
+    and its supplements effective 2018-08-13 for both represented strengths. Original
+    2007 approval/AP, sponsor and discontinued/currently_marketed=false facts remain
+    correct. The 2022 notice says the products were not withdrawn for safety or effectiveness
+    and protects generic-reference eligibility; it does not reinstate this NDA. Preserve
+    historical approval while adding the application-specific withdrawal event and
+    deriving a properly scoped summary.
+  target_ids:
+  - CHEBI:135928
+  field_paths:
+  - clinical_status
+  - clinical_status_assertions[0]
+  - clinical_status_assertions[1]
+  evidence_ids:
+  - owners
+  - fda-history
+  - withdrawal2018
+  - determination2022
+  rule_id: Clinical-status checklist and schema regulatory/use semantics; ClinicalStatusEnum
+    WITHDRAWN
+  native_severity: major
+  normalization_reason: A verified later event for the exact represented application
+    makes its unqualified regulatory summary materially incomplete. This is not an
+    inference from marketing discontinuation and does not assert that every doripenem
+    generic or jurisdiction is withdrawn.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Historical approval/product inventory
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: Application event and withdrawal handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Clinical summary and product assertion generation
+- finding_id: F2
+  issue_key: doripenem-hydrate-brand-exact-synonym-scope
+  category: identity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate hydrate and brand context from exact anhydrous synonyms
+  description: synonyms[0] types doribax as EXACT_SYNONYM and synonyms[1] types doripenem
+    hydrate the same way. The stored graph is anhydrous doripenem. Official ChEBI/PubChem/GSRS
+    encode the monohydrate separately, and the FDA label identifies Doribax as a monohydrate
+    product whose strength and activity are normalized to the active moiety. Retain
+    useful names with related-form and BRAND_NAME qualification instead of asserting
+    strict structural synonymy.
+  target_ids:
+  - CHEBI:135928
+  field_paths:
+  - synonyms[0].synonym_type
+  - synonyms[1].synonym_type
+  evidence_ids:
+  - identity
+  - hydrate
+  - fda-history
+  - owners
+  rule_id: Identity/equivalence checklist; declared synonym type must preserve exact
+    chemical form
+  native_severity: minor
+  normalization_reason: The exact core structure and active-moiety relationship are
+    correct. This is a bounded alias classification defect and does not make the record
+    a mixture or require replacing its graph.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted upstream alias provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained alias normalization or source qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible synonym type and scope
+- finding_id: F3
+  issue_key: doripenem-historical-comparator-superlative-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Bound the antipseudomonal superlative to the original comparison
+  description: The definition calls doripenem and meropenem the most active beta-lactams
+    against P. aeruginosa without a comparator, population or time boundary. The second
+    adopted primary study supports this ranking among its tested drugs for 829 isolates
+    collected in 2003. The selected PMID15047550 did not itself test a Pseudomonas
+    panel and cites earlier reports for that statement. Qualify the historical in-vitro
+    comparison and its claim-level citation, or remove the superlative while retaining
+    supported broad activity.
+  target_ids:
+  - CHEBI:135928
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - adopted2004
+  - adopted2005
+  - owners
+  rule_id: 'Evidence checklist: comparator, organism population and experimental scope
+    preserved'
+  native_severity: minor
+  normalization_reason: The broad activity claim is supported and the ranking has
+    a real historical source. The defect is bounded wording/citation scope, not evidence
+    that doripenem lacks antibacterial activity or a claim that every later comparison
+    reverses the ranking.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition and both publication references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained definition-source qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition and claim-level citation selection
+actions:
+- action_id: A1
+  description: Add maintained application-level withdrawal/event handling and derive
+    the clinical summary with explicit scope.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:135928
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Historical approval/product inventory
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: Application event and withdrawal handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Clinical summary and product assertion generation
+  acceptance_checks:
+  - Capture NDA022106 products 001/002, the 2018-08-13 withdrawal and official notice
+    2018-14935 with retrieval provenance. Preserve the 2007-10-12 original AP event
+    and discontinued marketing data.
+  - Retain the distinct 2022 nonsafety determination and ANDA eligibility. Do not
+    infer a safety withdrawal, invalidate other generic applications, or set a worldwide
+    compound status from this one NDA.
+  - Use a maintained overlay or event extraction rule, regenerate, and verify focused
+    schema/strict checks and source reproduction.
+- action_id: A2
+  description: Correct alias typing through maintained source qualification while
+    preserving parent/hydrate and product links.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:135928
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted upstream alias provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained alias normalization or source qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible synonym type and scope
+  acceptance_checks:
+  - Type Doribax as BRAND_NAME and retain doripenem hydrate only with supported related-form
+    scope; preserve the exact native structure and source provenance.
+  - Compare the water-free and hydrate keys independently and retain the FDA active-moiety
+    normalization context. Do not create or merge records solely from a brand name.
+  - Regenerate affected fields and verify exact identity/synonym scope, schema/strict
+    validation and corpus reproduction.
+- action_id: A3
+  description: Qualify or remove the unbounded comparative sentence and attach the
+    original surveillance citation at the supported claim.
+  finding_ids:
+  - F3
+  target_ids:
+  - CHEBI:135928
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition and both publication references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained definition-source qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition and claim-level citation selection
+  acceptance_checks:
+  - If retained, describe the 2003 collection and tested comparator panel, citing
+    PMID16307551. Preserve broad Gram-positive/Gram-negative activity without claiming
+    universal susceptibility or clinical superiority.
+  - Keep PMID15047550 as support for its actual tested activity scope; do not treat
+    its cited Pseudomonas discussion as its own direct experiment.
+  - Implement the qualification in a maintained source/definition owner, regenerate
+    and run focused validation and source reproduction.
+limitations:
+- HMDB0041883 returned 403 through direct and web access; it remains independently
+  attested by ChEBI/PubChem, but its own chemical graph was not inspected. Paid registries
+  were not used.
+- The 2004 original main prose was read completely, but every large susceptibility-table
+  cell and image was not independently reviewed. The 2005 original abstract, introduction,
+  methods and early results were read; subsequent publisher fetches returned 403/timeouts,
+  so complete later tables are not claimed read.
+- The 2008 PBP paper was read completely as main text and Table 1, including the morphology
+  caption; the microscopy image and underlying binding traces were not independently
+  reprocessed. Its bulk hydrate state is unspecified.
+- VCC-1 main prose and Tables 1–2 were read; genomic/sequence figures and raw data
+  were not reprocessed. CAM-1 was read at complete-abstract depth and PAM-1 at publisher-extract
+  depth; neither is treated as an inspected complete doripenem-specific functional
+  dataset. The native assertions retain their database qualification.
+- CDC pages establish exact isolate MICs and quoted interpretation provenance. CLSI
+  standards were not independently purchased or reinterpreted, and no particular resistance
+  determinant is inferred as the cause of these isolate measurements.
+- FDA label review covered the identity, relevant activity/indication and microbiology
+  sections plus the exact structure image, not a full clinical-safety audit. The two
+  regulatory notices were read at exact applicable scope. Other generic approvals
+  and other jurisdictions were not exhaustively inventoried; no compound-wide unavailability
+  conclusion is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native status promotion is implied. Optional claim-level primary PBP evidence
+  may be curated separately with assay and species scope, but its absence is not an
+  additional finding.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

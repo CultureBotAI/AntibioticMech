@@ -1,0 +1,795 @@
+# Dodecanoic acid: mixture synonym and conjugate-base exact link
+
+- Review: 20261021T144848Z-dodecanoic-acid-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T14:27:16Z
+- Finished UTC: 2026-10-21T14:48:48Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native neutral lauric-acid structure is coherent and original bacterial experiments support bounded antibacterial and bactericidal activity. Two exact-identity assertions need correction: coconut oil fatty acids denotes a mixture, and the EAWAG compound cross-reference encodes the laurate anion. Original host lipid-presentation work is not antimicrobial-target evidence.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position369; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:30805 | data/antibiotics/antibacterial/dodecanoic-acid.yaml | generated | dodecanoic acid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:30805 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:30805 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:30805 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:30805 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:30805 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:30805 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:30805 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:30805 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:30805 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:30805 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:30805 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:30805 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral lauric-acid record
+
+identity: supported. Targets: CHEBI:30805.
+
+Ten encodings match neutral C12H24O2 and no stereochemistry is missing. Common chemical names and structural parents are coherent; plant-oil occurrence remains source-attested.
+
+### Mixture name and ambiguous shorthand
+
+identity: concern. Targets: CHEBI:30805.
+
+Coconut oil fatty acids is too broad for exact identity. Dodecylcarboxylate and ABL have unresolved legacy/contextual ambiguity, but no additional exact chemical correction is established from a name collision alone.
+
+### Exact external identifiers and protonation
+
+grounding: concern. Targets: CHEBI:30805.
+
+The EAWAG exact link denotes an anion. Other accessible graph-bearing identifiers agree; inaccessible identifiers remain qualified, and MetaCyc is not judged solely from its identifier spelling.
+
+### Bactericidal and antibacterial definition scope
+
+evidence: supported. Targets: CHEBI:30805.
+
+Original bacterial growth and CFU endpoints support the role under tested material and strain conditions. They do not imply universal potency, approved treatment, interchangeable MIC/MBC values or activity of the coconut-fatty-acid mixture.
+
+### Absent molecular target and causal graph
+
+completeness: unknown. Targets: CHEBI:30805.
+
+No native mechanism is asserted. Host CD1c lipid binding is not an antibacterial target, and a killing phenotype alone does not establish a particular direct microbial mechanism.
+
+### Activity, resistance and producer enrichment
+
+completeness: unknown. Targets: CHEBI:30805.
+
+Quantitative import would require resolving source assay inconsistencies and retaining exact material/strain/time. Native absent clinical/resistance/producer fields are not defects; common lipid occurrence is not a verified microbial biosynthetic provenance object.
+
+### Adopted citations and generated source history
+
+provenance: supported. Targets: CHEBI:30805.
+
+Both adopted citations are explicitly disposed; four seed/reseed events and exact source identity reproduce. Fourteen captured hashes remain unchanged.
+
+## Findings
+
+### F1: Coconut oil fatty acids is a mixture, not an exact synonym
+
+major / open / confirmed; issue key: dodecanoic-acid-coconut-mixture-synonym.
+
+The native exact synonym denotes a multicomponent fatty-acid substance with CAS61788-47-4. Neutral lauric acid CAS143-07-7 is one constituent. Remove the exact-equivalence assertion through maintained source handling; retain occurrence context separately if useful.
+
+### F2: The EAWAG exact cross-reference encodes the laurate anion
+
+major / open / confirmed; issue key: dodecanoic-acid-eawag-laurate-xref.
+
+umbbd.compound:c0566 displays a negative carboxylate with formula C12H23O2 and key ending-M. Native dodecanoic acid is neutral C12H24O2 with key ending-N. Preserve a related conjugate-base link only with explicit nonexact semantics; do not change the native graph to fit this cross-reference.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Remove mixture exact equivalence and correct the conjugate-base link in maintained source handling.
+
+- Preserve the supported neutral lauric-acid graph, CAS143-07-7 and matching exact identifiers.
+- Remove Coconut oil fatty acids as an exact synonym; retain constituent/occurrence context separately if warranted.
+- Remove or explicitly reclassify c0566 as a related conjugate-base reference without exact-equivalence semantics.
+- Retain unresolved legacy shorthand and protected-reference limits without inventing corrections.
+- Regenerate with canonical history and run schema, strict, chemical equivalence, source reproduction and required QC.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/dodecanoic-acid.yaml; Entire YAML: definition,23 aliases, two parents, role, structure,10 exact identifiers, two drug links, document link, source and four history events | supports | CHEBI:30805 denotes neutral achiral C12H24O2, with no quantitative spectrum, target, resistance, clinical approval, producer object or causal graph. The broad bactericidal wording is assessed against defined experiments, not as universal efficacy. |
+| owners | data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Exact source row612; readiness queue1062; exact-xref and synonym schema semantics | supports | The frozen source reproduces all imported names and links and adopts two PMIDs. Fourteen original-plus-appended input hashes remain unchanged. Identity corrections must enter maintained source handling and survive reseeding. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/30805/; Current full identity, names, database links and relations | supports | Current ChEBI repeats the neutral graph and imported mixture synonym/link. The two parents are straight-chain saturated fatty acid and medium-chain fatty acid; current definitions include C12. The retained antibacterial role and plant-oil description are source annotations, not standalone quantitative experiments. |
+| chemistry | Independent RDKit2026.03.5 / InChI1.07.3; 037-root-chemistry.py;369-authority-chemistry.json | supports | Native SMILES/InChI, ChEBI molfile, PubChem3893 SMILES/InChI, KEGG C02679, KNApSAcK C00001221, DrugCentral4642, LipidMaps LMFA01010012 and PDB DAO reproduce POULHZVOKOAJMA-UHFFFAOYSA-N. Formula, zero charge, masses and absence of stereocentres agree. EAWAG c0566 instead gives POULHZVOKOAJMA-UHFFFAOYSA-M, charge minus1. |
+| groundings | https://rest.kegg.jp/get/C02679; https://www.lipidmaps.org/databases/lmsd/LMFA01010012; https://www.rcsb.org/ligand/DAO; https://drugcentral.org/drugcard/4642; Independent exact structure records and corresponding local fetched descriptors | supports | The accessible chemical identifiers agree with neutral lauric acid. NIST CAS143-07-7 also matches identity. HMDB and DrugBank retrieval returned403; MetaCyc DODECANOATE timed out. The MetaCyc name alone is not proof of an anionic graph. Reaxys1099477 and Gmelin103520 remain source-attested without independently read protected registers. |
+| mixture | https://services.industrialchemicals.gov.au/chemical-details-page/?id=1910ef16-12b0-ec11-8108-005056a07365; AICIS inventory entry CAS61788-47-4; names and formula fields | supports | The official inventory identifies Fatty acids, coco with the associated name Coconut oil fatty acids and a distinct CAS61788-47-4, without one molecular formula. This is not the exact lauric-acid substance CAS143-07-7. |
+| mixture-composition | https://www.canada.ca/en/environment-climate-change/services/evaluating-existing-substances/screening-assessment-fatty-acids-derivatives-group.html; August2020 assessment, section6.4.2.2 paragraph identifying coconut fatty-acid constituents; browser text read | supports | The official assessment lists lauric, myristic, oleic and palmitic acids as major coconut-fatty-acid constituents, with distinct CAS numbers. Thus lauric acid is a component of the mixture, not an exact synonym for the whole mixture. The command-line snapshot attempt timed out; this evidence records the successfully read browser section. |
+| umbbd | https://eawag-bbd.ethz.ch/servlets/pageservlet?ptype=c&amp;compID=c0566; Full compound page: displayed formula, mass and SMILES | supports | Although its label says Lauric acid, c0566 displays C12H23O2 with negative charge and SMILES CCCCCCCCCCCC([O-])=O. Independent parsing yields the laurate conjugate-base key ending-M. This contradicts exact equivalence to the native neutral graph. |
+| conjugate | https://www.ebi.ac.uk/chebi/backend/api/public/compound/18262/; Current dodecanoate identity and conjugate-base definition | supports | CHEBI:18262 explicitly distinguishes dodecanoate from dodecanoic acid and supplies the same negative-charge graph/key as c0566. Protonation-specific exact identity must be preserved even when acids and bases interconvert in solution. |
+| adopted2009 | https://doi.org/10.1038/jid.2009.93; PMID19387482/PMC2772209 original Results, Table1 and bacterial MIC/MBC Methods | supports | The study uses Sigma lauric acid with5% DMSO controls and defined P. acnes, S. aureus and S. epidermidis strains. Growth inhibition and surviving-CFU experiments support antibacterial and bactericidal scope. P. acnes experiments used anaerobic RCM; staphylococcal Methods specify aerobic TSB. The5-hour PBS MBC experiment is distinct from growth MICs and mouse-ear treatments. No direct bacterial molecular target or clinical authorization follows. |
+| assay-boundary | https://doi.org/10.1038/jid.2009.93; Table1, Figure1 caption and susceptibility Methods comparison | supports | Table1’s S. aureus MIC/EC50 ordering and the Figure1 caption’s blanket anaerobic wording require reconciliation before quantitative import; the detailed Methods distinguish organism-specific conditions. P. acnes MBC values are60 and80 micrograms/mL for ATCC6919 and11827 with5-hour exposure at10^7CFU/mL. These are assay-specific values, not native MIC observations or general clinical susceptibility cutoffs. |
+| adopted2016 | https://doi.org/10.1073/pnas.1519246113; PMID26884207/PMC4780616 complete abstract and relevant original structural Results | supports | The CD1c study concerns host lipid presentation and T-cell recognition. In a CD1c/CD1b chimera crystal, two C12 spacers are interpreted as likely lauric acid from the refolding mixture. This is a qualified structural lipid-assignment context, not proof that CD1c is the antibacterial target of lauric acid. |
+| aliases-document | https://en.wikipedia.org/wiki/Lauric_acid; https://rest.kegg.jp/get/C02679; https://www.rcsb.org/ligand/ABL; Document identity block; KEGG names; PDB ABL identity comparison | supports | The document link resolves the intended neutral lauric-acid page. KEGG repeats the legacy Dodecylcarboxylate name despite encoding the neutral C12 graph. Current PDB ABL is an unrelated molecule, but native ABL is a bare synonym, not a PDB xref; that namespace collision alone does not prove the historical synonym wrong. These ambiguous aliases remain qualified rather than receiving invented structural corrections. |
+| search | Ignored-inclusive local exact identity and public primary-source follow-up; 369-owners-search.json;037-root-fetch and subsequent fetch manifests | supports | Both adopted complete abstracts and relevant original full-text sections were read. Initial full XML routes failed, while PMC HTML succeeded. Additional fetched but unread studies were not counted as inspected evidence. No native gene/protein claim requires a structured gene adapter. |
+
+## Limits And Additional Notes
+
+- The2009 original bacterial Results, Table1 and relevant Methods were inspected. Figure pixels and all mouse histology were not independently reprocessed; source caption/Methods and MIC/EC50 inconsistencies must be resolved before numerical import.
+- The2016 original relevant structural Results and abstract were read; likely lauric-acid spacer assignment is explicitly qualified. The separately downloaded author PDF was not counted as a visually inspected figure source.
+- HMDB/DrugBank returned403 and MetaCyc timed out; Reaxys/Gmelin were source-attested only. Bare ABL and legacy Dodecylcarboxylate remain unresolved contextual aliases, not confirmed new chemical mismatches.
+- The Canadian composition paragraph and encyclopedia identity section were read through the browser; no successful Canadian full-page local snapshot is claimed. The encyclopedia is used only to check the asserted document destination.
+- No native record/source/status/history was edited. Shared required checks retain actual outcomes and bounded evidence does not certify universal clinical effectiveness.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T144848Z-dodecanoic-acid-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Dodecanoic acid: mixture synonym and conjugate-base exact link'
+started_at: '2026-10-21T14:27:16Z'
+finished_at: '2026-10-21T14:48:48Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The native neutral lauric-acid structure is coherent and original bacterial
+  experiments support bounded antibacterial and bactericidal activity. Two exact-identity
+  assertions need correction: coconut oil fatty acids denotes a mixture, and the EAWAG
+  compound cross-reference encodes the laurate anion. Original host lipid-presentation
+  work is not antimicrobial-target evidence.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/dodecanoic-acid.yaml
+    sha256: 5e214b433cbc483424529e419433081b5cdd10aa7924d8e706aa30b48118e59f
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+targets:
+- target_id: CHEBI:30805
+  path: data/antibiotics/antibacterial/dodecanoic-acid.yaml
+  label: dodecanoic acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position369; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:30805
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:30805
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    369
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:30805
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/dodecanoic-acid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:30805
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/dodecanoic-acid.yaml --out /private/tmp/am-review-session/369-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:30805
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:30805
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:30805
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:30805
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:30805
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:30805
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:30805
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:30805
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:30805
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/dodecanoic-acid.yaml
+  locator: 'Entire YAML: definition,23 aliases, two parents, role, structure,10 exact
+    identifiers, two drug links, document link, source and four history events'
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: CHEBI:30805 denotes neutral achiral C12H24O2, with no quantitative spectrum,
+    target, resistance, clinical approval, producer object or causal graph. The broad
+    bactericidal wording is assessed against defined experiments, not as universal
+    efficacy.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: Exact source row612; readiness queue1062; exact-xref and synonym schema
+    semantics
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: The frozen source reproduces all imported names and links and adopts two
+    PMIDs. Fourteen original-plus-appended input hashes remain unchanged. Identity
+    corrections must enter maintained source handling and survive reseeding.
+  snapshot_sha256: f7389c1946b6be71aa10dbc3c0f0ae9ad92ed2c5cabae1550a5c556ab82102a7
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/30805/
+  locator: Current full identity, names, database links and relations
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: Current ChEBI repeats the neutral graph and imported mixture synonym/link.
+    The two parents are straight-chain saturated fatty acid and medium-chain fatty
+    acid; current definitions include C12. The retained antibacterial role and plant-oil
+    description are source annotations, not standalone quantitative experiments.
+  snapshot_sha256: 35e971f393a5fac3e7de97912df820d59edefa2374a8f9d39b928afbe25ae1b4
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit2026.03.5 / InChI1.07.3
+  locator: 037-root-chemistry.py;369-authority-chemistry.json
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: Native SMILES/InChI, ChEBI molfile, PubChem3893 SMILES/InChI, KEGG C02679,
+    KNApSAcK C00001221, DrugCentral4642, LipidMaps LMFA01010012 and PDB DAO reproduce
+    POULHZVOKOAJMA-UHFFFAOYSA-N. Formula, zero charge, masses and absence of stereocentres
+    agree. EAWAG c0566 instead gives POULHZVOKOAJMA-UHFFFAOYSA-M, charge minus1.
+  snapshot_sha256: 54be9b50b3d416ebee22bbf93e9b876f6c184e37782c000c8b7e5ed099904ab7
+- evidence_id: groundings
+  kind: authority
+  reference: https://rest.kegg.jp/get/C02679; https://www.lipidmaps.org/databases/lmsd/LMFA01010012;
+    https://www.rcsb.org/ligand/DAO; https://drugcentral.org/drugcard/4642
+  locator: Independent exact structure records and corresponding local fetched descriptors
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: The accessible chemical identifiers agree with neutral lauric acid. NIST
+    CAS143-07-7 also matches identity. HMDB and DrugBank retrieval returned403; MetaCyc
+    DODECANOATE timed out. The MetaCyc name alone is not proof of an anionic graph.
+    Reaxys1099477 and Gmelin103520 remain source-attested without independently read
+    protected registers.
+  snapshot_sha256: 83ac86e0a5b4e00c34b62eaa589809701f0fbcb6880477e916bee233df3eb114
+- evidence_id: mixture
+  kind: authority
+  reference: https://services.industrialchemicals.gov.au/chemical-details-page/?id=1910ef16-12b0-ec11-8108-005056a07365
+  locator: AICIS inventory entry CAS61788-47-4; names and formula fields
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: The official inventory identifies Fatty acids, coco with the associated
+    name Coconut oil fatty acids and a distinct CAS61788-47-4, without one molecular
+    formula. This is not the exact lauric-acid substance CAS143-07-7.
+  snapshot_sha256: 4d8f4ba722b3d7db412e707d4448086523552427f3e09e72f15d3f04fc352621
+- evidence_id: mixture-composition
+  kind: authority
+  reference: https://www.canada.ca/en/environment-climate-change/services/evaluating-existing-substances/screening-assessment-fatty-acids-derivatives-group.html
+  locator: August2020 assessment, section6.4.2.2 paragraph identifying coconut fatty-acid
+    constituents; browser text read
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: The official assessment lists lauric, myristic, oleic and palmitic acids
+    as major coconut-fatty-acid constituents, with distinct CAS numbers. Thus lauric
+    acid is a component of the mixture, not an exact synonym for the whole mixture.
+    The command-line snapshot attempt timed out; this evidence records the successfully
+    read browser section.
+- evidence_id: umbbd
+  kind: authority
+  reference: https://eawag-bbd.ethz.ch/servlets/pageservlet?ptype=c&compID=c0566
+  locator: 'Full compound page: displayed formula, mass and SMILES'
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: Although its label says Lauric acid, c0566 displays C12H23O2 with negative
+    charge and SMILES CCCCCCCCCCCC([O-])=O. Independent parsing yields the laurate
+    conjugate-base key ending-M. This contradicts exact equivalence to the native
+    neutral graph.
+  snapshot_sha256: 448571c95a5ac34606809d7a888f64ca1683cb50d54774f18b8a3bf9f02f4361
+- evidence_id: conjugate
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/18262/
+  locator: Current dodecanoate identity and conjugate-base definition
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: CHEBI:18262 explicitly distinguishes dodecanoate from dodecanoic acid and
+    supplies the same negative-charge graph/key as c0566. Protonation-specific exact
+    identity must be preserved even when acids and bases interconvert in solution.
+  snapshot_sha256: 1c549d250f6f9174a7be3d5f0cda7f9fcb733c91db57e4f1736a4f20d6ac369b
+- evidence_id: adopted2009
+  kind: primary_source
+  reference: https://doi.org/10.1038/jid.2009.93
+  locator: PMID19387482/PMC2772209 original Results, Table1 and bacterial MIC/MBC
+    Methods
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: The study uses Sigma lauric acid with5% DMSO controls and defined P. acnes,
+    S. aureus and S. epidermidis strains. Growth inhibition and surviving-CFU experiments
+    support antibacterial and bactericidal scope. P. acnes experiments used anaerobic
+    RCM; staphylococcal Methods specify aerobic TSB. The5-hour PBS MBC experiment
+    is distinct from growth MICs and mouse-ear treatments. No direct bacterial molecular
+    target or clinical authorization follows.
+  snapshot_sha256: 8280d60f719e6389d6b1723af99d0e1dd25717d987e879bf8719eacf21339cba
+- evidence_id: assay-boundary
+  kind: primary_source
+  reference: https://doi.org/10.1038/jid.2009.93
+  locator: Table1, Figure1 caption and susceptibility Methods comparison
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: Table1’s S. aureus MIC/EC50 ordering and the Figure1 caption’s blanket
+    anaerobic wording require reconciliation before quantitative import; the detailed
+    Methods distinguish organism-specific conditions. P. acnes MBC values are60 and80
+    micrograms/mL for ATCC6919 and11827 with5-hour exposure at10^7CFU/mL. These are
+    assay-specific values, not native MIC observations or general clinical susceptibility
+    cutoffs.
+  snapshot_sha256: 8280d60f719e6389d6b1723af99d0e1dd25717d987e879bf8719eacf21339cba
+- evidence_id: adopted2016
+  kind: primary_source
+  reference: https://doi.org/10.1073/pnas.1519246113
+  locator: PMID26884207/PMC4780616 complete abstract and relevant original structural
+    Results
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: The CD1c study concerns host lipid presentation and T-cell recognition.
+    In a CD1c/CD1b chimera crystal, two C12 spacers are interpreted as likely lauric
+    acid from the refolding mixture. This is a qualified structural lipid-assignment
+    context, not proof that CD1c is the antibacterial target of lauric acid.
+  snapshot_sha256: 186fd3509bde881baba5ee0c8ae42b9a64db72ade8080061cb5f87df2386b9c4
+- evidence_id: aliases-document
+  kind: authority
+  reference: https://en.wikipedia.org/wiki/Lauric_acid; https://rest.kegg.jp/get/C02679;
+    https://www.rcsb.org/ligand/ABL
+  locator: Document identity block; KEGG names; PDB ABL identity comparison
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: The document link resolves the intended neutral lauric-acid page. KEGG
+    repeats the legacy Dodecylcarboxylate name despite encoding the neutral C12 graph.
+    Current PDB ABL is an unrelated molecule, but native ABL is a bare synonym, not
+    a PDB xref; that namespace collision alone does not prove the historical synonym
+    wrong. These ambiguous aliases remain qualified rather than receiving invented
+    structural corrections.
+  snapshot_sha256: 54be9b50b3d416ebee22bbf93e9b876f6c184e37782c000c8b7e5ed099904ab7
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local exact identity and public primary-source follow-up
+  locator: 369-owners-search.json;037-root-fetch and subsequent fetch manifests
+  accessed_at: '2026-10-21T14:42:58Z'
+  support: supports
+  summary: Both adopted complete abstracts and relevant original full-text sections
+    were read. Initial full XML routes failed, while PMC HTML succeeded. Additional
+    fetched but unread studies were not counted as inspected evidence. No native gene/protein
+    claim requires a structured gene adapter.
+  search_scope: 2026-10-21; rg --no-ignore --hidden across maintained curation, conf,
+    scripts, data/raw and .claude plus original repository inspection; CHEBI:30805,
+    full key and exact names. Bounded adopted-PMID and chemical-identity follow-up;
+    no exhaustive absence claim.
+  snapshot_sha256: dc0e77aff15f6d7492958ccc86bcd9b66ce4c8c47d6a102ed40044142b3c612f
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral lauric-acid record
+  outcome: supported
+  summary: Ten encodings match neutral C12H24O2 and no stereochemistry is missing.
+    Common chemical names and structural parents are coherent; plant-oil occurrence
+    remains source-attested.
+  target_ids:
+  - CHEBI:30805
+  evidence_ids:
+  - native
+  - chemistry
+  - chebi
+  - groundings
+- assessment_id: synonyms
+  area: identity
+  topic: Mixture name and ambiguous shorthand
+  outcome: concern
+  summary: Coconut oil fatty acids is too broad for exact identity. Dodecylcarboxylate
+    and ABL have unresolved legacy/contextual ambiguity, but no additional exact chemical
+    correction is established from a name collision alone.
+  target_ids:
+  - CHEBI:30805
+  evidence_ids:
+  - native
+  - mixture
+  - mixture-composition
+  - aliases-document
+- assessment_id: xref
+  area: grounding
+  topic: Exact external identifiers and protonation
+  outcome: concern
+  summary: The EAWAG exact link denotes an anion. Other accessible graph-bearing identifiers
+    agree; inaccessible identifiers remain qualified, and MetaCyc is not judged solely
+    from its identifier spelling.
+  target_ids:
+  - CHEBI:30805
+  evidence_ids:
+  - chemistry
+  - groundings
+  - umbbd
+  - conjugate
+- assessment_id: activity
+  area: evidence
+  topic: Bactericidal and antibacterial definition scope
+  outcome: supported
+  summary: Original bacterial growth and CFU endpoints support the role under tested
+    material and strain conditions. They do not imply universal potency, approved
+    treatment, interchangeable MIC/MBC values or activity of the coconut-fatty-acid
+    mixture.
+  target_ids:
+  - CHEBI:30805
+  evidence_ids:
+  - adopted2009
+  - assay-boundary
+- assessment_id: mechanism
+  area: completeness
+  topic: Absent molecular target and causal graph
+  outcome: unknown
+  summary: No native mechanism is asserted. Host CD1c lipid binding is not an antibacterial
+    target, and a killing phenotype alone does not establish a particular direct microbial
+    mechanism.
+  target_ids:
+  - CHEBI:30805
+  evidence_ids:
+  - native
+  - adopted2009
+  - adopted2016
+- assessment_id: optional
+  area: completeness
+  topic: Activity, resistance and producer enrichment
+  outcome: unknown
+  summary: Quantitative import would require resolving source assay inconsistencies
+    and retaining exact material/strain/time. Native absent clinical/resistance/producer
+    fields are not defects; common lipid occurrence is not a verified microbial biosynthetic
+    provenance object.
+  target_ids:
+  - CHEBI:30805
+  evidence_ids:
+  - native
+  - assay-boundary
+  - adopted2016
+- assessment_id: provenance
+  area: provenance
+  topic: Adopted citations and generated source history
+  outcome: supported
+  summary: Both adopted citations are explicitly disposed; four seed/reseed events
+    and exact source identity reproduce. Fourteen captured hashes remain unchanged.
+  target_ids:
+  - CHEBI:30805
+  evidence_ids:
+  - owners
+  - native
+  - adopted2009
+  - adopted2016
+findings:
+- finding_id: F1
+  issue_key: dodecanoic-acid-coconut-mixture-synonym
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Coconut oil fatty acids is a mixture, not an exact synonym
+  description: The native exact synonym denotes a multicomponent fatty-acid substance
+    with CAS61788-47-4. Neutral lauric acid CAS143-07-7 is one constituent. Remove
+    the exact-equivalence assertion through maintained source handling; retain occurrence
+    context separately if useful.
+  target_ids:
+  - CHEBI:30805
+  field_paths:
+  - synonyms[5]
+  evidence_ids:
+  - native
+  - owners
+  - mixture
+  - mixture-composition
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: native-review-checklist:Identity; schema:EXACT_SYNONYM
+  native_severity: major exact-name mixture conflation
+  normalization_reason: The wrong exact alias can merge a mixture and one chemical
+    constituent despite a coherent native molecular graph.
+- finding_id: F2
+  issue_key: dodecanoic-acid-eawag-laurate-xref
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The EAWAG exact cross-reference encodes the laurate anion
+  description: umbbd.compound:c0566 displays a negative carboxylate with formula C12H23O2
+    and key ending-M. Native dodecanoic acid is neutral C12H24O2 with key ending-N.
+    Preserve a related conjugate-base link only with explicit nonexact semantics;
+    do not change the native graph to fit this cross-reference.
+  target_ids:
+  - CHEBI:30805
+  field_paths:
+  - xrefs[9]
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+  - umbbd
+  - conjugate
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: native-review-checklist:Grounding; schema:xrefs
+  native_severity: major protonation-specific exact-grounding mismatch
+  normalization_reason: An exact link crosses an explicit protonation and charge boundary;
+    the shared connectivity does not make the full chemical identities identical.
+actions:
+- action_id: A1
+  description: Remove mixture exact equivalence and correct the conjugate-base link
+    in maintained source handling.
+  finding_ids:
+  - F1
+  - F2
+  target_ids:
+  - CHEBI:30805
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  acceptance_checks:
+  - Preserve the supported neutral lauric-acid graph, CAS143-07-7 and matching exact
+    identifiers.
+  - Remove Coconut oil fatty acids as an exact synonym; retain constituent/occurrence
+    context separately if warranted.
+  - Remove or explicitly reclassify c0566 as a related conjugate-base reference without
+    exact-equivalence semantics.
+  - Retain unresolved legacy shorthand and protected-reference limits without inventing
+    corrections.
+  - Regenerate with canonical history and run schema, strict, chemical equivalence,
+    source reproduction and required QC.
+limitations:
+- The2009 original bacterial Results, Table1 and relevant Methods were inspected.
+  Figure pixels and all mouse histology were not independently reprocessed; source
+  caption/Methods and MIC/EC50 inconsistencies must be resolved before numerical import.
+- The2016 original relevant structural Results and abstract were read; likely lauric-acid
+  spacer assignment is explicitly qualified. The separately downloaded author PDF
+  was not counted as a visually inspected figure source.
+- HMDB/DrugBank returned403 and MetaCyc timed out; Reaxys/Gmelin were source-attested
+  only. Bare ABL and legacy Dodecylcarboxylate remain unresolved contextual aliases,
+  not confirmed new chemical mismatches.
+- The Canadian composition paragraph and encyclopedia identity section were read through
+  the browser; no successful Canadian full-page local snapshot is claimed. The encyclopedia
+  is used only to check the asserted document destination.
+- No native record/source/status/history was edited. Shared required checks retain
+  actual outcomes and bounded evidence does not certify universal clinical effectiveness.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
