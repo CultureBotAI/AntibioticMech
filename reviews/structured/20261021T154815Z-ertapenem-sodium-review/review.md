@@ -1,0 +1,934 @@
+# Ertapenem sodium: coherent salt identity and a definition typo
+
+- Review: 20261021T154815Z-ertapenem-sodium-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T15:30:48Z
+- Finished UTC: 2026-10-21T15:48:15Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native monosodium ertapenem graph, six stereocentres, antibacterial-drug scope and all seven FDA product assertions are supported. DrugBank DB00303 appropriately identifies the ertapenem drug at the broader level explicitly permitted by drug_xrefs. The source-derived definition contains the minor typo “tham” for “than”; primary pharmacology supports the qualitative dehydropeptidase comparison within the inspected scope.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 412; one exact sodium salt. Original thirteen input hashes preserved within 22 expanded inputs.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:60070 | data/antibiotics/antibacterial/ertapenem-sodium.yaml | generated | ertapenem sodium |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Structured catalog before protein research | passed | False | CHEBI:60070 | Catalog command succeeded; the human renal enzyme has no matching covered dataset. |
+| Focused chemistry verification | passed | False | CHEBI:60070 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:60070 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:60070 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:60070 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:60070 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:60070 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:60070 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:60070 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:60070 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:60070 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:60070 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:60070 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact monosodium chemical identity
+
+identity: supported. Targets: CHEBI:60070.
+
+Native structure representations, formula, charge, masses, six assigned stereocentres and source mint agree. ChEBI, KEGG, PubChem and GSRS support the exact salt. Neutral ertapenem remains a separate chemical entity.
+
+### Chemical and drug cross-references
+
+grounding: supported. Targets: CHEBI:60070.
+
+The CAS assignment and independently compared sodium structures agree. DrugBank DB00303 is a legitimate drug-level link to ertapenem under the explicit schema, which permits parent and salt coverage. The inaccessible Beilstein mapping remains unverified rather than disproved. All three systematic synonyms retain the sodium salt and equivalent acid/base placement.
+
+### Antibacterial-drug role and infection-use definition
+
+scope: supported. Targets: CHEBI:60070.
+
+The exact official sodium-salt product label supports antibacterial-drug classification and the listed susceptible-infection settings. No natural producer is inferred for this synthetic carbapenem.
+
+### Renal dehydropeptidase comparison
+
+evidence: concern. Targets: CHEBI:60070.
+
+The original primate pharmacology abstract supports greater DHP-I stability than imipenem and single-agent use. The native claim is qualitative; exact salt-specific enzyme constants and all animal-species dosing conditions were not inferred. The source-derived text misspells the comparative “than” as “tham”; this is an editorial defect, not a reversal of the pharmacology.
+
+### Seven exact FDA product assertions
+
+evidence: supported. Targets: CHEBI:60070.
+
+All exact products and current marketing states reconcile. The historically approved discontinued ANDA remains approved in the appropriate sense; active ingredient identity matches GSRS and the native graph.
+
+### Optional primary target and activity enrichment
+
+completeness: unknown. Targets: CHEBI:60070.
+
+There are no native molecular-target, mode, activity_spectrum, resistance or causal-graph entries. These are optional enrichment opportunities; no required-schema flaw follows from their absence. Any future numeric observation must preserve assay preparation and parent-versus-salt concentration basis.
+
+### Maintained source and generated history
+
+provenance: supported. Targets: CHEBI:60070.
+
+All six history events and ChEBI/FDA source rows are coherent. The frozen sodium row has no adopted PMID bibliography. The definition typo is inherited from the maintained ChEBI source row. Original thirteen hashes remain within 22 expanded inputs.
+
+### Focused native checks
+
+schema: supported. Targets: CHEBI:60070.
+
+Schema, strict, independent chemistry and mint checks pass. The minor definition typo is outside those checks; the broader drug-level identifier is permitted by the native schema.
+
+## Findings
+
+### F1: Definition misspells “than” as “tham”
+
+minor / open / confirmed; issue key: ertapenem-sodium-definition-than-typo.
+
+The source-derived definition says “more stable to renal dehydropeptidase I tham imipenem”. Correct “tham” to “than” through the maintained source or field owner. This is a spelling error; the qualitative comparison is supported by the inspected original pharmacology abstract.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the inherited comparative-word typo through the maintained field owner.
+
+- The regenerated definition reads “than imipenem” and retains the supported qualitative comparison.
+- Run schema/strict and source-reproduction checks; preserve the exact salt structure and valid drug-level associations.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/ertapenem-sodium.yaml; Entire 222-line native YAML including all seven products and six history events | supports | All populated domains and history were read. The sodium salt is assessed separately from the adjacent neutral ertapenem record. |
+| owners | 412413419-raw-rows.json; Exact CHEBI60070 and all seven FDA source rows; maintained extraction and seeding owners | supports | The exact source identity/structure/roles and product rows were inspected after preserving the initial capture. The parent-drug link is inherited from the adopted ChEBI row, not a new curator assertion. |
+| search | 412413419-all-local-paths.txt; Ignored-inclusive case-insensitive identifier, label and slug search | context_only | Search included hidden and gitignored content across data, curation, conf, scripts, src, reports and reviews. No exact curator/decision overlay or additional native activity collection was identified; no claim of absent external research is made. |
+| chemistry | 412-chemistry.json; 412413419-xref-chemistry.json; Independent RDKit 2026.03.5 native and authority parsing, batch019 interpreter against batch042 cwd | supports | SMILES and InChI reproduce ZXNAQFZBWUNWJM-HRXMHBOMSA-M, neutral overall charge, monosodium composition, six assigned stereocentres and both masses. Formula comparison uses element counts so dotted component order is not mistaken for a discrepancy. Current ChEBI, KEGG, PubChem and GSRS independently reproduce the same salt key. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/60070/; Current CHEBI60070 identity, names, structure, role and parent | supports | The exact monosodium salt, CAS153773-82-1, organic-sodium-salt parent CHEBI38700 and antibacterial-drug role CHEBI36047 agree. The structure contains a sodium cation and the corresponding net monoanionic ertapenem component; alternate local proton placement in systematic names does not change salt stoichiometry. |
+| kegg | https://rest.kegg.jp/get/D04049/mol; KEGG D04049 molfile; accompanying exact entry | supports | The molfile parses to the native salt InChI key and six-centre stereochemistry, distinct from neutral ertapenem KEGG D07908. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/11145493/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON; CID11145493 exact salt properties | supports | Current PubChem provides an independent exact monosodium graph with the native formula, charge and standard key. This was an identity comparator, not a new native cross-reference. |
+| gsrs | https://gsrs.ncats.nih.gov/api/v1/substances/search?q=root_approvalID:2T90KE67L0; UNII2T90KE67L0 current version89 and molecular structure | supports | Current GSRS version89 agrees with the exact sodium salt and with the historical native identity source version. No version-only discrepancy is present. |
+| drugbank | https://go.drugbank.com/drugs/DB00303; Official public identity, formula, linked identifiers and structure sections, lines 57–97; 412413-drugbank-web.json | supports | The public DrugBank page identifies neutral ertapenem, formula C22H25N3O7S, CAS153832-46-3, UNII G32F6EID2H and key JUZNIMUFDBIJCM-ANEDZVCMSA-N, and separately lists sodium-salt commercial products. This supports the native drug-level association under the explicit drug_xrefs contract; no exact salt equivalence is asserted by that field. |
+| label | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33f3b99b-fa82-42e0-26bf-f49891ae3d22; Official INVANZ label, sections1/3/11/12.4 and product ingredient table | supports | The official label identifies the antibacterial product as ertapenem sodium, with 1.046 g salt equivalent to 1 g ertapenem. Its formula and mass match the monosodium structure. Listed infection-use settings support the bounded definition; formulation excipients and doses are not transferred into the molecular graph. |
+| fda-021337 | https://api.fda.gov/drug/drugsfda.json?search=application_number:NDA021337&amp;limit=10; Exact application 021337 product001, sponsor, ingredient, marketing and original AP submission | supports | The exact native product assertion was compared against the current official application response, including original approval date. Discontinued marketing is kept distinct from approval status. |
+| fda-207647 | https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA207647&amp;limit=10; Exact application 207647 product001, sponsor, ingredient, marketing and original AP submission | supports | The exact native product assertion was compared against the current official application response, including original approval date. Discontinued marketing is kept distinct from approval status. |
+| fda-208790 | https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA208790&amp;limit=10; Exact application 208790 product001, sponsor, ingredient, marketing and original AP submission | supports | The exact native product assertion was compared against the current official application response, including original approval date. Discontinued marketing is kept distinct from approval status. |
+| fda-209133 | https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA209133&amp;limit=10; Exact application 209133 product001, sponsor, ingredient, marketing and original AP submission | supports | The exact native product assertion was compared against the current official application response, including original approval date. Discontinued marketing is kept distinct from approval status. |
+| fda-209145 | https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA209145&amp;limit=10; Exact application 209145 product001, sponsor, ingredient, marketing and original AP submission | supports | The exact native product assertion was compared against the current official application response, including original approval date. Discontinued marketing is kept distinct from approval status. |
+| fda-212040 | https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA212040&amp;limit=10; Exact application 212040 product001, sponsor, ingredient, marketing and original AP submission | supports | The exact native product assertion was compared against the current official application response, including original approval date. Discontinued marketing is kept distinct from approval status. |
+| fda-218067 | https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA218067&amp;limit=10; Exact application 218067 product001, sponsor, ingredient, marketing and original AP submission | supports | The exact native product assertion was compared against the current official application response, including original approval date. Discontinued marketing is kept distinct from approval status. |
+| fda-audit | 412-fda-audit.json; All seven application/product assertions and exact field comparisons | supports | All seven sponsor, brand, ingredient, product-number, marketing and approval-date comparisons pass. ANDA209145 remains approved with discontinued marketing, consistent with the native currently_marketed=false assertion. |
+| primary-pharmacology | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A9257753%20OR%20EXT_ID%3A11353653%29%20AND%20SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; PMID9257753, DOI10.1128/AAC.41.8.1743; complete original abstract | supports | The original L-749,345 primate pharmacokinetic study reports renal dehydropeptidase-I hydrolysis at one quarter the imipenem rate and urinary recovery compatible with single-agent use. This supports the qualitative definition. Exact enzyme protocol and isolated preparation were not established from the accessible abstract; no salt-specific kinetic value is added. |
+| primary-activity | https://pmc.ncbi.nlm.nih.gov/articles/PMC90573/?pdf=1; PMID11353653, DOI10.1128/AAC.45.6.1915-1918.2001; abstract, isolate collection and complete assay-method paragraphs | partial | The original study tested 5,558 clinical isolates using Merck standardized ertapenem powder. Aerobic broth microdilution used CAMHB, appropriate fastidious-organism supplements and approximately 5×10^5 CFU/mL; anaerobes used supplemented Brucella blood agar and about 10^5 CFU/spot. This verifies bacterial activity of ertapenem material, but the inspected Methods do not establish the exact isolated sodium form or purity. No numerical panel result is transferred to a new sodium-salt observation. |
+| adapter | iModulonDB dataset catalog; 412413419-adapter-catalog.txt; actual structured runner before open protein research | context_only | The catalog contains no human renal dehydropeptidase dataset. This scope is not applicable to the native host-enzyme comparison and is not negative biological evidence. |
+| gates | 412-focused-results.json; Actual commands and exit codes | supports | Native schema and strict checks ran in batch042; standalone chemistry used the installed batch019 interpreter. All focused checks pass. |
+| access-boundaries | 412413419-fetch1.json through 412413419-fetch4.json; Per-request URL, access time, HTTP status and hash | context_only | Beilstein8182202 could not be independently verified because the Reaxys route returned 403. Direct DrugBank retrieval returned 403 but the official public web-reader text was inspected. The 1997 PMC HTML exposes the original abstract and scanned-paper link; full scan access was attempted and no uninspected methods are claimed. |
+| drug-xref-semantics | src/antibioticmech/schema/antibioticmech.yaml; AntibioticRecord.drug_xrefs, lines200–206 | supports | The schema explicitly defines DrugBank, DrugCentral and KEGG DRUG identifiers as drug-level associations covering parents, salts and stereoisomers. These identifiers are not same-structure equivalences; exact-equivalence rules apply to xrefs instead. |
+
+## Limits And Additional Notes
+
+- The Beilstein8182202 mapping remains unverified after a Reaxys 403 response. No transport failure is treated as proof of wrong identity.
+- The 1997 original pharmacology abstract was inspected in full; the full scanned experimental text was not established through the inspected public routes. The 2001 activity paper was read for exact material, isolate-collection and assay-method scope, without auditing every row of its large susceptibility table.
+- No numerical free-compound MIC or unspecified Merck assay-powder result is assigned to the exact sodium salt by mass conversion. No direct bacterial binding target is inferred from a host renal-enzyme comparison.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native or maintained input was edited. Original captures were preserved and expanded input hashes were checked unchanged. Optional links, tags and notes refer to this exact sodium salt.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T154815Z-ertapenem-sodium-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Ertapenem sodium: coherent salt identity and a definition typo'
+started_at: '2026-10-21T15:30:48Z'
+finished_at: '2026-10-21T15:48:15Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent whole-record review after preserved initial input
+    capture and actual maintained-row inspection, with current authority, independent
+    chemical and original-source checks. No native or maintained-source record was
+    authored or modified by this reviewer.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native monosodium ertapenem graph, six stereocentres, antibacterial-drug
+  scope and all seven FDA product assertions are supported. DrugBank DB00303 appropriately
+  identifies the ertapenem drug at the broader level explicitly permitted by drug_xrefs.
+  The source-derived definition contains the minor typo “tham” for “than”; primary
+  pharmacology supports the qualitative dehydropeptidase comparison within the inspected
+  scope.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ertapenem-sodium.yaml
+    sha256: 02b254ca86abee56bba72762553c410f685c139e0ec328785df3fe6fbc5f527f
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+targets:
+- target_id: CHEBI:60070
+  path: data/antibiotics/antibacterial/ertapenem-sodium.yaml
+  label: ertapenem sodium
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Exact FDA product assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: FDA/GSRS exact-identity extraction
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 412; one exact sodium salt. Original thirteen input hashes
+    preserved within 22 expanded inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:60070
+checks:
+- check_id: structured-adapter
+  name: Structured catalog before protein research
+  status: passed
+  required: false
+  target_ids:
+  - CHEBI:60070
+  evidence_ids:
+  - adapter
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Catalog command succeeded; the human renal enzyme has no matching covered
+    dataset.
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:60070
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/412413419-focused.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:60070
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ertapenem-sodium.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:60070
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ertapenem-sodium.yaml --out /private/tmp/am-review-session/412-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:60070
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:60070
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:60070
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:60070
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:60070
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:60070
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:60070
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:60070
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:60070
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ertapenem-sodium.yaml
+  locator: Entire 222-line native YAML including all seven products and six history
+    events
+  accessed_at: '2026-10-21T15:41:33Z'
+  support: supports
+  summary: All populated domains and history were read. The sodium salt is assessed
+    separately from the adjacent neutral ertapenem record.
+- evidence_id: owners
+  kind: record_content
+  reference: 412413419-raw-rows.json
+  locator: Exact CHEBI60070 and all seven FDA source rows; maintained extraction and
+    seeding owners
+  accessed_at: '2026-10-21T15:41:33Z'
+  support: supports
+  summary: The exact source identity/structure/roles and product rows were inspected
+    after preserving the initial capture. The parent-drug link is inherited from the
+    adopted ChEBI row, not a new curator assertion.
+  snapshot_sha256: c546fff3c15dd28b31ced02ac53f2f0e227666149841f6d23b09c868299cbed7
+- evidence_id: search
+  kind: search
+  reference: 412413419-all-local-paths.txt
+  locator: Ignored-inclusive case-insensitive identifier, label and slug search
+  accessed_at: '2026-10-21T15:41:33Z'
+  support: context_only
+  summary: Search included hidden and gitignored content across data, curation, conf,
+    scripts, src, reports and reviews. No exact curator/decision overlay or additional
+    native activity collection was identified; no claim of absent external research
+    is made.
+  search_scope: rg --no-ignore --hidden -il 'CHEBI:60070|CHEBI:404903|CHEBI:134705|ertapenem|etimicin'
+    data curation conf scripts src reports reviews
+  snapshot_sha256: 0ddb1e1c4005691595186e8f80b8c6c15cef3a3b6086b7acb0d8ebe880b600d6
+- evidence_id: chemistry
+  kind: record_content
+  reference: 412-chemistry.json; 412413419-xref-chemistry.json
+  locator: Independent RDKit 2026.03.5 native and authority parsing, batch019 interpreter
+    against batch042 cwd
+  accessed_at: '2026-10-21T15:41:33Z'
+  support: supports
+  summary: SMILES and InChI reproduce ZXNAQFZBWUNWJM-HRXMHBOMSA-M, neutral overall
+    charge, monosodium composition, six assigned stereocentres and both masses. Formula
+    comparison uses element counts so dotted component order is not mistaken for a
+    discrepancy. Current ChEBI, KEGG, PubChem and GSRS independently reproduce the
+    same salt key.
+  snapshot_sha256: 244f6d89d046a96750ccb2205d82fd09368a63d477dad250e5681c2d6cddbfc5
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/60070/
+  locator: Current CHEBI60070 identity, names, structure, role and parent
+  accessed_at: '2026-10-21T15:37:07.151559Z'
+  support: supports
+  summary: The exact monosodium salt, CAS153773-82-1, organic-sodium-salt parent CHEBI38700
+    and antibacterial-drug role CHEBI36047 agree. The structure contains a sodium
+    cation and the corresponding net monoanionic ertapenem component; alternate local
+    proton placement in systematic names does not change salt stoichiometry.
+  snapshot_sha256: bd7bfbe5b95f536165845696230e5606a101939f7b148e92ca8e616393fe644b
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/D04049/mol
+  locator: KEGG D04049 molfile; accompanying exact entry
+  accessed_at: '2026-10-21T15:37:07.161192Z'
+  support: supports
+  summary: The molfile parses to the native salt InChI key and six-centre stereochemistry,
+    distinct from neutral ertapenem KEGG D07908.
+  snapshot_sha256: d9a611866b05f530ee0ba75edfde61995e65e97673b6686b1270e531db04a78d
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/11145493/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: CID11145493 exact salt properties
+  accessed_at: '2026-10-21T15:38:22.860948Z'
+  support: supports
+  summary: Current PubChem provides an independent exact monosodium graph with the
+    native formula, charge and standard key. This was an identity comparator, not
+    a new native cross-reference.
+  snapshot_sha256: bfce5ed98df96460ac452bd51e5f2b9c861f246025898248c36cfc4cb780295e
+- evidence_id: gsrs
+  kind: authority
+  reference: https://gsrs.ncats.nih.gov/api/v1/substances/search?q=root_approvalID:2T90KE67L0
+  locator: UNII2T90KE67L0 current version89 and molecular structure
+  accessed_at: '2026-10-21T15:37:07.304794Z'
+  support: supports
+  summary: Current GSRS version89 agrees with the exact sodium salt and with the historical
+    native identity source version. No version-only discrepancy is present.
+  snapshot_sha256: c40f1c6f4e59a48dfda1c00bccbe5ae5a1e7f914dcfbe7fc9443e5efe68a1a87
+- evidence_id: drugbank
+  kind: authority
+  reference: https://go.drugbank.com/drugs/DB00303
+  locator: Official public identity, formula, linked identifiers and structure sections,
+    lines 57–97; 412413-drugbank-web.json
+  accessed_at: '2026-10-21T15:38:23.989419Z'
+  support: supports
+  summary: The public DrugBank page identifies neutral ertapenem, formula C22H25N3O7S,
+    CAS153832-46-3, UNII G32F6EID2H and key JUZNIMUFDBIJCM-ANEDZVCMSA-N, and separately
+    lists sodium-salt commercial products. This supports the native drug-level association
+    under the explicit drug_xrefs contract; no exact salt equivalence is asserted
+    by that field.
+  snapshot_sha256: 7ac29c01a18a59401fe385a1e5367cd9e252eb12d9a2f33b30e663cd6347ae17
+- evidence_id: label
+  kind: authority
+  reference: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33f3b99b-fa82-42e0-26bf-f49891ae3d22
+  locator: Official INVANZ label, sections1/3/11/12.4 and product ingredient table
+  accessed_at: '2026-10-21T15:38:22.860840Z'
+  support: supports
+  summary: The official label identifies the antibacterial product as ertapenem sodium,
+    with 1.046 g salt equivalent to 1 g ertapenem. Its formula and mass match the
+    monosodium structure. Listed infection-use settings support the bounded definition;
+    formulation excipients and doses are not transferred into the molecular graph.
+  snapshot_sha256: c3beac391868ed88bb207ae7f9d69facad6fa3a88f1f6b00e120cc5ed9e8b86a
+- evidence_id: fda-021337
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:NDA021337&limit=10
+  locator: Exact application 021337 product001, sponsor, ingredient, marketing and
+    original AP submission
+  accessed_at: '2026-10-21T15:37:08.292882Z'
+  support: supports
+  summary: The exact native product assertion was compared against the current official
+    application response, including original approval date. Discontinued marketing
+    is kept distinct from approval status.
+  snapshot_sha256: 1d3bd982075d8f258664b4ffc2150a1a9331df035f607a0b4c79df1516f54d6c
+- evidence_id: fda-207647
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA207647&limit=10
+  locator: Exact application 207647 product001, sponsor, ingredient, marketing and
+    original AP submission
+  accessed_at: '2026-10-21T15:37:08.401140Z'
+  support: supports
+  summary: The exact native product assertion was compared against the current official
+    application response, including original approval date. Discontinued marketing
+    is kept distinct from approval status.
+  snapshot_sha256: b48a02559069959f0c30d94c8bc7750734732188008a7d2aaf95af5083d09a5a
+- evidence_id: fda-208790
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA208790&limit=10
+  locator: Exact application 208790 product001, sponsor, ingredient, marketing and
+    original AP submission
+  accessed_at: '2026-10-21T15:37:08.550140Z'
+  support: supports
+  summary: The exact native product assertion was compared against the current official
+    application response, including original approval date. Discontinued marketing
+    is kept distinct from approval status.
+  snapshot_sha256: 85ddd1252eccd45e65b8054250c902e18a954fceee8a07614191793bb7bbd9e8
+- evidence_id: fda-209133
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA209133&limit=10
+  locator: Exact application 209133 product001, sponsor, ingredient, marketing and
+    original AP submission
+  accessed_at: '2026-10-21T15:37:08.580644Z'
+  support: supports
+  summary: The exact native product assertion was compared against the current official
+    application response, including original approval date. Discontinued marketing
+    is kept distinct from approval status.
+  snapshot_sha256: 4020cbb8f3d75605de9724a2c5bfe4c4ae0cb690c1f1538c63c11ad13548e482
+- evidence_id: fda-209145
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA209145&limit=10
+  locator: Exact application 209145 product001, sponsor, ingredient, marketing and
+    original AP submission
+  accessed_at: '2026-10-21T15:37:08.601313Z'
+  support: supports
+  summary: The exact native product assertion was compared against the current official
+    application response, including original approval date. Discontinued marketing
+    is kept distinct from approval status.
+  snapshot_sha256: e268ac85e65261427f1587bb49b9f8a8f8a239989548fbbc53ac9fe2eb626dca
+- evidence_id: fda-212040
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA212040&limit=10
+  locator: Exact application 212040 product001, sponsor, ingredient, marketing and
+    original AP submission
+  accessed_at: '2026-10-21T15:37:08.672333Z'
+  support: supports
+  summary: The exact native product assertion was compared against the current official
+    application response, including original approval date. Discontinued marketing
+    is kept distinct from approval status.
+  snapshot_sha256: 29580d67e3a9d7f9f1b75ac690fc318a248aba68329ca197d4faff151ac9b515
+- evidence_id: fda-218067
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA218067&limit=10
+  locator: Exact application 218067 product001, sponsor, ingredient, marketing and
+    original AP submission
+  accessed_at: '2026-10-21T15:37:08.787854Z'
+  support: supports
+  summary: The exact native product assertion was compared against the current official
+    application response, including original approval date. Discontinued marketing
+    is kept distinct from approval status.
+  snapshot_sha256: 93b2f104e9ff70f6ee0ce60b6fd5ec11f68f063eec89b2349d2a907006ac6d7d
+- evidence_id: fda-audit
+  kind: record_content
+  reference: 412-fda-audit.json
+  locator: All seven application/product assertions and exact field comparisons
+  accessed_at: '2026-10-21T15:41:33Z'
+  support: supports
+  summary: All seven sponsor, brand, ingredient, product-number, marketing and approval-date
+    comparisons pass. ANDA209145 remains approved with discontinued marketing, consistent
+    with the native currently_marketed=false assertion.
+  snapshot_sha256: 8b00fde7147aab38ff2e1e56c955908480525599ef705ea5ac9a4501dc065b55
+- evidence_id: primary-pharmacology
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A9257753%20OR%20EXT_ID%3A11353653%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: PMID9257753, DOI10.1128/AAC.41.8.1743; complete original abstract
+  accessed_at: '2026-10-21T15:38:22.860698Z'
+  support: supports
+  summary: The original L-749,345 primate pharmacokinetic study reports renal dehydropeptidase-I
+    hydrolysis at one quarter the imipenem rate and urinary recovery compatible with
+    single-agent use. This supports the qualitative definition. Exact enzyme protocol
+    and isolated preparation were not established from the accessible abstract; no
+    salt-specific kinetic value is added.
+  snapshot_sha256: 75d760438b7fe23116bc3051268496d5f3c0a30a8a2fa8a6dacbde1d62ca3b9f
+- evidence_id: primary-activity
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC90573/?pdf=1
+  locator: PMID11353653, DOI10.1128/AAC.45.6.1915-1918.2001; abstract, isolate collection
+    and complete assay-method paragraphs
+  accessed_at: '2026-10-21T15:38:23.522181Z'
+  support: partial
+  summary: The original study tested 5,558 clinical isolates using Merck standardized
+    ertapenem powder. Aerobic broth microdilution used CAMHB, appropriate fastidious-organism
+    supplements and approximately 5×10^5 CFU/mL; anaerobes used supplemented Brucella
+    blood agar and about 10^5 CFU/spot. This verifies bacterial activity of ertapenem
+    material, but the inspected Methods do not establish the exact isolated sodium
+    form or purity. No numerical panel result is transferred to a new sodium-salt
+    observation.
+  snapshot_sha256: f279c95c699d59a4c0c9014bd593a1145b959c90b75fb3ffb41ab3be14bd81a9
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB dataset catalog
+  locator: 412413419-adapter-catalog.txt; actual structured runner before open protein
+    research
+  accessed_at: '2026-10-21T15:41:33Z'
+  support: context_only
+  summary: The catalog contains no human renal dehydropeptidase dataset. This scope
+    is not applicable to the native host-enzyme comparison and is not negative biological
+    evidence.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: gates
+  kind: record_content
+  reference: 412-focused-results.json
+  locator: Actual commands and exit codes
+  accessed_at: '2026-10-21T15:41:33Z'
+  support: supports
+  summary: Native schema and strict checks ran in batch042; standalone chemistry used
+    the installed batch019 interpreter. All focused checks pass.
+  snapshot_sha256: 01e959a6339df043491924367d07bb689383609088e0ab389e2429b76e8a2fe9
+- evidence_id: access-boundaries
+  kind: search
+  reference: 412413419-fetch1.json through 412413419-fetch4.json
+  locator: Per-request URL, access time, HTTP status and hash
+  accessed_at: '2026-10-21T15:41:33Z'
+  support: context_only
+  summary: Beilstein8182202 could not be independently verified because the Reaxys
+    route returned 403. Direct DrugBank retrieval returned 403 but the official public
+    web-reader text was inspected. The 1997 PMC HTML exposes the original abstract
+    and scanned-paper link; full scan access was attempted and no uninspected methods
+    are claimed.
+  search_scope: Exact native salt identifiers, all seven official FDA applications,
+    current product label and directly relevant original ertapenem pharmacology/activity
+    papers; no paid access.
+  snapshot_sha256: c8548d31a6d2158e9516c45e728b55159020ff293da8dddca2fd9d1921a1aaa5
+- evidence_id: drug-xref-semantics
+  kind: record_content
+  reference: src/antibioticmech/schema/antibioticmech.yaml
+  locator: AntibioticRecord.drug_xrefs, lines200–206
+  accessed_at: '2026-10-21T15:47:02Z'
+  support: supports
+  summary: The schema explicitly defines DrugBank, DrugCentral and KEGG DRUG identifiers
+    as drug-level associations covering parents, salts and stereoisomers. These identifiers
+    are not same-structure equivalences; exact-equivalence rules apply to xrefs instead.
+  snapshot_sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact monosodium chemical identity
+  outcome: supported
+  summary: Native structure representations, formula, charge, masses, six assigned
+    stereocentres and source mint agree. ChEBI, KEGG, PubChem and GSRS support the
+    exact salt. Neutral ertapenem remains a separate chemical entity.
+  target_ids:
+  - CHEBI:60070
+  evidence_ids:
+  - native
+  - chemistry
+  - chebi
+  - kegg
+  - pubchem
+  - gsrs
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical and drug cross-references
+  outcome: supported
+  summary: The CAS assignment and independently compared sodium structures agree.
+    DrugBank DB00303 is a legitimate drug-level link to ertapenem under the explicit
+    schema, which permits parent and salt coverage. The inaccessible Beilstein mapping
+    remains unverified rather than disproved. All three systematic synonyms retain
+    the sodium salt and equivalent acid/base placement.
+  target_ids:
+  - CHEBI:60070
+  evidence_ids:
+  - native
+  - chebi
+  - kegg
+  - drugbank
+  - access-boundaries
+  - drug-xref-semantics
+- assessment_id: classification
+  area: scope
+  topic: Antibacterial-drug role and infection-use definition
+  outcome: supported
+  summary: The exact official sodium-salt product label supports antibacterial-drug
+    classification and the listed susceptible-infection settings. No natural producer
+    is inferred for this synthetic carbapenem.
+  target_ids:
+  - CHEBI:60070
+  evidence_ids:
+  - native
+  - chebi
+  - label
+  - primary-activity
+- assessment_id: definition
+  area: evidence
+  topic: Renal dehydropeptidase comparison
+  outcome: concern
+  summary: The original primate pharmacology abstract supports greater DHP-I stability
+    than imipenem and single-agent use. The native claim is qualitative; exact salt-specific
+    enzyme constants and all animal-species dosing conditions were not inferred. The
+    source-derived text misspells the comparative “than” as “tham”; this is an editorial
+    defect, not a reversal of the pharmacology.
+  target_ids:
+  - CHEBI:60070
+  evidence_ids:
+  - native
+  - primary-pharmacology
+  - adapter
+- assessment_id: clinical
+  area: evidence
+  topic: Seven exact FDA product assertions
+  outcome: supported
+  summary: All exact products and current marketing states reconcile. The historically
+    approved discontinued ANDA remains approved in the appropriate sense; active ingredient
+    identity matches GSRS and the native graph.
+  target_ids:
+  - CHEBI:60070
+  evidence_ids:
+  - native
+  - fda-audit
+  - gsrs
+  - label
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary target and activity enrichment
+  outcome: unknown
+  summary: There are no native molecular-target, mode, activity_spectrum, resistance
+    or causal-graph entries. These are optional enrichment opportunities; no required-schema
+    flaw follows from their absence. Any future numeric observation must preserve
+    assay preparation and parent-versus-salt concentration basis.
+  target_ids:
+  - CHEBI:60070
+  evidence_ids:
+  - native
+  - search
+  - primary-activity
+  - primary-pharmacology
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained source and generated history
+  outcome: supported
+  summary: All six history events and ChEBI/FDA source rows are coherent. The frozen
+    sodium row has no adopted PMID bibliography. The definition typo is inherited
+    from the maintained ChEBI source row. Original thirteen hashes remain within 22
+    expanded inputs.
+  target_ids:
+  - CHEBI:60070
+  evidence_ids:
+  - native
+  - owners
+  - gates
+- assessment_id: validation
+  area: schema
+  topic: Focused native checks
+  outcome: supported
+  summary: Schema, strict, independent chemistry and mint checks pass. The minor definition
+    typo is outside those checks; the broader drug-level identifier is permitted by
+    the native schema.
+  target_ids:
+  - CHEBI:60070
+  evidence_ids:
+  - gates
+  - chemistry
+  - drugbank
+findings:
+- finding_id: F1
+  issue_key: ertapenem-sodium-definition-than-typo
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Definition misspells “than” as “tham”
+  description: The source-derived definition says “more stable to renal dehydropeptidase
+    I tham imipenem”. Correct “tham” to “than” through the maintained source or field
+    owner. This is a spelling error; the qualitative comparison is supported by the
+    inspected original pharmacology abstract.
+  target_ids:
+  - CHEBI:60070
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - owners
+  - primary-pharmacology
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-checklist:Definition
+  native_severity: minor
+  normalization_reason: A local wording defect requires correction without changing
+    chemical identity or the supported scientific comparison.
+actions:
+- action_id: A1
+  description: Correct the inherited comparative-word typo through the maintained
+    field owner.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:60070
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - The regenerated definition reads “than imipenem” and retains the supported qualitative
+    comparison.
+  - Run schema/strict and source-reproduction checks; preserve the exact salt structure
+    and valid drug-level associations.
+limitations:
+- The Beilstein8182202 mapping remains unverified after a Reaxys 403 response. No
+  transport failure is treated as proof of wrong identity.
+- The 1997 original pharmacology abstract was inspected in full; the full scanned
+  experimental text was not established through the inspected public routes. The 2001
+  activity paper was read for exact material, isolate-collection and assay-method
+  scope, without auditing every row of its large susceptibility table.
+- No numerical free-compound MIC or unspecified Merck assay-powder result is assigned
+  to the exact sodium salt by mass conversion. No direct bacterial binding target
+  is inferred from a host renal-enzyme comparison.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native or maintained input was edited. Original captures were preserved and expanded
+  input hashes were checked unchanged. Optional links, tags and notes refer to this
+  exact sodium salt.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:60070
+- https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33f3b99b-fa82-42e0-26bf-f49891ae3d22
+- https://pubmed.ncbi.nlm.nih.gov/9257753/
+tags:
+- ertapenem-sodium
+- definition-wording
+- drug-level-association
+```

@@ -1,0 +1,592 @@
+# Ethyl 3,4-dihydroxybenzoate: supported identity, peanut-extract origin and bacterial growth inhibition
+
+- Review: 20261021T155453Z-ethyl-3-4-dihydroxybenzoate-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T15:30:50Z
+- Finished UTC: 2026-10-21T15:54:53Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The ethyl protocatechuate identity and catechol/ethyl-ester classes agree across accessible authorities. Original S. aureus growth experiments support antibacterial eligibility. The peanut-testa statement is supported at original abstract depth, while a specific bacterial molecular target remains unestablished. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 415; one entire native record. Thirteen initial input hashes were retained when the actual readiness-queue context was appended; fourteen unchanged inputs are captured.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:132364 | data/antibiotics/antibacterial/ethyl-3-4-dihydroxybenzoate.yaml | generated | ethyl 3,4-dihydroxybenzoate |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:132364 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:132364 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:132364 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:132364 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:132364 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:132364 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:132364 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:132364 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:132364 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:132364 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:132364 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:132364 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact ester and chemical classes
+
+identity: supported. Targets: CHEBI:132364.
+
+Neutral ethyl protocatechuate, all synonyms and both broader parents fit the independently matching graphs. The free acid and unrelated prolyl-hydroxylase inhibitors remain distinct.
+
+### Exact antibacterial eligibility and target limits
+
+evidence: supported. Targets: CHEBI:132364.
+
+The original growth experiments support the role. Host-cell enzyme studies and a speculative PBP analogy do not establish a bacterial molecular target. Quantitative reuse requires the paper’s unresolved method limits.
+
+### Peanut seed testa component
+
+evidence: supported. Targets: CHEBI:132364.
+
+The exact original abstract supports isolation and antioxidant identification from seed testa. This is not a claim of exclusivity or a fully demonstrated natural biosynthetic origin.
+
+### Optional biological fields and record status
+
+completeness: supported. Targets: CHEBI:132364.
+
+Absent optional quantitative activity, mechanism, resistance, producer, clinical, graph and dataset fields are not automatic defects in this SEEDED record. Useful exact primary leads are documented without treating this review as native curation or biological sign-off.
+
+### Adopted leads, generated ownership and immutable source capture
+
+provenance: supported. Targets: CHEBI:132364.
+
+Every native field and all ten adopted lead dispositions were covered at the stated reading depth. Focused schema, strict and chemistry checks pass, and all fourteen captured source inputs remain unchanged.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/ethyl-3-4-dihydroxybenzoate.yaml; Entire native YAML, all fields and history | supports | The SEEDED/EXACT record has 4 exact synonyms, 2 broader parents, one antibacterial role, one ChEBI source concept and 4 source history events. All were inspected. No quantitative activity, molecular target, mode, resistance, producer, clinical, graph or dataset object is asserted. |
+| owners | data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; curation/record_review_queue.tsv; 415-source-rows.json; applicable extraction, normalization and seeding code | supports | The exact adopted ChEBI row supplies identity, definition, structure, roles, links and ten publication leads. Readiness is context, not independent scientific evidence. Original hashes were retained before judgment. No additional exact source owner was established by the ignored-inclusive local search. |
+| chemistry | 042-authority-compare.json; 415-chemistry.json; Independent full-key, formula, charge and atom-adjacency comparisons | supports | Native SMILES and InChI, current ChEBI SMILES/InChI/molfile and PubChem encodings agree on KBPUBCVJHFXPOC-UHFFFAOYSA-N, C9H10O4, neutral charge and no stereocentres. Seven encodings agree. PubChem77547 is an independent discovery cross-check, not an asserted native xref. Focused chemistry additionally verifies stored masses and the deterministic source alias. |
+| authority | CHEBI:132364; https://www.ebi.ac.uk/chebi/CHEBI:132364; Current complete chemical entry and definitions of all asserted broader parents and role | supports | CHEBI23990 ethyl ester and33566 catechols fit the adjacent phenols and ester graph. All four synonyms refer to EDHB/ethyl protocatechuate, distinct from the free acid. The antibacterial role33282 is supported by original experiments. |
+| search | 415-local-hits.txt; 415-owners-search.json; 042-root-fetch-manifest.json through 042-root-fetch5-manifest.json; Ignored-inclusive local discovery, current linked authorities and bounded original-paper retrieval | supports | Hidden and gitignored files were included in the local evidence/owner search. Exact source rows and all adopted publication leads were assessed. Access failures, login pages and HTML challenges were not treated as read full texts or chemical structures. |
+| xrefs | CAS:3943-89-3; https://webbook.nist.gov/cgi/cbook.cgi?ID=C3943893; NIST identity section and complete chemical descriptors | supports | NIST identifies ethyl protocatechuate with the native InChI/key and CAS. Reaxys2097435 was inaccessible and remains independently unverified. Both Wikipedia page and REST retrieval returned429; the related document was not read or treated as exact primary evidence. |
+| adopted | PMID:12372619;12670184;18799519;2159480;24784993;25232961;26213908;26535807;26649730;2822818; All ten complete indexed abstracts, with deeper exact antibacterial follow-up | supports | 12372619 concerns cellular iron chelation;18799519 HO1/HIF effects in human cells;2159480 rat myoblast differentiation;24784993 osteoblast/osteoclast effects;25232961 ESCC autophagy;26535807 collagen-prolyl-hydroxylase inhibitor selectivity, with EDHB a poorly selective comparator rather than the new bipyridyl compounds;26649730 rat brain hypoxic preconditioning;2822818 human fibroblast hydroxylation. These are not bacterial target experiments.12670184 supplies the peanut-extract identification and26213908 direct S. aureus experiments, addressed separately. |
+| peanut | PMID:12670184; DOI:10.1021/jf0210019; Complete original indexed abstract only | supports | The2003 report fractionates an ethanolic peanut-seed-testa extract and identifies the antioxidant subfraction17-2 as ethyl protocatechuate using UV, MS, IR and proton NMR. This supports the native broad component statement at abstract depth. The original spectra were not accessible, and isolation after ethanol extraction is not proof of endogenous biosynthesis or the only antioxidant present. |
+| bacterial | PMID:26213908; DOI:10.3390/molecules200813536; PMC6332044; https://pmc.ncbi.nlm.nih.gov/articles/PMC6332044/; Complete original main text, all three tables and actual PDF Table2 p13540 inspected | supports | Sigma EDHB in DMSO was tested in TSB microdilution against20 clinical wound S. aureus isolates and three reference strains, with24-hour37°C OD600 endpoint. Table2 MICs range64–1024 micrograms/mL; reference25923 is256,43300 is512 and6538 is256. The methods dilution list omits512 despite its table use, and mixing equal culture/drug volumes leaves the stated inoculum concentration ambiguous. Separate agar/Etest experiments at one-quarter EDHB MIC show a significant average clindamycin MIC shift, not a checkerboard FICI or established clinical synergy. The suggested shared cefoxitin/PBP site is speculation, not direct binding evidence. |
+| adapter | iModulonDB public catalog; Actual catalog inspected before open-ended mechanism follow-up | supports | No specific bacterial gene, protein or native transcriptomic experiment is established in this record or exact primary study. The catalog does not justify inventing a PBP target from the paper’s speculative discussion. |
+
+## Limits And Additional Notes
+
+- All ten adopted abstracts were read; the2015 antibacterial main paper and actual key table were inspected in full relevant scope. The2003 peanut paper’s publisher HTML/PDF returned403, so the reported spectra were not independently viewed.
+- The2015 dilution list and table disagree on512 micrograms/mL, and final inoculum is not unambiguously stated. Some susceptibility labels also differ from listed zones. These source limits prevent unqualified reuse of clinical resistance or exact protocols.
+- Reaxys was inaccessible and Wikipedia routes returned429. No exact molecular bacterial target or current clinical use was established by the inspected sources.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native or source file was modified. Independent chemistry used the existing batch019 interpreter against the batch042 records; focused schema and strict gates used the batch042 environment.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T155453Z-ethyl-3-4-dihydroxybenzoate-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Ethyl 3,4-dihydroxybenzoate: supported identity, peanut-extract origin and
+  bacterial growth inhibition'
+started_at: '2026-10-21T15:30:50Z'
+finished_at: '2026-10-21T15:54:53Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The ethyl protocatechuate identity and catechol/ethyl-ester classes agree
+  across accessible authorities. Original S. aureus growth experiments support antibacterial
+  eligibility. The peanut-testa statement is supported at original abstract depth,
+  while a specific bacterial molecular target remains unestablished. Scientific assessment
+  retains the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ethyl-3-4-dihydroxybenzoate.yaml
+    sha256: eecbbf31ec5803b05a5f8df04c3257dbdbb6fe80466a24e8b4dcc4d663722d91
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+targets:
+- target_id: CHEBI:132364
+  path: data/antibiotics/antibacterial/ethyl-3-4-dihydroxybenzoate.yaml
+  label: ethyl 3,4-dihydroxybenzoate
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 415; one entire native record. Thirteen initial input
+    hashes were retained when the actual readiness-queue context was appended; fourteen
+    unchanged inputs are captured.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:132364
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:132364
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    415
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:132364
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ethyl-3-4-dihydroxybenzoate.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:132364
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ethyl-3-4-dihydroxybenzoate.yaml --out /private/tmp/am-review-session/415-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:132364
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:132364
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:132364
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:132364
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:132364
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:132364
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:132364
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:132364
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:132364
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ethyl-3-4-dihydroxybenzoate.yaml
+  locator: Entire native YAML, all fields and history
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: The SEEDED/EXACT record has 4 exact synonyms, 2 broader parents, one antibacterial
+    role, one ChEBI source concept and 4 source history events. All were inspected.
+    No quantitative activity, molecular target, mode, resistance, producer, clinical,
+    graph or dataset object is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py; curation/record_review_queue.tsv
+  locator: 415-source-rows.json; applicable extraction, normalization and seeding
+    code
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: The exact adopted ChEBI row supplies identity, definition, structure, roles,
+    links and ten publication leads. Readiness is context, not independent scientific
+    evidence. Original hashes were retained before judgment. No additional exact source
+    owner was established by the ignored-inclusive local search.
+  snapshot_sha256: 472c48e73da4b423c8fae520a5a40a895ad6ff9aca646a003b34970e4abbb8cd
+- evidence_id: chemistry
+  kind: validation
+  reference: 042-authority-compare.json; 415-chemistry.json
+  locator: Independent full-key, formula, charge and atom-adjacency comparisons
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: Native SMILES and InChI, current ChEBI SMILES/InChI/molfile and PubChem
+    encodings agree on KBPUBCVJHFXPOC-UHFFFAOYSA-N, C9H10O4, neutral charge and no
+    stereocentres. Seven encodings agree. PubChem77547 is an independent discovery
+    cross-check, not an asserted native xref. Focused chemistry additionally verifies
+    stored masses and the deterministic source alias.
+  snapshot_sha256: b272eea3b5cb152c442ab57efd0f202a9aa4f9afbc007c25784f9128b79dd74b
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:132364; https://www.ebi.ac.uk/chebi/CHEBI:132364
+  locator: Current complete chemical entry and definitions of all asserted broader
+    parents and role
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: CHEBI23990 ethyl ester and33566 catechols fit the adjacent phenols and
+    ester graph. All four synonyms refer to EDHB/ethyl protocatechuate, distinct from
+    the free acid. The antibacterial role33282 is supported by original experiments.
+  snapshot_sha256: 6c577b2912d0f6820bd987482141bb0564faa50e65be3c9d0ea313de8f643898
+- evidence_id: search
+  kind: search
+  reference: 415-local-hits.txt; 415-owners-search.json; 042-root-fetch-manifest.json
+    through 042-root-fetch5-manifest.json
+  locator: Ignored-inclusive local discovery, current linked authorities and bounded
+    original-paper retrieval
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: Hidden and gitignored files were included in the local evidence/owner search.
+    Exact source rows and all adopted publication leads were assessed. Access failures,
+    login pages and HTML challenges were not treated as read full texts or chemical
+    structures.
+  search_scope: '2026-10-21: rg --no-ignore --hidden using exact compound names, native
+    identifier and molecular key over repository data, curation, conf, scripts, src,
+    docs, reviews and reports; direct official linked authorities, EuropePMC metadata/full
+    text and free publisher routes. Broader searches were discovery only, not an exhaustive
+    absence claim.'
+  snapshot_sha256: d693489be4e47d9b340dadb1cbbfca537f54006fac9217398df3a69a7ec2b582
+- evidence_id: xrefs
+  kind: authority
+  reference: CAS:3943-89-3; https://webbook.nist.gov/cgi/cbook.cgi?ID=C3943893
+  locator: NIST identity section and complete chemical descriptors
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: NIST identifies ethyl protocatechuate with the native InChI/key and CAS.
+    Reaxys2097435 was inaccessible and remains independently unverified. Both Wikipedia
+    page and REST retrieval returned429; the related document was not read or treated
+    as exact primary evidence.
+  snapshot_sha256: c269c615f2af7c7a65178ffc51432090b406e8bdf72cc516213582ddb9842f07
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:12372619;12670184;18799519;2159480;24784993;25232961;26213908;26535807;26649730;2822818
+  locator: All ten complete indexed abstracts, with deeper exact antibacterial follow-up
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: 12372619 concerns cellular iron chelation;18799519 HO1/HIF effects in human
+    cells;2159480 rat myoblast differentiation;24784993 osteoblast/osteoclast effects;25232961
+    ESCC autophagy;26535807 collagen-prolyl-hydroxylase inhibitor selectivity, with
+    EDHB a poorly selective comparator rather than the new bipyridyl compounds;26649730
+    rat brain hypoxic preconditioning;2822818 human fibroblast hydroxylation. These
+    are not bacterial target experiments.12670184 supplies the peanut-extract identification
+    and26213908 direct S. aureus experiments, addressed separately.
+  snapshot_sha256: af2f37c1ea76657cce062787209896ac7a9c2f1b3e90716832eb14f939c2bd3b
+- evidence_id: peanut
+  kind: primary_source
+  reference: PMID:12670184; DOI:10.1021/jf0210019
+  locator: Complete original indexed abstract only
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: The2003 report fractionates an ethanolic peanut-seed-testa extract and
+    identifies the antioxidant subfraction17-2 as ethyl protocatechuate using UV,
+    MS, IR and proton NMR. This supports the native broad component statement at abstract
+    depth. The original spectra were not accessible, and isolation after ethanol extraction
+    is not proof of endogenous biosynthesis or the only antioxidant present.
+  snapshot_sha256: 43a71ffc0b9dbb257dacf57ba2b0e7d051538e1ce89409af5b87627769795a63
+- evidence_id: bacterial
+  kind: primary_source
+  reference: PMID:26213908; DOI:10.3390/molecules200813536; PMC6332044; https://pmc.ncbi.nlm.nih.gov/articles/PMC6332044/
+  locator: Complete original main text, all three tables and actual PDF Table2 p13540
+    inspected
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: Sigma EDHB in DMSO was tested in TSB microdilution against20 clinical wound
+    S. aureus isolates and three reference strains, with24-hour37°C OD600 endpoint.
+    Table2 MICs range64–1024 micrograms/mL; reference25923 is256,43300 is512 and6538
+    is256. The methods dilution list omits512 despite its table use, and mixing equal
+    culture/drug volumes leaves the stated inoculum concentration ambiguous. Separate
+    agar/Etest experiments at one-quarter EDHB MIC show a significant average clindamycin
+    MIC shift, not a checkerboard FICI or established clinical synergy. The suggested
+    shared cefoxitin/PBP site is speculation, not direct binding evidence.
+  snapshot_sha256: cfb94f708d39784e3f2db13d234c30d349a9db65b313cbe7bff51784f9121546
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB public catalog
+  locator: Actual catalog inspected before open-ended mechanism follow-up
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: No specific bacterial gene, protein or native transcriptomic experiment
+    is established in this record or exact primary study. The catalog does not justify
+    inventing a PBP target from the paper’s speculative discussion.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact ester and chemical classes
+  outcome: supported
+  summary: Neutral ethyl protocatechuate, all synonyms and both broader parents fit
+    the independently matching graphs. The free acid and unrelated prolyl-hydroxylase
+    inhibitors remain distinct.
+  target_ids:
+  - CHEBI:132364
+  evidence_ids:
+  - native
+  - chemistry
+  - authority
+  - xrefs
+- assessment_id: activity
+  area: evidence
+  topic: Exact antibacterial eligibility and target limits
+  outcome: supported
+  summary: The original growth experiments support the role. Host-cell enzyme studies
+    and a speculative PBP analogy do not establish a bacterial molecular target. Quantitative
+    reuse requires the paper’s unresolved method limits.
+  target_ids:
+  - CHEBI:132364
+  evidence_ids:
+  - bacterial
+  - adopted
+  - adapter
+- assessment_id: origin
+  area: evidence
+  topic: Peanut seed testa component
+  outcome: supported
+  summary: The exact original abstract supports isolation and antioxidant identification
+    from seed testa. This is not a claim of exclusivity or a fully demonstrated natural
+    biosynthetic origin.
+  target_ids:
+  - CHEBI:132364
+  evidence_ids:
+  - peanut
+  - native
+- assessment_id: coverage
+  area: completeness
+  topic: Optional biological fields and record status
+  outcome: supported
+  summary: Absent optional quantitative activity, mechanism, resistance, producer,
+    clinical, graph and dataset fields are not automatic defects in this SEEDED record.
+    Useful exact primary leads are documented without treating this review as native
+    curation or biological sign-off.
+  target_ids:
+  - CHEBI:132364
+  evidence_ids:
+  - native
+  - adopted
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Adopted leads, generated ownership and immutable source capture
+  outcome: supported
+  summary: Every native field and all ten adopted lead dispositions were covered at
+    the stated reading depth. Focused schema, strict and chemistry checks pass, and
+    all fourteen captured source inputs remain unchanged.
+  target_ids:
+  - CHEBI:132364
+  evidence_ids:
+  - owners
+  - native
+  - chemistry
+  - search
+findings: []
+actions: []
+limitations:
+- All ten adopted abstracts were read; the2015 antibacterial main paper and actual
+  key table were inspected in full relevant scope. The2003 peanut paper’s publisher
+  HTML/PDF returned403, so the reported spectra were not independently viewed.
+- The2015 dilution list and table disagree on512 micrograms/mL, and final inoculum
+  is not unambiguously stated. Some susceptibility labels also differ from listed
+  zones. These source limits prevent unqualified reuse of clinical resistance or exact
+  protocols.
+- Reaxys was inaccessible and Wikipedia routes returned429. No exact molecular bacterial
+  target or current clinical use was established by the inspected sources.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native or source file was modified. Independent chemistry used the existing batch019
+  interpreter against the batch042 records; focused schema and strict gates used the
+  batch042 environment.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
