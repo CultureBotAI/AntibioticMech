@@ -1,0 +1,613 @@
+schema_version: 1.0.0
+review_id: 20261021T164643Z-formicamycin-g-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Formicamycin G: exact congener and bounded family evidence'
+started_at: '2026-10-21T16:37:14Z'
+finished_at: '2026-10-21T16:46:43Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The recorded formicamycin G graph agrees with eight native and authority
+  encodings, original isolated compound 10 and the congener-specific 2026 crystal
+  structure. The 2017 B. subtilis MIC supports antibacterial filing; MRSA and VRE
+  were explicitly not tested for G in that study. The definition describes family
+  context, while C/J/L resistance selection and other-congener targets are not transferred
+  to G. No corrective finding is confirmed; axial representation and later assay access
+  remain limited. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/formicamycin-g.yaml
+    sha256: 87bd886d909ff99029290e970f8731300e3464275e582585c60a99a9c4d5415b
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+targets:
+- target_id: antibioticmech:aro-940323dd61
+  path: data/antibiotics/antibacterial/formicamycin-g.yaml
+  label: formicamycin G
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity, family definition, class, literature lead and xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact PubChem molecular structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: CARD/ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated native fields
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/record_review_queue.tsv
+    role: Source literature readiness leads
+scope:
+  description: 'Entire formicamycin G YAML: minted identity, family definition and
+    sole adopted PMID, broad polyketide parent, all chemical fields and four exact
+    xrefs, source concept, all three histories, original exact-congener identity/activity
+    and 2026 revision scope.'
+  selection: Queue position 462 in isolated batch047, reviewed separately after capture.
+    Original 13 hashes preserved and actual ARO/PubChem/enrichment/readiness inputs
+    appended before detailed assessment, for 17 unchanged inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-940323dd61
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    462
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/formicamycin-g.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/formicamycin-g.yaml --out /private/tmp/am-review-session/462-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent chemical-authority comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/462-authority-check.py
+    > /private/tmp/am-review-session/462-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Eight encodings agree by InChIKey and reciprocal chirality-aware graph
+    matching; pendant ring has both ortho and para methoxy groups.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  evidence_ids:
+  - chemistry
+- check_id: ledger
+  name: Input, source, term and history ledger
+  command: .venv/bin/python /private/tmp/am-review-session/462-ledger.py > /private/tmp/am-review-session/462-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All 17 hashes and original 13 are intact; all source fields, exact links,
+    sole adopted PMID and three chronological histories accounted for.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  evidence_ids:
+  - owners
+- check_id: adapter
+  name: Structured iModulonDB catalog
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Reused actual catalog query performed during the adjacent F review for
+    the identical S. formicae producer context; no new G-specific dataset query claimed.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/formicamycin-g.yaml
+  locator: Entire native YAML
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: supports
+  summary: One neutral formicamycin G, C30H27Cl3O8, MINTED ARO identity and two configured
+    tetrahedral centers. No synonyms, quantitative activity, molecular targets, resistance
+    edges, producers, clinical claims or causal graphs are present. The definition
+    explicitly names formicamycin congeners.
+- evidence_id: owners
+  kind: database
+  reference: Maintained ARO/PubChem extraction and seeding lane
+  locator: 462-raw-rows.json; 462-source-audit.json; actual extractor/seeder/enrichment
+    sections
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: supports
+  summary: The frozen ARO row supplies the family definition, PMID33440167 and broad
+    polyketide class; PubChem CID146684587 supplies the recorded graph. The source
+    mint is reproduced. All three chronological seeded/reseeded histories and 17 original/expanded
+    input hashes are coherent. ChEBI is an exact external structure cross-reference,
+    not the native PubChem owner.
+  snapshot_sha256: cd8c0309f1322eb2aa363cb0b5222bce58274e2fb8caf704fc6965fa117b651b
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:219470; PubChem CID146684587; CHEMBL4645206
+  locator: 462-authority-chemistry.json; 462-chebi.json/.mol; 462-pc.json; 462-chembl.json
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: supports
+  summary: Native SMILES/InChI, ChEBI SMILES/InChI/molfile, PubChem SMILES/InChI and
+    ChEMBL SMILES give identical XKPCUXOZLGRCDH-BJLXPSRBSA-N, C30H27Cl3O8, charge
+    zero and two R,R centers with reciprocal chiral graph matches. The original drawing
+    independently matches the chlorination and two pendant methoxy groups. Native
+    average and monoisotopic masses agree at recorded precision.
+  snapshot_sha256: 6b1786262eb92a71d7d0f2c67df7c0dff4dd48d6072c9327fc8a42243d36b2d7
+- evidence_id: aro
+  kind: authority
+  reference: ARO:3007591; ARO:3007574; ARO:3005171
+  locator: 462-aro-blocks.json, extracted from current official 426-current-aro.obo
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: supports
+  summary: The exact current ARO term repeats the native definition, PMID and three
+    external links. The parent chain leads through formicamycin to polyketide with
+    antibiotic activity. Original biosynthetic and isolated-antibacterial evidence
+    supports that broad class. No native grounding-status promotion follows merely
+    from present ChEBI availability.
+  snapshot_sha256: e84c66e016d60961c7081df464e8139d9e61455747fd926967f917879ed6d5df
+- evidence_id: identity
+  kind: primary_source
+  reference: PMID:28507698; DOI:10.1039/c6sc04265a
+  locator: Original main isolation/stereochemistry sections, Figure1 visually read;
+    SI pp41–42 compound10 and original drawing
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: supports
+  summary: Exact formicamycin G is compound 10, isolated as 1 mg from S. formicae
+    KY5. SI p41 reports C30H27O8Cl3, observed [M+H]+621.0859 and proton/NOESY data.
+    Original main NOESY/ECD supported 10R,19R for the formicamycins while withholding
+    a definitive axial assignment. The G-specific original drawing has chlorine at
+    positions14,16,22 and both pendant methoxy groups; current graphs match this pattern.
+  snapshot_sha256: c30ad317fb5a4e00f304850ff2bd67d2960f7643f468e35a913bda99aca2f70d
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:28507698; DOI:10.1039/c6sc04265a
+  locator: Original Table1 exact compound10 row and SI1g p56
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: supports
+  summary: G has a B. subtilis MIC of 5 μM; its MRSA and VRE cells explicitly say
+    not tested. This is not evidence of inactivity. SI1g uses LB without NaCl, 1 mL
+    24-well cultures, starting OD600 0.08–0.15, 40 μL water/methanol stock and static
+    30°C incubation, with no observable overnight growth as endpoint. The laboratory
+    B. subtilis lacks a precise strain accession in these methods. No original2017
+    G MRSA/VRE value or clinical breakpoint is inferred.
+  snapshot_sha256: 741a682eefa78fdbcfb69b76eddd1d23df3e5bffbb60b2c7df34b51d923083d5
+- evidence_id: selection
+  kind: primary_source
+  reference: PMID:28507698
+  locator: Resistance-selection Results and SI1g
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: partial
+  summary: Four- and twenty-generation MRSA passage experiments concern compounds6,13,15,
+    corresponding to C,J,L, with no MIC increase under those conditions. G was not
+    in that selection panel. The native definition explicitly describes the congener
+    family, not an exact G resistance-selection observation.
+  snapshot_sha256: 741a682eefa78fdbcfb69b76eddd1d23df3e5bffbb60b2c7df34b51d923083d5
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:33440167; DOI:10.1016/j.chembiol.2020.12.011
+  locator: PMC8062789 complete abstract, introduction, selected regulator Results/Discussion,
+    actual Table2 and Bioassays methods
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: partial
+  summary: The sole adopted lead studies regulation and increased production in S.
+    formicae KY5. Its actual Table2 tests formicamycins J/R/S alongside fasamycins,
+    not G. Family antibacterial/resistance introduction cites Qin2017. ForJ, ForGF,
+    ForZ and the putative exporter have biosynthetic producer-cell roles; these are
+    not demonstrated G antibacterial targets.
+  snapshot_sha256: e55b2fd0ccc375fd9d04e77b0102d8588ed7bab670427d6124477a3d2c38cdae
+- evidence_id: revision
+  kind: primary_source
+  reference: PMID:41988676; DOI:10.1021/acs.jnatprod.6c00145
+  locator: 2026 Table1 top row (G,2) visually inspected in456460-2026-0006.webp; Results
+    and Crystallographic Data for2
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: supports
+  summary: Exact G is crystallized compound2, explicitly retained as structure-as-published
+    in Table1. The paper assigns the sampled formicamycins, including G, Sa axial
+    configuration and confirms the 10R,19R framework. For G it reports Flack−0.003(8),
+    Hooft−0.005(8) and CCDC2498171. The crystal contains one DMSO solvent molecule
+    per C30H27Cl3O8 parent; this is not evidence that the neutral native compound
+    should be redefined as a solvate. G has both ortho and para pendant methoxy groups
+    and is not among the revised single-methoxy B/D/I structures.
+  snapshot_sha256: 55796020973e571658d3a02c0080a44cff02e2bd6113dbfe0c942357eb04354d
+- evidence_id: later-isolation
+  kind: primary_source
+  reference: PMID:32519857; DOI:10.1021/acs.jnatprod.0c00161
+  locator: Original complete publisher abstract; public SI TablesS3/S4 pS6 and FigureS1
+    pS7 visually read
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: partial
+  summary: The original2020 abstract describes nine new and ten known congeners from
+    Streptomyces sp. KIB-1414. Public SI TablesS3/S4 and FigureS1 show compound19
+    with the exact G substitution pattern and two core centers. The later main exact
+    G assay row and methods were not inspected at draft completion, so neither secondary
+    MRSA numbers nor the family abstract range are adopted as G-specific quantitative
+    data.
+  snapshot_sha256: 541af1eb06e40a6048ad327ca0c61a7eae45200a93c2541e98ee7a6a444c6d9b
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB
+  locator: 461-adapter-catalog.txt and 461-adapter-results.json, reused actual catalog
+    query during the adjacent exact-record review
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: context_only
+  summary: The actual catalog was queried for the same S. formicae producer context
+    before follow-up; no matching S. formicae dataset is listed. Native G asserts
+    no protein or pathway. No S. coelicolor/albidoflavus surrogate is substituted,
+    and missing coverage is not negative evidence.
+  snapshot_sha256: c699dc2b41711d1d20635d5941bd524d8caf61ddcdf5199d182d2c293aa3d370
+- evidence_id: gates
+  kind: validation
+  reference: Focused native checks
+  locator: 462-focused-results.json; 462-chemistry.json; 462-schema.log; 462-strict.log
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: supports
+  summary: Native chemistry, schema and strict checks all exited zero; independent
+    graph and source-ledger commands also exited zero. These checks neither establish
+    a molecular target nor promote native scientific status.
+  snapshot_sha256: 8637cee9fcd9dbbc934aa23fbba4658672f4198e1a47832feedd41c55e058add
+- evidence_id: search
+  kind: search
+  reference: Bounded exact-compound source investigation
+  locator: 462-owners-search.json; 462-search.json; 462-fetch.json; exact G public
+    search and reused F-led KIB-1414 family discovery
+  accessed_at: '2026-10-21T16:42:47Z'
+  support: context_only
+  summary: Ignored-inclusive local searches located the actual ARO/PubChem/readiness
+    rows. Public searches identified the original2017, adopted2021 and later2020/2026
+    sources. Source access and exact-table limits are preserved; no absence of an
+    optional native collection is treated as a defect.
+  search_scope: rg --no-ignore --hidden over data/raw, curation, conf and scripts
+    using exact label, ARO, CID and minted identifier; free exact-name literature
+    and official chemical sources.
+  snapshot_sha256: 04445d0f3b18c41b6bfccee7a39e9d6b89445f1fbf5dfc82f2bd6b2661b08c40
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact congener and chemical cross-references
+  outcome: supported
+  summary: Exact original G compound10, current authority graphs and the congener-specific2026
+    crystal agree. The three chlorine positions differ from same-formula F/H; no family
+    or neighboring congener is substituted.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  evidence_ids:
+  - record
+  - identity
+  - chemistry
+  - revision
+- assessment_id: activity
+  area: grounding
+  topic: Antibacterial filing and polyketide parent
+  outcome: supported
+  summary: The isolated G compound has positive B. subtilis growth inhibition and
+    a typeII polyketide origin. The2017 MRSA/VRE not-tested entries are not negative
+    activity measurements.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  evidence_ids:
+  - activity
+  - identity
+  - aro
+  - adopted
+- assessment_id: definition
+  area: scope
+  topic: Explicit family definition
+  outcome: supported
+  summary: The native subject is explicitly the congener family. Its source context
+    does not establish exact G MRSA/VRE or resistance-selection results. The original2017
+    G row and C/J/L selection panel remain separate; no individual-G assertion is
+    inferred from family wording.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  evidence_ids:
+  - adopted
+  - selection
+  - activity
+- assessment_id: stereo
+  area: consistency
+  topic: Bridgehead configuration and unencoded axis
+  outcome: unknown
+  summary: The2026 exact G crystal supports Sa and10R,19R. Native standard encodings
+    correctly represent two tetrahedral centers but do not encode the biaryl axis.
+    This representation limit is not proof of a mixture or opposite atropisomer; the
+    crystal DMSO is kept separate from the neutral parent identity.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  evidence_ids:
+  - chemistry
+  - identity
+  - revision
+- assessment_id: mechanism
+  area: evidence
+  topic: Exact G molecular target
+  outcome: unknown
+  summary: No native molecular target is asserted. Neither G growth inhibition, producer
+    regulation nor related fasamycin targets demonstrates an exact G antibacterial
+    target.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  evidence_ids:
+  - record
+  - adopted
+  - adapter
+- assessment_id: later-assay
+  area: quantity
+  topic: Later KIB-1414 exact assay
+  outcome: unknown
+  summary: Later original abstract and SI support the KIB-1414 context and matching
+    compound19 graph. Exact later G assay methods and row remain unverified; no secondary
+    potency is adopted.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  evidence_ids:
+  - later-isolation
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained ownership and history
+  outcome: supported
+  summary: Actual source/extractor/enrichment/seeder owners are captured; original
+    13 and all 17 total hashes remain unchanged. All asserted identifiers and adopted
+    lead dispositions are accounted for.
+  target_ids:
+  - antibioticmech:aro-940323dd61
+  evidence_ids:
+  - owners
+  - aro
+  - gates
+findings: []
+actions: []
+limitations:
+- The2017 original G drawing, analytical entry, exact Table1 row and SI methods were
+  inspected. Only1mg was originally isolated; the SI reports proton/NOESY data, and
+  raw spectra were not reprocessed.
+- The sole adopted2021 paper was read at complete abstract and selected relevant main
+  Results/Table2/methods depth. Its quantitative formicamycin panel is J/R/S, not
+  G.
+- The2020 original abstract and SI compound19 drawing/data were read; the exact G
+  main activity table and methods were not inspected at draft completion, so secondary
+  numerical claims are excluded.
+- The2026 actual Table1 G row, congener-specific crystal statistics and relevant Results
+  were read. Native standard structures omit the experimentally supported Sa axis;
+  raw diffraction data were not independently reprocessed.
+- Original2017 G MRSA/VRE assays were not performed and no G resistance-selection
+  or direct antibacterial target experiment is established by the inspected evidence.
+  Missing optional native collections are not themselves defects.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Standalone chemistry used batch019 against batch047; schema/strict, ledger and contract
+  use batch047. The actual461 adapter catalog is explicitly reused for the identical
+  producer context.
+- No native or maintained source bytes or scientific status were changed.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1039/c6sc04265a
+- https://doi.org/10.1016/j.chembiol.2020.12.011
+- https://doi.org/10.1021/acs.jnatprod.0c00161
+- https://doi.org/10.1021/acs.jnatprod.6c00145
