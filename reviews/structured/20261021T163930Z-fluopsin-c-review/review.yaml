@@ -1,0 +1,719 @@
+schema_version: 1.0.0
+review_id: 20261021T163930Z-fluopsin-c-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'fluopsin C: exact identity and primary-evidence boundaries'
+started_at: '2026-10-21T16:12:26Z'
+finished_at: '2026-10-21T16:39:30Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The copper(II) complex, two-ligand stoichiometry, bacterial origin and antibacterial
+  role are supported by original chemical and biological evidence. Metal geometry,
+  mixed fractions, host toxicity and biosynthetic enzymes are kept distinct from a
+  direct antibacterial protein target. No confirmed native defect is established.
+  Scientific assessment retains the stated evidence limits; full verification is blocked
+  by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/fluopsin-c.yaml
+    sha256: 88ad3ffbd660aac12b0c95ee9d5d8245b711d502ac6dc7e7a9472c7cdc96725b
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+targets:
+- target_id: CHEBI:222417
+  path: data/antibiotics/antibacterial/fluopsin-c.yaml
+  label: fluopsin C
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position449; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:222417
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:222417
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    449
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:222417
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/fluopsin-c.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:222417
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/fluopsin-c.yaml --out /private/tmp/am-review-session/449-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:222417
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:222417
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:222417
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:222417
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:222417
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:222417
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:222417
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:222417
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:222417
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/fluopsin-c.yaml
+  locator: Entire native YAML, all names, groundings, classifications and history
+    events
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: The complete SEEDED/EXACT record CHEBI:222417 was read. It describes a
+    neutral copper coordination entity with two anionic thiohydroxamate ligands, eight
+    chemical synonyms, one parent, one antibacterial role, two chemical identifiers
+    and two patent links. No protein target, producer collection, numerical activity
+    or clinical assertion is present.
+- evidence_id: owners
+  kind: record_content
+  reference: 449-source-rows.json
+  locator: Exact maintained source rows, readiness pointer and expanded capture
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: All original thirteen input hashes are preserved within 14 captured inputs.
+    The exact ChEBI222417 row2891 supplies structure, synonyms, role, identifiers,
+    patents and ten adopted PMID leads. Readiness is a follow-up pointer, not primary
+    evidence.
+  snapshot_sha256: 6c5eb4a3ca9792bb192fa4321904fc1fc316006dc59a5a084122ef5986c6fbea
+- evidence_id: local
+  kind: search
+  reference: 449-local-hits.txt
+  locator: Ignored- and hidden-inclusive local identity and owner search
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: context_only
+  summary: The complete search included ignored and hidden files. Exact maintained
+    rows and generated annotations were inspected. No additional exact curator override
+    was identified in this bounded repository search; this does not establish global
+    evidence absence.
+  search_scope: rg --no-ignore --hidden exact fluopsin C name, identifier and source
+    mint in own batch045 checkout, excluding Git metadata and virtual environment
+  snapshot_sha256: f3fb2676c8eff4c5be586d205018f5ba5ce419903df5f8348b0f0964c6776d90
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/222417/
+  locator: 'Current full compound export: graph, names, roles, origins, parent relationships
+    and accessions'
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: Current ChEBI reproduces the native graph, formula C4H8CuN2O2S2, zero net
+    charge and key PGYZQLIUYISMJD-UHFFFAOYSA-N. Source agreement is recorded separately
+    from primary biological evidence.
+  snapshot_sha256: e74c040b82fca4e639276f765f31ff599c193635d58e6b8a5cba73cc4b2f11cb
+- evidence_id: chemistry
+  kind: record_content
+  reference: 449-authority-chemistry.json
+  locator: Independent native/current ChEBI molfile and PubChem graph comparison
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: Native SMILES and InChI, ChEBI SMILES and molfile, and PubChem SMILES and
+    InChI all give PGYZQLIUYISMJD-UHFFFAOYSA-N, formula C4H8CuN2O2S2 and charge zero.
+    Standard InChI disconnects the two anions and Cu(II); connected coordination SMILES
+    and disconnected InChI yield the same key. That normalization is not a missing-metal
+    or fragment-count defect. The encodings do not specify square-planar cis/trans
+    geometry.
+  snapshot_sha256: 9dc19886ab04d275bc010250d0dc6044214a79431e1fb65df34aa2ab1717cdd3
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/PGYZQLIUYISMJD-UHFFFAOYSA-N/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: Current PubChem structure properties
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: The independently parsed structure agrees with the exact native graph and
+    mass/formula. This is independent structure corroboration; no new native identifier
+    is added.
+  snapshot_sha256: 847657b4a85a61c0bf93ab587a3fea31794bbc70cb5e44678356e2d17634aa0e
+- evidence_id: term-37403
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/37403/
+  locator: Current asserted class or role definition
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: CHEBI:37403 resolves as copper coordination entity. The term was assessed
+    against the native graph or original activity/product evidence.
+  snapshot_sha256: 471b5483696a804315e89f7f27c4ec3454ba6976a1a1570d18be641a6f5044da
+- evidence_id: term-33282
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/33282/
+  locator: Current asserted class or role definition
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: CHEBI:33282 resolves as antibacterial agent. The role explicitly includes
+    a substance or active part thereof that kills or slows bacterial growth.
+  snapshot_sha256: 20d92ce7e00c204b1753184671c043160821d692438278344335446aadcd5082
+- evidence_id: gates
+  kind: record_content
+  reference: 449-focused-results.json
+  locator: Executed native schema, strict and chemical checks
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: All focused checks passed on the untouched native record. Structural checks
+    do not replace primary biological evidence.
+  snapshot_sha256: 8fe608d6ed5ca9cb0c81fe43f7cee219a88359d555053dcdf2d54ebac99041f1
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB
+  locator: Actual pre-follow-up catalog and relevant bacterial query
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: context_only
+  summary: The structured catalog completed. The p_aeruginosa/precise364 flc query
+    returned only hflC protease, an unrelated substring match, and no iModulons. This
+    result is not evidence against the original PA3515–PA3519 biosynthetic operon.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: original1971
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.24.124
+  locator: PMID5549384; full seven-page original OCR, actual page126 structure and
+    table viewed
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: The original removes copper from YC73, isolates neutral C2H5NOS thioformin
+    and verifies N-methyl-N-thioformylhydroxylamine by degradation, synthesis and
+    matching IR/UV/NMR. Recomplexation gives the original Cu(II) antibiotic with two
+    ligands per metal. Table1 assays are O-acyl/aryl derivatives; Table2 assays are
+    metal complexes. The free ligand is explicitly described as an acidic antibiotic,
+    with bioautographic detection, but no exact free-ligand numeric MIC is imported.
+  snapshot_sha256: 537687a7b2c56a380c852b97247c1198a2c6b5d27ca90789a4325918eba5fd84
+- evidence_id: original1971-analogues
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.24.131
+  locator: PMID4927254; full four-page original OCR
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: The introduction explicitly describes thioformin itself as having antimicrobial
+    activity. The actual comparative Table1 is labeled ferric complexes, including
+    the methyl parent, so these numbers are not free-ligand measurements. Synthetic
+    intermediates and substituted analogues remain distinct.
+  snapshot_sha256: b82cab2b411253c73896c30741a307992ba10100f9a327f7535c15a94488fbb9
+- evidence_id: original1974
+  kind: primary_source
+  reference: https://doi.org/10.1248/cpb.22.2283
+  locator: PMID4468081; original first two pages, introduction/material and antibacterial-method
+    scope
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: The paper distinguishes thioformin from its copper and ferric complexes
+    and identifies historical P. fluorescens MCRL-10107 production of YC73. It explicitly
+    tests stable metal complexes because free acids are often unstable; the MIC table
+    is ferric derivatives. Those observations do not establish copper-free quantitative
+    activity. The historical source does not contradict modern P. aeruginosa production.
+  snapshot_sha256: 9b47df31d511e2f5b75fda0efdd61da25f64377daf05f409bd7880732030313e
+- evidence_id: qsar1974
+  kind: primary_source
+  reference: https://doi.org/10.1248/cpb.22.2288
+  locator: PMID4219752; full six-page original OCR
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: Despite generic thioformylhydroxylamine terminology, Methods and TablesI/III
+    explicitly use ferric complexes. Hansch-Fujita regressions are correlations of
+    hydrophobicity with bacterial growth inhibition, not direct molecular-binding
+    experiments and not free-ligand MICs.
+  snapshot_sha256: d79b383e91d407c539926fc9689c670d189ca19868d76e9fbc87e2e9b665f20f
+- evidence_id: science2021
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC8939262/
+  locator: PMID34793213 / DOI10.1126/science.abj6749; complete main prose and captions,
+    actual Figure4 viewed
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: Original PAO1 insertion mutants and heterologous P. fluorescens SBW25 expression
+    establish PA3515–PA3519/flcA–E biosynthesis of fluopsin C under copper stress.
+    Purified-enzyme reconstitution yields the Cu-free ligand6 before added copper
+    produces complex1. Figure4 explicitly draws the same neutral ligand and copper
+    complex as the native records. The enzymes synthesize the antibiotic; they are
+    not its antibacterial protein targets. Isotope labeling supports cysteine/methionine-derived
+    atoms.
+  snapshot_sha256: 2259a8523d0f3fad4a9059e6de8ac4639244ca400aac879c96a00120208e1ca5
+- evidence_id: geometry2021
+  kind: primary_source
+  reference: https://doi.org/10.1126/science.abj6749
+  locator: Original EPR/ENDOR and reductant paragraphs with Figure1 caption
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: partial
+  summary: Cu(II) is experimentally supported. The toluene sample contains cis/trans
+    coordination isomers, approximately1:1 at room temperature and1:6 at15K. Native
+    encodings do not claim one fixed geometry. Reductant-induced spectra suggest intracellular
+    Cu(I), but this does not replace the isolated Cu(II) formula or prove the in-cell
+    active species. The original SI request returned challenge HTML and was not treated
+    as a readable PDF.
+  snapshot_sha256: 2259a8523d0f3fad4a9059e6de8ac4639244ca400aac879c96a00120208e1ca5
+- evidence_id: cas
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/31323-25-8/property/IsomericSMILES,InChI,InChIKey,MolecularFormula/JSON
+  locator: Exact native CAS lookup in public PubChem
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: The CAS lookup returns the same full InChIKey and formula. This is corroborating
+    cross-reference evidence, not independent access to the proprietary CAS registry.
+  snapshot_sha256: d0c853a74d610c679f4c2fc993365143bc17531d26d82ae7e7c14a6b8e03ec92
+- evidence_id: chemspider
+  kind: authority
+  reference: https://www.chemspider.com/Chemical-Structure.148058.html
+  locator: Current ChemSpider148058 structured identity export
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: ChemSpider identifies copper(2+) bis{[methyl(thioformyl)amino]oxidanide},
+    the same formula and exact native InChI/InChIKey. The page also uses fluopsin
+    C as a name.
+  snapshot_sha256: fe4ab80f449f5349b7915986b846733cc7add76a710aa99e93a4ad1554b92988
+- evidence_id: activity2019
+  kind: primary_source
+  reference: https://doi.org/10.3389/fmicb.2019.02431
+  locator: PMID31708901 / PMC6824035; isolation, identification, antibacterial Methods,
+    Table1 and relevant Results
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: The P. aeruginosa LV crude fraction is about80% fluopsin C before a separate
+    HPLC peak is collected for analysis/testing. The purified compound is identified
+    by MS and complementary measurements. Table1 separates parent strains,21-passage
+    cultures and10 drug-free passages. Parent MRSA N315 MIC0.5µg/mL and CRE Kpn19
+    MIC2µg/mL are measured in cation-adjusted Mueller-Hinton broth; serial-passage
+    shifts are phenotypes without a molecular resistance determinant. Mouse survival
+    and host toxicity are separate from human efficacy.
+  snapshot_sha256: 02fc8e084064fa1ff906f4f01d7a421f7c8cda2cabdcd0d473f0fc06c89dce7e
+- evidence_id: membrane2020
+  kind: primary_source
+  reference: https://doi.org/10.3389/fmicb.2020.01076
+  locator: PMID32582065 / PMC7288723; Methods and relevant Results/Discussion
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: Pure fluopsin C is distinguished from four-component F4A. Electron/fluorescence
+    microscopy shows membrane disruption/permeability after exposure; GFP-ZapA septal
+    delocalization is interpreted as secondary. There is no direct FtsZ/other protein
+    binding assay or direct measured membrane-potential result in the inspected experiments.
+    E. faecium/E. faecalis naming and some statistical wording are inconsistent, so
+    exact strain/endpoint reconciliation is required before quantitative enrichment.
+  snapshot_sha256: 96fe8f93e7340f96d29289a432983cdb12bbfe03b1f53653f7374060ffc646eb
+- evidence_id: correction2020
+  kind: primary_source
+  reference: https://doi.org/10.3389/fmicb.2020.574002
+  locator: PMID33123105 / PMC7573976; complete correction body
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: context_only
+  summary: The correction adds FAPESP funding acknowledgment and explicitly states
+    that scientific conclusions are unchanged. It does not repair the separate taxon
+    naming inconsistencies.
+  snapshot_sha256: d6d7c55d9d6de0b8e4b9969677e776bc5b754925fc627fb88d91552c2bd9e633
+- evidence_id: antifungal2023
+  kind: primary_source
+  reference: https://doi.org/10.3390/antibiotics12050861
+  locator: PMID37237764 / PMC10215102; exact compound Results and MIC/MFC Methods
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: supports
+  summary: The original separately tests F4a and its components against C. auris CBS10913/12766.
+    F4a MIC3.12/MFC6.25µg/mL differs from fluopsin C MIC0.78/MFC1.56µg/mL. RPMI-MOPS,
+    visual growth24h/37C and subsequent colony recovery define separate MIC/MFC endpoints.
+    Combination/nanoparticle effects and host-cell viability remain distinct. These
+    are optional antifungal enrichment leads, not a reason to reject antibacterial
+    placement.
+  snapshot_sha256: 6ba51519a18098cdcc49bf8b054f3cf8db19d795fa7303fcfaae63aecf143515
+- evidence_id: flcd2024
+  kind: primary_source
+  reference: https://doi.org/10.1021/acscentsci.4c00015
+  locator: PMID39220707 / PMC11363339; complete original abstract
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: context_only
+  summary: FlcD crystallography, activity and spectroscopy support a mononuclear-iron
+    biosynthetic dioxygenase mechanism. This is not fluopsin C binding to a bacterial
+    therapeutic target. The full mechanistic paper was retrieved but only abstract-level
+    claims are adopted.
+  snapshot_sha256: cce290c5a7f6e540328bfdcfc4f7d0fc5353bff7c7b68c76ca91f7f7d53a8d29
+- evidence_id: lead-23708552
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/23708552/
+  locator: Complete indexed abstract where present, otherwise metadata
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: context_only
+  summary: Original breast-cancer-cell oncosis/cytotoxicity abstract; host-cell toxicity
+    is not an antibacterial target.
+  snapshot_sha256: 5eaad7a42d7745dcd2f7be107e33a158621c01a433322192b8099964e7439ae7
+- evidence_id: lead-35950849
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/35950849/
+  locator: Complete indexed abstract where present, otherwise metadata
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: context_only
+  summary: Original MCF7 tumor spheroid/DNA-stress study abstract; no bacterial target
+    inference.
+  snapshot_sha256: 5eaad7a42d7745dcd2f7be107e33a158621c01a433322192b8099964e7439ae7
+- evidence_id: lead-32242758
+  kind: database
+  reference: https://pubmed.ncbi.nlm.nih.gov/32242758/
+  locator: Complete indexed abstract where present, otherwise metadata
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: context_only
+  summary: Review/perspective bibliographic metadata; no indexed abstract, not read
+    as a primary experiment.
+  snapshot_sha256: 5eaad7a42d7745dcd2f7be107e33a158621c01a433322192b8099964e7439ae7
+- evidence_id: patents
+  kind: primary_source
+  reference: https://patents.google.com/patent/WO2004050095A1/en
+  locator: 'Both native patents resolved as A1: titles, complete abstracts and initial
+    definition paragraphs'
+  accessed_at: '2026-10-21T16:24:41Z'
+  support: context_only
+  summary: WO2004050095A1 concerns fluopsin C treatment/producing isolates; WO2004078179A1
+    concerns combination therapy. Both document links are relevant. A2 suffix attempts
+    returned404; resolved A1 documents were read. Patent treatment claims and broad
+    combination assertions are not equated with approved clinical efficacy or every
+    claimed assay independently verified.
+  snapshot_sha256: bf620e9bd91fd88a5396b16abc247bdeaa6bfcb0626a3a4c78a68901eb2ee79e
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact molecular representation
+  outcome: supported
+  summary: The native graph, formula C4H8CuN2O2S2, charge and mass agree across independent
+    encodings. Cu(II) and two thiohydroxamate ligands are supported by original chemistry.
+    The record does not assert a unique coordination geometry.
+  target_ids:
+  - CHEBI:222417
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - pubchem
+  - original1971
+  - science2021
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical, drug and document groundings
+  outcome: supported
+  summary: CAS lookup and ChemSpider support the same chemical identity. Both native
+    patent links resolve to relevant documents; document scope is broader than exact
+    molecular identity.
+  target_ids:
+  - CHEBI:222417
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - cas
+  - chemspider
+  - patents
+- assessment_id: classification
+  area: scope
+  topic: Parents and antibacterial eligibility
+  outcome: supported
+  summary: The copper coordination parent is structurally correct. Original isolated-compound
+    bacterial assays support antibacterial eligibility; optional antifungal/host activities
+    do not invalidate this placement.
+  target_ids:
+  - CHEBI:222417
+  evidence_ids:
+  - term-37403
+  - term-33282
+  - original1971
+  - original1971-analogues
+  - activity2019
+- assessment_id: mechanism
+  area: evidence
+  topic: Native target assertions and prospective mechanism
+  outcome: unknown
+  summary: No native target is asserted. Membrane permeability is a measured phenotype;
+    FtsZ binding and membrane-potential collapse are not directly established by the
+    inspected experiments. Flc proteins are biosynthesis enzymes.
+  target_ids:
+  - CHEBI:222417
+  evidence_ids:
+  - native
+  - adapter
+  - science2021
+  - membrane2020
+  - flcd2024
+- assessment_id: completeness
+  area: completeness
+  topic: Optional activity, resistance and producer enrichment
+  outcome: unknown
+  summary: Primary LV/PAO1 production, growth inhibition, serial-passage phenotypes
+    and antifungal activity can support bounded enrichment. No clinical approval,
+    resistance gene or direct protein target follows automatically.
+  target_ids:
+  - CHEBI:222417
+  evidence_ids:
+  - native
+  - local
+  - original1971
+  - original1974
+  - science2021
+  - activity2019
+  - antifungal2023
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained sources and historical events
+  outcome: supported
+  summary: The entire source rows and native seed/reseed histories were read; original
+    hashes are preserved and actual additional owners captured. Authority updates
+    do not silently rewrite historical provenance. No native or source file is edited.
+  target_ids:
+  - CHEBI:222417
+  evidence_ids:
+  - native
+  - owners
+  - local
+  - gates
+- assessment_id: validation
+  area: schema
+  topic: Actual checks
+  outcome: supported
+  summary: Focused native schema, strict and chemistry checks passed. Independent
+    authority graph comparisons also passed. Shared required checks are attached at
+    finalization, with their existing failure retained.
+  target_ids:
+  - CHEBI:222417
+  evidence_ids:
+  - gates
+  - chemistry
+findings: []
+actions:
+- action_id: A2
+  description: For optional enrichment, resolve exact experimental material and claim-level
+    evidence before adding assertions.
+  finding_ids: []
+  target_ids:
+  - CHEBI:222417
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  acceptance_checks:
+  - Keep pure fluopsin C separate from F4A, free ligand, ferric complexes and combination
+    formulations.
+  - Do not label Flc enzymes or FtsZ as direct antibacterial targets from biosynthetic/phenotypic
+    data.
+  - Reconcile strain labels, preparation identity, assay medium and endpoint before
+    numeric enrichment.
+limitations:
+- Review is bounded to the inspected original material, current authority exports
+  and explicit local search; no global evidence absence is asserted.
+- Optional absent schema fields are not treated as defects. No native, maintained
+  source or previously saved review is edited.
+- The2021 main paper was read; its SI request returned challenge HTML and no SI table
+  is claimed inspected. Original geometry conclusions are conditional on the reported
+  solution/temperature.
+- The2019/2020 and2023 papers were read for selected materials, methods and results.
+  Every numerical table cell and raw dataset was not reanalyzed. The2024 biosynthesis
+  paper and two host-toxicity originals support only the explicitly recorded abstract-level
+  dispositions.
+- Patent titles/abstracts and relevant introductory paragraphs were read, not every
+  claim or experimental table. Public CAS cross-links are not independent proprietary
+  registry access.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Native curation status remains SEEDED. This review records evidence boundaries without
+  changing the record.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
