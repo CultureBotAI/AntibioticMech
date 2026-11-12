@@ -1,0 +1,723 @@
+# Review of aspoxicillin
+
+- Review: 20261021T093118Z-aspoxicillin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:12:39Z
+- Finished UTC: 2026-10-21T09:31:18Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Aspoxicillin identity, all five stereocenters, penicillin class and cited broad antibacterial activity are supported. Primary PBP competition and lysis studies offer scoped enrichment. No demonstrated native scientific error was found; source-body, hydrate and assay boundaries remain explicit. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole merged ARO/ChEBI seed, exact neutral structure and xrefs, all adopted citation records/available abstracts, original synthesis and selected exact-compound mechanism studies.
+
+Selection: Queue index 115; initial inspection before judgment, maintained ARO owners captured before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:31240 | data/antibiotics/antibacterial/aspoxicillin.yaml | generated | aspoxicillin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema check | passed | True | CHEBI:31240 | Exit 0. |
+| Documented strict check | passed | True | CHEBI:31240 | Exit 0; zero ERROR rows. |
+| Exact chemical representations | passed | False | CHEBI:31240 | Exit 0; native,PubChem,ChEMBL and KEGG agree including five assigned centers. |
+| Source accessions and ancestry | passed | False | CHEBI:31240 | Exit 0; current and adopted sources agree. |
+| Native adapter initial attempt | failed | False | CHEBI:31240 | Exit 2; sandbox DNS resolution failed before web research. |
+| Native adapter network retry | passed | False | CHEBI:31240 | Exit 0 with network permission, before web research; catalog read. |
+| Authoritative full QC | failed | True | CHEBI:31240 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:31240 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:31240 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:31240 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:31240 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:31240 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:31240 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:31240 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:31240 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact structure and forms
+
+identity: supported. Targets: CHEBI:31240.
+
+Native anhydrous structure agrees with current sources and official stereochemical identity.
+
+### Penicillin and antibacterial classes
+
+grounding: supported. Targets: CHEBI:31240.
+
+Original synthesis/activity and adopted ontology ancestry support the native class.
+
+### Cited definition
+
+evidence: supported. Targets: CHEBI:31240.
+
+Original exact compound has antibacterial activity in the reported assays; broad-spectrum wording is historical scope,not universal susceptibility.
+
+### Optional primary mechanism enrichment
+
+completeness: supported. Targets: CHEBI:31240.
+
+Scoped exact PBP studies exist; native absent optional objects are not errors.
+
+### Source ownership and reference scopes
+
+provenance: supported. Targets: CHEBI:31240.
+
+Merged sources reproduce; host-safety leads not promoted into microbial mechanism.
+
+### Focused validators
+
+schema: supported. Targets: CHEBI:31240.
+
+Schema and strict checks pass.
+
+## Findings
+
+### F1: Exact primary PBP and phenotype studies can enrich the seed
+
+informational / open / confirmed; issue key: chebi-31240-aspoxicillin-primary-mechanism-enrichment.
+
+Useful primary evidence is available for claim-level mechanism and activity additions. Current empty optional objects do not establish a defect, and the native chemical identity and cited definition are supported.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Optionally curate exact primary PBP,activity and formulation context.
+
+- Keep exact aspoxicillin separate from dehydroxyaspoxicillin and L-asparaginyl analogues; represent trihydrate or anhydrous potency context where reported.
+- Attach PBP competition evidence at the measured protein/strain scope, separating assay IC50 from MIC and purified Kd. Validate any chosen gene/protein accession rather than inferring it solely from gel-band numbering.
+- Keep NB001 and IID983 distinct; their measured PBP profiles and lysis concentrations differ. Do not infer universal PBP1b-driven rapid lysis from comparator experiments.
+- Retain host-safety citations as context only unless exact results are inspected; run required native curation gates before status promotion.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/aspoxicillin.yaml; Complete native record and three seed/reseed events | supports | Exact neutral aspoxicillin is represented with a cited ARO antibacterial definition and penicillin class. Native record makes no target-specific, resistance or quantitative activity assertion. |
+| chemistry | PubChem71961;ChEMBL1318150;KEGG D07469;RDKit; 115-chemistry.py;115-chemistry.json | supports | All checked exact representations agree on BHELIUBJHYAEDK-OAIUPTLZSA-N, neutral C21H27N5O7S and five assigned stereocenters. Formula,masses,connectivity and source mint reproduce. |
+| sources | CHEBI:31240;ARO:3009133;ARO:3000008; 115-source-check.json;115-card.html;115 source-row JSON files | supports | Nonobsolete ChEBI and cached/current CARD resolve the exact compound. ARO extended-spectrum penicillin ancestry supports the native penicillin class. ARO owns the nonempty definition; ChEBI owns native chemistry. |
+| synthesis | PMID:6833130; DOI:10.7164/antibiotics.36.147;115-primary1983.pdf pp147–151,153–154;Table1 and11a preparation | supports | Compound 11a/TA-058 is N4-methyl-D-asparaginylamoxicillin, distinguished from L-asparaginyl and dehydroxy analogues. Agar-dilution results support antibacterial spectrum, while mouse protection is a separate endpoint. The characterized product is a trihydrate. The downloaded scan has unrelated printed p156 in place of expected p152; no missing-page synthesis detail is inferred. |
+| hydrate | Japanese Pharmacopoeia XVIII; https://www.mhlw.go.jp/content/11120000/001372345.pdf;115-pharmacopeia.pdf printed p490 | supports | Official monograph distinguishes C21H27N5O7S trihydrate from anhydrous aspoxicillin, gives the same five stereodescriptors and associates CAS63358-49-6 with the anhydrous form. Native free compound is coherent; hydrate preparations require explicit reagent/potency context. |
+| pbp | PMID:10817702; DOI:10.1128/AAC.44.6.1518-1523.2000;PMC/publisher Methods,Tables1–2 and relevant Results inspected | supports | Radiolabeled benzylpenicillin competition in membranes measures PBP occupancy competition in A.pleuropneumoniae NB001 and H.influenzae IID983, both beta-lactamase nonproducing. Affinity profiles and lysis kinetics differ by strain and concentration. The competition IC50 is distinct from whole-cell MIC and is not a purified equilibrium Kd. Preferential PBP3 binding does not by itself establish universal rapid lysis. |
+| ecoli | PMID:3043036; 115-primary1988.pdf:complete English abstract;Japanese Methods8 and Results4;Table2 caption | partial | Exact aspoxicillin and its dehydroxy analogue were separately tested in E.coli K-12 membrane competition assays. Broad PBP affinities and bacteriolysis support optional target evidence. The analogue and comparator values must remain distinct. No precise table values are transcribed from the scanned image. |
+| leads | Adopted PMID6833130,15646539,37468498 and class PMID3889939; 115-core.json;115-lead-dispositions.json | context_only | All adopted indexed records and available abstracts read. Liver-injury bibliography and secondary pharmacology resource are host-safety context, not antibacterial mechanism evidence. General beta-lactam class review is not exact aspoxicillin primary proof. Two adopted records have no abstract. |
+| adapter | Native iModulonDB adapter; 115-imodulondb-datasets.txt | context_only | Initial command failed DNS; same catalog command succeeded with network access before web. Native record has no gene or pathway assertion to query. Principal comparative PBP paper organisms are not in the catalog. No expression-module inference used. |
+| validation | Documented schema and strict checks; 115-strict.tsv | supports | Both focused checks passed. |
+| search | Ignored-inclusive local resolution; 115-local-hits.txt;115-inspect.json | context_only | One exact target resolved; all 16 initial hashes unchanged. |
+
+## Limits And Additional Notes
+
+- Original 1983 scan was read throughout its relevant available pages; expected p152 is replaced by unrelated printed p156. This defect was visually confirmed in 115-scan-page6.png.
+- The 2000 PBP article Methods,tables and relevant Results were inspected on PMC/publisher web. Its XML endpoint failed HTTP500; subsequent web requests returned a challenge/403. No complete-body access claim is made.
+- The 1988 English abstract and relevant Japanese Methods/Results sections were inspected; numerical Table2 values were not transcribed from the image.
+- All adopted citation records and available abstracts checked; two have no abstract. The 2023 host-secondary-pharmacology XML was searched for exact-compound context,without adopting a target claim or screening-result interpretation.
+- The broader literature search was selective: 120 hits,100 returned titles screened and five additional relevant abstracts read. It is not a complete modern resistance or clinical-efficacy review.
+- CAS is corroborated by the official monograph and current sources,not an independent proprietary registry lookup.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 16 initial input hashes unchanged; no native or saved bundle edits.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T093118Z-aspoxicillin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of aspoxicillin
+started_at: '2026-10-21T09:12:39Z'
+finished_at: '2026-10-21T09:31:18Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Exact structure and cited antibacterial definition supported; optional
+  primary mechanism enrichment
+scientific_review: true
+summary: Aspoxicillin identity, all five stereocenters, penicillin class and cited
+  broad antibacterial activity are supported. Primary PBP competition and lysis studies
+  offer scoped enrichment. No demonstrated native scientific error was found; source-body,
+  hydrate and assay boundaries remain explicit. Scientific assessment retains the
+  stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/aspoxicillin.yaml
+    sha256: a998c11d5a47691d8a873f9d20848e3965aa77f137ca9df77e2259668e0c5398
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+scope:
+  description: Whole merged ARO/ChEBI seed, exact neutral structure and xrefs, all
+    adopted citation records/available abstracts, original synthesis and selected
+    exact-compound mechanism studies.
+  selection: Queue index 115; initial inspection before judgment, maintained ARO owners
+    captured before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:31240
+targets:
+- target_id: CHEBI:31240
+  path: data/antibiotics/antibacterial/aspoxicillin.yaml
+  label: aspoxicillin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition and structural class
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/aspoxicillin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit 0; zero ERROR rows.
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/aspoxicillin.yaml --out /private/tmp/am-review-session/115-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Exact chemical representations
+  status: passed
+  required: false
+  summary: Exit 0; native,PubChem,ChEMBL and KEGG agree including five assigned centers.
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/115-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: sources
+  name: Source accessions and ancestry
+  status: passed
+  required: false
+  summary: Exit 0; current and adopted sources agree.
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/115-source-check.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - sources
+- check_id: adapter-first
+  name: Native adapter initial attempt
+  status: failed
+  required: false
+  summary: Exit 2; sandbox DNS resolution failed before web research.
+  target_ids:
+  - CHEBI:31240
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 2
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-retry
+  name: Native adapter network retry
+  status: passed
+  required: false
+  summary: Exit 0 with network permission, before web research; catalog read.
+  target_ids:
+  - CHEBI:31240
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:31240
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/aspoxicillin.yaml
+  locator: Complete native record and three seed/reseed events
+  accessed_at: '2026-10-21T09:15:34Z'
+  support: supports
+  summary: Exact neutral aspoxicillin is represented with a cited ARO antibacterial
+    definition and penicillin class. Native record makes no target-specific, resistance
+    or quantitative activity assertion.
+- evidence_id: chemistry
+  kind: validation
+  reference: PubChem71961;ChEMBL1318150;KEGG D07469;RDKit
+  locator: 115-chemistry.py;115-chemistry.json
+  accessed_at: '2026-10-21T09:15:34Z'
+  support: supports
+  summary: All checked exact representations agree on BHELIUBJHYAEDK-OAIUPTLZSA-N,
+    neutral C21H27N5O7S and five assigned stereocenters. Formula,masses,connectivity
+    and source mint reproduce.
+  snapshot_sha256: cd97fcfe9b899e195275c0d60d4db900ed921cfa7b60e3f434e1d7b1310bfd7a
+- evidence_id: sources
+  kind: database
+  reference: CHEBI:31240;ARO:3009133;ARO:3000008
+  locator: 115-source-check.json;115-card.html;115 source-row JSON files
+  accessed_at: '2026-10-21T09:15:34Z'
+  support: supports
+  summary: Nonobsolete ChEBI and cached/current CARD resolve the exact compound. ARO
+    extended-spectrum penicillin ancestry supports the native penicillin class. ARO
+    owns the nonempty definition; ChEBI owns native chemistry.
+  snapshot_sha256: e5a72c776e171c59e48ba8230a9f59edcdbf50db15a39b58f5bcfe2b7978a458
+- evidence_id: synthesis
+  kind: primary_source
+  reference: PMID:6833130
+  locator: DOI:10.7164/antibiotics.36.147;115-primary1983.pdf pp147–151,153–154;Table1
+    and11a preparation
+  accessed_at: '2026-10-21T09:15:34Z'
+  support: supports
+  summary: Compound 11a/TA-058 is N4-methyl-D-asparaginylamoxicillin, distinguished
+    from L-asparaginyl and dehydroxy analogues. Agar-dilution results support antibacterial
+    spectrum, while mouse protection is a separate endpoint. The characterized product
+    is a trihydrate. The downloaded scan has unrelated printed p156 in place of expected
+    p152; no missing-page synthesis detail is inferred.
+  snapshot_sha256: a7569b3610187b364575852edb6d10a59880501d16418e6e15b59b9db6eb17c5
+- evidence_id: hydrate
+  kind: primary_source
+  reference: Japanese Pharmacopoeia XVIII
+  locator: https://www.mhlw.go.jp/content/11120000/001372345.pdf;115-pharmacopeia.pdf
+    printed p490
+  accessed_at: '2026-10-21T09:15:34Z'
+  support: supports
+  summary: Official monograph distinguishes C21H27N5O7S trihydrate from anhydrous
+    aspoxicillin, gives the same five stereodescriptors and associates CAS63358-49-6
+    with the anhydrous form. Native free compound is coherent; hydrate preparations
+    require explicit reagent/potency context.
+  snapshot_sha256: 2a3d28b73c4b1d24d4195e377a99b8025d8d8b0e0765b4765729bf6e6ba1af5c
+- evidence_id: pbp
+  kind: primary_source
+  reference: PMID:10817702
+  locator: DOI:10.1128/AAC.44.6.1518-1523.2000;PMC/publisher Methods,Tables1–2 and
+    relevant Results inspected
+  accessed_at: '2026-10-21T09:15:34Z'
+  support: supports
+  summary: Radiolabeled benzylpenicillin competition in membranes measures PBP occupancy
+    competition in A.pleuropneumoniae NB001 and H.influenzae IID983, both beta-lactamase
+    nonproducing. Affinity profiles and lysis kinetics differ by strain and concentration.
+    The competition IC50 is distinct from whole-cell MIC and is not a purified equilibrium
+    Kd. Preferential PBP3 binding does not by itself establish universal rapid lysis.
+- evidence_id: ecoli
+  kind: primary_source
+  reference: PMID:3043036
+  locator: 115-primary1988.pdf:complete English abstract;Japanese Methods8 and Results4;Table2
+    caption
+  accessed_at: '2026-10-21T09:15:34Z'
+  support: partial
+  summary: Exact aspoxicillin and its dehydroxy analogue were separately tested in
+    E.coli K-12 membrane competition assays. Broad PBP affinities and bacteriolysis
+    support optional target evidence. The analogue and comparator values must remain
+    distinct. No precise table values are transcribed from the scanned image.
+  snapshot_sha256: e9da9e04a3dbfa4f7be555e12a7000439c87f5732d486c800837a46c43aaa999
+- evidence_id: leads
+  kind: database
+  reference: Adopted PMID6833130,15646539,37468498 and class PMID3889939
+  locator: 115-core.json;115-lead-dispositions.json
+  accessed_at: '2026-10-21T09:15:34Z'
+  support: context_only
+  summary: All adopted indexed records and available abstracts read. Liver-injury
+    bibliography and secondary pharmacology resource are host-safety context, not
+    antibacterial mechanism evidence. General beta-lactam class review is not exact
+    aspoxicillin primary proof. Two adopted records have no abstract.
+  snapshot_sha256: 853565b366c59d3bdd6bf6bf206cb652d49e5b2bc942b58e89672b1f974ca8d3
+- evidence_id: adapter
+  kind: database
+  reference: Native iModulonDB adapter
+  locator: 115-imodulondb-datasets.txt
+  accessed_at: '2026-10-21T09:15:34Z'
+  support: context_only
+  summary: Initial command failed DNS; same catalog command succeeded with network
+    access before web. Native record has no gene or pathway assertion to query. Principal
+    comparative PBP paper organisms are not in the catalog. No expression-module inference
+    used.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: validation
+  kind: validation
+  reference: Documented schema and strict checks
+  locator: 115-strict.tsv
+  accessed_at: '2026-10-21T09:15:34Z'
+  support: supports
+  summary: Both focused checks passed.
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local resolution
+  locator: 115-local-hits.txt;115-inspect.json
+  accessed_at: '2026-10-21T09:15:34Z'
+  support: context_only
+  summary: One exact target resolved; all 16 initial hashes unchanged.
+  search_scope: prepare.py 115 used rg --no-ignore --hidden excluding .git/.venv;
+    additional ARO inputs captured before assessment. Literature search returned 120
+    hits;100 titles screened,selected relevant abstracts read,not an exhaustive120-paper
+    review.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact structure and forms
+  outcome: supported
+  summary: Native anhydrous structure agrees with current sources and official stereochemical
+    identity.
+  target_ids:
+  - CHEBI:31240
+  evidence_ids:
+  - chemistry
+  - hydrate
+  - synthesis
+- assessment_id: classes
+  area: grounding
+  topic: Penicillin and antibacterial classes
+  outcome: supported
+  summary: Original synthesis/activity and adopted ontology ancestry support the native
+    class.
+  target_ids:
+  - CHEBI:31240
+  evidence_ids:
+  - sources
+  - synthesis
+- assessment_id: definition
+  area: evidence
+  topic: Cited definition
+  outcome: supported
+  summary: Original exact compound has antibacterial activity in the reported assays;
+    broad-spectrum wording is historical scope,not universal susceptibility.
+  target_ids:
+  - CHEBI:31240
+  evidence_ids:
+  - synthesis
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional primary mechanism enrichment
+  outcome: supported
+  summary: Scoped exact PBP studies exist; native absent optional objects are not
+    errors.
+  target_ids:
+  - CHEBI:31240
+  evidence_ids:
+  - pbp
+  - ecoli
+- assessment_id: sources
+  area: provenance
+  topic: Source ownership and reference scopes
+  outcome: supported
+  summary: Merged sources reproduce; host-safety leads not promoted into microbial
+    mechanism.
+  target_ids:
+  - CHEBI:31240
+  evidence_ids:
+  - sources
+  - leads
+- assessment_id: validation
+  area: schema
+  topic: Focused validators
+  outcome: supported
+  summary: Schema and strict checks pass.
+  target_ids:
+  - CHEBI:31240
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-31240-aspoxicillin-primary-mechanism-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Exact primary PBP and phenotype studies can enrich the seed
+  description: Useful primary evidence is available for claim-level mechanism and
+    activity additions. Current empty optional objects do not establish a defect,
+    and the native chemical identity and cited definition are supported.
+  target_ids:
+  - CHEBI:31240
+  field_paths:
+  - molecular_targets
+  - activity_spectrum
+  - evidence
+  - discussions
+  evidence_ids:
+  - pbp
+  - ecoli
+  - synthesis
+  - hydrate
+  rule_id: 'review-checklist: primary claim scope and exact reagent form'
+  native_severity: informational optional enrichment
+  normalization_reason: No unsupported native target or quantitative claim requires
+    correction.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/aspoxicillin.yaml
+    role: Curator-owned evidence,targets,activity and discussion
+actions:
+- action_id: A1
+  description: Optionally curate exact primary PBP,activity and formulation context.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:31240
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/aspoxicillin.yaml
+    role: Curator-owned evidence,targets,activity and discussion
+  acceptance_checks:
+  - Keep exact aspoxicillin separate from dehydroxyaspoxicillin and L-asparaginyl
+    analogues; represent trihydrate or anhydrous potency context where reported.
+  - Attach PBP competition evidence at the measured protein/strain scope, separating
+    assay IC50 from MIC and purified Kd. Validate any chosen gene/protein accession
+    rather than inferring it solely from gel-band numbering.
+  - Keep NB001 and IID983 distinct; their measured PBP profiles and lysis concentrations
+    differ. Do not infer universal PBP1b-driven rapid lysis from comparator experiments.
+  - Retain host-safety citations as context only unless exact results are inspected;
+    run required native curation gates before status promotion.
+limitations:
+- Original 1983 scan was read throughout its relevant available pages; expected p152
+  is replaced by unrelated printed p156. This defect was visually confirmed in 115-scan-page6.png.
+- The 2000 PBP article Methods,tables and relevant Results were inspected on PMC/publisher
+  web. Its XML endpoint failed HTTP500; subsequent web requests returned a challenge/403.
+  No complete-body access claim is made.
+- The 1988 English abstract and relevant Japanese Methods/Results sections were inspected;
+  numerical Table2 values were not transcribed from the image.
+- All adopted citation records and available abstracts checked; two have no abstract.
+  The 2023 host-secondary-pharmacology XML was searched for exact-compound context,without
+  adopting a target claim or screening-result interpretation.
+- 'The broader literature search was selective: 120 hits,100 returned titles screened
+  and five additional relevant abstracts read. It is not a complete modern resistance
+  or clinical-efficacy review.'
+- CAS is corroborated by the official monograph and current sources,not an independent
+  proprietary registry lookup.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 16 initial input hashes unchanged; no native or saved bundle edits.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:31240
+- https://card.mcmaster.ca/ontology/47963
+- https://doi.org/10.7164/antibiotics.36.147
+- https://doi.org/10.1128/AAC.44.6.1518-1523.2000
+tags:
+- record-review
+- aspoxicillin
+- penicillin
+- primary-evidence
+```
