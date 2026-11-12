@@ -1,0 +1,1029 @@
+# Azalomycin F: wrong ChEMBL identity and unresolved complex/congener scope
+
+- Review: 20261021T095048Z-azalomycin-f
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:33:42Z
+- Finished UTC: 2026-10-21T09:50:48Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Two major findings: a ChEMBL xref identifies tylvalosin,and generic F-complex evidence is mapped to an unstereospecified F3a structure. Internal chemistry and focused validators pass. Primary experiments are preserved with preparation,LTA/LtaS and computational boundaries.
+
+## Scope And Provenance
+
+Whole-record scientific review of the single minted azalomycin F record.
+
+Selection: Queue130 in isolated batch013.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-bf7dc59121 | data/antibiotics/antibacterial/azalomycin-f.yaml | generated | azalomycin F |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema | passed | True | antibioticmech:aro-bf7dc59121 | Actual command passed. |
+| Focused strict | passed | True | antibioticmech:aro-bf7dc59121 | Actual command passed. |
+| Internal chemical consistency and actual source mint | passed | True | antibioticmech:aro-bf7dc59121 | Native encodings and mint agree;18 unspecified tetrahedral centres and preparation mapping assessed separately. |
+| Authoritative full QC | failed | True | antibioticmech:aro-bf7dc59121 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-bf7dc59121 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-bf7dc59121 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-bf7dc59121 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-bf7dc59121 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-bf7dc59121 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-bf7dc59121 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-bf7dc59121 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-bf7dc59121 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Generic F complex versus F3a structure
+
+identity: concern. Targets: antibioticmech:aro-bf7dc59121.
+
+Native chemical fields describe an unstereospecified F3a connectivity,while source concept and adopted papers describe the complex. Exact entity mapping and assay transfer require adjudication.
+
+### ChEMBL chemical identifier
+
+grounding: concern. Targets: antibioticmech:aro-bf7dc59121.
+
+Native ChEMBL identifier names a different antibiotic and is inherited from current ARO.
+
+### Internal encodings and source mint
+
+identity: supported. Targets: antibioticmech:aro-bf7dc59121.
+
+Both encodings,masses,charge and actual ARO mint agree; unspecified stereochemistry is preserved without inventing configuration.
+
+### Macrolide label and parent scope
+
+grounding: supported. Targets: antibioticmech:aro-bf7dc59121.
+
+Broad macrolide classification is supported by lactone structure and primary description. Do not infer a50S ribosome target from the conventional parent definition.
+
+### LTA claim and source preparation
+
+evidence: concern. Targets: antibioticmech:aro-bf7dc59121.
+
+The cited work is relevant to LTA/cell-envelope effects,but exact preparation equivalence to the native structure is unresolved. LTA polymer effects must remain separate from LtaS enzyme assays and docking.
+
+### Antibacterial evidence
+
+evidence: unknown. Targets: antibioticmech:aro-bf7dc59121.
+
+Antibacterial data are real but source preparations are not established as the exact native structure. No automatic MIC or target transfer.
+
+### Definition producer context
+
+evidence: supported. Targets: antibioticmech:aro-bf7dc59121.
+
+The papers identify streptomycete fermentation of the F complex; that supports generic origin while exact congener producer annotation needs mapping.
+
+### Rat pharmacokinetic follow-up
+
+scope: not_applicable. Targets: antibioticmech:aro-bf7dc59121.
+
+No native clinical block; source rat experiments do not imply human approval or a recommended clinical route.
+
+### Source and history
+
+provenance: supported. Targets: antibioticmech:aro-bf7dc59121.
+
+Native fields reproduce the raw source/fallback with three seed events. Both adopted PMIDs resolve; faithful provenance does not correct a wrong source xref.
+
+### Mechanistic additions after form resolution
+
+completeness: unknown. Targets: antibioticmech:aro-bf7dc59121.
+
+Future evidence could separate polymer interaction,cell-envelope outcomes and qualified enzyme assays. Optional blank fields are not separate findings.
+
+### Structured source cross-check
+
+scope: supported. Targets: antibioticmech:aro-bf7dc59121.
+
+Two available S.aureus dataset queries returned a gene identity only. No module inference or cross-strain transfer is made.
+
+### Resistance,dataset and graph claims
+
+scope: not_applicable. Targets: antibioticmech:aro-bf7dc59121.
+
+No populated claims in these native blocks.
+
+### Focused validators
+
+schema: supported. Targets: antibioticmech:aro-bf7dc59121.
+
+Both actual focused validators pass despite scientific identity/xref issues.
+
+## Findings
+
+### F1: Remove or correct the non-equivalent tylvalosin ChEMBL cross-reference
+
+major / open / confirmed; issue key: azalomycin-f-chEMBL-xref-is-tylvalosin.
+
+CHEMBL2103834 identifies tylvalosin with a different formula and full structure. The xref is repeated by ARO but is not chemically equivalent to the native compound. Resolve through maintained source mapping rather than propagating the erroneous assertion.
+
+### F2: Resolve the F complex versus unstereospecified F3a entity scope
+
+major / open / confirmed; issue key: azalomycin-f-complex-versus-f3a-scope.
+
+The generic F source and its cited studies concern a component complex,while CID6450216 provides F3a connectivity with all tetrahedral centres unspecified. A separately indexed F3a structure is more specific. Exact preparation evidence cannot be attached to this molecular record solely by the generic name; determine whether the source is a mixture or can be explicitly assigned to one congener.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct or suppress the ARO-inherited ChEMBL mapping in maintained extraction/adjudication inputs. Verify any replacement against full structure and exact entity scope.
+
+- No exact-equivalence xref to tylvalosin remains on the regenerated azalomycin record.
+- Any replacement ChEMBL accession must be independently resolved and chemically matched; do not choose by name alone.
+- Run extraction/enrichment/seeding as applicable,focused validators and cross-reference consistency checks.
+
+### A2
+
+Adjudicate whether ARO3007795 represents the F complex or an individually justified congener. If the complex,retain it in the supported exclusion/worklist route rather than inventing one mixture structure; if one congener,document exact complete-structure mapping and source evidence.
+
+- Preserve F3a,F4a,F5a and generic complex boundaries; distinguish all18 unspecified centres from a racemate or a proven natural configuration.
+- Do not transfer pure F5a observations or generic preparation assays to F3a by name.
+- Any target curation distinguishes LTA polymer,eLtaS activity,intact-LtaS liposome results,protein-expression response and computational residue assignments.
+- Retain only source-supported strain,preparation and assay details; rat PK is preclinical and not approval evidence.
+- Run identity/duplicate,term,reference,history and corpus gates after regeneration;retain native SEEDED until scientific criteria pass.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/azalomycin-f.yaml; Entire YAML | supports | Read MINTED/SEEDED azalomycin F,definition/LTA claim and PMID38398608,macrolide parent/class,all PubChem chemical fields,three xrefs,ARO source and three seed-history events. No populated optional target,activity,resistance,producer,clinical,dataset or graph blocks. |
+| owners | data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; ARO row562; PubChem row249; extraction,enrichment and seeding owners | supports | Native reproduces ARO3007795 and CID6450216. Raw ARO also cites PMID34770873 and contains the same ChEMBL xref. Correct non-ChEBI owners and input hashes were captured before assessment. |
+| aro | https://purl.obolibrary.org/obo/aro.obo; Current ARO3007795 and parent0000000 | supports | Native concept,definition,PubChem and ChEMBL xrefs persist upstream. Parent label is macrolide antibiotic; its conventional12–16-member/ribosome description must not be imported as an exact mechanism for this36-membered compound. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/6450216; Live PUG properties | supports | CID6450216 matches native C55H93N3O17,charge0,average1068.3,exact1067.65049851 and key UVUPYXTUQSCQRV-PEKXHOPKSA-N. It has no tetrahedral stereochemistry specification. |
+| chemistry | Independent RDKit and source-mint checks; Native SMILES/InChI | supports | Both encodings parse to one neutral fragment and reproduce native formula/key. Average1068.353 is compatible with PubChem rounded1068.3; exact1067.650498516 agrees. All18 potential tetrahedral centres are unspecified. Correct ARO mint reproduces. |
+| chembl | https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL2103834.json; Current molecule identity and structures | refutes | CHEMBL2103834 is TYLVALOSIN,C53H87NO19,key KCJJINQANFZSAM-HZDSEHBESA-N. Its structure is chemically different from native azalomycin F,so the xref is not an equivalent chemical identifier. |
+| f3a | https://pubchem.ncbi.nlm.nih.gov/compound/73425468; Separately named azalomycin F3a | supports | CID73425468 has the native formula/connectivity and double-bond layers but18 defined tetrahedral centres,key UVUPYXTUQSCQRV-DFIBHIQRSA-N. It is a more specific structure,not an automatic exact full-key match. |
+| comparison | Independent Standard InChI comparison; Native CID6450216 versus F3a CID73425468 | supports | The InChIs are identical up to the additional tetrahedral t/m/s layers of F3a. This establishes F3a connectivity and a defined granularity difference,without assigning native stereochemistry or treating unspecified centres as a racemate. |
+| original | https://doi.org/10.1248/cpb.30.4006; 1982 primary PDF p4006,abstract/introduction/Figure1 visually inspected | supports | The original structural work distinguishes the azalomycin F complex from separated F3a,F4a,F5a. It assigns C55H93N3O17 to F3a and differences in guanidine methylation among these congeners. Its historical drawing is not used to override later stereo or ester-position revisions. |
+| mechanism | https://doi.org/10.3390/molecules29040856; PMID38398608/PMC10893547; full main text sections1,2.1–2.4,3.1,3.6–3.8; Figure1 inspected | partial | The paper defines F as a three-component complex and uses98%-purity fermentation material without assigning it to pure F3a. It reports S.aureus ATCC25923 MIC4micrograms/mL,LTA release,membrane damage and protein changes. DAG-based eLtaS assay inhibition was significant at80/640micromolar; intact-LtaS liposomes did not demonstrate inhibition and showed enhancement at20/80micromolar. Fluorescence supports interaction; docking-derived residue assignments are computational. These distinctions must survive any future target curation. |
+| fig1 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10893547/figure/molecules-29-00856-f001/; Figure1 chemical structures and workflow visually inspected | context_only | Figure distinguishes F3a,F4a,F5a by guanidine substitutions and shows separate congener docking in a study otherwise using generic F material. |
+| pk | https://doi.org/10.3390/molecules26216464; PMID34770873/PMC8588360; full Introduction,Methods2.1,Results and Discussion | context_only | The2021 study explicitly describes an F complex and uses98%-purity S.hygroscopicus var.azalomyceticus fermentation material. It reports rat oral/IV pharmacokinetics,including low oral availability and high plasma-protein binding. These are preclinical preparation-specific results,not human treatment/approval evidence or proof of one exact congener. |
+| f5a-lta | https://doi.org/10.1016/j.biopha.2018.11.067; PMID30551449; indexed abstract of the2019 source cited by the2024 paper | context_only | This source explicitly tests F5a,not native F3a connectivity. It reports membrane interactions and LTA protection against MRSA lysis,with inferred side-chain/LTA involvement. Preserve the congener and inference boundaries; it cannot alone substantiate a direct LTA binding claim for native F3a. |
+| adapter | kg-microbe-sources imodulondb; datasets; ltaS searches in s_aureus/staph_precise108 and165 | context_only | Free network retry succeeded after sandbox DNS failure. Both datasets return gene USA300HOU_RS03880/ltaS,lipoteichoic acid synthase,with zero iModulon hits. This is USA300 gene-name context; it neither establishes an ATCC25923 expression response nor proves azalomycin binding. |
+| gates | just validate; just validate-strict; Actual focused batch013 commands | supports | Both exit0; strict checked one file with zero errors. Chemical consistency passes; xref identity and exact-source applicability require scientific review. |
+| search | CultureBotAI/AntibioticMech and free public primary sources; Ignored-inclusive identifier,label,slug,congener and ChEMBL search | context_only | Ignored files were included outside.git/.venv. Bounded native/curation searches found no separate F3a record or exact-form decision resolving this generic source; found raw owners and readiness queue. |
+
+## Limits And Additional Notes
+
+- The relative proportions of the98%-purity F preparation were not resolved from the inspected methods. Purity does not establish a single component. No automatic absolute stereochemical assignment is made.
+- The historical1982 PDF was inspected visually on its first page for original component/formula scope; later structural revisions were recognized but not exhaustively reconstructed.
+- The2019 F5a source was inspected at indexed-abstract level. Full2021 and2024 main text and relevant2024 figure were inspected; this review is not a reanalysis of primary raw proteomics or an exhaustive assessment of every proposed binding residue.
+- Structured iModulonDB hits are USA300 gene context and do not establish the cited ATCC25923 response. Initial sandbox DNS failed; the authorized public network retry and both queries succeeded.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All23 captured input hashes rechecked unchanged. No native/source-table edits or scientific status/history changes.
+- Initial helper ChEBI-only mint and overstrict rounded-mass tolerance were corrected in scratch for actual ARO/PubChem representation; these helper issues are not native findings.
+- No optional empty field is classified as a defect. Broad macrolide naming does not import a conventional ribosome-target mechanism.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T095048Z-azalomycin-f
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Azalomycin F: wrong ChEMBL identity and unresolved complex/congener scope'
+started_at: '2026-10-21T09:33:42Z'
+finished_at: '2026-10-21T09:50:48Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Whole record and preassessment source capture,current chemical
+    identifiers,independent stereo comparison,structured gene cross-check and primary
+    full-text assay review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'Two major findings: a ChEMBL xref identifies tylvalosin,and generic F-complex
+  evidence is mapped to an unstereospecified F3a structure. Internal chemistry and
+  focused validators pass. Primary experiments are preserved with preparation,LTA/LtaS
+  and computational boundaries.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/azalomycin-f.yaml
+    sha256: 44332090b3ce65a0a7274d39b7a900e91641a4c9ab053e71f58db70648d33f5a
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+targets:
+- target_id: antibioticmech:aro-bf7dc59121
+  path: data/antibiotics/antibacterial/azalomycin-f.yaml
+  label: azalomycin F
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Inherited identity,definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Fallback chemical fields
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Fallback chemical mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exact source identity or exclusion adjudication
+scope:
+  description: Whole-record scientific review of the single minted azalomycin F record.
+  selection: Queue130 in isolated batch013.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-bf7dc59121
+  exclusions:
+  - target: F3a,F4a,F5a,tylvalosin and producer records as separate targets
+    reason: Inspected only as identity and evidence boundaries.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual command passed.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/azalomycin-f.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual command passed.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/azalomycin-f.yaml --out /private/tmp/am-review-session/130-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Internal chemical consistency and actual source mint
+  status: passed
+  required: true
+  summary: Native encodings and mint agree;18 unspecified tetrahedral centres and
+    preparation mapping assessed separately.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - chemistry
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/azalomycin-f.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T09:37:04Z'
+  support: supports
+  summary: Read MINTED/SEEDED azalomycin F,definition/LTA claim and PMID38398608,macrolide
+    parent/class,all PubChem chemical fields,three xrefs,ARO source and three seed-history
+    events. No populated optional target,activity,resistance,producer,clinical,dataset
+    or graph blocks.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv
+  locator: ARO row562; PubChem row249; extraction,enrichment and seeding owners
+  accessed_at: '2026-10-21T09:37:04Z'
+  support: supports
+  summary: Native reproduces ARO3007795 and CID6450216. Raw ARO also cites PMID34770873
+    and contains the same ChEMBL xref. Correct non-ChEBI owners and input hashes were
+    captured before assessment.
+- evidence_id: aro
+  kind: authority
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Current ARO3007795 and parent0000000
+  accessed_at: '2026-10-21T09:34:07Z'
+  support: supports
+  summary: Native concept,definition,PubChem and ChEMBL xrefs persist upstream. Parent
+    label is macrolide antibiotic; its conventional12–16-member/ribosome description
+    must not be imported as an exact mechanism for this36-membered compound.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/6450216
+  locator: Live PUG properties
+  accessed_at: '2026-10-21T09:34:06Z'
+  support: supports
+  summary: CID6450216 matches native C55H93N3O17,charge0,average1068.3,exact1067.65049851
+    and key UVUPYXTUQSCQRV-PEKXHOPKSA-N. It has no tetrahedral stereochemistry specification.
+  snapshot_sha256: 9ccc3b6b0e5f178129807cb4779fbdc682e7747a43f52f6d44d7c159c99caa91
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit and source-mint checks
+  locator: Native SMILES/InChI
+  accessed_at: '2026-10-21T09:34:14Z'
+  support: supports
+  summary: Both encodings parse to one neutral fragment and reproduce native formula/key.
+    Average1068.353 is compatible with PubChem rounded1068.3; exact1067.650498516
+    agrees. All18 potential tetrahedral centres are unspecified. Correct ARO mint
+    reproduces.
+  snapshot_sha256: 5b044d1cefb00362e961a5491bc12b3102e8a85c8bfff30938160e67b5e9c723
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL2103834.json
+  locator: Current molecule identity and structures
+  accessed_at: '2026-10-21T09:34:07Z'
+  support: refutes
+  summary: CHEMBL2103834 is TYLVALOSIN,C53H87NO19,key KCJJINQANFZSAM-HZDSEHBESA-N.
+    Its structure is chemically different from native azalomycin F,so the xref is
+    not an equivalent chemical identifier.
+  snapshot_sha256: 32c01f7decab3713afa77e8f514af2bb101d40b79bea91615288bb8e4d7a3a48
+- evidence_id: f3a
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/73425468
+  locator: Separately named azalomycin F3a
+  accessed_at: '2026-10-21T09:34:33Z'
+  support: supports
+  summary: CID73425468 has the native formula/connectivity and double-bond layers
+    but18 defined tetrahedral centres,key UVUPYXTUQSCQRV-DFIBHIQRSA-N. It is a more
+    specific structure,not an automatic exact full-key match.
+  snapshot_sha256: 2f3471737b2bc3b97af6bc52775879eb3a4a6af71cc0f7f03d2f6c5b5bbc6560
+- evidence_id: comparison
+  kind: validation
+  reference: Independent Standard InChI comparison
+  locator: Native CID6450216 versus F3a CID73425468
+  accessed_at: '2026-10-21T09:35:16Z'
+  support: supports
+  summary: The InChIs are identical up to the additional tetrahedral t/m/s layers
+    of F3a. This establishes F3a connectivity and a defined granularity difference,without
+    assigning native stereochemistry or treating unspecified centres as a racemate.
+  snapshot_sha256: 1ca4272040d0ddc1525f53594ebbe0455530ba5a767412c3d2bd067f094668af
+- evidence_id: original
+  kind: primary_source
+  reference: https://doi.org/10.1248/cpb.30.4006
+  locator: 1982 primary PDF p4006,abstract/introduction/Figure1 visually inspected
+  accessed_at: '2026-10-21T09:34:35Z'
+  support: supports
+  summary: The original structural work distinguishes the azalomycin F complex from
+    separated F3a,F4a,F5a. It assigns C55H93N3O17 to F3a and differences in guanidine
+    methylation among these congeners. Its historical drawing is not used to override
+    later stereo or ester-position revisions.
+  snapshot_sha256: 1dd9e4b9e84aa43f362b9b1cc39c86800c50352e56db1057278cae90aed37a90
+- evidence_id: mechanism
+  kind: primary_source
+  reference: https://doi.org/10.3390/molecules29040856
+  locator: PMID38398608/PMC10893547; full main text sections1,2.1–2.4,3.1,3.6–3.8;
+    Figure1 inspected
+  accessed_at: '2026-10-21T09:34:34Z'
+  support: partial
+  summary: The paper defines F as a three-component complex and uses98%-purity fermentation
+    material without assigning it to pure F3a. It reports S.aureus ATCC25923 MIC4micrograms/mL,LTA
+    release,membrane damage and protein changes. DAG-based eLtaS assay inhibition
+    was significant at80/640micromolar; intact-LtaS liposomes did not demonstrate
+    inhibition and showed enhancement at20/80micromolar. Fluorescence supports interaction;
+    docking-derived residue assignments are computational. These distinctions must
+    survive any future target curation.
+  snapshot_sha256: 68b07e1f840adcc428b10cef611abae9eeb96864ba88c8598f69130ac4f1cd2b
+- evidence_id: fig1
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10893547/figure/molecules-29-00856-f001/
+  locator: Figure1 chemical structures and workflow visually inspected
+  accessed_at: '2026-10-21T09:35:34Z'
+  support: context_only
+  summary: Figure distinguishes F3a,F4a,F5a by guanidine substitutions and shows separate
+    congener docking in a study otherwise using generic F material.
+  snapshot_sha256: 76678565d19ea2050c30ab2176b46897bf768c4d13d45cb3c26b4caecd682501
+- evidence_id: pk
+  kind: primary_source
+  reference: https://doi.org/10.3390/molecules26216464
+  locator: PMID34770873/PMC8588360; full Introduction,Methods2.1,Results and Discussion
+  accessed_at: '2026-10-21T09:34:34Z'
+  support: context_only
+  summary: The2021 study explicitly describes an F complex and uses98%-purity S.hygroscopicus
+    var.azalomyceticus fermentation material. It reports rat oral/IV pharmacokinetics,including
+    low oral availability and high plasma-protein binding. These are preclinical preparation-specific
+    results,not human treatment/approval evidence or proof of one exact congener.
+  snapshot_sha256: 57c898efbb8425992668f83b3deaf0f8a27b62e1077902cf13a694f33a94d310
+- evidence_id: f5a-lta
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.biopha.2018.11.067
+  locator: PMID30551449; indexed abstract of the2019 source cited by the2024 paper
+  accessed_at: '2026-10-21T09:35:35Z'
+  support: context_only
+  summary: This source explicitly tests F5a,not native F3a connectivity. It reports
+    membrane interactions and LTA protection against MRSA lysis,with inferred side-chain/LTA
+    involvement. Preserve the congener and inference boundaries; it cannot alone substantiate
+    a direct LTA binding claim for native F3a.
+  snapshot_sha256: eb2ac9b312a98cea17aab90981e488244cd0807a5e3a68d0b6abc20770428d25
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb
+  locator: datasets; ltaS searches in s_aureus/staph_precise108 and165
+  accessed_at: '2026-10-21T09:37:04Z'
+  support: context_only
+  summary: Free network retry succeeded after sandbox DNS failure. Both datasets return
+    gene USA300HOU_RS03880/ltaS,lipoteichoic acid synthase,with zero iModulon hits.
+    This is USA300 gene-name context; it neither establishes an ATCC25923 expression
+    response nor proves azalomycin binding.
+  snapshot_sha256: a9991da97faceda3176bffc96c83b935fd645d4b5f4b5cd831584821b7253f91
+- evidence_id: gates
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual focused batch013 commands
+  accessed_at: '2026-10-21T09:37:04Z'
+  support: supports
+  summary: Both exit0; strict checked one file with zero errors. Chemical consistency
+    passes; xref identity and exact-source applicability require scientific review.
+  snapshot_sha256: 32aecfb495ec0aa207e07928a49df4c1d7dbc9bebdd487c0e3cfd59efb9353b4
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech and free public primary sources
+  locator: Ignored-inclusive identifier,label,slug,congener and ChEMBL search
+  accessed_at: '2026-10-21T09:33:44Z'
+  support: context_only
+  summary: Ignored files were included outside.git/.venv. Bounded native/curation
+    searches found no separate F3a record or exact-form decision resolving this generic
+    source; found raw owners and readiness queue.
+  search_scope: prepare.py130 rg --no-ignore --hidden identifiers,label,slug; targeted
+    native/raw/curation searches for azalomycin,CHEMBL2103834,CID73425468; current
+    source authorities and cited full primary papers.
+  snapshot_sha256: c6b3a2f87068b2c032de12efb79ba1fb91bbc6c131b1f770bd2a4e1924e1a771
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Generic F complex versus F3a structure
+  outcome: concern
+  summary: Native chemical fields describe an unstereospecified F3a connectivity,while
+    source concept and adopted papers describe the complex. Exact entity mapping and
+    assay transfer require adjudication.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - native
+  - pubchem
+  - f3a
+  - comparison
+  - original
+  - mechanism
+  - pk
+- assessment_id: xref
+  area: grounding
+  topic: ChEMBL chemical identifier
+  outcome: concern
+  summary: Native ChEMBL identifier names a different antibiotic and is inherited
+    from current ARO.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - owners
+  - aro
+  - chembl
+- assessment_id: chemical
+  area: identity
+  topic: Internal encodings and source mint
+  outcome: supported
+  summary: Both encodings,masses,charge and actual ARO mint agree; unspecified stereochemistry
+    is preserved without inventing configuration.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - pubchem
+  - chemistry
+- assessment_id: classification
+  area: grounding
+  topic: Macrolide label and parent scope
+  outcome: supported
+  summary: Broad macrolide classification is supported by lactone structure and primary
+    description. Do not infer a50S ribosome target from the conventional parent definition.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - aro
+  - pubchem
+  - mechanism
+  - pk
+- assessment_id: definition
+  area: evidence
+  topic: LTA claim and source preparation
+  outcome: concern
+  summary: The cited work is relevant to LTA/cell-envelope effects,but exact preparation
+    equivalence to the native structure is unresolved. LTA polymer effects must remain
+    separate from LtaS enzyme assays and docking.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - native
+  - mechanism
+  - f5a-lta
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial evidence
+  outcome: unknown
+  summary: Antibacterial data are real but source preparations are not established
+    as the exact native structure. No automatic MIC or target transfer.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - mechanism
+  - original
+- assessment_id: producer
+  area: evidence
+  topic: Definition producer context
+  outcome: supported
+  summary: The papers identify streptomycete fermentation of the F complex; that supports
+    generic origin while exact congener producer annotation needs mapping.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - mechanism
+  - pk
+- assessment_id: clinical
+  area: scope
+  topic: Rat pharmacokinetic follow-up
+  outcome: not_applicable
+  summary: No native clinical block; source rat experiments do not imply human approval
+    or a recommended clinical route.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - native
+  - pk
+- assessment_id: provenance
+  area: provenance
+  topic: Source and history
+  outcome: supported
+  summary: Native fields reproduce the raw source/fallback with three seed events.
+    Both adopted PMIDs resolve; faithful provenance does not correct a wrong source
+    xref.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - native
+  - owners
+  - aro
+  - pk
+  - mechanism
+- assessment_id: completeness
+  area: completeness
+  topic: Mechanistic additions after form resolution
+  outcome: unknown
+  summary: Future evidence could separate polymer interaction,cell-envelope outcomes
+    and qualified enzyme assays. Optional blank fields are not separate findings.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - mechanism
+  - f5a-lta
+- assessment_id: adapter
+  area: scope
+  topic: Structured source cross-check
+  outcome: supported
+  summary: Two available S.aureus dataset queries returned a gene identity only. No
+    module inference or cross-strain transfer is made.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - adapter
+- assessment_id: other
+  area: scope
+  topic: Resistance,dataset and graph claims
+  outcome: not_applicable
+  summary: No populated claims in these native blocks.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - native
+- assessment_id: schema
+  area: schema
+  topic: Focused validators
+  outcome: supported
+  summary: Both actual focused validators pass despite scientific identity/xref issues.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  evidence_ids:
+  - gates
+findings:
+- finding_id: F1
+  issue_key: azalomycin-f-chEMBL-xref-is-tylvalosin
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Remove or correct the non-equivalent tylvalosin ChEMBL cross-reference
+  description: CHEMBL2103834 identifies tylvalosin with a different formula and full
+    structure. The xref is repeated by ARO but is not chemically equivalent to the
+    native compound. Resolve through maintained source mapping rather than propagating
+    the erroneous assertion.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  field_paths:
+  - xrefs[1]
+  evidence_ids:
+  - native
+  - owners
+  - aro
+  - chembl
+  - pubchem
+  rule_id: native-review-checklist:Identity and Equivalence; Identifier Validation
+  native_severity: major non-equivalent chemical cross-reference
+  normalization_reason: The identifier resolves successfully but denotes a different
+    compound. Main record structure remains internally valid; this is not a broken
+    URL or a wholesale record-identity blocker.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Inherited identity,definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Fallback chemical fields
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Fallback chemical mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exact source identity or exclusion adjudication
+- finding_id: F2
+  issue_key: azalomycin-f-complex-versus-f3a-scope
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Resolve the F complex versus unstereospecified F3a entity scope
+  description: The generic F source and its cited studies concern a component complex,while
+    CID6450216 provides F3a connectivity with all tetrahedral centres unspecified.
+    A separately indexed F3a structure is more specific. Exact preparation evidence
+    cannot be attached to this molecular record solely by the generic name; determine
+    whether the source is a mixture or can be explicitly assigned to one congener.
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  field_paths:
+  - identifier
+  - label
+  - definition
+  - definition_source
+  - chemical_structure
+  - source_concepts
+  - grounding_status
+  evidence_ids:
+  - native
+  - owners
+  - pubchem
+  - f3a
+  - comparison
+  - original
+  - mechanism
+  - pk
+  - f5a-lta
+  rule_id: docs/HARMONIZATION.md:The unit of the corpus is a structure; native-review-checklist:Evidence
+    Fidelity
+  native_severity: major mixture/congener scope and evidence transfer
+  normalization_reason: Composition/granularity mismatch is established;the correct
+    source adjudication and natural stereochemical assignment remain unresolved. No
+    automatic replacement,duplicate merge,or rejection of real experiments is proposed.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Inherited identity,definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Fallback chemical fields
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Fallback chemical mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exact source identity or exclusion adjudication
+actions:
+- action_id: A1
+  description: Correct or suppress the ARO-inherited ChEMBL mapping in maintained
+    extraction/adjudication inputs. Verify any replacement against full structure
+    and exact entity scope.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Inherited identity,definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Fallback chemical fields
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Fallback chemical mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exact source identity or exclusion adjudication
+  acceptance_checks:
+  - No exact-equivalence xref to tylvalosin remains on the regenerated azalomycin
+    record.
+  - Any replacement ChEMBL accession must be independently resolved and chemically
+    matched; do not choose by name alone.
+  - Run extraction/enrichment/seeding as applicable,focused validators and cross-reference
+    consistency checks.
+- action_id: A2
+  description: Adjudicate whether ARO3007795 represents the F complex or an individually
+    justified congener. If the complex,retain it in the supported exclusion/worklist
+    route rather than inventing one mixture structure; if one congener,document exact
+    complete-structure mapping and source evidence.
+  finding_ids:
+  - F2
+  target_ids:
+  - antibioticmech:aro-bf7dc59121
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Inherited identity,definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Fallback chemical fields
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Fallback chemical mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exact source identity or exclusion adjudication
+  acceptance_checks:
+  - Preserve F3a,F4a,F5a and generic complex boundaries; distinguish all18 unspecified
+    centres from a racemate or a proven natural configuration.
+  - Do not transfer pure F5a observations or generic preparation assays to F3a by
+    name.
+  - Any target curation distinguishes LTA polymer,eLtaS activity,intact-LtaS liposome
+    results,protein-expression response and computational residue assignments.
+  - Retain only source-supported strain,preparation and assay details; rat PK is preclinical
+    and not approval evidence.
+  - Run identity/duplicate,term,reference,history and corpus gates after regeneration;retain
+    native SEEDED until scientific criteria pass.
+limitations:
+- The relative proportions of the98%-purity F preparation were not resolved from the
+  inspected methods. Purity does not establish a single component. No automatic absolute
+  stereochemical assignment is made.
+- The historical1982 PDF was inspected visually on its first page for original component/formula
+  scope; later structural revisions were recognized but not exhaustively reconstructed.
+- The2019 F5a source was inspected at indexed-abstract level. Full2021 and2024 main
+  text and relevant2024 figure were inspected; this review is not a reanalysis of
+  primary raw proteomics or an exhaustive assessment of every proposed binding residue.
+- Structured iModulonDB hits are USA300 gene context and do not establish the cited
+  ATCC25923 response. Initial sandbox DNS failed; the authorized public network retry
+  and both queries succeeded.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All23 captured input hashes rechecked unchanged. No native/source-table edits or
+  scientific status/history changes.
+- Initial helper ChEBI-only mint and overstrict rounded-mass tolerance were corrected
+  in scratch for actual ARO/PubChem representation; these helper issues are not native
+  findings.
+- No optional empty field is classified as a defect. Broad macrolide naming does not
+  import a conventional ribosome-target mechanism.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pubchem.ncbi.nlm.nih.gov/compound/6450216
+- https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2103834
+- https://doi.org/10.3390/molecules29040856
+- https://doi.org/10.3390/molecules26216464
+tags:
+- azalomycin-f
+- xref-error
+- congener-scope
+- LTA
+- LtaS
+```
