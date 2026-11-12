@@ -1,0 +1,671 @@
+# Etrasimod: invalid indole SMILES despite a supported R free-acid identity
+
+- Review: 20261021T160145Z-etrasimod-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T15:38:13Z
+- Finished UTC: 2026-10-21T16:01:45Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native InChI and independent structures support the exact R free acid, while the stored SMILES omits the indole N–H and fails parsing. Original work verifies the 1.88 nM CHO internalization result and separately supports antibacterial activity; host S1P biology is not a bacterial target.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 421; entire native record. Original thirteen hashes were preserved within 14 actual owner/context inputs before substantive judgment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:229230 | data/antibiotics/antibacterial/etrasimod.yaml | generated | etrasimod |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | failed | False | CHEBI:229230 | Actual focused execution exited 1. |
+| Focused schema verification | passed | True | CHEBI:229230 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:229230 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:229230 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:229230 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:229230 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:229230 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:229230 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:229230 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:229230 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:229230 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:229230 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact R free acid and invalid SMILES
+
+identity: concern. Targets: CHEBI:229230.
+
+All independent valid encodings and original structure agree; the bare indole n is a reproducible serialization defect, not evidence against the compound identity.
+
+### CHO potency versus host and bacterial endpoints
+
+evidence: supported. Targets: CHEBI:229230.
+
+The original discovery directly supports1.88 nM CHO internalization. Human receptor pharmacology, antibacterial MIC, biofilm suppression and quorum phenotypes must remain separate.
+
+### Parents, names and broader drug references
+
+grounding: supported. Targets: CHEBI:229230.
+
+All five chemical classes and the R/APD334 name family are coherent. Unread HMDB/Wikipedia mappings remain access limitations.
+
+### Optional unasserted fields and review status
+
+completeness: supported. Targets: CHEBI:229230.
+
+All native fields and adopted leads were assessed at their recorded reading depth. Optional quantitative activity, targets, graphs, clinical status and expression datasets are not automatically required in a SEEDED record. This review does not promote native scientific curation status.
+
+### Generated owners and unchanged input ledger
+
+provenance: supported. Targets: CHEBI:229230.
+
+All 14 captured input hashes remain unchanged, including the initial thirteen. Focused schema/strict checks pass; the actual focused chemistry failure is retained and supports the SMILES finding.
+
+## Findings
+
+### F1: SMILES omits the indole N–H
+
+major / open / confirmed; issue key: etrasimod-invalid-indole-smiles.
+
+Repair the maintained structure source or supported extraction override so the generated SMILES represents [nH]. The stored/current ChEBI string fails parsing; the valid InChI, molfile and original drawing consistently specify N–H.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Repair the maintained structure source or supported extraction override so the generated SMILES represents [nH]. The stored/current ChEBI string fails parsing; the valid InChI, molfile and original drawing consistently specify N–H.
+
+- Regenerated SMILES parses and reproduces MVGWUTBTXDYMND-QGZVFWFLSA-N, C26H26F3NO3 and R configuration.
+- Run chemistry, schema/strict and source reproduction checks without changing the supported InChI or quantitative definition.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/etrasimod.yaml; Entire native YAML and every history entry | supports | The SEEDED/EXACT record has 7 synonyms, 5 parents, 4 history events and 1 source concept(s). Every populated field was read, including all exact, drug and document references. There is no asserted numerical activity observation, target, resistance, producer, clinical-status object, dataset or causal graph. |
+| owners | 421-source-rows.json; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Exact source rows and applicable extraction/seeding rules | supports | The exact ChEBI source row supplies identity, definition, structure, roles and adopted publication leads. Source citations are leads and are not automatically copied into native experimental evidence. The readiness queue is contextual. Original hashes were preserved; no native or maintained file was edited. |
+| search | 421-local-hits.txt; 421-owners-search.json; 043-root-fetch-manifest.json through 043-root-fetch8-manifest.json; Ignored-inclusive local discovery and bounded current authority/primary-source access | supports | All native identifiers and adopted publication leads were considered. HTTP200 challenge, error and login responses were not counted as structures or full papers. Search coverage is bounded, not evidence that other literature does not exist. |
+| semantics | src/antibioticmech/schema/antibioticmech.yaml; xrefs, drug_xrefs and document_xrefs definitions | supports | Exact xrefs require structural equivalence. Drug-level links may cover parents, salts or stereoisomers, and document references establish relevance rather than equivalence. No broader drug-level association is penalized for a different structural scope. |
+| chemistry | 043-authority-compare.json; 421-chemistry.json; Independent parsing, formula/charge/key and stereochemical checks | supports | Native and current ChEBI SMILES fail kekulization because indole nitrogen is bare n. Native/current InChI, current ChEBI molfile, PubChem44623998 and KEGG D10930 reproduce MVGWUTBTXDYMND-QGZVFWFLSA-N, C26H26F3NO3, neutral charge and one R centre. Scratch replacement with [nH] restores the exact key; no native mutation was made. |
+| adapter | 043-root-adapter-catalog.txt; Actual dataset catalog inspected before mechanism follow-up | supports | The catalog has no matching human host, clove, Kitasatospora setae, WAC5292 or CS62 dataset. Covered bacterial backgrounds do not make human S1P signaling, candidate plant biosynthesis or heterologous facT into endogenous bacterial target evidence. No component membership or unsupported gene identity is invented. |
+| authority | CHEBI:229230; https://www.ebi.ac.uk/chebi/backend/api/public/compound/229230/; KEGG:D10930; DrugBank:DB14766; Current full chemical entry, names, all five parent definitions, KEGG record/molfile and official DrugBank public page | supports | Five broader parents fit the cyclopentane, monocarboxylic acid, heterotricycle, aromatic ether and trifluoromethylbenzene graph. Systematic R names, APD334 aliases and language-specific INNs agree. CAS1206123-37-6 is supported by KEGG/DrugBank. HMDB0252121 returned403 and Wikipedia429; those mappings remain independently unverified. DrugBank and KEGG are valid drug-level associations. |
+| adopted | PMID:25516790;30872391;31711921;33475734;33566519;35733960;36695074;36756653; PMC10910369;PMC10910374; All ten adopted leads resolved; six full indexed abstracts and four no-abstract metadata entries | supports | 25516790 is discovery and35733960 exact antibacterial work, examined more deeply below.30872391 reports recombinant human S1P1 beta-arrestin EC50 6.1 nM, a different endpoint from the definition.31711921 is UC phase2 and33475734 its extension;36695074 is the atopic-dermatitis ADVISE trial whose primary endpoint was not met.33566519,36756653 and the two2024 PMC clinical summaries lacked indexed abstracts and their initial full-text routes failed. Host outcomes are not antibacterial efficacy. |
+| discovery | PMID:25516790; DOI:10.1021/ml500389m; https://pmc.ncbi.nlm.nih.gov/articles/PMC4265817/?pdf=render; Original full-text identity/SAR/internalization sections, Tables1–2, actual Figures1–2; selected original synthesis supplement | supports | The successful render route supplies original text after other routes returned challenges. Racemic15 was resolved, R-APD3344 selected, and both configurations were assigned by X-ray. Figure1 explicitly depicts indole N–H; Figure2 is the free-acid crystal. The paper directly reports IC50 1.88 nM for internalization in HA-S1P1-expressing CHO cells. Beta-arrestin EC50 and HTRF cAMP values are distinct. The l-arginine salt, crystalline free acid and amorphous acid are separately discussed and must not be interchanged. |
+| synthesis | DOI:10.1021/ml500389m.s001; https://ndownloader.figshare.com/files/3862045; Original SI StepsG/H and selected pharmacology material/HTRF-method sections; not all spectra or crystal tables | supports | StepH resolves racemic acid on ChiralCel OD and identifies the R acid as the later eluting enantiomer. NMR and HRMS [M−H] calculated456.1792/found456.1776 accompany its identity. HTRF cAMP uses recombinant receptors in HEK293 cells and is not the CHO internalization assay. The reported protonated/deprotonated ions are analytical ions, not different isolated salts. |
+| bacterial | PMID:35733960; DOI:10.3389/fmicb.2022.926170; PMC9207386; Original Materials/Methods and relevant Results/Discussion sections, Tables1/3 and actual PDFp3 | supports | Cayman etrasimod in the initial screen and Carbosynth material in follow-up were dissolved in DMSO; an exact salt form is not specified. In S. aureus ATCC25923, 18-hour37°C TSB assays at1% DMSO give MIC5–10 micromolar (over90% turbidity/viability inhibition); MBC and biofilm-prevention concentration are10 micromolar, with MBC requiring99.9% CFU reduction. Established biofilms require much higher exposure and use different endpoints. Newman,P2,ATCC43300,E. faecalis29212 and S. epidermidis strains are individually tested. Tested Gram-negative strains show no inhibition up to200 micromolar. Quorum-sensing phenotypes do not establish CviR binding; membrane disruption is proposed, not a proven molecular target. Resistance selection and gentamicin FICI0.5 remain assay-specific. |
+
+## Limits And Additional Notes
+
+- Six adopted indexed abstracts and four metadata-only items were assessed; four clinical reports remained unread in full. The original2014 article was read in the stated identity/pharmacology scope, not as a complete preclinical safety audit. Its supplement was selectively read, not fully re-elucidated.
+- The2022 antibacterial paper was read in relevant Methods/Results/Discussion scope and its actual methods page inspected. Not every supplementary figure or original raw dataset was reanalysed. Unknown assay material salt form is retained. HMDB and Wikipedia access failed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native/source edit or biological sign-off was performed. Independent chemistry used the existing batch019 interpreter against batch043; native gates used batch043. Shared required gates are attached from actual unchanged-base executions during finalization.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T160145Z-etrasimod-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Etrasimod: invalid indole SMILES despite a supported R free-acid identity'
+started_at: '2026-10-21T15:38:13Z'
+finished_at: '2026-10-21T16:01:45Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native InChI and independent structures support the exact R free acid,
+  while the stored SMILES omits the indole N–H and fails parsing. Original work verifies
+  the 1.88 nM CHO internalization result and separately supports antibacterial activity;
+  host S1P biology is not a bacterial target.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/etrasimod.yaml
+    sha256: 2c394efc5c9ad1a6e3320ff90b8742f55c879674d1d2505a191e7f5a48dd8156
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+targets:
+- target_id: CHEBI:229230
+  path: data/antibiotics/antibacterial/etrasimod.yaml
+  label: etrasimod
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 421; entire native record. Original thirteen hashes were
+    preserved within 14 actual owner/context inputs before substantive judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:229230
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: failed
+  required: false
+  summary: Actual focused execution exited 1.
+  target_ids:
+  - CHEBI:229230
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/111-chemistry-check.py
+    421
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:229230
+  command: just validate data/antibiotics/antibacterial/etrasimod.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:229230
+  command: just validate-strict data/antibiotics/antibacterial/etrasimod.yaml --out
+    /private/tmp/am-review-session/421-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:229230
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:229230
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:229230
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:229230
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:229230
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:229230
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:229230
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:229230
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:229230
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/etrasimod.yaml
+  locator: Entire native YAML and every history entry
+  accessed_at: '2026-10-21T16:01:14Z'
+  support: supports
+  summary: The SEEDED/EXACT record has 7 synonyms, 5 parents, 4 history events and
+    1 source concept(s). Every populated field was read, including all exact, drug
+    and document references. There is no asserted numerical activity observation,
+    target, resistance, producer, clinical-status object, dataset or causal graph.
+- evidence_id: owners
+  kind: record_content
+  reference: 421-source-rows.json; scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  locator: Exact source rows and applicable extraction/seeding rules
+  accessed_at: '2026-10-21T16:01:14Z'
+  support: supports
+  summary: The exact ChEBI source row supplies identity, definition, structure, roles
+    and adopted publication leads. Source citations are leads and are not automatically
+    copied into native experimental evidence. The readiness queue is contextual. Original
+    hashes were preserved; no native or maintained file was edited.
+  snapshot_sha256: 6a4c6d42906391e95857fde9a79a3bb5e689907693023763e54a33e43a58287b
+- evidence_id: search
+  kind: search
+  reference: 421-local-hits.txt; 421-owners-search.json; 043-root-fetch-manifest.json
+    through 043-root-fetch8-manifest.json
+  locator: Ignored-inclusive local discovery and bounded current authority/primary-source
+    access
+  accessed_at: '2026-10-21T16:01:14Z'
+  support: supports
+  summary: All native identifiers and adopted publication leads were considered. HTTP200
+    challenge, error and login responses were not counted as structures or full papers.
+    Search coverage is bounded, not evidence that other literature does not exist.
+  search_scope: Exact native identifier, name and key search with rg --no-ignore --hidden
+    across repository data, curation, conf, scripts, src, docs, reviews and reports;
+    linked public authorities, EuropePMC and free original publisher/supplement routes.
+  snapshot_sha256: 8680f8959802ada1e75227ef5907df8c87eb7165910709591059555234a62c0d
+- evidence_id: semantics
+  kind: record_content
+  reference: src/antibioticmech/schema/antibioticmech.yaml
+  locator: xrefs, drug_xrefs and document_xrefs definitions
+  accessed_at: '2026-10-21T16:01:14Z'
+  support: supports
+  summary: Exact xrefs require structural equivalence. Drug-level links may cover
+    parents, salts or stereoisomers, and document references establish relevance rather
+    than equivalence. No broader drug-level association is penalized for a different
+    structural scope.
+- evidence_id: chemistry
+  kind: validation
+  reference: 043-authority-compare.json; 421-chemistry.json
+  locator: Independent parsing, formula/charge/key and stereochemical checks
+  accessed_at: '2026-10-21T16:01:14Z'
+  support: supports
+  summary: Native and current ChEBI SMILES fail kekulization because indole nitrogen
+    is bare n. Native/current InChI, current ChEBI molfile, PubChem44623998 and KEGG
+    D10930 reproduce MVGWUTBTXDYMND-QGZVFWFLSA-N, C26H26F3NO3, neutral charge and
+    one R centre. Scratch replacement with [nH] restores the exact key; no native
+    mutation was made.
+  snapshot_sha256: 68ec5d3ab452a0f514033cbde3ea4767bc69579f1f6d7df76afbd175e52deb3d
+- evidence_id: adapter
+  kind: database
+  reference: 043-root-adapter-catalog.txt
+  locator: Actual dataset catalog inspected before mechanism follow-up
+  accessed_at: '2026-10-21T16:01:14Z'
+  support: supports
+  summary: The catalog has no matching human host, clove, Kitasatospora setae, WAC5292
+    or CS62 dataset. Covered bacterial backgrounds do not make human S1P signaling,
+    candidate plant biosynthesis or heterologous facT into endogenous bacterial target
+    evidence. No component membership or unsupported gene identity is invented.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:229230; https://www.ebi.ac.uk/chebi/backend/api/public/compound/229230/;
+    KEGG:D10930; DrugBank:DB14766
+  locator: Current full chemical entry, names, all five parent definitions, KEGG record/molfile
+    and official DrugBank public page
+  accessed_at: '2026-10-21T16:01:14Z'
+  support: supports
+  summary: Five broader parents fit the cyclopentane, monocarboxylic acid, heterotricycle,
+    aromatic ether and trifluoromethylbenzene graph. Systematic R names, APD334 aliases
+    and language-specific INNs agree. CAS1206123-37-6 is supported by KEGG/DrugBank.
+    HMDB0252121 returned403 and Wikipedia429; those mappings remain independently
+    unverified. DrugBank and KEGG are valid drug-level associations.
+  snapshot_sha256: 9ab479f5dee12ae74239bbe9cb203fb7aa7307a4e811d5d9a6374cd4257700d6
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:25516790;30872391;31711921;33475734;33566519;35733960;36695074;36756653;
+    PMC10910369;PMC10910374
+  locator: All ten adopted leads resolved; six full indexed abstracts and four no-abstract
+    metadata entries
+  accessed_at: '2026-10-21T16:01:14Z'
+  support: supports
+  summary: 25516790 is discovery and35733960 exact antibacterial work, examined more
+    deeply below.30872391 reports recombinant human S1P1 beta-arrestin EC50 6.1 nM,
+    a different endpoint from the definition.31711921 is UC phase2 and33475734 its
+    extension;36695074 is the atopic-dermatitis ADVISE trial whose primary endpoint
+    was not met.33566519,36756653 and the two2024 PMC clinical summaries lacked indexed
+    abstracts and their initial full-text routes failed. Host outcomes are not antibacterial
+    efficacy.
+  snapshot_sha256: b4934c39bb0539abc7c41a2588a0da0782e64e1181a8b121810cbb968b78eae1
+- evidence_id: discovery
+  kind: primary_source
+  reference: PMID:25516790; DOI:10.1021/ml500389m; https://pmc.ncbi.nlm.nih.gov/articles/PMC4265817/?pdf=render
+  locator: Original full-text identity/SAR/internalization sections, Tables1–2, actual
+    Figures1–2; selected original synthesis supplement
+  accessed_at: '2026-10-21T16:01:14Z'
+  support: supports
+  summary: The successful render route supplies original text after other routes returned
+    challenges. Racemic15 was resolved, R-APD3344 selected, and both configurations
+    were assigned by X-ray. Figure1 explicitly depicts indole N–H; Figure2 is the
+    free-acid crystal. The paper directly reports IC50 1.88 nM for internalization
+    in HA-S1P1-expressing CHO cells. Beta-arrestin EC50 and HTRF cAMP values are distinct.
+    The l-arginine salt, crystalline free acid and amorphous acid are separately discussed
+    and must not be interchanged.
+  snapshot_sha256: 789d804ae51dbf60b00745d53310843031f6f0095c3e0bbe6a25063c9c68aa7a
+- evidence_id: synthesis
+  kind: primary_source
+  reference: DOI:10.1021/ml500389m.s001; https://ndownloader.figshare.com/files/3862045
+  locator: Original SI StepsG/H and selected pharmacology material/HTRF-method sections;
+    not all spectra or crystal tables
+  accessed_at: '2026-10-21T16:01:14Z'
+  support: supports
+  summary: StepH resolves racemic acid on ChiralCel OD and identifies the R acid as
+    the later eluting enantiomer. NMR and HRMS [M−H] calculated456.1792/found456.1776
+    accompany its identity. HTRF cAMP uses recombinant receptors in HEK293 cells and
+    is not the CHO internalization assay. The reported protonated/deprotonated ions
+    are analytical ions, not different isolated salts.
+  snapshot_sha256: 2a6288aba092500200a5cdaa537e173eb5b8ca82b198c83d3778309f8269a22d
+- evidence_id: bacterial
+  kind: primary_source
+  reference: PMID:35733960; DOI:10.3389/fmicb.2022.926170; PMC9207386
+  locator: Original Materials/Methods and relevant Results/Discussion sections, Tables1/3
+    and actual PDFp3
+  accessed_at: '2026-10-21T16:01:14Z'
+  support: supports
+  summary: Cayman etrasimod in the initial screen and Carbosynth material in follow-up
+    were dissolved in DMSO; an exact salt form is not specified. In S. aureus ATCC25923,
+    18-hour37°C TSB assays at1% DMSO give MIC5–10 micromolar (over90% turbidity/viability
+    inhibition); MBC and biofilm-prevention concentration are10 micromolar, with MBC
+    requiring99.9% CFU reduction. Established biofilms require much higher exposure
+    and use different endpoints. Newman,P2,ATCC43300,E. faecalis29212 and S. epidermidis
+    strains are individually tested. Tested Gram-negative strains show no inhibition
+    up to200 micromolar. Quorum-sensing phenotypes do not establish CviR binding;
+    membrane disruption is proposed, not a proven molecular target. Resistance selection
+    and gentamicin FICI0.5 remain assay-specific.
+  snapshot_sha256: fc3a605246a89b3365ff1f7ebb738651e44a98ccfff26339a1bc4c0c875aae67
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact R free acid and invalid SMILES
+  outcome: concern
+  summary: All independent valid encodings and original structure agree; the bare
+    indole n is a reproducible serialization defect, not evidence against the compound
+    identity.
+  target_ids:
+  - CHEBI:229230
+  evidence_ids:
+  - native
+  - chemistry
+  - discovery
+  - synthesis
+- assessment_id: definition
+  area: evidence
+  topic: CHO potency versus host and bacterial endpoints
+  outcome: supported
+  summary: The original discovery directly supports1.88 nM CHO internalization. Human
+    receptor pharmacology, antibacterial MIC, biofilm suppression and quorum phenotypes
+    must remain separate.
+  target_ids:
+  - CHEBI:229230
+  evidence_ids:
+  - discovery
+  - bacterial
+  - adopted
+- assessment_id: grounding
+  area: grounding
+  topic: Parents, names and broader drug references
+  outcome: supported
+  summary: All five chemical classes and the R/APD334 name family are coherent. Unread
+    HMDB/Wikipedia mappings remain access limitations.
+  target_ids:
+  - CHEBI:229230
+  evidence_ids:
+  - authority
+  - semantics
+  - chemistry
+- assessment_id: coverage
+  area: completeness
+  topic: Optional unasserted fields and review status
+  outcome: supported
+  summary: All native fields and adopted leads were assessed at their recorded reading
+    depth. Optional quantitative activity, targets, graphs, clinical status and expression
+    datasets are not automatically required in a SEEDED record. This review does not
+    promote native scientific curation status.
+  target_ids:
+  - CHEBI:229230
+  evidence_ids:
+  - native
+  - owners
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Generated owners and unchanged input ledger
+  outcome: supported
+  summary: All 14 captured input hashes remain unchanged, including the initial thirteen.
+    Focused schema/strict checks pass; the actual focused chemistry failure is retained
+    and supports the SMILES finding.
+  target_ids:
+  - CHEBI:229230
+  evidence_ids:
+  - owners
+  - chemistry
+  - search
+findings:
+- finding_id: F1
+  issue_key: etrasimod-invalid-indole-smiles
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: SMILES omits the indole N–H
+  description: Repair the maintained structure source or supported extraction override
+    so the generated SMILES represents [nH]. The stored/current ChEBI string fails
+    parsing; the valid InChI, molfile and original drawing consistently specify N–H.
+  target_ids:
+  - CHEBI:229230
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - native
+  - chemistry
+  - discovery
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-checklist:Identity/Names/Definition
+  native_severity: major
+  normalization_reason: The finding concerns an asserted exact structure or claim-source
+    association.
+actions:
+- action_id: A1
+  description: Repair the maintained structure source or supported extraction override
+    so the generated SMILES represents [nH]. The stored/current ChEBI string fails
+    parsing; the valid InChI, molfile and original drawing consistently specify N–H.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:229230
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Regenerated SMILES parses and reproduces MVGWUTBTXDYMND-QGZVFWFLSA-N, C26H26F3NO3
+    and R configuration.
+  - Run chemistry, schema/strict and source reproduction checks without changing the
+    supported InChI or quantitative definition.
+limitations:
+- Six adopted indexed abstracts and four metadata-only items were assessed; four clinical
+  reports remained unread in full. The original2014 article was read in the stated
+  identity/pharmacology scope, not as a complete preclinical safety audit. Its supplement
+  was selectively read, not fully re-elucidated.
+- The2022 antibacterial paper was read in relevant Methods/Results/Discussion scope
+  and its actual methods page inspected. Not every supplementary figure or original
+  raw dataset was reanalysed. Unknown assay material salt form is retained. HMDB and
+  Wikipedia access failed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native/source edit or biological sign-off was performed. Independent chemistry
+  used the existing batch019 interpreter against batch043; native gates used batch043.
+  Shared required gates are attached from actual unchanged-base executions during
+  finalization.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
