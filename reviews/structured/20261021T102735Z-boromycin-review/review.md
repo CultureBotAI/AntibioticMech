@@ -1,0 +1,758 @@
+# Review of boromycin
+
+- Review: 20261021T102735Z-boromycin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:59:27Z
+- Finished UTC: 2026-10-21T10:27:35Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native boromycin structure, zwitterionic formula, chemical classes and biological roles are supported. Its PubChem cross-reference denotes an E-alkene structure with two additional unspecified carbon stereocenters. A current exact-key PubChem candidate matches the native Z structure. Repair the adopted mapping without changing the supported native graph.
+
+## Scope And Provenance
+
+Whole SEEDED record and four history events; ChEBI and ARO ownership; all fourteen adopted compound/class PMID leads, five patent references and three additional primary papers; public chemical structure comparisons.
+
+Selection: Queue index162; coordinator initial thirteen inputs preserved, with ARO identity table hashed before inspection. External ARO cache recorded separately.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:77880 | data/antibiotics/antibacterial/boromycin.yaml | generated | boromycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema check | passed | True | CHEBI:77880 | Exit0. |
+| Documented strict check | passed | True | CHEBI:77880 | Exit0;zero ERROR rows. |
+| Supplemental chemistry and exact-key comparison | passed | False | CHEBI:77880 | Exit0; assertions include the confirmed mismatch and exact replacement candidate. |
+| Native iModulonDB catalog | passed | False | CHEBI:77880 | Exit0 before detailed pathway follow-up; no matching H. pylori dataset for the discovered futalosine lead. No protein/pathway claim in the native record required a search. |
+| Authoritative full QC | failed | True | CHEBI:77880 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:77880 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:77880 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:77880 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:77880 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:77880 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:77880 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:77880 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:77880 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Native structure and exact cross-reference
+
+identity: concern. Targets: CHEBI:77880.
+
+The native graph is supported, but the PubChem mapping differs in stereochemistry as F1 details.
+
+### Chemical and biological roles
+
+grounding: supported. Targets: CHEBI:77880.
+
+Macrodiolide, organoboron, zwitterion and other adopted classes fit; original microbial and viral studies support the bounded biological roles.
+
+### Mechanism and source scope
+
+evidence: supported. Targets: CHEBI:77880.
+
+No native direct protein mechanism is overclaimed. Optional enrichment must distinguish potassium-ionophore evidence, HIV late-stage suggestion and futalosine screening.
+
+### Formal boron stereochemical assignment
+
+identity: unknown. Targets: CHEBI:77880.
+
+Current native/ChEBI/exact PubChem candidate agree but do not assign the formal boron stereocenter; the primary crystallographic full text was not independently examined to resolve it.
+
+### References, owners and history
+
+provenance: supported. Targets: CHEBI:77880.
+
+Four history events, fourteen adopted/class PMID records and five patent references were reviewed at explicitly stated access depth.
+
+### Optional mechanistic enrichment
+
+completeness: supported. Targets: CHEBI:77880.
+
+Missing molecular targets, causal graphs and MICs are optional enrichment here; their absence is not a demonstrated native defect.
+
+### Focused gates
+
+schema: supported. Targets: CHEBI:77880.
+
+Focused schema, strict and supplementary chemistry checks passed.
+
+## Findings
+
+### F1: Replace the stereochemically incompatible PubChem cross-reference
+
+major / open / confirmed; issue key: chebi-77880-pubchem-stereochemical-mismatch.
+
+CID6436027 has the same formula and connectivity but an E alkene and two unspecified carbon stereocenters, whereas the supported native structure has Z and sixteen assigned carbon centers. CID86289396 is a verified full-key match. The defect is the same-structure mapping, not a reason to alter the native boromycin graph.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct or suppress the ARO-derived same-structure PubChem mapping through its maintained source owner.
+
+- Use upstream ARO correction or a documented maintained narrow remapping to replace6436027 with the independently verified candidate86289396; preserve source-conflict provenance. Do not assume a generic decisions-row mechanism already supports xref overrides.
+- Compare full Standard InChI/InChIKey, alkene configuration, all assigned centers, formula and charge against the native graph. Do not coerce the native Z structure to the incompatible linked CID.
+- Re-extract/reseed through the maintained workflow and canary-check that the correction persists; run native schema/strict and required corpus gates. No record-only edit that will be overwritten on reseed.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/boromycin.yaml; Whole native YAML and four history events | supports | CHEBI:77880 is an exact SEEDED compound. No direct protein target, MIC, causal graph, producer object or ribosome mechanism is asserted; the source definition names Streptomyces antibioticus. Biological roles include antibacterial, antimicrobial and anti-HIV activity. |
+| chemistry | CHEBI:77880;PubChem:6436027;PubChem:86289396; 162-chemistry.py;162-chemistry.json;162-ols.json;162-parents.json;162-pubchem.json;162-pubchem-key.json | partial | Native SMILES/InChI, C45H74BNO15, neutral zwitterionic charge, masses and both mints agree. Current ChEBI supports the graph and classes/roles. Native full key is OOBFYEMEQCZLJL-IIWQOWOFSA-O. CID6436027 instead yields OOBFYEMEQCZLJL-XURNZCJASA-O, E instead of Z and two unspecified carbon centers. Exact-key lookup CID86289396 reproduces the native full Standard InChI, sixteen assigned carbon centers and Z bond; both retain unspecified formal boron stereochemistry. |
+| stereochemistry | PMID:25096282; DOI:10.1039/C4OB01017E;162-extra-core.json;RSC complete publisher abstract | supports | The total-synthesis abstract explicitly distinguishes the C12-C13 Z alkene of boromycin from the E alkene of aplasmomycin and identifies the final D-valine ester/borate complex. It independently supports the native alkene configuration, without a new assignment of every stereocenter. |
+| early-structure | PMID:5131791; DOI:10.1002/hlca.19710540624;Wiley publisher abstract;162-core.json bibliographic record | partial | Original publisher abstract describes combined chemical/X-ray structural analysis, C45H74BNO15 and a D-valine ester of a boric-acid macrodiolide complex. The full crystallographic report was not obtained. |
+| antibacterial | PMID:26941723; DOI:10.3389/fmicb.2016.00199;162-mycobacteria.xml entire main article | supports | Purified commercial boromycin inhibited M. tuberculosis H37Rv and M. bovis BCG. BCG assays showed depolarization, ATP loss and leakage after two days, with potassium supplementation rescue consistent with an ionophore mechanism. Hypoxic-persister experiments used BCG. Within-strain MIC50/MIC90 denote partial growth inhibition, not population percentiles. The work supports antibacterial activity without establishing a direct protein target. |
+| antihiv | PMID:8695905; DOI:10.1271/bbb.60.1036;162-hiv.pdf pages1036-1037 visually read | supports | Boromycin identified from Streptomyces sp. A-3376 inhibited HIV-related cell-culture outcomes. Experiments with chronically infected MOLT-4 cells suggested a late-stage effect; they do not identify a direct viral protein target. Selectivity varied markedly by cell/virus system. A concentration-unit inconsistency between TableII and nearby text prevents unqualified numeric transfer. |
+| pathway | PMID:30089869; DOI:10.1038/s41429-018-0087-2;162-core.json complete abstract;162-pathway.html publisher abstract | partial | Aplasmomycin was isolated from Streptomyces sp. K15-0223; boromycin was a comparator in a futalosine-pathway screening study. This is not evidence that K15-0223 produces boromycin, nor direct proof of a specific boromycin enzyme target. Full text remained behind login. |
+| adopted-leads | Fourteen adopted compound and class PMID records; 162-core.json;162-lead-dispositions.json | context_only | All fourteen records resolved. Nine had complete Europe PMC abstracts; the original1971 structure report additionally had its publisher abstract read. Four remaining records were metadata-only. Host calcium transport, checkpoint effects, analytical chemistry and broader macrolide studies were not transferred into exact microbial mechanism claims. |
+| patents | EP0002893;GB2012167;US3864479;US4102997;US4225593; 162 patent HTML/text artifacts; abstracts and relevant description passages | context_only | All five document references resolve. Three concern rumen/growth-promotion uses and derivative scope; US3864479 concerns poultry coccidiosis. US4102997 concerns an acid-degradation mixture. These are document cross-references, not exact-compound quantitative mechanism evidence; mixture/derivative outcomes were not imported. |
+| aro | ARO:3007793;ARO:0000000; 162-aro-stanzas.txt;data/raw/aro_antibiotics.tsv | partial | Adopted ARO boromycin mapping emits CID6436027, explaining the native mismatch. The macrolide parent is a broad chemical/class linkage; its ribosome mechanism and other-drug citations do not establish a boromycin 50S target. |
+| aro-cache | External ARO cache; /Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/downloads/aro.obo;162-aro-cache-hash.json | context_only | Hashed before relevant stanza inspection and rechecked; not a repository input. |
+| adapter | Native iModulonDB CLI; 162-imodulondb-datasets.txt | context_only | Catalog inspection preceded detailed pathway research. H. pylori futalosine follow-up lacked a matching dataset; no absence was interpreted as negative biology. The native record contains no protein claim needing a target crosswalk. |
+| validation | Focused schema and strict gates; 162-strict.tsv | supports | Documented focused gates and supplemental graph assertions all passed. These passes do not test scientific correctness of same-structure cross-references. |
+
+## Limits And Additional Notes
+
+- Four adopted records were available only as bibliographic metadata:4066498,4247775,4465333,6081908. The1971 structure report5131791 had a complete publisher abstract but no full crystallographic text. No complete primary reassignment of every stereocenter, especially formal boron configuration, was performed.
+- The2014 total synthesis and2018 futalosine papers were read at complete-abstract depth. Local RSC full-text access returned403 and the pathway page exposed abstract/login only. No specific boromycin enzyme or producer strain was inferred from the aplasmomycin study.
+- The2016 mycobacterial main article and1996 two-page HIV paper were read in full. Raw assay data and supplements were not reanalyzed. HIV TableII/text concentration units conflict; no quantitative activity value is proposed from that comparison.
+- All five patent references resolved and relevant abstracts/description passages were inspected; not every example or claim was audited. The acid-degradation mixture and derivative outcomes remain distinct.
+- Licensed Reaxys and authoritative CAS registry records were not independently accessed. Public/adopted identifiers and current ChEBI support those labels, without a licensed registry audit.
+- The current exact PubChem candidate matches the native encoded graph, rather than providing an independent new absolute-structure determination. Focused checks do not substitute for the separately reported shared full-corpus gates.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 14 repository input hashes and the external ARO cache remain unchanged. No native data or maintained sources were edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T102735Z-boromycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of boromycin
+started_at: '2026-10-21T09:59:27Z'
+finished_at: '2026-10-21T10:27:35Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Native boromycin graph supported; PubChem same-structure cross-reference
+  has different stereochemistry
+scientific_review: true
+summary: The native boromycin structure, zwitterionic formula, chemical classes and
+  biological roles are supported. Its PubChem cross-reference denotes an E-alkene
+  structure with two additional unspecified carbon stereocenters. A current exact-key
+  PubChem candidate matches the native Z structure. Repair the adopted mapping without
+  changing the supported native graph.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/boromycin.yaml
+    sha256: c6488f75ce90f8784fe015d28b9e23295efd265fb26aba3163347a32d59af3ba
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+scope:
+  description: Whole SEEDED record and four history events; ChEBI and ARO ownership;
+    all fourteen adopted compound/class PMID leads, five patent references and three
+    additional primary papers; public chemical structure comparisons.
+  selection: Queue index162; coordinator initial thirteen inputs preserved, with ARO
+    identity table hashed before inspection. External ARO cache recorded separately.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:77880
+targets:
+- target_id: CHEBI:77880
+  path: data/antibiotics/antibacterial/boromycin.yaml
+  label: boromycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO class/identity source
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit0.
+  target_ids:
+  - CHEBI:77880
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/boromycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit0;zero ERROR rows.
+  target_ids:
+  - CHEBI:77880
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/boromycin.yaml --out /private/tmp/am-review-session/162-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Supplemental chemistry and exact-key comparison
+  status: passed
+  required: false
+  summary: Exit0; assertions include the confirmed mismatch and exact replacement
+    candidate.
+  target_ids:
+  - CHEBI:77880
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/162-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: adapter-catalog
+  name: Native iModulonDB catalog
+  status: passed
+  required: false
+  summary: Exit0 before detailed pathway follow-up; no matching H. pylori dataset
+    for the discovered futalosine lead. No protein/pathway claim in the native record
+    required a search.
+  target_ids:
+  - CHEBI:77880
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:77880
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:77880
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:77880
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:77880
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:77880
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:77880
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:77880
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:77880
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:77880
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/boromycin.yaml
+  locator: Whole native YAML and four history events
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: supports
+  summary: CHEBI:77880 is an exact SEEDED compound. No direct protein target, MIC,
+    causal graph, producer object or ribosome mechanism is asserted; the source definition
+    names Streptomyces antibioticus. Biological roles include antibacterial, antimicrobial
+    and anti-HIV activity.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:77880;PubChem:6436027;PubChem:86289396
+  locator: 162-chemistry.py;162-chemistry.json;162-ols.json;162-parents.json;162-pubchem.json;162-pubchem-key.json
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: partial
+  summary: Native SMILES/InChI, C45H74BNO15, neutral zwitterionic charge, masses and
+    both mints agree. Current ChEBI supports the graph and classes/roles. Native full
+    key is OOBFYEMEQCZLJL-IIWQOWOFSA-O. CID6436027 instead yields OOBFYEMEQCZLJL-XURNZCJASA-O,
+    E instead of Z and two unspecified carbon centers. Exact-key lookup CID86289396
+    reproduces the native full Standard InChI, sixteen assigned carbon centers and
+    Z bond; both retain unspecified formal boron stereochemistry.
+  snapshot_sha256: e8b29c1645391cc933f9d5246c4c066ac1b93d63dbe3741e8e2b32994d2b7113
+- evidence_id: stereochemistry
+  kind: primary_source
+  reference: PMID:25096282
+  locator: DOI:10.1039/C4OB01017E;162-extra-core.json;RSC complete publisher abstract
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: supports
+  summary: The total-synthesis abstract explicitly distinguishes the C12-C13 Z alkene
+    of boromycin from the E alkene of aplasmomycin and identifies the final D-valine
+    ester/borate complex. It independently supports the native alkene configuration,
+    without a new assignment of every stereocenter.
+  snapshot_sha256: ddb86859bd7f88397dd17fb39e889590df9338eb8cf9b1c14af07bea343ba2cc
+- evidence_id: early-structure
+  kind: primary_source
+  reference: PMID:5131791
+  locator: DOI:10.1002/hlca.19710540624;Wiley publisher abstract;162-core.json bibliographic
+    record
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: partial
+  summary: Original publisher abstract describes combined chemical/X-ray structural
+    analysis, C45H74BNO15 and a D-valine ester of a boric-acid macrodiolide complex.
+    The full crystallographic report was not obtained.
+- evidence_id: antibacterial
+  kind: primary_source
+  reference: PMID:26941723
+  locator: DOI:10.3389/fmicb.2016.00199;162-mycobacteria.xml entire main article
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: supports
+  summary: Purified commercial boromycin inhibited M. tuberculosis H37Rv and M. bovis
+    BCG. BCG assays showed depolarization, ATP loss and leakage after two days, with
+    potassium supplementation rescue consistent with an ionophore mechanism. Hypoxic-persister
+    experiments used BCG. Within-strain MIC50/MIC90 denote partial growth inhibition,
+    not population percentiles. The work supports antibacterial activity without establishing
+    a direct protein target.
+  snapshot_sha256: dfd389580ce0f6cc5a56af86b871f3c1ae5128b2726d7bb618f23ca34b301fba
+- evidence_id: antihiv
+  kind: primary_source
+  reference: PMID:8695905
+  locator: DOI:10.1271/bbb.60.1036;162-hiv.pdf pages1036-1037 visually read
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: supports
+  summary: Boromycin identified from Streptomyces sp. A-3376 inhibited HIV-related
+    cell-culture outcomes. Experiments with chronically infected MOLT-4 cells suggested
+    a late-stage effect; they do not identify a direct viral protein target. Selectivity
+    varied markedly by cell/virus system. A concentration-unit inconsistency between
+    TableII and nearby text prevents unqualified numeric transfer.
+  snapshot_sha256: 7c74a430ea9c935dc89445d67b24aeb1f6de0e8f4178599b81e7af5124300a06
+- evidence_id: pathway
+  kind: primary_source
+  reference: PMID:30089869
+  locator: DOI:10.1038/s41429-018-0087-2;162-core.json complete abstract;162-pathway.html
+    publisher abstract
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: partial
+  summary: Aplasmomycin was isolated from Streptomyces sp. K15-0223; boromycin was
+    a comparator in a futalosine-pathway screening study. This is not evidence that
+    K15-0223 produces boromycin, nor direct proof of a specific boromycin enzyme target.
+    Full text remained behind login.
+  snapshot_sha256: 68c4db1c452493abe377a71f4a42dd812b5d7558e16b00c458de0424b087f936
+- evidence_id: adopted-leads
+  kind: search
+  reference: Fourteen adopted compound and class PMID records
+  locator: 162-core.json;162-lead-dispositions.json
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: context_only
+  summary: All fourteen records resolved. Nine had complete Europe PMC abstracts;
+    the original1971 structure report additionally had its publisher abstract read.
+    Four remaining records were metadata-only. Host calcium transport, checkpoint
+    effects, analytical chemistry and broader macrolide studies were not transferred
+    into exact microbial mechanism claims.
+  search_scope: Ten ChEBI compound leads, one ARO compound lead and three ARO macrolide-parent
+    leads; three additional original boromycin papers verified separately.
+- evidence_id: patents
+  kind: primary_source
+  reference: EP0002893;GB2012167;US3864479;US4102997;US4225593
+  locator: 162 patent HTML/text artifacts; abstracts and relevant description passages
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: context_only
+  summary: All five document references resolve. Three concern rumen/growth-promotion
+    uses and derivative scope; US3864479 concerns poultry coccidiosis. US4102997 concerns
+    an acid-degradation mixture. These are document cross-references, not exact-compound
+    quantitative mechanism evidence; mixture/derivative outcomes were not imported.
+- evidence_id: aro
+  kind: database
+  reference: ARO:3007793;ARO:0000000
+  locator: 162-aro-stanzas.txt;data/raw/aro_antibiotics.tsv
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: partial
+  summary: Adopted ARO boromycin mapping emits CID6436027, explaining the native mismatch.
+    The macrolide parent is a broad chemical/class linkage; its ribosome mechanism
+    and other-drug citations do not establish a boromycin 50S target.
+  snapshot_sha256: 667fbdc424b1b8e7e78d38acf036d55b67c5caf46e592ca7443f3ece1e09c898
+- evidence_id: aro-cache
+  kind: database
+  reference: External ARO cache
+  locator: /Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/downloads/aro.obo;162-aro-cache-hash.json
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: context_only
+  summary: Hashed before relevant stanza inspection and rechecked; not a repository
+    input.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: adapter
+  kind: validation
+  reference: Native iModulonDB CLI
+  locator: 162-imodulondb-datasets.txt
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: context_only
+  summary: Catalog inspection preceded detailed pathway research. H. pylori futalosine
+    follow-up lacked a matching dataset; no absence was interpreted as negative biology.
+    The native record contains no protein claim needing a target crosswalk.
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema and strict gates
+  locator: 162-strict.tsv
+  accessed_at: '2026-10-21T10:14:03Z'
+  support: supports
+  summary: Documented focused gates and supplemental graph assertions all passed.
+    These passes do not test scientific correctness of same-structure cross-references.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Native structure and exact cross-reference
+  outcome: concern
+  summary: The native graph is supported, but the PubChem mapping differs in stereochemistry
+    as F1 details.
+  target_ids:
+  - CHEBI:77880
+  evidence_ids:
+  - chemistry
+  - stereochemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical and biological roles
+  outcome: supported
+  summary: Macrodiolide, organoboron, zwitterion and other adopted classes fit; original
+    microbial and viral studies support the bounded biological roles.
+  target_ids:
+  - CHEBI:77880
+  evidence_ids:
+  - chemistry
+  - antibacterial
+  - antihiv
+- assessment_id: evidence
+  area: evidence
+  topic: Mechanism and source scope
+  outcome: supported
+  summary: No native direct protein mechanism is overclaimed. Optional enrichment
+    must distinguish potassium-ionophore evidence, HIV late-stage suggestion and futalosine
+    screening.
+  target_ids:
+  - CHEBI:77880
+  evidence_ids:
+  - record
+  - antibacterial
+  - antihiv
+  - pathway
+- assessment_id: stereo-limit
+  area: identity
+  topic: Formal boron stereochemical assignment
+  outcome: unknown
+  summary: Current native/ChEBI/exact PubChem candidate agree but do not assign the
+    formal boron stereocenter; the primary crystallographic full text was not independently
+    examined to resolve it.
+  target_ids:
+  - CHEBI:77880
+  evidence_ids:
+  - chemistry
+  - early-structure
+- assessment_id: provenance
+  area: provenance
+  topic: References, owners and history
+  outcome: supported
+  summary: Four history events, fourteen adopted/class PMID records and five patent
+    references were reviewed at explicitly stated access depth.
+  target_ids:
+  - CHEBI:77880
+  evidence_ids:
+  - record
+  - adopted-leads
+  - patents
+  - aro
+- assessment_id: completeness
+  area: completeness
+  topic: Optional mechanistic enrichment
+  outcome: supported
+  summary: Missing molecular targets, causal graphs and MICs are optional enrichment
+    here; their absence is not a demonstrated native defect.
+  target_ids:
+  - CHEBI:77880
+  evidence_ids:
+  - record
+  - antibacterial
+- assessment_id: schema
+  area: schema
+  topic: Focused gates
+  outcome: supported
+  summary: Focused schema, strict and supplementary chemistry checks passed.
+  target_ids:
+  - CHEBI:77880
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-77880-pubchem-stereochemical-mismatch
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Replace the stereochemically incompatible PubChem cross-reference
+  description: CID6436027 has the same formula and connectivity but an E alkene and
+    two unspecified carbon stereocenters, whereas the supported native structure has
+    Z and sixteen assigned carbon centers. CID86289396 is a verified full-key match.
+    The defect is the same-structure mapping, not a reason to alter the native boromycin
+    graph.
+  target_ids:
+  - CHEBI:77880
+  field_paths:
+  - xrefs
+  evidence_ids:
+  - chemistry
+  - stereochemistry
+  - aro
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO boromycin cross-reference row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction/mapping owner for reproducible correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerate supported native mapping from maintained input
+  rule_id: 'review-checklist: exact chemical identity and identifier concordance'
+  native_severity: major incorrect same-structure external mapping
+  normalization_reason: The target retains the correct identity; one external identifier
+    points to a stereochemically different representation, warranting a substantive
+    mapping correction rather than blocker-level replacement of the native compound.
+actions:
+- action_id: A1
+  description: Correct or suppress the ARO-derived same-structure PubChem mapping
+    through its maintained source owner.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:77880
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO boromycin cross-reference row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction/mapping owner for reproducible correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerate supported native mapping from maintained input
+  acceptance_checks:
+  - Use upstream ARO correction or a documented maintained narrow remapping to replace6436027
+    with the independently verified candidate86289396; preserve source-conflict provenance.
+    Do not assume a generic decisions-row mechanism already supports xref overrides.
+  - Compare full Standard InChI/InChIKey, alkene configuration, all assigned centers,
+    formula and charge against the native graph. Do not coerce the native Z structure
+    to the incompatible linked CID.
+  - Re-extract/reseed through the maintained workflow and canary-check that the correction
+    persists; run native schema/strict and required corpus gates. No record-only edit
+    that will be overwritten on reseed.
+limitations:
+- Four adopted records were available only as bibliographic metadata:4066498,4247775,4465333,6081908.
+  The1971 structure report5131791 had a complete publisher abstract but no full crystallographic
+  text. No complete primary reassignment of every stereocenter, especially formal
+  boron configuration, was performed.
+- The2014 total synthesis and2018 futalosine papers were read at complete-abstract
+  depth. Local RSC full-text access returned403 and the pathway page exposed abstract/login
+  only. No specific boromycin enzyme or producer strain was inferred from the aplasmomycin
+  study.
+- The2016 mycobacterial main article and1996 two-page HIV paper were read in full.
+  Raw assay data and supplements were not reanalyzed. HIV TableII/text concentration
+  units conflict; no quantitative activity value is proposed from that comparison.
+- All five patent references resolved and relevant abstracts/description passages
+  were inspected; not every example or claim was audited. The acid-degradation mixture
+  and derivative outcomes remain distinct.
+- Licensed Reaxys and authoritative CAS registry records were not independently accessed.
+  Public/adopted identifiers and current ChEBI support those labels, without a licensed
+  registry audit.
+- The current exact PubChem candidate matches the native encoded graph, rather than
+  providing an independent new absolute-structure determination. Focused checks do
+  not substitute for the separately reported shared full-corpus gates.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 14 repository input hashes and the external ARO cache remain unchanged. No native
+  data or maintained sources were edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pubchem.ncbi.nlm.nih.gov/compound/6436027
+- https://pubchem.ncbi.nlm.nih.gov/compound/86289396
+- https://doi.org/10.1039/C4OB01017E
+- https://doi.org/10.3389/fmicb.2016.00199
+- https://doi.org/10.1271/bbb.60.1036
+tags:
+- record-review
+- boromycin
+- stereochemistry
+- xref
+```
