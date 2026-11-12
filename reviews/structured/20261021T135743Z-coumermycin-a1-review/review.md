@@ -1,0 +1,1387 @@
+# Coumermycin A1: invalid pyrrole SMILES and non-equivalent chemical xrefs
+
+- Review: 20261021T135743Z-coumermycin-a1-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T13:39:01Z
+- Finished UTC: 2026-10-21T13:57:43Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The exact InChI, antibacterial activity, gyrase mechanism and existing bounded ParYR host annotation are supported. Two major corrections are needed: three missing pyrrole hydrogens make the native SMILES invalid, and the ChEMBL and KNApSAcK xrefs encode different stereochemistry. The database target/resistance assertions remain explicitly qualified; newly recovered original papers permit focused enrichment.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 329; one entire exact record. All 13 original input hashes were preserved; all 36 expanded inputs were rechecked.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:3907 | data/antibiotics/antibacterial/coumermycin-a1.yaml | generated | coumermycin A1 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | failed | False | CHEBI:3907 | Actual focused execution exited 1. |
+| Focused schema verification | passed | True | CHEBI:3907 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:3907 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:3907 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:3907 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:3907 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:3907 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:3907 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:3907 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:3907 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:3907 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:3907 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact A1 graph and chemical eligibility
+
+identity: concern. Targets: CHEBI:3907.
+
+The retained InChI and independent authorities identify one neutral stereodefined A1 molecule, supported by original structure drawings and deposited ligand. The invalid SMILES requires correction; no new congener or mixture is inferred.
+
+### Chemical equivalence and nomenclature
+
+grounding: concern. Targets: CHEBI:3907.
+
+ChEMBL is the complete enantiomer; KNApSAcK has different and internally conflicting stereochemical encodings. Other verified xrefs/names are coherent, with legacy register limitations retained.
+
+### Nucleic-acid synthesis inhibition and microbial scope
+
+evidence: supported. Targets: CHEBI:3907.
+
+Bacterial gyrase fragment binding, enzyme assays and bacterial phenotypes support the broad native enum. The mode notes correctly identify seeder ownership; they are not a complete curated causal chain.
+
+### Four database target objects
+
+evidence: unknown. Targets: CHEBI:3907.
+
+All four source relations resolve and remain explicitly PRIMARY_EVIDENCE_NEEDED. Exact GyrB primary binding is now available for careful enrichment; purified topoIV inhibition and ParYR function are different evidence types and cannot automatically certify direct drug binding to every named protein.
+
+### Five ARO resistance templates
+
+evidence: supported. Targets: CHEBI:3907.
+
+The database assertions are accurately labeled. Original studies support bounded E. coli/S. aureus/Bartonella GyrB, S. aureus ParE and producer ParYR contexts, while allele, background and intrinsic-versus-induced distinctions remain essential. No universal species-wide phenotype is inferred.
+
+### Native qualitative TK24 host observation
+
+evidence: supported. Targets: CHEBI:3907.
+
+The full original and Table2 verify the carefully qualified curator annotation. Reference taxon/protein versions remain coherent; source assay values can now be reviewed separately without converting it into donor susceptibility or a modern standardized AST result.
+
+### S. rishiriensis/BGC0000833
+
+provenance: supported. Targets: CHEBI:3907.
+
+The exact compound join and questionable-quality provenance are reproduced by available MIBiG data, and independent2000 experiments substantiate DSM40489 production and cluster disruption. Locus methods are not proof that each compound-specific mechanism was individually measured.
+
+### Antibacterial and anticancer wording
+
+scope: unknown. Targets: CHEBI:3907.
+
+Bacterial activity and producer identity are directly supported. Cancer-cell activity has a bounded experimental basis, but potent is context-dependent and no human cancer efficacy or HSP90 mechanism is established. The 2012/2014 host papers and2013 pathway paper should not be substituted for antibacterial experiments. No contradiction requiring a native role deletion was established.
+
+### Optional activity_spectrum
+
+completeness: unknown. Targets: CHEBI:3907.
+
+Exact original strain/assay observations are available, including parent and mutant comparisons. Import should preserve material, medium, method, endpoint and internal source discrepancies; absence of optional numerical observations is not an error.
+
+### Clinical products, causal graph and datasets
+
+scope: not_applicable. Targets: CHEBI:3907.
+
+No native clinical product, approval, graph or dataset assertion is populated. KEGG drug nomenclature and host cell studies do not establish clinical use.
+
+### Status, curator ownership and source history
+
+provenance: supported. Targets: CHEBI:3907.
+
+Eight events preserve source reseeding and one transparent LLM-assisted host evidence addition. SEEDED and the explicit open whole-record review are appropriate; prior access limitations describe the earlier annotation and are not rewritten in this review.
+
+### Focused structural and native validation
+
+schema: concern. Targets: CHEBI:3907.
+
+Native YAML gates pass while chemical parsing fails. The exact structure can be recovered from independently agreeing encodings, so this is a major repairable representation defect rather than an unresolved wrong-compound identity.
+
+## Findings
+
+### F1: Three missing pyrrole hydrogens make the native SMILES invalid
+
+major / open / confirmed; issue key: coumermycin-a1-invalid-pyrrole-smiles.
+
+All three pyrrole nitrogens are encoded as aromatic n rather than [nH]. RDKit cannot kekulize the native or current ChEBI SMILES. A scratch-only hydrogen correction reproduces the stored complete InChI, formula, mass and eight stereocentres, corroborated by PubChem/KEGG and the exact deposited BHW ligand. Repair the maintained representation without changing the supported identity or native curator evidence.
+
+### F2: ChEMBL and KNApSAcK do not match the native stereodefined molecule
+
+major / open / confirmed; issue key: coumermycin-a1-chembl-knapsack-stereochemical-xrefs.
+
+CHEMBL389471 encodes the complete enantiomer, /m0/s1 and IYKSDEDASA-N instead of native /m1/s1 and DHFGXMAYSA-N. KNApSAcK C00002461 has a different fully specified InChI and a differently configured partially specified SMILES; its displayed key is inconsistent with both. No inspected KNApSAcK encoding matches native. Resolve or qualify these exact links through maintained source ownership; preserve the supported native InChI and document the upstream conflicts.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Repair the maintained SMILES representation and reproduce the unchanged exact A1 graph.
+
+- Confirm all three pyrrole NH groups, parse the revised SMILES and reproduce WTIJXIZOODAMJT-DHFGXMAYSA-N with eight assigned centres.
+- Preserve formula, charge, masses and the independently supported exact InChI.
+- Use the authorized source/curation workflow; pass native schema/strict, chemistry, corpus reproduction, provenance and history checks without overwriting the ParYR curator entry.
+
+### A2
+
+Adjudicate or qualify the ChEMBL/KNApSAcK exact xrefs without changing native stereochemistry.
+
+- Compare full stereochemical layers after any upstream correction; matching labels or key prefixes are insufficient.
+- Do not import ChEMBL enantiomer assays as exact native evidence or silently replace the native graph.
+- Retain source conflict provenance and ensure the maintained override or source correction survives reseeding.
+
+### A3
+
+Optionally enrich primary target, activity, producer and ParYR context using the newly inspected originals.
+
+- Attach 2019 GyrB binding to the correct fragment/taxon and exact BHW ligand; do not promote all four source targets to direct-binding evidence.
+- If adding Table2 numerical host data, retain six-day minimal-medium complete-inhibition endpoint and TK24/pGES3-versus-empty-vector background.
+- Retain S. aureus allele/background specificity and the Bartonella Arg184Gln/Glu source conflict.
+- Separate natural producer, engineered host, isolated enzyme and mammalian cell phenotypes; preserve optional gaps and unsupported material details explicitly.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/coumermycin-a1.yaml; Entire YAML, all nine synonyms, seven chemical xrefs, drug/document links, six resistance entries, four targets, producer and eight history events | supports | The exact SEEDED record has five source-only ARO resistance assertions and one separately curated ParYR laboratory-host observation. Four direct-target objects explicitly say CARD_ARO and PRIMARY_EVIDENCE_NEEDED, with unspecified taxon/assay. No activity_spectrum, clinical products, causal graph or dataset is populated. The October10 history explicitly leaves whole-record review open. |
+| owners | data/raw/chebi_antimicrobials.tsv;data/raw/aro_antibiotics.tsv;data/raw/aro_resistance_edges.tsv;data/raw/aro_target_edges.tsv;data/raw/mibig_producers.tsv; ChEBI row124;ARO row77;resistance rows2080-2084;target rows84-87;MIBiG row374 | supports | The defective SMILES and KNApSAcK xref originate in ChEBI. The ChEMBL xref originates in ARO. The five resistance and four target objects reproduce source edges; the producer uses an exact-key join. Native curator ownership of the ParYR evidence/history is explicit in the expanded capture and must survive source correction. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Identity, exact equivalence, source assertion scope, evidence and generated ownership | supports | Chemical structures must parse and agree; exact xrefs must preserve full stereochemistry. Database assertions must remain distinguished from primary experiments, and missing optional annotations alone are not native defects. |
+| chemistry | Independent batch019 RDKit calculation against batch033 cwd; 329-focused.py;329-chemistry.json | refutes | Native SMILES fails kekulization. Native InChI gives neutral C55H59N5O20, key WTIJXIZOODAMJT-DHFGXMAYSA-N, eight assigned centres, average mass1110.092 and exact mass1109.375339. Replacing only the three aromatic pyrrole n tokens with [nH] in scratch yields precisely the retained InChI/key/formula; both source mints reproduce. No native write occurred. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/3907/; CHEBI:3907 default_structure, chemical data, names, roles, parents and adopted citations | supports | Current ChEBI retains the same invalid SMILES but a coherent exact InChI. Its chemical parent/role identifiers and native synonym set resolve consistently. The bad SMILES is an inherited source encoding defect, not evidence that the retained molecular identity is a different compound. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/54675768/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON; CID54675768 complete property response | supports | PubChem agrees with the native complete InChI and eight-centre stereochemical graph. |
+| kegg | https://rest.kegg.jp/get/C05073/mol; C05073 and D02333 text and molfiles;329-xref-chemistry.json | supports | Both the KEGG compound and drug molfiles independently reproduce the retained full key. The drug dictionary entry is not a regulatory approval claim. |
+| chembl | https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL389471.json; CHEMBL389471 canonical SMILES, stored InChI and key | refutes | Both ChEMBL SMILES and InChI encode the complete opposite enantiomer, WTIJXIZOODAMJT-IYKSDEDASA-N: the same connectivity and relative /t layer but /m0/s1 instead of native /m1/s1. Independent parsing reverses all eight stereocentres. A shared label is insufficient for exact equivalence. |
+| knapsack | http://www.knapsackfamily.com/knapsack_core/information.php?word=C00002461; C00002461 displayed InChI, InChIKey and SMILES;329-xref-chemistry.json | refutes | All displayed encodings differ from native stereochemistry. The displayed InChI computes WTIJXIZOODAMJT-NMONVADOSA-N; the SMILES computes GVDKFCQMSA-N with six assigned/two unassigned centres and altered configurations; the displayed key is KHJHQJPXNA-N. The upstream page is internally inconsistent as well as non-equivalent to the native graph. No matching encoding was verified. |
+| xref-calculation | Independent official-structure comparison; 329-xref.py;329-xref-chemistry.json | supports | Native/ChEBI InChI, PubChem, both KEGG entries and MIBiG agree on DHFGXMAYSA-N. ChEMBL and KNApSAcK do not. Differences were evaluated with complete InChI layers and parsed centres rather than only names or connectivity-key prefixes. |
+| registry-document | https://www.ebi.ac.uk/chebi/backend/api/public/compound/3907/; CAS4434-05-3, Reaxys5230975, Wikipedia Coumermycin_A1 and native synonym types | context_only | CAS and Reaxys links are retained by official ChEBI; no independent paid Reaxys register was accessed. The Wikipedia document resolves to the intended A1 subject and is used only to verify document relevance. Generic Coumermycin and historical Notomycin names are retained source synonyms, not proof that other congeners or mixtures share this graph. |
+| aro | https://card.mcmaster.ca/ontology/36289; Live ARO:3000150 card, all five resistance and four target relation listings; individual OLS term responses | context_only | The live card reproduces all nine native source edges and four adopted ARO references. Its embedded chemical SMILES follows the ChEMBL enantiomer, so it is not independent confirmation of native stereochemistry. ARO:3003318 describes an intrinsically resistant parY variant despite mutant in its label; do not infer an induced point mutation from that label. |
+| adapter | https://imodulondb.org/api/datasets; 325-adapter-catalog-network.json;329-adapter-corrected-results.json, before open web research | context_only | Catalog-supported queries identify e_coli/precise1k/b3699 gyrB and s_aureus/staph_precise108/USA300HOU_RS00025 gyrB plus USA300HOU_RS06890 parE, with zero modules. An initial unsupported s_aureus/modulome attempt returned zero and was corrected; it is not absence evidence. No exact B. bacilliformis, S. rishiriensis or S. lividans dataset is cataloged. Gene annotation is not proof of drug binding or resistance. |
+| saureus-primary | https://doi.org/10.1128/AAC.49.9.3810-3815.2005; PMID:16127057; full Methods and Results/Discussion, original Tables1-2 | supports | Sigma coumermycin A1 was tested by CLSI twofold agar dilution in S. aureus RN4220 and novobiocin-selected mutants. Parent COU MIC is 0.008 micrograms/mL; specific gyrB variants raise it, but S128L does not, and D89G does not uniformly add a COU-resistance effect. ParE G78S or R136G in a pre-existing double-gyrB background raises COU MIC 16 to 64 micrograms/mL. These are genotype/background-specific associations, not resistance from every allele. Enzyme supercoiling/decatenation assays report COU IC50 0.05 and 1.56 micrograms/mL for gyrase and topoIV respectively; enzyme inhibition is distinct from direct-binding measurement. |
+| bartonella-primary | https://doi.org/10.1128/AAC.42.11.2906; PMID:9797224; full Methods, Results and Discussion; original Tables1-3 | supports | Sigma coumermycin A1 was used with B. bacilliformis KC583 on heart-infusion agar plus 5% erythrocytes, with seven-day no-growth MIC and three determinations. Wild type is 0.06 micrograms/mL; representative mutants are 0.2 or 0.3. Table3 says Arg184Glu whereas abstract, sequence-change text and Table1 say Gln; preserve this internal source conflict before allele-level import. The E. coli complementation experiment tests enzyme function and is not the same as the Bartonella drug-exposure assay. |
+| ecoli-primary | https://doi.org/10.1111/j.1365-2958.1992.tb00886.x; PMID:1323022; complete original abstract | supports | The abstract reports E. coli GyrB Arg136Cys/His/Ser and Gly164Val variants with altered ATPase/supercoiling and differing coumarin sensitivities, explicitly distinguishing coumermycin from novobiocin/clorobiocin. It supports the bounded source determinant concept, but exact strain, material and per-allele COU measurements were not recovered. |
+| paryr-primary | https://doi.org/10.1128/AAC.47.3.869-877.2003; PMID:12604514; full Methods, relevant Results/Discussion and original Tables1-2 | supports | S. rishiriensis donor parYR was expressed from pUWL201-derived pGES3 in S. lividans TK24. Approximately 10^6 spores were plated on minimal medium plus 20 micrograms/mL thiostrepton and drug, then read after six days at 30 C. Table2 defines MIC as complete inhibition under that experiment: empty vector 50 and parYR 300 micrograms/mL COU. This verifies the native qualitative host claim and closes the earlier table-access limit without assigning the donor phenotype, an induced point mutant, clinical category or exact archived allele. The 2003 purification attempt failed and enzyme function remained unresolved there. |
+| paryr-structure | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6a92/149333/8ea43bc8eff8/ac0330890001.jpg; Actual Figure1A chemical drawing visually inspected | supports | The coumermycin A1 drawing is distinct from the neighboring novobiocin and clorobiocin structures and explicitly shows the three pyrrole NH groups. It supports material naming/connectivity but does not independently identify the tested batch or certify all absolute configurations. |
+| paryr-followup | https://doi.org/10.1099/mic.0.26867-0; PMID:14993313; complete original abstract | supports | The 2004 follow-up reports purified S. rishiriensis GyrBR/GyrA ATP-dependent supercoiling and ParYR/ParX decatenation/relaxation after expression in S. lividans. This updates biological-function context but does not retroactively change the 2003 paper’s experimental scope. Full methods and drug-inhibition measurements were not recovered. |
+| taxon-reference | https://rest.uniprot.org/uniprotkb/Q83WB8.json; Q83WB8 entryAudit, organism and sequence version; NCBI Taxonomy1916,457428,68264 | supports | UniProt remains entry version 120/sequence version 2 for S. rishiriensis ParYR. Taxonomy1916 is S. lividans and457428 the TK24 background, while68264 is S. rishiriensis. These reference identifiers do not establish the exact experimental derivative, genome or allele; native cautions are appropriate. |
+| binding-primary | https://doi.org/10.1021/acs.jmedchem.8b01928; PMID:30920824; full main text; actual Figures1-2; SI experimental pagesS2-S4 | supports | Cocrystals and native mass spectrometry directly support one coumermycin A1 molecule bridging two GyrB ATPase-site fragments from E. coli and T. thermophilus. SI describes N-terminal43-kDa constructs, E. coli expression, Sigma COU and biophysical buffers; the T. thermophilus donor is HB8. These direct fragment-binding data support GyrB enrichment. They are not direct ParE/ParY binding measurements, whole-cell MICs or proof of all proposed full-gyrase stoichiometries. |
+| binding-si | https://pstorage-acs-6854636.s3.amazonaws.com/14798264/jm8b01928_si_001.pdf; SI protein expression/purification, cocrystallization, mass spectrometry, SEC and thermal-denaturation methods | supports | The E. coli and T. thermophilus fragments span residues1-393 and1-390, respectively. Mass-spectrometry/thermal assays used 50 micromolar protein with 75 micromolar COU; SEC names Sigma reagent. Conformational modeling is distinct from experimental structural evidence, and no purity percentage or catalog was established from the inspected text. |
+| pdb | https://www.rcsb.org/structure/6ENG; 6ENG/6ENH coordinate metadata and CCD BHW descriptors | supports | Deposited ligand BHW has complete key WTIJXIZOODAMJT-DHFGXMAYSA-N, matching native InChI rather than the ChEMBL enantiomer. 6ENG specifies E. coli K-12 as protein source; expression host is distinct. Coordinates/density were not independently rerefined. |
+| producer-primary | https://doi.org/10.1128/AAC.44.11.3040-3048.2000; Adopted PMID:11036020; Methods, production/inactivation Results, Table1 and actual Figure5 | supports | The original identifies S. rishiriensis DSM40489 and tests production in a defined production-medium recipe for 7-10 days at 28 C. Extraction/TLC against an authentic COU standard detects parent production in wild type, lost in proB-disrupted ZW20/ZW21; a different metabolite accumulates. This supports producer and cluster linkage, not antibacterial potency of the mutant metabolite. |
+| producer-figure | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6e3a/101600/41d700609da5/ac1100359005.jpg; Actual Figure5 TLC image inspected with caption | supports | Lane1 standard and lane2 wild-type extract share the indicated parent-band position; lanes3/4 mutant extracts differ. This is a TLC production comparison, not a fresh absolute-structure determination. |
+| mibig | https://dl.secondarymetabolites.org/mibig/mibig_json_4.0.tar.gz; Extracted BGC0000833 version4 JSON;329-mibig4.json; original314 archive manifest | context_only | The available official 4.0 archive records active/questionable BGC0000833, S. rishiriensis68264 and one exact-structure compound. Evidence methods are locus-level, and compound evidence is empty. Native wording already says the first legacy PMID is not established compound-link evidence. The declared 4.0.1 Zenodo download was previously403 and the current entry route404; exact archive-byte equivalence is not claimed. The 2000 original independently supports the producer linkage. |
+| chebi-leads | PMID:23123663;PMID:23652970;PMID:24692538; All original abstracts;2014 full Methods and coumermycin-specific Results/Discussion | supports | PMID23123663 reports murine osteoclast differentiation/bone-resorption effects, not microbial AST. PMID23652970 reports the five-gene central-pyrrole scaffold pathway and heterologous CPM production, not full-parent production or a direct antibacterial target assay. PMID24692538 uses Sigma COU as a mammalian comparator that did not enhance RAW264.7 osteoclast formation; it does not supply bacterial mechanism evidence. |
+| host2014 | https://doi.org/10.1074/jbc.M113.530626; Adopted PMID:24692538 / PMC4036365; reagent and cell Methods, relevant Results/Figure2 caption and Discussion | context_only | Coumermycin A1 came from Sigma-Aldrich. The original distinguishes its lack of heat-shock/osteoclast enhancement from17-AAG and radicicol. The source’s HSP90 interpretation is not a native microbial-target annotation and was not used to create one. These cell experiments differ from the 2012 osteoclast study in model and conditions. |
+| review-leads | PMID:24079980;PMID:8231802; Complete abstracts and publication metadata | context_only | These are the adopted 2013 aminocoumarin review and1993 coumarin/gyrase review. They provide background and original-paper leads; neither was treated as new compound-specific primary binding or MIC evidence. Full text was not recovered. |
+| historical-leads | PMID:14285468;PMID:14285469; Original1965 bibliographic records, no abstracts | context_only | Both adopted historical leads resolve to coumermycin A1 structure and production/isolation papers. A guessed J-STAGE route returned 404 for each, and no full source was recovered. Their experimental details and absolute-configuration derivation therefore remain unverified; no numbers were transferred from secondary citations. |
+| anticancer-context | https://doi.org/10.1038/s41419-023-06337-3; PMID:38057328 / PMC10700369; COU-specific Results/Figure4 caption and resistant-cell-generation Methods | context_only | The original exposes K562 leukemia cells to COU and reports dose-response shifts after chronic treatment over 12-14 months. This supports bounded cell-level antiproliferative activity in the broad native definition, not clinical cancer efficacy or a microbial resistance mechanism. Exact preparation and whole supplementary assay coverage were not established in this targeted reading. |
+| anticancer-boundary | https://doi.org/10.1021/jm200553w; PMID:21861487 / PMC3184553; original Table1 and surrounding Results | context_only | Table1 labels parent COU antiproliferative values as inherited from reference23. The newly synthesized dimers have distinct structures. Those numerical values and analog HSP90 blots were not treated as newly measured parent results. A newer discovered2026 original abstract questions HSP90 attribution in Jurkat cells; no HSP90 mechanism is asserted by the native record or this review. |
+| search | Ignored-inclusive repository search and free primary-source retrieval; 329-local-hits.txt;329-owner-search.txt;329-context-paths.txt;329-discovery.json | context_only | All four ChEBI and four ARO adopted leads were resolved with explicit reading depth. Historical curator/research artifacts were discovery only; exact original host, enzyme and producer experiments were independently inspected. No claim that further literature is absent is made. |
+| access | Free retrieval manifests; 329-fetch1-5.json and reused313314-recovery-fetch.json | context_only | EPMC full-text routes for2000,2014 and2011 returned 500; PMC HTML alternatives succeeded. The 2013 biosynthetic full paper and author thesis were not recovered, nor the 1992/1993/2004 full originals. Public author-deposited2019 main PDF and ACS SI succeeded. Historical1965 sources remain metadata only. |
+| gates | Actual focused checks; 329-focused-results.json,329-schema.log,329-strict.log | supports | Native schema and strict checks exit 0. Standalone chemistry records failure because the native SMILES cannot be parsed; the scratch-only repair reproduces the retained identity. Passing schema checks do not clear this scientific encoding defect. |
+
+## Limits And Additional Notes
+
+- The two 1965 adopted originals were bibliographically resolved but not recovered. The 2013 central-pyrrole paper and1992/2004 originals were read at complete-abstract depth;1993/2013 reviews were context only. No historical structural proof or exact allele measurements were fabricated.
+- The 2003 host paper was read through Methods, relevant Results/Discussion and Tables1-2, with Figure1 visually inspected. The 2005 S. aureus and1998 Bartonella Methods/Results/Discussion and relevant tables were read; all sequence accessions and original gel images were not independently reconstructed.
+- The 2019 main paper and SI experimental pages S2-S4 were read, with actual Figures1-2 and deposited BHW identity inspected. All supplementary plots, raw diffraction, SAXS fits and atomic coordinates were not independently reanalyzed.
+- The 2000 producer experiment and actual TLC Figure5 were inspected. MIBiG4.0 was available, but declared 4.0.1 archive-byte equivalence was not verified after 403, and the current entry route returned 404.
+- The 2014 mammalian comparator was read for reagent/cell Methods and COU-specific Results/Discussion. The 2023 cancer study was read for COU dose-response/resistant-cell passages, not all supplementary preparation details; the 2011 parent values were recognized as inherited comparators. No clinical anticancer efficacy is assessed.
+- Reaxys was checked through official ChEBI rather than a paid registry; KNApSAcK remains internally inconsistent. Historical producer names and INN labels were checked against current authorities, not original naming publications.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native record, maintained source, scientific status or history was edited.
+- Schema and strict validation used batch033; standalone RDKit chemistry used existing batch019 against batch033 cwd.
+- Optional links, tags and notes were checked against this exact target; source-study reference comparisons were not copied as native assertions.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T135743Z-coumermycin-a1-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Coumermycin A1: invalid pyrrole SMILES and non-equivalent chemical xrefs'
+started_at: '2026-10-21T13:39:01Z'
+finished_at: '2026-10-21T13:57:43Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire YAML,
+    actual source rows, source transformations and curator context were read. Chemical
+    representations were independently parsed, official groundings checked, and primary
+    papers read at explicitly recorded depth; prior review drafts were not scientific
+    evidence.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The exact InChI, antibacterial activity, gyrase mechanism and existing bounded
+  ParYR host annotation are supported. Two major corrections are needed: three missing
+  pyrrole hydrogens make the native SMILES invalid, and the ChEMBL and KNApSAcK xrefs
+  encode different stereochemistry. The database target/resistance assertions remain
+  explicitly qualified; newly recovered original papers permit focused enrichment.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/coumermycin-a1.yaml
+    sha256: c17d4ae89ba13e9ec5d3cae6f36eefa234685dc4d4249c1b5f2e91412fb81f79
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_mibig_producers.py
+    sha256: a078cdf4c9b2d09999800ab7ae03f93d3972f29b7d2f460ebbbe7d7ec6b31c53
+    role: context
+  - path: tests/test_aminocoumarin_reference_followup.py
+    sha256: 11de72cf50cd46935698167d1fb2a9e0248d1a6e213fd42c242f4d303bb71c01
+    role: context
+  - path: tests/test_aminocoumarin_primary_curation.py
+    sha256: 8dc5cdf7f027c6912a515cc5193a42b0736ebd4a37e6f5950f3153e63a8a552e
+    role: context
+  - path: research/2026-10-09-aminocoumarin-primary-curation.json
+    sha256: 503855ee4bbdfd4310ff23a40d89c22c21ebb90b60c208314876ec8499effc0f
+    role: context
+  - path: research/2026-10-09-aminocoumarin-primary-context.json
+    sha256: b9e0c6b79af5317e42223a01b869f25ec3498d5379cbbef5563efb9769d43656
+    role: context
+  - path: research/2026-10-09-aminocoumarin-reference-followup.json
+    sha256: e3fb4342cf8565dd9c46c886493f20e573544afec562a72acaa1b9ad3726017b
+    role: context
+targets:
+- target_id: CHEBI:3907
+  path: data/antibiotics/antibacterial/coumermycin-a1.yaml
+  label: coumermycin A1
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity, definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Five imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Four imported target assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Native target relation and evidence-status mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact structure
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/mibig_producers.tsv
+    role: Producer and BGC assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_mibig_producers.py
+    role: MIBiG extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Any evidence-scope overrides
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/coumermycin-a1.yaml
+    role: Curator-maintained ParYR primary evidence and scientific history
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 329; one entire exact record. All 13 original input hashes
+    were preserved; all 36 expanded inputs were rechecked.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:3907
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: failed
+  required: false
+  summary: Actual focused execution exited 1.
+  target_ids:
+  - CHEBI:3907
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/329-chemical-gate.py
+    (cwd /private/tmp/antibioticmech-record-reviews-033)
+  exit_code: 1
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:3907
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/coumermycin-a1.yaml (cwd /private/tmp/antibioticmech-record-reviews-033)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:3907
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/coumermycin-a1.yaml --out /private/tmp/am-review-session/329-strict.tsv
+    (cwd /private/tmp/antibioticmech-record-reviews-033)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:3907
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:3907
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:3907
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:3907
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:3907
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:3907
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:3907
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:3907
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:3907
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/coumermycin-a1.yaml
+  locator: Entire YAML, all nine synonyms, seven chemical xrefs, drug/document links,
+    six resistance entries, four targets, producer and eight history events
+  accessed_at: '2026-10-21T13:57:04Z'
+  support: supports
+  summary: The exact SEEDED record has five source-only ARO resistance assertions
+    and one separately curated ParYR laboratory-host observation. Four direct-target
+    objects explicitly say CARD_ARO and PRIMARY_EVIDENCE_NEEDED, with unspecified
+    taxon/assay. No activity_spectrum, clinical products, causal graph or dataset
+    is populated. The October10 history explicitly leaves whole-record review open.
+  snapshot_sha256: de0758abde34d419f3145e0b4433ef8a2458c82af2145c256e5029410bdf5323
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv;data/raw/aro_antibiotics.tsv;data/raw/aro_resistance_edges.tsv;data/raw/aro_target_edges.tsv;data/raw/mibig_producers.tsv
+  locator: ChEBI row124;ARO row77;resistance rows2080-2084;target rows84-87;MIBiG
+    row374
+  accessed_at: '2026-10-21T13:57:04Z'
+  support: supports
+  summary: The defective SMILES and KNApSAcK xref originate in ChEBI. The ChEMBL xref
+    originates in ARO. The five resistance and four target objects reproduce source
+    edges; the producer uses an exact-key join. Native curator ownership of the ParYR
+    evidence/history is explicit in the expanded capture and must survive source correction.
+  snapshot_sha256: de0758abde34d419f3145e0b4433ef8a2458c82af2145c256e5029410bdf5323
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity, exact equivalence, source assertion scope, evidence and generated
+    ownership
+  accessed_at: '2026-10-21T13:57:04Z'
+  support: supports
+  summary: Chemical structures must parse and agree; exact xrefs must preserve full
+    stereochemistry. Database assertions must remain distinguished from primary experiments,
+    and missing optional annotations alone are not native defects.
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent batch019 RDKit calculation against batch033 cwd
+  locator: 329-focused.py;329-chemistry.json
+  accessed_at: '2026-10-21T13:57:04Z'
+  support: refutes
+  summary: Native SMILES fails kekulization. Native InChI gives neutral C55H59N5O20,
+    key WTIJXIZOODAMJT-DHFGXMAYSA-N, eight assigned centres, average mass1110.092
+    and exact mass1109.375339. Replacing only the three aromatic pyrrole n tokens
+    with [nH] in scratch yields precisely the retained InChI/key/formula; both source
+    mints reproduce. No native write occurred.
+  snapshot_sha256: b5f792a61a042787934d27cbedc50b959b20b07b07d263004f3a9c5ef6aa5a5b
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/3907/
+  locator: CHEBI:3907 default_structure, chemical data, names, roles, parents and
+    adopted citations
+  accessed_at: '2026-10-21T13:51:14.084194Z'
+  support: supports
+  summary: Current ChEBI retains the same invalid SMILES but a coherent exact InChI.
+    Its chemical parent/role identifiers and native synonym set resolve consistently.
+    The bad SMILES is an inherited source encoding defect, not evidence that the retained
+    molecular identity is a different compound.
+  snapshot_sha256: a1c4051d24d60bafa7fdf73e1ff799b2f600b5f47971d776e35e07e08a46c15a
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/54675768/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: CID54675768 complete property response
+  accessed_at: '2026-10-21T13:51:14.084530Z'
+  support: supports
+  summary: PubChem agrees with the native complete InChI and eight-centre stereochemical
+    graph.
+  snapshot_sha256: 717577f8da7c252d8386cbfcdd7fa20e0da14eeedc2f463844cce073daa8c660
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/C05073/mol
+  locator: C05073 and D02333 text and molfiles;329-xref-chemistry.json
+  accessed_at: '2026-10-21T13:51:14.085401Z'
+  support: supports
+  summary: Both the KEGG compound and drug molfiles independently reproduce the retained
+    full key. The drug dictionary entry is not a regulatory approval claim.
+  snapshot_sha256: 0f7cae3a18daf1ed49ef72789ef7fc7e3f6a2a3f876cd99021320215bc528f03
+- evidence_id: chembl
+  kind: authority
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL389471.json
+  locator: CHEMBL389471 canonical SMILES, stored InChI and key
+  accessed_at: '2026-10-21T13:51:14.084679Z'
+  support: refutes
+  summary: 'Both ChEMBL SMILES and InChI encode the complete opposite enantiomer,
+    WTIJXIZOODAMJT-IYKSDEDASA-N: the same connectivity and relative /t layer but /m0/s1
+    instead of native /m1/s1. Independent parsing reverses all eight stereocentres.
+    A shared label is insufficient for exact equivalence.'
+  snapshot_sha256: f0c958a8bdf0c75283998f0b33d0ce5dde26f2ffe7b419ad0dfd0eb49e603a31
+- evidence_id: knapsack
+  kind: authority
+  reference: http://www.knapsackfamily.com/knapsack_core/information.php?word=C00002461
+  locator: C00002461 displayed InChI, InChIKey and SMILES;329-xref-chemistry.json
+  accessed_at: '2026-10-21T13:51:14.607514Z'
+  support: refutes
+  summary: All displayed encodings differ from native stereochemistry. The displayed
+    InChI computes WTIJXIZOODAMJT-NMONVADOSA-N; the SMILES computes GVDKFCQMSA-N with
+    six assigned/two unassigned centres and altered configurations; the displayed
+    key is KHJHQJPXNA-N. The upstream page is internally inconsistent as well as non-equivalent
+    to the native graph. No matching encoding was verified.
+  snapshot_sha256: 4a8e7ec54f3c9f4610f1ae476ed3916851a1673471c1169db75d8768d3e575ae
+- evidence_id: xref-calculation
+  kind: validation
+  reference: Independent official-structure comparison
+  locator: 329-xref.py;329-xref-chemistry.json
+  accessed_at: '2026-10-21T13:57:04Z'
+  support: supports
+  summary: Native/ChEBI InChI, PubChem, both KEGG entries and MIBiG agree on DHFGXMAYSA-N.
+    ChEMBL and KNApSAcK do not. Differences were evaluated with complete InChI layers
+    and parsed centres rather than only names or connectivity-key prefixes.
+  snapshot_sha256: 747a448ca864d72e9e52631bfb39c6afa573b6b605af7e0ca3d3f16dd12955d0
+- evidence_id: registry-document
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/3907/
+  locator: CAS4434-05-3, Reaxys5230975, Wikipedia Coumermycin_A1 and native synonym
+    types
+  accessed_at: '2026-10-21T13:51:14.751833Z'
+  support: context_only
+  summary: CAS and Reaxys links are retained by official ChEBI; no independent paid
+    Reaxys register was accessed. The Wikipedia document resolves to the intended
+    A1 subject and is used only to verify document relevance. Generic Coumermycin
+    and historical Notomycin names are retained source synonyms, not proof that other
+    congeners or mixtures share this graph.
+  snapshot_sha256: b9a2dc3fc28d7c44542894d3e620c1268989010e961980730b9231a685c40908
+- evidence_id: aro
+  kind: database
+  reference: https://card.mcmaster.ca/ontology/36289
+  locator: Live ARO:3000150 card, all five resistance and four target relation listings;
+    individual OLS term responses
+  accessed_at: '2026-10-21T13:51:51.618590Z'
+  support: context_only
+  summary: The live card reproduces all nine native source edges and four adopted
+    ARO references. Its embedded chemical SMILES follows the ChEMBL enantiomer, so
+    it is not independent confirmation of native stereochemistry. ARO:3003318 describes
+    an intrinsically resistant parY variant despite mutant in its label; do not infer
+    an induced point mutation from that label.
+  snapshot_sha256: 1ab8e1eacf08af432408a3a8691bcca6a251110f9d6ad8c4884fcf231f669275
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: 325-adapter-catalog-network.json;329-adapter-corrected-results.json, before
+    open web research
+  accessed_at: '2026-10-21T13:57:04Z'
+  support: context_only
+  summary: Catalog-supported queries identify e_coli/precise1k/b3699 gyrB and s_aureus/staph_precise108/USA300HOU_RS00025
+    gyrB plus USA300HOU_RS06890 parE, with zero modules. An initial unsupported s_aureus/modulome
+    attempt returned zero and was corrected; it is not absence evidence. No exact
+    B. bacilliformis, S. rishiriensis or S. lividans dataset is cataloged. Gene annotation
+    is not proof of drug binding or resistance.
+  snapshot_sha256: 18b80c8cf0ce91783e8c2ab9fea524551932caec3490dc41e41fa062b3c974d7
+- evidence_id: saureus-primary
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.49.9.3810-3815.2005
+  locator: PMID:16127057; full Methods and Results/Discussion, original Tables1-2
+  accessed_at: '2026-10-21T13:30:38.923413Z'
+  support: supports
+  summary: Sigma coumermycin A1 was tested by CLSI twofold agar dilution in S. aureus
+    RN4220 and novobiocin-selected mutants. Parent COU MIC is 0.008 micrograms/mL;
+    specific gyrB variants raise it, but S128L does not, and D89G does not uniformly
+    add a COU-resistance effect. ParE G78S or R136G in a pre-existing double-gyrB
+    background raises COU MIC 16 to 64 micrograms/mL. These are genotype/background-specific
+    associations, not resistance from every allele. Enzyme supercoiling/decatenation
+    assays report COU IC50 0.05 and 1.56 micrograms/mL for gyrase and topoIV respectively;
+    enzyme inhibition is distinct from direct-binding measurement.
+  snapshot_sha256: 98d3be6e4f0d46d2c1fe89ad07ec4d216a79fa9652080b2ac95dec977e741ebe
+- evidence_id: bartonella-primary
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.42.11.2906
+  locator: PMID:9797224; full Methods, Results and Discussion; original Tables1-3
+  accessed_at: '2026-10-21T13:30:38.924065Z'
+  support: supports
+  summary: Sigma coumermycin A1 was used with B. bacilliformis KC583 on heart-infusion
+    agar plus 5% erythrocytes, with seven-day no-growth MIC and three determinations.
+    Wild type is 0.06 micrograms/mL; representative mutants are 0.2 or 0.3. Table3
+    says Arg184Glu whereas abstract, sequence-change text and Table1 say Gln; preserve
+    this internal source conflict before allele-level import. The E. coli complementation
+    experiment tests enzyme function and is not the same as the Bartonella drug-exposure
+    assay.
+  snapshot_sha256: e66951034872c89978c483ae2939b33acd616f5e46c129302b9645e95ffb5612
+- evidence_id: ecoli-primary
+  kind: primary_source
+  reference: https://doi.org/10.1111/j.1365-2958.1992.tb00886.x
+  locator: PMID:1323022; complete original abstract
+  accessed_at: '2026-10-21T13:51:14.789181Z'
+  support: supports
+  summary: The abstract reports E. coli GyrB Arg136Cys/His/Ser and Gly164Val variants
+    with altered ATPase/supercoiling and differing coumarin sensitivities, explicitly
+    distinguishing coumermycin from novobiocin/clorobiocin. It supports the bounded
+    source determinant concept, but exact strain, material and per-allele COU measurements
+    were not recovered.
+  snapshot_sha256: 69dedde0b77a714214bd5ce6582943a7a48b88a887db8e120a3fb4b142eedcda
+- evidence_id: paryr-primary
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.47.3.869-877.2003
+  locator: PMID:12604514; full Methods, relevant Results/Discussion and original Tables1-2
+  accessed_at: '2026-10-21T13:30:38.923861Z'
+  support: supports
+  summary: 'S. rishiriensis donor parYR was expressed from pUWL201-derived pGES3 in
+    S. lividans TK24. Approximately 10^6 spores were plated on minimal medium plus
+    20 micrograms/mL thiostrepton and drug, then read after six days at 30 C. Table2
+    defines MIC as complete inhibition under that experiment: empty vector 50 and
+    parYR 300 micrograms/mL COU. This verifies the native qualitative host claim and
+    closes the earlier table-access limit without assigning the donor phenotype, an
+    induced point mutant, clinical category or exact archived allele. The 2003 purification
+    attempt failed and enzyme function remained unresolved there.'
+  snapshot_sha256: e6a1dd3b113997e7624588cd3120beee45663df719634db6b1db8543792a8015
+- evidence_id: paryr-structure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6a92/149333/8ea43bc8eff8/ac0330890001.jpg
+  locator: Actual Figure1A chemical drawing visually inspected
+  accessed_at: '2026-10-21T13:53:24.162142Z'
+  support: supports
+  summary: The coumermycin A1 drawing is distinct from the neighboring novobiocin
+    and clorobiocin structures and explicitly shows the three pyrrole NH groups. It
+    supports material naming/connectivity but does not independently identify the
+    tested batch or certify all absolute configurations.
+  snapshot_sha256: 50fa4f2b49288612ab9f54c3a0a1899fe77efd946530e4111a1af989ead8b247
+- evidence_id: paryr-followup
+  kind: primary_source
+  reference: https://doi.org/10.1099/mic.0.26867-0
+  locator: PMID:14993313; complete original abstract
+  accessed_at: '2026-10-21T13:51:14.789181Z'
+  support: supports
+  summary: The 2004 follow-up reports purified S. rishiriensis GyrBR/GyrA ATP-dependent
+    supercoiling and ParYR/ParX decatenation/relaxation after expression in S. lividans.
+    This updates biological-function context but does not retroactively change the
+    2003 paper’s experimental scope. Full methods and drug-inhibition measurements
+    were not recovered.
+  snapshot_sha256: 69dedde0b77a714214bd5ce6582943a7a48b88a887db8e120a3fb4b142eedcda
+- evidence_id: taxon-reference
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q83WB8.json
+  locator: Q83WB8 entryAudit, organism and sequence version; NCBI Taxonomy1916,457428,68264
+  accessed_at: '2026-10-21T13:51:14.762943Z'
+  support: supports
+  summary: UniProt remains entry version 120/sequence version 2 for S. rishiriensis
+    ParYR. Taxonomy1916 is S. lividans and457428 the TK24 background, while68264 is
+    S. rishiriensis. These reference identifiers do not establish the exact experimental
+    derivative, genome or allele; native cautions are appropriate.
+  snapshot_sha256: 44f3e2d26c7d8e146482da8d8dc6ff8151f379493df3ea5672bd3c7c5ec43e93
+- evidence_id: binding-primary
+  kind: primary_source
+  reference: https://doi.org/10.1021/acs.jmedchem.8b01928
+  locator: PMID:30920824; full main text; actual Figures1-2; SI experimental pagesS2-S4
+  accessed_at: '2026-10-21T13:53:23.637317Z'
+  support: supports
+  summary: Cocrystals and native mass spectrometry directly support one coumermycin
+    A1 molecule bridging two GyrB ATPase-site fragments from E. coli and T. thermophilus.
+    SI describes N-terminal43-kDa constructs, E. coli expression, Sigma COU and biophysical
+    buffers; the T. thermophilus donor is HB8. These direct fragment-binding data
+    support GyrB enrichment. They are not direct ParE/ParY binding measurements, whole-cell
+    MICs or proof of all proposed full-gyrase stoichiometries.
+  snapshot_sha256: e00fe4cd8927898cdc2ee356739d481dc0fc8ae1a0bb5e54ca54869a9d517a85
+- evidence_id: binding-si
+  kind: primary_source
+  reference: https://pstorage-acs-6854636.s3.amazonaws.com/14798264/jm8b01928_si_001.pdf
+  locator: SI protein expression/purification, cocrystallization, mass spectrometry,
+    SEC and thermal-denaturation methods
+  accessed_at: '2026-10-21T13:53:23.637585Z'
+  support: supports
+  summary: The E. coli and T. thermophilus fragments span residues1-393 and1-390,
+    respectively. Mass-spectrometry/thermal assays used 50 micromolar protein with
+    75 micromolar COU; SEC names Sigma reagent. Conformational modeling is distinct
+    from experimental structural evidence, and no purity percentage or catalog was
+    established from the inspected text.
+  snapshot_sha256: 36e90e552fcc4eb1b2ceb6e1d69bf7c538dc729363ee9d97e743cafb4fcc1a8e
+- evidence_id: pdb
+  kind: authority
+  reference: https://www.rcsb.org/structure/6ENG
+  locator: 6ENG/6ENH coordinate metadata and CCD BHW descriptors
+  accessed_at: '2026-10-21T13:54:01.140299Z'
+  support: supports
+  summary: Deposited ligand BHW has complete key WTIJXIZOODAMJT-DHFGXMAYSA-N, matching
+    native InChI rather than the ChEMBL enantiomer. 6ENG specifies E. coli K-12 as
+    protein source; expression host is distinct. Coordinates/density were not independently
+    rerefined.
+  snapshot_sha256: 2054592e636763748c43189d31e2d151e4d5eacdddcac675787fb821f0ed90e2
+- evidence_id: producer-primary
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.44.11.3040-3048.2000
+  locator: Adopted PMID:11036020; Methods, production/inactivation Results, Table1
+    and actual Figure5
+  accessed_at: '2026-10-21T13:52:34.995625Z'
+  support: supports
+  summary: The original identifies S. rishiriensis DSM40489 and tests production in
+    a defined production-medium recipe for 7-10 days at 28 C. Extraction/TLC against
+    an authentic COU standard detects parent production in wild type, lost in proB-disrupted
+    ZW20/ZW21; a different metabolite accumulates. This supports producer and cluster
+    linkage, not antibacterial potency of the mutant metabolite.
+  snapshot_sha256: 73cf875eb6da3ea608cb6e38221a099ef8a03d9be7e8afb8d2b0f3e10c7e098e
+- evidence_id: producer-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6e3a/101600/41d700609da5/ac1100359005.jpg
+  locator: Actual Figure5 TLC image inspected with caption
+  accessed_at: '2026-10-21T13:53:24.334712Z'
+  support: supports
+  summary: Lane1 standard and lane2 wild-type extract share the indicated parent-band
+    position; lanes3/4 mutant extracts differ. This is a TLC production comparison,
+    not a fresh absolute-structure determination.
+  snapshot_sha256: f5dee968e0fe7419ce01a5ce4a908a4da83e3f1008159f111bca15ad88389325
+- evidence_id: mibig
+  kind: database
+  reference: https://dl.secondarymetabolites.org/mibig/mibig_json_4.0.tar.gz
+  locator: Extracted BGC0000833 version4 JSON;329-mibig4.json; original314 archive
+    manifest
+  accessed_at: '2026-10-21T13:57:04Z'
+  support: context_only
+  summary: The available official 4.0 archive records active/questionable BGC0000833,
+    S. rishiriensis68264 and one exact-structure compound. Evidence methods are locus-level,
+    and compound evidence is empty. Native wording already says the first legacy PMID
+    is not established compound-link evidence. The declared 4.0.1 Zenodo download
+    was previously403 and the current entry route404; exact archive-byte equivalence
+    is not claimed. The 2000 original independently supports the producer linkage.
+  snapshot_sha256: 10bb32e91bb5257d6279eca58db9ccbfded016caa4f2c6328ae60af30cb6b542
+- evidence_id: chebi-leads
+  kind: primary_source
+  reference: PMID:23123663;PMID:23652970;PMID:24692538
+  locator: All original abstracts;2014 full Methods and coumermycin-specific Results/Discussion
+  accessed_at: '2026-10-21T13:51:14.789181Z'
+  support: supports
+  summary: PMID23123663 reports murine osteoclast differentiation/bone-resorption
+    effects, not microbial AST. PMID23652970 reports the five-gene central-pyrrole
+    scaffold pathway and heterologous CPM production, not full-parent production or
+    a direct antibacterial target assay. PMID24692538 uses Sigma COU as a mammalian
+    comparator that did not enhance RAW264.7 osteoclast formation; it does not supply
+    bacterial mechanism evidence.
+  snapshot_sha256: 69dedde0b77a714214bd5ce6582943a7a48b88a887db8e120a3fb4b142eedcda
+- evidence_id: host2014
+  kind: primary_source
+  reference: https://doi.org/10.1074/jbc.M113.530626
+  locator: Adopted PMID:24692538 / PMC4036365; reagent and cell Methods, relevant
+    Results/Figure2 caption and Discussion
+  accessed_at: '2026-10-21T13:52:34.995955Z'
+  support: context_only
+  summary: Coumermycin A1 came from Sigma-Aldrich. The original distinguishes its
+    lack of heat-shock/osteoclast enhancement from17-AAG and radicicol. The source’s
+    HSP90 interpretation is not a native microbial-target annotation and was not used
+    to create one. These cell experiments differ from the 2012 osteoclast study in
+    model and conditions.
+  snapshot_sha256: 54cf6be520afa9e9c9838b330d33244f2b10d7d5ea3ca451e304f08dcebe68af
+- evidence_id: review-leads
+  kind: database
+  reference: PMID:24079980;PMID:8231802
+  locator: Complete abstracts and publication metadata
+  accessed_at: '2026-10-21T13:51:14.789181Z'
+  support: context_only
+  summary: These are the adopted 2013 aminocoumarin review and1993 coumarin/gyrase
+    review. They provide background and original-paper leads; neither was treated
+    as new compound-specific primary binding or MIC evidence. Full text was not recovered.
+  snapshot_sha256: 69dedde0b77a714214bd5ce6582943a7a48b88a887db8e120a3fb4b142eedcda
+- evidence_id: historical-leads
+  kind: database
+  reference: PMID:14285468;PMID:14285469
+  locator: Original1965 bibliographic records, no abstracts
+  accessed_at: '2026-10-21T13:51:14.789181Z'
+  support: context_only
+  summary: Both adopted historical leads resolve to coumermycin A1 structure and production/isolation
+    papers. A guessed J-STAGE route returned 404 for each, and no full source was
+    recovered. Their experimental details and absolute-configuration derivation therefore
+    remain unverified; no numbers were transferred from secondary citations.
+  snapshot_sha256: 69dedde0b77a714214bd5ce6582943a7a48b88a887db8e120a3fb4b142eedcda
+- evidence_id: anticancer-context
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41419-023-06337-3
+  locator: PMID:38057328 / PMC10700369; COU-specific Results/Figure4 caption and resistant-cell-generation
+    Methods
+  accessed_at: '2026-10-21T13:53:23.637741Z'
+  support: context_only
+  summary: The original exposes K562 leukemia cells to COU and reports dose-response
+    shifts after chronic treatment over 12-14 months. This supports bounded cell-level
+    antiproliferative activity in the broad native definition, not clinical cancer
+    efficacy or a microbial resistance mechanism. Exact preparation and whole supplementary
+    assay coverage were not established in this targeted reading.
+  snapshot_sha256: a686d612ff343f4494cc9e1067f38d267e27a38920655236aa62c4dbcbf13c37
+- evidence_id: anticancer-boundary
+  kind: primary_source
+  reference: https://doi.org/10.1021/jm200553w
+  locator: PMID:21861487 / PMC3184553; original Table1 and surrounding Results
+  accessed_at: '2026-10-21T13:54:01.145916Z'
+  support: context_only
+  summary: Table1 labels parent COU antiproliferative values as inherited from reference23.
+    The newly synthesized dimers have distinct structures. Those numerical values
+    and analog HSP90 blots were not treated as newly measured parent results. A newer
+    discovered2026 original abstract questions HSP90 attribution in Jurkat cells;
+    no HSP90 mechanism is asserted by the native record or this review.
+  snapshot_sha256: bf136e652350621f56f34365ad41e79847f15cbec12c09b70b3f32bb1a795ae8
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive repository search and free primary-source retrieval
+  locator: 329-local-hits.txt;329-owner-search.txt;329-context-paths.txt;329-discovery.json
+  accessed_at: '2026-10-21T13:57:04Z'
+  support: context_only
+  summary: All four ChEBI and four ARO adopted leads were resolved with explicit reading
+    depth. Historical curator/research artifacts were discovery only; exact original
+    host, enzyme and producer experiments were independently inspected. No claim that
+    further literature is absent is made.
+  snapshot_sha256: 86eea111c772626166b788bf54b021d4ed03e57764c5fb56fc23aa862dc02341
+  search_scope: 2026-10-21; exact coumermycin A1 label, CHEBI:3907, ARO:3000150, molecular
+    key, BGC0000833 and adopted publication identifiers. Repository searches included
+    hidden and ignored files; primary-paper follow-up was bounded rather than an exhaustive
+    literature search.
+- evidence_id: access
+  kind: search
+  reference: Free retrieval manifests
+  locator: 329-fetch1-5.json and reused313314-recovery-fetch.json
+  accessed_at: '2026-10-21T13:57:04Z'
+  support: context_only
+  summary: EPMC full-text routes for2000,2014 and2011 returned 500; PMC HTML alternatives
+    succeeded. The 2013 biosynthetic full paper and author thesis were not recovered,
+    nor the 1992/1993/2004 full originals. Public author-deposited2019 main PDF and
+    ACS SI succeeded. Historical1965 sources remain metadata only.
+  snapshot_sha256: 12997d161c189fd915ed9ff3345db396c8aae852f6ed62c73c8b417188261397
+  search_scope: 2026-10-21; exact coumermycin A1 label, CHEBI:3907, ARO:3000150, molecular
+    key, BGC0000833 and adopted publication identifiers. Repository searches included
+    hidden and ignored files; primary-paper follow-up was bounded rather than an exhaustive
+    literature search.
+- evidence_id: gates
+  kind: validation
+  reference: Actual focused checks
+  locator: 329-focused-results.json,329-schema.log,329-strict.log
+  accessed_at: '2026-10-21T13:57:04Z'
+  support: supports
+  summary: Native schema and strict checks exit 0. Standalone chemistry records failure
+    because the native SMILES cannot be parsed; the scratch-only repair reproduces
+    the retained identity. Passing schema checks do not clear this scientific encoding
+    defect.
+  snapshot_sha256: 6dad52b1ca107840f0fb28a61f9c8ca7511d74ee3323d2175814e74acce62aa8
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact A1 graph and chemical eligibility
+  outcome: concern
+  summary: The retained InChI and independent authorities identify one neutral stereodefined
+    A1 molecule, supported by original structure drawings and deposited ligand. The
+    invalid SMILES requires correction; no new congener or mixture is inferred.
+  target_ids:
+  - CHEBI:3907
+  evidence_ids:
+  - chemistry
+  - pubchem
+  - pdb
+  - paryr-structure
+  - rubric
+- assessment_id: xref
+  area: grounding
+  topic: Chemical equivalence and nomenclature
+  outcome: concern
+  summary: ChEMBL is the complete enantiomer; KNApSAcK has different and internally
+    conflicting stereochemical encodings. Other verified xrefs/names are coherent,
+    with legacy register limitations retained.
+  target_ids:
+  - CHEBI:3907
+  evidence_ids:
+  - chembl
+  - knapsack
+  - xref-calculation
+  - kegg
+  - registry-document
+  - rubric
+- assessment_id: mode
+  area: evidence
+  topic: Nucleic-acid synthesis inhibition and microbial scope
+  outcome: supported
+  summary: Bacterial gyrase fragment binding, enzyme assays and bacterial phenotypes
+    support the broad native enum. The mode notes correctly identify seeder ownership;
+    they are not a complete curated causal chain.
+  target_ids:
+  - CHEBI:3907
+  evidence_ids:
+  - binding-primary
+  - saureus-primary
+  - bartonella-primary
+  - chebi
+- assessment_id: targets
+  area: evidence
+  topic: Four database target objects
+  outcome: unknown
+  summary: All four source relations resolve and remain explicitly PRIMARY_EVIDENCE_NEEDED.
+    Exact GyrB primary binding is now available for careful enrichment; purified topoIV
+    inhibition and ParYR function are different evidence types and cannot automatically
+    certify direct drug binding to every named protein.
+  target_ids:
+  - CHEBI:3907
+  evidence_ids:
+  - aro
+  - binding-primary
+  - pdb
+  - saureus-primary
+  - paryr-followup
+  - adapter
+- assessment_id: source-resistance
+  area: evidence
+  topic: Five ARO resistance templates
+  outcome: supported
+  summary: The database assertions are accurately labeled. Original studies support
+    bounded E. coli/S. aureus/Bartonella GyrB, S. aureus ParE and producer ParYR contexts,
+    while allele, background and intrinsic-versus-induced distinctions remain essential.
+    No universal species-wide phenotype is inferred.
+  target_ids:
+  - CHEBI:3907
+  evidence_ids:
+  - aro
+  - saureus-primary
+  - bartonella-primary
+  - ecoli-primary
+  - paryr-primary
+- assessment_id: curated-paryr
+  area: evidence
+  topic: Native qualitative TK24 host observation
+  outcome: supported
+  summary: The full original and Table2 verify the carefully qualified curator annotation.
+    Reference taxon/protein versions remain coherent; source assay values can now
+    be reviewed separately without converting it into donor susceptibility or a modern
+    standardized AST result.
+  target_ids:
+  - CHEBI:3907
+  evidence_ids:
+  - paryr-primary
+  - paryr-structure
+  - paryr-followup
+  - taxon-reference
+- assessment_id: producer
+  area: provenance
+  topic: S. rishiriensis/BGC0000833
+  outcome: supported
+  summary: The exact compound join and questionable-quality provenance are reproduced
+    by available MIBiG data, and independent2000 experiments substantiate DSM40489
+    production and cluster disruption. Locus methods are not proof that each compound-specific
+    mechanism was individually measured.
+  target_ids:
+  - CHEBI:3907
+  evidence_ids:
+  - mibig
+  - producer-primary
+  - producer-figure
+  - owners
+- assessment_id: definition
+  area: scope
+  topic: Antibacterial and anticancer wording
+  outcome: unknown
+  summary: Bacterial activity and producer identity are directly supported. Cancer-cell
+    activity has a bounded experimental basis, but potent is context-dependent and
+    no human cancer efficacy or HSP90 mechanism is established. The 2012/2014 host
+    papers and2013 pathway paper should not be substituted for antibacterial experiments.
+    No contradiction requiring a native role deletion was established.
+  target_ids:
+  - CHEBI:3907
+  evidence_ids:
+  - saureus-primary
+  - producer-primary
+  - anticancer-context
+  - anticancer-boundary
+  - chebi-leads
+  - host2014
+- assessment_id: activity
+  area: completeness
+  topic: Optional activity_spectrum
+  outcome: unknown
+  summary: Exact original strain/assay observations are available, including parent
+    and mutant comparisons. Import should preserve material, medium, method, endpoint
+    and internal source discrepancies; absence of optional numerical observations
+    is not an error.
+  target_ids:
+  - CHEBI:3907
+  evidence_ids:
+  - saureus-primary
+  - bartonella-primary
+  - paryr-primary
+  - rubric
+- assessment_id: other
+  area: scope
+  topic: Clinical products, causal graph and datasets
+  outcome: not_applicable
+  summary: No native clinical product, approval, graph or dataset assertion is populated.
+    KEGG drug nomenclature and host cell studies do not establish clinical use.
+  target_ids:
+  - CHEBI:3907
+  evidence_ids:
+  - native
+  - kegg
+  - anticancer-context
+- assessment_id: history
+  area: provenance
+  topic: Status, curator ownership and source history
+  outcome: supported
+  summary: Eight events preserve source reseeding and one transparent LLM-assisted
+    host evidence addition. SEEDED and the explicit open whole-record review are appropriate;
+    prior access limitations describe the earlier annotation and are not rewritten
+    in this review.
+  target_ids:
+  - CHEBI:3907
+  evidence_ids:
+  - native
+  - owners
+  - paryr-primary
+  - search
+- assessment_id: checks
+  area: schema
+  topic: Focused structural and native validation
+  outcome: concern
+  summary: Native YAML gates pass while chemical parsing fails. The exact structure
+    can be recovered from independently agreeing encodings, so this is a major repairable
+    representation defect rather than an unresolved wrong-compound identity.
+  target_ids:
+  - CHEBI:3907
+  evidence_ids:
+  - chemistry
+  - gates
+findings:
+- finding_id: F1
+  issue_key: coumermycin-a1-invalid-pyrrole-smiles
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Three missing pyrrole hydrogens make the native SMILES invalid
+  description: All three pyrrole nitrogens are encoded as aromatic n rather than [nH].
+    RDKit cannot kekulize the native or current ChEBI SMILES. A scratch-only hydrogen
+    correction reproduces the stored complete InChI, formula, mass and eight stereocentres,
+    corroborated by PubChem/KEGG and the exact deposited BHW ligand. Repair the maintained
+    representation without changing the supported identity or native curator evidence.
+  target_ids:
+  - CHEBI:3907
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - chemistry
+  - chebi
+  - pubchem
+  - pdb
+  - paryr-structure
+  - owners
+  - gates
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: ChEBI structure and KNApSAcK source owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity and xrefs
+  rule_id: native-review-checklist:Identity
+  native_severity: major invalid chemical encoding with independently recoverable
+    exact identity
+  normalization_reason: The YAML is valid and its exact InChI is coherent, but a primary
+    machine-readable molecular representation cannot be parsed.
+- finding_id: F2
+  issue_key: coumermycin-a1-chembl-knapsack-stereochemical-xrefs
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: ChEMBL and KNApSAcK do not match the native stereodefined molecule
+  description: CHEMBL389471 encodes the complete enantiomer, /m0/s1 and IYKSDEDASA-N
+    instead of native /m1/s1 and DHFGXMAYSA-N. KNApSAcK C00002461 has a different
+    fully specified InChI and a differently configured partially specified SMILES;
+    its displayed key is inconsistent with both. No inspected KNApSAcK encoding matches
+    native. Resolve or qualify these exact links through maintained source ownership;
+    preserve the supported native InChI and document the upstream conflicts.
+  target_ids:
+  - CHEBI:3907
+  field_paths:
+  - xrefs[3]
+  - xrefs[5]
+  evidence_ids:
+  - chembl
+  - knapsack
+  - xref-calculation
+  - pubchem
+  - pdb
+  - owners
+  - rubric
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: ChEBI structure and KNApSAcK source owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity and xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO-supplied ChEMBL xref
+  rule_id: native-review-checklist:Equivalence
+  native_severity: major wrong exact chemical grounding
+  normalization_reason: Exact stereochemical equivalence is false despite shared labels
+    and connectivity. The supported native molecule itself does not need to be replaced.
+actions:
+- action_id: A1
+  description: Repair the maintained SMILES representation and reproduce the unchanged
+    exact A1 graph.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:3907
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: ChEBI structure and KNApSAcK source owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity and xrefs
+  acceptance_checks:
+  - Confirm all three pyrrole NH groups, parse the revised SMILES and reproduce WTIJXIZOODAMJT-DHFGXMAYSA-N
+    with eight assigned centres.
+  - Preserve formula, charge, masses and the independently supported exact InChI.
+  - Use the authorized source/curation workflow; pass native schema/strict, chemistry,
+    corpus reproduction, provenance and history checks without overwriting the ParYR
+    curator entry.
+- action_id: A2
+  description: Adjudicate or qualify the ChEMBL/KNApSAcK exact xrefs without changing
+    native stereochemistry.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:3907
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: ChEBI structure and KNApSAcK source owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity and xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO-supplied ChEMBL xref
+  acceptance_checks:
+  - Compare full stereochemical layers after any upstream correction; matching labels
+    or key prefixes are insufficient.
+  - Do not import ChEMBL enantiomer assays as exact native evidence or silently replace
+    the native graph.
+  - Retain source conflict provenance and ensure the maintained override or source
+    correction survives reseeding.
+- action_id: A3
+  description: Optionally enrich primary target, activity, producer and ParYR context
+    using the newly inspected originals.
+  finding_ids: []
+  target_ids:
+  - CHEBI:3907
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/coumermycin-a1.yaml
+    role: Curator-owned optional primary evidence and history
+  acceptance_checks:
+  - Attach 2019 GyrB binding to the correct fragment/taxon and exact BHW ligand; do
+    not promote all four source targets to direct-binding evidence.
+  - If adding Table2 numerical host data, retain six-day minimal-medium complete-inhibition
+    endpoint and TK24/pGES3-versus-empty-vector background.
+  - Retain S. aureus allele/background specificity and the Bartonella Arg184Gln/Glu
+    source conflict.
+  - Separate natural producer, engineered host, isolated enzyme and mammalian cell
+    phenotypes; preserve optional gaps and unsupported material details explicitly.
+limitations:
+- The two 1965 adopted originals were bibliographically resolved but not recovered.
+  The 2013 central-pyrrole paper and1992/2004 originals were read at complete-abstract
+  depth;1993/2013 reviews were context only. No historical structural proof or exact
+  allele measurements were fabricated.
+- The 2003 host paper was read through Methods, relevant Results/Discussion and Tables1-2,
+  with Figure1 visually inspected. The 2005 S. aureus and1998 Bartonella Methods/Results/Discussion
+  and relevant tables were read; all sequence accessions and original gel images were
+  not independently reconstructed.
+- The 2019 main paper and SI experimental pages S2-S4 were read, with actual Figures1-2
+  and deposited BHW identity inspected. All supplementary plots, raw diffraction,
+  SAXS fits and atomic coordinates were not independently reanalyzed.
+- The 2000 producer experiment and actual TLC Figure5 were inspected. MIBiG4.0 was
+  available, but declared 4.0.1 archive-byte equivalence was not verified after 403,
+  and the current entry route returned 404.
+- The 2014 mammalian comparator was read for reagent/cell Methods and COU-specific
+  Results/Discussion. The 2023 cancer study was read for COU dose-response/resistant-cell
+  passages, not all supplementary preparation details; the 2011 parent values were
+  recognized as inherited comparators. No clinical anticancer efficacy is assessed.
+- Reaxys was checked through official ChEBI rather than a paid registry; KNApSAcK
+  remains internally inconsistent. Historical producer names and INN labels were checked
+  against current authorities, not original naming publications.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record, maintained source, scientific status or history was edited.
+- Schema and strict validation used batch033; standalone RDKit chemistry used existing
+  batch019 against batch033 cwd.
+- Optional links, tags and notes were checked against this exact target; source-study
+  reference comparisons were not copied as native assertions.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pubchem.ncbi.nlm.nih.gov/compound/54675768
+- https://doi.org/10.1021/acs.jmedchem.8b01928
+- https://doi.org/10.1128/AAC.47.3.869-877.2003
+tags:
+- coumermycin-a1
+- pyrrole-smiles
+- stereochemical-grounding
+- paryr-host-scope
+```

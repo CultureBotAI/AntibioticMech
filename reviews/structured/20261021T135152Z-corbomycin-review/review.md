@@ -1,0 +1,1050 @@
+# Corbomycin: peptidoglycan-binding mechanism and exact-xref corrections
+
+- Review: 20261021T135152Z-corbomycin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T13:38:56Z
+- Finished UTC: 2026-10-21T13:51:52Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native PubChem structure is internally coherent and antibacterial activity is supported. Two major corrections are needed: the definition mistakes substrate binding for direct hydrolase binding, and CHEBI:221137 lacks the six stereochemical assignments present in the native graph. The record remains SEEDED; missing optional targets, activity and producer fields are bounded curation opportunities.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 325; one complete exact record. All 13 original input hashes were preserved; all 29 expanded inputs were rechecked.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-e523675af2 | data/antibiotics/antibacterial/corbomycin.yaml | generated | corbomycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | antibioticmech:aro-e523675af2 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | antibioticmech:aro-e523675af2 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | antibioticmech:aro-e523675af2 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | antibioticmech:aro-e523675af2 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-e523675af2 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-e523675af2 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-e523675af2 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-e523675af2 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-e523675af2 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-e523675af2 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-e523675af2 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-e523675af2 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact native structure and antibacterial eligibility
+
+identity: supported. Targets: antibioticmech:aro-e523675af2.
+
+The native graph and PubChem source agree; original structure characterization and activity support corbomycin identity. Three unassigned centres are reported honestly and are not called a mixture.
+
+### CHEBI:221137 exact equivalence
+
+grounding: concern. Targets: antibioticmech:aro-e523675af2.
+
+The asserted ChEBI xref lacks all six native stereochemical assignments. The shared name and constitution are insufficient for exact equivalence. Keep the supported native graph while resolving or qualifying the source xref.
+
+### Definition binding object
+
+evidence: concern. Targets: antibioticmech:aro-e523675af2.
+
+The adopted original supports binding peptidoglycan and thereby blocking autolysin access/action. Binding essential hydrolases is a materially different claim and is not what the inspected binding experiment demonstrates.
+
+### Glycopeptide parent and ANTIBACTERIAL filing
+
+scope: supported. Targets: antibioticmech:aro-e523675af2.
+
+The ARO parent/class, nonapeptide structure and primary growth inhibition support the filing. TypeV glycopeptides need not be glycosylated; no additional native activity role was silently removed.
+
+### Optional activity_spectrum
+
+completeness: unknown. Targets: antibioticmech:aro-e523675af2.
+
+Exact primary strain-specific activity is available. Original2020 MIC methods and exact 2023 preparation details still need verification before quantitative curation. Activity in one strain does not establish a whole-species spectrum or clinical susceptibility.
+
+### Optional molecular targets, resistance and causal graph
+
+completeness: unknown. Targets: antibioticmech:aro-e523675af2.
+
+A substrate-binding mechanism and genetic susceptibility follow-ups could support careful enrichment. iModulon annotations and mutant phenotypes cannot be promoted to direct protein binding; low observed resistance emergence is not absence of resistance.
+
+### Optional natural and engineered producer records
+
+completeness: supported. Targets: antibioticmech:aro-e523675af2.
+
+Original corbomycin production work supports WAC01529 and a separately engineered S. coelicolor host. Absence of an optional producer object is not a defect.
+
+### Clinical products and datasets
+
+scope: not_applicable. Targets: antibioticmech:aro-e523675af2.
+
+No native clinical-product, approval or dataset assertion is populated. The mouse skin model cannot supply those claims.
+
+### Source attribution and historical status
+
+provenance: supported. Targets: antibioticmech:aro-e523675af2.
+
+Actual ARO/PubChem owners were captured before detailed assessment; all original hashes and three source history events are preserved. SEEDED is appropriate pending correction and does not claim previous scientific review.
+
+### Native checks
+
+schema: supported. Targets: antibioticmech:aro-e523675af2.
+
+All focused checks pass; the identified issues concern scientific meaning and exact equivalence rather than native YAML validity.
+
+## Findings
+
+### F1: The definition substitutes hydrolases for the experimentally bound peptidoglycan
+
+major / open / confirmed; issue key: corbomycin-definition-hydrolase-versus-peptidoglycan-binding.
+
+The maintained ARO sentence says corbomycin binds essential peptidoglycan hydrolases. Its cited original instead states that corbomycin binds peptidoglycan and blocks autolysin action; inspected Figure4 directly tests peptidoglycan association. Correct the binding object without asserting an individual hydrolase as a direct target. Preserve downstream cell-wall-remodelling effects with their source scope.
+
+### F2: CHEBI:221137 does not retain the native stereochemical detail
+
+major / open / confirmed; issue key: corbomycin-chebi221137-stereo-exact-xref.
+
+Native and current PubChem structures specify six of nine tetrahedral centres, with key YPKFJNUZFFXJND-XFKCSEFZSA-N. Current CHEBI:221137 InChI specifies none and has key YPKFJNUZFFXJND-UHFFFAOYSA-N. It is not an exact graph match under the repository equivalence contract. Qualify or withhold this exact xref pending source correction; do not erase native stereochemistry, infer a racemate, or silently import the failing upstream ChEBI SMILES.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the source-owned mechanism sentence to peptidoglycan binding followed by blocked autolysin action.
+
+- Retain PMID:32051588 at the corrected claim and distinguish parent HPLC binding from BODIPY derivative localization.
+- Do not add direct hydrolase protein targets from genetic phenotypes or source wording alone.
+- Use maintained inputs and the validated curation/reseed workflow; pass focused validation, corpus reproduction, provenance/history and required QC.
+
+### A2
+
+Resolve the unsupported exact ChEBI equivalence without changing the supported native PubChem graph.
+
+- Compare full InChI stereochemical layers after any upstream correction.
+- Withhold or qualify CHEBI:221137 as exact while its graph remains stereochemically unspecified; preserve provenance of the source assertion.
+- Retain the six assigned/three unassigned native centres unless independent primary structure evidence justifies a change.
+- Confirm source-to-record reproduction and exact-xref checks after separately authorized curation.
+
+### A3
+
+Optionally add bounded primary activity, producer and mechanism evidence.
+
+- Recover original assay methods and preparation details before importing quantitative activity.
+- Separate natural WAC01529 from engineered M1154 production, parent from labeled derivatives, and susceptibility genes from direct targets.
+- Preserve organism/strain, units, endpoint and source uncertainty; optional gaps alone do not require a native correction.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/corbomycin.yaml; Entire native YAML, including three history events | supports | Native MINTED/SEEDED identity derives from ARO:3005071 and PubChem CID163285731. The definition alone makes a mechanism assertion. No molecular_targets, resistance_mechanisms, activity_spectrum, producer_organisms, clinical assertions, causal graphs or datasets are populated. |
+| owners | data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; ARO row 366; PubChem row 123; extract_source_inventory.py and seed_from_sources.py definition/xref paths | supports | The incorrect hydrolase-binding sentence and CHEBI:221137 xref originate in the ARO row. The PubChem row supplies the complete native graph. No corbomycin ChEBI row or exact curator override was found in the inspected inventories and ignored-inclusive searches. Source-owned fixes must survive reseeding. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Identity, equivalence, mechanism, optional fields and generated ownership | supports | An exact xref must denote the same molecular graph, direct binding needs appropriate evidence, and absent optional fields alone are not errors. A blank mode enum does not excuse a false binding claim already present in the definition. |
+| chemistry | Independent RDKit calculation using batch019 interpreter in batch033 cwd; 325-chemistry.json; 325326-xref-chemistry.json | supports | Native SMILES and InChI agree on YPKFJNUZFFXJND-XFKCSEFZSA-N, C79H66N10O22, charge zero, one fragment, six assigned and three unassigned tetrahedral centres. Masses and source mint reproduce. This is a partially specified graph, not evidence of a racemate or mixture. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/163285731/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON; CID163285731 current property response | supports | The current PubChem InChI and complete key match the native partially specified structure, including /t55-,56+,57+,64?,65?,66?,67+,68-,69-/m0/s1. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/221137/; CHEBI:221137 default_structure, chemical_data, stars and origin | refutes | The current two-star ChEBI entry has the same constitution/formula but no stereochemical layer and key YPKFJNUZFFXJND-UHFFFAOYSA-N. Independent InChI parsing finds nine unassigned centres. Its aromatic SMILES fails RDKit kekulization; the native SMILES does not. This upstream encoding problem must not be reported as a native parse failure or silently substituted into the native record. |
+| aro | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3005071; ARO:3005071 definition, citation and exact xrefs; ARO:3000081 parent response | context_only | The live ARO source retains the same hydrolase-binding sentence, PMID:32051588 and chemical xrefs. The glycopeptide parent resolves. The reproducible source assertion is not independent experimental validation of its wording. |
+| adapter | https://imodulondb.org/api/datasets; 325-adapter-catalog-network.json and 325-adapter-search.json, executed before web research | context_only | The sandbox catalog attempt failed DNS; public retrieval then succeeded. A bounded b_subtilis/modulome query for peptidoglycan hydrolase returned six annotated genes and zero iModulons. The native sentence names no species or individual enzyme; these family-level annotations do not establish drug binding, nor does the absence of a component refute the mechanism. |
+| original | https://doi.org/10.1038/s41586-020-1990-9; PMID:32051588; complete original abstract and publisher extended-data captions | supports | The original explicitly assigns peptidoglycan binding followed by blocked autolysin action. It reports low resistance development and reduced bacterial burden in a mouse MRSA skin model. Those claims do not mean direct enzyme binding, lack of any resistance, systemic efficacy or human approval. The publisher main text was subscription-limited. |
+| binding-figure | https://www.nature.com/articles/s41586-020-1990-9/figures/4; Original Figure4a-c, actual image visually inspected and caption read | supports | Figure4a measures depletion of unbound parent antibiotic after incubation with S. aureus or B. subtilis peptidoglycan at varying mass ratios. Separate panels image fluorescent BODIPY derivatives on rods versus protoplasts. These are substrate-binding and localization experiments, not a direct hydrolase-binding assay; derivative images are not silently treated as unmodified parent measurements. |
+| structure-si | https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-020-1990-9/MediaObjects/41586_2020_1990_MOESM1_ESM.pdf; Supplementary Discussion structural characterization, biosynthetic proposal and resistant-mutant analysis; Table1 NMR assignments; original Figure1 drawing visually inspected | supports | The isolated white amorphous material has C79H66N10O22 and observed [M+H]+1507.4434. NMR supports the nine aromatic amino-acid residues and crosslinks. The inspected discussion does not experimentally assign all absolute configurations. Figure1 shows the partially specified drawing; no missing stereocentre was filled by biosynthetic assumption. The proposed pathway and selected-mutant hypotheses remain distinct from proven enzyme functions. |
+| structure-figure | https://media.springernature.com/original/springer-static/image/art%3A10.1038%2Fs41586-020-1990-9/MediaObjects/41586_2020_1990_Fig1_HTML.png; Figure1b corbomycin versus complestatin, actual image | supports | The corbomycin structure was inspected separately from the neighboring complestatin drawing. It is the nonapeptide with an indole NH, phenolic groups and an N-acetyl terminus. Formula, connectivity and partial stereochemical depiction support the native identity; complete absolute stereochemistry and atropisomerism were not independently reconstructed. |
+| activity-table | https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-020-1990-9/MediaObjects/41586_2020_1990_Tab1_ESM.jpg; Original Extended Data Table1, all rows visually inspected | supports | The corbomycin column reports MIC 1 microgram/mL for B. subtilis168 and S. aureus ATCC29213, 2 for S. aureus ATCC33591, 0.25 for N. gonorrhoeae ATCC49226, and &gt;256 for E. coli BW25113. Other strain-specific values are present. HEK-cell IC50 232 micrograms/mL is a separate endpoint. Original MIC methods were not recovered, so these values are review evidence rather than a ready-to-import AST dataset. |
+| producer-followup | https://doi.org/10.1038/s41467-020-19138-5; PMID:33067466 / PMC7567792; corbomycin production Results, Figure2 caption, growth conditions and metabolic-analysis Methods | supports | The original follow-up identifies Streptomyces sp. WAC01529 as the natural producer and studies engineered S. coelicolor M1154/pAMX4 with captured crb genes. Six-day SAM fermentation at 30 C and DMSO extraction/HPLC are described. Natural production and engineered heterologous production must be separate provenance claims; GP1416 and GP6738 experiments are not corbomycin results. |
+| resistance-followup | https://doi.org/10.1128/spectrum.00370-23; PMID:37646518 / PMC10581084; susceptibility Methods, Results on VraSR/SpdC/SagB, Table1 and Discussion | supports | In S. aureus MW2 the study reports corbomycin MIC 3 micrograms/mL versus 2 for the multiple-TCS deletion strain, and increased MIC 4 in sagB or spdC deletion strains. MHB broth microdilution at 37 C for 24 h and separate growth kinetics are described. Genetic susceptibility modulation does not establish these proteins as direct drug targets. The paper explicitly leaves downstream mechanisms uncertain; source MIC 3/4 values are retained despite its general twofold-dilution method wording. No catalog, counterion or detailed compound-purity specification was verified in the inspected material sections. |
+| search | Ignored-inclusive local search and EPMC exact corbomycin search; 325-local-hits.txt; 325-focused-local-search.json; 325-discovery.json | context_only | Historical research/index hits were discovery only. The only adopted PMID was resolved and inspected; the follow-ups were independently read at the stated depth. No broad claim that further evidence does not exist is made. |
+| access | Free public source retrieval manifests; 325326-fetch1/2/3.json;325-fetch4.json | context_only | Nature main HTML is an abstract/subscription preview; the requested .pdf returned HTML, not a full paper. Original figures, extended tables, SI and binary ChemDraw supplement downloaded successfully. The ChemDraw binary was retained but not parsed; no full-main-text or complete stereochemical reconstruction is claimed. Follow-up XML sources were available. |
+| gates | Actual focused validation; 325-focused-results.json and logs | supports | Independent chemistry, native schema and strict checks each exited 0 on the unchanged target. Scientific mechanism and xref issues remain despite those passes. |
+
+## Limits And Additional Notes
+
+- The 2020 full main text was not recovered. Its complete abstract, all extended captions, actual Figure1 and Figure4, actual Extended Data Table1 and SI structural/biosynthetic/resistance discussion were inspected. NMR spectra were not independently reinterpreted, and the binary ChemDraw supplement was not parsed.
+- The 2020 activity table lacks locally recovered assay methods. The 2023 original susceptibility Methods, relevant Results/Table1 and Discussion were read; individual allele reconstruction, all supplemental tables and material purity were not exhaustively verified.
+- The 2020 GPAHex follow-up was read for exact corbomycin production Results, Methods and figure caption; unrelated analog production and all pathway experiments were not fully audited.
+- Current ChEBI has an invalid aromatic SMILES and no assigned stereochemistry. Its parse failure is upstream-only; native chemistry passes. Full natural-product absolute and atropisomeric assignment was not independently established.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native record, source input, scientific status or history was edited.
+- Native schema/strict checks used batch033; standalone chemistry used the existing batch019 RDKit interpreter against batch033 cwd.
+- Optional links, tags and notes were checked against this exact target.
+- Root audit narrowed corrective owners to the actual ARO inventory, extractor and seeder. The identity-decision table is not represented as a definition or per-xref wording override.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T135152Z-corbomycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Corbomycin: peptidoglycan-binding mechanism and exact-xref corrections'
+started_at: '2026-10-21T13:38:56Z'
+finished_at: '2026-10-21T13:51:52Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The whole native
+    YAML and actual maintained rows were read, chemistry independently calculated,
+    live chemical groundings checked and original paper abstract, figures, supplementary
+    discussion and selected follow-up experimental sections inspected. Reading limitations
+    are explicit.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The native PubChem structure is internally coherent and antibacterial activity
+  is supported. Two major corrections are needed: the definition mistakes substrate
+  binding for direct hydrolase binding, and CHEBI:221137 lacks the six stereochemical
+  assignments present in the native graph. The record remains SEEDED; missing optional
+  targets, activity and producer fields are bounded curation opportunities.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/corbomycin.yaml
+    sha256: d3d3b48a1c4141683d7ff7c4423b304cf59f3eb9eaf26f75db3eb434eaa0b365
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+targets:
+- target_id: antibioticmech:aro-e523675af2
+  path: data/antibiotics/antibacterial/corbomycin.yaml
+  label: corbomycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, source concept and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, roles and bibliographic leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem structure enrichment where present
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source inventory extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated native field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Identity grounding overrides
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Source evidence-scope overrides if applicable
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 325; one complete exact record. All 13 original input
+    hashes were preserved; all 29 expanded inputs were rechecked.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-e523675af2
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    325 (cwd /private/tmp/antibioticmech-record-reviews-033)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/corbomycin.yaml (cwd /private/tmp/antibioticmech-record-reviews-033)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/corbomycin.yaml --out /private/tmp/am-review-session/325-strict.tsv
+    (cwd /private/tmp/antibioticmech-record-reviews-033)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/corbomycin.yaml
+  locator: Entire native YAML, including three history events
+  accessed_at: '2026-10-21T13:44:26Z'
+  support: supports
+  summary: Native MINTED/SEEDED identity derives from ARO:3005071 and PubChem CID163285731.
+    The definition alone makes a mechanism assertion. No molecular_targets, resistance_mechanisms,
+    activity_spectrum, producer_organisms, clinical assertions, causal graphs or datasets
+    are populated.
+  snapshot_sha256: 4600d10ca5a7c07f9dda19a1ad0b12e3d55d71a1a75d4ecc96890663dd0f49a8
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv
+  locator: ARO row 366; PubChem row 123; extract_source_inventory.py and seed_from_sources.py
+    definition/xref paths
+  accessed_at: '2026-10-21T13:44:26Z'
+  support: supports
+  summary: The incorrect hydrolase-binding sentence and CHEBI:221137 xref originate
+    in the ARO row. The PubChem row supplies the complete native graph. No corbomycin
+    ChEBI row or exact curator override was found in the inspected inventories and
+    ignored-inclusive searches. Source-owned fixes must survive reseeding.
+  snapshot_sha256: 4600d10ca5a7c07f9dda19a1ad0b12e3d55d71a1a75d4ecc96890663dd0f49a8
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity, equivalence, mechanism, optional fields and generated ownership
+  accessed_at: '2026-10-21T13:44:26Z'
+  support: supports
+  summary: An exact xref must denote the same molecular graph, direct binding needs
+    appropriate evidence, and absent optional fields alone are not errors. A blank
+    mode enum does not excuse a false binding claim already present in the definition.
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculation using batch019 interpreter in batch033
+    cwd
+  locator: 325-chemistry.json; 325326-xref-chemistry.json
+  accessed_at: '2026-10-21T13:44:26Z'
+  support: supports
+  summary: Native SMILES and InChI agree on YPKFJNUZFFXJND-XFKCSEFZSA-N, C79H66N10O22,
+    charge zero, one fragment, six assigned and three unassigned tetrahedral centres.
+    Masses and source mint reproduce. This is a partially specified graph, not evidence
+    of a racemate or mixture.
+  snapshot_sha256: 48aa0a8e27c3907c41d4d2f59b517d743e12fb68d5b46037cb49ea0886d70f5a
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/163285731/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: CID163285731 current property response
+  accessed_at: '2026-10-21T13:40:18.581954Z'
+  support: supports
+  summary: The current PubChem InChI and complete key match the native partially specified
+    structure, including /t55-,56+,57+,64?,65?,66?,67+,68-,69-/m0/s1.
+  snapshot_sha256: 6f0c0c3eb35477dd5d91916d787413b58eafc0f482254a8b07b0ea993e3ccd26
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/221137/
+  locator: CHEBI:221137 default_structure, chemical_data, stars and origin
+  accessed_at: '2026-10-21T13:40:18.578899Z'
+  support: refutes
+  summary: The current two-star ChEBI entry has the same constitution/formula but
+    no stereochemical layer and key YPKFJNUZFFXJND-UHFFFAOYSA-N. Independent InChI
+    parsing finds nine unassigned centres. Its aromatic SMILES fails RDKit kekulization;
+    the native SMILES does not. This upstream encoding problem must not be reported
+    as a native parse failure or silently substituted into the native record.
+  snapshot_sha256: e0ac93c49c0f684f277e450c1f7537d7af11884cae8db5a0fddbe277452c6ce7
+- evidence_id: aro
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3005071
+  locator: ARO:3005071 definition, citation and exact xrefs; ARO:3000081 parent response
+  accessed_at: '2026-10-21T13:40:19.356821Z'
+  support: context_only
+  summary: The live ARO source retains the same hydrolase-binding sentence, PMID:32051588
+    and chemical xrefs. The glycopeptide parent resolves. The reproducible source
+    assertion is not independent experimental validation of its wording.
+  snapshot_sha256: 8f8f33162f62b2b3bbc496d2fb82c9f97cfd19afc323bb3430174551922e6cf8
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: 325-adapter-catalog-network.json and 325-adapter-search.json, executed
+    before web research
+  accessed_at: '2026-10-21T13:39:59.649279Z'
+  support: context_only
+  summary: The sandbox catalog attempt failed DNS; public retrieval then succeeded.
+    A bounded b_subtilis/modulome query for peptidoglycan hydrolase returned six annotated
+    genes and zero iModulons. The native sentence names no species or individual enzyme;
+    these family-level annotations do not establish drug binding, nor does the absence
+    of a component refute the mechanism.
+  snapshot_sha256: 02eb8c83d0b9adf71e9d79869970cd908eded7b52413273e7d22b37eeb7e33cf
+- evidence_id: original
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41586-020-1990-9
+  locator: PMID:32051588; complete original abstract and publisher extended-data captions
+  accessed_at: '2026-10-21T13:40:18.575499Z'
+  support: supports
+  summary: The original explicitly assigns peptidoglycan binding followed by blocked
+    autolysin action. It reports low resistance development and reduced bacterial
+    burden in a mouse MRSA skin model. Those claims do not mean direct enzyme binding,
+    lack of any resistance, systemic efficacy or human approval. The publisher main
+    text was subscription-limited.
+  snapshot_sha256: 9c80c90167ff03be7f628ac3d2be01a91d0a46b8bebd8df5041ebd19f3397ceb
+- evidence_id: binding-figure
+  kind: primary_source
+  reference: https://www.nature.com/articles/s41586-020-1990-9/figures/4
+  locator: Original Figure4a-c, actual image visually inspected and caption read
+  accessed_at: '2026-10-21T13:41:18.189516Z'
+  support: supports
+  summary: Figure4a measures depletion of unbound parent antibiotic after incubation
+    with S. aureus or B. subtilis peptidoglycan at varying mass ratios. Separate panels
+    image fluorescent BODIPY derivatives on rods versus protoplasts. These are substrate-binding
+    and localization experiments, not a direct hydrolase-binding assay; derivative
+    images are not silently treated as unmodified parent measurements.
+  snapshot_sha256: 913f73888af01de7f7f1bff33ee0f83c4f0cec77b908629eafd6cd553894bd07
+- evidence_id: structure-si
+  kind: primary_source
+  reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-020-1990-9/MediaObjects/41586_2020_1990_MOESM1_ESM.pdf
+  locator: Supplementary Discussion structural characterization, biosynthetic proposal
+    and resistant-mutant analysis; Table1 NMR assignments; original Figure1 drawing
+    visually inspected
+  accessed_at: '2026-10-21T13:41:18.183185Z'
+  support: supports
+  summary: The isolated white amorphous material has C79H66N10O22 and observed [M+H]+1507.4434.
+    NMR supports the nine aromatic amino-acid residues and crosslinks. The inspected
+    discussion does not experimentally assign all absolute configurations. Figure1
+    shows the partially specified drawing; no missing stereocentre was filled by biosynthetic
+    assumption. The proposed pathway and selected-mutant hypotheses remain distinct
+    from proven enzyme functions.
+  snapshot_sha256: c8e91259a314b63fd52de0685cbca0f119ba4719e00cf46d674df6eddcf5a684
+- evidence_id: structure-figure
+  kind: primary_source
+  reference: https://media.springernature.com/original/springer-static/image/art%3A10.1038%2Fs41586-020-1990-9/MediaObjects/41586_2020_1990_Fig1_HTML.png
+  locator: Figure1b corbomycin versus complestatin, actual image
+  accessed_at: '2026-10-21T13:41:18.186915Z'
+  support: supports
+  summary: The corbomycin structure was inspected separately from the neighboring
+    complestatin drawing. It is the nonapeptide with an indole NH, phenolic groups
+    and an N-acetyl terminus. Formula, connectivity and partial stereochemical depiction
+    support the native identity; complete absolute stereochemistry and atropisomerism
+    were not independently reconstructed.
+  snapshot_sha256: 648cbb88368efb1275654e13133ac539ddb5f2e9550af4ef2d6539d78e0f5712
+- evidence_id: activity-table
+  kind: primary_source
+  reference: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-020-1990-9/MediaObjects/41586_2020_1990_Tab1_ESM.jpg
+  locator: Original Extended Data Table1, all rows visually inspected
+  accessed_at: '2026-10-21T13:42:22.167211Z'
+  support: supports
+  summary: The corbomycin column reports MIC 1 microgram/mL for B. subtilis168 and
+    S. aureus ATCC29213, 2 for S. aureus ATCC33591, 0.25 for N. gonorrhoeae ATCC49226,
+    and >256 for E. coli BW25113. Other strain-specific values are present. HEK-cell
+    IC50 232 micrograms/mL is a separate endpoint. Original MIC methods were not recovered,
+    so these values are review evidence rather than a ready-to-import AST dataset.
+  snapshot_sha256: df4a4fa596f84a98f0ab253fa37512dba6f21edbeab2ff0c846674e07519426f
+- evidence_id: producer-followup
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41467-020-19138-5
+  locator: PMID:33067466 / PMC7567792; corbomycin production Results, Figure2 caption,
+    growth conditions and metabolic-analysis Methods
+  accessed_at: '2026-10-21T13:40:50.738901Z'
+  support: supports
+  summary: The original follow-up identifies Streptomyces sp. WAC01529 as the natural
+    producer and studies engineered S. coelicolor M1154/pAMX4 with captured crb genes.
+    Six-day SAM fermentation at 30 C and DMSO extraction/HPLC are described. Natural
+    production and engineered heterologous production must be separate provenance
+    claims; GP1416 and GP6738 experiments are not corbomycin results.
+  snapshot_sha256: c3438ad3b7a7cb0499774e41d850ed161839513efac6ee29e6a56c5777f4f0e9
+- evidence_id: resistance-followup
+  kind: primary_source
+  reference: https://doi.org/10.1128/spectrum.00370-23
+  locator: PMID:37646518 / PMC10581084; susceptibility Methods, Results on VraSR/SpdC/SagB,
+    Table1 and Discussion
+  accessed_at: '2026-10-21T13:40:50.732774Z'
+  support: supports
+  summary: In S. aureus MW2 the study reports corbomycin MIC 3 micrograms/mL versus
+    2 for the multiple-TCS deletion strain, and increased MIC 4 in sagB or spdC deletion
+    strains. MHB broth microdilution at 37 C for 24 h and separate growth kinetics
+    are described. Genetic susceptibility modulation does not establish these proteins
+    as direct drug targets. The paper explicitly leaves downstream mechanisms uncertain;
+    source MIC 3/4 values are retained despite its general twofold-dilution method
+    wording. No catalog, counterion or detailed compound-purity specification was
+    verified in the inspected material sections.
+  snapshot_sha256: b2878146698e2816af1e955a4167cdd8d214a357e0adbddaec5963895cd90a9a
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local search and EPMC exact corbomycin search
+  locator: 325-local-hits.txt; 325-focused-local-search.json; 325-discovery.json
+  accessed_at: '2026-10-21T13:44:26Z'
+  support: context_only
+  summary: Historical research/index hits were discovery only. The only adopted PMID
+    was resolved and inspected; the follow-ups were independently read at the stated
+    depth. No broad claim that further evidence does not exist is made.
+  snapshot_sha256: 340ceac14700be9bee2a319fdf301c615e3797feb460071e9b6357d6a0695009
+  search_scope: 2026-10-21; exact label, ARO:3005071, CHEBI:221137 and molecular key.
+    Repository searches included hidden and ignored files; targeted curation/conf/tests
+    search and free official/primary publication retrievals were bounded, not exhaustive
+    absence claims.
+- evidence_id: access
+  kind: search
+  reference: Free public source retrieval manifests
+  locator: 325326-fetch1/2/3.json;325-fetch4.json
+  accessed_at: '2026-10-21T13:44:26Z'
+  support: context_only
+  summary: Nature main HTML is an abstract/subscription preview; the requested .pdf
+    returned HTML, not a full paper. Original figures, extended tables, SI and binary
+    ChemDraw supplement downloaded successfully. The ChemDraw binary was retained
+    but not parsed; no full-main-text or complete stereochemical reconstruction is
+    claimed. Follow-up XML sources were available.
+  snapshot_sha256: 0dd4b6c28896380f04df6c1fb25c272030952f13353053038231607ebfe86bc7
+  search_scope: 2026-10-21; exact label, ARO:3005071, CHEBI:221137 and molecular key.
+    Repository searches included hidden and ignored files; targeted curation/conf/tests
+    search and free official/primary publication retrievals were bounded, not exhaustive
+    absence claims.
+- evidence_id: gates
+  kind: validation
+  reference: Actual focused validation
+  locator: 325-focused-results.json and logs
+  accessed_at: '2026-10-21T13:44:26Z'
+  support: supports
+  summary: Independent chemistry, native schema and strict checks each exited 0 on
+    the unchanged target. Scientific mechanism and xref issues remain despite those
+    passes.
+  snapshot_sha256: fe9f71fb53683a0fe48cd28dc3e1e3ffbaa932db2e4557bea75154b6a2fbb376
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact native structure and antibacterial eligibility
+  outcome: supported
+  summary: The native graph and PubChem source agree; original structure characterization
+    and activity support corbomycin identity. Three unassigned centres are reported
+    honestly and are not called a mixture.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  evidence_ids:
+  - native
+  - chemistry
+  - pubchem
+  - structure-si
+  - structure-figure
+  - activity-table
+- assessment_id: xref
+  area: grounding
+  topic: CHEBI:221137 exact equivalence
+  outcome: concern
+  summary: The asserted ChEBI xref lacks all six native stereochemical assignments.
+    The shared name and constitution are insufficient for exact equivalence. Keep
+    the supported native graph while resolving or qualifying the source xref.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  evidence_ids:
+  - chebi
+  - pubchem
+  - chemistry
+  - rubric
+- assessment_id: mechanism
+  area: evidence
+  topic: Definition binding object
+  outcome: concern
+  summary: The adopted original supports binding peptidoglycan and thereby blocking
+    autolysin access/action. Binding essential hydrolases is a materially different
+    claim and is not what the inspected binding experiment demonstrates.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  evidence_ids:
+  - native
+  - aro
+  - original
+  - binding-figure
+  - rubric
+- assessment_id: classification
+  area: scope
+  topic: Glycopeptide parent and ANTIBACTERIAL filing
+  outcome: supported
+  summary: The ARO parent/class, nonapeptide structure and primary growth inhibition
+    support the filing. TypeV glycopeptides need not be glycosylated; no additional
+    native activity role was silently removed.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  evidence_ids:
+  - aro
+  - structure-si
+  - activity-table
+  - producer-followup
+- assessment_id: activity
+  area: completeness
+  topic: Optional activity_spectrum
+  outcome: unknown
+  summary: Exact primary strain-specific activity is available. Original2020 MIC methods
+    and exact 2023 preparation details still need verification before quantitative
+    curation. Activity in one strain does not establish a whole-species spectrum or
+    clinical susceptibility.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  evidence_ids:
+  - activity-table
+  - resistance-followup
+  - access
+  - rubric
+- assessment_id: targets-resistance
+  area: completeness
+  topic: Optional molecular targets, resistance and causal graph
+  outcome: unknown
+  summary: A substrate-binding mechanism and genetic susceptibility follow-ups could
+    support careful enrichment. iModulon annotations and mutant phenotypes cannot
+    be promoted to direct protein binding; low observed resistance emergence is not
+    absence of resistance.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  evidence_ids:
+  - binding-figure
+  - structure-si
+  - resistance-followup
+  - adapter
+  - rubric
+- assessment_id: producer
+  area: completeness
+  topic: Optional natural and engineered producer records
+  outcome: supported
+  summary: Original corbomycin production work supports WAC01529 and a separately
+    engineered S. coelicolor host. Absence of an optional producer object is not a
+    defect.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  evidence_ids:
+  - producer-followup
+  - structure-si
+  - rubric
+- assessment_id: other-domains
+  area: scope
+  topic: Clinical products and datasets
+  outcome: not_applicable
+  summary: No native clinical-product, approval or dataset assertion is populated.
+    The mouse skin model cannot supply those claims.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  evidence_ids:
+  - native
+  - original
+- assessment_id: ownership
+  area: provenance
+  topic: Source attribution and historical status
+  outcome: supported
+  summary: Actual ARO/PubChem owners were captured before detailed assessment; all
+    original hashes and three source history events are preserved. SEEDED is appropriate
+    pending correction and does not claim previous scientific review.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  evidence_ids:
+  - native
+  - owners
+  - search
+- assessment_id: schema
+  area: schema
+  topic: Native checks
+  outcome: supported
+  summary: All focused checks pass; the identified issues concern scientific meaning
+    and exact equivalence rather than native YAML validity.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  evidence_ids:
+  - gates
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: corbomycin-definition-hydrolase-versus-peptidoglycan-binding
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The definition substitutes hydrolases for the experimentally bound peptidoglycan
+  description: The maintained ARO sentence says corbomycin binds essential peptidoglycan
+    hydrolases. Its cited original instead states that corbomycin binds peptidoglycan
+    and blocks autolysin action; inspected Figure4 directly tests peptidoglycan association.
+    Correct the binding object without asserting an individual hydrolase as a direct
+    target. Preserve downstream cell-wall-remodelling effects with their source scope.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - owners
+  - original
+  - binding-figure
+  - aro
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source definition and xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition and exact-xref emission
+  rule_id: native-review-checklist:Mode of action and Molecular targets
+  native_severity: major unsupported direct-binding claim
+  normalization_reason: Changing the directly bound biological entity changes mechanism
+    interpretation; the core compound identity and antibacterial role remain supported.
+- finding_id: F2
+  issue_key: corbomycin-chebi221137-stereo-exact-xref
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: CHEBI:221137 does not retain the native stereochemical detail
+  description: Native and current PubChem structures specify six of nine tetrahedral
+    centres, with key YPKFJNUZFFXJND-XFKCSEFZSA-N. Current CHEBI:221137 InChI specifies
+    none and has key YPKFJNUZFFXJND-UHFFFAOYSA-N. It is not an exact graph match under
+    the repository equivalence contract. Qualify or withhold this exact xref pending
+    source correction; do not erase native stereochemistry, infer a racemate, or silently
+    import the failing upstream ChEBI SMILES.
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  field_paths:
+  - xrefs[1]
+  evidence_ids:
+  - chebi
+  - pubchem
+  - chemistry
+  - owners
+  - rubric
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source definition and xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition and exact-xref emission
+  rule_id: native-review-checklist:Equivalence
+  native_severity: major wrong exact-equivalence grounding
+  normalization_reason: The record remains identifiable and internally coherent, but
+    its external equivalence assertion changes stereochemical specificity.
+actions:
+- action_id: A1
+  description: Correct the source-owned mechanism sentence to peptidoglycan binding
+    followed by blocked autolysin action.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source definition and xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition and exact-xref emission
+  acceptance_checks:
+  - Retain PMID:32051588 at the corrected claim and distinguish parent HPLC binding
+    from BODIPY derivative localization.
+  - Do not add direct hydrolase protein targets from genetic phenotypes or source
+    wording alone.
+  - Use maintained inputs and the validated curation/reseed workflow; pass focused
+    validation, corpus reproduction, provenance/history and required QC.
+- action_id: A2
+  description: Resolve the unsupported exact ChEBI equivalence without changing the
+    supported native PubChem graph.
+  finding_ids:
+  - F2
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source definition and xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition and exact-xref emission
+  acceptance_checks:
+  - Compare full InChI stereochemical layers after any upstream correction.
+  - Withhold or qualify CHEBI:221137 as exact while its graph remains stereochemically
+    unspecified; preserve provenance of the source assertion.
+  - Retain the six assigned/three unassigned native centres unless independent primary
+    structure evidence justifies a change.
+  - Confirm source-to-record reproduction and exact-xref checks after separately authorized
+    curation.
+- action_id: A3
+  description: Optionally add bounded primary activity, producer and mechanism evidence.
+  finding_ids: []
+  target_ids:
+  - antibioticmech:aro-e523675af2
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/corbomycin.yaml
+    role: Curator-owned activity_spectrum, producer and mechanism evidence
+  acceptance_checks:
+  - Recover original assay methods and preparation details before importing quantitative
+    activity.
+  - Separate natural WAC01529 from engineered M1154 production, parent from labeled
+    derivatives, and susceptibility genes from direct targets.
+  - Preserve organism/strain, units, endpoint and source uncertainty; optional gaps
+    alone do not require a native correction.
+limitations:
+- The 2020 full main text was not recovered. Its complete abstract, all extended captions,
+  actual Figure1 and Figure4, actual Extended Data Table1 and SI structural/biosynthetic/resistance
+  discussion were inspected. NMR spectra were not independently reinterpreted, and
+  the binary ChemDraw supplement was not parsed.
+- The 2020 activity table lacks locally recovered assay methods. The 2023 original
+  susceptibility Methods, relevant Results/Table1 and Discussion were read; individual
+  allele reconstruction, all supplemental tables and material purity were not exhaustively
+  verified.
+- The 2020 GPAHex follow-up was read for exact corbomycin production Results, Methods
+  and figure caption; unrelated analog production and all pathway experiments were
+  not fully audited.
+- Current ChEBI has an invalid aromatic SMILES and no assigned stereochemistry. Its
+  parse failure is upstream-only; native chemistry passes. Full natural-product absolute
+  and atropisomeric assignment was not independently established.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record, source input, scientific status or history was edited.
+- Native schema/strict checks used batch033; standalone chemistry used the existing
+  batch019 RDKit interpreter against batch033 cwd.
+- Optional links, tags and notes were checked against this exact target.
+- Root audit narrowed corrective owners to the actual ARO inventory, extractor and
+  seeder. The identity-decision table is not represented as a definition or per-xref
+  wording override.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pubchem.ncbi.nlm.nih.gov/compound/163285731
+- https://doi.org/10.1038/s41586-020-1990-9
+- https://doi.org/10.1128/spectrum.00370-23
+tags:
+- corbomycin
+- peptidoglycan-binding
+- exact-xref-stereochemistry
+```

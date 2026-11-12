@@ -1,0 +1,1052 @@
+# Cordycepin: supported exact identity with assay and metabolite boundaries
+
+- Review: 20261021T135201Z-cordycepin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T13:38:57Z
+- Finished UTC: 2026-10-21T13:52:01Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The native exact structure, nucleoside-antibiotic class and bounded H. pylori activity statement are supported. No required native correction was established. Optional enrichment should preserve high-concentration antibacterial assays, host-associated mouse endpoints, yeast metabolite activation and uncertain KNApSAcK structure encodings. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 326; one entire exact record. All 13 original input hashes were preserved, and all 33 expanded input hashes were rechecked.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:29014 | data/antibiotics/antibacterial/cordycepin.yaml | generated | cordycepin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:29014 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:29014 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:29014 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:29014 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:29014 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:29014 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:29014 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:29014 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:29014 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:29014 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:29014 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:29014 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact nucleoside identity and nomenclature
+
+identity: supported. Targets: CHEBI:29014.
+
+The complete native molecular graph matches ChEBI, PubChem, ChEMBL, KEGG and CCD; registry/synonym scope is coherent. The phosphorylated metabolites are separate entities.
+
+### Internally inconsistent KNApSAcK encodings
+
+grounding: unknown. Targets: CHEBI:29014.
+
+The displayed InChI is exact while the displayed key and SMILES disagree. Source adjudication is useful, but this review does not establish a mandatory native xref deletion.
+
+### Adopted H. pylori and fungal-provenance statement
+
+evidence: supported. Targets: CHEBI:29014.
+
+The sentence is broad and qualified as experimental. Its H. pylori activity is supported by the original mouse study; the fungal producer is supported by an independent original abstract. The traditional-use phrase concerns the fungus and does not assert drug approval.
+
+### ANTIBACTERIAL filing and nucleoside-antibiotic role
+
+scope: supported. Targets: CHEBI:29014.
+
+Direct bacterial MIC measurements and the adopted animal study support the antibacterial role. No activity against every strain, potency threshold or clinical efficacy is implied.
+
+### Optional activity_spectrum
+
+completeness: unknown. Targets: CHEBI:29014.
+
+Useful exact-compound experiments are available, but numerical import should preserve strain, reagent, medium, units, final inoculum and endpoint. The mouse CLO/qPCR measures, bacterial OD growth curves and biofilm endpoints are different observations.
+
+### Optional mechanism, molecular targets and resistance
+
+completeness: unknown. Targets: CHEBI:29014.
+
+No native direct target is asserted. New enrichment must separate parent exposure, metabolic activation, altered RNA processing, genetic susceptibility, DNA spectroscopy and host inflammatory pathways. The cited yeast papers concern different endpoints rather than one universal active-metabolite rule.
+
+### Optional producer_organisms
+
+completeness: unknown. Targets: CHEBI:29014.
+
+Generic Cordyceps provenance is supported. Exact strain-level production requires the 2017 experimental methods or another verified original; absence of the optional object is not a defect.
+
+### Source concepts, status and history
+
+provenance: supported. Targets: CHEBI:29014.
+
+Actual ChEBI/ARO owners and historical research context were captured with preserved original hashes. The three SEEDED/reseed history events do not claim scientific review; source-derived fields remain reproducible owner responsibilities.
+
+### Clinical products, approvals and datasets
+
+scope: not_applicable. Targets: CHEBI:29014.
+
+No such native assertion is populated. Animal efficacy and unrelated antitumor experiments do not provide human antibacterial approval or a transcriptomic dataset assertion.
+
+### Focused checks
+
+schema: supported. Targets: CHEBI:29014.
+
+Native chemistry, schema and strict checks pass; remaining limitations concern source granularity and optional future enrichment.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Optionally add primary activity and mechanism context after resolving experimental granularity.
+
+- Preserve 2019 MIC units of mg/mL and source-specific strains; recover final assay inoculum before importing precise AST observations.
+- Do not convert optical-density curves into CFU kill kinetics, mouse qPCR into MIC, or antibiofilm128 micrograms/mL into growth inhibition.
+- Keep yeast activation and RNA-processing claims endpoint-specific and separate the parent compound from its phosphorylated metabolites.
+- Retain the source CLO-method conflict and unrecovered supplementary experiment as explicit limits.
+- Use separately authorized curation and required reproduction, evidence, history and schema gates.
+
+### A2
+
+Optionally resolve the conflicting KNApSAcK encodings before any chemical-grounding change.
+
+- Reconcile displayed InChI, InChIKey and SMILES at C00001495.
+- Keep the supported native exact graph; do not replace it with the partially specified upstream SMILES or delete the xref solely from the inconsistent displayed key.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/cordycepin.yaml; Entire YAML, all seven synonyms, eight xrefs, source concepts and three history events | supports | The SEEDED exact record contains an ARO-derived definition with PMID:35191475 and no populated molecular_targets, resistance_mechanisms, activity_spectrum, producer_organisms, causal graphs, clinical products or datasets. It does not claim a direct protein target or human therapeutic approval. |
+| owners | data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; ChEBI row 572; ARO row 390; source extraction/seeder and captured curation context | supports | The ChEBI row supplies identity and the nucleoside-antibiotic role; ARO supplies the adopted H. pylori definition and citation. The adjacent cordycepin-triphosphate inventory row is a separate compound. Historical yeast research/test artifacts were found by ignored-inclusive searches and treated as discovery, not as native curation. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Identity, equivalence, evidence placement, source scope and optional completeness | supports | Exact structure and chemical form must be preserved, primary evidence must remain at the claim it supports, and absent optional fields alone do not establish a defect. |
+| chemistry | Independent RDKit calculation using batch019 interpreter against batch033 cwd; 326-chemistry.json and 325326-xref-chemistry.json | supports | Native SMILES and InChI agree on neutral C10H13N5O3, full key OFEZSBMBBKLLBJ-BAJZRUMYSA-N and all three specified tetrahedral centres. Formula, exact/average masses and source mint are coherent. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/29014/; CHEBI:29014 current identity, synonyms, parents and roles | supports | Current ChEBI agrees with the exact native molecular graph and 3-prime-deoxyadenosine identity. Current additional antimetabolite/antineoplastic roles and newer citations are not automatically adopted antibacterial claims. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6303/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON; CID6303 complete property response | supports | The exact PubChem formula, charge, InChI and stereochemical key match the native graph. |
+| chembl | https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL305686.json; CHEMBL305686 molecule structures | supports | The current ChEMBL structure independently reproduces the complete native stereochemical key. |
+| kegg | https://rest.kegg.jp/get/C08431/mol; C08431 molfile | supports | The current KEGG molfile independently reproduces the full native graph; it is not cordycepin triphosphate. |
+| ccd | https://data.rcsb.org/rest/v1/core/chemcomp/3AD; CCD 3AD component descriptors | supports | The current PDB chemical component descriptors independently reproduces the same complete key. This chemical identity does not establish a physiologically relevant macromolecular target. |
+| aro | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3007139; ARO:3007139 and its nucleoside-antibiotic parent | supports | ARO resolves to cordycepin and retains the H. pylori sentence and PMID:35191475. The class and source-concept links are coherent. |
+| registry | https://www.ebi.ac.uk/chebi/backend/api/public/compound/29014/; Current ChEBI registry xrefs and nomenclature | supports | CAS73-03-0 and Beilstein0035194 are retained by current ChEBI; the purchased 2019 reagent also identifies CAS73-03-0. No independent legacy Beilstein register page was recovered. The seven native synonyms denote the nucleoside and contain no identified branded salt-product name. |
+| knapsack | http://www.knapsackfamily.com/knapsack_core/information.php?word=C00001495; C00001495 displayed InChI, InChIKey and SMILES; independent 326-knapsack-chemistry.json | context_only | KNApSAcK is internally inconsistent: its displayed InChI matches native cordycepin, its displayed key ends CXZLXVGFNA-N, and its SMILES leaves one centre unspecified and computes GZRQHRFASA-N. Because one official encoding matches exactly, this is an unresolved upstream encoding conflict rather than a proven wrong native xref; do not silently substitute or remove it. |
+| adopted | https://doi.org/10.1093/femspd/ftac005; PMID:35191475; full public publisher reader, Methods/Results/Discussion | supports | In infected BALB/c mice, cordycepin 10, 20 or 40 mg/kg for three weeks reduced gastric infection-associated readouts and inflammation. The oral inoculation schedule and OAC comparator are reported. No local supplier/purity specification or unequivocal challenge strain identifier was verified; SS1 in the primer table alone does not establish the challenge strain. These are animal and host-response results, not a clinical susceptibility breakpoint or direct bacterial target experiment. |
+| adopted-figure | https://oup.silverchair-cdn.com/article-minimal/6534255; Original Figure1 A-C, actual image inspected | supports | The plotted endpoints are CLO score, serum H. pylori-specific IgG OD450 and relative gastric H. pylori16S rDNA, with n=12 and a dose response. They are not CFU-per-mass counts. Methods call CLO a clorprenaline ELISA with kit E-FS-E089, whereas Results/Figure1 call it a urease CLO score; this source inconsistency is retained. |
+| adopted-si-boundary | https://doi.org/10.1093/femspd/ftac005; Main-text statement referring to supplementary FigureS1 | context_only | The main text reports reduced in-vitro H. pylori viability at 50-200 micromolar, but the supplementary experiment was not recovered. It must not be converted into a measured MIC or a fully verified strain-specific direct-growth assay. SOCS3/ROR-gamma-t and Th17 findings concern host inflammatory pathways. |
+| bacterial2019 | https://doi.org/10.1007/s12275-019-8113-z; PMID:30929229; full Methods and Results/Discussion; Table1 on printed page291 visually inspected | supports | The study used at least 98% cordycepin, CAS73-03-0, from Xi’an Natural Field. In 24-hour LB assays it reports MIC/MBC in mg/mL: E. coli ATCC25922 2.5/10, B. subtilis9372 1.25/5, and S. mutans ATCC35668 5/&gt;10. Other panel strains are reported individually. Methods describe 20 microlitres of 10^8 CFU/mL inoculum, but the final assay volume was not established. Final inoculum, strain and medium should be resolved before structured quantitative import. |
+| bacterial-mechanism | https://doi.org/10.1007/s12275-019-8113-z; Printed pages289-296; Figure2 growth curves and Table1 actual page viewed | context_only | The time-killing label refers to OD600 growth curves, not viable-count kill kinetics. Membrane microscopy, leakage and PI/cFDA staining show damage; the authors also state rupture may follow death. Isolated genomic-DNA spectroscopy and dye competition support an interaction hypothesis, not a site-specific bacterial protein target. Methods/captions differ on some microscopy dose/time settings, so these should not be flattened into one definitive mechanism protocol. |
+| mutans2025 | https://doi.org/10.1186/s12903-024-05355-7; PMID:39755609 / PMC11700466; reagent, MIC and biofilm Methods, corresponding Results and Discussion | supports | Using S. mutans UA159 ATCC700610 in BHI and BENCAOYIKANG YK220110 material, the study found no effective MIC through 4096 micrograms/mL at 24 hours. Treatment at 128 micrograms/mL for 10 minutes at 8 and 20 hours reduced 24-hour biofilm biomass/metabolic readouts without changing the live-cell fraction. This is an antibiofilm phenotype, not proof of growth inhibition at 128 micrograms/mL. Different strain, medium and upper dose mean this result does not contradict the 2019 5 mg/mL MIC by itself. |
+| yeast2009 | https://doi.org/10.1261/rna.1458909; PMID:19324962 / PMC2673080; initial growth/activation Results, relevant Methods; actual Figure1 and Table1 images | supports | Saccharomyces cerevisiae was exposed to Sigma-Aldrich cordycepin, generally20 micrograms/mL, with selected spot assays at 80/120. Loss of ADO1 or ADK1 reduced growth sensitivity, leading the authors to infer a phosphorylated toxic form. These are relative growth phenotypes under specified media/temperature, not clinical resistance categories. The tested parent nucleoside must be separated from the intracellular metabolites and from direct polymerase-binding claims. |
+| yeast-visual | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d74a/2673080/2c7f755f64b2/837fig1.jpg; Actual original Figure1 and separate strain Table1 images | supports | Figure1C visibly compares deletion strains across0,20,80 and120 micrograms/mL. Table1 lists several laboratory strain/allele backgrounds but does not identify every activation-gene deletion shown in the figure; do not assign one reference genotype to all strains without checking its provenance. |
+| yeast2021 | https://doi.org/10.7554/eLife.65331; Original eLife XML; activation/transporter/Rpb1 Results, Figure6 captions and growth Methods | supports | At20 micrograms/mL in laboratory S. cerevisiae, ADO1 deletion prevents an alternative-polyadenylation response whereas ADK1 deletion does not. The authors infer a monophosphorylated intermediate for that endpoint, distinct from the 2009 growth-toxicity interpretation. NRT1 and Rpb1 phenotypes are contextual genetic evidence; they do not establish direct parent-drug binding. Figure6D combines cordycepin with mycophenolic acid and must not be transferred as monotherapy. |
+| producer | https://doi.org/10.1016/j.chembiol.2017.09.001; PMID:29056419; complete original abstract only | supports | The original biosynthesis abstract identifies Cordyceps militaris cordycepin production coupled to pentostatin production. This supports the native generic fungal provenance, but exact producer-strain and biosynthetic-enzyme annotations require the unrecovered full experimental source. The later2019 editorial was discovery only. |
+| search | Ignored-inclusive local search and free primary-source follow-up; 326-local-hits.txt;326-focused-local-search.json; captured historical research and tests | context_only | The sole adopted native citation was resolved and fully inspected through the public publisher reader. Existing yeast context reports were discovered rather than presumed absent, and their original sources were independently read at the stated depth. Current ChEBI newer citations are not all reviewed or treated as adopted native leads. |
+| adapter | https://imodulondb.org/api/datasets; 325-adapter-catalog-network.json, fetched before web follow-up | context_only | The native record has no named gene, pathway or expression dataset, so no native adapter claim needs adjudication. The available catalog contains no S. cerevisiae dataset for the optional yeast experiments. Catalog absence is not negative biological evidence. |
+| access | Free retrieval manifests; 325326-fetch1/2/3.json;326-fetch-more/final.json;326-figures-fetch.json;326-2019-pdf-fetch.json | context_only | Direct OUP and SI routes failed 403; the public minimal reader supplied the main2022 paper. The 2009 EPMC XML returned 500, but the complete PMC HTML was recovered. The 2017 publisher PDF returned 403, leaving abstract-only producer verification. The 2019 original publisher PDF was recovered successfully; its Methods, Results/Discussion and actual Table1 were inspected. |
+| gates | Actual focused chemistry, schema and strict validation; 326-focused-results.json and logs | supports | All three focused checks exited 0 against the unchanged native record. |
+
+## Limits And Additional Notes
+
+- The 2022 main Methods/Results/Discussion and actual Figure1 were inspected, but supplementary FigureS1 was not recovered. Reagent purity and an unequivocal animal-challenge strain were not verified; CLO-method terminology conflicts within the source.
+- The 2019 full Methods and Results/Discussion were read and Table1/Figure2 visually inspected. Individual spectral and microscopy images were not independently reanalyzed; some dose/time descriptions differ between Methods and captions.
+- The 2025 oral-biofilm paper was read for relevant Methods, Results and Discussion, not independently audited across all transcriptomic data or supplementary experiments.
+- The 2009 yeast source was read for initial growth/activation Results and relevant Methods, with actual Figure1/Table1 inspection; later RNA-processing experiments were not exhaustively reviewed. The 2021 source was read for activation, transporter and Rpb1 passages plus Methods/Figure6 captions; its figures were not visually reanalyzed.
+- The 2017 producer original was available only at complete-abstract depth. No exact fungal strain or enzyme annotation was inferred from the 2019 editorial.
+- KNApSAcK has discordant structure encodings, and legacy Beilstein was checked through official ChEBI rather than an independent historical register.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native record, source input, scientific status or history was edited.
+- Native schema/strict checks used batch033; standalone chemistry used the existing batch019 RDKit interpreter against batch033 cwd.
+- Optional links, tags and notes were checked for this exact compound.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T135201Z-cordycepin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cordycepin: supported exact identity with assay and metabolite boundaries'
+started_at: '2026-10-21T13:38:57Z'
+finished_at: '2026-10-21T13:52:01Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The native exact structure, nucleoside-antibiotic class and bounded H. pylori
+  activity statement are supported. No required native correction was established.
+  Optional enrichment should preserve high-concentration antibacterial assays, host-associated
+  mouse endpoints, yeast metabolite activation and uncertain KNApSAcK structure encodings.
+  Scientific assessment retains the stated evidence limits; full verification is blocked
+  by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cordycepin.yaml
+    sha256: 721122b233eea1341feb863c2a7c82c555dbf5a6f8a5b576d71ec3b4014c6c73
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: tests/test_cordycepin_primary_context.py
+    sha256: d4ad546e872101381bc6f8847b13d4dc98b28a8086c71654396d763fe8c91183
+    role: context
+  - path: tests/test_cordycepin_reference_lead.py
+    sha256: d311389cc5ea9ab9d4cd3dfd967a9c9296953c2fdfd3aeba3187c295a1457bef
+    role: context
+  - path: research/2026-10-12-cordycepin-primary-context.json
+    sha256: 8118cc42b9270338fe40827e3ae7dfc7cbbeb2df2e55fc4c12f5e47415fd5247
+    role: context
+  - path: research/2026-10-09-cordycepin-reference-lead.json
+    sha256: 9dbb2c85db09d3c1afe49ecbee56fb00c7e2fecb2946507d1326c845e4e3553c
+    role: context
+targets:
+- target_id: CHEBI:29014
+  path: data/antibiotics/antibacterial/cordycepin.yaml
+  label: cordycepin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, source concept and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, roles and bibliographic leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem structure enrichment where present
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source inventory extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated native field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Identity grounding overrides
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Source evidence-scope overrides if applicable
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 326; one entire exact record. All 13 original input hashes
+    were preserved, and all 33 expanded input hashes were rechecked.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:29014
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:29014
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    326 (cwd /private/tmp/antibioticmech-record-reviews-033)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:29014
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cordycepin.yaml (cwd /private/tmp/antibioticmech-record-reviews-033)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:29014
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cordycepin.yaml --out /private/tmp/am-review-session/326-strict.tsv
+    (cwd /private/tmp/antibioticmech-record-reviews-033)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:29014
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:29014
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:29014
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:29014
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:29014
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:29014
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:29014
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:29014
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:29014
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cordycepin.yaml
+  locator: Entire YAML, all seven synonyms, eight xrefs, source concepts and three
+    history events
+  accessed_at: '2026-10-21T13:50:11Z'
+  support: supports
+  summary: The SEEDED exact record contains an ARO-derived definition with PMID:35191475
+    and no populated molecular_targets, resistance_mechanisms, activity_spectrum,
+    producer_organisms, causal graphs, clinical products or datasets. It does not
+    claim a direct protein target or human therapeutic approval.
+  snapshot_sha256: a739cb652a86a248b8113d65bbc95c08a9838f43ac42b754992c6460699ce24d
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv
+  locator: ChEBI row 572; ARO row 390; source extraction/seeder and captured curation
+    context
+  accessed_at: '2026-10-21T13:50:11Z'
+  support: supports
+  summary: The ChEBI row supplies identity and the nucleoside-antibiotic role; ARO
+    supplies the adopted H. pylori definition and citation. The adjacent cordycepin-triphosphate
+    inventory row is a separate compound. Historical yeast research/test artifacts
+    were found by ignored-inclusive searches and treated as discovery, not as native
+    curation.
+  snapshot_sha256: a739cb652a86a248b8113d65bbc95c08a9838f43ac42b754992c6460699ce24d
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity, equivalence, evidence placement, source scope and optional completeness
+  accessed_at: '2026-10-21T13:50:11Z'
+  support: supports
+  summary: Exact structure and chemical form must be preserved, primary evidence must
+    remain at the claim it supports, and absent optional fields alone do not establish
+    a defect.
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculation using batch019 interpreter against batch033
+    cwd
+  locator: 326-chemistry.json and 325326-xref-chemistry.json
+  accessed_at: '2026-10-21T13:50:11Z'
+  support: supports
+  summary: Native SMILES and InChI agree on neutral C10H13N5O3, full key OFEZSBMBBKLLBJ-BAJZRUMYSA-N
+    and all three specified tetrahedral centres. Formula, exact/average masses and
+    source mint are coherent.
+  snapshot_sha256: 0437d947e955980eb2318dd73352588dc0824f3078d33dfa92e22b165fb73989
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/29014/
+  locator: CHEBI:29014 current identity, synonyms, parents and roles
+  accessed_at: '2026-10-21T13:40:18.580374Z'
+  support: supports
+  summary: Current ChEBI agrees with the exact native molecular graph and 3-prime-deoxyadenosine
+    identity. Current additional antimetabolite/antineoplastic roles and newer citations
+    are not automatically adopted antibacterial claims.
+  snapshot_sha256: 5f1ca4fd8e99881e4b47707d0d4a91ee042fccc40092f06686e6ac829ce5fd60
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6303/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: CID6303 complete property response
+  accessed_at: '2026-10-21T13:40:18.583432Z'
+  support: supports
+  summary: The exact PubChem formula, charge, InChI and stereochemical key match the
+    native graph.
+  snapshot_sha256: 0fca2031cb28e84450c72cd5561864da2d4c111997bc8404d6cbb68e7451a63e
+- evidence_id: chembl
+  kind: authority
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL305686.json
+  locator: CHEMBL305686 molecule structures
+  accessed_at: '2026-10-21T13:40:18.961380Z'
+  support: supports
+  summary: The current ChEMBL structure independently reproduces the complete native
+    stereochemical key.
+  snapshot_sha256: eff81fa26aa1c1fc6cecdede55e8952355357e01997aa85ccebca2ec7211b238
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/C08431/mol
+  locator: C08431 molfile
+  accessed_at: '2026-10-21T13:40:19.261500Z'
+  support: supports
+  summary: The current KEGG molfile independently reproduces the full native graph;
+    it is not cordycepin triphosphate.
+  snapshot_sha256: f73f77751c1d52d81fc56c006fc034c67d04675c86112af870bc499305bb5d8c
+- evidence_id: ccd
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/chemcomp/3AD
+  locator: CCD 3AD component descriptors
+  accessed_at: '2026-10-21T13:40:19.283855Z'
+  support: supports
+  summary: The current PDB chemical component descriptors independently reproduces
+    the same complete key. This chemical identity does not establish a physiologically
+    relevant macromolecular target.
+  snapshot_sha256: 7a77f525baa45a0ebd39cfb7c60516c4f49d0b8add74dfef601a88e40681f04f
+- evidence_id: aro
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3007139
+  locator: ARO:3007139 and its nucleoside-antibiotic parent
+  accessed_at: '2026-10-21T13:40:19.409106Z'
+  support: supports
+  summary: ARO resolves to cordycepin and retains the H. pylori sentence and PMID:35191475.
+    The class and source-concept links are coherent.
+  snapshot_sha256: 35f81676b933669730c5b9b2a481004157d4852aeaf868c64a1938020019776e
+- evidence_id: registry
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/29014/
+  locator: Current ChEBI registry xrefs and nomenclature
+  accessed_at: '2026-10-21T13:40:18.580374Z'
+  support: supports
+  summary: CAS73-03-0 and Beilstein0035194 are retained by current ChEBI; the purchased
+    2019 reagent also identifies CAS73-03-0. No independent legacy Beilstein register
+    page was recovered. The seven native synonyms denote the nucleoside and contain
+    no identified branded salt-product name.
+  snapshot_sha256: 5f1ca4fd8e99881e4b47707d0d4a91ee042fccc40092f06686e6ac829ce5fd60
+- evidence_id: knapsack
+  kind: authority
+  reference: http://www.knapsackfamily.com/knapsack_core/information.php?word=C00001495
+  locator: C00001495 displayed InChI, InChIKey and SMILES; independent 326-knapsack-chemistry.json
+  accessed_at: '2026-10-21T13:40:19.938452Z'
+  support: context_only
+  summary: 'KNApSAcK is internally inconsistent: its displayed InChI matches native
+    cordycepin, its displayed key ends CXZLXVGFNA-N, and its SMILES leaves one centre
+    unspecified and computes GZRQHRFASA-N. Because one official encoding matches exactly,
+    this is an unresolved upstream encoding conflict rather than a proven wrong native
+    xref; do not silently substitute or remove it.'
+  snapshot_sha256: ed4ab1414bba20eeb84640770e7032ab337286f4241dbe141bc251e7aa1572e6
+- evidence_id: adopted
+  kind: primary_source
+  reference: https://doi.org/10.1093/femspd/ftac005
+  locator: PMID:35191475; full public publisher reader, Methods/Results/Discussion
+  accessed_at: '2026-10-21T13:41:18.786169Z'
+  support: supports
+  summary: In infected BALB/c mice, cordycepin 10, 20 or 40 mg/kg for three weeks
+    reduced gastric infection-associated readouts and inflammation. The oral inoculation
+    schedule and OAC comparator are reported. No local supplier/purity specification
+    or unequivocal challenge strain identifier was verified; SS1 in the primer table
+    alone does not establish the challenge strain. These are animal and host-response
+    results, not a clinical susceptibility breakpoint or direct bacterial target experiment.
+  snapshot_sha256: d39aba532a5dd5a87db9ed1ce550ddc4fb8b26ced57e25c31f094268a2e1e37c
+- evidence_id: adopted-figure
+  kind: primary_source
+  reference: https://oup.silverchair-cdn.com/article-minimal/6534255
+  locator: Original Figure1 A-C, actual image inspected
+  accessed_at: '2026-10-21T13:45:50.112763Z'
+  support: supports
+  summary: The plotted endpoints are CLO score, serum H. pylori-specific IgG OD450
+    and relative gastric H. pylori16S rDNA, with n=12 and a dose response. They are
+    not CFU-per-mass counts. Methods call CLO a clorprenaline ELISA with kit E-FS-E089,
+    whereas Results/Figure1 call it a urease CLO score; this source inconsistency
+    is retained.
+  snapshot_sha256: ad1772db18301c8cd507d7a159454934489578f8b1e4eb4d6a1598516fbf0d3d
+- evidence_id: adopted-si-boundary
+  kind: primary_source
+  reference: https://doi.org/10.1093/femspd/ftac005
+  locator: Main-text statement referring to supplementary FigureS1
+  accessed_at: '2026-10-21T13:41:18.786169Z'
+  support: context_only
+  summary: The main text reports reduced in-vitro H. pylori viability at 50-200 micromolar,
+    but the supplementary experiment was not recovered. It must not be converted into
+    a measured MIC or a fully verified strain-specific direct-growth assay. SOCS3/ROR-gamma-t
+    and Th17 findings concern host inflammatory pathways.
+  snapshot_sha256: d39aba532a5dd5a87db9ed1ce550ddc4fb8b26ced57e25c31f094268a2e1e37c
+- evidence_id: bacterial2019
+  kind: primary_source
+  reference: https://doi.org/10.1007/s12275-019-8113-z
+  locator: PMID:30929229; full Methods and Results/Discussion; Table1 on printed page291
+    visually inspected
+  accessed_at: '2026-10-21T13:46:28.182982Z'
+  support: supports
+  summary: 'The study used at least 98% cordycepin, CAS73-03-0, from Xi’an Natural
+    Field. In 24-hour LB assays it reports MIC/MBC in mg/mL: E. coli ATCC25922 2.5/10,
+    B. subtilis9372 1.25/5, and S. mutans ATCC35668 5/>10. Other panel strains are
+    reported individually. Methods describe 20 microlitres of 10^8 CFU/mL inoculum,
+    but the final assay volume was not established. Final inoculum, strain and medium
+    should be resolved before structured quantitative import.'
+  snapshot_sha256: 4a3ee27decca0d935ad4fadaad2b53afd53ff09ff09abc1a2ece5da98196b6f8
+- evidence_id: bacterial-mechanism
+  kind: primary_source
+  reference: https://doi.org/10.1007/s12275-019-8113-z
+  locator: Printed pages289-296; Figure2 growth curves and Table1 actual page viewed
+  accessed_at: '2026-10-21T13:46:28.182982Z'
+  support: context_only
+  summary: The time-killing label refers to OD600 growth curves, not viable-count
+    kill kinetics. Membrane microscopy, leakage and PI/cFDA staining show damage;
+    the authors also state rupture may follow death. Isolated genomic-DNA spectroscopy
+    and dye competition support an interaction hypothesis, not a site-specific bacterial
+    protein target. Methods/captions differ on some microscopy dose/time settings,
+    so these should not be flattened into one definitive mechanism protocol.
+  snapshot_sha256: 4a3ee27decca0d935ad4fadaad2b53afd53ff09ff09abc1a2ece5da98196b6f8
+- evidence_id: mutans2025
+  kind: primary_source
+  reference: https://doi.org/10.1186/s12903-024-05355-7
+  locator: PMID:39755609 / PMC11700466; reagent, MIC and biofilm Methods, corresponding
+    Results and Discussion
+  accessed_at: '2026-10-21T13:40:50.744533Z'
+  support: supports
+  summary: Using S. mutans UA159 ATCC700610 in BHI and BENCAOYIKANG YK220110 material,
+    the study found no effective MIC through 4096 micrograms/mL at 24 hours. Treatment
+    at 128 micrograms/mL for 10 minutes at 8 and 20 hours reduced 24-hour biofilm
+    biomass/metabolic readouts without changing the live-cell fraction. This is an
+    antibiofilm phenotype, not proof of growth inhibition at 128 micrograms/mL. Different
+    strain, medium and upper dose mean this result does not contradict the 2019 5
+    mg/mL MIC by itself.
+  snapshot_sha256: 43e9aab0a0beb833595f38eab2e0c1184471847430f85b5d7d2474ef6fc3f86a
+- evidence_id: yeast2009
+  kind: primary_source
+  reference: https://doi.org/10.1261/rna.1458909
+  locator: PMID:19324962 / PMC2673080; initial growth/activation Results, relevant
+    Methods; actual Figure1 and Table1 images
+  accessed_at: '2026-10-21T13:45:10.691984Z'
+  support: supports
+  summary: Saccharomyces cerevisiae was exposed to Sigma-Aldrich cordycepin, generally20
+    micrograms/mL, with selected spot assays at 80/120. Loss of ADO1 or ADK1 reduced
+    growth sensitivity, leading the authors to infer a phosphorylated toxic form.
+    These are relative growth phenotypes under specified media/temperature, not clinical
+    resistance categories. The tested parent nucleoside must be separated from the
+    intracellular metabolites and from direct polymerase-binding claims.
+  snapshot_sha256: ff5f7a574019193bb013653bc9130f5ca01bafd1236d6827aea4af185fe2d89a
+- evidence_id: yeast-visual
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d74a/2673080/2c7f755f64b2/837fig1.jpg
+  locator: Actual original Figure1 and separate strain Table1 images
+  accessed_at: '2026-10-21T13:45:50.115814Z'
+  support: supports
+  summary: Figure1C visibly compares deletion strains across0,20,80 and120 micrograms/mL.
+    Table1 lists several laboratory strain/allele backgrounds but does not identify
+    every activation-gene deletion shown in the figure; do not assign one reference
+    genotype to all strains without checking its provenance.
+  snapshot_sha256: 477f1d594cbb00c7037ed26f3810b089f406d0417301419de5d4ee90682f6c38
+- evidence_id: yeast2021
+  kind: primary_source
+  reference: https://doi.org/10.7554/eLife.65331
+  locator: Original eLife XML; activation/transporter/Rpb1 Results, Figure6 captions
+    and growth Methods
+  accessed_at: '2026-10-21T13:42:56.300141Z'
+  support: supports
+  summary: At20 micrograms/mL in laboratory S. cerevisiae, ADO1 deletion prevents
+    an alternative-polyadenylation response whereas ADK1 deletion does not. The authors
+    infer a monophosphorylated intermediate for that endpoint, distinct from the 2009
+    growth-toxicity interpretation. NRT1 and Rpb1 phenotypes are contextual genetic
+    evidence; they do not establish direct parent-drug binding. Figure6D combines
+    cordycepin with mycophenolic acid and must not be transferred as monotherapy.
+  snapshot_sha256: 469d4dc296c8c27c34bbda6f8d80a2cbbc89351cd64422754fb928676a638d7f
+- evidence_id: producer
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.chembiol.2017.09.001
+  locator: PMID:29056419; complete original abstract only
+  accessed_at: '2026-10-21T13:42:56.297999Z'
+  support: supports
+  summary: The original biosynthesis abstract identifies Cordyceps militaris cordycepin
+    production coupled to pentostatin production. This supports the native generic
+    fungal provenance, but exact producer-strain and biosynthetic-enzyme annotations
+    require the unrecovered full experimental source. The later2019 editorial was
+    discovery only.
+  snapshot_sha256: 30f34406212dc257f02b1ed1f1d255a196f930a43b13c0cb2fdd70a5d8306a4e
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local search and free primary-source follow-up
+  locator: 326-local-hits.txt;326-focused-local-search.json; captured historical research
+    and tests
+  accessed_at: '2026-10-21T13:50:11Z'
+  support: context_only
+  summary: The sole adopted native citation was resolved and fully inspected through
+    the public publisher reader. Existing yeast context reports were discovered rather
+    than presumed absent, and their original sources were independently read at the
+    stated depth. Current ChEBI newer citations are not all reviewed or treated as
+    adopted native leads.
+  snapshot_sha256: cee3386382cedbe810fbaafc7faec9065cbb5a46a9cc509c85d07800d74f3331
+  search_scope: 2026-10-21; exact cordycepin label, CHEBI:29014, ARO:3007139, native
+    molecular key and adopted PMID:35191475. Repository searches included hidden and
+    ignored files, followed by bounded official chemical and free primary-paper retrievals;
+    no exhaustive literature-absence claim.
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: 325-adapter-catalog-network.json, fetched before web follow-up
+  accessed_at: '2026-10-21T13:50:11Z'
+  support: context_only
+  summary: The native record has no named gene, pathway or expression dataset, so
+    no native adapter claim needs adjudication. The available catalog contains no
+    S. cerevisiae dataset for the optional yeast experiments. Catalog absence is not
+    negative biological evidence.
+  snapshot_sha256: 29e6c14282557b2e19f4df100551e6bb93f97b7d23a81f10f85a9a5a4d0ec6ac
+- evidence_id: access
+  kind: search
+  reference: Free retrieval manifests
+  locator: 325326-fetch1/2/3.json;326-fetch-more/final.json;326-figures-fetch.json;326-2019-pdf-fetch.json
+  accessed_at: '2026-10-21T13:50:11Z'
+  support: context_only
+  summary: Direct OUP and SI routes failed 403; the public minimal reader supplied
+    the main2022 paper. The 2009 EPMC XML returned 500, but the complete PMC HTML
+    was recovered. The 2017 publisher PDF returned 403, leaving abstract-only producer
+    verification. The 2019 original publisher PDF was recovered successfully; its
+    Methods, Results/Discussion and actual Table1 were inspected.
+  snapshot_sha256: a84377931d6e9ad03148f6b9c08b208c8637ac45989bf5ebc655ac223028a6c8
+  search_scope: 2026-10-21; exact cordycepin label, CHEBI:29014, ARO:3007139, native
+    molecular key and adopted PMID:35191475. Repository searches included hidden and
+    ignored files, followed by bounded official chemical and free primary-paper retrievals;
+    no exhaustive literature-absence claim.
+- evidence_id: gates
+  kind: validation
+  reference: Actual focused chemistry, schema and strict validation
+  locator: 326-focused-results.json and logs
+  accessed_at: '2026-10-21T13:50:11Z'
+  support: supports
+  summary: All three focused checks exited 0 against the unchanged native record.
+  snapshot_sha256: 947f51afbd810d83e64fdca5137807e55364304a74045fb1dafcb6113ee6b2d5
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact nucleoside identity and nomenclature
+  outcome: supported
+  summary: The complete native molecular graph matches ChEBI, PubChem, ChEMBL, KEGG
+    and CCD; registry/synonym scope is coherent. The phosphorylated metabolites are
+    separate entities.
+  target_ids:
+  - CHEBI:29014
+  evidence_ids:
+  - native
+  - chemistry
+  - chebi
+  - pubchem
+  - chembl
+  - kegg
+  - ccd
+  - registry
+- assessment_id: knapsack
+  area: grounding
+  topic: Internally inconsistent KNApSAcK encodings
+  outcome: unknown
+  summary: The displayed InChI is exact while the displayed key and SMILES disagree.
+    Source adjudication is useful, but this review does not establish a mandatory
+    native xref deletion.
+  target_ids:
+  - CHEBI:29014
+  evidence_ids:
+  - knapsack
+  - chemistry
+  - rubric
+- assessment_id: definition
+  area: evidence
+  topic: Adopted H. pylori and fungal-provenance statement
+  outcome: supported
+  summary: The sentence is broad and qualified as experimental. Its H. pylori activity
+    is supported by the original mouse study; the fungal producer is supported by
+    an independent original abstract. The traditional-use phrase concerns the fungus
+    and does not assert drug approval.
+  target_ids:
+  - CHEBI:29014
+  evidence_ids:
+  - adopted
+  - adopted-figure
+  - producer
+  - native
+- assessment_id: class
+  area: scope
+  topic: ANTIBACTERIAL filing and nucleoside-antibiotic role
+  outcome: supported
+  summary: Direct bacterial MIC measurements and the adopted animal study support
+    the antibacterial role. No activity against every strain, potency threshold or
+    clinical efficacy is implied.
+  target_ids:
+  - CHEBI:29014
+  evidence_ids:
+  - bacterial2019
+  - mutans2025
+  - adopted
+  - aro
+  - chebi
+- assessment_id: activity
+  area: completeness
+  topic: Optional activity_spectrum
+  outcome: unknown
+  summary: Useful exact-compound experiments are available, but numerical import should
+    preserve strain, reagent, medium, units, final inoculum and endpoint. The mouse
+    CLO/qPCR measures, bacterial OD growth curves and biofilm endpoints are different
+    observations.
+  target_ids:
+  - CHEBI:29014
+  evidence_ids:
+  - bacterial2019
+  - bacterial-mechanism
+  - mutans2025
+  - adopted-figure
+  - adopted-si-boundary
+  - rubric
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional mechanism, molecular targets and resistance
+  outcome: unknown
+  summary: No native direct target is asserted. New enrichment must separate parent
+    exposure, metabolic activation, altered RNA processing, genetic susceptibility,
+    DNA spectroscopy and host inflammatory pathways. The cited yeast papers concern
+    different endpoints rather than one universal active-metabolite rule.
+  target_ids:
+  - CHEBI:29014
+  evidence_ids:
+  - yeast2009
+  - yeast2021
+  - bacterial-mechanism
+  - adopted-si-boundary
+  - adapter
+  - rubric
+- assessment_id: producer
+  area: completeness
+  topic: Optional producer_organisms
+  outcome: unknown
+  summary: Generic Cordyceps provenance is supported. Exact strain-level production
+    requires the 2017 experimental methods or another verified original; absence of
+    the optional object is not a defect.
+  target_ids:
+  - CHEBI:29014
+  evidence_ids:
+  - producer
+  - access
+  - rubric
+- assessment_id: ownership
+  area: provenance
+  topic: Source concepts, status and history
+  outcome: supported
+  summary: Actual ChEBI/ARO owners and historical research context were captured with
+    preserved original hashes. The three SEEDED/reseed history events do not claim
+    scientific review; source-derived fields remain reproducible owner responsibilities.
+  target_ids:
+  - CHEBI:29014
+  evidence_ids:
+  - native
+  - owners
+  - search
+- assessment_id: other
+  area: scope
+  topic: Clinical products, approvals and datasets
+  outcome: not_applicable
+  summary: No such native assertion is populated. Animal efficacy and unrelated antitumor
+    experiments do not provide human antibacterial approval or a transcriptomic dataset
+    assertion.
+  target_ids:
+  - CHEBI:29014
+  evidence_ids:
+  - native
+  - adopted
+- assessment_id: schema
+  area: schema
+  topic: Focused checks
+  outcome: supported
+  summary: Native chemistry, schema and strict checks pass; remaining limitations
+    concern source granularity and optional future enrichment.
+  target_ids:
+  - CHEBI:29014
+  evidence_ids:
+  - gates
+  - chemistry
+findings: []
+actions:
+- action_id: A1
+  description: Optionally add primary activity and mechanism context after resolving
+    experimental granularity.
+  finding_ids: []
+  target_ids:
+  - CHEBI:29014
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cordycepin.yaml
+    role: Curator-owned optional evidence annotations
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Chemical xref owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field reproduction
+  acceptance_checks:
+  - Preserve 2019 MIC units of mg/mL and source-specific strains; recover final assay
+    inoculum before importing precise AST observations.
+  - Do not convert optical-density curves into CFU kill kinetics, mouse qPCR into
+    MIC, or antibiofilm128 micrograms/mL into growth inhibition.
+  - Keep yeast activation and RNA-processing claims endpoint-specific and separate
+    the parent compound from its phosphorylated metabolites.
+  - Retain the source CLO-method conflict and unrecovered supplementary experiment
+    as explicit limits.
+  - Use separately authorized curation and required reproduction, evidence, history
+    and schema gates.
+- action_id: A2
+  description: Optionally resolve the conflicting KNApSAcK encodings before any chemical-grounding
+    change.
+  finding_ids: []
+  target_ids:
+  - CHEBI:29014
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cordycepin.yaml
+    role: Curator-owned optional evidence annotations
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Chemical xref owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field reproduction
+  acceptance_checks:
+  - Reconcile displayed InChI, InChIKey and SMILES at C00001495.
+  - Keep the supported native exact graph; do not replace it with the partially specified
+    upstream SMILES or delete the xref solely from the inconsistent displayed key.
+limitations:
+- The 2022 main Methods/Results/Discussion and actual Figure1 were inspected, but
+  supplementary FigureS1 was not recovered. Reagent purity and an unequivocal animal-challenge
+  strain were not verified; CLO-method terminology conflicts within the source.
+- The 2019 full Methods and Results/Discussion were read and Table1/Figure2 visually
+  inspected. Individual spectral and microscopy images were not independently reanalyzed;
+  some dose/time descriptions differ between Methods and captions.
+- The 2025 oral-biofilm paper was read for relevant Methods, Results and Discussion,
+  not independently audited across all transcriptomic data or supplementary experiments.
+- The 2009 yeast source was read for initial growth/activation Results and relevant
+  Methods, with actual Figure1/Table1 inspection; later RNA-processing experiments
+  were not exhaustively reviewed. The 2021 source was read for activation, transporter
+  and Rpb1 passages plus Methods/Figure6 captions; its figures were not visually reanalyzed.
+- The 2017 producer original was available only at complete-abstract depth. No exact
+  fungal strain or enzyme annotation was inferred from the 2019 editorial.
+- KNApSAcK has discordant structure encodings, and legacy Beilstein was checked through
+  official ChEBI rather than an independent historical register.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record, source input, scientific status or history was edited.
+- Native schema/strict checks used batch033; standalone chemistry used the existing
+  batch019 RDKit interpreter against batch033 cwd.
+- Optional links, tags and notes were checked for this exact compound.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pubchem.ncbi.nlm.nih.gov/compound/6303
+- https://doi.org/10.1093/femspd/ftac005
+- https://doi.org/10.1007/s12275-019-8113-z
+tags:
+- cordycepin
+- nucleoside-antibiotic
+- assay-scope
+```
