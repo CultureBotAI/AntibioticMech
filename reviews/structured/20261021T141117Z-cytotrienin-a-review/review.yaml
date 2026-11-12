@@ -1,0 +1,561 @@
+schema_version: 1.0.0
+review_id: 20261021T141117Z-cytotrienin-a-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cytotrienin A: unsupported antibacterial classification despite original fungal
+  activity'
+started_at: '2026-10-21T13:49:22Z'
+finished_at: '2026-10-21T14:11:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The exact structure and apoptosis/producer definition are supported, including
+  later asymmetric total synthesis. One major concern remains: the original biological
+  study reports fungal inhibition and no activity against its tested bacteria at100
+  micrograms/mL, while native assigns an unqualified antibacterial role/class. Bounded
+  later-source follow-up did not establish exact-parent positive bacterial activity.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cytotrienin-a.yaml
+    sha256: 1d2b8ba4b24ea5dddb4e88ed9c7c0af87b8dce0013f77ef851dd43ecc941f7a6
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+targets:
+- target_id: CHEBI:65720
+  path: data/antibiotics/antibacterial/cytotrienin-a.yaml
+  label: cytotrienin A
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position339; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:65720
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:65720
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    339
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:65720
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cytotrienin-a.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:65720
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cytotrienin-a.yaml --out /private/tmp/am-review-session/339-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: Current authority exact graph comparison
+  status: passed
+  required: false
+  summary: Actual comparison exited 0; individual source results are retained.
+  target_ids:
+  - CHEBI:65720
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/034-authority-gate.py
+    339
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:65720
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:65720
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:65720
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:65720
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:65720
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:65720
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:65720
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:65720
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:65720
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cytotrienin-a.yaml
+  locator: entire native YAML
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: All native fields, aliases, classes, exact representations, xrefs, source
+    concepts and history were read. Original target and context hashes were captured
+    before judgment and remain unchanged.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: row 1284; exact source rows and maintained generation owners
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: Source assertions were traced through extraction, seeding and applicable
+    enrichment. Repository identity and ownership searches included hidden and ignored
+    files.
+  snapshot_sha256: 5ddf8bdb98509b1b40a0aee630e967eda4573e188d41fa86010f97f97c435dc3
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit 2026.03.5 / InChI 1.07.3
+  locator: native and current authority molecular graph comparison
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: Formula, charge, masses, stereocentres and full Standard InChIKey were
+    calculated independently. Explicit source-specific outcomes are retained.
+  snapshot_sha256: 009e9794287a53e03f829c509bd5401ad4611bbd1747ba065a01f74000b70228
+- evidence_id: authority
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/65720/
+  locator: complete current entry, official molfile, one exact synonym, six parents
+    and roles
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: Current ChEBI repeats native exact graph, neutral formula, six chemical
+    parents, definition and antibacterial role. PubChem11966097 independently matches
+    the full key. Reaxys18866746 remains ChEBI-attested rather than independently
+    inspected.
+  snapshot_sha256: 80638ff390305561952501fdfd3c47b992a4ca7afd0132b9836c6c4bbdf3deb3
+- evidence_id: original1997
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.50.370
+  locator: PMID:9186568; complete three-page original; page371 actual antimicrobial
+    paragraph visually inspected
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: Purified cytotrienin A from Streptomyces sp.RK95-74/patent deposit FERM
+    P15904 has fungal Pyricularia orizae MIC12.5 micrograms/mL by standard agar dilution.
+    No activity was observed at100 micrograms/mL against S.aureus FDA209P, E.coli
+    BE1186, P.aeruginosa N-10 L-form, C.albicans or C.vulgaris. HL-60 apoptosis and
+    mammalian MTT results are separate assays. The negative bacterial panel is bounded,
+    not proof that every bacterium is insensitive.
+  snapshot_sha256: 2cca6df21cfbb7e527e8980607fb78b32da576a52c6f31c7e6be8e8f7a025d33
+- evidence_id: synthesis2008
+  kind: primary_source
+  reference: https://doi.org/10.1002/anie.200802079
+  locator: PMID:18646025; original pages6657–6660 in government-host scan, PDF pages4–7;
+    pages6657/6659 visually inspected
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: The full original asymmetric synthesis reports the natural enantiomer and
+    confirms relative/absolute configuration by comparison with authentic material.
+    Its initial statement that earlier assignments were analogical is resolved by
+    the reported total synthesis; it does not justify deleting native absolute stereochemistry.
+    No antibacterial assay was reported in this paper.
+  snapshot_sha256: 6492ea8ad8e179ee311bbcfc2890106b149a2034037f0482b46cee90750edec4
+- evidence_id: synthesis-si
+  kind: primary_source
+  reference: https://www.wiley-vch.de/contents/jc_2002/2008/z802079_s.pdf
+  locator: General Remarks; exact final-product preparation and characterization S30–S31;
+    actual natural/synthetic NMR comparison S91
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: The SI reports final isolation, HRMS, rotations, HPLC conditions and paired
+    natural/synthetic proton NMR data. The final preparation was protected from light.
+    The actual S91 spectra were visually compared without raw-spectrum reprocessing.
+    The remaining intermediate synthetic procedures were not all reviewed.
+  snapshot_sha256: 55bd794d493ec7c867f6b8121f3236ea655fab41543c1fd8647036bfd03db8ed
+- evidence_id: leads
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/37212460/
+  locator: all seven adopted PMID records; five complete indexed abstracts and two
+    full originals without indexed abstracts
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: PMID37212460 is later total synthesis;21663740 concerns A549 TNFR1 shedding;21323372
+    concerns core synthesis only;20943818 concerns eukaryotic translation;9809995
+    concerns HL-60 apoptosis/p36 kinase. PMID9186568 and18646025 have no indexed abstracts
+    and were recovered as originals. None of these later abstracts establishes bacterial
+    susceptibility.
+  snapshot_sha256: 41195920feb1490680123395675b13532a9a3fcd0c80320031e4d5e0a48dba82
+- evidence_id: translation2010
+  kind: primary_source
+  reference: https://doi.org/10.1261/rna.2307710
+  locator: PMID:20943818 / PMC2995401; relevant original Results/Discussion and material/assay
+    Methods
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: Cytotrienin A from the earlier isolation procedure was tested in mammalian
+    translation extracts, purified eukaryotic systems, HeLa and HUVEC cells. The paper
+    explicitly leaves direct binding to ribosome and/or eEF1A unresolved. Bacterial
+    EF-Tu comparators and E.coli synthetase used as an assay reagent are not cytotrienin
+    antibacterial-target evidence. Its Results also report no significant inhibition
+    of E.coli S30 translation at50 micromolar, explicitly data not shown; this cell-free
+    endpoint is separate from a whole-cell MIC.
+  snapshot_sha256: 92909fe13502cfc5c53a6bb74acad79f086e65cf061faff9eaca813136aad5d2
+- evidence_id: later-search
+  kind: search
+  reference: Bounded exact-parent bacterial-activity search
+  locator: Europe PMC exact name with bacterial/antimicrobial terms; independent web
+    follow-up
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: context_only
+  summary: No verified positive exact-parent bacterial experiment was established
+    among inspected hits. PMID36438873 assays plant extracts/fractions after metabolomic
+    profiling, not isolated cytotrienin A;23531987 studies different linearolides
+    from the same producer;26456470 and40001427 are reviews. Later synthesis/core
+    and host-cell papers do not supply bacterial activity. This is a bounded failure
+    to corroborate, not exhaustive absence evidence.
+  search_scope: 2026-10-21; cytotrienin A plus antibacterial, bacteria, antimicrobial
+    and MIC; all seven adopted leads individually resolved. Repository searches included
+    hidden and ignored files.
+  snapshot_sha256: bd357f747e954489c4ea415bb2513f329c23475cde333b173d3fc6e15fc37418
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact natural cytotrienin A structure
+  outcome: supported
+  summary: Neutral C37H48N2O8, average mass648.797, exact mass648.341066496 and four
+    assigned centres reconcile across native, ChEBI and PubChem. The2008 total synthesis
+    supports the full natural stereochemical assignment.
+  target_ids:
+  - CHEBI:65720
+  evidence_ids:
+  - native
+  - chemistry
+  - authority
+  - synthesis2008
+  - synthesis-si
+- assessment_id: definition
+  area: evidence
+  topic: Macrocycle, apoptosis and isolation
+  outcome: supported
+  summary: The chemical constitution and six structural parents are coherent. The
+    original supports isolation from the stated Streptomyces strain and apoptosis
+    in HL-60 cells; this does not imply human therapeutic efficacy.
+  target_ids:
+  - CHEBI:65720
+  evidence_ids:
+  - authority
+  - original1997
+  - synthesis2008
+- assessment_id: class
+  area: scope
+  topic: Antibacterial role versus original measured scope
+  outcome: concern
+  summary: The only recovered original microbial panel supports antifungal activity
+    and reports no activity for the tested bacteria at100 micrograms/mL. The adopted/current
+    ChEBI antibacterial assertion was not corroborated by inspected later originals.
+    Antimicrobial eligibility remains supported by the fungal result, so blanket exclusion
+    is unwarranted.
+  target_ids:
+  - CHEBI:65720
+  evidence_ids:
+  - original1997
+  - leads
+  - later-search
+  - owners
+  - translation2010
+- assessment_id: mechanism
+  area: evidence
+  topic: Optional target and mechanism
+  outcome: unknown
+  summary: No native target, resistance or causal graph is populated. Eukaryotic translation
+    findings cannot be converted into an antibacterial EF-Tu mechanism, and direct
+    eEF1A binding was unresolved in the original. No native gene/pathway assertion
+    required a target-specific structured lookup.
+  target_ids:
+  - CHEBI:65720
+  evidence_ids:
+  - native
+  - translation2010
+  - leads
+- assessment_id: provenance
+  area: provenance
+  topic: Adopted source and full lead disposition
+  outcome: supported
+  summary: The source mint/version, one exact alias, six parents and three history
+    events reproduce. All seven adopted citations were individually evaluated with
+    explicit access depth. Source agreement preserves provenance but does not resolve
+    the primary-evidence classification concern.
+  target_ids:
+  - CHEBI:65720
+  evidence_ids:
+  - owners
+  - native
+  - authority
+  - leads
+findings:
+- finding_id: F1
+  issue_key: cytotrienin-a-antibacterial-role-primary-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: provisional
+  title: The unqualified antibacterial role is not supported by the recovered original
+    biological evidence
+  description: The1997 original reports fungal inhibition but no activity at100 micrograms/mL
+    against its tested bacterial panel. All adopted later citation leads and bounded
+    additional searches failed to establish positive exact-parent bacterial activity.
+    Review the inherited CHEBI:33282 assertion and ANTIBACTERIAL filing against the
+    original; retain the demonstrated fungal antimicrobial scope and do not infer
+    universal bacterial inactivity.
+  target_ids:
+  - CHEBI:65720
+  field_paths:
+  - antimicrobial_class
+  - activity_roles[1]
+  - source_concepts[0].role_terms[1]
+  evidence_ids:
+  - original1997
+  - leads
+  - later-search
+  - authority
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: native-review-checklist:Evidence
+  native_severity: major unsupported target-class annotation
+  normalization_reason: The inherited role controls corpus classification and implies
+    a microbial target group not established by the inspected primary experiments.
+    This is bounded evidence insufficiency with an explicit negative original panel,
+    not a claim of universal absence.
+actions:
+- action_id: A1
+  description: Adjudicate the antibacterial role through maintained ChEBI extraction/seeding
+    ownership and preserve antifungal evidence.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:65720
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  acceptance_checks:
+  - Supply exact-parent positive bacterial evidence if retaining ANTIBACTERIAL; otherwise
+    revise the source-owned role/class with traceable primary evidence and regenerate
+    consistently.
+  - Preserve fungal eligibility, exact structure and source provenance; do not exclude
+    the molecule solely because the bacterial panel was negative.
+  - If adding activity observations, preserve the original organism spelling, method,
+    endpoint and concentration limits; do not infer modern breakpoints or universal
+    species-wide resistance.
+limitations:
+- Reaxys was not independently accessed. The original1997 structural-letter companion
+  was not recovered, but the full2008 asymmetric synthesis and final-product supplementary
+  comparison were inspected.
+- The2008 main article was recovered within a scanned government report and read as
+  pages6657–6660, not as all20 pages of that report. Only stated SI sections and S91
+  spectra were inspected; raw NMR data were not reprocessed.
+- The2010 paper was read for relevant translation results/discussion and material/assay
+  methods; all figures and supplementary assays were not independently reconstructed.
+  Other later adopted papers remain at complete abstract depth, with2011 core-paper
+  introductory context also checked.
+- The antibacterial classification concern remains bounded by inspected evidence;
+  further positive exact-compound experiments may exist. Negative results at100 micrograms/mL
+  do not prove universal inactivity.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- 'Review only: no native records, inventories, configuration, dependencies or generators
+  were changed. Optional annotation gaps alone are not findings.'
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

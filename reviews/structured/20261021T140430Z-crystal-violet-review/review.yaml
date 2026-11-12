@@ -1,0 +1,932 @@
+schema_version: 1.0.0
+review_id: 20261021T140430Z-crystal-violet-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Crystal violet chloride: correct core structure; repair cation equivalences
+  and stale FDA approval summary'
+started_at: '2026-10-21T13:49:10Z'
+finished_at: '2026-10-21T14:04:30Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the native seed. Verified the original captured
+    hashes before judgment, read the entire native and actual source rows and transforms,
+    independently parsed public chemical encodings, and inspected primary antibacterial
+    and antifungal studies with explicit chemical-material and access limits.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The exact monochloride graph is coherent across native, ChEBI, PubChem,
+  KEGG and FDA GSRS. Two major findings concern exported assertions: cation-only structure
+  identifiers and a cation systematic synonym are attached as exact chloride equivalences;
+  and the sole FDA product history is summarized as APPROVED despite formal withdrawal
+  effective January 16, 1992. Primary studies support bounded Staphylococcus and Candida
+  activity, with reagent-composition and endpoint limits. The graph itself is not
+  shown to be a mixture or the wrong chemical.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/crystal-violet.yaml
+    sha256: a495449434cc65f0015358ed151051a430c4c01fd5cfcf14ef046426051dc136
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+targets:
+- target_id: CHEBI:41688
+  path: data/antibiotics/antibacterial/crystal-violet.yaml
+  label: crystal violet
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Maintained exact GSRS identity and historical Drugs@FDA product join
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: FDA and GSRS extraction and exact structure matching
+scope:
+  description: Entire native definition; all 36 aliases and their types; organic chloride
+    parent and two roles; complete structure/properties; four chemical xrefs, two
+    drug-level xrefs and document link; exact ChEBI source concept; one FDA assertion
+    and clinical summary; all six history events. All ten adopted publication leads
+    resolved and individually disposed at stated depth.
+  selection: Queue 332; original thirteen inputs preserved; actual FDA table and extractor
+    appended before assessment, for fifteen inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:41688
+  exclusions:
+  - target: Adjacent cation/chloride form and historical gentian-violet mixtures
+    reason: The cation and chloride salt are distinct exact records. Some commercial
+      gentian-violet preparations may contain other methylated dyes; their composition
+      is not inferred from an exact single-structure graph or a generic trade name.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused schema validation found no issues.
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/crystal-violet.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: One file scanned; zero strict errors.
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/crystal-violet.yaml --out /private/tmp/am-review-session/332-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Native SMILES and InChI reproduce the stored full key, charge, element
+    counts and rounded masses; no stereocentres occur and the source mint reproduces.
+    Formula spelling/order is normalized for comparison while charge is checked separately.
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/331332-chemistry-check.py 332
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: external-chemistry
+  name: external-chemistry
+  status: passed
+  required: false
+  summary: Comparison script completed and explicitly reports form differences; this
+    is not a blanket identity pass. ChEBI, PubChem and DrugCentral reproduce the cation;
+    ChEBI, PubChem, KEGG and GSRS reproduce the chloride. All six RCSB CVI encodings
+    reproduce only the cation.
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/331332-xref-check.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:41688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/chebi_role_names.tsv; conf/sources.yaml;
+    scripts/extract_source_inventory.py; scripts/seed_from_sources.py; data/raw/MANIFEST.yaml
+  locator: Complete exact ChEBI row 807 and adjacent-form row; relevant role/name
+    extraction, synonym, xref partitioning, mint and priority code.
+  accessed_at: '2026-10-21T14:01:26Z'
+  support: supports
+  summary: The native ChEBI identity, definition, aliases, parent, roles, structure
+    and source version reproduce the maintained row. ChEBI confirmed names are extracted,
+    brand and INN types are preserved, and ANTIBACTERIAL priority outranks ANTIFUNGAL
+    without deleting either role. The chloride row contains ten publication leads;
+    those leads are not native claim-level primary evidence. The FDA row and extractor
+    are separately assessed below.
+  snapshot_sha256: 7309fe9b3a3a47fb01d60bef5d0375b4f6e3ad585172c5e5d0913aebc4288248
+- evidence_id: roles
+  kind: authority
+  reference: CHEBI:33282; CHEBI:35718; CHEBI:36094
+  locator: Current official ChEBI parent and role entries and exact entry relations.
+  accessed_at: '2026-10-21T13:51:45Z'
+  support: supports
+  summary: The parent is organic chloride salt, structurally broader than the exact
+    monochloride. Both antibacterial and antifungal role relations are explicit. The
+    antibacterial definition includes a substance or its active part; role scope does
+    not require that the isolated counterion-free cation was weighed as an experimental
+    bulk material.
+  snapshot_sha256: 20d92ce7e00c204b1753184671c043160821d692438278344335446aadcd5082
+- evidence_id: antibacterial
+  kind: primary_source
+  reference: DOI:10.11150/kansenshogakuzasshi1970.66.914; https://www.jstage.jst.go.jp/article/kansenshogakuzasshi1970/66/7/66_7_914/_pdf
+  locator: Entire original 1992 paper main text pp914–922 read from extracted Japanese
+    text, English abstract and captions; tabular images and electron micrographs not
+    independently reprocessed.
+  accessed_at: '2026-10-21T13:53:45Z'
+  support: supports
+  summary: Saji explicitly identifies gentiana violet/pyoktanin blue as methylrosanilinium
+    chloride and uses Wako reagent-grade material, without a lot-specific purity certificate.
+    The study tests 66 MRSA and 42 MSSA clinical isolates plus S. aureus ATCC6538.
+    Broth bactericidal endpoints are subculture/no-growth endpoints, separate from
+    agar MIC for four MRSA isolates because dye interferes with turbidity. It also
+    reports a small uncontrolled twelve-patient topical series. Electron-microscope
+    changes after treatment are cellular observations, not direct target binding.
+    This supports the definition’s bounded Staphylococcus activity and historical
+    topical use. It is not a current approval or universal clinical-efficacy claim.
+  snapshot_sha256: ba38eb5de371b528bca1a0771084dcf9de410d29c2e3537030966d28984c9e42
+- evidence_id: antifungal
+  kind: primary_source
+  reference: PMID:21444708; DOI:10.1128/AAC.01601-10; PMC3101405
+  locator: Complete original main article HTML including Methods, Results, Table 1,
+    Discussion and figure captions. Figure images and raw data not independently reprocessed.
+  accessed_at: '2026-10-21T13:53:45Z'
+  support: supports
+  summary: Six oral Candida isolates from HIV-infected patients were tested with Sigma-Aldrich
+    gentian violet of unspecified catalog/purity/counterion certification. CLSI M27-A3
+    planktonic MICs, germination and 48-hour PMMA biofilm dry weight/architecture
+    are distinct endpoints. At 4 micrograms/mL, Table 1 has significant biomass reductions
+    for four of six isolates, not universal biofilm elimination. The authors did not
+    measure biofilm viability with XTT and did not establish a molecular mechanism.
+    Some prose calls thickness changes significant despite listed p values above 0.05;
+    those significance claims are not adopted. The study supports Candida-related
+    activity under stated material limits, not a claim that every gentian-violet product
+    is this exact pure salt.
+  snapshot_sha256: 7ef3da96072463ccfd964823f8b8771964d083b5db9c8980a96c0032c0c34f4b
+- evidence_id: mechanism-context
+  kind: database
+  reference: PMID:2272286; DOI:10.3109/03602539009041083; PMC4396813
+  locator: Complete indexed abstract of the adopted 1990 review and selected mechanism
+    discussion of the later review; discovery context only.
+  accessed_at: '2026-10-21T13:53:45Z'
+  support: context_only
+  summary: Reviews discuss multiple proposed mechanisms across bacterial, fungal,
+    host-cell and protozoan systems. The later review explicitly distinguishes brilliant-green
+    thioredoxin-reductase work from gentian violet. These summaries do not establish
+    an exact bacterial molecular target or justify transferring host NADPH-oxidase
+    effects, photodynamic conditions or a sibling dye’s covalent target to either
+    native record.
+  snapshot_sha256: 3e08a069ff7e8294257025d001eff1ad22b023fb9adca2669f5214113e43f605
+- evidence_id: adapter
+  kind: database
+  reference: Structured source applicability assessment
+  locator: Native assertions and maintained rows inspected before mechanism follow-up.
+  accessed_at: '2026-10-21T14:01:26Z'
+  support: context_only
+  summary: Neither record asserts a gene, protein, locus, regulator, pathway, stress
+    response or transcriptomics dataset. The iModulonDB adapter is not applicable
+    to these native chemical/role and regulatory assertions. Mechanism hypotheses
+    encountered in reviews are not promoted into native claims.
+- evidence_id: search
+  kind: search
+  reference: 331332-inclusive-hits.txt;331332-literature.json;331332-primary-followup.json
+  locator: Ignored-inclusive exact-label, identifier, full-key and product search
+    plus bounded public literature/authority follow-up.
+  accessed_at: '2026-10-21T14:01:26Z'
+  support: context_only
+  summary: Both distinct native forms and their ChEBI source rows were found. The
+    precise maintained-table scan found no adopted ARO, molecular-target, resistance,
+    MIBiG or curator evidence row for these exact entities; no mechanism absence is
+    inferred from a default ignored-aware search. Many broad crystal-violet hits use
+    the dye as a biomass stain or degradation substrate and are not antimicrobial
+    assays. No optional missing field is treated as a defect.
+  search_scope: 2026-10-21; rg --no-ignore --hidden for crystal/gentian violet labels,
+    CHEBI:77181, CHEBI:41688, exact InChIKeys, 085017 and J4Z741D6O5 across data,
+    curation, conf, scripts, src, docs, .claude, reviews and reports; exact PMID follow-up
+    and bounded public official compound/product sources. Ignored and hidden files
+    were included.
+  snapshot_sha256: bbe36bb9990ef805bc4fae94bae2a56a9aa10830e57d0a7cdecfa9a24926e529
+- evidence_id: validation
+  kind: validation
+  reference: 332-schema.log;332-strict.log;332-chemistry.json;331332-xref-chemistry.json
+  locator: Actual focused checks, external chemistry comparisons and captured-input
+    hash recheck.
+  accessed_at: '2026-10-21T14:01:26Z'
+  support: supports
+  summary: Schema, strict and native chemistry checks exit 0. The corrected external
+    comparison script also exits 0 while reporting CVI as cation-only. Its first scratch
+    attempt mistakenly tried to parse an InChIKey descriptor as SMILES; that helper
+    error is retained in 331332-xref-chemistry-initial.log and was corrected before
+    the final comparison. No native chemistry defect follows from that helper error.
+    All captured input hashes remain unchanged.
+  snapshot_sha256: f79add6ca1ab1a7db68bdff8e4f3c67eb7ed5bba074f18afc712efb46a5b19de
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/crystal-violet.yaml
+  locator: Entire native YAML.
+  accessed_at: '2026-10-21T14:01:26Z'
+  support: supports
+  summary: CHEBI:41688 is SEEDED/EXACT/ANTIBACTERIAL and explicitly the monochloride
+    of crystal violet cation. Native formula C25H30N3.Cl, total charge zero and full
+    key ZXJXZNDDNMQXFV-UHFFFAOYSA-M describe the cation plus chloride. The xrefs list
+    HMDB0014550 and PDB CCD CVI as same-structure identifiers; synonym index31 lacks
+    chloride. clinical_status is APPROVED and the sole dated US-FDA assertion is ANDA085017
+    product001 GENAPAX, with original approval 1977-02-02, marketing Discontinued
+    and currently_marketed false.
+- evidence_id: identity
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:41688; cas:548-62-9;
+    pubchem.compound:11057; pubchem.compound:23424024; https://rest.kegg.jp/get/D01046
+  locator: Complete current ChEBI and KEGG entries, PubChem properties and independently
+    parsed public structures.
+  accessed_at: '2026-10-21T13:51:45Z'
+  support: supports
+  summary: Both PubChem returned CIDs, current ChEBI SMILES/InChI and KEGG D01046
+    molfile reproduce the native chloride key, two fragments and total charge zero.
+    CAS 548-62-9 and the organic chloride classification agree. The generic gentian-violet
+    name can also describe commercial mixtures; that does not by itself change the
+    explicitly defined native exact graph into a mixture.
+  snapshot_sha256: 54ec275bbb8f5cac9eb44d8ca4a0669e8f93820fb284a5a1136b6440586eeade
+- evidence_id: cation-xref
+  kind: authority
+  reference: https://www.rcsb.org/ligand/CVI; https://files.rcsb.org/ligands/download/CVI.cif
+  locator: Complete official CCD descriptor, formula, charge and systematic-name fields;
+    all five SMILES descriptors and the InChI independently parsed.
+  accessed_at: '2026-10-21T13:51:46Z'
+  support: refutes
+  summary: CVI is the +1 C25H30N3 cation without chloride. All six independently parsed
+    encodings give LGLFFNDHMLKUMI-UHFFFAOYSA-N, which is the adjacent CHEBI:77181
+    cation, rather than native chloride key ZXJXZNDDNMQXFV-UHFFFAOYSA-M. Its systematic
+    name exactly matches native synonyms[31], N-(4-{bis[4-(dimethylamino)phenyl]methylidene}cyclohexa-2,5-dien-1-ylidene)-N-methylmethanaminium.
+    That name denotes the cation and lacks the salt component.
+  snapshot_sha256: 8661bb6aba45c3824c3dbd3d899d36b23e63897c6daf39bb32e89f4e6436bd0a
+- evidence_id: hmdb
+  kind: authority
+  reference: https://hmdb.ca/metabolites/HMDB0014550
+  locator: Public HMDB metabocard structure section inspected through web retrieval,
+    including embedded 2D MOL atom/charge block. Later direct page/XML/MOL and repeated
+    web requests returned 403.
+  accessed_at: '2026-10-21T14:01:26Z'
+  support: refutes
+  summary: The inspected 2D MOL has 28 heavy atoms, a positive charge and no chlorine
+    atom, consistent with the crystal-violet cation rather than the 29-heavy-atom
+    chloride. The page also uses broader gentian-violet mixture prose. Its exact structure
+    link therefore needs the same form-scope correction as CVI. No independently parsed
+    local HMDB molfile or later full-page refresh is claimed; the downloadable structure
+    remained inaccessible after the initial inspection.
+- evidence_id: drug-context
+  kind: database
+  reference: https://go.drugbank.com/drugs/DB00406; https://rest.kegg.jp/get/D01046;
+    wikipedia.en:Crystal_violet
+  locator: Public DrugBank entry and KEGG entry; document-link scope assessed against
+    native schema.
+  accessed_at: '2026-10-21T13:51:47Z'
+  support: context_only
+  summary: DrugBank DB00406 presents gentian-violet drug context and a cation graph,
+    while KEGG D01046 supplies the chloride graph and related drug names. These are
+    correctly placed in drug_xrefs, whose explicit contract permits parent/salt aggregation;
+    neither is treated as a wrong exact xref. Wikipedia is correctly a document/topic
+    link. The eleven historical product aliases are already BRAND_NAME, not exact
+    chemical structures. ChEBI and KEGG support the methylrosanilinium-chloride INN
+    naming; historical brand formulations were not individually certified.
+  snapshot_sha256: 927e0999f9615ab7a662e2440a0637be9f8071012dc8787a5608ce4663e16e1c
+- evidence_id: fda-owner
+  kind: record_content
+  reference: data/raw/fda_clinical_status.tsv; scripts/extract_fda_clinical_status.py;
+    scripts/seed_from_sources.py
+  locator: Complete maintained FDA row 3697, original-AP selection, exact GSRS join
+    and attach_fda_clinical_status code at lines 3746–3802.
+  accessed_at: '2026-10-21T14:01:26Z'
+  support: supports
+  summary: The source row faithfully preserves ANDA085017 product001 GENAPAX, KEY
+    PHARMS, GENTIAN VIOLET, UNII J4Z741D6O5, 1977-02-02 AP and Discontinued/false
+    marketing. The extractor selects original approval actions, and the seeder unconditionally
+    sets both assertion status and summary to APPROVED for matched rows. A formal
+    withdrawal is not represented by this historical-approval/marketing pipeline.
+    The problem is not the exact chemical identity join.
+  snapshot_sha256: 7309fe9b3a3a47fb01d60bef5d0375b4f6e3ad585172c5e5d0913aebc4288248
+- evidence_id: fda-current
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:ANDA085017
+  locator: Complete current openFDA Drugs@FDA application/product response, data update
+    2026-10-20.
+  accessed_at: '2026-10-21T13:51:47Z'
+  support: supports
+  summary: The current API reproduces the original 1977-02-02 approval, KEY PHARMS
+    sponsor and GENAPAX gentian-violet vaginal tampon, product001, with Discontinued
+    marketing. This supports the historical native row and the false currently_marketed
+    value; a retained AP event alone does not establish that approval remains in force.
+  snapshot_sha256: 67d0e1cc11a1aa0f42d33e1cbbb7d8a62527c4c23d188494f1f5c11e2d220591
+- evidence_id: gsrs
+  kind: authority
+  reference: https://api.fda.gov/other/substance.json?search=unii:J4Z741D6O5
+  locator: Complete current public GSRS substance response, structure version 28;
+    independent SMILES and molfile parsing.
+  accessed_at: '2026-10-21T13:52:43Z'
+  support: supports
+  summary: UNII J4Z741D6O5 version 28 encodes the exact cation-plus-chloride structure,
+    reproducing the native full key and zero total charge. Version28 agrees with the
+    native identity_record_version. This validates the salt identity of the regulatory
+    join without conflating identity verification with present approval status.
+  snapshot_sha256: fa5b379f5f18a1509d0a60d9acb2975f25c1df965991c2cca9e41611faebd5d4
+- evidence_id: withdrawal
+  kind: authority
+  reference: 56 FR 65489–65490; FR Doc 91-30095; Docket 91N-0498; https://tile.loc.gov/storage-services/service/ll/fedreg/fr056/fr056242/fr056242.pdf
+  locator: Entire relevant December 17, 1991 notice text; original printed pages 65489–65490
+    visually inspected in PDF pages 81–82.
+  accessed_at: '2026-10-21T13:52:43Z'
+  support: refutes
+  summary: The table explicitly lists ANDA85-017 GENAPAX (gentian violet) Tampons,
+    Key Pharmaceuticals. The notice withdraws the listed ANDA approvals and supplements
+    after holders reported the products were no longer marketed and requested withdrawal.
+    The original print has January 16, 1991 in both effective-date locations, a year
+    typo corrected in the subsequent official notice. The withdrawal is not attributed
+    here to carcinogenicity and is not generalized to every gentian-violet product
+    or country.
+  snapshot_sha256: b905d7daba654cc5c00841971a726acdc377f17467cd600c2528b6eeb5b60f1d
+- evidence_id: withdrawal-correction
+  kind: authority
+  reference: 57 FR 5048; February 11, 1992; https://tile.loc.gov/storage-services/service/ll/fedreg/fr057/fr057028/fr057028.pdf
+  locator: Complete relevant correction, printed page 5048, visually inspected in
+    PDF page 130.
+  accessed_at: '2026-10-21T13:56:48Z'
+  support: refutes
+  summary: The official correction identifies notice 91-30095 and changes 1991 to
+    1992 both under EFFECTIVE DATE on page 65489 and in the withdrawal paragraph on
+    page 65490. Read together with the original notice, the effective date for the
+    listed GENAPAX application is January 16, 1992. This is a formal approval withdrawal,
+    not an inference from Discontinued marketing.
+  snapshot_sha256: f2cdd2361ab6da54f1b8aef17b5cdb1ce2ec293115131af6f9fa48e377ded373
+- evidence_id: adopted-dispositions
+  kind: database
+  reference: PMID:18464526; PMID:21095530; PMID:21324408; PMID:21444708; PMID:2272286;
+    PMID:22889741; PMID:23007862; PMID:23465793; PMID:23598113; PMID:23664476
+  locator: All ten adopted leads resolved against complete indexed records. Nine available
+    abstracts read in full; PMID 23465793 is a letter without an abstract. PMC3101405
+    and PMC3490233 main texts additionally inspected.
+  accessed_at: '2026-10-21T13:51:47Z'
+  support: context_only
+  summary: PMID 18464526 is endoscopic cancer/staining-method context, not antibacterial
+    testing. PMID 21095530 is a pyoderma review. PMID 21324408 reports an uncontrolled
+    retrospective geriatric wound series and cannot establish a current approval or
+    pure-material mechanism. PMID 21444708 is the separately assessed original Candida
+    study. PMID 2272286 is a metabolism/mechanism review across systems. PMID 22889741
+    is an original Candida study assessed separately at abstract depth. PMID 23007862
+    is a mouse vaginal-cytology staining protocol, not vaginal infection therapy.
+    PMID 23465793 is a Burns letter with no accessible abstract/full text. PMID 23598113
+    studies electrochemiluminescence quenching, not an antimicrobial target. PMID
+    23664476 studies dye wastewater degradation, not antimicrobial efficacy or biological
+    production of the dye.
+  snapshot_sha256: 921187ab06b7e33fa266a4d519546ddd414096018290a6258e253a810fd3dde3
+- evidence_id: candida2012
+  kind: primary_source
+  reference: PMID:22889741; DOI:10.1159/000338899
+  locator: Complete original indexed abstract; attempted publisher full-text route
+    returned 403.
+  accessed_at: '2026-10-21T13:51:47Z'
+  support: supports
+  summary: The study tests seventeen recurrent-vulvovaginal-candidosis isolates plus
+    C. albicans ATCC10231 by CLSI M27-A3, reports fungicidal activity for most isolates
+    and uses flow cytometry to argue against primary cytoplasmic-membrane lesions.
+    It supports bounded Candida activity, not proof of a membrane-binding target or
+    general patient efficacy. Exact reagent composition, full methods, tables and
+    numerical isolate results were not inspected.
+  snapshot_sha256: 921187ab06b7e33fa266a4d519546ddd414096018290a6258e253a810fd3dde3
+- evidence_id: staining
+  kind: primary_source
+  reference: PMID:23007862; DOI:10.3791/4389; PMC3490233
+  locator: Entire main XML protocol, representative results, Discussion and figure
+    captions; video and figure images not independently inspected.
+  accessed_at: '2026-10-21T13:52:43Z'
+  support: supports
+  summary: The protocol prepares 0.1 g crystal-violet powder per 100 mL water and
+    stains mouse vaginal smears for cytological estrous staging. It supports a staining
+    use, not antibacterial treatment, fungal disease, hormonal drug action or an organism-specific
+    molecular target.
+  snapshot_sha256: 8c3bd305b0c5fd114183737e1a4ca686086d1d87ff73cb59ea048ead4f13150d
+- evidence_id: animal
+  kind: primary_source
+  reference: PMID:2731819; DOI:10.1016/0278-6915(89)90162-2
+  locator: Complete original rat carcinogenicity indexed abstract; full paper not
+    obtained.
+  accessed_at: '2026-10-21T13:53:46Z'
+  support: supports
+  summary: The chronic dietary rat experiment reports neoplastic effects under its
+    tested exposure conditions. This supports the bounded phrase reports of animal
+    carcinogenicity. It does not quantify topical human risk, establish that every
+    preparation is compositionally identical or prove that the specific GENAPAX withdrawal
+    was for safety. The definition’s historical decline/use narrative remains sourced
+    to ChEBI; it is not a current therapeutic recommendation.
+  snapshot_sha256: d325b45586baae64b3010cf1405a20025b83fbf51f0f53ef1f8b0391c8adbce6
+assessments:
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial/antifungal filing and experimental scope
+  outcome: supported
+  summary: ChEBI explicitly assigns both roles, and original studies provide bounded
+    Staphylococcus and Candida activity. Filing priority is reproduced. Preserve distinctions
+    between the exact ionic form, test material, MIC, subculture bactericidal endpoint,
+    biofilm biomass and clinical observations.
+  target_ids:
+  - CHEBI:41688
+  evidence_ids:
+  - roles
+  - antibacterial
+  - antifungal
+  - owners
+- assessment_id: mechanism
+  area: evidence
+  topic: Optional molecular mechanism and response fields
+  outcome: unknown
+  summary: No native molecular mechanism is asserted. Cellular morphology or reduced
+    fungal biomass does not prove a specific protein target; the available review
+    hypotheses require exact-compound primary follow-up before enrichment.
+  target_ids:
+  - CHEBI:41688
+  evidence_ids:
+  - mechanism-context
+  - antibacterial
+  - antifungal
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained source ownership, seed status and historical inputs
+  outcome: supported
+  summary: The complete source row and all native history events reconcile with the
+    seed pathway. Initial hashes are retained and actual owners are captured. SEEDED
+    does not imply scientific review, and this observation does not promote native
+    status.
+  target_ids:
+  - CHEBI:41688
+  evidence_ids:
+  - native
+  - owners
+  - validation
+  - search
+- assessment_id: identity
+  area: identity
+  topic: Exact chloride graph and erroneous cation equivalences
+  outcome: concern
+  summary: Core chloride identity, CAS, charge and masses agree with authoritative
+    graphs. CVI is positively demonstrated to be cation-only; the inspected HMDB structure
+    is also cation-only, and one explicit systematic synonym omits chloride. Repair
+    the exported exact equivalence assertions while retaining the correct chloride
+    graph.
+  target_ids:
+  - CHEBI:41688
+  evidence_ids:
+  - native
+  - identity
+  - cation-xref
+  - hmdb
+  - gsrs
+  - validation
+- assessment_id: regulatory
+  area: evidence
+  topic: Historical approval versus formal withdrawal
+  outcome: concern
+  summary: Historical AP and discontinued-marketing fields are accurate, but they
+    do not support the current unqualified APPROVED summary after the exact application’s
+    formal withdrawal. The official correction fixes the effective year to 1992. No
+    worldwide product-status inference or safety-cause inference is made.
+  target_ids:
+  - CHEBI:41688
+  evidence_ids:
+  - native
+  - fda-owner
+  - fda-current
+  - gsrs
+  - withdrawal
+  - withdrawal-correction
+- assessment_id: definition
+  area: evidence
+  topic: Activity, historical uses, carcinogenicity and adopted-lead scope
+  outcome: supported
+  summary: Original Staphylococcus and Candida studies support bounded biological
+    activity and historical topical use; the staining protocol supports cytology use
+    and the rat abstract supports reports of animal carcinogenicity. ChEBI supplies
+    the broader historical dye/use narrative. All adopted leads are explicitly classified
+    by study context and read depth rather than promoted wholesale into mechanism
+    evidence.
+  target_ids:
+  - CHEBI:41688
+  evidence_ids:
+  - owners
+  - antibacterial
+  - antifungal
+  - adopted-dispositions
+  - candida2012
+  - staining
+  - animal
+findings:
+- finding_id: F1
+  issue_key: crystal-violet-chloride-cation-exact-equivalence
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Cation identifiers and a cation name are exported as exact chloride equivalences
+  description: The native structure is a valid monochloride, but pdb-ccd:CVI identifies
+    only the +1 cation and its independently parsed key differs by chemical composition.
+    The initially inspected HMDB0014550 2D structure likewise has no chlorine, with
+    subsequent download access explicitly limited. Native synonyms[31] is the same
+    cation systematic name used by CVI and omits chloride. Correct these source-derived
+    equivalence assertions without replacing the sound native chloride structure.
+    DrugBank and KEGG DRUG are already drug-level links and are not part of this finding.
+  target_ids:
+  - CHEBI:41688
+  field_paths:
+  - xrefs[1]
+  - xrefs[2]
+  - synonyms[31]
+  evidence_ids:
+  - native
+  - identity
+  - cation-xref
+  - hmdb
+  - owners
+  - validation
+  rule_id: src/antibioticmech/schema/antibioticmech.yaml:xrefs same-structure contract;
+    native review checklist exact identity and synonyms
+  native_severity: major
+  normalization_reason: A positively demonstrated salt/cation scope mismatch in exact
+    chemical equivalences can misground downstream assertions. The core graph, parent
+    and CAS remain correct, so this is not a blocker declaring the whole record the
+    wrong entity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted exact xrefs and synonym source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI structure-xref extraction and source normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Existing maintained synonym_exclusions mechanism
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Exact-xref and synonym generation
+- finding_id: F2
+  issue_key: crystal-violet-genapax-formal-withdrawal-status
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The current approval summary ignores formal withdrawal of its sole cited
+    FDA application
+  description: clinical_status APPROVED is derived from the retained original AP action
+    for ANDA085017. The formal notice lists that exact GENAPAX application and withdraws
+    approval; the official correction establishes January 16, 1992 as the effective
+    date. Discontinued marketing alone would not prove withdrawal, but this notice
+    does. Preserve the accurate 1977 approval event and product identity while representing
+    the later withdrawal and deriving the present US status accordingly. The inspected
+    notice describes voluntary unmarketed-product withdrawal and does not support
+    attributing it to carcinogenicity.
+  target_ids:
+  - CHEBI:41688
+  field_paths:
+  - clinical_status
+  - clinical_status_assertions[0].status
+  evidence_ids:
+  - native
+  - fda-owner
+  - fda-current
+  - gsrs
+  - withdrawal
+  - withdrawal-correction
+  rule_id: src/antibioticmech/schema/antibioticmech.yaml:clinical_status Regulatory
+    / use status and ClinicalStatusEnum WITHDRAWN; native review checklist clinical
+    status
+  native_severity: major
+  normalization_reason: The error affects a structured present-status summary and
+    derives systematically from historical AP events despite contrary formal regulatory
+    evidence. This is more than missing optional current marketing detail; the original
+    approval date and discontinued flag remain accurate.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Historical approval and exact substance join
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: Maintained regulatory extraction and withdrawal reconciliation
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Current status aggregation from historical product evidence
+actions:
+- action_id: A1
+  description: Repair maintained chloride/cation equivalence handling and the cation-only
+    exact synonym.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:41688
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted exact xrefs and synonym source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI structure-xref extraction and source normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Existing maintained synonym_exclusions mechanism
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Exact-xref and synonym generation
+  acceptance_checks:
+  - Use the exact parsed graphs and charge/counterion evidence to withhold or reclassify
+    CVI and HMDB0014550 from chloride same-structure xrefs. Preserve related-component
+    knowledge using a supported relation; separately verify the cation record before
+    any reassignment.
+  - Use the maintained synonym exclusion mechanism for the explicit cation-only systematic
+    name, or a source correction that reproducibly prevents its reintroduction. Keep
+    true chloride names and drug-level links.
+  - Regenerate through maintained ownership and verify that the chloride structure/key
+    remain unchanged, the cation remains separate, exact xrefs resolve at correct
+    form scope, and schema/strict plus native xref checks pass.
+- action_id: A2
+  description: Reconcile the formal GENAPAX withdrawal with the retained original
+    FDA approval event.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:41688
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Historical approval and exact substance join
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: Maintained regulatory extraction and withdrawal reconciliation
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Current status aggregation from historical product evidence
+  acceptance_checks:
+  - Capture both the original Federal Register notice and its year correction. Resolve
+    ANDA85-017/085017 and preserve product001, UNII identity, sponsor and original
+    approval 1977-02-02.
+  - Represent the withdrawal effective 1992-01-16 through supported maintained evidence
+    and derive a current status that does not present this withdrawn application as
+    presently approved. Do not overwrite historical AP facts or equate all discontinued
+    products with withdrawn approvals.
+  - Keep the conclusion scoped to the inspected US application; do not infer worldwide
+    withdrawal or a carcinogenicity-related regulatory cause. Rerun source generation
+    and focused/native regulatory checks after an authorized change.
+- action_id: A3
+  description: Optionally add primary activity observations at exact material and
+    assay scope.
+  finding_ids: []
+  target_ids:
+  - CHEBI:41688
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/crystal-violet.yaml
+    role: Curator-owned primary evidence additions
+  acceptance_checks:
+  - Inspect original tables and reagent composition before importing numerical measurements.
+    Preserve MIC, bactericidal subculture endpoint, biofilm biomass, germination and
+    uncontrolled clinical outcome as distinct observations.
+  - Do not transfer a brilliant-green, host-cell or photodynamic mechanism into an
+    unqualified bacterial molecular target.
+limitations:
+- The primary antibacterial paper identifies chloride reagent material but does not
+  provide a lot-specific composition/purity certificate; the antifungal paper only
+  identifies a Sigma-Aldrich gentian-violet reagent. No quantitative endpoint is silently
+  assigned to separately isolated counterion-free cation or to every historical gentian-violet
+  mixture.
+- The 1992 Japanese main text and English abstract were read; tables embedded as images
+  and electron micrographs were not independently reprocessed. Its English abstract
+  rounds the lowest MIC differently from the Japanese results, and the time-kill caption
+  and prose have differing inoculum/replicate descriptions. No numerical observation
+  is curated from those ambiguities.
+- Reaxys registry entries were not independently accessed through a paid service.
+  Their exact numbers are verified as adopted/current ChEBI attestations, with that
+  independent-registry limitation retained.
+- Neither record contains optional molecular targets, causal graphs, activity-spectrum
+  observations, producers or resistance mechanisms. These absences alone are not corrective
+  findings. Hypotheses and host-cell effects in reviews do not establish a microbial
+  direct-binding mechanism.
+- HMDB0014550 was initially inspected through the public web-rendered structure block,
+  but subsequent direct page/XML/MOL and web rereads returned 403. No local HMDB graph
+  was independently parsed; the fully captured and independently parsed RCSB CVI evidence
+  alone establishes the exact-equivalence defect.
+- Nine available adopted abstracts were read completely; PMID 23465793 has no indexed
+  abstract and its full letter was not obtained. Main full text was read for PMID
+  21444708 and PMID 23007862; the remaining adopted publications were not claimed
+  fully read. PMID 22889741 publisher access returned 403.
+- The extra original rat experiment and MRSA follow-up reports were read at complete
+  indexed-abstract depth. The source’s broad historical decline in use and wood/silk/paper
+  applications remain authority-level ChEBI context, not independently reconstructed
+  market history. An attempted IARC Bookshelf page returned a browser challenge and
+  is not cited as inspected evidence.
+- Historical brand formulations were not individually certified. Correct BRAND_NAME
+  typing and the explicit chloride graph avoid asserting that every commercial gentian-violet
+  preparation has identical composition.
+- The regulatory audit concerns ANDA085017 and the current native summary supported
+  solely by that application. It is not an exhaustive current census of other products
+  or countries; no clinical recommendation is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
