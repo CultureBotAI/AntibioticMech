@@ -1,0 +1,551 @@
+schema_version: 1.0.0
+review_id: 20261021T091507Z-arugosin-b-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Arugosin B: consistent constitution with bounded primary activity support'
+started_at: '2026-10-21T08:55:53Z'
+finished_at: '2026-10-21T09:15:07Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The native lactol constitution,formula,mass,classes and source mapping are
+  consistent. Its single tetrahedral center is unassigned; this alone does not prove
+  a racemate or an error. The adopted primary abstract and accessible follow-up do
+  not establish a purified-B antibacterial assay,so exact-material and assay scope
+  remain an explicit curation follow-up. Scientific assessment retains the stated
+  evidence limits; full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/arugosin-b.yaml
+    sha256: 93d71d88f05a728f997a2d18cfa6b93476df30a9862bd27b7040088553431352
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:68859
+  path: data/antibiotics/antibacterial/arugosin-b.yaml
+  label: arugosin B
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position110; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:68859
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:68859
+  command: .venv/bin/python /private/tmp/am-review-session/focus011-root.py 110
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:68859
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/arugosin-b.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:68859
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/arugosin-b.yaml --out /private/tmp/am-review-session/110-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:68859
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:68859
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:68859
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:68859
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:68859
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:68859
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:68859
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:68859
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:68859
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/arugosin-b.yaml
+  locator: Entire YAML and three seed/reseed history entries
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: supports
+  summary: SEEDED/EXACT CHEBI68859 has one exact systematic synonym,four chemical
+    parents,one antibacterial role and Reaxys2025561. The definition asserts Aspergillus
+    isolation and antibacterial activity. No measured activity,target,producer object,resistance,clinical
+    assertion,expression dataset or causal graph is present.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: 110-raw.json; ChEBI extraction and source seeder
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: supports
+  summary: Exact row reproduces the native definition,structure,parents,role and Reaxys
+    mapping. Its sole adopted PMID16872131 is a discovery lead,not automatically attached
+    claim evidence. All thirteen captured maintained input hashes remain unchanged.
+  snapshot_sha256: 616492334a1d92011fdbb90e8fd39a9605e3547620f45966c2a3fd14e526990b
+- evidence_id: authority
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:68859
+  locator: 110-chebi.html;110-parents.json;current complete identity and ontology
+    fields
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: supports
+  summary: ChEBI agrees on the full constitution and unassigned lactol center. Polyphenol,lactol,dibenzooxepine
+    and cyclic-ketone parents fit. Antibacterial and Aspergillus-metabolite source
+    classifications are not new primary experiments. Current organism reference PMID22026385
+    is an analytical dereplication paper,not a bacterial inhibition experiment.
+  snapshot_sha256: 95401a1e1496408b21cc919b4b03613c43da278aba0843d876737dc819c7c278
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculation
+  locator: 110-chemistry.json; focus011-root.py110
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: supports
+  summary: Both encodings give WKCOWVOAMWLTDQ-UHFFFAOYSA-N,C25H28O6,one neutral component,average424.493
+    and exact424.188588616. One tetrahedral center is unspecified. No inspected exact-B
+    primary assignment supports an arbitrary replacement stereoisomer; unassigned
+    representation must not be called racemic without evidence. Source mint reproduces.
+  snapshot_sha256: 0cbbe2bca12fd4e4acf4138d202cdcea2287a9b65af95864bd4ebf06e331eee2
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/14034680
+  locator: 110-pubchem.json
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: supports
+  summary: Supplemental PubChem agrees with native formula,charge,InChI and full key.
+    It does not independently resolve lactol stereochemistry or the biological material.
+    Reaxys content itself was not accessed.
+  snapshot_sha256: 8b6f64ea61896835e41ab3ff2e859d913221ecb4ca6f164c5810b30c9c3fbab9
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:16872131
+  locator: DOI:10.1021/np050454f; complete EuropePMC and original ACS abstracts
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: context_only
+  summary: The2006 primary reports cultivated Emericella nidulans var.acristata metabolites,including
+    arugosins,and host-cell antitumor/immunostimulation assays. The abstract does
+    not report an exact-B antibacterial experiment or identify every numbered known
+    metabolite; those details cannot be inferred from its title. Full ACS body access
+    returned403.
+  snapshot_sha256: 14e9f883afa6282a74c380a7df48c68e05a1573fddf4902f4b59f068d0589992
+- evidence_id: thesis
+  kind: primary_source
+  reference: https://hdl.handle.net/20.500.11811/3188
+  locator: Ana Kralj2007 thesis; repository abstract and PDF front matter/contents
+    only
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: context_only
+  summary: 'The author repository explicitly identifies arugosins A and B among isolated
+    metabolites and links the2006 publication to chapter4.2. The relevant experimental
+    chapter was not read: an initial indexed PDF exposed only front matter,then requests
+    returned an access-denied/browser page. A local file with.pdf extension contained
+    HTML and was excluded. No numeric assay is established from this access.'
+- evidence_id: early
+  kind: primary_source
+  reference: PMID:5463825
+  locator: DOI:10.1039/J39700001175; full original RSC abstract
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: context_only
+  summary: The1970 structural paper describes arugosin as a mixture of two substituted
+    dibenzoxepins established through degradation,NMR and mass spectrometry. Its abstract
+    does not assign modern A/B labels to each graph or a single absolute lactol configuration.
+    It flags the need for exact-material adjudication without itself proving a defect
+    in this B constitutional record.
+- evidence_id: analytical
+  kind: primary_source
+  reference: PMID:22026385
+  locator: DOI:10.1021/np200254t; complete abstract in110-primary2011.json
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: context_only
+  summary: The2011 study analyzes719 microbial reference standards using LC-DAD-TOFMS.
+    It concerns dereplication and ionization reliability. Its abstract supplies neither
+    an exact-B antibacterial endpoint nor strain-specific biosynthesis proof.
+  snapshot_sha256: 03292052243218caf13ec0460f097cca285f853cae364a268f4dea91f9adf571
+- evidence_id: excluded
+  kind: primary_source
+  reference: PMID:34722462; PMID:27617983
+  locator: DOI:10.3389/fchem.2021.760083 and10.3390/molecules21091184; complete abstracts
+    and exact-B text search in downloaded full XML
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: context_only
+  summary: The2021 antimicrobial study isolates arugosin C and other metabolites;
+    its activity and docking claims cannot transfer to B. The2016 work assigns enantiomers
+    of K,L,M and tautomeric mixtures of other compounds; those assignments do not
+    establish B stereochemistry. The bounded text search found no exact arugosin B
+    string in either body,not an absence of all relevant literature.
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 110-local-hits.txt;109110-maintained-hits.txt;110-discovery.json
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: context_only
+  summary: Ignored-inclusive maintained searches found source and queue context,without
+    a B-specific curation overlay in the stated scope. Public discovery also surfaced
+    reports of A/B-mixture bioactivity,which remain unverified leads because the original
+    quantitative section was unavailable; no numeric value or confirmed mixture-only
+    conclusion is adopted.
+  search_scope: rg --no-ignore --hidden in isolated batch011 excluding.git/.venv;
+    maintained curation/conf/scripts/data/raw/reviews follow-up excludes large.obo/.jsonl/.html
+    files. Exact arugosin PubMed/EuropePMC and original ACS/RSC/author-thesis pages,official
+    ChEBI/OLS/PubChem.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Lactol constitution and stereo scope
+  outcome: supported
+  summary: Native constitution and source chemistry agree. One unassigned center remains
+    an explicit limit; the reviewed evidence does not justify a guessed assignment
+    or a racemate claim.
+  target_ids:
+  - CHEBI:68859
+  evidence_ids:
+  - native
+  - chemistry
+  - pubchem
+  - early
+- assessment_id: grounding
+  area: grounding
+  topic: Parents and exact mappings
+  outcome: supported
+  summary: All four structural parents fit; the sole Reaxys mapping remains an independently
+    unverified source assertion.
+  target_ids:
+  - CHEBI:68859
+  evidence_ids:
+  - authority
+  - owner
+  - pubchem
+- assessment_id: definition
+  area: evidence
+  topic: Isolation and antibacterial wording
+  outcome: unknown
+  summary: Source attribution is faithful and fungal isolation has primary-author
+    context. The inspected primary abstracts do not establish purified-B antibacterial
+    potency or a direct mechanism.
+  target_ids:
+  - CHEBI:68859
+  evidence_ids:
+  - authority
+  - adopted
+  - thesis
+  - early
+  - analytical
+- assessment_id: optional
+  area: completeness
+  topic: Evidence and assay enrichment
+  outcome: unknown
+  summary: Resolve exact material and assay scope before importing numerical mixture,congener
+    or host-cell results. Optional empty fields are not defects.
+  target_ids:
+  - CHEBI:68859
+  evidence_ids:
+  - adopted
+  - thesis
+  - excluded
+  - search
+- assessment_id: adapter
+  area: scope
+  topic: Structured expression applicability
+  outcome: not_applicable
+  summary: Native contains no named gene/protein/regulator/pathway/stress/transcriptomic
+    claim requiring a structured query.
+  target_ids:
+  - CHEBI:68859
+  evidence_ids:
+  - native
+- assessment_id: ownership
+  area: ownership
+  topic: Generated source and history
+  outcome: supported
+  summary: Source owners and all three native history events preserved; no native
+    status promotion.
+  target_ids:
+  - CHEBI:68859
+  evidence_ids:
+  - owner
+  - native
+  - search
+findings:
+- finding_id: F1
+  issue_key: chebi-68859-arugosin-b-primary-material-activity-followup
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Resolve primary assay material before adding exact-B activity evidence
+  description: The adopted primary article and its author thesis are concrete follow-up
+    sources,but the accessible abstracts do not establish a purified-B bacterial assay.
+    Distinguish B from A/B preparations and related arugosins before enriching evidence;
+    no definitive native role error is demonstrated by limited full-text access.
+  target_ids:
+  - CHEBI:68859
+  field_paths:
+  - definition
+  - activity_roles
+  - activity_spectrum
+  - evidence
+  - discussions
+  evidence_ids:
+  - adopted
+  - thesis
+  - early
+  - excluded
+  - search
+  rule_id: 'native-review-checklist: exact material and claim-level activity evidence'
+  native_severity: informational bounded primary-evidence follow-up
+  normalization_reason: The role is a faithfully attributed ontology classification,and
+    no quantitative native observation is fabricated. Limited access and optional-field
+    absence are not themselves scientific defects.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+actions:
+- action_id: A1
+  description: Retrieve the identified original experimental section and document
+    exact-compound versus preparation evidence before enrichment.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:68859
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  acceptance_checks:
+  - Inspect2006 compound-number assignments,isolation/purity,assay material and antibacterial
+    table or the corresponding author-thesis chapter. Preserve any A/B-mixture scope
+    and distinguish diffusion measurements from MIC.
+  - Do not transfer arugosin C,K,L or M target/activity/stereochemistry to B. If resolving
+    the lactol center,require exact-B evidence and consider solution interconversion;
+    unassigned does not establish racemic.
+  - Represent fungal culture/isolation evidence at its reported taxonomic and strain
+    resolution before adding producer objects; dereplication or host association alone
+    is insufficient.
+  - Use maintained owners for any definition or classification correction and validated
+    writer/history for later primary evidence. Preserve exact native constitution
+    pending positive contrary evidence; run focused and required corpus gates after
+    authorized curation.
+limitations:
+- The adopted2006 original was read at complete-abstract scope only; ACS full body
+  returned403. The author thesis repository abstract and front matter were readable,but
+  its relevant chapter was not; an HTML challenge masquerading as.pdf was detected
+  and excluded.
+- The1970 structural and2011 analytical sources were assessed at complete-abstract
+  scope. The two newer congener papers were screened at the explicitly stated abstract/text-search
+  scope,not exhaustively audited.
+- No purified-B numerical antibacterial assay,direct target,absolute stereochemistry
+  or clinical status was established. The search is bounded and does not prove these
+  data absent from the literature. Reaxys was not directly verified.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

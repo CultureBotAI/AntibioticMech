@@ -1,0 +1,935 @@
+# Arsinothricin: natural L-form conflicts with unspecified source structure
+
+- Review: 20261021T091454Z-arsinothricin
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:05:41Z
+- Finished UTC: 2026-10-21T09:14:54Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One confirmed major identity finding: the native unspecified-carbon PubChem structure is not exact-equivalent to its retained ChEBI L-form xref or unqualified natural-product scope. Internal chemistry and focused validators pass. Primary evidence supports antibacterial activity, E.coli glutamine synthetase inhibition and B.gladioli production within preparation-specific boundaries.
+
+## Scope And Provenance
+
+Whole-record scientific review of arsinothricin.
+
+Selection: Queue108 in isolated batch011.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-d03e1e5b82 | data/antibiotics/antibacterial/arsinothricin.yaml | generated | arsinothricin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema | passed | True | antibioticmech:aro-d03e1e5b82 | Actual command passed. |
+| Focused strict | passed | True | antibioticmech:aro-d03e1e5b82 | Actual command passed. |
+| Internal chemical consistency | passed | True | antibioticmech:aro-d03e1e5b82 | Native encodings and actual ARO mint reproduce; scientific stereochemical applicability is assessed separately. |
+| Exact stereochemical equivalence | failed | True | antibioticmech:aro-d03e1e5b82 | Native unspecified carbon stereo does not match retained ChEBI L-form exact xref. |
+| Structured source adapter | passed | True | antibioticmech:aro-d03e1e5b82 | Datasets and covered bacterial GS context search completed before open web follow-up; no informative iModulon. |
+| Authoritative full QC | failed | True | antibioticmech:aro-d03e1e5b82 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-d03e1e5b82 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-d03e1e5b82 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-d03e1e5b82 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-d03e1e5b82 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-d03e1e5b82 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-d03e1e5b82 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-d03e1e5b82 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-d03e1e5b82 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Natural L-form versus unspecified native structure
+
+identity: concern. Targets: antibioticmech:aro-d03e1e5b82.
+
+Stored PubChem structure and exact ChEBI xref disagree at amino-acid carbon stereochemistry; natural-product language and primary preparations require explicit resolution.
+
+### Internal chemistry and mint
+
+identity: supported. Targets: antibioticmech:aro-d03e1e5b82.
+
+Native encodings, formula, charge, masses and ARO mint are internally coherent; this does not establish L-form exactness.
+
+### Organoarsenic parent and MINTED status
+
+grounding: supported. Targets: antibioticmech:aro-d03e1e5b82.
+
+ARO parent/class is appropriately broader. MINTED reflects source fallback and must not be promoted automatically while the exact structure conflict remains.
+
+### Qualitative antibacterial definition
+
+evidence: supported. Targets: antibioticmech:aro-d03e1e5b82.
+
+Original primary growth assays support a broad-spectrum description within studied strains and biogenic preparation. Human efficacy and entire-species susceptibility are not established.
+
+### Glutamine synthetase inhibition
+
+evidence: supported. Targets: antibioticmech:aro-d03e1e5b82.
+
+Purified E.coli enzyme inhibition supports the native mechanistic sentence. The cited transport paper supplies earlier references; ArsN1 crystal binding is a resistance-protein experiment. No native direct-binding or taxon-wide target annotation is asserted.
+
+### B.gladioli GSRB05 production
+
+evidence: supported. Targets: antibioticmech:aro-d03e1e5b82.
+
+Primary production and gene-disruption/expression results support producer wording, with oxidation-state boundaries. Automated MIBiG attachment is intentionally gated by incomplete stereo.
+
+### Potential resistance enrichment
+
+completeness: unknown. Targets: antibioticmech:aro-d03e1e5b82.
+
+ArsN1 inactivation and qualified ArsQ transport are primary leads. Their optional absence is not a finding; exact-form resolution should precede curated additions.
+
+### Adopted source, references and history
+
+provenance: supported. Targets: antibioticmech:aro-d03e1e5b82.
+
+ARO definition reference resolves; PubChem structure and source mint reproduce; all three seed-history events remain unchanged. Conflict is inherited and needs maintained source handling.
+
+### Clinical,dataset and graph claims
+
+scope: not_applicable. Targets: antibioticmech:aro-d03e1e5b82.
+
+None is populated. Primary growth inhibition and microbial production do not establish clinical approval or patient efficacy.
+
+### Focused validation
+
+schema: supported. Targets: antibioticmech:aro-d03e1e5b82.
+
+Both actual focused validators pass despite the scientific identity conflict.
+
+## Findings
+
+### F1: Stored unspecified stereochemistry conflicts with the exact L-form cross-reference
+
+major / open / confirmed; issue key: aro-3007534-arsinothricin-carbon-stereo-xref-conflict.
+
+Native PubChem170988177 omits amino-acid carbon stereochemistry while CHEBI220158 specifies carbon-S/L arsinothricin. The definition denotes the natural product, and cited experiments use L-AST. Distinct racemic preparations have measurably different concentration-response behavior. Resolve the intended exact form and keep all structural identifiers, xrefs and preparation-scoped evidence consistent; an unspecified structure is not proof of a racemate.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Adjudicate natural L-arsinothricin as the intended target through maintained source and grounding owners. If retaining that scope, adopt the verified carbon-S structure with CHEBI220158/PubChem134817773 and remove or qualify the generic CID170988177 exact mapping. If an unspecified entity is intentional, explicitly separate it from the L-form and do not transfer L-only claims without qualification. Reseed reproducibly; do not patch generated YAML alone.
+
+- Verify the carbon-S/L full key CXTQPLOKUBDLTK-BYPYZUCNSA-N against independent structure authorities and primary preparation scope; no arsenic stereocentre assignment is required by this finding.
+- Preserve the distinction between unspecified stereochemistry, racemic synthetic material and L-enriched/natural material; preserve original source IDs as qualified provenance where needed.
+- Keep pentavalent AST separate from trivalent R-AST, hydroxyarsinothricin and N-acetylated products.
+- Re-run source extraction/enrichment and seeding as appropriate, focused schema/strict checks, exact full-key comparison, provenance/reproducibility and corpus gates. Keep native SEEDED until all scientific sign-off criteria pass.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/arsinothricin.yaml; Entire YAML | supports | Read natural-product/producer/antibacterial/GS definition, organoarsenic parent/class, all structural fields and three xrefs, ARO source mint and three seed events. Native MINTED/SEEDED remains unchanged; no separate molecular target, mode, activity, resistance, producer, clinical, dataset or graph block. |
+| owners | data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; ARO row451; PubChem row165; source extractor/enricher/seeder | supports | Definition and CHEBI/PubChem xrefs come from ARO3007534; native structure reproduces PubChem170988177. The adopted ChEBI inventory has no220158 row. Seeder falls back to the PubChem row when no ChEBI structure row exists. All raw and transform owners were captured before assessment. |
+| aro | https://purl.obolibrary.org/obo/aro.obo; Current ARO3007534 and ARO3000551 stanzas | supports | ARO retains the exact native definition with PMID36785875, the ChEBI220158/PubChem170988177 pair, and organoarsenic-antibiotic parent. Parent is broader and class placement is appropriate. The identity conflict is inherited from source cross-references. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/170988177; Live PUG identity | supports | CID170988177 exactly reproduces native key CXTQPLOKUBDLTK-UHFFFAOYSA-N, InChI without stereolayer, formula C5H12AsNO4, charge0 and masses. It is stereochemically unspecified, which does not itself assert a racemate. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:220158; Exact live structure | refutes | The native xref resolves to a third-party annotated ChEBI entry with carbon-S/L arsinothricin: C[As](=O)(O)CC[C@H](N)C(=O)O and CXTQPLOKUBDLTK-BYPYZUCNSA-N. This is more stereospecific than the stored native structure. |
+| pubchem-L | https://pubchem.ncbi.nlm.nih.gov/compound/134817773; Exact full-key query | supports | CID134817773 reproduces the ChEBI L-form full InChI/key, formula, charge and masses. It is a separate source identity from native CID170988177. |
+| chemistry | Independent RDKit calculations; Native SMILES/InChI and actual ARO mint | supports | Native encodings are mutually consistent: one neutral fragment, C5H12AsNO4, exact key and compatible mass225.076/exact224.998229364. Correct ARO source mint reproduces. Initial helper used a ChEBI-only mint assumption and was corrected in scratch; that was not a native defect. Carbon stereochemistry remains unassigned. |
+| stereo | Independent carbon-stereochemistry comparison; Native versus current ChEBI structures | refutes | ChEBI structure has S amino-acid carbon. Removing only that carbon chiral tag reproduces the native full key exactly. Finding concerns this carbon, not assignment of an arsenic configuration. |
+| adapter | kg-microbe-sources imodulondb; Datasets, then e_coli/precise1k query glutamine synthetase before web follow-up | context_only | No B.gladioli or E.cloacae dataset was listed. Generic bacterial context search returned glnA b3870 and modifier glnE b3053, with zero iModulons. glnE is not the GS target; no module summary was applicable and no AST phenotype follows. Sandbox DNS failure was resolved by authorized free-network escalation. |
+| cited-primary | https://doi.org/10.1111/mmi.15045; PMID36785875/PMC10101903; full primary main text, Chemicals, transport Results | supports | The cited paper explicitly uses purified L-AST from B.gladioli GSRB05. It studies ArsQ-mediated resistance and bidirectional, energy-independent transport chiefly of reduced trivalent R-AST/R-AST-OH; little short-term uptake of pentavalent forms was measured. Earlier GS and broad-spectrum statements cite prior work. Homology-model contacts are not a direct binding structure. Preserve the distinction between the pentavalent antibiotic and reduced biosynthetic species. |
+| original-activity | https://doi.org/10.1038/s42003-019-0365-y; PMID30993215/PMC6465285; Results/Fig2, GS assay, Chemicals and crystallographic sections | supports | Purified E.coli GS inhibition gave Ki0.30±0.05µM using a coupled ADP/NADH assay. Growth assays include carbapenem-resistant E.cloacae ATCCBAA-2341 at25µM in M9 and M.bovis BCG, not clinical efficacy or a direct M.tuberculosis assay. Biogenic AST was assumed L based on bound ArsN1 crystal density; the crystal is the resistance acetyltransferase, not GS. PpArsN1 expression and acetylation support drug inactivation. |
+| enantiomers | https://doi.org/10.1039/d1ra06770b; PMID35493177/PMC9043123; Results/Fig1/Table1 and GS/growth Methods | supports | Study distinguishes racemic synthetic/semisynthetic AST from biogenic L-AST. About twice the racemic concentration was needed for E.coli W3110 growth inhibition and GS inhibition; Table1 Ki values are0.75±0.20,0.65±0.20 and0.30±0.10µM respectively. Enzymatic resolution gave an L-enriched sample with 87% ee by Marfey derivatization. These preparations cannot be silently equated. |
+| producer | https://doi.org/10.1128/spectrum.00502-21; PMID34378964/PMC8552651; production time course/Figs1,3,4,7 and Results | supports | B.gladioli GSRB05 culture produces AST-related arsenicals; heterologous expression and stop-codon experiments identify arsL/arsM requirements. This supports producer wording. The proposed trivalent biosynthetic product can oxidize extracellularly to pentavalent AST. Earlier ArsQ transport interpretation must be read with the later2023 substrate/energy study. |
+| mibig | https://mibig.secondarymetabolites.org/repository/BGC0002423.3/annotations.json; Version3 annotation; native raw row1168 and seeder attach_mibig_producers | context_only | Active BGC0002423 version3 is quality questionable, completeness unknown, linked by knock-out studies, with legacy PMID34378964 and B.gladioli NCBITaxon28095. Its structure omits carbon stereo. Native raw stereo_complete=false causes the exact-identity seeder gate to skip producer attachment; missing optional producer block is not a separate flaw. |
+| gates | just validate; just validate-strict; Actual batch011 focused commands | supports | Both exited 0; strict scanned one file with zero errors. These checks do not detect the exact stereochemical cross-reference conflict. |
+| search | CultureBotAI/AntibioticMech; Ignored-inclusive exact label/ID/slug search | context_only | Native, raw ARO/PubChem/MIBiG owners, decisions and generated/research context were searched including ignored files. No record-level curation decision resolving this exact stereochemical conflict was found in the bounded repository search. |
+
+## Limits And Additional Notes
+
+- The 2019 biogenic material was assumed L from resistance-protein crystal density;2023 methods explicitly identify L-AST, and the2021 resolved synthetic preparation had 87% ee. No claim of universal 100% enantiopurity is made.
+- The 2016 initial isolation paper and raw NMR/crystallographic data were not reprocessed. Direct GS biochemical inhibition is distinguished from an independently solved GS–AST binding structure.
+- Potential primary resistance and producer additions were assessed as follow-up, not authored. The 2021/2023 ArsQ substrate and energy interpretations are retained in temporal context.
+- Free searches were bounded. Current MIBiG version3 annotations were retrieved after unversioned guessed endpoints returned 404; EuropePMC XML500 for the cited2023 paper was bypassed through PMC HTML. No unavailable endpoint is treated as missing literature.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 25 captured input hashes rechecked unchanged. Initial helper ChEBI-mint assumption is retained separately; corrected ARO mint passes. No native fields, status or history were changed.
+- After exact-form resolution, a curator can attach claim-level GS inhibition and strain-specific activity, ArsN1 resistance and B.gladioli GSRB05 producer evidence through the maintained native curation workflow. Current optional-field absence is not an additional finding.
+- MIBiG stereo_complete=false explains the missing imported producer assertion and should not be bypassed by name or connectivity-only matching.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T091454Z-arsinothricin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Arsinothricin: natural L-form conflicts with unspecified source structure'
+started_at: '2026-10-21T09:05:41Z'
+finished_at: '2026-10-21T09:14:54Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Whole-record review, prior owner capture, independent stereochemical
+    comparison, current source authorities and primary experimental text.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'One confirmed major identity finding: the native unspecified-carbon PubChem
+  structure is not exact-equivalent to its retained ChEBI L-form xref or unqualified
+  natural-product scope. Internal chemistry and focused validators pass. Primary evidence
+  supports antibacterial activity, E.coli glutamine synthetase inhibition and B.gladioli
+  production within preparation-specific boundaries.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/arsinothricin.yaml
+    sha256: ccf4decde707e4e83b4e9ee44ada45d87a11413df7b70159252cbd86fa7cd3e1
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_mibig_producers.py
+    sha256: a078cdf4c9b2d09999800ab7ae03f93d3972f29b7d2f460ebbbe7d7ec6b31c53
+    role: context
+targets:
+- target_id: antibioticmech:aro-d03e1e5b82
+  path: data/antibiotics/antibacterial/arsinothricin.yaml
+  label: arsinothricin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, identity, class and references
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted PubChem structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion decision
+scope:
+  description: Whole-record scientific review of arsinothricin.
+  selection: Queue108 in isolated batch011.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  exclusions:
+  - target: R-AST, AST-OH, R-AST-OH, acetyl-AST, phosphinothricin and unqualified
+      racemic preparations
+    reason: Different oxidation state, structure or stereochemical preparation; comparisons
+      retain experimental scope.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual command passed.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/arsinothricin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual command passed.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/arsinothricin.yaml --out /private/tmp/am-review-session/108-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Internal chemical consistency
+  status: passed
+  required: true
+  summary: Native encodings and actual ARO mint reproduce; scientific stereochemical
+    applicability is assessed separately.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - chemistry
+- check_id: exact-identity
+  name: Exact stereochemical equivalence
+  status: failed
+  required: true
+  summary: Native unspecified carbon stereo does not match retained ChEBI L-form exact
+    xref.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - chebi
+  - pubchem
+  - stereo
+- check_id: adapter
+  name: Structured source adapter
+  status: passed
+  required: true
+  summary: Datasets and covered bacterial GS context search completed before open
+    web follow-up; no informative iModulon.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/arsinothricin.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T09:11:11Z'
+  support: supports
+  summary: Read natural-product/producer/antibacterial/GS definition, organoarsenic
+    parent/class, all structural fields and three xrefs, ARO source mint and three
+    seed events. Native MINTED/SEEDED remains unchanged; no separate molecular target,
+    mode, activity, resistance, producer, clinical, dataset or graph block.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv
+  locator: ARO row451; PubChem row165; source extractor/enricher/seeder
+  accessed_at: '2026-10-21T09:11:11Z'
+  support: supports
+  summary: Definition and CHEBI/PubChem xrefs come from ARO3007534; native structure
+    reproduces PubChem170988177. The adopted ChEBI inventory has no220158 row. Seeder
+    falls back to the PubChem row when no ChEBI structure row exists. All raw and
+    transform owners were captured before assessment.
+- evidence_id: aro
+  kind: authority
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Current ARO3007534 and ARO3000551 stanzas
+  accessed_at: '2026-10-21T09:07:37Z'
+  support: supports
+  summary: ARO retains the exact native definition with PMID36785875, the ChEBI220158/PubChem170988177
+    pair, and organoarsenic-antibiotic parent. Parent is broader and class placement
+    is appropriate. The identity conflict is inherited from source cross-references.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/170988177
+  locator: Live PUG identity
+  accessed_at: '2026-10-21T09:07:12Z'
+  support: supports
+  summary: CID170988177 exactly reproduces native key CXTQPLOKUBDLTK-UHFFFAOYSA-N,
+    InChI without stereolayer, formula C5H12AsNO4, charge0 and masses. It is stereochemically
+    unspecified, which does not itself assert a racemate.
+  snapshot_sha256: d0690ed4a936eb8f16a974b1ae02aa8100a3a8e6f0fce2dca2b62e4ed52aad23
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:220158
+  locator: Exact live structure
+  accessed_at: '2026-10-21T09:07:14Z'
+  support: refutes
+  summary: 'The native xref resolves to a third-party annotated ChEBI entry with carbon-S/L
+    arsinothricin: C[As](=O)(O)CC[C@H](N)C(=O)O and CXTQPLOKUBDLTK-BYPYZUCNSA-N. This
+    is more stereospecific than the stored native structure.'
+  snapshot_sha256: 32665679d6d9f73bcf7074ae515e6b3056265aa5c2a1ab6e2477224354afc252
+- evidence_id: pubchem-L
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/134817773
+  locator: Exact full-key query
+  accessed_at: '2026-10-21T09:09:30Z'
+  support: supports
+  summary: CID134817773 reproduces the ChEBI L-form full InChI/key, formula, charge
+    and masses. It is a separate source identity from native CID170988177.
+  snapshot_sha256: fdee36b6bb645a192f253fd58904b244a1139d55e069692a3761a1e579a4a469
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculations
+  locator: Native SMILES/InChI and actual ARO mint
+  accessed_at: '2026-10-21T09:06:52Z'
+  support: supports
+  summary: 'Native encodings are mutually consistent: one neutral fragment, C5H12AsNO4,
+    exact key and compatible mass225.076/exact224.998229364. Correct ARO source mint
+    reproduces. Initial helper used a ChEBI-only mint assumption and was corrected
+    in scratch; that was not a native defect. Carbon stereochemistry remains unassigned.'
+  snapshot_sha256: 32915b67385a90c94ca3fcfc928ff5bd4e6ce26fb19b80ca299c895118484865
+- evidence_id: stereo
+  kind: validation
+  reference: Independent carbon-stereochemistry comparison
+  locator: Native versus current ChEBI structures
+  accessed_at: '2026-10-21T09:09:09Z'
+  support: refutes
+  summary: ChEBI structure has S amino-acid carbon. Removing only that carbon chiral
+    tag reproduces the native full key exactly. Finding concerns this carbon, not
+    assignment of an arsenic configuration.
+  snapshot_sha256: b396646d8ae7dd54b58ad9b5ca883dca9358cb41abaa21f9d90c31796f18a23f
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb
+  locator: Datasets, then e_coli/precise1k query glutamine synthetase before web follow-up
+  accessed_at: '2026-10-21T09:07:07Z'
+  support: context_only
+  summary: No B.gladioli or E.cloacae dataset was listed. Generic bacterial context
+    search returned glnA b3870 and modifier glnE b3053, with zero iModulons. glnE
+    is not the GS target; no module summary was applicable and no AST phenotype follows.
+    Sandbox DNS failure was resolved by authorized free-network escalation.
+  snapshot_sha256: ad9ed5c3689551c701d7730fff13c1157aba42dea19c2989c0279572c3b30aa6
+- evidence_id: cited-primary
+  kind: primary_source
+  reference: https://doi.org/10.1111/mmi.15045
+  locator: PMID36785875/PMC10101903; full primary main text, Chemicals, transport
+    Results
+  accessed_at: '2026-10-21T09:07:48Z'
+  support: supports
+  summary: The cited paper explicitly uses purified L-AST from B.gladioli GSRB05.
+    It studies ArsQ-mediated resistance and bidirectional, energy-independent transport
+    chiefly of reduced trivalent R-AST/R-AST-OH; little short-term uptake of pentavalent
+    forms was measured. Earlier GS and broad-spectrum statements cite prior work.
+    Homology-model contacts are not a direct binding structure. Preserve the distinction
+    between the pentavalent antibiotic and reduced biosynthetic species.
+  snapshot_sha256: c2833b0964216a6218dc80c7e2c05e42182d97b6854914b94c6cc2fdd83a9a5f
+- evidence_id: original-activity
+  kind: primary_source
+  reference: https://doi.org/10.1038/s42003-019-0365-y
+  locator: PMID30993215/PMC6465285; Results/Fig2, GS assay, Chemicals and crystallographic
+    sections
+  accessed_at: '2026-10-21T09:08:22Z'
+  support: supports
+  summary: Purified E.coli GS inhibition gave Ki0.30±0.05µM using a coupled ADP/NADH
+    assay. Growth assays include carbapenem-resistant E.cloacae ATCCBAA-2341 at25µM
+    in M9 and M.bovis BCG, not clinical efficacy or a direct M.tuberculosis assay.
+    Biogenic AST was assumed L based on bound ArsN1 crystal density; the crystal is
+    the resistance acetyltransferase, not GS. PpArsN1 expression and acetylation support
+    drug inactivation.
+  snapshot_sha256: 1d727c38aa89f970f346ace7720466d18a62e3eff9eb3a0658ae5943c9ab155e
+- evidence_id: enantiomers
+  kind: primary_source
+  reference: https://doi.org/10.1039/d1ra06770b
+  locator: PMID35493177/PMC9043123; Results/Fig1/Table1 and GS/growth Methods
+  accessed_at: '2026-10-21T09:08:29Z'
+  support: supports
+  summary: Study distinguishes racemic synthetic/semisynthetic AST from biogenic L-AST.
+    About twice the racemic concentration was needed for E.coli W3110 growth inhibition
+    and GS inhibition; Table1 Ki values are0.75±0.20,0.65±0.20 and0.30±0.10µM respectively.
+    Enzymatic resolution gave an L-enriched sample with 87% ee by Marfey derivatization.
+    These preparations cannot be silently equated.
+  snapshot_sha256: 35e7d46386cae9a3f0674d4728abda851e509c1cbf4b7c87b86604ed7f04e470
+- evidence_id: producer
+  kind: primary_source
+  reference: https://doi.org/10.1128/spectrum.00502-21
+  locator: PMID34378964/PMC8552651; production time course/Figs1,3,4,7 and Results
+  accessed_at: '2026-10-21T09:08:19Z'
+  support: supports
+  summary: B.gladioli GSRB05 culture produces AST-related arsenicals; heterologous
+    expression and stop-codon experiments identify arsL/arsM requirements. This supports
+    producer wording. The proposed trivalent biosynthetic product can oxidize extracellularly
+    to pentavalent AST. Earlier ArsQ transport interpretation must be read with the
+    later2023 substrate/energy study.
+  snapshot_sha256: 5d9e1522ff6550d073b0a46a7d4160c2123eb297110d43ca54cfa7f959c9e420
+- evidence_id: mibig
+  kind: database
+  reference: https://mibig.secondarymetabolites.org/repository/BGC0002423.3/annotations.json
+  locator: Version3 annotation; native raw row1168 and seeder attach_mibig_producers
+  accessed_at: '2026-10-21T09:09:30Z'
+  support: context_only
+  summary: Active BGC0002423 version3 is quality questionable, completeness unknown,
+    linked by knock-out studies, with legacy PMID34378964 and B.gladioli NCBITaxon28095.
+    Its structure omits carbon stereo. Native raw stereo_complete=false causes the
+    exact-identity seeder gate to skip producer attachment; missing optional producer
+    block is not a separate flaw.
+  snapshot_sha256: 411c6052b81ec0de951fc223e58f8851258c7176eda59a2220b2856a64899fbc
+- evidence_id: gates
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual batch011 focused commands
+  accessed_at: '2026-10-21T09:09:09Z'
+  support: supports
+  summary: Both exited 0; strict scanned one file with zero errors. These checks do
+    not detect the exact stereochemical cross-reference conflict.
+  snapshot_sha256: 7e9a4f5030b0a3fe56d2d294d17603420ab07a7b397c4779d924333e9b58b2f5
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: Ignored-inclusive exact label/ID/slug search
+  accessed_at: '2026-10-21T09:11:11Z'
+  support: context_only
+  summary: Native, raw ARO/PubChem/MIBiG owners, decisions and generated/research
+    context were searched including ignored files. No record-level curation decision
+    resolving this exact stereochemical conflict was found in the bounded repository
+    search.
+  search_scope: prepare.py108 rg --no-ignore --hidden excluding.git/.venv; exact identifiers
+    in data/raw, curation, scripts and conf; structured adapter before public primary
+    follow-up; current official ARO/ChEBI/PubChem/MIBiG and cited primary source chain.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Natural L-form versus unspecified native structure
+  outcome: concern
+  summary: Stored PubChem structure and exact ChEBI xref disagree at amino-acid carbon
+    stereochemistry; natural-product language and primary preparations require explicit
+    resolution.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - native
+  - pubchem
+  - chebi
+  - pubchem-L
+  - stereo
+  - cited-primary
+  - enantiomers
+- assessment_id: consistency
+  area: identity
+  topic: Internal chemistry and mint
+  outcome: supported
+  summary: Native encodings, formula, charge, masses and ARO mint are internally coherent;
+    this does not establish L-form exactness.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - chemistry
+  - owners
+- assessment_id: grounding
+  area: grounding
+  topic: Organoarsenic parent and MINTED status
+  outcome: supported
+  summary: ARO parent/class is appropriately broader. MINTED reflects source fallback
+    and must not be promoted automatically while the exact structure conflict remains.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - aro
+  - owners
+  - native
+- assessment_id: activity
+  area: evidence
+  topic: Qualitative antibacterial definition
+  outcome: supported
+  summary: Original primary growth assays support a broad-spectrum description within
+    studied strains and biogenic preparation. Human efficacy and entire-species susceptibility
+    are not established.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - original-activity
+  - enantiomers
+- assessment_id: target
+  area: evidence
+  topic: Glutamine synthetase inhibition
+  outcome: supported
+  summary: Purified E.coli enzyme inhibition supports the native mechanistic sentence.
+    The cited transport paper supplies earlier references; ArsN1 crystal binding is
+    a resistance-protein experiment. No native direct-binding or taxon-wide target
+    annotation is asserted.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - original-activity
+  - cited-primary
+  - adapter
+- assessment_id: producer
+  area: evidence
+  topic: B.gladioli GSRB05 production
+  outcome: supported
+  summary: Primary production and gene-disruption/expression results support producer
+    wording, with oxidation-state boundaries. Automated MIBiG attachment is intentionally
+    gated by incomplete stereo.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - producer
+  - mibig
+  - cited-primary
+- assessment_id: resistance
+  area: completeness
+  topic: Potential resistance enrichment
+  outcome: unknown
+  summary: ArsN1 inactivation and qualified ArsQ transport are primary leads. Their
+    optional absence is not a finding; exact-form resolution should precede curated
+    additions.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - original-activity
+  - cited-primary
+  - producer
+- assessment_id: provenance
+  area: provenance
+  topic: Adopted source, references and history
+  outcome: supported
+  summary: ARO definition reference resolves; PubChem structure and source mint reproduce;
+    all three seed-history events remain unchanged. Conflict is inherited and needs
+    maintained source handling.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - owners
+  - aro
+  - chemistry
+  - native
+- assessment_id: other
+  area: scope
+  topic: Clinical,dataset and graph claims
+  outcome: not_applicable
+  summary: None is populated. Primary growth inhibition and microbial production do
+    not establish clinical approval or patient efficacy.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - native
+  - original-activity
+- assessment_id: schema
+  area: schema
+  topic: Focused validation
+  outcome: supported
+  summary: Both actual focused validators pass despite the scientific identity conflict.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  evidence_ids:
+  - gates
+findings:
+- finding_id: F1
+  issue_key: aro-3007534-arsinothricin-carbon-stereo-xref-conflict
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Stored unspecified stereochemistry conflicts with the exact L-form cross-reference
+  description: Native PubChem170988177 omits amino-acid carbon stereochemistry while
+    CHEBI220158 specifies carbon-S/L arsinothricin. The definition denotes the natural
+    product, and cited experiments use L-AST. Distinct racemic preparations have measurably
+    different concentration-response behavior. Resolve the intended exact form and
+    keep all structural identifiers, xrefs and preparation-scoped evidence consistent;
+    an unspecified structure is not proof of a racemate.
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  field_paths:
+  - chemical_structure.smiles
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  - xrefs
+  - definition
+  - grounding_status
+  evidence_ids:
+  - native
+  - owners
+  - pubchem
+  - chebi
+  - pubchem-L
+  - stereo
+  - cited-primary
+  - enantiomers
+  rule_id: native-review-checklist:Identity, Structure and Equivalence
+  native_severity: major exact-stereochemical identity inconsistency
+  normalization_reason: Connectivity and internal chemistry are correct, but a retained
+    exact cross-reference is more stereospecific than the stored structure and materially
+    affects experimental applicability. This is a substantive identity mapping flaw,
+    not an optional missing annotation.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Inherited cross-reference and natural-product definition
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Fallback chemical structure
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Potential exact L-form source structure after verified source adoption
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Explicit exact-form grounding decision
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure-source mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible exact identity and structure selection
+actions:
+- action_id: A1
+  description: Adjudicate natural L-arsinothricin as the intended target through maintained
+    source and grounding owners. If retaining that scope, adopt the verified carbon-S
+    structure with CHEBI220158/PubChem134817773 and remove or qualify the generic
+    CID170988177 exact mapping. If an unspecified entity is intentional, explicitly
+    separate it from the L-form and do not transfer L-only claims without qualification.
+    Reseed reproducibly; do not patch generated YAML alone.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-d03e1e5b82
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Inherited cross-reference and natural-product definition
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Fallback chemical structure
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Potential exact L-form source structure after verified source adoption
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Explicit exact-form grounding decision
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure-source mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible exact identity and structure selection
+  acceptance_checks:
+  - Verify the carbon-S/L full key CXTQPLOKUBDLTK-BYPYZUCNSA-N against independent
+    structure authorities and primary preparation scope; no arsenic stereocentre assignment
+    is required by this finding.
+  - Preserve the distinction between unspecified stereochemistry, racemic synthetic
+    material and L-enriched/natural material; preserve original source IDs as qualified
+    provenance where needed.
+  - Keep pentavalent AST separate from trivalent R-AST, hydroxyarsinothricin and N-acetylated
+    products.
+  - Re-run source extraction/enrichment and seeding as appropriate, focused schema/strict
+    checks, exact full-key comparison, provenance/reproducibility and corpus gates.
+    Keep native SEEDED until all scientific sign-off criteria pass.
+limitations:
+- The 2019 biogenic material was assumed L from resistance-protein crystal density;2023
+  methods explicitly identify L-AST, and the2021 resolved synthetic preparation had
+  87% ee. No claim of universal 100% enantiopurity is made.
+- The 2016 initial isolation paper and raw NMR/crystallographic data were not reprocessed.
+  Direct GS biochemical inhibition is distinguished from an independently solved GS–AST
+  binding structure.
+- Potential primary resistance and producer additions were assessed as follow-up,
+  not authored. The 2021/2023 ArsQ substrate and energy interpretations are retained
+  in temporal context.
+- Free searches were bounded. Current MIBiG version3 annotations were retrieved after
+  unversioned guessed endpoints returned 404; EuropePMC XML500 for the cited2023 paper
+  was bypassed through PMC HTML. No unavailable endpoint is treated as missing literature.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 25 captured input hashes rechecked unchanged. Initial helper ChEBI-mint assumption
+  is retained separately; corrected ARO mint passes. No native fields, status or history
+  were changed.
+- After exact-form resolution, a curator can attach claim-level GS inhibition and
+  strain-specific activity, ArsN1 resistance and B.gladioli GSRB05 producer evidence
+  through the maintained native curation workflow. Current optional-field absence
+  is not an additional finding.
+- MIBiG stereo_complete=false explains the missing imported producer assertion and
+  should not be bypassed by name or connectivity-only matching.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:220158
+- https://pubchem.ncbi.nlm.nih.gov/compound/134817773
+- https://doi.org/10.1111/mmi.15045
+- https://doi.org/10.1039/d1ra06770b
+tags:
+- arsinothricin
+- organoarsenic
+- stereochemistry
+- glutamine-synthetase
+- identity-conflict
+```
