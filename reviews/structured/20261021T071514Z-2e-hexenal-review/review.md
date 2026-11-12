@@ -1,0 +1,859 @@
+# Review of (2E)-hexenal: exact isomer, antimicrobial responses and tolerance evidence
+
+- Review: 20261021T071514Z-2e-hexenal-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T07:08:00Z
+- Finished UTC: 2026-10-21T07:15:14Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The neutral E isomer, broader parent, registry mappings and seeded provenance are consistent. Primary evidence supports antibacterial and antifungal effects and a genetically bounded bacterial tolerance phenotype. Two minor findings identify concrete evidence-curation work. Cell-response measurements, docking and congener biotransformation do not establish exact direct antimicrobial targets.
+
+## Scope And Provenance
+
+Entire resolved record, maintained provenance, ten adopted abstract records and additional primary bacterial/fungal experimental sections.
+
+Selection: Twenty-second initially uncovered record in sorted corpus path order; second in batch003.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:28913 | data/antibiotics/antibacterial/2e-hexenal.yaml | generated | (2E)-hexenal |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema validation | passed | True | CHEBI:28913 | Actual focused execution exited0 with no validation errors. |
+| Documented strict validation | passed | True | CHEBI:28913 | Actual focused execution exited0 with no validation errors. |
+| Independent molecular and minted identifier consistency | passed | False | CHEBI:28913 | Corrected record-derived assertions pass; initial scratch identifier error is disclosed in limitations. |
+| Structured source applicability | not_applicable | False | CHEBI:28913 | The native record names no gene, protein, pathway, stress response or dataset. Literature findings identify future curation leads, not an existing expression-module claim. |
+| Authoritative full QC | failed | True | CHEBI:28913 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:28913 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:28913 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:28913 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:28913 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:28913 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:28913 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:28913 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:28913 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### One exact E aldehyde
+
+identity: supported. Targets: CHEBI:28913.
+
+Structure, stereochemistry, charge, formula, masses and registry mappings agree. The broader parent, Z isomer, 4-oxo congener and mixtures remain separate.
+
+### Antibacterial filing and broader experimental activity
+
+evidence: supported. Targets: CHEBI:28913.
+
+The retained ontology role is reproduced and exact bacterial experiments independently support it. Fungal activity is also documented but unrepresented; source filing alone is not a complete activity spectrum.
+
+### Cell response versus molecular target
+
+completeness: concern. Targets: CHEBI:28913.
+
+Specific primary response data warrant a qualified mechanism assessment. Docking, expression changes and genetic sensitivity do not alone prove inhibitory binding. No such unsupported target is currently asserted.
+
+### Genetically bounded tolerance
+
+completeness: concern. Targets: CHEBI:28913.
+
+The exact-compound yhfK phenotype is available for literature-backed contextual curation. It does not define clinical resistance or establish a directly inhibited antimicrobial target.
+
+### Natural occurrence and biosynthesis scope
+
+representation: supported. Targets: CHEBI:28913.
+
+The definition describes broad natural occurrence, supported by the authority and source lead. It makes no strain-specific producer assertion; a specific producer object would require exact taxon and biosynthetic evidence.
+
+### Clinical, causal and dataset objects
+
+representation: not_applicable. Targets: CHEBI:28913.
+
+No such objects are asserted. Food preservation, insect effects and rat mixture experiments are not clinical approval or treatment evidence.
+
+### Maintained inputs and scientific status
+
+ownership: supported. Targets: CHEBI:28913.
+
+SEEDED provenance is accurate. Review validation does not establish native mechanism sign-off or authorize data changes.
+
+## Findings
+
+### F1: Exact primary activity and response evidence needs scoped curation
+
+minor / open / confirmed; issue key: chebi-28913-primary-activity-and-qualified-mechanism.
+
+Add evidence-linked activity and a qualified mechanism narrative that separates measured cellular responses from binding hypotheses. Antifungal observations should not disappear merely because the adopted source role files this seed as antibacterial.
+
+### F2: Primary genetic tolerance evidence is not represented
+
+minor / open / confirmed; issue key: chebi-28913-yhfk-tolerance-evidence.
+
+The exact-compound deletion/complementation experiment provides a bounded resistance-context follow-up. Preserve its growth-curve endpoint and strain/construct scope, while keeping cinnamaldehyde conversion separate.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+In a separately authorized curation pass, attach exact primary evidence, organism-bounded activity and qualified mechanism notes. Inspect the Fusarium methods/controls before target claims; preserve unresolved direct-target status when necessary.
+
+- Preserve volume-based fungal concentration units and author-defined endpoints; do not silently convert to mass units or claim a standardized fungicidal test.
+- Keep bacterial stress responses and fungal assays taxonomically separate. Docking and qPCR remain predicted or response evidence rather than measured inhibition.
+- Resolve strain accession and source method details before fine-grained observations; use validated writer/history and focused validation, corpus reproduction and QC.
+
+### A2
+
+Curate the exact yhfK susceptibility phenotype with organism, strain, genotype, construct, dose and growth endpoint. Any biochemical detoxification annotation must match the actual substrate and experimental level.
+
+- No clinical breakpoint, MIC or purified-enzyme hexenal turnover is inferred from the growth curves.
+- Do not transfer cinnamaldehyde-selected variant resistance to hexenal: L53F, T77A and A113P showed reduced hexenal tolerance, while F57S was unchanged in the reported variant comparison.
+- Ground the experimental protein/taxon before structured entry, cite primary evidence on the narrow claim and retain native SEEDED until all promotion requirements are met.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/2e-hexenal.yaml; Complete generated YAML | supports | Read exact stereochemical identity, structural/natural-occurrence definition, eleven aliases, one parent, antibacterial role, all structure fields, three xrefs, one source concept and three seed/reseed events. No molecular mode, target, quantitative assay, resistance, producer, clinical, evidence, graph or dataset object is asserted. |
+| owner | data/raw/chebi_antimicrobials.tsv; Complete CHEBI:28913 row; manifest, source mappings, extractor and seeder | supports | Identity, structure, aliases and retained role match the adopted row. The ten PMID leads are discovery material, not automatically imported primary evidence. Mechanism role column is empty. Maintained exact-ID/minted-ID searches found no curator or decision override. Source generation history is reproducible. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:28913; Full official entry, structure, names, ontology and registry sections | supports | Label, definition, E-SMILES, stereospecific Standard InChI/key, C6H10O, charge0 and masses agree. The authority supplies CAS6728-26-3, KEGG C08497 and Reaxys1699684, plus antibacterial, plant-metabolite and flavouring roles; only antibacterial belongs to the retained antimicrobial-role subset. |
+| parent | https://www.ebi.ac.uk/chebi/CHEBI:19591; Definition, unspecified-stereo structure and incoming E/Z children | supports | The parent is the broader 2-hexenal concept. Its structure has no E/Z assignment and it separately lists E and Z children, so it must not replace the exact record identity. Generic leaf-aldehyde/propylacrolein names can be ambiguous without structure. |
+| kegg | https://www.kegg.jp/entry/C08497; Entire compound summary | supports | Names explicitly identify the trans/E isomer; formula, exact mass98.0732, CAS6728-26-3 and ChEBI28913 mapping agree. The KEGG lipid hierarchy is broader context, not a target assignment. |
+| chemistry | RDKit and hashlib independent calculation; /private/tmp/am-review-session/022-chemistry.py; 022-chemistry.json | supports | Corrected script verifies both encodings yield MBDOYVRWFFCFHM-SNAWJCMRSA-N, C6H10O, charge0, one fragment and the E double bond. Average98.145 and exact98.07316494 agree at recorded precision. The source-concept minted identifier is reproduced. |
+| pmid21548650 | PMID:21548650; Europe PMC core abstract record; DOI:10.1021/jf200846h | context_only | Model apple-beverage chemistry identifies a different off-flavour product, 6-propylbenzofuran-7-ol. This does not establish a microbial target or transfer that product identity. |
+| pmid22177713 | PMID:22177713; Europe PMC core abstract record; DOI:10.1016/j.ijfoodmicro.2011.11.015 | context_only | Encapsulated trans-2-hexenal in cyclodextrin/PLA formulations inhibits spoilage fungi. Formulation/release experiments are not a free-compound broth MIC. |
+| pmid22417509 | PMID:22417509; Europe PMC core abstract record; DOI:10.1111/j.1750-3841.2011.02250.x | context_only | Readable title and partial abstract describe trans-2-hexenal, plant lipoxygenase origin and inhibition of Aspergillus flavus/aflatoxin in corn. The returned abstract is truncated; no missing quantitative text was reconstructed. |
+| pmid22420267 | PMID:22420267; Europe PMC core abstract record; DOI:10.1603/ec11121 | context_only | Multicomponent volatile blends modify bark-beetle attraction. Blend and insect phenotypes do not establish exact-compound antimicrobial action. |
+| pmid22978292 | PMID:22978292; Europe PMC core abstract record; DOI:10.1021/tx3002669 | context_only | Rat physiologically based modelling studies detoxification and DNA-adduct formation. Rat/model pathways do not establish microbial killing targets. |
+| pmid23047086 | PMID:23047086; Europe PMC core abstract record; DOI:10.1271/bbb.120321 | context_only | The principal antibacterial compound is 4-oxo-(E)-2-hexenal; the abstract compares it with weaker E-hexenal. Its reported 10-microgram effect belongs to the oxo congener, not this record. |
+| pmid23865451 | PMID:23865451; Europe PMC core abstract record; DOI:10.1111/1750-3841.12151 | context_only | Intermittent vapour treatment reduces bacterial/fungal populations in moist nonsterile corn. A heterogeneous food microcosm is not an isolate-specific MIC or receptor assay. |
+| pmid25842326 | PMID:25842326; Europe PMC core abstract record; DOI:10.1016/j.foodchem.2015.02.136 | context_only | Sublethal trans-2-hexenal and other natural compounds change membrane fatty-acid and volatile profiles in tested Listeria, E. coli and Salmonella cultures. These are stress/adaptation observations, not direct binding to a lipid enzyme. |
+| pmid26170398 | PMID:26170398; Europe PMC core abstract record; DOI:10.1093/jisesa/iev075 | context_only | Fumigation, respiration and behavioural assays concern Bradysia odoriphaga insects. They supply no microbial target or quantitative microbial activity. |
+| pmid26475511 | PMID:26475511; Europe PMC core abstract record; DOI:10.1016/j.bbr.2015.10.023 | context_only | Rat behavioural experiments test a cis-3-hexenol/trans-2-hexenal mixture. Neither a mixture-specific effect nor rat serotonin context is an exact antimicrobial target. |
+| bacterial | DOI:10.1128/spectrum.04877-22; PMID37036358; PMC10269891 full XML, Results, Figures3/7, Table1 and Methods | supports | At 6mM trans-2-hexenal in BHI,30C, Listeria monocytogenes ScottA delta-yhfK showed an approximately42h lag versus15h WT and16h complemented cells. Bacillus subtilis168 yhfK-deletion strains were more sensitive at2mM. These are growth-curve tolerance phenotypes, not MICs or direct target-binding assays. Chemical conversion was measured with cinnamaldehyde; its product evidence cannot establish purified YhfK turnover of hexenal. Methods identify Sigma-Aldrich trans-2-hexenal and three independent cultures. |
+| fungal | DOI:10.3390/jof9090930; PMID37755038; PMC10532542 full XML, Methods2.1/2.3/2.4/2.9–2.13, Table2, Results3.1/3.6–3.9 | supports | Geotrichum citri-aurantii agar assays used98% trans-2-hexenal in PDA/Tween80 at28±2C. Reported MIC0.50µL/mL is complete growth inhibition at2days; reported MFC1.00µL/mL uses the authors’4day endpoint. PI staining, lipid/ergosterol measurements and qPCR support cellular responses. FKS1/ERG1/ERG7/ERG11 binding is docking to predicted structures, not measured affinity or enzyme inhibition. No significant chitin/AKP change was reported, limiting broad cell-wall-disruption claims. |
+| fusarium | PMID:35481379; DOI10.1021/acs.jafc.2c00942; Europe PMC and ACS publisher abstract | partial | The abstract describes membrane damage, ROS, SPR-LC-MS/MS protein identification and knockout effects involving FgTRR,FgSLX1,FgCOPB in Fusarium graminearum. These provide a concrete follow-up lead; the abstract alone does not justify encoding all three as proven inhibited targets. |
+| search | Ignored-inclusive local search and bounded free primary research; 022-local-hits.txt; 022-epmc.json; primary XML files | context_only | Local and free-source searches found exact-compound evidence and multiple neighbouring contexts. No paid source was used and no experiment on a different aldehyde or blend was imported as exact evidence. |
+
+## Limits And Additional Notes
+
+- Most adopted papers were inspected at abstract level through Europe PMC. PMID22417509 has a truncated abstract in the returned record; only its readable title and sentences were used.
+- The 2022 Fusarium paper was available as an abstract; publisher full text is purchase-only and the free supplement request returned 403. Its protein-identification lead requires full methods and controls before target curation.
+- Reaxys was corroborated through ChEBI rather than independently accessed. Common source aliases lacking E/Z notation are not independent proof of isomer identity.
+- The Geotrichum paper gives a source institution but no strain accession in inspected Methods. Its volume-based MIC/MFC and operational endpoint definitions must be retained; no mass conversion or clinical breakpoint is inferred.
+- The initial scratch chemistry probe retained the preceding record identifier in its minting assertion and failed for that reason. It was corrected to derive the identifier from this record; the corrected structure and minting assertions pass. No native data defect was inferred from the probe error.
+- Bounded research does not prove that direct targets or additional studies are absent. Insect activity, rat mixture effects, food formulations and microbial assays are distinct contexts.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T071514Z-2e-hexenal-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Review of (2E)-hexenal: exact isomer, antimicrobial responses and tolerance
+  evidence'
+started_at: '2026-10-21T07:08:00Z'
+finished_at: '2026-10-21T07:15:14Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the target. Entire record, source row,
+    official identity, independent chemistry, all adopted abstract records and relevant
+    additional primary full text were inspected.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The neutral E isomer, broader parent, registry mappings and seeded provenance
+  are consistent. Primary evidence supports antibacterial and antifungal effects and
+  a genetically bounded bacterial tolerance phenotype. Two minor findings identify
+  concrete evidence-curation work. Cell-response measurements, docking and congener
+  biotransformation do not establish exact direct antimicrobial targets.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/2e-hexenal.yaml
+    sha256: 646f235e5bea760c40b46ae077cb7e477bc7a099a064487e68b3c2b51ac7d9e7
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:28913
+  path: data/antibiotics/antibacterial/2e-hexenal.yaml
+  label: (2E)-hexenal
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire resolved record, maintained provenance, ten adopted abstract
+    records and additional primary bacterial/fungal experimental sections.
+  selection: Twenty-second initially uncovered record in sorted corpus path order;
+    second in batch003.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:28913
+checks:
+- check_id: schema
+  name: Documented schema validation
+  status: passed
+  required: true
+  summary: Actual focused execution exited0 with no validation errors.
+  target_ids:
+  - CHEBI:28913
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/2e-hexenal.yaml
+  exit_code: 0
+- check_id: strict
+  name: Documented strict validation
+  status: passed
+  required: true
+  summary: Actual focused execution exited0 with no validation errors.
+  target_ids:
+  - CHEBI:28913
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/2e-hexenal.yaml --out /private/tmp/am-review-session/022-strict.tsv
+  exit_code: 0
+- check_id: chemistry
+  name: Independent molecular and minted identifier consistency
+  status: passed
+  required: false
+  summary: Corrected record-derived assertions pass; initial scratch identifier error
+    is disclosed in limitations.
+  target_ids:
+  - CHEBI:28913
+  command: .venv/bin/python /private/tmp/am-review-session/022-chemistry.py
+  exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: imodulondb
+  name: Structured source applicability
+  status: not_applicable
+  required: false
+  summary: The native record names no gene, protein, pathway, stress response or dataset.
+    Literature findings identify future curation leads, not an existing expression-module
+    claim.
+  target_ids:
+  - CHEBI:28913
+  evidence_ids:
+  - record
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:28913
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:28913
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:28913
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:28913
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:28913
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:28913
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:28913
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:28913
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:28913
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/2e-hexenal.yaml
+  locator: Complete generated YAML
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: supports
+  summary: Read exact stereochemical identity, structural/natural-occurrence definition,
+    eleven aliases, one parent, antibacterial role, all structure fields, three xrefs,
+    one source concept and three seed/reseed events. No molecular mode, target, quantitative
+    assay, resistance, producer, clinical, evidence, graph or dataset object is asserted.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Complete CHEBI:28913 row; manifest, source mappings, extractor and seeder
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: supports
+  summary: Identity, structure, aliases and retained role match the adopted row. The
+    ten PMID leads are discovery material, not automatically imported primary evidence.
+    Mechanism role column is empty. Maintained exact-ID/minted-ID searches found no
+    curator or decision override. Source generation history is reproducible.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:28913
+  locator: Full official entry, structure, names, ontology and registry sections
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: supports
+  summary: Label, definition, E-SMILES, stereospecific Standard InChI/key, C6H10O,
+    charge0 and masses agree. The authority supplies CAS6728-26-3, KEGG C08497 and
+    Reaxys1699684, plus antibacterial, plant-metabolite and flavouring roles; only
+    antibacterial belongs to the retained antimicrobial-role subset.
+- evidence_id: parent
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:19591
+  locator: Definition, unspecified-stereo structure and incoming E/Z children
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: supports
+  summary: The parent is the broader 2-hexenal concept. Its structure has no E/Z assignment
+    and it separately lists E and Z children, so it must not replace the exact record
+    identity. Generic leaf-aldehyde/propylacrolein names can be ambiguous without
+    structure.
+- evidence_id: kegg
+  kind: database
+  reference: https://www.kegg.jp/entry/C08497
+  locator: Entire compound summary
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: supports
+  summary: Names explicitly identify the trans/E isomer; formula, exact mass98.0732,
+    CAS6728-26-3 and ChEBI28913 mapping agree. The KEGG lipid hierarchy is broader
+    context, not a target assignment.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit and hashlib independent calculation
+  locator: /private/tmp/am-review-session/022-chemistry.py; 022-chemistry.json
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: supports
+  summary: Corrected script verifies both encodings yield MBDOYVRWFFCFHM-SNAWJCMRSA-N,
+    C6H10O, charge0, one fragment and the E double bond. Average98.145 and exact98.07316494
+    agree at recorded precision. The source-concept minted identifier is reproduced.
+  snapshot_sha256: 46a322598f300fec0ce7530bd77284886303ab3c4dc40201eda7c0428065d1b0
+- evidence_id: pmid21548650
+  kind: primary_source
+  reference: PMID:21548650
+  locator: Europe PMC core abstract record; DOI:10.1021/jf200846h
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Model apple-beverage chemistry identifies a different off-flavour product,
+    6-propylbenzofuran-7-ol. This does not establish a microbial target or transfer
+    that product identity.
+- evidence_id: pmid22177713
+  kind: primary_source
+  reference: PMID:22177713
+  locator: Europe PMC core abstract record; DOI:10.1016/j.ijfoodmicro.2011.11.015
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Encapsulated trans-2-hexenal in cyclodextrin/PLA formulations inhibits
+    spoilage fungi. Formulation/release experiments are not a free-compound broth
+    MIC.
+- evidence_id: pmid22417509
+  kind: primary_source
+  reference: PMID:22417509
+  locator: Europe PMC core abstract record; DOI:10.1111/j.1750-3841.2011.02250.x
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Readable title and partial abstract describe trans-2-hexenal, plant lipoxygenase
+    origin and inhibition of Aspergillus flavus/aflatoxin in corn. The returned abstract
+    is truncated; no missing quantitative text was reconstructed.
+- evidence_id: pmid22420267
+  kind: primary_source
+  reference: PMID:22420267
+  locator: Europe PMC core abstract record; DOI:10.1603/ec11121
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Multicomponent volatile blends modify bark-beetle attraction. Blend and
+    insect phenotypes do not establish exact-compound antimicrobial action.
+- evidence_id: pmid22978292
+  kind: primary_source
+  reference: PMID:22978292
+  locator: Europe PMC core abstract record; DOI:10.1021/tx3002669
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Rat physiologically based modelling studies detoxification and DNA-adduct
+    formation. Rat/model pathways do not establish microbial killing targets.
+- evidence_id: pmid23047086
+  kind: primary_source
+  reference: PMID:23047086
+  locator: Europe PMC core abstract record; DOI:10.1271/bbb.120321
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: The principal antibacterial compound is 4-oxo-(E)-2-hexenal; the abstract
+    compares it with weaker E-hexenal. Its reported 10-microgram effect belongs to
+    the oxo congener, not this record.
+- evidence_id: pmid23865451
+  kind: primary_source
+  reference: PMID:23865451
+  locator: Europe PMC core abstract record; DOI:10.1111/1750-3841.12151
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Intermittent vapour treatment reduces bacterial/fungal populations in moist
+    nonsterile corn. A heterogeneous food microcosm is not an isolate-specific MIC
+    or receptor assay.
+- evidence_id: pmid25842326
+  kind: primary_source
+  reference: PMID:25842326
+  locator: Europe PMC core abstract record; DOI:10.1016/j.foodchem.2015.02.136
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Sublethal trans-2-hexenal and other natural compounds change membrane fatty-acid
+    and volatile profiles in tested Listeria, E. coli and Salmonella cultures. These
+    are stress/adaptation observations, not direct binding to a lipid enzyme.
+- evidence_id: pmid26170398
+  kind: primary_source
+  reference: PMID:26170398
+  locator: Europe PMC core abstract record; DOI:10.1093/jisesa/iev075
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Fumigation, respiration and behavioural assays concern Bradysia odoriphaga
+    insects. They supply no microbial target or quantitative microbial activity.
+- evidence_id: pmid26475511
+  kind: primary_source
+  reference: PMID:26475511
+  locator: Europe PMC core abstract record; DOI:10.1016/j.bbr.2015.10.023
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Rat behavioural experiments test a cis-3-hexenol/trans-2-hexenal mixture.
+    Neither a mixture-specific effect nor rat serotonin context is an exact antimicrobial
+    target.
+- evidence_id: bacterial
+  kind: primary_source
+  reference: DOI:10.1128/spectrum.04877-22
+  locator: PMID37036358; PMC10269891 full XML, Results, Figures3/7, Table1 and Methods
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: supports
+  summary: At 6mM trans-2-hexenal in BHI,30C, Listeria monocytogenes ScottA delta-yhfK
+    showed an approximately42h lag versus15h WT and16h complemented cells. Bacillus
+    subtilis168 yhfK-deletion strains were more sensitive at2mM. These are growth-curve
+    tolerance phenotypes, not MICs or direct target-binding assays. Chemical conversion
+    was measured with cinnamaldehyde; its product evidence cannot establish purified
+    YhfK turnover of hexenal. Methods identify Sigma-Aldrich trans-2-hexenal and three
+    independent cultures.
+  snapshot_sha256: 0d28d1d21801edee5448317278f50679a4beb8bc051ec15993d5dc8d63f5e92c
+- evidence_id: fungal
+  kind: primary_source
+  reference: DOI:10.3390/jof9090930
+  locator: PMID37755038; PMC10532542 full XML, Methods2.1/2.3/2.4/2.9–2.13, Table2,
+    Results3.1/3.6–3.9
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: supports
+  summary: Geotrichum citri-aurantii agar assays used98% trans-2-hexenal in PDA/Tween80
+    at28±2C. Reported MIC0.50µL/mL is complete growth inhibition at2days; reported
+    MFC1.00µL/mL uses the authors’4day endpoint. PI staining, lipid/ergosterol measurements
+    and qPCR support cellular responses. FKS1/ERG1/ERG7/ERG11 binding is docking to
+    predicted structures, not measured affinity or enzyme inhibition. No significant
+    chitin/AKP change was reported, limiting broad cell-wall-disruption claims.
+  snapshot_sha256: c7625133be8c087b93ba522f1a83269e45b727e917e47fc4595e64520fb5bdb7
+- evidence_id: fusarium
+  kind: primary_source
+  reference: PMID:35481379
+  locator: DOI10.1021/acs.jafc.2c00942; Europe PMC and ACS publisher abstract
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: partial
+  summary: The abstract describes membrane damage, ROS, SPR-LC-MS/MS protein identification
+    and knockout effects involving FgTRR,FgSLX1,FgCOPB in Fusarium graminearum. These
+    provide a concrete follow-up lead; the abstract alone does not justify encoding
+    all three as proven inhibited targets.
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local search and bounded free primary research
+  locator: 022-local-hits.txt; 022-epmc.json; primary XML files
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Local and free-source searches found exact-compound evidence and multiple
+    neighbouring contexts. No paid source was used and no experiment on a different
+    aldehyde or blend was imported as exact evidence.
+  search_scope: prepare.py22 searched exact CHEBI identifier, label and slug with
+    rg --no-ignore --hidden across the isolated worktree except .git and .venv. A
+    separate inclusive search of curation/decisions.tsv, curation/curator_antibiotics.tsv
+    and conf used CHEBI28913 and its minted identifier. Web queries included trans-2-hexenal
+    antibacterial mechanism, exact identifier, the ene-reductase title and Fusarium
+    DOI. Official ChEBI/KEGG, ten adopted abstract records and additional primary
+    bacterial/fungal full text were read; the inaccessible ACS supplement was not
+    treated as inspected.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: One exact E aldehyde
+  outcome: supported
+  summary: Structure, stereochemistry, charge, formula, masses and registry mappings
+    agree. The broader parent, Z isomer, 4-oxo congener and mixtures remain separate.
+  target_ids:
+  - CHEBI:28913
+  evidence_ids:
+  - record
+  - chebi
+  - parent
+  - kegg
+  - chemistry
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial filing and broader experimental activity
+  outcome: supported
+  summary: The retained ontology role is reproduced and exact bacterial experiments
+    independently support it. Fungal activity is also documented but unrepresented;
+    source filing alone is not a complete activity spectrum.
+  target_ids:
+  - CHEBI:28913
+  evidence_ids:
+  - chebi
+  - bacterial
+  - fungal
+  - pmid23865451
+- assessment_id: mechanism
+  area: completeness
+  topic: Cell response versus molecular target
+  outcome: concern
+  summary: Specific primary response data warrant a qualified mechanism assessment.
+    Docking, expression changes and genetic sensitivity do not alone prove inhibitory
+    binding. No such unsupported target is currently asserted.
+  target_ids:
+  - CHEBI:28913
+  evidence_ids:
+  - record
+  - pmid25842326
+  - fungal
+  - fusarium
+- assessment_id: resistance
+  area: completeness
+  topic: Genetically bounded tolerance
+  outcome: concern
+  summary: The exact-compound yhfK phenotype is available for literature-backed contextual
+    curation. It does not define clinical resistance or establish a directly inhibited
+    antimicrobial target.
+  target_ids:
+  - CHEBI:28913
+  evidence_ids:
+  - record
+  - bacterial
+- assessment_id: producer
+  area: representation
+  topic: Natural occurrence and biosynthesis scope
+  outcome: supported
+  summary: The definition describes broad natural occurrence, supported by the authority
+    and source lead. It makes no strain-specific producer assertion; a specific producer
+    object would require exact taxon and biosynthetic evidence.
+  target_ids:
+  - CHEBI:28913
+  evidence_ids:
+  - record
+  - chebi
+  - pmid22417509
+- assessment_id: optional
+  area: representation
+  topic: Clinical, causal and dataset objects
+  outcome: not_applicable
+  summary: No such objects are asserted. Food preservation, insect effects and rat
+    mixture experiments are not clinical approval or treatment evidence.
+  target_ids:
+  - CHEBI:28913
+  evidence_ids:
+  - record
+  - pmid26475511
+  - pmid26170398
+  - pmid22177713
+- assessment_id: provenance
+  area: ownership
+  topic: Maintained inputs and scientific status
+  outcome: supported
+  summary: SEEDED provenance is accurate. Review validation does not establish native
+    mechanism sign-off or authorize data changes.
+  target_ids:
+  - CHEBI:28913
+  evidence_ids:
+  - record
+  - owner
+findings:
+- finding_id: F1
+  issue_key: chebi-28913-primary-activity-and-qualified-mechanism
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Exact primary activity and response evidence needs scoped curation
+  description: Add evidence-linked activity and a qualified mechanism narrative that
+    separates measured cellular responses from binding hypotheses. Antifungal observations
+    should not disappear merely because the adopted source role files this seed as
+    antibacterial.
+  target_ids:
+  - CHEBI:28913
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - mode_of_action
+  - mode_of_action_notes
+  - discussions
+  evidence_ids:
+  - record
+  - pmid25842326
+  - fungal
+  - fusarium
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/2e-hexenal.yaml
+    role: Curator-owned evidence, activity, mechanism notes, resistance and discussions
+      through the validated writer and curation event
+  rule_id: 'native-review-checklist: Evidence standard, Activity, Mode of action and
+    Resistance'
+  native_severity: minor evidence-specific completeness gap
+  normalization_reason: Specific inspected experiments enable meaningful curation.
+    The finding does not label optional empty fields as schema violations or claim
+    the existing seed asserts a false mechanism.
+- finding_id: F2
+  issue_key: chebi-28913-yhfk-tolerance-evidence
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Primary genetic tolerance evidence is not represented
+  description: The exact-compound deletion/complementation experiment provides a bounded
+    resistance-context follow-up. Preserve its growth-curve endpoint and strain/construct
+    scope, while keeping cinnamaldehyde conversion separate.
+  target_ids:
+  - CHEBI:28913
+  field_paths:
+  - evidence
+  - resistance_mechanisms
+  - discussions
+  evidence_ids:
+  - record
+  - bacterial
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/2e-hexenal.yaml
+    role: Curator-owned evidence, activity, mechanism notes, resistance and discussions
+      through the validated writer and curation event
+  rule_id: 'native-review-checklist: Evidence standard, Activity, Mode of action and
+    Resistance'
+  native_severity: minor evidence-specific completeness gap
+  normalization_reason: Specific inspected experiments enable meaningful curation.
+    The finding does not label optional empty fields as schema violations or claim
+    the existing seed asserts a false mechanism.
+actions:
+- action_id: A1
+  description: In a separately authorized curation pass, attach exact primary evidence,
+    organism-bounded activity and qualified mechanism notes. Inspect the Fusarium
+    methods/controls before target claims; preserve unresolved direct-target status
+    when necessary.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:28913
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/2e-hexenal.yaml
+    role: Curator-owned evidence, activity, mechanism notes, resistance and discussions
+      through the validated writer and curation event
+  acceptance_checks:
+  - Preserve volume-based fungal concentration units and author-defined endpoints;
+    do not silently convert to mass units or claim a standardized fungicidal test.
+  - Keep bacterial stress responses and fungal assays taxonomically separate. Docking
+    and qPCR remain predicted or response evidence rather than measured inhibition.
+  - Resolve strain accession and source method details before fine-grained observations;
+    use validated writer/history and focused validation, corpus reproduction and QC.
+- action_id: A2
+  description: Curate the exact yhfK susceptibility phenotype with organism, strain,
+    genotype, construct, dose and growth endpoint. Any biochemical detoxification
+    annotation must match the actual substrate and experimental level.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:28913
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/2e-hexenal.yaml
+    role: Curator-owned evidence, activity, mechanism notes, resistance and discussions
+      through the validated writer and curation event
+  acceptance_checks:
+  - No clinical breakpoint, MIC or purified-enzyme hexenal turnover is inferred from
+    the growth curves.
+  - 'Do not transfer cinnamaldehyde-selected variant resistance to hexenal: L53F,
+    T77A and A113P showed reduced hexenal tolerance, while F57S was unchanged in the
+    reported variant comparison.'
+  - Ground the experimental protein/taxon before structured entry, cite primary evidence
+    on the narrow claim and retain native SEEDED until all promotion requirements
+    are met.
+limitations:
+- Most adopted papers were inspected at abstract level through Europe PMC. PMID22417509
+  has a truncated abstract in the returned record; only its readable title and sentences
+  were used.
+- The 2022 Fusarium paper was available as an abstract; publisher full text is purchase-only
+  and the free supplement request returned 403. Its protein-identification lead requires
+  full methods and controls before target curation.
+- Reaxys was corroborated through ChEBI rather than independently accessed. Common
+  source aliases lacking E/Z notation are not independent proof of isomer identity.
+- The Geotrichum paper gives a source institution but no strain accession in inspected
+  Methods. Its volume-based MIC/MFC and operational endpoint definitions must be retained;
+  no mass conversion or clinical breakpoint is inferred.
+- The initial scratch chemistry probe retained the preceding record identifier in
+  its minting assertion and failed for that reason. It was corrected to derive the
+  identifier from this record; the corrected structure and minting assertions pass.
+  No native data defect was inferred from the probe error.
+- Bounded research does not prove that direct targets or additional studies are absent.
+  Insect activity, rat mixture effects, food formulations and microbial assays are
+  distinct contexts.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

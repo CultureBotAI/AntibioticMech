@@ -1,0 +1,829 @@
+# CHEBI:67474: consistent onoceranoid identity with bounded primary-paper mapping
+
+- Review: 20261021T071553Z-chebi-67474-onoceranoid-ethyl-ester
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T07:08:02Z
+- Finished UTC: 2026-10-21T07:15:53Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Identity, charge, structure, classification, adopted provenance and focused validation are coherent. One informational follow-up concerns exact mapping to the primary paper and its inaccessible assay details. No specific MIC, mechanism or in-plant biosynthetic claim is imported from related compounds or the extraction context. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Complete one-record review with bounded official-source and primary-literature research.
+
+Selection: Queue index023, exactly CHEBI:67474.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:67474 | data/antibiotics/antibacterial/3-1s-2s-6s-2-2-1s-2r-3r-2-3-ethoxy-3-oxopropyl-3-2-hydroxypropan-2-yl-.yaml | generated | 3-[(1S,2S,6S)-2-{2-[(1S,2R,3R)-2-(3-ethoxy-3-oxopropyl)-3-(2-hydroxypropan-2-yl)-2-methyl-6-methylidenecyclohexyl]ethyl}-1,3-dimethyl-6-(prop-1-en-2-yl)cyclohex-3-en-1-yl]propanoic acid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Single-record LinkML schema | passed | True | CHEBI:67474 | Focused gate passed with no errors. |
+| Single-record strict validation | passed | True | CHEBI:67474 | Focused gate passed with no errors. |
+| Official identity and structure verification | passed | True | CHEBI:67474 | Live ChEBI and independent structure recomputation agree with the record. |
+| Exact primary compound mapping and assay inspection | unavailable | True | CHEBI:67474 | Abstract and official supplement inspected; main structural figure, activity table and assay Methods remain inaccessible. |
+| Structured expression-dataset follow-up | not_applicable | False | CHEBI:67474 | The target and inspected source text name no gene, protein, stress-response object or transcriptomic dataset needing adapter lookup. |
+| Authoritative full QC | failed | True | CHEBI:67474 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:67474 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:67474 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:67474 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:67474 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:67474 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:67474 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:67474 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:67474 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact chemical identity
+
+identity: supported. Targets: CHEBI:67474.
+
+The source, official authority and internal structure checks agree. This is a neutral, stereochemically specified monoethyl ester; no registry xrefs are asserted. No wrong-identity finding is supported.
+
+### Antibacterial filing and chemical parents
+
+grounding: supported. Targets: CHEBI:67474.
+
+The official source role supports filing, and the declared parent relationships are reproduced. An ethyl-substituted C32 structure can remain a triterpenoid derivative; the name does not imply a mixture.
+
+### Primary-paper compound identity
+
+evidence: unknown. Targets: CHEBI:67474.
+
+Compound2 is a plausible mapping supported by the ester name and matching formula. The available text and spectra do not independently establish its full connectivity and stereochemical correspondence to CHEBI:67474; the review does not promote the candidate mapping to a confirmed synonym.
+
+### Exact activity observations
+
+completeness: unknown. Targets: CHEBI:67474.
+
+The abstract reports group-level activity for compounds1–9, but the target compound mapping, assay details and quantitative rows cannot be fully checked. Related lamesticumin MIC ranges cannot populate this record. Empty optional activity fields are not a confirmed defect.
+
+### Mechanism and molecular targets
+
+evidence: unknown. Targets: CHEBI:67474.
+
+The current record asserts none. The inspected abstract and supplement do not demonstrate a mechanism or molecular target. Spectroscopic identification and antibacterial activity are different evidence types, and bounded access cannot establish global absence of mechanistic literature.
+
+### Plant source and ethanolysis boundary
+
+provenance: unknown. Targets: CHEBI:67474.
+
+ChEBI supports isolation from ethanolic twig extract. The abstract identifies one candidate compound as an ethanolysis product. Before adding structured producer evidence, resolve exact compound mapping and whether the material formed during extraction; no unsupported correction to the existing isolation wording is required now.
+
+### Resistance, clinical status, datasets and causal graphs
+
+scope: not_applicable. Targets: CHEBI:67474.
+
+There are no native claims in these optional categories to correct. The inspected source material provides no basis for a clinical-use, resistance, transcriptomic or causal-graph annotation. This is a scope assessment, not a claim that no relevant studies exist.
+
+### Generated ownership and scientific status
+
+provenance: supported. Targets: CHEBI:67474.
+
+The captured source row, configuration, maintained owners and seeder history agree. The record remains SEEDED and this read-only review does not confer native scientific sign-off.
+
+### Focused validation
+
+schema: supported. Targets: CHEBI:67474.
+
+Both focused validators pass.
+
+## Findings
+
+### F1: Exact paper mapping and assay details remain a bounded follow-up
+
+informational / open / confirmed; issue key: chebi-67474-primary-compound-assay-mapping.
+
+The adopted paper and free supplement are real and relevant, but available source text does not fully map its compound2 structure to this stereochemical record or expose individual antibacterial measurements. This is an access and traceability limitation, not a demonstrated incorrect field or a generic missing-field defect.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Obtain an authorized accessible copy of the main paper, match the complete structure and stereochemistry of its compound2 to the record, and inspect antibacterial Methods and individual result rows. Then assess exact-compound activity and source-origin annotations, retaining any ethanolysis-artifact caveat.
+
+- Document exact structure or identifier correspondence; matching formula alone is insufficient.
+- Record organism, strain, endpoint, units and assay conditions only from the matched compound row.
+- Distinguish isolation from plant extract from established in-plant production; do not infer target or mechanism from activity.
+- Any native curation uses the validated writer/history and applicable schema, strict, reproducibility and QC gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/3-1s-2s-6s-2-2-1s-2r-3r-2-3-ethoxy-3-oxopropyl-3-2-hydroxypropan-2-yl-.yaml; Complete YAML, all identity, chemical, ontology, provenance and curation-history fields | supports | The exact ChEBI-only record is ANTIBACTERIAL, SEEDED and EXACT. It has no native mechanism, target, activity_spectrum, producer_organisms, resistance, clinical, dataset or causal_graphs objects and no activity collections. Its definition describes isolation from Lansium domesticum twigs. |
+| owner | data/raw/chebi_antimicrobials.tsv; CHEBI:67474 row1668; MANIFEST; extractor/seeder; PATHS.tsv row1923 | supports | The adopted identity, structure, parents, antibacterial role, source version2026-08-30, minted identifier antibioticmech:chebi-e506f5fa20 and three seeder events agree. PMID21401117 is the sole adopted discovery lead. Generated-field fixes belong upstream; new scientific annotations belong on the actual target YAML. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:67474; Official entry: identity, chemical properties, ontology, species and name sections; scratch023-chebi.html | supports | Live ChEBI agrees on the long IUPAC label, definition, formula C32H52O5, charge0, mass516.763, exact mass516.38147 and structure strings/key. It assigns the same ethyl ester, hydroxy monocarboxylic acid and triterpenoid parents and antibacterial role. Its plant-source annotation links Lansium domesticum twigs and a 95% ethanolic extract to PMID21401117. Additional plant-metabolite and acid roles are not part of the adopted antimicrobial-role subset. |
+| structure | RDKit structure recomputation; Parsed both record SMILES and InChI; scratch023-chemistry.json | supports | Both representations give the same InChIKey JYNTZOBOTQIVKY-GIRUYCOHSA-N. Calculated formula C32H52O5, charge0, one fragment, six assigned stereocenters, average mass516.763 and exact mass516.381474764 agree. This checks internal consistency; it does not establish correspondence to a paper compound or biological production. |
+| config | conf/sources.yaml; role_to_class, role_to_mode_of_action and adopted role_names | supports | CHEBI:33282 maps to ANTIBACTERIAL. No adopted specific mechanism role exists, so the blank seeded mechanism is reproducible. The three chemical parents are broader classes, not external exact-identity xrefs. |
+| local-search | CultureBotAI/AntibioticMech; Ignored-inclusive exact identifier, structure key and expanded-name searches | context_only | Broad hits include raw/generated files and queue/research ledgers. Focused curation, structured-review and historical-report searches did not identify a target-specific curated override or prior prose review in those scopes. A separate alpha-phellandrene report was an irrelevant Lansium-name hit. No global evidence-absence claim is made. |
+| primary-abstract | PMID:21401117; Europe PMC REST core abstractText; DOI10.1021/np100943x; scratch023-europepmc.json | supports | The inspected abstract names compound2 as the ethanolysis product of lamesticumin A and reports moderate Gram-positive antibacterial activity for compounds1–9. It gives no individual MIC, bacterial strain, assay conditions, direct target or mechanism. Its compound numbering is not by itself a structural match to the target IUPAC name. |
+| primary-si | DOI:10.1021/np100943x.s001; https://acs.figshare.com/articles/journal_contribution/Onoceranoid_Type_Triterpenoids_from_i_Lansium_domesticum_i_/2647528 ; 62-page supporting PDF, contents and sections S10–S15 (PDF pages13–18); pages13 and17 visually inspected | supports | The supplement calls compound2 lamesticumin A 3-ethyl ester. Page17 HRESIMS displays an assigned C32H52NaO5 sodium-adduct formula and measured m/z539.3709, consistent with a neutral C32H52O5 molecule. These pages provide spectra, not an antibacterial table or a structure drawing for2. The name and formula strengthen a candidate mapping but do not independently prove the target stereochemistry. |
+| si-metadata | https://api.figshare.com/v2/articles/2647528; Public ACS Figshare article metadata; scratch023-figshare-article.json | supports | The official supplementary archive links resource DOI10.1021/np100943x to supplement DOI10.1021/np100943x.s001 and file np100943x_si_001.pdf, download file4301500. This verifies source provenance and does not supply absent experimental details. |
+| access | https://pubs.acs.org/doi/10.1021/np100943x; Primary-access bounds and free public retrieval | context_only | Publisher article and conventional SI URL returned403. PubMed and browser-based Europe PMC access failed or returned empty content. Free Europe PMC REST and public ACS Figshare retrieval succeeded after sandbox DNS failure was resolved with network access. The article body, structural figure for2, antibacterial table and assay Methods were not inspected. No paid access was used. |
+| rubric | docs/CURATION.md; Native checklist: identity, mechanism, targets, activity, producer, resistance, clinical status, datasets and causal graphs | supports | Optional absent fields are not schema failures. Paper evidence must match the exact compound and assay. A plant-extract isolation statement is narrower than proof of in-plant biosynthesis. No target or causal edge follows from antibacterial classification alone. Native REVIEWED status requires separate scientific curation and gates. |
+| validation | just validate; just validate-strict; Isolated worktree003; scratch023-validation.tsv | supports | Both focused commands exited0. LinkML reported no issues; strict scanned one target with zero ERROR rows. |
+
+## Limits And Additional Notes
+
+- Primary abstract and official supporting PDF were inspected; main article structure figure, antibacterial table and Methods were not accessible. Complete connectivity and stereochemical mapping to paper compound2 remain unresolved.
+- The supplement supports a compound2 ester name and compatible formula, not quantitative antimicrobial results or direct molecular mechanism. Spectra were not independently reprocessed.
+- Official plant-source metadata does not resolve whether an ethyl ester formed during extraction. This limits future producer annotation and does not establish a flaw in the present isolation wording.
+- Bounded research does not establish global evidence absence. No paid research or native record edits occurred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Initial provenance capture preceded judgment; expanded inputs preserve all original hashes and the same base revision.
+- Ignored and hidden files were included in local searches used for absence statements.
+- Source snapshots and SHA256 hashes are retained for the official entry, Europe PMC record and ACS supporting-information PDF.
+- The native record remains SEEDED; optional empty fields are not blanket schema defects.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T071553Z-chebi-67474-onoceranoid-ethyl-ester
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'CHEBI:67474: consistent onoceranoid identity with bounded primary-paper mapping'
+started_at: '2026-10-21T07:08:02Z'
+finished_at: '2026-10-21T07:15:53Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not create or curate the seed and independently
+    inspected official identity, the primary abstract and the free primary supplement;
+    agent review is not human scientific sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Identity, charge, structure, classification, adopted provenance and focused
+  validation are coherent. One informational follow-up concerns exact mapping to the
+  primary paper and its inaccessible assay details. No specific MIC, mechanism or
+  in-plant biosynthetic claim is imported from related compounds or the extraction
+  context. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/antibiotics/antibacterial/3-1s-2s-6s-2-2-1s-2r-3r-2-3-ethoxy-3-oxopropyl-3-2-hydroxypropan-2-yl-.yaml
+    sha256: 98d53df55f8bc51d2a7751cc9b7cdc9025ca408dac110ca039ea7fd311fa0558
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:67474
+  path: data/antibiotics/antibacterial/3-1s-2s-6s-2-2-1s-2r-3r-2-3-ethoxy-3-oxopropyl-3-2-hydroxypropan-2-yl-.yaml
+  label: 3-[(1S,2S,6S)-2-{2-[(1S,2R,3R)-2-(3-ethoxy-3-oxopropyl)-3-(2-hydroxypropan-2-yl)-2-methyl-6-methylidenecyclohexyl]ethyl}-1,3-dimethyl-6-(prop-1-en-2-yl)cyclohex-3-en-1-yl]propanoic
+    acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Complete one-record review with bounded official-source and primary-literature
+    research.
+  selection: Queue index023, exactly CHEBI:67474.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:67474
+  exclusions:
+  - target: Lamesticumin A and other onoceranoid records
+    reason: Discovery context only; no separate verdict or transferred activity.
+checks:
+- check_id: schema
+  name: Single-record LinkML schema
+  status: passed
+  required: true
+  summary: Focused gate passed with no errors.
+  target_ids:
+  - CHEBI:67474
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/3-1s-2s-6s-2-2-1s-2r-3r-2-3-ethoxy-3-oxopropyl-3-2-hydroxypropan-2-yl-.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Single-record strict validation
+  status: passed
+  required: true
+  summary: Focused gate passed with no errors.
+  target_ids:
+  - CHEBI:67474
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/3-1s-2s-6s-2-2-1s-2r-3r-2-3-ethoxy-3-oxopropyl-3-2-hydroxypropan-2-yl-.yaml
+    --out /private/tmp/am-review-session/023-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: identity
+  name: Official identity and structure verification
+  status: passed
+  required: true
+  summary: Live ChEBI and independent structure recomputation agree with the record.
+  target_ids:
+  - CHEBI:67474
+  evidence_ids:
+  - chebi
+  - structure
+  - config
+- check_id: primary-body
+  name: Exact primary compound mapping and assay inspection
+  status: unavailable
+  required: true
+  summary: Abstract and official supplement inspected; main structural figure, activity
+    table and assay Methods remain inaccessible.
+  target_ids:
+  - CHEBI:67474
+  evidence_ids:
+  - primary-abstract
+  - primary-si
+  - access
+- check_id: structured-adapter
+  name: Structured expression-dataset follow-up
+  status: not_applicable
+  required: false
+  summary: The target and inspected source text name no gene, protein, stress-response
+    object or transcriptomic dataset needing adapter lookup.
+  target_ids:
+  - CHEBI:67474
+  evidence_ids:
+  - record
+  - primary-abstract
+  - primary-si
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:67474
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:67474
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:67474
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:67474
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:67474
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:67474
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:67474
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:67474
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:67474
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/3-1s-2s-6s-2-2-1s-2r-3r-2-3-ethoxy-3-oxopropyl-3-2-hydroxypropan-2-yl-.yaml
+  locator: Complete YAML, all identity, chemical, ontology, provenance and curation-history
+    fields
+  accessed_at: '2026-10-21T07:13:20Z'
+  support: supports
+  summary: The exact ChEBI-only record is ANTIBACTERIAL, SEEDED and EXACT. It has
+    no native mechanism, target, activity_spectrum, producer_organisms, resistance,
+    clinical, dataset or causal_graphs objects and no activity collections. Its definition
+    describes isolation from Lansium domesticum twigs.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: CHEBI:67474 row1668; MANIFEST; extractor/seeder; PATHS.tsv row1923
+  accessed_at: '2026-10-21T07:13:20Z'
+  support: supports
+  summary: The adopted identity, structure, parents, antibacterial role, source version2026-08-30,
+    minted identifier antibioticmech:chebi-e506f5fa20 and three seeder events agree.
+    PMID21401117 is the sole adopted discovery lead. Generated-field fixes belong
+    upstream; new scientific annotations belong on the actual target YAML.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:67474
+  locator: 'Official entry: identity, chemical properties, ontology, species and name
+    sections; scratch023-chebi.html'
+  accessed_at: '2026-10-21T07:12:03Z'
+  support: supports
+  summary: Live ChEBI agrees on the long IUPAC label, definition, formula C32H52O5,
+    charge0, mass516.763, exact mass516.38147 and structure strings/key. It assigns
+    the same ethyl ester, hydroxy monocarboxylic acid and triterpenoid parents and
+    antibacterial role. Its plant-source annotation links Lansium domesticum twigs
+    and a 95% ethanolic extract to PMID21401117. Additional plant-metabolite and acid
+    roles are not part of the adopted antimicrobial-role subset.
+  snapshot_sha256: 82da185d6962f47f65efdaecd76133a108974368cfe4c2640999804c8e1802fb
+- evidence_id: structure
+  kind: validation
+  reference: RDKit structure recomputation
+  locator: Parsed both record SMILES and InChI; scratch023-chemistry.json
+  accessed_at: '2026-10-21T07:08:34Z'
+  support: supports
+  summary: Both representations give the same InChIKey JYNTZOBOTQIVKY-GIRUYCOHSA-N.
+    Calculated formula C32H52O5, charge0, one fragment, six assigned stereocenters,
+    average mass516.763 and exact mass516.381474764 agree. This checks internal consistency;
+    it does not establish correspondence to a paper compound or biological production.
+  snapshot_sha256: 3df21f6ad98f2341a3ac8de014c29b8dd7850beb0819a3e64c782dcb7515b69b
+- evidence_id: config
+  kind: record_content
+  reference: conf/sources.yaml
+  locator: role_to_class, role_to_mode_of_action and adopted role_names
+  accessed_at: '2026-10-21T07:13:20Z'
+  support: supports
+  summary: CHEBI:33282 maps to ANTIBACTERIAL. No adopted specific mechanism role exists,
+    so the blank seeded mechanism is reproducible. The three chemical parents are
+    broader classes, not external exact-identity xrefs.
+- evidence_id: local-search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: Ignored-inclusive exact identifier, structure key and expanded-name searches
+  accessed_at: '2026-10-21T07:13:20Z'
+  support: context_only
+  summary: Broad hits include raw/generated files and queue/research ledgers. Focused
+    curation, structured-review and historical-report searches did not identify a
+    target-specific curated override or prior prose review in those scopes. A separate
+    alpha-phellandrene report was an irrelevant Lansium-name hit. No global evidence-absence
+    claim is made.
+  search_scope: prepare.py23 used rg --no-ignore --hidden across the worktree excluding
+    .git/.venv. Exact CHEBI:67474,key and minted-ID searches in raw/curation/reviews/PATHS;
+    expanded 67474,JYNTZOBOTQIVKY,onoceranoid,Lansium in curation reviews reports/yaml_record_review
+    excluding queue and large JSON files. Hidden and ignored files included.
+- evidence_id: primary-abstract
+  kind: primary_source
+  reference: PMID:21401117
+  locator: Europe PMC REST core abstractText; DOI10.1021/np100943x; scratch023-europepmc.json
+  accessed_at: '2026-10-21T07:10:59Z'
+  support: supports
+  summary: The inspected abstract names compound2 as the ethanolysis product of lamesticumin
+    A and reports moderate Gram-positive antibacterial activity for compounds1–9.
+    It gives no individual MIC, bacterial strain, assay conditions, direct target
+    or mechanism. Its compound numbering is not by itself a structural match to the
+    target IUPAC name.
+  snapshot_sha256: 3d8e75cf70349de39eb38ccdfcf3ea78041f3a30a393b2c40b09da88f351c8f7
+- evidence_id: primary-si
+  kind: primary_source
+  reference: DOI:10.1021/np100943x.s001
+  locator: https://acs.figshare.com/articles/journal_contribution/Onoceranoid_Type_Triterpenoids_from_i_Lansium_domesticum_i_/2647528
+    ; 62-page supporting PDF, contents and sections S10–S15 (PDF pages13–18); pages13
+    and17 visually inspected
+  accessed_at: '2026-10-21T07:11:24Z'
+  support: supports
+  summary: The supplement calls compound2 lamesticumin A 3-ethyl ester. Page17 HRESIMS
+    displays an assigned C32H52NaO5 sodium-adduct formula and measured m/z539.3709,
+    consistent with a neutral C32H52O5 molecule. These pages provide spectra, not
+    an antibacterial table or a structure drawing for2. The name and formula strengthen
+    a candidate mapping but do not independently prove the target stereochemistry.
+  snapshot_sha256: 9118904a9e8cc7f4ab3d63537aff1be87c58aeeb7fb9f43631918118dacb4800
+- evidence_id: si-metadata
+  kind: database
+  reference: https://api.figshare.com/v2/articles/2647528
+  locator: Public ACS Figshare article metadata; scratch023-figshare-article.json
+  accessed_at: '2026-10-21T07:11:22Z'
+  support: supports
+  summary: The official supplementary archive links resource DOI10.1021/np100943x
+    to supplement DOI10.1021/np100943x.s001 and file np100943x_si_001.pdf, download
+    file4301500. This verifies source provenance and does not supply absent experimental
+    details.
+  snapshot_sha256: 1d58835bfd1a624117cce054d11eaa9a4d19291bae6991f7a19e14b324265751
+- evidence_id: access
+  kind: search
+  reference: https://pubs.acs.org/doi/10.1021/np100943x
+  locator: Primary-access bounds and free public retrieval
+  accessed_at: '2026-10-21T07:13:20Z'
+  support: context_only
+  summary: Publisher article and conventional SI URL returned403. PubMed and browser-based
+    Europe PMC access failed or returned empty content. Free Europe PMC REST and public
+    ACS Figshare retrieval succeeded after sandbox DNS failure was resolved with network
+    access. The article body, structural figure for2, antibacterial table and assay
+    Methods were not inspected. No paid access was used.
+  search_scope: Exact PMID,DOI,title,key and ethanolysis-product searches; ACS,PubMed,EuropePMC
+    and public Figshare. Secondary Lansium reviews were discovery leads only; their
+    MIC ranges were not transferred to this record.
+- evidence_id: rubric
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: 'Native checklist: identity, mechanism, targets, activity, producer, resistance,
+    clinical status, datasets and causal graphs'
+  accessed_at: '2026-10-21T07:13:20Z'
+  support: supports
+  summary: Optional absent fields are not schema failures. Paper evidence must match
+    the exact compound and assay. A plant-extract isolation statement is narrower
+    than proof of in-plant biosynthesis. No target or causal edge follows from antibacterial
+    classification alone. Native REVIEWED status requires separate scientific curation
+    and gates.
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Isolated worktree003; scratch023-validation.tsv
+  accessed_at: '2026-10-21T07:08:12Z'
+  support: supports
+  summary: Both focused commands exited0. LinkML reported no issues; strict scanned
+    one target with zero ERROR rows.
+  snapshot_sha256: b184ed5450b968070bb6c75648407e388f41a1eaf7017890723cf560999fc3f7
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact chemical identity
+  outcome: supported
+  summary: The source, official authority and internal structure checks agree. This
+    is a neutral, stereochemically specified monoethyl ester; no registry xrefs are
+    asserted. No wrong-identity finding is supported.
+  target_ids:
+  - CHEBI:67474
+  evidence_ids:
+  - record
+  - owner
+  - chebi
+  - structure
+- assessment_id: grounding
+  area: grounding
+  topic: Antibacterial filing and chemical parents
+  outcome: supported
+  summary: The official source role supports filing, and the declared parent relationships
+    are reproduced. An ethyl-substituted C32 structure can remain a triterpenoid derivative;
+    the name does not imply a mixture.
+  target_ids:
+  - CHEBI:67474
+  evidence_ids:
+  - chebi
+  - config
+  - structure
+- assessment_id: paper-mapping
+  area: evidence
+  topic: Primary-paper compound identity
+  outcome: unknown
+  summary: Compound2 is a plausible mapping supported by the ester name and matching
+    formula. The available text and spectra do not independently establish its full
+    connectivity and stereochemical correspondence to CHEBI:67474; the review does
+    not promote the candidate mapping to a confirmed synonym.
+  target_ids:
+  - CHEBI:67474
+  evidence_ids:
+  - chebi
+  - primary-abstract
+  - primary-si
+  - access
+- assessment_id: activity
+  area: completeness
+  topic: Exact activity observations
+  outcome: unknown
+  summary: The abstract reports group-level activity for compounds1–9, but the target
+    compound mapping, assay details and quantitative rows cannot be fully checked.
+    Related lamesticumin MIC ranges cannot populate this record. Empty optional activity
+    fields are not a confirmed defect.
+  target_ids:
+  - CHEBI:67474
+  evidence_ids:
+  - record
+  - primary-abstract
+  - primary-si
+  - access
+  - rubric
+- assessment_id: mechanism
+  area: evidence
+  topic: Mechanism and molecular targets
+  outcome: unknown
+  summary: The current record asserts none. The inspected abstract and supplement
+    do not demonstrate a mechanism or molecular target. Spectroscopic identification
+    and antibacterial activity are different evidence types, and bounded access cannot
+    establish global absence of mechanistic literature.
+  target_ids:
+  - CHEBI:67474
+  evidence_ids:
+  - record
+  - primary-abstract
+  - primary-si
+  - rubric
+- assessment_id: producer
+  area: provenance
+  topic: Plant source and ethanolysis boundary
+  outcome: unknown
+  summary: ChEBI supports isolation from ethanolic twig extract. The abstract identifies
+    one candidate compound as an ethanolysis product. Before adding structured producer
+    evidence, resolve exact compound mapping and whether the material formed during
+    extraction; no unsupported correction to the existing isolation wording is required
+    now.
+  target_ids:
+  - CHEBI:67474
+  evidence_ids:
+  - record
+  - chebi
+  - primary-abstract
+  - primary-si
+- assessment_id: other
+  area: scope
+  topic: Resistance, clinical status, datasets and causal graphs
+  outcome: not_applicable
+  summary: There are no native claims in these optional categories to correct. The
+    inspected source material provides no basis for a clinical-use, resistance, transcriptomic
+    or causal-graph annotation. This is a scope assessment, not a claim that no relevant
+    studies exist.
+  target_ids:
+  - CHEBI:67474
+  evidence_ids:
+  - record
+  - primary-abstract
+  - primary-si
+  - rubric
+- assessment_id: provenance
+  area: provenance
+  topic: Generated ownership and scientific status
+  outcome: supported
+  summary: The captured source row, configuration, maintained owners and seeder history
+    agree. The record remains SEEDED and this read-only review does not confer native
+    scientific sign-off.
+  target_ids:
+  - CHEBI:67474
+  evidence_ids:
+  - record
+  - owner
+  - config
+  - rubric
+- assessment_id: schema
+  area: schema
+  topic: Focused validation
+  outcome: supported
+  summary: Both focused validators pass.
+  target_ids:
+  - CHEBI:67474
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-67474-primary-compound-assay-mapping
+  category: evidence
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Exact paper mapping and assay details remain a bounded follow-up
+  description: The adopted paper and free supplement are real and relevant, but available
+    source text does not fully map its compound2 structure to this stereochemical
+    record or expose individual antibacterial measurements. This is an access and
+    traceability limitation, not a demonstrated incorrect field or a generic missing-field
+    defect.
+  target_ids:
+  - CHEBI:67474
+  field_paths:
+  - activity_spectrum
+  - producer_organisms
+  evidence_ids:
+  - chebi
+  - primary-abstract
+  - primary-si
+  - access
+  rule_id: review-yaml-record:Evidence Rules; native-review-checklist:Activity and
+    Producer
+  native_severity: informational primary-evidence access limitation
+  normalization_reason: No unsupported native assay or producer object exists. The
+    remaining uncertainty is explicitly bounded and should be resolved before enrichment.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/3-1s-2s-6s-2-2-1s-2r-3r-2-3-ethoxy-3-oxopropyl-3-2-hydroxypropan-2-yl-.yaml
+    role: Curator-owned scientific annotations; use the native validated writer and
+      curation event
+actions:
+- action_id: A1
+  description: Obtain an authorized accessible copy of the main paper, match the complete
+    structure and stereochemistry of its compound2 to the record, and inspect antibacterial
+    Methods and individual result rows. Then assess exact-compound activity and source-origin
+    annotations, retaining any ethanolysis-artifact caveat.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:67474
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/3-1s-2s-6s-2-2-1s-2r-3r-2-3-ethoxy-3-oxopropyl-3-2-hydroxypropan-2-yl-.yaml
+    role: Curator-owned scientific annotations; use the native validated writer and
+      curation event
+  acceptance_checks:
+  - Document exact structure or identifier correspondence; matching formula alone
+    is insufficient.
+  - Record organism, strain, endpoint, units and assay conditions only from the matched
+    compound row.
+  - Distinguish isolation from plant extract from established in-plant production;
+    do not infer target or mechanism from activity.
+  - Any native curation uses the validated writer/history and applicable schema, strict,
+    reproducibility and QC gates.
+limitations:
+- Primary abstract and official supporting PDF were inspected; main article structure
+  figure, antibacterial table and Methods were not accessible. Complete connectivity
+  and stereochemical mapping to paper compound2 remain unresolved.
+- The supplement supports a compound2 ester name and compatible formula, not quantitative
+  antimicrobial results or direct molecular mechanism. Spectra were not independently
+  reprocessed.
+- Official plant-source metadata does not resolve whether an ethyl ester formed during
+  extraction. This limits future producer annotation and does not establish a flaw
+  in the present isolation wording.
+- Bounded research does not establish global evidence absence. No paid research or
+  native record edits occurred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Initial provenance capture preceded judgment; expanded inputs preserve all original
+  hashes and the same base revision.
+- Ignored and hidden files were included in local searches used for absence statements.
+- Source snapshots and SHA256 hashes are retained for the official entry, Europe PMC
+  record and ACS supporting-information PDF.
+- The native record remains SEEDED; optional empty fields are not blanket schema defects.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:67474
+- https://doi.org/10.1021/np100943x
+- https://acs.figshare.com/articles/journal_contribution/Onoceranoid_Type_Triterpenoids_from_i_Lansium_domesticum_i_/2647528
+tags:
+- antibacterial
+- triterpenoid
+- ethyl-ester
+- seeded
+- primary-access-limitation
+```
