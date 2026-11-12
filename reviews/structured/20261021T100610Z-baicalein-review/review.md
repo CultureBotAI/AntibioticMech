@@ -1,0 +1,829 @@
+# Baicalein: retain the measured no-DTT protease result and correct its assay-method description
+
+- Review: 20261021T100610Z-baicalein-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:38:15Z
+- Finished UTC: 2026-10-21T10:06:10Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Exact neutral baicalein identity and its multiple antimicrobial activities are supported. The imported 20 nM result is confirmed as a no-DTT FRET enzyme measurement, not X-ray hit profiling or a cellular antiviral EC50. One minor assay-description correction and optional claim-specific enrichment preserve the valid measurement and distinguish processed viral protein, host effects and fungal targets.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position143; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:2979 | data/antibiotics/antibacterial/baicalein.yaml | generated | baicalein |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:2979 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:2979 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:2979 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:2979 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:2979 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:2979 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:2979 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:2979 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:2979 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:2979 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:2979 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:2979 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Source generation, ownership and history
+
+provenance: supported. Targets: CHEBI:2979.
+
+The adopted row and deterministic source handling reproduce the seeded fields. All captured inputs remain unchanged; this review does not promote native status.
+
+### Focused gates
+
+schema: supported. Targets: CHEBI:2979.
+
+Native schema, strict and independent chemistry checks pass. Shared corpus verification is reported separately.
+
+### Exact chemistry and classifications
+
+identity: supported. Targets: CHEBI:2979.
+
+Independent structures and native names agree. Multiple activity roles can coexist with antibacterial filing.
+
+### 20 nM and method
+
+evidence: concern. Targets: CHEBI:2979.
+
+The numerical no-DTT FRET result is confirmed; the copied X-ray characterization is wrong for this measurement.
+
+### Processed viral target and related mechanisms
+
+evidence: supported. Targets: CHEBI:2979.
+
+The measured construct is nsp5 within a valid reviewed precursor accession. Preserve measured-association and assay-specific scope; additional fungal and polymerase mechanisms are separate.
+
+### Activity, producer, resistance and transcriptomic evidence
+
+completeness: unknown. Targets: CHEBI:2979.
+
+Primary enrichment is possible but optional. Plant biosynthesis and host responses do not identify a bacterial target, resistance mechanism or compound-exposure transcriptomic dataset.
+
+## Findings
+
+### F1: Correct X-ray wording in the FRET measurement description
+
+minor / open / confirmed; issue key: baicalein-bindingdb-assay-method-scope.
+
+The native description combines a correct FRET assay with Hit profiling using X-ray. The original20 nM value comes from enzymatic fluorescence profiling; this paper crystallizes myricetin. Correct that bounded method phrase while preserving value, no-DTT qualifier, source IDs and original provenance.
+
+### F2: Curate separate microbial activities with assay and target boundaries
+
+informational / open / confirmed; issue key: baicalein-qualified-multiple-activity-enrichment.
+
+Original viral protease/polymerase and fungal Eno1 studies can strengthen the record. Preserve distinct constructs, organisms, biochemical endpoints, cellular readouts, mixtures and host effects.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the maintained assay description without deleting the supported measurement.
+
+- Preserve20 nM, no-DTT assay name, reactant902205 and original preprint link; add the peer-reviewed original as appropriate.
+- Describe the processed nsp5 construct and FRET readout. Keep the valid precursor accession with explicit chain context.
+- Do not substitute a plus-DTT IC50 that was not measured, a different paper’s potency, cellular EC50 or myricetin crystallography.
+- Use a maintained source correction or qualification that survives regeneration, then focused and shared validation.
+
+### A2
+
+Add only exact primary annotations after remaining experimental detail is checked.
+
+- Use separate claim-level evidence for enzyme activity, binding and cell phenotypes; keep model-specific results and exposure times.
+- Inspect supplements/strain and reagent details before importing fungal targets or exact MICs; do not equate MIC50 growth inhibition with an isolate-population median.
+- Do not infer current treatment approval, human efficacy, direct NorA binding or producer status from an isolation listing.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/baicalein.yaml; Entire YAML, all chemical/document/drug references and eight seed/reseed events | supports | The record contains five names, trihydroxyflavone parent, three antimicrobial roles, a transparently source-derived viral-protease mode, and one BindingDB target/measurement. The target relation is MEASURED_TARGET_ASSOCIATION; the assay name explicitly says without DTT. UniProt example P0DTD1 is a precursor entry. No quantitative cellular activity, resistance, producer, clinical or graph object is populated. |
+| source | data/raw/chebi_antimicrobials.tsv;data/raw/bindingdb_target_measurements.tsv; 143-raw.json; maintained BindingDB extraction and seed attachment owners captured in inspect.json | supports | ChEBI identity, roles and mechanism map reproduce. Three BindingDB rows were read: two review-derived rows from PMID34798775 were not retained, while reactant902205/assay9114_1/monomer50009001 from the original preprint was retained with its 20 nM value and no-DTT assay name. Source copying explains, but does not validate, the phrase Hit profiling using X-ray. |
+| identity | CHEBI:2979;PubChem CID:5281605;KEGG:C10023;PDB-CCD:3WL;LIPIDMAPS:LMPK12111095;KNApSAcK:C00001022; Current full ChEBI entry and independently parsed KEGG MOL; official structure exports | supports | Neutral C15H10O5, FXNFHKRTJBSTCS-UHFFFAOYSA-N and 5,6,7 hydroxyl positions agree; there are no potential tetrahedral stereocentres. All systematic native names agree. Noroxylin is the source brand-name mapping. The parent and antibacterial, antifungal and anticoronaviral roles are current and broader classification need not have native claim-level primary evidence. |
+| xref-access | ChemSpider4444924;CAS491-67-8;FooDBFDB012057;HMDB0134890;LINCSLSM6355;MetaCycCPD12724;Reaxys272683;DrugBankDB16101; 143-chemspider-visible.txt and015-root-fetch-results.json | partial | ChemSpider named card/formula and verified systematic names agree, but its exact structural export was not parsed. CAS and Reaxys remain authority crosswalks. FooDB/HMDB/DrugBank returned403, LINCS certificate verification failed, and MetaCyc returned an account gate. These access limits do not show that identifiers are wrong or absent. |
+| measurement | DOI:10.1021/acsptsci.0c00216; original preprint DOI:10.1101/2020.12.16.422677; 143-primary2021.xml; full Results and Materials/Methods; Figure3 visually inspected in143-figure3.jpg | partial | The peer-reviewed original Figure3 gives baicalein HP 3CL-Pro IC50 0.02 micromolar without DTT, equivalent to20 nM. The FRET protocol uses60 nM enzyme and15 micromolar substrate with60 min compound preincubation at37 C. The paper reports DTT-sensitive inhibition at the profiling screen; its plus-DTT dose-response value is not tested, not a numerical IC50. Figure3 reports only5.1% Vero-E6 CPE inhibition at10 micromolar. The paper crystallizes myricetin, not baicalein. Thus the native quantitative result is supported but the phrase Hit profiling using X-ray is inaccurate. |
+| protein | UniProtKB:P0DTD1; 143-uniprot.json current reviewed record and chain feature3264–3569 | supports | Reviewed SARS-CoV-2 replicase polyprotein1ab contains the processed3C-like proteinase nsp5 at residues3264–3569, exactly the construct range stated in the original assay Methods. The accession is valid precursor context, not evidence that intact polyprotein was the assayed protein. No strain-independent causal target claim is inferred. |
+| protease-independent | PMID:32737471;DOI:10.1038/s41401-020-0483-6; 143-sars2020-correct.xml; original FRET/ITC/crystallization/cell-assay Methods and corresponding baicalein Results | partial | Independent original study reports baicalein3CLpro IC50 0.94 micromolar, ITC KD4.03 micromolar, native-MS KD1.40 micromolar and2.2-A complex6M2N. These are different measurements from the20 nM screening value. Vero-E6 viral-RNA yield EC50 is2.94 micromolar under its own MOI0.01/48h protocol. Pure baicalein, baicalin and Shuanghuanglian mixtures are explicitly separate. Selective passages support the protease role without universal cellular potency or clinical efficacy. |
+| rdrp | PMID:33921971;DOI:10.3390/microorganisms9050893; 144-rdrp.xml full main text | partial | Both flavonoids reduce RNA primer extension by purified nsp12/nsp7/nsp8. Baicalein alone is tested in the thermal-shift binding assay; it stabilizes nsp12 more than nsp5/nsp14. Docked contacts are predictions. Cell viral-yield endpoints differ from enzyme activity and from the other CPE assay. These results provide additional context rather than invalidating a protocol-specific protease measurement. |
+| fungal-target | PMID:35900099;DOI:10.1128/spectrum.02085-22; 143-enolase2022.xml; complete Eno1 SPR/enzyme/larval Results and corresponding Methods | partial | Free baicalein binds immobilized Candida albicans Eno1 by SPR with kinetic KD8.12 micromolar and inhibits purified enolase with IC50 62.9 micromolar. The larval SN152 versus eno1 deletion experiment supports target relevance but also has baseline virulence differences. Predicted docking residues and apo-enolase structural comparisons are not a baicalein co-crystal; full probe synthesis, supplementary strain table and raw curves were not independently audited. |
+| other-activity | PMID:21782012;PMID:22918868;PMID:30737463; Complete original indexed abstracts in143-discovery.json and143-targeted.json | partial | MRSA work distinguishes ciprofloxacin potentiation in NorA-overexpressing SA1199B and a separate pyruvate-kinase enzyme assay; neither proves direct NorA binding. The2012 Candida study reports a50%-growth endpoint termed MIC50, not a population median MIC; the2019 study separates purified baicalein from root extract and wogonin. These support qualitative bacterial/fungal context without importing numerical strain assays from unread full Methods. |
+| adopted | All ten adopted ChEBI citations plus the excluded BindingDB review; 143-adopted-abstracts.txt; all11 complete indexed abstracts | context_only | PMID10724177 is plant glucuronosyltransferase biosynthesis;11513834 host endothelial growth;15853750 cardiovascular review;22114686 neurons/nematode aging;22891631 radiation protection;23098745 exact H5N1 antiviral and host-response work;23339711 Nrf2/SKN1;26268338 host glyoxalase inhibition;28166217 MR1/MAIT host ligands;31976018 host-guest formulation. PMID34798775 is a protease review and not original evidence for its secondary values. Host enzymes and plant biosynthesis must not be reclassified as bacterial killing targets. |
+| documents | patent:CN102429899; Public translated abstract and claims in143-CN102429899.html | context_only | The patent concerns baicalein use in pneumonia and mentions toxin/cell/mouse experiments. Its broad claim of no drug resistance and treatment promise is not independently established clinical evidence. The document reference is appropriate context, not exact assay or approval evidence. Wikipedia is a secondary document cross-reference only. |
+| chemistry | Independent native SMILES/InChI, formula, mass, charge and source-mint checks; 143-chemistry.json and focused command logs | supports | Both native encodings independently reproduce the stored full key, formula, neutral single component and masses at stored precision. Mint agrees. Actual focused schema and strict commands exit 0; chemical consistency does not prove biological mechanism. |
+| search | CultureBotAI/AntibioticMech and free primary literature; 143-local-hits.txt; initial inspection and adopted/discovery snapshots | context_only | Initial ignored-inclusive local source/ownership search and exact raw-row inspection were followed by current official chemical sources, all adopted citation records and available abstracts, and bounded primary follow-up. Discovery queries are capped and selected relevant papers were pursued; no exhaustive literature absence claim is made. |
+| adapter | Native iModulonDB structured catalog before web research; 015-root-imodulondb-datasets.txt | context_only | The successful structured dataset catalog was inspected before open-ended mechanism research. Its bacterial datasets do not cover the native viral or mammalian protein/pathway assertions. No unrelated bacterial gene was substituted for SARS-CoV-2 proteins or host NF-kappaB. Later bacterial/fungal leads are explicitly optional literature context; no exposure module or transcriptomic dataset is asserted. |
+
+## Limits And Additional Notes
+
+- All adopted abstracts were read, but their complete manuscripts were not systematically audited. The focused primary papers were inspected at the explicitly identified sections; raw data and most supplements were not inspected.
+- The screening Figure3 was visually verified. Direct supplementary PDF/XLSX requests returned browser-check HTML despite HTTP200 and were not treated as data.
+- The initial guessed PMC7393469 proved to be an unrelated olfaction paper and was rejected. Correct PMID32737471/PMC7393338 was then retrieved and inspected.
+- Database access failures and proprietary crosswalk limits are recorded above. No full clinical, resistance or transcriptomic census is claimed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 15 captured maintained inputs remain unchanged. No native record was edited. Empty optional fields are not automatically defects.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T100610Z-baicalein-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Baicalein: retain the measured no-DTT protease result and correct its assay-method
+  description'
+started_at: '2026-10-21T09:38:15Z'
+finished_at: '2026-10-21T10:06:10Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Exact neutral baicalein identity and its multiple antimicrobial activities
+  are supported. The imported 20 nM result is confirmed as a no-DTT FRET enzyme measurement,
+  not X-ray hit profiling or a cellular antiviral EC50. One minor assay-description
+  correction and optional claim-specific enrichment preserve the valid measurement
+  and distinguish processed viral protein, host effects and fungal targets.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/baicalein.yaml
+    sha256: 9a8c7747bb6b360ba5aeec7330ef0509843b1616935a35ef34d7b649c5192d52
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/bindingdb_target_measurements.tsv
+    sha256: faccfe5634f467801aeb256e6560af09d193cdb53bdbf29dea195c9c0488c480
+    role: context
+  - path: scripts/extract_bindingdb_targets.py
+    sha256: 9914a61b93326808b9800f3680dc935af2abcfa1e9925d6c3dd39180dbc78a2d
+    role: context
+targets:
+- target_id: CHEBI:2979
+  path: data/antibiotics/antibacterial/baicalein.yaml
+  label: baicalein
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/bindingdb_target_measurements.tsv
+    role: Adopted BindingDB target measurement and extraction owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_bindingdb_targets.py
+    role: Adopted BindingDB target measurement and extraction owner
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position143; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:2979
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:2979
+  command: .venv/bin/python /private/tmp/am-review-session/focus014-root.py 143
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:2979
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/baicalein.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:2979
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/baicalein.yaml --out /private/tmp/am-review-session/143-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:2979
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:2979
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:2979
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:2979
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:2979
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:2979
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:2979
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:2979
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:2979
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/baicalein.yaml
+  locator: Entire YAML, all chemical/document/drug references and eight seed/reseed
+    events
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: supports
+  summary: The record contains five names, trihydroxyflavone parent, three antimicrobial
+    roles, a transparently source-derived viral-protease mode, and one BindingDB target/measurement.
+    The target relation is MEASURED_TARGET_ASSOCIATION; the assay name explicitly
+    says without DTT. UniProt example P0DTD1 is a precursor entry. No quantitative
+    cellular activity, resistance, producer, clinical or graph object is populated.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv;data/raw/bindingdb_target_measurements.tsv
+  locator: 143-raw.json; maintained BindingDB extraction and seed attachment owners
+    captured in inspect.json
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: supports
+  summary: 'ChEBI identity, roles and mechanism map reproduce. Three BindingDB rows
+    were read: two review-derived rows from PMID34798775 were not retained, while
+    reactant902205/assay9114_1/monomer50009001 from the original preprint was retained
+    with its 20 nM value and no-DTT assay name. Source copying explains, but does
+    not validate, the phrase Hit profiling using X-ray.'
+  snapshot_sha256: 61bc0ed5ac92e113652b7763dc9f0f141293e01cbf4ec8c5a2d727111e1cd3b0
+- evidence_id: identity
+  kind: database
+  reference: CHEBI:2979;PubChem CID:5281605;KEGG:C10023;PDB-CCD:3WL;LIPIDMAPS:LMPK12111095;KNApSAcK:C00001022
+  locator: Current full ChEBI entry and independently parsed KEGG MOL; official structure
+    exports
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: supports
+  summary: Neutral C15H10O5, FXNFHKRTJBSTCS-UHFFFAOYSA-N and 5,6,7 hydroxyl positions
+    agree; there are no potential tetrahedral stereocentres. All systematic native
+    names agree. Noroxylin is the source brand-name mapping. The parent and antibacterial,
+    antifungal and anticoronaviral roles are current and broader classification need
+    not have native claim-level primary evidence.
+  snapshot_sha256: 75f6de6ec7e6cbb231249dbc3805046d9605ef6d5e05843afd4a573eb59bba58
+- evidence_id: xref-access
+  kind: database
+  reference: ChemSpider4444924;CAS491-67-8;FooDBFDB012057;HMDB0134890;LINCSLSM6355;MetaCycCPD12724;Reaxys272683;DrugBankDB16101
+  locator: 143-chemspider-visible.txt and015-root-fetch-results.json
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: partial
+  summary: ChemSpider named card/formula and verified systematic names agree, but
+    its exact structural export was not parsed. CAS and Reaxys remain authority crosswalks.
+    FooDB/HMDB/DrugBank returned403, LINCS certificate verification failed, and MetaCyc
+    returned an account gate. These access limits do not show that identifiers are
+    wrong or absent.
+  snapshot_sha256: eb5592cf325bcad464b47a52f186b5ffa7b995a4adc365eb81b5cd287aa1256a
+- evidence_id: measurement
+  kind: primary_source
+  reference: DOI:10.1021/acsptsci.0c00216; original preprint DOI:10.1101/2020.12.16.422677
+  locator: 143-primary2021.xml; full Results and Materials/Methods; Figure3 visually
+    inspected in143-figure3.jpg
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: partial
+  summary: The peer-reviewed original Figure3 gives baicalein HP 3CL-Pro IC50 0.02
+    micromolar without DTT, equivalent to20 nM. The FRET protocol uses60 nM enzyme
+    and15 micromolar substrate with60 min compound preincubation at37 C. The paper
+    reports DTT-sensitive inhibition at the profiling screen; its plus-DTT dose-response
+    value is not tested, not a numerical IC50. Figure3 reports only5.1% Vero-E6 CPE
+    inhibition at10 micromolar. The paper crystallizes myricetin, not baicalein. Thus
+    the native quantitative result is supported but the phrase Hit profiling using
+    X-ray is inaccurate.
+  snapshot_sha256: 3e2dbec226612010f393db1008c1f0d964774a823d08267c4be2f7491ee4c9b7
+- evidence_id: protein
+  kind: database
+  reference: UniProtKB:P0DTD1
+  locator: 143-uniprot.json current reviewed record and chain feature3264–3569
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: supports
+  summary: Reviewed SARS-CoV-2 replicase polyprotein1ab contains the processed3C-like
+    proteinase nsp5 at residues3264–3569, exactly the construct range stated in the
+    original assay Methods. The accession is valid precursor context, not evidence
+    that intact polyprotein was the assayed protein. No strain-independent causal
+    target claim is inferred.
+  snapshot_sha256: 7366d4fea701dfccea0226cbe43850961d5192cad95d0e7644cc0c16dec7e642
+- evidence_id: protease-independent
+  kind: primary_source
+  reference: PMID:32737471;DOI:10.1038/s41401-020-0483-6
+  locator: 143-sars2020-correct.xml; original FRET/ITC/crystallization/cell-assay
+    Methods and corresponding baicalein Results
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: partial
+  summary: Independent original study reports baicalein3CLpro IC50 0.94 micromolar,
+    ITC KD4.03 micromolar, native-MS KD1.40 micromolar and2.2-A complex6M2N. These
+    are different measurements from the20 nM screening value. Vero-E6 viral-RNA yield
+    EC50 is2.94 micromolar under its own MOI0.01/48h protocol. Pure baicalein, baicalin
+    and Shuanghuanglian mixtures are explicitly separate. Selective passages support
+    the protease role without universal cellular potency or clinical efficacy.
+  snapshot_sha256: ad4441a99571d348fe6ec1e9d14562d0ebd8687ddcaa2bc7e146c99040f98a46
+- evidence_id: rdrp
+  kind: primary_source
+  reference: PMID:33921971;DOI:10.3390/microorganisms9050893
+  locator: 144-rdrp.xml full main text
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: partial
+  summary: Both flavonoids reduce RNA primer extension by purified nsp12/nsp7/nsp8.
+    Baicalein alone is tested in the thermal-shift binding assay; it stabilizes nsp12
+    more than nsp5/nsp14. Docked contacts are predictions. Cell viral-yield endpoints
+    differ from enzyme activity and from the other CPE assay. These results provide
+    additional context rather than invalidating a protocol-specific protease measurement.
+  snapshot_sha256: 07211c19c1f9dd1ad0c029569817460e34c739079f55463dd22119c62d1a4c64
+- evidence_id: fungal-target
+  kind: primary_source
+  reference: PMID:35900099;DOI:10.1128/spectrum.02085-22
+  locator: 143-enolase2022.xml; complete Eno1 SPR/enzyme/larval Results and corresponding
+    Methods
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: partial
+  summary: Free baicalein binds immobilized Candida albicans Eno1 by SPR with kinetic
+    KD8.12 micromolar and inhibits purified enolase with IC50 62.9 micromolar. The
+    larval SN152 versus eno1 deletion experiment supports target relevance but also
+    has baseline virulence differences. Predicted docking residues and apo-enolase
+    structural comparisons are not a baicalein co-crystal; full probe synthesis, supplementary
+    strain table and raw curves were not independently audited.
+  snapshot_sha256: 748a5eb3078960382ca30ca97d74aed40597246bfe23da0db6ce1aadaee7b684
+- evidence_id: other-activity
+  kind: primary_source
+  reference: PMID:21782012;PMID:22918868;PMID:30737463
+  locator: Complete original indexed abstracts in143-discovery.json and143-targeted.json
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: partial
+  summary: MRSA work distinguishes ciprofloxacin potentiation in NorA-overexpressing
+    SA1199B and a separate pyruvate-kinase enzyme assay; neither proves direct NorA
+    binding. The2012 Candida study reports a50%-growth endpoint termed MIC50, not
+    a population median MIC; the2019 study separates purified baicalein from root
+    extract and wogonin. These support qualitative bacterial/fungal context without
+    importing numerical strain assays from unread full Methods.
+  snapshot_sha256: 65252e2a06f6691a93cb51cbdb2c6f5aac80e77864216355d21fda72e28f09e3
+- evidence_id: adopted
+  kind: database
+  reference: All ten adopted ChEBI citations plus the excluded BindingDB review
+  locator: 143-adopted-abstracts.txt; all11 complete indexed abstracts
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: context_only
+  summary: PMID10724177 is plant glucuronosyltransferase biosynthesis;11513834 host
+    endothelial growth;15853750 cardiovascular review;22114686 neurons/nematode aging;22891631
+    radiation protection;23098745 exact H5N1 antiviral and host-response work;23339711
+    Nrf2/SKN1;26268338 host glyoxalase inhibition;28166217 MR1/MAIT host ligands;31976018
+    host-guest formulation. PMID34798775 is a protease review and not original evidence
+    for its secondary values. Host enzymes and plant biosynthesis must not be reclassified
+    as bacterial killing targets.
+  snapshot_sha256: 2344eb01261d5858dd4743cac32aa3469689f392d9a54c88448a7faeef77d58c
+- evidence_id: documents
+  kind: primary_source
+  reference: patent:CN102429899
+  locator: Public translated abstract and claims in143-CN102429899.html
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: context_only
+  summary: The patent concerns baicalein use in pneumonia and mentions toxin/cell/mouse
+    experiments. Its broad claim of no drug resistance and treatment promise is not
+    independently established clinical evidence. The document reference is appropriate
+    context, not exact assay or approval evidence. Wikipedia is a secondary document
+    cross-reference only.
+  snapshot_sha256: 7f903a5e8d076f512171f935fbe9c8787ad425482a5bda40dd15731089fb2126
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent native SMILES/InChI, formula, mass, charge and source-mint
+    checks
+  locator: 143-chemistry.json and focused command logs
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: supports
+  summary: Both native encodings independently reproduce the stored full key, formula,
+    neutral single component and masses at stored precision. Mint agrees. Actual focused
+    schema and strict commands exit 0; chemical consistency does not prove biological
+    mechanism.
+  snapshot_sha256: c2b4ee23bfd446ffe9d0e34ee3a8f4ea20977291358afc516620787165c24a30
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech and free primary literature
+  locator: 143-local-hits.txt; initial inspection and adopted/discovery snapshots
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: context_only
+  summary: Initial ignored-inclusive local source/ownership search and exact raw-row
+    inspection were followed by current official chemical sources, all adopted citation
+    records and available abstracts, and bounded primary follow-up. Discovery queries
+    are capped and selected relevant papers were pursued; no exhaustive literature
+    absence claim is made.
+  search_scope: rg --no-ignore --hidden in the isolated batch015 worktree excluding
+    .git and .venv. Exact target identifier, name and slug; maintained raw inventories,
+    config, extraction and generation context. Free public databases and original
+    papers; no paid provider.
+  snapshot_sha256: 386a4d759db11faaae3b5cfcbaa11e0d49e9b1469a2f0b8e12d5de62245d8eae
+- evidence_id: adapter
+  kind: database
+  reference: Native iModulonDB structured catalog before web research
+  locator: 015-root-imodulondb-datasets.txt
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: context_only
+  summary: The successful structured dataset catalog was inspected before open-ended
+    mechanism research. Its bacterial datasets do not cover the native viral or mammalian
+    protein/pathway assertions. No unrelated bacterial gene was substituted for SARS-CoV-2
+    proteins or host NF-kappaB. Later bacterial/fungal leads are explicitly optional
+    literature context; no exposure module or transcriptomic dataset is asserted.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+assessments:
+- assessment_id: provenance
+  area: provenance
+  topic: Source generation, ownership and history
+  outcome: supported
+  summary: The adopted row and deterministic source handling reproduce the seeded
+    fields. All captured inputs remain unchanged; this review does not promote native
+    status.
+  target_ids:
+  - CHEBI:2979
+  evidence_ids:
+  - native
+  - source
+  - chemistry
+- assessment_id: schema
+  area: schema
+  topic: Focused gates
+  outcome: supported
+  summary: Native schema, strict and independent chemistry checks pass. Shared corpus
+    verification is reported separately.
+  target_ids:
+  - CHEBI:2979
+  evidence_ids:
+  - chemistry
+- assessment_id: identity
+  area: identity
+  topic: Exact chemistry and classifications
+  outcome: supported
+  summary: Independent structures and native names agree. Multiple activity roles
+    can coexist with antibacterial filing.
+  target_ids:
+  - CHEBI:2979
+  evidence_ids:
+  - identity
+  - xref-access
+  - chemistry
+- assessment_id: measurement
+  area: evidence
+  topic: 20 nM and method
+  outcome: concern
+  summary: The numerical no-DTT FRET result is confirmed; the copied X-ray characterization
+    is wrong for this measurement.
+  target_ids:
+  - CHEBI:2979
+  evidence_ids:
+  - measurement
+  - source
+- assessment_id: target
+  area: evidence
+  topic: Processed viral target and related mechanisms
+  outcome: supported
+  summary: The measured construct is nsp5 within a valid reviewed precursor accession.
+    Preserve measured-association and assay-specific scope; additional fungal and
+    polymerase mechanisms are separate.
+  target_ids:
+  - CHEBI:2979
+  evidence_ids:
+  - protein
+  - protease-independent
+  - rdrp
+  - fungal-target
+- assessment_id: optional
+  area: completeness
+  topic: Activity, producer, resistance and transcriptomic evidence
+  outcome: unknown
+  summary: Primary enrichment is possible but optional. Plant biosynthesis and host
+    responses do not identify a bacterial target, resistance mechanism or compound-exposure
+    transcriptomic dataset.
+  target_ids:
+  - CHEBI:2979
+  evidence_ids:
+  - adopted
+  - other-activity
+  - adapter
+findings:
+- finding_id: F1
+  issue_key: baicalein-bindingdb-assay-method-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct X-ray wording in the FRET measurement description
+  description: The native description combines a correct FRET assay with Hit profiling
+    using X-ray. The original20 nM value comes from enzymatic fluorescence profiling;
+    this paper crystallizes myricetin. Correct that bounded method phrase while preserving
+    value, no-DTT qualifier, source IDs and original provenance.
+  target_ids:
+  - CHEBI:2979
+  field_paths:
+  - molecular_targets[0].measurements[0].assay_description
+  evidence_ids:
+  - native
+  - source
+  - measurement
+  rule_id: 'native-review-checklist: exact identity and claim-level experimental scope'
+  native_severity: minor
+  normalization_reason: The native description combines a correct FRET assay with
+    Hit profiling using X-ray. The original20 nM value comes from enzymatic fluorescence
+    profiling; this paper crystallizes myricetin. Correct that bounded method phrase
+    while preserving value, no-DTT qualifier, source IDs and original provenance.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/bindingdb_target_measurements.tsv
+    role: Adopted BindingDB target measurement and extraction owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_bindingdb_targets.py
+    role: Adopted BindingDB target measurement and extraction owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Target measurement attachment and maintained source qualification
+- finding_id: F2
+  issue_key: baicalein-qualified-multiple-activity-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Curate separate microbial activities with assay and target boundaries
+  description: Original viral protease/polymerase and fungal Eno1 studies can strengthen
+    the record. Preserve distinct constructs, organisms, biochemical endpoints, cellular
+    readouts, mixtures and host effects.
+  target_ids:
+  - CHEBI:2979
+  field_paths:
+  - evidence
+  - molecular_targets
+  - activity_spectrum
+  - discussions
+  evidence_ids:
+  - protease-independent
+  - rdrp
+  - fungal-target
+  - other-activity
+  - adopted
+  rule_id: 'native-review-checklist: exact identity and claim-level experimental scope'
+  native_severity: informational
+  normalization_reason: Original viral protease/polymerase and fungal Eno1 studies
+    can strengthen the record. Preserve distinct constructs, organisms, biochemical
+    endpoints, cellular readouts, mixtures and host effects.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/baicalein.yaml
+    role: Curator-owned exact primary evidence and optional biological annotations
+      through validated writer/history helpers
+actions:
+- action_id: A1
+  description: Correct the maintained assay description without deleting the supported
+    measurement.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:2979
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/bindingdb_target_measurements.tsv
+    role: Adopted BindingDB target measurement and extraction owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_bindingdb_targets.py
+    role: Adopted BindingDB target measurement and extraction owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Target measurement attachment and maintained source qualification
+  acceptance_checks:
+  - Preserve20 nM, no-DTT assay name, reactant902205 and original preprint link; add
+    the peer-reviewed original as appropriate.
+  - Describe the processed nsp5 construct and FRET readout. Keep the valid precursor
+    accession with explicit chain context.
+  - Do not substitute a plus-DTT IC50 that was not measured, a different paper’s potency,
+    cellular EC50 or myricetin crystallography.
+  - Use a maintained source correction or qualification that survives regeneration,
+    then focused and shared validation.
+- action_id: A2
+  description: Add only exact primary annotations after remaining experimental detail
+    is checked.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:2979
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/baicalein.yaml
+    role: Curator-owned exact primary evidence and optional biological annotations
+      through validated writer/history helpers
+  acceptance_checks:
+  - Use separate claim-level evidence for enzyme activity, binding and cell phenotypes;
+    keep model-specific results and exposure times.
+  - Inspect supplements/strain and reagent details before importing fungal targets
+    or exact MICs; do not equate MIC50 growth inhibition with an isolate-population
+    median.
+  - Do not infer current treatment approval, human efficacy, direct NorA binding or
+    producer status from an isolation listing.
+limitations:
+- All adopted abstracts were read, but their complete manuscripts were not systematically
+  audited. The focused primary papers were inspected at the explicitly identified
+  sections; raw data and most supplements were not inspected.
+- The screening Figure3 was visually verified. Direct supplementary PDF/XLSX requests
+  returned browser-check HTML despite HTTP200 and were not treated as data.
+- The initial guessed PMC7393469 proved to be an unrelated olfaction paper and was
+  rejected. Correct PMID32737471/PMC7393338 was then retrieved and inspected.
+- Database access failures and proprietary crosswalk limits are recorded above. No
+  full clinical, resistance or transcriptomic census is claimed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 15 captured maintained inputs remain unchanged. No native record was edited.
+  Empty optional fields are not automatically defects.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1021/acsptsci.0c00216
+- https://doi.org/10.1038/s41401-020-0483-6
+- https://doi.org/10.1128/spectrum.02085-22
+```

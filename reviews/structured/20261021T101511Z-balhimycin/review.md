@@ -1,0 +1,1000 @@
+# Balhimycin: producer and cell-wall precursor binding supported; preserve assay salt and model-ligand scope
+
+- Review: 20261021T101511Z-balhimycin
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T10:08:44Z
+- Finished UTC: 2026-10-21T10:15:11Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The stereospecified neutral balhimycin parent and all native identifiers match the official chemical and ontology sources. Primary fermentation and genetic evidence support the producing strain, and exact balhimycin model-peptide structures support binding to the D-Ala-D-Ala cell-wall precursor component. Quantitative discovery assays used the acetate salt, requiring explicit form qualification before enrichment. No confirmed native error was found; one informational follow-up concerns qualified primary target, producer and activity additions. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole ARO-only record: exact chemical form, both xrefs, source mint, glycopeptide parent, producer/target definition, imported component target, all five adopted citation leads and four seed/reseed events.
+
+Selection: Queue 146 at the locked exact balhimycin path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-7abbaadfab | data/antibiotics/antibacterial/balhimycin.yaml | generated | balhimycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | antibioticmech:aro-7abbaadfab | Actual focused command exited 0. |
+| strict | passed | True | antibioticmech:aro-7abbaadfab | Actual focused command exited 0. |
+| chemistry | failed | False | antibioticmech:aro-7abbaadfab | Actual focused command exited 1. The initial custom chemistry diagnostic failed solely at the average-mass rounding threshold because RDKit uses a different chlorine atomic weight; see the separate successful convention-aware diagnostic. |
+| Independent chemical identity and source-specific atomic-weight diagnostic | passed | False | antibioticmech:aro-7abbaadfab | Exited 0. Preserves the original diagnostic failure and verifies formula, both structure keys, charge, monoisotopic mass, mint and conventional-atomic-weight average mass. |
+| Authoritative full QC | failed | True | antibioticmech:aro-7abbaadfab | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-7abbaadfab | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-7abbaadfab | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-7abbaadfab | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-7abbaadfab | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-7abbaadfab | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-7abbaadfab | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-7abbaadfab | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-7abbaadfab | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Stereospecified neutral parent and source identifiers
+
+identity: supported. Targets: antibioticmech:aro-7abbaadfab.
+
+Both native structures and current exact PubChem CID agree. The primary scaffold is consistent; acetate, trifluoroacetate, ketone hydrate and partially stereospecified name-search entries remain distinct.
+
+### Mint and glycopeptide class
+
+grounding: supported. Targets: antibioticmech:aro-7abbaadfab.
+
+The minted source identity is reproducible and lacks an adopted exact ChEBI crosswalk. ARO class is strictly broader and antibacterial inclusion is supported by direct compound studies.
+
+### Actual biosynthesis and strain taxonomy
+
+evidence: supported. Targets: antibioticmech:aro-7abbaadfab.
+
+Fermentation isolation plus gene disruption/chemical analysis establish production by DSM5908. Current taxonomy supports A. balhimycina, while historical nomenclature is retained.
+
+### Cell-wall precursor component binding
+
+evidence: supported. Targets: antibioticmech:aro-7abbaadfab.
+
+The imported target is honestly database-level and correctly nonprotein. An exact balhimycin/Lys-D-Ala-D-Ala complex independently supports the definition, within model-peptide crystallographic scope.
+
+### All five adopted citation dispositions
+
+provenance: supported. Targets: antibioticmech:aro-7abbaadfab.
+
+All five leads resolve to their actual primary topics. One complete biosynthesis paper and four original abstracts were inspected; none is silently reassigned as an intact-cell binding assay. More direct binding evidence exists outside the adopted list.
+
+### Antibacterial activity and exact assay material
+
+scope: supported. Targets: antibioticmech:aro-7abbaadfab.
+
+Historical primary activity supports antibacterial context, with acetate salt specified. Exact neutral-parent quantitative dose attribution remains unestablished and must be qualified before adding measurements.
+
+### Optional primary evidence enrichment
+
+completeness: supported. Targets: antibioticmech:aro-7abbaadfab.
+
+Structured producer, target and AST evidence can be improved. No resistance, clinical or dataset assertion is inferred merely from family membership, biosynthesis PCR or a related drug.
+
+### Actual source and curator owners
+
+ownership: supported. Targets: antibioticmech:aro-7abbaadfab.
+
+ARO/PubChem and target policy own seeded fields. Optional claim-level additions belong to the native balhimycin record through validated curation and history.
+
+### Focused gates and resolved diagnostic convention
+
+schema: supported. Targets: antibioticmech:aro-7abbaadfab.
+
+Both required focused gates pass. Exact chemical identity and source mass are confirmed after explaining the retained nonrequired diagnostic failure.
+
+## Findings
+
+### F1: Attach exact primary target and producer evidence while qualifying assay salts
+
+informational / open / confirmed; issue key: balhimycin-qualified-target-producer-activity-enrichment.
+
+The definition and component target are supported, but useful primary evidence is not attached to the narrow native objects. Optional enrichment should use the direct balhimycin model-peptide complex, strain-specific biosynthetic proof and acetate-qualified activity. The current absence of optional fields and the honest database evidence status are not scientific errors.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Curate available exact primary evidence with form, organism and assay boundaries intact.
+
+- Attach PMID 12054818 and PDB 1GO6 to an explicitly modeled Lys-D-Ala-D-Ala component-binding observation after checking the complete primary structure discussion. Do not turn the ligand into a protein target or attach a UniProt example to it; do not transfer degluco-balhimycin/pentapeptide results to the full parent.
+- Attach strain DSM5908 production evidence from fermentation isolation and PMID 10390204. Retain Y-86,21022 and historical A. mediterranei nomenclature with current A. balhimycina mapping; do not conflate DSM5908 with the species type strain DSM44591. Verify any optional MIBiG/sequence accession independently before adding it.
+- Preserve the 1994 acetate assay material and vancomycin hydrochloride comparator. Do not record the tabulated mass MICs as unqualified neutral-parent measurements without checking analyte normalization. Keep individual MIC, panel MIC90, MBC, time-kill and PAE endpoints separate with their methods, inocula, media, durations and units.
+- Keep DpgA, BpsA–D, OxyA–C and glycosyltransferases as biosynthetic machinery. Heterologous enzyme expression, mutant-product activity and RT-PCR are not parent drug targets, natural production in the expression host or an antibiotic-exposure transcriptome.
+- Prefer direct claim-level references for the target and producer rather than treating the first mechanically selected definition citation as proof of every definition clause. Preserve source-owned target qualifiers unless a separately curated exact primary observation is added.
+- Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/balhimycin.yaml for separately authorized changes, preserve curated additions across reseeding, run focused/shared validation and retain SEEDED until all native review criteria are satisfied.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/balhimycin.yaml; Entire YAML and four history events. | supports | SEEDED/MINTED balhimycin, glycopeptide class, neutral exact structure, source-attested production and D-Ala-D-Ala precursor binding. The one target is a CELL_WALL_COMPONENT with ATTACKED_COMPONENT relation and DATABASE_ASSERTION_ONLY evidence. It does not assert binding to a protein enzyme. No quantitative AST, resistance, structured producer, dataset, clinical indication or causal graph is present. |
+| source | data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; data/raw/aro_target_edges.tsv; conf/aro_target_roles.tsv; ARO line 69, PubChem line 13, target line 73 and role policy line 7; extraction/seeding and PubChem enrichment code. | supports | ARO supplies five citation leads, definition and broader glycopeptide class; PubChem supplies exact fallback structure. No adopted ChEBI crosswalk occurs, supporting MINTED rather than unsupported exact ChEBI grounding. The seeder picks the first ARO definition reference, retains database target provenance, and maps D-Ala-D-Ala to an attacked nonprotein cell-wall component. No exact adopted ARO resistance edge was found. Initial capture was preserved and corrected actual-source ownership and inputs were captured before judgment; all 19 input hashes remain unchanged. |
+| identity | PubChem CID 16134543; 146-pubchem.json; 146-chemistry.json; independently parsed native SMILES and InChI. | supports | Both native representations produce one neutral C66H73Cl2N9O24 structure with full key WKNFBFHAYANQHF-QNSRRSNQSA-N and 17 specified centers. Current CID 16134543 has exactly the same structure, key, formula, charge and reported masses. The source mint recomputes correctly. A broad name search also finds partially stereospecified CID 139586033, which is not an exact substitute for the explicitly adopted CID. |
+| mass-conventions | https://www.ciaaw.org/pubs/TSAW-2011.pdf; https://pubchem.ncbi.nlm.nih.gov/docs/atomic-mass-changes-2016; IUPAC Table 6 conventional atomic weights, official PubChem mass convention text, and 146-chemistry-conventions.json. | supports | Conventional C 12.011, H 1.008, Cl 35.45, N 14.007 and O 15.999 give 1447.249, which rounds to native/current PubChem 1447.2. RDKit uses Cl 35.453, adding 0.006 and yielding 1447.255, just over the one-decimal rounding boundary. The initial custom diagnostic failure is thus explained by atomic-weight conventions, not a mismatched molecular structure or incorrect imported source value. |
+| aro | https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo; 146-aro-terms.txt, complete molecule/class/target terms. | supports | Official ARO:3000120 and PubChem crosswalk agree with the record. ARO:3000081 is the broader glycopeptide antibiotic class. ARO:3000720 is acyl-D-alanyl-D-alanine, a peptidoglycan precursor terminal component, and has the exact balhimycin targeted_by_antibiotic edge. No protein accession is required for this chemical target. |
+| discovery-identity | PMID:8175486; DOI:10.7164/antibiotics.47.334; 146-discovery1994.pdf/text, complete main paper; Figure 1 visually inspected on p. 335. | supports | The primary discovery draws the ketosugar balhimycin scaffold, distinct from vancomycin, and describes purification from a producing fermentation. It isolated trifluoroacetate and converted it to acetate for testing. The present neutral parent is an appropriate chemical identity representation, while assay material and solution hydration must remain explicit. The separate detailed 1994 structure-elucidation paper DOI 10.1021/jo00091a044 concerns hydrated ketosugar chemistry but was not fully accessible. |
+| producer | PMID:8175486; DOI:10.7164/antibiotics.47.334; Discovery Methods, taxonomy, fermentation and isolation sections. | supports | Amycolatopsis sp. Y-86,21022 was deposited as DSM 5908. A 100-liter production culture, time-resolved HPLC/activity measurements and repeated isolation directly demonstrate production rather than mere presence in an extract. The discovery paper could identify the genus but explicitly could not resolve the species. Its experimental evidence must be joined to later strain taxonomy, not retroactively described as a species identification made in 1994. |
+| activity | PMID:8175486; DOI:10.7164/antibiotics.47.334; Methods and biological properties; Tables 4–7 visually inspected in 146-discovery-tables45.png; Tables 8–10 read in text. | supports | Balhimycin acetate, compared with vancomycin hydrochloride, inhibited named staphylococci and enterococci. Table 4 MICs include S. aureus 209P 0.39 and methicillin-resistant strain 3066 0.78 micrograms/mL by Mueller–Hinton agar dilution, 10^4 CFU/spot, 37 degrees C, 18 hours. Table 5 gives panel MIC90 values, not individual strain observations. Table 6 uses broth macrodilution and a 99.9% kill MBC definition; these endpoints differ from MIC and post-antibiotic effect. Neutral-parent mass equivalence was not specified, so these numbers should not be copied as unqualified neutral-parent MICs. Gram-negative negatives are assay-bounded, not universal inactivity. |
+| adopted-biosyn1999 | PMID:10390204; DOI:10.1128/AAC.43.7.1565; 146-biosyn1999.html/text, complete main Methods/Results/Discussion, tables and figure captions. | supports | DSM5908 is called A. mediterranei under the historical name. Gene disruption and HPLC/MS analysis distinguish wild-type balhimycin from linear inactive products and nonglycosylated active derivatives. These experiments support biosynthetic production and exact scaffold assembly, not Oxy or glycosyltransferase proteins as antibacterial targets. The Bacillus subtilis ATCC6633 assay is an indicator of broth activity and does not assign an MIC for purified parent or all mutant products. |
+| adopted-dpg | PMID:11495926; DOI:10.1074/JBC.M106580200; 146-epmc.json, complete original abstract. | partial | The paper selected as definition_source shows dpgA disruption, feeding rescue and biochemical precursor synthesis for balhimycin biosynthesis. It supports the producer/assembly context, but its abstract does not directly measure binding to the cell-wall precursor. Heterologous Streptomyces lividans expression of a precursor enzyme is not proof that this host biosynthesizes complete balhimycin. |
+| adopted-nrps | PMID:11932455; DOI:10.1099/00221287-148-4-1105; 146-adopted.json, complete original abstract. | supports | The bpsA–D NRPS study uses gene disruption/deletion, complementation and beta-hydroxytyrosine feeding rescue in historical DSM5908. It supports production and precursor assembly. Eight synthetase modules do not mean an eight-residue final scaffold; the paper explicitly describes a heptapeptide and an auxiliary precursor function. These proteins are biosynthetic machinery, not drug-inhibited targets. |
+| adopted-oxygenases | PMID:16730832; DOI:10.1016/J.JBIOTEC.2006.04.009; 146-epmc.json, complete original abstract. | supports | RT-PCR, nonpolar mutants and HPLC-ESI-MS demonstrate the OxyB–OxyA–OxyC ring-closing sequence in A. balhimycina and heterologous gene complementation. The Lys-D-Ala-D-Ala binding description is mechanistic background, whereas the reported experiments concern biosynthesis. This is not a public antibiotic-exposure transcriptomics dataset or a direct binding assay. |
+| adopted-crystal1998 | PMID:9761883; DOI:10.1107/S0907444997008895; 146-epmc.json, complete original abstract and official PubMed record. | partial | The crystal contains balhimycin dimers with citrate and acetate occupying binding pockets, plus solvent. It is useful exact structural context, but it is not itself a Lys-D-Ala-D-Ala ligand complex. Ureido-balhimycin was a molecular-replacement search model, not evidence that the native molecule should be renamed or replaced by that derivative. |
+| binding-primary | PMID:12054818; DOI:10.1016/S0022-2836(02)00146-8; 146-binding2002.json and official original abstract/publisher introduction. | partial | The primary study crystallizes balhimycin and degluco-balhimycin with di-, tri- and pentapeptide cell-wall precursor models. This independently supports the component-binding mechanism, but exact congener/ligand assignments must be preserved and crystal models are not intact-cell target-occupancy, MIC or kinetic affinity measurements. The complete paper was not inspected. |
+| binding-archive | PDB:1GO6; https://www.rcsb.org/structure/1GO6; Official structure entry and 146-PDB1GO6.json. | supports | The 0.98-angstrom entry specifically identifies balhimycin in complex with Lys-D-Ala-D-Ala and links PMID 12054818. It distinguishes the full balhimycin complex from aglycone/pentapeptide relatives. The peptide ligand is a model chemical component, not a taxon-specific protein target. Crystal solvent and hydrated sugar components should not become exact free-parent xrefs. |
+| producer-taxonomy | NCBITaxon:1081091; NCBITaxon:208443; ENA:Y16952.3; Official NCBI taxonomy entries and 146-Y16952.embl header/reference blocks. | supports | NCBI places DSM 5908 under A. balhimycina, distinct from the species type strain FH1894/DSM44591. Versioned Y16952.3 identifies the balhimycin biosynthetic gene cluster from DSM5908 and explicitly links the historical 1999, 2001 and 2002 papers. This joins the historical A. mediterranei name to the native current species context for this strain, without reassigning all A. mediterranei strains. |
+| adapter | iModulonDB dataset catalog; 055-imodulondb-datasets-retry.txt, covered organism keys examined. | context_only | There is no Amycolatopsis dataset in the inspected catalog, so a matching producer-gene lookup is not applicable; covered Streptomyces species are not interchangeable. The native antibacterial target is a chemical cell-wall component rather than a protein. No iModulon absence is used as evidence against production, target engagement or susceptibility. |
+| search | CultureBotAI/AntibioticMech; 146-local-hits.txt, 146-maintained-search.txt; exact source-row filtering. | context_only | Hidden- and ignored-inclusive searches confirmed the ARO/PubChem inputs and target policy, without a separate maintained curator activity/producer claim or exact adopted resistance edge in the searched scope. Historical reports were not treated as independent scientific proof. Primary searches stayed bounded to adopted leads, exact target complexes, discovery and producer taxonomy. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION.md; docs/HARMONIZATION.md; Exact forms, producer, target, AST and evidence-placement criteria. | supports | Keep biosynthetic proteins separate from antimicrobial targets, producer distinct from expression/assay hosts, salt/form context explicit, and generic precursor component distinct from a taxon-specific protein. Optional omissions are not required-field violations. |
+| validation | Focused record gates and independent chemistry; 146-focused-results.json, logs, strict TSV, 146-chemistry.json and 146-chemistry-conventions.json. | supports | Schema and strict validation exited 0. The first optional chemistry diagnostic exited 1 only because of the average atomic-weight convention boundary; the separate explained diagnostic exited 0 and verified exact identity. Initial and supplemental captured hashes remain unchanged. |
+
+## Limits And Additional Notes
+
+- The whole record and exact maintained source rows were inspected after initial capture; original capture files were preserved. Actual ARO/PubChem ownership was corrected and all 19 captured input hashes were rechecked unchanged.
+- All five adopted citation leads were resolved. PMID 10390204 was read in complete main text including tables and figure captions. PMIDs 11495926, 9761883, 11932455 and 16730832 were assessed through complete original abstracts; their full papers were not all inspected.
+- The 1994 discovery/activity main paper was fully read, with Figure 1 and Tables 4–7 visually inspected. The detailed organic-chemistry structure-elucidation article was not fully accessible. The native exact PubChem stereochemical representation was not independently rederived from raw NMR or diffraction data.
+- The 2002 target paper was inspected at original abstract and publisher introduction, supported by the exact official PDB 1GO6 entry. Raw diffraction data, full ligand-contact tables and hydration occupancies were not independently re-refined. The 1998 crystal abstract concerns citrate/acetate occupancy, not a cell-wall model peptide.
+- Numerical discovery activity concerns acetate salt. No independent free-neutral-parent assay mass normalization was established, and no clinical susceptibility breakpoint or current clinical indication is inferred.
+- The initial custom chemistry diagnostic failure is retained. Independent calculation using the official IUPAC conventional atomic weights reproduces source/current PubChem mass; the different RDKit chlorine weight explains the rounding-boundary failure without changing native data.
+- Amycolatopsis is not in the inspected iModulonDB catalog. No substitute organism or negative expression inference was used. No exhaustive self-resistance, clinical development, public transcriptome or biosynthetic-cluster inventory review is claimed.
+- A newly discovered 2024 lipid-II study DOI 10.1039/D4CB00140K could not be retrieved through the attempted publisher HTML route and remains an unassessed follow-up lead, not support for this verdict.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T101511Z-balhimycin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Balhimycin: producer and cell-wall precursor binding supported; preserve assay
+  salt and model-ligand scope'
+started_at: '2026-10-21T10:08:44Z'
+finished_at: '2026-10-21T10:15:11Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the record. Preserved initial provenance capture
+    and inspected actual ARO/PubChem source inputs before judging. Read the whole
+    record, all five adopted citation abstracts, complete primary discovery and biosynthetic-gene
+    papers, and official structural/taxonomic archives. Independently resolved a diagnostic
+    atomic-weight convention discrepancy.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The stereospecified neutral balhimycin parent and all native identifiers
+  match the official chemical and ontology sources. Primary fermentation and genetic
+  evidence support the producing strain, and exact balhimycin model-peptide structures
+  support binding to the D-Ala-D-Ala cell-wall precursor component. Quantitative discovery
+  assays used the acetate salt, requiring explicit form qualification before enrichment.
+  No confirmed native error was found; one informational follow-up concerns qualified
+  primary target, producer and activity additions. Scientific assessment retains the
+  stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/balhimycin.yaml
+    sha256: 80bf1977e857ab54ff305fe835c24d685c4d967fdeb5227051604f1df9f94b82
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-7abbaadfab
+  path: data/antibiotics/antibacterial/balhimycin.yaml
+  label: balhimycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted name, definition, class and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Exact neutral structure fallback
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported cell-wall component target
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target type and relation policy
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source policies and determinant lineage mechanism map
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source transform
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding/exclusion overrides
+scope:
+  description: 'Whole ARO-only record: exact chemical form, both xrefs, source mint,
+    glycopeptide parent, producer/target definition, imported component target, all
+    five adopted citation leads and four seed/reseed events.'
+  selection: Queue 146 at the locked exact balhimycin path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-7abbaadfab
+  exclusions:
+  - target: Vancomycin, degluco-balhimycin, ureido-balhimycin, minor balhimycin congeners,
+      acetate/trifluoroacetate salts and hydrated ketosugar forms as exact neutral-parent
+      equivalents
+    reason: Related drugs, salts, hydration and reaction products must remain distinguished;
+      evidence can support parent context only with explicit form qualifications.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - validation
+  - mass-conventions
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/balhimycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - validation
+  - mass-conventions
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/balhimycin.yaml --out /private/tmp/am-review-session/146-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: failed
+  required: false
+  summary: Actual focused command exited 1. The initial custom chemistry diagnostic
+    failed solely at the average-mass rounding threshold because RDKit uses a different
+    chlorine atomic weight; see the separate successful convention-aware diagnostic.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - validation
+  - mass-conventions
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 146
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: chemistry-conventions
+  name: Independent chemical identity and source-specific atomic-weight diagnostic
+  status: passed
+  required: false
+  summary: Exited 0. Preserves the original diagnostic failure and verifies formula,
+    both structure keys, charge, monoisotopic mass, mint and conventional-atomic-weight
+    average mass.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - mass-conventions
+  - identity
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/146-chemistry-conventions.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/balhimycin.yaml
+  locator: Entire YAML and four history events.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: SEEDED/MINTED balhimycin, glycopeptide class, neutral exact structure,
+    source-attested production and D-Ala-D-Ala precursor binding. The one target is
+    a CELL_WALL_COMPONENT with ATTACKED_COMPONENT relation and DATABASE_ASSERTION_ONLY
+    evidence. It does not assert binding to a protein enzyme. No quantitative AST,
+    resistance, structured producer, dataset, clinical indication or causal graph
+    is present.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; data/raw/aro_target_edges.tsv;
+    conf/aro_target_roles.tsv
+  locator: ARO line 69, PubChem line 13, target line 73 and role policy line 7; extraction/seeding
+    and PubChem enrichment code.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: ARO supplies five citation leads, definition and broader glycopeptide class;
+    PubChem supplies exact fallback structure. No adopted ChEBI crosswalk occurs,
+    supporting MINTED rather than unsupported exact ChEBI grounding. The seeder picks
+    the first ARO definition reference, retains database target provenance, and maps
+    D-Ala-D-Ala to an attacked nonprotein cell-wall component. No exact adopted ARO
+    resistance edge was found. Initial capture was preserved and corrected actual-source
+    ownership and inputs were captured before judgment; all 19 input hashes remain
+    unchanged.
+- evidence_id: identity
+  kind: validation
+  reference: PubChem CID 16134543
+  locator: 146-pubchem.json; 146-chemistry.json; independently parsed native SMILES
+    and InChI.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: Both native representations produce one neutral C66H73Cl2N9O24 structure
+    with full key WKNFBFHAYANQHF-QNSRRSNQSA-N and 17 specified centers. Current CID
+    16134543 has exactly the same structure, key, formula, charge and reported masses.
+    The source mint recomputes correctly. A broad name search also finds partially
+    stereospecified CID 139586033, which is not an exact substitute for the explicitly
+    adopted CID.
+  snapshot_sha256: b0ff7fd0d55cfeaab52445584fd34594f06fa6ed325eddd01bdfc5e46e222c01
+- evidence_id: mass-conventions
+  kind: validation
+  reference: https://www.ciaaw.org/pubs/TSAW-2011.pdf; https://pubchem.ncbi.nlm.nih.gov/docs/atomic-mass-changes-2016
+  locator: IUPAC Table 6 conventional atomic weights, official PubChem mass convention
+    text, and 146-chemistry-conventions.json.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: Conventional C 12.011, H 1.008, Cl 35.45, N 14.007 and O 15.999 give 1447.249,
+    which rounds to native/current PubChem 1447.2. RDKit uses Cl 35.453, adding 0.006
+    and yielding 1447.255, just over the one-decimal rounding boundary. The initial
+    custom diagnostic failure is thus explained by atomic-weight conventions, not
+    a mismatched molecular structure or incorrect imported source value.
+  snapshot_sha256: 5b3c48741a595611a413b80b7faebdd0e6be7cffdea02dba19d693b5d501b9a9
+- evidence_id: aro
+  kind: database
+  reference: https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo
+  locator: 146-aro-terms.txt, complete molecule/class/target terms.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: Official ARO:3000120 and PubChem crosswalk agree with the record. ARO:3000081
+    is the broader glycopeptide antibiotic class. ARO:3000720 is acyl-D-alanyl-D-alanine,
+    a peptidoglycan precursor terminal component, and has the exact balhimycin targeted_by_antibiotic
+    edge. No protein accession is required for this chemical target.
+  snapshot_sha256: 5c19b95014be253f962e29071711ddb1a334c5b1c6cb616106b5a5c8eae6cccf
+- evidence_id: discovery-identity
+  kind: primary_source
+  reference: PMID:8175486; DOI:10.7164/antibiotics.47.334
+  locator: 146-discovery1994.pdf/text, complete main paper; Figure 1 visually inspected
+    on p. 335.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: The primary discovery draws the ketosugar balhimycin scaffold, distinct
+    from vancomycin, and describes purification from a producing fermentation. It
+    isolated trifluoroacetate and converted it to acetate for testing. The present
+    neutral parent is an appropriate chemical identity representation, while assay
+    material and solution hydration must remain explicit. The separate detailed 1994
+    structure-elucidation paper DOI 10.1021/jo00091a044 concerns hydrated ketosugar
+    chemistry but was not fully accessible.
+  snapshot_sha256: fd8a745df9cd1c8ebf4b704e46c966a6a181ce7431de55edc64c8905274646fa
+- evidence_id: producer
+  kind: primary_source
+  reference: PMID:8175486; DOI:10.7164/antibiotics.47.334
+  locator: Discovery Methods, taxonomy, fermentation and isolation sections.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: Amycolatopsis sp. Y-86,21022 was deposited as DSM 5908. A 100-liter production
+    culture, time-resolved HPLC/activity measurements and repeated isolation directly
+    demonstrate production rather than mere presence in an extract. The discovery
+    paper could identify the genus but explicitly could not resolve the species. Its
+    experimental evidence must be joined to later strain taxonomy, not retroactively
+    described as a species identification made in 1994.
+  snapshot_sha256: fd8a745df9cd1c8ebf4b704e46c966a6a181ce7431de55edc64c8905274646fa
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:8175486; DOI:10.7164/antibiotics.47.334
+  locator: Methods and biological properties; Tables 4–7 visually inspected in 146-discovery-tables45.png;
+    Tables 8–10 read in text.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: Balhimycin acetate, compared with vancomycin hydrochloride, inhibited named
+    staphylococci and enterococci. Table 4 MICs include S. aureus 209P 0.39 and methicillin-resistant
+    strain 3066 0.78 micrograms/mL by Mueller–Hinton agar dilution, 10^4 CFU/spot,
+    37 degrees C, 18 hours. Table 5 gives panel MIC90 values, not individual strain
+    observations. Table 6 uses broth macrodilution and a 99.9% kill MBC definition;
+    these endpoints differ from MIC and post-antibiotic effect. Neutral-parent mass
+    equivalence was not specified, so these numbers should not be copied as unqualified
+    neutral-parent MICs. Gram-negative negatives are assay-bounded, not universal
+    inactivity.
+  snapshot_sha256: c58715f70ba1c2cf30907a7632a8f6b630bcd2988b8799b84717cd9e6e6aab2a
+- evidence_id: adopted-biosyn1999
+  kind: primary_source
+  reference: PMID:10390204; DOI:10.1128/AAC.43.7.1565
+  locator: 146-biosyn1999.html/text, complete main Methods/Results/Discussion, tables
+    and figure captions.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: DSM5908 is called A. mediterranei under the historical name. Gene disruption
+    and HPLC/MS analysis distinguish wild-type balhimycin from linear inactive products
+    and nonglycosylated active derivatives. These experiments support biosynthetic
+    production and exact scaffold assembly, not Oxy or glycosyltransferase proteins
+    as antibacterial targets. The Bacillus subtilis ATCC6633 assay is an indicator
+    of broth activity and does not assign an MIC for purified parent or all mutant
+    products.
+  snapshot_sha256: 3ed051aba70a35f55ede08086598d34e812a5087558f6f4cff5489b13d862243
+- evidence_id: adopted-dpg
+  kind: primary_source
+  reference: PMID:11495926; DOI:10.1074/JBC.M106580200
+  locator: 146-epmc.json, complete original abstract.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: partial
+  summary: The paper selected as definition_source shows dpgA disruption, feeding
+    rescue and biochemical precursor synthesis for balhimycin biosynthesis. It supports
+    the producer/assembly context, but its abstract does not directly measure binding
+    to the cell-wall precursor. Heterologous Streptomyces lividans expression of a
+    precursor enzyme is not proof that this host biosynthesizes complete balhimycin.
+  snapshot_sha256: 35126c1523159b8c4ec091340facceaa88127b40595011d3a8b1b7ee8289e791
+- evidence_id: adopted-nrps
+  kind: primary_source
+  reference: PMID:11932455; DOI:10.1099/00221287-148-4-1105
+  locator: 146-adopted.json, complete original abstract.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: The bpsA–D NRPS study uses gene disruption/deletion, complementation and
+    beta-hydroxytyrosine feeding rescue in historical DSM5908. It supports production
+    and precursor assembly. Eight synthetase modules do not mean an eight-residue
+    final scaffold; the paper explicitly describes a heptapeptide and an auxiliary
+    precursor function. These proteins are biosynthetic machinery, not drug-inhibited
+    targets.
+  snapshot_sha256: 79aacc51d96ff69cf245933645e416e32b67e2ef491aa7b3a103c10aee2b0a5a
+- evidence_id: adopted-oxygenases
+  kind: primary_source
+  reference: PMID:16730832; DOI:10.1016/J.JBIOTEC.2006.04.009
+  locator: 146-epmc.json, complete original abstract.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: RT-PCR, nonpolar mutants and HPLC-ESI-MS demonstrate the OxyB–OxyA–OxyC
+    ring-closing sequence in A. balhimycina and heterologous gene complementation.
+    The Lys-D-Ala-D-Ala binding description is mechanistic background, whereas the
+    reported experiments concern biosynthesis. This is not a public antibiotic-exposure
+    transcriptomics dataset or a direct binding assay.
+  snapshot_sha256: 35126c1523159b8c4ec091340facceaa88127b40595011d3a8b1b7ee8289e791
+- evidence_id: adopted-crystal1998
+  kind: primary_source
+  reference: PMID:9761883; DOI:10.1107/S0907444997008895
+  locator: 146-epmc.json, complete original abstract and official PubMed record.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: partial
+  summary: The crystal contains balhimycin dimers with citrate and acetate occupying
+    binding pockets, plus solvent. It is useful exact structural context, but it is
+    not itself a Lys-D-Ala-D-Ala ligand complex. Ureido-balhimycin was a molecular-replacement
+    search model, not evidence that the native molecule should be renamed or replaced
+    by that derivative.
+  snapshot_sha256: 35126c1523159b8c4ec091340facceaa88127b40595011d3a8b1b7ee8289e791
+- evidence_id: binding-primary
+  kind: primary_source
+  reference: PMID:12054818; DOI:10.1016/S0022-2836(02)00146-8
+  locator: 146-binding2002.json and official original abstract/publisher introduction.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: partial
+  summary: The primary study crystallizes balhimycin and degluco-balhimycin with di-,
+    tri- and pentapeptide cell-wall precursor models. This independently supports
+    the component-binding mechanism, but exact congener/ligand assignments must be
+    preserved and crystal models are not intact-cell target-occupancy, MIC or kinetic
+    affinity measurements. The complete paper was not inspected.
+  snapshot_sha256: 765c7a492469c120ff8fc9a82bf8088e66af7815a06b895ae832e1e750ed10ab
+- evidence_id: binding-archive
+  kind: database
+  reference: PDB:1GO6; https://www.rcsb.org/structure/1GO6
+  locator: Official structure entry and 146-PDB1GO6.json.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: The 0.98-angstrom entry specifically identifies balhimycin in complex with
+    Lys-D-Ala-D-Ala and links PMID 12054818. It distinguishes the full balhimycin
+    complex from aglycone/pentapeptide relatives. The peptide ligand is a model chemical
+    component, not a taxon-specific protein target. Crystal solvent and hydrated sugar
+    components should not become exact free-parent xrefs.
+  snapshot_sha256: 8d0c1058d1790b7ce11eaccce9fcc7cf500ab6b6def34b82959de7303296f6bb
+- evidence_id: producer-taxonomy
+  kind: database
+  reference: NCBITaxon:1081091; NCBITaxon:208443; ENA:Y16952.3
+  locator: Official NCBI taxonomy entries and 146-Y16952.embl header/reference blocks.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: NCBI places DSM 5908 under A. balhimycina, distinct from the species type
+    strain FH1894/DSM44591. Versioned Y16952.3 identifies the balhimycin biosynthetic
+    gene cluster from DSM5908 and explicitly links the historical 1999, 2001 and 2002
+    papers. This joins the historical A. mediterranei name to the native current species
+    context for this strain, without reassigning all A. mediterranei strains.
+  snapshot_sha256: 31f84e2165b1ecfff2610fce60eeced9bcb0886ccccae2a0ab440bb636c96a00
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB dataset catalog
+  locator: 055-imodulondb-datasets-retry.txt, covered organism keys examined.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: context_only
+  summary: There is no Amycolatopsis dataset in the inspected catalog, so a matching
+    producer-gene lookup is not applicable; covered Streptomyces species are not interchangeable.
+    The native antibacterial target is a chemical cell-wall component rather than
+    a protein. No iModulon absence is used as evidence against production, target
+    engagement or susceptibility.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 146-local-hits.txt, 146-maintained-search.txt; exact source-row filtering.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: context_only
+  summary: Hidden- and ignored-inclusive searches confirmed the ARO/PubChem inputs
+    and target policy, without a separate maintained curator activity/producer claim
+    or exact adopted resistance edge in the searched scope. Historical reports were
+    not treated as independent scientific proof. Primary searches stayed bounded to
+    adopted leads, exact target complexes, discovery and producer taxonomy.
+  snapshot_sha256: 86590068f9d87f981a45c3f6a0331cebb612a87a2d17e23ddad5e013d76dce2f
+  search_scope: rg --no-ignore --hidden for balhimycin, slug, ARO:3000120 and WKNFBFHAYANQHF
+    across batch015 excluding .git/.venv; focused curation/conf/scripts/data/raw/src/reports/reviews.
+    Official PubMed/Europe PMC, PubChem, ARO, J-STAGE, RCSB, ENA and NCBI sources;
+    exact balhimycin/D-Ala-D-Ala and DSM5908 queries.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION.md;
+    docs/HARMONIZATION.md
+  locator: Exact forms, producer, target, AST and evidence-placement criteria.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: Keep biosynthetic proteins separate from antimicrobial targets, producer
+    distinct from expression/assay hosts, salt/form context explicit, and generic
+    precursor component distinct from a taxon-specific protein. Optional omissions
+    are not required-field violations.
+- evidence_id: validation
+  kind: validation
+  reference: Focused record gates and independent chemistry
+  locator: 146-focused-results.json, logs, strict TSV, 146-chemistry.json and 146-chemistry-conventions.json.
+  accessed_at: '2026-10-21T10:12:37Z'
+  support: supports
+  summary: Schema and strict validation exited 0. The first optional chemistry diagnostic
+    exited 1 only because of the average atomic-weight convention boundary; the separate
+    explained diagnostic exited 0 and verified exact identity. Initial and supplemental
+    captured hashes remain unchanged.
+  snapshot_sha256: fdee9103c4116afe3883dea8b100e4fb189857dd6307aab6c24264daef09d5b4
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Stereospecified neutral parent and source identifiers
+  outcome: supported
+  summary: Both native structures and current exact PubChem CID agree. The primary
+    scaffold is consistent; acetate, trifluoroacetate, ketone hydrate and partially
+    stereospecified name-search entries remain distinct.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - identity
+  - mass-conventions
+  - discovery-identity
+  - aro
+- assessment_id: grounding
+  area: grounding
+  topic: Mint and glycopeptide class
+  outcome: supported
+  summary: The minted source identity is reproducible and lacks an adopted exact ChEBI
+    crosswalk. ARO class is strictly broader and antibacterial inclusion is supported
+    by direct compound studies.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - source
+  - aro
+  - activity
+- assessment_id: producer
+  area: evidence
+  topic: Actual biosynthesis and strain taxonomy
+  outcome: supported
+  summary: Fermentation isolation plus gene disruption/chemical analysis establish
+    production by DSM5908. Current taxonomy supports A. balhimycina, while historical
+    nomenclature is retained.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - producer
+  - adopted-biosyn1999
+  - producer-taxonomy
+  - adopted-dpg
+  - adopted-nrps
+  - adopted-oxygenases
+- assessment_id: target
+  area: evidence
+  topic: Cell-wall precursor component binding
+  outcome: supported
+  summary: The imported target is honestly database-level and correctly nonprotein.
+    An exact balhimycin/Lys-D-Ala-D-Ala complex independently supports the definition,
+    within model-peptide crystallographic scope.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - aro
+  - binding-primary
+  - binding-archive
+  - adopted-crystal1998
+- assessment_id: citations
+  area: provenance
+  topic: All five adopted citation dispositions
+  outcome: supported
+  summary: All five leads resolve to their actual primary topics. One complete biosynthesis
+    paper and four original abstracts were inspected; none is silently reassigned
+    as an intact-cell binding assay. More direct binding evidence exists outside the
+    adopted list.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - adopted-biosyn1999
+  - adopted-dpg
+  - adopted-nrps
+  - adopted-oxygenases
+  - adopted-crystal1998
+  - binding-primary
+- assessment_id: activity
+  area: scope
+  topic: Antibacterial activity and exact assay material
+  outcome: supported
+  summary: Historical primary activity supports antibacterial context, with acetate
+    salt specified. Exact neutral-parent quantitative dose attribution remains unestablished
+    and must be qualified before adding measurements.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - activity
+  - discovery-identity
+  - rubric
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary evidence enrichment
+  outcome: supported
+  summary: Structured producer, target and AST evidence can be improved. No resistance,
+    clinical or dataset assertion is inferred merely from family membership, biosynthesis
+    PCR or a related drug.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - record
+  - adapter
+  - rubric
+  - binding-primary
+  - producer
+- assessment_id: ownership
+  area: ownership
+  topic: Actual source and curator owners
+  outcome: supported
+  summary: ARO/PubChem and target policy own seeded fields. Optional claim-level additions
+    belong to the native balhimycin record through validated curation and history.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - source
+  - rubric
+- assessment_id: validation
+  area: schema
+  topic: Focused gates and resolved diagnostic convention
+  outcome: supported
+  summary: Both required focused gates pass. Exact chemical identity and source mass
+    are confirmed after explaining the retained nonrequired diagnostic failure.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  evidence_ids:
+  - validation
+  - mass-conventions
+findings:
+- finding_id: F1
+  issue_key: balhimycin-qualified-target-producer-activity-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Attach exact primary target and producer evidence while qualifying assay
+    salts
+  description: The definition and component target are supported, but useful primary
+    evidence is not attached to the narrow native objects. Optional enrichment should
+    use the direct balhimycin model-peptide complex, strain-specific biosynthetic
+    proof and acetate-qualified activity. The current absence of optional fields and
+    the honest database evidence status are not scientific errors.
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  field_paths:
+  - definition_source
+  - molecular_targets
+  - mode_of_action
+  - producer_organisms
+  - activity_spectrum
+  - evidence
+  evidence_ids:
+  - binding-primary
+  - binding-archive
+  - producer
+  - producer-taxonomy
+  - activity
+  - source
+  - rubric
+  rule_id: 'native-review-checklist: exact chemical form and narrow primary evidence'
+  native_severity: informational optional enrichment
+  normalization_reason: No unsupported identity, falsely promoted primary target or
+    incorrect producer claim was found. The initial chemistry diagnostic discrepancy
+    is independently explained by atomic weights.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/balhimycin.yaml
+    role: Curator-owned primary target, producer and activity additions using validated
+      writer and history
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Preserve curated additions and source definition citation handling
+actions:
+- action_id: A1
+  description: Curate available exact primary evidence with form, organism and assay
+    boundaries intact.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-7abbaadfab
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/balhimycin.yaml
+    role: Curator-owned primary target, producer and activity additions using validated
+      writer and history
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Preserve curated additions and source definition citation handling
+  acceptance_checks:
+  - Attach PMID 12054818 and PDB 1GO6 to an explicitly modeled Lys-D-Ala-D-Ala component-binding
+    observation after checking the complete primary structure discussion. Do not turn
+    the ligand into a protein target or attach a UniProt example to it; do not transfer
+    degluco-balhimycin/pentapeptide results to the full parent.
+  - Attach strain DSM5908 production evidence from fermentation isolation and PMID
+    10390204. Retain Y-86,21022 and historical A. mediterranei nomenclature with current
+    A. balhimycina mapping; do not conflate DSM5908 with the species type strain DSM44591.
+    Verify any optional MIBiG/sequence accession independently before adding it.
+  - Preserve the 1994 acetate assay material and vancomycin hydrochloride comparator.
+    Do not record the tabulated mass MICs as unqualified neutral-parent measurements
+    without checking analyte normalization. Keep individual MIC, panel MIC90, MBC,
+    time-kill and PAE endpoints separate with their methods, inocula, media, durations
+    and units.
+  - Keep DpgA, BpsA–D, OxyA–C and glycosyltransferases as biosynthetic machinery.
+    Heterologous enzyme expression, mutant-product activity and RT-PCR are not parent
+    drug targets, natural production in the expression host or an antibiotic-exposure
+    transcriptome.
+  - Prefer direct claim-level references for the target and producer rather than treating
+    the first mechanically selected definition citation as proof of every definition
+    clause. Preserve source-owned target qualifiers unless a separately curated exact
+    primary observation is added.
+  - Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/balhimycin.yaml
+    for separately authorized changes, preserve curated additions across reseeding,
+    run focused/shared validation and retain SEEDED until all native review criteria
+    are satisfied.
+limitations:
+- The whole record and exact maintained source rows were inspected after initial capture;
+  original capture files were preserved. Actual ARO/PubChem ownership was corrected
+  and all 19 captured input hashes were rechecked unchanged.
+- All five adopted citation leads were resolved. PMID 10390204 was read in complete
+  main text including tables and figure captions. PMIDs 11495926, 9761883, 11932455
+  and 16730832 were assessed through complete original abstracts; their full papers
+  were not all inspected.
+- The 1994 discovery/activity main paper was fully read, with Figure 1 and Tables
+  4–7 visually inspected. The detailed organic-chemistry structure-elucidation article
+  was not fully accessible. The native exact PubChem stereochemical representation
+  was not independently rederived from raw NMR or diffraction data.
+- The 2002 target paper was inspected at original abstract and publisher introduction,
+  supported by the exact official PDB 1GO6 entry. Raw diffraction data, full ligand-contact
+  tables and hydration occupancies were not independently re-refined. The 1998 crystal
+  abstract concerns citrate/acetate occupancy, not a cell-wall model peptide.
+- Numerical discovery activity concerns acetate salt. No independent free-neutral-parent
+  assay mass normalization was established, and no clinical susceptibility breakpoint
+  or current clinical indication is inferred.
+- The initial custom chemistry diagnostic failure is retained. Independent calculation
+  using the official IUPAC conventional atomic weights reproduces source/current PubChem
+  mass; the different RDKit chlorine weight explains the rounding-boundary failure
+  without changing native data.
+- Amycolatopsis is not in the inspected iModulonDB catalog. No substitute organism
+  or negative expression inference was used. No exhaustive self-resistance, clinical
+  development, public transcriptome or biosynthetic-cluster inventory review is claimed.
+- A newly discovered 2024 lipid-II study DOI 10.1039/D4CB00140K could not be retrieved
+  through the attempted publisher HTML route and remains an unassessed follow-up lead,
+  not support for this verdict.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

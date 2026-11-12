@@ -1,0 +1,561 @@
+schema_version: 1.0.0
+review_id: 20261021T100615Z-baicalin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Baicalin: supported exact glucuronide with distinct polymerase, toxin and
+  bacterial-response evidence'
+started_at: '2026-10-21T09:38:18Z'
+finished_at: '2026-10-21T10:06:15Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The five-centre neutral baicalin structure and source-derived viral-polymerase
+  role are supported. Original studies distinguish RdRp inhibition, cellular antiviral
+  effects, anti-virulence responses and weak planktonic growth effects. No confirmed
+  native scientific defect; optional enrichment should retain these boundaries and
+  an internally inconsistent KNApSAcK export should not replace the verified native
+  graph. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/baicalin.yaml
+    sha256: cd808a2f60db15f4f75238cec324dc73406dd954a5282997a412de3badc95478
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:2981
+  path: data/antibiotics/antibacterial/baicalin.yaml
+  label: baicalin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position144; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:2981
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:2981
+  command: .venv/bin/python /private/tmp/am-review-session/focus014-root.py 144
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:2981
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/baicalin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:2981
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/baicalin.yaml --out /private/tmp/am-review-session/144-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:2981
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:2981
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:2981
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:2981
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:2981
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:2981
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:2981
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:2981
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:2981
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/baicalin.yaml
+  locator: Entire YAML and five seed/reseed events
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: supports
+  summary: Read seven exact names, four parents, two antimicrobial roles, source-derived
+    viral-polymerase mode and cross-activity caveat, all chemistry, eight chemical
+    xrefs, drug-context card and three documents. No populated target, activity, resistance,
+    producer, clinical, dataset or graph objects.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv;conf/sources.yaml;scripts/seed_from_sources.py
+  locator: 144-raw.json line41 and mechanism/role mapping owners
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: supports
+  summary: Adopted identity and CHEBI170010 polymerase role reproduce; antibacterial
+    priority retains the anticoronaviral role. ChEBI citations are unassigned discovery
+    leads, not native claim-level primary evidence. Ten adopted leads comprise nine
+    PMIDs plus PMC8165801.
+  snapshot_sha256: 8535df289c91c08059a53cd5b7e8edf34193d91b3b80bfee188b87ac4d00810e
+- evidence_id: identity
+  kind: database
+  reference: CHEBI:2981;PubChem CID:64982;KEGG:C10025;PDB-CCD:0XE;LIPIDMAPS:LMPK12111081
+  locator: Official current structures; independent KEGG MOL parsing
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: supports
+  summary: Five-centre neutral C21H18O11/IKIIZLYTISPENI-ZFORQUDYSA-N and beta-D7-O-glucuronide
+    agree. Names and four chemical parents fit this graph. Baicalein aglycone, conjugate
+    base and differently substituted flavones are distinct.
+  snapshot_sha256: cdeb77aa21526c73d0cf1ec047536de50a93bd15dfb3d943c25909131685a695
+- evidence_id: xref
+  kind: database
+  reference: KNApSAcK:C00001024;DrugCentral4055;HMDB0041832;MetaCycCPD12725;CAS21967-41-9;Reaxys70480
+  locator: 144-knapsack-visible.txt;144-drugcentral-visible.txt; retrieval log
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: partial
+  summary: KNApSAcK full InChI matches native, but its printed key differs and its
+    SMILES leaves two centres unspecified. This is an internal external-page inconsistency,
+    not grounds to replace the native graph. DrugCentral named card/formula/CAS agrees
+    as drug context, without an independently parsed export or approval claim. HMDB403
+    and MetaCyc account gate leave those links source-crosswalk-only; CAS/Reaxys were
+    not registry-audited.
+  snapshot_sha256: 05d379e8cf346d8b0d8e7ece1c1eaee95c521e7ccbb32678158dc9c309cad585
+- evidence_id: polymerase
+  kind: primary_source
+  reference: PMID:33921971;DOI:10.3390/microorganisms9050893
+  locator: 144-rdrp.xml, complete main text
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: partial
+  summary: Purchased baicalin and baicalein separately inhibit nsp12/nsp7/nsp8 RNA-primer
+    extension. Baicalin is less potent in the gel-based biochemical experiment. VeroCCL81/USA-WA2020
+    viral-RNA yield at48h gives baicalin EC50 9 micromolar, distinct from enzyme potency;
+    Calu3 results are separately reported. Thermal-shift experiments are baicalein
+    only. Baicalin docking predicts contacts and is not direct affinity measurement.
+    No clinical benefit or universal viral mechanism follows.
+  snapshot_sha256: 07211c19c1f9dd1ad0c029569817460e34c739079f55463dd22119c62d1a4c64
+- evidence_id: bacterial-response
+  kind: primary_source
+  reference: PMID:28453568;DOI:10.1371/journal.pone.0176883
+  locator: 144-paer2017.xml; strain/reagent, MIC/growth Methods and exact growth/QS-expression
+    Results
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: partial
+  summary: For95%-pure baicalin in PAO1, broth MIC and MBC are both >1024 micrograms/mL;
+    growth slows at512 or more, while sub-MIC concentrations up to256 do not significantly
+    alter growth in the reported comparison. Sub-MIC qPCR changes in las/rhl/pqs genes
+    and biofilm effects are response observations, not direct binding to those regulators.
+    The title’s anti-biofilm effect is not a low planktonic MIC. NaOH-adjusted in-vivo
+    formulation and combination experiments retain separate scope.
+  snapshot_sha256: bac70623bc5e5f2029a9aebd9267d6a247ee93b66a02eabbaac0d794dc3850cc
+- evidence_id: toxin
+  kind: primary_source
+  reference: PMID:22551812;DOI:10.1093/infdis/jis336
+  locator: Complete original abstract in144-targeted.json
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: partial
+  summary: The study explicitly reports no anti-S.aureus growth activity in its setting
+    while describing alpha-hemolysin heptamer inhibition and protection in a mouse
+    pneumonia model. This does not universally negate the antibacterial role or convert
+    host survival into a bacterial MIC. Full binding/mutagenesis and preparation details
+    remain to inspect.
+  snapshot_sha256: a4ae2b5dcf1ce6061e4f568d854683bf5c76f669d1960bebbe5aeb4c942ce6f4
+- evidence_id: adopted
+  kind: database
+  reference: Nine adopted PMID citations and PMC8165801
+  locator: 144-adopted-abstracts.txt;144-polymerase.xml bibliographic identity and
+    selected host-model text
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: context_only
+  summary: PMID10724177 directly concerns plant7-O-glucuronosyltransferase;18650094
+    host prolyl oligopeptidase/metabolism;21087019 liver injury;22467027 fecal metabolism/toxicity;23142347
+    humanCD73;23302221 neurogenesis;23354080 bladder-cancer autophagy;23523628 mastitis
+    inflammation;25847243 ricin inhibition. All complete abstracts were read. PMC8165801
+    is a host COPD/HSP72/JNK paper, not the RdRp paper; its main text was checked
+    selectively and not used as polymerase evidence.
+  snapshot_sha256: 16713172494437ab02ddb962b7f6d58638891991fc4250aef60bec5e22328543
+- evidence_id: documents
+  kind: primary_source
+  reference: patent:CN102584918;patent:WO2012119458A1
+  locator: Public translated abstracts and selected claims
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: context_only
+  summary: CN102584918 describes baicalin extraction/purification. WO2012119458 is
+    a broad antitumor derivative disclosure naming baicalin among possible flavonoid
+    inputs; its derivative claims do not establish baicalin antimicrobial efficacy.
+    The initial guessed kind-code A URL returned404 and the correct A1 document resolved.
+    Wikipedia remains a secondary document link.
+  snapshot_sha256: 6cb428c406e13e60d088496d38a0a4dda67d269e04589894a83b3e898e9bdbda
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent native SMILES/InChI, formula, mass, charge and source-mint
+    checks
+  locator: 144-chemistry.json and focused command logs
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: supports
+  summary: Both native encodings independently reproduce the stored full key, formula,
+    neutral single component and masses at stored precision. Mint agrees. Actual focused
+    schema and strict commands exit 0; chemical consistency does not prove biological
+    mechanism.
+  snapshot_sha256: 0f7d8fc3639c5dafd628dce8ac028ef362bfac51a0adbe11c4098a6dfd95e881
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech and free primary literature
+  locator: 144-local-hits.txt; initial inspection and adopted/discovery snapshots
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: context_only
+  summary: Initial ignored-inclusive local source/ownership search and exact raw-row
+    inspection were followed by current official chemical sources, all adopted citation
+    records and available abstracts, and bounded primary follow-up. Discovery queries
+    are capped and selected relevant papers were pursued; no exhaustive literature
+    absence claim is made.
+  search_scope: rg --no-ignore --hidden in the isolated batch015 worktree excluding
+    .git and .venv. Exact target identifier, name and slug; maintained raw inventories,
+    config, extraction and generation context. Free public databases and original
+    papers; no paid provider.
+  snapshot_sha256: ccdb912483d8515f47d7c6d17e17ca97530a8c8dded8cd326048a8624171a6b2
+- evidence_id: adapter
+  kind: database
+  reference: Native iModulonDB structured catalog before web research
+  locator: 015-root-imodulondb-datasets.txt
+  accessed_at: '2026-10-21T09:49:53Z'
+  support: context_only
+  summary: The successful structured dataset catalog was inspected before open-ended
+    mechanism research. Its bacterial datasets do not cover the native viral or mammalian
+    protein/pathway assertions. No unrelated bacterial gene was substituted for SARS-CoV-2
+    proteins or host NF-kappaB. Later bacterial/fungal leads are explicitly optional
+    literature context; no exposure module or transcriptomic dataset is asserted.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+assessments:
+- assessment_id: provenance
+  area: provenance
+  topic: Source generation, ownership and history
+  outcome: supported
+  summary: The adopted row and deterministic source handling reproduce the seeded
+    fields. All captured inputs remain unchanged; this review does not promote native
+    status.
+  target_ids:
+  - CHEBI:2981
+  evidence_ids:
+  - native
+  - source
+  - chemistry
+- assessment_id: schema
+  area: schema
+  topic: Focused gates
+  outcome: supported
+  summary: Native schema, strict and independent chemistry checks pass. Shared corpus
+    verification is reported separately.
+  target_ids:
+  - CHEBI:2981
+  evidence_ids:
+  - chemistry
+- assessment_id: identity
+  area: identity
+  topic: Exact glucuronide and cross-reference granularity
+  outcome: supported
+  summary: Independent concordant full structures support native identity; KNApSAcK
+    internal discrepancies are an external-export limit.
+  target_ids:
+  - CHEBI:2981
+  evidence_ids:
+  - identity
+  - xref
+  - chemistry
+- assessment_id: mode
+  area: evidence
+  topic: Viral-polymerase role and antibacterial filing
+  outcome: supported
+  summary: Direct biochemical work supports the polymerase role with its limits. Multiple
+    activities may coexist; source-derived caveat does not assert a false universal
+    bacterial mechanism.
+  target_ids:
+  - CHEBI:2981
+  evidence_ids:
+  - source
+  - polymerase
+  - bacterial-response
+- assessment_id: definition
+  area: evidence
+  topic: Plant occurrence and biosynthesis
+  outcome: supported
+  summary: The2000 enzyme abstract supports7-O-glucuronidation in Scutellaria cultured
+    cells; plant-isolation studies support source wording. It is not clinical efficacy
+    evidence.
+  target_ids:
+  - CHEBI:2981
+  evidence_ids:
+  - adopted
+  - identity
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary mechanisms and response fields
+  outcome: unknown
+  summary: Useful exact primary evidence is available, but direct binding, toxin inhibition,
+    host protection, growth and qPCR responses require separate claims. No native
+    missing-required-field defect.
+  target_ids:
+  - CHEBI:2981
+  evidence_ids:
+  - polymerase
+  - bacterial-response
+  - toxin
+  - adopted
+  - adapter
+findings:
+- finding_id: F1
+  issue_key: baicalin-primary-assay-boundary-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Add exact biological evidence without conflating growth and anti-virulence
+    effects
+  description: Optional enrichment can link the biochemical polymerase assay and qualified
+    bacterial studies. Preserve baicalin versus baicalein, measured enzyme function
+    versus docking, and high/censored planktonic MIC versus sub-MIC responses.
+  target_ids:
+  - CHEBI:2981
+  field_paths:
+  - evidence
+  - molecular_targets
+  - activity_spectrum
+  - discussions
+  evidence_ids:
+  - polymerase
+  - bacterial-response
+  - toxin
+  - adopted
+  - xref
+  rule_id: 'native-review-checklist: exact identity and claim-level experimental scope'
+  native_severity: informational
+  normalization_reason: Optional enrichment can link the biochemical polymerase assay
+    and qualified bacterial studies. Preserve baicalin versus baicalein, measured
+    enzyme function versus docking, and high/censored planktonic MIC versus sub-MIC
+    responses.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/baicalin.yaml
+    role: Curator-owned exact primary evidence and optional biological annotations
+      through validated writer/history helpers
+actions:
+- action_id: A1
+  description: Curate separate claim-level primary annotations with verified assay
+    scope.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:2981
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/baicalin.yaml
+    role: Curator-owned exact primary evidence and optional biological annotations
+      through validated writer/history helpers
+  acceptance_checks:
+  - Use the actual RdRp paper PMID33921971, not unrelated adopted PMC8165801; do not
+    import baicalein-only thermal-shift results.
+  - Keep PAO1 MIC/MBC >1024, partial growth effects and sub-MIC qPCR/biofilm responses
+    separate; inspect full toxin study before exact protein additions.
+  - Resolve reagent form, strain details and raw/supplemental values before quantitative
+    annotations; keep clinical effects and approval unasserted.
+  - Retain the verified five-centre native structure and do not copy the incomplete
+    KNApSAcK SMILES; any external correction should reconcile full InChI, key and
+    SMILES.
+limitations:
+- All adopted citation abstracts were read; the host COPD PMC was inspected selectively,
+  not fully. The polymerase main text was read in full, but raw gel data and supporting
+  files were not independently audited.
+- The PAO1 paper was inspected for exact reagent/MIC/growth and qPCR Results; other
+  biofilm/mouse claims are contextual leads, not a full in-vivo efficacy audit. The
+  alpha-hemolysin study remains abstract-only.
+- Patent abstracts and selected claims were inspected, not every example or formula
+  image. No legal or current approval inference is made. Proprietary/account-gated
+  crosswalks remain limited.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 13 captured maintained inputs remain unchanged. No native record was edited.
+  Empty optional fields are not automatically defects.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.3390/microorganisms9050893
+- https://doi.org/10.1371/journal.pone.0176883
+- https://www.ebi.ac.uk/chebi/CHEBI:2981
