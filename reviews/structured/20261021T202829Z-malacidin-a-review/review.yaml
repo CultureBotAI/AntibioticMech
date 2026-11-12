@@ -1,0 +1,714 @@
+schema_version: 1.0.0
+review_id: 20261021T202829Z-malacidin-a-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of malacidin A
+started_at: '2026-10-21T20:11:25Z'
+finished_at: '2026-10-21T20:28:29Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The adopted graph matches current ChEBI, and the original isolation paper
+  supports calcium-dependent antibacterial activity. The structure nevertheless leaves
+  four beta stereocentres unspecified despite their later experimental assignment
+  by total synthesis and analysis of natural material. A separate exact PubChem association
+  has two opposite beta configurations and an additional unspecified centre. The incomplete
+  native graph and mismatching external grounding are distinct major findings, without
+  evidence of a natural mixture.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/malacidin-a.yaml
+    sha256: 4f088b92537bc6abab0200a53d833880c173cf92c1b7e9fc4f513b215dced10d
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+targets:
+- target_id: CHEBI:140173
+  path: data/antibiotics/antibacterial/malacidin-a.yaml
+  label: malacidin A
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity, structural class and primary citation
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position630; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:140173
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:140173
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    630
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:140173
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/malacidin-a.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:140173
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/malacidin-a.yaml --out /private/tmp/am-review-session/630-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: residue-and-authority-mapping
+  name: Primary-residue and authority stereochemistry comparison
+  status: passed
+  required: false
+  target_ids:
+  - CHEBI:140173
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/630-peer-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Independent mapped diagnostic preserves every native assigned tag, topology
+    and alkene geometry; the PubChem two-inversion conflict is reproduced. Initial
+    helper enum-label assertion was corrected without changing chemistry; its failed
+    attempt remains in the peer report.
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:140173
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:140173
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:140173
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:140173
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:140173
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:140173
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:140173
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:140173
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:140173
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/malacidin-a.yaml
+  locator: Entire native record and exact ChEBI/ARO source rows
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: supports
+  summary: The SEEDED/EXACT record contains ten amino-acid residues, a 28-member amide
+    macrocycle and a 2E,4Z lipid tail, one systematic synonym, three broader structural
+    parents, two activity roles, two exact xrefs, two source concepts and four seed
+    history events. No structured target, mechanism, numeric activity, resistance,
+    producer, clinical or causal-graph claim is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:2596; data/raw/aro_antibiotics.tsv:330;
+    scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  locator: Exact adopted rows and captured maintained owners
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: context_only
+  summary: ChEBI owns the native definition, chemical descriptors, synonym, parents
+    and roles; ARO adds its exact identity association and nonribosomal-peptide class.
+    Both source rows cite PMID29434326. All thirteen original inputs remain, with
+    the three actual ARO inventory contexts appended before detailed assessment. The
+    source mints reproduce.
+  snapshot_sha256: 7b5f2b731872cd009549a897c778dadf76b91c28515f353bf310adc3e3409d6b
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/140173/
+  locator: Complete current identity, descriptors, synonym and relationships
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: partial
+  summary: Current ChEBI repeats the native encodings and incomplete stereochemistry.
+    The formula is neutral C56H88N12O20. Agreement with the upstream source does not
+    resolve the later primary stereochemical assignment.
+  snapshot_sha256: 352b0c3ef0aba52715ebc84ea1f7be6bb4770c9c33a72af3b3917954bf9ba182
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/132274667/property/IsomericSMILES,InChI,InChIKey,MolecularFormula/JSON
+  locator: Asserted current exact CID descriptors
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: partial
+  summary: The current CID has the same connectivity but a different stereochemical
+    key, USNOUEMKNKRWQT-NRAWYNGHSA-N. It assigns MeDap2 beta S and MeAsp8 beta R,
+    opposite to the experimentally established R and S respectively, and leaves the
+    MePro10 gamma centre unspecified. Its actual SMILES was mapped to the primary-supported
+    graph; this is not an exact natural-structure equivalent.
+  snapshot_sha256: a5eed8cfc7ef0fca1309c4931b10f8eeafd841c32a3a5d7a57c6b2b251ac5cac
+- evidence_id: chemistry
+  kind: validation
+  reference: /private/tmp/am-review-session/630-chemistry.json
+  locator: Independent native SMILES and InChI calculation
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: supports
+  summary: Both native encodings produce USNOUEMKNKRWQT-ORRWAHHJSA-N, neutral C56H88N12O20,
+    average mass1249.384 and exact mass1248.623783216. Ten tetrahedral centres are
+    assigned and four remain unspecified. The two source mints match. Unspecified
+    stereochemistry does not imply a racemate or positive inversion.
+  snapshot_sha256: 69223bd0682668074f6ac9fb24c1e0f811e90b9f068c22d7465f0d19f3a02bfa
+- evidence_id: aro
+  kind: authority
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Same-day official426-current-aro.obo exact blocks3004374 and3009657; original
+    retrieval2026-10-21T15:57:42Z
+  accessed_at: '2026-10-21T15:57:42Z'
+  support: supports
+  summary: ARO3004374 resolves to malacidin A, its calcium-dependent cutaneous-wound
+    activity definition, PMID29434326 and the same ChEBI/PubChem associations. ARO3009657
+    is the broader nonribosomal-peptide-antibiotic class. Its current direct parent
+    is lipopeptide antibiotic; the adopted broader NRPS classification remains chemically
+    and biosynthetically appropriate.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: terms
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/140190/; CHEBI:24613;
+    CHEBI:46895; CHEBI:33282
+  locator: All four exact current term definitions and parent relationships read
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: supports
+  summary: Homodetic cyclic peptide and lipopeptide are broader structural classes;
+    the ring contains amide-linked amino acids including the beta-amino closure. Calcium-dependent
+    antibiotic denotes dependence of activity on calcium, not a protein-binding target
+    or structural calcium salt. Antibacterial agent includes an active molecular moiety.
+    All four roles/classes are compatible with the inspected graph and primary experiments.
+  snapshot_sha256: 4c685214ce857eacbba43d5a7ff42f71d74aa35302a8cf72f6e1e260af2a5361
+- evidence_id: discovery
+  kind: primary_source
+  reference: PMID:29434326; DOI:10.1038/s41564-018-0110-1; https://pmc.ncbi.nlm.nih.gov/articles/PMC5874163/
+  locator: Complete original main text and Methods; Table1, actual Figure2 and Figure4
+    directly read/viewed
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: supports
+  summary: Environmental DNA from desert soil DFD0097 supplied three overlapping cosmids
+    assembled for expression in Streptomyces albus J1074. Malacidins A and B were
+    individually isolated by chromatography; an engineered expression host is not
+    proof of a natural producer taxon. The full main methods describe material purification
+    and the original partial structural characterization. Figure2 distinguishes the
+    A methyl versus B ethyl terminal branch.
+  snapshot_sha256: 66380ff10290765829bdf5321a7e11c04bee0331299a7fb8a1e75ece3f984613
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:29434326; DOI:10.1038/s41564-018-0110-1
+  locator: Original Table1 and microbial susceptibility, calcium titration and rat-wound
+    Methods
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: supports
+  summary: At15mM supplemented CaCl2, the reported18h/30C microdilution assay gives
+    malacidinA MIC ranges0.2–0.8microgram/mL for S.aureus USA300,0.4–0.8 for NRS146(VISA),0.8–2.0
+    for the E.faecium VRE isolate and >100 for E.coli/C.albicans/C.neoformans. Strain
+    details deferred to the unavailable supplement are not guessed. Topical0.5mg in25mM
+    calcium reduced recoverable MRSA MW2 wound burdens below detection at the measured
+    rat endpoints; this is a preclinical preparation-specific outcome, not clinical
+    approval or a systemic dosing claim.
+  snapshot_sha256: 66380ff10290765829bdf5321a7e11c04bee0331299a7fb8a1e75ece3f984613
+- evidence_id: mechanism
+  kind: primary_source
+  reference: PMID:29434326; DOI:10.1038/s41564-018-0110-1
+  locator: Original main results, actual Figure4 and complete membrane/precursor/TLC
+    Methods
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: supports
+  summary: MalacidinA caused no rapid SYTOX/DiBAC4 response under the tested MRSA
+    conditions, accumulated UDP-MurNAc-pentapeptide and showed calcium-dependent loss
+    of its free TLC band upon mixing with purified lipidII. C55-P did not produce
+    the same effect. These experiments support lipidII interaction and a cell-wall-related
+    effect, with assay-specific limits; they do not identify a protein target, atomic
+    binding site or universal absence of membrane effects. No resistant S.aureus was
+    selected during the stated20-day experiment; this does not establish universal
+    resistance-proof activity.
+  snapshot_sha256: 66380ff10290765829bdf5321a7e11c04bee0331299a7fb8a1e75ece3f984613
+- evidence_id: synthesis
+  kind: primary_source
+  reference: PMID:32725837; DOI:10.1002/anie.202009092; https://bradylab.rockefeller.edu/wp-content/uploads/2022/11/13.pdf
+  locator: Full five-page2020 original paper; actual page19871/Scheme3 directly viewed
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: supports
+  summary: The synthetic natural-matching compound is1b in this paper. NMR comparison
+    and reported advanced Marfey analysis of natural malacidinA establish (2S,3S)-MeAsp1,(2S,3R)-MeDap2,(2S,3R)-HyAsp5,(2R,3S)-MeAsp8
+    and(2S,4R)-MePro10. The main text separately confirms the2E,4Z lipid configuration
+    and reports matching calcium-dependent MRSA activity. Four native beta centres
+    remain unspecified despite these assignments. Quantitative or chromatographic
+    details in the SI are not inferred from the main prose.
+  snapshot_sha256: 9d2457e0e6deccdb457b92e6c0fae97fd0166dd719c415080c6fce71db203be9
+- evidence_id: discovery-bound
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search; /private/tmp/am-review-session/630-search.json
+  locator: Exact TITLE_ABS malacidin search returned three indexed results; all titles
+    and complete abstracts read, plus independently retrieved2018 adopted original
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: context_only
+  summary: The literal search misses the plural title of the adopted2018 paper, which
+    was independently resolved and fully read. The2021 synthesis is an analogue/diastereomer
+    study and the2025 report concerns fifteen simplified analogues; their activity
+    cannot be assigned wholesale to the native parent. The2021 discussion uses1c for
+    the natural-matching structure, whereas2020 uses1b. This is bounded discovery,
+    not an exhaustive literature census.
+  snapshot_sha256: 40a76588c80e10a665052ec06506e0da00b364515bdab934637df57cb5a3e7aa
+  search_scope: EuropePMC TITLE_ABS:"malacidin"; first100 requested,3 returned; all3
+    titles/abstracts read, adopted PMID29434326 separately resolved.
+- evidence_id: adapter
+  kind: search
+  reference: /private/tmp/am-review-session/628630-adapter-results.json
+  locator: Native assertion applicability assessed before mechanism follow-up
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: context_only
+  summary: No native named bacterial protein, gene, regulator, pathway or transcriptomic
+    accession occurs. Calcium dependence and lipidII are chemical/physical contexts,
+    not iModulon gene identifiers. No applicable expression-module result was inferred;
+    absence of a native optional target field is not a defect.
+  snapshot_sha256: 70c1925cc83f1c744662de888f08ff39185334fbecd4194c521266438ba66422
+  search_scope: Whole native record applicability review; no named protein/gene/pathway,
+    lipidII physical mechanism and calcium role not used as gene-query terms.
+- evidence_id: search-local
+  kind: search
+  reference: /private/tmp/am-review-session/630-local-hits.txt
+  locator: Initial identifier/label/slug search included hidden and ignored files
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: context_only
+  summary: Native and maintained sources were read in full for their applicable exact
+    rows. Historical/generated matches are leads only; the unpopulated optional fields
+    were determined from the entire native file.
+  search_scope: Initial rg --no-ignore --hidden search of this isolated worktree,
+    plus exact complete maintained ChEBI/ARO rows.
+  snapshot_sha256: 170394254b1214c09fd7699239cdb78a5e1db02d34fc0e97a8eb01c569ee4d4d
+- evidence_id: peer-map
+  kind: validation
+  reference: /private/tmp/am-review-session/630-peer-audit.json; /private/tmp/am-review-session/630-peer-chemistry.json
+  locator: Independent primary-residue-to-atom mapping, read and checked by root
+  accessed_at: '2026-10-21T20:23:49Z'
+  support: supports
+  summary: The native beta atoms83/81/37/58 map to MeAsp1/MeDap2/HyAsp5/MeAsp8 and
+    require S/R/R/S. Filling only those centres preserves all existing tags, topology,28-member
+    ring and2E,4Z lipid, giving diagnostic keyUSNOUEMKNKRWQT-JAZGVTMUSA-N. Current
+    PubChem differs at two assigned beta centres even after masking only its missing
+    MePro gamma centre; flipping exactly those two tags produces reciprocal chirality-aware
+    equality. The diagnostic is not a source-adopted replacement or a new registry
+    accession.
+  snapshot_sha256: c6fe0c0346df3787d207a0ed077e8bf5d607619248474f5ed20c95feedc2b6ef
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Known natural stereochemistry versus partial graph
+  outcome: concern
+  summary: The native constitution, assigned stereocentres and2E,4Z lipid are compatible
+    with malacidinA, but four experimentally resolved beta configurations remain omitted.
+    This is stale incomplete exact representation, not evidence that the native encodes
+    an opposite assigned stereoisomer.
+  target_ids:
+  - CHEBI:140173
+  evidence_ids:
+  - native
+  - chemistry
+  - synthesis
+  - chebi
+  - pubchem
+- assessment_id: grounding
+  area: grounding
+  topic: Exact identifiers and broader classes
+  outcome: concern
+  summary: All asserted identifiers resolve, but the PubChem exact association has
+    two beta configurations that conflict with the original assignment and an additional
+    unspecified centre. ChEBI retains the partial native graph. The broader structural
+    classes are appropriate.
+  target_ids:
+  - CHEBI:140173
+  evidence_ids:
+  - chebi
+  - pubchem
+  - aro
+  - terms
+  - discovery
+- assessment_id: activity
+  area: evidence
+  topic: Calcium-dependent antibacterial role
+  outcome: supported
+  summary: The exact isolated A has original calcium-dependent bacterial MIC, topical
+    rat-wound and mechanistic evidence. Assay calcium, organism, exposure and preparation
+    boundaries remain explicit; B and later analogues are separate.
+  target_ids:
+  - CHEBI:140173
+  evidence_ids:
+  - activity
+  - discovery
+  - mechanism
+- assessment_id: evidence
+  area: evidence
+  topic: Primary scope and optional mechanism/producer enrichment
+  outcome: supported
+  summary: The only adopted PMID was read in full. LipidII interaction is supported
+    at the biochemical assay level; no lethal protein target, clinical indication,
+    natural producer taxon or universal resistance claim is invented. Empty optional
+    objects are not findings.
+  target_ids:
+  - CHEBI:140173
+  evidence_ids:
+  - discovery
+  - mechanism
+  - activity
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership and native history
+  outcome: supported
+  summary: The ChEBI/ARO source chain, both deterministic mints and four seed history
+    events are preserved. Exact source ownership is captured and no native scientific
+    status changed.
+  target_ids:
+  - CHEBI:140173
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+  - search-local
+findings:
+- finding_id: F1
+  issue_key: malacidin-a-four-resolved-beta-centres-unassigned
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Four experimentally assigned beta configurations remain unspecified
+  description: The native SMILES and Standard InChI leave the beta centres of MeAsp1,
+    MeDap2, HyAsp5 and MeAsp8 unspecified; the definition and systematic synonym retain
+    the same partial assignment. The2020 original establishes those configurations
+    by total synthesis, spectral comparison and analysis of natural material. Current
+    ChEBI repetition does not substitute for that primary assignment; the separate
+    PubChem stereoisomer conflict is assessed in F2. Complete the maintained exact
+    representation while preserving all supported existing stereochemistry and the2E,4Z
+    lipid.
+  target_ids:
+  - CHEBI:140173
+  field_paths:
+  - chemical_structure
+  - definition
+  - synonyms[0]
+  - grounding_status
+  evidence_ids:
+  - native
+  - chemistry
+  - synthesis
+  - chebi
+  - pubchem
+  - peer-map
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted stereochemical descriptors, definition and systematic synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Exact source chemical associations
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained exact-grounding adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Authority extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated structure and definition emission
+  rule_id: One exact structure; known natural stereochemistry must be represented
+    and evidence-backed
+  normalization_reason: Major incomplete exact chemical representation. No assigned
+    native stereocentre is demonstrated to be inverted, so a wrong-identity blocker
+    or mixture inference is unwarranted.
+- finding_id: F2
+  issue_key: malacidin-a-pubchem-two-beta-configuration-conflicts
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The exact PubChem association has two conflicting beta configurations
+  description: Current CID132274667 assigns MeDap2 beta S and MeAsp8 beta R, whereas
+    the2020 primary establishes R and S respectively. It also omits the supported
+    gamma configuration of MePro10. The two positive inversions survive a comparison
+    that masks only the missing gamma centre; changing precisely those two assignments
+    restores reciprocal chirality-aware agreement. This exact xref therefore cannot
+    independently validate the named natural structure. The native graph itself leaves
+    these two beta centres unspecified, so this external mismatch does not establish
+    an opposite assigned native stereoisomer.
+  target_ids:
+  - CHEBI:140173
+  field_paths:
+  - xrefs[1]
+  evidence_ids:
+  - pubchem
+  - synthesis
+  - peer-map
+  - native
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted stereochemical descriptors, definition and systematic synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Exact source chemical associations
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained exact-grounding adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Authority extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated structure and definition emission
+  rule_id: Exact chemical cross-references must agree with the primary-supported structure
+  normalization_reason: Major non-equivalent external grounding, separately from native
+    stereochemical incompleteness. All assigned native centres remain compatible with
+    the primary; the demonstrated wrong assignments reside in the external graph.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  - F2
+  target_ids:
+  - CHEBI:140173
+  description: Adjudicate the current authority graph against the2020 original, update
+    the maintained chemical identity lane to the verified complete stereochemistry
+    and regenerate the record through the source workflow.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted stereochemical descriptors, definition and systematic synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Exact source chemical associations
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained exact-grounding adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Authority extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated structure and definition emission
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  acceptance_checks:
+  - Independently map each native unspecified beta centre to the explicitly numbered
+    primary residue and retain all already supported centres, amide topology and2E,4Z
+    lipid geometry.
+  - Verify full stereochemical descriptors, systematic name, definition and exact
+    xrefs together; do not silently keep an incomplete external graph as independent
+    proof of the completed structure or adopt a scratch key as an authority accession.
+  - Read the original SI for detailed spectral/Marfey comparisons when curating the
+    final identity; preserve source-specific1b(2020) versus1c(2021) numbering.
+  - Run focused chemistry/schema/strict checks, corpus reproduction and required term/reference/history
+    gates after separately authorized regeneration.
+  - Reconcile or withhold the exact PubChem association until an independently verified
+    accession encodes all primary-supported centres; do not silently substitute the
+    mismatching CID graph or infer that its epimers were experimentally inactive.
+limitations:
+- The2018 main paper, complete Methods, Table1 and actual Figures2/4 were read; two
+  PMC supplement downloads returned recaptcha HTML despite HTTP200, and a publisher
+  supplement request failed DNS. No unread SI table or chromatogram was treated as
+  inspected evidence.
+- The2020 original full main paper and actual Scheme3 were read. Its main prose reports
+  natural-material Marfey confirmation; exact SI access depth is recorded separately
+  in the peer audit.
+- The exact literal discovery query returned only three indexed singular-name results
+  and missed the plural2018 title. No comprehensive absence claim is made.
+- No missing optional molecular target, producer, causal graph, activity observation
+  or resistance field is itself a defect. Heterologous expression, in-vitro activity,
+  topical animal efficacy and clinical use are distinct scopes.
+- The2020 SI was inaccessible by Wiley403, PMC preparation HTML and EuropePMC not-open-access
+  response. Main-text reported NMR/Marfey confirmation was read, but no SI chromatogram
+  or comparison table was independently assessed. The2021 primary discussion corroborates
+  the assignment with different compound numbering; no analogue inactivity is transferred
+  to the parent.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Unpublished earlier bundle preserved unchanged in session scratch; final publication
+  uses this newly saved observation after sequential-save and source-reference metadata
+  correction. Scientific findings are unchanged.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
