@@ -1,0 +1,658 @@
+schema_version: 1.0.0
+review_id: 20261021T112854Z-cefmenoxime-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of cefmenoxime
+started_at: '2026-10-21T11:08:29Z'
+finished_at: '2026-10-21T11:28:54Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: One confirmed major exact-synonym stereochemistry error; native Z
+  structure otherwise coherent
+scientific_review: true
+summary: The cefmenoxime free-acid structure is coherent, but one ChEBI-derived EXACT_SYNONYM
+  explicitly names the E oxime isomer while the native graph and independently checked
+  authorities specify Z. Original synthesis literature distinguishes these geometries.
+  The existing source-specific synonym exclusion configuration can remove the false
+  equivalence reproducibly. KEGG D01739 is a hemihydrochloride drug record and is
+  already placed contextually under drug_xrefs. All 14 adopted or parent MED records
+  resolve; 12 complete abstracts were read. Primary activity and PBP evidence was
+  located at stated inspection depth. No native record was changed.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefmenoxime.yaml
+    sha256: 072f3d93eb496531b7a284ba0ddb506ef7ec4d635d640f7e4713fb0ecd016662
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+scope:
+  description: Entire exact SEEDED cefmenoxime record, all four history events, all
+    synonyms, exact chemical and contextual drug/document identifiers, actual ChEBI/ARO
+    owner rows, all 14 adopted or parent PMID leads, and the original synthesis/isomer
+    study.
+  selection: Queue 226. Original 13 inputs preserved; three actual ARO inventories
+    appended before detailed judgment. The existing conf/sources.yaml input owns the
+    exact synonym exclusion.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:55490
+targets:
+- target_id: CHEBI:55490
+  path: data/antibiotics/antibacterial/cefmenoxime.yaml
+  label: cefmenoxime
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual ARO inventory or imported claim owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual ARO inventory or imported claim owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual ARO inventory or imported claim owner
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-concept-specific synonym_exclusions honored by the seeder
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:55490
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefmenoxime.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit 0; zero ERROR rows.
+  target_ids:
+  - CHEBI:55490
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefmenoxime.yaml --out /private/tmp/am-review-session/226-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry-initial
+  name: Initial supplemental script attempt
+  status: failed
+  required: false
+  summary: Exit 1 from an unmatched parenthesis in the newly constructed scratch script.
+    This was a script-construction failure, not a failed native chemical parse; the
+    scratch syntax was corrected before the successful run.
+  target_ids:
+  - CHEBI:55490
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/226-chemistry.py
+  exit_code: 1
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Supplemental exact graph and isomer comparison
+  status: passed
+  required: false
+  summary: Exit 0 after scratch syntax correction, using the 019 interpreter against
+    023 files.
+  target_ids:
+  - CHEBI:55490
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/226-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: structured-adapter
+  name: Structured source applicability
+  status: not_applicable
+  required: false
+  summary: The native record contains no named protein, gene, pathway, stress-response
+    or transcriptomic claim requiring a structured source adapter. Optional PBP literature
+    was subsequently identified during source verification.
+  target_ids:
+  - CHEBI:55490
+  evidence_ids:
+  - record
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:55490
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:55490
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:55490
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:55490
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:55490
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:55490
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:55490
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:55490
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:55490
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefmenoxime.yaml
+  locator: Entire native YAML and all four history events
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: supports
+  summary: The exact SEEDED record represents neutral cefmenoxime. Four history events
+    concern source seeding. No mode, target, resistance mechanism, MIC, producer or
+    causal graph is populated. One exact synonym contains the conflicting (2E) descriptor
+    while other systematic names specify (2Z).
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:55490; PubChem:9570757; CHEMBL1201224
+  locator: 226-chemistry.py/.json; 226-pubchem.json; 226-chembl.json; 226-ols.json
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: supports
+  summary: Native SMILES and InChI yield HJJDBAOLQAWBMH-YCRCPZNHSA-N, C16H17N9O5S3,
+    charge 0, matching masses, 6R/7R centers and a Z oxime. Current ChEBI InChI/key,
+    PubChem and ChEMBL agree. Reversing only the oxime geometry gives E and a different
+    complete key, HJJDBAOLQAWBMH-DKQCJYJNSA-N, with unchanged formula. The E name
+    is therefore a false exact synonym, not merely an alternative spelling.
+  snapshot_sha256: 71fcbb64a1a5c9939813590e9c542e77691ebdcb030355ef110a45e67e9887ce
+- evidence_id: synonym-owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; conf/sources.yaml; scripts/seed_from_sources.py
+  locator: 226-chebi_antimicrobials.json; current 226-ols.json synonym list; conf/sources.yaml
+    synonym_exclusions; seeder lines 1531-1540
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: refutes
+  summary: The adopted ChEBI row contains the complete E name as SYNONYM, which the
+    seeder maps to EXACT_SYNONYM. Current ChEBI still includes it, so re-extraction
+    alone will not cure the error. The existing synonym_exclusions configuration is
+    keyed by source concept ID and removes an exact text match during seeding. No
+    CHEBI:55490 exclusion is present in the inspected configuration.
+  snapshot_sha256: 6ff4a1610e2a904ae854bee913ae76190aaec6012c4fe229ab69a6b21dfeef0b
+- evidence_id: synthesis
+  kind: primary_source
+  reference: PMID:6271716; DOI:10.7164/antibiotics.34.171
+  locator: 226-synthesis.pdf, pp.171-177, Tables 2-3, and experimental entries for
+    7c/13g and hemihydrochloride; p174/p175 images inspected
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: supports
+  summary: The original synthesis paper distinguishes Z compound 7c from E counterpart
+    13g using preparation and NMR evidence, and identifies cefmenoxime as the Z compound.
+    Tables use sodium salts; agar dilution uses Trypticase soy agar. The later preparation
+    distinguishes the free acid and hemihydrochloride. These support geometry and
+    form boundaries, not transfer of sodium-salt MICs into an exact free-acid observation.
+    A footnote announces crystallographic confirmation elsewhere; those crystallographic
+    data were not inspected here.
+  snapshot_sha256: dd595e5e19905ebb2b71a1e08decbad4f4321b3d74e9d7eb6f412a8bd002ad6b
+- evidence_id: drug-context
+  kind: authority
+  reference: KEGG:D01739; drugcentral:538; drugbank:DB00267
+  locator: 226-kegg.txt/.mol; 226-drugcentral.html; 226-ols.json
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: supports
+  summary: KEGG D01739 explicitly denotes cefmenoxime hydrochloride with two cefmenoxime
+    moieties and HCl. Its full key differs, while each organic fragment matches the
+    native free acid; contextual drug_xrefs placement is appropriate. DrugCentral
+    538 resolves to a cefmenoxime drug card with free-acid formula and hydrochloride
+    names. DrugBank DB00267 is corroborated through ChEBI and DrugCentral, not directly
+    inspected as an independent exact graph.
+  snapshot_sha256: 72de7b583b5866ae265e9eb494bc4705be07b14c037f5da1b3f37e8fe871c3b2
+- evidence_id: grounding
+  kind: authority
+  reference: ARO:3009118; CHEBI:23066; ARO:0000032; CHEBI:33281; CHEBI:36047
+  locator: 226-aro-stanzas.txt; 226 owner-row snapshots; 226-ols.json
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: supports
+  summary: Compound and broader cephalosporin class/parents resolve, and antimicrobial
+    plus antibacterial roles match the source owners and compound-specific activity
+    literature. CAS 65085-01-0 is corroborated through chemical authorities rather
+    than direct registry access. Reaxys 5787828 was not independently resolved.
+  snapshot_sha256: 1c1838af49adfc95984c63398727b20fcd7723f1840acf0a957d45fa1acc653a
+- evidence_id: adopted-leads
+  kind: database
+  reference: 14 adopted or parent PMID records
+  locator: 226-core.json; 226-lead-dispositions.json
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: context_only
+  summary: All 14 MED records resolve. All 12 available complete abstracts were read;
+    parent reviews 15673804 and 6810737 have metadata only. Primary papers cover antibacterial
+    panels, selected beta-lactamases, historical pharmacokinetics and corneal toxicity.
+    The aztreonam epitope and cefotiam contact-urticaria reports are neighboring-drug
+    immunology context, not direct cefmenoxime antibacterial mechanism proof.
+  snapshot_sha256: 2bf10c420df65c7b4f83125aad20ddca9436b3662d947f1ed10f6047c1905ac6
+- evidence_id: pbp-activity
+  kind: primary_source
+  reference: PMID:6941742; DOI:10.1128/aac.19.1.56
+  locator: 226-core.json and complete original ASM abstract; full PDF request returned
+    403
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: partial
+  summary: The primary abstract explicitly identifies Z cefmenoxime/SCE-1365 and reports
+    tested bacterial activity, strongest E. coli affinity for PBP3 followed by PBP1A/1B,
+    morphology correlation and mouse infection outcomes. This is compound-specific
+    primary support for optional mechanism enrichment at abstract depth. The exact
+    PBP competition protocol, strain and reagent salt form were not verified from
+    full methods; morphology alone is not the binding evidence.
+  snapshot_sha256: 2bf10c420df65c7b4f83125aad20ddca9436b3662d947f1ed10f6047c1905ac6
+- evidence_id: enzyme-scope
+  kind: primary_source
+  reference: PMID:6269488; DOI:10.1128/aac.20.2.171
+  locator: 226-core.json, complete original abstract
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: partial
+  summary: The original study reports cefmenoxime stability toward selected penicillinases
+    and many cephalosporinases, but susceptibility to a P. vulgaris enzyme. It separately
+    reports competitive inhibition of selected beta-lactamases. These are enzyme-specific
+    results, not universal beta-lactamase stability and not a replacement for the
+    antibacterial PBP mechanism.
+  snapshot_sha256: 2bf10c420df65c7b4f83125aad20ddca9436b3662d947f1ed10f6047c1905ac6
+- evidence_id: documents
+  kind: primary_source
+  reference: patent:CN101816660; patent:DE2713272; patent:US4476122
+  locator: 226-patent-cn.html; 226-patent-de.html; 226-patent-us.html, titles, abstracts
+    and relevant claim-family text
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: context_only
+  summary: All three patent references resolve. CN101816660A concerns a cefmenoxime
+    hydrochloride injection formulation with buffer and excipient. DE2713272A1 and
+    US4476122A concern related aminothiazolyl cephalosporin oxime families and include
+    isomer/form scope. They are document references, not proof that every described
+    structure, salt or assay is exact neutral cefmenoxime.
+  snapshot_sha256: b69ff6d922f597820f3946f9cbb49f51da407b4ce7f7c52c571c2ff61dbb0c53
+- evidence_id: wikipedia
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Cefmenoxime
+  locator: 226-wikipedia.html, infobox and synthesis/reference sections
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: context_only
+  summary: The native document link resolves. Its displayed IUPAC name also says E
+    while its InChI/key are the native Z representation. This repeats the naming inconsistency
+    and is not independent primary justification for the E name. Its synthesis references
+    were followed to the original paper; clinical statements were not adopted.
+  snapshot_sha256: 858c2e8a914fd7976aefff1d4ba67cd693c7c618754167e4eeaa02a0ad97199d
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv
+  locator: 226 owner-row snapshots and 226-local-hits.txt
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: supports
+  summary: ChEBI owns identity, structure, definition, synonyms, roles and ten citation
+    leads; ARO supplies classification, exact ChEMBL/PubChem links and its original
+    activity lead. The adopted resistance and target inventories contain no entry
+    for ARO:3009118. No separate exact-compound curator overlay was found in the bounded
+    ignored-inclusive search.
+  snapshot_sha256: 1c1838af49adfc95984c63398727b20fcd7723f1840acf0a957d45fa1acc653a
+  search_scope: rg --no-ignore --hidden across curation, conf, data/antibiotics, scripts
+    and docs for cefmenoxime, CHEBI:55490, ARO:3009118 and HJJDBAOLQAWBMH; matching
+    adopted inventory rows and full synonym-exclusion configuration inspected.
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema/strict and supplemental chemistry commands
+  locator: 226-strict.tsv; 226-chemistry.json
+  accessed_at: '2026-10-21T11:22:04Z'
+  support: supports
+  summary: Native schema and strict checks passed with exit 0, zero ERROR rows. Supplemental
+    chemistry passed after a scratch-script syntax correction. The deterministic validators
+    do not detect the false stereochemical synonym; required shared corpus gates remain
+    separate.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Core free-acid identity and stereochemistry
+  outcome: supported
+  summary: The native graph, formula, charge, masses and exact chemical authorities
+    agree with Z cefmenoxime.
+  target_ids:
+  - CHEBI:55490
+  evidence_ids:
+  - chemistry
+  - synthesis
+- assessment_id: synonym
+  area: identity
+  topic: Exact synonym stereochemistry
+  outcome: concern
+  summary: The E name denotes another oxime geometry and conflicts with the coherent
+    Z identity.
+  target_ids:
+  - CHEBI:55490
+  evidence_ids:
+  - record
+  - chemistry
+  - synonym-owner
+  - synthesis
+- assessment_id: context
+  area: grounding
+  topic: Drug and document form boundaries
+  outcome: supported
+  summary: The hemihydrochloride drug and patent families are kept in contextual fields;
+    their composition is not asserted as exact chemical identity.
+  target_ids:
+  - CHEBI:55490
+  evidence_ids:
+  - drug-context
+  - documents
+  - wikipedia
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial classification and primary mechanism leads
+  outcome: supported
+  summary: Original cefmenoxime abstracts support antibacterial activity and PBP affinity
+    at declared depth; optional mechanistic slots remain empty without an unsupported
+    native claim.
+  target_ids:
+  - CHEBI:55490
+  evidence_ids:
+  - grounding
+  - pbp-activity
+  - enzyme-scope
+- assessment_id: provenance
+  area: provenance
+  topic: References, owners and history
+  outcome: supported
+  summary: All 14 adopted/parent MED records resolve, actual owners are captured and
+    four seeding events are intact.
+  target_ids:
+  - CHEBI:55490
+  evidence_ids:
+  - adopted-leads
+  - owners
+  - record
+- assessment_id: schema
+  area: schema
+  topic: Focused deterministic validity
+  outcome: supported
+  summary: Schema and strict pass; the chemical synonym defect needs scientific adjudication
+    beyond those validators.
+  target_ids:
+  - CHEBI:55490
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-55490-incorrect-e-oxime-exact-synonym
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Exclude the E oxime name from exact synonyms of Z cefmenoxime
+  description: The exact synonym beginning (6R,7R)-7-[[(2E) names the opposite oxime
+    configuration. Native SMILES, InChI, other systematic names and independent chemical
+    authority records specify Z. This is an identity equivalence error in one alias;
+    it does not invalidate the otherwise coherent native structure.
+  target_ids:
+  - CHEBI:55490
+  field_paths:
+  - synonyms[5].synonym_text
+  - synonyms[5].synonym_type
+  evidence_ids:
+  - record
+  - chemistry
+  - synonym-owner
+  - synthesis
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-concept-specific synonym_exclusions honored by the seeder
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted upstream alias provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Existing source-specific synonym exclusion and reproducible native emission
+  rule_id: '.claude/skills/curate-yaml-record/references/review-checklist.md: Identity
+    and Equivalence'
+  native_severity: major false exact stereoisomer synonym
+  normalization_reason: An explicitly different geometric isomer is asserted as an
+    exact name. Core identity remains correct, so the error is major rather than a
+    blocker affecting the whole record.
+actions:
+- action_id: A1
+  description: Add the complete false E alias to the existing conf/sources.yaml synonym_exclusions
+    entry for CHEBI:55490, then reproduce the record through seeding.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:55490
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-concept-specific synonym_exclusions honored by the seeder
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted upstream alias provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Existing source-specific synonym exclusion and reproducible native emission
+  acceptance_checks:
+  - 'Exclude exactly this source alias: (6R,7R)-7-[[(2E)-2-(2-amino-1,3-thiazol-4-yl)-2-methoxyiminoacetyl]amino]-3-[(1-methyltetrazol-5-yl)sulfanylmethyl]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid (IUPAC)'
+  - Preserve the native Z structure, both configured centers, complete key HJJDBAOLQAWBMH-YCRCPZNHSA-N,
+    supported Z synonyms and source provenance. Do not globally ban the E name from
+    a separate E-isomer record or edit only the generated YAML.
+  - Use the documented seed dry run and CHEBI:55490 canary before applying the generated
+    correction. Confirm that a repeated seed or inventory refresh cannot restore the
+    bad synonym.
+  - Run documented schema and strict validation for data/antibiotics/antibacterial/cefmenoxime.yaml,
+    then required source reproduction and full quality gates. Independently inspect
+    the emitted synonym list because existing schema/strict checks currently pass
+    this defect.
+limitations:
+- Twelve of 14 adopted/parent complete abstracts were read; two parent reviews are
+  metadata-only. The additional synthesis paper was inspected in full relevant main
+  text, tables and exact experimental entries; the additional alternative-synthesis
+  PMID6271717 has metadata only. The current extra ChEBI lead PMID8193431 was read
+  at complete-abstract depth and concerns historical pharmacoeconomics.
+- The PBP and beta-lactamase PMC requests returned browser-challenge HTML, not original
+  full articles. OA utility requests returned 404; the ASM PBP PDF request returned
+  403. The complete original abstracts were inspected. These access limits do not
+  undermine the independently confirmed synonym finding but bound any future assay-level
+  enrichment.
+- The synthetic comparison uses sodium salts and separately prepares a hemihydrochloride.
+  No quantitative MIC was transferred to a native free-acid observation. The stereochemical
+  comparison is valid at the shared compound-moiety level, while formulation, hydration
+  and assay concentration remain separate.
+- CAS and DrugBank were corroborated through inspected authorities; Reaxys was not
+  independently resolved. Patent family text was checked for document scope, not exhaustively
+  assigned example by example. Wikipedia is a document/discovery source and itself
+  carries the conflicting E name.
+- A future curator may add primary PBP evidence after full assay/form verification
+  via the validated native writer and a curation event. That optional enrichment is
+  separate from the required exact-synonym correction and does not authorize native
+  REVIEWED status.
+- The 023 native environment lacks RDKit; chemistry used the existing 019 interpreter.
+  A first scratch chemistry script failed to parse and was corrected before the successful
+  run. Focused checks do not replace required shared corpus gates.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 16 captured repository input hashes and the separately recorded external ARO
+  cache hash remain unchanged. No native record, saved bundle or Git state was modified.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.7164/antibiotics.34.171
+- https://doi.org/10.1128/aac.19.1.56
+- https://doi.org/10.1128/aac.20.2.171
+- https://pubchem.ncbi.nlm.nih.gov/compound/9570757
+tags:
+- record-review
+- cefmenoxime
+- stereochemistry
+- exact-synonym
