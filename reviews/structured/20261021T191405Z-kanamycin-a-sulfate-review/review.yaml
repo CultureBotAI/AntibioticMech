@@ -1,0 +1,562 @@
+schema_version: 1.0.0
+review_id: 20261021T191405Z-kanamycin-a-sulfate-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of kanamycin A sulfate
+started_at: '2026-10-21T18:53:53Z'
+finished_at: '2026-10-21T19:14:05Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The exact anhydrous 1:1 kanamycin A sulfate graph and antibacterial classification
+  are supported. Nine native/current authority encodings agree. One minor correction
+  is needed: Kantrex is a historical product brand, but the source imports it as an
+  exact chemical synonym. Primary assay material, monohydrate crystal and broader
+  commercial kanamycin boundaries remain explicit.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/kanamycin-a-sulfate.yaml
+    sha256: 85a9e9729bb5e52cca6d9f8bfde2b1a1df2b87932310b16511a0eb6980746cc3
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:6109
+  path: data/antibiotics/antibacterial/kanamycin-a-sulfate.yaml
+  label: kanamycin A sulfate
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Exact salt structure, source names, parent and adopted citation
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: Antibacterial role term
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Actual ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated exact salt fields
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-specific synonym and role policy
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained exact grounding decisions
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 574; original thirteen input hashes
+    preserved and actual ChEBI owners identified before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:6109
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:6109
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    574
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:6109
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/kanamycin-a-sulfate.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:6109
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/kanamycin-a-sulfate.yaml --out /private/tmp/am-review-session/574-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent authority check
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/574-authority-check.py
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Nine native/ChEBI/PubChem/KEGG encodings agree by full key and reciprocal
+    chirality-aware atom mapping.
+  target_ids:
+  - CHEBI:6109
+- check_id: ledger
+  name: Independent ledger check
+  command: .venv/bin/python /private/tmp/am-review-session/574-ledger.py > /private/tmp/am-review-session/574-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Original thirteen hashes, four chronological history events, deterministic
+    mint and the sole adopted lead disposition verified.
+  target_ids:
+  - CHEBI:6109
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:6109
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:6109
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:6109
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:6109
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:6109
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:6109
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:6109
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:6109
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:6109
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/kanamycin-a-sulfate.yaml
+  locator: Entire native record, five aliases, parent, activity role, chemical structure,
+    three exact xrefs, drug xref, source concept and four history events
+  accessed_at: '2026-10-21T19:02:33Z'
+  support: supports
+  summary: SEEDED/EXACT CHEBI:6109 has a valid 1:1 kanamycin A/sulfuric acid graph
+    without crystal water. Kantrex is typed EXACT_SYNONYM at synonyms[4]. No native
+    definition, molecular-target, resistance, MIC, clinical, producer or document
+    assertion is present.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:6109;pubchem.compound:441374;kegg.compound:C08046;kegg.drug:D00866
+  locator: 574-authority-check.py and574-authority-chemistry.json; current snapshots
+    in574-fetch.json
+  accessed_at: '2026-10-21T19:02:33Z'
+  support: supports
+  summary: Nine encodings share OOYGSFOGFJDDHP-KMCOLRRFSA-N, total formula C18H38N4O15S
+    and zero formal charge, with full reciprocal chirality matching. The two fragments
+    are C18H36N4O11 and H2O4S. Masses agree at recorded precision. Neutral component
+    encoding is a representation of this salt composition; it is not a claim about
+    all solution protonation states.
+  snapshot_sha256: 4e4f1e1c806706c9ff9512f9cb085fe6bd2a30208ee5b38d26d028808e501792
+- evidence_id: groundings
+  kind: authority
+  reference: CHEBI:38012;CHEBI:36047;cas:25389-94-0;beilstein:3874279
+  locator: 574-chebi-6109/38012/36047.json;574-pubchem-cas.json;574-kegg-C08046.txt/574-kegg-D00866.txt
+  accessed_at: '2026-10-21T19:02:33Z'
+  support: supports
+  summary: Current parent is aminoglycoside sulfate salt and the role is antibacterial
+    drug. Exact CAS lookup resolves PubChem 441374 with the same graph; KEGG compound
+    and drug structures also agree. Current ChEBI repeats Beilstein 3874279, whose
+    independent registry contents were not accessible. The drug xref remains drug-context
+    provenance, not an assertion that every marketed formulation is the exact anhydrous
+    species.
+  snapshot_sha256: 0d3099976fee0731c55d8ef9e93abead5e14c73fb7db37a6182d0899b7b380c8
+- evidence_id: brand
+  kind: authority
+  reference: FDA DESI11503;Federal Register35(7),1970-01-10,p397
+  locator: 574-kantrex-fr1970.pdf printedp397, actual574-kantrex-p397.png and notice
+    text;574-fetch.json
+  accessed_at: '2026-10-21T19:02:33Z'
+  support: supports
+  summary: The official historical notice explicitly identifies Kantrex Injection
+    and Kantrex Capsules as marketed kanamycin sulfate preparations from Bristol,
+    with amounts expressed as kanamycin base. This proves product-brand status for
+    the alias. It does not assert that these products remain marketed today or identify
+    their exact hydration/purity.
+  snapshot_sha256: 5e4a68268763a9da1a71c776a27541f1063e95704edfdee945aac0ec62d667d6
+- evidence_id: activity
+  kind: primary_source
+  reference: DOI:10.11554/antibioticsa.11.5_171
+  locator: 574-original1958.pdf/.txt, original introduction and Methods/Materials
+    pp171–173, early spectrum Results and Discussion pp178–179;574-fetch2.json
+  accessed_at: '2026-10-21T19:02:33Z'
+  support: supports
+  summary: Morikubo uses crystalline kanamycin monosulfate from Meiji Seika and expresses
+    concentrations as free-base equivalents. Agar-streak and broth experiments demonstrate
+    antibacterial activity with strain, pH and medium dependence. The paper itself
+    cautions against generalizing one Proteus strain and discusses different pneumococcal
+    results. Introductory composition agrees with kanamycin A, but modern A/B/C purity
+    and hydrate content are not analytically established here. No individual MIC row
+    is being added to the native record.
+  snapshot_sha256: 9f731c5a5653cbf1b4aef5e30f6d31f4c4ed4731e624e3fc73d3e5e0bcf388d8
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:18248662;DOI:10.1111/j.1474-9726.2008.00375.x
+  locator: 574-adopted-core.json complete abstract;574-PMC6838649.html selected Results/Figure1B/Table1
+    and Pharmacological compounds Methods;574-fetch3.json
+  accessed_at: '2026-10-21T19:02:33Z'
+  support: supports
+  summary: The original lifespan paper uses Sigma kanamycin sulfate at 50 micrograms/mL
+    as a bacterial-food/pathogenicity comparator in C.elegans. It reports lifespan
+    effects with kanamycin alone and valproic acid combinations, while preserving
+    possible overlapping effects. The material has no catalog number or hydration
+    analysis. This is relevant source context, not proof that valproic acid signaling
+    is a kanamycin mechanism or a direct bacterial target.
+  snapshot_sha256: cd30ddfd7e19fcc4e1190dbf2093feaef237682e4d154b297057fa6e182531b2
+- evidence_id: hydrate
+  kind: primary_source
+  reference: PMID:17052696;DOI:10.1016/j.carres.2006.09.008;PMC7465208
+  locator: 574-crystal-core.json complete2006 abstract;574-PMC7465208.xml selected2020
+    material/formulation/DFT passages;574-fetch2.json
+  accessed_at: '2026-10-21T19:02:33Z'
+  support: supports
+  summary: The original crystallographic abstract specifies kanamycin A monosulfate
+    monohydrate and confirms both alpha-D-glucose sugar configurations. Its introductory
+    disulfate wording is distinguished from the actual crystal. The 2020 study uses
+    sulfate of stated 582.6 g/mol and at least 99% purity for aerosol/solid-state
+    work, while its calculation cites the monohydrate crystal. These are material-specific
+    forms; neither demonstrates a defect in the native anhydrous graph.
+  snapshot_sha256: afb178be4bbeda63c7123693fd79930ee8d4f2a18589fa73610c09f699956b32
+- evidence_id: provenance
+  kind: validation
+  reference: Maintained ChEBI source, extraction and seeding ownership
+  locator: 574-raw-rows.json;574-owners-search.json;574-source-audit.json;574-inspect.json
+  accessed_at: '2026-10-21T19:02:33Z'
+  support: supports
+  summary: All thirteen original input hashes are unchanged. The frozen row has one
+    adopted PMID, all source names, parent/role and exact encodings; four chronological
+    events and the deterministic mint agree. The seeder maps source SYNONYM to EXACT_SYNONYM
+    and BRAND NAME to BRAND_NAME, explaining the Kantrex typing. No source, native
+    record or saved review was edited.
+  snapshot_sha256: a6b513f7008a1acb6e074bf2526fd7f652bb9b401535ab5cce6b0ce94a07da69
+- evidence_id: search
+  kind: search
+  reference: Bounded exact-salt primary and registry discovery
+  locator: 574-fetch.json/574-fetch2.json/574-fetch3.json and574-owners-search.json
+  accessed_at: '2026-10-21T19:02:33Z'
+  support: supports
+  summary: Ignored-inclusive local searches covered identifier, full key, CAS and
+    Kantrex. Current DailyMed returned no exact Kantrex result; that does not negate
+    the official historical notice. The EDQM USP poster failed HTTP 403 and remains
+    only an indexed hydrate lead. Adopted fullXML failed HTTP 500, but actual PMC
+    HTML was retrieved and read. No bacterial gene/pathway assertion triggered structured
+    adapter follow-up.
+  search_scope: Exact ChEBI/PubChem/KEGG salt structures, named parent/role, official
+    historical brand notice, adopted PMID, original monosulfate activity and crystallographic
+    material scope; local searches included ignored files.
+  snapshot_sha256: a6b513f7008a1acb6e074bf2526fd7f652bb9b401535ab5cce6b0ce94a07da69
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Anhydrous 1:1 kanamycin A sulfate
+  outcome: supported
+  summary: Native and current authority graphs agree, including stereochemistry and
+    formula. Specific experimental hydrates or broadly named commercial preparations
+    are kept separate.
+  target_ids:
+  - CHEBI:6109
+  evidence_ids:
+  - native
+  - chemistry
+  - groundings
+  - hydrate
+- assessment_id: role
+  area: scope
+  topic: Structural parent and antibacterial role
+  outcome: supported
+  summary: The aminoglycoside sulfate parent fits the graph, and original monosulfate
+    assays plus official product context support antibacterial activity without universal
+    strain susceptibility claims.
+  target_ids:
+  - CHEBI:6109
+  evidence_ids:
+  - chemistry
+  - groundings
+  - activity
+  - brand
+- assessment_id: synonyms
+  area: nomenclature
+  topic: Kantrex product alias typing
+  outcome: concern
+  summary: Kantrex is a verified historical brand imported as an exact chemical synonym;
+    use the available BRAND_NAME type. Other salt aliases agree with the represented
+    composition.
+  target_ids:
+  - CHEBI:6109
+  evidence_ids:
+  - native
+  - brand
+  - provenance
+- assessment_id: evidence
+  area: evidence
+  topic: Adopted lifespan citation and primary material scope
+  outcome: supported
+  summary: The sole adopted paper actually uses kanamycin sulfate, with worm/food
+    context explicit. It is not a native target claim. Crystalline monohydrate and
+    older analytical limits do not force a native hydration correction.
+  target_ids:
+  - CHEBI:6109
+  evidence_ids:
+  - adopted
+  - hydrate
+  - activity
+- assessment_id: limits
+  area: grounding
+  topic: Independent registry and product-form boundaries
+  outcome: unknown
+  summary: Beilstein is not independently resolved; the historical products and Sigma
+    material do not establish exact hydrate/purity. No wrong-identity conclusion follows
+    from these access limits.
+  target_ids:
+  - CHEBI:6109
+  evidence_ids:
+  - groundings
+  - brand
+  - adopted
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Original inputs and generated ownership
+  outcome: supported
+  summary: Original hashes, source row, minted identity, history and the sole adopted
+    lead were checked with actual focused validators.
+  target_ids:
+  - CHEBI:6109
+  evidence_ids:
+  - provenance
+  - search
+findings:
+- finding_id: F1
+  issue_key: kanamycin-a-sulfate-kantrex-brand-type
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Kantrex is imported as an exact chemical synonym instead of a brand
+  description: Native synonyms[4] types Kantrex as EXACT_SYNONYM. The official FDA
+    historical notice explicitly markets kanamycin sulfate injection and capsules
+    under Kantrex, so this is product naming. The valid exact salt structure is unaffected.
+  target_ids:
+  - CHEBI:6109
+  field_paths:
+  - synonyms[4].synonym_type
+  evidence_ids:
+  - native
+  - brand
+  - provenance
+  rule_id: Exact chemical identity versus product naming; schema BRAND_NAME
+  normalization_reason: Minor non-blocking alias typing defect; native chemical identity
+    and salt composition remain independently supported.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source synonym typing
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI synonym extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source synonym type to native enum mapping
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:6109
+  description: Correct the source-owned Kantrex synonym typing to the existing BRAND
+    NAME input form or an explicit reproducible extraction policy, so reseeding emits
+    BRAND_NAME. Preserve the exact salt graph and keep historical product/material
+    context separate from chemical equivalence.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source synonym typing
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI synonym extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source synonym type to native enum mapping
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - Regenerated Kantrex alias has synonym_type BRAND_NAME and retains source provenance.
+  - All other exact salt fields and valid full structure key remain unchanged.
+  - Required schema, term/reference/history/corpus and full QC checks pass for eventual
+    native curation.
+limitations:
+- Primary sources were read to the explicitly listed depth, not every full paper or
+  every original MIC row. The 2006 crystal study was available here at complete-abstract
+  depth; native structural agreement also rests on independent current authority graphs.
+- The adopted Sigma material, historical marketed preparations and 1958 crystalline
+  monosulfate do not independently establish modern congener purity or hydration.
+  Monohydrate observations and an inaccessible USP poster do not prove the native
+  anhydrous species is wrong.
+- Beilstein 3874279 remains independently unresolved; CAS concordance is from public
+  authority mappings, not direct paid registry access.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- The review is read-only with respect to native records and maintained sources; all
+  thirteen original input hashes remain unchanged.
+- Standalone chemistry used the 019 interpreter against 058; schema, strict, ledger
+  and contract used 058.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

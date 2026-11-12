@@ -1,0 +1,772 @@
+# Kalimantacin B: exact congener, source identity and experimental evidence
+
+- Review: 20261021T191357Z-kalimantacin-b-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T18:53:52Z
+- Finished UTC: 2026-10-21T19:13:57Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Kalimantacin B has a valid, mutually consistent native constitution and the original isolated congener has antibacterial activity. The principal representations leave five stereocentres unspecified despite subsequent structure-specific primary work. A source-owned exact-identity revision must account for the historical isolate and authority scope; no racemate or opposite-enantiomer claim is made.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position572; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:66136 | data/antibiotics/antibacterial/kalimantacin-b.yaml | generated | kalimantacin B |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:66136 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:66136 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:66136 | Actual focused execution exited 0. |
+| Independent native and current authority chemical comparison | passed | False | CHEBI:66136 | Six valid native/current ChEBI/current PubChem encodings agree at the native stereo scope. Primary-numbered configured A/B diagnostics separately agree with assigned authority graphs. |
+| Authoritative full QC | failed | True | CHEBI:66136 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:66136 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:66136 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:66136 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:66136 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:66136 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:66136 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:66136 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:66136 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact congener, formula, alkene and tetrahedral scope
+
+identity: unknown. Targets: CHEBI:66136.
+
+Native constitution and current source agree. Known subsequent exact-congener assignments need explicit incorporation or documented identity-scope resolution; missing stereo is not an opposite-hand assertion.
+
+### Identifier, synonym, parents, roles and xrefs
+
+grounding: unknown. Targets: CHEBI:66136.
+
+ChEBI and PubChem agree at the stored stereo scope. All asserted parent/role meanings fit. Reaxys direct identity remains unverified.
+
+### Exact isolated-material activity and mode of action
+
+evidence: supported. Targets: CHEBI:66136.
+
+Original Table2 directly supports antibacterial kalimantacin B, keeping medium, endpoint, strain and experimental limits. FabI follow-up supports a bounded optional mechanism addition for this congener, with A/B assays separated.
+
+### Maintained source, regenerated fields and adopted citation
+
+provenance: supported. Targets: CHEBI:66136.
+
+All populated fields trace to the captured ChEBI row and source pipeline. Sole adopted citation fully assessed; no historical timestamps or status flags were changed.
+
+### Whole record and evidence boundaries
+
+completeness: supported. Targets: CHEBI:66136.
+
+All populated native fields were reviewed. Optional target, producer, MIC and graph enrichment is distinguished from supported defect findings. Adapter scope was assessed before open follow-up: native kalimantacin records contain no asserted target/gene/pathway claim, so adapter execution was not applicable to asserted claims.
+
+## Findings
+
+### F1: Resolve the known stereochemistry in the principal identity
+
+major / open / confirmed; issue key: kalimantacin-b-known-stereo-under-specification.
+
+The principal SMILES/InChI omit all five tetrahedral configurations, while subsequent primary work describes the named isolated B congener with 5R,15S,19R,26R,27R configuration. The current source agreement does not preserve those assignments. Curate the exact experimental identity and its historical isolate/authority scope before regenerating an assigned representation; do not silently equate the unspecified ChEBI entity with a fully assigned graph. The finding is incomplete known identity specification, not a claim that the native encodes the opposite stereoisomer or a mixture.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Resolve the experimental stereochemical scope through maintained identity/source ownership.
+
+- Independently map original numbering and confirm the five assignments and exact alkene pattern; primary-derived candidate GENAAYFYLGYPIQ-YPMJEBJESA-N.
+- Explicitly handle the historical Alcaligenes identity and optical-rotation discrepancy where relevant; NMR matching alone is not a new absolute-configuration experiment.
+- Regenerate synchronized SMILES, InChI/key, systematic name and exact grounding/xrefs. Do not retain an unspecified authority as an unqualified exact equivalent without documented permitted scope.
+- Run native schema/strict/chemistry, grounding and source-reproduction checks; preserve honest unresolved evidence rather than importing A-only kinetics into B.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/kalimantacin-b.yaml; Entire native YAML: identifier, status, definition, one synonym, four parents, two roles, every chemistry value, xrefs, source concept and three history events. | supports | SEEDED/EXACT CHEBI:66136; neutral C30H48N2O7; GENAAYFYLGYPIQ-FFPWVZAVSA-N. All native encodings parse and agree, including three specified alkenes. There are five unspecified tetrahedral centres. No native molecular-target, resistance, producer object, MIC, clinical or causal-graph claim is populated. Missing stereochemical annotations do not mean an experimentally established mixture. |
+| owners | data/raw/chebi_antimicrobials.tsv:1429; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; conf/sources.yaml; Exact adopted row, manifest/source selection, relevant normalization/emission and overlay searches including hidden/ignored files. | supports | The maintained ChEBI row reproduces the definition, one systematic synonym, exact graph, roles, parents and external references. Its sole adopted citation is PMID:8621352. No exact row was found in the inspected maintained curator/decision overlays; ignored files were included. The stable historical mint and source-version/history are provenance, not additional chemical identifiers. All original thirteen captured inputs remain unchanged. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/66136/; Complete current official compound response; default graph, names, origin, outgoing ontology relations and database references. | supports | The current three-star ChEBI entry repeats the stored definition and full native key, with the same unspecified tetrahedral stereochemistry. Its single IUPAC synonym matches the native constitution and alkene pattern. Reaxys 21369092 is repeated as a source attribution; that repetition is not independent registry-graph verification.  |
+| chemistry | PubChem CID 6444314; 058-root-chemistry.json; Both official PubChem encodings and native/ChEBI SMILES/InChI independently parsed; all full keys compared. | supports | All six encodings reproduce GENAAYFYLGYPIQ-FFPWVZAVSA-N; formula C30H48N2O7, charge 0 and calculated monoisotopic mass 548.34615188 agree with stored rounding. A has 2E,10Z,12E alkenes; B changes only C10=C11 to E. |
+| parents | CHEBI:23003; CHEBI:25384; CHEBI:29347; CHEBI:61697; CHEBI:140325; CHEBI:79020; CHEBI:33281; CHEBI:33282; Complete official responses for each asserted parent and role, checked against the native molecular graph. | supports | The four asserted parents are secondary carboxamide, carbamate ester, fatty acid derivative and alpha,beta-unsaturated monocarboxylic acid. Each is strictly broader than this exact congener and fits its structure. The antimicrobial and antibacterial roles are supported by exact-congener growth inhibition; they do not assert a clinical indication. |
+| discovery | PMID:8621352; DOI:10.7164/antibiotics.49.136; Entire original four-page paper; actual Figure 1 and Table 2 viewed, including exact B column and assay Methods. | supports | The authors isolated kalimantacins A/B/C by extraction and preparative chromatography from an 18-L culture of Alcaligenes sp. YL-02632S, a West Kalimantan soil isolate deposited as FERM P-12694. Recovered A/B/C amounts were 20/2/1 mg. The historical phenotypic genus identification is not a modern sequence-based species reassignment. For B, Table 2 gives S. aureus FDA209P 0.78 µg/mL and MRSA No.5 1.56; S. epidermidis IID866 and MRSE No.17 0.78; Salmonella enteritidis1891 and K. pneumoniae ATCC10031 12.5; E. coli O-1 50; B. subtilis ATCC6633 and P. aeruginosa ATCC8689 &gt;100. The serial agar-dilution assay used Mueller-Hinton agar overnight at 37°C; inoculum density was not specified in the inspected Methods. These are historical experimental MICs, not modern clinical-breakpoint classifications. The prose calling B MICs lower conflicts with the actual table, which shows larger B MICs. A-only 72-hour P388/HeLa cytotoxicity results are not safety evidence for B/C or humans. |
+| structure1996 | PMID:8621353; DOI:10.7164/antibiotics.49.140; Entire original five-page structure paper; actual Table 1 and Figures 3/4 viewed; NMR tables read as text. | supports | HR-FAB-MS, NMR connectivity and coupling constants identify the separate A/B/C constitutions. A/C have J10,11 approximately 11 Hz and J12,13 approximately 15 Hz, while B has both diene couplings approximately 14.4 Hz. C is demethylated at C26 relative to A. The source explicitly says absolute-configuration work is in progress; it therefore does not specify the missing tetrahedral centres. The printed C mass of 535 corresponds to [M+H]+; neutral formula/mass remain C29H46N2O7/534.33, as correctly stored. A optical rotation is reported +56.3 in methanol, whereas B/C values are not determined. |
+| stereo2017 | PMID:28989652; DOI:10.1039/c7sc01670k; PMC5628338; Full scientific main text and captions; actual Schemes 1/2/3/7 viewed; supplementary Tables 6/7, cultivation/isolation section and A analytical description read. | supports | Natural P. fluorescens BCCM_ID9359 A and mutant-derived 17,19-diol/27-descarbamoyl intermediates were compared by selective reduction, acetonide NMR, synthetic fragments, degradation and optical-rotation matching. The demonstrated diol has 5R,15S,17S,19R,26R,27R configuration; oxidation removes the C17 stereocentre, leaving A 5R,15S,19R,26R,27R. Supplementary Tables 6/7 directly compare A NMR with the original Alcaligenes isolate. Method A reports final material &gt;95% pure. Its A rotation is -20.0 (c1.0, MeOH), differing from the historical +56.3; this is retained as an isolate/measurement limitation, not silently resolved by a name match. Neither this A-focused experiment nor biosynthetic family membership independently assigns C absolute configuration. |
+| fabI2020 | PMID:32208550; DOI:10.1002/anie.201915407; PDB:6TBB; PDB:6TBC; Entire author-accepted scientific main text and captions; actual Figures 1/2 viewed; Table 1 read; primary B complex entry and component N5H inspected. | supports | The study reports isolated A and B and structures of S. aureus FabI/NADPH with each at approximately 2.45 and 2.55 Å. Figure 1 draws the five assigned centres of both congeners. For A, crotonoyl-CoA-dependent NADPH consumption gives IC50 1.51 µM, competitive Ki 1.45±0.35 µM against crotonoyl-CoA and uncompetitive Ki 0.69±0.13 µM against NADPH. These are enzyme kinetics, not MIC or direct Kd; they are not B/C measurements. Engineered S. aureus RN4220 FabI M99T/Y147C double substitution raises A MIC from 0.125 to16 µg/mL in Table1; individual mutations and promoter variants differ. Molecular dynamics energies are computed hypotheses. The B structure supports B binding; none of this establishes C FabI binding. The main text contains residue/functional-group and RN4420/RN4220 inconsistencies, so precise source mapping is required before optional mechanism curation. |
+| synthesis2020 | DOI:10.1021/acs.orglett.0c02190; Entire author-accepted scientific main text and captions read; actual Scheme1 viewed; synthesis SI not obtained or claimed read. | supports | The first total synthesis specifically prepares A through enantioselective fragments, coupling and deprotection; reported NMR/HPLC agreement with natural material and rotation matching of protected derivatives corroborate the A assignment. Scheme1 depicts assigned A/B/C, but the experimental work is A-specific. That introductory C drawing is a follow-up lead, not an independent C absolute-configuration experiment. Its statement that configuration was determined in2015 points to the2017 paper; the original cited publication supplies the date. |
+| stereo-diagnostic | 058-root-chem.py; 058-root-chemistry.json; PDB6TBC component N5H (PubChem146014956 correspondence); Independent parent-numbered structure reconstructed using the primary 5R,15S,19R,26R,27R assignment and exact congener alkene geometry. | supports | The numbered primary-derived diagnostic gives GENAAYFYLGYPIQ-YPMJEBJESA-N, agreeing with independently parsed PDB6TBC component N5H (PubChem146014956 correspondence). Atom map numbers were removed before CIP ranking; final assignments are explicitly checked. Removing only tetrahedral specification retains the native constitution and E/Z pattern. This is a candidate for source-owned review, not an edit or a new physical measurement. Historical Alcaligenes material and unspecified ChEBI grounding must be reconciled explicitly before changing exact identity scope. |
+| search | 572-local-hits.txt; 572-owner-hits.txt; kal-discovery2.json; 058-root-fetch1.json through 058-root-fetch9.json; Exact name/identifier/key, adopted reference, related primary papers and hidden/ignored-inclusive repository/source search. | context_only | The sole adopted PMID8621352 was fully read, along with the companion1996 structure paper. Subsequent2017/2020 original work was inspected at the explicitly stated depths. The broader40-hit discovery response was screened at metadata/title level; it is not represented as40 fully read studies. No global literature-absence claim is made. Public CAS/Reaxys scope is limited as stated. No paid access or native/source changes occurred. |
+
+## Limits And Additional Notes
+
+- Reaxys identity was not independently retrieved through public access; authority attribution is not a verified exact registry graph. 
+- The1996 primary papers were read in full, including the stated actual table/figure pages. Raw spectra were not reprocessed and original assay purity/inoculum details are only available as reported.
+- The2017 main text and actual stated schemes were read; SI inspection covered Tables6/7 and culture/isolation/A analytical passages, not every synthetic intermediate or every spectrum. Its opposite-sign historical rotation values and strain-label typographical variants remain explicit.
+- The2020 FabI author-accepted main text was read, with Figures1/2 inspected. The public publisher SI request returned403. An author-hosted file bearing the FabI cover sheet actually contains the different2019 beta-branching paper supplement, so its contents were rejected as FabI experimental evidence. No full FabI supplementary-method verification is claimed.
+- The2020 synthesis main text and Scheme1 were inspected; its SI was not read. Its introductory C depiction is distinguished from its A-specific synthetic experiments.
+- A current source may intentionally retain unspecified tetrahedral scope. Future correction must resolve that scope and the named experimental material together, rather than treating a matching label or a broad structure as proof of exact stereochemical equivalence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native record, maintained inventory, schema or implementation was modified. Evidence snapshots and public-access results are retained in the named scratch files. Shared full-QC disposition is supplied by the coordinator before final validation.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T191357Z-kalimantacin-b-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Kalimantacin B: exact congener, source identity and experimental evidence'
+started_at: '2026-10-21T18:53:52Z'
+finished_at: '2026-10-21T19:13:57Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Kalimantacin B has a valid, mutually consistent native constitution and the
+  original isolated congener has antibacterial activity. The principal representations
+  leave five stereocentres unspecified despite subsequent structure-specific primary
+  work. A source-owned exact-identity revision must account for the historical isolate
+  and authority scope; no racemate or opposite-enantiomer claim is made.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/kalimantacin-b.yaml
+    sha256: d86c951f04c63461874fc12f8433edddb677d4c8eadc41fb516154022abbafdc
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:66136
+  path: data/antibiotics/antibacterial/kalimantacin-b.yaml
+  label: kalimantacin B
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position572; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:66136
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:66136
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    572
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:66136
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/kalimantacin-b.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:66136
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/kalimantacin-b.yaml --out /private/tmp/am-review-session/572-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: independent-authority-chemistry
+  name: Independent native and current authority chemical comparison
+  status: passed
+  required: false
+  summary: Six valid native/current ChEBI/current PubChem encodings agree at the native
+    stereo scope. Primary-numbered configured A/B diagnostics separately agree with
+    assigned authority graphs.
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/058-root-chem.py
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - CHEBI:66136
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:66136
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:66136
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:66136
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:66136
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:66136
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:66136
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:66136
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:66136
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:66136
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/kalimantacin-b.yaml
+  locator: 'Entire native YAML: identifier, status, definition, one synonym, four
+    parents, two roles, every chemistry value, xrefs, source concept and three history
+    events.'
+  accessed_at: '2026-10-21T19:07:09Z'
+  support: supports
+  summary: SEEDED/EXACT CHEBI:66136; neutral C30H48N2O7; GENAAYFYLGYPIQ-FFPWVZAVSA-N.
+    All native encodings parse and agree, including three specified alkenes. There
+    are five unspecified tetrahedral centres. No native molecular-target, resistance,
+    producer object, MIC, clinical or causal-graph claim is populated. Missing stereochemical
+    annotations do not mean an experimentally established mixture.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:1429; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py; conf/sources.yaml
+  locator: Exact adopted row, manifest/source selection, relevant normalization/emission
+    and overlay searches including hidden/ignored files.
+  accessed_at: '2026-10-21T19:07:09Z'
+  support: supports
+  summary: The maintained ChEBI row reproduces the definition, one systematic synonym,
+    exact graph, roles, parents and external references. Its sole adopted citation
+    is PMID:8621352. No exact row was found in the inspected maintained curator/decision
+    overlays; ignored files were included. The stable historical mint and source-version/history
+    are provenance, not additional chemical identifiers. All original thirteen captured
+    inputs remain unchanged.
+  snapshot_sha256: 7c71dacf134bb108a29481e062f3701066a1584172af0f9afa53d074d4a78ff8
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/66136/
+  locator: Complete current official compound response; default graph, names, origin,
+    outgoing ontology relations and database references.
+  accessed_at: '2026-10-21T19:07:09Z'
+  support: supports
+  summary: 'The current three-star ChEBI entry repeats the stored definition and full
+    native key, with the same unspecified tetrahedral stereochemistry. Its single
+    IUPAC synonym matches the native constitution and alkene pattern. Reaxys 21369092
+    is repeated as a source attribution; that repetition is not independent registry-graph
+    verification. '
+  snapshot_sha256: 3241ffbeb8ca7f47ec4a1c63eb6e7ed458707a3df0eaecd3c85faa533c691dca
+- evidence_id: chemistry
+  kind: database
+  reference: PubChem CID 6444314; 058-root-chemistry.json
+  locator: Both official PubChem encodings and native/ChEBI SMILES/InChI independently
+    parsed; all full keys compared.
+  accessed_at: '2026-10-21T19:07:09Z'
+  support: supports
+  summary: All six encodings reproduce GENAAYFYLGYPIQ-FFPWVZAVSA-N; formula C30H48N2O7,
+    charge 0 and calculated monoisotopic mass 548.34615188 agree with stored rounding.
+    A has 2E,10Z,12E alkenes; B changes only C10=C11 to E.
+  snapshot_sha256: 81b4b3546288f39d9e303581ab394f7dff8261b7997f54a96f891d771163e55f
+- evidence_id: parents
+  kind: authority
+  reference: CHEBI:23003; CHEBI:25384; CHEBI:29347; CHEBI:61697; CHEBI:140325; CHEBI:79020;
+    CHEBI:33281; CHEBI:33282
+  locator: Complete official responses for each asserted parent and role, checked
+    against the native molecular graph.
+  accessed_at: '2026-10-21T19:07:09Z'
+  support: supports
+  summary: The four asserted parents are secondary carboxamide, carbamate ester, fatty
+    acid derivative and alpha,beta-unsaturated monocarboxylic acid. Each is strictly
+    broader than this exact congener and fits its structure. The antimicrobial and
+    antibacterial roles are supported by exact-congener growth inhibition; they do
+    not assert a clinical indication.
+  snapshot_sha256: e58b64636270f25300dc4c58fc7768081d2c4ceed96b7107c6c852ce9757ea78
+- evidence_id: discovery
+  kind: primary_source
+  reference: PMID:8621352; DOI:10.7164/antibiotics.49.136
+  locator: Entire original four-page paper; actual Figure 1 and Table 2 viewed, including
+    exact B column and assay Methods.
+  accessed_at: '2026-10-21T19:07:09Z'
+  support: supports
+  summary: The authors isolated kalimantacins A/B/C by extraction and preparative
+    chromatography from an 18-L culture of Alcaligenes sp. YL-02632S, a West Kalimantan
+    soil isolate deposited as FERM P-12694. Recovered A/B/C amounts were 20/2/1 mg.
+    The historical phenotypic genus identification is not a modern sequence-based
+    species reassignment. For B, Table 2 gives S. aureus FDA209P 0.78 µg/mL and MRSA
+    No.5 1.56; S. epidermidis IID866 and MRSE No.17 0.78; Salmonella enteritidis1891
+    and K. pneumoniae ATCC10031 12.5; E. coli O-1 50; B. subtilis ATCC6633 and P.
+    aeruginosa ATCC8689 >100. The serial agar-dilution assay used Mueller-Hinton agar
+    overnight at 37°C; inoculum density was not specified in the inspected Methods.
+    These are historical experimental MICs, not modern clinical-breakpoint classifications.
+    The prose calling B MICs lower conflicts with the actual table, which shows larger
+    B MICs. A-only 72-hour P388/HeLa cytotoxicity results are not safety evidence
+    for B/C or humans.
+  snapshot_sha256: 43cdeac1ce95b185284fa9e2ec5905b43151b319a4fab2a01f90ab0d070a9441
+- evidence_id: structure1996
+  kind: primary_source
+  reference: PMID:8621353; DOI:10.7164/antibiotics.49.140
+  locator: Entire original five-page structure paper; actual Table 1 and Figures 3/4
+    viewed; NMR tables read as text.
+  accessed_at: '2026-10-21T19:07:09Z'
+  support: supports
+  summary: HR-FAB-MS, NMR connectivity and coupling constants identify the separate
+    A/B/C constitutions. A/C have J10,11 approximately 11 Hz and J12,13 approximately
+    15 Hz, while B has both diene couplings approximately 14.4 Hz. C is demethylated
+    at C26 relative to A. The source explicitly says absolute-configuration work is
+    in progress; it therefore does not specify the missing tetrahedral centres. The
+    printed C mass of 535 corresponds to [M+H]+; neutral formula/mass remain C29H46N2O7/534.33,
+    as correctly stored. A optical rotation is reported +56.3 in methanol, whereas
+    B/C values are not determined.
+  snapshot_sha256: 1d3afee308d0cbf55c2c7a91f8d43615b9d1d38ccd7ba611160482b9ab7e6f4e
+- evidence_id: stereo2017
+  kind: primary_source
+  reference: PMID:28989652; DOI:10.1039/c7sc01670k; PMC5628338
+  locator: Full scientific main text and captions; actual Schemes 1/2/3/7 viewed;
+    supplementary Tables 6/7, cultivation/isolation section and A analytical description
+    read.
+  accessed_at: '2026-10-21T19:07:09Z'
+  support: supports
+  summary: Natural P. fluorescens BCCM_ID9359 A and mutant-derived 17,19-diol/27-descarbamoyl
+    intermediates were compared by selective reduction, acetonide NMR, synthetic fragments,
+    degradation and optical-rotation matching. The demonstrated diol has 5R,15S,17S,19R,26R,27R
+    configuration; oxidation removes the C17 stereocentre, leaving A 5R,15S,19R,26R,27R.
+    Supplementary Tables 6/7 directly compare A NMR with the original Alcaligenes
+    isolate. Method A reports final material >95% pure. Its A rotation is -20.0 (c1.0,
+    MeOH), differing from the historical +56.3; this is retained as an isolate/measurement
+    limitation, not silently resolved by a name match. Neither this A-focused experiment
+    nor biosynthetic family membership independently assigns C absolute configuration.
+  snapshot_sha256: 4ca25a58fe11dd5e1d0108f2144ef63ed30b1d438bc0303e7cd7e4f6878475f7
+- evidence_id: fabI2020
+  kind: primary_source
+  reference: PMID:32208550; DOI:10.1002/anie.201915407; PDB:6TBB; PDB:6TBC
+  locator: Entire author-accepted scientific main text and captions; actual Figures
+    1/2 viewed; Table 1 read; primary B complex entry and component N5H inspected.
+  accessed_at: '2026-10-21T19:07:09Z'
+  support: supports
+  summary: The study reports isolated A and B and structures of S. aureus FabI/NADPH
+    with each at approximately 2.45 and 2.55 Å. Figure 1 draws the five assigned centres
+    of both congeners. For A, crotonoyl-CoA-dependent NADPH consumption gives IC50
+    1.51 µM, competitive Ki 1.45±0.35 µM against crotonoyl-CoA and uncompetitive Ki
+    0.69±0.13 µM against NADPH. These are enzyme kinetics, not MIC or direct Kd; they
+    are not B/C measurements. Engineered S. aureus RN4220 FabI M99T/Y147C double substitution
+    raises A MIC from 0.125 to16 µg/mL in Table1; individual mutations and promoter
+    variants differ. Molecular dynamics energies are computed hypotheses. The B structure
+    supports B binding; none of this establishes C FabI binding. The main text contains
+    residue/functional-group and RN4420/RN4220 inconsistencies, so precise source
+    mapping is required before optional mechanism curation.
+  snapshot_sha256: 1d7774afce2870198767c393203d0a65b2b635266d0517c1854ec90decfd0f63
+- evidence_id: synthesis2020
+  kind: primary_source
+  reference: DOI:10.1021/acs.orglett.0c02190
+  locator: Entire author-accepted scientific main text and captions read; actual Scheme1
+    viewed; synthesis SI not obtained or claimed read.
+  accessed_at: '2026-10-21T19:07:09Z'
+  support: supports
+  summary: The first total synthesis specifically prepares A through enantioselective
+    fragments, coupling and deprotection; reported NMR/HPLC agreement with natural
+    material and rotation matching of protected derivatives corroborate the A assignment.
+    Scheme1 depicts assigned A/B/C, but the experimental work is A-specific. That
+    introductory C drawing is a follow-up lead, not an independent C absolute-configuration
+    experiment. Its statement that configuration was determined in2015 points to the2017
+    paper; the original cited publication supplies the date.
+  snapshot_sha256: f73354646bc8084da4037e11c3f9b84130ca2986bf0e5d1c7ae49c9d9449d4d8
+- evidence_id: stereo-diagnostic
+  kind: validation
+  reference: 058-root-chem.py; 058-root-chemistry.json; PDB6TBC component N5H (PubChem146014956
+    correspondence)
+  locator: Independent parent-numbered structure reconstructed using the primary 5R,15S,19R,26R,27R
+    assignment and exact congener alkene geometry.
+  accessed_at: '2026-10-21T19:07:09Z'
+  support: supports
+  summary: The numbered primary-derived diagnostic gives GENAAYFYLGYPIQ-YPMJEBJESA-N,
+    agreeing with independently parsed PDB6TBC component N5H (PubChem146014956 correspondence).
+    Atom map numbers were removed before CIP ranking; final assignments are explicitly
+    checked. Removing only tetrahedral specification retains the native constitution
+    and E/Z pattern. This is a candidate for source-owned review, not an edit or a
+    new physical measurement. Historical Alcaligenes material and unspecified ChEBI
+    grounding must be reconciled explicitly before changing exact identity scope.
+  snapshot_sha256: 81b4b3546288f39d9e303581ab394f7dff8261b7997f54a96f891d771163e55f
+- evidence_id: search
+  kind: search
+  reference: 572-local-hits.txt; 572-owner-hits.txt; kal-discovery2.json; 058-root-fetch1.json
+    through 058-root-fetch9.json
+  locator: Exact name/identifier/key, adopted reference, related primary papers and
+    hidden/ignored-inclusive repository/source search.
+  accessed_at: '2026-10-21T19:07:09Z'
+  support: context_only
+  summary: The sole adopted PMID8621352 was fully read, along with the companion1996
+    structure paper. Subsequent2017/2020 original work was inspected at the explicitly
+    stated depths. The broader40-hit discovery response was screened at metadata/title
+    level; it is not represented as40 fully read studies. No global literature-absence
+    claim is made. Public CAS/Reaxys scope is limited as stated. No paid access or
+    native/source changes occurred.
+  search_scope: 2026-10-21, exact kalimantacin B, CHEBI:66136, native full key and
+    adopted PMID; repository search included hidden and ignored files.
+  snapshot_sha256: ce2541874e0e5df4d455761dde30a93b36a752e5f32edc7f33701dd092671294
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact congener, formula, alkene and tetrahedral scope
+  outcome: unknown
+  summary: Native constitution and current source agree. Known subsequent exact-congener
+    assignments need explicit incorporation or documented identity-scope resolution;
+    missing stereo is not an opposite-hand assertion.
+  target_ids:
+  - CHEBI:66136
+  evidence_ids:
+  - native
+  - chemistry
+  - structure1996
+  - stereo2017
+  - fabI2020
+  - synthesis2020
+- assessment_id: grounding
+  area: grounding
+  topic: Identifier, synonym, parents, roles and xrefs
+  outcome: unknown
+  summary: ChEBI and PubChem agree at the stored stereo scope. All asserted parent/role
+    meanings fit. Reaxys direct identity remains unverified.
+  target_ids:
+  - CHEBI:66136
+  evidence_ids:
+  - chebi
+  - chemistry
+  - parents
+  - discovery
+- assessment_id: activity
+  area: evidence
+  topic: Exact isolated-material activity and mode of action
+  outcome: supported
+  summary: Original Table2 directly supports antibacterial kalimantacin B, keeping
+    medium, endpoint, strain and experimental limits. FabI follow-up supports a bounded
+    optional mechanism addition for this congener, with A/B assays separated.
+  target_ids:
+  - CHEBI:66136
+  evidence_ids:
+  - discovery
+  - structure1996
+  - fabI2020
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained source, regenerated fields and adopted citation
+  outcome: supported
+  summary: All populated fields trace to the captured ChEBI row and source pipeline.
+    Sole adopted citation fully assessed; no historical timestamps or status flags
+    were changed.
+  target_ids:
+  - CHEBI:66136
+  evidence_ids:
+  - owners
+  - native
+  - chebi
+  - discovery
+- assessment_id: completeness
+  area: completeness
+  topic: Whole record and evidence boundaries
+  outcome: supported
+  summary: 'All populated native fields were reviewed. Optional target, producer,
+    MIC and graph enrichment is distinguished from supported defect findings. Adapter
+    scope was assessed before open follow-up: native kalimantacin records contain
+    no asserted target/gene/pathway claim, so adapter execution was not applicable
+    to asserted claims.'
+  target_ids:
+  - CHEBI:66136
+  evidence_ids:
+  - native
+  - search
+  - discovery
+  - stereo2017
+  - fabI2020
+findings:
+- finding_id: F1
+  issue_key: kalimantacin-b-known-stereo-under-specification
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Resolve the known stereochemistry in the principal identity
+  description: The principal SMILES/InChI omit all five tetrahedral configurations,
+    while subsequent primary work describes the named isolated B congener with 5R,15S,19R,26R,27R
+    configuration. The current source agreement does not preserve those assignments.
+    Curate the exact experimental identity and its historical isolate/authority scope
+    before regenerating an assigned representation; do not silently equate the unspecified
+    ChEBI entity with a fully assigned graph. The finding is incomplete known identity
+    specification, not a claim that the native encodes the opposite stereoisomer or
+    a mixture.
+  target_ids:
+  - CHEBI:66136
+  field_paths:
+  - chemical_structure.smiles
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  - grounding_status
+  - synonyms
+  evidence_ids:
+  - native
+  - chemistry
+  - structure1996
+  - stereo2017
+  - fabI2020
+  - stereo-diagnostic
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted unspecified source identity
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source structure and synonym normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Explicit exact-grounding scope decision
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Principal structure and grounding emission
+  rule_id: 'Native checklist: exact chemical structure and source stereo scope'
+  native_severity: major
+  normalization_reason: The valid graph omits five known configurations; an invalid
+    serialization or demonstrably wrong assigned hand is not established.
+actions:
+- action_id: A1
+  description: Resolve the experimental stereochemical scope through maintained identity/source
+    ownership.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:66136
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted unspecified source identity
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source structure and synonym normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Explicit exact-grounding scope decision
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Principal structure and grounding emission
+  acceptance_checks:
+  - Independently map original numbering and confirm the five assignments and exact
+    alkene pattern; primary-derived candidate GENAAYFYLGYPIQ-YPMJEBJESA-N.
+  - Explicitly handle the historical Alcaligenes identity and optical-rotation discrepancy
+    where relevant; NMR matching alone is not a new absolute-configuration experiment.
+  - Regenerate synchronized SMILES, InChI/key, systematic name and exact grounding/xrefs.
+    Do not retain an unspecified authority as an unqualified exact equivalent without
+    documented permitted scope.
+  - Run native schema/strict/chemistry, grounding and source-reproduction checks;
+    preserve honest unresolved evidence rather than importing A-only kinetics into
+    B.
+limitations:
+- 'Reaxys identity was not independently retrieved through public access; authority
+  attribution is not a verified exact registry graph. '
+- The1996 primary papers were read in full, including the stated actual table/figure
+  pages. Raw spectra were not reprocessed and original assay purity/inoculum details
+  are only available as reported.
+- The2017 main text and actual stated schemes were read; SI inspection covered Tables6/7
+  and culture/isolation/A analytical passages, not every synthetic intermediate or
+  every spectrum. Its opposite-sign historical rotation values and strain-label typographical
+  variants remain explicit.
+- The2020 FabI author-accepted main text was read, with Figures1/2 inspected. The
+  public publisher SI request returned403. An author-hosted file bearing the FabI
+  cover sheet actually contains the different2019 beta-branching paper supplement,
+  so its contents were rejected as FabI experimental evidence. No full FabI supplementary-method
+  verification is claimed.
+- The2020 synthesis main text and Scheme1 were inspected; its SI was not read. Its
+  introductory C depiction is distinguished from its A-specific synthetic experiments.
+- A current source may intentionally retain unspecified tetrahedral scope. Future
+  correction must resolve that scope and the named experimental material together,
+  rather than treating a matching label or a broad structure as proof of exact stereochemical
+  equivalence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record, maintained inventory, schema or implementation was modified. Evidence
+  snapshots and public-access results are retained in the named scratch files. Shared
+  full-QC disposition is supplied by the coordinator before final validation.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
