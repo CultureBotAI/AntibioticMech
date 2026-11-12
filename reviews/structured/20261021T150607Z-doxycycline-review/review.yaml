@@ -1,0 +1,901 @@
+schema_version: 1.0.0
+review_id: 20261021T150607Z-doxycycline-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of doxycycline
+started_at: '2026-10-21T14:43:51Z'
+finished_at: '2026-10-21T15:06:07Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Whole native read; preserved input and source-row reconciliation;
+    stereo-preserving graph mappings; official regulator product descriptions; exact
+    CDC/FDA and BioSample observation; primary ribosome methods/results and complete
+    adopted/cited abstract dispositions.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Major exact ChEMBL hydrate mismatch and minor product-name typing;
+  native parent chemistry and qualified bacterial evidence supported
+scientific_review: true
+summary: The anhydrous doxycycline graph is coherent across twelve independently compared
+  encodings with all six configured centers retained. However, its exact ChEMBL cross-reference
+  denotes the monohydrate; the independently mapped ChEMBL parent is the appropriate
+  candidate. Two ARO aliases are confirmed product brands rather than unqualified
+  exact chemical synonyms. All fifteen resistance entries remain honestly typed database
+  assertions, the direct ribosomal target is supported by scoped original structural
+  evidence, and the single CDC/FDA isolate MIC is reproduced exactly.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/doxycycline.yaml
+    sha256: e882cd7f14057c25a22688e168748d01103853c834614f531a722ee71243efb7
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    role: Adopted CARD/ARO identity and citation leads
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+  - path: data/raw/aro_resistance_edges.tsv
+    role: Fifteen adopted resistance database edges
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+  - path: data/raw/aro_target_edges.tsv
+    role: Adopted 16S rRNA target database edge
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+  - path: conf/aro_target_roles.tsv
+    role: ARO target relation policy
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+scope:
+  description: 'Entire SEEDED, EXACT record: definition, twenty typed synonyms, two
+    parents and roles, complete structure, twelve exact cross-references, three drug
+    links and three documents, two source concepts, fifteen resistance entries, one
+    16S rRNA target, one isolate MIC with BioSample and seven histories. All twelve
+    adopted citation leads and twenty-five current ARO cited leads inspected at the
+    stated levels.'
+  selection: Queue 373 in isolated batch 038. Initial thirteen hashes preserved and
+    four actual ARO owner inputs appended before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:50845
+targets:
+- target_id: CHEBI:50845
+  path: data/antibiotics/antibacterial/doxycycline.yaml
+  label: doxycycline
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI and CARD/ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted CARD/ARO identity and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Fifteen adopted resistance database edges
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted 16S rRNA target database edge
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: ARO target relation policy
+checks:
+- check_id: schema
+  name: Native schema
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/doxycycline.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Native strict terms
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/doxycycline.yaml --out /private/tmp/am-review-session/373-strict.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; no ERROR rows.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - validation
+- check_id: native-chemistry
+  name: Native graph and identifiers
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    373
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native graph, key, formula, charge and masses agree.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: all-exact-authorities
+  name: Attempted exact comparison including native ChEMBL
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/373-chemistry-all-exact.py
+    > /private/tmp/am-review-session/373-chemistry-all-exact-recheck.log 2>&1
+  status: failed
+  required: false
+  exit_code: 1
+  expected_exit_code: 0
+  summary: Exit 1 at the ChEMBL exact-graph assertion because CHEMBL1200699 includes
+    water. This executed failed comparison is retained; it is not an unavailable gate.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - chembl
+  - chemistry
+- check_id: authority-chemistry
+  name: Parent and hydrate comparison with explicit boundaries
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/373-chemistry-authorities.py
+    > /private/tmp/am-review-session/373-chemistry-authorities.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Twelve parent encodings match through reciprocal chirality-aware mappings
+    after explicit tautomer normalization; original parity at all six centers retained.
+    The wrong ChEMBL formula unit is separately verified as doxycycline plus water.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - chemistry
+  - chembl
+- check_id: adapter
+  name: Structured adapter before primary follow-up
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/373-adapter.py
+    > /private/tmp/am-review-session/373-adapter.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Dataset discovery and native gene/ribosome searches exit 0.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - adapter
+- check_id: adapter-summary
+  name: Translation module context
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/373-adapter-summary.py
+    > /private/tmp/am-review-session/373-adapter-summary.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Representative E. coli translation module 96 summary exits 0; not binding
+    or resistance proof.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - adapter
+- check_id: source-ledger
+  name: Whole source, citation, MIC and history ledger
+  command: .venv/bin/python /private/tmp/am-review-session/373-ledger.py > /private/tmp/am-review-session/373-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Seventeen inputs unchanged; fifteen resistance edges and target compared;
+    all twelve adopted and twenty-five current ARO citation dispositions; exact MIC
+    and seven ordered histories.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - owners
+  - leads
+  - resistance
+  - mic
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:50845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:50845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:50845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:50845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:50845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:50845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:50845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:50845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:50845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/doxycycline.yaml
+  locator: Whole 296-line native YAML
+  accessed_at: '2026-10-21T15:05:37Z'
+  support: supports
+  summary: Exact parent doxycycline with twenty synonyms, two parents and activity
+    roles, one curated MIC, fifteen database resistance edges and one explicitly primary-evidence-needed
+    16S target. No native source claim identifies a particular resistance gene as
+    the cause of isolate 0783 resistance.
+- evidence_id: chemistry
+  kind: authority
+  reference: CHEBI:50845; UNII:334895S862; PubChem CID54671203; KEGG C06973/D07876;
+    LMPK07000001; PDB CCD DXT
+  locator: 373-authority-chemistry.json; official ChEBI, GSRS, PubChem, KEGG, LipidMaps
+    and CCD snapshots
+  accessed_at: '2026-10-21T15:05:37Z'
+  support: supports
+  summary: Twelve encodings, including the independently fetched CHEMBL1433 candidate,
+    map to one neutral C22H24N2O8 doxycycline molecule with six configured centers.
+    ChEBI and GSRS agree with native JBIWCJUYHHGXTC-AKNGSSGZSA-N. Different enol/protonation
+    encodings were compared by explicit normalization that disables stereo removal,
+    preserves atom-neighbor ordering and parity, and requires reciprocal chirality-aware
+    matching. Formula and both masses agree. No epimer or salt correction is justified.
+  snapshot_sha256: 724de611a8450420aa6729082d28ef2b86ec8c0df9dac63a20bc7910c1223b50
+- evidence_id: chembl
+  kind: authority
+  reference: ChEMBL CHEMBL1200699 and CHEMBL1433
+  locator: 373-chembl.json molecule_structures/molecule_hierarchy; 373-chembl-parent.json;
+    explicit two-fragment comparison
+  accessed_at: '2026-10-21T14:57:30.021737Z'
+  support: refutes
+  summary: Native xrefs[10] points to CHEMBL1200699, whose full graph contains doxycycline
+    plus water and formula C22H26N2O9. Its largest organic fragment matches the parent,
+    but its complete formula unit does not. ChEMBL identifies CHEMBL1433 as the parent/active
+    molecule; that separately fetched graph matches the native parent with all six
+    centers. The mismatch concerns exact cross-reference placement, not the native
+    chemical graph.
+  snapshot_sha256: c744a79c4b59b30787a0bf5bc8a2dafc6de168473106502752c53a1728e9b31a
+- evidence_id: brands
+  kind: authority
+  reference: Slovak SUKL DEOXYMYKOIN 15/0179/85-CS; Austrian BASG Vibravenös 1-15051
+  locator: 373-deoxymykoin.html and .doc sections1-3; 373-deoxymykoin-spc.txt; 373-vibravenos.pdf
+    title and section6
+  accessed_at: '2026-10-21T14:59:34.821939Z'
+  support: refutes
+  summary: DEOXYMYKOIN is a named 100-mg tablet product containing 115.4 mg doxycycline
+    hyclate equivalent to 100 mg doxycycline. Vibravenös is a named 100-mg/5-mL ampoule
+    product containing doxycycline as hyclate. Thus native Deoxymykoin and the ASCII
+    rendering Vibravenos should be product-qualified BRAND_NAME aliases, not unqualified
+    EXACT_SYNONYM values. Product identity is distinct from free-parent chemical identity.
+  snapshot_sha256: 19d056c3370d5c246d686a2931910e1948c27adabfe3aa2be7f5d46d245cf857
+- evidence_id: brands-basg
+  kind: authority
+  reference: https://medikamente.basg.gv.at/documents/1-15051__DOTC_GEBR_INFO.pdf
+  locator: 373-vibravenos.pdf body title and section6; 373-vibravenos.txt
+  accessed_at: '2026-10-21T14:58:44.545213Z'
+  support: supports
+  summary: The actual leaflet body names Vibravenös, its ampoule formulation and hyclate
+    ingredient. The PDF metadata title is less specific and was not used as the identity
+    evidence.
+  snapshot_sha256: fb2d3dfae7c536cd37a759daad5a527c77029e5946eb46077a5489607268f589
+- evidence_id: terms
+  kind: authority
+  reference: CHEBI:26895; ARO:3000050; CHEBI:36047; CHEBI:38068
+  locator: 373-parent.json; 373-role38068.json; 371-role.json; 373-aro-blocks.json;
+    official doxycycline product labels
+  accessed_at: '2026-10-21T14:57:30.021117Z'
+  support: supports
+  summary: The fused tetracycline graph and official class definitions support the
+    parent/class. Conventional doxycycline labels support antibacterial use and malaria
+    use/prophylaxis at their stated regimens. The antimalarial role is not inferred
+    merely from antibacterial class. The native systematic name and alpha-6-deoxy
+    names are consistent with the independently mapped parent structure.
+  snapshot_sha256: 5d720f4b00acd57987c82a0c8bfa76ba5d5d0accf0102134dcdf5810a06ffe47
+- evidence_id: ribosome
+  kind: primary_source
+  reference: PMID:42225615; DOI:10.1038/s41467-026-73421-5
+  locator: 371-ribosome.xml main Methods, Results and Discussion; exact D9891 reagent
+    and 50-micromolar grid conditions
+  accessed_at: '2026-10-21T14:47:42.147458Z'
+  support: supports
+  summary: Original cryo-EM evidence directly locates doxycycline on E. coli BL21(DE3)
+    and C. burnetii NMII ribosomes, including the canonical 30S/16S binding region
+    and additional concentration/species-dependent sites. The experimental reagent
+    is doxycycline hyclate, Merck D9891, at 50 micromolar during grid preparation.
+    This supports the bound parent drug moiety and the broad 16S target, not an intact
+    anhydrous crystal binding, universal site occupancy or causal explanation of relative
+    MICs. The native target honestly remains a CARD assertion with PRIMARY_EVIDENCE_NEEDED
+    until separately curated.
+  snapshot_sha256: 73ad805876ddf07b6760a519cafdf4071dfceac327840d0de48039d7f0443404
+- evidence_id: resistance
+  kind: database
+  reference: Current CARD/ARO ontology and frozen adopted rows
+  locator: 373-aro-blocks.json all eighteen blocks; 374-current-aro.obo; 373-source-audit.json
+    all fifteen native edges
+  accessed_at: '2026-10-21T15:05:37Z'
+  support: supports
+  summary: All fifteen native determinant-to-doxycycline relations are present in
+    current ARO and reproduce the frozen source with their appropriate protection,
+    inactivation or efflux categories. Each native evidence note explicitly says database
+    assertion rather than primary citation. The current ontology was retrieved 2026-10-21T14:50:57Z
+    with SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4.
+  snapshot_sha256: 7549ecbb92d51a4222fd07d0bca4d568ae261dd964dbbaec94b766a675968bf7
+- evidence_id: resistance-primary
+  kind: primary_source
+  reference: PMID:33866063,33318011,33247717 and the other twenty-two current ARO
+    cited leads
+  locator: 373-resistance-core.json complete available abstracts; per-PMID dispositions
+    in 373-source-audit.json
+  accessed_at: '2026-10-21T14:58:44.544286Z'
+  support: context_only
+  summary: Tet63 and Tet64 abstracts explicitly include doxycycline phenotypes; Tet64
+    retains its B. ubonensis efflux-pump synergy and neighboring-drug distinctions.
+    Tet61 reduced susceptibility is expression-context dependent with additional tet58
+    in the reported S. aureus experiment. Several other abstracts concern tetracycline/minocycline,
+    gene transfer or class-level mechanism rather than an exact doxycycline assay.
+    PMID9662506 studies aminoglycoside-model-RNA binding, so it is not doxycycline
+    primary proof. These limits do not refute honestly qualified database edges.
+  snapshot_sha256: 5b05f13da14004ce350c645c743b5d22812e5feb29af080970118559842f387f
+- evidence_id: mic
+  kind: authority
+  reference: CDC/FDA AR Isolate Bank isolate0783; BioSample SAMN15040082
+  locator: 373-cdc.html/.txt exact isolate table and method; 373-biosample.html/.txt
+  accessed_at: '2026-10-21T14:57:31.277123Z'
+  support: supports
+  summary: The sources agree on E. faecium isolate 0783, study VRE-03 and SAMN15040082.
+    CDC reports modal broth-microdilution doxycycline MIC16 micrograms/mL, equivalent
+    to native16 mg/L, with R interpretation under CLSI2025 M100S35. It notes usual
+    assay variability. The record preserves the isolate and assay scope; this is not
+    a species-wide resistance claim or proof of any one determinant.
+  snapshot_sha256: a3b238380fe9c5659048f8a9af05555e09c881a74a0f807abd8f5a350d8d19d4
+- evidence_id: leads
+  kind: primary_source
+  reference: All adopted ChEBI/ARO citations
+  locator: 373-adopted-core.json twelve MED records; 373-source-audit.json individual
+    dispositions; 373-covid-case.xml and 373-cancer.xml
+  accessed_at: '2026-10-21T14:57:31.718783Z'
+  support: context_only
+  summary: All twelve adopted leads were resolved and their available complete abstracts
+    inspected. PMID19630297 has no abstract. Host-cell/animal cancer, vascular, IgE,
+    mitochondrial and lifespan studies do not become bacterial mechanism claims; two
+    ARO sources are reviews. The COVID source comprises four uncontrolled cases, not
+    controlled antiviral efficacy. The cancer paper methods specify Sigma doxycycline
+    without a catalog or exact solid form. No irrelevant role or causal graph is inferred
+    from these associations.
+  snapshot_sha256: 124e048987d4c4ef06ca0c1590970c5478db30c525d68b1e9696fb03f1350e95
+- evidence_id: clinical
+  kind: authority
+  reference: Exact product labels and primary clinical-study contexts
+  locator: 371-hyclate-label.xml; 372-monodox.xml; 371-periostat-fda.txt; 372-periodontal.pdf;
+    371-copd-core.json; 373-malaria-core.json
+  accessed_at: '2026-10-21T14:58:44.751254Z'
+  support: supports
+  summary: Official hyclate/monohydrate labels support specified susceptible urethral/endocervical
+    infection contexts. Periodontal use is supported by low-dose adjunctive formulations
+    and an original monohydrate randomized trial, not necessarily antibacterial killing.
+    Original COPD abstracts distinguish favorable short-term inpatient endpoints from
+    nonsignificant day-30 success and no prolonged time to next exacerbation in a
+    prednisolone-adjunct outpatient trial. The malaria traveller trial PMID14604928
+    primarily evaluates tolerability; it is not treated as a standalone efficacy demonstration.
+    These are bounded parent-drug uses, not a comparative solid-form efficacy claim.
+  snapshot_sha256: ebb4db77b46ac8e37790800f8fdad4482d5b793eb719f7938cf82e2af2853a49
+- evidence_id: documents
+  kind: primary_source
+  reference: US3019260 and US3200149
+  locator: 373-patent-US3019260-description.txt and 373-patent-US3200149-description.txt
+    inspected opening chemistry and epimer/separation passages
+  accessed_at: '2026-10-21T14:57:31.204840Z'
+  support: context_only
+  summary: The first patent concerns a broader 6-deoxy tetracycline series including
+    5-hydroxy compounds and epimers. The second distinguishes the alpha 6-deoxy series
+    from prior beta forms and discusses mixtures and separation during synthesis.
+    Both are relevant document links; neither is used as unrestricted exact-product
+    or biological assay evidence. Original scanned pages were not fully inspected.
+  snapshot_sha256: f0dd7c6e3f9468d59406f3301f726fe5ab28104397438cc0499c95c55fed2fcb
+- evidence_id: other-links
+  kind: authority
+  reference: ChemSpider10469369; VSDB1840; DrugCentral961; Wikipedia Doxycycline
+  locator: 373-chemspider.html structured identity; 373-vsdb.html; 373-drugcentral.html;
+    373-wikipedia.html
+  accessed_at: '2026-10-21T14:58:44.546384Z'
+  support: supports
+  summary: ChemSpider structured InChI/Key and VSDB identity resolve the doxycycline
+    parent. DrugCentral appropriately contains drug/product context with multiple
+    salt or hydrate products. Wikipedia resolves as the intended document link and
+    was not used as a primary chemical or mechanistic authority.
+  snapshot_sha256: a254f118c80adf45453bbc7e1235c77a073a45c22ce6d556424cea9de273dd79
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/modulome/96
+  locator: 373-adapter-results.json and 373-adapter-summary-results.json
+  accessed_at: '2026-10-21T15:05:37Z'
+  support: context_only
+  summary: Before primary follow-up, the adapter listed datasets and searched native
+    determinant/16S/ribosome terms. Translation module96 contains56 genes, including
+    rpsJ/rplV; it is representative E. coli expression context. It is not direct binding
+    evidence, a negative test for accessory resistance genes or an explanation of
+    E. faecium isolate0783.
+  snapshot_sha256: 9a8dbbe4f2f002e0b7cb5386ef3721fb907e387edd6f1840943f2052408fd2e2
+- evidence_id: owners
+  kind: database
+  reference: Maintained ChEBI and CARD/ARO sources plus curated MIC
+  locator: 373-inspect.json; 373-targets.yaml; 373-owner-append.json; 373-raw-rows.json;
+    373-source-audit.json
+  accessed_at: '2026-10-21T15:05:37Z'
+  support: supports
+  summary: All seventeen hashes remain unchanged. Identity fields, class/roles, fifteen
+    exact database edges, target provenance, all adopted citation dispositions and
+    seven ordered histories were reconciled. The wrong ChEMBL accession and brand-like
+    ARO synonyms reproduce the upstream ARO row; the curated MIC remains separate
+    from generated source projections.
+  snapshot_sha256: 96b6ea7b4fab6ec759b1cfbcc2c19a1b3d6e0df387b0b9e8437dedd015487f4e
+- evidence_id: validation
+  kind: validation
+  reference: Executed native and supplemental checks
+  locator: 373-focused-results.json; 373-strict.tsv; authority comparison logs; 373-ledger.log
+  accessed_at: '2026-10-21T15:05:37Z'
+  support: supports
+  summary: Native molecular, schema and strict checks pass. The attempted all-exact
+    authority check actually fails on the hydrate xref; the subsequent explicit parent-versus-hydrate
+    comparison passes and preserves that scientific finding.
+  snapshot_sha256: 10b9a77e23ff6ca0d04b21b1b6b6ffbb334a1f10833df61ee00fd6613204e293
+- evidence_id: access
+  kind: search
+  reference: Exact-identity, original-source and product-name follow-up
+  locator: 373-local-hits.txt includes ignored files; 373-fetch.json, 373-fetch2.json,
+    373-fetch3.json
+  accessed_at: '2026-10-21T15:05:37Z'
+  support: context_only
+  summary: HMDB returned403; MetaCyc served a login page rather than the compound
+    record; DrugBank remains inaccessible in the shared exact-drug attempt. Reaxys
+    was not accessed through a paid source. Tet64 and malaria full XML attempts returned500.
+    An opaque ARO web route returned404, replaced by the official ontology snapshot.
+    The large Azudoxat historical PDF downloaded but its relevant advertisement was
+    not visually inspected. A file named vibramycine actually contains a Vibramycin
+    leaflet, so it does not establish the extra-e alias.
+  snapshot_sha256: 4543a8b8f85ccd1428d2174c60bb08b81a1f0b03c7a0a661097b47859c420dff
+  search_scope: 373-local-hits.txt includes ignored files; 373-fetch.json, 373-fetch2.json,
+    373-fetch3.json
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Anhydrous parent and exact external graph
+  outcome: concern
+  summary: Native chemistry is coherent, but CHEMBL1200699 adds one water; exact mapping
+    must be corrected independently of the native graph.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - chemistry
+  - chembl
+- assessment_id: names
+  area: nomenclature
+  topic: Product aliases
+  outcome: concern
+  summary: Deoxymykoin and Vibravenos are officially named formulated medicines and
+    need BRAND_NAME typing.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - brands
+  - brands-basg
+  - owners
+- assessment_id: class
+  area: nomenclature
+  topic: Tetracycline and activity roles
+  outcome: supported
+  summary: Chemical class, antibacterial and antimalarial roles fit inspected authority
+    scope.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - terms
+  - clinical
+- assessment_id: target
+  area: evidence
+  topic: 16S rRNA binding
+  outcome: supported
+  summary: Native database provenance is honest and direct original structural evidence
+    supports binding of the parent moiety under specified hyclate/organism/concentration
+    conditions.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - ribosome
+  - resistance
+  - adapter
+- assessment_id: resistance
+  area: evidence
+  topic: Fifteen determinant edges
+  outcome: supported
+  summary: All native edges reproduce current/frozen ARO; primary abstract evidence
+    has explicitly bounded compound and expression scopes.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - resistance
+  - resistance-primary
+- assessment_id: exact-primary
+  area: evidence
+  topic: Completeness of direct resistance experiments
+  outcome: unknown
+  summary: Not every exact doxycycline determinant assay was inspected in full; adjacent
+    substrates and genetic-distribution abstracts cannot be promoted to direct exact-drug
+    evidence.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - resistance-primary
+- assessment_id: mic
+  area: evidence
+  topic: One CDC/FDA observation
+  outcome: supported
+  summary: Exact isolate, BioSample, method, units and interpretation agree.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - mic
+- assessment_id: uses
+  area: evidence
+  topic: Clinical definition scope
+  outcome: supported
+  summary: Clinical contexts are supported at parent-drug/formulation-specific scope
+    without universal efficacy or low-dose antibacterial-mechanism inference.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - clinical
+  - leads
+- assessment_id: links
+  area: identity
+  topic: Unresolved external content and remaining brands
+  outcome: unknown
+  summary: Blocked identifiers and unverified exact spellings remain unresolved; no
+    wrong-ID or brand conversion is asserted from inaccessible content.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - access
+  - other-links
+- assessment_id: provenance
+  area: provenance
+  topic: Owners, leads, history and checks
+  outcome: supported
+  summary: Whole record and all adopted leads audited, source hashes preserved and
+    actual failed optional comparison retained.
+  target_ids:
+  - CHEBI:50845
+  evidence_ids:
+  - owners
+  - validation
+  - leads
+findings:
+- finding_id: F1
+  issue_key: doxycycline-exact-chembl-link-denotes-monohydrate
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: An exact ChEMBL cross-reference denotes the monohydrate
+  description: CHEMBL1200699 contains an additional water molecule and C22H26N2O9,
+    whereas this exact record is neutral C22H24N2O8. Shared parent connectivity does
+    not make complete formula units identical. Independently fetched CHEMBL1433 is
+    the official parent candidate and matches the native graph with all six centers.
+  target_ids:
+  - CHEBI:50845
+  field_paths:
+  - xrefs[10]
+  evidence_ids:
+  - chembl
+  - chemistry
+  - owners
+  rule_id: 'review-checklist: exact chemical identity and source grounding'
+  native_severity: Major exact identity or semantic typing correction
+  normalization_reason: This is a confirmed exact-form grounding mismatch. The native
+    molecule remains supported, so the issue is major rather than a wrong-record blocker.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO cross-reference and alias row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction and future maintained exact-form/type correction lane
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Projection of normalized identifiers and synonym types
+- finding_id: F2
+  issue_key: doxycycline-aro-product-brands-typed-exact-synonyms
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Two confirmed product brands are typed as exact chemical synonyms
+  description: Native Deoxymykoin and Vibravenos aliases identify official hyclate-containing
+    tablet/ampoule products. Preserve the names as BRAND_NAME aliases and retain their
+    source provenance. The finding does not automatically retype every other brand-like
+    string.
+  target_ids:
+  - CHEBI:50845
+  field_paths:
+  - synonyms[13].synonym_type
+  - synonyms[19].synonym_type
+  evidence_ids:
+  - brands
+  - brands-basg
+  - owners
+  rule_id: 'review-checklist: synonym types and product/form boundaries'
+  native_severity: Minor exact identity or semantic typing correction
+  normalization_reason: The names remain useful parent-drug aliases; the bounded error
+    is semantic product-name typing, not evidence that the chemical record denotes
+    the wrong compound.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO cross-reference and alias row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction and future maintained exact-form/type correction lane
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Projection of normalized identifiers and synonym types
+actions:
+- action_id: A1
+  description: During separately authorized curation, correct the ARO exact cross-reference
+    upstream and refresh its maintained extraction, or implement a narrowly scoped
+    maintained normalization/exclusion before seeding. Remove CHEMBL1200699 from exact
+    xrefs; adopt independently verified CHEMBL1433 only with preserved evidence. Keep
+    the monohydrate as a related form if an appropriate explicit representation is
+    used. Do not add water to this record to accommodate the wrong link.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:50845
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO cross-reference and alias row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction and future maintained exact-form/type correction lane
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Projection of normalized identifiers and synonym types
+  acceptance_checks:
+  - Native parent graph, formula and six configured centers remain unchanged.
+  - Every retained exact ChEMBL graph has the complete same formula unit and reciprocal
+    chirality-aware match; no fragment-stripping shortcut conceals hydration.
+  - The narrow correction survives extraction/reseeding; run native schema/strict
+    and required corpus/history/reference checks.
+- action_id: A2
+  description: During separately authorized curation, preserve Deoxymykoin and Vibravenos
+    as BRAND_NAME through an upstream typed correction or an explicitly implemented
+    maintained source/type override. Current ARO exact strings are otherwise projected
+    unchanged, so do not rely on a hand-edited generated YAML or invent a presently
+    unsupported config key. Retain existing correct ChEBI brand typing and separately
+    verify the remaining candidate brand spellings before changing them.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:50845
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO cross-reference and alias row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction and future maintained exact-form/type correction lane
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Projection of normalized identifiers and synonym types
+  acceptance_checks:
+  - Both confirmed names regenerate as BRAND_NAME with retained provenance and unchanged
+    spelling.
+  - No salt/form or product identity is silently promoted into the exact chemical
+    structure.
+  - Schema/strict and required full corpus/history/reference gates pass after the
+    separately authorized change.
+limitations:
+- All adopted leads and current ARO cited abstracts were inspected, but most resistance
+  primary full bodies and exact doxycycline assay tables were not. Honest database
+  assertions are preserved; incomplete direct evidence is not a universal negative
+  result.
+- The original ribosome experiment used hyclate reagent at 50 micromolar and specified
+  E. coli/C. burnetii preparations. It supports binding of the parent moiety, not
+  intact anhydrous crystals, universal ancillary sites or causal differences in susceptibility.
+- Clinical evidence mixes explicitly identified hyclate/monohydrate products and original
+  abstracts without exact solid form. Low-dose periodontal benefit is not equated
+  with bacterial killing, and COPD use is not generalized to benefit in every trial
+  or exacerbation.
+- Tautomer enumeration emitted a maximum-transform warning. The comparison nevertheless
+  found explicit reciprocal mappings with stereo removal disabled and original atom-level
+  parity preserved; it is not a claim to enumerate all possible tautomers.
+- HMDB and DrugBank content remained blocked, MetaCyc required login, and Reaxys was
+  not independently inspected. Access failure does not demonstrate a wrong identifier.
+- Azudoxat, Doxitard and the exact Vibramycine spelling were not authoritatively resolved
+  at the same level as the two confirmed brands. A search excerpt and a differently
+  spelled product leaflet were not substituted as proof.
+- Patent text inspections establish related synthetic-series and epimer context, not
+  full verification of every scanned experimental example. The current native graph
+  was independently checked against multiple explicit structures.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- The native MIC and generated evidence are not edited. Optional enrichment with direct
+  primary target evidence remains a separate curation action.
+- Standalone chemistry used the batch019 interpreter against batch038; schema/strict
+  and the source ledger used batch038.
+- An initial scratch chemistry helper had a missing newline and produced SyntaxError;
+  after correction the attempted all-exact comparison failed specifically on the monohydrate.
+  Both preparatory logs remain preserved, and the final separated parent/hydrate comparison
+  passed.
+- The broad source-row capture contains resistance rows for other antibiotics sharing
+  determinants; the executed ledger filters antibiotic_id ARO:0000069 and compares
+  exactly the fifteen native doxycycline edges.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:50845
+- https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1200699.json
+- https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1433.json
+- https://www.sukl.sk/deoxymykoin-90986
+- https://medikamente.basg.gv.at/documents/1-15051__DOTC_GEBR_INFO.pdf
+- https://doi.org/10.1038/s41467-026-73421-5
+- https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10094&PanelID=1130
+tags:
+- record-review
+- doxycycline
+- exact-form-xref
+- brand-typing
+- resistance-evidence
