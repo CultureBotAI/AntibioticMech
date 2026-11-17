@@ -118,3 +118,112 @@ def test_unknown_fields_still_fail_closed_validation(assessment_view, assessment
 def test_shared_reference_location_keeps_its_legacy_meaning(assessment_validator):
     data = {"reference": "PMID:12345678", "supports": "PARTIAL", "evidence_source": "abstract"}
     assert not list(assessment_validator.iter_results(data, target_class="SupportingReference"))
+
+
+def test_causal_edge_spec_preserves_and_validates_optional_assessments():
+    from jinja2 import Environment, FileSystemLoader
+
+    from antibioticmech.causal_graphs_curation import (
+        ALLOWED_EVIDENCE_SOURCES,
+        ALLOWED_SUPPORT_LEVELS,
+        EVIDENCE_ITEM_KEYS,
+        validate_causal_edge_spec,
+    )
+
+    expected_keys = {
+        "reference",
+        "snippet",
+        "notes",
+        "supports",
+        "evidence_source",
+    }
+    assert expected_keys == EVIDENCE_ITEM_KEYS
+    assert ALLOWED_SUPPORT_LEVELS == SUPPORT
+    assert ALLOWED_EVIDENCE_SOURCES == SOURCES
+
+    base_edge = {
+        "subject": "n1",
+        "predicate": "inhibits",
+        "predicate_id": "RO:0002408",
+        "object": "n2",
+        "description": "Direct enzymatic inhibition.",
+        "evidence": [
+            {
+                "reference": "PMID:12345678",
+                "snippet": "Verbatim passage.",
+            }
+        ],
+    }
+    norm_plain = validate_causal_edge_spec(
+        base_edge, node_ids={"n1", "n2"}, context="test"
+    )
+    assert norm_plain["evidence"] == [
+        {"reference": "PMID:12345678", "snippet": "Verbatim passage."}
+    ]
+
+    assessed_edge = {
+        **base_edge,
+        "evidence": [
+            {
+                "reference": "PMID:12345678",
+                "supports": "SUPPORT",
+                "evidence_source": "IN_VITRO",
+                "snippet": "Verbatim passage.",
+                "notes": "Purified enzyme assay.",
+            }
+        ],
+    }
+    norm_assessed = validate_causal_edge_spec(
+        assessed_edge, node_ids={"n1", "n2"}, context="test"
+    )
+    assert norm_assessed["evidence"] == [
+        {
+            "reference": "PMID:12345678",
+            "supports": "SUPPORT",
+            "evidence_source": "IN_VITRO",
+            "snippet": "Verbatim passage.",
+            "notes": "Purified enzyme assay.",
+        }
+    ]
+
+    for bad_field, bad_val in (
+        ("supports", "HIGH_CONFIDENCE"),
+        ("supports", ""),
+        ("evidence_source", "abstract"),
+        ("evidence_source", ""),
+    ):
+        bad_edge = {
+            **base_edge,
+            "evidence": [
+                {
+                    "reference": "PMID:12345678",
+                    "snippet": "Verbatim passage.",
+                    bad_field: bad_val,
+                }
+            ],
+        }
+        with pytest.raises(ValueError, match=f"invalid {bad_field}"):
+            validate_causal_edge_spec(bad_edge, node_ids={"n1", "n2"}, context="test")
+
+    env = Environment(
+        loader=FileSystemLoader(str(ROOT / "src/antibioticmech/templates")),
+        autoescape=True,
+    )
+    tmpl = env.from_string(
+        '{% from "macros.html" import evidence_list %}{{ evidence_list(items) }}'
+    )
+    plain_html = tmpl.render(items=norm_plain["evidence"])
+    expected_href = "https://pubmed.ncbi.nlm.nih.gov/12345678"
+    assert (
+        plain_html.strip()
+        == '<ul class="plain evidence">\n'
+        "  \n"
+        f'  <li><span class="meta"><a href="{expected_href}">PMID:12345678</a></span>'
+        " — &#34;Verbatim passage.&#34;</li>\n"
+        "  \n"
+        "</ul>"
+    )
+    assessed_html = tmpl.render(items=norm_assessed["evidence"])
+    assert "[SUPPORT]" in assessed_html
+    assert "[IN_VITRO]" in assessed_html
+

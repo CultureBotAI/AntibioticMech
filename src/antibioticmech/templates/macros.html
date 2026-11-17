@@ -1,11 +1,11 @@
-{# Shared rendering helpers. Evidence (EvidenceItem: reference/snippet/notes) shows
-   up on molecular targets, causal-graph edges and record-level claims alike, so it
-   is one macro rather than four copies of the same three-field list. #}
+{# Shared rendering helpers. Evidence (EvidenceItem: reference/snippet/notes plus optional
+   supports/evidence_source) shows up on molecular targets, causal-graph edges and
+   record-level claims alike, so it is one macro rather than copies of the same list. #}
 {% macro evidence_list(items) %}
 {% if items %}
 <ul class="plain evidence">
   {% for e in items %}
-  <li><span class="meta">{{ reference_link(e.reference) }}</span>{% if e.snippet %} — "{{ e.snippet }}"{% endif %}{% if e.notes %} <span class="meta">({{ e.notes }})</span>{% endif %}</li>
+  <li><span class="meta">{{ reference_link(e.reference) }}</span>{% if e.supports %} <span class="meta">[{{ e.supports }}]</span>{% endif %}{% if e.evidence_source %} <span class="meta">[{{ e.evidence_source }}]</span>{% endif %}{% if e.snippet %} — "{{ e.snippet }}"{% endif %}{% if e.notes %} <span class="meta">({{ e.notes }})</span>{% endif %}</li>
   {% endfor %}
 </ul>
 {% endif %}

@@ -132,6 +132,30 @@ EVIDENCE_ITEM_KEYS = {
     "reference",
     "snippet",
     "notes",
+    "supports",
+    "evidence_source",
+}
+ALLOWED_SUPPORT_LEVELS = {
+    "SUPPORT",
+    "REFUTE",
+    "PARTIAL",
+    "NO_EVIDENCE",
+    "WRONG_STATEMENT",
+}
+ALLOWED_EVIDENCE_SOURCES = {
+    "FIELD_STUDY",
+    "MESOCOSM",
+    "LABORATORY",
+    "IN_VITRO",
+    "IN_VIVO",
+    "COMPUTATIONAL",
+    "META_ANALYSIS",
+    "REVIEW",
+    "REMOTE_SENSING",
+    "LONG_TERM_MONITORING",
+    "EXPERT_OPINION",
+    "DATABASE",
+    "OTHER",
 }
 
 _YAML_LOADER = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
@@ -337,7 +361,29 @@ def validate_causal_edge_spec(
             raise ValueError(
                 f"{context} ({subject} -> {obj} {ref}): evidence requires notes or snippet"
             )
+        raw_supports = ev.get("supports")
+        supports: str | None = None
+        if raw_supports is not None:
+            if not isinstance(raw_supports, str) or raw_supports.strip() not in ALLOWED_SUPPORT_LEVELS:
+                raise ValueError(
+                    f"{context} ({subject} -> {obj} {ref}): invalid supports {raw_supports!r} "
+                    f"(expected one of {sorted(ALLOWED_SUPPORT_LEVELS)})"
+                )
+            supports = raw_supports.strip()
+        raw_ev_source = ev.get("evidence_source")
+        ev_source: str | None = None
+        if raw_ev_source is not None:
+            if not isinstance(raw_ev_source, str) or raw_ev_source.strip() not in ALLOWED_EVIDENCE_SOURCES:
+                raise ValueError(
+                    f"{context} ({subject} -> {obj} {ref}): invalid evidence_source {raw_ev_source!r} "
+                    f"(expected one of {sorted(ALLOWED_EVIDENCE_SOURCES)})"
+                )
+            ev_source = raw_ev_source.strip()
         ev_dict: dict[str, str] = {"reference": ref}
+        if supports is not None:
+            ev_dict["supports"] = supports
+        if ev_source is not None:
+            ev_dict["evidence_source"] = ev_source
         if snippet:
             ev_dict["snippet"] = snippet
         if notes:
