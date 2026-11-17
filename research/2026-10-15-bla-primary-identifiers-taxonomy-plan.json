@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-15",
+  "release": "2026_03",
+  "canary": "ebr5-taxonomy",
+  "max_bytes": 2000000,
+  "requests": {
+    "ebr5-taxonomy": {
+      "query": "\"Empedobacter stercoris\" AND rank:species",
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Empedobacter+stercoris%22+AND+rank%3Aspecies&format=json&size=500"
+    },
+    "prc1-taxonomy": {
+      "query": "\"Pseudomonas wenzhouensis\" AND rank:species",
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Pseudomonas+wenzhouensis%22+AND+rank%3Aspecies&format=json&size=500"
+    },
+    "psz1-taxonomy": {
+      "query": "(\"Pantoea endophytica\" OR \"Pantoea sp. X85\")",
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%28%22Pantoea+endophytica%22+OR+%22Pantoea+sp.+X85%22%29&format=json&size=500"
+    }
+  },
+  "constraints": {
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "retries": 0,
+    "redirects_followed": 0,
+    "biological_record_writes": false,
+    "name_match_is_strain_or_allele_identity": false
+  },
+  "preflight": {
+    "ignored_files_included": true,
+    "existing_taxonomy_registry_entries_for_1628248_2906062_3037258": [],
+    "matching_report_receipts_attempts_plans": [],
+    "cache_inventory": "reports/resistance-grounding-2026-10-15-card-gene-reference-followup/taxonomy-cache-inventory.json",
+    "cache_inventory_sha256": "071db296d1418042946d97ffcd408151e2d665346a36b346df4f5ab048fc2d72",
+    "alternate_name_discovery": {
+      "name": "Pantoea sp. X85",
+      "url": "https://www.kegg.jp/kegg-bin/show_organism?org=pane",
+      "scope": "DISCOVERY_LABEL_ONLY_NOT_A_CROSSWALK_OR_SOURCE_ADOPTION"
+    }
+  }
+}

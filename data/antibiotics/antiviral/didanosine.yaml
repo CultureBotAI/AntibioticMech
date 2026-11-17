@@ -90,6 +90,536 @@ source_concepts:
   - CHEBI:36044
   - CHEBI:53756
   source_version: '2026-08-30'
+genotype_resistance_score_rules:
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:e8b453ac46c9ccbc
+  score_term_index: 1
+  score_term: 41L => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 1: 41L => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:4fae8ca44a521dda
+  score_term_index: 2
+  score_term: 62V => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 2: 62V => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:9b3eb24a079b7e0d
+  score_term_index: 3
+  score_term: MAX(65E => 10, 65N => 30, 65R => 60)
+  score_assignments: 3
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 3: MAX(65E => 10, 65N => 30, 65R => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:d0cdff332ac5a201
+  score_term_index: 4
+  score_term: MAX(67E => 5, 67G => 5, 67H => 5, 67N => 5, 67S => 5, 67T => 5, 67d
+    => 30)
+  score_assignments: 7
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 4: MAX(67E => 5, 67G => 5, 67H => 5, 67N => 5, 67S => 5,
+      67T => 5, 67d => 30)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:f64d1f2b8ec1725c
+  score_term_index: 5
+  score_term: 68d => 30
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 5: 68d => 30'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:4ca5fa2570ad6a53
+  score_term_index: 6
+  score_term: MAX(69G => 10, 69i => 60, 69d => 30, 69D => 30)
+  score_assignments: 4
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 6: MAX(69G => 10, 69i => 60, 69d => 30, 69D => 30)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:29fa1fd2465d85fb
+  score_term_index: 7
+  score_term: MAX(70E => 15, 70G => 15, 70N => 15, 70Q => 15, 70R => 10, 70S => 15,
+    70T => 15, 70d => 30)
+  score_assignments: 8
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 7: MAX(70E => 15, 70G => 15, 70N => 15, 70Q => 15, 70R =>
+      10, 70S => 15, 70T => 15, 70d => 30)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:fdd31b82cd052d8f
+  score_term_index: 8
+  score_term: MAX(74I => 60, 74V => 60)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 8: MAX(74I => 60, 74V => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:1af334c1f31c830c
+  score_term_index: 9
+  score_term: MAX(75I => 5, 75A => 15, 75M => 15, 75S => 15, 75T => 30)
+  score_assignments: 5
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 9: MAX(75I => 5, 75A => 15, 75M => 15, 75S => 15, 75T =>
+      30)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:858b2ac565ede7ac
+  score_term_index: 10
+  score_term: 77L => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 10: 77L => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:c816ae2e4dc372c0
+  score_term_index: 11
+  score_term: 116Y => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 11: 116Y => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:0bce0b19eb1ec325
+  score_term_index: 12
+  score_term: MAX(151L => 30, 151M => 60)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 12: MAX(151L => 30, 151M => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:2c33bd59726804b7
+  score_term_index: 13
+  score_term: MAX(184I => 10, 184V => 10)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 13: MAX(184I => 10, 184V => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:d33bc38cf50f9da5
+  score_term_index: 14
+  score_term: 210W => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 14: 210W => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:502be1e46625a276
+  score_term_index: 15
+  score_term: MAX(215F => 15, 215Y => 15, 215A => 10, 215C => 10, 215D => 10, 215E
+    => 10, 215I => 10, 215L => 10, 215N => 10, 215S => 10, 215V => 10)
+  score_assignments: 11
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 15: MAX(215F => 15, 215Y => 15, 215A => 10, 215C => 10,
+      215D => 10, 215E => 10, 215I => 10, 215L => 10, 215N => 10, 215S => 10, 215V
+      => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:921023ef3ab5c8c1
+  score_term_index: 16
+  score_term: MAX(41L AND 215FY => 10, 41L AND 215ACDEILNSV => 5)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 16: MAX(41L AND 215FY => 10, 41L AND 215ACDEILNSV => 5)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:b8d39566b5dfe60a
+  score_term_index: 17
+  score_term: MAX(210W AND 215FY => 10, 210W AND 215ACDEILNSV => 5)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 17: MAX(210W AND 215FY => 10, 210W AND 215ACDEILNSV => 5)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:249245838e8ba57d
+  score_term_index: 18
+  score_term: 41L AND 210W => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 18: 41L AND 210W => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:e85d4a0b5c43d2e4
+  score_term_index: 19
+  score_term: 41L AND 44AD AND 210W AND 215FY => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 19: 41L AND 44AD AND 210W AND 215FY => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:f9221fb07adc0034
+  score_term_index: 20
+  score_term: 40F AND 41L AND 210W AND 215FY => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 20: 40F AND 41L AND 210W AND 215FY => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:79522e626d36b4d1
+  score_term_index: 21
+  score_term: MAX(219E => 5, 219N => 5, 219Q => 5, 219R => 5, 219W => 5)
+  score_assignments: 5
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 21: MAX(219E => 5, 219N => 5, 219Q => 5, 219R => 5, 219W
+      => 5)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:d58b90138e05fcd9
+  score_term_index: 22
+  score_term: 41L AND 67EGN AND 215FY => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 22: 41L AND 67EGN AND 215FY => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:f06eb52658c9e465
+  score_term_index: 23
+  score_term: 67EGN AND 215FY AND 219ENQR => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 23: 67EGN AND 215FY AND 219ENQR => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:f8b7d5e34ab7185e
+  score_term_index: 24
+  score_term: 67EGN AND 70R AND 219ENQR => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 24: 67EGN AND 70R AND 219ENQR => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:2f45002f1b6cfe84
+  score_term_index: 25
+  score_term: 70R AND 215FY => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 25: 70R AND 215FY => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: DDI
+  source_rule_id: hivdb_hivfacts:bd1c972ec1feb44b
+  score_term_index: 26
+  score_term: 77L AND 116Y AND 151M => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 DDI score term 26: 77L AND 116Y AND 151M => 10'
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -726,3 +1256,8 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-28T17:24:07Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: genotype_resistance_score_rules (HIVDB_HIVFACTS be1c11a5145fea9073fdb71801919d4a34265336).
+    Upstream retrieval date 2026-08-30, unchanged.'

@@ -1,0 +1,187 @@
+{
+  "adversarial_review": "SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "all_other_record_fields_preserved": true,
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "9390754b301a563773cf5dd310322e34966e259442566c0c2e04b38753178a33"
+    },
+    {
+      "path": "research/2026-10-09-nimb-primary-checkpoint-reconciliation.json",
+      "sha256": "09bc47980d92ed4e01ada7fadc4e80b08b4959fac5c8706f4f6070e00508a90e"
+    },
+    {
+      "path": "research/2026-10-09-nimb-primary-context.json",
+      "sha256": "1209953d4e807934fe0cf8b65c5577c2c16de759ff786a6e0de0a5e8d4bdcce3"
+    },
+    {
+      "path": "research/2026-10-09-nimb-primary-curation.json",
+      "sha256": "7fcd476ae6131c1700e85bec35aca3442c5696ff5708abe82ea55f0bb41cff1b"
+    },
+    {
+      "path": "research/2026-10-09-nimb-primary-resistance-grounding.tsv",
+      "sha256": "59b9937cd2ccba6dc88c6483e72c0f1964f3a46938052b647bdb96ab297af6ae"
+    },
+    {
+      "path": "research/2026-10-09-nimb-primary-resistance-progress.json",
+      "sha256": "4abebc668c14088d59a88e95c017873030a9d47134ac8234df11c49e184810d2"
+    },
+    {
+      "path": "research/2026-10-09-nimb-primary-resistance-progress.tsv",
+      "sha256": "d9777d3fbc4ccac81bc23af96bb731440a81005f7c9f141b7150aaf73a2d1c75"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "d4be3085e51b83e94e4864f99afa6fa91fe4e6b22d90cf6acd5383394031b5e6"
+    },
+    {
+      "path": "tests/test_nimb_primary_curation.py",
+      "sha256": "5c803847bea07efdad1d9151b1fb865cba27a7eebb05acc620b294e8349970b1"
+    }
+  ],
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-09-nimb-primary/canary-review.json",
+    "sha256": "e6d884eacbd0918fd5fbf8238fbb38e2fbbf0176c38fb8dca1ee05ef2db78bbc"
+  },
+  "changed_protected_files": {
+    "data/antibiotics/antibacterial/metronidazole.yaml": {
+      "after_sha256": "aa73863504ab7267d085d53505986514b25d4b57ff58a342137f11f5ab5fdb2e",
+      "before_sha256": "fff04f6c19727cf87ad2abc2efe00f6f7491128b2fd75ab5e6a2d2a081dc8fb5"
+    },
+    "pages/antibacterial/metronidazole.html": {
+      "after_sha256": "4bf91be36355c1c457c21e0fcc3da6d1d83b228f15221c9657216a40d28bb33b",
+      "before_sha256": "774858ce9bcdcfae27d7e0bcfd50533ff04b93658ce3e954fbb636b6d751a0d8"
+    },
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "9390754b301a563773cf5dd310322e34966e259442566c0c2e04b38753178a33",
+      "before_sha256": "023b20ba73f42b60891e2bbcaad8914b7fc3f2b05bbf86448dca90d7ec179566"
+    },
+    "scripts/summarize_resistance_progress.py": {
+      "after_sha256": "d4be3085e51b83e94e4864f99afa6fa91fe4e6b22d90cf6acd5383394031b5e6",
+      "before_sha256": "f4b6be519b9d18afb34356af37c7ff4d720f76f0b251fa07085025528702348c"
+    }
+  },
+  "claims_added": 5,
+  "curator_claims": 64,
+  "curator_records": 34,
+  "current_ledger": {
+    "path": "research/2026-10-09-nimb-primary-resistance-grounding.tsv",
+    "sha256": "59b9937cd2ccba6dc88c6483e72c0f1964f3a46938052b647bdb96ab297af6ae"
+  },
+  "current_record_hashes_verified": 2939,
+  "date": "2026-10-09",
+  "embedding_preservation": {
+    "path": "reports/resistance-grounding-2026-10-09-nimb-primary/embedding-preservation.json",
+    "sha256": "a97599604d771af343a0b4eef0eed873dbb203f1eabd8904f1511ddb1eca14f3"
+  },
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-nimb-primary/focused-tests.xml",
+    "sha256": "38c8901045c71717df0bd24920abf8f1d08e046bdfa0448dae6708c0ececab4d"
+  },
+  "focused_tests_passed": 346,
+  "full_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-nimb-primary/full-tests.xml",
+    "sha256": "aba1dc2ca01c87908845fd9548080c5faafd4db24ec4abdae06bbce91c7e3c4d"
+  },
+  "full_test_skip_details": [
+    {
+      "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+      "test": "tests.test_card_structure_links.test_cached_export_reproduces_when_research_cache_is_available"
+    },
+    {
+      "reason": "got empty parameter set for (path)",
+      "test": "tests.test_skill_frontmatter.test_command_frontmatter_has_no_duplicate_keys[NOTSET]"
+    },
+    {
+      "reason": "got empty parameter set for (path)",
+      "test": "tests.test_skill_frontmatter.test_command_frontmatter_is_valid_yaml[NOTSET]"
+    },
+    {
+      "reason": "got empty parameter set for (path)",
+      "test": "tests.test_skill_frontmatter.test_command_declares_a_usable_description[NOTSET]"
+    }
+  ],
+  "full_test_warning_context": "Existing sssom_schema LinkML dataclass-extension deprecation warning.",
+  "full_test_warnings": 1,
+  "full_tests_passed": 2729,
+  "full_tests_skipped": 4,
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "ignored_files_included": true,
+  "ncbi_endpoint_requests": 0,
+  "new_files_before_verification_receipt": [
+    {
+      "path": "research/2026-10-09-nimb-primary-checkpoint-reconciliation.json",
+      "sha256": "09bc47980d92ed4e01ada7fadc4e80b08b4959fac5c8706f4f6070e00508a90e"
+    },
+    {
+      "path": "research/2026-10-09-nimb-primary-context.json",
+      "sha256": "1209953d4e807934fe0cf8b65c5577c2c16de759ff786a6e0de0a5e8d4bdcce3"
+    },
+    {
+      "path": "research/2026-10-09-nimb-primary-curation.json",
+      "sha256": "7fcd476ae6131c1700e85bec35aca3442c5696ff5708abe82ea55f0bb41cff1b"
+    },
+    {
+      "path": "research/2026-10-09-nimb-primary-resistance-grounding.tsv",
+      "sha256": "59b9937cd2ccba6dc88c6483e72c0f1964f3a46938052b647bdb96ab297af6ae"
+    },
+    {
+      "path": "research/2026-10-09-nimb-primary-resistance-progress.json",
+      "sha256": "4abebc668c14088d59a88e95c017873030a9d47134ac8234df11c49e184810d2"
+    },
+    {
+      "path": "research/2026-10-09-nimb-primary-resistance-progress.tsv",
+      "sha256": "d9777d3fbc4ccac81bc23af96bb731440a81005f7c9f141b7150aaf73a2d1c75"
+    },
+    {
+      "path": "tests/test_nimb_primary_curation.py",
+      "sha256": "5c803847bea07efdad1d9151b1fb865cba27a7eebb05acc620b294e8349970b1"
+    }
+  ],
+  "outreach": 0,
+  "prior_claims_preserved": 18,
+  "prior_report_bytes_preserved": true,
+  "progress_reproduction": {
+    "path": "reports/resistance-grounding-2026-10-09-nimb-primary/progress-check.json",
+    "sha256": "bc46f6402781c45eccaefe0a6bc216bdef28c7e01cf84065ed98a118b5a65d6d"
+  },
+  "protected_files": 6854,
+  "protected_files_unchanged": 6850,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-nimb-primary/protected-before.json",
+    "sha256": "72f758ef81ff60a462fac7e3200ecd69969eed503633ddce31c399dfeb56b334"
+  },
+  "qc_gates": [
+    "lint",
+    "documentation",
+    "raw-data provenance",
+    "source queue",
+    "curator antibiotic structures",
+    "tests",
+    "schema validation",
+    "corpus reproduction",
+    "chemical map",
+    "generated site",
+    "corpus report"
+  ],
+  "qc_receipt": {
+    "path": "reports/resistance-grounding-2026-10-09-nimb-primary/full-qc-exit.json",
+    "sha256": "7d1d41f2c11f9d77bbb56fcbd9b1cf7f6cc102ed9ec5fcb02d559bf5f5ae79da"
+  },
+  "records_byte_identical": 2938,
+  "records_changed": 1,
+  "remaining_limits": [
+    "Observational clinical association, not biochemical mechanism or causal proof.",
+    "Species grounding does not identify a strain TaxID, tested genome or exact allele.",
+    "The reference UniProt protein is not the experimental protein of these clinical isolates.",
+    "No source MIC is converted into a new breakpoint interpretation."
+  ],
+  "rendered_clinical_claims_verified": 5,
+  "scope": "QUALITATIVE_CLINICAL_COOCCURRENCE_NOT_EXACT_ALLELE_OR_COMPLETED_CORPUS_REVIEW",
+  "source_adoptions": 0,
+  "source_owned_slices_preserved": true,
+  "status": "ALL_AUTHORITATIVE_QC_GATES_PASSED",
+  "whole_corpus_primary_review": "OPEN",
+  "whole_records_completed": 0
+}

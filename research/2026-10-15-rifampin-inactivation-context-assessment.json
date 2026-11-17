@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-15",
+  "scope": "REFERENCE_IDENTITY_AND_PRIMARY_EVIDENCE_LIMITATIONS_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+  "terms": {
+    "rgt1438": {
+      "aro_id": "ARO:3002883",
+      "label": "rgt1438",
+      "pmids": ["22802246"],
+      "doi": "10.1128/AAC.01166-12",
+      "url": "https://journals.asm.org/doi/10.1128/aac.01166-12",
+      "source_organism": "Streptomyces sp. WAC1438",
+      "source_strain": "WAC1438",
+      "source_nucleotide_accession": "JX028276",
+      "source_accession_version_reported": false,
+      "query": "xref:embl-JX028276",
+      "locations": ["Nucleotide sequence accession number", "Results: WAC1438 inactivation and resistance", "Table 1 identity headings", "Tables 2-4 assay and substrate headings", "Discussion"],
+      "review": "JX028276 is the source-reported nucleotide deposit, not a protein or versioned assembly. Table 1 reports 16S relatedness to Streptomyces speibonae, not a verified species-level assignment of WAC1438. The study separates native-isolate drug inactivation and susceptibility effects from heterologous-host and biochemical results. Residual resistance after disruption indicates another mechanism; rgt1438 is not the sole explanation. The biochemical substrate tables include rifabutin and rifaximin, but not rifapentine. These results do not establish organismal resistance to every inherited rifamycin membership.",
+      "primary_access": "PUBLISHER_WEB_READER_SELECTED_TEXT_AND_TABLE_HEADINGS",
+      "native_primary_body_replay_available": false
+    },
+    "arr": {
+      "aro_id": "ARO:3000390",
+      "label": "rifampin ADP-ribosyltransferase (Arr)",
+      "pmids": ["18349144", "9869590"],
+      "doi": "10.1073/pnas.0711939105",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.0711939105",
+      "source_organism": "Mycobacterium smegmatis",
+      "reference_candidate": "UniProtKB:A0QRS5",
+      "structure": "2HW2",
+      "locations": ["Results: Diversity and Distribution of arr", "Results: Characterization of Arr Enzymatic Activity", "Table 2 subject and substrate headings", "Results: Crystal Structure of Rifampin-Bound Arr-ms", "Data deposition"],
+      "review": "Arr is a family context, not one universal allele. The paper distinguishes Arr-ms, Arr-sc and Arr-2, and deposits the Arr-ms structure as 2HW2. Its cellular comparison uses a heterologous host and does not establish native resistance in each source species. The displayed substrate headings include rifampin, rifabutin, rifamycin SV and rifaximin, not rifapentine. A structure-linked M. smegmatis reference cannot stand for Arr-sc, Arr-2, all family members or exact experimental derivatives.",
+      "primary_access": "PUBLISHER_WEB_READER_SELECTED_TEXT_AND_TABLE_HEADINGS",
+      "native_primary_body_replay_available": false,
+      "older_primary": {
+        "pmid": "9869590",
+        "doi": "10.1128/AAC.43.1.181",
+        "status": "WEB_READER_TECHNICAL_ERRORS_NO_NATIVE_HTTP_STATUS_PRIMARY_UNREVIEWED",
+        "attempted_urls": ["https://journals.asm.org/doi/10.1128/aac.43.1.181", "https://journals.asm.org/doi/10.1128/AAC.43.1.181-184.1999", "https://europepmc.org/article/MED/9869590"],
+        "biological_absence_inferred": false
+      }
+    },
+    "rphB": {
+      "aro_id": "ARO:3003992",
+      "label": "rphB",
+      "pmids": ["27929110"],
+      "doi": "10.1038/ncomms13803",
+      "url": "https://www.nature.com/articles/ncomms13803",
+      "source_organism": "Paenibacillus sp. LC231",
+      "source_strain": "LC231",
+      "source_wgs_accession": "JFOM00000000",
+      "source_nucleotide_accession_range": ["KX531043", "KX531056"],
+      "individual_gene_accession_assigned_from_range": false,
+      "query": "gene_exact:rphB AND organism_id:1120679",
+      "locations": ["Results: antibiotic-modifying enzyme context", "Table 1 subject and determinant headings", "Data availability"],
+      "review": "The LC231 study distinguishes a native organism, heterologous-host measurements and enzyme activity. Its WGS deposit and determinant-accession range do not specify which nucleotide accession belongs to rphB; range order is not a crosswalk. The existing LC231 taxonomy name has native species rank despite containing the word strain. Neither the species node nor a homolog identifies an exact experimental allele.",
+      "primary_access": "REUSED_NATIVE_EUROPE_PMC_XML_SELECTED_SECTIONS",
+      "native_primary_body_replay_available": true
+    }
+  },
+  "constraints": {
+    "figure_pixels_reviewed": false,
+    "supplements_reviewed_this_followup": false,
+    "whole_papers_reviewed": false,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "biological_record_writes": false,
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "full_investigation_complete": false
+  }
+}

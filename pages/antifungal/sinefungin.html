@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antifungal.html">ANTIFUNGAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>sinefungin</h1>
 <p class="meta">
   <code class="curie">CHEBI:45453</code>
@@ -36,16 +47,19 @@ signed off on this record yet.</p></div>
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_22260">CHEBI:22260</a>      <code class="curie">CHEBI:22260</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_83925">CHEBI:83925</a>      <code class="curie">CHEBI:83925</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_22260"><code class="curie">CHEBI:22260</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_83925"><code class="curie">CHEBI:83925</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C15H23N7O5</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>381.393 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>381.17607 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">LMXOHSDXUQEUSF-YECHIGJVSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">Nc1ncnc2c1ncn2[C@@H]1O[C@H](C[C@@H](N)CC[C@H](N)C(=O)O)[C@@H](O)[C@H]1O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C15H23N7O5/c16-6(1-2-7(17)15(25)26)3-8-10(23)11(24)14(27-8)22-5-21-9-12(18)19-4-20-13(9)22/h4-8,10-11,14,23-24H,1-3,16-17H2,(H,25,26)(H2,18,19,20)/t6-,7-,8+,10+,11+,14+/m0/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -82,13 +96,14 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_35718">CHEBI:35718</a>    <code class="curie">CHEBI:35718</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antifungal agent  <a href="http://purl.obolibrary.org/obo/CHEBI_35718"><code class="curie">CHEBI:35718</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -101,10 +116,101 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
 
 
 
 
+
+<h2>Resistance mechanisms</h2>
+<p class="meta">5 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
+<details class="details-group" open>
+  <summary>UNKNOWN <span class="pill plain">3</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
+<table>
+    <caption>UNKNOWN</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>Laboratory ABD1-associated sinefungin resistance<br><span class="meta">Context-dependent association in W303 derivatives, not a species-wide phenotype. Experimental allele, protein and genome unresolved. The stronger combined-context effect is not assigned to this gene individually; a specific molecular resistance route is not asserted.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a> <span class="meta">ABD1</span></td>
+      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/17932050">PMID:17932050</a></span> <span class="meta">(Results and native Figures 7; DOI:10.1093/nar/gkm817. Comparative growth, not a standardized MIC.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/P32783/entry">https://www.uniprot.org/uniprotkb/P32783/entry</a></span> <span class="meta">(Reference-only UniProtKB:P32783, entry version 191, sequence version 1, release 2026_03; ABD1 in S288c (NCBITaxon:559292). Not the tested W303 derivative or an exact resistance allele.)</span></li>
+</ul>
+<span class="meta">Comparative growth susceptibility</span></td>
+    </tr>
+    <tr>
+      <td>Laboratory SAM1-associated sinefungin resistance<br><span class="meta">Context-dependent association in W303 derivatives, not a species-wide phenotype. Experimental allele, protein and genome unresolved. The stronger combined-context effect is not assigned to this gene individually; a specific molecular resistance route is not asserted.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a> <span class="meta">SAM1</span></td>
+      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/17932050">PMID:17932050</a></span> <span class="meta">(Results and native Figures 7; DOI:10.1093/nar/gkm817. Comparative growth, not a standardized MIC.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/P10659/entry">https://www.uniprot.org/uniprotkb/P10659/entry</a></span> <span class="meta">(Reference-only UniProtKB:P10659, entry version 228, sequence version 2, release 2026_03; SAM1 in S288c (NCBITaxon:559292). Not the tested W303 derivative or an exact resistance allele.)</span></li>
+</ul>
+<span class="meta">Comparative growth susceptibility</span></td>
+    </tr>
+    <tr>
+      <td>Laboratory SAM2-associated sinefungin resistance<br><span class="meta">Context-dependent association in W303 derivatives, not a species-wide phenotype. Experimental allele, protein and genome unresolved. The stronger combined-context effect is not assigned to this gene individually; a specific molecular resistance route is not asserted.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a> <span class="meta">SAM2</span></td>
+      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/17932050">PMID:17932050</a></span> <span class="meta">(Results and native Figures 7; DOI:10.1093/nar/gkm817. Comparative growth, not a standardized MIC.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/P19358/entry">https://www.uniprot.org/uniprotkb/P19358/entry</a></span> <span class="meta">(Reference-only UniProtKB:P19358, entry version 217, sequence version 3, release 2026_03; SAM2 in S288c (NCBITaxon:559292). Not the tested W303 derivative or an exact resistance allele.)</span></li>
+</ul>
+<span class="meta">Comparative growth susceptibility</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
+<details class="details-group">
+  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
+    <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>Laboratory ABD1 target-alteration association with sinefungin resistance<br><span class="meta">Distinct 2025 laboratory association, not the earlier expression-context finding or a species-wide phenotype. Reference-sequence identity does not identify experimental alleles, strains or genomes; none is assigned. K. lactis biochemical results and modeled orthologs are not organismal resistance evidence.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a> <span class="meta">ABD1</span></td>
+      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/40682821">PMID:40682821</a></span> <span class="meta">(Results and native Figures 3-4; DOI:10.1093/nar/gkaf538. Relative growth and enzyme inhibition are distinct endpoints, not standardized MICs.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniparc/UPI000005318F">https://www.uniprot.org/uniparc/UPI000005318F</a></span> <span class="meta">(Reference-only archive link, release 2026_03: historical UniProtKB:A6ZLH5 (YJM789, NCBITaxon:307796) is inactive; UniProtKB:P32783 (S288c, NCBITaxon:559292) remains active. Same archived reference sequence does not establish strain or experimental-allele equivalence.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/P32783/entry">https://www.uniprot.org/uniprotkb/P32783/entry</a></span> <span class="meta">(Current reference only: entry version 191, sequence version 1, release 2026_03. Not assigned as an experimental resistance protein accession.)</span></li>
+</ul>
+<span class="meta">Comparative yeast growth with corroborating biochemical inhibition assays</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
+<details class="details-group">
+  <summary>REDUCED_PERMEABILITY <span class="pill plain">1</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: REDUCED_PERMEABILITY" tabindex="0">
+<table>
+    <caption>REDUCED_PERMEABILITY</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>Laboratory SAM3-associated sinefungin resistance<br><span class="meta">Context-dependent association in W303 derivatives, not a species-wide phenotype. Experimental allele, protein and genome unresolved. Reduced uptake is the authors&#39; genetic interpretation, not an efflux measurement; the opposite-direction control is retained in the dossier.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a> <span class="meta">SAM3</span></td>
+      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/17932050">PMID:17932050</a></span> <span class="meta">(Results and native Figures 3, 4 and 6; DOI:10.1093/nar/gkm817. Comparative growth, not a standardized MIC.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/Q08986/entry">https://www.uniprot.org/uniprotkb/Q08986/entry</a></span> <span class="meta">(Reference-only UniProtKB:Q08986, entry version 170, sequence version 1, release 2026_03; SAM3 in S288c (NCBITaxon:559292). Not the tested W303 derivative or an exact resistance allele.)</span></li>
+</ul>
+<span class="meta">Comparative growth susceptibility</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
 
 
 
@@ -133,32 +239,52 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-13 · codex · LLM-assisted</span>
+    <p>Added four qualified laboratory yeast gene associations from inspected primary results. UniProt identifiers remain reference-only; no experimental allele, protein, genome or numerical AST assigned. Preserved existing owners and left whole-record review open.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-13 · codex · LLM-assisted</span>
+    <p>Added a distinct 2025 laboratory ABD1 target-alteration association from primary figures. Grounded historical/current reference correspondence through UniParc without transferring reference strain or protein IDs to tested alleles. Preserved four earlier claims; no genome or numerical AST assigned. Whole-record review remains open.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antifungal/sinefungin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antifungal/sinefungin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=sinefungin">MediaIngredientMech (sinefungin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=sinefungin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=sinefungin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=sinefungin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=sinefungin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

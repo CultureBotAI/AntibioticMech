@@ -1,0 +1,364 @@
+{
+  "authoritative_runner": {
+    "path": "scripts/run_qc.py",
+    "sha256": "14c7eb66f38c078e2fe51331e98525a1bc5e189894b5e4ba22564ad6c85095d2"
+  },
+  "baseline": {
+    "path": "reports/cdsa-qualification-2026-10-15/baseline.json",
+    "sha256": "c6103a4d5db4f32898cb52530140c2e0568eb46ac5ba12e0ab1fe16ed683c774"
+  },
+  "baseline_files_checked": 7754,
+  "canary": {
+    "path": "reports/cdsa-qualification-2026-10-15/canary.json",
+    "sha256": "e2ebe42bc76671c4795f111b99e17b06e8681833bcd1e3497970a294f20d5e83"
+  },
+  "changed_existing_files": [
+    {
+      "after_sha256": "6b38d17c52d8b0123e7bb2ece35341322269f0efb79b47d66d513b3c6bf6830d",
+      "before_sha256": "289d45797f11d85fc535a61991f0f559b83cd307625c4df31aab52f865a8b71e",
+      "path": "curation/card_evidence_reviews.json"
+    },
+    {
+      "after_sha256": "280f96b6f76fa056b70bceb1e5c748fe9dd74850abcae39ac8cdf3e6e81ceccc",
+      "before_sha256": "2b8020dd24bb1b98b69d0b5286ee979baa65c123be1bf2cf3344a034049f74cd",
+      "path": "data/antibiotics/antibacterial/colistin-a.yaml"
+    },
+    {
+      "after_sha256": "cfd403df2e48958b40fc4354605c363170d6d52b2569e8fe77b701151c5b6350",
+      "before_sha256": "6a7050a96a3bd4403760cefc7a1c502bd67b4a235790a6c9bff98fcd9053e10c",
+      "path": "data/antibiotics/antibacterial/colistin-b.yaml"
+    },
+    {
+      "after_sha256": "47f0b5131772bc7593b52243400a379e6a9d299a63dd3a982b1fd22098839511",
+      "before_sha256": "4de6b2eda6d5db3c21fdd86fe918d25b5f4b09c06b41e4c25a83a8b23f400656",
+      "path": "data/antibiotics/antibacterial/daptomycin.yaml"
+    },
+    {
+      "after_sha256": "2d14fa9991be8f9cebf525c9b74a3ba87822d4f85a59efc07caeb006a83a4d82",
+      "before_sha256": "3c9726dea285943c9a78252cee6a0be456df57723036ed5aa86e08c2b9219578",
+      "path": "data/antibiotics/antibacterial/pleuromutilin.yaml"
+    },
+    {
+      "after_sha256": "23b6d27fcf03324f300fb9beef86c408da990a6a633aa69d991671490ff1e5e2",
+      "before_sha256": "7c523c2c568ba5d01495663fe9238c98f9410fab1bcfbbe6d55f962b4940711e",
+      "path": "pages/antibacterial/colistin-a.html"
+    },
+    {
+      "after_sha256": "4473908b287d244172b03f58f0573b6976b601b37ee433e896dded8f092d0df3",
+      "before_sha256": "bb9859f9bbaf5135323a6e2faaa7e7e6ea2e0f13a1e1b917fd77a7da8d0757e3",
+      "path": "pages/antibacterial/colistin-b.html"
+    },
+    {
+      "after_sha256": "d0a2aef7e9bad68d001aa7c28f1d47126092981426e449b0484938f94c1fe66c",
+      "before_sha256": "ef50a29063b36e0e2113072c955b666ed56e433eb6965eb4557e449e5cffeb97",
+      "path": "pages/antibacterial/daptomycin/activity-1.html"
+    },
+    {
+      "after_sha256": "a1954794780d006e560644f9d1731e78b8481a087b151cf579e1dbb409a80fe6",
+      "before_sha256": "ccfe6a0977dd8c427dae7b76a5a51df82d8a76d3dbd7870d1a7ccbb1edbcefee",
+      "path": "pages/antibacterial/daptomycin.html"
+    },
+    {
+      "after_sha256": "1018fb03c15915aa301b7e34bf0eecab6f54ab4553e5ca7f36ce88b16e2a9b25",
+      "before_sha256": "b273463227d7c1869856a77a4a5aca4ac1fc0488c4f28447c7a792ed84673493",
+      "path": "pages/antibacterial/pleuromutilin.html"
+    },
+    {
+      "after_sha256": "64624c3481823c97214f1625dc836f42c242cd92f6726fd1fefd56388d49ae2e",
+      "before_sha256": "8cafaa4c546dae9da353fc1168a3019cbd2ddcbd9b93a59354aa190473d0dafe",
+      "path": "tests/conftest.py"
+    },
+    {
+      "after_sha256": "559f79fbec3b6333f72084677848f093be6a2d0f064458503ee461346bc0623a",
+      "before_sha256": "4fb17f1a2e5d35c95e334bbe9b6097f1ce4fa971068c71ac2b513824d74a6946",
+      "path": "tests/test_acr_reference_context.py"
+    },
+    {
+      "after_sha256": "51f53a89f692b9a235c804d2aa35b7908453ca597852706f853c92b83c817771",
+      "before_sha256": "af727b7c7e038508bae2f76f2349fcbb62908dbaf0ca63cbc6e818cd4a68dc1f",
+      "path": "tests/test_card_all_status_genes.py"
+    },
+    {
+      "after_sha256": "9490e09093822c505f205d3fc68dbefab38131c9917468d58fc2b53b528e154f",
+      "before_sha256": "7cd277a6e217536547b7fad6f81257497c4ee6d216dfa6503a86a149fb5a48f8",
+      "path": "tests/test_card_complex_members.py"
+    },
+    {
+      "after_sha256": "bd0c8cbce0c1c8ec85277f9c907db1fc54458d3db10c15d6c6e1b54bc77f27f0",
+      "before_sha256": "cc46b65ec5667551ddda72ab1a784d6832bc7805e6c39da6052cce842bc5bcce",
+      "path": "tests/test_card_evidence_reviews.py"
+    },
+    {
+      "after_sha256": "bb360c91b70db03a63680e0cf89cdee189dd400c161afe307c64df7ea2a56746",
+      "before_sha256": "dee569447168ec6892e40200d259e03ea9edeaa0aa6cced73931b7ed59e3804c",
+      "path": "tests/test_card_explicit_identifiers.py"
+    },
+    {
+      "after_sha256": "ba0799b5f2affac8e680a97d7f2b04be0b36d8d2a71a851037a9d0b708c127f1",
+      "before_sha256": "41f73ad7d1930caedf44f7ef2d9fab8acba18e741bd151cbe7c2b1697906c371",
+      "path": "tests/test_card_gene_reference_followup.py"
+    },
+    {
+      "after_sha256": "c940d3d47854de1ac34c13a7700e1971aa5a827e97d5ec65f9f416982aa38be1",
+      "before_sha256": "e337c16bde04a461df5e46635ccc6e358902fa075331f191e00a753ed6becc5e",
+      "path": "tests/test_card_name_crosswalks.py"
+    },
+    {
+      "after_sha256": "88a67730c8bb3e1bcd30a0cc84729969189f168b518f7d01645e14915e5ff2e8",
+      "before_sha256": "b2e2c23c31843b9732d58fd811eccefe3cbd67c29e6659f44080aa1512bbd816",
+      "path": "tests/test_card_name_holds.py"
+    },
+    {
+      "after_sha256": "9f5d7cbfa10cf1c747d88f355553096426dd1ab3314bb1118e6f502bec3638ec",
+      "before_sha256": "05e5dfce1fd9a78a8a9a0a81d004520563bd7a86558e31ea0f863219a5b35ec4",
+      "path": "tests/test_card_qualification_checkpoint.py"
+    },
+    {
+      "after_sha256": "497ba0297c597dcc52d7723f74004341c83976d559835ce76f5391f5a7774109",
+      "before_sha256": "792fef7e500cb72657e7223f69e13808b271be56e7f178ecfe6de476033d9f49",
+      "path": "tests/test_card_reference_lineages.py"
+    },
+    {
+      "after_sha256": "21e1a55ebca528b09daed0a406cfcc1c2c8319ff94db5e66d7fbaf0a993607a5",
+      "before_sha256": "eb31348950cfb80df28f1738f70437c79c287aaea67d6a3bfd8e808118d17584",
+      "path": "tests/test_card_source_aliases.py"
+    },
+    {
+      "after_sha256": "662ec513747578c5034359a9d569b499f0deb867dfda9888f5fdee7296fcae68",
+      "before_sha256": "20f5f23500dad01f5a81ea4d1031e71d14d21c9d62f78d7607ad9a62a27e9ba0",
+      "path": "tests/test_card_species_gene_context.py"
+    },
+    {
+      "after_sha256": "8082b8858260b1a9302e481563585953b47bbede4280c809c8b1a8109f34b6cc",
+      "before_sha256": "3025779a19934fa79454ee8b19384cb06a307325e96e559e84fe3da5014a70b2",
+      "path": "tests/test_card_unresolved_names.py"
+    },
+    {
+      "after_sha256": "d85c25c347a70e71f24f98e9be80f29ac9a25c6c41302a54b30696e3d90e1326",
+      "before_sha256": "1f67e2caf7f18e6230826f4e371f5e5817783bbeda53e256410db925651c632b",
+      "path": "tests/test_cdsa_cyp51_context.py"
+    },
+    {
+      "after_sha256": "a5aed7dc7c50b85784e92cf06fea23ac80a41db9c0bc081e9c2a8c6603c5f1af",
+      "before_sha256": "a653db236e3710f03c67aa537a1a6c88876f1f446a150018903050c6e0b0105b",
+      "path": "tests/test_daptomycin_locus_context.py"
+    },
+    {
+      "after_sha256": "9870cf3da7e1bebd05b7b6e844cfebdf6a812b319e5447a0bf506483aa688ab9",
+      "before_sha256": "fc4dc23dc5761d5f517588b453afe80a2c06b670af4990dd3814d9c23e16e51c",
+      "path": "tests/test_erm_name_context.py"
+    },
+    {
+      "after_sha256": "0eb227b1c2a2f768ebc7119052482bfe776d23e66c3ea70b708a8b6fd26b7fb6",
+      "before_sha256": "ee9c852c7511cabb4e1c1bbb95ff7ce91ae3b252f82c1c506d302e67265ee94c",
+      "path": "tests/test_kpn_locus_references.py"
+    },
+    {
+      "after_sha256": "64b9ddcf5ce1f8ac3d9b472b2cd0c0fc003c1d0619008696f43f559839f5283d",
+      "before_sha256": "207086bad40f1ea0d0ff61e8f158e1424e5f6924bffd811f53311644bf8a8b3e",
+      "path": "tests/test_m35_porin_context.py"
+    },
+    {
+      "after_sha256": "bd4101859dd63ebe2828bf4ac18b579cfeaa83ee9c52b56fa1061bf35da90691",
+      "before_sha256": "3f0e440873644e27966e076678bacad08d9802ac42da609b80ab415e30c3606b",
+      "path": "tests/test_mdea_evidence.py"
+    },
+    {
+      "after_sha256": "131601204886db533669b4d4e1cc11da469a36b492472ee84855ec744f113e9d",
+      "before_sha256": "7ac674c2bc07910faaef4da82742b4364c04c85bc648f5514e37de59de800ae0",
+      "path": "tests/test_mdea_primary.py"
+    },
+    {
+      "after_sha256": "84b641f515f8b47b5ec83109e0c814a99823d3f89309c828a64207f16e86fd74",
+      "before_sha256": "2d9f096faebe83262d48610257f5453791a757451dfa19bdf6093aea1597942d",
+      "path": "tests/test_mex_citation_followup.py"
+    },
+    {
+      "after_sha256": "299c2551a99fb65b419825dc856600a33593daa42bdcc5b817df22e9013888f1",
+      "before_sha256": "cd161fa9027779486e0f3469f677b54f0524b7a4439427f6d2402700cc075e26",
+      "path": "tests/test_mex_component_references.py"
+    },
+    {
+      "after_sha256": "54243277b090201bdd5552fbc361db7dced8fc6023561d287315d5c6535f5191",
+      "before_sha256": "1b7a78af8d7c11175a6333453a2d824a5063c963b597be82adf52ffd4232ff9e",
+      "path": "tests/test_mex_component_xrefs.py"
+    },
+    {
+      "after_sha256": "0a6da075dff40e37afb53a783357235be667c3141d9a430bbcb9dc0dba5549e7",
+      "before_sha256": "1945133b11932eb4cc764bf3fd5d4b3fdef8a2dee1d7d1906f3a59146efaaf8e",
+      "path": "tests/test_mex_host_context.py"
+    },
+    {
+      "after_sha256": "eca3f21a88a0a4b6f385cc39713be7d5c2a844064dc17eeac42cd4c8f05b3438",
+      "before_sha256": "24253d639f4c4ee7fc04c61c516d11c970bbcc90f780cd1f841ca21c61f9d810",
+      "path": "tests/test_mex_jkvw_evidence.py"
+    },
+    {
+      "after_sha256": "0c0bd0e301d4726116d9acf9384432a9e73531ac51d574ca80638bba66f94dcb",
+      "before_sha256": "fea7408f4b3922237a54511d2b6a9744af63c78e9b2b8ad92b15a24c8b7986b6",
+      "path": "tests/test_mex_substrate_context.py"
+    },
+    {
+      "after_sha256": "4a5833c1ea680bb639dbe9725138f1119b0fffc85a8f45ca2c10f9c2cf18fab1",
+      "before_sha256": "3e20a4298534a1f781494451dfeeb47ad4832114e007f00791dbfc23053e3d28",
+      "path": "tests/test_mexxy_context.py"
+    },
+    {
+      "after_sha256": "332489641732aa8dbf5f8fe6585f5ec433cd3583d224173f00fe9ffb4207ab07",
+      "before_sha256": "d6d1613d3c14727ab969fb9880f2e91a13f8f9afd05680c63595e6399f79207e",
+      "path": "tests/test_mexxy_definitions.py"
+    },
+    {
+      "after_sha256": "d76893467242ee7f24412ebcd9ec0ecce83680aa092d640f59ff8a7f0494a687",
+      "before_sha256": "dd400592be634dd27bdab6a079384646e3742981dcc64c9f18716430f32763c7",
+      "path": "tests/test_pbp_reference_context.py"
+    },
+    {
+      "after_sha256": "2c5bfbb2070142ceeb15a3fdcc9780245417cd3fa125ed1059ec421eeb4a8fb2",
+      "before_sha256": "f3c31af726648f16c04d92b03a9882cff06678eecef1a4193f4aac73a20c6739",
+      "path": "tests/test_rosab_primary.py"
+    },
+    {
+      "after_sha256": "8cc0d324a4796f2e545fbe187ff7840c909f95b7bba62175c9457186d6e6b45a",
+      "before_sha256": "1c3da5ffcb23eded1a30a474ce9a46d65dcfa30913fe07585506828857640137",
+      "path": "tests/test_vmlr2_structure_context.py"
+    }
+  ],
+  "complete_download_matches_collection_aware_record": {
+    "path": "pages/antibacterial/daptomycin/record-63f18034083b43d6a564dc42dfa3e6040344cc84305776218a3b116c2e441ab6.json.gz",
+    "sha256": "63f18034083b43d6a564dc42dfa3e6040344cc84305776218a3b116c2e441ab6"
+  },
+  "date": "2026-10-15",
+  "earlier_research_artifacts_unchanged": true,
+  "environment_receipt": {
+    "path": "research/2026-10-15-qc-environment-verification.json",
+    "sha256": "fddcb62bfaa3cb9808f0cf6c8b65057997c1e5ce3896041d2e4ad44d1a15a366"
+  },
+  "experimental_identifiers_assigned": 0,
+  "focused_regression": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/cdsa-qualification-2026-10-15/focused.xml",
+      "sha256": "eaf2295e0211bfd73a49611ae26326f7c301fd1996b78c4b321af077a3ee717a"
+    },
+    "passed": 142,
+    "seconds": 183.556,
+    "skipped": 0,
+    "skipped_cases": [],
+    "tests": 142
+  },
+  "full_investigation_complete": false,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "ncbi_requests": 0,
+  "new_test_and_fixture": [
+    {
+      "path": "tests/test_cdsa_qualification_checkpoint.py",
+      "sha256": "3cbe32932f5fa5fd2a47985fa50aa4a87b46a82361737d0018ee14dc2f653bfd"
+    },
+    {
+      "path": "tests/fixtures/card_evidence_reviews-before-cdsa-2026-10-15.json",
+      "sha256": "289d45797f11d85fc535a61991f0f559b83cd307625c4df31aab52f865a8b71e"
+    }
+  ],
+  "numeric_ast_exported": false,
+  "preservation_scope": "Measured before appending the final report section; prior report bytes remain reconstructible by removing that section",
+  "production_implementation_unchanged": true,
+  "protocols_exported": false,
+  "qc": {
+    "command": [
+      "/private/tmp/antibioticmech-qc-2026-10-15/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "elapsed_seconds": 4651.796,
+    "errors": 0,
+    "exit_code": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/cdsa-qualification-2026-10-15/qc-1-tests.xml",
+      "sha256": "584df5eb39006e328050aa9a371d56fb194a731f4e63804a562ee67eda1392f1"
+    },
+    "log": {
+      "path": "reports/cdsa-qualification-2026-10-15/qc-1.log",
+      "sha256": "b26410460a432021cd470386e4225ae60b57682f713e5002a0637d70706a9dca"
+    },
+    "passed": 9128,
+    "pytest_addopts": "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/cdsa-qualification-2026-10-15/qc-1-tests.xml -ra --maxfail=1",
+    "seconds": 4159.197,
+    "skipped": 7,
+    "skipped_cases": [
+      {
+        "class": "tests.test_aph_ant_aad_mph_gaps",
+        "name": "test_native_replay_has_no_network_or_file_writes",
+        "reason": "historical corpus changed; immutable public snapshot tested separately"
+      },
+      {
+        "class": "tests.test_card_protein_name_evidence",
+        "name": "test_live_replay_is_readonly_and_cache_free_when_source_bytes_are_current",
+        "reason": "historical corpus changed; immutable output and review are tested separately"
+      },
+      {
+        "class": "tests.test_card_protein_name_screen",
+        "name": "test_native_replay_without_network_or_file_writes",
+        "reason": "historical corpus changed; immutable public snapshot tested separately"
+      },
+      {
+        "class": "tests.test_card_structure_links",
+        "name": "test_cached_export_reproduces_when_research_cache_is_available",
+        "reason": "historical checkpoint no longer matches the live corpus; public invariants still run"
+      },
+      {
+        "class": "tests.test_skill_frontmatter",
+        "name": "test_command_frontmatter_has_no_duplicate_keys[NOTSET]",
+        "reason": "got empty parameter set for (path)"
+      },
+      {
+        "class": "tests.test_skill_frontmatter",
+        "name": "test_command_frontmatter_is_valid_yaml[NOTSET]",
+        "reason": "got empty parameter set for (path)"
+      },
+      {
+        "class": "tests.test_skill_frontmatter",
+        "name": "test_command_declares_a_usable_description[NOTSET]",
+        "reason": "got empty parameter set for (path)"
+      }
+    ],
+    "started_at_utc": "2026-10-16T01:17:03.301337+00:00",
+    "tests": 9135
+  },
+  "removed_stale_generated_download": [
+    "pages/antibacterial/daptomycin/record-696ee15ba57b8c41ff2aca6db62e911a9ec67747b61f837b05e9e42177188c95.json.gz"
+  ],
+  "rendered_qualification_notes_verified": [
+    {
+      "path": "pages/antibacterial/colistin-a.html",
+      "sha256": "23b6d27fcf03324f300fb9beef86c408da990a6a633aa69d991671490ff1e5e2"
+    },
+    {
+      "path": "pages/antibacterial/colistin-b.html",
+      "sha256": "4473908b287d244172b03f58f0573b6976b601b37ee433e896dded8f092d0df3"
+    },
+    {
+      "path": "pages/antibacterial/daptomycin.html",
+      "sha256": "a1954794780d006e560644f9d1731e78b8481a087b151cf579e1dbb409a80fe6"
+    },
+    {
+      "path": "pages/antibacterial/pleuromutilin.html",
+      "sha256": "1018fb03c15915aa301b7e34bf0eecab6f54ab4553e5ca7f36ce88b16e2a9b25"
+    }
+  ],
+  "repeat_seed": {
+    "already_current": 4,
+    "records_written": 0,
+    "transition_reverified": true
+  },
+  "report_sha256_before_append": "7df8ff87fc3713f7a66bcf988f80c94cc7b5636b4210829d41693246ae31af1a",
+  "status": "SOURCE_OWNED_QUALIFICATION_CURATED_AND_AUTHORITATIVE_QC_PASSED",
+  "transition": {
+    "path": "research/2026-10-15-cdsa-qualification-transition.json",
+    "sha256": "b5c28727895c2b88845978f0e6afe158371e1b3e2be8633a465cdcf14adca0b8"
+  },
+  "unchanged_embedding_documents": 4,
+  "variant_specifications_exported": false
+}

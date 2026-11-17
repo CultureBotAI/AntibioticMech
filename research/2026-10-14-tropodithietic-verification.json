@@ -1,0 +1,86 @@
+{
+  "authoritative_full_qc_rerun": false,
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "broad_reference_query": {
+    "complete": false,
+    "empty_query_proves_protein_absence": false,
+    "query": "\"tropodithietic\"",
+    "release": "2026_03",
+    "reported_total": 3932,
+    "returned_entries": 500,
+    "unretrieved_entries": 3432
+  },
+  "byte_identical_biological_records": 2939,
+  "captured_at": "2026-10-14T17:09:26.181881+00:00",
+  "changed_baseline_files": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "complete_empty_reference_queries": 3,
+  "current_census_matches_all_records": true,
+  "documentation_check": "PASS",
+  "files": [
+    {
+      "path": "research/2026-10-14-tropodithietic-context.json",
+      "sha256": "889b8b0714fb3134a133af75dbdb2220483fb1ff31ffc7e09e79dd85c7be6319"
+    },
+    {
+      "path": "scripts/audit_tropodithietic_context.py",
+      "sha256": "8623e7e039d2378e95dfdfd9581f6da95c51186952f6e187092846c81bda4261"
+    },
+    {
+      "path": "tests/test_tropodithietic_context.py",
+      "sha256": "becd3e026f1ee56da6d10d0e5f0a642512b8ff847db0729338608146db2e80d8"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "f19ed2383bc025e8506be1147ea6cc6d558275d68f856d13d9673b5b6368063e"
+    }
+  ],
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "historical_exports_unchanged": true,
+  "issue_1040": "DEFERRED",
+  "ncbi_requests": 0,
+  "new_resistance_claims": 0,
+  "offline_context_replay_equal": true,
+  "previous_full_qc_result_renewed": false,
+  "primary_results_reviewed": 0,
+  "protected_files_checked": 7562,
+  "reference_species_identities_checked": 2,
+  "ruff_check": "PASS",
+  "ruff_format_check": "PASS",
+  "scientific_http_attempts": 8,
+  "scope": "RESEARCH_ONLY_REFERENCE_AND_ACCESS_AUDIT_NOT_PRIMARY_SCIENTIFIC_SIGNOFF",
+  "source_adoptions": 0,
+  "source_inputs_embeddings_and_pages_unchanged": true,
+  "terminal_http_statuses": {
+    "compound-references": 200,
+    "primary": 500,
+    "primary-2011": 403,
+    "producer-taxonomy": 200,
+    "protein-name-references": 200,
+    "reference-taxonomy": 200,
+    "references-2011": 200,
+    "references-2016": 200
+  },
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "path": "reports/resistance-grounding-2026-10-14-tropodithietic/targeted-tests.xml",
+      "sha256": "8e9bab55a90bb30459aedf48444f1a0d4e785f49757aae9645ab9441ae55412b",
+      "skipped": 0,
+      "tests": 96
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "path": "reports/resistance-grounding-2026-10-14-tropodithietic/expanded-tests.xml",
+      "sha256": "58197e90d02046b447398944b3ce4e5f8dc0816e47077309b9042f2ed3085bfe",
+      "skipped": 0,
+      "tests": 109
+    }
+  ],
+  "unchanged_baseline_files": 7561
+}

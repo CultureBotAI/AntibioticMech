@@ -17,8 +17,16 @@ prose below are the reasoning, the queue is the list.
 
 ## Now
 
-- **Curate the next mechanism graphs.** 16 of 2,939 records carry a
-  `causal_graph`; that number is the point of the repository. Start with the 399
+- **Reconcile tetracenomycin X's chemical identity before transferring claims.**
+  CHEBI:32209 and the pinned inventory encode `C24H20O11`, while the
+  PMID:32601485 paper-linked PDB ligand OCW encodes `C24H22O11`. The native
+  chemical figure supports the latter. The existing target claim also needs
+  reassessment; do not silently replace the ChEBI structure or import the paper's
+  resistance measurements. See
+  `research/2026-10-12-tetracenomycin-context.json` and #1085 for the source-owned
+  repair hold.
+- **Curate the next mechanism graphs.** 97 of 3,125 records carry a
+  `causal_graph`; that number is the point of the repository. Start with the 518
   records that already have target or resistance evidence to build on —
   `just worklist --queue mechanism` ranks them by how much evidence is waiting.
   No data source will close this column: a mechanism graph is authored from
@@ -35,7 +43,7 @@ prose below are the reasoning, the queue is the list.
   than a structural description (a per-class review, not a regex), and curated
   review literature per compound. Prefer the second for anything that will carry
   a causal graph anyway.
-- **Ground the 270 minted records.** `just worklist --queue minted`. Most are
+- **Ground the 343 minted records.** `just worklist --queue minted`. Most are
   CARD molecules with a PubChem structure and no ChEBI entry; some deserve a
   ChEBI term request.
 - **Re-file the compounds no source classifies well.** After #2 and #3, a
@@ -50,14 +58,22 @@ prose below are the reasoning, the queue is the list.
 ## Next
 
 - **Find a resistance source for the antiviral records.** CARD covers bacterial
-  and (increasingly) fungal resistance; it has nothing for viruses, so 461
+  and (increasingly) fungal resistance; it has nothing for viruses, so 459
   antiviral records still carry an empty `resistance_mechanisms`. The obvious
   candidates are the Stanford HIV Drug Resistance Database for HIV, and the
   literature for HBV/HSV/influenza —
   each would need the same treatment CARD got: a committed inventory, an explicit
   citation on every item, and a mechanism vocabulary that says what it means.
-  Until then the asymmetry should be visible in the report rather than read as
+  The HIVDB evaluator now validates the exact drug map plus class-level HIV-1
+  DRM, SDRM and TSM lists, class-specific drug pattern level/score matrices, and
+  HIVDB 10.2 XML drug-specific score rules plus their ordered top-level formula
+  terms. A dormant importer can now load an exact HIVDB algorithm-term report
+  as `genotype_resistance_score_rules`, separate from biochemical
+  `resistance_mechanisms`. Until a curated exact term inventory is committed,
+  the antiviral asymmetry should be visible in the reports rather than read as
   "antivirals have no known resistance".
+  Filing is not assay scope: anisomycin's curated yeast association is not a
+  viral-resistance observation.
 
 - **Decide what the 372 structureless concepts are.** `just worklist
   --queue no-structure`. Each is a mixture, a class, a preparation, or a
@@ -78,9 +94,17 @@ prose below are the reasoning, the queue is the list.
   evidence methods, which are machine-readable and grade the link itself rather
   than entry curation (#203). Any further widening should come from a second
   source, not from relaxing the evidence requirement.
-- **Activity spectrum.** `activity_spectrum` is empty. Real MIC data would come
-  from a screening resource with assays attached; without the assay a number is
-  not an observation, so pick the source carefully.
+- **Activity spectrum.** CRyPTIC 3.4.0 now seeds grouped DST/UKMYC MIC rows
+  against exact-mapped drugs. The NCBI Pathogen Detection AST preflight now
+  audits submitted antibiotic strings, writes fillable exact-structure
+  crosswalks, and emits source-versioned exact activity reports with MIC or
+  disk-diffusion measurements on BioSample/BioProject-backed rows. It can
+  exclude curated BioSample/BioProject contexts already represented by CRyPTIC
+  or another source before writing an exact report, and the seeder can consume
+  that report as an NCBI_AST-owned source slice. **NCBI AST / #1040 is deferred.**
+  Do not contact NCBI, make new requests to NCBI endpoints, or resume reuse-terms
+  work without new explicit maintainer authorization. The source remains
+  `BLOCKED`, `REFERENCE`, `UNVERIFIED`; the dormant evaluator is not adoption.
 - **A `research/` path.** Sibling repos run model-assisted deep research per
   entity with a manifest of what was actually paid for. The `research` extra in
   `pyproject.toml` is declared and unused; wire it up when there is a question

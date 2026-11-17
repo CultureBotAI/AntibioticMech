@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>avibactam</h1>
 <p class="meta">
   <code class="curie">CHEBI:85984</code>
@@ -33,18 +44,21 @@
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_29347">CHEBI:29347</a>      <code class="curie">CHEBI:29347</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_38025">CHEBI:38025</a>      <code class="curie">CHEBI:38025</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_38295">CHEBI:38295</a>      <code class="curie">CHEBI:38295</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_47857">CHEBI:47857</a>      <code class="curie">CHEBI:47857</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_29347"><code class="curie">CHEBI:29347</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_38025"><code class="curie">CHEBI:38025</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_38295"><code class="curie">CHEBI:38295</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_47857"><code class="curie">CHEBI:47857</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C7H11N3O6S</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>265.247 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>265.03686 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">NDCUAPJVLWFHHB-UHNVWZDZSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">NC(=O)[C@@H]1CC[C@@H]2CN1C(=O)N2OS(=O)(=O)O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C7H11N3O6S/c8-6(11)5-2-1-4-3-9(5)7(12)10(4)16-17(13,14)15/h4-5H,1-3H2,(H2,8,11)(H,13,14,15)/t4-,5+/m1/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -78,13 +92,14 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_36047">CHEBI:36047</a>    <code class="curie">CHEBI:36047</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antibacterial drug  <a href="http://purl.obolibrary.org/obo/CHEBI_36047"><code class="curie">CHEBI:36047</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -97,13 +112,28 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>class D OXA beta-lactamases <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta">X-ray structures of OXA-24 and OXA-48 captured covalent inhibited states and, together with kinetic analysis, explained selective, slowly reversible beta-lactamase inhibition. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2014-12 (retrieved 2026-09-02).</p>
+<div class="table-scroll" role="region" aria-label="class D OXA beta-lactamases organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Beta-lactamase OXA-48 <a href="https://www.uniprot.org/uniprotkb/Q6XEC0"><code class="curie">UniProtKB:Q6XEC0</code></a><br><span class="meta">Class D carbapenem-hydrolyzing beta-lactamase OXA-48 (blaOXA-48) from Klebsiella pneumoniae covalently carbamylated at active-site Ser70 by avibactam in the PMID:25406838 X-ray crystal structures (PDB:4S2K, 4S2N, 4WMC) and carbamylation/decarbamylation kinetic assays; Acinetobacter baumannii OXA-24/OXA-40 (PDB:4WM9, Q8RLA6_ACIBA) cocrystallized in the same study is an unreviewed TrEMBL entry and is not added as a reviewed example.</span></td>
+    <td>OXA-48</td>
+    <td><em>Klebsiella pneumoniae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_573"><code class="curie">NCBITaxon:573</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:25406838</span> <span class="meta">(Primary avibactam-bound OXA-24/OXA-48 structural and kinetic study (DOI:10.1021/cb500703p).)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25406838">PMID:25406838</a></span> <span class="meta">(Primary avibactam-bound OXA-24/OXA-48 structural and kinetic study (DOI:10.1021/cb500703p).)</span></li>
 </ul>
 
 
@@ -115,12 +145,82 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Avibactam covalently carbamylates class D OXA beta-lactamases to inhibit beta-lactam hydrolysis <span class="pill">MECHANISTIC</span></h3>
+<p>Avibactam binds the active site of class D OXA beta-lactamases (including OXA-10 and OXA-48) and forms a reversible covalent carbamyl-enzyme adduct that inhibits beta-lactamase catalytic hydrolysis.</p><div class="table-scroll" role="region" aria-label="Nodes: avibactam_class_d_oxa_beta_lactamase_carbamylation" tabindex="0">
+<table>
+  <caption>Nodes — avibactam_class_d_oxa_beta_lactamase_carbamylation</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">avibactam</code></td>
+    <td>avibactam</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/avibactam.html"><code class="curie">CHEBI:85984</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">class_d_oxa_beta_lactamase</code></td>
+    <td>class D OXA beta-lactamases<br><span class="meta">Examples: Beta-lactamase OXA-48 (OXA-48) <a href="https://www.uniprot.org/uniprotkb/Q6XEC0"><code class="curie">UniProtKB:Q6XEC0</code></a>, <em>Klebsiella pneumoniae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_573"><code class="curie">NCBITaxon:573</code></a> <span class="pill">REVIEWED</span> — Class D carbapenem-hydrolyzing beta-lactamase OXA-48 (blaOXA-48) from Klebsiella pneumoniae covalently carbamylated at active-site Ser70 by avibactam in the PMID:25406838 X-ray crystal structures (PDB:4S2K, 4S2N, 4WMC) and carbamylation/decarbamylation kinetic assays; Acinetobacter baumannii OXA-24/OXA-40 (PDB:4WM9, Q8RLA6_ACIBA) cocrystallized in the same study is an unreviewed TrEMBL entry and is not added as a reviewed example.</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">carbamylated_oxa_active_site_adduct</code></td>
+    <td>reversibly carbamylated class D OXA beta-lactamase active-site complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">oxa_beta_lactam_hydrolysis</code></td>
+    <td>class D OXA beta-lactamase catalytic activity</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: avibactam_class_d_oxa_beta_lactamase_carbamylation" tabindex="0">
+<table>
+  <caption>Edges — avibactam_class_d_oxa_beta_lactamase_carbamylation</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">avibactam</code></td>
+    <td>binds</td>
+    <td><code class="curie">carbamylated_oxa_active_site_adduct</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25406838">PMID:25406838</a></span> <span class="meta">(X-ray crystal structures of avibactam bound to OXA-10 and OXA-48 (1.4-2.1 angstrom, PDB:4S2K/4S2N/4WMC) resolved the covalent carbamylated active-site adduct.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">class_d_oxa_beta_lactamase</code></td>
+    <td>participates in</td>
+    <td><code class="curie">carbamylated_oxa_active_site_adduct</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25406838">PMID:25406838</a></span> <span class="meta">(Structural analysis mapped the OXA-10 and OXA-48 active-site interactions stabilizing the avibactam carbamyl linkage.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">carbamylated_oxa_active_site_adduct</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">oxa_beta_lactam_hydrolysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25406838">PMID:25406838</a></span> <span class="meta">(Enzyme-kinetic acylation and deacylation measurements across OXA-2, OXA-10, OXA-24, and OXA-48 demonstrated inhibition of class D beta-lactamase activity.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
 <h2>Record-level evidence</h2>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:25406838</span> <span class="meta">(Primary class D beta-lactamase inhibition and cocrystal study.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25406838">PMID:25406838</a></span> <span class="meta">(Primary class D beta-lactamase inhibition and cocrystal study.)</span></li>
 </ul>
 
 
@@ -151,32 +251,52 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_UNIPROT_PROTEIN_EXAMPLES</span>
+    <span class="meta">2026-10-25 · antigravity · LLM-assisted</span>
+    <p>Added reviewed UniProtKB:Q6XEC0 (Klebsiella pneumoniae OXA-48, blaOXA-48) protein example to the class D OXA beta-lactamases PRIMARY_LITERATURE molecular target (PMID:25406838).</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-25 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph avibactam_class_d_oxa_beta_lactamase_carbamylation (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:Q6XEC0) and primary literature (PMID:25406838).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/avibactam.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/avibactam.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=avibactam">MediaIngredientMech (avibactam)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=avibactam">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=avibactam">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=avibactam">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=avibactam">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

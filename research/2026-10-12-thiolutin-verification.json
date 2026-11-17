@@ -1,0 +1,214 @@
+{
+  "adversarial_self_review": [
+    "Reference proteins and S288c TaxID are not assigned to experimental subjects.",
+    "Reciprocal TRX aliases require canonical names, loci and SGD IDs; no first-hit assignment.",
+    "Dosage uncertainty, negative deletion comparisons and duplicate synonymous candidates remain explicit.",
+    "Combined TRX1/TRX2 loss is one association, not two independent single-gene effects.",
+    "Native S1E is the growth panel despite the main-text S1D reference.",
+    "The first full run caught a stale NEXT_TASKS coverage count; corrected the maintained prose, not the tests.",
+    "No numerical AST, clinical category, exact allele or genome assignment was added.",
+    "This was a separate same-agent pass, not an independent scientific review."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-12-thiolutin-context.json",
+      "sha256": "7513c5f467ee3cffad02c9a1591b60b7f56149eab1cd868b4d2533666b612f06"
+    },
+    {
+      "path": "research/2026-10-12-thiolutin-curation.json",
+      "sha256": "38b5183594576d6b2c11407420619487226ce93de8f3db79bbf0d1a003227d3c"
+    },
+    {
+      "path": "research/2026-10-12-thiolutin-reconciliation.json",
+      "sha256": "3b6b9d5d031003dc8ba37fb9f2baad919e2e086f732be4c5c24a761b31b1f44d"
+    },
+    {
+      "path": "research/2026-10-12-thiolutin-resistance-grounding.tsv",
+      "sha256": "bf61f96c90214ed76721c506289e9bbc03ea03953237983ad58a02bb65239564"
+    },
+    {
+      "path": "research/2026-10-12-thiolutin-resistance-progress.json",
+      "sha256": "5a38edcfc50004e0e6003cc69e4a8884debc73c5481e1a0eece157b2d4bb3df1"
+    },
+    {
+      "path": "research/2026-10-12-thiolutin-resistance-progress.tsv",
+      "sha256": "2b37a1f40bcdd243b84542a5102286b8f5904a27cdd1998ca1156e7a602e722e"
+    },
+    {
+      "path": "research/2026-10-12-cordycepin-primary-context.json",
+      "sha256": "8118cc42b9270338fe40827e3ae7dfc7cbbeb2df2e55fc4c12f5e47415fd5247"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "b8cd56f68e8bca8f729012be9b5c7df3708ab2def91d3f20442c374ccef96a39"
+    },
+    {
+      "path": "tests/test_thiolutin_curation.py",
+      "sha256": "16fc6718616ce6d20a0e663507395147ed27cd2f0de123f03b5cfd1d64dd14da"
+    },
+    {
+      "path": "tests/test_cordycepin_primary_context.py",
+      "sha256": "d4ad546e872101381bc6f8847b13d4dc98b28a8086c71654396d763fe8c91183"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f5358b05451f202b7a9930592bf361440cf561f2cab45b212762d7f599e5051c"
+    },
+    {
+      "path": "NEXT_TASKS.md",
+      "sha256": "0eb178054c030466fa096da8c49d428410c513b891c08fb0a90076c731c48aa1"
+    },
+    {
+      "path": "data/antibiotics/antibacterial/thiolutin.yaml",
+      "sha256": "2c41b032abf1406b57b316624f81381efa1bcd5a3b3f31f894cb799eacdab3bd"
+    },
+    {
+      "path": "data/embeddings/corpus_map.json",
+      "sha256": "3dea9a18f729646a1bf5e04352fa98161bded67c426136361d61fdb1aa5a09c8"
+    },
+    {
+      "path": "pages/antibacterial/thiolutin.html",
+      "sha256": "0634f7e92e1a249f65345b1f8b48d90854402af5b7af761428b881280b8cfd49"
+    },
+    {
+      "path": "pages/index.html",
+      "sha256": "82eb0bdc47052a46085eae6907086d61bc97fc2b0fd88bf61b81a595739a4ec9"
+    },
+    {
+      "path": "pages/map.html",
+      "sha256": "d673b39d58ba2e7072528633499ffafd74a9ccbfe73eab701a43460dd3c8bc30"
+    }
+  ],
+  "curation_events_added": 1,
+  "date": "2026-10-12",
+  "embeddings": {
+    "after_fingerprint": "f57e7de3a0495f2a",
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-12-thiolutin/embedding-stage/baseline.json",
+      "sha256": "d8dae40424ab5074f391451d2e52a920424425ef8af31219e13aa4f6a1d85a14"
+    },
+    "before_fingerprint": "b3db5e80cdb6d7c9",
+    "changed_documents_reencoded": [
+      "CHEBI:156450"
+    ],
+    "chemical_map_unchanged": true,
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows_reencoded": 16,
+    "finite_and_normalized": true,
+    "full_projection_regenerated": true,
+    "model_pins": {
+      "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+      "weights_sha256": "45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7"
+    },
+    "projection": "PaCMAP",
+    "published_local_artifacts": {
+      "path": "reports/resistance-grounding-2026-10-12-thiolutin/embedding-stage/published.json",
+      "sha256": "c40300c9bd3b5447fb44d0e4f38f928778761b22d432c50042f4a7bbfffd1fd3"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-12-thiolutin/embedding-stage/reuse-proof.json",
+      "sha256": "9ff4ef30199cf20f14e1c0e8aaf7b35759c906b1cdab25259d53dbca82ab1c5f"
+    },
+    "seed": 42,
+    "unchanged_vector_rows_byte_identical": 2938
+  },
+  "experimental_protein_or_genome_assignments": 0,
+  "full_qc": {
+    "current_ci_run": false,
+    "dependency_deviation": "Local RDKit 2025.03.6, not project pin 2026.3.5; project dependency pins unchanged.",
+    "exit_code": 0,
+    "local_rdkit_version": "2025.03.6",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-12-thiolutin/qc-2.log",
+      "sha256": "0e8f7619b9f96787e0aefb1504b94de50eaeb0aef5ce712d2a5d377ea7122f6d"
+    },
+    "passed": 3051,
+    "pinned_environment_reproduced": false,
+    "project_rdkit_version": "2026.3.5",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-12-thiolutin/qc-2.json",
+      "sha256": "06e6b788bf7d14fcef66b8f2709f446f905e5f195a54424a75e08ff3f828025f"
+    },
+    "skipped": 4,
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "test_summary": "3051 passed, 4 skipped in 1503.16s (0:25:03)"
+  },
+  "generated_site": {
+    "four_claim_labels_and_qualifications_checked_in_html": true,
+    "full_render_and_check_completed": true,
+    "live_browser_verification": false
+  },
+  "github_mutations": 0,
+  "initial_qc_attempt": {
+    "disposition": "Corrected stale NEXT_TASKS target-or-resistance count from 411 to 412; test assertions unchanged.",
+    "exit_code": 1,
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-12-thiolutin/qc-1.log",
+      "sha256": "7fd17bb08724dda62672c3c2fd906fcd33a1823028af3771c97f07ee969888c7"
+    },
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-12-thiolutin/qc-1.json",
+      "sha256": "715ed0641164e213d76b53cb9756e9cb544aafe7dbdc229ee9f9cadadf22fbf2"
+    }
+  },
+  "issue_1040": "DEFERRED",
+  "local_source_replay": {
+    "context": {
+      "path": "research/2026-10-12-thiolutin-context.json",
+      "sha256": "7513c5f467ee3cffad02c9a1591b60b7f56149eab1cd868b4d2533666b612f06"
+    },
+    "network_requests": 0,
+    "publisher_asset_hashes_verified": 8,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-12-thiolutin/source-replay.json",
+      "sha256": "09d3a53c42c0d40c153fbaf968118519e4d23494c6bebcd1a26bd94ea8e8d7f5"
+    },
+    "reference_proteins_reconstructed": 5,
+    "scope": "REFERENCE_IDENTITIES_AND_CACHED_ASSET_INTEGRITY_NOT_NEW_EXPERIMENTAL_ASSIGNMENTS",
+    "status": "LOCAL_SOURCE_REPLAY_PASSED",
+    "taxonomy_responses_replayed": 2,
+    "uniprot_requests_replayed": 5
+  },
+  "ncbi_contact": 0,
+  "ncbi_endpoint_requests": 0,
+  "ncbi_reuse_terms_review_resumed": false,
+  "numerical_ast_added": 0,
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-12-thiolutin/baseline.json",
+      "sha256": "943218369124ae8b903fff14ad571bf1eb1d56019c76410c39633470c4c848d5"
+    },
+    "historical_receipts_not_rewritten": true,
+    "ignored_files_included": true,
+    "original_chemical_and_source_fields_preserved": true,
+    "record_membership_unchanged": true,
+    "record_paths_and_hashes_checked": 2939,
+    "records_byte_identical": 2938,
+    "records_changed": [
+      "data/antibiotics/antibacterial/thiolutin.yaml"
+    ],
+    "tracked_raw_curation_schema_dependency_files_unchanged": true
+  },
+  "publication_status": "LOCAL_UNCOMMITTED_CHECKPOINT",
+  "qualitative_claims_added": 4,
+  "raw_source_assets_redistributed": false,
+  "reference_uniprot_identities": 5,
+  "scope": "FOUR_QUALITATIVE_LABORATORY_ASSOCIATIONS_NOT_EXACT_ALLELE_ASSIGNMENTS",
+  "source_adoptions": 0,
+  "status": "ALL_AUTHORITATIVE_RUNNER_GATES_PASSED_WITH_DISCLOSED_DEPENDENCY_DEVIATION",
+  "whole_corpus_primary_review": "OPEN",
+  "whole_record_primary_reviews_completed": 0
+}

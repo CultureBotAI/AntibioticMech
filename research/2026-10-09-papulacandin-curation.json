@@ -1,0 +1,153 @@
+{
+  "claims_added": 3,
+  "corpus_research_complete": false,
+  "date": "2026-10-09",
+  "doi": "10.1128/jb.177.20.5732-5739.1995",
+  "experimental_alleles_validated": false,
+  "history_events_added": 2,
+  "ignored_files_included": true,
+  "limitations": [
+    "Primary text supports author-reported qualitative associations, not figure reanalysis.",
+    "Reference proteins and strain TaxIDs are provenance, not experimental identifiers.",
+    "No inference from gene presence, parent identity or same-family membership.",
+    "Papulacandin A and arborcandin C remain uncurated from this review.",
+    "The 2011 full Results and exact tested alleles remain unverified."
+  ],
+  "other_records_unchanged": 2937,
+  "protected_existing_files_before_render": 6474,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/curation-protected-before.json",
+    "sha256": "d9e252e4e7e887cbfa80a6925e7a8a00d607a133ee3de9514755e49d28afcd2a"
+  },
+  "quantitative_ast_added": false,
+  "records": [
+    {
+      "before_record_sha256": "bc8df558560abd66de09db9c018e515f09046a200dc78bef26d9c18ab8b92394",
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/papulacandin-b-canary.yaml",
+        "sha256": "7c22a84a3ed7d336a105781830aabb303401e145387906577d3f3927d572bd7f"
+      },
+      "claims": [
+        {
+          "assay": "Growth susceptibility comparisons",
+          "evidence": [
+            {
+              "notes": "Primary Results, physiological characterization; Methods identify the tested compounds. Qualitative PDF-text review, not independent image or numeric reanalysis.",
+              "reference": "PMID:7592316"
+            },
+            {
+              "notes": "Reference locus only; UniProtKB 2026_03, entry version 209, sequence version 2.",
+              "reference": "UniProtKB:P38631"
+            }
+          ],
+          "gene_families": [
+            "FKS1"
+          ],
+          "gene_id": "PBR1",
+          "label": "PBR1-associated papulacandin B resistance in Saccharomyces cerevisiae",
+          "mechanism_type": "OTHER",
+          "note": "Laboratory derivatives in the X2180-1A background, not resistance inferred from gene presence or assigned to the parent or species. Reference-only mapping: UniProtKB:P38631 (FKS1, YLR342W; NCBITaxon:559292), not a tested allele or protein assignment. Figures were not independently reanalyzed; no numeric AST or clinical category is inferred. The paper also reports a non-resistant comparison at this locus.",
+          "phenotype_label": "Author-reported papulacandin B resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        },
+        {
+          "assay": "Growth susceptibility comparisons",
+          "evidence": [
+            {
+              "notes": "Primary Results, physiological characterization; Methods identify the tested compounds. Qualitative PDF-text review, not independent image or numeric reanalysis.",
+              "reference": "PMID:7592316"
+            },
+            {
+              "notes": "Reference locus only; UniProtKB 2026_03, entry version 158, sequence version 1.",
+              "reference": "UniProtKB:O74475"
+            },
+            {
+              "notes": "Reference-name alias and UniProt cross-reference only; official gene page inspected 2026-10-09, release date 2026-09-15.",
+              "reference": "https://www.pombase.org/gene/SPCC1840.02c"
+            }
+          ],
+          "gene_families": [
+            "bgs4"
+          ],
+          "gene_id": "pbr1",
+          "label": "pbr1-associated papulacandin B resistance in Schizosaccharomyces pombe",
+          "mechanism_type": "OTHER",
+          "note": "Laboratory derivatives in the 972 background, not resistance inferred from gene presence or assigned to the parent or species. Reference-only mapping: UniProtKB:O74475 (bgs4, SPCC1840.02c; NCBITaxon:284812), not a tested allele or protein assignment. Figures were not independently reanalyzed; no numeric AST or clinical category is inferred. PomBase explicitly aliases pbr1 to bgs4; the inspected UniProt synonym list omits pbr1.",
+          "phenotype_label": "Author-reported papulacandin B resistance",
+          "taxon_id": "NCBITaxon:4896",
+          "taxon_label": "Schizosaccharomyces pombe"
+        }
+      ],
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added primary author-reported qualitative gene associations with species grounding and reference-only UniProt provenance. Kept experimental allele, strain and genome assignments unresolved; no quantitative AST added; figure review remains pending.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-09T09:24:08Z"
+      },
+      "identifier": "CHEBI:569624",
+      "record": {
+        "path": "data/antibiotics/antifungal/papulacandin-b.yaml",
+        "sha256": "7c22a84a3ed7d336a105781830aabb303401e145387906577d3f3927d572bd7f"
+      }
+    },
+    {
+      "before_record_sha256": "8cc2c195bfd6187328c291de7b90386d1e5dfe83b25c35d01cf58adfc3c849ee",
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/papulacandin-d-canary.yaml",
+        "sha256": "c0ea8cbc905dd2afd18ad143f9eb7c95a17cc87a23d1d6718ee0ccf531711b6b"
+      },
+      "claims": [
+        {
+          "assay": "Growth susceptibility comparisons",
+          "evidence": [
+            {
+              "notes": "Primary Results, physiological characterization; Methods identify the tested compounds. Qualitative PDF-text review, not independent image or numeric reanalysis.",
+              "reference": "PMID:7592316"
+            },
+            {
+              "notes": "Reference locus only; UniProtKB 2026_03, entry version 158, sequence version 1.",
+              "reference": "UniProtKB:O74475"
+            },
+            {
+              "notes": "Reference-name alias and UniProt cross-reference only; official gene page inspected 2026-10-09, release date 2026-09-15.",
+              "reference": "https://www.pombase.org/gene/SPCC1840.02c"
+            }
+          ],
+          "gene_families": [
+            "bgs4"
+          ],
+          "gene_id": "pbr1",
+          "label": "pbr1-associated papulacandin D resistance in Schizosaccharomyces pombe",
+          "mechanism_type": "OTHER",
+          "note": "Laboratory derivatives in the 972 background, not resistance inferred from gene presence or assigned to the parent or species. Reference-only mapping: UniProtKB:O74475 (bgs4, SPCC1840.02c; NCBITaxon:284812), not a tested allele or protein assignment. Figures were not independently reanalyzed; no numeric AST or clinical category is inferred. PomBase explicitly aliases pbr1 to bgs4; the inspected UniProt synonym list omits pbr1. The budding-yeast comparison is not assigned to this fission-yeast determinant.",
+          "phenotype_label": "Author-reported papulacandin D resistance",
+          "taxon_id": "NCBITaxon:4896",
+          "taxon_label": "Schizosaccharomyces pombe"
+        }
+      ],
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added primary author-reported qualitative gene associations with species grounding and reference-only UniProt provenance. Kept experimental allele, strain and genome assignments unresolved; no quantitative AST added; figure review remains pending.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-09T09:24:19Z"
+      },
+      "identifier": "CHEBI:72630",
+      "record": {
+        "path": "data/antibiotics/antifungal/papulacandin-d.yaml",
+        "sha256": "c0ea8cbc905dd2afd18ad143f9eb7c95a17cc87a23d1d6718ee0ccf531711b6b"
+      }
+    }
+  ],
+  "records_changed": 2,
+  "reference": "PMID:7592316",
+  "reference_grounding": {
+    "path": "research/2026-10-09-glucan-inhibitor-grounding.json",
+    "sha256": "8d23998d36e78f9f6da30813fae1837f23837c961f99d8dafd07389b6fbffd21"
+  },
+  "source_ownership": "CURATOR; preserved by the normal source merge",
+  "status": "CURATED_PRIMARY_AUTHOR_REPORTED_GENE_ASSOCIATIONS",
+  "whole_record_review_complete": false
+}

@@ -1,0 +1,266 @@
+identifier: CHEBI:198520
+label: pneumocandin A0
+antimicrobial_class: ANTIFUNGAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: An echinocandin-class cyclic lipohexapeptide from Glarea lozoyensis that
+  inhibits fungal 1,3-beta-D-glucan synthase with potent antifungal activity against
+  Candida species and Pneumocystis.
+definition_source: DOI:10.7164/antibiotics.45.1886
+synonyms:
+- synonym_text: L-671,329
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12C[C@@H](O)CN1C(=O)[C@@]([H])(NC(=O)[C@@H](C[C@@H](O)[C@@H](O)NC(=O)[C@]1([H])[C@@H](O)[C@@H](C)CN1C(=O)[C@@]([H])(NC(=O)[C@@]([H])(NC2=O)[C@H](O)[C@@H](O)C1=CC=C(O)C=C1)[C@H](O)CC(N)=O)NC(=O)CCCCCCCC[C@@H](C)C[C@@H](C)CC)[C@@H](C)O'
+  standard_inchi: InChI=1S/C51H82N8O17/c1-6-25(2)19-26(3)13-11-9-7-8-10-12-14-37(66)53-32-21-35(64)47(72)57-49(74)41-42(67)27(4)23-59(41)51(76)39(34(63)22-36(52)65)55-48(73)40(44(69)43(68)29-15-17-30(61)18-16-29)56-46(71)33-20-31(62)24-58(33)50(75)38(28(5)60)54-45(32)70/h15-18,25-28,31-35,38-44,47,60-64,67-69,72H,6-14,19-24H2,1-5H3,(H2,52,65)(H,53,66)(H,54,70)(H,55,73)(H,56,71)(H,57,74)/t25-,26+,27-,28+,31+,32+,33-,34+,35+,38-,39-,40-,41-,42-,43-,44-,47+/m0/s1
+  standard_inchi_key: DFQUSLQYURJBIT-GNDCHVOXSA-N
+  molecular_formula: C51H82N8O17
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001035/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1079.256
+  monoisotopic_mass: 1078.5798
+xrefs:
+- pubchem.compound:139583400
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.7164/antibiotics.45.1886#pneumocandin-a0
+  source_label: pneumocandin A0
+  minted_identifier: antibioticmech:curator-adaf7c7236
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.7164/antibiotics.45.1886
+    snippet: Schmatz et al. characterized pneumocandin A0 (L-671,329), an echinocandin-like
+      cyclic lipohexapeptide from Zalerion arboricola (Glarea lozoyensis) that inhibits
+      fungal 1,3-beta-D-glucan synthesis and displays potent antifungal activity against
+      pathogenic Candida species and Pneumocystis carinii.
+    notes: Reported by Schmatz et al. 1992 (J Antibiot 45:1886-1891; PMID:1490879;
+      DOI:10.7164/antibiotics.45.1886) and Chen et al. 2013 (BMC Genomics 14:339;
+      PMID:23688303; DOI:10.1186/1471-2164-14-339) as a 10,12-dimethylmyristoyl echinocandin-class
+      cyclic lipohexapeptide antifungal produced by Glarea lozoyensis. MIBiG 4.0.1
+      entry BGC0001035, ChEBI CHEBI:198520, and PubChem CID 139583400 supply the stereo-complete
+      SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1116229
+  taxon_label: Glarea lozoyensis
+  strain: ATCC 20868
+  biosynthetic_gene_cluster: BGC0001035
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'pneumocandin A0' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:23688303
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-03T23:20:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and CELL_WALL_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Schmatz et al. 1992 (PMID:1490879) and
+    Chen et al. 2013 (PMID:23688303).
+  llm_assisted: true
+- timestamp: '2026-11-04T02:18:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for fungal 1,3-beta-D-glucan
+    synthase (Fks1 / Fks2; PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) backed by Schmatz
+    et al. 1992 (DOI:10.7164/antibiotics.45.1886, PMID:1490879) and Douglas et al.
+    1994 (DOI:10.1073/pnas.91.26.12907, PMID:7809096).
+  llm_assisted: true
+- timestamp: '2026-11-04T02:20:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed UniProtKB protein_examples (P38631, P40989) to the primary-literature
+    fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2) target on pneumocandin A0 (DOI:10.7164/antibiotics.45.1886).
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:198520) with complete 4/4 chemical_structure,
+    curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and
+    primary-literature molecular_targets with reviewed UniProtKB protein_examples
+    (UniProtKB:P38631, UniProtKB:P40989; DOI:10.7164/antibiotics.45.1886, PMID:1490879;
+    DOI:10.1073/pnas.91.26.12907, PMID:7809096) from PROPOSED to REVIEWED (issue #1320).'
+  llm_assisted: true
+- timestamp: '2026-11-05T09:12:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph pneumocandin_a0_fks1_fks2_beta_1_3_glucan_synthase_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P38631,
+    UniProtKB:P40989) and primary literature (DOI:10.7164/antibiotics.45.1886, DOI:10.1073/pnas.91.26.12907).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Echinocandin-class 10,12-dimethylmyristoyl cyclic
+  lipohexapeptide (L-671,329) from Glarea lozoyensis that noncompetitively inhibits
+  fungal 1,3-beta-D-glucan synthase, blocking fungal cell wall beta-glucan biosynthesis
+  (Schmatz et al. 1992, DOI:10.7164/antibiotics.45.1886, PMID:1490879; Chen et al.
+  2013, DOI:10.1186/1471-2164-14-339, PMID:23688303).'
+molecular_targets:
+- target_id: GO:0000148
+  target_label: fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  experimental_context: Non-competitive inhibition of fungal membrane-bound 1,3-beta-D-glucan
+    synthase activity across Candida albicans and Saccharomyces cerevisiae, with target
+    identity confirmed by cloning of the echinocandin/pneumocandin target subunit
+    FKS1 (ETG1) and paralog GSC2 (FKS2) (Schmatz et al. 1992, DOI:10.7164/antibiotics.45.1886,
+    PMID:1490879; Douglas et al. 1994, DOI:10.1073/pnas.91.26.12907, PMID:7809096).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1994-12
+  source_retrieved_on: '2026-11-04'
+  evidence:
+  - reference: DOI:10.7164/antibiotics.45.1886
+    snippet: Schmatz et al. demonstrated that pneumocandin A0 (L-671,329) potently
+      inhibits fungal 1,3-beta-D-glucan synthase and cell-wall biosynthesis in Candida
+      species and Pneumocystis carinii.
+    notes: Schmatz et al. 1992 (J Antibiot 45:1886-1891; PMID:1490879) established
+      inhibition of fungal 1,3-beta-D-glucan synthesis by pneumocandin A0.
+  - reference: PMID:1490879
+    notes: PubMed record for Schmatz et al. 1992 on pneumocandin A0 1,3-beta-D-glucan
+      synthase inhibition.
+  - reference: DOI:10.1073/pnas.91.26.12907
+    notes: Douglas et al. 1994 (Proc Natl Acad Sci U S A 91:12907-12911; PMID:7809096)
+      identified Saccharomyces cerevisiae FKS1 (ETG1) as the catalytic/target subunit
+      of 1,3-beta-D-glucan synthase conferring echinocandin/pneumocandin resistance
+      upon mutation.
+  - reference: PMID:7809096
+    notes: PubMed record for Douglas et al. 1994 identifying FKS1 (ETG1) as the 1,3-beta-D-glucan
+      synthase target subunit.
+  protein_examples:
+  - uniprot_id: UniProtKB:P38631
+    protein_label: 1,3-beta-glucan synthase component FKS1
+    gene_symbol: FKS1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-04'
+    role: Primary catalytic subunit Fks1 (ETG1, EC 2.4.1.34) of the Saccharomyces
+      cerevisiae S288c 1,3-beta-D-glucan synthase complex inhibited by pneumocandin
+      A0 (L-671,329) and other echinocandins (DOI:10.7164/antibiotics.45.1886; PMID:1490879;
+      DOI:10.1073/pnas.91.26.12907; PMID:7809096).
+  - uniprot_id: UniProtKB:P40989
+    protein_label: 1,3-beta-glucan synthase component GSC2
+    gene_symbol: GSC2
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-04'
+    role: Alternative catalytic subunit Gsc2 (Fks2, EC 2.4.1.34) of the Saccharomyces
+      cerevisiae S288c 1,3-beta-D-glucan synthase complex inhibited by pneumocandin
+      A0 (DOI:10.7164/antibiotics.45.1886; PMID:1490879; DOI:10.1073/pnas.91.26.12907;
+      PMID:7809096).
+causal_graphs:
+- graph_id: pneumocandin_a0_fks1_fks2_beta_1_3_glucan_synthase_inhibition
+  title: Pneumocandin A0 noncompetitively inhibits fungal 1,3-beta-D-glucan synthase
+    (Fks1/Fks2) to disrupt cell-wall glucan biosynthesis
+  description: Pneumocandin A0, an acyl-homotyrosine echinocandin lipopeptide antifungal,
+    noncompetitively inhibits the fungal 1,3-beta-D-glucan synthase complex (Fks1/Fks2
+    catalytic subunits), blocking UDP-glucose polymerization into structural cell-wall
+    1,3-beta-D-glucan.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: pneumocandin_a0
+    label: pneumocandin A0
+    node_type: COMPOUND
+    grounding: CHEBI:198520
+  - node_id: fungal_1_3_beta_d_glucan_synthase_fks1_fks2
+    label: fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Fungal 1,3-beta-D-glucan synthase catalytic complex (Fks1/Fks2,
+      EC 2.4.1.34); kept label-only with Saccharomyces cerevisiae S288c Fks1 (UniProtKB:P38631)
+      and Fks2/Gsc2 (UniProtKB:P40989) protein_examples.
+    gene_symbols:
+    - FKS1
+    - GSC2
+    protein_examples:
+    - uniprot_id: UniProtKB:P38631
+      protein_label: 1,3-beta-glucan synthase component FKS1
+      gene_symbol: FKS1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Primary catalytic subunit Fks1 (ETG1, EC 2.4.1.34) of the Saccharomyces
+        cerevisiae S288c 1,3-beta-D-glucan synthase complex inhibited by pneumocandin
+        A0 (L-671,329) and other echinocandins (DOI:10.7164/antibiotics.45.1886; PMID:1490879;
+        DOI:10.1073/pnas.91.26.12907; PMID:7809096).
+    - uniprot_id: UniProtKB:P40989
+      protein_label: 1,3-beta-glucan synthase component GSC2
+      gene_symbol: GSC2
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Alternative catalytic subunit Gsc2 (Fks2, EC 2.4.1.34) of the Saccharomyces
+        cerevisiae S288c 1,3-beta-D-glucan synthase complex inhibited by pneumocandin
+        A0 (DOI:10.7164/antibiotics.45.1886; PMID:1490879; DOI:10.1073/pnas.91.26.12907;
+        PMID:7809096).
+  - node_id: beta_1_3_d_glucan_synthase_udp_glucose_polymerization_activity
+    label: Fks1/Fks2-catalyzed UDP-glucose polymerization into 1,3-beta-D-glucan
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Polymerization of UDP-glucose into linear 1,3-beta-D-glucan catalyzed
+      by fungal 1,3-beta-D-glucan synthase (Fks1/Fks2) and noncompetitively inhibited
+      by pneumocandin A0 (DOI:10.7164/antibiotics.45.1886; DOI:10.1073/pnas.91.26.12907).
+  - node_id: fungal_cell_wall_1_3_beta_d_glucan_biosynthesis
+    label: fungal cell-wall 1,3-beta-D-glucan biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Synthesis and assembly of structural 1,3-beta-D-glucan in the
+      fungal cell wall disrupted by pneumocandin A0 inhibition of 1,3-beta-D-glucan
+      synthase (DOI:10.7164/antibiotics.45.1886; DOI:10.1073/pnas.91.26.12907).
+  edges:
+  - subject: pneumocandin_a0
+    predicate: inhibits
+    object: beta_1_3_d_glucan_synthase_udp_glucose_polymerization_activity
+    description: Pneumocandin A0 noncompetitively inhibits fungal 1,3-beta-D-glucan
+      synthase (Fks1/Fks2) catalytic activity.
+    evidence:
+    - reference: DOI:10.7164/antibiotics.45.1886
+      notes: Schmatz et al. 1992 (PMID:1490879) demonstrated that pneumocandin A0
+        potently inhibits Candida albicans membrane 1,3-beta-D-glucan synthase activity.
+    - reference: DOI:10.1073/pnas.91.26.12907
+      notes: Douglas et al. 1994 (PMID:7809096) cloned Saccharomyces cerevisiae FKS1
+        and showed that fks1 mutations confer echinocandin/pneumocandin resistance
+        both in whole cells and in purified 1,3-beta-D-glucan synthase assays.
+  - subject: fungal_1_3_beta_d_glucan_synthase_fks1_fks2
+    predicate: enables
+    object: beta_1_3_d_glucan_synthase_udp_glucose_polymerization_activity
+    description: Fungal 1,3-beta-D-glucan synthase catalytic subunits (Fks1/Fks2)
+      catalyze UDP-glucose polymerization into 1,3-beta-D-glucan.
+    evidence:
+    - reference: DOI:10.1073/pnas.91.26.12907
+      notes: Saccharomyces cerevisiae Fks1 (and homologous Fks2/Gsc2) forms the catalytic
+        subunit of the membrane-bound 1,3-beta-D-glucan synthase complex (PMID:7809096).
+  - subject: beta_1_3_d_glucan_synthase_udp_glucose_polymerization_activity
+    predicate: supports
+    object: fungal_cell_wall_1_3_beta_d_glucan_biosynthesis
+    description: 1,3-beta-D-glucan synthase activity drives fungal cell-wall 1,3-beta-D-glucan
+      biosynthesis and cell-wall integrity.
+    evidence:
+    - reference: DOI:10.7164/antibiotics.45.1886
+      notes: Inhibition of 1,3-beta-D-glucan synthase by pneumocandin A0 blocked fungal
+        cell-wall glucan synthesis and caused fungicidal activity against Candida
+        species and Pneumocystis carinii (PMID:1490879).

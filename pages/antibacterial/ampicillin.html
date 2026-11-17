@@ -7,7 +7,7 @@
 <meta name="description" content="ampicillin (CHEBI:28971): A penicillin in which the substituent at position 6 of the penam ring is a 2-amino-2-phenylacetamido group.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>ampicillin</h1>
 <p class="meta">
   <code class="curie">CHEBI:28971</code>
@@ -37,18 +48,21 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000008">penicillin beta-lactam</a><code class="curie">ARO:3000008</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_17334">CHEBI:17334</a>      <code class="curie">CHEBI:17334</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_27933">CHEBI:27933</a>      <code class="curie">CHEBI:27933</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_88187">CHEBI:88187</a>      <code class="curie">CHEBI:88187</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000008">ARO:3000008</a>      <code class="curie">ARO:3000008</code></li>
+  <li>penicillin  <a href="http://purl.obolibrary.org/obo/CHEBI_17334"><code class="curie">CHEBI:17334</code></a></li>
+  <li>β-lactam antibiotic  <a href="http://purl.obolibrary.org/obo/CHEBI_27933"><code class="curie">CHEBI:27933</code></a></li>
+  <li>penicillin allergen  <a href="http://purl.obolibrary.org/obo/CHEBI_88187"><code class="curie">CHEBI:88187</code></a></li>
+  <li>penicillin beta-lactam  <a href="http://purl.obolibrary.org/obo/ARO_3000008"><code class="curie">ARO:3000008</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C16H19N3O4S</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>349.412 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>349.10963 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">AVKUERGKIZMTKX-NJBDSQKTSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N)c1ccccc1</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C16H19N3O4S/c1-16(2)11(15(22)23)19-13(21)10(14(19)24-16)18-12(20)9(17)8-6-4-3-5-7-8/h3-7,9-11,14H,17H2,1-2H3,(H,18,20)(H,22,23)/t9-,10-,11+,14-/m1/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -59,7 +73,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000637">ARO:3000637</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3000637">ampicillin</a><code class="curie">ARO:3000637</code></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=69-53-4">cas:69-53-4</a></li>
   <li><a href="http://www.hmdb.ca/metabolites/HMDB0014559">hmdb:HMDB0014559</a></li>
   <li><a href="https://www.kegg.jp/entry/C06574">kegg.compound:C06574</a></li>
@@ -96,13 +110,14 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_36047">CHEBI:36047</a>    <code class="curie">CHEBI:36047</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antibacterial drug  <a href="http://purl.obolibrary.org/obo/CHEBI_36047"><code class="curie">CHEBI:36047</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -122,145 +137,357 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>beta-lactam sensitive penicillin-binding protein <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000749">ARO:3000749</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. Penicillin-binding proteins are asserted as inhibited transpeptidases. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000749</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000749">ARO:3000749</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
 
 
-<h2>Activity spectrum</h2>
+<h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">21 observations &middot; <a href="ampicillin/activity-1.html">Browse all observations</a> &middot; <a href="ampicillin/record-6ded7e22206b8159d3911cc9df766788f4399456653cee8f3e603adbc7779254.json.gz" download>Complete record (JSON.gz)</a></p>
+<div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
-  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Assay</th><th scope="col">Strain</th></tr></thead>
-  <tr>
-    <td><em>Enterococcus faecium</em> <code class="curie">NCBITaxon:1352</code></td>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Enterococcus faecium</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1352">NCBITaxon:1352</a></td>
     <td>—</td>
     <td class="num">64.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0783</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN15040082">SAMN15040082</a><br>    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></td>
+  <tr id="observation-2">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0349</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN11953777">SAMN11953777</a><br>    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
+  <tr id="observation-3">
+    <td><em>Klebsiella pneumoniae</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=573">NCBITaxon:573</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0497</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN11953783">SAMN11953783</a><br>    </td>
+    <td><details class="activity-evidence" data-row="2" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Klebsiella aerogenes</em> <code class="curie">NCBITaxon:548</code></td>
+  <tr id="observation-4">
+    <td><em>Klebsiella aerogenes</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=548">NCBITaxon:548</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0074</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN04014915">SAMN04014915</a><br>    </td>
+    <td><details class="activity-evidence" data-row="3" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></td>
+  <tr id="observation-5">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0346</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN11953774">SAMN11953774</a><br>    </td>
+    <td><details class="activity-evidence" data-row="4" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
+  <tr id="observation-6">
+    <td><em>Klebsiella pneumoniae</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=573">NCBITaxon:573</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1149</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111336">SAMN34111336</a><br>    </td>
+    <td><details class="activity-evidence" data-row="5" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterobacter cloacae complex</em> <code class="curie">NCBITaxon:354276</code></td>
+  <tr id="observation-7">
+    <td><em>Enterobacter cloacae complex</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=354276">NCBITaxon:354276</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1150</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111337">SAMN34111337</a><br>    </td>
+    <td><details class="activity-evidence" data-row="6" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterobacter cloacae complex</em> <code class="curie">NCBITaxon:354276</code></td>
+  <tr id="observation-8">
+    <td><em>Enterobacter cloacae complex</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=354276">NCBITaxon:354276</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1151</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111338">SAMN34111338</a><br>    </td>
+    <td><details class="activity-evidence" data-row="7" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterobacter cloacae complex</em> <code class="curie">NCBITaxon:354276</code></td>
+  <tr id="observation-9">
+    <td><em>Enterobacter cloacae complex</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=354276">NCBITaxon:354276</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1152</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111339">SAMN34111339</a><br>    </td>
+    <td><details class="activity-evidence" data-row="8" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
+  <tr id="observation-10">
+    <td><em>Klebsiella pneumoniae</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=573">NCBITaxon:573</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1153</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111340">SAMN34111340</a><br>    </td>
+    <td><details class="activity-evidence" data-row="9" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
+  <tr id="observation-11">
+    <td><em>Klebsiella pneumoniae</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=573">NCBITaxon:573</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1158</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111344">SAMN34111344</a><br>    </td>
+    <td><details class="activity-evidence" data-row="10" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterobacter cloacae complex</em> <code class="curie">NCBITaxon:354276</code></td>
+  <tr id="observation-12">
+    <td><em>Enterobacter cloacae complex</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=354276">NCBITaxon:354276</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1160</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111346">SAMN34111346</a><br>    </td>
+    <td><details class="activity-evidence" data-row="11" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></td>
+  <tr id="observation-13">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1162</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111348">SAMN34111348</a><br>    </td>
+    <td><details class="activity-evidence" data-row="12" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
+  <tr id="observation-14">
+    <td><em>Klebsiella pneumoniae</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=573">NCBITaxon:573</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1163</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111349">SAMN34111349</a><br>    </td>
+    <td><details class="activity-evidence" data-row="13" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Citrobacter freundii</em> <code class="curie">NCBITaxon:546</code></td>
+  <tr id="observation-15">
+    <td><em>Citrobacter freundii</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=546">NCBITaxon:546</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0637</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN10055345">SAMN10055345</a><br>    </td>
+    <td><details class="activity-evidence" data-row="14" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterobacter cloacae complex</em> <code class="curie">NCBITaxon:354276</code></td>
+  <tr id="observation-16">
+    <td><em>Enterobacter cloacae complex</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=354276">NCBITaxon:354276</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1329</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN50502208">SAMN50502208</a><br>    </td>
+    <td><details class="activity-evidence" data-row="15" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
+  <tr id="observation-17">
+    <td><em>Enterobacter cloacae complex</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=354276">NCBITaxon:354276</a></td>
+    <td>—</td>
+    <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
+    <td class="meta">1331</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN50502209">SAMN50502209</a><br>    </td>
+    <td><details class="activity-evidence" data-row="16" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-18">
+    <td><em>Enterococcus faecium</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1352">NCBITaxon:1352</a></td>
+    <td>—</td>
+    <td class="num">128.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
+    <td class="meta">0500</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN11953784">SAMN11953784</a><br>    </td>
+    <td><details class="activity-evidence" data-row="17" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-19">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
+    <td>—</td>
+    <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
+    <td class="meta">0495</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN11953781">SAMN11953781</a><br>    </td>
+    <td><details class="activity-evidence" data-row="18" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-20">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
+    <td>—</td>
+    <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 10 footnote.</td>
+    <td class="meta">0538</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN11953785">SAMN11953785</a><br>    </td>
+    <td><details class="activity-evidence" data-row="19" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-21">
+    <td><em>Salmonella enterica subsp. enterica serovar Typhimurium</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=90371">NCBITaxon:90371</a></td>
+    <td>—</td>
+    <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">Broth microdilution ampicillin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 10 footnote.</td>
+    <td class="meta">0539</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN07688908">SAMN07688908</a><br>    </td>
+    <td><details class="activity-evidence" data-row="20" data-offset="0" data-total="21" data-identifier="CHEBI:28971" data-key="AVKUERGKIZMTKX-NJBDSQKTSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ampicillin/activity-1-a57ba32ca56d5c6c484de79253dc2fd9ec7f74f3244a1c750e018f24e70afeff.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  </tbody>
 </table>
 
+</div>
+
+
 <h2>Resistance mechanisms</h2>
-<p class="meta">37 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">37 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">31</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_INACTIVATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -269,7 +496,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007694</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007694">ARO:3007694</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -279,7 +506,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007635</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007635">ARO:3007635</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -289,7 +516,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002013</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002013">ARO:3002013</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -299,7 +526,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3001878</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3001878">ARO:3001878</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -309,7 +536,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3001889</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3001889">ARO:3001889</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -319,7 +546,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3001866</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3001866">ARO:3001866</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -329,7 +556,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007437</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007437">ARO:3007437</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -339,7 +566,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007206</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007206">ARO:3007206</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -349,7 +576,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007438</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007438">ARO:3007438</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -359,7 +586,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003589</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003589">ARO:3003589</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -369,7 +596,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3001396</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3001396">ARO:3001396</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -379,7 +606,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3001397</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3001397">ARO:3001397</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -389,7 +616,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3001796</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3001796">ARO:3001796</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -399,7 +626,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002500</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002500">ARO:3002500</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -409,7 +636,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002502</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002502">ARO:3002502</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -419,7 +646,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007374</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007374">ARO:3007374</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -429,7 +656,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007085</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007085">ARO:3007085</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -439,7 +666,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007648</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007648">ARO:3007648</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -449,7 +676,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3001059</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3001059">ARO:3001059</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -459,7 +686,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007442</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007442">ARO:3007442</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -469,7 +696,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000014</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000014">ARO:3000014</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -479,7 +706,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000873</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000873">ARO:3000873</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -489,7 +716,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000966</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000966">ARO:3000966</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -499,7 +726,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000900</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000900">ARO:3000900</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -509,7 +736,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007062</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007062">ARO:3007062</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -519,7 +746,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007003</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007003">ARO:3007003</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -529,7 +756,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007004</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007004">ARO:3007004</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -539,7 +766,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005511</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005511">ARO:3005511</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -549,7 +776,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005015</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005015">ARO:3005015</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -559,7 +786,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007435</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007435">ARO:3007435</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -569,15 +796,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005111</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005111">ARO:3005111</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">3</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_EFFLUX</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -586,7 +816,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000384</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000384">ARO:3000384</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -596,7 +826,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000386</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000386">ARO:3000386</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -606,15 +836,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007011</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007011">ARO:3007011</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">2</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -623,7 +856,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004446</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004446">ARO:3004446</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -633,15 +866,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007531</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007531">ARO:3007531</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>REDUCED_PERMEABILITY <span class="pill plain">1</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: REDUCED_PERMEABILITY" tabindex="0">
+<table>
     <caption>REDUCED_PERMEABILITY</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -650,11 +886,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003966</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003966">ARO:3003966</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -744,32 +982,72 @@ type — expand a group to see its determinants.</p>
     <span class="meta">2026-09-17 · codex · LLM-assisted</span>
     <p>Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 ampicillin-resistant Enterobacter cloacae complex MIC observation for AR-1329.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_RESISTANT_TAXA</span>
+    <span class="meta">2026-09-17 · codex · LLM-assisted</span>
+    <p>Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 ampicillin-resistant Enterobacter cloacae complex MIC observation for AR-1331.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANT_TAXA</span>
+    <span class="meta">2026-09-17 · codex · LLM-assisted</span>
+    <p>Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 ampicillin-resistant Enterococcus faecium MIC observation for AR-0500.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANT_TAXA</span>
+    <span class="meta">2026-09-17 · codex · LLM-assisted</span>
+    <p>Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 ampicillin-resistant Escherichia coli MIC observation for AR-0495.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANT_TAXA</span>
+    <span class="meta">2026-09-20 · codex · LLM-assisted</span>
+    <p>Added two stable-URL CDC/FDA AR Isolate Bank Panel 10 ampicillin-resistant Escherichia coli and Salmonella Typhimurium MIC observations for AR-0538 and AR-0539; preserved BioSamples SAMN11953785/SAMN07688908, Study IDs NEW-22/NEW-23, and source Stool for AR-0539 in evidence notes.</p>
+  </li>
+  <li>
+    <span class="pill">STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS</span>
+    <span class="meta">2026-09-26 · codex · LLM-assisted</span>
+    <p>Structured BioSample accessions on 21 activity_spectrum observation(s) where evidence notes already named exactly one accession.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_STRUCTURAL_OBSERVATION</span>
+    <span class="meta">2026-10-25 · curate-yaml-record · LLM-assisted</span>
+    <p>Curated ChEBI-seeded structural_observations entry PDB:1H8S from UNREVIEWED (PRIMARY_EVIDENCE_NEEDED) to ANTIBODY_COMPLEX (PRIMARY_EVIDENCE) for murine anti-ampicillin single-chain Fv antibody fragment aL2 bound to ampicillin (pdb-ccd:AIC, X-ray, PMID:11397088, DOI:10.1006/jmbi.2001.4663) (#1256).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/ampicillin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/ampicillin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=ampicillin">MediaIngredientMech (ampicillin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=ampicillin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=ampicillin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=ampicillin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=ampicillin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

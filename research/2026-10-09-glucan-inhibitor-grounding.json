@@ -1,0 +1,285 @@
+{
+  "access_attempts": [
+    {
+      "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/martins-2011.xml.json",
+      "sha256": "3191649bca0b0eb3a4bda55414f8ba9e3086c28f780b9231c78f1d9c4f57cf4a"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/castro-1995.pdf.json",
+      "sha256": "e5a4cc8f77ec7bc386332bef33e28f49474db5e30a8f0060246eecb9b24376e5"
+    }
+  ],
+  "all_record_paths_and_hashes_verified": 2939,
+  "biological_record_changes_at_this_checkpoint": 0,
+  "current_census": {
+    "path": "reports/resistance-grounding-2026-10-09-gm193663/corpus.json",
+    "sha256": "5eca9b187baeb613ab354ae09ccb4633942a9629d5a857f8559bbb3506432c15"
+  },
+  "current_ledger": {
+    "path": "research/2026-10-09-gm193663-resistance-grounding.tsv",
+    "sha256": "24ed1d91c1e66808be1dbfb6a46d964c6301d522bd04a4e67e1a344ad3a88e79"
+  },
+  "date": "2026-10-09",
+  "experimental_alleles_validated": false,
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "latest_authoritative_qc": {
+    "path": "research/2026-10-09-gm193663-verification.json",
+    "sha256": "9a97aa49740017d85863e61f1c577a42597a9f075ef433d6ced6d8dc01d40c67"
+  },
+  "ncbi_endpoint_requests": 0,
+  "pombase_alias_review": {
+    "alias": "pbr1",
+    "limit": "The inspected UniProt synonym list omits pbr1; PomBase supplies the alias, not an assignment of its reference protein to a tested allele.",
+    "native_page_snapshot_cached": false,
+    "observed_release_date": "2026-09-15",
+    "primary_gene": "bgs4",
+    "reading": "MANUAL_INDEXED_OFFICIAL_GENE_PAGE",
+    "reviewed_on": "2026-10-09",
+    "systematic_id": "SPCC1840.02c",
+    "uniprot_cross_reference": "O74475",
+    "url": "https://www.pombase.org/gene/SPCC1840.02c"
+  },
+  "primary_reviews": [
+    {
+      "compound_exclusion": "This study is not papulacandin A evidence.",
+      "doi": "10.1128/jb.177.20.5732-5739.1995",
+      "figures_visually_reviewed": false,
+      "findings": "Papulacandin B: PBR1-associated findings in budding yeast and pbr1-associated findings in fission yeast. Papulacandin D: fission-yeast findings. Other perturbations at the same locus do not reproduce every phenotype.",
+      "native_pdf_cached": false,
+      "reference": "PMID:7592316",
+      "scope": "Publisher PDF extracted text: Methods, Table 1, Results pp. 5734-5736.",
+      "url": "https://journals.asm.org/doi/pdf/10.1128/jb.177.20.5732-5739.1995?download=true"
+    },
+    {
+      "disposition": "Keep subject crosswalk unresolved; do not normalize the differing labels.",
+      "doi": "10.1128/aac.48.1.319-322.2004",
+      "findings": "Arborcandin C has a gene-level FKS1 lead in experimental budding yeast.",
+      "reference": "PMID:14693557",
+      "scope": "Publisher indexed Methods, Results and tables; not figure reanalysis.",
+      "unresolved_subject_labels": [
+        [
+          "YPH250",
+          "YHP250"
+        ],
+        [
+          "ACR79-5",
+          "ACR75-5"
+        ]
+      ],
+      "url": "https://journals.asm.org/doi/10.1128/aac.48.1.319-322.2004"
+    },
+    {
+      "access": "EMBL-EBI fullTextXML returned HTTP 500; publisher access was inconsistent or denied.",
+      "crossref": {
+        "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/martins-crossref.json",
+        "sha256": "ed35b498b47a6a8339fb6a9ee1d085ca9a527fce35c7112d5091028bd1eb1531"
+      },
+      "disposition": "No independent primary conclusions or new compound assignments from this paper.",
+      "doi": "10.1074/jbc.M110.174300",
+      "reference": "PMID:21115488",
+      "scope": "Bibliography and database leads only; full Results review incomplete."
+    },
+    {
+      "disposition": "Historical resistant-background use, not replacement evidence for original papulacandin experiments; new tested compounds are not imported.",
+      "doi": "10.3389/fmicb.2019.01692",
+      "scope": "Introduction and Results context inspected.",
+      "url": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2019.01692/full"
+    }
+  ],
+  "protected_files_unchanged": 6322,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/protected-before.json",
+    "sha256": "1efd8a0c0a73704abe61dfbadd9aa73058f4a3f7cccbfe83646cb6a45331bbdc"
+  },
+  "public_export_excludes": [
+    "sequences",
+    "variant specifications",
+    "constructs",
+    "protocols",
+    "coordinates",
+    "quantitative resistance measurements"
+  ],
+  "records": [
+    {
+      "identifier": "antibioticmech:aro-de2f58b0cc",
+      "label": "arborcandin C",
+      "path": "data/antibiotics/antibacterial/arborcandin-c.yaml",
+      "sha256": "6b854e87a5d833a14691ffdc54b1df9b96bbb82a66da1adf64c74b67ad08332a",
+      "standard_inchi_key": "AHATVKJRQUTSJV-UHFFFAOYSA-N"
+    },
+    {
+      "identifier": "CHEBI:72611",
+      "label": "papulacandin A",
+      "path": "data/antibiotics/antifungal/papulacandin-a.yaml",
+      "sha256": "1d1e5a92498149d47a42527f1169594338423932e1c2738cb634c725febbb667",
+      "standard_inchi_key": "DPVWBQZOSHCQTG-NVTMJBNDSA-N"
+    },
+    {
+      "identifier": "CHEBI:569624",
+      "label": "papulacandin B",
+      "path": "data/antibiotics/antifungal/papulacandin-b.yaml",
+      "sha256": "bc8df558560abd66de09db9c018e515f09046a200dc78bef26d9c18ab8b92394",
+      "standard_inchi_key": "UJLFRJFJTPPIOK-RZGJRGQUSA-N"
+    },
+    {
+      "identifier": "CHEBI:72630",
+      "label": "papulacandin D",
+      "path": "data/antibiotics/antifungal/papulacandin-d.yaml",
+      "sha256": "8cc2c195bfd6187328c291de7b90386d1e5dfe83b25c35d01cf58adfc3c849ee",
+      "standard_inchi_key": "XKSZJTQIZHUMGA-HPZFVNCBSA-N"
+    }
+  ],
+  "reference_proteins": [
+    {
+      "accession": "UniProtKB:P38631",
+      "database_links": [
+        {
+          "database": "SGD",
+          "id": "S000004334"
+        }
+      ],
+      "entry_version": 209,
+      "locus_names": [
+        "YLR342W",
+        "L8300.6"
+      ],
+      "organism": {
+        "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "taxonId": 559292
+      },
+      "primary_gene": "FKS1",
+      "request": {
+        "body_sha256": "618f7d1847fc052ebe2575d4439e23875b5a47846c653788bf89990a6e65aafd",
+        "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/request-5a11dd629cf9889dba72627d4d9ffe68bb04bea88d1803ee1e62bdfcce3edc4f.json",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T09:09:14.813776+00:00",
+        "sha256": "e3b0f68b972002a412194e387b33142ad93f923a51a1eef050678a817e859d8a",
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AFKS1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=20&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Cxref_pombase%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reviewed": true,
+      "role": "REFERENCE_LOCUS_NOT_EXACT_TESTED_ALLELE",
+      "sequence_version": 2,
+      "uniprot_synonyms": [
+        "CND1",
+        "CWH53",
+        "ETG1",
+        "GLS1",
+        "GSC1",
+        "PBR1"
+      ]
+    },
+    {
+      "accession": "UniProtKB:O74475",
+      "database_links": [
+        {
+          "database": "PomBase",
+          "id": "SPCC1840.02c"
+        }
+      ],
+      "entry_version": 158,
+      "locus_names": [
+        "SPCC1840.02c"
+      ],
+      "organism": {
+        "scientificName": "Schizosaccharomyces pombe (strain 972 / ATCC 24843)",
+        "taxonId": 284812
+      },
+      "primary_gene": "bgs4",
+      "request": {
+        "body_sha256": "3a4c7b4b19c3c6d5be5d61a00450ed5552f806857c5adaebde39a1c94b7bb094",
+        "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/request-ec4148133a7c4559e602b251467470ebefb39c7f3b661efc32e224f48e69ad32.json",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T09:07:08.034582+00:00",
+        "sha256": "e785a68fddf68cc60d77d95bd0cff5beff0d95c19662f080202b6f889f20f037",
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Abgs4+AND+taxonomy_id%3A4896+AND+reviewed%3Atrue&format=json&size=20&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Cxref_pombase%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reviewed": true,
+      "role": "REFERENCE_LOCUS_NOT_EXACT_TESTED_ALLELE",
+      "sequence_version": 1,
+      "uniprot_synonyms": [
+        "cwg1",
+        "orb11"
+      ]
+    }
+  ],
+  "scope": "PRE_CURATION_RESEARCH_CHECKPOINT",
+  "status": "REFERENCE_GROUNDING_AND_COMPOUND_SCOPE_REVIEW",
+  "taxonomy": [
+    {
+      "active": true,
+      "parent": {
+        "scientificName": "Schizosaccharomyces",
+        "taxonId": 4895
+      },
+      "rank": "species",
+      "request": {
+        "body_sha256": "40efab4a26c4564d44f999cf690971857fa247eb31a12663ac2afe0886733438",
+        "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/request-82e94bd595a4221419be8996762bfd511993bb8d133f422b2708fb15f4bc1ee5.json",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T09:09:57.467434+00:00",
+        "sha256": "7184630f190ece5dbc05501c32f2ea302974b6068b1b90af11fcb86f2fefc66c",
+        "url": "https://rest.uniprot.org/taxonomy/4896"
+      },
+      "scientificName": "Schizosaccharomyces pombe",
+      "taxonId": 4896
+    },
+    {
+      "active": true,
+      "parent": {
+        "commonName": "Fission yeast",
+        "scientificName": "Schizosaccharomyces pombe",
+        "taxonId": 4896
+      },
+      "rank": "strain",
+      "request": {
+        "body_sha256": "3b78267f00e0ce7d290c9899372e09e2cb7f25d9d13fb832d21f45c9e24a39ce",
+        "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/request-8e797c0e7d209b5e4e517bd50e17fed9a101979d60e787046af3fe5eea04a78b.json",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T09:09:27.821459+00:00",
+        "sha256": "f3306fac23d061e11b0610a9cd35c7e77ddd5dc3a87e82d31c0f3982d1db9518",
+        "url": "https://rest.uniprot.org/taxonomy/284812"
+      },
+      "scientificName": "Schizosaccharomyces pombe (strain 972 / ATCC 24843)",
+      "taxonId": 284812
+    },
+    {
+      "active": true,
+      "parent": {
+        "scientificName": "Saccharomyces",
+        "taxonId": 4930
+      },
+      "rank": "species",
+      "request": {
+        "body_sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+        "path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+        "sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98",
+        "url": "https://rest.uniprot.org/taxonomy/4932"
+      },
+      "scientificName": "Saccharomyces cerevisiae",
+      "taxonId": 4932
+    },
+    {
+      "active": true,
+      "parent": {
+        "commonName": "Baker's yeast",
+        "scientificName": "Saccharomyces cerevisiae",
+        "taxonId": 4932
+      },
+      "rank": "strain",
+      "request": {
+        "body_sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+        "path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+        "sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba",
+        "url": "https://rest.uniprot.org/taxonomy/559292"
+      },
+      "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "taxonId": 559292
+    }
+  ],
+  "whole_record_reviews_complete": false
+}

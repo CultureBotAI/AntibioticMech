@@ -1,0 +1,382 @@
+{
+  "baseline_census": {
+    "path": "research/2026-10-14-formaldehyde-resistance-grounding.tsv",
+    "sha256": "0cca75691edd1ad52b0127e6d57b0ae5b5bd07c892005b238df9768b7037685a"
+  },
+  "limitations": [
+    "Historical primary interpretations are preserved, not independently renewed.",
+    "Reference metadata does not resolve experimental alleles, subjects or genomes.",
+    "Operon-only claims and all other source-owned claims are unchanged.",
+    "No sequences, variant specifications, constructs, protocols or numeric AST added."
+  ],
+  "records": [
+    {
+      "before": {
+        "path": "data/antibiotics/antibacterial/pr-39.yaml",
+        "sha256": "272ab62a133779fb068f84c97fbeba1dfd1d3e101d7342d8994b2a632d6224bd"
+      },
+      "dossier": {
+        "path": "research/2026-10-08-pr39-grounding.json",
+        "sha256": "a336458cbf51b20a1fd922d044c2df255bd7a817c12dfff5561803ce8313b82b"
+      },
+      "edits": [
+        {
+          "before_claim_sha256": "32dc5a94fa55a1d7831ad88bbd8bbb75785b20ac0fbf05e8c27f6c1d56a871c5",
+          "primary_reference": "PMID:18519732",
+          "references": [
+            {
+              "accession": "UniProtKB:Q8ZRF5",
+              "entry_type": "UniProtKB unreviewed (TrEMBL)",
+              "entry_version": 106,
+              "gene": "sbmA",
+              "reference_taxon_id": "NCBITaxon:99287",
+              "release": "2026_03",
+              "retrieved_on": "2026-10-08",
+              "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+              "sequence_version": 1,
+              "source_receipt": {
+                "path": "reports/resistance-grounding-2026-10-07/request-e8c6970e1476abc1cc1692fe42c98d76e09d04ce9bfd5adbe0460dfef47f38ad.json",
+                "sha256": "743edbf91f9b56571be290a5490ef9eb0f593ee8856251b1fe4a2535d09173a7"
+              },
+              "source_request": {
+                "retrieved_at": "2026-10-08T05:38:26.749008+00:00",
+                "sha256": "eb1f81b09b786d83a29e78a63636d1b8b2814acca6e7d953d8ed43ff1b82d940",
+                "status": 200,
+                "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AsbmA+AND+organism_id%3A99287&format=json&size=100&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_refseq%2Cxref_embl%2Cversion%2Csequence_version"
+              }
+            }
+          ],
+          "resistance_index": 0
+        }
+      ],
+      "identifier": "CHEBI:131850",
+      "label": "PR-39",
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-reference-citations/pr-39-before.yaml",
+        "sha256": "272ab62a133779fb068f84c97fbeba1dfd1d3e101d7342d8994b2a632d6224bd"
+      },
+      "standard_inchi_key": "JTJJGVCUEGCBHL-IWDHFESKSA-N"
+    },
+    {
+      "before": {
+        "path": "data/antibiotics/antifungal/blasticidin-s.yaml",
+        "sha256": "4886e113f1e70381dd401f1346c9058c687ea5c7f192fbbd12db7bedbc4cc3f4"
+      },
+      "dossier": {
+        "path": "research/2026-10-12-blasticidin-context.json",
+        "sha256": "dfb54be7e4f93f65a8c835881d1bc209fa454eef909ab6e3bdc8bc8dee39239b"
+      },
+      "edits": [
+        {
+          "before_claim_sha256": "59fe132b309b181f379f6cdc4099932d4fae0ebff9bfff7658b336015d22fed3",
+          "primary_reference": "PMID:27355376",
+          "references": [
+            {
+              "accession": "UniProtKB:P23843",
+              "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+              "entry_version": 171,
+              "gene": "oppA",
+              "reference_taxon_id": "NCBITaxon:83333",
+              "release": "2026_03",
+              "retrieved_on": "2026-10-12",
+              "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+              "sequence_version": 2,
+              "source_receipt": {
+                "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-136b4ff93496b30b58d477d03a4e63a4ca7269d8df40ea9d16abac7789ec625e.json",
+                "sha256": "5684c068142914917d1c663dc55e3d285505a0685fcc3bbe01fdc6a3cad4cf91"
+              },
+              "source_request": {
+                "retrieved_at": "2026-10-12T18:27:37.986619+00:00",
+                "sha256": "ae0525d2e2d90f5ea34afbdfe88bc301b5af73226dfaa4aa84796a784351cf1b",
+                "status": 200,
+                "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AoppA+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+              }
+            }
+          ],
+          "resistance_index": 0
+        },
+        {
+          "before_claim_sha256": "98e23efdb1d0452c7d160113f6d1ff42f59ecf527ee758d1cb1805234b6418ff",
+          "primary_reference": "PMID:27355376",
+          "references": [
+            {
+              "accession": "UniProtKB:P0AFH2",
+              "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+              "entry_version": 126,
+              "gene": "oppB",
+              "reference_taxon_id": "NCBITaxon:83333",
+              "release": "2026_03",
+              "retrieved_on": "2026-10-12",
+              "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+              "sequence_version": 1,
+              "source_receipt": {
+                "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-4d5bd364d3cce6dad75915c2d1dbdc32c6fb3f631504289e0ad4aad1395ee699.json",
+                "sha256": "05e90d6ba2be46b42c721bf9e3d4baf36e48eb6610390858ddb4d75dbc4b3b4a"
+              },
+              "source_request": {
+                "retrieved_at": "2026-10-12T18:28:06.439981+00:00",
+                "sha256": "24e29c92fbb26c3936d9bbb047ecc0e53a17db038f6a7e000ab59c2daff28b7a",
+                "status": 200,
+                "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AoppB+OR+gene_exact%3AoppC+OR+gene_exact%3AoppD+OR+gene_exact%3AoppF%29+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+              }
+            }
+          ],
+          "resistance_index": 1
+        }
+      ],
+      "identifier": "CHEBI:15353",
+      "label": "blasticidin S",
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-reference-citations/blasticidin-s-before.yaml",
+        "sha256": "4886e113f1e70381dd401f1346c9058c687ea5c7f192fbbd12db7bedbc4cc3f4"
+      },
+      "standard_inchi_key": "CXNPLSGKWMLZPZ-ZNIXKSQXSA-N"
+    },
+    {
+      "before": {
+        "path": "data/antibiotics/antifungal/kasugamycin.yaml",
+        "sha256": "7a1fb4d516dcc4337524ad052655d47fe2ff98e4dfe0b53f1c3b4c981518fd37"
+      },
+      "dossier": {
+        "path": "research/2026-10-12-kasugamycin-context.json",
+        "sha256": "ebff90b85a509536f622a6bcdd71dfb1c60d1f4f8b9cb16d65428e1bf37fbead"
+      },
+      "edits": [
+        {
+          "before_claim_sha256": "0b310ab8c92c663acffd89cebeaf5b649af4d7496d5b968a9bd80ed4c1aa87a0",
+          "primary_reference": "PMID:27355376",
+          "references": [
+            {
+              "accession": "UniProtKB:P23843",
+              "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+              "entry_version": 171,
+              "gene": "oppA",
+              "reference_taxon_id": "NCBITaxon:83333",
+              "release": "2026_03",
+              "retrieved_on": "2026-10-12",
+              "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+              "sequence_version": 2,
+              "source_receipt": {
+                "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-136b4ff93496b30b58d477d03a4e63a4ca7269d8df40ea9d16abac7789ec625e.json",
+                "sha256": "5684c068142914917d1c663dc55e3d285505a0685fcc3bbe01fdc6a3cad4cf91"
+              },
+              "source_request": {
+                "retrieved_at": "2026-10-12T18:27:37.986619+00:00",
+                "sha256": "ae0525d2e2d90f5ea34afbdfe88bc301b5af73226dfaa4aa84796a784351cf1b",
+                "status": 200,
+                "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AoppA+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+              }
+            }
+          ],
+          "resistance_index": 4
+        },
+        {
+          "before_claim_sha256": "c1abae2a14e232f2c92c097c3906324cdf6cd7fe934c173b8c6d3295af4c6e19",
+          "primary_reference": "PMID:27355376",
+          "references": [
+            {
+              "accession": "UniProtKB:P0AFH2",
+              "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+              "entry_version": 126,
+              "gene": "oppB",
+              "reference_taxon_id": "NCBITaxon:83333",
+              "release": "2026_03",
+              "retrieved_on": "2026-10-12",
+              "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+              "sequence_version": 1,
+              "source_receipt": {
+                "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-4d5bd364d3cce6dad75915c2d1dbdc32c6fb3f631504289e0ad4aad1395ee699.json",
+                "sha256": "05e90d6ba2be46b42c721bf9e3d4baf36e48eb6610390858ddb4d75dbc4b3b4a"
+              },
+              "source_request": {
+                "retrieved_at": "2026-10-12T18:28:06.439981+00:00",
+                "sha256": "24e29c92fbb26c3936d9bbb047ecc0e53a17db038f6a7e000ab59c2daff28b7a",
+                "status": 200,
+                "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AoppB+OR+gene_exact%3AoppC+OR+gene_exact%3AoppD+OR+gene_exact%3AoppF%29+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+              }
+            }
+          ],
+          "resistance_index": 5
+        },
+        {
+          "before_claim_sha256": "c9c9ea57bce8e7d99ecea73beb0aae5efc73943581eb72c37608d5669090b627",
+          "primary_reference": "PMID:27355376",
+          "references": [
+            {
+              "accession": "UniProtKB:P23843",
+              "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+              "entry_version": 171,
+              "gene": "oppA",
+              "reference_taxon_id": "NCBITaxon:83333",
+              "release": "2026_03",
+              "retrieved_on": "2026-10-12",
+              "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+              "sequence_version": 2,
+              "source_receipt": {
+                "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-136b4ff93496b30b58d477d03a4e63a4ca7269d8df40ea9d16abac7789ec625e.json",
+                "sha256": "5684c068142914917d1c663dc55e3d285505a0685fcc3bbe01fdc6a3cad4cf91"
+              },
+              "source_request": {
+                "retrieved_at": "2026-10-12T18:27:37.986619+00:00",
+                "sha256": "ae0525d2e2d90f5ea34afbdfe88bc301b5af73226dfaa4aa84796a784351cf1b",
+                "status": 200,
+                "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AoppA+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+              }
+            },
+            {
+              "accession": "UniProtKB:P23847",
+              "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+              "entry_version": 195,
+              "gene": "dppA",
+              "reference_taxon_id": "NCBITaxon:83333",
+              "release": "2026_03",
+              "retrieved_on": "2026-10-12",
+              "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+              "sequence_version": 1,
+              "source_receipt": {
+                "path": "reports/resistance-grounding-2026-10-12-kasugamycin/request-98fa233e1b9311915ce14e4a406910ca5be8a103acb57a0ef4b1ebc2012d413b.json",
+                "sha256": "e14417b74a6fa893c2be59d07778d81250a68a0d1232b7acfb177a8d0f23a19e"
+              },
+              "source_request": {
+                "retrieved_at": "2026-10-12T19:10:42.147074+00:00",
+                "sha256": "1de21a503f810e3c69f92a2f555e6e66ed69c4766a4765ba4ae0f55433f04d3f",
+                "status": 200,
+                "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AdppA+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+              }
+            }
+          ],
+          "resistance_index": 7
+        },
+        {
+          "before_claim_sha256": "a8df29322b34d23602a137eabe6b3ab9cfe355507fb9099fd015d3deb2871be2",
+          "primary_reference": "PMID:27355376",
+          "references": [
+            {
+              "accession": "UniProtKB:P0AFH2",
+              "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+              "entry_version": 126,
+              "gene": "oppB",
+              "reference_taxon_id": "NCBITaxon:83333",
+              "release": "2026_03",
+              "retrieved_on": "2026-10-12",
+              "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+              "sequence_version": 1,
+              "source_receipt": {
+                "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-4d5bd364d3cce6dad75915c2d1dbdc32c6fb3f631504289e0ad4aad1395ee699.json",
+                "sha256": "05e90d6ba2be46b42c721bf9e3d4baf36e48eb6610390858ddb4d75dbc4b3b4a"
+              },
+              "source_request": {
+                "retrieved_at": "2026-10-12T18:28:06.439981+00:00",
+                "sha256": "24e29c92fbb26c3936d9bbb047ecc0e53a17db038f6a7e000ab59c2daff28b7a",
+                "status": 200,
+                "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AoppB+OR+gene_exact%3AoppC+OR+gene_exact%3AoppD+OR+gene_exact%3AoppF%29+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+              }
+            },
+            {
+              "accession": "UniProtKB:P0AEF8",
+              "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+              "entry_version": 136,
+              "gene": "dppB",
+              "reference_taxon_id": "NCBITaxon:83333",
+              "release": "2026_03",
+              "retrieved_on": "2026-10-12",
+              "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+              "sequence_version": 1,
+              "source_receipt": {
+                "path": "reports/resistance-grounding-2026-10-12-kasugamycin/request-8f6b2ed43c42337427e65ea1a2d3406e6b6a85808afa96345b79811bd60f7765.json",
+                "sha256": "1b63267549f31137674811a59d80bf07b852b3a76dd9ffcd0bd401260b4535f3"
+              },
+              "source_request": {
+                "retrieved_at": "2026-10-12T19:11:15.999519+00:00",
+                "sha256": "a192fc7ad26627e22fd17ffe37d4b4d0abb6474387e3d4280f30a22e756e69e3",
+                "status": 200,
+                "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AdppB+OR+gene_exact%3AdppC+OR+gene_exact%3AdppD+OR+gene_exact%3AdppF%29+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+              }
+            }
+          ],
+          "resistance_index": 8
+        }
+      ],
+      "identifier": "CHEBI:81419",
+      "label": "kasugamycin",
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-reference-citations/kasugamycin-before.yaml",
+        "sha256": "7a1fb4d516dcc4337524ad052655d47fe2ff98e4dfe0b53f1c3b4c981518fd37"
+      },
+      "standard_inchi_key": "PVTHJAPFENJVNC-MHRBZPPQSA-N"
+    }
+  ],
+  "scope": "REFERENCE_CITATIONS_ONLY_NOT_NEW_RESISTANCE_OR_EXPERIMENTAL_IDENTITY",
+  "sources": [
+    {
+      "path": "research/2026-10-08-pr39-grounding.json",
+      "sha256": "a336458cbf51b20a1fd922d044c2df255bd7a817c12dfff5561803ce8313b82b"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-07/request-e8c6970e1476abc1cc1692fe42c98d76e09d04ce9bfd5adbe0460dfef47f38ad.json",
+      "sha256": "743edbf91f9b56571be290a5490ef9eb0f593ee8856251b1fe4a2535d09173a7"
+    },
+    {
+      "path": "research/2026-10-12-blasticidin-context.json",
+      "sha256": "dfb54be7e4f93f65a8c835881d1bc209fa454eef909ab6e3bdc8bc8dee39239b"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/primary.xml",
+      "sha256": "90b5ebf3467a8be752bb323114f784554e042f9565521e94931a80426b0fae96"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/correction.xml",
+      "sha256": "3ca45c72d7bd26a42f6bc4c83c4dacd2affe76a7475ebb4b2787328fdc7e2230"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/corrected-figure-3.png",
+      "sha256": "6ac2a503b68e52d7b2abeaddf37681688d3b0e35a45fe5742829125b5623e710"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/figure-4.png",
+      "sha256": "079e370bb3315bf8feccaa2b50d401bbb611a4cae8bc923d00d37d31ee5df74e"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/table-2.png",
+      "sha256": "eb60458c591b67f97fa3fbbd4947197dbd86f26b1dc36f75ac82d8886756f50f"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/strains.docx",
+      "sha256": "ff9e0dedb88745090fe17350975f7cd3a3fa06fbdb83aa3b7b980276f86de93e"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-136b4ff93496b30b58d477d03a4e63a4ca7269d8df40ea9d16abac7789ec625e.json",
+      "sha256": "5684c068142914917d1c663dc55e3d285505a0685fcc3bbe01fdc6a3cad4cf91"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-4d5bd364d3cce6dad75915c2d1dbdc32c6fb3f631504289e0ad4aad1395ee699.json",
+      "sha256": "05e90d6ba2be46b42c721bf9e3d4baf36e48eb6610390858ddb4d75dbc4b3b4a"
+    },
+    {
+      "path": "research/2026-10-12-kasugamycin-context.json",
+      "sha256": "ebff90b85a509536f622a6bcdd71dfb1c60d1f4f8b9cb16d65428e1bf37fbead"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin/figure-5.png",
+      "sha256": "c069886a1234df1387012204c58ab33c73afd7b606017e99878e2623c959a0d9"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin/request-98fa233e1b9311915ce14e4a406910ca5be8a103acb57a0ef4b1ebc2012d413b.json",
+      "sha256": "e14417b74a6fa893c2be59d07778d81250a68a0d1232b7acfb177a8d0f23a19e"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin/request-8f6b2ed43c42337427e65ea1a2d3406e6b6a85808afa96345b79811bd60f7765.json",
+      "sha256": "1b63267549f31137674811a59d80bf07b852b3a76dd9ffcd0bd401260b4535f3"
+    }
+  ],
+  "summary": {
+    "distinct_reference_accessions": 5,
+    "existing_claims": 7,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_network_requests": 0,
+    "new_resistance_claims": 0,
+    "records": 3,
+    "reference_citations": 9
+  }
+}

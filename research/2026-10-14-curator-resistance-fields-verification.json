@@ -1,0 +1,108 @@
+{
+  "audit_script": {
+    "path": "scripts/audit_curator_resistance_fields.py",
+    "sha256": "a696f7fd061ee59e77a0b2f9f50757d121e64cb8c4a80513cb89c8b62bf30d29"
+  },
+  "checkpoint": {
+    "path": "research/2026-10-14-curator-resistance-fields.json",
+    "sha256": "2db1f8a477ca248adacc32f90c36a472de9a561fe43c32e34f28bc84d5e6bbfe"
+  },
+  "focused_results": {
+    "errors": 0,
+    "failures": 0,
+    "includes_network_blocked_full_corpus_replay": true,
+    "junit": {
+      "path": "reports/curator-resistance-fields-tests-final-20261014.xml",
+      "sha256": "639904e150d0f3a8d2a6a53395e3c643cd3f81d163152372fbb2a0753ce3e72a"
+    },
+    "skipped": 0,
+    "tests": 239
+  },
+  "git_diff_check": "PASS",
+  "limits": {
+    "biological_record_changes": 0,
+    "experimental_allele_assignments": 0,
+    "experimental_genome_assignments": 0,
+    "full_authoritative_qc": "NOT_RUN_RESEARCH_ONLY_NO_BIOLOGICAL_OR_GENERATED_CHANGES",
+    "gene_values_and_claim_prose_exported": false,
+    "github_mutations": 0,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "network_requests": 0,
+    "new_primary_reviews": 0,
+    "notes_mined_for_identifiers": false,
+    "numeric_AST_or_variant_specifications_exported": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "preservation": {
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "corpus_records_byte_identical": 2939,
+    "eugenol_checkpoint_script_tests_unchanged": true,
+    "eugenol_receipt": {
+      "path": "research/2026-10-14-eugenol-verification.json",
+      "sha256": "7acc4200ee6e67fd86e78b6b23bbb4d3af502ab417dbb3f8bb40c8a239a82fdd"
+    },
+    "existing_files_checked": 7241,
+    "prior_checkpoints_generated_pages_source_inputs_and_embeddings_unchanged": true,
+    "protected_baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-eugenol/protected-before.json",
+      "sha256": "7aa728b6fc703533ef25fe89927e4b26e42e60a8024f332607b9f522201051a8"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "a537df347d2706b058828232dcc5833645348ef9006a9862bd1afea0624aaa12"
+  },
+  "repository_ruff": "PASS",
+  "scope": "OFFLINE_FIELD_AND_CITATION_INDEX_NOT_PRIMARY_REVIEW",
+  "self_review": [
+    "Gene ID and family fields remain distinct; blank optional fields are not identity defects.",
+    "Protein citations, UniParc links, accession slots and taxon slots are not experimental assignments.",
+    "Rejected credential-bearing, explicit-port, whitespace and malformed lookalike URLs; regression tested.",
+    "Legacy source ownership is preserved and conflicting or unknown ownership fails closed.",
+    "No gene values, claim prose, sequences, exact variants, protocols or numeric AST exported."
+  ],
+  "summary": {
+    "claims_citing_each_namespace": {
+      "DOI": 15,
+      "NCBITaxon": 6,
+      "PMID": 124,
+      "UniParc": 1,
+      "UniProtKB": 48
+    },
+    "claims_with_protein_accession_slot": 6,
+    "claims_with_strain_taxon_id_slot": 1,
+    "claims_with_taxon_id_slot": 114,
+    "claims_with_taxon_label_but_no_taxon_id": 5,
+    "claims_with_unclassified_citations": 13,
+    "claims_without_taxon_label_or_id": 12,
+    "corpus_records_checked": 2939,
+    "curator_claims": 131,
+    "curator_records": 53,
+    "distinct_cited_uniprot_accessions": 42,
+    "gene_field_states": {
+      "BOTH_FIELDS": 18,
+      "GENE_FAMILIES_ONLY": 87,
+      "GENE_ID_ONLY": 24,
+      "NEITHER_FIELD": 2
+    },
+    "resistance_claims_by_owner": {
+      "CARD": 4538,
+      "CURATOR": 131,
+      "PHIBASE": 217
+    }
+  },
+  "tests": {
+    "path": "tests/test_curator_resistance_fields.py",
+    "sha256": "8db8f11fe429c8b7fcefa9c11fb86ad8d920d55af4706ebc624a86cb992d985c"
+  },
+  "verified_at": "2026-10-14T07:10:56.363166+00:00"
+}

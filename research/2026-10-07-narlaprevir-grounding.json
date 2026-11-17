@@ -1,0 +1,215 @@
+{
+  "after_record_sha256": "9c3e565a664311dec750fe2950471e1abfca6f7770f7676e5b48fc99b71482c7",
+  "attribution": "UniProt Consortium, release 2026_03, CC BY 4.0",
+  "before_record_sha256": "b739409739ca27acf4f403a4dc36adf54b5b46f01332829ec00680e92559fde9",
+  "identifier": "CHEBI:173104",
+  "inspected_results_version": "2012 submitted manuscript in author's thesis, not final 2013 publication",
+  "limitations": [
+    "The submitted chapter and published abstract differ in one reported long-term frequency; no quantitative update was made.",
+    "H77 is a reference isolate, not an identified patient virus. No canonical protein was assigned to the clinical association.",
+    "The reference crosswalk has two products: polyprotein and F protein; an EMBL accession alone does not identify the affected product.",
+    "No new variants, sequence transformations, MICs, patient accessions or causal-effect claims were curated.",
+    "Taxon identity is verified; final-publication Results and exact clinical allele grounding remain open."
+  ],
+  "locations": [
+    "Chapter 8, Study Design and Patient Population",
+    "Sequence Alignment",
+    "Results"
+  ],
+  "published_doi": "10.1111/jvh.12104",
+  "published_metadata_url": "https://repub.eur.nl/pub/41170",
+  "published_primary_reference": "PMID:24168257",
+  "reference_accession_in_submitted_manuscript": "AF009606",
+  "reference_candidates": [
+    {
+      "accession": "UniProtKB:P27958",
+      "assigned_to_patient_claim": false,
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "AF009606",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AAB66324.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_RNA"
+          }
+        ]
+      },
+      "entry_audit": {
+        "entryVersion": 252,
+        "sequenceVersion": 3
+      },
+      "protein_name": "Genome polyprotein",
+      "reference_organism": {
+        "commonName": "HCV",
+        "lineage": [
+          "Viruses",
+          "Riboviria",
+          "Orthornavirae",
+          "Kitrinoviricota",
+          "Flasuviricetes",
+          "Amarillovirales",
+          "Flaviviridae",
+          "Orthohepacivirus",
+          "Orthohepacivirus hominis",
+          "hepatitis C virus genotype 1a"
+        ],
+        "scientificName": "Hepatitis C virus genotype 1a (isolate H77)",
+        "taxonId": 63746
+      }
+    },
+    {
+      "accession": "UniProtKB:P0C045",
+      "assigned_to_patient_claim": false,
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "AF009606",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "-"
+          },
+          {
+            "key": "Status",
+            "value": "NOT_ANNOTATED_CDS"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_RNA"
+          }
+        ]
+      },
+      "entry_audit": {
+        "entryVersion": 65,
+        "sequenceVersion": 2
+      },
+      "protein_name": "F protein",
+      "reference_organism": {
+        "commonName": "HCV",
+        "lineage": [
+          "Viruses",
+          "Riboviria",
+          "Orthornavirae",
+          "Kitrinoviricota",
+          "Flasuviricetes",
+          "Amarillovirales",
+          "Flaviviridae",
+          "Orthohepacivirus",
+          "Orthohepacivirus hominis",
+          "hepatitis C virus genotype 1a"
+        ],
+        "scientificName": "Hepatitis C virus genotype 1a (isolate H77)",
+        "taxonId": 63746
+      }
+    }
+  ],
+  "requests": [
+    {
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Length": "484",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 03:48:23 GMT",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "hit cached"
+      },
+      "retrieved_at": "2026-10-08T03:48:23.231564+00:00",
+      "sha256": "9937380c4376178516d8f6b14893b728bb7e70986be245a62f39b137b0a59de3",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/3052230"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 03:50:19 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "2",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T03:50:19.993340+00:00",
+      "sha256": "6ee05345abac204c58807f93b4f16ad3f03a7f1c7a7d0f7dc99391f96207dee4",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-AF009606&format=json&size=100&fields=accession%2Creviewed%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Cversion%2Csequence_version"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 03:52:35 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "2",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T03:52:35.830308+00:00",
+      "sha256": "78d44093cc7f5ef303f4cd151ab0a5c28eee5053ba80fa736ad7ba3aaa409cfb",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP27958+OR+accession%3AP0C045&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Corganism_id%2Corganism_name%2Cft_chain%2Cversion%2Csequence_version"
+    }
+  ],
+  "results_url": "https://pure.uva.nl/ws/files/1654204/110650_11.pdf",
+  "standard_inchi_key": "RICZEKWVNZFTNZ-LFGITCQGSA-N",
+  "taxonomy": {
+    "active": true,
+    "otherNames": [
+      "HCV",
+      "Hepacivirus C",
+      "post-transfusion hepatitis non A non B virus",
+      "human hepatitis C virus HCV",
+      "human hepatitis virus C HCV",
+      "human hepatitis C virus",
+      "hepatitis C virus HCV",
+      "Hepatitis C virus",
+      "Hepacivirus hominis"
+    ],
+    "rank": "species",
+    "scientificName": "Orthohepacivirus hominis",
+    "taxonId": 3052230
+  }
+}

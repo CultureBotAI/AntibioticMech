@@ -7,7 +7,7 @@
 <meta name="description" content="ethambutol (CHEBI:4877): An ethylenediamine derivative that is ethane-1,2-diamine in which one hydrogen attached to each of the nitrogens is sutstituted by a 1-hydroxybutan-2-yl group (S,S-configuration). It is a bacteriostatic antimycobacterial drug, effective against Mycobacterium tuberculosis and some other mycobacteria. It is used (as the dihydrochloride salt) in combination with other antituberculous drugs in the treatment of pulmonary and extrapulmonary tuberculosis; resistant strains of M. tuberculosis are readily produced if ethambutol is used alone.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antimycobacterial.html">ANTIMYCOBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>ethambutol</h1>
 <p class="meta">
   <code class="curie">CHEBI:4877</code>
@@ -34,17 +45,20 @@
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000527">polyamine antibiotic</a><code class="curie">ARO:3000527</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_23981">CHEBI:23981</a>      <code class="curie">CHEBI:23981</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_31577">CHEBI:31577</a>      <code class="curie">CHEBI:31577</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000527">ARO:3000527</a>      <code class="curie">ARO:3000527</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_23981"><code class="curie">CHEBI:23981</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_31577"><code class="curie">CHEBI:31577</code></a></li>
+  <li>polyamine antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_3000527"><code class="curie">ARO:3000527</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C10H24N2O2</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>204.314 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>204.18378 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">AEUTYOVWOVBAKS-UWVGGRQHSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">CC[C@@H](CO)NCCN[C@@H](CC)CO</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C10H24N2O2/c1-3-9(7-13)11-5-6-12-10(4-2)8-14/h9-14H,3-8H2,1-2H3/t9-,10-/m0/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -55,7 +69,7 @@
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000497">ARO:3000497</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3000497">ethambutol</a><code class="curie">ARO:3000497</code></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=74-55-5">cas:74-55-5</a></li>
   <li><a href="https://www.kegg.jp/entry/C06984">kegg.compound:C06984</a></li>
   <li>reaxys:6312870</li>
@@ -84,12 +98,13 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33231">CHEBI:33231</a>    <code class="curie">CHEBI:33231</code></li>
+  <li>antitubercular agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33231"><code class="curie">CHEBI:33231</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -109,43 +124,70 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>antibiotic sensitive aftA <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000725">ARO:3000725</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. AftA is asserted as the antibiotic-sensitive enzyme. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000725</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000725">ARO:3000725</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>antibiotic sensitive embC <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000763">ARO:3000763</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. EmbC is asserted as the antibiotic-sensitive enzyme. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000763</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000763">ARO:3000763</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>antibiotic sensitive embA <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000764">ARO:3000764</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. EmbA is asserted as the antibiotic-sensitive enzyme. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000764</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000764">ARO:3000764</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>antibiotic sensitive embB <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000765">ARO:3000765</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. EmbB is asserted as the antibiotic-sensitive enzyme. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000765</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000765">ARO:3000765</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>Antibiotic sensitive embR <span class="pill plain">PROTEIN</span> <span class="pill">SUSCEPTIBILITY_DETERMINANT</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3003473">ARO:3003473</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO states only that wild-type embR is antibiotic-sensitive; direct binding is not asserted. Evidence status: DATABASE_ASSERTION_ONLY. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3003473</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003473">ARO:3003473</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>EmbA-EmbB and EmbC-EmbC arabinosyltransferase complexes <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta">Cryo-EM and X-ray structures contained ethambutol with substrate-bound mycobacterial Emb complexes and localized competitive binding to the shared donor/acceptor site in EmbB and EmbC. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2020-04 (retrieved 2026-09-02).</p>
+<div class="table-scroll" role="region" aria-label="EmbA-EmbB and EmbC-EmbC arabinosyltransferase complexes organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Arabinosyltransferase A <a href="https://www.uniprot.org/uniprotkb/P9WNL9"><code class="curie">UniProtKB:P9WNL9</code></a><br><span class="meta">EmbA subunit of the M. tuberculosis EmbA-EmbB-AcpM2 complex resolved with ethambutol by cryo-EM (PMID:32327601, PDB 7BVF; H37Rv reference strain context).</span></td>
+    <td>embA</td>
+    <td><em>Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83332"><code class="curie">NCBITaxon:83332</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>Arabinosyltransferase B <a href="https://www.uniprot.org/uniprotkb/P9WNL7"><code class="curie">UniProtKB:P9WNL7</code></a><br><span class="meta">Catalytic EmbB subunit containing the direct ethambutol-binding pocket in the M. tuberculosis EmbA-EmbB-AcpM2 complex (PMID:32327601, PDB 7BVF; H37Rv reference strain context).</span></td>
+    <td>embB</td>
+    <td><em>Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83332"><code class="curie">NCBITaxon:83332</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>Arabinosyltransferase C <a href="https://www.uniprot.org/uniprotkb/P9WNL5"><code class="curie">UniProtKB:P9WNL5</code></a><br><span class="meta">Catalytic EmbC subunit of the homodimeric EmbC-EmbC arabinosyltransferase complex directly bound by ethambutol (PMID:32327601; H37Rv reference strain context; M. smegmatis EmbC2 complex also resolved in the same study).</span></td>
+    <td>embC</td>
+    <td><em>Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83332"><code class="curie">NCBITaxon:83332</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:32327601</span> <span class="meta">(Primary ethambutol-bound arabinosyltransferase structural study (DOI:10.1126/science.aba9102).)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32327601">PMID:32327601</a></span> <span class="meta">(Primary ethambutol-bound arabinosyltransferase structural study (DOI:10.1126/science.aba9102).)</span></li>
 </ul>
 
 
@@ -154,14 +196,328 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <dt>Mode of action</dt><dd>CELL_WALL_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: PMID:32327601 resolved ethambutol with mycobacterial EmbA-EmbB and EmbC-EmbC arabinosyltransferase complexes. The drug occupies the donor- and acceptor-substrate site in EmbB and EmbC, explaining inhibition of mycobacterial cell-wall arabinan synthesis and the clustering of resistance mutations near the binding site.</span></dd></dl>
 
 
+<h2 id="activity">Activity spectrum</h2>
+<p class="meta">Measured or curated activity against specific taxa. A number
+without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">338 observations &middot; <a href="ethambutol/activity-1.html">Browse all observations</a> &middot; <a href="ethambutol/record-9566eaa3c051cdab48960dfcdf42c851a413a7bbb8e2644d0ff863f88925cdbd.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">Observations 1&ndash;20 of 338</p><div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
+<table>
+  <caption>Activity observations</caption>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.12 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae8be82d3ba7b0a37">10 source isolates</a><br>10 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-2">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.12 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A74f2d7c5c5fff0d5">5 source isolates</a><br>5 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-3">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.12 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A040464b7fd6d76dc">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="2" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-4">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.25 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A8dc1cbd2e7953213">80 source isolates</a><br>80 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="3" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-5">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.25 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aff1a8967aaa94c0e">26 source isolates</a><br>26 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="4" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-6">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.25 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A7a86f2b2d82c98a7">3 source isolates</a><br>3 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="5" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-7">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.5 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A1ba093236221bd98">286 source isolates</a><br>286 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="6" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-8">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.5 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A999fc0cb3b59f289">91 source isolates</a><br>91 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="7" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-9">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.5 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A0d15c278e97e8456">148 source isolates</a><br>148 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="8" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-10">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">1.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Afdfe25ca4d5b877f">1514 source isolates</a><br>1514 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="9" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-11">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">1.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A00612d363c974771">202 source isolates</a><br>202 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="10" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-12">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">1.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aeb61ba72518609d1">325 source isolates</a><br>325 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="11" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-13">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">2.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A33cc9258c1b7392a">1462 source isolates</a><br>1462 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="12" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-14">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">2.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Abe2c98ba1aa0916b">123 source isolates</a><br>123 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="13" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-15">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">2.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ac9beee560d7750ca">266 source isolates</a><br>266 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="14" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-16">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">4.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ac042bbdfa2bfb908">590 source isolates</a><br>590 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="15" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-17">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">4.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A2cfa912e89f1f290">104 source isolates</a><br>104 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="16" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-18">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">4.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ac3984d6d8ef87809">171 source isolates</a><br>171 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="17" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-19">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">8.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A080083bafd69e5f8">737 source isolates</a><br>737 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="18" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-20">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">8.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="ethambutol/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A48a7900a9815b540">23 source isolates</a><br>23 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="19" data-offset="0" data-total="338" data-identifier="CHEBI:4877" data-key="AEUTYOVWOVBAKS-UWVGGRQHSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="ethambutol/activity-1-a3b6ee77ecfb3f05f1ef9d5fb440d544253871f29b271c11ecbd8eb160da0abc.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  </tbody>
+</table>
+
+</div>
+
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">19 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">19 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">19</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -170,7 +526,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004136</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004136">ARO:3004136</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -180,7 +536,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003450</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003450">ARO:3003450</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -190,7 +546,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007185</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007185">ARO:3007185</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -200,7 +556,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004951</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004951">ARO:3004951</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -210,7 +566,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003453</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003453">ARO:3003453</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -220,7 +576,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003326</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003326">ARO:3003326</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -230,7 +586,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003327</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003327">ARO:3003327</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -240,7 +596,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003455</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003455">ARO:3003455</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -250,7 +606,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003448</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003448">ARO:3003448</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -260,7 +616,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004135</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004135">ARO:3004135</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -270,7 +626,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003451</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003451">ARO:3003451</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -280,7 +636,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004950</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004950">ARO:3004950</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -290,7 +646,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003325</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003325">ARO:3003325</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -300,7 +656,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002876</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002876">ARO:3002876</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -310,7 +666,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003452</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003452">ARO:3003452</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -320,7 +676,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000235</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000235">ARO:3000235</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -330,7 +686,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002706</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002706">ARO:3002706</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -340,7 +696,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003454</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003454">ARO:3003454</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -350,11 +706,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003447</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003447">ARO:3003447</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -363,24 +721,25 @@ type — expand a group to see its determinants.</p>
 target, what the target does, and how the effect propagates to growth inhibition
 or death.</p>
 <h3>Ethambutol inhibits mycobacterial arabinan synthesis <span class="pill">MECHANISTIC</span></h3>
-<p>Ethambutol inhibits Emb arabinosyltransferase complexes, reducing arabinan addition to arabinogalactan and lipoarabinomannan in the mycobacterial cell envelope.</p><table>
+<p>Ethambutol inhibits Emb arabinosyltransferase complexes, reducing arabinan addition to arabinogalactan and lipoarabinomannan in the mycobacterial cell envelope.</p><div class="table-scroll" role="region" aria-label="Nodes: ethambutol_emb_arabinan_inhibition" tabindex="0">
+<table>
   <caption>Nodes — ethambutol_emb_arabinan_inhibition</caption>
   <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
   <tr>
     <td><code class="curie">ethambutol</code></td>
     <td>ethambutol</td>
     <td class="meta">COMPOUND</td>
-    <td><code class="curie">CHEBI:4877</code></td>
+    <td> <a href="../antimycobacterial/ethambutol.html"><code class="curie">CHEBI:4877</code></a></td>
   </tr>
   <tr>
     <td><code class="curie">embab_complex</code></td>
-    <td>mycobacterial EmbA-EmbB arabinosyltransferase complex</td>
+    <td>mycobacterial EmbA-EmbB arabinosyltransferase complex<br><span class="meta">Examples: Arabinosyltransferase A (embA) <a href="https://www.uniprot.org/uniprotkb/P9WNL9"><code class="curie">UniProtKB:P9WNL9</code></a>, <em>Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83332"><code class="curie">NCBITaxon:83332</code></a> <span class="pill">REVIEWED</span> — EmbA subunit of the heterodimeric EmbA-EmbB-AcpM2 arabinosyltransferase complex bound by ethambutol in cryo-EM structures (PMID:32327601, PDB 7BVF; H37Rv reference strain context).; Arabinosyltransferase B (embB) <a href="https://www.uniprot.org/uniprotkb/P9WNL7"><code class="curie">UniProtKB:P9WNL7</code></a>, <em>Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83332"><code class="curie">NCBITaxon:83332</code></a> <span class="pill">REVIEWED</span> — Catalytic EmbB subunit harboring the conserved ethambutol-binding active-site pocket within the EmbA-EmbB-AcpM2 complex (PMID:32327601, PDB 7BVF; H37Rv reference strain context).</span></td>
     <td class="meta">GENE_OR_PROTEIN</td>
     <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
   </tr>
   <tr>
     <td><code class="curie">embc_complex</code></td>
-    <td>mycobacterial EmbC arabinosyltransferase complex</td>
+    <td>mycobacterial EmbC arabinosyltransferase complex<br><span class="meta">Examples: Arabinosyltransferase C (embC) <a href="https://www.uniprot.org/uniprotkb/P9WNL5"><code class="curie">UniProtKB:P9WNL5</code></a>, <em>Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83332"><code class="curie">NCBITaxon:83332</code></a> <span class="pill">REVIEWED</span> — Catalytic EmbC subunit of the homodimeric EmbC2-AcpM2 lipoarabinomannan arabinosyltransferase complex bound by ethambutol at its active site (PMID:32327601; H37Rv reference strain context).</span></td>
     <td class="meta">GENE_OR_PROTEIN</td>
     <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
   </tr>
@@ -409,6 +768,9 @@ or death.</p>
     <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
   </tr>
 </table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: ethambutol_emb_arabinan_inhibition" tabindex="0">
 <table>
   <caption>Edges — ethambutol_emb_arabinan_inhibition</caption>
   <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
@@ -417,7 +779,7 @@ or death.</p>
     <td>binds</td>
     <td><code class="curie">embab_complex</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:32327601</span> <span class="meta">(Zhang and colleagues resolved mycobacterial EmbA-EmbB structures with ethambutol and donor and acceptor substrates.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32327601">PMID:32327601</a></span> <span class="meta">(Zhang and colleagues resolved mycobacterial EmbA-EmbB structures with ethambutol and donor and acceptor substrates.)</span></li>
 </ul>
 </td>
   </tr>
@@ -426,7 +788,7 @@ or death.</p>
     <td>binds</td>
     <td><code class="curie">embc_complex</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:32327601</span> <span class="meta">(Zhang and colleagues also resolved ethambutol with mycobacterial EmbC complexes and assayed drug inhibition of Emb transferase activity.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32327601">PMID:32327601</a></span> <span class="meta">(Zhang and colleagues also resolved ethambutol with mycobacterial EmbC complexes and assayed drug inhibition of Emb transferase activity.)</span></li>
 </ul>
 </td>
   </tr>
@@ -435,8 +797,8 @@ or death.</p>
     <td>participates in</td>
     <td><code class="curie">arabinogalactan_arabinan</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:8876238</span> <span class="meta">(Belanger and colleagues linked embA and embB to mycobacterial cell-wall arabinan biosynthesis and ethambutol susceptibility.)</span></li>
-  <li><span class="meta">PMID:32327601</span> <span class="meta">(The ethambutol-bound EmbA-EmbB structures captured the substrate binding sites used for arabinofuranose transfer.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/8876238">PMID:8876238</a></span> <span class="meta">(Belanger and colleagues linked embA and embB to mycobacterial cell-wall arabinan biosynthesis and ethambutol susceptibility.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32327601">PMID:32327601</a></span> <span class="meta">(The ethambutol-bound EmbA-EmbB structures captured the substrate binding sites used for arabinofuranose transfer.)</span></li>
 </ul>
 </td>
   </tr>
@@ -445,7 +807,7 @@ or death.</p>
     <td>participates in</td>
     <td><code class="curie">lipoarabinomannan_arabinan</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:19596878</span> <span class="meta">(Goude and colleagues showed that ethambutol inhibits EmbC-dependent lipoarabinomannan synthesis in Mycobacterium tuberculosis.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/19596878">PMID:19596878</a></span> <span class="meta">(Goude and colleagues showed that ethambutol inhibits EmbC-dependent lipoarabinomannan synthesis in Mycobacterium tuberculosis.)</span></li>
 </ul>
 </td>
   </tr>
@@ -454,7 +816,7 @@ or death.</p>
     <td>participates in</td>
     <td><code class="curie">cell_wall_arabinan_synthesis</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:2817850</span> <span class="meta">(Takayama and Kilburn observed that ethambutol blocked transfer of glucose-derived label into arabinogalactan arabinose in Mycobacterium smegmatis.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/2817850">PMID:2817850</a></span> <span class="meta">(Takayama and Kilburn observed that ethambutol blocked transfer of glucose-derived label into arabinogalactan arabinose in Mycobacterium smegmatis.)</span></li>
 </ul>
 </td>
   </tr>
@@ -463,7 +825,7 @@ or death.</p>
     <td>participates in</td>
     <td><code class="curie">cell_wall_arabinan_synthesis</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:19596878</span> <span class="meta">(The EmbC inhibition study traced ethambutol-sensitive arabinan synthesis into mycobacterial lipoarabinomannan.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/19596878">PMID:19596878</a></span> <span class="meta">(The EmbC inhibition study traced ethambutol-sensitive arabinan synthesis into mycobacterial lipoarabinomannan.)</span></li>
 </ul>
 </td>
   </tr>
@@ -472,17 +834,19 @@ or death.</p>
     <td>supports</td>
     <td><code class="curie">mycobacterial_cell_wall_integrity</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:9142129</span> <span class="meta">(Telenti and colleagues identified the M. tuberculosis embCAB cluster through ethambutol resistance and placed Emb activity in mycobacterial cell-wall biosynthesis.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9142129">PMID:9142129</a></span> <span class="meta">(Telenti and colleagues identified the M. tuberculosis embCAB cluster through ethambutol resistance and placed Emb activity in mycobacterial cell-wall biosynthesis.)</span></li>
 </ul>
 </td>
   </tr>
 </table>
 
+</div>
+
 
 
 <h2>Record-level evidence</h2>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:32327601</span> <span class="meta">(Primary exact-ethambutol Emb-complex structural and resistance study.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32327601">PMID:32327601</a></span> <span class="meta">(Primary exact-ethambutol Emb-complex structural and resistance study.)</span></li>
 </ul>
 
 
@@ -523,32 +887,57 @@ or death.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-26 · seed_from_sources</span>
+    <p>Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-10-05 · seed_from_sources</span>
+    <p>Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_UNIPROT_PROTEIN_EXAMPLES</span>
+    <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
+    <p>Added curated M. tuberculosis H37Rv EmbA (P9WNL9), EmbB (P9WNL7), and EmbC (P9WNL5) UniProtKB protein examples on the ethambutol_emb_arabinan_inhibition causal graph nodes and the PRIMARY_LITERATURE EmbA-EmbB / EmbC-EmbC arabinosyltransferase complexes molecular target.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antimycobacterial/ethambutol.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antimycobacterial/ethambutol.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=ethambutol">MediaIngredientMech (ethambutol)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=ethambutol">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=ethambutol">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=ethambutol">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=ethambutol">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

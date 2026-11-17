@@ -84,6 +84,7 @@ activity_spectrum:
   assay: Broth microdilution nitrofurantoin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1151'
+  biosample_accession: SAMN34111338
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10442&PanelID=1247
     snippet: Nitrofurantoin  | 128  | R
@@ -97,6 +98,7 @@ activity_spectrum:
   assay: Broth microdilution nitrofurantoin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1153'
+  biosample_accession: SAMN34111340
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10444&PanelID=1247
     snippet: Nitrofurantoin  | >128  | R
@@ -111,6 +113,7 @@ activity_spectrum:
   assay: Broth microdilution nitrofurantoin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1158'
+  biosample_accession: SAMN34111344
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10449&PanelID=1247
     snippet: Nitrofurantoin  | >128  | R
@@ -125,6 +128,7 @@ activity_spectrum:
   assay: Broth microdilution nitrofurantoin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1163'
+  biosample_accession: SAMN34111349
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10454&PanelID=1247
     snippet: Nitrofurantoin  | >128  | R
@@ -649,4 +653,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added 4 stable-URL CDC/FDA AR Isolate Bank nitrofurantoin-resistant Multi-Mechanism
     panel MIC observations for AR-1151, AR-1153, AR-1158, and AR-1163.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:43Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 4 activity_spectrum observation(s) where
+    evidence notes already named exactly one accession.
   llm_assisted: true

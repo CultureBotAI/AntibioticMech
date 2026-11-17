@@ -1,0 +1,105 @@
+{
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "ca21e12416aae041319ceee5a61bacc716f92a1672b1f081a0e4d73f81c215df"
+    },
+    {
+      "path": "research/2026-10-09-peptide-discovery-vocabulary-gap.json",
+      "sha256": "02ab47b82e717b4863621b380acfd35bd3ffd7b067e1ec9d70a0ca7507a0855d"
+    },
+    {
+      "path": "research/2026-10-09-peptide-reference-followup.json",
+      "sha256": "2ba117b0a53249a7adca62327d70e93a80f710ca310fefcb22a55d96d42a185b"
+    },
+    {
+      "path": "tests/test_peptide_reference_followup.py",
+      "sha256": "0e439c071be52f248781555dd7f1f052815349cebc1dc47258eb612ab819d75a"
+    }
+  ],
+  "background_chromosome_crosswalks": 1,
+  "checks": {
+    "lint": {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-09-peptide-followup/lint.log",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      }
+    },
+    "whitespace": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-09-peptide-followup/whitespace.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  "confirmed_discovery_filter_counterexamples": 2,
+  "curation_events_added": 0,
+  "date": "2026-10-09",
+  "discovery_code_changed": false,
+  "existing_reference_candidates_reused": 1,
+  "existing_report_text_preserved": true,
+  "experimental_genome_assignments": 0,
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_primary_review": "OPEN",
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "independent_external_review": false,
+  "ncbi_endpoint_requests": 0,
+  "new_reference_candidates": 6,
+  "no_primary_text_or_figures_redistributed": true,
+  "previous_biological_qc": {
+    "path": "research/2026-10-09-bacteriocin-curation-verification.json",
+    "sha256": "a9a314402f581af8a2e5472d6a4eec445d83abb8d142b96c29741f67cd446779"
+  },
+  "private_response_receipts_verified": 30,
+  "private_source_and_receipt_files_gitignored": 88,
+  "protected_changes": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "ca21e12416aae041319ceee5a61bacc716f92a1672b1f081a0e4d73f81c215df",
+      "before_sha256": "dd010a490690870e94755137d5af62df4aceffbde19c3abc99145fa7a91e83ce"
+    }
+  },
+  "protected_files_unchanged": 6768,
+  "protected_files_verified": 6769,
+  "record_changes": 0,
+  "record_hashes_verified": 2939,
+  "record_set_equality_verified": true,
+  "review": "Adversarial self-review of compound, subject, reference-version and search-completeness scope",
+  "scope": "RESEARCH_REFERENCE_GROUNDING_AND_DISCOVERY_GAP_AUDIT",
+  "source_adoptions": 0,
+  "tests": {
+    "final-focused-tests": {
+      "failed": 0,
+      "passed": 16,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-peptide-followup/final-focused-tests.xml",
+        "sha256": "42d69cbcd2957abb4f70944772af535ff6641b7b867fdbef20fead38ccaef2a0"
+      },
+      "skipped": 0
+    },
+    "final-related-tests": {
+      "failed": 0,
+      "passed": 153,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-peptide-followup/final-related-tests.xml",
+        "sha256": "12916ddbd963021dd36969a991d04224c2e3b95f89847957b884aeecb40b259c"
+      },
+      "skipped": 0
+    }
+  },
+  "whole_records_completed": 0
+}

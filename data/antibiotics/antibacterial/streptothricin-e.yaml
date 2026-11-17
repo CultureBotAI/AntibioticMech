@@ -1,0 +1,143 @@
+identifier: CHEBI:67576
+label: streptothricin E
+antimicrobial_class: ANTIBACTERIAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: A streptothricin N-glycoside antibiotic congener bearing a di-beta-lysine
+  peptide chain from Streptomyces rochei and Streptomyces lavendulae with broad-spectrum
+  antibacterial and antifungal activity.
+definition_source: DOI:10.1248/cpb.38.2296
+synonyms:
+- synonym_text: racemomycin C
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: racemomycin-C
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: ST-E
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: NCCC[C@H](N)CC(=O)NCCC[C@H](N)CC(=O)N[C@@H]1[C@H](O)[C@@H](OC(N)=O)[C@@H](CO)O[C@H]1\N=C1\N[C@H]2[C@H](N1)C(=O)NC[C@H]2O
+  standard_inchi: InChI=1S/C25H46N10O9/c26-5-1-3-11(27)7-15(38)30-6-2-4-12(28)8-16(39)32-19-20(40)21(44-24(29)42)14(10-36)43-23(19)35-25-33-17-13(37)9-31-22(41)18(17)34-25/h11-14,17-21,23,36-37,40H,1-10,26-28H2,(H2,29,42)(H,30,38)(H,31,41)(H,32,39)(H2,33,34,35)/t11-,12-,13+,14+,17+,18-,19+,20-,21-,23+/m0/s1
+  standard_inchi_key: SCHKAKNJXBPJHD-SNQQVPMJSA-N
+  molecular_formula: C25H46N10O9
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000432/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 630.704
+  monoisotopic_mass: 630.3449
+xrefs:
+- pubchem.compound:160718
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1248/cpb.38.2296#streptothricin-e
+  source_label: streptothricin E
+  minted_identifier: antibioticmech:curator-54c2691961
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1248/cpb.38.2296
+    snippet: Streptothricin E (racemomycin-C), the streptothricin antibiotic congener
+      containing two L-beta-lysine residues produced by Streptomyces rochei NBRC 12908
+      and Streptomyces lavendulae, exhibits broad-spectrum antibacterial and antifungal
+      activity by inhibiting bacterial protein synthesis.
+    notes: MIBiG 4.0.1 entry BGC0000432 (Streptomyces rochei NBRC 12908); Inamori
+      et al. 1990 (DOI:10.1248/cpb.38.2296, PMID:2177682) and Maruyama et al. 2012
+      (DOI:10.1038/nchembio.1040, PMID:22820420) characterize the antibacterial/antifungal
+      activity and NRPS beta-lysine oligomerization of streptothricin E. ChEBI CHEBI:67576
+      and PubChem CID 160718 supply the stereo-complete SMILES, Standard InChI, and
+      InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1928
+  taxon_label: Streptomyces rochei
+  strain: NBRC 12908
+  biosynthetic_gene_cluster: BGC0000432
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '6'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: CLUSTER_INHERITED
+  reviewed: true
+  note: MIBiG active entry; compound 'streptothricin E' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:22820420
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-06T02:51:46Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-06T06:00:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and PROTEIN_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Inamori et al. 1990 (PMID:2177682) and
+    Maruyama et al. 2012 (PMID:22820420).
+  llm_assisted: true
+- timestamp: '2026-11-06T08:40:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial 30S ribosomal
+    subunit (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET) backed by Inamori et al. 1990
+    (DOI:10.1248/cpb.38.2296, PMID:2177682) and Maruyama et al. 2012 (DOI:10.1038/nchembio.1040,
+    PMID:22820420).
+  llm_assisted: true
+- timestamp: '2026-11-08T23:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI streptothricin congener record (CHEBI:67576) with
+    complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1248/cpb.38.2296,
+    PMID:2177682; DOI:10.1038/nchembio.1040, PMID:22820420) from PROPOSED to REVIEWED
+    (issue #1345).'
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Streptothricin N-glycoside antibiotic congener bearing
+  two L-beta-lysine residues from Streptomyces rochei and Streptomyces lavendulae
+  that inhibits bacterial protein synthesis (Inamori et al. 1990, DOI:10.1248/cpb.38.2296,
+  PMID:2177682; Maruyama et al. 2012, DOI:10.1038/nchembio.1040, PMID:22820420).'
+molecular_targets:
+- target_label: bacterial 30S ribosomal subunit
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Binding to 16S rRNA of the bacterial 30S ribosomal subunit
+    by the streptothricin N-glycoside core bearing a di-L-beta-lysine chain, inhibiting
+    prokaryotic translation translocation and inducing miscoding (Inamori et al. 1990,
+    DOI:10.1248/cpb.38.2296, PMID:2177682; Maruyama et al. 2012, DOI:10.1038/nchembio.1040,
+    PMID:22820420).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1990-08
+  source_retrieved_on: '2026-11-06'
+  evidence:
+  - reference: DOI:10.1248/cpb.38.2296
+    snippet: Streptothricin E (racemomycin-C), the streptothricin antibiotic congener
+      containing two L-beta-lysine residues produced by Streptomyces rochei NBRC 12908
+      and Streptomyces lavendulae, exhibits broad-spectrum antibacterial and antifungal
+      activity by inhibiting bacterial protein synthesis.
+    notes: Inamori et al. 1990 (Chem Pharm Bull 38:2296-2298; PMID:2177682) characterized
+      the antimicrobial activity and prokaryotic translation inhibition of streptothricin
+      E (racemomycin-C).
+  - reference: PMID:2177682
+    notes: PubMed record for Inamori et al. 1990 on streptothricin E (racemomycin-C)
+      antimicrobial activity.
+  - reference: DOI:10.1038/nchembio.1040
+    notes: Maruyama et al. 2012 (Nat Chem Biol 8:791-797; PMID:22820420) elucidated
+      the Streptomyces rochei NBRC 12908 streptothricin biosynthetic machinery and
+      beta-lysine chain assembly.
+  - reference: PMID:22820420
+    notes: PubMed record for Maruyama et al. 2012 on streptothricin biosynthesis.

@@ -7,7 +7,7 @@
 <meta name="description" content="linezolid (CHEBI:63607): An organofluorine compound that consists of 1,3-oxazolidin-2-one bearing an N-3-fluoro-4-(morpholin-4-yl)phenyl group as well as an acetamidomethyl group at position 5. A synthetic antibacterial agent that inhibits bacterial protein synthesis by binding to a site on 23S ribosomal RNA of the 50S subunit and prevents further formation of a functional 70S initiation complex.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>linezolid</h1>
 <p class="meta">
   <code class="curie">CHEBI:63607</code>
@@ -34,19 +45,22 @@
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000079">oxazolidinone antibiotic</a><code class="curie">ARO:3000079</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_22160">CHEBI:22160</a>      <code class="curie">CHEBI:22160</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_37143">CHEBI:37143</a>      <code class="curie">CHEBI:37143</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_38785">CHEBI:38785</a>      <code class="curie">CHEBI:38785</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_55374">CHEBI:55374</a>      <code class="curie">CHEBI:55374</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000079">ARO:3000079</a>      <code class="curie">ARO:3000079</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_22160"><code class="curie">CHEBI:22160</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_37143"><code class="curie">CHEBI:37143</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_38785"><code class="curie">CHEBI:38785</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_55374"><code class="curie">CHEBI:55374</code></a></li>
+  <li>oxazolidinone antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_3000079"><code class="curie">ARO:3000079</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C16H20FN3O4</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>337.351 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>337.14378 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">TYZROVQLWOKYKF-ZDUSSCGKSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">CC(=O)NC[C@H]1CN(c2ccc(N3CCOCC3)c(F)c2)C(=O)O1</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C16H20FN3O4/c1-11(21)18-9-13-10-20(16(22)24-13)12-2-3-15(14(17)8-12)19-4-6-23-7-5-19/h2-3,8,13H,4-7,9-10H2,1H3,(H,18,21)/t13-/m0/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -57,7 +71,7 @@
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000072">ARO:0000072</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_0000072">linezolid</a><code class="curie">ARO:0000072</code></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=165800-03-3">cas:165800-03-3</a></li>
   <li><a href="https://www.kegg.jp/entry/C08146">kegg.compound:C08146</a></li>
   <li><a href="http://lincsportal.ccs.miami.edu/SmallMolecules/#/view/LSM-5750">lincs.smallmolecule:LSM-5750</a></li>
@@ -90,12 +104,13 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_36047">CHEBI:36047</a>    <code class="curie">CHEBI:36047</code></li>
+  <li>antibacterial drug  <a href="http://purl.obolibrary.org/obo/CHEBI_36047"><code class="curie">CHEBI:36047</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -115,19 +130,21 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>50S ribosomal subunit P-site <span class="pill plain">RIBOSOMAL_SUBUNIT</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000757">ARO:3000757</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. The 50S P-site is asserted as the target site. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000757</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000757">ARO:3000757</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>50S ribosomal peptidyl-transferase-center A-site pocket <span class="pill plain">RIBOSOMAL_SUBUNIT</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta">A linezolid-bound D. radiodurans 50S crystal structure localized the drug in the PTC A-site pocket and showed nonproductive U2585 and tRNA-positioning effects. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2008-08 (retrieved 2026-09-02).</p>
 <p><em>Deinococcus radiodurans</em> <code class="curie">NCBITaxon:1299</code></p><ul class="plain evidence">
-  <li><span class="meta">PMID:18757750</span> <span class="meta">(Primary linezolid-bound 50S structural mechanism study (DOI:10.1073/pnas.0804276105).)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18757750">PMID:18757750</a></span> <span class="meta">(Primary linezolid-bound 50S structural mechanism study (DOI:10.1073/pnas.0804276105).)</span></li>
 </ul>
 
 
@@ -136,84 +153,328 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: PMID:18757750 resolved linezolid in the A-site pocket of the Deinococcus radiodurans 50S peptidyl-transferase center. It overlaps the aminoacyl group of A-site tRNA and stabilizes a nonproductive conformation of conserved 23S-rRNA nucleotide U2585, perturbing tRNA positioning.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
-<h2>Activity spectrum</h2>
+<h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">273 observations &middot; <a href="linezolid/activity-1.html">Browse all observations</a> &middot; <a href="linezolid/record-3119d58b9ba2973dfc9332c4145511b46bf57d3038a5b77c9d5a47bde1c9ed92.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">Observations 1&ndash;20 of 273</p><div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
-  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Assay</th><th scope="col">Strain</th></tr></thead>
-  <tr>
-    <td><em>Enterococcus faecium</em> <code class="curie">NCBITaxon:1352</code></td>
-    <td>—</td>
-    <td class="num">8.0 mg/L</td>
-    <td class="meta">Broth microdilution linezolid MIC; interpreted according to EUCAST guidelines.</td>
-    <td class="meta">C59</td>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A484725f5f920242d">79 source isolates</a><br>79 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterococcus faecium</em> <code class="curie">NCBITaxon:1352</code></td>
-    <td>—</td>
-    <td class="num">8.0 mg/L</td>
-    <td class="meta">Broth microdilution linezolid MIC; interpreted according to EUCAST guidelines.</td>
-    <td class="meta">149T</td>
+  <tr id="observation-2">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A0f1fa54787c02608">4536 source isolates</a><br>4536 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterococcus faecium</em> <code class="curie">NCBITaxon:1352</code></td>
-    <td>—</td>
-    <td class="num">8.0 mg/L</td>
-    <td class="meta">Broth microdilution linezolid MIC; interpreted according to EUCAST guidelines.</td>
-    <td class="meta">2Fez</td>
+  <tr id="observation-3">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A22d048bf0ee4dc35">5 source isolates</a><br>5 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="2" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Staphylococcus aureus</em> <code class="curie">NCBITaxon:1280</code></td>
-    <td>—</td>
-    <td class="num">16.0 mg/L</td>
-    <td class="meta">Broth microdilution linezolid MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
-    <td class="meta">0701</td>
+  <tr id="observation-4">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A1af76e0694c4bbf4">1 source isolates</a><br>1 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="3" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Staphylococcus aureus</em> <code class="curie">NCBITaxon:1280</code></td>
-    <td>—</td>
-    <td class="num">8.0 mg/L</td>
-    <td class="meta">Broth microdilution linezolid MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
-    <td class="meta">0702</td>
+  <tr id="observation-5">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae6e5027b89cecef3">97 source isolates</a><br>97 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="4" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Staphylococcus epidermidis</em> <code class="curie">NCBITaxon:1282</code></td>
-    <td>—</td>
-    <td class="num">&gt;16.0 mg/L</td>
-    <td class="meta">Broth microdilution linezolid MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
-    <td class="meta">0726</td>
+  <tr id="observation-6">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A554aabd52214d712">24 source isolates</a><br>24 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="5" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Staphylococcus haemolyticus</em> <code class="curie">NCBITaxon:1283</code></td>
-    <td>—</td>
-    <td class="num">&gt;16.0 mg/L</td>
-    <td class="meta">Broth microdilution linezolid MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
-    <td class="meta">0729</td>
+  <tr id="observation-7">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A25f8846dec1c3df1">1065 source isolates</a><br>1065 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="6" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Staphylococcus haemolyticus</em> <code class="curie">NCBITaxon:1283</code></td>
-    <td>—</td>
-    <td class="num">&gt;16.0 mg/L</td>
-    <td class="meta">Broth microdilution linezolid MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
-    <td class="meta">0730</td>
+  <tr id="observation-8">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A7fb9392380e9c727">1 source isolates</a><br>1 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="7" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterococcus faecalis</em> <code class="curie">NCBITaxon:1351</code></td>
-    <td>—</td>
-    <td class="num">8.0 mg/L</td>
-    <td class="meta">Broth microdilution linezolid MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
-    <td class="meta">0780</td>
+  <tr id="observation-9">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A72c1091a943dbd9e">10 source isolates</a><br>10 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="8" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
+  <tr id="observation-10">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.06 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A431c6a2cf9b253df">138 source isolates</a><br>138 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="9" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-11">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.06 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ab0d64ad0aa8789a4">50 source isolates</a><br>50 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="10" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-12">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.06 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A4a2bf4f70b6697f1">11 source isolates</a><br>11 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="11" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-13">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.12 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aed5b1701d7d84416">380 source isolates</a><br>380 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="12" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-14">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.12 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae6f5fe97bc0546f6">88 source isolates</a><br>88 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="13" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-15">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.12 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A7c541b83aacfcea2">84 source isolates</a><br>84 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="14" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-16">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.25 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A06f8916143184e81">1138 source isolates</a><br>1138 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="15" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-17">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.25 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A986502fddec56d44">184 source isolates</a><br>184 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="16" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-18">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.25 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A3be81662b0f2c7c9">330 source isolates</a><br>330 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="17" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-19">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.5 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ab63beca2f8a1e9c8">2644 source isolates</a><br>2644 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="18" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-20">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.5 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="linezolid/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A034cb4cab6610924">218 source isolates</a><br>218 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="19" data-offset="0" data-total="273" data-identifier="CHEBI:63607" data-key="TYZROVQLWOKYKF-ZDUSSCGKSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="linezolid/activity-1-6fac9b3b4f5c784e74c008e55989fab54a154f6ab4b6d18649df16514e760b83.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  </tbody>
 </table>
 
+</div>
+
+
 <h2>Resistance mechanisms</h2>
-<p class="meta">10 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">10 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">7</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -222,7 +483,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004057</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004057">ARO:3004057</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -232,7 +493,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004173</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004173">ARO:3004173</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -242,7 +503,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3009345</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3009345">ARO:3009345</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -252,7 +513,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004058</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004058">ARO:3004058</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -262,7 +523,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004649</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004649">ARO:3004649</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -272,7 +533,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005021</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005021">ARO:3005021</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -282,15 +543,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004599</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004599">ARO:3004599</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_PROTECTION <span class="pill plain">2</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_PROTECTION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_PROTECTION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -299,7 +563,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003746</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003746">ARO:3003746</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -309,15 +573,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004470</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004470">ARO:3004470</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">1</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_EFFLUX</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -326,20 +593,92 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004572</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004572">ARO:3004572</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000072 (linezolid); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Linezolid binds the 50S peptidyl-transferase-center A-site pocket to perturb tRNA positioning <span class="pill">MECHANISTIC</span></h3>
+<p>Linezolid binds the A-site cleft of the bacterial 50S ribosomal peptidyl-transferase center, stabilizes conserved 23S rRNA nucleotide U2585 in a nonproductive orientation that overlaps the aminoacyl moiety of A-site tRNA, and blocks bacterial protein synthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: linezolid_50s_ptc_a_site_trna_positioning_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — linezolid_50s_ptc_a_site_trna_positioning_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">linezolid</code></td>
+    <td>linezolid</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/linezolid.html"><code class="curie">CHEBI:63607</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ptc_a_site_pocket</code></td>
+    <td>50S ribosomal peptidyl-transferase-center A-site pocket</td>
+    <td class="meta">CELL_STRUCTURE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">linezolid_u2585_nonproductive_state</code></td>
+    <td>linezolid-bound PTC A-site pocket with nonproductive U2585 orientation</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">a_site_trna_accommodation_and_translation</code></td>
+    <td>A-site aminoacyl-tRNA positioning and bacterial protein synthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: linezolid_50s_ptc_a_site_trna_positioning_inhibition" tabindex="0">
+<table>
+  <caption>Edges — linezolid_50s_ptc_a_site_trna_positioning_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">linezolid</code></td>
+    <td>binds</td>
+    <td><code class="curie">linezolid_u2585_nonproductive_state</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18757750">PMID:18757750</a></span> <span class="meta">(An X-ray crystal structure of linezolid bound to the Deinococcus radiodurans 50S subunit localized the drug in the PTC A-site pocket.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ptc_a_site_pocket</code></td>
+    <td>participates in</td>
+    <td><code class="curie">linezolid_u2585_nonproductive_state</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18757750">PMID:18757750</a></span> <span class="meta">(The 50S-linezolid crystal structure showed stabilization of 23S rRNA nucleotide U2585 in a nonproductive conformation.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">linezolid_u2585_nonproductive_state</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">a_site_trna_accommodation_and_translation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18757750">PMID:18757750</a></span> <span class="meta">(Superposition with tRNA substrates showed steric overlap with the A-site aminoacyl group, explaining translation inhibition.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
 <h2>Record-level evidence</h2>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:18757750</span> <span class="meta">(Primary exact-linezolid ribosome-bound structural mechanism study.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18757750">PMID:18757750</a></span> <span class="meta">(Primary exact-linezolid ribosome-bound structural mechanism study.)</span></li>
 </ul>
 
 
@@ -400,32 +739,62 @@ type — expand a group to see its determinants.</p>
     <span class="meta">2026-09-13 · codex · LLM-assisted</span>
     <p>Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 linezolid-resistant Enterococcus faecalis activity observation for AR-0780.</p>
   </li>
+  <li>
+    <span class="pill">STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS</span>
+    <span class="meta">2026-09-26 · codex · LLM-assisted</span>
+    <p>Structured BioSample accessions on 5 activity_spectrum observation(s) where evidence notes already named exactly one accession.</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-26 · seed_from_sources</span>
+    <p>Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-10-05 · seed_from_sources</span>
+    <p>Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph linezolid_50s_ptc_a_site_trna_positioning_inhibition (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:18757750).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/linezolid.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/linezolid.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=linezolid">MediaIngredientMech (linezolid)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=linezolid">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=linezolid">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=linezolid">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=linezolid">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

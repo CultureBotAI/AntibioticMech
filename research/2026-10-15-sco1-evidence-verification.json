@@ -1,0 +1,133 @@
+{
+  "baseline_commit": "b0950a9c3256aacee226834e0e8a88d1022c9948",
+  "biological_records_changed": 0,
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/canary-review.json",
+    "sha256": "c2ecc6409c7b8c14f0d4c416ab96a773cdb9c23174f049bd817dbbfc4f5d1480"
+  },
+  "captured_at": "2026-10-15T09:13:23.482979+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/cohort.json",
+    "sha256": "ff4b2aa983a974f380033c64dc4ba59d218c9c114645b52b1fe6abf050e7e9a9"
+  },
+  "complete_citation_queries_replayed": 3,
+  "complete_collection_aware_records_read": 8,
+  "corpus_records_hash_checked": 2939,
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "9284747d7f35a29bda65baea56919ec446f77827c39f8f957cdca6487c35e1d3"
+    },
+    {
+      "path": "research/2026-10-15-sco1-evidence.json",
+      "sha256": "57392e58d8c0fa682066669a44c1e027fa6f9e5f7af35876b1b1e5b3201d9852"
+    },
+    {
+      "path": "scripts/audit_sco1_evidence.py",
+      "sha256": "571457c38c89b55c61758c0749376769af85c67024e98f02858e5f9beaa5e180"
+    },
+    {
+      "path": "tests/test_sco1_evidence.py",
+      "sha256": "46e60505e736f3d097fc8b7e0862e99bd135364edbb864a5e9fbb77331424690"
+    }
+  ],
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_sco1_evidence_20261015.py",
+      "sha256": "731278ca1d74ff312a3c63d2b051d1fb55c75993476110ff639ec0f384874f75"
+    },
+    {
+      "path": "/private/tmp/select_sco1_evidence_20261015.py",
+      "sha256": "cce68c59687e68b79afabb8ab988afbf4cc6fb62f9a277b0adcf8da7709fa20e"
+    },
+    {
+      "path": "/private/tmp/finalize_sco1_evidence_20261015.py",
+      "sha256": "d550bf7e36ff33a3eec59f158bee0ec93b249a14075a33bd76f7238eff957439"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "membership_index_updated": false,
+  "membership_reconciliation_pending": true,
+  "native_offline_replay": "PASS",
+  "native_source_definition_and_citations_replayed": true,
+  "ncbi_requests": 0,
+  "network_and_file_writes_blocked_during_replay": true,
+  "network_requests": 3,
+  "new_access_holds": 0,
+  "new_experimental_assignments": 0,
+  "new_gene_reference_links": 2,
+  "new_gene_reference_memberships": 16,
+  "new_metadata_requests": 3,
+  "new_primary_requests": 0,
+  "new_uniprot_requests": 0,
+  "new_verified_resistance_results": 0,
+  "outreach": 0,
+  "prior_research_checkpoints_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/protected-before.json",
+    "sha256": "df75c99ff4ae5c64b30d4cb8e3651450bdab30d6649238a76f62752c75bcc55a"
+  },
+  "protected_files_checked": 7743,
+  "repository_ruff_check": "PASS",
+  "reuse_terms_review_resumed": false,
+  "review_findings_addressed": [
+    "The source label SCO-1 and native blaSCO-1 gene differ; the alias is supported here by exact native citations, not a global prefix rule.",
+    "Both entries remain unreviewed and lack explicit CARD cross-references.",
+    "Distinct E. coli and A. baumannii reference accessions are not collapsed or assigned to tested subjects.",
+    "The Acinetobacter spp. publication title does not make every isolate A. baumannii.",
+    "Three complete citation queries contain 48 distinct entries; 46 neighboring or other-enzyme entries are excluded.",
+    "Sixteen reference memberships across eight records are not sixteen phenotypes or resistant alleles.",
+    "Source bibliography matches do not replace unreviewed primary results or authorize exact-drug AST claims.",
+    "Non-OA metadata and advertised free links are not access denials, primary review, or permanent unavailability.",
+    "The initial cross-cohort metadata URL helper was replaced by a SCO-1-scoped request builder.",
+    "Synthetic taxonomy fixtures now include matching parent names, so mutation tests exercise their intended guards."
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "SCO1_NATIVE_GENE_CITATION_TAXON_REFERENCE_NOT_EXPERIMENTAL_ALLELE",
+  "source_adoptions": 0,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "cohort_records": 8,
+    "corpus_records_hash_checked": 2939,
+    "distinct_citation_query_entries": 48,
+    "incidental_citation_hits_not_selected": 46,
+    "metadata_only_papers": 3,
+    "native_reference_taxa_checked": 2,
+    "new_gene_reference_links": 2,
+    "new_gene_reference_memberships": 16,
+    "primary_context_reviews": 0,
+    "reused_complete_citation_queries": 3,
+    "source_claims": 8,
+    "source_terms": 1
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 857,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/tests.xml",
+      "sha256": "979358adf810223c377aa5abb609675924f9783abe7b687387599130504f8ba7"
+    },
+    "skip_details": [
+      {
+        "classname": "tests.test_card_structure_links",
+        "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+        "test": "test_cached_export_reproduces_when_research_cache_is_available"
+      }
+    ],
+    "skipped": 1,
+    "tests": 858
+  },
+  "verification_limit": "Gene-reference metadata and citation concordance, not primary results or exact resistant alleles. Pinned RDKit lacks an Intel macOS wheel; historical Linux CI is not current signoff.",
+  "whole_record_primary_signoffs": 0
+}

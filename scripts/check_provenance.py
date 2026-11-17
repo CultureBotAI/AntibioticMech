@@ -11,9 +11,11 @@ from __future__ import annotations
 import csv
 import hashlib
 import sys
+import zlib
 from pathlib import Path
 
 import yaml
+from ncbi_ast_inventory import inventory_metadata, open_activity_text
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = REPO_ROOT / "data" / "raw"
@@ -29,7 +31,8 @@ def sha256_of(path: Path) -> str:
 
 
 def row_count(path: Path) -> int:
-    with path.open(newline="", encoding="utf-8") as fh:
+    handle = open_activity_text(path) if path.suffix == ".gz" else path.open(newline="", encoding="utf-8")
+    with handle as fh:
         return sum(1 for _ in csv.DictReader(fh, delimiter="\t"))
 
 
@@ -39,7 +42,7 @@ def main() -> int:
         return 1
     manifest = yaml.safe_load(MANIFEST_PATH.read_text(encoding="utf-8"))
     recorded = manifest.get("inventories", {})
-    on_disk = {p.name for p in RAW_DIR.glob("*.tsv")}
+    on_disk = {p.name for pattern in ("*.tsv", "*.tsv.gz") for p in RAW_DIR.glob(pattern)}
 
     problems = []
     # pubchem_structures.tsv is produced by a separate network step whose own
@@ -59,7 +62,16 @@ def main() -> int:
         if actual_sha != entry.get("sha256"):
             problems.append(f"  {name}: sha256 {actual_sha[:12]}… != manifest "
                             f"{str(entry.get('sha256'))[:12]}… (edited after extraction?)")
-        actual_rows = row_count(path)
+        try:
+            if path.suffix == ".gz":
+                metadata = inventory_metadata(path)
+                for field in ("encoding", "bytes", "content_sha256", "content_bytes"):
+                    if entry.get(field) != metadata[field]:
+                        problems.append(f"  {name}: {field} differs from manifest or is missing")
+            actual_rows = row_count(path)
+        except (OSError, EOFError, ValueError, zlib.error) as error:
+            problems.append(f"  {name}: cannot read inventory: {error}")
+            continue
         if actual_rows != entry.get("rows"):
             problems.append(f"  {name}: {actual_rows} rows != manifest {entry.get('rows')}")
 

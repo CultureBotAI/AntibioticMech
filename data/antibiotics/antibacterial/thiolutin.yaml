@@ -91,3 +91,103 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-12T22:14:48Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added four qualitative thiolutin resistance associations from one laboratory-yeast
+    study. Grounded species and five reference-only UniProt identities. Preserved
+    dosage, duplicate-candidate, combined-loss and subject-identity limits. No exact
+    alleles, genomes, numerical AST or clinical categories assigned; whole-record
+    review remains open.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  label: YAP1-associated thiolutin resistance in laboratory yeast
+  gene_families:
+  - YAP1
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative thiolutin resistance
+  assay: Comparative plate growth
+  note: Mutant- or dosage-dependent resistance; gene presence alone is not predictive.
+    Forward-screen CKY457 derivatives and Variomics candidates are distinct. Gene
+    deletion did not reproduce the resistant phenotype. No exact experimental protein,
+    allele, strain TaxID, genome, MIC or clinical category assigned. Mechanistic interpretations
+    are not direct biochemical measurements.
+  evidence:
+  - reference: PMID:38214235
+    notes: Results on MDR/OSR; Supplementary Figures S1B, S1C, S1E and S3; Table S1
+      rows 9-10; DOI:10.1093/nar/gkad1258. Selected native supplemental figures and
+      tables inspected; one study, not independent studies.
+  - reference: UniProtKB:P19880
+    notes: 'Reference identity only: YAP1, YML007W, S288c NCBITaxon:559292; UniProtKB
+      2026_03, entry 230, sequence 2. Not an experimental allele assignment.'
+- mechanism_type: UNKNOWN
+  label: YRR1-associated thiolutin resistance in laboratory yeast
+  gene_families:
+  - YRR1
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative thiolutin resistance
+  assay: Comparative plate growth
+  note: Mutant- or dosage-dependent resistance; gene presence alone is not predictive.
+    Forward-screen CKY457 derivatives and Variomics candidates are distinct. Gene
+    deletion did not reproduce the resistant phenotype. No exact experimental protein,
+    allele, strain TaxID, genome, MIC or clinical category assigned. Mechanistic interpretations
+    are not direct biochemical measurements.
+  evidence:
+  - reference: PMID:38214235
+    notes: Results on MDR/OSR; Supplementary Figures S1B, S1C, S1E and S3; Table S1
+      rows 16-17; DOI:10.1093/nar/gkad1258. Selected native supplemental figures and
+      tables inspected; one study, not independent studies.
+  - reference: UniProtKB:Q12172
+    notes: 'Reference identity only: YRR1, YOR162C, S288c NCBITaxon:559292; UniProtKB
+      2026_03, entry 169, sequence 1. Not an experimental allele assignment.'
+- mechanism_type: UNKNOWN
+  label: SNQ2-associated thiolutin resistance in laboratory yeast
+  gene_families:
+  - SNQ2
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative thiolutin resistance
+  assay: Comparative plate growth
+  note: Plasmid-dependent, dominant-or-dosage-associated phenotype. Table S1 candidates
+    220 and 221 have identical reported synonymous changes and are not distinct protein
+    alleles. A dosage contribution is not excluded. SNQ2 deletion increased sensitivity,
+    not resistance; direct thiolutin transport was not measured in these growth assays.
+    No exact experimental protein, allele, strain TaxID, genome, MIC or clinical category
+    assigned. Mechanistic interpretations are not direct biochemical measurements.
+  evidence:
+  - reference: PMID:38214235
+    notes: Results on MDR/OSR; Supplementary Figures S1B, S1E and S3; Table S1 rows
+      5-6 and note 2; DOI:10.1093/nar/gkad1258. Selected native supplemental figures
+      and tables inspected; one study, not independent studies.
+  - reference: UniProtKB:P32568
+    notes: 'Reference identity only: SNQ2, YDR011W, S288c NCBITaxon:559292; UniProtKB
+      2026_03, entry 216, sequence 2. Not an experimental allele assignment.'
+- mechanism_type: UNKNOWN
+  label: Combined TRX1/TRX2 loss-associated thiolutin resistance in laboratory yeast
+  gene_families:
+  - TRX1
+  - TRX2
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative thiolutin resistance
+  assay: Comparative plate growth
+  note: Combined-loss phenotype, not two independent single-gene resistance effects.
+    The CKY457-derived background is distinct from a reference strain accession. Table
+    S2 lists CKY1984 and CKY1985; the plotted row does not identify which derivative.
+    Direct reduction of thiolutin by either protein remains an author hypothesis.
+    No exact experimental protein, allele, strain TaxID, genome, MIC or clinical category
+    assigned. Mechanistic interpretations are not direct biochemical measurements.
+  evidence:
+  - reference: PMID:38214235
+    notes: Results on thioredoxins; Supplementary Figure S1G; Table S2, Yeast Strains
+      rows 27-28; DOI:10.1093/nar/gkad1258. Selected native supplemental figures and
+      tables inspected; one study, not independent studies.
+  - reference: UniProtKB:P22217
+    notes: 'Reference identity only: TRX1, YLR043C, S288c NCBITaxon:559292; UniProtKB
+      2026_03, entry 219, sequence 3. Not an experimental allele assignment.'
+  - reference: UniProtKB:P22803
+    notes: 'Reference identity only: TRX2, YGR209C, S288c NCBITaxon:559292; UniProtKB
+      2026_03, entry 230, sequence 3. Not an experimental allele assignment.'

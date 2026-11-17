@@ -1,0 +1,1286 @@
+{
+  "attribution": {
+    "card_ontology_attribution": {
+      "ontology_license": "CC-BY-4.0",
+      "ontology_license_url": "https://github.com/arpcard/aro/blob/0225daaf01b1336fc6e866989b4835b89afa40d8/LICENSE",
+      "source": "CARD curation team, Antibiotic Resistance Ontology; UniProt Consortium"
+    },
+    "source": "UniProt Consortium and CARD curation team",
+    "uniprot_license": "CC BY 4.0",
+    "uniprot_license_url": "https://www.uniprot.org/help/license"
+  },
+  "constraints": {
+    "failed_source_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0
+  },
+  "curation_decision": "HOLD_UNVERIFIED_PRIMARY_SUBJECT_PROTEIN_AND_MECHANISM",
+  "date": "2026-10-13",
+  "focal_citation_contexts": [
+    {
+      "citation": {
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "34672600"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1021/acs.jproteome.1c00635"
+          }
+        ],
+        "citationType": "journal article",
+        "id": "34672600",
+        "publicationDate": "2021"
+      },
+      "citation_identifiers": [
+        "DOI:10.1021/acs.jproteome.1c00635",
+        "PMID:34672600"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "experimental_subject_assignment": false,
+      "omitted_comment_types": [],
+      "primary_review_completed_by_this_audit": false,
+      "raw_role_annotations_exported": false,
+      "reference_number": 8,
+      "role_annotations": [
+        {
+          "category": "FUNCTION",
+          "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+        },
+        {
+          "category": "CATALYTIC ACTIVITY",
+          "source_annotation_sha256": "0e085e8676b9694290585c2df494314bd24591504ad182ac665b9690c7ce70d2"
+        },
+        {
+          "category": "DISRUPTION PHENOTYPE",
+          "source_annotation_sha256": "11b4d4a5d6972fbd2245f1158272b661c21073913bc75681d31a4aefea69753c"
+        }
+      ],
+      "strain_annotations": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "id": "34672600",
+              "source": "PubMed"
+            }
+          ],
+          "type": "STRAIN",
+          "value": "OG1"
+        }
+      ],
+      "strain_values_split_or_normalized": false,
+      "title_mentions_susceptibility": false,
+      "title_sha256": "900519dccb0c4cdba73d7ff756c25f0cbd6e4123d3c6e7d545d58a6fd792b504"
+    },
+    {
+      "citation": {
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "37517789"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.jmb.2023.168216"
+          }
+        ],
+        "citationType": "journal article",
+        "id": "37517789",
+        "publicationDate": "2023"
+      },
+      "citation_identifiers": [
+        "DOI:10.1016/j.jmb.2023.168216",
+        "PMID:37517789"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "experimental_subject_assignment": false,
+      "omitted_comment_types": [],
+      "primary_review_completed_by_this_audit": false,
+      "raw_role_annotations_exported": false,
+      "reference_number": 10,
+      "role_annotations": [
+        {
+          "category": "FUNCTION",
+          "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+        },
+        {
+          "category": "CATALYTIC ACTIVITY",
+          "source_annotation_sha256": "0e085e8676b9694290585c2df494314bd24591504ad182ac665b9690c7ce70d2"
+        },
+        {
+          "category": "ACTIVITY REGULATION",
+          "source_annotation_sha256": "0be02902ee515c4e12939a522fd2f21ecabc2b22b3a35e3ab7ad080be61ad7f4"
+        }
+      ],
+      "strain_annotations": [],
+      "strain_values_split_or_normalized": false,
+      "title_mentions_susceptibility": false,
+      "title_sha256": "a43eb10e149abb2605721b10652dfabe187eac6977832d2081b2e5a584898c17"
+    }
+  ],
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-13-fpr1-primary-resistance-grounding.tsv",
+      "sha256": "5199994e1415dd11a99621c21dd6cd0e131da330fff954708895a0c99ac58c90"
+    },
+    "prior": {
+      "path": "research/2026-10-13-card-study-context.json",
+      "sha256": "f2b79c4a82a3661bc2884266e01a679ded36f712e920d218ba4ad2dfb0ad84c3"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-13-card-study-context-verification.json",
+      "sha256": "10ad0a12ce7cbde766e6af6825880b09eb3586070c902e300137ea79921cd257"
+    },
+    "protected": {
+      "path": "reports/resistance-grounding-2026-10-13-irek-context/protected-before.json",
+      "sha256": "fae665550bf16514c50633ec05489b2145f78672d88cd18de3b923fa3c67d7ea"
+    }
+  },
+  "limitations": [
+    "V583, the citation label OG1, and the separate OG1RF reference remain distinct.",
+    "OG1RF taxonomy does not establish which subject either focal paper tested.",
+    "A zero-result exact-alias query is not absence of IreK, homologs or sequence data.",
+    "Suggested alternative gene or taxon queries are not hits for the requested query.",
+    "No locus-specific, homology, sequence or genome analysis was performed.",
+    "Neither focal primary result, figure nor supplement was newly reviewed.",
+    "The CARD route is retained as source-owned evidence, not newly verified permeability.",
+    "Transport failure does not establish publisher refusal or global source unavailability.",
+    "Replay validates bytes and identifier boundaries, not experimental truth.",
+    "No sequences, exact variants, constructs, protocols or numeric AST are exported."
+  ],
+  "plans": {
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-13-irek-context/cohort.json",
+      "sha256": "68a885b7d1e4cb457c9315b9a2f1acd3d5bae8811a95b86537a988fb96380758"
+    },
+    "reference": {
+      "path": "reports/resistance-grounding-2026-10-13-irek-context/reference-plan.json",
+      "sha256": "2a4e07ebb761eebd4509eee9991e8b0469ac86836fef7fc464090f2951395b90"
+    },
+    "taxon_reference": {
+      "path": "reports/resistance-grounding-2026-10-13-irek-context/taxon-reference-plan.json",
+      "sha256": "e49ddfc11a76792023410c2251eed4447792fc13572ca91bed9d4bbc1b9f6a38"
+    },
+    "taxonomy": {
+      "path": "reports/resistance-grounding-2026-10-13-irek-context/taxonomy-plan.json",
+      "sha256": "d63faea68cf933dac7ae919c1d0afcdce8b02e65b759bc06984b592ee7ebfbf2"
+    }
+  },
+  "primary_holds": {
+    "paper2021": {
+      "alternate_route_attempted": false,
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-context/paper2021-attempt.json",
+        "sha256": "3eb1a34bcc663b0bf8a356cd8bd70fd397bbcb0349ded5d5a660cd493261ed5b"
+      },
+      "attempted_at": "2026-10-13T22:14:09.174145+00:00",
+      "doi": "10.1021/acs.jproteome.1c00635",
+      "error_type": "ConnectionError",
+      "full_text_reviewed": false,
+      "global_unavailability_inferred": false,
+      "http_status": null,
+      "native_figures_or_supplements_reviewed": false,
+      "pmid": "34672600",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-context/paper2021-receipt.json",
+        "sha256": "c608480884116cd258d1e9ad4fff0f7c219a644daae498b718f0575dce07c74d"
+      },
+      "response": null,
+      "search_snippets_are_primary_results": false,
+      "status": "TRANSPORT_ERROR_NO_HTTP_RESPONSE",
+      "url": "https://europepmc.org/articles/PMC10037947?pdf=render"
+    },
+    "paper2023": {
+      "alternate_route_attempted": false,
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-context/paper2023-attempt.json",
+        "sha256": "b67afcff9072271f84356ae7fd81957b8a2efd99e16aaf4339c841f7602cd029"
+      },
+      "attempted_at": "2026-10-13T22:14:24.285356+00:00",
+      "doi": "10.1016/j.jmb.2023.168216",
+      "full_text_reviewed": false,
+      "global_unavailability_inferred": false,
+      "http_status": 403,
+      "native_figures_or_supplements_reviewed": false,
+      "pmid": "37517789",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-context/paper2023-receipt.json",
+        "sha256": "cb7bc79d96d98ad91bb6172013bf2d3f49e042b588c73c05fba140ccdad66ec2"
+      },
+      "response": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-context/paper2023-response.bin",
+        "sha256": "0a943bb07c2be4137b90e958d0b0f7106bd6276b425a57a5c85ef914edbe190f"
+      },
+      "search_snippets_are_primary_results": false,
+      "status": "HTTP_ACCESS_HOLD",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022283623003157"
+    }
+  },
+  "queries": {
+    "reference": {
+      "all_strains_and_aliases_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-context/reference-response.bin",
+        "sha256": "58002875dbfc777cf198903c724d316c1a62638fc69da3fabdfc917063cf0d11"
+      },
+      "complete_for_exact_query": true,
+      "protein_absence_inferred": false,
+      "query": "(gene_exact:ireK OR gene_exact:prkC) AND organism_name:OG1RF",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-context/reference-receipt.json",
+        "sha256": "7aef8b8dec5b39939446cf7e56f3e23a36cbb57cf56ffdeeaa53205feaabb0d5"
+      },
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-13T22:16:10.153124+00:00",
+      "status": 200,
+      "suggested_queries_excluded": 1,
+      "suggested_query_text_exported": false,
+      "suggestions_used_as_results": false,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AireK+OR+gene_exact%3AprkC%29+AND+organism_name%3AOG1RF&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "taxon-reference": {
+      "all_strains_and_aliases_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-context/taxon-reference-response.bin",
+        "sha256": "dec2bd6ad24f29a8b354cf9cb2e308cf9b4a80a8a6bc4a18f3f70e3079d5787e"
+      },
+      "complete_for_exact_query": true,
+      "protein_absence_inferred": false,
+      "query": "(gene_exact:ireK OR gene_exact:prkC) AND organism_id:474186",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-context/taxon-reference-receipt.json",
+        "sha256": "16557005f464dde6c011f0edb9a79aa72b990b52ed5a98df5c3609950a0494cf"
+      },
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-13T22:18:05.874682+00:00",
+      "status": 200,
+      "suggested_queries_excluded": 5,
+      "suggested_query_text_exported": false,
+      "suggestions_used_as_results": false,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AireK+OR+gene_exact%3AprkC%29+AND+organism_id%3A474186&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "record": {
+    "cohort_terms": [
+      "ARO:3007678"
+    ],
+    "identifier": "CHEBI:29007",
+    "path": "data/antibiotics/antibacterial/ceftriaxone.yaml",
+    "sha256": "7294a0606c41257f1589c2aa54119527ccf09778c7d84f7258d74e4253f12135",
+    "source_assertions": 23,
+    "source_owned_irek_assertion": {
+      "aro_id": "ARO:3007678",
+      "evidence": [
+        {
+          "notes": "CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone); database assertion, not a primary citation.",
+          "reference": "ARO:3007678"
+        }
+      ],
+      "label": "IreK",
+      "mechanism_type": "REDUCED_PERMEABILITY"
+    },
+    "source_route_newly_confirmed": false,
+    "standard_inchi_key": "VAAUVRVFOQPIGI-SPQHTLEESA-N",
+    "whole_record_primary_review": "OPEN",
+    "whole_record_review": "OPEN"
+  },
+  "reused_reference_protein": {
+    "accession": "UniProtKB:Q820A8",
+    "bibliography": [
+      {
+        "identifiers": [
+          "DOI:10.1126/science.1080613",
+          "PMID:12663927"
+        ],
+        "reference_number": 1,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1073/pnas.0608742104",
+          "PMID:17360674"
+        ],
+        "reference_number": 2,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1128/mbio.00199-11",
+          "PMID:22045988"
+        ],
+        "reference_number": 3,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1128/aac.01472-13",
+          "PMID:24080657"
+        ],
+        "reference_number": 4,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1128/jb.00363-17",
+          "PMID:28808126"
+        ],
+        "reference_number": 5,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1128/iai.00381-17",
+          "PMID:29038125"
+        ],
+        "reference_number": 6,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1128/jb.00086-18",
+          "PMID:29632091"
+        ],
+        "reference_number": 7,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1021/acs.jproteome.1c00635",
+          "PMID:34672600"
+        ],
+        "reference_number": 8,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1128/jb.00304-22",
+          "PMID:36094306"
+        ],
+        "reference_number": 9,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1016/j.jmb.2023.168216",
+          "PMID:37517789"
+        ],
+        "reference_number": 10,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1111/mmi.15150",
+          "PMID:37688380"
+        ],
+        "reference_number": 11,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1128/mbio.00593-25",
+          "PMID:40272164"
+        ],
+        "reference_number": 12,
+        "unresolved_identifiers": []
+      }
+    ],
+    "description_flag": null,
+    "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+    "entry_version": 142,
+    "exact_allele_assignment": false,
+    "experimental_subject_assignment": false,
+    "gene_names_and_synonyms": [
+      "ireK",
+      "prkC"
+    ],
+    "ordered_locus_names": [
+      "EF_3120"
+    ],
+    "reference_contexts": [
+      {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "12663927"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1126/science.1080613"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "12663927",
+          "publicationDate": "2003"
+        },
+        "citation_identifiers": [
+          "DOI:10.1126/science.1080613",
+          "PMID:12663927"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000312",
+            "id": "UP000001415",
+            "source": "Proteomes"
+          }
+        ],
+        "experimental_subject_assignment": false,
+        "omitted_comment_types": [],
+        "primary_review_completed_by_this_audit": false,
+        "raw_role_annotations_exported": false,
+        "reference_number": 1,
+        "role_annotations": [
+          {
+            "category": "NUCLEOTIDE SEQUENCE",
+            "source_annotation_sha256": "ae5d729013bd28a23b98d2b02bd320e0d9be68fd9968d6e1b56a28995717b667"
+          }
+        ],
+        "strain_annotations": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000312",
+                "id": "UP000001415",
+                "source": "Proteomes"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "ATCC 700802 / V583"
+          }
+        ],
+        "strain_values_split_or_normalized": false,
+        "title_mentions_susceptibility": false,
+        "title_sha256": "e2324467d7812ada266e5069ab2d87670756376ba049461180802db8744a78e2"
+      },
+      {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "17360674"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.0608742104"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "17360674",
+          "publicationDate": "2007"
+        },
+        "citation_identifiers": [
+          "DOI:10.1073/pnas.0608742104",
+          "PMID:17360674"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "experimental_subject_assignment": false,
+        "omitted_comment_types": [],
+        "primary_review_completed_by_this_audit": false,
+        "raw_role_annotations_exported": false,
+        "reference_number": 2,
+        "role_annotations": [
+          {
+            "category": "FUNCTION",
+            "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+          },
+          {
+            "category": "DISRUPTION PHENOTYPE",
+            "source_annotation_sha256": "11b4d4a5d6972fbd2245f1158272b661c21073913bc75681d31a4aefea69753c"
+          }
+        ],
+        "strain_annotations": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "17360674",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1RF"
+          }
+        ],
+        "strain_values_split_or_normalized": false,
+        "title_mentions_susceptibility": false,
+        "title_sha256": "ddebacbb63ba70f1013fa520ac585daf0a374cde7df04a6a3f09c35704e5a445"
+      },
+      {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "22045988"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/mbio.00199-11"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "22045988",
+          "publicationDate": "2011"
+        },
+        "citation_identifiers": [
+          "DOI:10.1128/mbio.00199-11",
+          "PMID:22045988"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "experimental_subject_assignment": false,
+        "omitted_comment_types": [],
+        "primary_review_completed_by_this_audit": false,
+        "raw_role_annotations_exported": false,
+        "reference_number": 3,
+        "role_annotations": [
+          {
+            "category": "FUNCTION",
+            "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+          },
+          {
+            "category": "CATALYTIC ACTIVITY",
+            "source_annotation_sha256": "0e085e8676b9694290585c2df494314bd24591504ad182ac665b9690c7ce70d2"
+          },
+          {
+            "category": "ACTIVITY REGULATION",
+            "source_annotation_sha256": "0be02902ee515c4e12939a522fd2f21ecabc2b22b3a35e3ab7ad080be61ad7f4"
+          },
+          {
+            "category": "INDUCTION",
+            "source_annotation_sha256": "dd92ab1b6fcd435cc4b845dc5a3d902fb7f21d6e9704d6a7f1f45097db5d2ebd"
+          },
+          {
+            "category": "OTHER_HASH_ONLY",
+            "source_annotation_sha256": "d4ce8b86dba8e7060165908e95a53cbc92b9fa14bb1125d1135593ad9cdf4213"
+          },
+          {
+            "category": "MUTAGENESIS",
+            "source_annotation_sha256": "c64f8e085c24f0e7363e3bc95153339a32a7769218c34bb22e86ae0bae278a37"
+          }
+        ],
+        "strain_annotations": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "22045988",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1"
+          },
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "22045988",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1RF"
+          },
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "22045988",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "T1"
+          }
+        ],
+        "strain_values_split_or_normalized": false,
+        "title_mentions_susceptibility": false,
+        "title_sha256": "58f1471403343a217dd53759d277da86c80dde232bfb7603d9f81f1ce41229ad"
+      },
+      {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "24080657"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.01472-13"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "24080657",
+          "publicationDate": "2013"
+        },
+        "citation_identifiers": [
+          "DOI:10.1128/aac.01472-13",
+          "PMID:24080657"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "experimental_subject_assignment": false,
+        "omitted_comment_types": [],
+        "primary_review_completed_by_this_audit": false,
+        "raw_role_annotations_exported": false,
+        "reference_number": 4,
+        "role_annotations": [
+          {
+            "category": "FUNCTION",
+            "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+          },
+          {
+            "category": "CATALYTIC ACTIVITY",
+            "source_annotation_sha256": "0e085e8676b9694290585c2df494314bd24591504ad182ac665b9690c7ce70d2"
+          },
+          {
+            "category": "MUTAGENESIS",
+            "source_annotation_sha256": "c64f8e085c24f0e7363e3bc95153339a32a7769218c34bb22e86ae0bae278a37"
+          }
+        ],
+        "strain_annotations": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "24080657",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1RF"
+          },
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "24080657",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "T1"
+          }
+        ],
+        "strain_values_split_or_normalized": false,
+        "title_mentions_susceptibility": false,
+        "title_sha256": "6a214225fea6c9b1e99230b60a3b7878d126aeb9d411fe6f6b8f834906006c0b"
+      },
+      {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "28808126"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.00363-17"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "28808126",
+          "publicationDate": "2017"
+        },
+        "citation_identifiers": [
+          "DOI:10.1128/jb.00363-17",
+          "PMID:28808126"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "experimental_subject_assignment": false,
+        "omitted_comment_types": [],
+        "primary_review_completed_by_this_audit": false,
+        "raw_role_annotations_exported": false,
+        "reference_number": 5,
+        "role_annotations": [
+          {
+            "category": "FUNCTION",
+            "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+          },
+          {
+            "category": "CATALYTIC ACTIVITY",
+            "source_annotation_sha256": "0e085e8676b9694290585c2df494314bd24591504ad182ac665b9690c7ce70d2"
+          },
+          {
+            "category": "OTHER_HASH_ONLY",
+            "source_annotation_sha256": "76c992175d2d6048d91dac48138c5163371951067c739b52b3db266801a5b8ff"
+          },
+          {
+            "category": "OTHER_HASH_ONLY",
+            "source_annotation_sha256": "be8eddf79a4a5cbc33ef68950942e0302ac05aa7fb5af3d78133771fec466fcb"
+          },
+          {
+            "category": "DISRUPTION PHENOTYPE",
+            "source_annotation_sha256": "11b4d4a5d6972fbd2245f1158272b661c21073913bc75681d31a4aefea69753c"
+          },
+          {
+            "category": "MUTAGENESIS",
+            "source_annotation_sha256": "562bd6a3ce62683e7e485ee58be2c05c7ca7c88f69c392a61144d002c5c138f0"
+          }
+        ],
+        "strain_annotations": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "28808126",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1"
+          }
+        ],
+        "strain_values_split_or_normalized": false,
+        "title_mentions_susceptibility": false,
+        "title_sha256": "63b8a61462c657ece9f1efce84c337dce6fbdc942fcd4ae201f6cec110959414"
+      },
+      {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "29038125"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/iai.00381-17"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "29038125",
+          "publicationDate": "2018"
+        },
+        "citation_identifiers": [
+          "DOI:10.1128/iai.00381-17",
+          "PMID:29038125"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "experimental_subject_assignment": false,
+        "omitted_comment_types": [],
+        "primary_review_completed_by_this_audit": false,
+        "raw_role_annotations_exported": false,
+        "reference_number": 6,
+        "role_annotations": [
+          {
+            "category": "FUNCTION",
+            "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+          },
+          {
+            "category": "DISRUPTION PHENOTYPE",
+            "source_annotation_sha256": "11b4d4a5d6972fbd2245f1158272b661c21073913bc75681d31a4aefea69753c"
+          },
+          {
+            "category": "MUTAGENESIS",
+            "source_annotation_sha256": "c64f8e085c24f0e7363e3bc95153339a32a7769218c34bb22e86ae0bae278a37"
+          }
+        ],
+        "strain_annotations": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "29038125",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1RF"
+          }
+        ],
+        "strain_values_split_or_normalized": false,
+        "title_mentions_susceptibility": false,
+        "title_sha256": "bdbcac3606834893d2928b8c250d2e08fa0d2e29c9659c0d78939af4c3124f87"
+      },
+      {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "29632091"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.00086-18"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "29632091",
+          "publicationDate": "2018"
+        },
+        "citation_identifiers": [
+          "DOI:10.1128/jb.00086-18",
+          "PMID:29632091"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "experimental_subject_assignment": false,
+        "omitted_comment_types": [],
+        "primary_review_completed_by_this_audit": false,
+        "raw_role_annotations_exported": false,
+        "reference_number": 7,
+        "role_annotations": [
+          {
+            "category": "FUNCTION",
+            "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+          },
+          {
+            "category": "CATALYTIC ACTIVITY",
+            "source_annotation_sha256": "0e085e8676b9694290585c2df494314bd24591504ad182ac665b9690c7ce70d2"
+          },
+          {
+            "category": "DISRUPTION PHENOTYPE",
+            "source_annotation_sha256": "11b4d4a5d6972fbd2245f1158272b661c21073913bc75681d31a4aefea69753c"
+          },
+          {
+            "category": "MUTAGENESIS",
+            "source_annotation_sha256": "c64f8e085c24f0e7363e3bc95153339a32a7769218c34bb22e86ae0bae278a37"
+          }
+        ],
+        "strain_annotations": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "29632091",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1"
+          },
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "29632091",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1RF"
+          },
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "29632091",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "T1"
+          }
+        ],
+        "strain_values_split_or_normalized": false,
+        "title_mentions_susceptibility": false,
+        "title_sha256": "597e4147fd620f350941c6571a698cb5be1d556d1309cf998e19a8501cede2cf"
+      },
+      {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "34672600"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1021/acs.jproteome.1c00635"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "34672600",
+          "publicationDate": "2021"
+        },
+        "citation_identifiers": [
+          "DOI:10.1021/acs.jproteome.1c00635",
+          "PMID:34672600"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "experimental_subject_assignment": false,
+        "omitted_comment_types": [],
+        "primary_review_completed_by_this_audit": false,
+        "raw_role_annotations_exported": false,
+        "reference_number": 8,
+        "role_annotations": [
+          {
+            "category": "FUNCTION",
+            "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+          },
+          {
+            "category": "CATALYTIC ACTIVITY",
+            "source_annotation_sha256": "0e085e8676b9694290585c2df494314bd24591504ad182ac665b9690c7ce70d2"
+          },
+          {
+            "category": "DISRUPTION PHENOTYPE",
+            "source_annotation_sha256": "11b4d4a5d6972fbd2245f1158272b661c21073913bc75681d31a4aefea69753c"
+          }
+        ],
+        "strain_annotations": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "34672600",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1"
+          }
+        ],
+        "strain_values_split_or_normalized": false,
+        "title_mentions_susceptibility": false,
+        "title_sha256": "900519dccb0c4cdba73d7ff756c25f0cbd6e4123d3c6e7d545d58a6fd792b504"
+      },
+      {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "36094306"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.00304-22"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "36094306",
+          "publicationDate": "2022"
+        },
+        "citation_identifiers": [
+          "DOI:10.1128/jb.00304-22",
+          "PMID:36094306"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "experimental_subject_assignment": false,
+        "omitted_comment_types": [],
+        "primary_review_completed_by_this_audit": false,
+        "raw_role_annotations_exported": false,
+        "reference_number": 9,
+        "role_annotations": [
+          {
+            "category": "FUNCTION",
+            "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+          },
+          {
+            "category": "CATALYTIC ACTIVITY",
+            "source_annotation_sha256": "0e085e8676b9694290585c2df494314bd24591504ad182ac665b9690c7ce70d2"
+          },
+          {
+            "category": "ACTIVITY REGULATION",
+            "source_annotation_sha256": "0be02902ee515c4e12939a522fd2f21ecabc2b22b3a35e3ab7ad080be61ad7f4"
+          },
+          {
+            "category": "OTHER_HASH_ONLY",
+            "source_annotation_sha256": "d4ce8b86dba8e7060165908e95a53cbc92b9fa14bb1125d1135593ad9cdf4213"
+          },
+          {
+            "category": "MUTAGENESIS",
+            "source_annotation_sha256": "c64f8e085c24f0e7363e3bc95153339a32a7769218c34bb22e86ae0bae278a37"
+          }
+        ],
+        "strain_annotations": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "36094306",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1"
+          },
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "36094306",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1RF"
+          }
+        ],
+        "strain_values_split_or_normalized": false,
+        "title_mentions_susceptibility": false,
+        "title_sha256": "e7fb6ca1412a0e46d52e77ec641240262a528a633b05b4c2e08458a46544f172"
+      },
+      {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "37517789"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.jmb.2023.168216"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "37517789",
+          "publicationDate": "2023"
+        },
+        "citation_identifiers": [
+          "DOI:10.1016/j.jmb.2023.168216",
+          "PMID:37517789"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "experimental_subject_assignment": false,
+        "omitted_comment_types": [],
+        "primary_review_completed_by_this_audit": false,
+        "raw_role_annotations_exported": false,
+        "reference_number": 10,
+        "role_annotations": [
+          {
+            "category": "FUNCTION",
+            "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+          },
+          {
+            "category": "CATALYTIC ACTIVITY",
+            "source_annotation_sha256": "0e085e8676b9694290585c2df494314bd24591504ad182ac665b9690c7ce70d2"
+          },
+          {
+            "category": "ACTIVITY REGULATION",
+            "source_annotation_sha256": "0be02902ee515c4e12939a522fd2f21ecabc2b22b3a35e3ab7ad080be61ad7f4"
+          }
+        ],
+        "strain_annotations": [],
+        "strain_values_split_or_normalized": false,
+        "title_mentions_susceptibility": false,
+        "title_sha256": "a43eb10e149abb2605721b10652dfabe187eac6977832d2081b2e5a584898c17"
+      },
+      {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "37688380"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/mmi.15150"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "37688380",
+          "publicationDate": "2023"
+        },
+        "citation_identifiers": [
+          "DOI:10.1111/mmi.15150",
+          "PMID:37688380"
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "experimental_subject_assignment": false,
+        "omitted_comment_types": [],
+        "primary_review_completed_by_this_audit": false,
+        "raw_role_annotations_exported": false,
+        "reference_number": 11,
+        "role_annotations": [
+          {
+            "category": "FUNCTION",
+            "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+          }
+        ],
+        "strain_annotations": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "37688380",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1"
+          },
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "37688380",
+                "source": "PubMed"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "OG1RF"
+          }
+        ],
+        "strain_values_split_or_normalized": false,
+        "title_mentions_susceptibility": false,
+        "title_sha256": "e0a2277dd8d1a8e2053abb04a560493af8e38a26762ecbe7cc997c0bd78256d7"
+      },
+      {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "40272164"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/mbio.00593-25"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "40272164",
+          "publicationDate": "2025"
+        },
+        "citation_identifiers": [
+          "DOI:10.1128/mbio.00593-25",
+          "PMID:40272164"
+        ],
+        "evidences": [],
+        "experimental_subject_assignment": false,
+        "omitted_comment_types": [],
+        "primary_review_completed_by_this_audit": false,
+        "raw_role_annotations_exported": false,
+        "reference_number": 12,
+        "role_annotations": [
+          {
+            "category": "FUNCTION",
+            "source_annotation_sha256": "9d1aae1b4ddcfcecc414ff36d7f86b8240ff338a3fb36f1c2113fcf10b9ec73c"
+          },
+          {
+            "category": "CATALYTIC ACTIVITY",
+            "source_annotation_sha256": "0e085e8676b9694290585c2df494314bd24591504ad182ac665b9690c7ce70d2"
+          }
+        ],
+        "strain_annotations": [],
+        "strain_values_split_or_normalized": false,
+        "title_mentions_susceptibility": false,
+        "title_sha256": "168a14c81541c4996696f3ac77b6da50fa5803924149973698f6854a1b16c31c"
+      }
+    ],
+    "reference_organism_name": "Enterococcus faecalis (strain ATCC 700802 / V583)",
+    "reference_species_lineage": {
+      "experimental_subject_assignment": false,
+      "rank": "species",
+      "scientific_name": "Enterococcus faecalis",
+      "taxon_id": "NCBITaxon:1351"
+    },
+    "reference_taxon_id": "NCBITaxon:226185",
+    "sequence_version": 1,
+    "taxonomy_identity_verified": true,
+    "taxonomy_rank": "strain",
+    "taxonomy_scientific_name": "Enterococcus faecalis (strain ATCC 700802 / V583)"
+  },
+  "scope": "DISTINCT_REFERENCE_STRAIN_TAXONOMY_WITH_UNRESOLVED_PRIMARY_AND_PROTEIN_IDENTITY",
+  "separate_og1rf_reference_taxonomy": {
+    "active": true,
+    "experimental_subject_assignment": false,
+    "genome_assignment": false,
+    "other_names": [
+      "Enterococcus faecalis OG1RF",
+      "Enterococcus faecalis str. OG1RF",
+      "Enterococcus faecalis strain OG1RF"
+    ],
+    "rank": "strain",
+    "scientific_name": "Enterococcus faecalis (strain ATCC 47077 / OG1RF)",
+    "source_og1_equated_to_og1rf": false,
+    "species_lineage": {
+      "experimental_subject_assignment": false,
+      "rank": "species",
+      "scientific_name": "Enterococcus faecalis",
+      "taxon_id": "NCBITaxon:1351"
+    },
+    "strain_annotations": [
+      {
+        "name": "ATCC 47077 / OG1RF",
+        "synonyms": [
+          "OG1RF"
+        ]
+      }
+    ],
+    "taxon_id": "NCBITaxon:474186"
+  },
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_checked": 2939,
+    "exact_gene_queries": 2,
+    "exact_gene_query_results": 0,
+    "experimental_allele_or_genome_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "http_access_holds": 1,
+    "new_primary_results_reviewed": 0,
+    "new_protein_references": 0,
+    "new_reference_strain_taxa": 1,
+    "primary_request_attempts": 2,
+    "reused_protein_references": 1,
+    "selected_records": 1,
+    "suggested_queries_excluded": 6,
+    "transport_failures": 1,
+    "whole_record_reviews_completed": 0
+  },
+  "taxonomy_request": {
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-13-irek-context/taxonomy-response.bin",
+      "sha256": "c06dc346376f1ddf565ab2bec907cbbc3835f6faaa522392ee3c83c1fddb881e"
+    },
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-irek-context/taxonomy-receipt.json",
+      "sha256": "886c14edd10f97612413301e706029d618c477ffe6230578a01458ed4c44a3d1"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-13T22:17:10.732502+00:00",
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/search?query=OG1RF&format=json&size=50"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "automatic_redirects": 0,
+  "baseline_commit": "8861902da2991f045b2894621b1760a41d7eb061",
+  "biological_records_changed": 0,
+  "cache_independent_fixture_and_public_projection_tests": "PASS",
+  "cache_search_included_ignored_files": true,
+  "captured_at": "2026-10-15T00:56:11.975610+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-card-glucan-synthase/cohort.json",
+    "sha256": "093c645cf879465970c4f5c299e261db9adfb409f084e373dd1154b624a1bc20"
+  },
+  "complete_selected_collection_aware_records_read": 8,
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 695,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-glucan-synthase/expanded-tests.xml",
+      "sha256": "de3e1aca73031c4fd01e74d235e031b83d1624757932e5ebe10c4a2afa42bcb6"
+    },
+    "skipped": 0,
+    "tests": 695
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "2457c1c6dd8f7cd1666b31548f5de16c84951e215301b7732d1f6d3f80070180"
+    },
+    {
+      "path": "research/2026-10-14-card-glucan-references.json",
+      "sha256": "8b3b7fbbe6e786c3a35ed0a4dfb2a6ec360aa152469bd7019855302141cf13af"
+    },
+    {
+      "path": "scripts/audit_card_glucan_references.py",
+      "sha256": "cae8635430970672496967f2762ef5572ad7a15b21b9c9fe3925d3225ffc4e4d"
+    },
+    {
+      "path": "tests/test_card_glucan_references.py",
+      "sha256": "c0b3518af198af9c82811f3eeea3dee1797c86873b68f9fb810a35fabc657593"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 61,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-glucan-synthase/focused-tests.xml",
+      "sha256": "687898ffbe35d1cb3f485d6190aeee6928a1742afa415c0e112514dd59ccaace"
+    },
+    "skipped": 0,
+    "tests": 61
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "gene_cache_inventory": {
+    "path": "reports/resistance-grounding-2026-10-14-card-glucan-synthase/gene-cache-inventory.json",
+    "sha256": "80c279ebe1b2c410993fd3bd8445c53fdb2c08a4d7c34d99449702a0b81040b5"
+  },
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_glucan_20261014.py",
+      "sha256": "09e61cb74146758a4d62c6484d116867c8ce9db6792614d35d6e681d8a774f07"
+    },
+    {
+      "path": "/private/tmp/verify_glucan_20261014.py",
+      "sha256": "816b40b6bd4bd16728e5b6f0c320369d63f9cf05980782d24b897925585f1ea3"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "name_cache_inventory": {
+    "path": "reports/resistance-grounding-2026-10-14-card-glucan-synthase/name-cache-inventory.json",
+    "sha256": "5aff6aeb390accc77e1d4c672752f3ed180238216d99b46f839026b4a7e3e139"
+  },
+  "native_http_attempts": 26,
+  "native_http_status_counts": {
+    "200": 26
+  },
+  "ncbi_requests": 0,
+  "network_blocked_during_replay": true,
+  "new_candidate_taxonomy_queries": 0,
+  "new_experimental_allele_subject_or_genome_assignments": 0,
+  "new_name_queries": 3,
+  "new_primary_results_reviews": 0,
+  "new_reviewed_queries": 12,
+  "new_unreviewed_queries": 11,
+  "no_new_data_source_owned_or_rendered_files": true,
+  "offline_full_source_selection_and_request_reconstruction": "PASS",
+  "offline_native_replay": "PASS",
+  "outreach": 0,
+  "primary_paper_requests": 0,
+  "primary_source_holds_preserved": true,
+  "prior_research_checkpoints_unchanged": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-card-glucan-synthase/protected-before.json",
+    "sha256": "8aecd0c78a7a374bff14387764eb19a6a1ae18e3dbfc456592e1311cf9a954a6"
+  },
+  "protected_files_checked": 7654,
+  "repository_ruff_check": "PASS",
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "reused_complete_reviewed_queries": 2,
+  "reused_complete_unreviewed_queries": 2,
+  "reused_name_contexts": 9,
+  "reused_native_candidate_taxonomy_sources": 11,
+  "review_fixes": [
+    "Record ignored search suggestions without scope substitution",
+    "Require boolean review status in frozen query metadata",
+    "Distinguish primary nomenclature bridge from native source-name synonymy",
+    "Pin each inspected canary receipt in the public projection"
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "ALL_CARD_FKS_FSK_REFERENCE_CONTEXTS_NOT_RESISTANCE_ALLELES",
+  "search_suggestions_ignored": 8,
+  "source_adoptions": 0,
+  "source_assertion_memberships_hash_and_position_checked": 47,
+  "source_fsk1_spellings_corrected": 0,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "biological_records_changed": 0,
+    "context_status_counts": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 10,
+      "NO_EXACT_GENE_RESULTS_NOT_ABSENCE": 4,
+      "REVIEWED_REFERENCE": 1,
+      "UNREVIEWED_CANDIDATE": 1
+    },
+    "corpus_records_checked": 2939,
+    "experimental_assignments": 0,
+    "native_protein_flags": {
+      "Fragment": 87,
+      "None": 13
+    },
+    "reference_proteins": 100,
+    "reference_taxa": 11,
+    "source_assertions": 47,
+    "source_contexts": 16,
+    "source_names": 12,
+    "source_records": 8,
+    "source_terms": 47,
+    "term_status_counts": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 30,
+      "NO_EXACT_GENE_RESULTS_NOT_ABSENCE": 11,
+      "REVIEWED_REFERENCE": 3,
+      "UNREVIEWED_CANDIDATE": 3
+    },
+    "terms_with_candidates": 36,
+    "unique_gene_species_queries": 14,
+    "whole_record_primary_signoffs": 0
+  },
+  "taxonomy_cache_inventory": {
+    "path": "reports/resistance-grounding-2026-10-14-card-glucan-synthase/taxonomy-cache-inventory.json",
+    "sha256": "30d3eefe1aa0ecd1577ebacad2d49ccd06077c44e43cef6608c5b7731829c2ac"
+  },
+  "verification_limit": "FKS/FSK gene/species reference metadata only; no experimental allele or phenotype signoff.",
+  "whole_record_primary_signoffs": 0
+}

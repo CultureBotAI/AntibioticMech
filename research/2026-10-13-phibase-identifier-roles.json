@@ -1,0 +1,2250 @@
+{
+  "documentation": {
+    "current_ensembl_objects_verified": false,
+    "database": "EnsemblFungi",
+    "date": "2026-10-13",
+    "experimental_identifiers_assigned": 0,
+    "field_roles": {
+      "GeneId": "GENE",
+      "ProteinId": "PROTEIN",
+      "id": "TRANSCRIPT"
+    },
+    "interpretation": "Documented UniProt field convention, not independent validation of an Ensembl object or an experimental identity.",
+    "source_code_commit": "f2e1f8f6c537d80d5501bb0af04fb47a91bf8296",
+    "source_code_executed": false,
+    "sources": [
+      {
+        "body_sha256": "d0f6fb87527060c99217412e9a87b0d223d8cdb6cb6cf87fdb802a3426b47504",
+        "locations": [
+          "3.13.1.2",
+          "3.13.1.3",
+          "3.13.1.4"
+        ],
+        "retrieved_at": "2026-10-13T08:33:22.103923+00:00",
+        "supports": "EnsemblFungi resource identifier, first optional field and second optional field denote transcript, protein and gene roles respectively; one string may occupy several roles.",
+        "title": "UniProt Knowledgebase User Manual",
+        "url": "https://web.expasy.org/docs/userman.html"
+      },
+      {
+        "body_sha256": "d39878ffe1285b3f1d7d6eaa0e349e3c47ffa9ec48a4b485be34f36075fe1838",
+        "location": "addDrLine",
+        "retrieved_at": "2026-10-13T08:34:06.875780+00:00",
+        "supports": "The first DR attribute becomes the cross-reference model ID; subsequent attributes become database-defined properties.",
+        "title": "UniProt Core DR converter",
+        "url": "https://raw.githubusercontent.com/ebi-uniprot/uniprot-core/f2e1f8f6c537d80d5501bb0af04fb47a91bf8296/ff-parser/src/main/java/org/uniprot/core/flatfile/parser/impl/dr/DrLineConverter.java"
+      },
+      {
+        "body_sha256": "91966ed3b89ec90e0f5cf3761889b1909a02f0304d502f7a21449f3c8a3529be",
+        "location": "testUniProtDBCrossReferenceComplete",
+        "retrieved_at": "2026-10-13T08:34:15.781170+00:00",
+        "supports": "The model ID serializes as JSON id; named property keys and values remain distinct. The test uses Ensembl, not a biological PHI-base example.",
+        "title": "UniProt Core JSON cross-reference serialization tests",
+        "url": "https://raw.githubusercontent.com/ebi-uniprot/uniprot-core/f2e1f8f6c537d80d5501bb0af04fb47a91bf8296/json-parser/src/test/java/org/uniprot/core/json/parser/uniprot/UniProtKBCrossReferenceTest.java"
+      }
+    ]
+  },
+  "inputs": {
+    "audit": {
+      "path": "research/2026-10-13-phibase-gene-id-types.json",
+      "sha256": "e6397f6bc3d0e812d86567780ad44615e5c5b3fb4c16493932c86e59fdf0e25f"
+    },
+    "documentation": {
+      "path": "research/2026-10-13-uniprot-ensemblfungi-fields.json",
+      "sha256": "886f61295f8c3bad48b00b4da777f0cd9478d4f08767ab50d7675c11b467b074"
+    }
+  },
+  "limitations": [
+    "Roles describe fields in the pinned UniProt reference, not verified experimental subjects.",
+    "Current documentation is applied to historical metadata; no live Ensembl object lookup or current-release validation of the 23 references is claimed.",
+    "Roles can overlap for the same string. Gene annotation membership is retained separately.",
+    "No identifier spelling, version, namespace or source-owned review is changed.",
+    "Rejected references remain rejected, including when their field roles are known.",
+    "No new gene, allele, genome, sequence, variant, phenotype or measurement is assigned.",
+    "Empty source values remain empty; none are filled from related reference properties."
+  ],
+  "reference_releases": [
+    "2026_03"
+  ],
+  "rows": [
+    {
+      "current_review": {
+        "review_id": "krishnan-natesan-2008-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "B8NFL5",
+      "source_gene_id": "AFLA_005443_t1",
+      "source_row_sha256": "bd8c64b95f026fb10208759c17768091c6cfe6a586ab7127878847f88b5fefff"
+    },
+    {
+      "current_review": {
+        "review_id": "krishnan-natesan-2008-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "B8NFL5",
+      "source_gene_id": "AFLA_005443_t1",
+      "source_row_sha256": "e69179a09b6a43e0419c062721b2f7442461129c287f68e2d82de2425666bea9"
+    },
+    {
+      "current_review": {
+        "review_id": "liu-2012-cyp51b-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "B8NFL5",
+      "source_gene_id": "AFLA_005443_t1",
+      "source_row_sha256": "03378a1ee766aaa8f9ce7cf0b9806383259402e8342704aa954b4254a6b227b3"
+    },
+    {
+      "current_review": {
+        "review_id": "liu-2012-cyp51c-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "B8NUK6",
+      "source_gene_id": "AFLA_010303_t1",
+      "source_row_sha256": "d5095234347e36dbddb15fe326b058011dac75b0c0bcf7e43affa3520135ee30"
+    },
+    {
+      "current_review": {
+        "review_id": "krishnan-natesan-2008-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "B8N2C8",
+      "source_gene_id": "AFLA_001488_t1",
+      "source_row_sha256": "e1e1c9a47660386d287dc7cf0b9df9eb955cb84920c4da37f451524ba40c043d"
+    },
+    {
+      "current_review": {
+        "review_id": "krishnan-natesan-2008-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "B8N2C8",
+      "source_gene_id": "AFLA_001488_t1",
+      "source_row_sha256": "8fba48adda77a72c058099046eec7a66c1dd41765c95ab028d2741b02ebd51b9"
+    },
+    {
+      "current_review": {
+        "review_id": "krishnan-natesan-2008-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "B8N2C8",
+      "source_gene_id": "AFLA_001488_t1",
+      "source_row_sha256": "2b889bcb24f08b4f8215ab0606f72366f37e4ba5ba2a0d4bbfaed8bd4cb67477"
+    },
+    {
+      "current_review": {
+        "review_id": "liu-2012-cyp51a-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "B8N2C8",
+      "source_gene_id": "AFLA_001488_t1",
+      "source_row_sha256": "b7ee8d6778a5809ee7c642ee35a9b12bb7fb680fea47869333682d400802ed79"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "e9896962f0f11b22a5ea31d9218f293a84c869c7a5d8485bd7fd70a369c2cbed"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "a6c071a79e8f16f9e24ada7116e182d66cebbfa50ca735ba2d0083135d3bf0c0"
+    },
+    {
+      "current_review": {
+        "review_id": "rybak-2017-albicans-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q59VG6",
+      "source_gene_id": "C1_04770C_A-T",
+      "source_row_sha256": "f0a72acbbc4f481032fd146b688219388cc5012e0693f1aeed4f690871eac3ef"
+    },
+    {
+      "current_review": {
+        "review_id": "eddouzi-2013-erg11-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P14263",
+      "source_gene_id": "CTRG_05283-t43_1",
+      "source_row_sha256": "670146aa88bb77cd8f3ffe961208e09aa93f9c4bbe948e60ffb7432bb575230e"
+    },
+    {
+      "current_review": {
+        "review_id": "mellado-2007-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "638c79400e5fd24b23930ac51f9c94c7b274e5e76ad5a949d62c7a3d5cecf572"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "2a8f7937bee39b0a600e82cbd915ebf8cca429731ece623cac08c6ab6faa9bac"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "7f5ac6464af1e2de3025434685d35a4ffb72b2da7669c636d8a75eef84386fbc"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "01690c1e90aecca6b33301ede8565b86185e7b59ee9022e9312f2bb1ee8909ad"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "458ef05507951358d184841bd01e91e98f6fb5abf943cbffc856f645190c5939"
+    },
+    {
+      "current_review": {
+        "review_id": "fungal-2018-parent-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 1,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [
+        "orfNames"
+      ],
+      "reference_accession": "I1S9X9",
+      "source_gene_id": "FGRAMPH1_01T26133",
+      "source_row_sha256": "f6437026791c1c7093da45791cb7b557f97cd725daac5d416e99239ec4cd8b1a"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P0C431",
+      "source_gene_id": "FGRAMPH1_01T26671",
+      "source_row_sha256": "eeee294d942ac7a63143980086deeaceb80622490d503cc6d9331afd39dc1020"
+    },
+    {
+      "current_review": {
+        "review_id": "bissinger-kuchler-1994-sts1-name-collision",
+        "source_gene_id_rejected": true,
+        "source_gene_id_withheld": true
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P38637",
+      "source_gene_id": "YIR011C_mRNA",
+      "source_row_sha256": "bff7ab8539de8d71c20a48a073b38e80f52a150b3dd321b5697b9ef3b73487ca"
+    },
+    {
+      "current_review": {
+        "review_id": "mehrabi-2006-parent-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q1KTF2",
+      "source_gene_id": "Mycgr3T76502",
+      "source_row_sha256": "e9970c191a147615d701d638225912add989160001a184e5dd5c3b0c1295c822"
+    },
+    {
+      "current_review": {
+        "review_id": "li-1996-yeast-subject-group-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P02557",
+      "source_gene_id": "YFL037W_mRNA",
+      "source_row_sha256": "124ed968f52f38ebec48c1344be2465ffb25113d14cda61411d717e73c1d7812"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "PROTEIN",
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        },
+        {
+          "field": "ProteinId",
+          "match_index": 1,
+          "role": "PROTEIN"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P05220",
+      "source_gene_id": "EAA28433",
+      "source_row_sha256": "7ace37c6427c588526fb1cc75a5b8d5ac8325c9a71230497df9e8cf18f319626"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4HZS8",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_row_sha256": "4af21522c270dd57d695d4942aa8ad6e105b72e4130ad9c5789009351d4164f3"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4HZS8",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_row_sha256": "12898536c16060cc524e80db9486f43c008c87faf4db42a3e879acaa5425d144"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4HZS8",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_row_sha256": "809a90c390dc6e1ea9c84ab09475aa973967e58ef7ea75a345b45c5b9124cfe5"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4HZS8",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_row_sha256": "8c9b75dc37f89c9830f84d36b09d733aa287e6b7346ba8498a448e82599c48cc"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4HZS8",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_row_sha256": "6541832d4da4b70eb4e318f01993e01707d60780560ef3bae1cbe32f79959ad4"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4HZS8",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_row_sha256": "1d8916c059b96bc65131bdd692cb8027f57eb53c5e69a07abccd9d2bee577bd9"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4HZS8",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_row_sha256": "0c7e48c5c6ee8bf0fc585a5ed5708d11a1129121844607012e2f7f5d629c60c8"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "PROTEIN",
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        },
+        {
+          "field": "ProteinId",
+          "match_index": 1,
+          "role": "PROTEIN"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P32420",
+      "source_gene_id": "KIS70918",
+      "source_row_sha256": "6cd5e5fd14b9960870ab78fdcab70513796b317391d58999fb8d3b61bdbbafdb"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "PROTEIN",
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        },
+        {
+          "field": "ProteinId",
+          "match_index": 1,
+          "role": "PROTEIN"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10653",
+      "source_gene_id": "CBF87981",
+      "source_row_sha256": "4f00e3a6ded3613d3a630c1dc3e137ddff88c7ab222263f237235f2459fd7422"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "PROTEIN",
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        },
+        {
+          "field": "ProteinId",
+          "match_index": 1,
+          "role": "PROTEIN"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10653",
+      "source_gene_id": "CBF87981",
+      "source_row_sha256": "475c8124458e97a7d7b785ae9334e3e63fd40d1a659aa0df7f4336b1c76a74f0"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "PROTEIN",
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        },
+        {
+          "field": "ProteinId",
+          "match_index": 1,
+          "role": "PROTEIN"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10653",
+      "source_gene_id": "CBF87981",
+      "source_row_sha256": "f1c3931ece36caca5d600577facdf495b3984038e91984ce34b3c8b607308508"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "PROTEIN",
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        },
+        {
+          "field": "ProteinId",
+          "match_index": 1,
+          "role": "PROTEIN"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10653",
+      "source_gene_id": "CBF87981",
+      "source_row_sha256": "83698774ec3629d80020df2e499f131d60103c31207ee43da6f6211845772abd"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "PROTEIN",
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        },
+        {
+          "field": "ProteinId",
+          "match_index": 1,
+          "role": "PROTEIN"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10653",
+      "source_gene_id": "CBF87981",
+      "source_row_sha256": "f8cbeca910e5f7b0a865df243969e808fa6ecfca100d7373661d1dcc228dde37"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "PROTEIN",
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        },
+        {
+          "field": "ProteinId",
+          "match_index": 1,
+          "role": "PROTEIN"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10653",
+      "source_gene_id": "CBF87981",
+      "source_row_sha256": "d16cbf8eaae75082d48c11ae7744cc0f17975a68bc6bf1505c6165146245d311"
+    },
+    {
+      "current_review": {
+        "review_id": "sla1-2024-candida-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q5ALV2",
+      "source_gene_id": "C2_01640W_A-T",
+      "source_row_sha256": "9e7bbb216e9251c97ee2b6e0c30f8f72398fb2118366ab7ba5cc09db771ce5e4"
+    },
+    {
+      "current_review": {
+        "review_id": "kakeya-2000-darlington-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "c71d9939d9ef63717ea9fb61a15521064b7fb1525a7ae2a15ecf3caa83c3f046"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "115835e69e1eec336cc72878d41f8b5571960457e3591a2305411a66b1168992"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "dae671e67c43eea23c6f1a89a32e01f02de42ce30c5806ac8e0cfce1b8990b65"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "c89bb090b7fc73c8a090c16c53a28ab31103ee8e12baead059fffb02e113192f"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "719c814b1cddf24a1262c238508f9a5084462a43c867e325e290c76fe2ca3f6f"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "1e1158a378c8e871bdc6af48366104f79d2fadff1e24bb67ca9c6eb2e47bf85a"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "0ac4318128c748f468934e56dd5d1d1620e822e5b641bd508de8bcdaf40346d3"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "35c6b09ecbdf5e296e062b0e4203803a5560f20973095a52c42ae1cae66f7efd"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "82086758ea6eeae40bd3325d364a2b7a1d65075dcbbb0ec2ba745f32ac0fa570"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "710126cc04eb0e6cf5112b0dafaed58c91b0c96f72c7b26ea2ed7569dde52a4d"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "ef4ec0fe10dfc5547262006190510f9c7c84d892d63f66c371b5962f427073a9"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "38f585d8c4b1ba05813dc818871fc332abeaeac0a250dd9c65f8b5bb373aaf53"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "7af07477c889f15c0749f935c65c7fc187e8548112666f81e707ea6f35d237e0"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "957d06e3366343ae8eee7066fcbfc34ef9ef12586af3c203baced4a1bcb0d274"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "9b6cf7016eea40e8421fb40c143cb7a07e36edcd840d1b38659cd4babb6f309d"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "5c420b8d88bffc80a306394631d144a70b3d8f881ebe32e8b0b14796ca3f8bfc"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "2b233b1f5651047ea127eca51a0eda45ff78cce6961868b2a927218abbdffe82"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "d7af62f399df667de4cfb88a5c4afd62ef1c77b871d65e754c0c601adf282076"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "e80b5ebaafe58d3889cec184203353f981e9c8f21712e5662d4701c8a1281ee9"
+    },
+    {
+      "current_review": {
+        "review_id": "rybak-2017-albicans-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q59VG6",
+      "source_gene_id": "C1_04770C_A-T",
+      "source_row_sha256": "c0aa204884b61d42e2fda2ae65239e228e939edb291de51bfca4d9cb6ad49293"
+    },
+    {
+      "current_review": {
+        "review_id": "sla1-2024-candida-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q59X67",
+      "source_gene_id": "CR_07890W_A-T",
+      "source_row_sha256": "48e342b6dcbf4915e346b7429f72232375ecb83fdf1976c2839880762fc2cca3"
+    },
+    {
+      "current_review": {
+        "review_id": "eddouzi-2013-mrr1-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q5A4G2",
+      "source_gene_id": "C3_05920W_A-T",
+      "source_row_sha256": "67743488d82e3f0395ab4b402682e87c49ccb8b19f13b5e42c3d7bdfd809fa25"
+    },
+    {
+      "current_review": {
+        "review_id": "nakayama-2001-reference-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P50859",
+      "source_gene_id": "CAGL0E04334g-T",
+      "source_row_sha256": "a451e066b9b8c2bedc7648c7faf18b6b083d3f2cd94e281f6be33adfad2dda53"
+    },
+    {
+      "current_review": {
+        "review_id": "eddouzi-2013-erg11-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P14263",
+      "source_gene_id": "CTRG_05283-t43_1",
+      "source_row_sha256": "4020805150e3faebd4a6b66b953c595fa79bf78c9185d0650187c8da4ee40735"
+    },
+    {
+      "current_review": {
+        "review_id": "garcia-effron-2008-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P38631",
+      "source_gene_id": "YLR342W_mRNA",
+      "source_row_sha256": "5690bee568133fb582a4fd090c934036d3e0290cda2ee739690549211ced3fca"
+    },
+    {
+      "current_review": {
+        "review_id": "eddouzi-2013-mrr1-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q5A4G2",
+      "source_gene_id": "C3_05920W_A-T",
+      "source_row_sha256": "f455b9799cdbedfd22ced7747738e9311638fbcc3223672cda7c65e3fc14caa3"
+    },
+    {
+      "current_review": {
+        "review_id": "garcia-effron-2008-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P38631",
+      "source_gene_id": "YLR342W_mRNA",
+      "source_row_sha256": "114769721c7e74990a74a4bda84ebbc8cf0b05573e54fe6298c1217b0bc1339c"
+    },
+    {
+      "current_review": {
+        "review_id": "garcia-effron-2008-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P38631",
+      "source_gene_id": "YLR342W_mRNA",
+      "source_row_sha256": "fbe92d5bf4ea01f50c568ede76cbbb43c43411d74eb88834041268d3c35e9953"
+    },
+    {
+      "current_review": {
+        "review_id": "flowers-2015-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P10613",
+      "source_gene_id": "C5_00660C_A-T",
+      "source_row_sha256": "f463cd017bb42a43710013598d275b3112ecd9b1489aa9df1c89dea82c3798f6"
+    },
+    {
+      "current_review": {
+        "review_id": "rybak-2017-albicans-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q59VG6",
+      "source_gene_id": "C1_04770C_A-T",
+      "source_row_sha256": "4494127a2a0df45526c4e87a35e322c31b49380960d8ca38240cf0aa2fde6f9d"
+    },
+    {
+      "current_review": {
+        "review_id": "mellado-2007-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "c7a17535c1b1116fd45ad3fe4042b0adf56fd26241c6b28287d315f4b4cf2810"
+    },
+    {
+      "current_review": {
+        "review_id": "ferreira-2004-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "5b7aa359ff8018f0839232bddbd620890e57ba144c95a1e9abf4ba5f3237abed"
+    },
+    {
+      "current_review": {
+        "review_id": "ferreira-2004-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "20b51458b8db6dacf901a9d15b9f69af168a9dc9e317c7e79baf5c85cde9952a"
+    },
+    {
+      "current_review": {
+        "review_id": "wei-2016-reference-context-followup",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "0b45cd4cfedca0529221f704cb28d84016507d0a6b3d0ef8b09911bb4d07cc31"
+    },
+    {
+      "current_review": {
+        "review_id": "diaz-guerra-2003-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "219775f180619be721184b593e3eded9de52414a837e59f920180aa899bd9f01"
+    },
+    {
+      "current_review": {
+        "review_id": "nascimento-2003-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "4248ed189d2be9d68f1a0d28e63f1f738b7f19f49f685ce6d5998772c3f99260"
+    },
+    {
+      "current_review": {
+        "review_id": "nascimento-2003-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "4d6dc03fc9ada968d73ee312884eaefd87bfe8fdfc22219e2b5b5659e861b398"
+    },
+    {
+      "current_review": {
+        "review_id": "mann-2003-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "ee415298b14c133bcad48af461600236f9cd123144b2553c86ce376fe04fca64"
+    },
+    {
+      "current_review": {
+        "review_id": "nascimento-2003-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "a2ad0ee80f9fd403bc632f00cec8d84af8d9dae6fbaf578ade8b667933d621a8"
+    },
+    {
+      "current_review": {
+        "review_id": "mann-2003-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "ca6c2ffc916008640f65d3e84d19b8d8e51b399ea769643150b729661936ded2"
+    },
+    {
+      "current_review": {
+        "review_id": "mellado-2004-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "e6c1b6c3e02bbf46b37b6b36ba165952d7af86614b0cc71d08a63ce21815429f"
+    },
+    {
+      "current_review": {
+        "review_id": "mellado-2004-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "762d9866407de1a27b2dcd8d1a4428e94c7ee440ff302566c2009d87491df177"
+    },
+    {
+      "current_review": {
+        "review_id": "mellado-2004-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "8e725338a2d44f83737203affb66d09044e5dd3174901933556bb206d4f1d9c5"
+    },
+    {
+      "current_review": {
+        "review_id": "mann-2003-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "341654a5febc118071de2a86a3bf161c315fa2307aebf178d896c4af1ba86911"
+    },
+    {
+      "current_review": {
+        "review_id": "mann-2003-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "78c4d687525e70ae84d45501727f42f843998a4f63ed342e4d770e37c392193f"
+    },
+    {
+      "current_review": {
+        "review_id": "mann-2003-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "cc5c1a8ac1590137803900536ae95e1df5675d834eac0e53c1fdc70f49b88929"
+    },
+    {
+      "current_review": {
+        "review_id": "mann-2003-fumigatus-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q4WNT5",
+      "source_gene_id": "Afu4g06890-T",
+      "source_row_sha256": "394ef320e24258ea92ec7193dcbbba12ac60b24468a5d3b3cd1bbe5c29a5fb7c"
+    },
+    {
+      "current_review": {
+        "review_id": "duan-2018-reference-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 1,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [
+        "orfNames"
+      ],
+      "reference_accession": "I1RJR2",
+      "source_gene_id": "FGRAMPH1_01T14465",
+      "source_row_sha256": "ae8fb2dd0560572b63b08cc8e75876dfc6cf2a18ba0f63298fd7420f14822fa2"
+    },
+    {
+      "current_review": {
+        "review_id": "duan-2018-reference-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 1,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [
+        "orfNames"
+      ],
+      "reference_accession": "I1RJR2",
+      "source_gene_id": "FGRAMPH1_01T14465",
+      "source_row_sha256": "56658c358ef1d150e881418e42dbdab1cbf8db6dfce7e2c707925c606c3629cb"
+    },
+    {
+      "current_review": {
+        "review_id": "duan-2018-reference-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 1,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [
+        "orfNames"
+      ],
+      "reference_accession": "I1RJR2",
+      "source_gene_id": "FGRAMPH1_01T14465",
+      "source_row_sha256": "e7f97258b540d01a85caf0d2dd1e58996e07f98b7756efa91b5c09570ab32df9"
+    },
+    {
+      "current_review": {
+        "review_id": "mehrabi-2006-parent-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "Q1KTF2",
+      "source_gene_id": "Mycgr3T76502",
+      "source_row_sha256": "9b6ad9dcd0279f1321fd5897f1969474f46a65b84e4d7e773ec7d1ffcb690948"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P0C431",
+      "source_gene_id": "FGRAMPH1_01T26671",
+      "source_row_sha256": "a1a1bc2ef20255470d46f95ce69a59ff5538973733e29f516d2c39e60f841d71"
+    },
+    {
+      "current_review": {
+        "review_id": null,
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "P0C431",
+      "source_gene_id": "FGRAMPH1_01T26671",
+      "source_row_sha256": "db3586159399f0df98f90dced097ad2d1f7cf2d3766c99cd0246e3f3e9bae26c"
+    },
+    {
+      "current_review": {
+        "review_id": "duan-2018-reference-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 1,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [
+        "orfNames"
+      ],
+      "reference_accession": "I1RJR2",
+      "source_gene_id": "FGRAMPH1_01T14465",
+      "source_row_sha256": "21853d9f769e8205cb98183d12734d71204621e2b16b133553e9d7328f5a28c7"
+    },
+    {
+      "current_review": {
+        "review_id": "duan-2018-reference-subject-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 1,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [
+        "orfNames"
+      ],
+      "reference_accession": "I1RJR2",
+      "source_gene_id": "FGRAMPH1_01T14465",
+      "source_row_sha256": "e578169af19530a5aa83ed93d20465416d9a530d9d6f2d6670c41edc8a44405f"
+    },
+    {
+      "current_review": {
+        "review_id": "terbinafine-2006-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "E9R5G2",
+      "source_gene_id": "Afu5g07780-T",
+      "source_row_sha256": "16161cfc729e6b1fb8d48b0b9a20f52b5c33be87feb5a1e309c630859e451a1f"
+    },
+    {
+      "current_review": {
+        "review_id": "terbinafine-2004-reference-context",
+        "source_gene_id_rejected": false,
+        "source_gene_id_withheld": false
+      },
+      "documented_roles": [
+        "TRANSCRIPT"
+      ],
+      "experimental_identity_verified": false,
+      "field_role_evidence": [
+        {
+          "field": "id",
+          "match_index": 0,
+          "role": "TRANSCRIPT"
+        }
+      ],
+      "gene_annotation_fields": [],
+      "reference_accession": "E9R5G2",
+      "source_gene_id": "Afu5g07780-T",
+      "source_row_sha256": "6c92e2e4c161827c8df8f810c30a0361358c43844183295b1f9f5349185ad9a0"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "DOCUMENTED_FIELD_ROLES_NOT_EXPERIMENTAL_IDENTIFIERS",
+  "snapshot_summary": {
+    "already_rejected_source_gene_ids": 1,
+    "distinct_identifier_reference_pairs": 23,
+    "empty_source_gene_ids": 122,
+    "experimental_identifiers_assigned": 0,
+    "gene_annotation_field_matches": 6,
+    "nonempty_source_gene_ids": 95,
+    "primary_id_only_matches": 81,
+    "reference_entries": 23,
+    "source_rows": 217,
+    "typed_property_matches": {
+      "ProteinId": 8
+    },
+    "unmatched_source_values": 0
+  },
+  "summary": {
+    "documented_role_counts": {
+      "PROTEIN": 8,
+      "TRANSCRIPT": 95
+    },
+    "empty_source_gene_ids": 122,
+    "experimental_identifiers_assigned": 0,
+    "multiple_documented_roles": 8,
+    "no_documented_role": 0,
+    "nonempty_source_gene_ids": 95,
+    "rejected_source_gene_ids_preserved": 1,
+    "source_rows": 217
+  }
+}

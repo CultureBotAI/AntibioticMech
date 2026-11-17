@@ -1,0 +1,209 @@
+{
+  "adversarial_self_review": [
+    "Limited caption reading cannot validate primary resistance results or exact experimental subjects; no such validation claimed.",
+    "Both protein accessions and the strain TaxID describe reference context, not a verified exact subject; original IDs retained in provenance.",
+    "Caption label 1980 UF-70 is not asserted an independently verified synonym of UniProt reference 1980 / Ss-1.",
+    "Source strain label retained with explicit unresolved-subject caveat; no representative derivative selected.",
+    "Canary and preservation assertions caught claim-order sensitivity before bulk writes; source claim ordering preserved.",
+    "Historical hash regression exposed root field-order drift in three records; original ordering restored before final QC without changing event contents or historical receipts.",
+    "Historical CARD tests reconstruct only the later checksum/history refresh and prove the original byte hashes; eight negative cases reject unrelated drift, even with a repinned current hash.",
+    "Historical coverage receipts remain immutable; only live-corpus regression expectations and successor ledgers updated.",
+    "Shared-file checksum changes are provenance refreshes, not 185 new scientific reviews.",
+    "No independent reviewer or live-browser verification claimed."
+  ],
+  "artifacts": [
+    {
+      "path": "curation/phibase_grounding_reviews.json",
+      "sha256": "e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "c56678c2555079a418b4f42a02bf444698f83dd4191b55f1e4ebe5c0c9c675c9"
+    },
+    {
+      "path": "research/2026-10-12-ma-reference-context.json",
+      "sha256": "653fddbd45bc66e0843681fb6240a81fb35ae36ce390e3a4351e3a26ca6bdda1"
+    },
+    {
+      "path": "research/2026-10-12-ma-reference-curation.json",
+      "sha256": "f7c32dfe80a9a296ca91ea79a4a0c30da1bf3c7b045a88c9e8f0a95c345a6fff"
+    },
+    {
+      "path": "research/2026-10-12-ma-reference-reconciliation.json",
+      "sha256": "673be75eebaae74186388bb90be0486a8096dd71beba0601d5a64e3d750ffc33"
+    },
+    {
+      "path": "research/2026-10-12-ma-resistance-grounding.tsv",
+      "sha256": "758ba8aba770343be279eb581442cba2e14a9eb5b7be79ba1e1b7f305311e542"
+    },
+    {
+      "path": "research/2026-10-12-ma-resistance-progress.json",
+      "sha256": "cbdf54e5ff83984c45b1d291afb3e40594afb7e6c85fa721567b00d024084fcb"
+    },
+    {
+      "path": "research/2026-10-12-ma-resistance-progress.tsv",
+      "sha256": "10ab95c27f06bc8725475b8730a85497ff026a9abfaa7b5ca105a7a2aae8d061"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "09450cbfa009612f9c11d9b78ca5c2de28a3c2b9b82309d695a41b8b510392b4"
+    },
+    {
+      "path": "tests/test_card_parent_references.py",
+      "sha256": "28e473f7150066d11ae622a163e4fda8bc7aea66ac948ba781b24202c559d3e6"
+    },
+    {
+      "path": "tests/test_ma_reference_context.py",
+      "sha256": "c57d06cf5ccc70efe8e3a380c921f0dbbdcd1919f2f90fee70ba894c0d36c92d"
+    }
+  ],
+  "biological_claims_and_measurements_changed": 0,
+  "curation_events_added": 22,
+  "curation_statuses_preserved": true,
+  "date": "2026-10-12",
+  "embedding_fingerprint": "b3db5e80cdb6d7c9",
+  "embedding_inputs_and_artifacts_unchanged": true,
+  "experimental_protein_or_genome_assignments": 0,
+  "focused_tests": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-12-ma-reference/focused-tests-final.xml",
+      "sha256": "9658cd92d91bd683c2ee3814317dbed54631e770b7dd5443187cf27150469c1a"
+    },
+    "passed": 202,
+    "skip_reasons": [],
+    "skipped": 0
+  },
+  "full_qc": {
+    "dependency_deviation": "RDKit 2025.03.6 instead of project pin 2026.3.5; no chemistry/map regeneration",
+    "environment": {
+      "numpy": "2.2.6",
+      "python": "3.13.12",
+      "rdkit": "2025.03.6",
+      "scikit_learn": "1.7.2",
+      "umap": "0.5.12"
+    },
+    "execution": {
+      "path": "reports/resistance-grounding-2026-10-12-ma-reference/full-qc-final-exit.json",
+      "sha256": "8de6a683e998f2d50cd6a8b17d92cc92ba2abddc78fbcd8866ddf567ae1251a8"
+    },
+    "exit_code": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-12-ma-reference/full-tests-final.xml",
+      "sha256": "4d185ffbe5e229c0147879612624acf83bf732f6052545543e8c672c66e8ae11"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-12-ma-reference/full-qc-final.log",
+      "sha256": "82c1e97e04c9d0337b26651b1fe3e1bc8b4369ff080f61e864f4036ae0542f04"
+    },
+    "passed": 2986,
+    "pinned_environment_reproduced": false,
+    "project_dependency_pins_changed": false,
+    "skip_reasons": [
+      "got empty parameter set for (path)",
+      "historical checkpoint no longer matches the live corpus; public invariants still run"
+    ],
+    "skipped": 4,
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ]
+  },
+  "github_mutations": 0,
+  "historical_regression_tests": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-12-ma-reference/historical-tests-final.xml",
+      "sha256": "05bea93df8216563a893af18a0f3073aaf0ff1c880d8700896a4fe4ae82cf215"
+    },
+    "passed": 45,
+    "skip_reasons": [],
+    "skipped": 0
+  },
+  "ignored_files_included": true,
+  "initial_qc_attempt": {
+    "execution": {
+      "path": "reports/resistance-grounding-2026-10-12-ma-reference/full-qc-exit.json",
+      "sha256": "9242d60e6ffce566b76b7dd144b829a86c7668eea5324bd40fa10b64d547e1a7"
+    },
+    "exit_code": 2,
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-12-ma-reference/full-qc.log",
+      "sha256": "ea87093f585182bfa284df36800bb943047b398632d2fe59fce42a1ae7552f6f"
+    },
+    "status": "INTERRUPTED_AFTER_HISTORICAL_PIN_FAILURE_BEFORE_FULL_RERUN"
+  },
+  "live_browser_verification": false,
+  "ncbi_endpoint_requests": 0,
+  "new_identifier_scope_decisions": 4,
+  "previous_decision_checksum_refreshes": 185,
+  "record_hashes_verified": 2939,
+  "records_byte_identical": 2917,
+  "records_changed": 22,
+  "records_checksum_history_only": 20,
+  "records_with_new_scope_decisions": 2,
+  "rendered_caveats_and_downloads_checked": true,
+  "scope": "LIMITED_REFERENCE_IDENTITY_REVIEW_NOT_EXPERIMENTAL_ALLELE_GROUNDING",
+  "source_adoptions": 0,
+  "source_requests": [
+    {
+      "body_sha256": "31afd6c971a4fc4ac6c5a096f030e5932d69d19bd1dd4c85ac8b964a5a07c70d",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-ma-reference/request-2c7249732481551381a173cbe7453c549302c48e693e593ef98eb939b7f4667b.json",
+        "sha256": "3582e1d053d5dbcc96de4b02d6c26a38f413ebda6f63c067a9a374131ace6bce"
+      },
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AA7F519&format=json&size=2&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion%2Cxref_embl%2Cxref_ensemblfungi%2Ccc_miscellaneous"
+    },
+    {
+      "body_sha256": "735a5aabe2c86ecf4b074afd2fe856401ce74cd17cb6416febd08c3898fd88f5",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-ma-reference/request-7ee92f40ec4d1b09eddf883a6fc97711aeb357e9e0d779a440ebc76030fe893d.json",
+        "sha256": "854596df53cdfdd93f0d59d7bcfb1c3bed55c2499689d51cd1429adb42f41098"
+      },
+      "url": "https://rest.uniprot.org/taxonomy/5180.json"
+    },
+    {
+      "body_sha256": "81f3b0a70104fb717fa1bfa734a936d9ab9318542268c6ca9d25e953b756f989",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-ma-reference/request-81700cad09466fa8d40d912cd21db35aa88513b568a6c14a341a0d50e59eb651.json",
+        "sha256": "2a3e947e659aede64fb9cddca4a9b9ffda977070c9e3b008c2868c9bc5a3f562"
+      },
+      "url": "https://rest.uniprot.org/taxonomy/665079.json"
+    },
+    {
+      "body_sha256": "1f775feb024849863a4b56fce16a7e0e16f2e99a61b0b4dc515a151f2927dd5e",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-ma-reference/request-a1f0cb3481dc5d773d2c4fd9735b19d4d38700d7ce0b95c058886ecf00d5a2ef.json",
+        "sha256": "89f35484698cbd8ee5d1bcacf547de336a294450253b7987466065c1f5b67e86"
+      },
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AA7EQI8&format=json&size=2&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion%2Cxref_embl%2Cxref_ensemblfungi%2Ccc_miscellaneous"
+    }
+  ],
+  "status": "ALL_AUTHORITATIVE_RUNNER_GATES_PASSED_WITH_DISCLOSED_DEPENDENCY_DEVIATION",
+  "supplement": {
+    "inspection": "Six-page supplement headings checked; opening subject-label lines of Figure S4 caption on PDF page 5 text-extracted and visually inspected as a crop. Main text, figure sequence panels, protocols, primers and assay results were not reviewed for curation.",
+    "metadata_cache": {
+      "path": "reports/resistance-grounding-2026-10-12-ma-reference/figshare-article.json",
+      "sha256": "9f05057098ca9fb8b6b55c7869dbb130cf76cb80575d307aaff46966244a6d18"
+    },
+    "pdf": {
+      "path": "reports/resistance-grounding-2026-10-12-ma-reference/jf3c08093_si_001.pdf",
+      "sha256": "308aea69f5da416e1669287e0862a7a5853483d80a15ffe8f2f4daaab021d36e"
+    },
+    "public_download_receipt": {
+      "path": "reports/resistance-grounding-2026-10-12-ma-reference/supplement-receipt.json",
+      "sha256": "0d6d01ab73f1aabbb6fd01b1c441d54025cb7cb28f367871afb756b391234484"
+    },
+    "raw_redistributed": false
+  },
+  "whole_corpus_primary_review": "OPEN",
+  "whole_record_primary_reviews_completed": 0
+}

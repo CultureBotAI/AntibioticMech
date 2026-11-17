@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>oleandomycin</h1>
 <p class="meta">
   <code class="curie">CHEBI:16869</code>
@@ -37,15 +48,18 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000000">macrolide antibiotic</a><code class="curie">ARO:0000000</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000000">ARO:0000000</a>      <code class="curie">ARO:0000000</code></li>
+  <li>macrolide antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_0000000"><code class="curie">ARO:0000000</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C35H61NO12</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>687.868 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>687.41938 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">RZPAKFUAFGMUPI-QESOVKLGSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">CO[C@H]1C[C@H](O[C@H]2[C@H](C)[C@@H](O[C@@H]3O[C@H](C)C[C@H](N(C)C)[C@H]3O)[C@@H](C)C[C@@]3(CO3)C(=O)[C@H](C)[C@@H](O)[C@@H](C)[C@@H](C)OC(=O)[C@@H]2C)O[C@@H](C)[C@@H]1O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C35H61NO12/c1-16-14-35(15-43-35)32(40)19(4)27(37)18(3)22(7)46-33(41)21(6)31(47-26-13-25(42-11)28(38)23(8)45-26)20(5)30(16)48-34-29(39)24(36(9)10)12-17(2)44-34/h16-31,34,37-39H,12-15H2,1-11H3/t16-,17+,18-,19+,20+,21+,22+,23-,24-,25-,26-,27-,28-,29+,30-,31-,34-,35+/m0/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -56,7 +70,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000867">ARO:3000867</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3000867">oleandomycin</a><code class="curie">ARO:3000867</code></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=3922-90-5">cas:3922-90-5</a></li>
   <li><a href="https://www.ebi.ac.uk/chembl/id_lookup/CHEMBL606258">chembl:CHEMBL606258</a></li>
   <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/72493">pubchem.compound:72493</a></li>
@@ -68,6 +82,7 @@ both rather than shown here, since it names at most one of them.</p>
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -80,17 +95,19 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 
 
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">30 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">32 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">23</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -99,7 +116,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000599</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000599">ARO:3000599</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -109,7 +126,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000600</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000600">ARO:3000600</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -119,7 +136,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000604</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000604">ARO:3000604</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -129,7 +146,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000605</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000605">ARO:3000605</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -139,7 +156,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000392</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000392">ARO:3000392</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -149,7 +166,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000601</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000601">ARO:3000601</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -159,7 +176,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000602</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000602">ARO:3000602</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -169,7 +186,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000603</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000603">ARO:3000603</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -179,7 +196,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000347</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000347">ARO:3000347</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -189,7 +206,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000375</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000375">ARO:3000375</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -199,7 +216,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000250</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000250">ARO:3000250</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -209,7 +226,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000495</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000495">ARO:3000495</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -219,7 +236,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000326</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000326">ARO:3000326</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -229,7 +246,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000498</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000498">ARO:3000498</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -239,7 +256,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000522</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000522">ARO:3000522</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -249,7 +266,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002823</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002823">ARO:3002823</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -259,7 +276,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000592</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000592">ARO:3000592</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -269,7 +286,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000593</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000593">ARO:3000593</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -279,7 +296,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000594</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000594">ARO:3000594</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -289,7 +306,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000595</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000595">ARO:3000595</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -299,7 +316,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002824</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002824">ARO:3002824</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -309,7 +326,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000596</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000596">ARO:3000596</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -319,15 +336,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002825</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002825">ARO:3002825</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
-  <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">5</span></summary>
-  <table>
+  <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">7</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_INACTIVATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -336,7 +356,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000463</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000463">ARO:3000463</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -346,7 +366,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000316</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000316">ARO:3000316</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -356,7 +376,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000318</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000318">ARO:3000318</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -366,7 +386,20 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000319</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000319">ARO:3000319</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+</ul>
+</td>
+    </tr>
+    <tr>
+      <td>oleD biochemical glycosylation of oleandomycin<br><span class="meta">Biochemical inactivation route, not a measured whole-cell resistance or clinical susceptibility call. The donor species Streptomyces antibioticus (reference NCBITaxon:1890, species rank) is distinct from the heterologous expression host Streptomyces lividans. Donor and reference taxonomy do not identify an organism tested for resistance here. No experimental allele, protein accession, strain TaxID or genome is assigned. Reference-only protein entries: UniProtKB:Q53685, UniProtKB:Q3HTL6. OleR-mediated reactivation is a different direction, not another inactivation determinant. No class-wide substrate claim is inferred.</span></td>
+      <td>—</td>
+      <td><span class="meta">not organism-specific</span></td>
+      <td class="meta">oleD</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9680207">PMID:9680207</a></span> <span class="meta">(Results, expression/activity sections and Figure 4A/6 legends: qualitative glycosylation evidence with a negative expression-host control. Results on in vitro protein synthesis support reduced activity of the glycosylated product. Publisher-indexed text inspected; figures not visually inspected.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/17376874">PMID:17376874</a></span> <span class="meta">(Table 3, wild-type oleandomycin row; biochemical activity with oleandomycin, not an MIC. Author-hosted paper, Figure 2 and cited table visually inspected. Correction DOI:10.1073/pnas.0704090104 changes author-contribution credit. Supplementary material was not inspected; no claim depends on it.)</span></li>
+  <li><span class="meta">UniProtKB:Q53685</span> <span class="meta">(Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 100, sequence version 1. Separate deposits are not collapsed into one experimental allele.)</span></li>
+  <li><span class="meta">UniProtKB:Q3HTL6</span> <span class="meta">(Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 69, sequence version 2. Separate deposits are not collapsed into one experimental allele.)</span></li>
 </ul>
 </td>
     </tr>
@@ -376,15 +409,31 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000866</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000866">ARO:3000866</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+</ul>
+</td>
+    </tr>
+    <tr>
+      <td>oleI biochemical glycosylation of oleandomycin<br><span class="meta">Biochemical inactivation route, not a measured whole-cell resistance or clinical susceptibility call. The donor species Streptomyces antibioticus (reference NCBITaxon:1890, species rank) is distinct from the heterologous expression host Streptomyces lividans. Donor and reference taxonomy do not identify an organism tested for resistance here. No experimental allele, protein accession, strain TaxID or genome is assigned. Reference-only protein entries: UniProtKB:O68841, UniProtKB:Q3HTL7. OleR-mediated reactivation is a different direction, not another inactivation determinant. No class-wide substrate claim is inferred.</span></td>
+      <td>—</td>
+      <td><span class="meta">not organism-specific</span></td>
+      <td class="meta">oleI</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9680207">PMID:9680207</a></span> <span class="meta">(Results, expression/activity sections and Figure 4A/6 legends: qualitative glycosylation evidence with a negative expression-host control. Results on in vitro protein synthesis support reduced activity of the glycosylated product. Publisher-indexed text inspected; figures not visually inspected.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/17376874">PMID:17376874</a></span> <span class="meta">(Table 1, wild-type row; biochemical activity with oleandomycin, not an MIC. Author-hosted paper, Figure 2 and cited table visually inspected. Correction DOI:10.1073/pnas.0704090104 changes author-contribution credit. Supplementary material was not inspected; no claim depends on it.)</span></li>
+  <li><span class="meta">UniProtKB:O68841</span> <span class="meta">(Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 77, sequence version 1. Separate deposits are not collapsed into one experimental allele.)</span></li>
+  <li><span class="meta">UniProtKB:Q3HTL7</span> <span class="meta">(Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 79, sequence version 2. Separate deposits are not collapsed into one experimental allele.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">1</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_EFFLUX</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -393,15 +442,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003748</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003748">ARO:3003748</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_PROTECTION <span class="pill plain">1</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_PROTECTION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_PROTECTION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -410,11 +462,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003036</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003036">ARO:3003036</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -439,32 +493,47 @@ type — expand a group to see its determinants.</p>
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Added two qualitative primary-paper biochemical inactivation assertions for oleI and oleD, retaining separate UniProt references and donor/host context. Preserved all 30 CARD assertions. No experimental allele, protein or organism identifier, whole-cell phenotype, or quantitative AST assigned.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/oleandomycin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/oleandomycin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=oleandomycin">MediaIngredientMech (oleandomycin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=oleandomycin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=oleandomycin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=oleandomycin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=oleandomycin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

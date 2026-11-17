@@ -1,0 +1,450 @@
+{% extends "base.html" %}
+{% block title %}Protein sequence map (pLM) — AntibioticMech{% endblock %}
+{% block description %}2D PaCMAP projection of ESM-2 (esm2_t33_650M_UR50D) protein language model embeddings for curated target and resistance determinant sequences across AntibioticMech.{% endblock %}
+{% block wrapclass %} map-page-wrap{% endblock %}
+{% block content %}
+<section id="sequence-map" data-source="data/sequence_map.json" aria-label="Protein sequence map">
+  <h1>Protein sequence map (pLM)</h1>
+  <p class="lede">
+    <strong>{{ seq_map.n_proteins }} unique proteins</strong> across
+    <strong>{{ seq_map.n_records }} compound records</strong> ({{ seq_map.n_mentions }} protein&ndash;record mentions),
+    embedded with <code>{{ seq_map.model }}</code> (revision <code>{{ seq_map.revision }}</code>,
+    {{ seq_map.dim }}-d mean-pooled residue representations) and projected to 2D with
+    <strong>PaCMAP</strong> (<code>n_neighbors={{ seq_map.neighbors }}</code>, mean-centred cosine prep).
+  </p>
+
+  <div class="note">
+    <p>
+      Positions depend only on amino-acid sequence via the protein language model
+      <code>{{ seq_map.model }}</code>. Antimicrobial classes, molecular target vs.
+      resistance determinant roles, and organism taxonomy are layered on as colors
+      and filters without influencing the coordinates.
+    </p>
+  </div>
+
+  <div class="page-with-sidebar">
+    <aside class="facet-sidebar" aria-label="Sequence map filters">
+      <div class="map-controls facet-form">
+        <label>
+          Search proteins or compounds
+          <input id="seq-search" type="search" autocomplete="off"
+                 placeholder="Protein, UniProt/RefSeq, organism, compound…">
+        </label>
+        <label>
+          Color points by
+          <select id="seq-color">
+            <option value="group">{{ seq_map.group_label }}</option>
+            <option value="role">Mechanistic role</option>
+            <option value="channel">Extraction channel</option>
+            <option value="length_bin">Sequence length</option>
+          </select>
+        </label>
+        <label>
+          {{ seq_map.group_label }}
+          <select id="seq-group">
+            <option value="">All classes</option>
+          </select>
+        </label>
+        <label>
+          Mechanistic role
+          <select id="seq-role">
+            <option value="">All roles</option>
+          </select>
+        </label>
+        <label>
+          Extraction channel
+          <select id="seq-channel">
+            <option value="">All channels</option>
+          </select>
+        </label>
+        <label>
+          Sequence length
+          <select id="seq-length">
+            <option value="">All lengths</option>
+          </select>
+        </label>
+        <button id="seq-reset" type="button">Reset filters</button>
+      </div>
+      <div class="facet-group">
+        <span class="facet-title">Legend (click to toggle)</span>
+        <div id="seq-legend" class="map-legend" aria-label="Sequence map legend"></div>
+      </div>
+    </aside>
+
+    <div class="results-main">
+      <div id="seq-status" class="map-status" role="status" aria-live="polite">
+        Loading protein sequence map…
+      </div>
+
+      <div class="chemical-map-layout">
+        <div class="map-stage">
+          <canvas id="seq-canvas" width="960" height="620"
+                  aria-label="Interactive PaCMAP scatter plot of ESM-2 protein sequence embeddings">
+            The interactive plot requires Canvas support.
+          </canvas>
+          <div id="seq-tooltip" class="map-tooltip" hidden></div>
+        </div>
+
+        <aside class="map-details" aria-label="Selected protein">
+          <div id="seq-selection">
+            <h2>Select a protein</h2>
+            <p>Click any point on the scatter plot or pick a protein from the search results to inspect its sequence metadata and linked compound records.</p>
+          </div>
+          <div>
+            <h2>Matching proteins</h2>
+            <p id="seq-search-count" role="status" aria-live="polite"></p>
+            <ol id="seq-results" class="map-results">
+              <li>Enter a query or filter to list matching proteins.</li>
+            </ol>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  "use strict";
+  const root = document.getElementById("sequence-map");
+  if (!root) return;
+  const canvas = document.getElementById("seq-canvas");
+  const ctx = canvas.getContext("2d");
+  const searchInput = document.getElementById("seq-search");
+  const colorSelect = document.getElementById("seq-color");
+  const groupSelect = document.getElementById("seq-group");
+  const roleSelect = document.getElementById("seq-role");
+  const channelSelect = document.getElementById("seq-channel");
+  const lengthSelect = document.getElementById("seq-length");
+  const resetBtn = document.getElementById("seq-reset");
+  const statusEl = document.getElementById("seq-status");
+  const legendEl = document.getElementById("seq-legend");
+  const selectionEl = document.getElementById("seq-selection");
+  const resultsEl = document.getElementById("seq-results");
+  const countEl = document.getElementById("seq-search-count");
+  const tooltipEl = document.getElementById("seq-tooltip");
+
+  const PALETTE = [
+    "#3764a5", "#b45f35", "#168477", "#6c4ca5", "#be3f70",
+    "#8b6a18", "#2b8cbe", "#d95f02", "#7570b3", "#1b9e77",
+    "#e7298a", "#66a61e", "#e6ab02", "#a6761d", "#64748b"
+  ];
+
+  const state = {
+    data: null,
+    proteins: [],
+    visible: [],
+    hiddenCategories: new Set(),
+    colorMap: new Map(),
+    selected: null,
+    hovered: null,
+    bounds: { minX: -1, maxX: 1, minY: -1, maxY: 1 },
+    width: 960,
+    height: 620,
+    dpr: 1
+  };
+
+  function categoryOf(p) {
+    const mode = colorSelect.value;
+    if (mode === "role") return p.primary_role_label || p.primary_role || "Unspecified";
+    if (mode === "channel") return (p.channels && p.channels[0]) || "Unspecified";
+    if (mode === "length_bin") return p.length_bin || "Unspecified";
+    return p.primary_group || "Unspecified";
+  }
+
+  function rebuildColorMap() {
+    state.colorMap.clear();
+    state.hiddenCategories.clear();
+    const cats = [...new Set(state.proteins.map(categoryOf))].sort();
+    cats.forEach((cat, idx) => {
+      state.colorMap.set(cat, PALETTE[idx % PALETTE.length]);
+    });
+  }
+
+  function rebuildLegend() {
+    legendEl.replaceChildren();
+    const counts = new Map();
+    state.proteins.forEach((p) => {
+      const c = categoryOf(p);
+      counts.set(c, (counts.get(c) || 0) + 1);
+    });
+    for (const [cat, color] of state.colorMap.entries()) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "pill plain legend" + (state.hiddenCategories.has(cat) ? " off" : "");
+      btn.setAttribute("aria-pressed", String(!state.hiddenCategories.has(cat)));
+      const swatch = document.createElement("i");
+      swatch.style.backgroundColor = color;
+      btn.append(swatch, document.createTextNode(`${cat.replaceAll("_", " ")} (${counts.get(cat) || 0})`));
+      btn.addEventListener("click", () => {
+        if (state.hiddenCategories.has(cat)) state.hiddenCategories.delete(cat);
+        else state.hiddenCategories.add(cat);
+        applyFilters();
+      });
+      legendEl.append(btn);
+    }
+  }
+
+  function projected(p) {
+    const pad = 28;
+    const w = Math.max(1e-6, state.bounds.maxX - state.bounds.minX);
+    const h = Math.max(1e-6, state.bounds.maxY - state.bounds.minY);
+    return {
+      x: pad + ((p.x - state.bounds.minX) / w) * (state.width - 2 * pad),
+      y: state.height - pad - ((p.y - state.bounds.minY) / h) * (state.height - 2 * pad)
+    };
+  }
+
+  function resizeCanvas() {
+    const rect = canvas.getBoundingClientRect();
+    state.dpr = Math.min(window.devicePixelRatio || 1, 2);
+    state.width = Math.max(320, Math.round(rect.width || 960));
+    state.height = Math.max(420, Math.round(rect.height || 620));
+    canvas.width = Math.round(state.width * state.dpr);
+    canvas.height = Math.round(state.height * state.dpr);
+    ctx.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
+    draw();
+  }
+
+  function draw() {
+    if (!ctx) return;
+    ctx.clearRect(0, 0, state.width, state.height);
+    ctx.fillStyle = getComputedStyle(canvas).backgroundColor;
+    ctx.fillRect(0, 0, state.width, state.height);
+    state.visible.forEach((p) => {
+      const pt = projected(p);
+      const isSel = state.selected && state.selected.id === p.id;
+      const isHov = state.hovered && state.hovered.id === p.id;
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y, isSel ? 6.5 : isHov ? 5.2 : 3.6, 0, Math.PI * 2);
+      ctx.fillStyle = state.colorMap.get(categoryOf(p)) || "#64748b";
+      ctx.globalAlpha = isSel || isHov ? 1 : 0.82;
+      ctx.fill();
+      if (isSel || isHov) {
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "#111827";
+        ctx.stroke();
+      }
+    });
+    ctx.globalAlpha = 1;
+  }
+
+  function nearestPoint(event) {
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    let best = null;
+    let bestDist = 144;
+    state.visible.forEach((p) => {
+      const pt = projected(p);
+      const d = (pt.x - x) ** 2 + (pt.y - y) ** 2;
+      if (d < bestDist) {
+        best = p;
+        bestDist = d;
+      }
+    });
+    return best;
+  }
+
+  function externalUrl(id) {
+    if (id.startsWith("UniProtKB:")) {
+      return "https://www.uniprot.org/uniprotkb/" + id.slice("UniProtKB:".length) + "/entry";
+    }
+    if (id.startsWith("RefSeq:")) {
+      return "https://www.ncbi.nlm.nih.gov/protein/" + id.slice("RefSeq:".length);
+    }
+    return null;
+  }
+
+  function selectProtein(p) {
+    state.selected = p;
+    selectionEl.replaceChildren();
+    const h2 = document.createElement("h2");
+    h2.textContent = p.label || p.id;
+    const meta = document.createElement("p");
+    meta.className = "meta";
+    const ext = externalUrl(p.id);
+    if (ext) {
+      const a = document.createElement("a");
+      a.href = ext;
+      a.textContent = p.id;
+      meta.append(a);
+    } else {
+      meta.textContent = p.id;
+    }
+    if (p.organism) {
+      meta.append(document.createTextNode(` · ${p.organism}`));
+    }
+    if (p.length) {
+      meta.append(document.createTextNode(` · ${p.length} aa`));
+    }
+    const badges = document.createElement("p");
+    badges.className = "map-badges";
+    [p.primary_group, p.primary_role_label, ...(p.channels || [])].filter(Boolean).forEach((b) => {
+      const span = document.createElement("span");
+      span.className = "pill plain";
+      span.textContent = b.replaceAll("_", " ");
+      badges.append(span);
+    });
+    const recHeading = document.createElement("h3");
+    recHeading.textContent = `Compound records (${p.records.length})`;
+    const recList = document.createElement("ol");
+    recList.className = "map-neighbors";
+    p.records.forEach((r) => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = r.page;
+      a.textContent = r.label;
+      const span = document.createElement("span");
+      span.textContent = `${r.role_label || r.role} · ${r.group}`;
+      li.append(a, span);
+      recList.append(li);
+    });
+    selectionEl.append(h2, meta, badges, recHeading, recList);
+    draw();
+  }
+
+  function applyFilters() {
+    const q = searchInput.value.trim().toLowerCase();
+    const g = groupSelect.value;
+    const r = roleSelect.value;
+    const c = channelSelect.value;
+    const l = lengthSelect.value;
+    if (window.history && window.history.replaceState) {
+      const url = new URL(window.location.href);
+      if (q) url.searchParams.set("q", searchInput.value.trim());
+      else url.searchParams.delete("q");
+      window.history.replaceState(null, "", url);
+    }
+    state.visible = state.proteins.filter((p) => {
+      if (state.hiddenCategories.has(categoryOf(p))) return false;
+      if (g && !(p.groups || []).includes(g)) return false;
+      if (r && !(p.roles || []).includes(r)) return false;
+      if (c && !(p.channels || []).includes(c)) return false;
+      if (l && p.length_bin !== l) return false;
+      if (q && !p._search.includes(q)) return false;
+      return true;
+    });
+    statusEl.textContent = `Showing ${state.visible.length} of ${state.proteins.length} proteins.`;
+    rebuildLegend();
+    resultsEl.replaceChildren();
+    countEl.textContent = `${state.visible.length} matching proteins (${Math.min(25, state.visible.length)} listed).`;
+    state.visible.slice(0, 25).forEach((p) => {
+      const li = document.createElement("li");
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = p.label || p.id;
+      btn.addEventListener("click", () => selectProtein(p));
+      const span = document.createElement("span");
+      span.textContent = `${p.id} · ${p.organism || p.primary_group}`;
+      li.append(btn, span);
+      resultsEl.append(li);
+    });
+    draw();
+  }
+
+  async function init() {
+    try {
+      const resp = await fetch(root.dataset.source);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const data = await resp.json();
+      state.data = data;
+      state.proteins = (data.proteins || []).map((p) => ({
+        ...p,
+        _search: [
+          p.id, p.label, p.organism, p.taxon_id, p.primary_group, p.primary_role_label,
+          ...(p.groups || []), ...(p.channels || []),
+          ...(p.records || []).map((r) => `${r.id} ${r.label}`)
+        ].filter(Boolean).join(" ").toLowerCase()
+      }));
+      if (state.proteins.length) {
+        state.bounds = {
+          minX: Math.min(...state.proteins.map((p) => p.x)),
+          maxX: Math.max(...state.proteins.map((p) => p.x)),
+          minY: Math.min(...state.proteins.map((p) => p.y)),
+          maxY: Math.max(...state.proteins.map((p) => p.y))
+        };
+      }
+      (data.groups || []).forEach((g) => {
+        const opt = document.createElement("option");
+        opt.value = g;
+        opt.textContent = g.replaceAll("_", " ");
+        groupSelect.append(opt);
+      });
+      (data.roles || []).forEach((role) => {
+        const opt = document.createElement("option");
+        opt.value = role.id;
+        opt.textContent = role.label;
+        roleSelect.append(opt);
+      });
+      (data.channels || []).forEach((ch) => {
+        const opt = document.createElement("option");
+        opt.value = ch;
+        opt.textContent = ch;
+        channelSelect.append(opt);
+      });
+      (data.length_bins || []).forEach((lb) => {
+        const opt = document.createElement("option");
+        opt.value = lb;
+        opt.textContent = lb;
+        lengthSelect.append(opt);
+      });
+      if (window.location && window.location.search) {
+        const qParam = new URLSearchParams(window.location.search).get("q");
+        if (qParam) searchInput.value = qParam;
+      }
+      rebuildColorMap();
+      resizeCanvas();
+      applyFilters();
+      if (state.visible.length) selectProtein(state.visible[0]);
+    } catch (err) {
+      statusEl.textContent = `Sequence map could not be loaded: ${err.message}`;
+      statusEl.classList.add("error");
+    }
+  }
+
+  searchInput.addEventListener("input", applyFilters);
+  colorSelect.addEventListener("change", () => { rebuildColorMap(); applyFilters(); });
+  groupSelect.addEventListener("change", applyFilters);
+  roleSelect.addEventListener("change", applyFilters);
+  channelSelect.addEventListener("change", applyFilters);
+  lengthSelect.addEventListener("change", applyFilters);
+  resetBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    colorSelect.value = "group";
+    groupSelect.value = "";
+    roleSelect.value = "";
+    channelSelect.value = "";
+    lengthSelect.value = "";
+    rebuildColorMap();
+    applyFilters();
+  });
+  canvas.addEventListener("click", (e) => {
+    const p = nearestPoint(e);
+    if (p) selectProtein(p);
+  });
+  canvas.addEventListener("pointermove", (e) => {
+    const p = nearestPoint(e);
+    state.hovered = p;
+    canvas.style.cursor = p ? "pointer" : "default";
+    if (!p) {
+      tooltipEl.hidden = true;
+    } else {
+      tooltipEl.textContent = `${p.label || p.id} (${p.id}) · ${p.organism || p.primary_group}`;
+      const stage = canvas.parentElement.getBoundingClientRect();
+      tooltipEl.style.left = `${e.clientX - stage.left + 12}px`;
+      tooltipEl.style.top = `${e.clientY - stage.top + 12}px`;
+      tooltipEl.hidden = false;
+    }
+    draw();
+  });
+  canvas.addEventListener("pointerleave", () => {
+    state.hovered = null;
+    tooltipEl.hidden = true;
+    draw();
+  });
+  new ResizeObserver(resizeCanvas).observe(canvas);
+  init();
+})();
+</script>
+{% endblock %}

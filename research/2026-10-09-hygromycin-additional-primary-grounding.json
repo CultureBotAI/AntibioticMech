@@ -1,0 +1,1068 @@
+{
+  "attribution": "Niekamp et al. 2019, Woodruff et al. 2021 and Daraghmi et al. 2023, microPublication Biology (CC BY 4.0); Habeck et al. 2015 strain-table citation; UniProt Consortium release 2026_03 (CC BY 4.0).",
+  "builder_sha256": "a97b2fe9bc5150d5eb3e59fda662f7a2e029d2b208e516f1d3e8ae5e8f2be2f1",
+  "curation_decision": {
+    "biological_record_changes": 0,
+    "curation_events_added": 0,
+    "reason": "Sensitivity and negative comparisons do not establish a new resistance-conferring allele, reference-to-tested-protein crosswalk, or clinical resistance classification.",
+    "status": "KEEP_QUALITATIVE_RESEARCH_NO_RESISTANCE_ALLELE_CURATION"
+  },
+  "date": "2026-10-09",
+  "limitations": [
+    "All 2939 records remain in scope; neither this compound nor the full corpus is completely reviewed.",
+    "Species taxonomy is experimental context; S288c strain taxonomy and protein accessions are reference-only.",
+    "No new sequences, variant specifications, constructs, primers, protocols or numeric resistance measurements exported.",
+    "The gene list is a focused reference cohort, not an exhaustive list of every gene mentioned in these articles.",
+    "No MIC is inferred from spot growth, and negative findings are restricted to tested comparisons.",
+    "The older UBC6/UBC7 discordance and original-figure review gap remain unresolved.",
+    "No NCBI request, outreach, reuse-terms review, source adoption or GitHub mutation occurred.",
+    "Full authoritative QC remains unpassed because of the existing stale semantic text map."
+  ],
+  "preservation": {
+    "current_census": {
+      "path": "reports/resistance-grounding-2026-10-09-sdh8/corpus.json",
+      "sha256": "659b758cba122d3b571f55fb26ad4f61473ce4a4ba81fbceb015c89fd65fdcaf"
+    },
+    "discovery_checkpoint": {
+      "path": "research/2026-10-09-resistance-discovery-date-sort.json",
+      "sha256": "e3e545520420d8109c8b0bd2ac07ea8c3c248ab5c829b29ba1eb2a2112436846"
+    },
+    "protected_files_verified": 6462,
+    "protected_manifest": {
+      "path": "reports/resistance-grounding-2026-10-07/expansion-date-sort-20261009/protected-files.json",
+      "sha256": "9d93b2e461ecec65d86a180e9507a0d23cc350f4d87845a1c7a8e17cbddfb8ac"
+    },
+    "record_hashes_verified": 2939,
+    "record_path_search_includes_ignored": true
+  },
+  "primary_studies": [
+    {
+      "authors": "Niekamp et al.",
+      "comparisons": [
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "SENSITIZATION_IN_LOSS_COMPARISON",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "TOM1"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1A"
+          ],
+          "source_comparator": "VJY476",
+          "source_subjects": [
+            "VJY656"
+          ]
+        },
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "SENSITIZATION_IN_LOSS_COMPARISON",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "TOM1"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1B"
+          ],
+          "source_comparator": "VJY477",
+          "source_subjects": [
+            "VJY788"
+          ]
+        }
+      ],
+      "doi": "10.17912/micropub.biology.000193",
+      "material_scope": "Source names hygromycin B; no independent lot or structural analysis.",
+      "measurement_scope": "Qualitative growth comparison; not MIC or breakpoint classification.",
+      "primary_request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/primary-000193.json",
+          "sha256": "b9dcdebffa65233cd66ff50259f4274e6711fbeb6dad4ca0b71ef71a6fbfc361"
+        },
+        "retrieved_at": "2026-10-09T06:57:48.213158+00:00",
+        "sha256": "f469975f37090b2a6bbce08ae03f66854ec7f55946fbb8e2783829844c5ba87a",
+        "status": 200,
+        "url": "https://www.micropublication.org/static/jats/micropub-biology-000193.xml"
+      },
+      "primary_review": {
+        "caption_sha256": "0ec160a1bcbdfbe962277a6bfec48f9c524db5963385b95851aa66b864ccfd95",
+        "description_anchors": [
+          {
+            "normalized_text_sha256": "ff35a5e0d192f0366c2598ea2e3f230af023554fabc8f2a5bba45e187450492f",
+            "paragraph": 3
+          },
+          {
+            "normalized_text_sha256": "25ed315cb139b273ea3daf4f6467eea63fe079fc683ad929f1c6dd687592e2e9",
+            "paragraph": 4
+          }
+        ],
+        "figure": {
+          "bytes": 477746,
+          "file": {
+            "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/figure-000193.png",
+            "sha256": "7f54cf92caae00f876b315fbdd525b1647160e0741cc78100f2b53649f91f391"
+          },
+          "response": {
+            "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/figure-000193.png.json",
+            "sha256": "f1dca27e071bfc75502934aa56ea4fba2a1969c5686cdef9aca1ebbaeff817f7"
+          },
+          "retrieved_at": "2026-10-09T06:59:25.396488+00:00",
+          "url": "https://www.micropublication.org/static/figures/micropub-biology-000193.png",
+          "visually_inspected": true
+        },
+        "figure_panels_inspected": [
+          "1A",
+          "1B"
+        ],
+        "method": "MANUAL_PRIMARY_DESCRIPTION_REAGENTS_AND_FIGURE_REVIEW"
+      },
+      "primary_url": "https://www.micropublication.org/journals/biology/micropub-biology-000193/",
+      "qualitative_finding": "TOM1 loss was associated with poorer growth during hygromycin B exposure in two independently sourced comparisons. No-drug growth was comparable. The two comparators have distinct BY4741 and BY4742 source labels.",
+      "reference": "PMID:32083242",
+      "source_license": "CC-BY-4.0",
+      "source_subject_rows": [
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "d9ffbd2de250ad316a9081e1fe664035858a342cef53be60dfefb5cb0378c5e9",
+          "source_alias": "BY4741",
+          "source_figure_column": "1A",
+          "source_reference": "(Brachmann et al. 1998)",
+          "source_subject_name": "VJY476"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "a3eebf8b3f6020b38fb0f174a4c1c7bd518b7871c9b27dde9801c6db07d1ecb2",
+          "source_alias": "",
+          "source_figure_column": "1A",
+          "source_reference": "(Tong et al. 2001)",
+          "source_subject_name": "VJY22"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "ebdf32e7a32dba3d2145407d56df3d76e8fd05a334ca6ec2075eaf2f74d094e0",
+          "source_alias": "",
+          "source_figure_column": "1A",
+          "source_reference": "(Tong et al. 2001)",
+          "source_subject_name": "VJY102"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "d0d668467a476107fd7c533efde5e58dd6f3f0333946dee2b7b7ecf254378376",
+          "source_alias": "SKY252",
+          "source_figure_column": "1A",
+          "source_reference": "(Habeck et al. 2015)",
+          "source_subject_name": "VJY305"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "8b459bc5551bb4430854dc2043b984956ed167f9265f4a76efd78cd7fce26b3c",
+          "source_alias": "",
+          "source_figure_column": "1A",
+          "source_reference": "(Tong et al. 2001)",
+          "source_subject_name": "VJY656"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "3d59267f0815edcec640d5f13a3de7af79b557722ac4965cf855bab1532fe472",
+          "source_alias": "BY4742",
+          "source_figure_column": "1B",
+          "source_reference": "(Brachmann et al. 1998)",
+          "source_subject_name": "VJY477"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "2651eda1135e27fd0bf44b77631cc4ce667652ff807aefe4900e5f85f834a4e3",
+          "source_alias": "LMA2948",
+          "source_figure_column": "1B",
+          "source_reference": "(Defenouillere et al. 2017)",
+          "source_subject_name": "VJY788"
+        }
+      ],
+      "title": "TOM1 confers resistance to the aminoglycoside hygromycin B in Saccharomyces cerevisiae",
+      "year": 2019
+    },
+    {
+      "authors": "Woodruff et al.",
+      "comparisons": [
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "SENSITIZATION_IN_LOSS_COMPARISON",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "ASI1"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1A"
+          ],
+          "source_comparator": "VJY476 (alias BY4741)",
+          "source_subjects": [
+            "VJY360"
+          ]
+        },
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "SENSITIZATION_IN_LOSS_COMPARISON",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "ASI3"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1A"
+          ],
+          "source_comparator": "VJY476 (alias BY4741)",
+          "source_subjects": [
+            "VJY696"
+          ]
+        },
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "NO_ADDITIONAL_SENSITIZATION_UNDER_TESTED_CONDITIONS",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "ASI2"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1A"
+          ],
+          "source_comparator": "VJY476 (alias BY4741)",
+          "source_subjects": [
+            "VJY852"
+          ]
+        },
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "NO_ADDITIONAL_SENSITIZATION_UNDER_TESTED_CONDITIONS",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "ASI2"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1C"
+          ],
+          "source_comparator": "VJY476 (alias BY4741)",
+          "source_subjects": [
+            "VJY852",
+            "VJY969",
+            "VJY970"
+          ]
+        },
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "NO_ADDITIONAL_SENSITIZATION_UNDER_TESTED_CONDITIONS",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "HUL5"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1A"
+          ],
+          "source_comparator": "VJY476 (alias BY4741)",
+          "source_subjects": [
+            "VJY662"
+          ]
+        },
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "NO_ADDITIONAL_SENSITIZATION_UNDER_TESTED_CONDITIONS",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "HUL5"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1B"
+          ],
+          "source_comparator": "VJY60 (alias W303)",
+          "source_subjects": [
+            "VJY85"
+          ]
+        }
+      ],
+      "doi": "10.17912/micropub.biology.000403",
+      "material_scope": "Source names hygromycin B; no independent lot or structural analysis.",
+      "measurement_scope": "Qualitative growth comparison; not MIC or breakpoint classification.",
+      "primary_request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/primary-000403.json",
+          "sha256": "9cab9645ed1a7b8cda5e383983712d125dfd370bbf5452bf3dfb08b0e8dda915"
+        },
+        "retrieved_at": "2026-10-09T06:58:32.075291+00:00",
+        "sha256": "b99c9f952d30144076a7df4d50b08921d32d4219203bc24509c4b7ca02c38eaa",
+        "status": 200,
+        "url": "https://www.micropublication.org/static/jats/micropub-biology-000403.xml"
+      },
+      "primary_review": {
+        "caption_sha256": "99a77d2096b1e025e7bc87094d7f69e46c484fb885a8578420d3b22401cdac95",
+        "description_anchors": [
+          {
+            "normalized_text_sha256": "4207aa580d6e5c2ea3e36374cc54d6f565cc35f4f28f44f2c9d347a3bb6e56be",
+            "paragraph": 4
+          },
+          {
+            "normalized_text_sha256": "dde298490434ea09e4b550ae9f7b3d35810258b5450e4b17dc9f7035c49aaaaf",
+            "paragraph": 5
+          },
+          {
+            "normalized_text_sha256": "b06442fee43dc1e2963ccfa2abfcb0cbf42ffd3f701a8bbe3fc637bb15a1faa4",
+            "paragraph": 6
+          },
+          {
+            "normalized_text_sha256": "71c240c4686cb01c3d375add35e3f5ef54a610ce133937d38e49c2a8c90cb9ea",
+            "paragraph": 7
+          }
+        ],
+        "figure": {
+          "bytes": 1014545,
+          "file": {
+            "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/figure-000403.png",
+            "sha256": "e2e15fc3ba110c2ff5244c8f56e96d7b42044b132f5cb036345a793e4a5624f6"
+          },
+          "response": {
+            "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/figure-000403.png.json",
+            "sha256": "707d166b599cad01ad2e966d5c07426264e90eba92cbb70a4c1873e489ff93b8"
+          },
+          "retrieved_at": "2026-10-09T07:00:07.648022+00:00",
+          "url": "https://www.micropublication.org/static/figures/micropub-biology-000403.png",
+          "visually_inspected": true
+        },
+        "figure_panels_inspected": [
+          "1A",
+          "1B",
+          "1C"
+        ],
+        "method": "MANUAL_PRIMARY_DESCRIPTION_REAGENTS_AND_FIGURE_REVIEW"
+      },
+      "primary_url": "https://www.micropublication.org/journals/biology/micropub-biology-000403/",
+      "qualitative_finding": "ASI1 and ASI3 loss comparisons showed sensitization. ASI2 comparisons, including independently generated subjects, did not show the same disadvantage. HUL5 loss comparisons were negative in two backgrounds. These negatives are condition-specific, not proof of universal dispensability; proposed explanations remain hypotheses.",
+      "reference": "PMID:34095778",
+      "source_license": "CC-BY-4.0",
+      "source_subject_rows": [
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "b7c63abf786542e5eeb851e1eacf016934fe1bac1b91d063456dc5d19432b486",
+          "source_alias": null,
+          "source_figure_column": "1B",
+          "source_reference": "(Thomas and Rothstein, 1989)",
+          "source_subject_name": "VJY60 (alias W303)"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "90456b7b80f9d43fdd709d28418ec062f4e8053e9b40313d850b55d11244c725",
+          "source_alias": null,
+          "source_figure_column": "1B",
+          "source_reference": "(Wang et al. , 1999)",
+          "source_subject_name": "VJY85"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "dfbf6b9bd987a321b61abb921bcd0417a737fb3f4336d6dbc415622271326e68",
+          "source_alias": null,
+          "source_figure_column": "1A",
+          "source_reference": "(Tong et al. , 2001)",
+          "source_subject_name": "VJY360"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "a09527d0b083df3c9134924b1d70ba4b96dad3917fcb19af93f0c9053d2571e3",
+          "source_alias": null,
+          "source_figure_column": "1A",
+          "source_reference": "(Tong et al. , 2001)",
+          "source_subject_name": "VJY469"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "087133ca83076baa507dca554ce8c9543e5105db53c95d8a3ce4af6692552179",
+          "source_alias": null,
+          "source_figure_column": "1A, 1C",
+          "source_reference": "(Tong et al. , 2001)",
+          "source_subject_name": "VJY476 (alias BY4741)"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "40dd2039f8bc74f9eadd81b1d0c6023704dc0b8731b34ebd25a8bd451cdc6421",
+          "source_alias": null,
+          "source_figure_column": "1A, 1C",
+          "source_reference": "(Tong et al. , 2001)",
+          "source_subject_name": "VJY511"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "e1d7563fc14479fec4fd89fa68cf37b9f10ce9d0c006b085f9b712a65bb3dd51",
+          "source_alias": null,
+          "source_figure_column": "1A",
+          "source_reference": "(Tong et al. , 2001)",
+          "source_subject_name": "VJY662"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "4e007d4af6a615fc7767a5931c9f0b7c2d8e39181f4e09ff3eff9df47a5c19ac",
+          "source_alias": null,
+          "source_figure_column": "1A",
+          "source_reference": "(Tong et al. , 2001)",
+          "source_subject_name": "VJY667"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "3f11e0e9e07ba6a61a20e05c15947e634909484ce141f1532c2dc8d7bd4f495b",
+          "source_alias": null,
+          "source_figure_column": "1A",
+          "source_reference": "(Tong et al. , 2001)",
+          "source_subject_name": "VJY696"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "22b0ea1ff775918191fd748430c2d4faff8e0eb015691c628346cf64765ea585",
+          "source_alias": null,
+          "source_figure_column": "1A, 1C",
+          "source_reference": "(Tong et al. , 2001)",
+          "source_subject_name": "VJY852"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "9ea3121bd1a492cef510c189a81fb47f00ac64f8d380e7411b8b8941b66fd21d",
+          "source_alias": null,
+          "source_figure_column": "1C",
+          "source_reference": "This study",
+          "source_subject_name": "VJY969"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "1d3b907dc331cd2b92b39322653de0dbd104c3f82554f2bb3be865eeb4d73c98",
+          "source_alias": null,
+          "source_figure_column": "1C",
+          "source_reference": "This study",
+          "source_subject_name": "VJY970"
+        }
+      ],
+      "title": "Inner Nuclear Membrane Asi Ubiquitin Ligase Catalytic Subunits Asi1p and Asi3p, but not Asi2p, confer resistance to aminoglycoside hygromycin B in Saccharomyces cerevisiae",
+      "year": 2021
+    },
+    {
+      "authors": "Daraghmi et al.",
+      "comparisons": [
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "SENSITIZATION_IN_LOSS_COMPARISON",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "ATG39"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1A"
+          ],
+          "source_comparator": "VJY476 (alias BY4741)",
+          "source_subjects": [
+            "VJY421"
+          ]
+        },
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "SENSITIZATION_IN_LOSS_COMPARISON",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "ATG40"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1A"
+          ],
+          "source_comparator": "VJY476 (alias BY4741)",
+          "source_subjects": [
+            "VJY422"
+          ]
+        },
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "SENSITIZATION_IN_LOSS_COMPARISON",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "ATG39"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1B"
+          ],
+          "source_comparator": "VJY476 (alias BY4741)",
+          "source_subjects": [
+            "VJY1054 (alias NSY2000)"
+          ]
+        },
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "SENSITIZATION_IN_LOSS_COMPARISON",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "ATG40"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1B"
+          ],
+          "source_comparator": "VJY476 (alias BY4741)",
+          "source_subjects": [
+            "VJY1055 (alias NSY2001)"
+          ]
+        },
+        {
+          "clinical_resistance_interpretation": null,
+          "direction": "JOINT_SENSITIZATION_NOT_DECOMPOSED",
+          "evidence_type": "FUNCTIONAL_EXPERIMENT",
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_strain_taxon_id": null,
+          "genes": [
+            "ATG39",
+            "ATG40"
+          ],
+          "genome_accession": null,
+          "mic": null,
+          "panels": [
+            "1B"
+          ],
+          "source_comparator": "VJY476 (alias BY4741)",
+          "source_subjects": [
+            "VJY1056 (alias NSY2004)"
+          ]
+        }
+      ],
+      "doi": "10.17912/micropub.biology.000738",
+      "material_scope": "Source names hygromycin B; no independent lot or structural analysis.",
+      "measurement_scope": "Qualitative growth comparison; not MIC or breakpoint classification.",
+      "primary_request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/primary-000738.json",
+          "sha256": "9aeb5a87234f92858c69d77123f8a11e732641f406ef730acc393aca5651e7a9"
+        },
+        "retrieved_at": "2026-10-09T06:58:32.590356+00:00",
+        "sha256": "067955be129dd049a4a3b4838a00b86a136c98a168afd383105f15d23e807e1e",
+        "status": 200,
+        "url": "https://www.micropublication.org/static/jats/micropub-biology-000738.xml"
+      },
+      "primary_review": {
+        "caption_sha256": "f19f1de4e20b6bcd61cb4486310a153d8dd0a7b4feedd2aa01f12113b1acbdbf",
+        "description_anchors": [
+          {
+            "normalized_text_sha256": "e4c69147e53d0bdb3b6e482d8c51946c66b90a568f5fc748aa4b9bbe458f8cfd",
+            "paragraph": 4
+          },
+          {
+            "normalized_text_sha256": "dc2b8f7b9d3871f67232af1e94c3ce28226b6b1fec16ee4c2f86791221952213",
+            "paragraph": 5
+          },
+          {
+            "normalized_text_sha256": "58b6edb7e9f7ac59d8a57e234214bb067241df19d2056948ed34b199265e2797",
+            "paragraph": 6
+          }
+        ],
+        "figure": {
+          "bytes": 1181099,
+          "file": {
+            "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/figure-000738.png",
+            "sha256": "ec6095b2b3bab7fe65bd71f903e1cf2683d3821c23dec8b68ba8791e87eaa4e0"
+          },
+          "response": {
+            "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/figure-000738.png.json",
+            "sha256": "2aae20db55efd2d9cacf07054d5be08bd9f658317bee69c7782bb49bbb6e3047"
+          },
+          "retrieved_at": "2026-10-09T07:00:25.009398+00:00",
+          "url": "https://www.micropublication.org/static/figures/micropub-biology-000738.png",
+          "visually_inspected": true
+        },
+        "figure_panels_inspected": [
+          "1A",
+          "1B"
+        ],
+        "method": "MANUAL_PRIMARY_DESCRIPTION_REAGENTS_AND_FIGURE_REVIEW"
+      },
+      "primary_url": "https://www.micropublication.org/journals/biology/micropub-biology-000738/",
+      "qualitative_finding": "Independent ATG39 and ATG40 loss comparisons showed sensitization with comparable drug-free growth. The paper also reports a modest additional effect in the joint comparison; it is not assigned independently to either gene or treated as a biochemical mechanism or clinical resistance classification.",
+      "reference": "PMID:36818312",
+      "source_license": "CC-BY-4.0",
+      "source_subject_rows": [
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "9edba3aa38d7bdde44af3d05b3858e921471249bcd6927d7d35d8f41a6ee467f",
+          "source_alias": null,
+          "source_figure_column": null,
+          "source_reference": "(Habeck et al., 2015)",
+          "source_subject_name": "VJY305 (alias SKY252)"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "f7aeddc01d8b42bf8479c64fbb095c20b07d77451db337b557c57a70190bd77c",
+          "source_alias": null,
+          "source_figure_column": null,
+          "source_reference": "(Tong et al., 2001)",
+          "source_subject_name": "VJY421"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "9756dbb30b2f0251db22f3b168bef74556ce52cb812ea4a295fe75c6167be714",
+          "source_alias": null,
+          "source_figure_column": null,
+          "source_reference": "(Tong et al., 2001)",
+          "source_subject_name": "VJY422"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "385830ed6d018294670e435b2133f952aa6681ba467ff6df12887ca1aecbe635",
+          "source_alias": null,
+          "source_figure_column": null,
+          "source_reference": "(Tong et al., 2001)",
+          "source_subject_name": "VJY476 (alias BY4741)"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "5af8c26993ee4dac374bb43b2bdf7844c3baf235bafd1874dad90137ef7dbcb9",
+          "source_alias": null,
+          "source_figure_column": null,
+          "source_reference": "(Lipatova et al., 2020)",
+          "source_subject_name": "VJY1054 (alias NSY2000)"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "68a5dd25832c7aa6c40c48de8b409626e70e5b59a591318638d1943f642d88d2",
+          "source_alias": null,
+          "source_figure_column": null,
+          "source_reference": "(Lipatova et al., 2020)",
+          "source_subject_name": "VJY1055 (alias NSY2001)"
+        },
+        {
+          "experimental_allele_accession": null,
+          "experimental_protein_accession": null,
+          "experimental_species_taxon_id": "NCBITaxon:4932",
+          "experimental_strain_taxon_id": null,
+          "genome_accession": null,
+          "row_text_sha256": "4ba44e501d80ad3dc07d2b43accd55a1a89cd2cfee0b4c1c36dea138084ec88c",
+          "source_alias": null,
+          "source_figure_column": null,
+          "source_reference": "(Lipatova et al., 2020)",
+          "source_subject_name": "VJY1056 (alias NSY2004)"
+        }
+      ],
+      "title": "Macro-ER-phagy receptors Atg39p and Atg40p confer resistance to aminoglycoside hygromycin B in S. cerevisiae",
+      "year": 2023
+    }
+  ],
+  "prior_dossier": {
+    "path": "research/2026-10-08-hygromycin-yeast-figure-followup.json",
+    "sha256": "ae84c2b65f383008dc7b2377df370ab0c0497816ce87e9e29ed7732a9d5c4d39"
+  },
+  "record": {
+    "existing_assertions_unchanged": 5,
+    "file": {
+      "path": "data/antibiotics/antibacterial/hygromycin-b.yaml",
+      "sha256": "e7068c03170e7b323adcd73ac643107c46c026c65d512d32c9d57d681a18403b"
+    },
+    "identifier": "CHEBI:16976",
+    "label": "hygromycin B",
+    "standard_inchi_key": "GRRNUXAQVGOGFE-NZSRVPFOSA-N"
+  },
+  "reference_genes": [
+    {
+      "entry_audit": {
+        "entryVersion": 161,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "gene": "ASI1",
+      "protein_accession": "UniProtKB:P54074",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "release": "2026_03",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/request-6fd6f67f29cefd670615dc0ef2b772af5ff94a6b4f442d1151dee51a4866ba5e.json",
+          "sha256": "8cd191b6e472e3f016c2359e8a319b6fc1247a7aea8d5a8b04046e8c25eb2be0"
+        },
+        "retrieved_at": "2026-10-09T06:58:33.605532+00:00",
+        "sha256": "783de3c91a746db75700f3dd1ddf13422372d9eae9e42d04918a2617513e52e2",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AASI1+OR+gene_exact%3AASI2+OR+gene_exact%3AASI3+OR+gene_exact%3AATG39+OR+gene_exact%3AATG40%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion&format=json&size=20"
+      },
+      "scope": "CANONICAL_REFERENCE_NOT_EXPERIMENTAL_ALLELE_OR_STRAIN",
+      "sgd_cross_reference": "SGD:S000004725",
+      "systematic_loci": [
+        "YMR119W"
+      ]
+    },
+    {
+      "entry_audit": {
+        "entryVersion": 146,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "gene": "ASI2",
+      "protein_accession": "UniProtKB:P53895",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "release": "2026_03",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/request-6fd6f67f29cefd670615dc0ef2b772af5ff94a6b4f442d1151dee51a4866ba5e.json",
+          "sha256": "8cd191b6e472e3f016c2359e8a319b6fc1247a7aea8d5a8b04046e8c25eb2be0"
+        },
+        "retrieved_at": "2026-10-09T06:58:33.605532+00:00",
+        "sha256": "783de3c91a746db75700f3dd1ddf13422372d9eae9e42d04918a2617513e52e2",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AASI1+OR+gene_exact%3AASI2+OR+gene_exact%3AASI3+OR+gene_exact%3AATG39+OR+gene_exact%3AATG40%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion&format=json&size=20"
+      },
+      "scope": "CANONICAL_REFERENCE_NOT_EXPERIMENTAL_ALLELE_OR_STRAIN",
+      "sgd_cross_reference": "SGD:S000005103",
+      "systematic_loci": [
+        "YNL159C"
+      ]
+    },
+    {
+      "entry_audit": {
+        "entryVersion": 154,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "gene": "ASI3",
+      "protein_accession": "UniProtKB:P53983",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "release": "2026_03",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/request-6fd6f67f29cefd670615dc0ef2b772af5ff94a6b4f442d1151dee51a4866ba5e.json",
+          "sha256": "8cd191b6e472e3f016c2359e8a319b6fc1247a7aea8d5a8b04046e8c25eb2be0"
+        },
+        "retrieved_at": "2026-10-09T06:58:33.605532+00:00",
+        "sha256": "783de3c91a746db75700f3dd1ddf13422372d9eae9e42d04918a2617513e52e2",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AASI1+OR+gene_exact%3AASI2+OR+gene_exact%3AASI3+OR+gene_exact%3AATG39+OR+gene_exact%3AATG40%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion&format=json&size=20"
+      },
+      "scope": "CANONICAL_REFERENCE_NOT_EXPERIMENTAL_ALLELE_OR_STRAIN",
+      "sgd_cross_reference": "SGD:S000004953",
+      "systematic_loci": [
+        "YNL008C"
+      ]
+    },
+    {
+      "entry_audit": {
+        "entryVersion": 132,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "gene": "ATG39",
+      "protein_accession": "UniProtKB:Q06159",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "release": "2026_03",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/request-6fd6f67f29cefd670615dc0ef2b772af5ff94a6b4f442d1151dee51a4866ba5e.json",
+          "sha256": "8cd191b6e472e3f016c2359e8a319b6fc1247a7aea8d5a8b04046e8c25eb2be0"
+        },
+        "retrieved_at": "2026-10-09T06:58:33.605532+00:00",
+        "sha256": "783de3c91a746db75700f3dd1ddf13422372d9eae9e42d04918a2617513e52e2",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AASI1+OR+gene_exact%3AASI2+OR+gene_exact%3AASI3+OR+gene_exact%3AATG39+OR+gene_exact%3AATG40%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion&format=json&size=20"
+      },
+      "scope": "CANONICAL_REFERENCE_NOT_EXPERIMENTAL_ALLELE_OR_STRAIN",
+      "sgd_cross_reference": "SGD:S000004303",
+      "systematic_loci": [
+        "YLR312C"
+      ]
+    },
+    {
+      "entry_audit": {
+        "entryVersion": 142,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "gene": "ATG40",
+      "protein_accession": "UniProtKB:Q99325",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "release": "2026_03",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/request-6fd6f67f29cefd670615dc0ef2b772af5ff94a6b4f442d1151dee51a4866ba5e.json",
+          "sha256": "8cd191b6e472e3f016c2359e8a319b6fc1247a7aea8d5a8b04046e8c25eb2be0"
+        },
+        "retrieved_at": "2026-10-09T06:58:33.605532+00:00",
+        "sha256": "783de3c91a746db75700f3dd1ddf13422372d9eae9e42d04918a2617513e52e2",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AASI1+OR+gene_exact%3AASI2+OR+gene_exact%3AASI3+OR+gene_exact%3AATG39+OR+gene_exact%3AATG40%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion&format=json&size=20"
+      },
+      "scope": "CANONICAL_REFERENCE_NOT_EXPERIMENTAL_ALLELE_OR_STRAIN",
+      "sgd_cross_reference": "SGD:S000005678",
+      "systematic_loci": [
+        "YOR152C"
+      ]
+    },
+    {
+      "entry_audit": {
+        "entryVersion": 183,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "gene": "HUL5",
+      "protein_accession": "UniProtKB:P53119",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "release": "2026_03",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/request-2d13010f4f8051653a27ae20da5219b88c6621b5cd84754706fede53fee418c9.json",
+          "sha256": "7858d618f09825ef7efab360895c0cae163b2e9fa86ceb6d705296b0199412d5"
+        },
+        "retrieved_at": "2026-10-09T07:01:01.124875+00:00",
+        "sha256": "9f4b5a3427f346c5e75453ee9fb7f4efdf563c28bf4fdeddfefe36e2133e56fc",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AHUL5%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion&format=json&size=20"
+      },
+      "scope": "CANONICAL_REFERENCE_NOT_EXPERIMENTAL_ALLELE_OR_STRAIN",
+      "sgd_cross_reference": "SGD:S000003109",
+      "systematic_loci": [
+        "YGL141W"
+      ]
+    },
+    {
+      "entry_audit": {
+        "entryVersion": 209,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "gene": "TOM1",
+      "protein_accession": "UniProtKB:Q03280",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "release": "2026_03",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/request-f64ef5f68a545141e8ec0ac1c6c0c5a25148b823cb9c01e840280158b54edc5d.json",
+          "sha256": "1e3181f5be3b648379d6145f695ce4554aa858a60b751e886ed90b91a8acfddf"
+        },
+        "retrieved_at": "2026-10-09T06:57:49.174038+00:00",
+        "sha256": "9602ceb101aac811f5b58f65f9e1e55c603074c0251ac9e052f6f9e1ce7de7a5",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ATOM1%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion&format=json&size=20"
+      },
+      "scope": "CANONICAL_REFERENCE_NOT_EXPERIMENTAL_ALLELE_OR_STRAIN",
+      "sgd_cross_reference": "SGD:S000002865",
+      "systematic_loci": [
+        "YDR457W"
+      ]
+    }
+  ],
+  "scope": "SOURCE_QUALIFIED_YEAST_SUSCEPTIBILITY_MODIFIERS_NOT_RESISTANCE_ALLELE_ASSIGNMENTS",
+  "status": "PRIMARY_QUALITATIVE_REVIEW_REFERENCE_GROUNDING_ONLY",
+  "subject_alias_followup": {
+    "background_taxon_assigned_to_derivatives": false,
+    "cross_study_subjects_merged": false,
+    "finding": "Table S2 explicitly lists SKY252 in the S288C-background group. The 2019 and 2023 reagent tables also name VJY305 with alias SKY252. This corroborates that alias but does not prove the later SKY242 label is a typo.",
+    "flag": "HYGROMYCIN-VJY305-SKY-ALIAS-CONFLICT",
+    "source": "DOI:10.1083/jcb.201408088",
+    "source_aliases_rewritten": false,
+    "status": "SKY252_CORROBORATED_SKY242_CONFLICT_NOT_RESOLVED",
+    "supplement": {
+      "bytes": 1634597,
+      "extracted_text": {
+        "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/habeck-render/text.txt",
+        "sha256": "6c30e8eaa2aa4f72cf0154885ca390c73c1ff2a09d2210e8644405b807782031"
+      },
+      "file": {
+        "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/habeck-2015-supplement.pdf",
+        "sha256": "c2232eb3518242c1c86c224ee375f5d5482490733243530b386d1cc7344e132b"
+      },
+      "rendered_page": {
+        "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/habeck-render/page-6.png",
+        "sha256": "5149ea2a5f7e6b06498467aff594b3ef63fad449803f2d78b42aa73c450beb00"
+      },
+      "response": {
+        "path": "reports/resistance-grounding-2026-10-07/hygromycin-additional-20261009/habeck-2015-supplement.pdf.json",
+        "sha256": "76290a3f2dd0c01c991ba8de69c24c83fbc3ab596089e4e1e8b83f468e0c41d6"
+      },
+      "retrieved_at": "2026-10-09T07:00:29.364699+00:00",
+      "reviewed_location": "Table S2, printed S6 / PDF page 6",
+      "url": "https://cdn.rupress.org/rup/content_public/journal/jcb/209/2/10.1083_jcb.201408088/6/jcb_201408088_sm.pdf",
+      "visually_inspected": true
+    }
+  },
+  "taxonomy": [
+    {
+      "parent_taxon_id": "NCBITaxon:4930",
+      "rank": "species",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "cache_sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+        "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/4932"
+      },
+      "scientific_name": "Saccharomyces cerevisiae",
+      "scope": "EXPERIMENTAL_SPECIES",
+      "taxon_id": "NCBITaxon:4932"
+    },
+    {
+      "parent_taxon_id": "NCBITaxon:4932",
+      "rank": "strain",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "cache_sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+        "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/559292"
+      },
+      "scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "scope": "REFERENCE_PROTEIN_TAXON_ONLY",
+      "taxon_id": "NCBITaxon:559292"
+    }
+  ]
+}

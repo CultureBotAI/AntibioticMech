@@ -1,0 +1,411 @@
+{
+  "attribution": [
+    {
+      "license": "CC BY 4.0",
+      "release": "2026_03",
+      "source": "UniProt Consortium"
+    },
+    {
+      "scope": "previously captured bibliographic discovery metadata",
+      "source": "Europe PMC"
+    },
+    {
+      "scope": "committed source identity and citation inventory",
+      "source": "ChEBI"
+    }
+  ],
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "bibliography_only_page": {
+    "all_provider_matches_explained": false,
+    "entries_checked": 500,
+    "entries_with_compound_in_returned_protein_or_gene_names": 0,
+    "entries_with_compound_in_submission_title": 500,
+    "examples": [
+      {
+        "accession": "UniProtKB:A0A1L3I2Y5",
+        "entry_version": 39,
+        "gene_names": [
+          "glmU"
+        ],
+        "role": "REFERENCE_METADATA_EXAMPLE_NOT_RESISTANCE_DETERMINANT",
+        "sequence_version": 1
+      },
+      {
+        "accession": "UniProtKB:A0A1L3I6Q7",
+        "entry_version": 38,
+        "gene_names": [
+          "carB"
+        ],
+        "role": "REFERENCE_METADATA_EXAMPLE_NOT_RESISTANCE_DETERMINANT",
+        "sequence_version": 1
+      },
+      {
+        "accession": "UniProtKB:A0A1L3IBA0",
+        "entry_version": 35,
+        "gene_names": [
+          "katG"
+        ],
+        "role": "REFERENCE_METADATA_EXAMPLE_NOT_RESISTANCE_DETERMINANT",
+        "sequence_version": 1
+      }
+    ],
+    "reference_taxon_assigned_as_experimental_subject": false,
+    "reference_taxon_id": "NCBITaxon:1844006",
+    "reference_taxon_name": "Phaeobacter porticola",
+    "resistance_determinants_assigned": 0,
+    "submission_label": "Phaeobacter portensis",
+    "submission_label_accepted_as_synonym": false,
+    "unretrieved_pages_assessed": false,
+    "unreviewed_entries": 500
+  },
+  "census": {
+    "path": "research/2026-10-14-formaldehyde-resistance-grounding.tsv",
+    "sha256": "0cca75691edd1ad52b0127e6d57b0ae5b5bd07c892005b238df9768b7037685a"
+  },
+  "citation_cohort": {
+    "chebi_ids": [
+      "MED:18062698",
+      "MED:18192410",
+      "MED:20601479",
+      "MED:21263047",
+      "MED:21430694",
+      "MED:21622742",
+      "MED:21949069",
+      "MED:22407685",
+      "MED:24723119",
+      "MED:25161739"
+    ],
+    "combined_ids": [
+      "MED:18062698",
+      "MED:18192410",
+      "MED:20601479",
+      "MED:21263047",
+      "MED:21430694",
+      "MED:21622742",
+      "MED:21949069",
+      "MED:22407685",
+      "MED:24723119",
+      "MED:25161739",
+      "MED:25513851",
+      "MED:26802120",
+      "MED:26922490",
+      "MED:27052703",
+      "MED:27235441",
+      "MED:29319806",
+      "MED:32239689",
+      "MED:33310406",
+      "MED:34940130",
+      "MED:35080904",
+      "MED:37964901",
+      "MED:38349149",
+      "MED:38969999",
+      "MED:41007415"
+    ],
+    "discovery_ids": [
+      "MED:21263047",
+      "MED:25513851",
+      "MED:26802120",
+      "MED:26922490",
+      "MED:27052703",
+      "MED:27235441",
+      "MED:29319806",
+      "MED:32239689",
+      "MED:33310406",
+      "MED:34940130",
+      "MED:35080904",
+      "MED:37964901",
+      "MED:38349149",
+      "MED:38969999",
+      "MED:41007415"
+    ],
+    "held_primary_studies": 2,
+    "other_candidates_unreviewed": 22,
+    "primary_results_reviewed": 0,
+    "source_inventory": {
+      "path": "data/raw/chebi_antimicrobials.tsv",
+      "sha256": "4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004"
+    }
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-tropodithietic/cohort.json",
+    "sha256": "43365df1595b0eaeb59d35fefd327557b14a32f7e9353dd812401c7bbd21dca5"
+  },
+  "corpus_records_hash_checked_at_preflight": 2939,
+  "curation_decision": "NO_SUPPORTED_NEW_RESISTANCE_CLAIM_WITH_AVAILABLE_EVIDENCE",
+  "date": "2026-10-14",
+  "limits": {
+    "biological_records_changed": 0,
+    "exact_alleles_or_genomes_assigned": 0,
+    "full_corpus_goal_status": "OPEN",
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "numeric_AST_exported": false,
+    "reuse_terms_review_resumed": false,
+    "scientific_http_attempts": 8,
+    "sequences_variants_constructs_or_protocols_exported": false,
+    "source_adoptions": 0,
+    "whole_record_primary_review": "OPEN"
+  },
+  "primary_holds": {
+    "PMID:21263047": {
+      "disposition": "ACCESS_HOLD",
+      "primary_results_reviewed": false,
+      "retry_or_alternate_route_attempted": false,
+      "status": 403
+    },
+    "PMID:26802120": {
+      "disposition": "TECHNICAL_HOLD",
+      "primary_results_reviewed": false,
+      "retry_or_alternate_route_attempted": false,
+      "status": 500
+    }
+  },
+  "producer_taxonomy": {
+    "candidates": [
+      {
+        "active": true,
+        "exact_name_fields": [
+          "scientificName"
+        ],
+        "other_name_match_only": false,
+        "rank": "species",
+        "scientific_name": "Phaeobacter inhibens",
+        "taxon_id": "NCBITaxon:221822"
+      }
+    ],
+    "experimental_subject_assigned": false,
+    "named_organism_taxon_id": "NCBITaxon:221822",
+    "release": "2026_03",
+    "request": {
+      "retrieved_at": "2026-10-14T17:03:14.091040+00:00",
+      "sha256": "7025e2690446d4d380560865530f01273cbcb3a57134a0243cc481adb6ea6304",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Phaeobacter+inhibens%22+AND+rank%3Aspecies&format=json&size=500"
+    },
+    "resistance_inferred": false,
+    "role": "EXISTING_CHEBI_PRODUCER_LABEL_ONLY",
+    "status": "EXACT_SPECIES_NAME_RESOLVED"
+  },
+  "record": {
+    "complete_collection_aware_record_read": true,
+    "identifier": "CHEBI:156455",
+    "label": "tropodithietic acid",
+    "path": "data/antibiotics/antibacterial/tropodithietic-acid.yaml",
+    "sha256": "23379050abc6522274455c3ae96d4d509b06e2c84974c09e961b488e9f5382ce",
+    "standard_inchi_key": "BLFCMITWMARUSM-UHFFFAOYSA-N"
+  },
+  "reference_queries": {
+    "compound-references": {
+      "complete": false,
+      "empty_query_proves_protein_absence": false,
+      "query": "\"tropodithietic\"",
+      "release": "2026_03",
+      "reported_total": 3932,
+      "returned_entries": 500,
+      "unretrieved_entries": 3432
+    },
+    "protein-name-references": {
+      "complete": true,
+      "empty_query_proves_protein_absence": false,
+      "query": "protein_name:\"tropodithietic\"",
+      "release": "2026_03",
+      "reported_total": 0,
+      "returned_entries": 0,
+      "unretrieved_entries": 0
+    },
+    "references-2011": {
+      "complete": true,
+      "empty_query_proves_protein_absence": false,
+      "query": "lit_pubmed:21263047",
+      "release": "2026_03",
+      "reported_total": 0,
+      "returned_entries": 0,
+      "unretrieved_entries": 0
+    },
+    "references-2016": {
+      "complete": true,
+      "empty_query_proves_protein_absence": false,
+      "query": "lit_pubmed:26802120",
+      "release": "2026_03",
+      "reported_total": 0,
+      "returned_entries": 0,
+      "unretrieved_entries": 0
+    }
+  },
+  "scope": "REFERENCE_SEARCH_SCOPE_NOT_RESISTANCE_OR_ALLELE_GROUNDING",
+  "source_queue": {
+    "path": "curation/source_queue.tsv",
+    "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+  },
+  "sources": {
+    "compound-references": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/compound-references-attempt.json",
+        "sha256": "479b8f2c9cec1efed224e2c42c05d7e315567e66cda0d883b191dfb314f5bf53"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/compound-references-response.bin",
+        "sha256": "89bb5c16632f4d0af3b568af342c0d4fe42b2ee0b45a5d1b06ef85b46604782b"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/compound-reference-plan.json",
+        "sha256": "eade12ad27ed3dc25885628292523422a7795be2e5dc2525f315074e6a1286b0"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/compound-references-receipt.json",
+        "sha256": "6082492f8822025e6bc1ff66f614f77206606be93bbe3fcc3533319a86ef6039"
+      },
+      "retrieved_at": "2026-10-14T17:01:05.660947+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%22tropodithietic%22&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "primary": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/primary-attempt.json",
+        "sha256": "c2d7b8aefb1cdd09d6115cf905d1254dd9aa47bdf1bb2e6d66e5f65b7f2d5ef7"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/primary-response.bin",
+        "sha256": "58497ae9ee503296bb6ab33467dc56fa7a143077b1b20d21a7d53140692d7aa6"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/request-plan.json",
+        "sha256": "7e98d71e2f9feaa403a308b8e328a75e2ae759e3b8c47cbb3d7a299bb9e17175"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/primary-receipt.json",
+        "sha256": "a662a7f79e3514c94d321ea9859767d0ff5d344d51612a6592b2767f548f70e7"
+      },
+      "retrieved_at": "2026-10-14T16:58:33.809873+00:00",
+      "status": 500,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4760781/fullTextXML"
+    },
+    "primary-2011": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/primary-2011-attempt.json",
+        "sha256": "bdea420657142685252d30183781344f2a6e0f0170747c5e46471e2fce6c07fa"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/primary-2011-response.bin",
+        "sha256": "4a6f960a062b98776305d29e04a768f12379ef7de2e380cee86aa039c1a9d0db"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/distinct-primary-plan.json",
+        "sha256": "ef8aba00cc64f05a44a8c94fb3bdb4e292d457e3a350ce7143c3b2adc31eaf05"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/primary-2011-receipt.json",
+        "sha256": "e9833a9813e3a7569dbb6486a002b8fc25705241daaca9f33c52d732e3c8a021"
+      },
+      "retrieved_at": "2026-10-14T16:59:35.862906+00:00",
+      "status": 403,
+      "url": "https://journals.asm.org/doi/10.1128/aac.01222-10"
+    },
+    "producer-taxonomy": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/producer-taxonomy-attempt.json",
+        "sha256": "39b6b41d997ca1c3f63ec0f311feaa0da9f00a63f6f9f87a9cde012574a492f5"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/producer-taxonomy-response.bin",
+        "sha256": "7025e2690446d4d380560865530f01273cbcb3a57134a0243cc481adb6ea6304"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/scoped-reference-plan.json",
+        "sha256": "51e26c6bee8709ccaae8df04b88f81a73bdb53b272beceae0a952f43c7b8aa61"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/producer-taxonomy-receipt.json",
+        "sha256": "a9712a259eedf8aef40657129504fc44066edda5bcf4f907cde2177433bbacfd"
+      },
+      "retrieved_at": "2026-10-14T17:03:14.091040+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Phaeobacter+inhibens%22+AND+rank%3Aspecies&format=json&size=500"
+    },
+    "protein-name-references": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/protein-name-references-attempt.json",
+        "sha256": "01a96671c324a2d0d08afeeb047320f4038b64be6ad43445e0b12bc1d3128cbe"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/protein-name-references-response.bin",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/scoped-reference-plan.json",
+        "sha256": "51e26c6bee8709ccaae8df04b88f81a73bdb53b272beceae0a952f43c7b8aa61"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/protein-name-references-receipt.json",
+        "sha256": "a2b3c63c3bbd99b456149ad21b4f57af1eb5fdc0eaa388d12d10a66dca54a1d0"
+      },
+      "retrieved_at": "2026-10-14T17:02:44.421344+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22tropodithietic%22&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "reference-taxonomy": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/reference-taxonomy-attempt.json",
+        "sha256": "7c52843df3b4607cfcb8738a9e2f9f3a224b4da52ddea670e15809908e8c2fe1"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/reference-taxonomy-response.bin",
+        "sha256": "3d91325fcc9d2eec7506924590c3e262b68e9a7eaa1c3b82518462535694926e"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/scoped-reference-plan.json",
+        "sha256": "51e26c6bee8709ccaae8df04b88f81a73bdb53b272beceae0a952f43c7b8aa61"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/reference-taxonomy-receipt.json",
+        "sha256": "a688a469f45e0a9c3787f096c8689544dd0e724b5c94fc6b2154177a4ebb2751"
+      },
+      "retrieved_at": "2026-10-14T17:02:59.810811+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/1844006"
+    },
+    "references-2011": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/references-2011-attempt.json",
+        "sha256": "de91554847974e1d9a564856848f04ed0b429d906dc6e7dca2d2102492e81ce5"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/references-2011-response.bin",
+        "sha256": "7d98cd0831fde169705b00e857334572b09b4d74552a491568571af791e998b5"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/reference-plan.json",
+        "sha256": "2d5b3c5750789ecf3d60de301b5b60bed888110fb184137c8b9ba156d45f775f"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/references-2011-receipt.json",
+        "sha256": "eda4738cb379c6b778cd0b2d088bf5d351412dbc2aab8e67ce522387ad077ffa"
+      },
+      "retrieved_at": "2026-10-14T17:00:49.992024+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A21263047&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "references-2016": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/references-2016-attempt.json",
+        "sha256": "74079bd93243d7fd2ee6cce4ca66d8e3db6d1966406679f7fe390f190073c69e"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/references-2016-response.bin",
+        "sha256": "bba16d313368c705c145315a558c248836f5d23a556d123d952cb6e557fd5afb"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/reference-plan.json",
+        "sha256": "2d5b3c5750789ecf3d60de301b5b60bed888110fb184137c8b9ba156d45f775f"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-tropodithietic/references-2016-receipt.json",
+        "sha256": "60f8f2a7b158e6fa66e15a290aab22afb427da65f9782629eb7e0c9a4ac8d96b"
+      },
+      "retrieved_at": "2026-10-14T17:00:08.528610+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A26802120&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  }
+}

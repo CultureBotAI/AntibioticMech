@@ -1,0 +1,270 @@
+{
+  "census": {
+    "path": "research/2026-10-14-j1074-resistance-grounding.tsv",
+    "sha256": "425c2852b7443e73c5e79cfd5b30a3d4cba895c321ffa9e59c9c18afb2ed8aab"
+  },
+  "curation": {
+    "path": "research/2026-10-14-j1074-curation.json",
+    "sha256": "3267b822679f6673f4601beb91ce15b647c9939e174763c9079838c720b60739"
+  },
+  "embeddings": {
+    "annoy_dependency_repair": {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/embedding-stage/annoy-repair.json",
+      "sha256": "82003cbd805d2e288e557a595b19d161976b8611a509796ffc60fd718f62651d"
+    },
+    "baseline_sha256": "681194ae85755a9b4a7bd7532ccb91ea1a849a1ff8b9c656914d9d87d6f6869c",
+    "byte_identical_reused_rows": 2936,
+    "changed_documents": [
+      "CHEBI:68236",
+      "CHEBI:68241",
+      "CHEBI:78661"
+    ],
+    "control_max_abs_delta": 1.52587890625e-05,
+    "control_rows": 16,
+    "dimension": 1024,
+    "fingerprint": "fc78c5005699217c",
+    "finite": true,
+    "normalized": true,
+    "published": {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/embedding-stage/published.json",
+      "sha256": "c8075b66444265192c916a719d26b5e47a233ccf8fbb28609745b068c704a437"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/embedding-stage/reuse-proof.json",
+      "sha256": "ea529f40e7521fafabf2f307254205021d4de0d18d7d4b82d1acf607d677caac"
+    },
+    "vector_rows": 2939
+  },
+  "field_index": {
+    "path": "research/2026-10-14-j1074-curator-resistance-fields.json",
+    "sha256": "5bba9b17374815759c82c7c511465d5795b899ca67bc3f48b660e411e6237f7e"
+  },
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/focused-tests.xml",
+      "sha256": "40f2a91d7afe3160af7e81df814a414a50bd1e7894cab92ded8bd18528540084"
+    },
+    "passed": 191,
+    "skip_reasons": [],
+    "skipped": 0,
+    "tests": 191
+  },
+  "full_authoritative_qc": {
+    "exit_receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/full-qc-exit.json",
+      "sha256": "6d2669170f7c12b3c2a33238995e16c5bedcdd0dbbdefc103f816dc976405f24"
+    },
+    "gates": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/full-qc.log",
+      "sha256": "4372a568242e654dbcf51f8c0d13714c4c57f19599879dda2604434fa0ea698d"
+    },
+    "runner": {
+      "path": "scripts/run_qc.py",
+      "sha256": "14c7eb66f38c078e2fe51331e98525a1bc5e189894b5e4ba22564ad6c85095d2"
+    },
+    "status": "PASS",
+    "tests": {
+      "errors": 0,
+      "failures": 0,
+      "junit": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/full-qc-tests.xml",
+        "sha256": "ee9aa1d8baf2368ca80f1ff2368eb459438d45e2f443414e0270c6f00f8bd985"
+      },
+      "passed": 4512,
+      "skip_reasons": [
+        {
+          "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+          "test": "tests.test_card_structure_links::test_cached_export_reproduces_when_research_cache_is_available"
+        },
+        {
+          "reason": "got empty parameter set for (path)",
+          "test": "tests.test_skill_frontmatter::test_command_frontmatter_has_no_duplicate_keys[NOTSET]"
+        },
+        {
+          "reason": "got empty parameter set for (path)",
+          "test": "tests.test_skill_frontmatter::test_command_frontmatter_is_valid_yaml[NOTSET]"
+        },
+        {
+          "reason": "got empty parameter set for (path)",
+          "test": "tests.test_skill_frontmatter::test_command_declares_a_usable_description[NOTSET]"
+        }
+      ],
+      "skipped": 4,
+      "tests": 4516
+    }
+  },
+  "implementation": [
+    {
+      "path": "scripts/audit_j1074_taxonomy.py",
+      "sha256": "a96a1b8a15773466dfe81931d4cf1d0c30e83b68076b5c984182b0d58e3854fc"
+    },
+    {
+      "path": "scripts/audit_curator_resistance_fields.py",
+      "sha256": "c786cbee9a0ffdda32aaf7b3148899b8fcec1154b8009cab3d0dbac25d4cb5b3"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "ade92871211aed4a008fdbebe09ae25882789770c7b387a584522269954bf2e7"
+    },
+    {
+      "path": "scripts/resistance_checkpoint_records.py",
+      "sha256": "b243df6e1ce2302ff773bc8f7abc7977f3b7979900ec4808258ed8a97565e24f"
+    },
+    {
+      "path": "tests/test_j1074_taxonomy.py",
+      "sha256": "748849ebf7c6f886dbb1d40a21d92b580b4a60f60355ce7e86ba796f6a08cd2c"
+    },
+    {
+      "path": "tests/test_curator_resistance_fields.py",
+      "sha256": "520e9a14ec21788b1a1da2d8d9c9d2897796d9a6922316ebe7adbd5f2c1eb916"
+    },
+    {
+      "path": "tests/test_borrelidin_curation.py",
+      "sha256": "837237567fb3167b7b7a2a4c958f3d534a0607703d74e863c469fccd1cb46566"
+    },
+    {
+      "path": "tests/test_platen_curation.py",
+      "sha256": "589791a817eb7a5a1ec7e99f081b02d54663755f3a9c46cf3abfefeb186305b8"
+    }
+  ],
+  "limits": {
+    "experimental_alleles_assigned": 0,
+    "experimental_genomes_or_samples_assigned": 0,
+    "full_corpus_records_in_scope": 2939,
+    "github_mutations": 0,
+    "held_scientific_sources_retried": false,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "native_scientific_requests": 8,
+    "ncbi_requests": 0,
+    "new_resistance_claims": 0,
+    "numeric_AST_sequences_variants_or_constructs_exported": false,
+    "source_adoptions": 0,
+    "web_search_calls": 2,
+    "whole_record_primary_signoffs": 0
+  },
+  "native_source_receipts": [
+    {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/albidoflavus-taxonomy-receipt.json",
+      "sha256": "7164fe443683b12eabf60059491d24d05bb5e158f6f6473a8c3f531dfd792b5c"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/ena-chromosome-metadata-receipt.json",
+      "sha256": "1d3e2e7aef7ae672954b7fd75fb76b32dc63f9fc34c731635f56a372439e1524"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/ena-sequence-return-fields-receipt.json",
+      "sha256": "d6c1945b368ffe8e56afdc7fcd7327f024fdf1811b15fcd1289691e3c8cc59c5"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/ena-sequence-search-fields-receipt.json",
+      "sha256": "6dd4f94a3bf390a8d413e081286f36c07b3a957d43f16bf7e172060fce51074e"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/genome-metadata-receipt.json",
+      "sha256": "a0ba79c0baa2c1dcc64dabe415900c44e40ad748601e958866474b603aa3c632"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/genome-primary-receipt.json",
+      "sha256": "f16e2986a9100f57eef04faf80a13d0971a457b0a8c969829b2eeed902b06e46"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/modern-name-metadata-receipt.json",
+      "sha256": "03b3aec614a1802ecc30e990a0559ab034cf77f89ab2fa923af2ea7cf4060ae6"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/modern-name-primary-receipt.json",
+      "sha256": "723c0c92a0dc1dc29c118ad673ff0d38851d064e52b3551691102ade1a6c2ea0"
+    }
+  ],
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/protected-before.json",
+      "sha256": "a50c82463c026c28f00475a9197e8b2f277131baf6fe21b08c922cc401219c1d"
+    },
+    "changed_existing_files": [
+      "data/antibiotics/antibacterial/platencin.yaml",
+      "data/antibiotics/antibacterial/platensimycin.yaml",
+      "data/antibiotics/antifungal/borrelidin.yaml",
+      "data/embeddings/corpus_map.json",
+      "data/embeddings/meta.json",
+      "data/embeddings/vectors.f16.npy",
+      "pages/antibacterial/platencin.html",
+      "pages/antibacterial/platensimycin.html",
+      "pages/antifungal/borrelidin.html",
+      "pages/map.html",
+      "research/2026-10-07-resistance-gene-grounding.md",
+      "scripts/audit_curator_resistance_fields.py",
+      "scripts/resistance_checkpoint_records.py",
+      "scripts/summarize_resistance_progress.py",
+      "tests/test_borrelidin_curation.py",
+      "tests/test_curator_resistance_fields.py",
+      "tests/test_platen_curation.py"
+    ],
+    "existing_files_checked": 7249,
+    "prior_checkpoints_and_source_inputs_unchanged": true,
+    "prior_field_index_generator_copy": {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/curator-fields-before.py",
+      "sha256": "a696f7fd061ee59e77a0b2f9f50757d121e64cb8c4a80513cb89c8b62bf30d29"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    },
+    "unchanged_record_files": 2936
+  },
+  "progress": {
+    "path": "research/2026-10-14-j1074-resistance-progress.json",
+    "sha256": "e4cc4af808046685c5f2917839f92f4a204a6bf62f602a33220b038934d00e4c"
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "b32a1f4f22c76c0234d348b3128fb78e1e66a177c6642bac1f4110e39368224f"
+  },
+  "runtime": {
+    "embedding_versions": {
+      "path": "reports/resistance-grounding-2026-10-14-j1074/embedding-stage/runtime.json",
+      "sha256": "84e209bb3c40a700b694203aa09a1bd74c91aa997b1f40ce0af3f4eafacd6bd9"
+    },
+    "qc_science_versions": {
+      "llvmlite": "0.44.0",
+      "numba": "0.61.2",
+      "numpy": "2.2.6",
+      "rdkit": "2025.3.6",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "umap-learn": "0.5.12"
+    },
+    "rdkit_environment_note": "Local RDKit 2025.3.6 differs from project pin 2026.3.5; authoritative QC passed in this environment; existing chemical map was checked, not recomputed or represented as reproduced in the pinned environment."
+  },
+  "same_agent_adversarial_review": [
+    "Species-rank metadata does not resolve exact tested derivatives or donor alleles.",
+    "Historical J1074 name-search nodes are not substituted for the verified species.",
+    "Duplicate exact species names with distinct TaxIDs fail closed; regression tested.",
+    "CP004370.1 is a chromosome, not an assembly or experimental sample assignment.",
+    "Qualitative, partial and UNKNOWN source limitations are preserved without numeric exports.",
+    "Historical tests use checksum-pinned fixtures and live tests verify the narrow correction.",
+    "Three documents genuinely re-encoded; control vectors and 2936 reused rows verified."
+  ],
+  "scope": "FIVE_EXISTING_CLAIMS_SPECIES_GROUNDING_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+  "taxonomy": {
+    "path": "research/2026-10-14-j1074-taxonomy.json",
+    "sha256": "d9e2e075b8199ff9dd8f252642b82af4a29097f0d4df4b941ba029a376b64946"
+  }
+}

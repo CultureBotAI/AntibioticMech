@@ -1,0 +1,143 @@
+{
+  "date": "2026-10-15",
+  "scope": "DEPOSITED_LOCUS_AND_ARCHIVE_REFERENCE_NOT_EXPERIMENTAL_ALLELE",
+  "base_commit": "9d967d482277d4c762b3c56424b4e83d0dea83f5",
+  "branch": "research/acr-reference-context",
+  "artifacts": {
+    "dossier": {"path": "research/2026-10-15-vmlr2-structure.json", "sha256": "691b67f1a1317a8ebb23b261e63195a8fb411851d36b0646b82b7982caae4b0a"},
+    "structure_plan": {"path": "research/2026-10-15-vmlr2-structure-plan.json", "sha256": "fe58e0c3be4ec8b9acedfd89ae42b37d96d246ee877db1779d6e8e5b88786a99"},
+    "protein_plan": {"path": "research/2026-10-15-vmlr2-structure-protein-plan.json", "sha256": "adf4607ba83548d7988224e8609320e120335038e659529a30755a7496660ec6"},
+    "taxonomy_plan": {"path": "research/2026-10-15-vmlr2-structure-taxonomy-plan.json", "sha256": "5f4e214be43d985044cc7db07b1e5c4f589918763e378493d6d8f964cc13d6c6"},
+    "audit_plan": {"path": "research/2026-10-15-vmlr2-structure-audit-plan.json", "sha256": "0380769ddc864cc3b723aeee0e66fff5c7da97954433c7e11d5c8426bc620d45"},
+    "access_review": {"path": "research/2026-10-15-vmlr2-structure-access-review.json", "sha256": "9fdfc108da2075ed0e5d7961768d7ec7020c70cdcc1fa9b5512e2a31216ba7bf"},
+    "script": {"path": "scripts/audit_vmlr2_structure_context.py", "sha256": "b9a49fe53c2661f19bcafe1c7a0e67c41e56c5b31eebd2de089748aaba583d63"},
+    "tests": {"path": "tests/test_vmlr2_structure_context.py", "sha256": "1c3da5ffcb23eded1a30a474ce9a46d65dcfa30913fe07585506828857640137"},
+    "report": {"path": "research/2026-10-07-resistance-gene-grounding.md", "sha256": "4c9139f0f893346b722054fcb78af3cf6b3e104a86816e544a2c936f88fc7f19"}
+  },
+  "coverage": {
+    "corpus_record_hashes_checked": 2939,
+    "complete_collection_aware_records": 6,
+    "source_claims": 6,
+    "source_terms_followed": 1,
+    "deposited_polymer_entities_inspected": 51,
+    "focal_entities": 1,
+    "active_reference_entries": 1,
+    "inactive_reference_entries": 1,
+    "prior_qualified_terms": 104,
+    "new_qualified_source_terms": 1,
+    "combined_qualified_terms": 105,
+    "combined_remaining_terms": 73,
+    "bounded_cohort_terms": 178,
+    "broad_index_rewritten": false,
+    "new_primary_results_reviews": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "checks": {
+    "combined_regression": {
+      "status": "PASS",
+      "passed": 534,
+      "failed": 0,
+      "skipped": 1,
+      "duration_seconds": 195.30,
+      "new_tests_passed": 60,
+      "skip": "test_card_reference_lineages.test_offline_native_replay: known qualification deltas lack historical fixtures; public artifact checks still run",
+      "command": ".venv/bin/pytest -q -rs tests/test_vmlr2_structure_context.py tests/test_card_explicit_identifiers.py tests/test_card_name_holds.py tests/test_card_name_crosswalks.py tests/test_card_source_aliases.py tests/test_card_all_status_genes.py tests/test_card_unresolved_names.py tests/test_card_gene_reference_followup.py tests/test_card_species_gene_context.py tests/test_acr_reference_context.py tests/test_card_complex_members.py tests/test_card_literature_expansion.py tests/test_card_literature_proteins.py tests/test_card_reference_lineages.py tests/test_mex_component_references.py"
+    },
+    "initial_test_authoring_failure": {
+      "passed": 533,
+      "failed": 1,
+      "skipped": 1,
+      "duration_seconds": 120.18,
+      "cause": "One new assertion read result_count from a native receipt that stores its total in headers.x-total-results.",
+      "resolution": "Corrected the test to assert the native total and explicit no-biological-absence flag; no source evidence or audit output was changed."
+    },
+    "ruff": "PASS",
+    "ruff_format": "PASS",
+    "git_diff_check": "PASS",
+    "read_only_offline_native_replay": "PASS_WITH_NETWORK_AND_PYTHON_FILE_WRITES_DENIED",
+    "explicit_pins_before_this_receipt": {"occurrences": 54, "distinct_paths": 32, "all_verified": true},
+    "artifact_pins_in_this_receipt": {"checked": 9, "all_verified": true},
+    "prior_nonreport_artifacts_checked_unchanged": 50,
+    "corpus_record_hashes": {"checked": 2939, "changed": 0},
+    "previous_report": {
+      "sha256": "42a3591c3c4371de4c6bb6fcd33276ae37879048ec367aa63cc5294488776b8f",
+      "bytes": 979252,
+      "all_bytes_preserved": true,
+      "sole_remaining_work_heading_preserved": true
+    },
+    "current_report_bytes": 984061,
+    "biological_source_input_and_project_dependency_git_diff": "EMPTY"
+  },
+  "adversarial_review": {
+    "reviewer": "SAME_AGENT_SEPARATE_PASS",
+    "implementation_findings_addressed": [
+      {
+        "finding": "Inherited claim pointers targeted /terms/ARO:3007646 while the draft output used a singular term key.",
+        "resolution": "The audit now uses the established terms map; a regression test resolves every claim pointer and checks membership."
+      },
+      {
+        "finding": "The receipt size bound accepted a negative reported byte count.",
+        "resolution": "Require a positive integer within the frozen bound; a negative-size regression fails closed."
+      },
+      {
+        "finding": "Input-index no-candidate status could be mistaken for the newly derived term assessment.",
+        "resolution": "Preserve the source checkpoint unchanged while explicitly documenting its scope and linking it to the updated term assessment."
+      }
+    ],
+    "unresolved_implementation_findings": [],
+    "checks": [
+      "GraphQL errors, wrong entry or citation, duplicate or ambiguous entities, mixed sources and invalid engineered-state counts fail closed.",
+      "Focal entity selection remains a documented inference; the native ExpZ description is retained.",
+      "Reference qualification requires an exact native locus or ORF field, matching valid archive identifiers and independently matching species.",
+      "Gene-name-only matches cannot stand in for a locus or ORF match.",
+      "The inactive accession is not an active reference and the current entry is not asserted to be its official replacement.",
+      "Shared reference archive identity does not establish engineered-construct, experimental allele, donor strain or genome identity.",
+      "Source species, expression host and current reference strain remain distinct contexts.",
+      "Sequences, variant details and construction payloads are recursively rejected from inspected metadata.",
+      "Exact request artifact sets reject unaccounted attempts, receipts, bodies and failures.",
+      "Own-citation and gene-query zero results are reused without inferring biological absence.",
+      "The PDF access denial was not bypassed; the unverified publisher URL is not evidence of a publisher HTTP denial.",
+      "Coverage remains a disjoint 178-term partition, not a full-corpus completion claim.",
+      "CLI replay does not overwrite differing output, and check mode cannot create output directories."
+    ],
+    "remaining_scientific_work": [
+      "The primary paper's results, figures and supplements remain access-held and unreviewed.",
+      "Exact experimental donor strain, resistant allele, sample and genome identities remain unresolved.",
+      "The reference crosswalk does not independently validate each compound-specific inherited CARD assertion.",
+      "Continue reference and primary-evidence review beyond this bounded cohort; the 2939-record investigation remains open."
+    ],
+    "github_issues_created": 0
+  },
+  "access": {
+    "new_native_pdb_metadata_requests": 1,
+    "new_complete_uniprot_protein_queries": 1,
+    "new_uniprot_taxonomy_requests": 1,
+    "successful_native_http_responses": 3,
+    "reused_taxonomy_nodes": 2,
+    "reused_complete_queries": 2,
+    "retries": 0,
+    "redirects_followed": 0,
+    "sequence_or_archive_traversal_requests": 0,
+    "primary_document_review": "NOT_COMPLETED_ACCESS_HELD",
+    "alternate_article_copies_requested_after_denial": 0,
+    "unverified_publisher_candidate_treated_as_canonical": false,
+    "ncbi_endpoint_requests": 0,
+    "outreach": false,
+    "reuse_terms_review_resumed": false,
+    "ignored_files_included_in_history_search": true,
+    "taxonomy_preflight_scope": "Literal request URLs and pinned registry, not all possible cached search results",
+    "operational_details_exported": false
+  },
+  "full_authoritative_qc": {
+    "run": false,
+    "rdkit_availability_rechecked": true,
+    "rdkit_available": false,
+    "limitation": "RDKit is absent in the existing Intel macOS environment. No full authoritative QC or biological-curation verification is claimed."
+  },
+  "biological_record_writes": 0,
+  "experimental_identifiers_assigned": 0,
+  "source_adoptions": 0,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "full_corpus_goal_status": "OPEN"
+}

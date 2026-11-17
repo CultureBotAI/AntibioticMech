@@ -1,0 +1,93 @@
+{
+  "before_census": {
+    "path": "reports/resistance-grounding-2026-10-09-sdh8/corpus.json",
+    "sha256": "659b758cba122d3b571f55fb26ad4f61473ce4a4ba81fbceb015c89fd65fdcaf"
+  },
+  "checkpoint": "2026-10-09-gm193663",
+  "curation_dossier": {
+    "path": "research/2026-10-09-gm193663-curation.json",
+    "sha256": "af443f0ef23f28ccaa5fca284f57b22cfb6c4989f091852a3110fff73ef14ce3"
+  },
+  "curator_claims": 30,
+  "curator_records": 20,
+  "current_census": {
+    "path": "reports/resistance-grounding-2026-10-09-gm193663/corpus.json",
+    "sha256": "5eca9b187baeb613ab354ae09ccb4633942a9629d5a857f8559bbb3506432c15"
+  },
+  "current_counts": {
+    "pending_discovery": 2628,
+    "records": 2939,
+    "resistance_assertions": 4785,
+    "score_rules": 467,
+    "with_resistance_mechanisms": 298,
+    "with_score_rules": 16
+  },
+  "current_ledger": {
+    "path": "research/2026-10-09-gm193663-resistance-grounding.tsv",
+    "sha256": "24ed1d91c1e66808be1dbfb6a46d964c6301d522bd04a4e67e1a344ad3a88e79"
+  },
+  "history_events_added": 1,
+  "ignored_files_included": true,
+  "ledger_reference_columns": "PHI_BASE_ONLY; new non-PHI mappings remain in the curation dossier",
+  "ledger_rows_changed": 1,
+  "limitations": [
+    "Primary Results text supports qualitative findings; figures and supplements remain unreviewed.",
+    "No tested allele, strain TaxID, genome, quantitative AST, or clinical resistance category assigned.",
+    "Reference-accession and lineage columns retain the earlier PHI-base-only scope.",
+    "Older dossier and discovery pins remain historical; no completed whole-record review inferred.",
+    "Full QC is reported separately after its running process terminates."
+  ],
+  "non_resistance_fields_preserved": [
+    "activity_roles",
+    "antimicrobial_class",
+    "chemical_structure",
+    "curation_status",
+    "definition",
+    "definition_source",
+    "grounding_status",
+    "identifier",
+    "label",
+    "mode_of_action",
+    "mode_of_action_notes",
+    "mode_of_action_target_scope",
+    "parent_compounds",
+    "source_concepts",
+    "synonyms",
+    "xrefs"
+  ],
+  "previous_ledger": {
+    "path": "research/2026-10-09-sdh8-resistance-grounding.tsv",
+    "sha256": "cf5908cc0a3e8447f8239fcb354977cc90294c7f950b7f40d9fe15ef3a9cc99a"
+  },
+  "protected_file_changes": {
+    "data/antibiotics/antifungal/gm-193663.yaml": {
+      "after": "1b3c9d7c426e1774cc5faa037c047d40ea4251658faafb2c77d54dd169668684",
+      "before": "3ccfd7c55a15cd6efb696d243941bd62672cfe02586b5da90c4fd112ba0720ee"
+    },
+    "pages/antifungal/gm-193663.html": {
+      "after": "221288968a3b46a638f0e8d36806e9457e5cecc25a1f3063b8eefb33706ba095",
+      "before": "c195ee1affc44e95f27a753b2bfb9d782cb62e2abc3add33b0b063b63ba14cde"
+    },
+    "pages/index.html": {
+      "after": "e20176a4e862bcfb4a5b97707f58d639d6305461b2e586ebb48082645bab5c30",
+      "before": "57aec170b7bc2cdae42a4c018a68d22afe058cc29df1db6ec91473f81bac1ae7"
+    }
+  },
+  "protected_files": 6468,
+  "protected_files_unchanged": 6465,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-07/gm193663-20261009/protected-before.json",
+    "sha256": "022ae18277497148e7a8d87f16de05ea81798541ebf1a74e96e8e3e02ce9da4c"
+  },
+  "records_byte_identical": 2938,
+  "records_changed": 1,
+  "scope": "PRIMARY_AUTHOR_REPORTED_GENE_ASSOCIATIONS_NOT_ALLELE_VALIDATION",
+  "semantic_map": {
+    "artifacts_rewritten": false,
+    "current_document_fingerprint": "8eb46854614f7c55",
+    "path": "data/embeddings/corpus_map.json",
+    "sha256": "3fe50803c00f4f5e9a5967c053c0a6e0622628e32a68c1393f0a6f32290650d1",
+    "stored_fingerprint": "089fe6e5f5af1d42"
+  },
+  "whole_record_review_complete": false
+}

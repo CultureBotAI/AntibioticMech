@@ -1,0 +1,206 @@
+{
+  "adversarial_review": "SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "all_other_record_fields_preserved": true,
+  "artifacts": [
+    {
+      "path": "pages/antibacterial/clarithromycin/record-1256a0c3e20c3c16f11f2f51cd1b932761d71163b1288643354edfb857bf0f68.json.gz",
+      "sha256": "1256a0c3e20c3c16f11f2f51cd1b932761d71163b1288643354edfb857bf0f68"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "980a491318fe097bc341dce05a2363cece10fea809c6c2bc6af3b92c6217578e"
+    },
+    {
+      "path": "research/2026-10-09-erm55-primary-checkpoint-reconciliation.json",
+      "sha256": "fb7c51dc9270ddd3edbc90edf72c6919dd609c62e37acf7f8049c5bf149f4415"
+    },
+    {
+      "path": "research/2026-10-09-erm55-primary-context.json",
+      "sha256": "280258e3137b7377a8e5caefb25ca65ce6838c5b6e85acd8a99a7ea6a3ec2d9d"
+    },
+    {
+      "path": "research/2026-10-09-erm55-primary-curation.json",
+      "sha256": "721a7eaf06393e5284428f85c37f65a20c75de1b33490f7c7b7bda14f08bde67"
+    },
+    {
+      "path": "research/2026-10-09-erm55-primary-resistance-grounding.tsv",
+      "sha256": "cf6fd88fa2e02f302cc7e419efe6577eb64e8311c5fa4299a1e29e3c3749d54e"
+    },
+    {
+      "path": "research/2026-10-09-erm55-primary-resistance-progress.json",
+      "sha256": "3a84eb2cb39555a03f99ea9f53856918ba1691f084a29b7a12534a64ae206c42"
+    },
+    {
+      "path": "research/2026-10-09-erm55-primary-resistance-progress.tsv",
+      "sha256": "698966515200fad224dd7ae99f40c05b3c3596ae820e00d79b170393b14a3a90"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "f4b6be519b9d18afb34356af37c7ff4d720f76f0b251fa07085025528702348c"
+    },
+    {
+      "path": "tests/test_erm55_primary_curation.py",
+      "sha256": "2a571ca8804b14cd884ebbdce59ef52d8299a06e88d0f04596c7c45309bdb00a"
+    }
+  ],
+  "changed_protected_files": {
+    "data/antibiotics/antibacterial/clarithromycin.yaml": {
+      "after_sha256": "ab9144b6a1b21521e7166f05819d832e9ce4d127438ac1aa1e2e9f82d02a453c",
+      "before_sha256": "b61171d9337ec2346af8541586e3f54b71574d016adc1b922dfcd999b54e4783"
+    },
+    "pages/antibacterial/clarithromycin.html": {
+      "after_sha256": "780dd663b89b3ef77581dd8a28e8aa52404b2dd623b441507b1ec36590344247",
+      "before_sha256": "0022f1b547ee7a51caff3d797dc6f1c26939fe19905af4210edf5a48d8c152a7"
+    },
+    "pages/antibacterial/clarithromycin/activity-1.html": {
+      "after_sha256": "2ab3f8f6b58fb7e3fa5f8602717ed2c434cbefea592767c6b8988500a8e82435",
+      "before_sha256": "0f04ba6ef9736cfda3c8a6f7044fafe29e466edd5e12e94196da150c2b8d183a"
+    },
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "980a491318fe097bc341dce05a2363cece10fea809c6c2bc6af3b92c6217578e",
+      "before_sha256": "1aaa8ce4826683f83b0ed2273835ee1fd731354408ceac11dc0de2dfb4dc188e"
+    },
+    "scripts/summarize_resistance_progress.py": {
+      "after_sha256": "f4b6be519b9d18afb34356af37c7ff4d720f76f0b251fa07085025528702348c",
+      "before_sha256": "6dd369a86bec05310866eda979b897d7c6bca678e6c53184a73cb0943e614dbe"
+    }
+  },
+  "claims_added": 10,
+  "curator_claims": 59,
+  "curator_records": 33,
+  "current_ledger": {
+    "path": "research/2026-10-09-erm55-primary-resistance-grounding.tsv",
+    "sha256": "cf6fd88fa2e02f302cc7e419efe6577eb64e8311c5fa4299a1e29e3c3749d54e"
+  },
+  "current_record_hashes_verified": 2939,
+  "date": "2026-10-09",
+  "embedding_preservation": {
+    "path": "reports/resistance-grounding-2026-10-09-erm55-primary/embedding-preservation.json",
+    "sha256": "ba99d0080f4813230e7ef66e288b874b2aea5cbdf264981739a4c6df320cfca8"
+  },
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-erm55-primary/focused-tests.xml",
+    "sha256": "7af1b9a4b5fd72da6d21de0317003d300939d8922fae99d72c40e03dacd1bca8"
+  },
+  "focused_tests_passed": 75,
+  "full_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-erm55-primary/full-tests.xml",
+    "sha256": "071e5085feb3f015470a2b0dee94adb6da15369e39309ad6b82890ae693088d5"
+  },
+  "full_test_skip_details": [
+    {
+      "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+      "test": "tests.test_card_structure_links.test_cached_export_reproduces_when_research_cache_is_available"
+    },
+    {
+      "reason": "got empty parameter set for (path)",
+      "test": "tests.test_skill_frontmatter.test_command_frontmatter_has_no_duplicate_keys[NOTSET]"
+    },
+    {
+      "reason": "got empty parameter set for (path)",
+      "test": "tests.test_skill_frontmatter.test_command_frontmatter_is_valid_yaml[NOTSET]"
+    },
+    {
+      "reason": "got empty parameter set for (path)",
+      "test": "tests.test_skill_frontmatter.test_command_declares_a_usable_description[NOTSET]"
+    }
+  ],
+  "full_test_warning_context": "Existing sssom_schema LinkML dataclass-extension deprecation warning.",
+  "full_test_warnings": 1,
+  "full_tests_passed": 2563,
+  "full_tests_skipped": 4,
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "ignored_files_included": true,
+  "membership_artifacts": [
+    {
+      "path": "data/antibiotics/antibacterial/membership-ac9b7b540ddc33b670ff85e5077fe30655c4f674d904871781fa9e818a240b27.json.gz",
+      "sha256": "ac9b7b540ddc33b670ff85e5077fe30655c4f674d904871781fa9e818a240b27"
+    }
+  ],
+  "ncbi_endpoint_requests": 0,
+  "new_files_before_verification_receipt": [
+    {
+      "path": "pages/antibacterial/clarithromycin/record-1256a0c3e20c3c16f11f2f51cd1b932761d71163b1288643354edfb857bf0f68.json.gz",
+      "sha256": "1256a0c3e20c3c16f11f2f51cd1b932761d71163b1288643354edfb857bf0f68"
+    },
+    {
+      "path": "research/2026-10-09-erm55-primary-checkpoint-reconciliation.json",
+      "sha256": "fb7c51dc9270ddd3edbc90edf72c6919dd609c62e37acf7f8049c5bf149f4415"
+    },
+    {
+      "path": "research/2026-10-09-erm55-primary-context.json",
+      "sha256": "280258e3137b7377a8e5caefb25ca65ce6838c5b6e85acd8a99a7ea6a3ec2d9d"
+    },
+    {
+      "path": "research/2026-10-09-erm55-primary-curation.json",
+      "sha256": "721a7eaf06393e5284428f85c37f65a20c75de1b33490f7c7b7bda14f08bde67"
+    },
+    {
+      "path": "research/2026-10-09-erm55-primary-resistance-grounding.tsv",
+      "sha256": "cf6fd88fa2e02f302cc7e419efe6577eb64e8311c5fa4299a1e29e3c3749d54e"
+    },
+    {
+      "path": "research/2026-10-09-erm55-primary-resistance-progress.json",
+      "sha256": "3a84eb2cb39555a03f99ea9f53856918ba1691f084a29b7a12534a64ae206c42"
+    },
+    {
+      "path": "research/2026-10-09-erm55-primary-resistance-progress.tsv",
+      "sha256": "698966515200fad224dd7ae99f40c05b3c3596ae820e00d79b170393b14a3a90"
+    },
+    {
+      "path": "tests/test_erm55_primary_curation.py",
+      "sha256": "2a571ca8804b14cd884ebbdce59ef52d8299a06e88d0f04596c7c45309bdb00a"
+    }
+  ],
+  "outreach": 0,
+  "prior_claims_preserved": 44,
+  "prior_report_bytes_preserved": true,
+  "protected_files": 6820,
+  "protected_files_unchanged": 6814,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-erm55-primary/protected-before.json",
+    "sha256": "9d6ea08224a929a779e1b0e9353d481ab1e4cb956fce56cab9582a37972840da"
+  },
+  "qc_gates": [
+    "lint",
+    "documentation",
+    "raw-data provenance",
+    "source queue",
+    "curator antibiotic structures",
+    "tests",
+    "schema validation",
+    "corpus reproduction",
+    "chemical map",
+    "generated site",
+    "corpus report"
+  ],
+  "qc_receipt": {
+    "path": "reports/resistance-grounding-2026-10-09-erm55-primary/full-qc-exit.json",
+    "sha256": "580f91f5cfe6cebd19a356ce9e653137e2875903a25080a7afaefcda9d8227d6"
+  },
+  "records_byte_identical": 2938,
+  "records_changed": 1,
+  "remaining_limits": [
+    "No species-wide phenotype inferred.",
+    "Genotype and phenotype co-occurrence does not prove causality.",
+    "No exact UniProt or allele mapping established by the recorded queries.",
+    "The corrected table was inspected as publisher text; no native PDF visual review is claimed."
+  ],
+  "rendered_clinical_claims_verified": 10,
+  "replaced_content_addressed_download": {
+    "old_bytes_reproduced_from_original_record": true,
+    "old_path": "pages/antibacterial/clarithromycin/record-91f2d49c6d89259b2e703d07849fcdfd270a0bc05272b07fd7b1b1c21404e16b.json.gz",
+    "old_sha256": "91f2d49c6d89259b2e703d07849fcdfd270a0bc05272b07fd7b1b1c21404e16b",
+    "replacement": {
+      "path": "pages/antibacterial/clarithromycin/record-1256a0c3e20c3c16f11f2f51cd1b932761d71163b1288643354edfb857bf0f68.json.gz",
+      "sha256": "1256a0c3e20c3c16f11f2f51cd1b932761d71163b1288643354edfb857bf0f68"
+    }
+  },
+  "scope": "QUALITATIVE_CLINICAL_COOCCURRENCE_NOT_EXACT_ALLELE_OR_COMPLETED_CORPUS_REVIEW",
+  "source_adoptions": 0,
+  "source_owned_slices_preserved": true,
+  "status": "ALL_AUTHORITATIVE_QC_GATES_PASSED",
+  "whole_corpus_primary_review": "OPEN",
+  "whole_records_completed": 0
+}

@@ -1,0 +1,43 @@
+{
+  "identifier": "CHEBI:2450",
+  "path": "data/antibiotics/antifungal/aculeacin-a.yaml",
+  "record_sha256": "35137dae602556e4c165ffac59ed56d887ad9f5024d2b9d4c52cfa5855930b6d",
+  "standard_inchi_key": "FBCLKBXYZRAXNA-PDIPHZEPSA-N",
+  "status": "DISCOVERY_ONLY_PRIMARY_RESULTS_UNAVAILABLE",
+  "record_changed": false,
+  "literature_query_hits": 8,
+  "primary_candidates_checked_for_uniprot_citation_links": [
+    {"pmid": "1839761", "pmcid": "PMC245437", "doi": "10.1128/aac.35.12.2596"},
+    {"pmid": "8083161", "pmcid": "PMC196772", "doi": "10.1128/jb.176.18.5686-5696.1994"},
+    {"pmid": "1828464", "pmcid": "PMC207959", "doi": "10.1128/jb.173.11.3456-3462.1991"}
+  ],
+  "uniprot_search": {
+    "query": "lit_pubmed:1839761 OR lit_pubmed:8083161 OR lit_pubmed:1828464",
+    "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A1839761+OR+lit_pubmed%3A8083161+OR+lit_pubmed%3A1828464&format=json&size=100&fields=accession%2Cid%2Cgene_names%2Corganism_id%2Corganism_name%2Ccc_function%2Ccc_caution%2Cft_variant%2Cxref_embl%2Clit_pubmed_id%2Cversion%2Csequence_version",
+    "status": 200,
+    "release": "2026_03",
+    "total_results": 0,
+    "next_page": false,
+    "retrieved_at": "2026-10-08T03:41:11.763293+00:00",
+    "response_sha256": "2a6f7a94f535453bd51d104f694cce2acae7f96936c3a1a3b63c8b674e27d622",
+    "suggestions_used": false,
+    "interpretation": "No explicit citation-linked entry returned for these exact PMIDs in this release; not evidence that a protein or gene mapping is absent."
+  },
+  "primary_access_check": {
+    "publisher_url": "https://journals.asm.org/doi/10.1128/aac.35.12.2596",
+    "publisher_result": "Browser fetch failed; primary Results not inspected.",
+    "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC245437/fullTextXML",
+    "status": 500,
+    "retrieved_at": "2026-10-08T03:41:30.448705+00:00",
+    "response_sha256": "35b3170a0ff0e405c0c66a4a1a522ecc9e6216718c05d6f627e890b0b4692004",
+    "cache": "reports/resistance-grounding-2026-10-07/aculeacin-PMC245437-fulltext-response.json"
+  },
+  "limitations": [
+    "The complete existing record was read through the collection-aware loader; prior mechanism and producer curation were preserved.",
+    "Citation titles do not establish exact alleles, resistance mechanisms, assay results or strain identities.",
+    "UniProt suggested different publication IDs; these were not substituted for the requested PMIDs.",
+    "An earlier request used an invalid return-field name and received HTTP 400; it supplied no evidence and is not counted as an empty search.",
+    "No resistance assertion, UniProt accession, taxon assignment, genome accession or AST measurement was added.",
+    "NCBI was not contacted. Primary Results and alternative source-supported crosswalks remain to be investigated."
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "TA289_primary_access_disposition": "ACCESS_HOLD",
+  "TA289_primary_results_reviewed": false,
+  "api_configuration_requests": 1,
+  "automatic_redirects": 0,
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "biological_record_hash_drift": 0,
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-ta289/cohort.json",
+    "sha256": "642c402c0cdeaafb83ffd297b30577b807709106e1dad92f0dbd6cbdfd5a1301"
+  },
+  "commands_passed": [
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "check",
+      "."
+    ],
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "scripts/audit_equisetin_followup.py",
+      "tests/test_equisetin_followup.py"
+    ],
+    [
+      "git",
+      "diff",
+      "--check"
+    ]
+  ],
+  "component_reference_candidates": 2,
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-reference-citation-resistance-grounding.tsv",
+    "sha256": "5e37b4d2ee3a7bafab7d173896dcb084b0444e2f06c02f49542eda866109524a"
+  },
+  "date": "2026-10-14",
+  "discovery_status": {
+    "AGR_MED_same_title_records_merged_or_counted_as_replication": false,
+    "additional_primary_bibliography_leads": 1,
+    "initial_candidate_dispositions": {
+      "AGR:IND608566932": "UNASSESSED",
+      "MED:10934347": "UNASSESSED",
+      "MED:17707105": "UNASSESSED",
+      "MED:23715404": "ACCESS_HOLD_PRIMARY_RESULTS_UNREVIEWED",
+      "MED:26431450": "UNASSESSED",
+      "MED:34869220": "PRIOR_SCOPED_PRIMARY_TEXT_REVIEW",
+      "MED:38327434": "HOST_CONTEXT_NOT_ANTIMICROBIAL_RESISTANCE",
+      "MED:41317882": "UNASSESSED"
+    },
+    "initial_candidate_identities": 8,
+    "initial_candidates_primary_results_unreviewed_including_held": 6,
+    "initial_candidates_without_followup_disposition": 5
+  },
+  "draft_changes_confined_to_discovery_accounting": true,
+  "draft_review_fix": "Separate five unassessed original candidates from six primary-results-unreviewed candidates including the access-held paper; retain all eight individual dispositions.",
+  "embedding_files_unchanged": true,
+  "embedding_refresh_required": false,
+  "experimental_strain_taxon_protein_and_genome_assignments": 0,
+  "figures_visually_reviewed": false,
+  "files": [
+    {
+      "path": "scripts/audit_equisetin_followup.py",
+      "sha256": "b063e4b7393243b4f944348c582a82dfeb6cac02f92423187bd3d6b3b7f4a67d"
+    },
+    {
+      "path": "tests/test_equisetin_followup.py",
+      "sha256": "77efa311a2d26d695a3037ce15ba7bafc4f47c8302217553abd3b9306124d131"
+    },
+    {
+      "path": "research/2026-10-14-equisetin-followup-context.json",
+      "sha256": "1ef408aac7a56a947f6e04af88beaf599ed96c60fc45a57d6751dde152a0c431"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "8a6b1b653a7e2d05bcf8f6efeda054c02d3cfef9df9fcf5364ab45b9c387d6e5"
+    },
+    {
+      "path": "/private/tmp/verify_equisetin_followup_20261014.py",
+      "sha256": "20f57aa78665ab0ae1ca2eba51edc9a0c0daf75d7044d7e40748ae735ba30eb4"
+    }
+  ],
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_rerun": false,
+  "full_qc_scope_note": "Research-only checks do not renew the earlier full-QC receipt.",
+  "github_mutations": 0,
+  "http_attempts": 8,
+  "http_status_counts": {
+    "200": 6,
+    "302": 1,
+    "403": 1
+  },
+  "initial_draft_preserved": {
+    "path": "reports/resistance-grounding-2026-10-14-ta289/first-draft-context.json",
+    "sha256": "89ee8f981cb98468d045d9e283f59b46446590e9971a85a55e385cea19c48d81"
+  },
+  "issue_1040": "DEFERRED",
+  "local_helper_recoveries": [
+    {
+      "path": "reports/resistance-grounding-2026-10-14-ta289/local-helper-repair.json",
+      "sha256": "d0dbb502fad12862a88ac003b92bfae8f8d50407ca3fd751cad00faa14593387"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-ta289/local-helper-repair-2.json",
+      "sha256": "fb10dfe484880f082252af9ded9a4bacece35b49fd91e207fc3bcac6d08decd2"
+    }
+  ],
+  "main_report_changes_are_exactly_the_new_section": true,
+  "manually_inspected_redirect_hops": 1,
+  "native_taxonomy_responses_reused": 5,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_assertions": 0,
+  "numeric_AST_or_variant_sequence_construct_or_protocol_exports": false,
+  "offline_plan_helper_smoke_test": {
+    "functions": [
+      "primary_followup_plan",
+      "reference_plan",
+      "function_plan",
+      "field_config_plan",
+      "taxonomy_plan"
+    ],
+    "helper": {
+      "path": "/private/tmp/research_ta289_20261014.py",
+      "sha256": "7f67005bc9dda0e0e41eceb6c17923424e0e87d589697a7b5e041bf4a2b73ff9"
+    },
+    "original_cache_writes": 0,
+    "requests_blocked": true,
+    "status": "PASS"
+  },
+  "offline_replay": "PASS",
+  "prior_source_holds_preserved": true,
+  "prior_uncommitted_work_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-ta289/protected-before.json",
+    "sha256": "397838d73808264c48e4ddabd3f3cda9f0a9bc5af66c02a79228b5e03e697952"
+  },
+  "protected_files_checked": 7592,
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "scientific_http_attempts_excluding_configuration": 7,
+  "scope": "PRIMARY_CONTEXT_AND_COMPONENT_REFERENCES_NOT_RESISTANCE_ALLELE_CURATION",
+  "scoped_primary_text_reviews_this_pass": 2,
+  "source_adoptions": 0,
+  "structured_research_exports_source_inputs_and_generated_pages_preserved": true,
+  "supplements_reviewed": false,
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 81,
+      "path": "reports/resistance-grounding-2026-10-14-ta289/focused-tests.xml",
+      "sha256": "998eebe9d0d4ca6edab289775b85b787d4d018d20c3e5e83c079ef5ae6c98ff6",
+      "skipped": 0,
+      "tests": 81
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 571,
+      "path": "reports/resistance-grounding-2026-10-14-ta289/expanded-tests.xml",
+      "sha256": "a98f776d36a8ba7a4c3da67c495bf1678578424bce8d3647fddddf29f5fa527a",
+      "skipped": 0,
+      "tests": 571
+    }
+  ],
+  "whole_record_primary_signoffs": 0
+}

@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-09",
+  "status": "OLDER_PRIMARY_TEXT_REVIEWED_DISCORDANCE_UNRESOLVED",
+  "prior_dossier": {
+    "path": "research/2026-10-08-hygromycin-yeast-figure-followup.json",
+    "sha256": "ae84c2b65f383008dc7b2377df370ab0c0497816ce87e9e29ed7732a9d5c4d39",
+    "scope": "Preserved historical checkpoint; only its older-study primary-text access limitation is superseded. Its subject-alias conflict remains unresolved."
+  },
+  "record": {
+    "identifier": "CHEBI:16976",
+    "label": "hygromycin B",
+    "path": "data/antibiotics/antibacterial/hygromycin-b.yaml",
+    "record_sha256": "e7068c03170e7b323adcd73ac643107c46c026c65d512d32c9d57d681a18403b",
+    "standard_inchi_key": "GRRNUXAQVGOGFE-NZSRVPFOSA-N",
+    "existing_assertions_unchanged": 5
+  },
+  "older_study": {
+    "reference": "PMID:16118187",
+    "doi": "10.1534/genetics.105.046888",
+    "year": 2005,
+    "primary_url": "https://www.researchgate.net/publication/7642934_Saccharomyces_cerevisiae_Ub-Conjugating_Enzyme_Ubc4_Binds_the_Proteasome_in_the_Presence_of_Translationally_Damaged_Proteins",
+    "review": {
+      "method": "MANUAL_REVIEW_OF_AUTHOR_UPLOADED_ARTICLE_TEXT_TRANSCRIPTION",
+      "reviewed_on": "2026-10-09",
+      "locations": [
+        "Results, first subsection, printed pages 1478-1479",
+        "Figure 1 caption, printed page 1479",
+        "Materials and Methods, strain provenance, printed page 1478"
+      ],
+      "pdf_downloaded": false,
+      "figure_visually_inspected": false,
+      "successful_fulltext_cache": null,
+      "scope": "Article transcription, not the site's later citing-paper excerpts. No article text or figure is redistributed."
+    },
+    "rights": "Copyright 2005 Genetics Society of America; no reusable full-text license inferred from author upload.",
+    "qualitative_findings": [
+      {
+        "genes": ["UBC4"],
+        "context": "SINGLE_GENE_LOSS",
+        "direction": "SENSITIZATION",
+        "location": "Results, printed page 1478; Figure 1A cited in text",
+        "scope": "Reported poorer growth with hygromycin B."
+      },
+      {
+        "genes": ["UBC5"],
+        "context": "SINGLE_GENE_LOSS",
+        "direction": "NO_GROWTH_IMPAIRMENT_REPORTED_UNDER_TESTED_CONDITIONS",
+        "location": "Results, printed page 1478; Figure 1A cited in text",
+        "scope": "Not a universal absence of gene involvement."
+      },
+      {
+        "genes": ["UBC6", "UBC7"],
+        "context": "SEPARATE_SINGLE_GENE_LOSS_COMPARISONS",
+        "direction": "NO_GROWTH_IMPAIRMENT_REPORTED_UNDER_TESTED_CONDITIONS",
+        "location": "Results and Figure 1B caption, printed page 1479",
+        "scope": "Text-reported negative comparisons, not independently inspected figure evidence."
+      },
+      {
+        "genes": ["UBC6", "UBC7"],
+        "context": "COMBINED_GENE_LOSS_COMPARISON",
+        "direction": "NO_GROWTH_IMPAIRMENT_REPORTED_UNDER_TESTED_CONDITIONS",
+        "location": "Results, printed page 1479",
+        "scope": "Authors explicitly report data not shown; not a Figure 1B panel."
+      }
+    ],
+    "experimental_identity": {
+      "species_name": "Saccharomyces cerevisiae",
+      "species_taxon_id": "NCBITaxon:4932",
+      "taxonomy_evidence": "Pinned prior dossier, taxonomy entry with EXPERIMENTAL_SPECIES scope",
+      "source_provenance": "Ubc-loss strains supplied by M. Hochstrasser; Chen et al. (1993) cited.",
+      "named_background": "NOT_ESTABLISHED_BY_THIS_REVIEW",
+      "experimental_strain_taxon_id": null,
+      "experimental_genome_accession": null,
+      "experimental_protein_accession": null,
+      "experimental_allele_accession": null
+    },
+    "failed_direct_fetch": {
+      "cache_path": "reports/resistance-grounding-2026-10-07/hygromycin-2005-author-copy-20261009.json",
+      "cache_sha256": "36dc87308db60bae244de0cd9bfd365545dbca4df152b0ec3e56cbffd1bb4182",
+      "body_path": "reports/resistance-grounding-2026-10-07/hygromycin-2005-author-copy-20261009.html",
+      "sha256": "9c818d738045b6a70c43dce9206a50401ab214eb0d619de8c912a475abdaf3a1",
+      "status": 403,
+      "retrieved_at": "2026-10-09T03:30:49.700609+00:00",
+      "bytes": 21117,
+      "scope": "Failure evidence only; this response does not contain the reviewed primary text."
+    }
+  },
+  "later_study_comparison": {
+    "reference": "DOI:10.17912/micropub.biology.001276",
+    "primary_url": "https://www.micropublication.org/journals/biology/micropub-biology-001276/",
+    "primary_evidence": "Pinned prior dossier primary_studies entry, publisher JATS and manually reviewed Figure 1B/1C",
+    "genes": ["UBC6", "UBC7"],
+    "direction": "LOSS_ASSOCIATED_SENSITIZATION",
+    "context": "Separate source-qualified subjects and comparators in two laboratory backgrounds; no cross-study subject merge.",
+    "disagreement_status": "UNRESOLVED",
+    "explanation_status": "AUTHOR_HYPOTHESIS_NOT_ESTABLISHED_CAUSE",
+    "explanation": "The newer paper suggests differences in effective drug exposure; this review does not establish assay equivalence or test that explanation."
+  },
+  "additional_reference_genes": [
+    {
+      "gene": "UBC4",
+      "systematic_locus": "YBR082C",
+      "sgd_cross_reference": "SGD:S000000286",
+      "reference_protein_accession": "UniProtKB:P15731",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_audit": {"entryVersion": 228, "sequenceVersion": 1},
+      "reference_taxon_id": "NCBITaxon:559292",
+      "scope": "CANONICAL_S288C_REFERENCE_NOT_TESTED_ALLELE_OR_STRAIN"
+    },
+    {
+      "gene": "UBC5",
+      "systematic_locus": "YDR059C",
+      "sgd_cross_reference": "SGD:S000002466",
+      "reference_protein_accession": "UniProtKB:P15732",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_audit": {"entryVersion": 207, "sequenceVersion": 1},
+      "reference_taxon_id": "NCBITaxon:559292",
+      "scope": "CANONICAL_S288C_REFERENCE_NOT_TESTED_ALLELE_OR_STRAIN"
+    }
+  ],
+  "reference_request": {
+    "cache_path": "reports/resistance-grounding-2026-10-07/request-183d11d63270efd3000b4ef25c36e415be35fd45633be54d8401c04cb8e3a0f3.json",
+    "cache_sha256": "84f963a88745a9f067b850c1460287f14e368f97e89e9ad0237df67fcbf768c5",
+    "sha256": "6815be0ff17066860f2ee1296e74ac5343cdf82318e7d5445e984e73ee3b2ced",
+    "endpoint": "https://rest.uniprot.org/uniprotkb/search",
+    "query": "(gene_exact:UBC4 OR gene_exact:UBC5) AND organism_id:559292 AND reviewed:true",
+    "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_sgd,lit_pubmed_id,sequence_version,version",
+    "format": "json",
+    "size": 10,
+    "status": 200,
+    "retrieved_at": "2026-10-09T03:31:01.845282+00:00",
+    "release": "2026_03",
+    "total_results": 2,
+    "has_next_page": false,
+    "sequence_requested": false
+  },
+  "curation_decision": {
+    "status": "RETAIN_AS_SUSCEPTIBILITY_MODIFIER_RESEARCH",
+    "production_record_changes": 0,
+    "curation_events_added": 0,
+    "reason": "No new resistance-conferring allele, experimental protein crosswalk or clinical interpretation is established. Reference proteins and sensitizing loss comparisons are not promoted to resistance assertions."
+  },
+  "limitations": [
+    "The 2005 transcription review is manual and not independently reproducible from the failed local fetch; PDF and figure review remain outstanding.",
+    "Reference identity verification does not independently validate the scientific interpretation.",
+    "No experimental strain, genome or allele accession is assigned; S288c reference taxonomy remains separate from experimental species taxonomy.",
+    "HYGROMYCIN-VJY305-SKY-ALIAS-CONFLICT remains unresolved in the pinned prior dossier.",
+    "No sequences, variant specifications, constructs, protocols or quantitative resistance measurements are exported.",
+    "No NCBI request, outreach, reuse-terms review, source adoption or GitHub mutation occurred.",
+    "This follow-up does not complete the hygromycin B record or the 2939-record corpus investigation."
+  ]
+}

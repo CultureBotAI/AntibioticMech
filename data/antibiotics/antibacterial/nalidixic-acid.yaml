@@ -1,7 +1,7 @@
 identifier: CHEBI:100147
 label: nalidixic acid
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A monocarboxylic acid comprising 1,8-naphthyridin-4-one substituted by
   carboxylic acid, ethyl and methyl groups at positions 3, 1, and 7, respectively.
@@ -245,6 +245,18 @@ resistance_mechanisms:
   - reference: ARO:3003317
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
       acid); database assertion, not a primary citation.
+  note: 'Evidence-scope review 2026-10-16-salmonella-pare-evidence-scope: The cited
+    Enteritidis study found no independent parE effect in its tested background; an
+    indirect contribution remained unresolved. This is not a universal inactivity
+    claim or evidence for every serovar and inherited compound. Retain CARD''s assertion
+    as database evidence, without assigning an experimental protein, allele, taxon
+    or susceptibility observation. Qualification references, not an upgrade of the
+    CARD assertion: DOI:10.1128/aac.01005-08 (Results: Contribution of target gene
+    mutations to quinolone resistance; Table 1: quinolone headers and relevant parE
+    comparison; Table 3: compound headers and absence of a parE-specific comparison;
+    Discussion: paragraph beginning Although complementation; publisher HTML text
+    and selected table text; no visual table, figure or supplement verification).
+    Reviewed 2026-10-16 by Codex; curation/card_evidence_reviews.json SHA-256 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687.'
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003381
   label: Escherichia coli soxR with mutation conferring antibiotic resistance
@@ -418,6 +430,44 @@ molecular_targets:
     entry_status: REVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 2
+- target_label: bacterial DNA gyrase
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  experimental_context: Purified Escherichia coli DNA gyrase (NalA/GyrA and GyrB)
+    supercoiling and detergent-induced DNA cleavage-complex assays in the presence
+    of nalidixic acid (PMID:200930).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1977-11
+  source_retrieved_on: '2026-10-23'
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AES4
+    protein_label: DNA gyrase subunit A
+    gene_symbol: gyrA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: GyrA subunit (formerly nalA gene product) of E. coli DNA gyrase that forms
+      the nalidixic acid-stabilized DNA cleavage complex and controls supercoiling
+      sensitivity (PMID:303505; PMID:217495; K-12 reference proteome context).
+  - uniprot_id: UniProtKB:P0AES6
+    protein_label: DNA gyrase subunit B
+    gene_symbol: gyrB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: ATPase GyrB subunit partnering with GyrA in the E. coli DNA gyrase holoenzyme
+      inhibited by nalidixic acid (PMID:303505; PMID:217495; K-12 reference proteome
+      context).
+  evidence:
+  - reference: PMID:200930
+    notes: Sugino et al. demonstrated that nalidixic acid inhibits Escherichia coli
+      DNA gyrase via the NalA/GyrA subunit and traps a covalent gyrase-DNA cleavage
+      complex.
 causal_graphs:
 - graph_id: nalidixic_acid_gyrase_cleavage_complex
   title: Nalidixic acid poisons bacterial DNA gyrase
@@ -439,6 +489,27 @@ causal_graphs:
       sensitivity.
     gene_symbols:
     - gyrA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AES4
+      protein_label: DNA gyrase subunit A
+      gene_symbol: gyrA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: GyrA subunit (formerly nalA gene product) of E. coli DNA gyrase that forms
+        the nalidixic acid-stabilized DNA cleavage complex and controls supercoiling
+        sensitivity (PMID:303505; PMID:217495; K-12 reference proteome context).
+    - uniprot_id: UniProtKB:P0AES6
+      protein_label: DNA gyrase subunit B
+      gene_symbol: gyrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: ATPase GyrB subunit partnering with GyrA in the E. coli DNA gyrase holoenzyme
+        inhibited by nalidixic acid (PMID:303505; PMID:217495; K-12 reference proteome
+        context).
   - node_id: gyrase_dna_cleavage_complex
     label: DNA gyrase covalent DNA cleavage complex
     node_type: STATE
@@ -745,3 +816,22 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-16T06:07:03Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date
+    2026-08-30, unchanged.'
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated E. coli K-12 DNA gyrase subunit A (P0AES4) and subunit B
+    (P0AES6) UniProtKB protein examples on the nalidixic_acid_gyrase_cleavage_complex
+    dna_gyrase causal graph node.
+  llm_assisted: true
+- timestamp: '2026-10-23T18:15:00Z'
+  curator: antigravity
+  action: RESOLVED_REVIEW_FINDINGS
+  changes: Added PRIMARY_LITERATURE DIRECT_BINDING_TARGET for bacterial DNA gyrase
+    (PMID:200930) with reviewed UniProtKB protein examples and promoted nalidixic
+    acid to REVIEWED (#1254).
+  llm_assisted: true

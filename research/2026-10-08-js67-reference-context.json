@@ -1,0 +1,415 @@
+{
+  "snapshot_scope": "Historical JS67 identifier-scope checkpoint; later provenance-only record refresh is documented separately.",
+  "follow_up_review": "2026-10-08-flavus-reference-context.json",
+  "attribution": "UniProt Consortium, release 2026_03, CC BY 4.0; PHI-base pinned AMR export, CC BY 4.0.",
+  "finding": "JS67 is the experimental background; Nara gc5 is reference material. Reference IDs do not identify the studied subject.",
+  "grounding_snapshot_sha256": "bf7f08d23bdd810051d75d1c9937b83271d90ec4d4941482b7687bd1b15f5bd4",
+  "inspected_version": "Author-provided Wiley article, uploaded by Dongya Shi on 2020-08-31",
+  "limitations": [
+    "No replacement subject TaxID, protein, genome or allele coordinate inferred.",
+    "Historical locus-to-current-protein mapping was not independently reconstructed.",
+    "No new genotype, assay, quantitative endpoint or biochemical mechanism curated.",
+    "EC50 observations are not MICs; quantitative and whole-record review remain open.",
+    "NCBI contact and requests remain deferred."
+  ],
+  "primary_reference": "DOI:10.1002/ps.5964",
+  "primary_source_url": "https://www.researchgate.net/publication/342367490_Mutations_at_sterol_14a-demethylases_CYP51AB_confer_the_DMI_resistance_in_Colletotrichum_gloeosporioides_from_grape",
+  "records": [
+    {
+      "after_record_sha256": "fcaef8ef6ff67040913224e587c2c1b17894d77945f207650a26f6cfcb5b3d35",
+      "before_record_sha256": "f626d63457e1be4022d4784b62bbae6ee3a28eee5f72b133e545bf45a2fc3e68",
+      "identifier": "CHEBI:81760",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml",
+      "source_row": {
+        "evidence_code": "Cell growth assay",
+        "gene_id": "",
+        "identifier": "CHEBI:81760",
+        "interaction_type": "antimicrobial_interaction",
+        "modification": "CYP51Bdelta (deletion)",
+        "phenotype_id": "PHIPO:0000663",
+        "phenotype_label": "resistance to difenoconazole",
+        "phig_id": "PHIG:733",
+        "pmid": "32569396",
+        "protein_accession": "L2FD62",
+        "source_commit": "62e6a87a49397cba6ceb211b254d7ac8e5d09ff8",
+        "source_retrieved_on": "2026-09-01",
+        "standard_inchi_key": "BQYJATMQXGBDHF-UHFFFAOYSA-N",
+        "strain_label": "JS67",
+        "strain_taxon_id": "1213859",
+        "taxon_id": "690256",
+        "taxon_label": "Colletotrichum gloeosporioides"
+      },
+      "source_row_sha256": "3a72efaf2ac116d7398a477e62ca8c1f905edb49b5995e4bef6d9e73c97fdfbf",
+      "standard_inchi_key": "BQYJATMQXGBDHF-UHFFFAOYSA-N",
+      "status": "IDENTIFIER_SCOPE_REVIEWED_ASSOCIATION_RETAINED",
+      "subject_taxon_and_protein_grounding": "UNRESOLVED"
+    },
+    {
+      "after_record_sha256": "4fb6db41df412b9f0c3a41b63835f3b08f5d64d04547da1a6f74dd3ee8fc6c8b",
+      "before_record_sha256": "32d2865ceb0264b7978d0ca592e5dbd6d39ae55e91a7aa843c6252e57c35e2e5",
+      "identifier": "CHEBI:8434",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml",
+      "source_row": {
+        "evidence_code": "Cell growth assay",
+        "gene_id": "",
+        "identifier": "CHEBI:8434",
+        "interaction_type": "antimicrobial_interaction",
+        "modification": "CYP51Adelta (deletion)",
+        "phenotype_id": "PHIPO:0000528",
+        "phenotype_label": "resistance to prochloraz",
+        "phig_id": "PHIG:734",
+        "pmid": "32569396",
+        "protein_accession": "L2FQR9",
+        "source_commit": "62e6a87a49397cba6ceb211b254d7ac8e5d09ff8",
+        "source_retrieved_on": "2026-09-01",
+        "standard_inchi_key": "TVLSRXXIMLFWEO-UHFFFAOYSA-N",
+        "strain_label": "JS67",
+        "strain_taxon_id": "1213859",
+        "taxon_id": "690256",
+        "taxon_label": "Colletotrichum gloeosporioides"
+      },
+      "source_row_sha256": "ca113a423af4adf483abe166fbebf93f85bf32fed5b20b78ffb02cbd49a0220b",
+      "standard_inchi_key": "TVLSRXXIMLFWEO-UHFFFAOYSA-N",
+      "status": "IDENTIFIER_SCOPE_REVIEWED_ASSOCIATION_RETAINED",
+      "subject_taxon_and_protein_grounding": "UNRESOLVED"
+    },
+    {
+      "after_record_sha256": "8bfc6dda8f1f95d62d548095dc0e66c96b7f2c5c0810045e525be926248da0ea",
+      "before_record_sha256": "04e339f48bb1759ccd8b3622b60ff8c4dee735fe69b5299a1d374fd981b99d9e",
+      "identifier": "CHEBI:8489",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml",
+      "source_row": {
+        "evidence_code": "Cell growth assay",
+        "gene_id": "",
+        "identifier": "CHEBI:8489",
+        "interaction_type": "antimicrobial_interaction",
+        "modification": "CYP51Bdelta (deletion)",
+        "phenotype_id": "PHIPO:0000682",
+        "phenotype_label": "resistance to propiconazole",
+        "phig_id": "PHIG:733",
+        "pmid": "32569396",
+        "protein_accession": "L2FD62",
+        "source_commit": "62e6a87a49397cba6ceb211b254d7ac8e5d09ff8",
+        "source_retrieved_on": "2026-09-01",
+        "standard_inchi_key": "STJLVHWMYQXCPB-UHFFFAOYSA-N",
+        "strain_label": "JS67",
+        "strain_taxon_id": "1213859",
+        "taxon_id": "690256",
+        "taxon_label": "Colletotrichum gloeosporioides"
+      },
+      "source_row_sha256": "d9a9937a215b3546fb89d6920b279280e8fa2d746a2d85e94e6baa0dd38ff5bd",
+      "standard_inchi_key": "STJLVHWMYQXCPB-UHFFFAOYSA-N",
+      "status": "IDENTIFIER_SCOPE_REVIEWED_ASSOCIATION_RETAINED",
+      "subject_taxon_and_protein_grounding": "UNRESOLVED"
+    }
+  ],
+  "reference_proteins": {
+    "L2FD62": {
+      "entryAudit": {
+        "entryVersion": 60,
+        "firstPublicDate": "2013-03-06",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2013-03-06",
+        "sequenceVersion": 1
+      },
+      "genes": [
+        {
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "KAF4491851.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "CGGC5_v000622"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Anthracnose fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "KAF4491851.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000011096",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Sordariomycetes",
+          "Hypocreomycetidae",
+          "Glomerellales",
+          "Glomerellaceae",
+          "Colletotrichum",
+          "Colletotrichum gloeosporioides species complex"
+        ],
+        "scientificName": "Colletotrichum fructicola (strain Nara gc5)",
+        "synonyms": [
+          "Colletotrichum gloeosporioides (strain Nara gc5)"
+        ],
+        "taxonId": 1213859
+      },
+      "primaryAccession": "L2FD62"
+    },
+    "L2FQR9": {
+      "entryAudit": {
+        "entryVersion": 64,
+        "firstPublicDate": "2013-03-06",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2013-03-06",
+        "sequenceVersion": 1
+      },
+      "genes": [
+        {
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "KAF4478428.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "CGGC5_v013507"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Anthracnose fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "KAF4478428.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000011096",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Sordariomycetes",
+          "Hypocreomycetidae",
+          "Glomerellales",
+          "Glomerellaceae",
+          "Colletotrichum",
+          "Colletotrichum gloeosporioides species complex"
+        ],
+        "scientificName": "Colletotrichum fructicola (strain Nara gc5)",
+        "synonyms": [
+          "Colletotrichum gloeosporioides (strain Nara gc5)"
+        ],
+        "taxonId": 1213859
+      },
+      "primaryAccession": "L2FQR9"
+    }
+  },
+  "reference_taxa": {
+    "1213859": {
+      "active": true,
+      "parent": {
+        "scientificName": "Colletotrichum fructicola",
+        "taxonId": 690256
+      },
+      "rank": "strain",
+      "scientificName": "Colletotrichum fructicola (strain Nara gc5)",
+      "taxonId": 1213859
+    },
+    "690256": {
+      "active": true,
+      "parent": {
+        "scientificName": "Colletotrichum gloeosporioides species complex",
+        "taxonId": 2707338
+      },
+      "rank": "species",
+      "scientificName": "Colletotrichum fructicola",
+      "taxonId": 690256
+    }
+  },
+  "requests": [
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:04:47 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "15",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T02:04:47.436600+00:00",
+      "sha256": "ca8e94a43d1062b986cf6b6711139733dd1948d40d506d8f1032cca0929585e1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AE9R5G2+OR+accession%3AF9X9V6+OR+accession%3AF9XH52+OR+accession%3AG2XFG4+OR+accession%3AG4N021+OR+accession%3AG4NE45+OR+accession%3AG8B7T4+OR+accession%3AI1RAE5+OR+accession%3AI1RCN2+OR+accession%3AI1RJR2+OR+accession%3AI1RPK0+OR+accession%3AI1S9X9+OR+accession%3AL2FD62+OR+accession%3AL2FQR9+OR+accession%3AN0A5G3&format=json&size=500"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:05:56 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T02:05:56.531361+00:00",
+      "sha256": "ce7c90ca72d87652039019953fcd28c95f66af0d10544da2b4137cbe78cf4da0",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/690256"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:05:59 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T02:05:59.525811+00:00",
+      "sha256": "1ea029809741d802d4d4cd5ad7100a25fada4b574dd426baa5dad8aea24606b2",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/1213859"
+    }
+  ],
+  "review_locations": [
+    "Table 1",
+    "Section 2.5",
+    "Section 3.6"
+  ],
+  "review_sha256": "a3da004a14ca1478b57718c0ebfa8d343b36d1b7ed5e95bd7251606381e9e902",
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "subject_identifier_searches": [
+    {
+      "endpoint": "taxonomy/search",
+      "ignored_different_name_suggestions": 0,
+      "parameters": {
+        "format": "json",
+        "query": "\"JS67\"",
+        "size": 100
+      },
+      "request": {
+        "headers": {
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+          "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+          "Access-Control-Max-Age": "1728000",
+          "Cache-Control": "public, max-age=43200",
+          "Connection": "keep-alive",
+          "Content-Encoding": "gzip",
+          "Content-Type": "application/json",
+          "Date": "Thu, 08 Oct 2026 04:32:29 GMT",
+          "Transfer-Encoding": "chunked",
+          "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+          "X-API-Deployment-Date": "23-September-2026",
+          "X-Total-Results": "0",
+          "X-UniProt-Release": "2026_03",
+          "X-UniProt-Release-Date": "02-September-2026",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-cache": "miss cached"
+        },
+        "retrieved_at": "2026-10-08T04:32:29.070120+00:00",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22JS67%22&format=json&size=100"
+      },
+      "result_count": 0,
+      "status": "NO_HITS_IN_LIMITED_QUERY_NOT_BIOLOGICAL_ABSENCE"
+    },
+    {
+      "endpoint": "uniprotkb/search",
+      "ignored_different_name_suggestions": 5,
+      "parameters": {
+        "fields": "accession,reviewed,gene_names,organism_id,organism_name,version,sequence_version",
+        "format": "json",
+        "query": "\"JS67\"",
+        "size": 100
+      },
+      "request": {
+        "headers": {
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+          "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+          "Access-Control-Max-Age": "1728000",
+          "Cache-Control": "public, max-age=43200",
+          "Connection": "keep-alive",
+          "Content-Encoding": "gzip",
+          "Content-Type": "application/json",
+          "Date": "Thu, 08 Oct 2026 04:32:55 GMT",
+          "Transfer-Encoding": "chunked",
+          "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+          "X-API-Deployment-Date": "07-October-2026",
+          "X-Total-Results": "0",
+          "X-UniProt-Release": "2026_03",
+          "X-UniProt-Release-Date": "02-September-2026",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-cache": "miss cached"
+        },
+        "retrieved_at": "2026-10-08T04:32:55.793557+00:00",
+        "sha256": "1f6eb6ba8c5135f142e314d3b2c21809773adcfa16dd52e97162bad0731b576e",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%22JS67%22&format=json&size=100&fields=accession%2Creviewed%2Cgene_names%2Corganism_id%2Corganism_name%2Cversion%2Csequence_version"
+      },
+      "result_count": 0,
+      "status": "NO_HITS_IN_LIMITED_QUERY_NOT_BIOLOGICAL_ABSENCE"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "adversarial_review": {
+    "method": "Separate self-review plus mutated native identity, citation, taxonomy and scope inputs",
+    "remaining": [
+      "These are reference proteins, not exact resistant alleles, experimental strain IDs or genomic crosswalks.",
+      "Primary figure and supplement review remains open; selected web text is not native-body replay.",
+      "The MSH and Aspergillus family-wide source labels are not fully resolved by one source-species reference each."
+    ],
+    "resolved": [
+      "Retain Hmg1 ORF-name and MSH2 ordered-locus fields without treating them as interchangeable aliases.",
+      "Require DOI and PMID to match within one citation, not merely anywhere in the entry bibliography.",
+      "Exclude the same-paper erg10B hit and do not double-count the already selected Hmg1 protein.",
+      "Keep resistance-emergence endpoints, baseline susceptibility and cohort-specific negative associations separate."
+    ]
+  },
+  "audit_plan": {
+    "path": "research/2026-10-15-msh-hmg-reference-audit-plan.json",
+    "sha256": "c794381b2db22136309e5e9c3c397175ebce863ed13303269f4d42070c774f0a"
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-msh-hmg-reference/baseline.json",
+    "sha256": "335c54d47ef38901b4b0388de49b302bf45c00c525b0a38415b53423643c7bb4"
+  },
+  "checks": {
+    "errors": 0,
+    "failures": 0,
+    "focused_tests_passed": 111,
+    "full_authoritative_qc_rerun": false,
+    "offline_write_disabled_replay": true,
+    "report_only_appended_section": true,
+    "saved_projection_equal": true,
+    "skipped": 0,
+    "unchanged_data_curation_site_files": 6353
+  },
+  "constraints": {
+    "biological_record_writes": false,
+    "broad_index_rewritten": false,
+    "experimental_identifiers_assigned": false,
+    "figure_pixels_reviewed": false,
+    "full_investigation_complete": false,
+    "issue_1040": "DEFERRED",
+    "native_primary_bodies_replayed": false,
+    "ncbi_requests": 0,
+    "primary_access": "SELECTED_PUBLISHER_WEB_TEXT_AND_ENDPOINT_HEADINGS",
+    "redirects_followed": 0,
+    "retries": 0,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "source_adoption": false,
+    "supplements_reviewed": false,
+    "whole_papers_reviewed": false
+  },
+  "date": "2026-10-15",
+  "dossier": {
+    "path": "research/2026-10-15-msh-hmg-reference.json",
+    "sha256": "6b9f0987c93b9b37757740fe2e22628e03f295a096ead8d74e03c8f2e324c171"
+  },
+  "github_mutations": 0,
+  "new_native_requests": 1,
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "23aae999b86d9b9783b927483659c465c9ed6df2fa07bb531a40dff2ae75030c"
+  },
+  "script": {
+    "path": "scripts/audit_msh_hmg_reference.py",
+    "sha256": "bf4c6beae44cb1d4f708b2a65b74740069fedbbf805c51b7a75a8ae7b2a9fca2"
+  },
+  "shared_helpers": [
+    {
+      "path": "scripts/audit_bla_primary_identifiers.py",
+      "sha256": "d3a6cf163b9be1ca37f0670e98cc6753ef5f6f4b1cd36dfeec6f198c0fe9d77f"
+    },
+    {
+      "path": "scripts/audit_card_gene_reference_followup.py",
+      "sha256": "50f9c57b425a432a83eedae3699f80b9ba246d3e7ddb8164444def3e1b3af732"
+    },
+    {
+      "path": "scripts/audit_card_literature_expansion.py",
+      "sha256": "1a90ceb23c83c3d28a926b97e45d5ecf029a9d4eb1340bde8446af8cd2d63bbd"
+    },
+    {
+      "path": "scripts/audit_card_reference_lineages.py",
+      "sha256": "71474aa505ffdea55c2147eb934d9885ebdb040806f818b27490c51d8197aaa5"
+    },
+    {
+      "path": "scripts/audit_card_reference_memberships.py",
+      "sha256": "a247908f66360b08d8a1e8bd400b71ce30f5ecf95b81fe92d29057e4186be81d"
+    },
+    {
+      "path": "scripts/audit_sal_reference_context.py",
+      "sha256": "39cb77220df99b8f07bd17749a84bf50f8923263f89d59158ffa3fb3ff53d27f"
+    },
+    {
+      "path": "scripts/audit_topoisomerase_references.py",
+      "sha256": "440bc495fbc08e9e02b4365a61a41b50893638ac7a222cd3990dceb44676442a"
+    },
+    {
+      "path": "scripts/audit_curator_resistance_fields.py",
+      "sha256": "bcc3493cca199a418b6eb69cec5b51a293fe3a8aa15ed3272f7f285616e0d5dd"
+    }
+  ],
+  "status": "SOURCE_SPECIFIC_GENE_REFERENCES_VERIFIED_EXPERIMENTAL_IDENTITIES_OPEN",
+  "summary": {
+    "complete_records_loaded": 8,
+    "current_corpus_hashes_verified": 2939,
+    "excluded_same_citation_candidates": 1,
+    "new_native_requests": 1,
+    "new_term_reference_links": 2,
+    "new_unique_reference_proteins": 1,
+    "previously_selected_reference_proteins": 1,
+    "reused_native_taxonomy_nodes": 4,
+    "selected_references": 2,
+    "source_claims_bound": 9,
+    "terms_investigated": 2,
+    "whole_record_primary_signoffs": 0
+  },
+  "test_report": {
+    "path": "reports/resistance-grounding-2026-10-15-msh-hmg-reference/tests.xml",
+    "sha256": "6364f1f0428fdf0551c3d4a3569df2e33c1cd3521bd0cfd3573ac3eda6d04f0c"
+  },
+  "tests": {
+    "path": "tests/test_msh_hmg_reference.py",
+    "sha256": "22e18f8627a1d6c0f8233afb3c327617c846da85fb5a01552b68846d8546ffcf"
+  },
+  "verification_script": {
+    "path": "reports/resistance-grounding-2026-10-15-msh-hmg-reference/verify.py",
+    "sha256": "821ca34991ff5079a38d80b5050093d759f26458f746aa482331a4e9012bfe79"
+  }
+}

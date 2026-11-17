@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-15",
+  "scope": "ACR_REFERENCE_CONTEXT_REPLAY_NOT_BIOLOGICAL_CURATION_OR_FULL_QC",
+  "base_commit": "9d967d482277d4c762b3c56424b4e83d0dea83f5",
+  "branch": "research/acr-reference-context",
+  "artifacts": {
+    "dossier": {"path": "research/2026-10-15-acr-reference-context.json", "sha256": "51d97fece6721d9abf917faaf1127989e51807009583b5840532545540707033"},
+    "plan": {"path": "research/2026-10-15-acr-reference-context-plan.json", "sha256": "437aa7ead328f4d0959af6beb1c2890e6aaf0b0d465426e4e699f98264c45ccb"},
+    "assessment": {"path": "research/2026-10-15-acr-reference-context-assessment.json", "sha256": "2f2dfd9e92543b30ce6d66ec0272efe2d57ac1edae0b7b7c04c86e3ac019e23c"},
+    "canary": {"path": "research/2026-10-15-acr-reference-context-canary.json", "sha256": "0f005604c2ba134ace754dfc4859a8fe3672549a576175dceb4b5529ffe960bc"},
+    "script": {"path": "scripts/audit_acr_reference_context.py", "sha256": "6951158de691bed1343bf29784f9a24b81958713e602d202f0c42cabe7553c0a"},
+    "tests": {"path": "tests/test_acr_reference_context.py", "sha256": "4fb17f1a2e5d35c95e334bbe9b6097f1ce4fa971068c71ac2b513824d74a6946"},
+    "report": {"path": "research/2026-10-07-resistance-gene-grounding.md", "sha256": "509b213b8d09a954080f7f18950d189cbf78e1be2e7433052cf8282f237b5a34"}
+  },
+  "checks": {
+    "focused_pytest": {"command": ".venv/bin/pytest -q tests/test_acr_reference_context.py", "passed": 35, "skipped": 0, "failed": 0},
+    "combined_pytest": {
+      "command": ".venv/bin/pytest -q tests/test_acr_reference_context.py tests/test_card_complex_members.py tests/test_card_literature_expansion.py tests/test_card_literature_proteins.py tests/test_card_reference_lineages.py",
+      "passed": 161,
+      "skipped": 1,
+      "failed": 0,
+      "skip": "test_card_reference_lineages.test_offline_native_replay: known qualification deltas lack historical fixtures; public artifact checks still run"
+    },
+    "ruff": "PASS",
+    "git_diff_check": "PASS",
+    "read_only_offline_replay": "PASS_WITH_NETWORK_AND_PYTHON_FILE_WRITES_DENIED",
+    "explicit_source_pins": {"occurrences": 56, "distinct_local_paths": 47, "all_verified": true},
+    "corpus_record_hashes": {"checked": 2939, "changed": 0},
+    "previous_report": {
+      "sha256": "352e309e3f48aad88d22e2619cc082f11f4732d16e8d4970826fbe9de98f2fb3",
+      "bytes": 942664,
+      "all_bytes_preserved": true,
+      "sole_remaining_work_heading_preserved": true
+    },
+    "adversarial_self_review": "Checked query absence versus missing queries, primary versus secondary citations, regulator membership versus structural composition, whole-complex versus protein identity, historical yeast name collisions, and corpus/report preservation; no additional supported defect identified."
+  },
+  "full_authoritative_qc": {
+    "run": false,
+    "limitation": "Pinned RDKit 2026.3.5 is unavailable in this Intel macOS environment; no full-QC or biological-curation verification is claimed."
+  },
+  "biological_records_curated": 0,
+  "source_owned_curation_inputs_changed": false,
+  "experimental_identifiers_assigned": 0,
+  "whole_record_primary_signoffs": 0,
+  "new_uniprot_requests": 0,
+  "ncbi_requests": 0,
+  "issue_1040": "DEFERRED",
+  "outreach": false,
+  "reuse_terms_review_resumed": false,
+  "github_mutations": 0,
+  "full_corpus_goal_status": "OPEN"
+}

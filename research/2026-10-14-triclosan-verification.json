@@ -1,0 +1,133 @@
+{
+  "audit_script": {
+    "path": "scripts/audit_triclosan_context.py",
+    "sha256": "81c564cf93f765fe86bb74224667b3bcc31516890aff90ba512baf91cf897c44"
+  },
+  "baseline_commit": "5e9c257a69d5a0c998e57447195f8c40d62d2a30",
+  "checkpoint": {
+    "path": "research/2026-10-14-triclosan-context.json",
+    "sha256": "b9acd6b77ef071a50186e87cb04795bbf95d6140fd7267bdba1387dec6c6b957"
+  },
+  "checks": {
+    "git_diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "repository_ruff": {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!"
+    }
+  },
+  "focused_results": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-14-triclosan/focused-tests-final.xml",
+      "sha256": "862c493b6f4d7c8b7fb99442726f4a0d6f33bf3a83dfeb51ca503f568461e308"
+    },
+    "offline_replay_blocked_requests_and_sockets": true,
+    "passed": 202,
+    "skip_details": [
+      {
+        "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+        "test": "tests.test_card_structure_links.test_cached_export_reproduces_when_research_cache_is_available"
+      }
+    ],
+    "skipped": 1,
+    "tests": 203
+  },
+  "network": {
+    "held_sources_retried": 0,
+    "http_200": 7,
+    "http_403": 1,
+    "native_domains": [
+      "data.rcsb.org",
+      "europepmc.org",
+      "rest.uniprot.org",
+      "www.ebi.ac.uk"
+    ],
+    "native_http_attempts": 8,
+    "ncbi_requests": 0,
+    "new_primary_hold": "PMID:17720796 PDF HTTP 403; no alternate route attempted",
+    "new_taxonomy_requests": 0
+  },
+  "preservation": {
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "corpus_records_byte_identical": 2939,
+    "current_census": {
+      "path": "research/2026-10-14-j1074-resistance-grounding.tsv",
+      "sha256": "425c2852b7443e73c5e79cfd5b30a3d4cba895c321ffa9e59c9c18afb2ed8aab"
+    },
+    "existing_files_checked": 7261,
+    "generated_artifacts_unchanged": true,
+    "prior_checkpoints_unchanged": true,
+    "protected_baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-triclosan/protected-before.json",
+      "sha256": "231db37ff97090b578aadb5437a2edbf06f195c295c34c2ad0899eec8a779dec"
+    },
+    "source_owned_inputs_unchanged": true,
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "2552dba25171f01d534024f47294976b21086b48d7c0d30fb7181861042a93ce"
+  },
+  "scope": {
+    "biological_records_changed": 0,
+    "corpus_records_in_scope": 2939,
+    "curated_resistance_assertions": 0,
+    "empty_opmh_queries": 2,
+    "full_authoritative_qc": "NOT_RUN_RESEARCH_ONLY_NO_BIOLOGICAL_OR_GENERATED_CHANGES",
+    "github_mutations": 0,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "new_native_requests": 8,
+    "new_primary_access_holds": 1,
+    "pdb_entities": 2,
+    "records_in_this_checkpoint": 1,
+    "source_adoptions": 0,
+    "source_assertions_preserved": 10,
+    "source_terms_investigated": 1,
+    "unreviewed_locus_references": 3,
+    "whole_record_primary_signoffs": 0
+  },
+  "self_review": [
+    "Unreviewed systematic loci are not individual inferred TriA/TriB/TriC symbols or exact alleles.",
+    "PAO1 reference strain and species ranks stay distinct from original experimental derivatives.",
+    "PDB 6VEJ_2 retains both UniProt references; no representative or entity architecture inferred.",
+    "The later structural citation does not establish the held original paper's experimental subjects.",
+    "Both completed zero-result OpmH queries remain scoped negatives, not biological absence.",
+    "The report overview now uses the current J1074 progress ledger and species-level disposition.",
+    "No sequence, exact variant, construct, protocol or numeric AST exported."
+  ],
+  "tests": {
+    "path": "tests/test_triclosan_context.py",
+    "sha256": "5dd673289b0352d1002f1ca075abfd1a97e8e7ff36025885c6196f877874553c"
+  },
+  "transport_script": {
+    "path": "reports/resistance-grounding-2026-10-14-triclosan/research_triclosan_context_20261014.py",
+    "sha256": "6e8eca0fdbe187850ce29c0ba1e73e5ef5682a8b8828ceee9b93a980efa7328d"
+  },
+  "verification_script": {
+    "path": "reports/resistance-grounding-2026-10-14-triclosan/verify_checkpoint.py",
+    "sha256": "28ecab47555006ee29f3ff773c10f320e6ea8fd76b5de236beb8fd1d7a3d29e2"
+  },
+  "verified_at": "2026-10-14T09:09:37.634923+00:00"
+}

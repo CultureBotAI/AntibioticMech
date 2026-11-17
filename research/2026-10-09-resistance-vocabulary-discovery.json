@@ -1,0 +1,274 @@
+{
+  "biological_record_changes": 0,
+  "cache_verification": {
+    "candidate_exports_recomputed_from_validated_responses": true,
+    "manifest": {
+      "path": "reports/resistance-grounding-2026-10-09-vocabulary-discovery/citation-cache-pins.json",
+      "sha256": "ce3ac1a672f90f37c764a15fb1b9274a64dec57f5d4c9db3e1c6a6cc23234adf"
+    },
+    "responses": 7466
+  },
+  "canaries": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-vocabulary-discovery/epmc-discovery-75fb242e784ed573dc4fc70a5ae74d66976d2926e1d9825b427d914228844443.json",
+        "sha256": "b0599a7e04a3fe31bf5e5c396e52b7d1e83435f19b0068462b94062bdea2e1b1"
+      },
+      "candidate_ids": [
+        "ETH:775582",
+        "MED:19949048",
+        "MED:27858169",
+        "MED:28061020",
+        "MED:28576760",
+        "MED:41594142",
+        "MED:7737474"
+      ],
+      "expected_citation": "MED:27858169",
+      "hit_count": 7,
+      "identifier": "CHEBI:141991",
+      "known_primary_recovered": true,
+      "primary_review_status": "NOT_CHANGED_BY_DISCOVERY",
+      "query": "TITLE_ABS:\"cinnamycin\" AND (TITLE_ABS:resistan* OR TITLE_ABS:susceptib* OR TITLE_ABS:toleran* OR TITLE_ABS:immun* OR TITLE_ABS:sensitiv*) AND (TITLE_ABS:gene* OR TITLE_ABS:allele* OR TITLE_ABS:mutan* OR TITLE_ABS:mutation* OR TITLE_ABS:genetic* OR TITLE_ABS:genom*)",
+      "retrieved_at": "2026-10-09T20:08:19.493817+00:00"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-vocabulary-discovery/epmc-discovery-833650edbf6039ec9eddf8491cba057135747fc228c0cda08974891f0cc16869.json",
+        "sha256": "d6fbfc258ec8e9b3f2e37146b764ac3a6bd3ee4a1670f658a8ec5952d85d491a"
+      },
+      "candidate_ids": [
+        "MED:30472287",
+        "MED:33106269",
+        "MED:35893538",
+        "MED:37632676",
+        "MED:39983037",
+        "MED:40099907",
+        "MED:40649886",
+        "MED:40844229",
+        "MED:40848518"
+      ],
+      "expected_citation": "MED:33106269",
+      "hit_count": 9,
+      "identifier": "CHEBI:133127",
+      "known_primary_recovered": true,
+      "primary_review_status": "NOT_CHANGED_BY_DISCOVERY",
+      "query": "TITLE_ABS:\"lugdunin\" AND (TITLE_ABS:resistan* OR TITLE_ABS:susceptib* OR TITLE_ABS:toleran* OR TITLE_ABS:immun* OR TITLE_ABS:sensitiv*) AND (TITLE_ABS:gene* OR TITLE_ABS:allele* OR TITLE_ABS:mutan* OR TITLE_ABS:mutation* OR TITLE_ABS:genetic* OR TITLE_ABS:genom*)",
+      "retrieved_at": "2026-10-09T20:09:24.126529+00:00"
+    }
+  ],
+  "candidate_index": {
+    "encoding": "gzip",
+    "path": "research/2026-10-09-resistance-vocabulary-discovery-candidates.json.gz",
+    "sha256": "86e532f162a827a285822355d68f052fc74023653fcb0ac102ddaeb9c37da969",
+    "stored_bytes": 13071878,
+    "uncompressed_bytes": 81476833,
+    "uncompressed_sha256": "298b99151eb526f451ab34db83b52789a9f8618e2680806ac5d661c7a138e426"
+  },
+  "citation_identity_union": {
+    "encoding": "gzip",
+    "path": "research/2026-10-09-resistance-vocabulary-discovery-union.json.gz",
+    "sha256": "1faa45340727d7d35360b82950c866918c592dce850cf67ac5415023d07a2e72",
+    "stored_bytes": 6130177,
+    "uncompressed_bytes": 41244529,
+    "uncompressed_sha256": "5c990a37faf619a0bc558e84dd1be66f386674fb5b28023c371636e90251b05f"
+  },
+  "citation_union_summary": {
+    "distinct_queries": 7466,
+    "historical_distinct_citations": 247623,
+    "historical_distinct_citations_not_in_v2_initial_pages": 213972,
+    "historical_memberships_lost": 0,
+    "historical_record_citation_memberships": 500533,
+    "query_memberships": 7469,
+    "query_status": {
+      "CANDIDATES_REQUIRE_REVIEW": 2409,
+      "NO_HITS_IN_LIMITED_QUERY": 4200,
+      "TRUNCATED_REFINEMENT_REQUIRED": 860
+    },
+    "records": 2939,
+    "records_with_added_citations": 1634,
+    "union_distinct_citations": 286114,
+    "union_record_citation_memberships": 547953,
+    "v2_distinct_citations": 72142,
+    "v2_distinct_citations_not_in_history": 38491,
+    "v2_record_citation_memberships": 95862
+  },
+  "coverage": {
+    "bulk_new_responses": 7464,
+    "canary_responses": 2,
+    "distinct_queries": 7466,
+    "query_memberships": 7469,
+    "recorded_names": 16030,
+    "records": 2939,
+    "records_with_existing_resistance_or_scores": 319,
+    "retrieved_at_first": "2026-10-09T20:08:19.493817+00:00",
+    "retrieved_at_last": "2026-10-09T21:28:33.577134+00:00"
+  },
+  "criteria": "all-record-provenance-names-title-abstract-resistance-immunity-genetics-v2",
+  "curation_events_added": 0,
+  "date": "2026-10-09",
+  "distinct_query_status": {
+    "CANDIDATES_REQUIRE_REVIEW": 2408,
+    "NO_HITS_IN_LIMITED_QUERY": 4199,
+    "TRUNCATED_REFINEMENT_REQUIRED": 859
+  },
+  "historical_inputs": [
+    {
+      "path": "research/2026-10-07-resistance-discovery-candidates.json",
+      "sha256": "62a15d016a329193679d52d34252b63dc91307909d75be8b92954477bfec551e",
+      "stored_bytes": 2755262,
+      "uncompressed_bytes": 2755262,
+      "uncompressed_sha256": "62a15d016a329193679d52d34252b63dc91307909d75be8b92954477bfec551e"
+    },
+    {
+      "path": "research/2026-10-07-resistance-discovery-current-candidates.json",
+      "sha256": "5404527e95ec2adc37faad773a8fc699433495503cf82f1bfe278385198d201f",
+      "stored_bytes": 14981931,
+      "uncompressed_bytes": 14981931,
+      "uncompressed_sha256": "5404527e95ec2adc37faad773a8fc699433495503cf82f1bfe278385198d201f"
+    },
+    {
+      "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+      "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f",
+      "stored_bytes": 65706067,
+      "uncompressed_bytes": 65706067,
+      "uncompressed_sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+    },
+    {
+      "path": "research/2026-10-08-resistance-discovery-expansion-candidates.json.gz",
+      "sha256": "6df989a88ca0e99f6280e981e91e5a3b4e45ed14565f45da3a7a37c9557adb92",
+      "stored_bytes": 38082180,
+      "uncompressed_bytes": 203884217,
+      "uncompressed_sha256": "c12d8d9b2830e16176846184a066c3db8938e577f74e4468b9955d95f2dbe28e"
+    },
+    {
+      "path": "research/2026-10-09-resistance-discovery-restart-candidates.json.gz",
+      "sha256": "1a24df51210772265636e307ab73e078140317c8c945d88e0ab427e6955c3326",
+      "stored_bytes": 10468778,
+      "uncompressed_bytes": 55548318,
+      "uncompressed_sha256": "ffaef9c299aa5b485afacf5c9209d4a17036bed61b8cca40149421df194c9a52"
+    },
+    {
+      "path": "research/2026-10-09-resistance-discovery-query-local-candidates.json.gz",
+      "sha256": "7f09b34ddeedfb5a5b866ef48d8cb706d55197e9ed7588cbb86a0a1275bdb53e",
+      "stored_bytes": 24355547,
+      "uncompressed_bytes": 130446197,
+      "uncompressed_sha256": "b7017633469ac8dafede946ceeb8a4c5ee4f1ad760c1677d83cca889fdb475f2"
+    },
+    {
+      "path": "research/2026-10-09-resistance-discovery-date-sort-candidates.json.gz",
+      "sha256": "fc28e63c67fe2b9c27e241dc37fefff12fa78e56891a2ec6a9e147fa2da828f6",
+      "stored_bytes": 6883981,
+      "uncompressed_bytes": 36800476,
+      "uncompressed_sha256": "eb783fc8c4878c838d8afde4e32e84129fe68265dd1624acf1b4293bc743d7b3"
+    }
+  ],
+  "ledger": {
+    "path": "research/2026-10-09-resistance-vocabulary-discovery-ledger.tsv",
+    "sha256": "026cb6efe7e6dae5b4db44cc2f33829445c7d8299108505adb6b01ea002c09a4"
+  },
+  "limitations": [
+    "Only names already present in records are covered; undiscovered historical names remain open.",
+    "INN, brand, exact and related synonyms retain their source scope; none proves exact material identity.",
+    "Shared names do not merge salts, stereoisomers, mixtures, structures or record identifiers.",
+    "An OR-query hit does not identify which name matched or prove resistance to an exact structure.",
+    "Only the first 100 provider-ranked citations per query are retained; truncated queries need refinement.",
+    "Added citations are relative to the retained canonical page, not absence from its complete results.",
+    "Completed searches are not primary review, allele grounding, phenotype evidence or biological absence.",
+    "Expanded vocabulary adds gene*, immun* and sensitiv*; historical v1 results remain separate.",
+    "This is a full broader query, not a live-v1 subtraction; retain older citations when merging.",
+    "Broader vocabulary improves the known-paper canaries, not proven corpus recall or precision.",
+    "This union retains accepted historical prefixes; it does not splice cursor chains.",
+    "Different source-qualified citation identities are not independent biological replicates.",
+    "Name co-occurrence and shared aliases do not establish exact compound identity.",
+    "V2 stores only initial pages; truncated queries remain open for separate traversal.",
+    "Live-index changes and ranking affect additions; not all differences are vocabulary effects.",
+    "No new allele, protein, taxon, phenotype or mechanism assignments are made.",
+    "All records remain in scope for primary evidence review; no-hit queries do not prove absence.",
+    "Existing expansion tooling defaults to v1; v2 cursor expansion needs a separate profile-aware plan.",
+    "Two successful known-paper canaries are not corpus recall, precision or relevance estimates.",
+    "Prior biological curation remains unchanged; this checkpoint adds no verified resistance assertions."
+  ],
+  "network": {
+    "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+    "maximum_attempts_per_query": 3,
+    "maximum_bulk_new_responses": 7466,
+    "ncbi_endpoint_requests": 0,
+    "ncbi_outreach": false,
+    "redirects_followed": false,
+    "source_adoption": false
+  },
+  "plan": {
+    "encoding": "gzip",
+    "path": "research/2026-10-09-resistance-vocabulary-discovery-plan.json.gz",
+    "sha256": "7e2030ff406c7d18a7ae3457bfabbd05faeeddbd387c7f01329b495039731520",
+    "stored_bytes": 736886,
+    "uncompressed_bytes": 10943931,
+    "uncompressed_sha256": "a25d4d94246cc3b1252a9a75b591608c6e1bde2375f4a8470413bb807b61469a"
+  },
+  "primary_review_status": "PENDING",
+  "query_vocabulary": {
+    "default_cli_vocabulary": "v1",
+    "existing_v1_query_memberships_byte_compatible": 7469,
+    "genetics_terms": [
+      "gene*",
+      "allele*",
+      "mutan*",
+      "mutation*",
+      "genetic*",
+      "genom*"
+    ],
+    "live_v1_subtraction": false,
+    "phenotype_terms": [
+      "resistan*",
+      "susceptib*",
+      "toleran*",
+      "immun*",
+      "sensitiv*"
+    ]
+  },
+  "records_with_v2_truncated_queries": 536,
+  "scope": "INITIAL_CITATION_DISCOVERY_NOT_PRIMARY_REVIEW_OR_BIOLOGICAL_GROUNDING",
+  "search_exit": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "scripts/discover_resistance_aliases.py",
+      "search",
+      "--output-dir",
+      "reports/resistance-grounding-2026-10-09-vocabulary-discovery",
+      "--vocabulary",
+      "immunity-v2",
+      "--max-new-requests",
+      "7466",
+      "--allow-network"
+    ],
+    "exit_code": 0,
+    "finished_at": "2026-10-09T21:28:35.233675+00:00",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-09-vocabulary-discovery/bulk-search.log",
+      "sha256": "04b946f687fe29e898dc9d4c85f390d8c6f77ce8d4639ce7fffa03029c9a1320"
+    },
+    "maximum_attempts_per_response": 3,
+    "maximum_new_responses": 7466,
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-09-vocabulary-discovery/vocabulary-discovery-plan.json",
+      "sha256": "a25d4d94246cc3b1252a9a75b591608c6e1bde2375f4a8470413bb807b61469a"
+    },
+    "started_at": "2026-10-09T20:10:02.461576+00:00"
+  },
+  "summary": {
+    "names": 16030,
+    "queries": 7469,
+    "query_status": {
+      "CANDIDATES_REQUIRE_REVIEW": 2409,
+      "NO_HITS_IN_LIMITED_QUERY": 4200,
+      "TRUNCATED_REFINEMENT_REQUIRED": 860
+    },
+    "record_search_status": {
+      "ALL_INITIAL_NAME_QUERIES_SEARCHED": 2939
+    },
+    "records": 2939,
+    "records_with_added_citations": 925,
+    "records_with_shared_names": 137
+  },
+  "whole_record_reviews_completed": 0
+}

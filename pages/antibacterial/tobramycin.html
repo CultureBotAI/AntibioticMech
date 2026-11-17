@@ -7,7 +7,7 @@
 <meta name="description" content="tobramycin (CHEBI:28864): A amino cyclitol glycoside that is kanamycin B lacking the 3-hydroxy substituent from the 2,6-diaminoglucose ring.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>tobramycin</h1>
 <p class="meta">
   <code class="curie">CHEBI:28864</code>
@@ -37,16 +48,19 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000016">aminoglycoside antibiotic</a><code class="curie">ARO:0000016</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_22479">CHEBI:22479</a>      <code class="curie">CHEBI:22479</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000016">ARO:0000016</a>      <code class="curie">ARO:0000016</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_22479"><code class="curie">CHEBI:22479</code></a></li>
+  <li>aminoglycoside antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_0000016"><code class="curie">ARO:0000016</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C18H37N5O9</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>467.52 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>467.25913 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">NLVFBUXFDBBNBW-PBSUHMDJSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H](N)C[C@@H]2N)[C@H](N)C[C@@H]1O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C18H37N5O9/c19-3-9-8(25)2-7(22)17(29-9)31-15-5(20)1-6(21)16(14(15)28)32-18-13(27)11(23)12(26)10(4-24)30-18/h5-18,24-28H,1-4,19-23H2/t5-,6+,7+,8-,9+,10+,11-,12+,13+,14-,15+,16-,17+,18+/m0/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -57,7 +71,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000052">ARO:0000052</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_0000052">tobramycin</a><code class="curie">ARO:0000052</code></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=32986-56-4">cas:32986-56-4</a></li>
   <li><a href="https://www.kegg.jp/entry/C00397">kegg.compound:C00397</a></li>
   <li><a href="http://lincsportal.ccs.miami.edu/SmallMolecules/#/view/LSM-6534">lincs.smallmolecule:LSM-6534</a></li>
@@ -88,13 +102,14 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33282">CHEBI:33282</a>    <code class="curie">CHEBI:33282</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antibacterial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33282"><code class="curie">CHEBI:33282</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -114,13 +129,15 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>antibiotic sensitive 16S rRNA <span class="pill plain">NUCLEIC_ACID</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000755">ARO:3000755</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. 16S rRNA is asserted as the target. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000755</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000755">ARO:3000755</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
@@ -129,203 +146,508 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
-<h2>Activity spectrum</h2>
+<h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">32 observations &middot; <a href="tobramycin/activity-1.html">Browse all observations</a> &middot; <a href="tobramycin/record-aa18acc32b63104c025460f484fc06851a6978e8ed607c3bfc09702c5934ffba.json.gz" download>Complete record (JSON.gz)</a></p>
+<div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
-  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Assay</th><th scope="col">Strain</th></tr></thead>
-  <tr>
-    <td><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></td>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0349</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN11953777">SAMN11953777</a><br>    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
+  <tr id="observation-2">
+    <td><em>Klebsiella pneumoniae</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=573">NCBITaxon:573</a></td>
     <td>—</td>
     <td class="num">16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0497</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN11953783">SAMN11953783</a><br>    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Acinetobacter baumannii</em> <code class="curie">NCBITaxon:470</code></td>
+  <tr id="observation-3">
+    <td><em>Acinetobacter baumannii</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=470">NCBITaxon:470</a></td>
     <td>—</td>
     <td class="num">16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2024 M100 S34.</td>
     <td class="meta">0297</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN04901687">SAMN04901687</a><br>    </td>
+    <td><details class="activity-evidence" data-row="2" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></td>
+  <tr id="observation-4">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0346</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN11953774">SAMN11953774</a><br>    </td>
+    <td><details class="activity-evidence" data-row="3" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
+  <tr id="observation-5">
+    <td><em>Klebsiella pneumoniae</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=573">NCBITaxon:573</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1149</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111336">SAMN34111336</a><br>    </td>
+    <td><details class="activity-evidence" data-row="4" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterobacter cloacae complex</em> <code class="curie">NCBITaxon:354276</code></td>
+  <tr id="observation-6">
+    <td><em>Enterobacter cloacae complex</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=354276">NCBITaxon:354276</a></td>
     <td>—</td>
     <td class="num">16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1151</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111338">SAMN34111338</a><br>    </td>
+    <td><details class="activity-evidence" data-row="5" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterobacter cloacae complex</em> <code class="curie">NCBITaxon:354276</code></td>
+  <tr id="observation-7">
+    <td><em>Enterobacter cloacae complex</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=354276">NCBITaxon:354276</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1152</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111339">SAMN34111339</a><br>    </td>
+    <td><details class="activity-evidence" data-row="6" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
+  <tr id="observation-8">
+    <td><em>Klebsiella pneumoniae</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=573">NCBITaxon:573</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1153</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111340">SAMN34111340</a><br>    </td>
+    <td><details class="activity-evidence" data-row="7" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Pseudomonas aeruginosa</em> <code class="curie">NCBITaxon:287</code></td>
+  <tr id="observation-9">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1155</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111341">SAMN34111341</a><br>    </td>
+    <td><details class="activity-evidence" data-row="8" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Pseudomonas aeruginosa</em> <code class="curie">NCBITaxon:287</code></td>
+  <tr id="observation-10">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1156</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111342">SAMN34111342</a><br>    </td>
+    <td><details class="activity-evidence" data-row="9" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Pseudomonas aeruginosa</em> <code class="curie">NCBITaxon:287</code></td>
+  <tr id="observation-11">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1157</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111343">SAMN34111343</a><br>    </td>
+    <td><details class="activity-evidence" data-row="10" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
+  <tr id="observation-12">
+    <td><em>Klebsiella pneumoniae</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=573">NCBITaxon:573</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1158</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111344">SAMN34111344</a><br>    </td>
+    <td><details class="activity-evidence" data-row="11" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Pseudomonas aeruginosa</em> <code class="curie">NCBITaxon:287</code></td>
+  <tr id="observation-13">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1159</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111345">SAMN34111345</a><br>    </td>
+    <td><details class="activity-evidence" data-row="12" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterobacter cloacae complex</em> <code class="curie">NCBITaxon:354276</code></td>
+  <tr id="observation-14">
+    <td><em>Enterobacter cloacae complex</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=354276">NCBITaxon:354276</a></td>
     <td>—</td>
     <td class="num">8.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1160</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111346">SAMN34111346</a><br>    </td>
+    <td><details class="activity-evidence" data-row="13" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Pseudomonas aeruginosa</em> <code class="curie">NCBITaxon:287</code></td>
+  <tr id="observation-15">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1161</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111347">SAMN34111347</a><br>    </td>
+    <td><details class="activity-evidence" data-row="14" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></td>
+  <tr id="observation-16">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
     <td>—</td>
     <td class="num">8.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1162</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111348">SAMN34111348</a><br>    </td>
+    <td><details class="activity-evidence" data-row="15" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
+  <tr id="observation-17">
+    <td><em>Klebsiella pneumoniae</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=573">NCBITaxon:573</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1163</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN34111349">SAMN34111349</a><br>    </td>
+    <td><details class="activity-evidence" data-row="16" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Pseudomonas aeruginosa</em> <code class="curie">NCBITaxon:287</code></td>
+  <tr id="observation-18">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
     <td>—</td>
     <td class="num">8.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1106</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN19970475">SAMN19970475</a><br>    </td>
+    <td><details class="activity-evidence" data-row="17" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Pseudomonas aeruginosa</em> <code class="curie">NCBITaxon:287</code></td>
+  <tr id="observation-19">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1107</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN31096620">SAMN31096620</a><br>    </td>
+    <td><details class="activity-evidence" data-row="18" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Pseudomonas aeruginosa</em> <code class="curie">NCBITaxon:287</code></td>
+  <tr id="observation-20">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1268</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN33435241">SAMN33435241</a><br>    </td>
+    <td><details class="activity-evidence" data-row="19" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Pseudomonas aeruginosa</em> <code class="curie">NCBITaxon:287</code></td>
+  <tr id="observation-21">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1269</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN33435242">SAMN33435242</a><br>    </td>
+    <td><details class="activity-evidence" data-row="20" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Pseudomonas aeruginosa</em> <code class="curie">NCBITaxon:287</code></td>
+  <tr id="observation-22">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1270</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN33435243">SAMN33435243</a><br>    </td>
+    <td><details class="activity-evidence" data-row="21" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Pseudomonas aeruginosa</em> <code class="curie">NCBITaxon:287</code></td>
+  <tr id="observation-23">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
     <td>—</td>
     <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">1328</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN50502207">SAMN50502207</a><br>    </td>
+    <td><details class="activity-evidence" data-row="22" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
+  <tr id="observation-24">
+    <td><em>Klebsiella pneumoniae</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=573">NCBITaxon:573</a></td>
     <td>—</td>
     <td class="num">16.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0347</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN11953775">SAMN11953775</a><br>    </td>
+    <td><details class="activity-evidence" data-row="23" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></td>
+  <tr id="observation-25">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
     <td>—</td>
     <td class="num">8.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0495</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN11953781">SAMN11953781</a><br>    </td>
+    <td><details class="activity-evidence" data-row="24" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></td>
+  <tr id="observation-26">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
     <td>—</td>
     <td class="num">8.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0538</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN11953785">SAMN11953785</a><br>    </td>
+    <td><details class="activity-evidence" data-row="25" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
+  <tr id="observation-27">
+    <td><em>Acinetobacter baumannii</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=470">NCBITaxon:470</a></td>
+    <td>—</td>
+    <td class="num">16.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; CDC/FDA AR Isolate Bank reports an R interpretation without a versioned breakpoint footnote on this isolate page.</td>
+    <td class="meta">0033</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN04014874">SAMN04014874</a><br>    </td>
+    <td><details class="activity-evidence" data-row="26" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-28">
+    <td><em>Acinetobacter baumannii</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=470">NCBITaxon:470</a></td>
+    <td>—</td>
+    <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2024 M100 S34 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.</td>
+    <td class="meta">0078</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN04014919">SAMN04014919</a><br>    </td>
+    <td><details class="activity-evidence" data-row="27" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-29">
+    <td><em>Acinetobacter baumannii</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=470">NCBITaxon:470</a></td>
+    <td>—</td>
+    <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">Broth microdilution tobramycin MIC; modal MIC reported; interpreted using CLSI 2020 M100 S30 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.</td>
+    <td class="meta">0083</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN04014924">SAMN04014924</a><br>    </td>
+    <td><details class="activity-evidence" data-row="28" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-30">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
+    <td>—</td>
+    <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CDC/FDA AR Isolate Bank tobramycin MIC; interpreted using CLSI 2026 M100 Ed36 per the Panel 1394 footnote.</td>
+    <td class="meta">1332</td>
+    <td class="meta">
+—    </td>
+    <td><details class="activity-evidence" data-row="29" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-31">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
+    <td>—</td>
+    <td class="num">&gt;16.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CDC/FDA AR Isolate Bank tobramycin MIC; interpreted using CLSI 2026 M100 Ed36 per the Panel 1394 footnote.</td>
+    <td class="meta">1333</td>
+    <td class="meta">
+—    </td>
+    <td><details class="activity-evidence" data-row="30" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-32">
+    <td><em>Pseudomonas aeruginosa</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287">NCBITaxon:287</a></td>
+    <td>—</td>
+    <td class="num">8.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CDC/FDA AR Isolate Bank tobramycin MIC; interpreted using CLSI 2026 M100 S36 per the Panel 1394 footnote.</td>
+    <td class="meta">1334</td>
+    <td class="meta">
+—    </td>
+    <td><details class="activity-evidence" data-row="31" data-offset="0" data-total="32" data-identifier="CHEBI:28864" data-key="NLVFBUXFDBBNBW-PBSUHMDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="tobramycin/activity-1-6da8b72d2ae98a10130f9a48dfe1b6fbfae662b921942c8baf87d45ab96420ba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  </tbody>
 </table>
 
+</div>
+
+
 <h2>Resistance mechanisms</h2>
-<p class="meta">116 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">116 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">95</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_INACTIVATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -334,7 +656,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002523</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002523">ARO:3002523</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -344,7 +666,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002524</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002524">ARO:3002524</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -354,7 +676,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002525</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002525">ARO:3002525</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -364,7 +686,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002526</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002526">ARO:3002526</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -374,7 +696,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002527</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002527">ARO:3002527</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -384,7 +706,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002536</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002536">ARO:3002536</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -394,7 +716,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002537</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002537">ARO:3002537</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -404,7 +726,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002533</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002533">ARO:3002533</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -414,7 +736,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002534</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002534">ARO:3002534</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -424,7 +746,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002535</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002535">ARO:3002535</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -434,7 +756,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004623</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004623">ARO:3004623</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -444,7 +766,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004621</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004621">ARO:3004621</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -454,7 +776,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005085</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005085">ARO:3005085</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -464,7 +786,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002539</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002539">ARO:3002539</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -474,7 +796,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005061</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005061">ARO:3005061</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -484,7 +806,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002600</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002600">ARO:3002600</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -494,7 +816,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002583</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002583">ARO:3002583</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -504,7 +826,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002584</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002584">ARO:3002584</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -514,7 +836,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002585</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002585">ARO:3002585</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -524,7 +846,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002586</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002586">ARO:3002586</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -534,7 +856,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004641</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004641">ARO:3004641</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -544,7 +866,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004638</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004638">ARO:3004638</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -554,7 +876,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002588</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002588">ARO:3002588</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -564,7 +886,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002587</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002587">ARO:3002587</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -574,7 +896,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002594</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002594">ARO:3002594</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -584,7 +906,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002595</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002595">ARO:3002595</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -594,7 +916,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002596</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002596">ARO:3002596</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -604,7 +926,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002545</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002545">ARO:3002545</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -614,7 +936,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002571</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002571">ARO:3002571</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -624,7 +946,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002572</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002572">ARO:3002572</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -634,7 +956,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002573</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002573">ARO:3002573</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -644,7 +966,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002574</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002574">ARO:3002574</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -654,7 +976,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002575</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002575">ARO:3002575</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -664,7 +986,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003677</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003677">ARO:3003677</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -674,7 +996,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003199</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003199">ARO:3003199</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -684,7 +1006,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003200</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003200">ARO:3003200</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -694,7 +1016,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007204</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007204">ARO:3007204</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -704,7 +1026,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002546</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002546">ARO:3002546</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -714,7 +1036,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003676</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003676">ARO:3003676</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -724,7 +1046,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002592</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002592">ARO:3002592</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -734,7 +1056,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002593</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002593">ARO:3002593</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -744,7 +1066,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002591</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002591">ARO:3002591</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -754,7 +1076,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002547</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002547">ARO:3002547</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -764,7 +1086,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005112</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005112">ARO:3005112</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -774,7 +1096,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005114</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005114">ARO:3005114</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -784,7 +1106,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005115</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005115">ARO:3005115</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -794,7 +1116,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005116</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005116">ARO:3005116</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -804,7 +1126,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005117</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005117">ARO:3005117</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -814,7 +1136,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005118</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005118">ARO:3005118</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -824,7 +1146,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005119</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005119">ARO:3005119</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -834,7 +1156,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002581</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002581">ARO:3002581</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -844,7 +1166,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002582</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002582">ARO:3002582</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -854,7 +1176,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002576</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002576">ARO:3002576</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -864,7 +1186,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002577</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002577">ARO:3002577</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -874,7 +1196,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002578</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002578">ARO:3002578</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -884,7 +1206,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002579</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002579">ARO:3002579</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -894,7 +1216,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002580</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002580">ARO:3002580</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -904,7 +1226,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002549</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002549">ARO:3002549</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -914,7 +1236,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002597</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002597">ARO:3002597</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -924,7 +1246,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002553</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002553">ARO:3002553</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -934,7 +1256,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002554</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002554">ARO:3002554</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -944,7 +1266,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002555</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002555">ARO:3002555</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -954,7 +1276,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002556</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002556">ARO:3002556</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -964,7 +1286,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002589</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002589">ARO:3002589</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -974,7 +1296,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002590</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002590">ARO:3002590</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -984,7 +1306,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002557</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002557">ARO:3002557</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -994,7 +1316,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002558</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002558">ARO:3002558</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1004,7 +1326,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004635</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004635">ARO:3004635</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1014,7 +1336,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004629</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004629">ARO:3004629</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1024,7 +1346,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002559</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002559">ARO:3002559</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1034,7 +1356,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002560</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002560">ARO:3002560</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1044,7 +1366,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002561</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002561">ARO:3002561</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1054,7 +1376,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002562</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002562">ARO:3002562</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1064,7 +1386,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002563</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002563">ARO:3002563</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1074,7 +1396,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002564</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002564">ARO:3002564</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1084,7 +1406,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002565</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002565">ARO:3002565</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1094,7 +1416,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002566</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002566">ARO:3002566</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1104,7 +1426,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002567</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002567">ARO:3002567</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1114,7 +1436,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002568</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002568">ARO:3002568</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1124,7 +1446,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002569</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002569">ARO:3002569</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1134,7 +1456,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002570</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002570">ARO:3002570</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1144,7 +1466,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3009655</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3009655">ARO:3009655</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1154,7 +1476,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000230</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000230">ARO:3000230</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1164,7 +1486,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002598</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002598">ARO:3002598</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1174,7 +1496,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002624</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002624">ARO:3002624</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1184,7 +1506,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002625</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002625">ARO:3002625</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1194,7 +1516,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002623</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002623">ARO:3002623</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1204,7 +1526,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003905</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003905">ARO:3003905</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1214,7 +1536,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002636</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002636">ARO:3002636</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1224,7 +1546,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002637</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002637">ARO:3002637</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1234,7 +1556,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002634</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002634">ARO:3002634</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1244,7 +1566,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004191</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004191">ARO:3004191</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1254,7 +1576,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002669</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002669">ARO:3002669</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1264,7 +1586,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007770</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007770">ARO:3007770</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1274,15 +1596,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007771</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007771">ARO:3007771</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">12</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -1291,7 +1616,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003408</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003408">ARO:3003408</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1301,7 +1626,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003237</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003237">ARO:3003237</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1311,7 +1636,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003516</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003516">ARO:3003516</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1321,7 +1646,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000858</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000858">ARO:3000858</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1331,7 +1656,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000859</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000859">ARO:3000859</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1341,7 +1666,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000860</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000860">ARO:3000860</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1351,7 +1676,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000861</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000861">ARO:3000861</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1361,7 +1686,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002667</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002667">ARO:3002667</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1371,7 +1696,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004677</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004677">ARO:3004677</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1381,7 +1706,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002668</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002668">ARO:3002668</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1391,7 +1716,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003198</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003198">ARO:3003198</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1401,15 +1726,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000862</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000862">ARO:3000862</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">7</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_EFFLUX</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -1418,7 +1746,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004082</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004082">ARO:3004082</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1428,7 +1756,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002981</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002981">ARO:3002981</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1438,7 +1766,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005049</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005049">ARO:3005049</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1448,7 +1776,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004598</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004598">ARO:3004598</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1458,7 +1786,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003038</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003038">ARO:3003038</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1468,7 +1796,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003032</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003032">ARO:3003032</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1478,15 +1806,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000491</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000491">ARO:3000491</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_REPLACEMENT <span class="pill plain">1</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_REPLACEMENT" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_REPLACEMENT</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -1495,15 +1826,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007456</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007456">ARO:3007456</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>UNKNOWN <span class="pill plain">1</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
+<table>
     <caption>UNKNOWN</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -1512,11 +1846,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003688</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003688">ARO:3003688</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -1636,32 +1972,82 @@ type — expand a group to see its determinants.</p>
     <span class="meta">2026-09-15 · codex · LLM-assisted</span>
     <p>Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 tobramycin-resistant Escherichia coli MIC observation for AR-0538.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_RESISTANT_TAXA</span>
+    <span class="meta">2026-09-18 · codex · LLM-assisted</span>
+    <p>Added CDC/FDA AR Isolate Bank Panel 1227 isolate 0033 Acinetobacter baumannii tobramycin MIC 16 mg/L with interpretation R; preserved source Unknown, BioSample SAMN04014874, Study ID CarbaNP-02, and MLST ST85(Pasteur)/ST1089(Oxford) in evidence notes.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANT_TAXA</span>
+    <span class="meta">2026-09-18 · codex · LLM-assisted</span>
+    <p>Fixes #428. Clarified the CDC/FDA AR Isolate Bank Panel 1227 isolate 0033 tobramycin evidence note for BioSample SAMN04014874 to include both normalized and original MIC units, and revised the same-row curation-history wording to call out the stable isolate-detail URL.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANT_TAXA</span>
+    <span class="meta">2026-09-18 · codex · LLM-assisted</span>
+    <p>Fixes #429. Restored the original 2026-09-18T10:14:31Z AR Bank 0033 tobramycin curation-history text so provenance remains append-only; left the #428 correction as a later clarification of normalized/original MIC units and the stable CDC/FDA AR Isolate Bank isolate-detail URL.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANT_TAXA</span>
+    <span class="meta">2026-09-19 · codex · LLM-assisted</span>
+    <p>Added one stable-URL CDC/FDA AR Isolate Bank Panel 1227 tobramycin-resistant Acinetobacter baumannii MIC observation for AR-0078; preserved source Pus, BioSample SAMN04014919, Study ID CarbaNP-47, and MLST ST229(Pasteur)/ST203(Oxford) in evidence notes.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANT_TAXA</span>
+    <span class="meta">2026-09-19 · codex · LLM-assisted</span>
+    <p>Added one stable-URL CDC/FDA AR Isolate Bank Panel 1227 tobramycin-resistant Acinetobacter baumannii MIC observation for AR-0083; preserved source Unknown, BioSample SAMN04014924, Study ID CarbaNP-52, and MLST ST1(Pasteur)/ST231/1604(Oxford) in evidence notes.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANT_TAXA</span>
+    <span class="meta">2026-09-20 · codex · LLM-assisted</span>
+    <p>Added one stable-URL CDC/FDA AR Isolate Bank Panel 1394 tobramycin-resistant Pseudomonas aeruginosa MIC observation for AR-1332; preserved source Urine, Study ID IMP-10, unavailable BioSample accession, and MLST ST357(Pasteur) in evidence notes.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANT_TAXA</span>
+    <span class="meta">2026-09-20 · codex · LLM-assisted</span>
+    <p>Added two stable-URL CDC/FDA AR Isolate Bank Panel 1394 tobramycin-resistant Pseudomonas aeruginosa MIC observations for AR-1333 and AR-1334; preserved sources Urine and P-trap water, Study IDs IMP-11 and IMP-12, unavailable BioSample accessions, and MLST ST2731(Pasteur)/ST235(Pasteur) in evidence notes.</p>
+  </li>
+  <li>
+    <span class="pill">STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS</span>
+    <span class="meta">2026-09-26 · codex · LLM-assisted</span>
+    <p>Structured BioSample accessions on 29 activity_spectrum observation(s) where evidence notes already named exactly one accession.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/tobramycin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/tobramycin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=tobramycin">MediaIngredientMech (tobramycin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=tobramycin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=tobramycin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=tobramycin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=tobramycin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

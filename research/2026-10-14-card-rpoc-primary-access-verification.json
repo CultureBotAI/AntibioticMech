@@ -1,0 +1,133 @@
+{
+  "authorization_code_and_response_headers_not_exported": true,
+  "automatic_redirects": 0,
+  "baseline_commit": "1c75f9126071ef9563a545c0780b861616a7e9d8",
+  "biological_records_changed": 0,
+  "cache_independent_fixture_and_public_snapshot_tests": "PASS",
+  "captured_at": "2026-10-15T03:12:44.590616+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/cohort.json",
+    "sha256": "7ddcae8ab222331573f0ad7a0382c16326ead4be42634b3ee24356ab4da96cd9"
+  },
+  "complete_collection_aware_records_read": 2,
+  "corpus_records_hash_checked": 2939,
+  "credentials_supplied": false,
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 395,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/expanded-tests.xml",
+      "sha256": "b9915e8055cdce7f658589e6f4133a868c35bdafe5e920c6782c08216bf1d0e1"
+    },
+    "skipped": 0,
+    "tests": 395
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "c59e607fa7be4361049e6a504f0a8d4e17b3a8a207e24d97fb8c82befc48cf39"
+    },
+    {
+      "path": "research/2026-10-14-card-rpoc-primary-access.json",
+      "sha256": "6f4fccc57c2b4a83d0b084b90ae5c5859ad39e444a58364f77ef27a24b6d6849"
+    },
+    {
+      "path": "scripts/audit_card_rpoc_primary_access.py",
+      "sha256": "b011c5220d5b9e640ea615876f6572d3a2d003da9a0777684573f564e2c149f4"
+    },
+    {
+      "path": "tests/test_card_rpoc_primary_access.py",
+      "sha256": "820f3333da8be7479f24904b75d3bb39bd529536a18280f947bef786e697108e"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 28,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/focused-tests.xml",
+      "sha256": "37afa5e03710a35875731cf58071f12e562f998a7d614118ae232446c1f262bb"
+    },
+    "skipped": 0,
+    "tests": 28
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_environment_limit": "Pinned RDKit 2026.3.5 has no Intel macOS wheel; prior merged Linux QC is historical.",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_rpoc_primary_20261014.py",
+      "sha256": "85da4970e144afc1799404ea5f6171580b64db8abc01415fbb39029492eedecc"
+    },
+    {
+      "path": "/private/tmp/verify_rpoc_primary_20261014.py",
+      "sha256": "dbe230617d261bbd7b36a28282ec0960b4c7b9c49b137fbe31d08ae7d1bff803"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "manual_redirect_requests": 1,
+  "native_http_attempts": 3,
+  "native_http_status_counts": {
+    "302": 1,
+    "303": 1,
+    "500": 1
+  },
+  "ncbi_requests": 0,
+  "network_blocked_during_replay": true,
+  "new_primary_result_reviews": 0,
+  "no_new_data_source_owned_or_rendered_files": true,
+  "offline_native_replay": "PASS",
+  "outreach": 0,
+  "previous_goal_turn_outcome": "PROGRESS_REFERENCE_COHORT_AUDIT",
+  "primary_access_holds_preserved": true,
+  "prior_rpo_reference_checkpoint_and_other_research_unchanged": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/protected-before.json",
+    "sha256": "b8a20aa235ad2426f254c866b4b89989a67e1a1c4b3169f1496df07cd3bc8944"
+  },
+  "protected_files_checked": 7673,
+  "repository_ruff_check": "PASS",
+  "retried_held_sources": 0,
+  "reuse_terms_review_resumed": false,
+  "review_boundaries": [
+    "A failed canary cannot become primary biological evidence",
+    "A separate publisher request must not retry the held first paper",
+    "An unresolved redirect is not proof of access denial or a paywall",
+    "Preserve the uncited generic term without borrowing organism or citations",
+    "Do not export authorisation values or equate reference proteins with experimental subjects"
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "RPOC_PRIMARY_ACCESS_AND_UNRESOLVED_CLAIM_SCOPE_NOT_CAUSAL_REVIEW",
+  "source_adoptions": 0,
+  "source_claim_content_hashes_and_positions_checked": 4,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "automatic_redirects": 0,
+    "biological_records_changed": 0,
+    "cited_publications": 2,
+    "corpus_records_hash_checked": 2939,
+    "http_status_counts": {
+      "302": 1,
+      "303": 1,
+      "500": 1
+    },
+    "manual_redirect_requests": 1,
+    "new_primary_result_reviews": 0,
+    "primary_articles_obtained": 0,
+    "source_assertions": 4,
+    "source_records": 2,
+    "source_terms": 2,
+    "whole_record_primary_signoffs": 0
+  },
+  "this_goal_turn_outcome": "PROGRESS_PRIMARY_ACCESS_EVIDENCE_RECORDED_NOT_BIOLOGICAL_SIGNOFF",
+  "verification_limit": "Access state and preserved claim scope only; no primary text obtained or causal adjudication.",
+  "whole_record_primary_signoffs": 0
+}

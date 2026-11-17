@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-15",
+  "scope": "CURRENT_CARD_ACR_REFERENCE_CONTEXT_NOT_EXPERIMENTAL_ALLELES",
+  "selection": "ALL_CURRENT_CARD_LABELS_MATCHING_CASE_INSENSITIVE_WORD_BOUNDARY_ACR_WORD_CHARACTERS",
+  "expected_terms": ["ARO:3000216", "ARO:3000384", "ARO:3000491", "ARO:3003373", "ARO:3003374", "ARO:3003807", "ARO:3004041", "ARO:3004042", "ARO:3004082", "ARO:3004083", "ARO:3007509"],
+  "expected_records": 16,
+  "expected_claims": 31,
+  "inputs": {
+    "index": {"path": "research/2026-10-15-card-aph-memberships.json", "sha256": "66fc408ae1bd53b78376d08f4cb9cecb1d587e95ce0c99f740ac4e186e966595"},
+    "corpus_update": {"path": "research/2026-10-15-card-evidence-qualifications-verification.json", "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"},
+    "definition_citations": {"path": "research/2026-10-09-card-definition-citations.json", "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"},
+    "members": {"path": "research/2026-10-15-card-complex-members.json", "sha256": "008d915100f8c36ca43b39b891a97a418e4e9d60dcd807cbfe9e2ed9284779ac"},
+    "citation_plan": {"path": "research/2026-10-15-card-protein-name-screen-plan.json", "sha256": "eca6ca45feb4fc78547a9647d3f31a2952e96837ab485569f7ac1a80140a5720"},
+    "source_plan": {"path": "research/2026-10-15-mex-component-xrefs-plan.json", "sha256": "03ca5b14555593d3146895ce32c8a56887afd0fa591a601b249e6242f884e4c5"},
+    "protein_snapshot": {"path": "reports/resistance-grounding-2026-10-07/card-proteins.json", "sha256": "be858b4818e8f74e99f13adb0485851c438adbeca0081b7eb5e01d6296e6d5eb"},
+    "lineages": {"path": "research/2026-10-14-card-reference-lineages.json", "sha256": "55126bbdd99d5baf328a23dfd849d8db1365bab5fd24100e345f01c1fcb79d01"},
+    "unrelated_yeast_acr": {"path": "research/2026-10-13-acr-context.json", "sha256": "56d25e2fc42452014a26df8c351e42797f20109761fd3072d8bc8306006f4628"}
+  },
+  "reference_strategy": "Replay selected direct references and explicit ontology member references without promoting other citation hits or merging reference taxa.",
+  "citation_strategy": "Replay the 11 own-citation queries in the pinned cache plan; retain the other eight as NOT_QUERIED_IN_SELECTED_INPUTS, never zero-hit queries.",
+  "primary_reading_plan": {
+    "canary": "PMID:10692383",
+    "remaining_after_canary_inspection": ["PMID:14706082"],
+    "allowed_sources": "Publisher or DOI pages, text context only; no NCBI endpoints.",
+    "max_web_search_queries": 4,
+    "max_web_reader_open_operations": 2,
+    "no_access_hold_retries_or_alternate_routes": true,
+    "prior_hold_search": "Ignored-inclusive search and structured inspection of 141 matching local JSON files found no primary-request receipt for these PMIDs or the verified 10692383 DOI. No existing hold was identified in that search; this is not proof that every possible source URL was searched."
+  },
+  "constraints": {
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_uniprot_requests": 0,
+    "outreach": false,
+    "reuse_terms_review_resumed": false,
+    "biological_record_writes": false,
+    "exact_alleles_assigned": false,
+    "experimental_subjects_or_genomes_assigned": false,
+    "operational_details_or_numeric_ast_exported": false,
+    "whole_record_primary_signoffs": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "audit_plan": {
+    "path": "research/2026-10-15-bla-primary-identifiers-audit-plan.json",
+    "sha256": "3b6a42e8d68ee625db2db54cc5bb563b6c6f8a9910a28f22bbe79458ddaa7b0c"
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-bla-primary-identifiers/baseline.json",
+    "sha256": "4cac89c27231d05445a496bfb1e2bc4b8c9f0dc169c0277bed939749384032c0"
+  },
+  "checks": {
+    "authoritative_full_qc_rerun": false,
+    "failed": 0,
+    "focused_tests_passed": 69,
+    "offline_write_disabled_replay": true,
+    "report_only_appended_section": true,
+    "saved_projection_equal": true,
+    "skipped": 0,
+    "unchanged_data_curation_site_files": 6353
+  },
+  "constraints": {
+    "biological_record_writes": 0,
+    "full_investigation_complete": false,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "source_adoptions": 0
+  },
+  "date": "2026-10-15",
+  "dossier": {
+    "path": "research/2026-10-15-bla-primary-identifiers.json",
+    "sha256": "2fcb241c8878168b49b990b956e6ed9cd2b3922569e62d2152ebf194613e6fee"
+  },
+  "native_requests": 6,
+  "publication_scope": "SELECTED_PRIMARY_TEXT_NOT_FULL_FIGURE_SUPPLEMENT_OR_RECORD_REVIEW",
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "195bc8b4e5c60f15278617f8f7f89e0348bb3fb55b4e1b65beda15cdea132ce5"
+  },
+  "script": {
+    "path": "scripts/audit_bla_primary_identifiers.py",
+    "sha256": "d3a6cf163b9be1ca37f0670e98cc6753ef5f6f4b1cd36dfeec6f198c0fe9d77f"
+  },
+  "status": "PRIMARY_IDENTIFIERS_AND_TAXONOMY_VERIFIED_PROTEINS_UNRESOLVED",
+  "summary": {
+    "complete_target_records_read": 12,
+    "current_record_hashes_verified": 2939,
+    "distinct_native_taxonomy_nodes": 4,
+    "new_selected_proteins": 0,
+    "source_claims_bound": 18,
+    "species_names_grounded": 3,
+    "terms_investigated": 3,
+    "whole_record_primary_signoffs": 0
+  },
+  "test_report": {
+    "path": "reports/resistance-grounding-2026-10-15-bla-primary-identifiers/tests-passing.xml",
+    "sha256": "a18bea88e0586c8f5071e061045e00c1a778c5f41cf384e2421e22f57aae3364"
+  },
+  "tests": {
+    "path": "tests/test_bla_primary_identifiers.py",
+    "sha256": "2184984ae24e37a23ec146a219aff1478dbb9382c24341415c8ea3e45791d732"
+  }
+}

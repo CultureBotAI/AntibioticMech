@@ -1,0 +1,140 @@
+{
+  "adversarial_self_review": [
+    "The two strain comments belong to PMID:36094306, not another citation on the reference entry.",
+    "OG1 and OG1RF are not conflated with one another or the V583 reference protein.",
+    "A PMCID and listed free links do not establish open-access licensing.",
+    "HTTP 403 is not primary evidence; no alternate source or failed request was retried.",
+    "Prior 2021 and 2023 access holds are unchanged, not implicitly resolved by new metadata.",
+    "The frozen baseline includes the earlier uncommitted work, which remains intact.",
+    "All records remain in scope; source triage is not biological grounding or whole-record completion.",
+    "Offline replay and focused tests are not independent scientific signoff or full QC."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-irek-2022-context.json",
+      "sha256": "d85dfcf24f3f49e6d2b195b37f722bf87b6dafe5419b4e380d9c8b792a4c677f"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "f08a571a4589b17262ced758a728ca00e2c5b3ee8cd28f6b2f2004d92664914c"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-irek-2022/protected-before.json",
+    "sha256": "d25111bf5c2f8a408681831310fe2eb54542f83d36e2401cd36c6b1b4898153d"
+  },
+  "baseline_files_checked": 7165,
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_docs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "README statistics are current.\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "current_goal_turn": "PROGRESS_SOURCE_TRIAGE_ONLY",
+  "date": "2026-10-13",
+  "failed_source_retries": 0,
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-irek-2022/focused-tests.xml",
+      "sha256": "c72d392b6e7b8bb7bfe1a508698ce84178746a3c87dd410f199afc8eb14d5201"
+    },
+    "passed": 60,
+    "skipped": 0,
+    "tests": 60
+  },
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations_this_checkpoint": 0,
+  "ignored_files_included": true,
+  "issue_1040": "DEFERRED",
+  "local_cache_replay_command": "PYTHONPATH=src:scripts:reports/resistance-grounding-2026-10-13-irek-2022 .venv/bin/python reports/resistance-grounding-2026-10-13-irek-2022/research_irek_2022_20261013.py check",
+  "ncbi_contact": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-irek-2022-context.json"
+  ],
+  "new_full_authoritative_qc_claimed": false,
+  "offline_replay_with_http_and_sockets_disabled": true,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "preexisting_uncommitted_files_preserved": true,
+  "previous_goal_turn": "PROGRESS",
+  "primary_full_texts_reviewed": 0,
+  "prior_irek_full_audit_reproduced": true,
+  "prior_receipt_main_report_pin": "VERIFIED_BEFORE_EDITS_NOW_HISTORICAL",
+  "raw_inputs_curation_schema_pages_embeddings_and_prior_snapshots_unchanged": true,
+  "raw_responses_and_helpers_committed": false,
+  "records_byte_identical": 2939,
+  "records_changed": 0,
+  "records_checked": 2939,
+  "removed_files": [],
+  "request_count": {
+    "ebi_metadata": 1,
+    "ncbi": 0,
+    "new_uniprot": 0,
+    "publisher_article": 1,
+    "web_discovery_calls": 1
+  },
+  "retained_local_replay_helpers": [
+    {
+      "path": "reports/resistance-grounding-2026-10-13-irek-2022/research_irek_2022_20261013.py",
+      "sha256": "82e8464512aee758ca94d4a2cb20cb5b179a428585df6115a3ae305f75581658"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-irek-2022/research_yeast_regulators_20261013.py",
+      "sha256": "3f1222c351db0d29f8414315458d8c98ea0280f61e49626d21bb4123bc4f69cb"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-irek-2022/research_erm_references.py",
+      "sha256": "44b22e5b4542012f453be6e120ef7eeb33c8b3bb97a999b1e4c78f78f1d056ff"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-irek-2022/verify_irek_2022_20261013.py",
+      "sha256": "f5c284e4c3d9ef4d9a6e42ef7f8f38682033a7222092bf37f7f4182ad41c40a2"
+    }
+  ],
+  "reuse_terms_review_resumed": false,
+  "source_adoptions": 0,
+  "status": "BIBLIOGRAPHY_VERIFIED_PRIMARY_ACCESS_HOLD",
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_checked": 2939,
+    "full_corpus_goal_status": "OPEN",
+    "new_bibliographic_records_verified": 1,
+    "new_primary_access_holds": 1,
+    "new_primary_results_reviewed": 0,
+    "new_protein_or_taxon_assignments": 0,
+    "selected_records": 1,
+    "whole_record_reviews_completed": 0
+  },
+  "whole_record_reviews_completed": 0
+}

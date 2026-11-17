@@ -1,0 +1,185 @@
+{
+  "all_biological_records_and_previous_dossiers_unchanged": true,
+  "authoritative_qc": {
+    "limitation": "Pinned RDKit 2026.3.5 lacks a compatible Intel macOS distribution. Earlier Linux QC does not validate this change.",
+    "run_for_this_change": false
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-mexxy-definitions/protected-before.json",
+    "sha256": "4ca9d215c5072babb471b47b19470d4f4171264bfcd50087005fe03fcc3db6b1"
+  },
+  "baseline_files_checked": 7872,
+  "biological_records_hash_checked": 2939,
+  "checks": {
+    "diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "offline_replay": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/audit_mexxy_definitions.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\n  \"complete_selected_records_read\": 11,\n  \"source_claims\": 11,\n  \"source_terms\": 1,\n  \"new_primary_text_contexts_reviewed\": 2,\n  \"secondary_reviews_classified\": 1,\n  \"definition_citations_with_scoped_status\": 4,\n  \"selected_claim_qualifications\": 3,\n  \"new_regulator_reference_loci\": 2,\n  \"reused_own_citation_reference_entries\": 1,\n  \"new_uniprot_requests\": 2,\n  \"new_ncbi_requests\": 0,\n  \"corpus_records_hash_checked\": 2939\n}\n"
+    },
+    "provenance": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_provenance.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "provenance OK: 14 inventories, 23 upstream files, retrieved 2026-08-30\n"
+    },
+    "ruff": {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "scripts/audit_mexxy_definitions.py",
+        "tests/test_mexxy_definitions.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    "ruff_format": {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "scripts/audit_mexxy_definitions.py",
+        "tests/test_mexxy_definitions.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "2 files already formatted\n"
+    },
+    "source_queue": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_source_queue.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "source queue OK: 37 sources \u2014 10 adopted, 12 blocked, 11 candidate, 4 evaluating\nnext up: chebi-citations (P3, evidence), lotus (P3, producer_organisms), antismash-db (P4, producer_organisms)\n"
+    }
+  },
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "0269dcd4f50d061636f86e3da14223261babef9a0ca6439e3ee6d05e53b0c98d"
+    },
+    {
+      "path": "research/2026-10-15-mexxy-definitions-assessment.json",
+      "sha256": "e3272c1e29bc2c106551ee82c9eed03211c8436f02f75afe0b8164edd322d3be"
+    },
+    {
+      "path": "research/2026-10-15-mexxy-definitions-plan.json",
+      "sha256": "944f3700ea1e8d021e22d6241836250d709f870f411898d204bab99c5eea7bec"
+    },
+    {
+      "path": "research/2026-10-15-mexxy-definitions.json",
+      "sha256": "6ca49ff84019917f3112430c76b733cb6f885d9c8b047e52c770a1fa9013f7b9"
+    },
+    {
+      "path": "scripts/audit_mexxy_definitions.py",
+      "sha256": "692bacffd23bcb1bbc7df9fdb660badfd0b7a9f1aa80a615ac324e7cfcd1c386"
+    },
+    {
+      "path": "tests/test_mexxy_definitions.py",
+      "sha256": "d6d1613d3c14727ab969fb9880f2e91a13f8f9afd05680c63595e6399f79207e"
+    }
+  ],
+  "ignored_files_included_in_membership_check": true,
+  "limits": {
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_primary_results_reviews": 2,
+    "new_review_is_text_only_not_whole_paper_signoff": true,
+    "numeric_ast_exports": 0,
+    "operational_exports": false,
+    "outreach": 0,
+    "reuse_terms_review_resumed": false,
+    "review_is_primary_experiment": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "manual_primary_reading_is_not_independently_reproduced_by_tests": true,
+  "new_files_before_receipt": [
+    "research/2026-10-15-mexxy-definitions-assessment.json",
+    "research/2026-10-15-mexxy-definitions-plan.json",
+    "research/2026-10-15-mexxy-definitions.json",
+    "scripts/audit_mexxy_definitions.py",
+    "tests/test_mexxy_definitions.py"
+  ],
+  "previous_report_preserved_except_appended_section": true,
+  "prior_file_changes": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "0269dcd4f50d061636f86e3da14223261babef9a0ca6439e3ee6d05e53b0c98d",
+      "before_sha256": "bc67479ca6e4953872a2ffe1a55046fb20268f5d7dcc0a7da245fb9dce102d3f"
+    }
+  },
+  "publication": {
+    "commits": 0,
+    "issue_mutations": 0,
+    "pull_requests": 0,
+    "pushes": 0
+  },
+  "scope": "MEXXY_DEFINITION_CITATION_SCOPE_AND_REGULATOR_REFERENCE_GROUNDING",
+  "summary": {
+    "complete_selected_records_read": 11,
+    "corpus_records_hash_checked": 2939,
+    "definition_citations_with_scoped_status": 4,
+    "new_ncbi_requests": 0,
+    "new_primary_text_contexts_reviewed": 2,
+    "new_regulator_reference_loci": 2,
+    "new_uniprot_requests": 2,
+    "reused_own_citation_reference_entries": 1,
+    "secondary_reviews_classified": 1,
+    "selected_claim_qualifications": 3,
+    "source_claims": 11,
+    "source_terms": 1
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-mexxy-definitions/tests.xml",
+      "sha256": "97007028c6c1a645b1eb7553a46f56a3df759d6e06654a12faf23173f30c8d4d"
+    },
+    "native_replay_network_and_python_file_writes_blocked": true,
+    "new_audit_tests_passed": 49,
+    "passed": 309,
+    "skipped": 2,
+    "skips": [
+      {
+        "message": "historical corpus changed; immutable public snapshot tested separately",
+        "name": "test_native_replay_without_network_or_file_writes"
+      },
+      {
+        "message": "known qualification deltas lack historical fixtures; public artifact checks still run",
+        "name": "test_offline_native_replay"
+      }
+    ],
+    "tests": 311
+  }
+}

@@ -77,6 +77,16 @@ molecular_targets:
   evidence:
   - reference: PMID:24900178
     notes: Primary medicinal-chemistry discovery and target-potency report.
+  protein_examples:
+  - uniprot_id: UniProtKB:P26662
+    protein_label: Genome polyprotein
+    taxon_id: NCBITaxon:11108
+    taxon_label: Hepatitis C virus genotype 1b (isolate BK)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reference HCV genotype 1b polyprotein encoding the NS3/4A serine protease
+      inhibited by narlaprevir (SCH 900518) during discovery and potency optimization
+      (PMID:24900178; genotype 1b reference isolate BK context).
 xrefs:
 - cas:865466-24-6
 - chemspider:10031710
@@ -106,12 +116,20 @@ resistance_mechanisms:
   label: HCV NS3 V36, T54, R155, and A156 resistance-associated substitutions
   gene_families:
   - HCV NS3 serine protease
-  note: Longitudinal clonal sequencing detected substitutions at these NS3 positions
+  note: 'Longitudinal clonal sequencing detected substitutions at these NS3 positions
     during narlaprevir exposure; participants with detected substitutions had a smaller
-    viral-load decline, and R155K persisted in two participants for 3.1 years.
+    viral-load decline, and R155K persisted in two participants for 3.1 years. Taxon
+    grounding only: the source calls the virus HCV. The clinical association does
+    not establish an individual patient''s UniProt accession, strain TaxID or genome.
+    No allele coordinates or resistance measurements were added.'
   evidence:
   - reference: PMID:24168257
     notes: Primary treatment-exposure, clonal-sequencing, and viral-load study.
+  - reference: https://rest.uniprot.org/taxonomy/3052230
+    notes: 'Taxonomic identity only: active species; Hepatitis C virus is an explicit
+      name alias. Retrieved 2026-10-08 UTC.'
+  taxon_id: NCBITaxon:3052230
+  taxon_label: Orthohepacivirus hominis
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -136,3 +154,87 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T04:06:43Z'
+  curator: codex
+  action: GROUNDED_RESISTANCE_TAXON
+  changes: Grounded the existing HCV clinical association to an active species TaxID;
+    retained the original claim without assigning patient-specific proteins, strains,
+    genomes or allele coordinates.
+  llm_assisted: true
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated HCV genotype 1b isolate BK genome polyprotein (P26662) UniProtKB
+    protein example on the PRIMARY_LITERATURE hepatitis C virus NS3/4A serine protease
+    molecular target.
+  llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph narlaprevir_hcv_ns3_4a_protease_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:24900178).
+  llm_assisted: true
+causal_graphs:
+- graph_id: narlaprevir_hcv_ns3_4a_protease_inhibition
+  title: Narlaprevir inhibits hepatitis C virus NS3/4A serine protease
+  description: Narlaprevir (SCH 900518) potently inhibits the hepatitis C virus NS3/4A
+    serine protease and suppresses HCV replication in replicon and clinical settings.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: narlaprevir
+    label: narlaprevir
+    node_type: COMPOUND
+    grounding: CHEBI:173104
+  - node_id: hcv_ns3_4a_serine_protease
+    label: hepatitis C virus NS3/4A serine protease
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Hepatitis C virus NS3/4A serine protease; kept label-only with
+      HCV genotype 1b isolate BK polyprotein (UniProtKB:P26662) protein_examples.
+    protein_examples:
+    - uniprot_id: UniProtKB:P26662
+      protein_label: Genome polyprotein
+      taxon_id: NCBITaxon:11108
+      taxon_label: Hepatitis C virus genotype 1b (isolate BK)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Reference HCV genotype 1b polyprotein encoding the NS3/4A serine protease
+        inhibited by narlaprevir (SCH 900518) during discovery and potency optimization
+        (PMID:24900178; genotype 1b reference isolate BK context).
+  - node_id: ns3_4a_proteolytic_cleavage
+    label: HCV NS3/4A serine protease catalytic cleavage
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Ketoamide-sensitive NS3/4A protease catalysis assayed during
+      narlaprevir discovery.
+  - node_id: hcv_viral_replication
+    label: hepatitis C virus RNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: NS3/4A-dependent HCV replicon and viral replication.
+  edges:
+  - subject: narlaprevir
+    predicate: inhibits
+    object: ns3_4a_proteolytic_cleavage
+    description: Narlaprevir inhibits the catalytic activity of the hepatitis C virus
+      NS3/4A serine protease.
+    evidence:
+    - reference: PMID:24900178
+      notes: Medicinal-chemistry discovery and enzyme-potency assays established narlaprevir
+        (SCH 900518) as a potent HCV NS3/4A serine protease inhibitor.
+  - subject: hcv_ns3_4a_serine_protease
+    predicate: enables
+    object: ns3_4a_proteolytic_cleavage
+    description: The HCV NS3/4A serine protease catalyzes viral polyprotein cleavage.
+    evidence:
+    - reference: PMID:24900178
+      notes: Enzyme kinetics characterized NS3/4A serine protease inhibition by narlaprevir.
+  - subject: ns3_4a_proteolytic_cleavage
+    predicate: supports
+    object: hcv_viral_replication
+    description: NS3/4A protease activity is required for cellular HCV RNA replication.
+    evidence:
+    - reference: PMID:24900178
+      notes: Potent NS3/4A enzyme inhibition by narlaprevir translated to strong cellular
+        HCV antiviral activity.

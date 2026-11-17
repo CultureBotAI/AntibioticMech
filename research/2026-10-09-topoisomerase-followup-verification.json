@@ -1,0 +1,99 @@
+{
+  "adversarial_review": "SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "artifacts": [
+    {
+      "path": "scripts/audit_topoisomerase_references.py",
+      "sha256": "783690b77c977fd988184b964ed80cfd189ab334f6f206ad8c0ad39bc7f574b9"
+    },
+    {
+      "path": "tests/test_topoisomerase_reference_followup.py",
+      "sha256": "5e4eb84ac9e0e58d78415eaa82f32a3ad4452d4cabb58069d89d2abf9bb7dc49"
+    },
+    {
+      "path": "research/2026-10-09-topoisomerase-reference-followup.json",
+      "sha256": "4aecf6ad46b502cc9610b26993fa0422fa0a92be8f85a62318e73b3994d199a4"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "d01f0ca7f9eff876efa952c191440075c8d4e2a529498cbbd0025522ed6c99a3"
+    }
+  ],
+  "biological_records_byte_identical": 2939,
+  "changed_protected_files": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "d01f0ca7f9eff876efa952c191440075c8d4e2a529498cbbd0025522ed6c99a3",
+      "before_sha256": "980a491318fe097bc341dce05a2363cece10fea809c6c2bc6af3b92c6217578e"
+    }
+  },
+  "checks_receipt": {
+    "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/checks.json",
+    "sha256": "e0c20487caa35e682adea4f461672ae3fcb26809eefff4cf3e026b82d5cd5556"
+  },
+  "date": "2026-10-09",
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/focused-tests.xml",
+    "sha256": "c71b8ef447c0cf6e9d751b2fec030c6029fc7bcaf072906ae3c39e17e3cfd195"
+  },
+  "focused_tests_passed": 188,
+  "full_authoritative_qc_rerun": false,
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "ncbi_endpoint_requests": 0,
+  "new_tests_passed": 25,
+  "outreach": 0,
+  "prior_checkpoint": {
+    "path": "research/2026-10-09-erm55-primary-verification.json",
+    "sha256": "119942a69b5a1cd1fe3452e0be748977fe2fd5158775497fb92fd5db23e456ea"
+  },
+  "prior_full_qc_context": "All 11 authoritative gates passed for the unchanged biological corpus; this research-only pass ran focused tests, lint, documentation, full-corpus reference-export reproduction and diff checks.",
+  "prior_report_bytes_preserved": true,
+  "protected_files": 6828,
+  "protected_files_unchanged": 6827,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/protected-before.json",
+    "sha256": "f0843c9f33b26bab3ab476a53fb24caabceb2bc262883d2679311a9a2e8bdc20"
+  },
+  "remaining_limits": [
+    "Source ontology terms are not verified compound-specific experimental resistance evidence.",
+    "Reviewed reference proteins are not exact resistance alleles or experimental subjects.",
+    "Multiple reference entries are retained; none is chosen as a representative experimental allele.",
+    "No-hit queries cover reviewed entries only; unreviewed entries and additional aliases remain unsearched.",
+    "Broad source names and absent exact active-species matches remain unresolved.",
+    "Bibliography is database-linked discovery evidence; primary results were not reviewed in this pass.",
+    "No sequences, variants, reference positions, constructs, protocols, coordinates or numerical AST are exported."
+  ],
+  "review_findings_addressed": [
+    "Test import path now follows standalone repository test loading.",
+    "Exporter checks all current records for missing cohort memberships, not only planned records.",
+    "Protein responses must match the frozen preparation as well as their own receipts."
+  ],
+  "scope": "REVIEWED_REFERENCE_PROTEINS_NOT_EXPERIMENTAL_RESISTANCE_ALLELES",
+  "source_adoptions": 0,
+  "sources_pages_embeddings_unchanged": true,
+  "status": "SCOPED_RESEARCH_CHECKS_PASSED",
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records": 2939,
+    "distinct_reference_proteins": 68,
+    "exact_allele_assignments": 0,
+    "experimental_subject_assignments": 0,
+    "queries_with_no_reviewed_hit": 16,
+    "reference_taxa_verified": 27,
+    "reviewed_protein_queries": 45,
+    "selected_source_terms": 57,
+    "source_assertion_memberships": 332,
+    "source_name_status_counts": {
+      "BROAD_SOURCE_NAME_UNRESOLVED": 1,
+      "EXACT_SPECIES_NAME_RESOLVED": 24,
+      "NO_EXACT_ACTIVE_SPECIES_NAME": 1
+    },
+    "source_organism_names": 26,
+    "source_records": 21,
+    "terms_with_reviewed_candidates": 37,
+    "terms_with_species_grounding": 53,
+    "uniprot_release": "2026_03",
+    "whole_record_reviews_completed": 0
+  },
+  "whole_corpus_primary_review": "OPEN",
+  "whole_records_completed": 0
+}

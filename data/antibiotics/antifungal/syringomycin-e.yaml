@@ -56,3 +56,130 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-14T02:26:41Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added six primary-backed qualitative yeast gene associations for named
+    syringomycin E. Kept experimental identifiers unset and UniProt proteins reference-only;
+    excluded the incompletely described SKN1 row and related syringopeptin evidence.
+    No numerical AST, exact resistance variant, construct or protocol was added. Whole-record
+    review remains open.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  label: SYR2-associated laboratory syringomycin E resistance
+  gene_families:
+  - SYR2
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative syringomycin E resistance
+  assay: Comparative laboratory growth and susceptibility assays
+  note: Qualified laboratory association in a W303C-derived yeast model; the parent
+    background is not an exact experimental isolate identifier. Lipid-biosynthesis
+    context does not identify a direct protein target or clinical resistance. No experimental
+    allele, protein, strain-TaxID, genome or numerical AST is assigned.
+  evidence:
+  - reference: PMID:22046175
+    notes: Methods, Yeast strains; Table 1 SRE column; Figure 1B SRE comparison; DOI:10.3389/fmicb.2011.00216.
+      Named purified syringomycin E evidence, not SP22A/SP25A transfer or independent
+      reidentification of the preparation.
+  - reference: UniProtKB:P38992
+    notes: 'Reference identity only: SYR2 maps to SUR2, YDR297W; UniProtKB 2026_03
+      entry 177, sequence 1. S288c NCBITaxon:559292 is reference context, not the
+      tested derivative.'
+- mechanism_type: UNKNOWN
+  label: IPT1-associated laboratory syringomycin E resistance
+  gene_families:
+  - IPT1
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative syringomycin E resistance
+  assay: Comparative laboratory growth and susceptibility assays
+  note: Qualified laboratory association in a W303C-derived yeast model; the parent
+    background is not an exact experimental isolate identifier. Lipid-biosynthesis
+    context does not identify a direct protein target or clinical resistance. No experimental
+    allele, protein, strain-TaxID, genome or numerical AST is assigned.
+  evidence:
+  - reference: PMID:22046175
+    notes: Methods, Yeast strains; Table 1 SRE column; Figure 1B SRE comparison; DOI:10.3389/fmicb.2011.00216.
+      Named purified syringomycin E evidence, not SP22A/SP25A transfer or independent
+      reidentification of the preparation.
+  - reference: UniProtKB:P38954
+    notes: 'Reference identity only: IPT1 maps to IPT1, YDR072C; UniProtKB 2026_03
+      entry 175, sequence 2. S288c NCBITaxon:559292 is reference context, not the
+      tested derivative.'
+- mechanism_type: UNKNOWN
+  label: ELO2-associated laboratory syringomycin E resistance
+  gene_families:
+  - ELO2
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative syringomycin E resistance
+  assay: Comparative laboratory growth and susceptibility assays
+  note: Qualified laboratory association in a W303C-derived yeast model; the parent
+    background is not an exact experimental isolate identifier. Lipid-biosynthesis
+    context does not identify a direct protein target or clinical resistance. No experimental
+    allele, protein, strain-TaxID, genome or numerical AST is assigned. A versioned
+    UniProt crosswalk remains pending.
+  evidence:
+  - reference: PMID:22046175
+    notes: Methods, Yeast strains; Table 1 SRE column; Figure 1B SRE comparison; DOI:10.3389/fmicb.2011.00216.
+      Named purified syringomycin E evidence, not SP22A/SP25A transfer or independent
+      reidentification of the preparation.
+- mechanism_type: UNKNOWN
+  label: ELO3-associated laboratory syringomycin E resistance
+  gene_families:
+  - ELO3
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative syringomycin E resistance
+  assay: Comparative laboratory growth and susceptibility assays
+  note: Qualified laboratory association in a W303C-derived yeast model; the parent
+    background is not an exact experimental isolate identifier. Lipid-biosynthesis
+    context does not identify a direct protein target or clinical resistance. No experimental
+    allele, protein, strain-TaxID, genome or numerical AST is assigned. A versioned
+    UniProt crosswalk remains pending.
+  evidence:
+  - reference: PMID:22046175
+    notes: Methods, Yeast strains; Table 1 SRE column; Figure 1B SRE comparison; DOI:10.3389/fmicb.2011.00216.
+      Named purified syringomycin E evidence, not SP22A/SP25A transfer or independent
+      reidentification of the preparation.
+- mechanism_type: UNKNOWN
+  label: FAH1-associated laboratory syringomycin E resistance
+  gene_families:
+  - FAH1
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative syringomycin E resistance
+  assay: Comparative laboratory growth and susceptibility assays
+  note: Qualified laboratory association in a BY4741-derived yeast model; the parent
+    background is not an exact experimental isolate identifier. Lipid-biosynthesis
+    context does not identify a direct protein target or clinical resistance. No experimental
+    allele, protein, strain-TaxID, genome or numerical AST is assigned.
+  evidence:
+  - reference: PMID:22046175
+    notes: Methods, Yeast strains; Table 1 SRE column; Figure 1B SRE comparison; DOI:10.3389/fmicb.2011.00216.
+      Named purified syringomycin E evidence, not SP22A/SP25A transfer or independent
+      reidentification of the preparation.
+  - reference: UniProtKB:Q03529
+    notes: 'Reference identity only: FAH1 maps to SCS7, YMR272C; UniProtKB 2026_03
+      entry 203, sequence 1. S288c NCBITaxon:559292 is reference context, not the
+      tested derivative.'
+- mechanism_type: UNKNOWN
+  label: ERG3-associated laboratory syringomycin E resistance
+  gene_families:
+  - ERG3
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative syringomycin E resistance
+  assay: Comparative laboratory growth and susceptibility assays
+  note: Qualified laboratory association in a 8A-1B-derived yeast model; the parent
+    background is not an exact experimental isolate identifier. Lipid-biosynthesis
+    context does not identify a direct protein target or clinical resistance. No experimental
+    allele, protein, strain-TaxID, genome or numerical AST is assigned. A versioned
+    UniProt crosswalk remains pending.
+  evidence:
+  - reference: PMID:22046175
+    notes: Methods, Yeast strains; Table 1 SRE column; Figure 1B SRE comparison; DOI:10.3389/fmicb.2011.00216.
+      Named purified syringomycin E evidence, not SP22A/SP25A transfer or independent
+      reidentification of the preparation.

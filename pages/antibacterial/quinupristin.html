@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>quinupristin</h1>
 <p class="meta">
   <code class="curie">CHEBI:8732</code>
@@ -37,15 +48,18 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000026">streptogramin antibiotic</a><code class="curie">ARO:0000026</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000026">ARO:0000026</a>      <code class="curie">ARO:0000026</code></li>
+  <li>streptogramin antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_0000026"><code class="curie">ARO:0000026</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C53H67N9O10S</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>1022.239 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>1021.47316 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">WTHRRGMBUAHGNI-MJWHERSYSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">[H][C@@]12CCCN1C(=O)[C@@H](CC)NC(=O)[C@@H](NC(=O)c1ncccc1O)[C@@H](C)OC(=O)[C@H](c1ccccc1)NC(=O)C1CC(=O)C(CS[C@@H]3CN4CCC3CC4)CN1C(=O)[C@H](Cc1ccc(N(C)C)cc1)N(C)C2=O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C53H67N9O10S/c1-6-37-50(68)61-23-11-14-38(61)51(69)59(5)40(26-32-16-18-36(19-17-32)58(3)4)52(70)62-28-35(30-73-43-29-60-24-20-33(43)21-25-60)42(64)27-39(62)47(65)57-45(34-12-8-7-9-13-34)53(71)72-31(2)44(48(66)55-37)56-49(67)46-41(63)15-10-22-54-46/h7-10,12-13,15-19,22,31,33,35,37-40,43-45,63H,6,11,14,20-21,23-30H2,1-5H3,(H,55,66)(H,56,67)(H,57,65)/t31-,35?,37-,38+,39?,40+,43-,44+,45+/m1/s1</pre>
 
 <h2>Cross-references</h2>
@@ -53,7 +67,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000584">ARO:3000584</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3000584">quinupristin</a><code class="curie">ARO:3000584</code></li>
   <li><a href="https://www.ebi.ac.uk/chembl/id_lookup/CHEMBL1200649">chembl:CHEMBL1200649</a></li>
   <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/5388937">pubchem.compound:5388937</a></li>
 </ul>
@@ -64,6 +78,7 @@ both rather than shown here, since it names at most one of them.</p>
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -76,13 +91,15 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>antibiotic sensitive peptidyl transferase (23S rRNA) <span class="pill plain">NUCLEIC_ACID</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000754">ARO:3000754</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. 23S rRNA peptidyl-transferase center is asserted as the target. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000754</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000754">ARO:3000754</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
@@ -90,12 +107,12 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">28 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">28 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">21</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -104,7 +121,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000599</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000599">ARO:3000599</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -114,7 +131,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000600</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000600">ARO:3000600</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -124,7 +141,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000604</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000604">ARO:3000604</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -134,7 +151,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000605</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000605">ARO:3000605</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -144,7 +161,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000392</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000392">ARO:3000392</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -154,7 +171,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000601</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000601">ARO:3000601</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -164,7 +181,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000602</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000602">ARO:3000602</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -174,7 +191,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000603</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000603">ARO:3000603</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -184,7 +201,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003908</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003908">ARO:3003908</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -194,7 +211,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000347</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000347">ARO:3000347</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -204,7 +221,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000375</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000375">ARO:3000375</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -214,7 +231,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000250</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000250">ARO:3000250</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -224,7 +241,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000495</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000495">ARO:3000495</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -234,7 +251,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000326</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000326">ARO:3000326</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -244,7 +261,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000498</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000498">ARO:3000498</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -254,7 +271,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000522</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000522">ARO:3000522</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -264,7 +281,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000592</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000592">ARO:3000592</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -274,7 +291,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000593</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000593">ARO:3000593</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -284,7 +301,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000594</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000594">ARO:3000594</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -294,7 +311,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000595</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000595">ARO:3000595</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -304,15 +321,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000596</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000596">ARO:3000596</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_PROTECTION <span class="pill plain">4</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_PROTECTION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_PROTECTION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -321,7 +341,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000300</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000300">ARO:3000300</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -331,7 +351,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000251</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000251">ARO:3000251</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -341,7 +361,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002818</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002818">ARO:3002818</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -351,15 +371,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002819</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002819">ARO:3002819</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">3</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_INACTIVATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -368,7 +391,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3001307</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3001307">ARO:3001307</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -378,7 +401,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3001308</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3001308">ARO:3001308</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -388,11 +411,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003990</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003990">ARO:3003990</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000584 (quinupristin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -428,26 +453,36 @@ type — expand a group to see its determinants.</p>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/quinupristin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/quinupristin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=quinupristin">MediaIngredientMech (quinupristin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=quinupristin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=quinupristin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=quinupristin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=quinupristin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

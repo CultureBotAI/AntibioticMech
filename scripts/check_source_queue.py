@@ -13,6 +13,8 @@ This checks the claims that are checkable:
   * ADOPTED means adopted: the source appears in conf/sources.yaml, its
     redistribution terms have been verified, and it carries a verification date
   * conversely, every source the pipeline actually reads has an ADOPTED row
+  * optional exact-report inventories that would activate an evaluating source
+    cannot be committed before their source is adopted
   * an ADOPTED seed source carries terms the corpus's own licence can pass on.
     This is a tripwire AT ADOPTION, not a ban on candidates: a CANDIDATE row may
     sit at `use: SEED` with UNVERIFIED terms for as long as it takes to check
@@ -33,6 +35,7 @@ import sys
 from pathlib import Path
 
 import yaml
+from ncbi_ast_inventory import inventory_candidates
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 QUEUE_PATH = REPO_ROOT / "curation" / "source_queue.tsv"
@@ -74,10 +77,75 @@ EXTRA_GAPS = {"identity", "structures", "evidence", "classification", "mechanism
 # check that silently stops checking is worse than no check.
 SOURCE_MARKER = "name"
 
+# Some evaluators can already write exact, source-versioned inventories before
+# the repository is legally ready to seed from that lane. Once one of those
+# files appears under data/raw, it would be redistributed and consumed by
+# seed_from_sources.py, so the source queue has to say ADOPTED first. Once that
+# source is ADOPTED, the inventory stops being optional and must be committed.
+OPTIONAL_ADOPTION_INVENTORIES = {
+    "bacdive": (Path("data/raw/bacdive_activity.tsv"),),
+    "ncbi-ast": inventory_candidates(Path("data/raw/ncbi_ast_activity.tsv")),
+}
+
 
 def source_sections(conf: dict) -> set[str]:
     return {key for key, value in conf.items()
             if isinstance(value, dict) and SOURCE_MARKER in value}
+
+
+def pipeline_use_problems(
+    queue_by_source: dict[str, dict[str, str]],
+    pipeline_sources: set[str],
+) -> list[str]:
+    problems = []
+    for source in sorted(pipeline_sources):
+        row = queue_by_source.get(source)
+        if row is not None and row["use"] != "SEED":
+            problems.append(
+                f"{source}: read by conf/sources.yaml but use is "
+                f"{row['use']}, not SEED"
+            )
+    return problems
+
+
+def present_optional_inventories(root: Path = REPO_ROOT) -> dict[str, tuple[Path, ...]]:
+    return {
+        source_id: present
+        for source_id, paths in OPTIONAL_ADOPTION_INVENTORIES.items()
+        if (present := tuple(p for p in paths if (root / p).exists() or (root / p).is_symlink()))
+    }
+
+
+def optional_inventory_problems(
+    queue_by_source: dict[str, dict[str, str]],
+    present_inventories: dict[str, tuple[Path, ...]],
+) -> list[str]:
+    problems = []
+    for source_id, paths in sorted(present_inventories.items()):
+        path = ", ".join(map(str, paths))
+        if len(paths) > 1:
+            problems.append(f"{source_id}: ambiguous inventories: {path}; retain exactly one")
+        row = queue_by_source.get(source_id)
+        if row is None:
+            problems.append(
+                f"{source_id}: {path} exists but has no queue row"
+            )
+        elif row["status"] != "ADOPTED":
+            problems.append(
+                f"{source_id}: {path} exists but source status is "
+                f"{row['status']}, not ADOPTED"
+            )
+    for source_id, paths in sorted(OPTIONAL_ADOPTION_INVENTORIES.items()):
+        row = queue_by_source.get(source_id)
+        if (
+            row is not None
+            and row["status"] == "ADOPTED"
+            and source_id not in present_inventories
+        ):
+            problems.append(
+                f"{source_id}: {' or '.join(map(str, paths))} is required when source status is ADOPTED"
+            )
+    return problems
 
 
 def record_fields() -> set[str]:
@@ -103,12 +171,14 @@ def main() -> int:
 
     problems: list[str] = []
     seen: set[str] = set()
+    queue_by_source: dict[str, dict[str, str]] = {}
 
     for row in rows:
         sid = row["source_id"]
         if sid in seen:
             problems.append(f"{sid}: duplicate row")
         seen.add(sid)
+        queue_by_source.setdefault(sid, row)
 
         for column, allowed in (("use", USE), ("structures", STRUCTURES),
                                 ("redistribution", REDISTRIBUTION), ("access", ACCESS),
@@ -151,6 +221,13 @@ def main() -> int:
     adopted = {r["source_id"] for r in rows if r["status"] == "ADOPTED"}
     for source in sorted(pipeline_sources - adopted):
         problems.append(f"{source}: read by conf/sources.yaml but has no ADOPTED queue row")
+    # Configured sources feed committed record content, so they must use the
+    # SEED lane that trips the corpus redistribution gate.
+    problems.extend(pipeline_use_problems(queue_by_source, pipeline_sources))
+    problems.extend(optional_inventory_problems(
+        queue_by_source,
+        present_optional_inventories(),
+    ))
 
     if problems:
         print("source queue check FAILED:", file=sys.stderr)

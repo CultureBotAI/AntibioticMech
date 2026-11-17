@@ -1,0 +1,241 @@
+{
+  "activity_record_download": "NOT_APPLICABLE_NO_ACTIVITY_COLLECTION",
+  "adversarial_self_review": [
+    "Qualified associations are not inferred mechanisms, exact alleles or species-wide phenotypes.",
+    "Unreviewed ORF fields stay distinct from primary gene names and ordered loci.",
+    "RefSeq protein and transcript identifiers jointly support reference-only mappings.",
+    "Zero exact-name results are not absence; no focal citation in UniProt is not disproof.",
+    "Not-done comparisons, differing controls, and the SEM/SD discrepancy remain explicit.",
+    "Public publisher query parameters are not mislabeled as signed credentials.",
+    "The no-activity page uses a source-record link, not the activity collection download path.",
+    "Full QC caught stale NEXT_TASKS coverage prose; the derived count was fixed without changing the test.",
+    "Historical replay tests use immutable fixtures rather than freezing future live curation.",
+    "Same-agent review is not independent scientific signoff."
+  ],
+  "all_existing_fields_and_claims_preserved": true,
+  "artifacts": [
+    {
+      "path": "NEXT_TASKS.md",
+      "sha256": "058580bafd17db181d181397e87f96d25016e5dab1d9b3f2eaa0e550e13cab59"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "42c223ec355fa4dc6c96efe105b932a3c08f2e8c4de3735d63ef36edfc1887dd"
+    },
+    {
+      "path": "research/2026-10-13-tubercidin-context.json",
+      "sha256": "62aa88b09210ca7f29f6d5d07e4d19e0d6bba4f5c7398bebb7e2982c13e3da27"
+    },
+    {
+      "path": "research/2026-10-13-tubercidin-curation.json",
+      "sha256": "93f8b2154640111fbab13e8cc6cd6c119d04e61dc46d80411e246777d21a0fea"
+    },
+    {
+      "path": "research/2026-10-13-tubercidin-reconciliation.json",
+      "sha256": "5036d825e498b62ef4d1043239fdb00c6b943c2725d43f5aa5b6a50f10e19fda"
+    },
+    {
+      "path": "research/2026-10-13-tubercidin-resistance-grounding.tsv",
+      "sha256": "0a9d4c8c48eb8c29a7f7fe59c8b455ce586ed6648be8e6d6759ab1b23706f6b2"
+    },
+    {
+      "path": "research/2026-10-13-tubercidin-resistance-progress.json",
+      "sha256": "4b290eabd54e28aadd0990c4c74b07c1bcb8f6362dc8be77e90a59b827d923d6"
+    },
+    {
+      "path": "research/2026-10-13-tubercidin-resistance-progress.tsv",
+      "sha256": "564913d2161e1e8045244c5ff85181fd0d97bf19f665e0e979974159c7f6afa2"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "ece3ba13f9d70f634e73b350825bea28aa7c0a5ba47fa06a3662f640b81f5e0e"
+    },
+    {
+      "path": "tests/fixtures/tubercidin-before-2026-10-13.yaml",
+      "sha256": "68f43e55af1ac377e2ff416b2000e6bbf35e52ec3f54a52ca8d5c655d43da976"
+    },
+    {
+      "path": "tests/test_tubercidin_curation.py",
+      "sha256": "2c220a7e5caa150ccb3ebf5a300c746181ee96c76c6ccc16df4e5dd3c8e9ae5a"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-tubercidin/protected-before.json",
+    "sha256": "ad3861b172e5337c7058ec0425e004e7f894529d39cd2e8d0afead245264236e"
+  },
+  "baseline_files_checked": 7122,
+  "changed_baseline_files": [
+    "NEXT_TASKS.md",
+    "README.md",
+    "data/antibiotics/antifungal/tubercidin.yaml",
+    "data/embeddings/corpus_map.json",
+    "data/embeddings/meta.json",
+    "data/embeddings/vectors.f16.npy",
+    "pages/antifungal/tubercidin.html",
+    "pages/index.html",
+    "pages/map.html",
+    "research/2026-10-07-resistance-gene-grounding.md",
+    "scripts/summarize_resistance_progress.py"
+  ],
+  "claims_added": 2,
+  "curator_claims": 122,
+  "curator_records": 50,
+  "date": "2026-10-13",
+  "documentation_fix_tests": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/docs-fix-tests.xml",
+      "sha256": "a10056f1ea5ed3b8d88176fb66670ae547c1cbcacaaca04816c03045afa8130a"
+    },
+    "passed": 2,
+    "skip_reasons": [],
+    "skipped": 0
+  },
+  "embedding": {
+    "changed_documents_encoded": 1,
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows": 16,
+    "full_projection_rebuilt": true,
+    "model_revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+    "network_used": false,
+    "published": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/embedding-stage/published.json",
+      "sha256": "fbf9bca9878f5c97c4dc876d9e7c7c1136fb2f7d752d8ffdc8a68a8eeebdf7ac"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/embedding-stage/reuse-proof.json",
+      "sha256": "5adba1b60205cfe857f8a7dd295b28109bc0af3b0fc6e9b2531546ccbd0eb107"
+    },
+    "structure_map_unchanged": true,
+    "unchanged_rows_reused": 2938
+  },
+  "experimental_protein_allele_sample_or_genome_assignments": 0,
+  "first_qc_attempt": {
+    "execution": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/full-qc-exit.json",
+      "sha256": "a828d5eff8af63bff11bed8ae83b6b3d4bd855df71779c627401e608789e6bbf"
+    },
+    "exit_code": 1,
+    "failures": [
+      [
+        "tests.test_docs",
+        "test_numeric_claims_in_prose_match_the_corpus"
+      ]
+    ],
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/full-tests.xml",
+      "sha256": "fb83319e6dfce118cfda379174785c53ea114f42c2e27307ab9788e6cdf7f6af"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/full-qc.log",
+      "sha256": "1c9b746fec36ae6c4303b34d2436b4fb00eb00994ebd25d27cde95061f9b5cfc"
+    },
+    "resolution": "Updated NEXT_TASKS.md target-or-resistance count from 417 to 418; gates unchanged."
+  },
+  "focused_tests": {
+    "passed": 39,
+    "skip_reasons": [],
+    "skipped": 0
+  },
+  "full_qc": {
+    "environment": {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "scripts/run_qc.py"
+      ],
+      "dependency_deviation": "RDKit 2025.03.6 instead of project pin 2026.3.5; no chemistry/map regeneration",
+      "elapsed_seconds": 1708.056,
+      "exit_code": 0,
+      "python": "3.13.12",
+      "pythonpath": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/src:/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/scripts:/private/tmp/antibioticmech-qc-science-20261013-abd1:/private/tmp/antibioticmech-identity-20261012/lib/python3.13/site-packages:/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/lib/python3.13/site-packages",
+      "started_at": "2026-10-13T16:16:50.427314+00:00",
+      "versions": {
+        "PyYAML": "6.0.3",
+        "numpy": "2.2.6",
+        "pytest": "9.1.1",
+        "rdkit": "2025.3.6",
+        "scikit-learn": "1.7.2",
+        "scipy": "1.15.3"
+      }
+    },
+    "execution": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/qc-rerun/full-qc-exit.json",
+      "sha256": "9a9c1bf2516cb9d44f069c61c5c75666ba2365a016f95fce79f601c305b26b93"
+    },
+    "exit_code": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/qc-rerun/full-tests.xml",
+      "sha256": "4b4fa056be4a26cf39b643b171f4701cbe5259b7d2f82d9adffbe89a2d1d1211"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/qc-rerun/full-qc.log",
+      "sha256": "e6f10ce1abd3eadd06ef0c5b81569a69eaee68a5f2281211086b0ac3d886b0f6"
+    },
+    "passed": 3411,
+    "pinned_environment_reproduced": false,
+    "project_dependency_pins_changed": false,
+    "skip_reasons": [
+      "got empty parameter set for (path)",
+      "historical checkpoint no longer matches the live corpus; public invariants still run"
+    ],
+    "skipped": 4,
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ]
+  },
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "ignored_files_included": true,
+  "issue_1040": "DEFERRED",
+  "live_browser_verification": false,
+  "native_visual_assets_inspected": 6,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-tubercidin-context.json",
+    "research/2026-10-13-tubercidin-curation.json",
+    "research/2026-10-13-tubercidin-reconciliation.json",
+    "research/2026-10-13-tubercidin-resistance-grounding.tsv",
+    "research/2026-10-13-tubercidin-resistance-progress.json",
+    "research/2026-10-13-tubercidin-resistance-progress.tsv",
+    "tests/fixtures/tubercidin-before-2026-10-13.yaml",
+    "tests/test_tubercidin_curation.py"
+  ],
+  "primary_asset_pins_verified": 7,
+  "prior_uncommitted_vatpase_and_myriocin_checkpoints_preserved": true,
+  "progress_tests": {
+    "passed": 36,
+    "skip_reasons": [],
+    "skipped": 0
+  },
+  "records_byte_identical": 2938,
+  "records_changed": 1,
+  "records_checked": 2939,
+  "records_with_resistance_assertions": 317,
+  "records_without_assertions_or_rules": 2609,
+  "reference_metadata_and_asset_receipts_replayed_with_network_disabled": true,
+  "removed_regenerated_downloads": [],
+  "rendered_claims_caveats_and_record_source_link_verified": true,
+  "rendered_map_payload_verified": true,
+  "rendered_map_record_links_verified": 2939,
+  "resistance_assertions": 4877,
+  "reuse_terms_review_resumed": false,
+  "scientific_interpretation_automatically_revalidated": false,
+  "scope": "SELECTED_PRIMARY_ASSOCIATIONS_NOT_WHOLE_RECORD_REVIEW",
+  "source_adoptions": 0,
+  "source_owned_inputs_and_schema_unchanged": true,
+  "status": "ALL_AUTHORITATIVE_GATES_PASSED_WITH_DISCLOSED_DEPENDENCY_DEVIATION",
+  "uniprot_response_caches_verified": 4,
+  "whole_corpus_goal_status": "OPEN",
+  "whole_record_primary_reviews_completed": 0
+}

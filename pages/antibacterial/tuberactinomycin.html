@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>tuberactinomycin</h1>
 <p class="meta">
   <code class="curie">antibioticmech:aro-4c6e0c1ff0</code>
@@ -37,15 +48,18 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3009657">nonribosomal peptide antibiotics</a><code class="curie">ARO:3009657</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3009657">ARO:3009657</a>      <code class="curie">ARO:3009657</code></li>
+  <li>nonribosomal peptide antibiotics  <a href="http://purl.obolibrary.org/obo/ARO_3009657"><code class="curie">ARO:3009657</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C25H43N13O11</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>701.7 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>701.32049924 Da</td></tr><tr><th scope="row">Source</th><td>PubChem · retrieved 2026-08-29</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">JCTPGOAHEVLZAB-KIXAZQDESA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">C1[C@@H](NC(=N[C@H]1O)N)C2C(=O)NCC(C(=O)NC(C(=O)NC(C(=O)N/C(=C\NC(=O)N)/C(=O)N2)CO)CO)NC(=O)CC(C(CCN)O)N</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C25H43N13O11/c26-2-1-15(41)9(27)3-16(42)32-11-5-30-23(48)18(10-4-17(43)37-24(28)36-10)38-20(45)12(6-31-25(29)49)33-21(46)13(7-39)35-22(47)14(8-40)34-19(11)44/h6,9-11,13-15,17-18,39-41,43H,1-5,7-8,26-27H2,(H,30,48)(H,32,42)(H,33,46)(H,34,44)(H,35,47)(H,38,45)(H3,28,36,37)(H3,29,31,49)/b12-6-/t9?,10-,11?,13?,14?,15?,17+,18?/m1/s1</pre>
 
 <h2>Cross-references</h2>
@@ -53,7 +67,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000490">ARO:3000490</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3000490">tuberactinomycin</a><code class="curie">ARO:3000490</code></li>
   <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/24847446">pubchem.compound:24847446</a></li>
 </ul>
 
@@ -63,6 +77,7 @@ both rather than shown here, since it names at most one of them.</p>
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -75,19 +90,21 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>ribosomal complex <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000729">ARO:3000729</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO asserts stabilization of the ribosomal complex by antibiotics. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000729</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000490 (tuberactinomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000729">ARO:3000729</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000490 (tuberactinomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>RNA guanosine binding site <span class="pill plain">NUCLEIC_ACID</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000739">ARO:3000739</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO asserts competition at the RNA guanosine-binding site. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000739</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000490 (tuberactinomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000739">ARO:3000739</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000490 (tuberactinomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
@@ -128,26 +145,36 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/tuberactinomycin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/tuberactinomycin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=tuberactinomycin">MediaIngredientMech (tuberactinomycin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=tuberactinomycin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=tuberactinomycin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=tuberactinomycin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=tuberactinomycin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

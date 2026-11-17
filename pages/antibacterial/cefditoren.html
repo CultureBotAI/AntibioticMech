@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>cefditoren</h1>
 <p class="meta">
   <code class="curie">CHEBI:59343</code>
@@ -37,17 +48,20 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000032">cephalosporin</a><code class="curie">ARO:0000032</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_23066">CHEBI:23066</a>      <code class="curie">CHEBI:23066</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33575">CHEBI:33575</a>      <code class="curie">CHEBI:33575</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000032">ARO:0000032</a>      <code class="curie">ARO:0000032</code></li>
+  <li>cephalosporin  <a href="http://purl.obolibrary.org/obo/CHEBI_23066"><code class="curie">CHEBI:23066</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_33575"><code class="curie">CHEBI:33575</code></a></li>
+  <li>cephalosporin  <a href="http://purl.obolibrary.org/obo/ARO_0000032"><code class="curie">ARO:0000032</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C19H18N6O5S3</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>506.591 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>506.05008 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">KMIPKYQIOVAHOP-YLGJWRNMSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">[H][C@]12SCC(/C=C\c3scnc3C)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C19H18N6O5S3/c1-8-11(33-7-21-8)4-3-9-5-31-17-13(16(27)25(17)14(9)18(28)29)23-15(26)12(24-30-2)10-6-32-19(20)22-10/h3-4,6-7,13,17H,5H2,1-2H3,(H2,20,22)(H,23,26)(H,28,29)/b4-3-,24-12-/t13-,17-/m1/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -58,7 +72,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000649">ARO:3000649</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3000649">cefditoren</a><code class="curie">ARO:3000649</code></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=104145-95-1">cas:104145-95-1</a></li>
   <li>reaxys:8174297</li>
   <li><a href="https://www.ebi.ac.uk/chembl/id_lookup/CHEMBL1743">chembl:CHEMBL1743</a></li>
@@ -87,13 +101,14 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_36047">CHEBI:36047</a>    <code class="curie">CHEBI:36047</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antibacterial drug  <a href="http://purl.obolibrary.org/obo/CHEBI_36047"><code class="curie">CHEBI:36047</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -113,13 +128,15 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>beta-lactam sensitive penicillin-binding protein <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000749">ARO:3000749</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. Penicillin-binding proteins are asserted as inhibited transpeptidases. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000749</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000649 (cefditoren); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000749">ARO:3000749</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000649 (cefditoren); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
@@ -127,12 +144,12 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">1 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">1 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -141,11 +158,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004446</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000649 (cefditoren); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004446">ARO:3004446</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000649 (cefditoren); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -186,26 +205,36 @@ type — expand a group to see its determinants.</p>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/cefditoren.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/cefditoren.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=cefditoren">MediaIngredientMech (cefditoren)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=cefditoren">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=cefditoren">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=cefditoren">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=cefditoren">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

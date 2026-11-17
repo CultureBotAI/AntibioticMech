@@ -1,0 +1,110 @@
+{
+  "canary": "dnaA",
+  "constraints": {
+    "biological_record_writes": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "source_adoption": false,
+    "whole_record_primary_signoff": false
+  },
+  "date": "2026-10-15",
+  "inputs": {
+    "assessment": {
+      "path": "research/2026-10-15-dnaa-sigma-hp1184-assessment.json",
+      "sha256": "cf9076c723d355a4acc31d5a1d63bc8ae41a261c2014801333d2affcb690ab6c"
+    },
+    "current_index": {
+      "path": "research/2026-10-15-card-current-references.json",
+      "sha256": "f98aaf50c76aaab8917fd470d4622e8ec2ababfbcdf970ce2b89439e614d71e7"
+    },
+    "definitions": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "prior_citation_screen": {
+      "path": "research/2026-10-15-card-protein-name-screen.json",
+      "sha256": "9ea833b1d24f8c48189a374f13a549ccff6458185d77f782a86961aea15a8a51"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    },
+    "taxonomy_inventory": {
+      "path": "reports/resistance-grounding-2026-10-15-card-gene-reference-followup/taxonomy-cache-inventory.json",
+      "sha256": "071db296d1418042946d97ffcd408151e2d665346a36b346df4f5ab048fc2d72"
+    }
+  },
+  "max_bytes": 2000000,
+  "preflight": {
+    "ignored_files_included": true,
+    "matching_exact_gene_query_history": [],
+    "patterns": [
+      "gene_exact:dnaA",
+      "gene_exact:rpoD",
+      "gene_exact:rpoH",
+      "HP1184",
+      "HP_1184"
+    ],
+    "prior_empty_citation_queries_reused": [
+      "19170875",
+      "9862449",
+      "15793129",
+      "27303615"
+    ],
+    "roots": [
+      "reports",
+      "research"
+    ],
+    "scope": "REQUEST_RECEIPT_ATTEMPT_PLAN_GLOBS"
+  },
+  "release": "2026_03",
+  "requests": {
+    "dnaA": {
+      "query": "gene_exact:dnaA AND organism_id:83333 AND reviewed:true",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AdnaA+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "hp1184": {
+      "query": "(gene_exact:HP_1184 OR gene_exact:HP1184) AND organism_id:85962",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AHP_1184+OR+gene_exact%3AHP1184%29+AND+organism_id%3A85962&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "sigma": {
+      "query": "(gene_exact:rpoD OR gene_exact:rpoH) AND organism_id:83333 AND reviewed:true",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ArpoD+OR+gene_exact%3ArpoH%29+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "taxonomy_sources": {
+    "210": {
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Helicobacter+pylori%22+AND+rank%3Aspecies&format=json&size=500",
+      "wrapper": {
+        "path": "reports/resistance-grounding-2026-10-07/request-a7dd4cf8cb671d6c5d908fddd938064b7054358c32d4843eaa72cb6fbe03fc36.json",
+        "sha256": "8bf05a617f1980f8736900adc0fd75e6c8385558e93933849dc7f60d605bc6ce"
+      }
+    },
+    "562": {
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Escherichia+coli%22+AND+rank%3Aspecies&format=json&size=500",
+      "wrapper": {
+        "path": "reports/resistance-grounding-2026-10-07/request-a73f8a746b5a2ccfcd667d308609f748041078ef59aefecb2f0420a17583e26e.json",
+        "sha256": "b4802e9f4a3f8b75c70561e8790054f93d3b472e8a4894296304a2907679e835"
+      }
+    },
+    "83333": {
+      "url": "https://rest.uniprot.org/taxonomy/83333",
+      "wrapper": {
+        "path": "reports/resistance-grounding-2026-10-07/request-5bb14d6f1fb091d5ec596c51990d122b059d006670135e99c308ef0bb1eb7734.json",
+        "sha256": "50bb456e3ae9c94ef4070970795c8628009cd5042ab742a754c828b235712eec"
+      }
+    },
+    "85962": {
+      "url": "https://rest.uniprot.org/taxonomy/85962",
+      "wrapper": {
+        "path": "reports/resistance-grounding-2026-10-07/request-7f7188da0cd761055835d719c0938d00abd15e7288efbafd8d1828982fc71fa5.json",
+        "sha256": "91f9d04481d617d8422e39c1b5482f4fd959c52a66b93c9a251477d198302ec2"
+      }
+    }
+  }
+}

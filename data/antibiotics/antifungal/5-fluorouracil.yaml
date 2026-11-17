@@ -1315,3 +1315,54 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T16:06:20Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added two primary-supported FUR1 cohort associations; grounded species
+    and reference-only UniProt context. No exact allele, experimental protein, genome,
+    MIC or clinical call inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T16:17:38Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Removed descriptive cohort labels from strain identifier fields after scope
+    review. Retained cohort context in claim labels; gene associations and reference
+    provenance unchanged.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: OTHER
+  label: FUR1-associated 5-fluorouracil resistance in LL13-040-derived cohort
+  gene_id: FUR1
+  gene_families:
+  - FUR1
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported 5-fluorouracil resistance-associated growth
+  assay: Relative colony-growth area under the curve
+  note: Gene-level cohort association; not allele-specific causality or resistance
+    of the parental strain. UniProtKB:P18562 (entry 192, sequence 2; S288c, NCBITaxon:559292;
+    locus YHR128W) is reference-only. No tested-allele protein, strain TaxID, sample/genome
+    ID, MIC or clinical category assigned.
+  evidence:
+  - reference: PMID:37856537
+    notes: Results sec003/sec005; Figures 2 and 4C. Cohort association.
+  - reference: UniProtKB:P18562
+    notes: FUR1 reference identity only; release 2026_03.
+- mechanism_type: OTHER
+  label: FUR1-associated 5-fluorouracil resistance in NC-02-derived cohort
+  gene_id: FUR1
+  gene_families:
+  - FUR1
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported 5-fluorouracil resistance-associated growth
+  assay: Relative colony-growth area under the curve
+  note: Gene-level cohort association; not allele-specific causality or resistance
+    of the parental strain. UniProtKB:P18562 (entry 192, sequence 2; S288c, NCBITaxon:559292;
+    locus YHR128W) is reference-only. No tested-allele protein, strain TaxID, sample/genome
+    ID, MIC or clinical category assigned.
+  evidence:
+  - reference: PMID:37856537
+    notes: Results sec003/sec005; Figures 2 and 4C. Cohort association.
+  - reference: UniProtKB:P18562
+    notes: FUR1 reference identity only; release 2026_03.

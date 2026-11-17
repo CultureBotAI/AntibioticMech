@@ -1,0 +1,353 @@
+{
+  "adversarial_self_review": [
+    "Unmapped historical ACR loci are not assigned modern alias-hit proteins.",
+    "Papulacandin B is not transferred to ACR2 or to all genetic backgrounds.",
+    "Hypothetical surface/accessibility effects are not asserted biochemical routes.",
+    "Reference-strain taxonomy is not assigned to laboratory derivatives.",
+    "Old papulacandin claims and other owners remain unchanged.",
+    "Same-agent review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-acr-context.json",
+      "sha256": "56d25e2fc42452014a26df8c351e42797f20109761fd3072d8bc8306006f4628"
+    },
+    {
+      "path": "research/2026-10-13-acr-curation.json",
+      "sha256": "22b6232f2cf831cb5dfe569e55dd34d97d03f8b9b218817e0540d69d576c0722"
+    },
+    {
+      "path": "research/2026-10-13-acr-reconciliation.json",
+      "sha256": "30d17f0dc91aa3d1a76a2275b85c8c04d9970539c39ffe5d65a712e3eab68d7d"
+    },
+    {
+      "path": "research/2026-10-13-acr-resistance-grounding.tsv",
+      "sha256": "bf35c90860ec367559a2a97b50e2c74b6f2b0eb8a1fd426cab45062dccddd7da"
+    },
+    {
+      "path": "research/2026-10-13-acr-resistance-progress.json",
+      "sha256": "76fff19e45dbfe473ee44c73db493f75a49cfef3ee53966ef1c34dce28703721"
+    },
+    {
+      "path": "research/2026-10-13-acr-resistance-progress.tsv",
+      "sha256": "a503ffc6d9d64cfe0c27af8ec154d68f80e03ffd7b30a8960d68f28ce68d3e71"
+    },
+    {
+      "path": "data/antibiotics/antifungal/aculeacin-a.yaml",
+      "sha256": "1317d6273e9579eca86304a66e4d42da183b7d84131671710731c92293f07b15"
+    },
+    {
+      "path": "tests/fixtures/aculeacin-a-before-2026-10-13.yaml",
+      "sha256": "35137dae602556e4c165ffac59ed56d887ad9f5024d2b9d4c52cfa5855930b6d"
+    },
+    {
+      "path": "data/antibiotics/antifungal/echinocandin-b.yaml",
+      "sha256": "d6a0405b4759f0fef94c2067b7ce77b101a1ade2d69388cf1887004ada21bd42"
+    },
+    {
+      "path": "tests/fixtures/echinocandin-b-before-2026-10-13.yaml",
+      "sha256": "4dfc8af1ba680deb05b99d10faad8eba4c156e483b5892d25c16d5cc390f356f"
+    },
+    {
+      "path": "data/antibiotics/antifungal/papulacandin-b.yaml",
+      "sha256": "e3468aa27d49bc0adfebd073b051209549050565bf22cf675f07d795e56c7e80"
+    },
+    {
+      "path": "tests/fixtures/papulacandin-b-before-2026-10-13.yaml",
+      "sha256": "7c22a84a3ed7d336a105781830aabb303401e145387906577d3f3927d572bd7f"
+    },
+    {
+      "path": "tests/test_acr_locus_curation.py",
+      "sha256": "791bfbb29862ac0b9dce747ba60d34b5983c55e2a0d0e61c5461bab8a5d4d941"
+    },
+    {
+      "path": "tests/test_papulacandin_curation.py",
+      "sha256": "2130f004f8e44d41129db776301b48a5d612f39238539cd2a13f368061039117"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "6930ee4dec3dd6164eed747e1972b5be305690fc99700ff97a5821a18d442108"
+    }
+  ],
+  "cached_sources_verified": 11,
+  "coverage_reconciled_from_progress_rows": {
+    "assertions": 4866,
+    "curator_claims": 111,
+    "curator_records": 46,
+    "records": 2939,
+    "records_with_assertions": 313,
+    "without_assertions_or_rules": 2613
+  },
+  "date": "2026-10-13",
+  "embedding": {
+    "actual_reencoding": true,
+    "model_pins": {
+      "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+      "weights_sha256": "45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7"
+    },
+    "projection_method": "pacmap",
+    "published": {
+      "corpus_map.json": "551a2c8ffb43add7d6d225f2657deca2d80c323c68504c26562c32412d32798a",
+      "meta.json": "6fe194379ac7a0f2da2489376c1ad7573003505f91f1c04fd24b9e5773ca89f3",
+      "vectors.f16.npy": "53d251d8cce832eced2cc0a2e2d779344ee222d075743d94fcb443474e952f50"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-13-acr/embedding-stage/reuse-proof.json",
+      "sha256": "51b786f26663b08e1d7d7b39dd47933328f0a756028d4bde001ecc526028c1c8"
+    },
+    "seed": 42,
+    "unchanged_rows_independently_checked_against_pinned_local_baseline": true,
+    "vector_baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-cyh2/embedding-stage/bulk/vectors.f16.npy",
+      "sha256": "96b640427755611f0ece7a5940966dce30ce064feca5ebf7e679a3dd8b753807"
+    }
+  },
+  "embedding_reuse_proof": {
+    "baseline_sha256": "333f83ffdac970ef0aa005fee4ff8a4ccb97e9618b5be24f2d67a41c32c02d6e",
+    "byte_identical_reused_rows": 2936,
+    "changed_documents": [
+      "CHEBI:2450",
+      "CHEBI:315018",
+      "CHEBI:569624"
+    ],
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows": 16,
+    "dimension": 1024,
+    "fingerprint": "13990a0e50efee9a",
+    "finite": true,
+    "normalized": true,
+    "vector_rows": 2939
+  },
+  "environment_limitation": "Local RDKit 2025.03.6 differs from project pin 2026.3.5. No new CI or pinned-environment pass is claimed.",
+  "experimental_proteins_or_genomes_assigned": 0,
+  "focused_preflight_final": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_acr_locus_curation.py",
+      "tests/test_papulacandin_curation.py",
+      "tests/test_resistance_progress.py",
+      "tests/test_checkpoint_scope_rendering.py"
+    ],
+    "exit_code": 0,
+    "finished": "2026-10-13T05:13:40.246885+00:00",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-acr/focused.log",
+      "sha256": "6c3c83ea0fb4249a51a12f5f0ac7e6e949bc94caba9bac5534bfb072aba0dfd8"
+    },
+    "output": ".................................................................        [100%]\n65 passed in 47.76s\n",
+    "started": "2026-10-13T05:12:51.491879+00:00"
+  },
+  "focused_preflight_initial": "1 failed, 64 passed in 75.76s; progress test raced unfinished export generation",
+  "full_local_qc": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "current_ci_run": false,
+    "elapsed_seconds": 2399.67,
+    "exit_code": 0,
+    "finished": "2026-10-13T05:57:20.238240+00:00",
+    "local_rdkit_version": "2025.03.6",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-acr/qc.log",
+      "sha256": "cd9582c115ba138d51e3f825779d2831e40a81a43420b9134956a6cc61faca28"
+    },
+    "pinned_environment_reproduced": false,
+    "project_rdkit_version": "2026.3.5",
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "started": "2026-10-13T05:17:20.537280+00:00",
+    "test_summary": "3155 passed, 4 skipped in 2023.36s (0:33:43)"
+  },
+  "generated_site": {
+    "full_render_completed": true,
+    "live_browser_verification": false,
+    "scope_notes_visible": true
+  },
+  "github_mutations": 0,
+  "historical_test_failure_reproduction": {
+    "all_prior_claims_unchanged": true,
+    "files_modified": false,
+    "historical_claim_count": 2,
+    "prior_test_reproduced_failure": true,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-acr/legacy-test-reproduction.json",
+      "sha256": "253f06416e2d2343cd95bad875cfe5fd90922adbc933aafb60fdf1525bbbc242"
+    },
+    "source": "HEAD:tests/test_papulacandin_curation.py",
+    "successor_claim_count": 5
+  },
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_claims": 11,
+  "offline_source_replay": {
+    "network_requests": 0,
+    "sources": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-acr/request-3d91ffff1aa6e469d0639c0b7738fd77244d95e5036e2b84228fa699afd7da6e.json",
+        "sha256": "4a211d06a11eeb099d2b4e9570731de8d6f2130c0b17ef7b5e9596f006191d0d"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-acr/request-12ce6d0f6a7362805201f03702a5e99c18263b62c72a86935b2a5d88ac7172c2.json",
+        "sha256": "5f48a2bbaf72b753882a019ed283e8dabbd5456a53683a37548411c9b29a91d9"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-acr/request-e9ab6b44fbcb0343f0a5d6b4c26ba79ce89173ca26aff7c31dcd29b81722c217.json",
+        "sha256": "a24ff8bc170721ff20e019d87b7a60b83c508e551e54c3fbd039a4b74b367e63"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-acr/request-9aa9fba18ea536cd026ff32034ae96fea73830c8345e601c74e8642ec2598f33.json",
+        "sha256": "71a7000e43f1d9767e47255278efa339f3f7eac30d2b995cfb608b068d257547"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-acr/primary.pdf",
+        "sha256": "2e75ba6836f4acad924eab9d761528a24ec264da2efadb04fb60dd8319c62ee2"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-acr/page-3.png",
+        "sha256": "d2608844778449e04afd77bacf5847d0e338b7f86d92e181f9b3476d111e9795"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-acr/page-4.png",
+        "sha256": "ef084ca33eae4772391a756da16c789b83faacfaf63d0d0df93667b044e6d2a9"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-acr/page-5.png",
+        "sha256": "de3b174190d6bc64895eb4b465d5798d0f5255f4965fdf0cdf62de6cd07e9176"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-acr/sgd-genetic-loci.html",
+        "sha256": "c4fcf48cf18a9e8653bc722587ab0332a44b0a48ecb8dd631b6279cda8a3941e"
+      }
+    ]
+  },
+  "preservation": {
+    "all_memberships_unchanged": true,
+    "all_raw_and_curation_files_byte_identical": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-acr/baseline.json",
+      "sha256": "5173078edb961c48466fe5fa643f16d311359d9f79d399028059a02d5eed87c2"
+    },
+    "changed_records": [
+      "data/antibiotics/antifungal/aculeacin-a.yaml",
+      "data/antibiotics/antifungal/echinocandin-b.yaml",
+      "data/antibiotics/antifungal/papulacandin-b.yaml"
+    ],
+    "earlier_research_files_preserved_except_main_report": true,
+    "historical_research_files_checked": 367,
+    "ignored_files_included": true,
+    "protected_files_checked": 3385,
+    "records_checked": 2939
+  },
+  "protected_files_changed": [
+    "data/embeddings/corpus_map.json",
+    "data/embeddings/meta.json",
+    "data/embeddings/vectors.f16.npy",
+    "pages/antifungal/aculeacin-a.html",
+    "pages/antifungal/echinocandin-b.html",
+    "pages/antifungal/papulacandin-b.html",
+    "pages/index.html",
+    "pages/map.html"
+  ],
+  "records_byte_identical": 2936,
+  "render_mutation_checks": {
+    "biological_files_changed": false,
+    "caught": 12,
+    "mutations": [
+      {
+        "caught": true,
+        "mutation": "adapter_note",
+        "record_index": 0
+      },
+      {
+        "caught": true,
+        "mutation": "adapter_note",
+        "record_index": 1
+      },
+      {
+        "caught": true,
+        "mutation": "adapter_note",
+        "record_index": 2
+      },
+      {
+        "caught": true,
+        "mutation": "adapter_evidence",
+        "record_index": 0
+      },
+      {
+        "caught": true,
+        "mutation": "adapter_evidence",
+        "record_index": 1
+      },
+      {
+        "caught": true,
+        "mutation": "adapter_evidence",
+        "record_index": 2
+      },
+      {
+        "caught": true,
+        "mutation": "template_note",
+        "record_index": 0
+      },
+      {
+        "caught": true,
+        "mutation": "template_note",
+        "record_index": 1
+      },
+      {
+        "caught": true,
+        "mutation": "template_note",
+        "record_index": 2
+      },
+      {
+        "caught": true,
+        "mutation": "template_evidence",
+        "record_index": 0
+      },
+      {
+        "caught": true,
+        "mutation": "template_evidence",
+        "record_index": 1
+      },
+      {
+        "caught": true,
+        "mutation": "template_evidence",
+        "record_index": 2
+      }
+    ],
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-acr/render-mutations.json",
+      "sha256": "7de9c735c4e3f17c9132eff885894c5879ba184ea79e326fe7bc2e8aa1005a70"
+    },
+    "template_files_changed": false
+  },
+  "review_fix": "Historical papulacandin assertions now use pinned fixtures and dated census, not mutable live records. Added tamper/live-read guards and real rendered-caveat tests.",
+  "scope": "HISTORICAL_LOCUS_ASSOCIATIONS_NOT_WHOLE_RECORD_REVIEW",
+  "source_adoptions": 0,
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}

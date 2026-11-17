@@ -1,0 +1,267 @@
+identifier: CHEBI:200517
+label: salinamide B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: A chlorohydrin-containing bicyclic depsipeptide antibiotic congener from
+  marine Streptomyces sp. CNB-091 that inhibits bacterial RNA polymerase with antibacterial
+  activity.
+definition_source: DOI:10.1002/anie.201508576
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@@H](C)[C@@H]1NC(=O)[C@H](NC(=O)[C@@H](C)[C@@H](O)C(C)C)[C@H](C)OC(=O)[C@H]2COC(=O)CNC(=O)\C=C/[C@@](O)(CCl)[C@H](C)OC3=CC=C(C=C3)[C@@H](NC1=O)C(=O)N(C)[C@H](CC1=CC=CC=C1)C(=O)N[C@@H]([C@H](C)O)C(=O)N2
+  standard_inchi: InChI=1S/C51H70ClN7O15/c1-10-27(4)39-46(66)58-42-33-16-18-34(19-17-33)74-31(8)51(71,25-52)21-20-37(61)53-23-38(62)72-24-35(50(70)73-30(7)41(48(68)55-39)57-44(64)28(5)43(63)26(2)3)54-47(67)40(29(6)60)56-45(65)36(59(9)49(42)69)22-32-14-12-11-13-15-32/h11-21,26-31,35-36,39-43,60,63,71H,10,22-25H2,1-9H3,(H,53,61)(H,54,67)(H,55,68)(H,56,65)(H,57,64)(H,58,66)/b21-20-/t27-,28+,29+,30+,31+,35-,36-,39+,40+,41-,42-,43+,51-/m1/s1
+  standard_inchi_key: MXWLREHUFSKYRH-CHKOLDIQSA-N
+  molecular_formula: C51H70ClN7O15
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001230/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1056.608
+  monoisotopic_mass: 1055.4618
+xrefs:
+- pubchem.compound:22953478
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1002/anie.201508576#salinamide-b
+  source_label: salinamide B
+  minted_identifier: antibioticmech:curator-304fb1f922
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1002/anie.201508576
+    snippet: Ray et al. elucidated the biosynthetic pathway for the chlorohydrin bicyclic
+      depsipeptide antibiotic salinamide B in marine Streptomyces sp. CNB-091, which
+      binds the bacterial RNA polymerase bridge-helix cap and inhibits Gram-positive
+      and Gram-negative bacterial growth.
+    notes: Reported by Ray et al. 2016 (Angew Chem Int Ed Engl 55:364-367; PMID:26553755;
+      DOI:10.1002/anie.201508576) and Degen et al. 2014 (eLife 3:e02451; PMID:24843001;
+      DOI:10.7554/eLife.02451) as a chlorohydrin bicyclic depsipeptide antibiotic
+      congener of salinamide A from marine Streptomyces sp. CNB-091 that inhibits
+      bacterial RNA polymerase. MIBiG 4.0.1 entry BGC0001230, ChEBI CHEBI:200517,
+      and PubChem CID 22953478 supply the stereo-complete SMILES, Standard InChI,
+      and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1169156
+  taxon_label: Streptomyces sp.
+  strain: CNB091
+  biosynthetic_gene_cluster: BGC0001230
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'salinamide B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:26553755
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-05T09:15:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and NUCLEIC_ACID_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Ray et al. 2016 (PMID:26553755) and Degen
+    et al. 2014 (PMID:24843001).
+  llm_assisted: true
+- timestamp: '2026-11-05T12:15:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial DNA-directed
+    RNA polymerase bridge-helix cap (RpoB / RpoC; GO:0000428, PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+    backed by Degen et al. 2014 (DOI:10.7554/eLife.02451, PMID:24843001) and Ray et
+    al. 2016 (DOI:10.1002/anie.201508576, PMID:26553755).
+  llm_assisted: true
+- timestamp: '2026-11-05T12:20:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed UniProtKB protein_examples (P0A8V2, P0A8T7) to the primary-literature
+    bacterial DNA-directed RNA polymerase bridge-helix cap (RpoB / RpoC) target on
+    salinamide B (DOI:10.7554/eLife.02451).
+  llm_assisted: true
+- timestamp: '2026-11-05T21:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:200517) with complete 4/4 chemical_structure,
+    curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET),
+    and primary-literature molecular_targets with reviewed UniProtKB protein_examples
+    (UniProtKB:P0A8V2, UniProtKB:P0A8T7; DOI:10.7554/eLife.02451, PMID:24843001; DOI:10.1002/anie.201508576,
+    PMID:26553755) from PROPOSED to REVIEWED (issue #1333).'
+  llm_assisted: true
+- timestamp: '2026-11-06T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph salinamide_b_rnap_bridge_helix_cap_hinge_transcription_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8V2,
+    UniProtKB:P0A8T7) and primary literature (DOI:10.7554/eLife.02451).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Chlorohydrin bicyclic depsipeptide antibiotic from
+  marine Streptomyces sp. CNB-091 that binds the bridge-helix cap of bacterial RNA
+  polymerase and inhibits bacterial transcription (Ray et al. 2016, DOI:10.1002/anie.201508576,
+  PMID:26553755; Degen et al. 2014, DOI:10.7554/eLife.02451, PMID:24843001).'
+molecular_targets:
+- target_id: GO:0000428
+  target_label: bacterial DNA-directed RNA polymerase bridge-helix cap (RpoB / RpoC)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: In vitro transcription inhibition assays and X-ray crystal
+    structure of Escherichia coli DNA-directed RNA polymerase holoenzyme bound to
+    the chlorohydrin bicyclic depsipeptide salinamide B at the bridge-helix cap (PDB:4MEY)
+    blocking bridge-helix N-terminal hinge conformational cycling (Degen et al. 2014,
+    DOI:10.7554/eLife.02451, PMID:24843001; Ray et al. 2016, DOI:10.1002/anie.201508576,
+    PMID:26553755).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-05
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.7554/eLife.02451
+    snippet: Degen et al. solved the crystal structure of Escherichia coli RNA polymerase
+      holoenzyme in complex with salinamide B (bromo-analogue/congener, PDB:4MEY)
+      at the bridge-helix cap and showed direct inhibition of bacterial RNA polymerase
+      nucleotide addition.
+    notes: Degen et al. 2014 (eLife 3:e02451; PMID:24843001; PDB:4MEY) established
+      direct binding of salinamide B to the RpoB/RpoC bridge-helix cap of Escherichia
+      coli DNA-directed RNA polymerase.
+  - reference: PMID:24843001
+    notes: PubMed record for Degen et al. 2014 on transcription inhibition and crystal
+      structure of E. coli RNA polymerase with salinamide B.
+  - reference: DOI:10.1002/anie.201508576
+    notes: Ray et al. 2016 (Angew Chem Int Ed Engl 55:364-367; PMID:26553755) characterized
+      the salinamide B biosynthetic pathway in marine Streptomyces sp. CNB-091.
+  - reference: PMID:26553755
+    notes: PubMed record for Ray et al. 2016 on salinamide B biosynthesis and antibacterial
+      activity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8V2
+    protein_label: DNA-directed RNA polymerase subunit beta
+    gene_symbol: rpoB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-05'
+    role: Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB) forming
+      part of the bridge-helix cap binding site in the salinamide B-bromobenzoate
+      cocrystal structure (PDB:4MEY) and harboring resistance substitutions (DOI:10.7554/eLife.02451;
+      PMID:24843001).
+  - uniprot_id: UniProtKB:P0A8T7
+    protein_label: DNA-directed RNA polymerase subunit beta'
+    gene_symbol: rpoC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-05'
+    role: Escherichia coli K-12 DNA-directed RNA polymerase beta' subunit (RpoC) whose
+      bridge-helix hinge and F-loop directly contact salinamide B in the cocrystal
+      structure (PDB:4MEY) to prevent active-center nucleotide addition (DOI:10.7554/eLife.02451;
+      PMID:24843001).
+causal_graphs:
+- graph_id: salinamide_b_rnap_bridge_helix_cap_hinge_transcription_inhibition
+  title: Salinamide B binds the bacterial RNA polymerase bridge-helix cap/hinge pocket
+    to inhibit nucleotide addition and transcription
+  description: Salinamide B, a chlorinated bicyclic depsipeptide antibiotic from marine
+    Streptomyces sp. CNB-091, binds the bacterial DNA-directed RNA polymerase (RpoB/RpoC)
+    bridge-helix cap/hinge pocket (PDB:4MEY), allosterically blocking bridge-helix
+    N-terminal hinge unbending required for nucleotide addition and arresting bacterial
+    transcription.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: salinamide_b
+    label: salinamide B
+    node_type: COMPOUND
+    grounding: CHEBI:200517
+  - node_id: bacterial_rna_polymerase_bridge_helix_hinge
+    label: bacterial DNA-directed RNA polymerase (RpoB/RpoC) bridge-helix cap/hinge
+      pocket
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial DNA-directed RNA polymerase beta (RpoB) and beta' (RpoC)
+      subunits forming the salinamide-binding bridge-helix cap/hinge pocket; kept
+      label-only with Escherichia coli K-12 RpoB (UniProtKB:P0A8V2) and RpoC (UniProtKB:P0A8T7)
+      protein_examples.
+    gene_symbols:
+    - rpoB
+    - rpoC
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A8V2
+      protein_label: DNA-directed RNA polymerase subunit beta
+      gene_symbol: rpoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-05'
+      role: Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB)
+        forming part of the bridge-helix cap binding site in the salinamide B-bromobenzoate
+        cocrystal structure (PDB:4MEY) and harboring resistance substitutions (DOI:10.7554/eLife.02451;
+        PMID:24843001).
+    - uniprot_id: UniProtKB:P0A8T7
+      protein_label: DNA-directed RNA polymerase subunit beta'
+      gene_symbol: rpoC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-05'
+      role: Escherichia coli K-12 DNA-directed RNA polymerase beta' subunit (RpoC)
+        whose bridge-helix hinge and F-loop directly contact salinamide B in the cocrystal
+        structure (PDB:4MEY) to prevent active-center nucleotide addition (DOI:10.7554/eLife.02451;
+        PMID:24843001).
+  - node_id: rnap_bridge_helix_hinge_nucleotide_addition_activity
+    label: RNA polymerase bridge-helix hinge conformational cycling and nucleotide
+      addition activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Conformational unbending of the RNA polymerase bridge-helix N-terminal
+      hinge that couples nucleotide addition in transcription initiation and elongation,
+      allosterically blocked by salinamide B (DOI:10.7554/eLife.02451, PDB:4MEY).
+  - node_id: bacterial_dna_templated_transcription
+    label: bacterial DNA-templated transcription
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial RNA synthesis during transcription initiation and elongation
+      inhibited by salinamide B (DOI:10.7554/eLife.02451).
+  edges:
+  - subject: salinamide_b
+    predicate: inhibits
+    object: rnap_bridge_helix_hinge_nucleotide_addition_activity
+    description: Salinamide B binds the bacterial RNA polymerase bridge-helix cap/hinge
+      site and allosterically inhibits nucleotide addition.
+    evidence:
+    - reference: DOI:10.7554/eLife.02451
+      notes: Degen et al. 2014 (PMID:24843001; PDB:4MEY) solved the crystal structure
+        of Escherichia coli RNA polymerase holoenzyme bound to salinamide B-Br and
+        demonstrated allosteric inhibition of bridge-helix N-terminal hinge unbending
+        and nucleotide addition.
+  - subject: bacterial_rna_polymerase_bridge_helix_hinge
+    predicate: enables
+    object: rnap_bridge_helix_hinge_nucleotide_addition_activity
+    description: The bacterial RNA polymerase RpoB and RpoC subunits form the bridge-helix
+      cap/hinge region that mediates catalytic nucleotide addition.
+    evidence:
+    - reference: DOI:10.7554/eLife.02451
+      notes: X-ray crystallography (PDB:4MEY) and rpoB/rpoC mutagenesis defined the
+        salinamide B binding pocket at the RpoB/RpoC bridge-helix cap/hinge interface
+        (PMID:24843001).
+  - subject: rnap_bridge_helix_hinge_nucleotide_addition_activity
+    predicate: supports
+    object: bacterial_dna_templated_transcription
+    description: Bridge-helix hinge cycling and nucleotide addition drive bacterial
+      transcription initiation and elongation.
+    evidence:
+    - reference: DOI:10.7554/eLife.02451
+      notes: Inhibition of nucleotide addition at the bridge-helix hinge by salinamide
+        B blocks bacterial transcription and growth (PMID:24843001).

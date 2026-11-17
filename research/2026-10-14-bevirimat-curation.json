@@ -1,0 +1,47 @@
+{
+  "after": {
+    "path": "data/antibiotics/antiviral/bevirimat.yaml",
+    "sha256": "a57382975e070534ebcd81755be66a9a4931da845824dfe89335b9fd576f2ea9"
+  },
+  "before": {
+    "complete_collection_aware_record_loaded": true,
+    "identifier": "CHEBI:65484",
+    "path": "data/antibiotics/antiviral/bevirimat.yaml",
+    "sha256": "2894f5b4c56f5716b102720362a56e69279661421faff7dcc5c30a0954f01566",
+    "standard_inchi_key": "YJEJKUQEXFSVCJ-WRFMNRASSA-N"
+  },
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-14-bevirimat/bevirimat-canary.yaml",
+    "sha256": "a57382975e070534ebcd81755be66a9a4931da845824dfe89335b9fd576f2ea9"
+  },
+  "census": {
+    "path": "research/2026-10-14-bevirimat-resistance-grounding.tsv",
+    "sha256": "8a6f419ca0fa0c8bd4e18bc4c4dfbb23601bc3a84c2b8d51f8bbd1e44e3004e6"
+  },
+  "claims_grounded": 1,
+  "context": {
+    "path": "research/2026-10-14-bevirimat-taxonomy.json",
+    "sha256": "2341d1e997c325a3e9c593328ed5e3f03fe78fff7c8353ccb35ca10f9d4368ec"
+  },
+  "curation_event": {
+    "action": "GROUNDED_RESISTANCE_TAXONOMY",
+    "changes": "Grounded the existing bevirimat HIV-1 resistance claim at species rank as Lentivirus humimdef1 (NCBITaxon:3418650), using the cited 2010 primary organism context and UniProt taxonomy release 2026_03. Preserved the original mechanism, gene-family label, variant wording and primary citations. Distinguished the unranked HIV-1 node and laboratory background from experimental identities. Added no protein, strain, genome, normalized allele or numeric AST; whole-record review and exact compound formulation remain open.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-14T09:23:33Z"
+  },
+  "experimental_alleles_assigned": 0,
+  "experimental_genomes_or_samples_assigned": 0,
+  "fixture": {
+    "path": "tests/fixtures/bevirimat-before-2026-10-14.yaml",
+    "sha256": "2894f5b4c56f5716b102720362a56e69279661421faff7dcc5c30a0954f01566"
+  },
+  "fresh_seed_merge_equal": true,
+  "history_events_added": 1,
+  "identifier": "CHEBI:65484",
+  "new_resistance_claims": 0,
+  "other_records_byte_identical": 2938,
+  "records_changed": 1,
+  "unrelated_fields_preserved": true,
+  "whole_record_primary_signoffs": 0
+}

@@ -1,0 +1,248 @@
+{
+  "additional_transitive_replay": {
+    "dossier_unchanged": true,
+    "http_and_sockets_disabled": true,
+    "module": "audit_irek_context",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-syringomycin/irek-offline-replay.json",
+      "sha256": "b8763ecbf26cfa39e618d0a10c9f5b93cb1d8a00f1a2180c187826038c1031e2"
+    }
+  },
+  "adversarial_review": {
+    "code_fix_commit": "0cfa6266a",
+    "count_fix_commit": "4d33ae18a",
+    "findings": [
+      "Fail-open claim context",
+      "Historical replay coupled to mutable records",
+      "Stale current-status counts and ledger links"
+    ],
+    "fixed_issues": [
+      1098,
+      1099,
+      1100
+    ],
+    "kind": "SAME_AGENT_NOT_INDEPENDENT_SCIENTIFIC_SIGNOFF",
+    "pr": "https://github.com/CultureBotAI/AntibioticMech/pull/1097",
+    "transitive_fix_commit": "fc9eaf192"
+  },
+  "artifacts": [
+    {
+      "path": "data/antibiotics/antifungal/syringomycin-e.yaml",
+      "sha256": "e984b707b8d8e39e0e4e06e1b1e6b17c724dade7ca1af9f0d38226d42bafd7de"
+    },
+    {
+      "path": "pages/antifungal/syringomycin-e.html",
+      "sha256": "3ae8b66413aea120f839feebbeabbf773265b1767dc83c1bfaded0e598855d33"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "60a98839e4633ebc01c22f10170440d039c9e0eed7e1cc6e21e652a54c41efc1"
+    },
+    {
+      "path": "research/2026-10-13-syringomycin-context.json",
+      "sha256": "e3689aeb9d1a24e1f3ecb280fb5d348efab144a530a2a0d9817fa6315ccedb22"
+    },
+    {
+      "path": "research/2026-10-13-syringomycin-curation.json",
+      "sha256": "da6cbb2785da9f1ad49feb42f31517b6e4fb79c75e764caace18f14f0d8f7de0"
+    },
+    {
+      "path": "research/2026-10-13-syringomycin-resistance-grounding.tsv",
+      "sha256": "01f00af94fe6993d38a84a4a4faf4566686f8813c5740d6b1956e93120ddc5ee"
+    },
+    {
+      "path": "research/2026-10-13-syringomycin-resistance-progress.json",
+      "sha256": "17ad17957edf6afcabe67176d7198d8f1ecfe29fc569c1d7312177f212e3e55f"
+    },
+    {
+      "path": "research/2026-10-13-syringomycin-resistance-progress.tsv",
+      "sha256": "9b11c4805675bd04fbb5008fc1397555ec7119228385d4c17fbf84c167ecf922"
+    },
+    {
+      "path": "scripts/audit_card_definition_citations.py",
+      "sha256": "5151468db79efbfd10d3f41d54b4401791ca46b6ea5ccdef8e04a551067b253e"
+    },
+    {
+      "path": "scripts/audit_card_study_context.py",
+      "sha256": "8bf04c84ba38e5ca0af72278eaada7dbbbac860ead2d8325586bc6d28af6fe66"
+    },
+    {
+      "path": "scripts/audit_irek_context.py",
+      "sha256": "4806224e1413e7546d623ac49a3d9b9a6fdc89031cbac2fd9f66d8e6789c65db"
+    },
+    {
+      "path": "scripts/audit_syringomycin_context.py",
+      "sha256": "b1e22d77dbcb610fc672d9cfa8c6467e0bd8c54885c1847b8e4c90fe6b23191f"
+    },
+    {
+      "path": "scripts/resistance_checkpoint_records.py",
+      "sha256": "cb59941d4ae4f4f23533552e99af83f7830ba476853fdb1c87e754451311637e"
+    },
+    {
+      "path": "tests/fixtures/syringomycin-e-before-2026-10-13.yaml",
+      "sha256": "1731a6718d89e95494d9d8b1c9c621ef538e9a4fd1993f6b952f11d7d0cd96bc"
+    },
+    {
+      "path": "tests/test_card_definition_citations.py",
+      "sha256": "a391eadaefdb0130544aea621dfd578bed4780a59e9d58696b010bd214dc7c2c"
+    },
+    {
+      "path": "tests/test_resistance_checkpoint_records.py",
+      "sha256": "95f653a5435d9d5827edd17e6440953405a07f2f048a2146049baed678bddbd6"
+    },
+    {
+      "path": "tests/test_syringomycin_context.py",
+      "sha256": "3b8ef519c9bfc2680318ffeeb0fe5cbeb90a68aa0bef75a410568f2918921f3e"
+    }
+  ],
+  "authoritative_qc": {
+    "final_results": "https://github.com/CultureBotAI/AntibioticMech/pull/1097/checks",
+    "local_environment_limitation": "Local RDKit 2025.3.6 differs from the project pin 2026.3.5; no pinned local environment claim.",
+    "required_before_merge": true,
+    "snapshot_semantics": "This dated receipt does not change when subsequent PR checks complete.",
+    "status_at_capture": "PENDING_NOT_A_QC_PASS"
+  },
+  "browser": {
+    "first_harness_attempt": "Exact pixel-count equality failed after redraw; final harness checks empty hidden canvas, all restored filters, and nonblank redraw, retaining both counts.",
+    "mobile_tables_use_existing_horizontal_scroll": true,
+    "pages": [
+      "syringomycin-e",
+      "clotrimazole",
+      "flucytosine",
+      "map"
+    ],
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-syringomycin/browser-check.json",
+      "sha256": "c732cae2240bbf2f7d0e58c0771d64fbb30f6bc8158da93074f8afb278916b95"
+    },
+    "viewports": [
+      390,
+      1440
+    ],
+    "visual_inspection": true
+  },
+  "captured_at": "2026-10-14T03:03:49.084480+00:00",
+  "embedding": {
+    "actual_reencoding": true,
+    "baseline_vectors": {
+      "path": "reports/resistance-grounding-2026-10-13-syringomycin/embedding-stage/baseline-vectors.f16.npy",
+      "sha256": "6e166bba6b55af899445d5279f2fac4d082ed24653b74eef9d712303871f79f3"
+    },
+    "changed_ids": [
+      "CHEBI:77762"
+    ],
+    "fingerprint": "3d03c5cc431609f8",
+    "model_pins": {
+      "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+      "weights_sha256": "45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7"
+    },
+    "published": {
+      "corpus_map.json": "48aab2a0f7a91f5e40f36e07f6d5b8a189bf3600c4709d2a06501713017224e4",
+      "meta.json": "146e4dd28a05c5b8133da05a567a049f3f5ef577532c849030aaf2faa11c3d99",
+      "vectors.f16.npy": "384f057cd165eebdf90563be8f586622538245606fbda36cc7bb7d373e469144"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-13-syringomycin/embedding-stage/reuse-proof.json",
+      "sha256": "deb388287b3d6be01a9048da16036ad948d6cc3315f181f7a139c80b78c5537d"
+    },
+    "seed": 42,
+    "unchanged_vector_rows_byte_verified": 2938
+  },
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 478,
+    "skipped": 0,
+    "tests": 478
+  },
+  "initial_local_qc": {
+    "cause": "NEXT_TASKS evidence-bearing count 419 instead of 420",
+    "exit_code": 1,
+    "failed_test": "test_numeric_claims_in_prose_match_the_corpus",
+    "fixed_issue": 1100,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-syringomycin/full-qc-final-exit.json",
+      "sha256": "4241193738c14fbb63a018c089f0f5c16ecef541ff19d17fb1d14daab2cde126"
+    }
+  },
+  "intermediate_local_qc": {
+    "exit_code": 241,
+    "intentionally_stopped": true,
+    "reason": "Restarted after the transitive IreK replay fix for #1099",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-syringomycin/full-qc-after-review-exit.json",
+      "sha256": "5acfdf02ae38f7eb19150724807af2e8a01f40ab06d7bbb9400c04ce68279cac"
+    }
+  },
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_experimental_allele_or_genome_assignments": 0,
+  "new_resistance_claims": 6,
+  "numeric_ast_exported": false,
+  "offline_replay": {
+    "dossiers_unchanged": true,
+    "http_and_sockets_disabled": true,
+    "modules": [
+      "caspofungin_context",
+      "fungal_locus_gaps",
+      "fungamr_cohort",
+      "fungamr_documentation",
+      "fungamr_references",
+      "hivdb_reference_identity",
+      "ionophore_yeast",
+      "yeast_atp_context",
+      "syringomycin_context"
+    ],
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-syringomycin/offline-replay.json",
+      "sha256": "4818469866e17f426749e55192d27ce2a0cea2ed6564397334e0c9946539b071"
+    }
+  },
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-syringomycin/protected-before.json",
+      "sha256": "4d764eed78396a3d8a898aca91e8e24409a76337aa0f6581bcf3f68f6dc158e1"
+    },
+    "changed_baseline_paths": [
+      "NEXT_TASKS.md",
+      "README.md",
+      "data/antibiotics/antifungal/syringomycin-e.yaml",
+      "data/embeddings/corpus_map.json",
+      "data/embeddings/meta.json",
+      "data/embeddings/vectors.f16.npy",
+      "pages/antifungal/syringomycin-e.html",
+      "pages/index.html",
+      "pages/map.html",
+      "research/2026-10-07-resistance-gene-grounding.md",
+      "scripts/audit_card_definition_citations.py",
+      "scripts/audit_card_study_context.py",
+      "scripts/audit_fungamr_documentation.py",
+      "scripts/audit_hivdb_reference_identity.py",
+      "scripts/audit_ionophore_yeast.py",
+      "scripts/audit_irek_context.py",
+      "scripts/audit_yeast_atp_context.py",
+      "scripts/resistance_checkpoint_records.py",
+      "scripts/summarize_resistance_progress.py",
+      "tests/test_card_definition_citations.py"
+    ],
+    "earlier_clotrimazole_flucytosine_work_preserved": true,
+    "ignored_files_included": true,
+    "protected_files": 7216,
+    "records_checked": 2939,
+    "source_inputs_shared_schema_and_queue_unchanged": true,
+    "unchanged_records": 2938
+  },
+  "scope": "SIX_QUALIFIED_ASSOCIATIONS_AND_PR_REVIEW_VERIFICATION_NOT_WHOLE_CORPUS_SIGNOFF",
+  "source_adoptions": 0,
+  "transitive_tests": {
+    "errors": 0,
+    "failures": 0,
+    "overlaps_focused_suite_not_additive": true,
+    "passed": 85,
+    "skipped": 0,
+    "tests": 85
+  },
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}

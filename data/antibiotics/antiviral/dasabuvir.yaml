@@ -78,9 +78,12 @@ resistance_mechanisms:
   label: HCV NS5B C316Y, M414T, Y448C/Y448H, and S556G variants
   gene_families:
   - HCV NS5B RNA-dependent RNA polymerase
-  note: These NS5B variants were selected in genotype 1 replicon cells maintained
+  note: 'These NS5B variants were selected in genotype 1 replicon cells maintained
     at 10- or 100-fold the dasabuvir EC50 and were consistent with interaction at
-    the polymerase palm-I site.
+    the polymerase palm-I site. Compound-form review pending: PMID:25534735 names
+    a sodium form in its Compound section, whereas this record is neutral dasabuvir.
+    This existing claim has not been revalidated for exact-form placement; no additional
+    organism, protein or allele grounding is assigned pending resolution.'
   evidence:
   - reference: PMID:25534735
     notes: Primary in-vitro selection and sequencing study.
@@ -108,3 +111,36 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T05:00:17Z'
+  curator: codex
+  action: FLAGGED_COMPOUND_FORM_REVIEW
+  changes: Flagged primary-paper material-form ambiguity in an open discussion and
+    the existing resistance note. Preserved chemical identity, claim evidence and
+    prior review status; did not transfer or expand the claim.
+  llm_assisted: true
+discussions:
+- discussion_id: resistance-compound-form-dasabuvir
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: 'Resolve the placement of PMID:25534735 evidence on neutral dasabuvir: the
+    paper''s Compound section names a sodium form. Does the evidence belong on a different
+    structure record or require an explicit active-moiety interpretation?'
+  rationale: Neutral dasabuvir (CHEBI:85182), dasabuvir sodium (CHEBI:85179), and
+    dasabuvir sodium hydrate (CHEBI:85178) have distinct InChIKeys. The inspected
+    text does not establish hydration state or justify copying this study to all three
+    records.
+  attaches_to:
+  - chemical_structure
+  - resistance_mechanisms
+  - molecular_targets
+  - mode_of_action
+  evidence:
+  - reference: PMID:25534735
+    evidence_source: full_text
+    explanation: Materials and Methods, Compound, page 1506; publisher PDF text inspected
+      2026-10-08 UTC.
+  posed_by: codex
+  posed_date: '2026-10-08'
+  notes: The pre-existing REVIEWED status is retained, not renewed by this limited
+    audit. Resolve material identity before expanding resistance grounding; do not
+    infer form equivalence from a shared drug name.

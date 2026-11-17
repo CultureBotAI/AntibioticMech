@@ -1,0 +1,78 @@
+{
+  "verified_on": "2026-10-12",
+  "scope": "RESEARCH_ONLY_CHEMICAL_IDENTITY_HOLD",
+  "baseline_commit": "0611c4ed87a1d089aea7b1a1f60d3b32b9f57d32",
+  "artifacts": [
+    {
+      "path": "research/2026-10-12-aureobasidin-identity-context.json",
+      "sha256": "dbb4a761815121831b15a6e6da5928e65cd707278a921f3f6371eadc11e37657"
+    },
+    {
+      "path": "tests/test_aureobasidin_identity_context.py",
+      "sha256": "9a2f8e7c63febe172dab3629e8bc2941f24f548c805d4b0b31977311e6062b81"
+    }
+  ],
+  "checks": [
+    {
+      "command": ".venv/bin/python -m pytest -q tests/test_aureobasidin_identity_context.py tests/test_emrd_primary_context.py tests/test_structure_primary_context.py tests/test_resistance_grounding_audit.py",
+      "exit_code": 0,
+      "passed": 55,
+      "skipped": 1,
+      "duration_seconds": 2.32,
+      "skip_reason": "RDKit is absent from the normal repository environment; the chemistry test was run separately below."
+    },
+    {
+      "command": "PYTHONPATH=src:.venv/lib/python3.13/site-packages /private/tmp/antibioticmech-identity-20261012/bin/python -m pytest -q tests/test_aureobasidin_identity_context.py",
+      "exit_code": 0,
+      "passed": 8,
+      "skipped": 0,
+      "duration_seconds": 3.16,
+      "chemistry_version": "RDKit 2025.03.6"
+    },
+    {
+      "command": ".venv/bin/ruff check .",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "check": "Offline source-owner row digest, current record identity, live ChEBI structure, primary PDF/XML and supplement byte hashes, and UniProt cache identity/body/release checks",
+      "exit_code": 0,
+      "cached_sources_verified": 6
+    }
+  ],
+  "preservation": {
+    "baseline_census": "research/2026-10-11-pr-integration-resistance-grounding.tsv",
+    "baseline_census_sha256": "554a58d517d915c013a5139501a557d15a47b09ef0bd113b003d3fb4dabf5591",
+    "enumeration": "Path.rglob under data/antibiotics, including ignored and hidden files",
+    "record_hashes_verified": 2939,
+    "changed_records": 0,
+    "missing_records": 0,
+    "unexpected_records": 0,
+    "curation_events_added": 0,
+    "tracked_protected_paths": ["data", "curation", "src", "scripts", "pages", "conf", "schema"],
+    "tracked_protected_paths_diff_against_baseline": [],
+    "raw_source_caches_gitignored": true
+  },
+  "adversarial_self_review": {
+    "independent_review": false,
+    "checked": [
+      "Matching compound names and CAS identifiers do not override a chemical graph discrepancy",
+      "The current upstream structure and local pinned inventory agree; no cause or replacement structure is invented",
+      "Biochemical inhibition and binding assays are not MIC or clinical resistance observations",
+      "Reference protein and taxonomy identifiers are not resistant experimental allele or genome assignments",
+      "Historical tests use the review-time census and do not freeze the faulty live structure against future repair",
+      "Restricted article materials remain in ignored caches; only limited factual analysis and citation metadata are saved"
+    ],
+    "chemical_identity_hold_unresolved": true
+  },
+  "full_authoritative_qc_rerun": false,
+  "limitations": [
+    "No biological record, source inventory, runtime code or generated site changed.",
+    "Focused validation checks this research checkpoint, not the biological truth of the entire corpus.",
+    "Whole-record and corpus-wide primary review remain incomplete.",
+    "No NCBI endpoint request, outreach, source adoption or GitHub mutation occurred."
+  ]
+}

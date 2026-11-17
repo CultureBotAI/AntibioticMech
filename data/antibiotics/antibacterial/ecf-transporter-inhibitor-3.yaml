@@ -1,0 +1,48 @@
+identifier: antibioticmech:curator-ec9bb92e4a
+label: ECF transporter inhibitor 3
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 5-((3,5-di-tert-butylbenzyl)oxy)-2-hydroxybenzoic acid ECF transporter
+  inhibitor with antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.1021/acs.jmedchem.5c02721
+synonyms:
+- synonym_text: 5-((3,5-di-tert-butylbenzyl)oxy)-2-hydroxybenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)(C)c1cc(COc2ccc(O)c(C(=O)O)c2)cc(C(C)(C)C)c1
+  standard_inchi: InChI=1S/C22H28O4/c1-21(2,3)15-9-14(10-16(11-15)22(4,5)6)13-26-17-7-8-19(23)18(12-17)20(24)25/h7-12,23H,13H2,1-6H3,(H,24,25)
+  standard_inchi_key: OEODEHXAMXXTHS-UHFFFAOYSA-N
+  molecular_formula: C22H28O4
+  structure_source: https://pmc.ncbi.nlm.nih.gov/articles/PMC13312448/
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 356.46
+  monoisotopic_mass: 356.19875938
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acs.jmedchem.5c02721#3
+  source_label: ECF transporter inhibitor 3
+  minted_identifier: antibioticmech:curator-ec9bb92e4a
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acs.jmedchem.5c02721
+    snippet: Exapicheidou et al. reported that hit compound 3 inhibited Enterococcus
+      faecalis DSM-20478 (MIC 11 ug/mL), Enterococcus faecium DSM-17050 (MIC 3 to
+      6 ug/mL), Enterococcus faecium DSM-20477 (MIC 11 ug/mL), Streptococcus pneumoniae
+      DSM-11865 (MIC 6 ug/mL), and Streptococcus pneumoniae DSM-20566 (MIC 1 to 3
+      ug/mL) while inhibiting Lactobacillus casei vitamin uptake with an IC50 of 28
+      uM.
+    notes: Table 1 and the experimental section of PMC13312448 identify compound 3
+      as 5-((3,5-di-tert-butylbenzyl)oxy)-2-hydroxybenzoic acid; the structure was
+      normalized with RDKit to derive the standard InChI and InChIKey.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

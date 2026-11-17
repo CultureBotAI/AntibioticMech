@@ -1,0 +1,209 @@
+{
+  "biological_record_changes": 0,
+  "cache_verification": {
+    "all_chains_rebuilt_offline": true,
+    "rejected_pages_excluded_in_full": true,
+    "response_manifest": {
+      "path": "reports/resistance-grounding-2026-10-09-vocabulary-expansion/expansion-cache-pins.json",
+      "sha256": "2a8e57b780074be6780cc24713ab69bfe997e075c0405259dac536a2c8ac6e7d"
+    },
+    "responses": 2016
+  },
+  "canary": {
+    "pages": 3,
+    "pagination_and_shared_membership_verified": true,
+    "proof": {
+      "path": "reports/resistance-grounding-2026-10-09-vocabulary-expansion/canary-proof.json",
+      "sha256": "8346964e172895396216550589652203d9ddf61726ce2b007a3ffc5e4493d4a5"
+    },
+    "query_keys": [
+      "bae085970462dc27b2305c3942d03b1540ad735ead8a2c135b0c12e64fd95310",
+      "c8eeb15ad1846c0bb921180847bb171814122b9ab5200303a2b27da436290ab8"
+    ]
+  },
+  "candidate_index": {
+    "concatenated_sha256": "111f053eccd66b4f0d76ca700a8bebf93f2ababdb9912b279533daa46b7a1918",
+    "concatenated_stored_bytes": 117944432,
+    "encoding": "multipart-gzip",
+    "parts": 4,
+    "path": "research/2026-10-09-resistance-vocabulary-expansion-candidates-parts.json",
+    "sha256": "77f9c81177ff8119c048344f3ec1b1b1b1ac20e3a58b02a9239d9c33ecc74901",
+    "uncompressed_bytes": 639230999,
+    "uncompressed_sha256": "7fbae5d1b562e722f5841cbfae968a1da45c6d37b3dbd564620584556708d1ce"
+  },
+  "citation_identity_union": {
+    "encoding": "gzip",
+    "path": "research/2026-10-09-resistance-vocabulary-expansion-union.json.gz",
+    "sha256": "1f237aa9d416d12710ddb61e9fc53d577a38f2c4664a39142179e555de03d47e",
+    "stored_bytes": 7090690,
+    "uncompressed_bytes": 41197982,
+    "uncompressed_sha256": "34115f38062f00dbe4c171c971422e741fbbeecb6988676a10063c19e71b5a4d"
+  },
+  "citation_union_summary": {
+    "added_distinct_citations": 358956,
+    "historical_memberships_lost": 0,
+    "previous_distinct_citations": 286114,
+    "previous_record_citation_memberships": 547953,
+    "records": 2939,
+    "records_with_added_citations": 533,
+    "selected_expansion_distinct_citations": 636253,
+    "selected_expansion_record_citation_memberships": 1064461,
+    "union_distinct_citations": 645070,
+    "union_record_citation_memberships": 1093332
+  },
+  "coverage": {
+    "all_stored_responses": 2016,
+    "batch_new_responses": 2013,
+    "canary_responses": 3,
+    "historical_v1_completion_reused_as_v2": false,
+    "retrieved_at_first": "2026-10-09T22:39:17.200734+00:00",
+    "retrieved_at_last": "2026-10-10T01:38:31.376920+00:00"
+  },
+  "criteria": "truncated-immunity-v2-date-sorted-citation-expansion-v1",
+  "curation_events_added": 0,
+  "current_census": {
+    "path": "research/2026-10-09-duramycin-resistance-grounding.tsv",
+    "sha256": "e444ba41b7dd6ee36d35f876f5905b1379bad15015e091354fc70c8e2d9a6e45"
+  },
+  "date": "2026-10-09",
+  "documentation": "https://europepmc.org/RestfulWebService",
+  "documentation_access": "Direct documentation fetch returned 403; official indexed REST documentation inspected, without bypass or retry.",
+  "execution_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-vocabulary-expansion/execution-manifest.json",
+    "sha256": "f09f90a8173c67b3241ec08d5472a3b44821498b08f08cc195db2ffc6fbaf0da"
+  },
+  "execution_receipts": {
+    "analyze": {
+      "path": "reports/resistance-grounding-2026-10-09-vocabulary-expansion/analyze-exit.json",
+      "sha256": "a0c0c8bdfa0161050af64c19aacaac1af40f3a8b61120baa0183fcb631b8abd9"
+    },
+    "batch": {
+      "path": "reports/resistance-grounding-2026-10-09-vocabulary-expansion/batch-exit.json",
+      "sha256": "3d416c17ad389012835fec0f115323dd145eb23e82025a6c0bee8dcb3b7c80b4"
+    },
+    "canary": {
+      "path": "reports/resistance-grounding-2026-10-09-vocabulary-expansion/canary-exit.json",
+      "sha256": "1a65280e5430921b5d970d1fe1a5b8b0642c266ce7a6d2d2392898256f1a922b"
+    },
+    "qc": {
+      "path": "reports/resistance-grounding-2026-10-09-vocabulary-expansion/qc-exit.json",
+      "sha256": "21993815b2b4fdea085ee76aed60efbb0226ecae48268cf3c590f33a3e860a00"
+    }
+  },
+  "full_qc": {
+    "exit_code": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-09-vocabulary-expansion/full-tests.xml",
+      "sha256": "5ed42d91c3602f00ebbe700f5b3fbd83ba921ac693aaf36fea155da4f50254f7"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-09-vocabulary-expansion/qc.log",
+      "sha256": "a7f263383ed7d7f2ba8e083462385eaeca61a29da4cb8ab2492b4bc3bb137774"
+    },
+    "passed": 2497,
+    "skipped": 4,
+    "stages": [
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "warnings": 1
+  },
+  "github_mutations": 0,
+  "ledger": {
+    "path": "research/2026-10-09-resistance-vocabulary-expansion-ledger.tsv",
+    "sha256": "25fe52678b4552ec393c82753501a7bc6fbfffcdecd532788e8d58cc08412555"
+  },
+  "limitations": [
+    "Queries are unchanged name-co-occurrence searches, not exact compound or biological evidence.",
+    "The 1000-row cursor chain is separate from historical 100-row caches; counts may change.",
+    "Completion means unique rows equal the reported hit count across consistent cached pages.",
+    "Europe PMC is live: consistent counts and API versions do not prove an atomic index snapshot.",
+    "Added citations are relative to one original query page, not all citations for the record.",
+    "A shared query retains each record/name membership without merging chemical identities.",
+    "No abstracts, full text, sequences, new gene/allele, protein, taxon or AST assignments exported.",
+    "All candidates require primary review; search completion does not establish biological absence.",
+    "A conflicting page is rejected in full and pinned separately; only its valid prefix is retained.",
+    "Conflicted queries remain incomplete and are not retried by resuming the same cursor chain.",
+    "V2 is the broader genetics/immunity vocabulary, not completion of historical v1 searches.",
+    "Date ordering and query-local traversal do not establish a stable index or prevent all conflicts.",
+    "Historical record hashes are preserved; a current name/identity bridge is not biological review.",
+    "Short aliases and stop words remain ambiguous; large result counts are not relevance estimates.",
+    "Historical citation identities must be preserved separately, not discarded when live results differ."
+  ],
+  "name_bridge": {
+    "current_census": {
+      "path": "research/2026-10-09-duramycin-resistance-grounding.tsv",
+      "sha256": "e444ba41b7dd6ee36d35f876f5905b1379bad15015e091354fc70c8e2d9a6e45"
+    },
+    "historical_record_pins_rewritten": false,
+    "ignored_files_included": true,
+    "names_verified": 16030,
+    "queries_verified": 7469,
+    "record_hashes_changed_since_historical_plan": 1,
+    "records_verified": 2939,
+    "scope": "CURRENT_NAME_AND_CHEMICAL_IDENTITY_BRIDGE_NOT_BIOLOGICAL_REVIEW"
+  },
+  "network": "EMBL-EBI Europe PMC citation metadata only; no NCBI request or outreach",
+  "packaging_verification": {
+    "path": "reports/resistance-grounding-2026-10-09-vocabulary-expansion/packaging-verification.json",
+    "sha256": "dcff7353cf95ae0b132bcf17e320babcfb95821678ab5eb6056cc48a9072751a"
+  },
+  "plan": {
+    "encoding": "gzip",
+    "path": "research/2026-10-09-resistance-vocabulary-expansion-plan.json.gz",
+    "sha256": "5ae26b1a2933d7ad6012acdaae74a112308813a31fe51573bf5b8fa6b824dd0c",
+    "stored_bytes": 848822,
+    "uncompressed_bytes": 5349319,
+    "uncompressed_sha256": "b26a71cba5138ddcdedb30dad88e9142fdc10cab1bb4f24a2c43d584c4214655"
+  },
+  "previous_descriptor": {
+    "path": "research/2026-10-09-resistance-vocabulary-discovery.json",
+    "sha256": "cb3c8d3a09c4eb15f355a56362aaaea9f07e363d80731c70a0c9c0fb13007543"
+  },
+  "previous_union": {
+    "encoding": "gzip",
+    "path": "research/2026-10-09-resistance-vocabulary-discovery-union.json.gz",
+    "sha256": "1faa45340727d7d35360b82950c866918c592dce850cf67ac5415023d07a2e72",
+    "stored_bytes": 6130177,
+    "uncompressed_bytes": 41244529,
+    "uncompressed_sha256": "5c990a37faf619a0bc558e84dd1be66f386674fb5b28023c371636e90251b05f"
+  },
+  "primary_review_status": "PENDING",
+  "query_text_changed": false,
+  "request_bounds": {
+    "batch": 2400,
+    "canary": 20,
+    "max_http_attempts_per_new_page": 3,
+    "stored_response_count_excludes_transient_failed_attempts": true
+  },
+  "requested_sort": "P_PDATE_D desc",
+  "scope": "CITATION_DISCOVERY_ONLY; NO_COMPOUND_ALLELE_OR_AST_ASSIGNMENTS",
+  "source_adoptions": 0,
+  "status": "PLANNED_V2_CURSOR_TRAVERSALS_COMPLETE_NOT_PRIMARY_REVIEW",
+  "summary": {
+    "cached_pages": 2016,
+    "corpus_records": 2939,
+    "queries_with_hit_count_drift": 0,
+    "query_record_memberships": 860,
+    "query_status": {
+      "CURSOR_TRAVERSAL_COMPLETE": 859
+    },
+    "records_with_truncated_queries": 536,
+    "rejected_cached_pages": 0,
+    "retained_query_citation_memberships": 1488394,
+    "unique_queries": 859,
+    "unique_retained_citations": 636253
+  },
+  "traversal_order": "query-local",
+  "vocabulary": "immunity-v2",
+  "whole_record_primary_reviews_completed": 0
+}

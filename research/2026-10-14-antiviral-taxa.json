@@ -1,0 +1,262 @@
+{
+  "date": "2026-10-14",
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-14-bevirimat-resistance-grounding.tsv",
+      "sha256": "8a6f419ca0fa0c8bd4e18bc4c4dfbb23601bc3a84c2b8d51f8bbd1e44e3004e6"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-14-antiviral-taxa/cohort.json",
+      "sha256": "7e6adbe8cd106601916c4d017a43e5ca6c6f999624aa5adb73c089dd31cf2652"
+    },
+    "field_index": {
+      "path": "research/2026-10-14-bevirimat-curator-resistance-fields.json",
+      "sha256": "1f9eaf5ff6864cf0c9701997a4a051ec22af8dc4097bdc83afab6bb1daf960a7"
+    },
+    "prior_checkpoint": {
+      "path": "research/2026-10-14-thevissen-2007-access-verification.json",
+      "sha256": "bb400407250bee47bc3045351d11eb77c42cbc1c32e617681270be622dddf4ef"
+    },
+    "prior_taxonomy": {
+      "path": "research/2026-10-14-bevirimat-taxonomy.json",
+      "sha256": "2341d1e997c325a3e9c593328ed5e3f03fe78fff7c8353ccb35ca10f9d4368ec"
+    },
+    "protected": {
+      "path": "reports/resistance-grounding-2026-10-14-antiviral-taxa/protected-before.json",
+      "sha256": "eb210e3019424d7320e4bfc8f480723781f539711a48f625508ec84f871fe93b"
+    },
+    "publications": {
+      "path": "reports/resistance-grounding-2026-10-07/publications.json",
+      "sha256": "9d49be230d9f5e81d6187618e61c66bad3418d7d4f26ef25d681c9ebdaa2eef1"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "limits": {
+    "dolutegravir_full_text_request_attempted": false,
+    "full_corpus_goal_status": "OPEN",
+    "full_corpus_records_in_scope": 2939,
+    "github_mutations": 0,
+    "held_sources_retried": false,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "primary_or_taxonomy_references_are_experimental_allele_assignments": false,
+    "sg85_error_establishes_permission_or_global_unavailability": false,
+    "source_adoptions": 0
+  },
+  "primary": {
+    "all_inherited_variant_or_quantitative_claims_revalidated": false,
+    "attribution": "Tsiang et al. (2016), CC BY 4.0",
+    "doi": "10.1128/AAC.01474-16",
+    "exact_compound_form_newly_resolved": false,
+    "existing_claim_context": "LABORATORY_NOT_PATIENT_ASSIGNMENT",
+    "locations": {
+      "compound_source": {
+        "text_sha256": "44642005f9500ca15763c94b49af6a1593bb4a3f4a439b945e18b677eaee3262",
+        "xpath": "body/sec[title='MATERIALS AND METHODS']/sec[title='Compounds.']/p[1]"
+      },
+      "laboratory_organism": {
+        "text_sha256": "2d413ef76231eef6b430407afacf1c61fb52205ab3b0eb0d9fd44b265483d95a",
+        "xpath": "body/sec[title='RESULTS']/sec[title='BIC selected for HIV variants with low-level resistance.']/p[1]"
+      },
+      "phenotyped_subject_context": {
+        "text_sha256": "5d3bcd62af2b2245401ed6567f124af2eb89a8a9f562aa6eba6f9e0e5d7c21b3",
+        "xpath": "body/sec[title='RESULTS']/sec[title='BIC selected for HIV variants with low-level resistance.']/p[5]"
+      },
+      "separate_patient_derived_context": {
+        "text_sha256": "c90828fdc273dd966088251410e1cd70e33c4bf6aa4c18501bd88e2f9de9ed14",
+        "xpath": "body/sec[title='RESULTS']/sec[5]/p[1]"
+      }
+    },
+    "native_figures_or_supplements_reviewed": false,
+    "new_sequences_variants_constructs_protocols_or_numeric_AST_exported": false,
+    "pmcid": "PMC5118987",
+    "pmid": "27645238",
+    "review_scope": "Selected Results subsections and compound-source paragraph; organism/subject scope only",
+    "selected_populations_and_site_directed_test_viruses_are_interchangeable": false,
+    "source_organism_label": "HIV-1"
+  },
+  "primary_canary": {
+    "path": "reports/resistance-grounding-2026-10-14-antiviral-taxa/primary-canary-reviewed.json",
+    "sha256": "66291da53d308d611cabda89d19e486d6d8e14bc6bc27dca7bd42aebb1a89b6e"
+  },
+  "record_before": {
+    "complete_collection_aware_record_loaded": true,
+    "identifier": "CHEBI:172943",
+    "path": "data/antibiotics/antiviral/bictegravir.yaml",
+    "sha256": "ac88ec7d91f9fe520740a84623e1024bfce36c338d16da4c63398a5f2079466e",
+    "standard_inchi_key": "SOLUWJRYJLAZCX-LYOVBCGYSA-N"
+  },
+  "scope": "COMPLETE_CURATOR_TAXON_GAP_SELECTION_ONE_SPECIES_ONLY_CURATION",
+  "sources": {
+    "bictegravir_primary": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-antiviral-taxa/bictegravir-primary-attempt.json",
+        "sha256": "64deee334865084c4cd7732d1ec5d16e9934bcd4f352204bab943b7d77c0d36c"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-antiviral-taxa/bictegravir-primary-response.bin",
+        "sha256": "d51a50d1766b074eabe21ed9edb5b794cd04224597ccbf3e302de65cc20ad9bd"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-antiviral-taxa/bictegravir-primary-receipt.json",
+        "sha256": "d103a64df48bfd6be3368fcca37ff84dbfae5cb9e6e5ddfec8386b026ac2ecee"
+      },
+      "retrieved_at": "2026-10-14T10:50:34.119948+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5118987/fullTextXML"
+    },
+    "parent_taxonomy_reused": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/request-128583b56de08be785ae3389aabf58525f47fbc0d5ad8080c44790fc3a80a14e.json",
+        "sha256": "3a40a61592fd7b228318866e93fc8c710e7862c990d06799d73060f96517bb1d"
+      },
+      "retrieved_at": "2026-10-08T03:48:24.945318+00:00",
+      "sha256": "9f9fc6bbe373beb927ef59cafab71148e76c210c4ac0a1db3a25ff5fbe6c1de9",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/11676"
+    },
+    "sg85_technical_failure": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-antiviral-taxa/sg85-primary-attempt.json",
+        "sha256": "0601e05d941133b9a71b9ebb4a1c929540124f8776cea4089d0e4db27cf50a2a"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-antiviral-taxa/sg85-primary-response.bin",
+        "sha256": "9f2ad05f079c33a0dd147c5a11f34d4f41f889f4ac1c07c1d4778efdf5e15fdd"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-antiviral-taxa/sg85-primary-receipt.json",
+        "sha256": "2098b1635c1d8af4c07e6f789e2ca25bfe72a2c71c0053b7456a09a50d55a58d"
+      },
+      "retrieved_at": "2026-10-14T10:51:43.427793+00:00",
+      "status": 500,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4538484/fullTextXML"
+    },
+    "species_taxonomy_reused": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/species-taxonomy-response.bin",
+        "sha256": "25b4c314a4dc5ed2e4efd97fad3ee5de4b18fb7045fa0bca82b92ed42ec48f8e"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/species-taxonomy-receipt.json",
+        "sha256": "ab456a137872c95a5f23ff55b60db0f835d9b4500a416452516bd1f042a5595c"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-14T09:16:49.831952+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/3418650"
+    }
+  },
+  "summary": {
+    "claims_supported_for_species_grounding": 1,
+    "corpus_record_hashes_checked": 2939,
+    "experimental_alleles_or_genomes_assigned": 0,
+    "historical_taxon_gap_claims": 11,
+    "historical_taxon_gap_records": 9,
+    "new_network_requests": 2,
+    "new_resistance_claims": 0,
+    "new_taxonomy_or_protein_requests": 0,
+    "primary_leads_not_requested_after_error": 1,
+    "primary_technical_failures": 1,
+    "whole_record_primary_signoffs": 0
+  },
+  "taxon_gap_dispositions": [
+    {
+      "claim_sha256": "553af742e3e1ec1f479d96fa716a10e652ca25bed8930bb7764210822a4df159",
+      "record_identifier": "CHEBI:136047",
+      "record_path": "data/antibiotics/antiviral/vaniprevir.yaml",
+      "resistance_index": 0,
+      "status": "EXISTING_PRIMARY_NOT_REVIEWED_UNCHANGED"
+    },
+    {
+      "claim_sha256": "60e264de11ad9ad817605326e3980331b948b489c73bdcde16d1f70a3306bb18",
+      "record_identifier": "CHEBI:147346",
+      "record_path": "data/antibiotics/antiviral/sg85.yaml",
+      "resistance_index": 0,
+      "status": "EBI_HTTP_500_TECHNICAL_HOLD_NO_RETRY"
+    },
+    {
+      "claim_sha256": "869afbd7fa0a2c2810cc3cea73f5e084e930fa5914f6c97382f0ab144ae41a12",
+      "record_identifier": "CHEBI:16869",
+      "record_path": "data/antibiotics/antibacterial/oleandomycin.yaml",
+      "resistance_index": 30,
+      "status": "BIOCHEMICAL_SCOPE_NOT_AUTOMATIC_ORGANISM_ASSIGNMENT"
+    },
+    {
+      "claim_sha256": "c89f678fab9e5e344f900cb6c49318dbe9da0ed2b5fa4b1f3d1bb2b2c40531ec",
+      "record_identifier": "CHEBI:16869",
+      "record_path": "data/antibiotics/antibacterial/oleandomycin.yaml",
+      "resistance_index": 31,
+      "status": "BIOCHEMICAL_SCOPE_NOT_AUTOMATIC_ORGANISM_ASSIGNMENT"
+    },
+    {
+      "claim_sha256": "b687b6b02c1223e0358f546f0e1f3e64a3a5cd44a7d054f47fa7fe2ce88d23aa",
+      "record_identifier": "CHEBI:172943",
+      "record_path": "data/antibiotics/antiviral/bictegravir.yaml",
+      "resistance_index": 0,
+      "status": "SPECIES_ONLY_CURATION_SUPPORTED"
+    },
+    {
+      "claim_sha256": "8be2e9238f0470031084186562fad21911ca8b423138292f114daf94c273f195",
+      "record_identifier": "CHEBI:68621",
+      "record_path": "data/antibiotics/antiviral/boceprevir.yaml",
+      "resistance_index": 0,
+      "status": "EXISTING_PRIMARY_ACCESS_HOLD_UNCHANGED"
+    },
+    {
+      "claim_sha256": "eea1ba01d1b410c88e11bc9e8737c1727a9b6572315033ffc4dce8b220ad0c86",
+      "record_identifier": "CHEBI:76010",
+      "record_path": "data/antibiotics/antiviral/dolutegravir.yaml",
+      "resistance_index": 0,
+      "status": "PRIMARY_NOT_REQUESTED_AFTER_EBI_SERVER_ERROR"
+    },
+    {
+      "claim_sha256": "169a9fdfc523bb941dc183d8251d12eae348214641a093d0084e13a6917576dc",
+      "record_identifier": "CHEBI:82754",
+      "record_path": "data/antibiotics/unspecified/microcin-c.yaml",
+      "resistance_index": 0,
+      "status": "BIOCHEMICAL_SCOPE_NOT_AUTOMATIC_ORGANISM_ASSIGNMENT"
+    },
+    {
+      "claim_sha256": "db0cc16c3249365116f317f8e65b3d3b715bca08f8fa0eb7c9dc9f995ba87da0",
+      "record_identifier": "CHEBI:82754",
+      "record_path": "data/antibiotics/unspecified/microcin-c.yaml",
+      "resistance_index": 1,
+      "status": "BIOCHEMICAL_SCOPE_NOT_AUTOMATIC_ORGANISM_ASSIGNMENT"
+    },
+    {
+      "claim_sha256": "eceea412edd7bb409476c402593de6d93b5bd34e1a063c76ac9be548e97c653b",
+      "record_identifier": "CHEBI:85182",
+      "record_path": "data/antibiotics/antiviral/dasabuvir.yaml",
+      "resistance_index": 0,
+      "status": "EXISTING_CHEMICAL_FORM_HOLD_UNCHANGED"
+    },
+    {
+      "claim_sha256": "487f32fff237d4f40568f6be2c216a4f1ce65918bbcfc029c7065845930c32c8",
+      "record_identifier": "CHEBI:85188",
+      "record_path": "data/antibiotics/antiviral/paritaprevir.yaml",
+      "resistance_index": 0,
+      "status": "EXISTING_CHEMICAL_FORM_HOLD_UNCHANGED"
+    }
+  ],
+  "taxonomy": {
+    "assignment_scope": "SPECIES_LINEAGE_ONLY_NOT_TESTED_DERIVATIVE_OR_PATIENT",
+    "experimental_allele_assignment": null,
+    "experimental_genome_assignment": null,
+    "experimental_strain_taxon_assignment": null,
+    "protein_accession_assignment": null,
+    "source_common_name": "HIV-1",
+    "source_context_id": "NCBITaxon:11676",
+    "source_context_rank": "no rank",
+    "source_name": "Human immunodeficiency virus type 1",
+    "species": {
+      "taxon_id": "NCBITaxon:3418650",
+      "taxon_label": "Lentivirus humimdef1"
+    },
+    "species_rank": "species"
+  }
+}

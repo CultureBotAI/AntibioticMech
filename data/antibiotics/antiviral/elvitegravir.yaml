@@ -68,6 +68,689 @@ source_concepts:
   role_terms:
   - CHEBI:67268
   source_version: '2026-08-30'
+genotype_resistance_score_rules:
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:e465f4aa0ac2e7f9
+  score_term_index: 1
+  score_term: 51Y => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 1: 51Y => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:8643d625e4872dcf
+  score_term_index: 2
+  score_term: MAX(66A => 60, 66I => 60, 66K => 60)
+  score_assignments: 3
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 2: MAX(66A => 60, 66I => 60, 66K => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:dd6c94dcb0b5997c
+  score_term_index: 3
+  score_term: MAX(74F => 5, 74M => 5)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 3: MAX(74F => 5, 74M => 5)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:d77775ff7accfbc9
+  score_term_index: 4
+  score_term: MAX(92Q => 60, 92G => 30, 92V => 60)
+  score_assignments: 3
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 4: MAX(92Q => 60, 92G => 30, 92V => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:4fea458689a5d2c5
+  score_term_index: 5
+  score_term: 118R => 60
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 5: 118R => 60'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:d5fbf77b2bb83304
+  score_term_index: 6
+  score_term: MAX(121C => 60, 121Y => 60)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 6: MAX(121C => 60, 121Y => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:15bebc99fcbcd391
+  score_term_index: 7
+  score_term: MAX(138A => 15, 138K => 15, 138T => 15)
+  score_assignments: 3
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 7: MAX(138A => 15, 138K => 15, 138T => 15)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:55423503ed3f2973
+  score_term_index: 8
+  score_term: MAX(140A => 30, 140C => 30, 140R => 30, 140S => 30)
+  score_assignments: 4
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 8: MAX(140A => 30, 140C => 30, 140R => 30, 140S => 30)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:c530a84be2bb863e
+  score_term_index: 9
+  score_term: MAX(146I => 60, 146L => 30, 146P => 60, 146R => 5)
+  score_assignments: 4
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 9: MAX(146I => 60, 146L => 30, 146P => 60, 146R => 5)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:81cb460723aa113c
+  score_term_index: 10
+  score_term: 147G => 60
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 10: 147G => 60'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:ccc58d11c4b5760a
+  score_term_index: 11
+  score_term: MAX(148H => 60, 148K => 60, 148R => 60, 148N => 10)
+  score_assignments: 4
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 11: MAX(148H => 60, 148K => 60, 148R => 60, 148N => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:c1b85e6d42e61b13
+  score_term_index: 12
+  score_term: 149A => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 12: 149A => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:d0cfa0fde45f100b
+  score_term_index: 13
+  score_term: MAX(151L => 60, 151A => 30, 151I => 5)
+  score_assignments: 3
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 13: MAX(151L => 60, 151A => 30, 151I => 5)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:6b4b4810a0353c16
+  score_term_index: 14
+  score_term: MAX(153F => 25, 153Y => 25)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 25.0
+  max_score: 25.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 14: MAX(153F => 25, 153Y => 25)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:d258c2efc463c066
+  score_term_index: 15
+  score_term: MAX(155H => 60, 155S => 30, 155T => 30)
+  score_assignments: 3
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 15: MAX(155H => 60, 155S => 30, 155T => 30)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:d27539c18206d081
+  score_term_index: 16
+  score_term: 230R => 20
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 20.0
+  max_score: 20.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 16: 230R => 20'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:73fd7195ba9dffe0
+  score_term_index: 17
+  score_term: 263K => 30
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 17: 263K => 30'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:c229be28a9a4ebf1
+  score_term_index: 18
+  score_term: 49G AND 263K => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 18: 49G AND 263K => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:c60dd8b6d45c234b
+  score_term_index: 19
+  score_term: 74F AND 75I => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 19: 74F AND 75I => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:325d9b2e5c89f78d
+  score_term_index: 20
+  score_term: 74FM AND 148HKR => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 20: 74FM AND 148HKR => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:990ff2e0766486e4
+  score_term_index: 21
+  score_term: 138AKT AND 140ACS => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 21: 138AKT AND 140ACS => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:af80c8fa067587dc
+  score_term_index: 22
+  score_term: 138K AND 263K => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 22: 138K AND 263K => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:7423428e9e021ba9
+  score_term_index: 23
+  score_term: 51Y AND 263K => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 23: 51Y AND 263K => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:07db93facd0cb6c5
+  score_term_index: 24
+  score_term: 92Q AND 155H => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 24: 92Q AND 155H => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:6cb14a07f4173f62
+  score_term_index: 25
+  score_term: MAX(143A => 10, 143C => 10, 143G => 10, 143H => 10, 143K => 10, 143R
+    => 10, 143S => 10)
+  score_assignments: 7
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 25: MAX(143A => 10, 143C => 10, 143G => 10, 143H => 10,
+      143K => 10, 143R => 10, 143S => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:7d94ba921bff3dbb
+  score_term_index: 26
+  score_term: 97A AND 143ACGHRS => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 26: 97A AND 143ACGHRS => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:d62a94dabc4e2d6a
+  score_term_index: 27
+  score_term: 95K => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 27: 95K => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:1486bcf07827fa6a
+  score_term_index: 28
+  score_term: 97A => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 28: 97A => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:94bf76fd2a4dbd22
+  score_term_index: 29
+  score_term: 145S => 60
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 29: 145S => 60'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:f98cf7a9d3b10a76
+  score_term_index: 30
+  score_term: 157Q => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 30: 157Q => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:b775e1c1feeda25f
+  score_term_index: 31
+  score_term: MAX(163K => 15, 163R => 15)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 31: MAX(163K => 15, 163R => 15)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:7e63a9973ee85da6
+  score_term_index: 32
+  score_term: 232N => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 32: 232N => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:3ef978d1846b3f72
+  score_term_index: 33
+  score_term: 143ACGHRS AND 163R => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 33: 143ACGHRS AND 163R => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: IN
+  drug_class: INSTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: EVG
+  source_rule_id: hivdb_hivfacts:125a3aae32c6fe5f
+  score_term_index: 34
+  score_term: 143ACGHRS AND 230R => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 EVG score term 34: 143ACGHRS AND 230R => 10'
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -137,3 +820,8 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-28T17:24:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: genotype_resistance_score_rules (HIVDB_HIVFACTS be1c11a5145fea9073fdb71801919d4a34265336).
+    Upstream retrieval date 2026-08-30, unchanged.'

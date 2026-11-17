@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-15",
+  "scope": "PRIMARY_IDENTITY_AND_EVIDENCE_SCOPE_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+  "terms": {
+    "ARO:3003071": {"source_label": "mphF", "selected_pmid": "29317655", "previous_name": "MphE", "source_organism": "uncultured", "source_accession": "CAJ98570.1", "accession_namespace": "INSDC_PROTEIN", "query": "\"CAJ98570.1\""},
+    "ARO:3003072": {"source_label": "mphL", "selected_pmid": "29317655", "previous_name": "B. cereus Cluster A", "source_organism": "Bacillus cereus", "source_accession": "WP_001094257.1", "accession_namespace": "RefSeq", "query": "xref:refseq-WP_001094257.1"},
+    "ARO:3003767": {"source_label": "mphM", "selected_pmid": "29317655", "previous_name": "B. cereus Cluster B", "source_organism": "Bacillus cereus", "source_accession": "WP_001041372.1", "accession_namespace": "RefSeq", "query": "xref:refseq-WP_001041372.1"},
+    "ARO:3003991": {"source_label": "mphI", "selected_pmid": "29317655", "previous_name": null, "source_organism": "Paenibacillus sp. LC231", "source_accession": "KX531056.1", "accession_namespace": "INSDC_NUCLEOTIDE", "query": "xref:embl-KX531056"},
+    "ARO:3004543": {"source_label": "mphO", "selected_pmid": "29317655", "previous_name": "MphE", "source_organism": "Brachybacterium paraconglomeratum", "source_accession": "WP_050815728.1", "accession_namespace": "RefSeq", "query": "xref:refseq-WP_050815728.1"},
+    "ARO:3004675": {"source_label": "aphA15", "selected_pmid": "11257042"}
+  },
+  "mph_primary": {
+    "pmid": "29317655",
+    "doi": "10.1038/s41467-017-02680-0",
+    "identity_location": "Data availability directs protein accessions to Supplementary Table 1",
+    "scope_location": "Results / Substrate specificity correlates with genetic diversity",
+    "finding": "The paper distinguishes MphI-mediated biochemical modification from resistance in the tested heterologous host. Responses differ with host background, and engineered derivatives are separate subjects. Neither a biochemical result nor a derivative result establishes a universal wild-type resistance phenotype.",
+    "whole_paper_signoff": false,
+    "chemical_form_review_complete": false,
+    "numeric_ast_exported": false,
+    "engineering_or_variant_details_exported": false
+  },
+  "supplement_review": {
+    "file": "41467_2017_2680_MOESM1_ESM.pdf",
+    "page_one_based": 9,
+    "visually_reviewed": true,
+    "selected_identity_table": "Supplementary Table 1 and footnotes",
+    "limits": "Mixed accession namespaces are preserved. MphF and MphO are distinct despite the shared historical MphE label. The MphM footnote does not establish plasmid location. The uncultured source is not assigned a species. Table 2 separates the mphI host result from biochemical activity; values are not exported. Other supplement pages were not reviewed.",
+    "whole_supplement_reviewed": false
+  },
+  "aph_primary": {
+    "pmid": "11257042",
+    "doi": "10.1128/aac.45.4.1249-1253.2001",
+    "url": "https://europepmc.org/articles/PMC90451",
+    "http_status": 403,
+    "status": "ACCESS_HOLD_NO_PRIMARY_REVIEW",
+    "retry_or_alternate_route": false,
+    "candidate": "UniProtKB:Q9AF71",
+    "native_gene_label": "aph",
+    "native_synonym": "apaA15",
+    "synonym_corrected_to_source_label": false,
+    "selected_as_aphA15": false,
+    "reason": "Shared bibliography, a generic aph name and the distinct apaA15 spelling do not establish exact aphA15 identity."
+  },
+  "constraints": {
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "biological_record_writes": false,
+    "experimental_allele_assignments": 0,
+    "genome_assignments": 0,
+    "whole_record_signoffs": 0,
+    "full_corpus_goal": "OPEN"
+  }
+}

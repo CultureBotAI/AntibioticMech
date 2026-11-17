@@ -1,0 +1,47 @@
+identifier: antibioticmech:curator-a420576237
+label: Dehydro-delta-viniferin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A resveratrol dehydrodimer stilbenoid with bactericidal activity against
+  methicillin-resistant Staphylococcus aureus.
+definition_source: DOI:10.1002/biof.70128
+synonyms:
+- synonym_text: dehydro-d-viniferin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1=CC(=CC=C1C2=C(C3=C(O2)C=CC(=C3)/C=C/C4=CC(=CC(=C4)O)O)C5=CC(=CC(=C5)O)O)O
+  standard_inchi: InChI=1S/C28H20O6/c29-20-6-4-18(5-7-20)28-27(19-12-23(32)15-24(33)13-19)25-11-16(3-8-26(25)34-28)1-2-17-9-21(30)14-22(31)10-17/h1-15,29-33H/b2-1+
+  standard_inchi_key: VRZNEZHYQWTDDD-OWOJBTEDSA-N
+  molecular_formula: C28H20O6
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/141762088
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 452.46
+  monoisotopic_mass: 452.12598836
+xrefs:
+- pubchem.compound:141762088
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1002/biof.70128#dehydro-delta-viniferin
+  source_label: Dehydro-delta-viniferin
+  minted_identifier: antibioticmech:curator-a420576237
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1002/biof.70128
+    snippet: Johnsen et al. reported that dehydro-delta-viniferin inhibited methicillin-resistant
+      Staphylococcus aureus USA300 and cefoxitin-treated USA300Cef with a MIC of 2
+      ug/mL and MBC values of 8 to 16 ug/mL while enhancing IL-12 production in MRSA-stimulated
+      dendritic cells.
+    notes: PubChem CID 141762088 supplies the standard InChI, InChIKey, formula, and
+      isomeric SMILES for dehydro-delta-viniferin.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

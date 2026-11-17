@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-15",
+  "scope": "BCMFS1_REFERENCE_IDENTITY_NOT_RESISTANT_ALLELE_ASSIGNMENT",
+  "release": "2026_03",
+  "canary": "gene",
+  "max_bytes": 2000000,
+  "requests": {
+    "gene": {
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ABcmfs1%20AND%20taxonomy_id%3A40559&format=json&size=500&fields=accession,reviewed,protein_name,gene_names,organism_id,organism_name,lit_pubmed_id,sequence_version,version",
+      "query": "gene_exact:Bcmfs1 AND taxonomy_id:40559"
+    },
+    "citation": {
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A12324349&format=json&size=500&fields=accession,reviewed,protein_name,gene_names,organism_id,organism_name,lit_pubmed_id,sequence_version,version",
+      "query": "lit_pubmed:12324349"
+    }
+  },
+  "selection": {
+    "aro_id": "ARO:3009459",
+    "record_identifier": "antibioticmech:aro-1224dc3554",
+    "record_path": "data/antibiotics/antifungal/oxpoconazole.yaml",
+    "inchi_key": "FJBGIXKIXPUXBY-UHFFFAOYSA-N",
+    "source_label": "Botrytis cinerea MFS1 with mutations conferring resistance to oxpoconazole",
+    "reference_gene": "Bcmfs1",
+    "species_id": 40559,
+    "species_label": "Botrytis cinerea",
+    "pmid": "12324349",
+    "doi": "10.1128/AEM.68.10.4996-5004.2002",
+    "publication_scope": "AUTHOR_INSTITUTION_TITLE_AND_ABSTRACT_ONLY",
+    "publication_url": "https://research.wur.nl/en/publications/bcmfs1-a-novel-major-facilitator-superfamily-transporter-from-bot/",
+    "paper_is_inherited_card_determinant_citation": false,
+    "paper_is_current_compound_definition_citation": true
+  },
+  "constraints": {
+    "retries": 0,
+    "redirects_followed": 0,
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "sequences_requested": false,
+    "features_requested": false,
+    "biological_record_writes": false,
+    "experimental_subject_assignments": false,
+    "full_investigation_complete": false
+  }
+}

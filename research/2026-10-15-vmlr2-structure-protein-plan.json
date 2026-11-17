@@ -1,0 +1,60 @@
+{
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-15-vmlr2-structure/canary-reviewed.json",
+    "sha256": "d284bf41139edf0dca9f42f436a6c06f2a6ce990cfa952d57a3efe0d7da8e927"
+  },
+  "constraints": {
+    "biological_record_writes": false,
+    "experimental_identity_assignment": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_primary_results_reviews": 0,
+    "redirects_followed": 0,
+    "retries": 0
+  },
+  "date": "2026-10-15",
+  "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version,xref_pdb",
+  "max_bytes": 1000000,
+  "preflight": {
+    "existing_uniprot_queries_or_responses_found": false,
+    "file_globs": [
+      "*.json",
+      "*.bin"
+    ],
+    "ignored_files_included": true,
+    "literal_patterns": [
+      "W1SM44",
+      "BAVI_03309"
+    ],
+    "matching_paths": [
+      "research/2026-10-15-vmlr2-structure-plan.json",
+      "reports/resistance-grounding-2026-10-15-vmlr2-structure/pdb-metadata-body.json"
+    ],
+    "searched_roots": [
+      "reports",
+      "research"
+    ]
+  },
+  "release": "2026_03",
+  "requests": {
+    "uniprot-identifiers": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version,xref_pdb",
+        "format": "json",
+        "query": "(accession:W1SM44 OR sec_acc:W1SM44 OR (gene_exact:BAVI_03309 AND taxonomy_id:220686))",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28accession%3AW1SM44+OR+sec_acc%3AW1SM44+OR+%28gene_exact%3ABAVI_03309+AND+taxonomy_id%3A220686%29%29&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion%2Cxref_pdb"
+    }
+  },
+  "scope": "PDB_EXPLICIT_REFERENCE_ACCESSION_AND_LOCUS_NOT_ENGINEERED_ENTITY_IDENTITY",
+  "structure_plan": {
+    "path": "research/2026-10-15-vmlr2-structure-plan.json",
+    "sha256": "fe58e0c3be4ec8b9acedfd89ae42b37d96d246ee877db1779d6e8e5b88786a99"
+  },
+  "structure_receipt": {
+    "path": "reports/resistance-grounding-2026-10-15-vmlr2-structure/pdb-metadata-receipt.json",
+    "sha256": "a40408ae5948c2d6e7ebafae883807566b832f807c1f46862979e0060b6b09d4"
+  }
+}

@@ -127,22 +127,68 @@ resistance_mechanisms:
   taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
   strain: YPH501
-  strain_taxon_id: NCBITaxon:559292
   alteration: STS1+ (wild type) [Overexpression]
-  protein_accession: UniProtKB:P38637
-  gene_id: YIR011C_mRNA
   phenotype_id: PHIPO:0000544
   phenotype_label: resistance to cycloheximide
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review bissinger-kuchler-1994-sts1-name-collision:
+    Historical STS1 denotes PDR5, not the modern STS1 proteasome-tether gene. UniProtKB:P33302
+    / YOR153W supports the PDR5 reference crosswalk, not an exact experimental allele.
+    The strain label is parent-background context; S288c is a reference, not a resolved
+    experimental subject. Reference-only source identifiers: strain_taxon_id=NCBITaxon:559292.
+    Rejected misassigned source identifiers: protein_accession=UniProtKB:P38637; gene_id=YIR011C_mRNA.'
   evidence:
   - reference: PMID:8307980
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1805; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1016/S0021-9258(17)41760-1
+    notes: 'Identifier-scope review: pp. 4180-4181: gene identity and strain context,
+      Results and Table I, p. 4185: STS1/PDR5 allelism, UniProtKB release 2026_03:
+      P33302 entry 235, P38637 entry 160, sequence versions 1. Reviewed 2026-10-08
+      by codex; curation/phibase_grounding_reviews.json SHA-256 1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed.'
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: CYH2/RPL28-associated laboratory cycloheximide resistance
+  gene_families:
+  - RPL28
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative cycloheximide resistance
+  assay: Laboratory genetic and protein comparisons
+  note: Historical CYH2/L29 maps to current RPL28/uL15, not modern RPL29/eL29. Gene-level
+    laboratory evidence does not establish direct drug binding to this protein. Historical
+    variant coordinates remain unresolved; reference identity is not an experimental
+    allele assignment.
+  evidence:
+  - reference: PMID:6304624
+    notes: Selected Results and Discussion, pp. 3125 and 3132; DOI:10.1093/nar/11.10.3123.
+      Author-uploaded primary text inspected; native figures not inspected.
+  - reference: UniProtKB:P02406
+    notes: 'Reference identity only: RPL28, YGL103W; UniProtKB 2026_03, entry 210,
+      sequence 3. S288c NCBITaxon:559292 is reference context, not an experimental
+      strain assignment.'
+- mechanism_type: UNKNOWN
+  label: AGP2-associated laboratory cycloheximide resistance
+  gene_families:
+  - AGP2
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative cycloheximide resistance
+  assay: Comparative plate and liquid growth
+  note: Laboratory phenotype association. PDR5-mediated causality and direct cycloheximide
+    transport by Agp2 were not established. Figure 1B units conflict with Results;
+    no numerical AST imported. Reference identity is not an experimental allele assignment.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0303747
+    notes: Results and Discussion; native Figures 1, 8 and 10 inspected, pp. 7, 15
+      and 19.
+  - reference: UniProtKB:P38090
+    notes: 'Reference identity only: AGP2, YBR132C; UniProtKB 2026_03, entry 177,
+      sequence 1. S288c NCBITaxon:559292 is reference context, not an experimental
+      strain assignment.'
 molecular_targets:
 - target_id: ARO:3000729
   target_label: ribosomal complex
@@ -174,6 +220,17 @@ molecular_targets:
   evidence:
   - reference: PMID:25209664
     notes: Primary cycloheximide-80S structural and kinetic study (DOI:10.1038/nature13737).
+  protein_examples:
+  - uniprot_id: UniProtKB:P02406
+    protein_label: Large ribosomal subunit protein uL15
+    gene_symbol: RPL28
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: 60S ribosomal E-site protein uL15 (RPL28; historical CYH2/L29) that lines
+      the cycloheximide binding pocket with 25S rRNA in the S. cerevisiae 80S ribosome-inhibitor
+      crystal structure (PMID:25209664, PDB 4U3U; S288c reference strain context).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -218,3 +275,273 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T06:48:36Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_IDENTIFIER_SCOPE
+  changes: Rejected the misassigned modern STS1 protein/locus for the historical PDR5
+    association; retained the supported reference crosswalk and withheld the unresolved
+    experimental strain identifier without changing the source phenotype.
+  llm_assisted: true
+- timestamp: '2026-10-08T07:21:08Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after additional reviews;
+    all biological fields and previous identifier-scope decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T07:56:02Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_IDENTIFIER_SCOPE
+  changes: Refreshed the whole-file PHI-base review checksum after the FKS1 review;
+    all biological fields and previous identifier-scope decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T08:33:34Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after two further reviews;
+    all biological fields and previous identifier-scope decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T09:10:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after Eddouzi subject
+    reviews; all biological fields and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T09:45:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after Rybak reference-context
+    reviews; all biological fields and previous decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T10:12:34Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after carboxin reference-context
+    reviews; all biological fields, activities and previous decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T10:52:13Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after two additional
+    carboxin identifier-scope corrections; all biological fields, activities and previous
+    decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T11:28:52Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after eleven additional
+    identifier-scope corrections; biological fields, activities and decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T12:09:14Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after seventeen additional
+    identifier-scope corrections; biological fields, activities and decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T12:49:26Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after one yeast identity-scope
+    correction; biological fields, activities and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T13:24:16Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after twelve reference-scope
+    corrections; biological fields, activities and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:01:31Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after nine identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:40:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after six identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T15:08:43Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after eight subject-identity
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:11:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Darlington subject
+    correction; prior review decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:44:02Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Nakayama reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T20:35:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Duan reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:06:58Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Piotrowska parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:55:57Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Xu subject and species
+    corrections; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:27:16Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Shima parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:54:07Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Mehrabi parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T23:22:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Huang parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T00:15:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the HDF1 subject-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T04:34:45Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Fouche parent-cohort
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T05:46:23Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the SDH8 reference-alias
+    correction; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T10:41:08Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
+    review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-12T20:12:16Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after four reference-identifier
+    scope corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-13T02:32:03Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added qualified CYH2/RPL28 and AGP2 laboratory cycloheximide resistance
+    associations. Distinguished historical L29 from modern RPL29, kept UniProt proteins
+    and S288c taxonomy reference-only, and retained mechanistic and numerical-endpoint
+    limitations. Existing source-owned claims are unchanged; whole-record review remains
+    open.
+  llm_assisted: true
+- timestamp: '2026-10-13T08:51:03Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after one Neurospora subject-context
+    correction; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Saccharomyces cerevisiae S288c 60S ribosomal protein uL15
+    / RPL28 (P02406) UniProtKB protein example on the PRIMARY_LITERATURE eukaryotic
+    80S ribosome molecular target.
+  llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph cycloheximide_80s_ribosome_elongation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:25209664).
+  llm_assisted: true
+causal_graphs:
+- graph_id: cycloheximide_80s_ribosome_elongation_inhibition
+  title: Cycloheximide binds the eukaryotic 80S ribosome E site to block translation
+    elongation
+  description: Cycloheximide binds the 60S E-site pocket lined by 25S rRNA and ribosomal
+    protein uL15 on the Saccharomyces cerevisiae 80S ribosome and inhibits eukaryotic
+    translation elongation.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: cycloheximide
+    label: cycloheximide
+    node_type: COMPOUND
+    grounding: CHEBI:27641
+  - node_id: eukaryotic_80s_ribosome
+    label: eukaryotic 80S ribosome
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Eukaryotic 80S ribosome complex; kept label-only with Saccharomyces
+      cerevisiae S288c uL15/RPL28 (UniProtKB:P02406) protein_examples.
+    gene_symbols:
+    - RPL28
+    protein_examples:
+    - uniprot_id: UniProtKB:P02406
+      protein_label: Large ribosomal subunit protein uL15
+      gene_symbol: RPL28
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: 60S ribosomal E-site protein uL15 (RPL28; historical CYH2/L29) that lines
+        the cycloheximide binding pocket with 25S rRNA in the S. cerevisiae 80S ribosome-inhibitor
+        crystal structure (PMID:25209664, PDB 4U3U; S288c reference strain context).
+  - node_id: cycloheximide_bound_80s_e_site
+    label: cycloheximide-bound 80S ribosomal E-site pocket
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Inhibitor-occupied 60S tRNA exit site resolved in high-resolution
+      yeast 80S X-ray structures.
+  - node_id: eukaryotic_translation_elongation
+    label: eukaryotic translation elongation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: mRNA/tRNA translocation cycle during eukaryotic cytoplasmic protein
+      synthesis.
+  edges:
+  - subject: cycloheximide
+    predicate: binds
+    object: cycloheximide_bound_80s_e_site
+    description: Cycloheximide binds the E-site pocket on the eukaryotic 80S ribosome.
+    evidence:
+    - reference: PMID:25209664
+      notes: High-resolution X-ray crystal structures of Saccharomyces cerevisiae
+        80S ribosomes localized cycloheximide in the 60S E site.
+  - subject: eukaryotic_80s_ribosome
+    predicate: participates in
+    object: cycloheximide_bound_80s_e_site
+    description: The eukaryotic 80S ribosome 25S rRNA and protein uL15 form the cycloheximide
+      binding pocket.
+    evidence:
+    - reference: PMID:25209664
+      notes: The yeast 80S-cycloheximide crystal structure defined drug contacts with
+        25S rRNA and uL15 (RPL28).
+  - subject: cycloheximide_bound_80s_e_site
+    predicate: inhibits
+    object: eukaryotic_translation_elongation
+    description: Cycloheximide occupancy at the 80S E site blocks eukaryotic translation
+      elongation.
+    evidence:
+    - reference: PMID:25209664
+      notes: Paired structural and kinetic analyses demonstrated how E-site cycloheximide
+        binding inhibits eukaryotic translation elongation.

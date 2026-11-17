@@ -1,0 +1,161 @@
+{
+  "adversarial_self_review": {
+    "checks": [
+      "Original and later deposits remain distinct; no exact allele inferred",
+      "Donor taxonomy is reference-only, not an observed resistance subject",
+      "OleR reactivation and oleN2 biosynthesis are not positive resistance findings",
+      "Published correction reviewed in the correct journal section",
+      "No quantitative susceptibility, variant or engineering details added",
+      "All CARD-owned assertions and unrelated record fields preserved",
+      "Round-trip and no-op reseeding checked"
+    ],
+    "independent_review": false,
+    "remaining_scope": "Experimental identity, supplements and broader source assertions remain open"
+  },
+  "all_current_record_hashes_verified": 2939,
+  "artifacts": [
+    {
+      "path": "research/2026-10-09-oleandomycin-curation.json",
+      "sha256": "c5ad639efa80bb7609d48a17dc68e6ca834479d7ef2d0253dbee97f21c7bd934"
+    },
+    {
+      "path": "research/2026-10-09-oleandomycin-checkpoint-reconciliation.json",
+      "sha256": "fe629be98b2a367d297613c2bd5e81066065861e553eb1adbf957617b7240a7b"
+    },
+    {
+      "path": "research/2026-10-09-oleandomycin-resistance-progress.json",
+      "sha256": "32067178868be3ba4da643f11ae9312e269de4520b4e8847c57cb96de4f682c5"
+    },
+    {
+      "path": "research/2026-10-09-oleandomycin-resistance-progress.tsv",
+      "sha256": "5d2dfbfbc377ae3cb54dd5b51125e694117df95a1ff974290b8b3226cc774fac"
+    },
+    {
+      "path": "tests/test_oleandomycin_curation.py",
+      "sha256": "1ee06affc4ebbddff9a45ab29fff6cb71467ff6199fe551fb2681342bff597a4"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "8ff69abb06ecc12f50ba4c706241f15ea069f08aa490a7d7af3d734877b58ae3"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "73c65e8862506163a0fb57aa336ac9b2f9c4e23652dd6b6bfc02223e672ee1eb"
+    }
+  ],
+  "changed_documents_encoded": 0,
+  "changed_protected_files": {
+    "data/antibiotics/antibacterial/oleandomycin.yaml": {
+      "after_sha256": "54f3cef2361e85c145287aef108d9af84cfc1334353b8ca3c51a1c8bef6c5ae0",
+      "before_sha256": "6c823de3739d928112615c8a4b2557d0be876a6d262184fad2c85a7f192cfb15"
+    },
+    "pages/antibacterial/oleandomycin.html": {
+      "after_sha256": "c9c9420ee562a7cf1004f1394474d70b4475a3f663f96582f03cd8bcfec4de2b",
+      "before_sha256": "758275f7ecf784fb445da9e5f148f911ad160e05b29428f77791b745e48fdaef"
+    },
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "73c65e8862506163a0fb57aa336ac9b2f9c4e23652dd6b6bfc02223e672ee1eb",
+      "before_sha256": "cfe15cf5c4712d42125c5c18db1a6349a71acf052835c541abe08c5412560800"
+    },
+    "scripts/summarize_resistance_progress.py": {
+      "after_sha256": "8ff69abb06ecc12f50ba4c706241f15ea069f08aa490a7d7af3d734877b58ae3",
+      "before_sha256": "7a16333c8c04312eea4300095080c9147a6968ca70f2a57f046f8cbeda46e838"
+    }
+  },
+  "chemical_map_unchanged": true,
+  "corpus_research_complete": false,
+  "curation_inputs_unchanged": true,
+  "current_ledger": {
+    "path": "research/2026-10-09-oleandomycin-resistance-grounding.tsv",
+    "sha256": "e2ac349a1a893263fd2bfd26ad4602bc7f2b319ee202391944d4407efc5004fe"
+  },
+  "date": "2026-10-09",
+  "embedding_artifacts_unchanged": true,
+  "embedding_limitation": "Builder includes first six resistance labels; appended curator claims are outside that projection.",
+  "embedding_scripts_unchanged": true,
+  "embedding_unchanged_proof": {
+    "path": "reports/resistance-grounding-2026-10-09-oleandomycin/embedding-stage/unchanged-proof.json",
+    "sha256": "04e46fa8a8955ee15df22f383694ad8fba4a2ba962d5958a14fe8970d950c8dc"
+  },
+  "experimental_alleles_validated": false,
+  "focused_tests": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-09-oleandomycin/focused-tests.xml",
+      "sha256": "35f9398d7825aece89334acc31733e5d4ba2059f39c976cf8d41092fd3bbcb69"
+    },
+    "passed": 78,
+    "skipped": 1
+  },
+  "full_qc": {
+    "command": "env PYTHONPATH=/private/tmp/antibioticmech-qc-science-20261009.GtY47E:src:.venv/lib/python3.13/site-packages PYTEST_ADDOPTS='-rs --junitxml=reports/resistance-grounding-2026-10-09-oleandomycin/full-tests.xml' /private/tmp/npmech-rdkit-2026.03.5/bin/python -u scripts/run_qc.py",
+    "exit_code": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-09-oleandomycin/full-tests.xml",
+      "sha256": "9281b6edc874eeaffd2b8b4c2ff99abf77e10432bb10ecec38f297792dd0534b"
+    },
+    "passed": 2334,
+    "path": "reports/resistance-grounding-2026-10-09-oleandomycin/full-qc.log",
+    "sha256": "bd9b77469a2bf1e0aca38284a29cbfacc1a8837fe2a98e485c9f26732ce853bd",
+    "skip_reasons": [
+      "historical checkpoint no longer matches the live corpus; public invariants still run",
+      "got empty parameter set for (path)",
+      "got empty parameter set for (path)",
+      "got empty parameter set for (path)"
+    ],
+    "skipped": 4,
+    "stages": [
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "test_seconds": 1691.12,
+    "warnings": 1
+  },
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "ignored_files_included": true,
+  "live_browser_verification": false,
+  "model_revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+  "ncbi_endpoint_requests": 0,
+  "network_used_for_embedding": false,
+  "protected_files": 6726,
+  "protected_files_unchanged": 6722,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-oleandomycin/protected-before.json",
+    "sha256": "dbd7441de8c41d54262255b7676664f7679e8be75db21427e8ec936ff78434ca"
+  },
+  "records_byte_identical": 2938,
+  "records_changed": 1,
+  "rendered_claims_and_caveats_checked": true,
+  "rendered_map_payload_matches_artifact": true,
+  "rendered_map_record_links_verified": 2939,
+  "root_documents": [
+    {
+      "path": "README.md",
+      "sha256": "04d9fc1dad950669cc76efb5d362a07f993e20dce7870d07940e7a71576e726c"
+    },
+    {
+      "path": "NEXT_TASKS.md",
+      "sha256": "de77e4952bc300d6227071441e136ed6b3e66de6150431d88e89e870112ae2df"
+    }
+  ],
+  "scope": "QUALITATIVE_BIOCHEMICAL_CURATION_NOT_COMPLETED_CORPUS_RESEARCH",
+  "semantic_map": {
+    "fingerprint": "6ef789f99f7de573",
+    "method": "pacmap",
+    "points": 2939,
+    "seed": 42
+  },
+  "source_assertions_preserved": 30,
+  "status": "ALL_AUTHORITATIVE_QC_GATES_PASSED",
+  "unchanged_vector_rows": 2939,
+  "whole_record_primary_review_complete": false
+}

@@ -1,0 +1,106 @@
+{
+  "records": [
+    {
+      "before": {
+        "path": "data/antibiotics/antiviral/anisomycin.yaml",
+        "sha256": "c6389c4d91a9cdb501e4ed2dcf6c456d8286ecbd3b65d0e2becd5621bdac6213"
+      },
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-13-translation/anisomycin-canary.yaml",
+        "sha256": "46a33646cb7a0f814a7b793669b3f8d824f3bcf9fcd8978b46ca8c51fbc0ca24"
+      },
+      "claims": [
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "Results, Table 1 and native Figure 2D. Qualitative anisomycin result only; source concentration-unit discrepancy is not resolved or imported.",
+              "reference": "https://doi.org/10.1093/nar/gkn642"
+            },
+            {
+              "notes": "Reference-only UniProtKB:P14126, entry version 233, sequence version 4, release 2026_03; RPL3 in S288c (NCBITaxon:559292). Not an exact experimental derivative or resistance allele.",
+              "reference": "https://www.uniprot.org/uniprotkb/P14126/entry"
+            }
+          ],
+          "gene_id": "RPL3",
+          "label": "Laboratory RPL3-associated anisomycin resistance",
+          "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+          "note": "Context-dependent association in JD1090 derivatives; responses differ among tested contexts. This is not a species-wide phenotype. Experimental allele, protein and genome unresolved; no standardized MIC or clinical category inferred.",
+          "phenotype_label": "Source-reported relative anisomycin resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        }
+      ],
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added a qualified laboratory yeast RPL3 association from inspected primary results. UniProt remains reference-only; no experimental allele, protein, genome or numeric AST assigned. Preserved existing owners and left whole-record review open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-13T09:59:58Z"
+      },
+      "existing_claims_preserved": 0,
+      "fixture": {
+        "path": "tests/fixtures/anisomycin-before-translation-2026-10-13.yaml",
+        "sha256": "c6389c4d91a9cdb501e4ed2dcf6c456d8286ecbd3b65d0e2becd5621bdac6213"
+      },
+      "fresh_seed_merge_equal": true,
+      "identifier": "CHEBI:338412",
+      "record": {
+        "path": "data/antibiotics/antiviral/anisomycin.yaml",
+        "sha256": "46a33646cb7a0f814a7b793669b3f8d824f3bcf9fcd8978b46ca8c51fbc0ca24"
+      },
+      "whole_record_review_complete": false
+    },
+    {
+      "before": {
+        "path": "data/antibiotics/antifungal/trichothecin.yaml",
+        "sha256": "159ced6d28f531be9b2df72f95d777ec3711a6bfa80911b6cec5313c97a9aa62"
+      },
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-13-translation/trichothecin-canary.yaml",
+        "sha256": "39afe90626559076e5877e9ce87e3a9a712f9f905d5ea98332cba38c7174c526"
+      },
+      "claims": [
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "DOI:10.1186/s12864-016-2718-y; Results and native Figure 1a-b. Figure 1c is DON-only; the hypersensitivity screen is not imported as resistant alleles.",
+              "reference": "PMID:27245696"
+            },
+            {
+              "notes": "Reference-only UniProtKB:P33302, entry version 235, sequence version 1, release 2026_03; PDR5 in S288c (NCBITaxon:559292). Not an exact experimental derivative or resistance allele.",
+              "reference": "https://www.uniprot.org/uniprotkb/P33302/entry"
+            }
+          ],
+          "gene_id": "PDR5",
+          "label": "Laboratory PDR5-associated trichothecin resistance",
+          "mechanism_type": "ANTIBIOTIC_EFFLUX",
+          "note": "Context-dependent association in FY1679-28C and YALA-B1/YALA-G4 derivatives. Efflux is the authors' interpretation of the genetic comparisons, not a direct transport measurement. This is not a species-wide phenotype. Experimental allele, protein and genome unresolved; no standardized MIC or clinical category inferred.",
+          "phenotype_label": "Source-reported relative trichothecin resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        }
+      ],
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added a qualified laboratory yeast PDR5 association from inspected primary results. UniProt remains reference-only; no experimental allele, protein, genome or numeric AST assigned. Preserved existing owners and left whole-record review open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-13T09:59:58Z"
+      },
+      "existing_claims_preserved": 0,
+      "fixture": {
+        "path": "tests/fixtures/trichothecin-before-translation-2026-10-13.yaml",
+        "sha256": "159ced6d28f531be9b2df72f95d777ec3711a6bfa80911b6cec5313c97a9aa62"
+      },
+      "fresh_seed_merge_equal": true,
+      "identifier": "CHEBI:69621",
+      "record": {
+        "path": "data/antibiotics/antifungal/trichothecin.yaml",
+        "sha256": "39afe90626559076e5877e9ce87e3a9a712f9f905d5ea98332cba38c7174c526"
+      },
+      "whole_record_review_complete": false
+    }
+  ]
+}

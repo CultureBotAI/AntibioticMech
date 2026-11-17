@@ -1,0 +1,163 @@
+{
+  "added_evidence": {
+    "notes": "Taxonomic identity only: active species, UniProt release 2026_03; retrieved 2026-10-08 UTC.",
+    "reference": "https://rest.uniprot.org/taxonomy/3052230"
+  },
+  "after_record_sha256": "064fbd4d73b33b7d4f56d5733ec36b8639db814750e47f0d4e2cec9cc87b1515",
+  "attribution": "UniProt Consortium, release 2026_03, CC BY 4.0",
+  "before_record_sha256": "049deff52e27e78f2b52eac4426111c7d80b1b76de630811e0cfde7a151c8696",
+  "claim_note_replacement": "Clinical sequencing after 14-day monotherapy identified genotype-dependent NS5A variants; phenotypes were assessed separately in H77c and Con1 reference replicons. Variant populations, not every individual substitution, persisted for up to six months. Taxon grounding only: no patient-specific protein, strain TaxID, genome, normalized allele or new quantitative endpoint assigned. This review does not establish the administered compound form.",
+  "compound_form_review": "Not newly resolved by the cited paper's generic compound name; no exact-form claim added or transferred.",
+  "current_claim_sha256": "8914ade9ce7cccfc45ef2c91d49107ff186a859f06472cbddb3ba8f647799ed0",
+  "doi": "10.1128/aac.02494-12",
+  "identifier": "CHEBI:82977",
+  "inspected_primary_url": "https://journals.asm.org/doi/10.1128/aac.02494-12",
+  "limitations": [
+    "This aggregate is not a single allele, patient or isolate; no genome or sample identity is inferred.",
+    "No quantitative endpoint, clinical breakpoint, sequence or normalized variant added.",
+    "The pre-existing REVIEWED status is retained, not renewed; whole-record and full literature review remain open.",
+    "No requests to NCBI endpoints were made."
+  ],
+  "locations": [
+    "Compounds",
+    "In vitro analysis of replicon variants",
+    "Results and Tables 1-2",
+    "Discussion"
+  ],
+  "original_claim": {
+    "evidence": [
+      {
+        "notes": "Primary daclatasvir monotherapy sequencing and resistance-persistence study (DOI:10.1128/AAC.02494-12).",
+        "reference": "PMID:23403428"
+      }
+    ],
+    "gene_families": [
+      "HCV NS5A"
+    ],
+    "label": "HCV NS5A substitutions at M28, Q30, L31, and Y93",
+    "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+    "note": "Replicon selection and sequencing after 14-day monotherapy identified genotype-dependent NS5A resistance variants; variants at positions 28, 30, 31, and 93 persisted for up to six months in the studied populations."
+  },
+  "original_claim_sha256": "0e5fb6a5bee1c401ec7ca76a06f3f6a681f30b20acc71272096b19bce2d18005",
+  "original_history_sha256": "b391e9b70e0b523f07546a4e5ff6063dc07dc3120a3b605f7579d7efdb1c3f26",
+  "path": "data/antibiotics/antiviral/daclatasvir.yaml",
+  "primary_reference": "PMID:23403428",
+  "reference_candidate": null,
+  "requests": [
+    {
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Length": "484",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 03:48:23 GMT",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "hit cached"
+      },
+      "retrieved_at": "2026-10-08T03:48:23.231564+00:00",
+      "sha256": "9937380c4376178516d8f6b14893b728bb7e70986be245a62f39b137b0a59de3",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/3052230"
+    }
+  ],
+  "reviewed_on": "2026-10-08",
+  "source_reference_backgrounds": [
+    "H77c",
+    "Con1"
+  ],
+  "standard_inchi_key": "FKRSSPOQAMALKA-CUPIEXAXSA-N",
+  "status": "SPECIES_GROUNDED_EXACT_ALLELES_UNRESOLVED",
+  "taxonomy": {
+    "active": true,
+    "hidden": false,
+    "lineage": [
+      {
+        "hidden": false,
+        "rank": "no rank",
+        "scientificName": "Viruses",
+        "taxonId": 10239
+      },
+      {
+        "commonName": "RNA viruses and retroviruses",
+        "hidden": false,
+        "rank": "realm",
+        "scientificName": "Riboviria",
+        "taxonId": 2559587
+      },
+      {
+        "hidden": false,
+        "rank": "kingdom",
+        "scientificName": "Orthornavirae",
+        "taxonId": 2732396
+      },
+      {
+        "hidden": false,
+        "rank": "phylum",
+        "scientificName": "Kitrinoviricota",
+        "taxonId": 2732406
+      },
+      {
+        "hidden": false,
+        "rank": "class",
+        "scientificName": "Flasuviricetes",
+        "taxonId": 2732462
+      },
+      {
+        "hidden": false,
+        "rank": "order",
+        "scientificName": "Amarillovirales",
+        "taxonId": 2732545
+      },
+      {
+        "hidden": false,
+        "rank": "family",
+        "scientificName": "Flaviviridae",
+        "taxonId": 11050
+      },
+      {
+        "hidden": false,
+        "rank": "genus",
+        "scientificName": "Orthohepacivirus",
+        "taxonId": 11102
+      }
+    ],
+    "mnemonic": "9HEPC",
+    "otherNames": [
+      "HCV",
+      "Hepacivirus C",
+      "post-transfusion hepatitis non A non B virus",
+      "human hepatitis C virus HCV",
+      "human hepatitis virus C HCV",
+      "human hepatitis C virus",
+      "hepatitis C virus HCV",
+      "Hepatitis C virus",
+      "Hepacivirus hominis"
+    ],
+    "parent": {
+      "scientificName": "Orthohepacivirus",
+      "taxonId": 11102
+    },
+    "rank": "species",
+    "scientificName": "Orthohepacivirus hominis",
+    "statistics": {
+      "proteomeCount": 469,
+      "referenceProteomeCount": 0,
+      "reviewedProteinCount": 46,
+      "unreviewedProteinCount": 17759
+    },
+    "taxonId": 3052230
+  },
+  "unchanged_fields_sha256": "f3216507e534d3b730caf43be0104cf54e22f1512e63a33a0d2a056054f936c9"
+}

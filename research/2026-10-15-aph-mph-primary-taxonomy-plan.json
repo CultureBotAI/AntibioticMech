@@ -1,0 +1,57 @@
+{
+  "cache_screen": {
+    "exact_scientific_name_matches": [
+      "Bacillus cereus"
+    ],
+    "missing_in_selected_registry": "Brachybacterium paraconglomeratum",
+    "not_a_repository_wide_absence_claim": true,
+    "parse_errors": [],
+    "unique_native_payloads_checked": 695
+  },
+  "canary": "mphO-taxonomy",
+  "constraints": {
+    "biological_record_writes": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "redirects_followed": 0,
+    "retries": 0,
+    "uncultured_source_species_assigned": false
+  },
+  "date": "2026-10-15",
+  "inputs": {
+    "assessment": {
+      "path": "research/2026-10-15-aph-mph-primary-assessment.json",
+      "sha256": "8f8f38656da3f07b44b05c76f6c94203cc55468bf4068fb7c16aa9e461b10163"
+    },
+    "prior_lc231": {
+      "path": "research/2026-10-15-vgb-evidence.json",
+      "sha256": "c2e6ac2bceff744758ce373ec5b92a590a02482f66b62984aeecb7ac6cf331e2"
+    },
+    "taxonomy_inventory": {
+      "path": "reports/resistance-grounding-2026-10-15-card-gene-reference-followup/taxonomy-cache-inventory.json",
+      "sha256": "071db296d1418042946d97ffcd408151e2d665346a36b346df4f5ab048fc2d72"
+    }
+  },
+  "max_bytes": 2000000,
+  "release": "2026_03",
+  "requests": {
+    "mphO-taxonomy": {
+      "query": "\"Brachybacterium paraconglomeratum\" AND rank:species",
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Brachybacterium+paraconglomeratum%22+AND+rank%3Aspecies&format=json&size=500"
+    }
+  },
+  "reused_native_wrappers": {
+    "aph_candidate": {
+      "path": "reports/resistance-grounding-2026-10-07/request-349e2c3fbd74453ccb4cc82014fddbab02ab4e434c2f351e1780e5de733db825.json",
+      "sha256": "ff20506d894a4d92acc14f7b6798effb70a1ef697e29a473ee968f9e2bf292d5"
+    },
+    "bacillus_cereus": {
+      "path": "reports/resistance-grounding-2026-10-07/request-5eee15d0e294e3e267ae350028883d14f5e8e008a2f9f0e9e18c84bf387f829d.json",
+      "sha256": "d9f4343ffa4c0a38ee262b91494f9f472bb52be9b8e9bcfcd25477dc3acc21bf"
+    },
+    "lc231": {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/request-09356de11bb83206f7d90d9a26b72ee2dd840466605ea1fa02daa0dd9c6b3968.json",
+      "sha256": "5c2b443ac4a9021b488c148f2bc65f4e4e77d7e18bf867a3d4c1aef3c796a54d"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "audit_plan": {
+    "path": "research/2026-10-15-dnaa-sigma-hp1184-audit-plan.json",
+    "sha256": "adb680e098ca908932c0f22cd9c48b2e54fb8e72b293a88e3bbd7eb2e9ef2eea"
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-dnaa-sigma-hp1184/baseline.json",
+    "sha256": "e716332382e4304a1a8334d325cbd9246549a3a8e929c22f302de2cf2f345484"
+  },
+  "checks": {
+    "authoritative_full_qc_rerun": false,
+    "errors": 0,
+    "failures": 0,
+    "focused_tests_passed": 91,
+    "native_primary_publication_body_replayed": false,
+    "offline_write_disabled_replay": true,
+    "report_only_appended_section": true,
+    "saved_projection_equal": true,
+    "skipped": 0,
+    "unchanged_data_curation_site_files": 6353
+  },
+  "constraints": {
+    "biological_record_writes": false,
+    "full_investigation_complete": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "source_adoption": false,
+    "whole_record_primary_signoff": false
+  },
+  "date": "2026-10-15",
+  "dossier": {
+    "path": "research/2026-10-15-dnaa-sigma-hp1184.json",
+    "sha256": "710f39a850a4432b8b55a8a5de703c1da8a84cb8efb5c02ac64d879df4234394"
+  },
+  "new_native_requests": 3,
+  "primary_review": {
+    "access_mode": "PUBLISHER_WEB_READER",
+    "figure_pixels_reviewed": false,
+    "native_primary_body_replay_available": false,
+    "selected_text_only": true,
+    "supplements_reviewed": false,
+    "whole_papers_reviewed": false
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "894137f9970fa24f8b3ffd8404459a373ef0448bba8bb57ff705b5f0b2073fb6"
+  },
+  "reused_native_taxonomy_nodes": 4,
+  "script": {
+    "path": "scripts/audit_dnaa_sigma_hp1184.py",
+    "sha256": "ef6b214bbd309bc6a2cab68821e6e92b497df9f8d422e11d5c25c8f82d726f89"
+  },
+  "shared_helpers": [
+    {
+      "path": "scripts/audit_bla_primary_identifiers.py",
+      "sha256": "d3a6cf163b9be1ca37f0670e98cc6753ef5f6f4b1cd36dfeec6f198c0fe9d77f"
+    },
+    {
+      "path": "scripts/audit_card_reference_lineages.py",
+      "sha256": "71474aa505ffdea55c2147eb934d9885ebdb040806f818b27490c51d8197aaa5"
+    },
+    {
+      "path": "scripts/audit_card_reference_memberships.py",
+      "sha256": "a247908f66360b08d8a1e8bd400b71ce30f5ecf95b81fe92d29057e4186be81d"
+    },
+    {
+      "path": "scripts/audit_card_gene_reference_followup.py",
+      "sha256": "50f9c57b425a432a83eedae3699f80b9ba246d3e7ddb8164444def3e1b3af732"
+    },
+    {
+      "path": "scripts/audit_curator_resistance_fields.py",
+      "sha256": "bcc3493cca199a418b6eb69cec5b51a293fe3a8aa15ed3272f7f285616e0d5dd"
+    },
+    {
+      "path": "scripts/audit_topoisomerase_references.py",
+      "sha256": "440bc495fbc08e9e02b4365a61a41b50893638ac7a222cd3990dceb44676442a"
+    },
+    {
+      "path": "scripts/audit_sal_reference_context.py",
+      "sha256": "39cb77220df99b8f07bd17749a84bf50f8923263f89d59158ffa3fb3ff53d27f"
+    }
+  ],
+  "status": "THREE_REFERENCE_CONTEXTS_AND_ONE_COMPARATOR_VERIFIED_EXPERIMENTAL_ALLELES_OPEN",
+  "summary": {
+    "comparators_not_resistance_determinants": 1,
+    "complete_records_loaded": 8,
+    "current_corpus_hashes_verified": 2939,
+    "determinant_reference_contexts": 3,
+    "reference_proteins": 4,
+    "reference_strain_nodes": 2,
+    "source_claims_bound": 12,
+    "species_nodes": 2,
+    "terms_investigated": 3,
+    "whole_record_primary_signoffs": 0
+  },
+  "test_report": {
+    "path": "reports/resistance-grounding-2026-10-15-dnaa-sigma-hp1184/tests.xml",
+    "sha256": "beb8aecb06e98444c82354b6ae4635fd34242bab2602f646e3afe3a7cdb48498"
+  },
+  "tests": {
+    "path": "tests/test_dnaa_sigma_hp1184.py",
+    "sha256": "2d12a3038bd3d6aba7447ba142175689c5390995e9511ca41a7a977a658c7c55"
+  }
+}

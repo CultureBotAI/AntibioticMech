@@ -1,0 +1,181 @@
+identifier: CHEBI:198310
+label: negamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: A natural pseudodipeptide hydrazide antibiotic ([2-[(3R,5R)-3,6-diamino-5-hydroxyhexanoyl]-1-methylhydrazinyl]acetic
+  acid) that binds helix 34 of the bacterial 30S ribosomal subunit to impair translocation
+  and induce miscoding.
+definition_source: DOI:10.1073/pnas.1414401111
+synonyms:
+- synonym_text: (+)-negamycin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CN(CC(=O)O)NC(=O)C[C@H](N)C[C@@H](O)CN
+  standard_inchi: InChI=1S/C9H20N4O4/c1-13(5-9(16)17)12-8(15)3-6(11)2-7(14)4-10/h6-7,14H,2-5,10-11H2,1H3,(H,12,15)(H,16,17)/t6-,7-/m1/s1
+  standard_inchi_key: IKHFJPZQZVMLRH-RNFRBKRXSA-N
+  molecular_formula: C9H20N4O4
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/11118411
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 248.283
+  monoisotopic_mass: 248.1485
+xrefs:
+- pubchem.compound:11118411
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1073/pnas.1414401111#negamycin
+  source_label: negamycin
+  minted_identifier: antibioticmech:curator-d9386dbf24
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1073/pnas.1414401111
+    snippet: Olivier et al. determined the crystal structure of negamycin bound to
+      the Escherichia coli 70S ribosome, showed that negamycin binds helix 34 of the
+      30S ribosomal subunit head domain to induce translational stalling and miscoding
+      (translation IC50 = 1.8 uM), and reported an MIC of 32 ug/mL against E. coli
+      ATCC 25922 and single-rrn strain SQ110 that increased 16- to 32-fold upon 16S
+      rRNA U1052G or U1060A mutation.
+    notes: Reported by Olivier et al. 2014 (Proc Natl Acad Sci U S A 111:16274-16279;
+      PMID:25368144) and Polikanov et al. 2014 (Mol Cell 56:541-550; DOI:10.1016/j.molcel.2014.09.021)
+      as a Streptomyces pseudodipeptide hydrazide antibiotic targeting 16S rRNA helix
+      34 in the 30S ribosomal decoding center. PubChem CID 11118411 and ChEBI CHEBI:198310
+      supply the standard InChI, InChIKey, formula, and isomeric SMILES for negamycin.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=PROTEIN_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
+  llm_assisted: true
+- timestamp: '2026-10-25T21:55:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for bacterial 30S ribosomal subunit
+    head domain (16S rRNA helix 34) backed by DOI:10.1073/pnas.1414401111.
+  llm_assisted: true
+- timestamp: '2026-10-26T07:10:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted curation_status from PROPOSED to REVIEWED after verifying exact
+    ChEBI:198310 identity, definition, antimicrobial_class, mode_of_action, and primary-literature
+    bacterial 30S ribosomal subunit head domain (16S rRNA helix 34) molecular_targets
+    (issue #1284).'
+  llm_assisted: true
+- timestamp: '2026-10-31T16:20:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph negamycin_30s_helix_34_miscoding_and_stalling
+    (4 nodes, 3 edges) for the non-protein primary-literature target (DOI:10.1073/pnas.1414401111,
+    DOI:10.1016/j.molcel.2014.09.021).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: Pseudodipeptide natural product from Streptomyces purpeofuscus
+  that binds the 16S rRNA helix 34 decoding center of the bacterial 30S ribosomal
+  subunit, stabilizing near-cognate tRNA binding and inducing miscoding (DOI:10.1073/pnas.1414401111;
+  PMID:25368144).
+molecular_targets:
+- target_label: bacterial 30S ribosomal subunit head domain (16S rRNA helix 34)
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  experimental_context: X-ray crystal structure of negamycin bound to the Escherichia
+    coli 70S ribosome (PDB:4W2I), single-molecule FRET tRNA-stabilization assays,
+    and 16S rRNA helix 34 resistance mutations (U1052G, U1060A, A1197U) in E. coli
+    SQ110 (DOI:10.1073/pnas.1414401111; PMID:25368144).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-11
+  source_retrieved_on: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1073/pnas.1414401111
+    snippet: Olivier et al. determined the crystal structure of negamycin bound to
+      the Escherichia coli 70S ribosome, showed that negamycin binds helix 34 of the
+      30S ribosomal subunit head domain to induce translational stalling and miscoding
+      (translation IC50 = 1.8 uM), and reported an MIC of 32 ug/mL against E. coli
+      ATCC 25922 and single-rrn strain SQ110 that increased 16- to 32-fold upon 16S
+      rRNA U1052G or U1060A mutation.
+    notes: Olivier et al. 2014 (Proc Natl Acad Sci U S A 111:16274-16279; PMID:25368144;
+      PDB:4W2I) and Polikanov et al. 2014 (Mol Cell 56:541-550; PMID:25306922; DOI:10.1016/j.molcel.2014.09.021)
+      demonstrated that negamycin binds 16S rRNA helix 34 and the A-site tRNA anticodon
+      stem-loop in the 30S ribosomal subunit head domain.
+causal_graphs:
+- graph_id: negamycin_30s_helix_34_miscoding_and_stalling
+  title: Negamycin binds 16S rRNA helix 34 and the A-site tRNA anticodon arm to induce
+    miscoding and block translocation
+  description: Negamycin binds the head domain of the bacterial 30S ribosomal subunit
+    at 16S rRNA helix 34, contacts the sugar-phosphate backbone of the A-site aminoacyl-tRNA
+    anticodon stem-loop, stabilizes near-cognate tRNA occupancy, and impairs mRNA-tRNA
+    translocation and translational fidelity.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: negamycin
+    label: negamycin
+    node_type: COMPOUND
+    grounding: CHEBI:198310
+  - node_id: ribosomal_30s_helix_34_pocket
+    label: bacterial 30S ribosomal subunit head domain (16S rRNA helix 34)
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 16S rRNA helix 34 in the head domain of the bacterial 30S ribosomal
+      subunit adjacent to the A-site tRNA anticodon stem-loop.
+  - node_id: negamycin_bound_helix34_asite_trna_complex
+    label: negamycin-bridged 16S rRNA helix 34 and A-site tRNA anticodon complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 70S ribosome crystal structures (PDB:4W2I, PDB:4UJC) showing
+      negamycin bridging 16S rRNA helix 34 and the A-site tRNA anticodon arm.
+  - node_id: bacterial_translation_fidelity_and_translocation
+    label: faithful bacterial A-site decoding and mRNA-tRNA translocation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Ribosomal decoding fidelity and EF-G-catalyzed translocation
+      assayed by single-molecule FRET and in vitro translation.
+  edges:
+  - subject: negamycin
+    predicate: binds
+    object: negamycin_bound_helix34_asite_trna_complex
+    description: Negamycin binds 16S rRNA helix 34 in the 30S head domain and directly
+      contacts the A-site tRNA anticodon stem-loop.
+    evidence:
+    - reference: DOI:10.1073/pnas.1414401111
+      notes: The Escherichia coli 70S-negamycin crystal structure (PDB:4W2I; PMID:25368144)
+        resolved negamycin bound at 16S rRNA helix 34 bridging the A-site tRNA anticodon
+        arm.
+    - reference: DOI:10.1016/j.molcel.2014.09.021
+      notes: The Thermus thermophilus 70S-negamycin crystal structure (PDB:4UJC; PMID:25306922)
+        confirmed specific coordination of negamycin at 16S rRNA helix 34.
+  - subject: ribosomal_30s_helix_34_pocket
+    predicate: participates in
+    object: negamycin_bound_helix34_asite_trna_complex
+    description: 16S rRNA helix 34 nucleotides in the 30S subunit head domain form
+      the ribosomal binding site for negamycin.
+    evidence:
+    - reference: DOI:10.1073/pnas.1414401111
+      notes: Crystallographic and mutational analyses in E. coli rrn operon strains
+        showed that 16S rRNA helix 34 mutations confer negamycin resistance.
+  - subject: negamycin_bound_helix34_asite_trna_complex
+    predicate: disrupts
+    object: bacterial_translation_fidelity_and_translocation
+    description: Negamycin stabilization of A-site tRNA at helix 34 promotes near-cognate
+      miscoding and inhibits mRNA-tRNA translocation.
+    evidence:
+    - reference: DOI:10.1073/pnas.1414401111
+      notes: Single-molecule FRET and biochemical translation assays demonstrated
+        that negamycin prolongs near-cognate tRNA residency, induces miscoding, and
+        impedes translocation.
+    - reference: DOI:10.1016/j.molcel.2014.09.021
+      notes: Mechanistic and structural analyses confirmed that negamycin-tRNA interactions
+        at helix 34 drive miscoding and inhibit ribosome progression.

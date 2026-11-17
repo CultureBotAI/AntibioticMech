@@ -1,0 +1,111 @@
+{
+  "before": {
+    "path": "data/antibiotics/antifungal/sinefungin.yaml",
+    "sha256": "09998401b1ff09a558b42971bb901e26a228fd77e362814f8b37f84174245a34"
+  },
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-13-antifungal/sinefungin-canary.yaml",
+    "sha256": "3264f6081cdfc48b9ae4e345cc89a940bb543bcc7f53e882bb26c9d44aa2807c"
+  },
+  "claims": [
+    {
+      "assay": "Comparative growth susceptibility",
+      "evidence": [
+        {
+          "notes": "Results and native Figures 3, 4 and 6; DOI:10.1093/nar/gkm817. Comparative growth, not a standardized MIC.",
+          "reference": "PMID:17932050"
+        },
+        {
+          "notes": "Reference-only UniProtKB:Q08986, entry version 170, sequence version 1, release 2026_03; SAM3 in S288c (NCBITaxon:559292). Not the tested W303 derivative or an exact resistance allele.",
+          "reference": "https://www.uniprot.org/uniprotkb/Q08986/entry"
+        }
+      ],
+      "gene_id": "SAM3",
+      "label": "Laboratory SAM3-associated sinefungin resistance",
+      "mechanism_type": "REDUCED_PERMEABILITY",
+      "note": "Context-dependent association in W303 derivatives, not a species-wide phenotype. Experimental allele, protein and genome unresolved. Reduced uptake is the authors' genetic interpretation, not an efflux measurement; the opposite-direction control is retained in the dossier.",
+      "phenotype_label": "Source-reported relative sinefungin resistance",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    },
+    {
+      "assay": "Comparative growth susceptibility",
+      "evidence": [
+        {
+          "notes": "Results and native Figures 7; DOI:10.1093/nar/gkm817. Comparative growth, not a standardized MIC.",
+          "reference": "PMID:17932050"
+        },
+        {
+          "notes": "Reference-only UniProtKB:P10659, entry version 228, sequence version 2, release 2026_03; SAM1 in S288c (NCBITaxon:559292). Not the tested W303 derivative or an exact resistance allele.",
+          "reference": "https://www.uniprot.org/uniprotkb/P10659/entry"
+        }
+      ],
+      "gene_id": "SAM1",
+      "label": "Laboratory SAM1-associated sinefungin resistance",
+      "mechanism_type": "UNKNOWN",
+      "note": "Context-dependent association in W303 derivatives, not a species-wide phenotype. Experimental allele, protein and genome unresolved. The stronger combined-context effect is not assigned to this gene individually; a specific molecular resistance route is not asserted.",
+      "phenotype_label": "Source-reported relative sinefungin resistance",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    },
+    {
+      "assay": "Comparative growth susceptibility",
+      "evidence": [
+        {
+          "notes": "Results and native Figures 7; DOI:10.1093/nar/gkm817. Comparative growth, not a standardized MIC.",
+          "reference": "PMID:17932050"
+        },
+        {
+          "notes": "Reference-only UniProtKB:P19358, entry version 217, sequence version 3, release 2026_03; SAM2 in S288c (NCBITaxon:559292). Not the tested W303 derivative or an exact resistance allele.",
+          "reference": "https://www.uniprot.org/uniprotkb/P19358/entry"
+        }
+      ],
+      "gene_id": "SAM2",
+      "label": "Laboratory SAM2-associated sinefungin resistance",
+      "mechanism_type": "UNKNOWN",
+      "note": "Context-dependent association in W303 derivatives, not a species-wide phenotype. Experimental allele, protein and genome unresolved. The stronger combined-context effect is not assigned to this gene individually; a specific molecular resistance route is not asserted.",
+      "phenotype_label": "Source-reported relative sinefungin resistance",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    },
+    {
+      "assay": "Comparative growth susceptibility",
+      "evidence": [
+        {
+          "notes": "Results and native Figures 7; DOI:10.1093/nar/gkm817. Comparative growth, not a standardized MIC.",
+          "reference": "PMID:17932050"
+        },
+        {
+          "notes": "Reference-only UniProtKB:P32783, entry version 191, sequence version 1, release 2026_03; ABD1 in S288c (NCBITaxon:559292). Not the tested W303 derivative or an exact resistance allele.",
+          "reference": "https://www.uniprot.org/uniprotkb/P32783/entry"
+        }
+      ],
+      "gene_id": "ABD1",
+      "label": "Laboratory ABD1-associated sinefungin resistance",
+      "mechanism_type": "UNKNOWN",
+      "note": "Context-dependent association in W303 derivatives, not a species-wide phenotype. Experimental allele, protein and genome unresolved. The stronger combined-context effect is not assigned to this gene individually; a specific molecular resistance route is not asserted.",
+      "phenotype_label": "Source-reported relative sinefungin resistance",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    }
+  ],
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added four qualified laboratory yeast gene associations from inspected primary results. UniProt identifiers remain reference-only; no experimental allele, protein, genome or numerical AST assigned. Preserved existing owners and left whole-record review open.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-13T06:15:27Z"
+  },
+  "existing_claims_preserved": 0,
+  "fixture": {
+    "path": "tests/fixtures/sinefungin-before-2026-10-13.yaml",
+    "sha256": "09998401b1ff09a558b42971bb901e26a228fd77e362814f8b37f84174245a34"
+  },
+  "fresh_seed_merge_equal": true,
+  "identifier": "CHEBI:45453",
+  "record": {
+    "path": "data/antibiotics/antifungal/sinefungin.yaml",
+    "sha256": "3264f6081cdfc48b9ae4e345cc89a940bb543bcc7f53e882bb26c9d44aa2807c"
+  },
+  "whole_record_review_complete": false
+}

@@ -1,0 +1,117 @@
+{
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-fungamr-cohort-context.json",
+      "sha256": "2ecd41ec60a2a6196a915fa373004e1a041c4eeb2a00b64b8cfae8488cf99047"
+    },
+    {
+      "path": "scripts/audit_fungamr_cohort.py",
+      "sha256": "5427158574c59d6ef135fbb61b219facb1561ad32d7b8c77b5b176a4c6cbb3c4"
+    },
+    {
+      "path": "tests/test_fungamr_cohort.py",
+      "sha256": "d78515c7b95d9075ec2ef465375ea30f5683ac2e36bb570742ae5af28053fe0a"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "3989812357791c1c7c510b35e2e2258e922380a007637b54422fd9596ab04c3b"
+    }
+  ],
+  "checks": {
+    "focused_tests": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 129
+    },
+    "full_qc_note": "Previous biological curation passed all 12 gates with disclosed RDKit deviation; no new domain, record or page changes.",
+    "full_qc_rerun": false,
+    "git_diff_check": "PASS",
+    "socket_and_http_disabled_replay": "PASS",
+    "test_result": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-cohort/focused-tests.xml",
+      "sha256": "22e7cdcbe1aee157db48e1421086ef6950497a191ccbfedf92cadddc70243ce3"
+    }
+  },
+  "classification": "PROGRESS",
+  "constraints": {
+    "failed_request_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_network_requests": 0,
+    "source_adoptions": 0
+  },
+  "goal_status": "OPEN",
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-cohort/protected-before.json",
+      "sha256": "ba48d7c3de739c7dba9c897aff4046bef20f79e8b73699fd224979623ed950a6"
+    },
+    "baseline_files": 7179,
+    "biological_records_byte_identical": 2939,
+    "byte_identical_baseline_files": 7178,
+    "changed_baseline_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "embedding_artifacts_changed": 0,
+    "generated_pages_changed": 0,
+    "ignored_files_included": true
+  },
+  "prior_artifact_pins_superseded": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "prior_artifact_pins_unchanged": 12,
+  "prior_verification": {
+    "path": "research/2026-10-13-yeast-atp-supplement-verification.json",
+    "sha256": "fa6b0bc8318ed1679185a1fa66690b953edc4be44d50ecc0843858500dee4730"
+  },
+  "review": {
+    "findings": [
+      {
+        "action": "Preserve the edge pending source-row and primary-evidence review; cross-resistance is not excluded.",
+        "edge_drug": "tebuconazole",
+        "id": "fungamr-cohort-drug-label-discrepancy",
+        "label_drug": "voriconazole",
+        "status": "OPEN_SOURCE_CONTEXT_REQUIRED",
+        "term": "ARO:3009486"
+      },
+      {
+        "action": "Do not fill experimental protein, strain, genome or phenotype slots from these references.",
+        "id": "fungamr-cohort-reference-not-allele",
+        "status": "SCOPE_GUARD_APPLIED",
+        "terms": [
+          "ARO:3009201",
+          "ARO:3009347",
+          "ARO:3009350",
+          "ARO:3009397",
+          "ARO:3009437",
+          "ARO:3009575"
+        ]
+      },
+      {
+        "action": "Existing CaFKS1/GSC1 context is an alias lead, not a verified mapping for this term or its drug claim.",
+        "id": "fungamr-cohort-fks1-alias",
+        "status": "OPEN_ALIAS_AND_PRIMARY_CONTEXT",
+        "term": "ARO:3009559"
+      }
+    ],
+    "independent_scientific_review": false,
+    "remediation": "Duplicate claims, changed reference selections, paralogs and wrong taxonomy are rejected. Open source discrepancies remain unaltered."
+  },
+  "scope": "READ_ONLY_CACHED_REFERENCE_RECONCILIATION_NOT_WHOLE_RECORD_SIGNOFF",
+  "summary": {
+    "biological_records_changed": 0,
+    "citation_terms": 19,
+    "corpus_records_hash_verified": 2939,
+    "exact_alleles_assigned": 0,
+    "initial_explicit_card_xref_candidates": 0,
+    "new_resistance_assertions": 0,
+    "records_in_cohort": 10,
+    "reference_contexts_reconciled": 6,
+    "terms_without_reference_resolution_here": 13,
+    "whole_record_reviews_completed": 0
+  },
+  "verified_at": "2026-10-13T23:46:00.862148+00:00",
+  "whole_record_reviews_completed": 0
+}

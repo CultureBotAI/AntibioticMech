@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "command": ".venv/bin/ruff check .",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/ruff format --check scripts/audit_mex_jkvw_evidence.py tests/test_mex_jkvw_evidence.py",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/check_source_queue.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/check_provenance.py",
+      "exit_code": 0
+    }
+  ],
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-15-mex-jkvw-evidence-plan.json",
+      "sha256": "9a8c1f4ebfdd84110f0314d8e93d80dfe81d741c304750dc95a7e6b06469730f"
+    },
+    {
+      "path": "research/2026-10-15-mex-jkvw-evidence-native-plan.json",
+      "sha256": "dcfb7d245a45be12e5ef66b21ea9a9903fba5a5f2f769e7c0cb80a435a691137"
+    },
+    {
+      "path": "research/2026-10-15-mex-jkvw-evidence.json",
+      "sha256": "e0d24b4254443cddc56f87b263ab7189bcf25953557667311586b2ef18f49bec"
+    },
+    {
+      "path": "scripts/audit_mex_jkvw_evidence.py",
+      "sha256": "d6df038e631a7f943ed5db4d5204571b806027f2498b657fccc3dce37213e631"
+    },
+    {
+      "path": "tests/test_mex_jkvw_evidence.py",
+      "sha256": "24253d639f4c4ee7fc04c61c516d11c970bbcc90f780cd1f841ca21c61f9d810"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "17ca2d5e4d811ab20cc7e041c83f2bbd4c0d2c4018092f277a0a2353d7a0264f"
+    }
+  ],
+  "full_qc": {
+    "prior_attempt": {
+      "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+      "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+    },
+    "reason": "Prior just qc could not start because locked RDKit 2026.3.5 lacks an Intel macOS wheel/sdist. This pass is research-only.",
+    "run_this_pass": false,
+    "status": "NOT_A_FULL_QC_PASS"
+  },
+  "limits": {
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "copies_requested_from_user": true,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exact_variant_or_operational_exports": false,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "manual_doi_redirects_followed": 1,
+    "ncbi_requests": 0,
+    "new_primary_results_reviews": 0,
+    "new_taxonomy_requests": 0,
+    "new_uniprot_requests": 0,
+    "outreach": 0,
+    "reuse_terms_review_resumed": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "offline_replay_matches": true,
+  "preservation": {
+    "all_earlier_report_bytes_preserved": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-15-mex-jkvw/protected-before.json",
+      "sha256": "6408232376b60d20b00f9d520abf90230a369fcb1b669a92f1e4f821369aceea"
+    },
+    "biological_records_changed": 0,
+    "biological_records_checked": 2939,
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "historical_artifacts_and_reviews_preserved": true,
+    "protected_files_checked": 7815
+  },
+  "regression": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-mex-jkvw/regression.xml",
+      "sha256": "50aad6de980a39dc4c1631d7b8acbd7c2d5c5719498afe7a815937044ac70264"
+    },
+    "passed": 243,
+    "skip_scope": "Two older live replay tests recognize documented historical record changes; immutable artifact checks still run.",
+    "skipped": 2,
+    "tests": 245
+  },
+  "regression_command": ".venv/bin/python -m pytest -q tests/test_mex_jkvw_evidence.py tests/test_mex_citation_followup.py tests/test_mex_component_references.py tests/test_card_protein_name_screen.py tests/test_card_reference_lineages.py tests/test_card_evidence_reviews.py tests/test_card_aph_memberships.py --junitxml=reports/resistance-grounding-2026-10-15-mex-jkvw/regression.xml",
+  "status": "OFFLINE_REPLAY_AND_FOCUSED_CHECKS_PASSED_PRIMARY_REVIEW_OPEN",
+  "summary": {
+    "complete_records_read_in_prior_replay": 27,
+    "confirmed_primary_access_holds": 2,
+    "corpus_records_hash_checked": 2939,
+    "new_native_http_requests": 7,
+    "new_reference_candidates": 0,
+    "own_citations_metadata_inspected": 4,
+    "primary_papers_not_requested": 2,
+    "selected_claims": 8,
+    "selected_records": 5,
+    "selected_terms": 4,
+    "underlying_web_http_request_count_known": false,
+    "web_reader_calls": 2
+  }
+}

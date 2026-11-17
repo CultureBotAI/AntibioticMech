@@ -1,0 +1,257 @@
+{
+  "chemical_identity": {
+    "molecular_formula": "C17H26N8O5",
+    "primary_identity_location": "Corrected Figure 3A depicts neutral blasticidin S; CHEBI:57289 (1+) remains separate.",
+    "rdkit_version": "2025.03.6",
+    "smiles_inchi_key_agree": true,
+    "standard_inchi_key": "CXNPLSGKWMLZPZ-ZNIXKSQXSA-N",
+    "tested_preparation_independently_reidentified": false
+  },
+  "curated_subjects": [
+    {
+      "gene": "oppA",
+      "join": "Table 2 deletion label to matching Table S2 derivative; no cross-study join",
+      "source_genotype": "MG1655 oppA::FRT",
+      "strain": "CAG67774"
+    },
+    {
+      "gene": "oppB",
+      "join": "Table 2 deletion label to matching Table S2 derivative; no cross-study join",
+      "source_genotype": "MG1655 oppB::FRT",
+      "strain": "CAG67775"
+    }
+  ],
+  "identifier": "CHEBI:15353",
+  "label": "blasticidin S",
+  "limitations": [
+    "Only two single-gene derivatives curated; operon and combined genotypes remain separate evidence.",
+    "Protein entries, MG1655 TaxID and reference genome are not assigned to altered experimental subjects.",
+    "No original screening dataset is imported; compound preparation was not independently chemically characterized.",
+    "No NCBI requests, outreach, new source adoption or GitHub mutation occurred."
+  ],
+  "measurement_policy": {
+    "clinical_categories_inferred": false,
+    "comparator_range_preserved_in_notes": true,
+    "normalization": "ug/mL to mg/L, factor 1",
+    "range_collapsed_to_point": false
+  },
+  "primary": {
+    "correction_doi": "10.1371/journal.pgen.1006902",
+    "correction_inspected": true,
+    "correction_scope": "Screen normalization and duplicate-condition handling were corrected; follow-up Table 2 and Table S2 were not replaced.",
+    "doi": "10.1371/journal.pgen.1006124",
+    "interpretation_boundary": "Translation inhibition is an uptake proxy, not a direct drug-flux assay. Screening BW25113 and follow-up MG1655 contexts remain distinct.",
+    "license": "CC BY; Shiver et al. (2016), with Shiver et al. (2017) correction",
+    "native_visual_review": [
+      "Corrected Figure 3",
+      "Original Figure 4",
+      "Original Table 2"
+    ],
+    "reference": "PMID:27355376",
+    "structured_supplement_review": "Table S2, Word XML table rows"
+  },
+  "record_before": {
+    "path": "data/antibiotics/antifungal/blasticidin-s.yaml",
+    "sha256": "1a488bae1fbed0d26950a8150b7b8c315860c1b43b9be4d179ef9a163e3e4468"
+  },
+  "reference_attribution": "UniProt Consortium, UniProtKB and UniProt Taxonomy, CC BY 4.0; https://www.uniprot.org/help/license",
+  "reference_genome": {
+    "accession": "U00096.3",
+    "assembly_accession_assigned": false,
+    "scope": "REFERENCE_GENOME_NOT_SEQUENCED_EXPERIMENTAL_DERIVATIVE",
+    "source_location": "Figure 6A legend"
+  },
+  "reference_proteins": {
+    "oppA": {
+      "accession": "UniProtKB:P23843",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 171,
+      "loci": [
+        "b1243",
+        "JW1235"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 2
+    },
+    "oppB": {
+      "accession": "UniProtKB:P0AFH2",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 126,
+      "loci": [
+        "b1244",
+        "JW1236"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1
+    },
+    "oppC": {
+      "accession": "UniProtKB:P0AFH6",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 130,
+      "loci": [
+        "b1245",
+        "JW1237"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1
+    },
+    "oppD": {
+      "accession": "UniProtKB:P76027",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 179,
+      "loci": [
+        "b1246",
+        "JW1238"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 2
+    },
+    "oppF": {
+      "accession": "UniProtKB:P77737",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 169,
+      "loci": [
+        "b1247",
+        "JW1239"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1
+    }
+  },
+  "reference_release": "2026_03",
+  "reviewed_on": "2026-10-12",
+  "scope": "SELECTED_PRIMARY_RESISTANCE_EVIDENCE_NOT_WHOLE_RECORD_REVIEW",
+  "source_assets": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/primary.xml",
+        "sha256": "90b5ebf3467a8be752bb323114f784554e042f9565521e94931a80426b0fae96"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 158328,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4927156/fullTextXML"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/correction.xml",
+        "sha256": "3ca45c72d7bd26a42f6bc4c83c4dacd2affe76a7475ebb4b2787328fdc7e2230"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 16168,
+      "url": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1006902&type=manuscript"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/corrected-figure-3.png",
+        "sha256": "6ac2a503b68e52d7b2abeaddf37681688d3b0e35a45fe5742829125b5623e710"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 768166,
+      "url": "https://journals.plos.org/plosgenetics/article/figure/image?size=large&id=10.1371/journal.pgen.1006902.g003"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/figure-4.png",
+        "sha256": "079e370bb3315bf8feccaa2b50d401bbb611a4cae8bc923d00d37d31ee5df74e"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 142339,
+      "url": "https://journals.plos.org/plosgenetics/article/figure/image?size=large&id=10.1371/journal.pgen.1006124.g004"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/table-2.png",
+        "sha256": "eb60458c591b67f97fa3fbbd4947197dbd86f26b1dc36f75ac82d8886756f50f"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 33863,
+      "url": "https://journals.plos.org/plosgenetics/article/figure/image?size=large&id=10.1371/journal.pgen.1006124.t002"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/strains.docx",
+        "sha256": "ff9e0dedb88745090fe17350975f7cd3a3fa06fbdb83aa3b7b980276f86de93e"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 100109,
+      "url": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1006124.s007&type=supplementary"
+    }
+  ],
+  "taxonomy": {
+    "511145": {
+      "parent": {
+        "scientificName": "Escherichia coli (strain K12)",
+        "taxonId": 83333
+      },
+      "rank": "no rank",
+      "scientificName": "Escherichia coli str. K-12 substr. MG1655",
+      "taxonId": 511145
+    },
+    "562": {
+      "parent": {
+        "scientificName": "Escherichia",
+        "taxonId": 561
+      },
+      "rank": "species",
+      "scientificName": "Escherichia coli",
+      "taxonId": 562
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-136b4ff93496b30b58d477d03a4e63a4ca7269d8df40ea9d16abac7789ec625e.json",
+        "sha256": "5684c068142914917d1c663dc55e3d285505a0685fcc3bbe01fdc6a3cad4cf91"
+      },
+      "complete_for_requested_reference_query": true,
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-12T18:27:37.986619+00:00",
+      "sha256": "ae0525d2e2d90f5ea34afbdfe88bc301b5af73226dfaa4aa84796a784351cf1b",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AoppA+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-4d5bd364d3cce6dad75915c2d1dbdc32c6fb3f631504289e0ad4aad1395ee699.json",
+        "sha256": "05e90d6ba2be46b42c721bf9e3d4baf36e48eb6610390858ddb4d75dbc4b3b4a"
+      },
+      "complete_for_requested_reference_query": true,
+      "release": "2026_03",
+      "result_count": 4,
+      "retrieved_at": "2026-10-12T18:28:06.439981+00:00",
+      "sha256": "24e29c92fbb26c3936d9bbb047ecc0e53a17db038f6a7e000ab59c2daff28b7a",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AoppB+OR+gene_exact%3AoppC+OR+gene_exact%3AoppD+OR+gene_exact%3AoppF%29+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-d68fc2e2fe607ee8638a3846e3b1897fb0918c3c55d5478b9419ac5f53a11248.json",
+        "sha256": "dd4cdba062905bc43bab188606f682cefd67d40aae43c6c1f695f00d4dfcc2f3"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-12T18:28:07.266256+00:00",
+      "sha256": "8c7240ff98ba3f1a09ede2ff2d6f6f3e61d4b7de276f8126112586f92685c931",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/511145.json"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-ee6dbf6e3f09c6cab02e184352e45e77bb32a7adbb024d9ceea31aaf75599c37.json",
+        "sha256": "6f15a516e89969828b9950036cd9d5a791d2070e8fb836f0ba068f921f2e822e"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-12T18:28:08.166925+00:00",
+      "sha256": "20aa358053d2fae1e2cd74636ed5aca1efbc372e5b8bcfdb10d3fa80be6789a1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/562.json"
+    }
+  ],
+  "whole_corpus_primary_review": "OPEN",
+  "whole_record_review_complete": false
+}

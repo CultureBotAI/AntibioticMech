@@ -1,0 +1,143 @@
+{
+  "checks": [
+    {
+      "command": ".venv/bin/ruff check .",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/ruff format --check scripts/audit_mdea_primary.py tests/test_mdea_primary.py",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/check_source_queue.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/check_provenance.py",
+      "exit_code": 0
+    }
+  ],
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-15-mdea-primary-plan.json",
+      "sha256": "979d1cac18b7cd3292195ed4c0e6cd910260786f42eb4f60edc1dd37a4a2833c"
+    },
+    {
+      "path": "research/2026-10-15-mdea-primary-native-plan.json",
+      "sha256": "97059acc0a179ee6fa324623921d47890cc51e08bc7ac5364f1d860369ac8754"
+    },
+    {
+      "path": "research/2026-10-15-mdea-primary-assessment.json",
+      "sha256": "cba7c2b42b77cd80fe0c781ef50d8d0580c715185c141a6880ceff9105e267e0"
+    },
+    {
+      "path": "research/2026-10-15-mdea-primary.json",
+      "sha256": "6d7f184d6c781b93ede34a2221d93737dbf8d9a8e941aa30d2b01fc291bbca13"
+    },
+    {
+      "path": "scripts/audit_mdea_primary.py",
+      "sha256": "1aa57dbe0f13091dfa310862d1191bf7331d4a242fbaa97325e3c143548e6e27"
+    },
+    {
+      "path": "tests/test_mdea_primary.py",
+      "sha256": "7ac674c2bc07910faaef4da82742b4364c04c85bc648f5514e37de59de800ae0"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "da1a6eb45ef2c202ecfd0aa62f46e7e6418ac8de39382f60d1ed69805b40f447"
+    }
+  ],
+  "full_qc": {
+    "reason": "Prior just qc could not start because locked RDKit2026.3.5 lacks an Intel macOS wheel/sdist. This pass is research-only.",
+    "run_this_pass": false,
+    "status": "NOT_A_FULL_QC_PASS"
+  },
+  "limits": {
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "copies_requested_from_user": true,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exact_variant_or_operational_exports": false,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "full_primary_text_or_figures_replayed_offline": false,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_primary_results_review_scope": "SELECTED_IDENTITY_CONTEXT_NOT_AST_OR_FULL_PAPER",
+    "new_primary_results_reviews": 1,
+    "new_taxonomy_requests": 0,
+    "new_uniprot_protein_requests": 3,
+    "outreach": 0,
+    "primary_identity_review_medium": "AUTHOR_UPLOADED_WEB_TEXT_ONLY",
+    "reuse_terms_review_resumed": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "offline_replay_matches": true,
+  "post_format_focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-mdea-primary/focused-final.xml",
+      "sha256": "e1f1f779bb85390ed20f6ea78b223d9c1e6d53dd89c45c802b1d1cbb683dc10b"
+    },
+    "passed": 30,
+    "skipped": 0,
+    "tests": 30
+  },
+  "preservation": {
+    "all_earlier_report_bytes_preserved": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-15-mdea-primary/protected-before.json",
+      "sha256": "5b1a62efd7ee88a5b991e91eca10bbfcddc2a958802f949e1dafae9de40e5b48"
+    },
+    "biological_records_changed": 0,
+    "biological_records_checked": 2939,
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "historical_artifacts_and_reviews_preserved": true,
+    "protected_files_checked": 7834
+  },
+  "primary_review_scope": "Selected author-uploaded identity text, not native PDF, figures, full-paper or AST signoff.",
+  "primary_web_text_replayed_offline": false,
+  "regression": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-mdea-primary/regression.xml",
+      "sha256": "98e35a77bdd8945cba1a7631e053bfffee314929ff195bfa60e480adca3ea79f"
+    },
+    "passed": 327,
+    "skip_scope": "Two older live replay tests recognize historical record changes; current mdeA/Mex replays and immutable artifact checks ran.",
+    "skipped": 2,
+    "tests": 329
+  },
+  "regression_command": ".venv/bin/python -m pytest -q tests/test_mdea_primary.py tests/test_mdea_evidence.py tests/test_mex_component_xrefs.py tests/test_mex_jkvw_evidence.py tests/test_mex_citation_followup.py tests/test_mex_component_references.py tests/test_card_protein_name_screen.py tests/test_card_reference_lineages.py tests/test_card_evidence_reviews.py tests/test_card_aph_memberships.py --junitxml=reports/resistance-grounding-2026-10-15-mdea-primary/regression.xml",
+  "status": "OFFLINE_REPLAY_AND_FOCUSED_CHECKS_PASSED_REFERENCE_AND_VISUAL_REVIEW_OPEN",
+  "summary": {
+    "complete_records_read_in_prior_replay": 7,
+    "corpus_records_hash_checked": 2939,
+    "native_http_responses": 4,
+    "new_confirmed_access_denials": 0,
+    "new_empty_identifier_queries": 2,
+    "new_native_request_attempts": 5,
+    "new_reference_proteins": 0,
+    "paper_reference_accession_leads": 1,
+    "paper_reference_locus_leads": 1,
+    "partial_positive_species_controls": 1,
+    "publisher_transport_failures_without_http_status": 1,
+    "selected_primary_identity_contexts_reviewed": 1,
+    "source_claims": 7,
+    "source_terms": 1
+  }
+}

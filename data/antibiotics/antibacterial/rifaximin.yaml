@@ -1,7 +1,7 @@
 identifier: CHEBI:75246
 label: rifaximin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A semisynthetic member of the class of rifamycins and non-systemic gastrointestinal
   site-specific broad spectrum antibiotic. Used in the treatment of traveller's diarrhoea,
@@ -211,6 +211,46 @@ molecular_targets:
   - reference: ARO:3000737
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000517 (rifaximin); database
       assertion, not a primary citation.
+- target_id: GO:0000428
+  target_label: DNA-directed RNA polymerase complex
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Rifaximin binds the beta subunit (RpoB) of bacterial DNA-directed
+    RNA polymerase (including Escherichia coli RNAP) to block transcription initiation
+    and bacterial RNA synthesis without inhibiting mammalian RNA polymerase (Gillis
+    & Brogden 1995, DOI:10.2165/00003495-199549030-00009, PMID:7774516; Jiang & DuPont
+    2005, DOI:10.1159/000081991, PMID:15855749; Floss & Yu 2005, DOI:10.1021/cr030112j,
+    PMID:15700959).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1995-03
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: PMID:7774516
+    notes: Gillis & Brogden 1995 (Drugs 49:467-484; DOI:10.2165/00003495-199549030-00009)
+      characterized rifaximin binding to the beta subunit (RpoB) of bacterial DNA-dependent
+      RNA polymerase and inhibition of bacterial RNA synthesis.
+  - reference: PMID:15855749
+    notes: Jiang & DuPont 2005 (Chemotherapy 51 Suppl 1:67-72; DOI:10.1159/000081991)
+      reviewed the mechanism of action of rifaximin via bacterial RNA polymerase RpoB
+      binding and enteropathogenic Escherichia coli susceptibility.
+  - reference: PMID:15700959
+    notes: Floss & Yu 2005 (Chem Rev 105:621-632; DOI:10.1021/cr030112j) characterized
+      the conserved rifamycin mode of action on bacterial DNA-directed RNA polymerase
+      beta subunit RpoB.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8V2
+    protein_label: DNA-directed RNA polymerase subunit beta
+    gene_symbol: rpoB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-09'
+    role: Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB, EC
+      2.7.7.6) bound by rifaximin to inhibit bacterial RNA synthesis in enteric Escherichia
+      coli (PMID:7774516, PMID:15855749, PMID:15700959).
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -326,3 +366,35 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-11-09T15:05:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added SEMISYNTHETIC biosynthesis_origin, curator-verified NUCLEIC_ACID_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action, and primary-literature DNA-directed RNA polymerase
+    complex molecular_targets on rifaximin (PMID:7774516, PMID:15855749, PMID:15700959;
+    issue #1361).'
+  llm_assisted: true
+- timestamp: '2026-11-09T15:10:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example
+    (UniProtKB:P0A8V2, rpoB) to the primary-literature DNA-directed RNA polymerase
+    complex target on rifaximin (PMID:7774516, PMID:15855749, PMID:15700959).
+  llm_assisted: true
+- timestamp: '2026-11-09T15:15:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI pyridoimidazorifamycin record (CHEBI:75246) with
+    complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), primary-literature DNA-directed RNA polymerase complex molecular_targets
+    (PMID:7774516, PMID:15855749, PMID:15700959), and reviewed Swiss-Prot RpoB protein_example
+    (UniProtKB:P0A8V2) from SEEDED to REVIEWED (issue #1361).'
+  llm_assisted: true
+biosynthesis_origin: SEMISYNTHETIC
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Semisynthetic pyridoimidazorifamycin antibiotic that
+  binds the beta subunit (RpoB) of bacterial DNA-dependent RNA polymerase to inhibit
+  bacterial RNA synthesis in enteric pathogens (Gillis & Brogden 1995, DOI:10.2165/00003495-199549030-00009,
+  PMID:7774516; Jiang & DuPont 2005, DOI:10.1159/000081991, PMID:15855749; Floss &
+  Yu 2005, DOI:10.1021/cr030112j, PMID:15700959).'

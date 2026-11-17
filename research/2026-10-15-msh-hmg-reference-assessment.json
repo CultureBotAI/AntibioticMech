@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-15",
+  "scope": "SOURCE_SPECIFIC_GENE_REFERENCES_NOT_TESTED_ALLELES_OR_DIRECT_DRUG_TARGETS",
+  "terms": {
+    "msh": {
+      "aro_id": "ARO:3009134",
+      "source_label": "antifungal resistance-associated MSH",
+      "pmid": "27020939",
+      "doi": "10.1038/ncomms11128",
+      "url": "https://www.nature.com/articles/ncomms11128",
+      "source_species": "Candida glabrata",
+      "source_gene": "MSH2",
+      "source_locus": "CAGL0I07733g",
+      "source_reference_strain": "CBS138/ATCC2001",
+      "reference_taxon_id": 284593,
+      "reference_species_taxon_id": 5478,
+      "query": "gene_exact:MSH2 AND organism_id:284593",
+      "locations": ["Results: first paragraph", "Results: clinical-isolate comparison", "Table 1 endpoint headings", "Discussion"],
+      "review": "The primary source identifies MSH2 and CAGL0I07733g, using CBS138/ATCC2001 as a database reference rather than an identifier for every clinical or experimental subject. Baseline echinocandin and fluconazole susceptibility was not significantly changed in the tested background; resistance-emergence frequency is a different endpoint from MIC. MSH2 variation also occurs in susceptible clinical isolates. The study's fluconazole-resistant grouping includes susceptible-dose-dependent isolates, so its grouping is not identical to a standard resistant category. This supports a context-specific mismatch-repair association, not a direct antifungal target or universal resistance from a gene annotation.",
+      "endpoint_is_mic": false,
+      "direct_drug_target_established": false,
+      "single_identity_for_whole_msh_family": false,
+      "later_primary": {
+        "doi": "10.3389/fmicb.2016.02038",
+        "url": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2016.02038/full",
+        "locations": ["Abstract", "Results: clinical associations", "Discussion"],
+        "review": "A separate French clinical cohort did not find enrichment of fluconazole resistance associated with MSH2 polymorphism. It linked polymorphisms with genotype and emphasized prior drug exposure. Retain this cohort-specific negative association; neither cohort establishes a universal diagnostic resistance marker.",
+        "cohorts_pooled": false
+      },
+      "publisher_update_banner": "Observed; following its link returned the same article, not a separate reviewed correction notice."
+    },
+    "hmg": {
+      "aro_id": "ARO:3007670",
+      "source_label": "Aspergillus spp. Hmg1 with mutations conferring resistance to triazoles antibiotics",
+      "pmid": "30940706",
+      "doi": "10.1128/mbio.00437-19",
+      "url": "https://journals.asm.org/doi/full/10.1128/mbio.00437-19",
+      "source_species": "Aspergillus fumigatus",
+      "source_gene": "hmg1",
+      "source_reference_strain": "Af293",
+      "reference_taxon_id": 330879,
+      "reference_species_taxon_id": 746128,
+      "reference_candidate": "UniProtKB:Q4WHZ1",
+      "native_reference_locus": "AFUA_2G03700",
+      "locations": ["Results: clinical isolates and Af293 comparison", "Results: Hmg1 and sterol-homeostasis context", "Discussion"],
+      "review": "The paper distinguishes Af293 as a genomic reference from clinical isolates and a different laboratory background. Its Hmg1 results concern sterol homeostasis, not evidence that Hmg1 is the triazoles' direct target. The exact mechanistic explanation remains qualified in the discussion. An A. fumigatus reference cannot represent all Aspergillus species or every tested allele. The same citation also occurs on an erg10B entry, which is not Hmg1 and must not be selected merely because the paper matches.",
+      "direct_drug_target_established": false,
+      "all_aspergillus_species_grounded": false,
+      "experimental_background_is_af293": false,
+      "citation_comparator_accession": "UniProtKB:B0YA65"
+    }
+  },
+  "constraints": {
+    "primary_access": "SELECTED_PUBLISHER_WEB_TEXT_AND_ENDPOINT_HEADINGS",
+    "native_primary_bodies_replayed": false,
+    "whole_papers_reviewed": false,
+    "figure_pixels_reviewed": false,
+    "supplements_reviewed": false,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "biological_record_writes": false,
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "full_investigation_complete": false
+  }
+}

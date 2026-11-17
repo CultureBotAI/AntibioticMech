@@ -886,3 +886,54 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-13T22:59:53Z'
+  curator: codex
+  action: CURATED_EVIDENCE_SCOPE_DISCUSSION
+  changes: Added an evidence-backed ATP1/ATP2 scope discussion retaining negative
+    and conditional laboratory growth findings. Preserved all four CARD assertions
+    and SEEDED review status. UniProt entries remain reference-only; no experimental
+    allele, genome or new resistance claim assigned.
+  llm_assisted: true
+discussions:
+- discussion_id: clotrimazole-atp-source-scope-2026-10-13
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Reconcile the ATP1/ATP2 CARD assertions with exact source-row, experimental-background
+    and endpoint evidence before assigning tested alleles or interpreting target alteration
+    mechanistically.
+  attaches_to:
+  - resistance_mechanisms#ARO:3009347
+  - resistance_mechanisms#ARO:3009350
+  rationale: Taylor et al. (2022) report ATP1/ATP2 changes in evolved multi-gene laboratory
+    yeast backgrounds. Their tested ATP2 single mutants grew more slowly than the
+    wild-type comparator in the reported growth analysis. Combination effects depend
+    on background and condition; this is neither proof of a standalone ATP2 resistance
+    effect nor evidence against every ATP2 allele. The exact FungAMR-row crosswalk
+    to this independently identified study remains unresolved. Retain the CARD assertions
+    as database provenance, not a newly verified direct ATP-synthase drug target.
+  evidence:
+  - reference: DOI:10.1093/g3journal/jkac246
+    evidence_source: full_text
+    explanation: 'Taylor et al. (2022), G3, CC BY 4.0: Results on epistatic interactions,
+      Figure 5 and Supplementary Figure S3. The ATP2 comparison concerns growth curves
+      and doubling time, not MIC or clinical susceptibility categories. Clone-level
+      MIC data are supplied separately in Supplementary Table S4; they are not isolated
+      allele-effect measurements.'
+    notes: 'Selected source cells inspected read-only: Supplementary File S1, Table
+      S1!A1:B7 (background labels), Table S6 columns I/K/L (gene, independence and
+      background), and Table S16!A1:CS4 (growth-comparison metadata). The workbook
+      was not rendered and curves were not refitted. BY-derived experimental subjects
+      are not exact S288c reference entries.'
+  - reference: https://www.uniprot.org/uniprotkb/P07251/entry
+    explanation: 'Reference ATP1 only: UniProtKB:P07251, entry 238, sequence version
+      5, release 2026_03; YBL099W, SGD:S000000195. Not a tested resistance allele.'
+  - reference: https://www.uniprot.org/uniprotkb/P00830/entry
+    explanation: 'Reference ATP2 only: UniProtKB:P00830, entry 242, sequence version
+      2, release 2026_03; YJR121W, SGD:S000003882. Not a tested resistance allele.'
+  notes: 'Reference taxonomy from UniProt: NCBITaxon:559292 is the S288c reference
+    strain, within Saccharomyces cerevisiae (NCBITaxon:4932). Neither identifier establishes
+    an exact tested derivative or genome. No resistance claim, subject accession,
+    numeric AST or exact variant is added by this discussion. Source-owned claims
+    and whole-record review status are unchanged.'
+  posed_by: codex
+  posed_date: '2026-10-13'

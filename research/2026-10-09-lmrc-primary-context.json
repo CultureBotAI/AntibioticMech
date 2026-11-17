@@ -1,0 +1,368 @@
+{
+  "aro_id": "ARO:3002881",
+  "attribution": "Koberska and colleagues, mBio 2021, DOI:10.1128/mbio.01731-21, CC BY 4.0; UniProt Consortium release 2026_03, CC BY 4.0; existing adopted CARD/ARO ontology assertions.",
+  "candidate_resolution": {
+    "a0a1b1m202_citation_context": "The separate 2016 database submission annotates NRRL 2936.",
+    "a9y8t8_citation_context": "The linked 2008 publication names ATCC 25466; this is reference provenance, not verification of the 2021 tested allele.",
+    "scope": "A shared database archive identifier does not link an experimental subject, genomic locus or tested allele to either record; no new sequence comparison was performed.",
+    "selected_experimental_accession": null,
+    "shared_uniparc_id": "UPI000162A5BF",
+    "status": "MULTIPLE_REFERENCE_CANDIDATES_RETAINED"
+  },
+  "limitations": [
+    "Named compounds do not establish tested salt, hydration state or exact structure; no new assay or resistance assertion was placed on a compound record.",
+    "Figure 1d concerns celesticetin production, not a celesticetin LmrC resistance endpoint; the existing CARD assertion remains unvalidated by this paper review.",
+    "Both UniProt candidates are unreviewed reference entries; neither is assigned as a tested allele.",
+    "No equivalence of ATCC 25466 and NRRL 2936 experimental materials is inferred from taxonomy aliases.",
+    "Supplementary Table S2 was not inspected; study-wide allele and material identity remain open.",
+    "No new sequences, variants, constructs, primers, protocols or numeric resistance results are exported.",
+    "No NCBI request, outreach, source adoption, restricted bulk import, paid research or GitHub mutation.",
+    "The full 2939-record investigation remains open; this review does not complete any compound's coverage."
+  ],
+  "preservation": {
+    "biological_record_changes": 0,
+    "candidate_audit": {
+      "path": "research/2026-10-07-card-reference-grounding.json",
+      "sha256": "bf01b0fef65240d2d1daf8298398ae171194420c0093a7aad2c9ba318b9b5961"
+    },
+    "census": {
+      "path": "reports/resistance-grounding-2026-10-07/corpus.json",
+      "sha256": "ba828f06017d67183a8335e2933656b9970ac13ce57e764f518a92faccac8610"
+    },
+    "citation_context_index": {
+      "path": "research/2026-10-09-card-citation-context.json",
+      "sha256": "2bf1c102685080c1a130af31be4cf9a8c9d81c64bf7b2774bf9fd0afa19bd07e"
+    },
+    "curation_events_added": 0,
+    "protected_files_verified": 3428,
+    "protected_manifest": {
+      "path": "reports/resistance-grounding-2026-10-07/lmrc-context-protected-files.json",
+      "sha256": "fce549cdbcfc1a42d1f76438975b47cc761d233db112b6457f76dd6e8ffdfca9"
+    },
+    "protein_snapshot": {
+      "path": "reports/resistance-grounding-2026-10-07/card-proteins.json",
+      "sha256": "be858b4818e8f74e99f13adb0485851c438adbeca0081b7eb5e01d6296e6d5eb"
+    },
+    "record_hashes_verified": 2939,
+    "record_path_search_includes_ignored": true,
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "taxonomy_snapshot": {
+      "path": "reports/resistance-grounding-2026-10-07/card-taxonomy.json",
+      "sha256": "d75a09d19145527c20d59928f4e3a44b0e827e7fae1e3220b8a6546ce5be6e6a"
+    }
+  },
+  "primary_paper": {
+    "citation_request": {
+      "bytes": 11763,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/lmrc-2021-citation.json",
+        "sha256": "0ed82b4f03b0163795f73ce380cda2e3214c0410a4f6dcd5444bc7954da6e86b"
+      },
+      "release": null,
+      "retrieved_at": "2026-10-09T01:48:19.476697+00:00",
+      "sha256": "82b72e8894e4c6865aff115b8f87de7c548591d4327bede7888fa4e41dce6875",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1128%2Fmbio.01731-21&format=json&resultType=core&pageSize=2"
+    },
+    "doi": "10.1128/mbio.01731-21",
+    "license": "CC BY 4.0, printed article page 1; no rights inferred for the entire bundle.",
+    "pdf": {
+      "bytes": 8323814,
+      "headers": {
+        "Content-Type": "application/pdf;charset=ISO-8859-1",
+        "Last-Modified": "Sun, 22 Jun 2025 02:07:46 GMT"
+      },
+      "retrieved_at": "2026-10-09T01:48:18.774319+00:00",
+      "sha256": "1b94db0911267332a5b0f796c67cdf98370b376173d88243e5c6ddac5b9b1c74",
+      "status": 200,
+      "url": "https://dspace.cuni.cz/bitstream/handle/20.500.11956/197887/140129614.pdf?isAllowed=y&sequence=4"
+    },
+    "pdf_cache": {
+      "path": "reports/resistance-grounding-2026-10-07/lmrc-2021-published-bundle.pdf",
+      "sha256": "1b94db0911267332a5b0f796c67cdf98370b376173d88243e5c6ddac5b9b1c74"
+    },
+    "pdf_metadata_cache": {
+      "path": "reports/resistance-grounding-2026-10-07/lmrc-2021-published-bundle.json",
+      "sha256": "c47633d06cbac920e0e14ce72236a56960167596753763aa517a8d067e0356df"
+    },
+    "publisher_url": "https://journals.asm.org/doi/full/10.1128/mbio.01731-21",
+    "reference": "PMID:34488446",
+    "reviewed_locations": [
+      "Figure 1b/c/d, printed page 3",
+      "Results, printed page 4",
+      "Materials and Methods, printed pages 14-15 (text inspection)"
+    ],
+    "scope_limit": "Only the identified 2021 published article supports these conclusions; other articles in the appendix bundle were not used as evidence for this experiment.",
+    "supplement_table_s2_inspected": false,
+    "text_cache": {
+      "path": "reports/resistance-grounding-2026-10-07/lmrc-published-review/text.txt",
+      "sha256": "d2a6046487a63393a71c372911f958a2a7b1311bec98b947560aaf12f5228e8a"
+    },
+    "version": "PUBLISHED_JOURNAL_REPRINT_WITHIN_THESIS_APPENDIX",
+    "visually_inspected_pages": [
+      {
+        "image_cache": {
+          "path": "reports/resistance-grounding-2026-10-07/lmrc-published-review/page-2.png",
+          "sha256": "1a166a426d8749e454d6ec55748dfffaacbf59c5c7f58faf3a21a8388c228637"
+        },
+        "pdf_page": 2,
+        "printed_page": 1
+      },
+      {
+        "image_cache": {
+          "path": "reports/resistance-grounding-2026-10-07/lmrc-published-review/page-4.png",
+          "sha256": "6aa3c85dc11ccc3444734207acb255a0d11f9942e74bb199f8817e7db651c41e"
+        },
+        "pdf_page": 4,
+        "printed_page": 3
+      },
+      {
+        "image_cache": {
+          "path": "reports/resistance-grounding-2026-10-07/lmrc-published-review/page-5.png",
+          "sha256": "27fcdba6fc475fa55e7ba2ab4a6e7d6dfa6e80ff579a9a11c3e830bc8ba34ece"
+        },
+        "pdf_page": 5,
+        "printed_page": 4
+      }
+    ]
+  },
+  "qualitative_contexts": [
+    {
+      "context": "NATIVE_PRODUCER",
+      "finding": "LmrC is not a major contributor to native self-protection in the tested background; the authors also distinguish its regulatory role from self-protection.",
+      "source_location": "Figure 1b and Results, printed pages 3-4",
+      "source_subject_label": "Streptomyces lincolnensis ATCC 25466",
+      "species_name_taxon_id": "NCBITaxon:1915",
+      "taxon_scope": "SPECIES_NAME_NOT_STRAIN_ID"
+    },
+    {
+      "context": "HETEROLOGOUS_LABORATORY_HOST",
+      "finding": "The paper reports an LmrC-associated resistance effect in this laboratory host; this does not identify its native locus or establish the same effect in the producer.",
+      "source_location": "Figure 1c and Results, printed pages 3-4",
+      "source_subject_label": "Streptomyces coelicolor M1154",
+      "species_name_taxon_id": "NCBITaxon:1902",
+      "taxon_scope": "SPECIES_NAME_NOT_STRAIN_ID"
+    }
+  ],
+  "record_memberships": [
+    {
+      "identifier": "antibioticmech:aro-94c19a1c3c",
+      "label": "celesticetin",
+      "new_experimental_assertions": 0,
+      "primary_scope": "PRODUCTION_COMPARISON_NOT_LMRC_RESISTANCE_ENDPOINT",
+      "record_path": "data/antibiotics/antibacterial/celesticetin.yaml",
+      "record_sha256": "dd62c5c221873c28e02e8f01e30938c9d52553dd51ba05566c4dec4fc9394515",
+      "source_assertion_sha256": "756532836046f7e56f1dfe96025b9dfab659db7dfb0b651cd6efe1f6da6cce94",
+      "source_assertion_status": "PRESERVED_DATABASE_ASSERTION_NOT_REVALIDATED",
+      "standard_inchi_key": "VMSQKUCYEMOKMM-UHFFFAOYSA-N"
+    },
+    {
+      "identifier": "CHEBI:3745",
+      "label": "clindamycin",
+      "new_experimental_assertions": 0,
+      "primary_scope": "NAMED_DRUG_TESTED_MATERIAL_FORM_UNRESOLVED",
+      "record_path": "data/antibiotics/antibacterial/clindamycin.yaml",
+      "record_sha256": "042c20cb84653c1aa1357fbc742c00835bca1ab71f79c95131c71ad5589bb8e7",
+      "source_assertion_sha256": "277eb4a7ce60b2c8c2e055cc2e70cfd994e76a3ecff938f79d4f700fc4474f6d",
+      "source_assertion_status": "PRESERVED_DATABASE_ASSERTION_NOT_REVALIDATED",
+      "standard_inchi_key": "KDLRVYVGXIQJDK-AWPVFWJPSA-N"
+    },
+    {
+      "identifier": "CHEBI:6472",
+      "label": "lincomycin",
+      "new_experimental_assertions": 0,
+      "primary_scope": "NAMED_DRUG_TESTED_MATERIAL_FORM_UNRESOLVED",
+      "record_path": "data/antibiotics/antibacterial/lincomycin.yaml",
+      "record_sha256": "98440188b1f25a69728f2fdd546666634607a37ff4e7f05a7a96ab7c28f0c968",
+      "source_assertion_sha256": "fdd7a68cafc92fd11324c92c73e3c4f67721f069b949187a2ae6897ad14201a2",
+      "source_assertion_status": "PRESERVED_DATABASE_ASSERTION_NOT_REVALIDATED",
+      "standard_inchi_key": "OJMMVQQUTAEWLP-KIDUDLJLSA-N"
+    }
+  ],
+  "reference_candidates": [
+    {
+      "accession": "UniProtKB:A9Y8T8",
+      "citation_contexts": [
+        {
+          "citation": {
+            "citationCrossReferences": [
+              {
+                "database": "PubMed",
+                "id": "19085073"
+              },
+              {
+                "database": "DOI",
+                "id": "10.1007/s12223-008-0060-8"
+              }
+            ],
+            "citationType": "journal article",
+            "id": "19085073",
+            "publicationDate": "2008"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "id": "ABX00624.1",
+              "source": "EMBL"
+            }
+          ],
+          "omitted_comment_types": [],
+          "reference_number": 1,
+          "strain_annotations": []
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 70,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "genes": [],
+      "reference_taxon_id": "NCBITaxon:1915",
+      "scope": "REFERENCE_METADATA_NOT_TESTED_ALLELE_OR_HOST_LOCUS",
+      "source_accession_evidence": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "id": "ABX00624.1",
+          "source": "EMBL"
+        }
+      ],
+      "uniparc_id": "UPI000162A5BF"
+    },
+    {
+      "accession": "UniProtKB:A0A1B1M202",
+      "citation_contexts": [
+        {
+          "citation": {
+            "citationCrossReferences": [],
+            "citationType": "submission",
+            "id": "CI-A81CVAOAPPCF",
+            "publicationDate": "JUL-2016"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "id": "ANS62484.1",
+              "source": "EMBL"
+            },
+            {
+              "evidenceCode": "ECO:0000313",
+              "id": "UP000092598",
+              "source": "Proteomes"
+            }
+          ],
+          "omitted_comment_types": [],
+          "reference_number": 1,
+          "strain_annotations": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "ANS62484.1",
+                  "source": "EMBL"
+                },
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "UP000092598",
+                  "source": "Proteomes"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "NRRL 2936"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 2,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "genes": [
+        {
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "ANS62484.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "SLINC_0260"
+            }
+          ]
+        }
+      ],
+      "reference_taxon_id": "NCBITaxon:1915",
+      "scope": "REFERENCE_METADATA_NOT_TESTED_ALLELE_OR_HOST_LOCUS",
+      "source_accession_evidence": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "id": "ANS62484.1",
+          "source": "EMBL"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "id": "UP000092598",
+          "source": "Proteomes"
+        }
+      ],
+      "uniparc_id": "UPI000162A5BF"
+    }
+  ],
+  "reviewed_on": "2026-10-09",
+  "status": "PRIMARY_CONTEXT_REVIEW_ONLY_NO_CORPUS_CURATION",
+  "taxonomy": {
+    "100226": {
+      "active": true,
+      "parent": {
+        "scientificName": "Streptomyces coelicolor",
+        "taxonId": 1902
+      },
+      "rank": "strain",
+      "scientificName": "Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)",
+      "taxonId": 100226
+    },
+    "1902": {
+      "active": true,
+      "parent": {
+        "scientificName": "Streptomyces albidoflavus group",
+        "taxonId": 1477431
+      },
+      "rank": "species",
+      "scientificName": "Streptomyces coelicolor",
+      "taxonId": 1902
+    },
+    "1915": {
+      "active": true,
+      "parent": {
+        "scientificName": "Streptomyces",
+        "taxonId": 1883
+      },
+      "rank": "species",
+      "scientificName": "Streptomyces lincolnensis",
+      "taxonId": 1915
+    }
+  },
+  "taxonomy_request": {
+    "bytes": 2862,
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-07/lmrc-host-taxonomy-1902.json",
+      "sha256": "90d63a053449d8b440d1b60e0d751338d0cf319ec495671ea4db471930f7f65f"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-09T01:48:20.169656+00:00",
+    "sha256": "92eed1e3c25ac9339acf90d393bb3ee11ac8b307d8353ac0bd0bc6752c9ae670",
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/1902"
+  },
+  "withheld_assignments": {
+    "m1154_reference_taxon_substitution": "NCBITaxon:100226 was not assigned to M1154; the cached strain node names A3(2)/M145, not this experimental subject.",
+    "tested_allele_crosswalk": "NOT_ESTABLISHED",
+    "tested_genome_accessions": "NOT_ESTABLISHED",
+    "tested_strain_taxon_ids": "NOT_ESTABLISHED"
+  }
+}

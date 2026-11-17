@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>netilmycin</h1>
 <p class="meta">
   <code class="curie">CHEBI:7528</code>
@@ -37,19 +48,22 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000016">aminoglycoside antibiotic</a><code class="curie">ARO:0000016</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_22479">CHEBI:22479</a>      <code class="curie">CHEBI:22479</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_22507">CHEBI:22507</a>      <code class="curie">CHEBI:22507</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_28079">CHEBI:28079</a>      <code class="curie">CHEBI:28079</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_63367">CHEBI:63367</a>      <code class="curie">CHEBI:63367</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000016">ARO:0000016</a>      <code class="curie">ARO:0000016</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_22479"><code class="curie">CHEBI:22479</code></a></li>
+  <li>aminoglycoside antibiotic  <a href="http://purl.obolibrary.org/obo/CHEBI_22507"><code class="curie">CHEBI:22507</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_28079"><code class="curie">CHEBI:28079</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_63367"><code class="curie">CHEBI:63367</code></a></li>
+  <li>aminoglycoside antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_0000016"><code class="curie">ARO:0000016</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C21H41N5O7</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>475.587 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>475.3006 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">ZBGPYVZLYBDXKO-HILBYHGXSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">CCN[C@@H]1C[C@H](N)[C@@H](O[C@H]2OC(CN)=CC[C@H]2N)[C@H](O)[C@H]1O[C@H]1OC[C@H](O)[C@@H](NC)[C@@]1(C)O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C21H41N5O7/c1-4-26-13-7-12(24)16(32-19-11(23)6-5-10(8-22)31-19)15(28)17(13)33-20-21(2,29)18(25-3)14(27)9-30-20/h5,11-20,25-29H,4,6-9,22-24H2,1-3H3/t11-,12+,13-,14+,15+,16-,17+,18-,19-,20-,21-/m1/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -60,7 +74,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000038">ARO:0000038</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_0000038">netilmicin</a><code class="curie">ARO:0000038</code></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=56391-56-1">cas:56391-56-1</a></li>
   <li><a href="https://www.kegg.jp/entry/C07657">kegg.compound:C07657</a></li>
   <li><a href="https://www.ebi.ac.uk/chembl/id_lookup/CHEMBL1572">chembl:CHEMBL1572</a></li>
@@ -81,12 +95,13 @@ corpus keeps as separate records, so it is not an equivalence of structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -106,13 +121,15 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>antibiotic sensitive 16S rRNA <span class="pill plain">NUCLEIC_ACID</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000755">ARO:3000755</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. 16S rRNA is asserted as the target. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000755</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000755">ARO:3000755</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
@@ -120,12 +137,12 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">60 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">60 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">54</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_INACTIVATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -134,7 +151,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002523</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002523">ARO:3002523</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -144,7 +161,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002524</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002524">ARO:3002524</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -154,7 +171,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002525</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002525">ARO:3002525</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -164,7 +181,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002526</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002526">ARO:3002526</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -174,7 +191,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002527</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002527">ARO:3002527</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -184,7 +201,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002533</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002533">ARO:3002533</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -194,7 +211,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002534</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002534">ARO:3002534</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -204,7 +221,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002535</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002535">ARO:3002535</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -214,7 +231,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004623</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004623">ARO:3004623</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -224,7 +241,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004621</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004621">ARO:3004621</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -234,7 +251,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005085</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005085">ARO:3005085</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -244,7 +261,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002539</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002539">ARO:3002539</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -254,7 +271,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002585</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002585">ARO:3002585</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -264,7 +281,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004638</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004638">ARO:3004638</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -274,7 +291,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002588</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002588">ARO:3002588</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -284,7 +301,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002594</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002594">ARO:3002594</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -294,7 +311,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002595</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002595">ARO:3002595</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -304,7 +321,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002596</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002596">ARO:3002596</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -314,7 +331,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002545</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002545">ARO:3002545</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -324,7 +341,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002571</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002571">ARO:3002571</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -334,7 +351,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002572</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002572">ARO:3002572</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -344,7 +361,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002573</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002573">ARO:3002573</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -354,7 +371,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002574</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002574">ARO:3002574</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -364,7 +381,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002575</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002575">ARO:3002575</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -374,7 +391,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003677</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003677">ARO:3003677</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -384,7 +401,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003199</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003199">ARO:3003199</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -394,7 +411,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003200</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003200">ARO:3003200</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -404,7 +421,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007204</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007204">ARO:3007204</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -414,7 +431,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002549</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002549">ARO:3002549</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -424,7 +441,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002597</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002597">ARO:3002597</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -434,7 +451,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002553</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002553">ARO:3002553</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -444,7 +461,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002554</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002554">ARO:3002554</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -454,7 +471,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002555</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002555">ARO:3002555</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -464,7 +481,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002556</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002556">ARO:3002556</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -474,7 +491,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002589</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002589">ARO:3002589</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -484,7 +501,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002590</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002590">ARO:3002590</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -494,7 +511,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002557</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002557">ARO:3002557</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -504,7 +521,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002558</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002558">ARO:3002558</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -514,7 +531,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004635</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004635">ARO:3004635</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -524,7 +541,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004629</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004629">ARO:3004629</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -534,7 +551,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002559</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002559">ARO:3002559</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -544,7 +561,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002560</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002560">ARO:3002560</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -554,7 +571,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002561</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002561">ARO:3002561</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -564,7 +581,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002562</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002562">ARO:3002562</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -574,7 +591,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002563</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002563">ARO:3002563</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -584,7 +601,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002564</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002564">ARO:3002564</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -594,7 +611,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002565</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002565">ARO:3002565</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -604,7 +621,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002566</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002566">ARO:3002566</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -614,7 +631,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002567</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002567">ARO:3002567</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -624,7 +641,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002568</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002568">ARO:3002568</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -634,7 +651,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002569</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002569">ARO:3002569</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -644,7 +661,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002570</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002570">ARO:3002570</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -654,7 +671,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002598</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002598">ARO:3002598</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -664,15 +681,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004675</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004675">ARO:3004675</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">6</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -681,7 +701,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000858</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000858">ARO:3000858</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -691,7 +711,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000859</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000859">ARO:3000859</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -701,7 +721,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000860</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000860">ARO:3000860</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -711,7 +731,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000861</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000861">ARO:3000861</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -721,7 +741,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004677</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004677">ARO:3004677</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -731,11 +751,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000862</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000862">ARO:3000862</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000038 (netilmicin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -776,26 +798,36 @@ type — expand a group to see its determinants.</p>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/netilmycin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/netilmycin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=netilmycin">MediaIngredientMech (netilmycin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=netilmycin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=netilmycin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=netilmycin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=netilmycin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

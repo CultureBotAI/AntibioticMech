@@ -1,0 +1,138 @@
+{
+  "access_history_review": {
+    "path": "reports/resistance-grounding-2026-10-14-outer-membrane-evidence/case-insensitive-access-review.json",
+    "sha256": "8c4673d48aec3a0817579af7b97ff27c9ce1a76aeec755fa9b76121da294af8b"
+  },
+  "baseline_commit": "b0950a9c3256aacee226834e0e8a88d1022c9948",
+  "biological_records_changed": 0,
+  "cache_independent_projection_and_request_tests": "PASS",
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-14-outer-membrane-evidence/offline-projection-canary-review.json",
+    "sha256": "c07dafb15d3ea4a5a6a52761bfb06c5db693bdc32df412b34f0f7d96a6f9f167"
+  },
+  "captured_at": "2026-10-15T06:41:35.550644+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-outer-membrane-evidence/cohort.json",
+    "sha256": "0f5683a3237b95b311f227ad04e5b7328d5bf3fb89554a76c77bb08621d5ea77"
+  },
+  "complete_collection_aware_records_read": 46,
+  "corpus_records_hash_checked": 2939,
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 446,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-outer-membrane-evidence/expanded-tests.xml",
+      "sha256": "17632c537270f2758344b23700189cfb08b831b7223d5aa961a61f21025ad386"
+    },
+    "skipped": 0,
+    "tests": 446
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "c1d37285d35edbd063fe43cf565361fa905b6e794db0e962ba5d05c84814296a"
+    },
+    {
+      "path": "research/2026-10-14-outer-membrane-evidence.json",
+      "sha256": "92488ea870a0008f23593240d9f1bbd57652901ae063159c381c2d17ef10200c"
+    },
+    {
+      "path": "scripts/audit_outer_membrane_evidence.py",
+      "sha256": "fcc6a7556c52408bdd266e82435835b43fcfcc6e6ca171e36f17418fe2700b0d"
+    },
+    {
+      "path": "tests/test_outer_membrane_evidence.py",
+      "sha256": "db6276d0b0967cbd0407faf07b53f9cbb17e546b88b82dba8a945719c8d3e39e"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 52,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-outer-membrane-evidence/focused-tests.xml",
+      "sha256": "2a9f75202d1faa61facd4b79bff212ba53894c1cd8d0fb201bcfd364ceefde21"
+    },
+    "skipped": 0,
+    "tests": 52
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_outer_membrane_evidence_20261014.py",
+      "sha256": "16b3281e16551827a4819beabe9a23f95e816d00c0fba41e2484854a8c4f724a"
+    },
+    {
+      "path": "/private/tmp/publish_outer_membrane_evidence_20261014.py",
+      "sha256": "cadefd6781e4db5d5ea4f081d025d8b5cec10f14b4b4b27a6ada42eb457ebf84"
+    },
+    {
+      "path": "/private/tmp/verify_outer_membrane_evidence_20261014.py",
+      "sha256": "fd30603fb84bf260c96dc5febd733a64caf55aea7ff403e30c8833adebc4af71"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "independently_verified_new_genome_identifiers": 0,
+  "issue_1040": "DEFERRED",
+  "metadata_only_papers": 2,
+  "ncbi_requests": 0,
+  "network_and_file_writes_blocked_during_replay": true,
+  "network_requests": 4,
+  "new_access_holds": 0,
+  "new_experimental_gene_allele_assignments": 0,
+  "new_uniprot_requests": 0,
+  "new_verified_resistance_results": 0,
+  "no_new_data_source_owned_or_rendered_files": true,
+  "offline_native_current_corpus_replay": "PASS",
+  "outreach": 0,
+  "paper_reported_study_genomes": 1,
+  "previous_uncommitted_work_preserved": true,
+  "primary_requests": 1,
+  "prior_research_checkpoints_and_receipts_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-outer-membrane-evidence/protected-before.json",
+    "sha256": "3d5b5f6eb18149b9a112e0b49025d8d13a3fce7e3c8588ec4426c0088b4d6555"
+  },
+  "protected_files_checked": 7711,
+  "repository_ruff_check": "PASS",
+  "reuse_terms_review_resumed": false,
+  "review_findings_addressed": [
+    "Literal gene check uses Omp1, not the full organism-qualified source label",
+    "Native species discrepancy retained; no species TaxID substituted for FS14",
+    "Study genome remains unversioned GenBank context, not an assembly or determinant crosswalk",
+    "OA flag N is not a source-access denial; two papers remain unrequested primary evidence",
+    "Ignored-inclusive case-insensitive access-history follow-up is explicitly post-request"
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "ABUO_OMP1_OWN_CITATION_CONTEXT_NOT_EXPERIMENTAL_GENE_ALLELE_ASSIGNMENT",
+  "selected_cohort_records": 14,
+  "source_adoptions": 0,
+  "source_claims_checked": 15,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "biological_records_changed": 0,
+    "cohort_records": 14,
+    "complete_records_read_in_prior_replay": 46,
+    "corpus_records_hash_checked": 2939,
+    "experimental_gene_allele_assignments": 0,
+    "metadata_only_papers": 2,
+    "new_verified_resistance_results": 0,
+    "paper_reported_study_genomes": 1,
+    "primary_context_reviews": 1,
+    "reused_complete_literature_queries": 3,
+    "source_claims": 15,
+    "source_terms": 2,
+    "unassigned_citation_hits": 1
+  },
+  "verification_limit": "Research-only context review, not biological curation or full-paper signoff. Pinned RDKit has no Intel macOS wheel; earlier Linux CI is historical.",
+  "whole_record_primary_signoffs": 0
+}

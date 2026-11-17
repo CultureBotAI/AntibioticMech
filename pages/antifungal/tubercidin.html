@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antifungal.html">ANTIFUNGAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>tubercidin</h1>
 <p class="meta">
   <code class="curie">CHEBI:48267</code>
@@ -36,17 +47,20 @@ signed off on this record yet.</p></div>
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_18254">CHEBI:18254</a>      <code class="curie">CHEBI:18254</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_48036">CHEBI:48036</a>      <code class="curie">CHEBI:48036</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_86478">CHEBI:86478</a>      <code class="curie">CHEBI:86478</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_18254"><code class="curie">CHEBI:18254</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_48036"><code class="curie">CHEBI:48036</code></a></li>
+  <li>antibiotic antifungal agent  <a href="http://purl.obolibrary.org/obo/CHEBI_86478"><code class="curie">CHEBI:86478</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C11H14N4O4</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>266.257 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>266.1015 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">HDZZVAMISRMYHH-KCGFPETGSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">Nc1ncnc2c1ccn2[C@@H]1O[C@H](CO)[C@@H](O)[C@H]1O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C11H14N4O4/c12-9-5-1-2-15(10(5)14-4-13-9)11-8(18)7(17)6(3-16)19-11/h1-2,4,6-8,11,16-18H,3H2,(H2,12,13,14)/t6-,7-,8-,11-/m1/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -82,12 +96,13 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_35718">CHEBI:35718</a>    <code class="curie">CHEBI:35718</code></li>
+  <li>antifungal agent  <a href="http://purl.obolibrary.org/obo/CHEBI_35718"><code class="curie">CHEBI:35718</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -100,10 +115,47 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
 
 
 
 
+
+<h2>Resistance mechanisms</h2>
+<p class="meta">2 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
+<details class="details-group" open>
+  <summary>UNKNOWN <span class="pill plain">2</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
+<table>
+    <caption>UNKNOWN</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>Laboratory NUPM1-associated tubercidin resistance<br><span class="meta">Qualified association in Friedlin laboratory derivatives, not a species-wide or clinical phenotype. Molecular route unresolved; reference proteins are not experimental allele or genome assignments.</span></td>
+      <td>—</td>
+      <td><em>Leishmania major</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5664"><code class="curie">NCBITaxon:5664</code></a> <span class="meta">LmjF.31.1940</span></td>
+      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/27606425">PMID:27606425</a></span> <span class="meta">(DOI:10.1371/journal.pntd.0004972; Results and native S1 Figure and rendered S1 Table. Qualitative association only; no numerical AST imported.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/Q4Q668/entry">https://www.uniprot.org/uniprotkb/Q4Q668/entry</a></span> <span class="meta">(Reference-only UniProtKB:Q4Q668, unreviewed entry 71, sequence version 1, release 2026_03; exact source-reported RefSeq cross-reference. Species context only, not an exact tested derivative.)</span></li>
+</ul>
+<span class="meta">Comparative growth inhibition (IC50-based)</span></td>
+    </tr>
+    <tr>
+      <td>Laboratory TRP-associated tubercidin resistance<br><span class="meta">Qualified association in Friedlin laboratory derivatives, not a species-wide or clinical phenotype. Molecular route unresolved; reference proteins are not experimental allele or genome assignments.</span></td>
+      <td>—</td>
+      <td><em>Leishmania major</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5664"><code class="curie">NCBITaxon:5664</code></a> <span class="meta">LmjF.31.2010</span></td>
+      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/27606425">PMID:27606425</a></span> <span class="meta">(DOI:10.1371/journal.pntd.0004972; Results and native Table 1 and Figures 2-3. Qualitative association only; no numerical AST imported.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/Q4Q661/entry">https://www.uniprot.org/uniprotkb/Q4Q661/entry</a></span> <span class="meta">(Reference-only UniProtKB:Q4Q661, unreviewed entry 78, sequence version 1, release 2026_03; exact source-reported RefSeq cross-reference. Species context only, not an exact tested derivative.)</span></li>
+</ul>
+<span class="meta">Comparative growth inhibition (IC50-based)</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
 
 
 
@@ -132,32 +184,47 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-13 · codex · LLM-assisted</span>
+    <p>Added two qualified laboratory gene associations from primary results and native table/figure review. Molecular routes remain UNKNOWN; UniProt proteins remain reference-only. No experimental allele, sample, genome or numeric AST assigned; existing owners preserved and whole-record review left open.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antifungal/tubercidin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antifungal/tubercidin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=tubercidin">MediaIngredientMech (tubercidin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=tubercidin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=tubercidin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=tubercidin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=tubercidin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

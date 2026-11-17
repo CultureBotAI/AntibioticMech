@@ -7,7 +7,7 @@
 <meta name="description" content="streptomycin (CHEBI:17076): A amino cyclitol glycoside that consists of streptidine having a disaccharyl moiety attached at the 4-position. The parent of the streptomycin class">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>streptomycin</h1>
 <p class="meta">
   <code class="curie">CHEBI:17076</code>
@@ -34,18 +45,21 @@
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000016">aminoglycoside antibiotic</a><code class="curie">ARO:0000016</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_26788">CHEBI:26788</a>      <code class="curie">CHEBI:26788</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_87113">CHEBI:87113</a>      <code class="curie">CHEBI:87113</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_87114">CHEBI:87114</a>      <code class="curie">CHEBI:87114</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000016">ARO:0000016</a>      <code class="curie">ARO:0000016</code></li>
+  <li>streptomycins  <a href="http://purl.obolibrary.org/obo/CHEBI_26788"><code class="curie">CHEBI:26788</code></a></li>
+  <li>antibiotic antifungal drug  <a href="http://purl.obolibrary.org/obo/CHEBI_87113"><code class="curie">CHEBI:87113</code></a></li>
+  <li>antibiotic fungicide  <a href="http://purl.obolibrary.org/obo/CHEBI_87114"><code class="curie">CHEBI:87114</code></a></li>
+  <li>aminoglycoside antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_0000016"><code class="curie">ARO:0000016</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C21H39N7O12</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>581.58 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>581.26567 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">UCSJYZPVAKXKNQ-HZYVHMACSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">CN[C@@H]1[C@H](O[C@H]2[C@H](O[C@H]3[C@H](O)[C@@H](O)[C@H](NC(=N)N)[C@@H](O)[C@@H]3NC(=N)N)O[C@@H](C)[C@]2(O)C=O)O[C@@H](CO)[C@H](O)[C@H]1O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C21H39N7O12/c1-5-21(36,4-30)16(40-17-9(26-2)13(34)10(31)6(3-29)38-17)18(37-5)39-15-8(28-20(24)25)11(32)7(27-19(22)23)12(33)14(15)35/h4-18,26,29,31-36H,3H2,1-2H3,(H4,22,23,27)(H4,24,25,28)/t5-,6-,7+,8-,9-,10-,11+,12-,13-,14+,15+,16-,17-,18-,21+/m0/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -56,7 +70,7 @@
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000040">ARO:0000040</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_0000040">streptomycin</a><code class="curie">ARO:0000040</code></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=57-92-1">cas:57-92-1</a></li>
   <li><a href="http://www.hmdb.ca/metabolites/HMDB0015214">hmdb:HMDB0015214</a></li>
   <li><a href="https://www.kegg.jp/entry/C00413">kegg.compound:C00413</a></li>
@@ -89,18 +103,19 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_24127">CHEBI:24127</a>    <code class="curie">CHEBI:24127</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_35718">CHEBI:35718</a>    <code class="curie">CHEBI:35718</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_36043">CHEBI:36043</a>    <code class="curie">CHEBI:36043</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_36047">CHEBI:36047</a>    <code class="curie">CHEBI:36047</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_86327">CHEBI:86327</a>    <code class="curie">CHEBI:86327</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_86328">CHEBI:86328</a>    <code class="curie">CHEBI:86328</code></li>
+  <li>fungicide  <a href="http://purl.obolibrary.org/obo/CHEBI_24127"><code class="curie">CHEBI:24127</code></a></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antifungal agent  <a href="http://purl.obolibrary.org/obo/CHEBI_35718"><code class="curie">CHEBI:35718</code></a></li>
+  <li>antimicrobial drug  <a href="http://purl.obolibrary.org/obo/CHEBI_36043"><code class="curie">CHEBI:36043</code></a></li>
+  <li>antibacterial drug  <a href="http://purl.obolibrary.org/obo/CHEBI_36047"><code class="curie">CHEBI:36047</code></a></li>
+  <li>antifungal drug  <a href="http://purl.obolibrary.org/obo/CHEBI_86327"><code class="curie">CHEBI:86327</code></a></li>
+  <li>antifungal agrochemical  <a href="http://purl.obolibrary.org/obo/CHEBI_86328"><code class="curie">CHEBI:86328</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -120,25 +135,40 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>antibiotic sensitive 16S rRNA <span class="pill plain">NUCLEIC_ACID</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000755">ARO:3000755</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. 16S rRNA is asserted as the target. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000755</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000755">ARO:3000755</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>antibiotic sensitive Ribosomal protein S12 (rpsL) <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3003431">ARO:3003431</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. Ribosomal protein S12 is asserted as targeted and inhibited by streptomycin. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3003431</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003431">ARO:3003431</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>30S ribosomal decoding center <span class="pill plain">RIBOSOMAL_SUBUNIT</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta">Streptomycin-bound T. thermophilus 30S structures with mRNA and cognate or near-cognate anticodon-stem loops directly showed local 16S-rRNA distortion and altered substrate recognition. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2013 (retrieved 2026-09-02).</p>
-<p><em>Thermus thermophilus</em> <code class="curie">NCBITaxon:274</code></p><ul class="plain evidence">
-  <li><span class="meta">PMID:23322043</span> <span class="meta">(Primary streptomycin-bound 30S decoding and misreading study (DOI:10.1038/ncomms2346).)</span></li>
+<p><em>Thermus thermophilus</em> <code class="curie">NCBITaxon:274</code></p><div class="table-scroll" role="region" aria-label="30S ribosomal decoding center organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Small ribosomal subunit protein uS12 <a href="https://www.uniprot.org/uniprotkb/Q5SHN3"><code class="curie">UniProtKB:Q5SHN3</code></a><br><span class="meta">Protein component (uS12/RpsL) of the 30S decoding-center binding pocket alongside 16S rRNA helices h18, h27, and h44 in the streptomycin-30S crystal structure (PMID:23322043, PDB 4DR3; HB8 reference strain context).</span></td>
+    <td>rpsL</td>
+    <td><em>Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_300852"><code class="curie">NCBITaxon:300852</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23322043">PMID:23322043</a></span> <span class="meta">(Primary streptomycin-bound 30S decoding and misreading study (DOI:10.1038/ncomms2346).)</span></li>
 </ul>
 
 
@@ -147,14 +177,1228 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: PMID:23322043 resolved streptomycin at the Thermus thermophilus 30S decoding center with cognate or near-cognate anticodon-stem-loop and mRNA substrates. Streptomycin distorts 16S-rRNA bases including A1492 and A1493, destabilizing cognate while stabilizing near-cognate decoding and thereby promoting genetic-code misreading.</span></dd></dl>
 
 
+<h2 id="activity">Activity spectrum</h2>
+<p class="meta">Measured or curated activity against specific taxa. A number
+without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">80 observations &middot; <a href="streptomycin/activity-1.html">Browse all observations</a> &middot; <a href="streptomycin/record-10d0fc6d4bdb57004955587a7b76c70024a720f1fc01e91ed0b179c13c075be4.json.gz" download>Complete record (JSON.gz)</a></p>
+<div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
+<table>
+  <caption>Activity observations</caption>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A658d1ecc702e76ae">142 source isolates</a><br>142 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-2">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae97860126599aec9">196 source isolates</a><br>196 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-3">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; liquid media; microdilution plate; MODS</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae5242b35792df6d0">1 source isolates</a><br>1 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="2" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-4">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A7a0e80a5752969c3">6 source isolates</a><br>6 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="3" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-5">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A77fc11e4625e2681">10 source isolates</a><br>10 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="4" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-6">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">INTERMEDIATE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aea4a95098ceb1e81">1 source isolates</a><br>1 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="5" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-7">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A007b663e0a2b8acc">823 source isolates</a><br>823 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="6" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-8">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aeeefd2e00aee29c9">1270 source isolates</a><br>1270 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="7" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-9">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">INTERMEDIATE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae9b575c143fd3e07">1 source isolates</a><br>1 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="8" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-10">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A10298c237725d3eb">44 source isolates</a><br>44 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="9" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-11">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aab434b9c2a4901c5">102 source isolates</a><br>102 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="10" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-12">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A95e5860bc683b1f1">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="11" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-13">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">INTERMEDIATE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A769c63f293036440">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="12" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-14">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A8b32f3b219c2af20">360 source isolates</a><br>360 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="13" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-15">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A39631ba3bbb003e0">496 source isolates</a><br>496 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="14" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-16">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; KMMYKROBE2025; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ab4eff9c9dddfdb87">4 source isolates</a><br>4 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="15" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-17">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; KMMYKROBE2025; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A64d7ae3330478b38">9 source isolates</a><br>9 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="16" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-18">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; KMVALIDATION2025; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Af8ed8d77cc843042">1111 source isolates</a><br>1111 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="17" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-19">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; KMVALIDATION2025; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ade42ef5152292e39">1224 source isolates</a><br>1224 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="18" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-20">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; LID2015; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A430e955deceef8bb">385 source isolates</a><br>385 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="19" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-21">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; LID2015; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Afc6a7906608a08c0">1284 source isolates</a><br>1284 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="20" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-22">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; LID2015; solid media; LJ; resistance ratio; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A4beebeceab4f3fc8">30 source isolates</a><br>30 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="21" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-23">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; LID2015; solid media; LJ; resistance ratio; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A01f21401d37a9081">168 source isolates</a><br>168 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="22" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-24">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; MUMBAI2018; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A13ce5dac6106e8bb">43 source isolates</a><br>43 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="23" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-25">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; MUMBAI2018; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A24dd115629a665c4">56 source isolates</a><br>56 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="24" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-26">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aa02b77e81f2d8e3e">714 source isolates</a><br>714 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="25" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-27">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A389f78c8235978da">2981 source isolates</a><br>2981 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="26" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-28">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; solid media; LJ; proportion method</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A31df29c9ea0ffc8c">280 source isolates</a><br>280 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="27" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-29">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; solid media; LJ; proportion method</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aca6c4ba857fa4a19">115 source isolates</a><br>115 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="28" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-30">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; solid media; LJ; resistance ratio</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Af3f311f695da43da">481 source isolates</a><br>481 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="29" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-31">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; solid media; LJ; resistance ratio</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae736e4179a295a54">370 source isolates</a><br>370 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="30" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-32">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; solid media; middlebrook; 7H10</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae0aecb189bf65a20">124 source isolates</a><br>124 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="31" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-33">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; solid media; middlebrook; 7H10</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae7369cb6eb790fa4">128 source isolates</a><br>128 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="32" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-34">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; solid media; middlebrook; proportion method</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A9d5df01a099839e1">81 source isolates</a><br>81 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="33" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-35">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; solid media; middlebrook; proportion method</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ac8055b62b75e6b30">78 source isolates</a><br>78 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="34" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-36">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; PHE2019; solid media; LJ; resistance ratio; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A6ea251f4dc7ba763">25 source isolates</a><br>25 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="35" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-37">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; PHE2019; solid media; LJ; resistance ratio; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aec64939426e33e34">138 source isolates</a><br>138 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="36" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-38">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; BACTEC460; critical concentration 2.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A989e442acc7476f3">6 source isolates</a><br>6 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="37" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-39">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; BACTEC460; critical concentration 2.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aaa532f4a21a04d24">65 source isolates</a><br>65 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="38" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-40">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Af2007722052bcc87">835 source isolates</a><br>835 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="39" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-41">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae5381e31c7127cd2">2766 source isolates</a><br>2766 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="40" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-42">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration 1.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aad3a874ccd65f6c8">116 source isolates</a><br>116 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="41" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-43">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A7c628c8206af3feb">19 source isolates</a><br>19 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="42" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-44">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Affb127a0a3449edc">3 source isolates</a><br>3 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="43" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-45">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration 4.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aaa4f12b5b74e43e3">442 source isolates</a><br>442 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="44" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-46">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A37101f8712408ce5">358 source isolates</a><br>358 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="45" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-47">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ab0cb3663844568cc">226 source isolates</a><br>226 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="46" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-48">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A4fe6fa9af5080146">172 source isolates</a><br>172 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="47" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-49">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aa37ebedc284ee9a2">858 source isolates</a><br>858 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="48" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-50">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A7b2a4e61a3b9f00b">113 source isolates</a><br>113 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="49" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-51">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A06fb0032c578de89">509 source isolates</a><br>509 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="50" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-52">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">0.5 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; MYCOTB</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ac1e58ccdf70ac927">22 source isolates</a><br>22 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="51" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-53">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">1.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; MYCOTB</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae2166ff1184ed5d4">6 source isolates</a><br>6 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="52" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-54">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">16.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; MYCOTB</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A1386bcc7ca07423a">4 source isolates</a><br>4 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="53" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-55">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">2.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; MYCOTB</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A6269959ac3099fb8">6 source isolates</a><br>6 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="54" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-56">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">32.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; MYCOTB</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aaa699c58989f55eb">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="55" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-57">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">4.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; MYCOTB</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aeb750d34aabe7402">8 source isolates</a><br>8 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="56" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-58">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">8.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; MYCOTB</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ab7b567e111112fda">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="57" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-59">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">&lt;=0.25 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; MYCOTB</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Af12f2df9555b8c4a">27 source isolates</a><br>27 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="58" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-60">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; MYCOTB</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae8a074d375ef6599">43 source isolates</a><br>43 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="59" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-61">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; UKMYC5</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A75d29efc1d8051c0">20 source isolates</a><br>20 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="60" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-62">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A2923de574af6d1c3">40 source isolates</a><br>40 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="61" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-63">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ab332b05f3e05844f">444 source isolates</a><br>444 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="62" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-64">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A75e5bbdd8db7e114">76 source isolates</a><br>76 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="63" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-65">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; LJ; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A1848fcb62c66fd88">96 source isolates</a><br>96 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="64" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-66">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; LJ; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A3a85dbe3ddb3cab4">29 source isolates</a><br>29 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="65" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-67">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; LJ; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ad801f1b4c12fbda4">53 source isolates</a><br>53 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="66" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-68">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration 2.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A59efc3464829a41a">136 source isolates</a><br>136 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="67" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-69">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration 2.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A391440c85231b6cb">102 source isolates</a><br>102 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="68" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-70">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration UK mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A86f59b1490ab58a1">336 source isolates</a><br>336 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="69" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-71">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; critical concentration 10.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A4901781e7ec906f0">22 source isolates</a><br>22 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="70" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-72">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; critical concentration 10.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A720d2f94dd382ca7">55 source isolates</a><br>55 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="71" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-73">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; critical concentration 10.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae82d43223471f772">7 source isolates</a><br>7 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="72" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-74">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; critical concentration 2.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A1cacee3866945f86">29 source isolates</a><br>29 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="73" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-75">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; critical concentration 2.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A98d733228f9fd92e">48 source isolates</a><br>48 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="74" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-76">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; critical concentration 2.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A427b1ca6ca12da5d">7 source isolates</a><br>7 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="75" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-77">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; WHO2019; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A384d6a9be8268d61">108 source isolates</a><br>108 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="76" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-78">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; WHO2019; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A69c2f9d933632a47">66 source isolates</a><br>66 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="77" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-79">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; WHO2019; solid media; LJ; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A298cb7ec4e38d4e7">648 source isolates</a><br>648 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="78" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-80">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; WHO2019; solid media; LJ; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="streptomycin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A7cc06210c0e477d1">1420 source isolates</a><br>1420 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="79" data-offset="0" data-total="80" data-identifier="CHEBI:17076" data-key="UCSJYZPVAKXKNQ-HZYVHMACSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="streptomycin/activity-1-bd28ed89f1e1cca6c072db33a8c337865251fe5990e36e3aec0649601c0e5240.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  </tbody>
+</table>
+
+</div>
+
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">62 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">62 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">43</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_INACTIVATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -163,7 +1407,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002598</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002598">ARO:3002598</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -173,7 +1417,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004089</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004089">ARO:3004089</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -183,7 +1427,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004090</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004090">ARO:3004090</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -193,7 +1437,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004091</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004091">ARO:3004091</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -203,7 +1447,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005062</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005062">ARO:3005062</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -213,7 +1457,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002626</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002626">ARO:3002626</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -223,7 +1467,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002629</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002629">ARO:3002629</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -233,7 +1477,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002638</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002638">ARO:3002638</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -243,7 +1487,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002639</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002639">ARO:3002639</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -253,7 +1497,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002640</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002640">ARO:3002640</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -263,7 +1507,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002657</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002657">ARO:3002657</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -273,7 +1517,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002658</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002658">ARO:3002658</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -283,7 +1527,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002659</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002659">ARO:3002659</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -293,7 +1537,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002660</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002660">ARO:3002660</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -303,7 +1547,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002628</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002628">ARO:3002628</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -313,7 +1557,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002601</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002601">ARO:3002601</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -323,7 +1567,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004692</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004692">ARO:3004692</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -333,7 +1577,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002611</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002611">ARO:3002611</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -343,7 +1587,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002612</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002612">ARO:3002612</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -353,7 +1597,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002613</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002613">ARO:3002613</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -363,7 +1607,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002614</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002614">ARO:3002614</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -373,7 +1617,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002615</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002615">ARO:3002615</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -383,7 +1627,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002616</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002616">ARO:3002616</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -393,7 +1637,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002617</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002617">ARO:3002617</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -403,7 +1647,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002602</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002602">ARO:3002602</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -413,7 +1657,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002618</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002618">ARO:3002618</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -423,7 +1667,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002619</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002619">ARO:3002619</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -433,7 +1677,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002620</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002620">ARO:3002620</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -443,7 +1687,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002621</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002621">ARO:3002621</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -453,7 +1697,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003197</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003197">ARO:3003197</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -463,7 +1707,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004682</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004682">ARO:3004682</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -473,7 +1717,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002603</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002603">ARO:3002603</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -483,7 +1727,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002604</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002604">ARO:3002604</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -493,7 +1737,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002605</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002605">ARO:3002605</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -503,7 +1747,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002606</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002606">ARO:3002606</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -513,7 +1757,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002622</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002622">ARO:3002622</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -523,7 +1767,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002607</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002607">ARO:3002607</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -533,7 +1777,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002608</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002608">ARO:3002608</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -543,7 +1787,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004704</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004704">ARO:3004704</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -553,7 +1797,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002609</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002609">ARO:3002609</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -563,7 +1807,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002627</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002627">ARO:3002627</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -573,7 +1817,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004683</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004683">ARO:3004683</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -583,15 +1827,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004675</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004675">ARO:3004675</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">12</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -600,7 +1847,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003978</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003978">ARO:3003978</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -610,7 +1857,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003406</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003406">ARO:3003406</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -620,7 +1867,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003405</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003405">ARO:3003405</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -630,7 +1877,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003480</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003480">ARO:3003480</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -640,7 +1887,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007186</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007186">ARO:3007186</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -650,7 +1897,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004971</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004971">ARO:3004971</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -660,7 +1907,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003470</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003470">ARO:3003470</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -670,7 +1917,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003395</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003395">ARO:3003395</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -680,7 +1927,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003445</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003445">ARO:3003445</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -690,7 +1937,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004968</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004968">ARO:3004968</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -700,7 +1947,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003541</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003541">ARO:3003541</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -710,15 +1957,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004965</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004965">ARO:3004965</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">5</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_EFFLUX</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -727,7 +1977,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004578</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004578">ARO:3004578</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -737,7 +1987,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004585</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004585">ARO:3004585</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -747,7 +1997,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004598</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004598">ARO:3004598</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -757,7 +2007,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004572</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004572">ARO:3004572</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -767,15 +2017,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003062</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003062">ARO:3003062</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_REPLACEMENT <span class="pill plain">1</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_REPLACEMENT" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_REPLACEMENT</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -784,15 +2037,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007456</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007456">ARO:3007456</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>REDUCED_PERMEABILITY <span class="pill plain">1</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: REDUCED_PERMEABILITY" tabindex="0">
+<table>
     <caption>REDUCED_PERMEABILITY</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -801,11 +2057,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004127</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004127">ARO:3004127</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -814,26 +2072,27 @@ type — expand a group to see its determinants.</p>
 target, what the target does, and how the effect propagates to growth inhibition
 or death.</p>
 <h3>Streptomycin perturbs the bacterial 30S decoding site <span class="pill">MECHANISTIC</span></h3>
-<p>Streptomycin binds the bacterial 30S ribosomal decoding site formed by 16S rRNA and ribosomal protein S12, distorts 16S rRNA helix 44, and lowers translational decoding accuracy.</p><table>
+<p>Streptomycin binds the bacterial 30S ribosomal decoding site formed by 16S rRNA and ribosomal protein S12, distorts 16S rRNA helix 44, and lowers translational decoding accuracy.</p><div class="table-scroll" role="region" aria-label="Nodes: streptomycin_30s_decoding_site_misreading" tabindex="0">
+<table>
   <caption>Nodes — streptomycin_30s_decoding_site_misreading</caption>
   <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
   <tr>
     <td><code class="curie">streptomycin</code></td>
     <td>streptomycin</td>
     <td class="meta">COMPOUND</td>
-    <td><code class="curie">CHEBI:17076</code></td>
+    <td> <a href="../antibacterial/streptomycin.html"><code class="curie">CHEBI:17076</code></a></td>
   </tr>
   <tr>
     <td><code class="curie">rrna_16s</code></td>
     <td>bacterial 16S rRNA</td>
     <td class="meta">RNA</td>
-    <td><code class="curie">ARO:3000755</code></td>
+    <td> <a href="http://purl.obolibrary.org/obo/ARO_3000755"><code class="curie">ARO:3000755</code></a></td>
   </tr>
   <tr>
     <td><code class="curie">ribosomal_protein_s12</code></td>
-    <td>ribosomal protein S12</td>
+    <td>ribosomal protein S12<br><span class="meta">Examples: Small ribosomal subunit protein uS12 (rpsL) <a href="https://www.uniprot.org/uniprotkb/Q5SHN3"><code class="curie">UniProtKB:Q5SHN3</code></a>, <em>Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_300852"><code class="curie">NCBITaxon:300852</code></a> <span class="pill">REVIEWED</span> — 30S ribosomal protein uS12 (S12) directly contacted by streptomycin at the decoding center in Thermus thermophilus 30S crystal structures (PMID:10984042, PDB 1FJG; PMID:23322043, PDB 4DR3; HB8 reference strain context).; Small ribosomal subunit protein uS12 (rpsL) <a href="https://www.uniprot.org/uniprotkb/P0A7S3"><code class="curie">UniProtKB:P0A7S3</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — 30S ribosomal protein uS12 (S12) whose rpsL mutations govern streptomycin binding and translational misreading in E. coli (PMID:353564; K-12 reference strain context).</span></td>
     <td class="meta">GENE_OR_PROTEIN</td>
-    <td><code class="curie">ARO:3003431</code></td>
+    <td> <a href="http://purl.obolibrary.org/obo/ARO_3003431"><code class="curie">ARO:3003431</code></a></td>
   </tr>
   <tr>
     <td><code class="curie">streptomycin_30s_binding_site</code></td>
@@ -860,6 +2119,9 @@ or death.</p>
     <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
   </tr>
 </table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: streptomycin_30s_decoding_site_misreading" tabindex="0">
 <table>
   <caption>Edges — streptomycin_30s_decoding_site_misreading</caption>
   <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
@@ -868,7 +2130,7 @@ or death.</p>
     <td>participates in</td>
     <td><code class="curie">streptomycin_30s_binding_site</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:24820088</span> <span class="meta">(Demirci and colleagues resolved streptomycin-bound Thermus thermophilus 30S subunits and described 16S rRNA contacts in the streptomycin site.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/24820088">PMID:24820088</a></span> <span class="meta">(Demirci and colleagues resolved streptomycin-bound Thermus thermophilus 30S subunits and described 16S rRNA contacts in the streptomycin site.)</span></li>
 </ul>
 </td>
   </tr>
@@ -877,7 +2139,7 @@ or death.</p>
     <td>participates in</td>
     <td><code class="curie">streptomycin_30s_binding_site</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:24820088</span> <span class="meta">(The 16S rRNA resistance-structure study placed S12 next to streptomycin in the bacterial 30S subunit.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/24820088">PMID:24820088</a></span> <span class="meta">(The 16S rRNA resistance-structure study placed S12 next to streptomycin in the bacterial 30S subunit.)</span></li>
 </ul>
 </td>
   </tr>
@@ -886,7 +2148,7 @@ or death.</p>
     <td>binds</td>
     <td><code class="curie">streptomycin_30s_binding_site</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:23322043</span> <span class="meta">(Demirci and colleagues used X-ray crystallography to locate streptomycin in the Thermus thermophilus 30S decoding region.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23322043">PMID:23322043</a></span> <span class="meta">(Demirci and colleagues used X-ray crystallography to locate streptomycin in the Thermus thermophilus 30S decoding region.)</span></li>
 </ul>
 </td>
   </tr>
@@ -895,7 +2157,7 @@ or death.</p>
     <td>promotes</td>
     <td><code class="curie">distorted_decoding_site</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:23322043</span> <span class="meta">(Streptomycin-bound 30S structures showed local distortion of 16S rRNA and bases involved in codon recognition.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23322043">PMID:23322043</a></span> <span class="meta">(Streptomycin-bound 30S structures showed local distortion of 16S rRNA and bases involved in codon recognition.)</span></li>
 </ul>
 </td>
   </tr>
@@ -904,7 +2166,7 @@ or death.</p>
     <td>decreases</td>
     <td><code class="curie">decoding_accuracy</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:23322043</span> <span class="meta">(Cognate and near-cognate mRNA-tRNA crystal structures explained how streptomycin promotes misreading of the genetic code.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23322043">PMID:23322043</a></span> <span class="meta">(Cognate and near-cognate mRNA-tRNA crystal structures explained how streptomycin promotes misreading of the genetic code.)</span></li>
 </ul>
 </td>
   </tr>
@@ -913,17 +2175,19 @@ or death.</p>
     <td>supports</td>
     <td><code class="curie">protein_synthesis</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:11340196</span> <span class="meta">(Ogle and colleagues resolved 30S ribosomal subunit complexes that define the conserved A-site bases used to recognize cognate tRNA.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11340196">PMID:11340196</a></span> <span class="meta">(Ogle and colleagues resolved 30S ribosomal subunit complexes that define the conserved A-site bases used to recognize cognate tRNA.)</span></li>
 </ul>
 </td>
   </tr>
 </table>
 
+</div>
+
 
 
 <h2>Record-level evidence</h2>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:23322043</span> <span class="meta">(Primary exact-streptomycin 30S structure and decoding-fidelity study.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23322043">PMID:23322043</a></span> <span class="meta">(Primary exact-streptomycin 30S structure and decoding-fidelity study.)</span></li>
 </ul>
 
 
@@ -964,32 +2228,57 @@ or death.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-26 · seed_from_sources</span>
+    <p>Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-10-05 · seed_from_sources</span>
+    <p>Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_UNIPROT_PROTEIN_EXAMPLES</span>
+    <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
+    <p>Added curated T. thermophilus HB8 (Q5SHN3) and E. coli K-12 (P0A7S3) ribosomal protein uS12 (rpsL) UniProtKB protein examples on the streptomycin_30s_decoding_site_misreading causal graph node and the PRIMARY_LITERATURE 30S ribosomal decoding center molecular target.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/streptomycin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/streptomycin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=streptomycin">MediaIngredientMech (streptomycin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=streptomycin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=streptomycin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=streptomycin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=streptomycin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

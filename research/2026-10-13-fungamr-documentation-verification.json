@@ -1,0 +1,161 @@
+{
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-fungamr-documentation.json",
+      "sha256": "949ecec3bef69327731e719834802177baf6defb8f6f9ef6ee322b8e33a5be86"
+    },
+    {
+      "path": "scripts/audit_fungamr_documentation.py",
+      "sha256": "7ae5997a419cc4b66762d18c3a4ca7fa3e7a176d7fcf2ce99da62a9a91a562a4"
+    },
+    {
+      "path": "tests/test_fungamr_documentation.py",
+      "sha256": "5d72548c417bfe314e136bedf5c015a8e3ab6c4ce656fb7ccd89c835420c17ef"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "439607e3a855e2e2f111575ff565d763aef95a61c7f2f3f2f7df913090e5fa71"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/focused-tests-final.xml",
+      "sha256": "d8e8402197dd3242ad73c0ed8ef930515b7b650e3078b45c149e3cbc4f0b22dc"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/cohort.json",
+      "sha256": "e0952da42e13e02cd37a25ef236ef5691281bdc487ee1146481962ab2e1dbed6"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/native-plan.json",
+      "sha256": "b260252123941a65beea13427816c171326566f0b09134ed6f0b826083adfb45"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/documentation-canary.json",
+      "sha256": "3fcbbbf1b06c6064e9dc9999507020c5061fe3121c48967067733b13edcb0df2"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-resistance-grounding.tsv",
+      "sha256": "a7d1c4ce9e473e43d040d8e23099ee119a6e0e2cd05f5b03f403ac80ceafa841"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-resistance-progress.json",
+      "sha256": "f0c28fdd28209adb07e8a3dd2fb5914b93e742e265e0be3fcc1ec71cabc1ed46"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-resistance-progress.tsv",
+      "sha256": "be3da009b8d3aec22042fe3e59d9df026821841900dbe167cec3787f9d821210"
+    }
+  ],
+  "classification": "PROGRESS_NOT_COMPLETE",
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "scripts/audit_fungamr_documentation.py",
+        "tests/test_fungamr_documentation.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "scripts/audit_fungamr_documentation.py",
+        "tests/test_fungamr_documentation.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "2 files already formatted\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "constraints": {
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "source_adoptions": 0,
+    "whole_record_reviews_completed": 0
+  },
+  "date_label_timezone": "America/Los_Angeles",
+  "full_qc_note": "Research-only step; prior full-QC receipt is historical, not this checkpoint's test result.",
+  "full_qc_rerun": false,
+  "native_requests": {
+    "attempts": [
+      "publisher-attempt.json",
+      "repository-metadata-attempt.json",
+      "repository-readme-attempt.json",
+      "tool-readme-attempt.json"
+    ],
+    "failed_source_retries": 0,
+    "http_200": 3,
+    "source_rows_downloaded": 0,
+    "unfollowed_http_303": 1
+  },
+  "offline_replay": {
+    "byte_identical": true,
+    "http_disabled": true,
+    "sockets_disabled": true
+  },
+  "preservation": {
+    "added_before_receipt": [
+      "research/2026-10-13-fungamr-documentation.json",
+      "scripts/audit_fungamr_documentation.py",
+      "tests/test_fungamr_documentation.py"
+    ],
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/protected-before.json",
+      "sha256": "6124b55b47003b6397417e4261ec1df436ff226dea81fcb182ef4d2d39dc64fd"
+    },
+    "baseline_files": 7204,
+    "biological_records_byte_identical": 2939,
+    "changed": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "ignored_files_included": true,
+    "pages_inventories_and_embedding_artifacts_unchanged": true,
+    "unchanged_baseline_files": 7203
+  },
+  "remaining_scope": "All 2939 records remain in scope; exact primary crosswalks for the selected 19 terms remain open.",
+  "review": {
+    "findings": [
+      {
+        "disposition": "Default tests replay immutable documentation; dated verification checks the live corpus separately.",
+        "id": "mutable-corpus-test",
+        "status": "ADDRESSED"
+      },
+      {
+        "disposition": "Use LICENSE-DATA and ATTRIBUTION.md CC BY 4.0, not stale CC0 workflow prose; no unrelated docs refactor.",
+        "id": "destination-license",
+        "status": "ADDRESSED_IN_ASSESSMENT"
+      },
+      {
+        "disposition": "Documentation and shared citations do not assign scores, alleles, experimental subjects or rows.",
+        "id": "source-row-crosswalk",
+        "status": "OPEN"
+      }
+    ],
+    "independent_validation": false,
+    "reviewer": "SAME_AGENT"
+  },
+  "scope": "RESEARCH_DOCUMENTATION_ONLY",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 298
+  },
+  "verified_at": "2026-10-14T01:38:39.226756+00:00"
+}

@@ -1,0 +1,177 @@
+identifier: CHEBI:45453
+label: sinefungin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An adenosine that is the the δ-(5'-adenosyl) derivative of ornithine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sinefungina
+  synonym_type: INN
+  source: chebi
+- synonym_text: sinefungine
+  synonym_type: INN
+  source: chebi
+- synonym_text: sinefunginum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (5S)-5-amino-6-[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]-L-norleucine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5S)-2,5-diamino-6-[(2R,3S,R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]hexanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6,9-Diamino-1-(6-amino-9H-purin-9-yl)-1,5,6,7,8,9-hexadeoxy-beta-D-ribo-decofuranuronic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6,9-Diamino-1-(6-amino-9H-purin-9-yl)-1,5,6,7,8,9-hexadeoxydecofuranuronic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: A 9145
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ADENOSYL-ORNITHINE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic A 9145
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22260
+- CHEBI:83925
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: Nc1ncnc2c1ncn2[C@@H]1O[C@H](C[C@@H](N)CC[C@H](N)C(=O)O)[C@@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C15H23N7O5/c16-6(1-2-7(17)15(25)26)3-8-10(23)11(24)14(27-8)22-5-21-9-12(18)19-4-20-13(9)22/h4-8,10-11,14,23-24H,1-3,16-17H2,(H,25,26)(H2,18,19,20)/t6-,7-,8+,10+,11+,14+/m0/s1
+  standard_inchi_key: LMXOHSDXUQEUSF-YECHIGJVSA-N
+  molecular_formula: C15H23N7O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 381.393
+  monoisotopic_mass: 381.17607
+xrefs:
+- cas:58944-73-3
+- metacyc.compound:SINEFUNGIN
+- pdb-ccd:SFG
+- reaxys:3574678
+drug_xrefs:
+- kegg.drug:D05846
+document_xrefs:
+- patent:US3758681
+- patent:US5872104
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:45453
+  source_label: sinefungin
+  minted_identifier: antibioticmech:chebi-c266cf14d1
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-30'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:18Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-13T06:15:27Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added four qualified laboratory yeast gene associations from inspected
+    primary results. UniProt identifiers remain reference-only; no experimental allele,
+    protein, genome or numerical AST assigned. Preserved existing owners and left
+    whole-record review open.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: REDUCED_PERMEABILITY
+  label: Laboratory SAM3-associated sinefungin resistance
+  gene_id: SAM3
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative sinefungin resistance
+  assay: Comparative growth susceptibility
+  note: Context-dependent association in W303 derivatives, not a species-wide phenotype.
+    Experimental allele, protein and genome unresolved. Reduced uptake is the authors'
+    genetic interpretation, not an efflux measurement; the opposite-direction control
+    is retained in the dossier.
+  evidence:
+  - reference: PMID:17932050
+    notes: Results and native Figures 3, 4 and 6; DOI:10.1093/nar/gkm817. Comparative
+      growth, not a standardized MIC.
+  - reference: https://www.uniprot.org/uniprotkb/Q08986/entry
+    notes: Reference-only UniProtKB:Q08986, entry version 170, sequence version 1,
+      release 2026_03; SAM3 in S288c (NCBITaxon:559292). Not the tested W303 derivative
+      or an exact resistance allele.
+- mechanism_type: UNKNOWN
+  label: Laboratory SAM1-associated sinefungin resistance
+  gene_id: SAM1
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative sinefungin resistance
+  assay: Comparative growth susceptibility
+  note: Context-dependent association in W303 derivatives, not a species-wide phenotype.
+    Experimental allele, protein and genome unresolved. The stronger combined-context
+    effect is not assigned to this gene individually; a specific molecular resistance
+    route is not asserted.
+  evidence:
+  - reference: PMID:17932050
+    notes: Results and native Figures 7; DOI:10.1093/nar/gkm817. Comparative growth,
+      not a standardized MIC.
+  - reference: https://www.uniprot.org/uniprotkb/P10659/entry
+    notes: Reference-only UniProtKB:P10659, entry version 228, sequence version 2,
+      release 2026_03; SAM1 in S288c (NCBITaxon:559292). Not the tested W303 derivative
+      or an exact resistance allele.
+- mechanism_type: UNKNOWN
+  label: Laboratory SAM2-associated sinefungin resistance
+  gene_id: SAM2
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative sinefungin resistance
+  assay: Comparative growth susceptibility
+  note: Context-dependent association in W303 derivatives, not a species-wide phenotype.
+    Experimental allele, protein and genome unresolved. The stronger combined-context
+    effect is not assigned to this gene individually; a specific molecular resistance
+    route is not asserted.
+  evidence:
+  - reference: PMID:17932050
+    notes: Results and native Figures 7; DOI:10.1093/nar/gkm817. Comparative growth,
+      not a standardized MIC.
+  - reference: https://www.uniprot.org/uniprotkb/P19358/entry
+    notes: Reference-only UniProtKB:P19358, entry version 217, sequence version 3,
+      release 2026_03; SAM2 in S288c (NCBITaxon:559292). Not the tested W303 derivative
+      or an exact resistance allele.
+- mechanism_type: UNKNOWN
+  label: Laboratory ABD1-associated sinefungin resistance
+  gene_id: ABD1
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative sinefungin resistance
+  assay: Comparative growth susceptibility
+  note: Context-dependent association in W303 derivatives, not a species-wide phenotype.
+    Experimental allele, protein and genome unresolved. The stronger combined-context
+    effect is not assigned to this gene individually; a specific molecular resistance
+    route is not asserted.
+  evidence:
+  - reference: PMID:17932050
+    notes: Results and native Figures 7; DOI:10.1093/nar/gkm817. Comparative growth,
+      not a standardized MIC.
+  - reference: https://www.uniprot.org/uniprotkb/P32783/entry
+    notes: Reference-only UniProtKB:P32783, entry version 191, sequence version 1,
+      release 2026_03; ABD1 in S288c (NCBITaxon:559292). Not the tested W303 derivative
+      or an exact resistance allele.

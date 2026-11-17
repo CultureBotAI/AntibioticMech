@@ -1,0 +1,50 @@
+{
+  "canary": "salb-accession",
+  "constraints": {
+    "biological_record_writes": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "redirects_followed": 0,
+    "retries": 0
+  },
+  "date": "2026-10-15",
+  "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_embl,xref_refseq,lit_pubmed_id,sequence_version,version",
+  "inputs": {
+    "original_plan": {
+      "path": "research/2026-10-15-sal-reference-context-plan.json",
+      "sha256": "921a33a1c1fc3aadfe33959806422ed8b489ff1fcdbd49b5a2f595e8a61e9917"
+    },
+    "pdb_body": {
+      "path": "reports/resistance-grounding-2026-10-15-sal-reference-context/pdb-metadata-body.json",
+      "sha256": "8e3bbbe39325da506ef839f3bb56e6a1261a02662dcda8a215ba7a5304576e07"
+    },
+    "pdb_receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-sal-reference-context/pdb-metadata-receipt.json",
+      "sha256": "5dff6ee901d8018e779ec2b1b71b05c6201267d8798a96b08cbc438155d73f44"
+    }
+  },
+  "max_bytes": 2000000,
+  "preflight": {
+    "globs": [
+      "*receipt.json",
+      "*attempt.json",
+      "*plan.json"
+    ],
+    "ignored_files_included": true,
+    "matching_paths": [],
+    "pattern": "A0A7D7YNB9",
+    "roots": [
+      "research",
+      "reports"
+    ],
+    "scope": "ONLY_LISTED_GLOBS_NOT_ALL_EVIDENCE"
+  },
+  "release": "2026_03",
+  "requests": {
+    "salb-accession": {
+      "query": "accession:A0A7D7YNB9",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AA0A7D7YNB9&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "uniprot_canary": "salb-accession"
+}

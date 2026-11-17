@@ -1,0 +1,83 @@
+{
+  "canary": "vim92",
+  "constraints": {
+    "biological_record_writes": false,
+    "figure_pixels_reviewed": false,
+    "full_investigation_complete": false,
+    "issue_1040": "DEFERRED",
+    "native_primary_bodies_replayed": false,
+    "ncbi_requests": 0,
+    "redirects_followed": 0,
+    "retries": 0,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "source_adoption": false,
+    "supplements_reviewed": false,
+    "whole_papers_reviewed": false
+  },
+  "date": "2026-10-15",
+  "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_embl,xref_refseq,lit_pubmed_id,sequence_version,version",
+  "inputs": {
+    "assessment": {
+      "path": "research/2026-10-15-bla-recent-identifiers-assessment.json",
+      "sha256": "ddc442b8128c8fd3835e924be4a05e62da828625b3898caed357846c3416903c"
+    },
+    "current_index": {
+      "path": "research/2026-10-15-card-reference-successor.json",
+      "sha256": "ceae861cd595a44f45691e83f9bbe5ac5ca83e9a17a5b3bf24f73013210d9e3b"
+    },
+    "definitions": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "prior_name_screen": {
+      "path": "research/2026-10-15-card-protein-name-screen.json",
+      "sha256": "9ea833b1d24f8c48189a374f13a549ccff6458185d77f782a86961aea15a8a51"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    },
+    "taxonomy_inventory": {
+      "path": "reports/resistance-grounding-2026-10-15-card-gene-reference-followup/taxonomy-cache-inventory.json",
+      "sha256": "071db296d1418042946d97ffcd408151e2d665346a36b346df4f5ab048fc2d72"
+    }
+  },
+  "max_bytes": 1000000,
+  "prior_exact_query_search_included_ignored_files": true,
+  "prior_matching_exact_requests": 0,
+  "release": "2026_03",
+  "requests": {
+    "fri11": {
+      "query": "xref:refseq-WP_223174987.1",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Arefseq-WP_223174987.1&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "vim92": {
+      "query": "xref:embl-PQ563311",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-PQ563311&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "wus-taxonomy": {
+      "query": "\"Myroides albus\" AND rank:species",
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Myroides+albus%22+AND+rank%3Aspecies&format=json&size=500"
+    },
+    "wus1": {
+      "query": "UPP01678.1",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=UPP01678.1&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "reused_taxonomy": {
+    "287": {
+      "source": {
+        "url": "https://rest.uniprot.org/taxonomy/287",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-4bbd28383b3f1605787c22f019f974a4e70d9c85458753fd6b133c4498744057.json",
+          "sha256": "1ef1df6197f9c8fa81b3bb269e23ebaf319b7de98f12fb1eae58cd894f331e66"
+        }
+      },
+      "taxon_id": "287"
+    }
+  }
+}

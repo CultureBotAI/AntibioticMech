@@ -1,0 +1,723 @@
+{
+  "access_holds": [
+    {
+      "asset": "earlier_primary_article",
+      "checked_on": "2026-10-13",
+      "doi": "10.1128/ec.00323-07",
+      "retried_or_alternate_transport_used": false,
+      "status": "TOOL_INACCESSIBLE_NO_HTTP_STATUS_AVAILABLE",
+      "url": "https://journals.asm.org/doi/full/10.1128/ec.00323-07"
+    },
+    {
+      "asset": "figure1",
+      "checked_on": "2026-10-13",
+      "doi": "10.1128/ec.05170-11",
+      "retried_or_alternate_transport_used": false,
+      "status": "TOOL_TIMEOUT",
+      "url": "https://journals.asm.org/cms/10.1128/ec.05170-11/asset/7d907cca-123a-4000-928b-0e52fdf8b034/assets/graphic/zek9990938050001.jpeg"
+    }
+  ],
+  "attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "source": "UniProt Consortium"
+  },
+  "complete_collection_aware_record_loaded": true,
+  "date": "2026-10-13",
+  "discovery": {
+    "aliases": {
+      "all_discovery_sources_or_full_bibliography_audited": false,
+      "includes_reviewed_2011_source": false,
+      "input": {
+        "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+        "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+      },
+      "retained_dois": [
+        "10.1128/ec.00323-07"
+      ]
+    },
+    "canonical": {
+      "all_discovery_sources_or_full_bibliography_audited": false,
+      "includes_reviewed_2011_source": false,
+      "input": {
+        "path": "research/2026-10-07-resistance-discovery-current-candidates.json",
+        "sha256": "5404527e95ec2adc37faad773a8fc699433495503cf82f1bfe278385198d201f"
+      },
+      "retained_dois": [
+        "10.1128/ec.00323-07"
+      ]
+    }
+  },
+  "experimental_subjects_assigned": [],
+  "inputs": {
+    "canary": {
+      "path": "reports/resistance-grounding-2026-10-13-sampangine/canary-reviewed.json",
+      "sha256": "24522292a8a9692973e4a31dca6ac26b9ae350e804706ce155b27f3fbc6215b5"
+    },
+    "census": {
+      "path": "research/2026-10-13-blasticidin-deaminase-resistance-grounding.tsv",
+      "sha256": "b630521072e27883b1dac381e5473a838edc7ecd6a7c9d1170af19277deea0d4"
+    },
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-13-sampangine/cohort.json",
+      "sha256": "37a2189a92b2812929b1e16db0684d9a7639a2aa5ad3fa766e680cb852ee0f23"
+    },
+    "primary_review": {
+      "path": "reports/resistance-grounding-2026-10-13-sampangine/primary-review.json",
+      "sha256": "c931f182f6aa0745a4f91afca07972b1fb23760d892da7c7bd1c708d5a42512c"
+    },
+    "snq2_dossier": {
+      "path": "research/2026-10-12-thiolutin-context.json",
+      "sha256": "7513c5f467ee3cffad02c9a1591b60b7f56149eab1cd868b4d2533666b612f06"
+    },
+    "taxonomy_dossier": {
+      "path": "research/2026-10-13-tavaborole-reference-context.json",
+      "sha256": "6f021d40120fc2ff0c66a38ca7e71acd573438a694a6d023bbd9c1f574ccf75f"
+    }
+  },
+  "limits": [
+    "CIN5's earlier source remains an inaccessible discovery lead, not a verified experimental result.",
+    "S288c reference proteins and reference-strain TaxID do not identify exact tested strains or alleles.",
+    "Reviewed S288c queries are bounded reference searches, not exhaustive all-strain coverage.",
+    "The old thiolutin finding is not transferred to sampangine; only its versioned SNQ2 reference is reused.",
+    "The 2011 source is absent only from the two inspected historical query outputs; broader discovery outputs were not audited here.",
+    "Metadata can be replayed offline; manually inspected primary text is not reproducible from the denied cache response.",
+    "Native figures and supplements remain unreviewed. No failed publisher request was retried or bypassed.",
+    "No sequence, variant specification, construct, protocol, numeric AST or sample/genome join is exported.",
+    "No NCBI requests, contact, source adoption, reuse-terms review or GitHub mutation; issue 1040 remains deferred."
+  ],
+  "primary": {
+    "biological_records_changed": 0,
+    "checked_on": "2026-10-13",
+    "doi": "10.1128/ec.05170-11",
+    "findings": [
+      {
+        "curation_admitted": false,
+        "direct_transport_demonstrated": false,
+        "evidence_scope": "AUTHOR_REPORT_DATA_NOT_SHOWN",
+        "gene": "SNQ2",
+        "key": "snq2",
+        "source_location": "Results, first subsection, SNQ2 statement",
+        "summary": "Resistance association reported; supporting results are not displayed."
+      },
+      {
+        "curation_admitted": false,
+        "evidence_scope": "SENSITIVITY_NOT_RESISTANCE",
+        "gene": "HEM4",
+        "key": "hem4_sensitivity",
+        "native_figure_reviewed": false,
+        "source_location": "Results, final subsection; Figure 5C caption",
+        "summary": "The reported yeast phenotype is increased sensitivity, not resistance."
+      },
+      {
+        "curation_admitted": false,
+        "establishes_biological_absence": false,
+        "evidence_scope": "AUTHOR_REPORTED_NEGATIVE_FINDING_DATA_NOT_SHOWN",
+        "gene": "HEM4",
+        "key": "hem4_negative",
+        "source_location": "Results, final subsection, final two sentences",
+        "summary": "No successful resistant HEM4 variants are reported in this study; this does not establish biological absence."
+      },
+      {
+        "curation_admitted": false,
+        "erases_snq2_report": false,
+        "evidence_scope": "DISTINCT_SCREEN_CONTEXTS",
+        "key": "screen_scope",
+        "source_location": "Introduction, final paragraph; Results, first subsection",
+        "summary": "Negative resistance screening concerns the deletion collection, not every experiment."
+      },
+      {
+        "curation_admitted": false,
+        "evidence_scope": "BIOCHEMICAL_AND_GENETIC_CONTEXTS_SEPARATE",
+        "human_assay_protein_assigned_from_yeast_reference": false,
+        "key": "human_yeast_scope",
+        "source_location": "Results, final subsection; Discussion, human UIIIS paragraph",
+        "summary": "Human biochemical results and yeast genetic results are distinct contexts. Proposed target modulation does not establish a resistance mechanism or direct binding."
+      }
+    ],
+    "inspection": {
+      "failed_requests_retried_or_bypassed": false,
+      "full_article_review_complete": false,
+      "full_text_snapshot_persisted": false,
+      "later_cache_attempt": "HTTP_403_NOT_A_PRIMARY_TEXT_SNAPSHOT",
+      "native_result_images_reviewed": false,
+      "selected_primary_results_text_read": true,
+      "supplements_reviewed": false,
+      "transport": "web.open"
+    },
+    "url": "https://journals.asm.org/doi/full/10.1128/ec.05170-11",
+    "whole_record_review": "OPEN"
+  },
+  "primary_cache_failure": {
+    "bytes": 5565,
+    "content_type": "text/html; charset=UTF-8",
+    "is_primary_text_snapshot": false,
+    "path": "reports/resistance-grounding-2026-10-13-sampangine/source.html",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-sampangine/source-receipt.json",
+      "sha256": "7b82d243561f47a041aff830560be1d96ec4e8b4315b15476aca2b634ce39382"
+    },
+    "redirect_target": null,
+    "redirects_followed": false,
+    "retrieved_at": "2026-10-13T13:48:58.496714+00:00",
+    "sha256": "e408ebab32b2f6fe4dac2b5af2d89aea651932a8c1c64e51b8e1babc9add1055",
+    "status": 403,
+    "url": "https://journals.asm.org/doi/full/10.1128/ec.05170-11"
+  },
+  "record": {
+    "identifier": "CHEBI:67606",
+    "path": "data/antibiotics/antifungal/sampangine.yaml",
+    "sha256": "843cf2c01380c7976925e02425b425b1ed9dbf477ab2411cd507335c77f3c92c",
+    "standard_inchi_key": "BWQKHOMAOVUASZ-UHFFFAOYSA-N"
+  },
+  "reference_proteins": {
+    "CIN5": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s098"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169874"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.17.12.6982"
+            },
+            {
+              "database": "PubMed",
+              "id": "9372930"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.42.5.1034"
+            },
+            {
+              "database": "PubMed",
+              "id": "9593122"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1998"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0014-5793(98)00249-x"
+            },
+            {
+              "database": "PubMed",
+              "id": "9559673"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1998"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1124/mol.59.3.470"
+            },
+            {
+              "database": "PubMed",
+              "id": "11179441"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2001"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1126/science.1075090"
+            },
+            {
+              "database": "PubMed",
+              "id": "12399584"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2002"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nbt890"
+            },
+            {
+              "database": "PubMed",
+              "id": "14555958"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02026"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562095"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/mcp.m700468-mcp200"
+            },
+            {
+              "database": "PubMed",
+              "id": "18407956"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1126/science.1172867"
+            },
+            {
+              "database": "PubMed",
+              "id": "19779198"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2009"
+        }
+      ],
+      "compound_specific_resistance_independently_verified": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 181,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "CIN5",
+        "HAL6",
+        "SDS15",
+        "YAP4"
+      ],
+      "human_assay_protein_assignment": false,
+      "ordered_locus_names": [
+        "YOR028C"
+      ],
+      "protein_accession": "UniProtKB:P40917",
+      "protein_name": "AP-1-like transcription factor YAP4",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "HELD_EARLIER_PRIMARY_LEAD_REFERENCE",
+      "sequence_version": 1,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "HEM4": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1007/bf00420604"
+            },
+            {
+              "database": "PubMed",
+              "id": "2834088"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1986"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/(sici)1097-0061(199609)12:10b%3c1059::aid-yea994%3e3.0.co;2-7"
+            },
+            {
+              "database": "PubMed",
+              "id": "8896271"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1996"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s098"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169874"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/yea.320110504"
+            },
+            {
+              "database": "PubMed",
+              "id": "7597845"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1995"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        }
+      ],
+      "compound_specific_resistance_independently_verified": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 178,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "HEM4",
+        "ORF1"
+      ],
+      "human_assay_protein_assignment": false,
+      "ordered_locus_names": [
+        "YOR278W"
+      ],
+      "protein_accession": "UniProtKB:P06174",
+      "protein_name": "Uroporphyrinogen-III synthase",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "SENSITIVITY_AND_NEGATIVE_FINDING_REFERENCE_NOT_RESISTANCE_ALLELE",
+      "sequence_version": 2,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "SNQ2": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1007/bf00277115"
+            },
+            {
+              "database": "PubMed",
+              "id": "8437567"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1993"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/(sici)1097-0061(199609)12:10b<1085::aid-yea9>3.3.co;2-s"
+            },
+            {
+              "database": "PubMed",
+              "id": "8896275"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1996"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s075"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169867"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.270.30.18150"
+            },
+            {
+              "database": "PubMed",
+              "id": "7629127"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1995"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1021/pr060559j"
+            },
+            {
+              "database": "PubMed",
+              "id": "17330950"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2007"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/mcp.m700468-mcp200"
+            },
+            {
+              "database": "PubMed",
+              "id": "18407956"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1126/science.1172867"
+            },
+            {
+              "database": "PubMed",
+              "id": "19779198"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2009"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.1210303109"
+            },
+            {
+              "database": "PubMed",
+              "id": "22814378"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2012"
+        }
+      ],
+      "compound_specific_resistance_independently_verified": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 216,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "SNQ2"
+      ],
+      "human_assay_protein_assignment": false,
+      "ordered_locus_names": [
+        "YDR011W"
+      ],
+      "protein_accession": "UniProtKB:P32568",
+      "protein_name": "Protein SNQ2",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "AUTHOR_REPORTED_LEAD_WITHOUT_DISPLAYED_RESULTS_REFERENCE",
+      "sequence_version": 2,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    }
+  },
+  "resistance_assertions_added": [],
+  "scope": "SELECTED_PRIMARY_TEXT_REVIEW_AND_REFERENCE_IDENTITIES",
+  "source_organism_context": {
+    "experimental_strain_sample_genome_and_allele_links": "UNRESOLVED_NOT_ASSERTED_ABSENT",
+    "grounding_basis": "NAME_MATCH_TO_PINNED_UNIPROT_SPECIES_LINEAGE",
+    "named_taxon_id": "NCBITaxon:4932",
+    "rank": "species",
+    "reference_strain_taxon_id_assigned_to_experiment": false,
+    "resistance_subject_assignment": false,
+    "source_reported_name": "Saccharomyces cerevisiae",
+    "taxon_id_source": "UNIPROT_LINEAGE_MATCH_NOT_VERIFIED_AS_ARTICLE_REPORTED"
+  },
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_in_scope": 2939,
+    "experimental_accessions_assigned": 0,
+    "new_taxonomy_requests": 0,
+    "new_uniprot_queries": 2,
+    "reference_proteins": 3,
+    "reused_taxonomy_responses": 1,
+    "reused_uniprot_queries": 1,
+    "selected_primary_articles_with_text_review": 1,
+    "selected_records": 1,
+    "whole_records_completed": 0
+  },
+  "taxonomy_request": {
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+    },
+    "new_request": false,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+      "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+    "reused_byte_identically": true,
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/559292"
+  },
+  "uniprot_requests": {
+    "CIN5": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-sampangine/cin5-response.bin",
+        "sha256": "793cfa23fe028f7fa37a9893f47fe8d53a9d4aadf6c7305d124aa6e5d8efec66"
+      },
+      "new_request": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-sampangine/cin5-receipt.json",
+        "sha256": "e3c91e6ff4be36aab2aa67f0b20585b905734f27d4fb316696fa9c08418afda4"
+      },
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-13T13:50:01.937260+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACIN5+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "HEM4": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-sampangine/hem4-response.bin",
+        "sha256": "454a96e4510643262db7b8c9367381e4a99c08ba63eaddc04b8e3fea4b9d21c3"
+      },
+      "new_request": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-sampangine/hem4-receipt.json",
+        "sha256": "0442615ce6662fe7b7a0e2f348152d433c1051790267f0d4fb16bb1668025367"
+      },
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-13T13:49:24.654046+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AHEM4+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "SNQ2": {
+      "body_sha256": "612f9b08494d5f3441c302e50dec390b57fd5a5c5c636bf65ae5888fe4edb12e",
+      "new_request": false,
+      "pagination_complete": true,
+      "path": "reports/resistance-grounding-2026-10-12-thiolutin/request-6c7f593c65946fdf9485a26ad0190e2482e0e98443ffd1ef0a29eed90a78fcdf.json",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-12T22:10:44.236072+00:00",
+      "reused_byte_identically": true,
+      "sha256": "48050e75b5f7412aa714331ae2fe0184e610f48ef8ae2afdde457102b2b0aef4",
+      "status": 200,
+      "total_results": 1,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ASNQ2+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  }
+}

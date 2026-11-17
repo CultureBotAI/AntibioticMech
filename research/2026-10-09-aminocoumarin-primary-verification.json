@@ -1,0 +1,211 @@
+{
+  "adversarial_review": "SELF_REVIEW_WITH_SOURCE_SCOPE_AND_PRESERVATION_REGRESSIONS_NOT_INDEPENDENT_REVIEW",
+  "all_current_record_hashes_verified": 2939,
+  "all_other_record_fields_preserved": true,
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "a36a4f8b15bed3b40dc062bfa33a4843e2892c66c123c83daf3c4d1fd3678267"
+    },
+    {
+      "path": "research/2026-10-09-aminocoumarin-primary-checkpoint-reconciliation.json",
+      "sha256": "18bdf0db2499b4fe93d8cc80ee565fc6ca543aacad4c7285f6f457cec827f824"
+    },
+    {
+      "path": "research/2026-10-09-aminocoumarin-primary-context.json",
+      "sha256": "b9e0c6b79af5317e42223a01b869f25ec3498d5379cbbef5563efb9769d43656"
+    },
+    {
+      "path": "research/2026-10-09-aminocoumarin-primary-curation.json",
+      "sha256": "503855ee4bbdfd4310ff23a40d89c22c21ebb90b60c208314876ec8499effc0f"
+    },
+    {
+      "path": "research/2026-10-09-aminocoumarin-primary-resistance-grounding.tsv",
+      "sha256": "3d5bd6926f6edba6c2e36d05ef5bf5627f7c248506f0d84a0123e5c40d860723"
+    },
+    {
+      "path": "research/2026-10-09-aminocoumarin-primary-resistance-progress.json",
+      "sha256": "3abb24c586ab19cec2574a2341a932b313760858075f733c58cfa794dd0f1030"
+    },
+    {
+      "path": "research/2026-10-09-aminocoumarin-primary-resistance-progress.tsv",
+      "sha256": "9596c91cb6e668bf25799cfcd332f21e66540562b22973351576633eb040a5e3"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "6dd369a86bec05310866eda979b897d7c6bca678e6c53184a73cb0943e614dbe"
+    },
+    {
+      "path": "tests/test_aminocoumarin_primary_curation.py",
+      "sha256": "a297f79ffce43eee8baf537bc176909b3702bc51eb27beec95ebb6f327ec6afc"
+    }
+  ],
+  "changed_protected_files": {
+    "data/antibiotics/antibacterial/coumermycin-a1.yaml": {
+      "after_sha256": "c17d4ae89ba13e9ec5d3cae6f36eefa234685dc4d4249c1b5f2e91412fb81f79",
+      "before_sha256": "2e77f06884f8afb05a79df534bd16df1fbd741a91f482091b4d4d5862cde0fbd"
+    },
+    "data/antibiotics/antibacterial/novobiocin.yaml": {
+      "after_sha256": "0493eb6364990e579ac5acaadb12281981ce6831f643b8797e56f2371d0cd568",
+      "before_sha256": "9ae7d270c772405bad59e0f394e797bc2d0c9550bd1e9dbd71f29e882e2081d3"
+    },
+    "data/embeddings/corpus_map.json": {
+      "after_sha256": "d57d72161d364f27f97d121b8501cb04bce0a51af4cd8788b43057443a942d9b",
+      "before_sha256": "6855280605e7f817e72c4db6f9ed18ab33bab2cfe6b72a9defcf790f084183ab"
+    },
+    "data/embeddings/meta.json": {
+      "after_sha256": "bdd444ddf8f81a2584f0e582a38261f889b23b1b18a56f819fb4aa1ddd22af2e",
+      "before_sha256": "e7c61f2083f190d0bfd2c9a1481a72d533e136da6686484619426306532cacec"
+    },
+    "data/embeddings/vectors.f16.npy": {
+      "after_sha256": "9bba30b1b8b56b028d1b732970b0c45ee56153e7007fdf8b8e99566ed4b055ec",
+      "before_sha256": "78c665033cbddd029accd3510f07c6653baf171fecc037cca8575f72c24ab620"
+    },
+    "pages/antibacterial/coumermycin-a1.html": {
+      "after_sha256": "c286649d1c51a69ccdff8d34ae4bae8bbd40842ca6422e947565c7c723573bad",
+      "before_sha256": "a0803ec8563cc41ca307f2bd21e43bcb458109958e1351b9bc2334a0badd4cc6"
+    },
+    "pages/antibacterial/novobiocin.html": {
+      "after_sha256": "43efa0988853bbaf7892ea9a57a949b6fbcb2003d0b80c7055c44144601faa94",
+      "before_sha256": "ef7acf9f32efc0839a0e5c187266fb4c1104e328f06dd8b1abc2b6ae31c258e7"
+    },
+    "pages/map.html": {
+      "after_sha256": "73374d88592ec80f4d5cc987fcf91f51cef49c27bb1f60a5dad54b48cf164f16",
+      "before_sha256": "195f4cb7c3d4f9190b0676cdd540b6d1e89684b23f2e53ee40f406dd076e83d1"
+    },
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "a36a4f8b15bed3b40dc062bfa33a4843e2892c66c123c83daf3c4d1fd3678267",
+      "before_sha256": "196a5a7700bf496424f7a0ff78b9bbd2e5354fa9919fec3084f8592080f4cf19"
+    },
+    "scripts/summarize_resistance_progress.py": {
+      "after_sha256": "6dd369a86bec05310866eda979b897d7c6bca678e6c53184a73cb0943e614dbe",
+      "before_sha256": "241a939ef82c5fa9bece9f78ff3e34f170a61e62742a1809baf8f39f585de942"
+    }
+  },
+  "complete_projection_and_rendered_links_verified": 2939,
+  "curator_claims": 49,
+  "curator_records": 32,
+  "current_ledger": {
+    "path": "research/2026-10-09-aminocoumarin-primary-resistance-grounding.tsv",
+    "sha256": "3d5bd6926f6edba6c2e36d05ef5bf5627f7c248506f0d84a0123e5c40d860723"
+  },
+  "date": "2026-10-09",
+  "dependency_warning": "LinkML dataclass-extension deprecation in sssom_schema; no dependency changes made.",
+  "embedding_changed_documents": [
+    "CHEBI:3907"
+  ],
+  "embedding_publication": {
+    "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/embedding-stage/published.json",
+    "sha256": "e44e9a32e224108c0dade4dd1bb9fef524dcfbae4eba6f1872e95c0c3668564e"
+  },
+  "embedding_reuse_proof": {
+    "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/embedding-stage/reuse-proof.json",
+    "sha256": "f25e6758124d3103434f8ad6f4897e0638b71b6866ce4efa3100ea96022fc2ea"
+  },
+  "embedding_rows_reused_byte_identically": 2938,
+  "embedding_scope_limit": "Existing six-resistance-label cap leaves novobiocin model text unchanged; its record and page do change. Builder unchanged.",
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/focused-tests-final.xml",
+    "sha256": "a7b89aa0f222b44865d14c44145d8623c4d57f7ef4bec6ed585c01b2b229bd2f"
+  },
+  "focused_tests_passed": 35,
+  "full_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/full-tests.xml",
+    "sha256": "921f1149d1775063ddfde2ab6bd69255e3e118fed335636fe93fb72a2598a25a"
+  },
+  "full_test_skip_details": [
+    {
+      "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+      "test": "tests.test_card_structure_links.test_cached_export_reproduces_when_research_cache_is_available"
+    },
+    {
+      "reason": "got empty parameter set for (path)",
+      "test": "tests.test_skill_frontmatter.test_command_frontmatter_has_no_duplicate_keys[NOTSET]"
+    },
+    {
+      "reason": "got empty parameter set for (path)",
+      "test": "tests.test_skill_frontmatter.test_command_frontmatter_is_valid_yaml[NOTSET]"
+    },
+    {
+      "reason": "got empty parameter set for (path)",
+      "test": "tests.test_skill_frontmatter.test_command_declares_a_usable_description[NOTSET]"
+    }
+  ],
+  "full_test_warnings": 1,
+  "full_tests_passed": 2532,
+  "full_tests_skipped": 4,
+  "github_mutations": 0,
+  "history_events_added": 2,
+  "ignored_files_included": true,
+  "ncbi_endpoint_requests": 0,
+  "new_files_before_verification_receipt": [
+    {
+      "path": "research/2026-10-09-aminocoumarin-primary-checkpoint-reconciliation.json",
+      "sha256": "18bdf0db2499b4fe93d8cc80ee565fc6ca543aacad4c7285f6f457cec827f824"
+    },
+    {
+      "path": "research/2026-10-09-aminocoumarin-primary-context.json",
+      "sha256": "b9e0c6b79af5317e42223a01b869f25ec3498d5379cbbef5563efb9769d43656"
+    },
+    {
+      "path": "research/2026-10-09-aminocoumarin-primary-curation.json",
+      "sha256": "503855ee4bbdfd4310ff23a40d89c22c21ebb90b60c208314876ec8499effc0f"
+    },
+    {
+      "path": "research/2026-10-09-aminocoumarin-primary-resistance-grounding.tsv",
+      "sha256": "3d5bd6926f6edba6c2e36d05ef5bf5627f7c248506f0d84a0123e5c40d860723"
+    },
+    {
+      "path": "research/2026-10-09-aminocoumarin-primary-resistance-progress.json",
+      "sha256": "3abb24c586ab19cec2574a2341a932b313760858075f733c58cfa794dd0f1030"
+    },
+    {
+      "path": "research/2026-10-09-aminocoumarin-primary-resistance-progress.tsv",
+      "sha256": "9596c91cb6e668bf25799cfcd332f21e66540562b22973351576633eb040a5e3"
+    },
+    {
+      "path": "tests/test_aminocoumarin_primary_curation.py",
+      "sha256": "a297f79ffce43eee8baf537bc176909b3702bc51eb27beec95ebb6f327ec6afc"
+    }
+  ],
+  "prior_report_bytes_preserved": true,
+  "prior_research_artifacts_unchanged_except_report_append": true,
+  "protected_files": 6809,
+  "protected_files_unchanged": 6799,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/protected-before.json",
+    "sha256": "084306c52f30ec584c93e3a3264cd9c23a5d26341704c73e5823c698bfce54a1"
+  },
+  "qc_gates": [
+    "lint",
+    "documentation",
+    "raw-data provenance",
+    "source queue",
+    "curator antibiotic structures",
+    "tests",
+    "schema validation",
+    "corpus reproduction",
+    "chemical map",
+    "generated site",
+    "corpus report"
+  ],
+  "qc_receipt": {
+    "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/full-qc-exit.json",
+    "sha256": "b8253f030e858058f9165d9a7b8b7167bcd6762b719abc6593750279f79f6402"
+  },
+  "records_byte_identical": 2937,
+  "records_changed": 2,
+  "remaining_limits": [
+    "No native-donor phenotype is inferred from a heterologous host.",
+    "No induced point mutant or exact experimental protein is assigned.",
+    "The 2004 biochemical abstract is not promoted to inspected primary Results.",
+    "The clorobiocin record and existing CARD assertions remain unchanged.",
+    "No source-owned chemical fields are changed; the SMILES parsing defect remains open."
+  ],
+  "scope": "QUALITATIVE_CURATION_AND_REFERENCE_CONTEXT_NOT_COMPLETED_CORPUS_RESEARCH",
+  "source_adoptions": 0,
+  "source_inputs_unchanged": true,
+  "source_owned_slices_preserved": true,
+  "status": "ALL_AUTHORITATIVE_QC_GATES_PASSED",
+  "whole_corpus_primary_review": "OPEN"
+}

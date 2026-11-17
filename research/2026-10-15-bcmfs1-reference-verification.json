@@ -1,0 +1,97 @@
+{
+  "adversarial_review": {
+    "method": "Separate self-review of evidence scope, source joins, query completeness and code",
+    "remaining": [
+      "Source gene alias",
+      "Primary full-text results and exact chemical form",
+      "Experimental allele, strain and genome joins"
+    ],
+    "resolved": [
+      "Withheld the MFS1-to-Bcmfs1 source alias and removed the unsupported coverage increment.",
+      "Retained all eight distinct same-name loci rather than selecting a representative.",
+      "Kept bibliography strain comments separate from tested subject identity.",
+      "Removed an unnecessary response-order dependency; overlapping entries are compared by accession."
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "research/2026-10-15-bcmfs1-reference.json",
+      "sha256": "3d1501c9b659cecc52d9d2396cd50b59f5d5dca51d9d206f570c89e52ff3566d"
+    },
+    {
+      "path": "research/2026-10-15-bcmfs1-reference-audit-plan.json",
+      "sha256": "caedf00800b3bbd0b8e7c85b2b7c2aaa31a7128be69627761aef4c289cdac259"
+    },
+    {
+      "path": "research/2026-10-15-bcmfs1-reference-assessment.json",
+      "sha256": "9fb16f45d0727dd2aef0d4b32aff23f929a1a7623058343c947d41b273a624e7"
+    },
+    {
+      "path": "research/2026-10-15-bcmfs1-reference-plan.json",
+      "sha256": "0d2bd4ae281f74eaeec3ca4290c382475496c9107551f6c924f2d4d0850766e9"
+    },
+    {
+      "path": "scripts/audit_bcmfs1_reference.py",
+      "sha256": "2c331c80c2108923cd024f486212d015b5a79d73a02016a668ab198c9ab0f3e6"
+    },
+    {
+      "path": "tests/test_bcmfs1_reference.py",
+      "sha256": "4fec56278acc2b5ded2ff5e554b1dab011924b7455956956d9bc364db7afc625"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-bcmfs1-reference/baseline.json",
+    "sha256": "bfb3c7d43024029e6bac015ef810556125772ececea3b7804c9bf7aad067d418"
+  },
+  "biological_records_written": 0,
+  "bounded_cohort_qualified": 108,
+  "bounded_cohort_total": 178,
+  "checks": {
+    "full_authoritative_qc_rerun": false,
+    "git_diff_check": "PASS",
+    "ruff_changed_code": "PASS"
+  },
+  "date": "2026-10-15",
+  "existing_files_checked": 7993,
+  "experimental_identifiers_assigned": false,
+  "focused_regression": {
+    "command": "/private/tmp/antibioticmech-qc-2026-10-15/bin/python -m pytest tests/test_bcmfs1_reference.py tests/test_cdsa_qualification_checkpoint.py -q",
+    "errors": 0,
+    "failed": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-bcmfs1-reference/tests-final.xml",
+      "sha256": "d5c163a48d4bdeb2f165ed01529ef7fa96dd64bf13b7e9deb800c8d7fdda0ce8"
+    },
+    "passed": 43,
+    "skipped": 0
+  },
+  "full_investigation_complete": false,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "native_replay": {
+    "equal_to_public_dossier": true,
+    "file_writes_denied": true,
+    "network_denied": true
+  },
+  "ncbi_requests": 0,
+  "report_append": {
+    "after_sha256": "d25a2d8999ac8b8e143573f319c5247d7045a2b899d24ac59f44b55d49cf5283",
+    "before_sha256": "b8be8cfa3f82510713fff11a66d10896401d5f728c6a2a32d8ccb2c76224bb5b",
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "prior_bytes_exactly_reconstructed": true
+  },
+  "status": "PUBLICATION_REFERENCE_LEAD_SAVED_SOURCE_ALIAS_STILL_UNRESOLVED",
+  "summary": {
+    "biological_records_written": 0,
+    "complete_collection_aware_records_read": 1,
+    "corpus_records_hash_checked": 2939,
+    "native_gene_candidates": 9,
+    "ncbi_requests": 0,
+    "new_uniprot_requests": 2,
+    "publication_qualified_references": 1,
+    "qualified_card_term_mappings": 0,
+    "reused_taxonomy_nodes": 2,
+    "unresolved_gene_only_candidates": 8
+  },
+  "unchanged_existing_files": 7992
+}

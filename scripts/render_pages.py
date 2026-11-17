@@ -31,12 +31,14 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import csv
 import filecmp
 import json
 import re
 import shutil
 import sys
 from collections import Counter, defaultdict
+from functools import lru_cache
 from pathlib import Path
 
 import yaml
@@ -54,7 +56,10 @@ CHEMICAL_MAP_ARTIFACT = REPO_ROOT / "data" / "embeddings" / "chemical-structure-
 # first time a class is added — which is exactly what happened when ANTIVIRAL
 # had to be threaded through four separate enumerations by hand.
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
+from activity_pages import render_activity_pages  # noqa: E402
 from seed_from_sources import CLASS_DIRS, class_parents, rollup_by_class  # noqa: E402
+
+from antibioticmech.activity_collections import load_record  # noqa: E402
 
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "MANIFEST.yaml"
 
@@ -170,8 +175,7 @@ XREF_URL_TEMPLATES = _xref_url_templates()
 def load_records() -> list[tuple[Path, dict]]:
     out = []
     for path in sorted(CORPUS_DIR.rglob("*.yaml")):
-        with path.open(encoding="utf-8") as fh:
-            doc = yaml.safe_load(fh)
+        doc = load_record(path)
         if isinstance(doc, dict):
             out.append((path, doc))
     return out
@@ -217,6 +221,26 @@ def external_iri(identifier: str) -> str | None:
     return template.format(local) if template else None
 
 
+@lru_cache(maxsize=1)
+def term_labels() -> dict[str, str]:
+    """Labels from the committed source inventories, never guessed from CURIEs."""
+    labels: dict[str, set[str]] = defaultdict(set)
+    sources = [
+        ("chebi_antimicrobials.tsv", "chebi_id", "name"),
+        ("aro_antibiotics.tsv", "aro_id", "name"),
+        ("aro_antibiotics.tsv", "drug_class_id", "drug_class_label"),
+        ("chebi_role_names.tsv", "role_id", "name"),
+    ]
+    for filename, id_key, label_key in sources:
+        path = MANIFEST_PATH.parent / filename
+        if path.exists():
+            with path.open(encoding="utf-8", newline="") as source:
+                for row in csv.DictReader(source, delimiter="\t"):
+                    if row.get(id_key) and row.get(label_key):
+                        labels[row[id_key]].add(row[label_key])
+    return {key: next(iter(values)) for key, values in labels.items() if len(values) == 1}
+
+
 def resolve_curie(curie: str, index: dict[str, dict], root: str) -> dict:
     """Turn a CURIE into a link: internal if it is a record in this corpus,
     external if its prefix is one this site resolves,
@@ -226,7 +250,24 @@ def resolve_curie(curie: str, index: dict[str, dict], root: str) -> dict:
         href = f"{root}{entry['class_dir']}/{entry['slug']}.html"
         return {"id": curie, "label": entry["label"], "href": href}
     href = external_iri(curie)
-    return {"id": curie, "label": None, "href": href}
+    return {"id": curie, "label": term_labels().get(curie), "href": href}
+
+
+def _resolve_protein_examples(
+    examples: list[dict], index: dict[str, dict], root: str
+) -> list[dict]:
+    return [
+        {
+            **p,
+            "resolved_uniprot_id": (
+                resolve_curie(p["uniprot_id"], index, root) if p.get("uniprot_id") else None
+            ),
+            "resolved_taxon_id": (
+                resolve_curie(p["taxon_id"], index, root) if p.get("taxon_id") else None
+            ),
+        }
+        for p in examples
+    ]
 
 
 def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> dict:
@@ -285,7 +326,9 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
             "source_version": t.get("source_version"),
             "source_retrieved_on": t.get("source_retrieved_on"),
             "measurements": t.get("measurements") or [],
-            "protein_examples": t.get("protein_examples") or [],
+            "protein_examples": _resolve_protein_examples(
+                t.get("protein_examples") or [], index, root
+            ),
             "evidence": t.get("evidence") or [],
         }
         for t in (doc.get("molecular_targets") or [])
@@ -296,6 +339,13 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
         for event in (doc.get("curation_history") or [])
     ]
 
+    related_records = []
+    for link in doc.get("related_records") or []:
+        row = dict(link)
+        if row.get("corpus") == "PathwayMech":
+            slug = row["identifier"].replace(":", "_").replace("/", "_")
+            row["url"] = f"https://culturebotai.github.io/PathwayMech/pages/records/{slug}.html"
+        related_records.append(row)
     identifier = doc["identifier"]
     return {
         "identifier": identifier,
@@ -326,6 +376,7 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
         ],
         "source_concepts": doc.get("source_concepts") or [],
         "molecular_targets": molecular_targets,
+        "related_records": related_records,
         "mode_of_action": doc.get("mode_of_action"),
         "mode_of_action_notes": doc.get("mode_of_action_notes"),
         "mode_of_action_target_scope": doc.get("mode_of_action_target_scope"),
@@ -342,7 +393,26 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
                 for method in (item.get("link_evidence") or [])]}
             for item in (doc.get("producer_organisms") or [])
         ],
-        "causal_graphs": doc.get("causal_graphs") or [],
+        "causal_graphs": [
+            {
+                **g,
+                "nodes": [
+                    {
+                        **n,
+                        "resolved_grounding": (
+                            resolve_curie(n["grounding"], index, root)
+                            if n.get("grounding")
+                            else None
+                        ),
+                        "protein_examples": _resolve_protein_examples(
+                            n.get("protein_examples") or [], index, root
+                        ),
+                    }
+                    for n in g.get("nodes") or []
+                ],
+            }
+            for g in doc.get("causal_graphs") or []
+        ],
         "discussions": doc.get("discussions") or [],
         "datasets": doc.get("datasets") or [],
         "evidence": doc.get("evidence") or [],
@@ -365,8 +435,8 @@ def class_hierarchy() -> dict[str, list[str]]:
     return out
 
 
-def build(out_dir: Path) -> None:
-    records = load_records()
+def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> None:
+    records = load_records() if records is None else records
     chemical_map = load_chemical_map({doc["identifier"] for _, doc in records})
     if not records:
         raise SystemExit(f"no records under {CORPUS_DIR}; run `just seed-apply` first")
@@ -421,9 +491,20 @@ def build(out_dir: Path) -> None:
         key: sum(1 for _, doc in records if doc.get(key)) for key, _label in MECHANISM_FIELDS
     }
 
+    import hashlib
+    digest_h = hashlib.sha256()
+    for _, doc in records:
+        row_key = (
+            f"{doc.get('identifier', '')}:{doc.get('curation_status', '')}:"
+            f"{len(doc.get('curation_history') or [])}\n"
+        )
+        digest_h.update(row_key.encode())
+    corpus_digest = digest_h.hexdigest()[:12]
+
     stats = {
         "total": total,
         "extracted_at": extracted_at(),
+        "corpus_digest": corpus_digest,
         "reviewed": curation_counts.get("REVIEWED", 0),
         "seeded": curation_counts.get("SEEDED", 0),
         "seeded_pct": round(100 * curation_counts.get("SEEDED", 0) / total, 1),
@@ -442,26 +523,62 @@ def build(out_dir: Path) -> None:
 
     by_class: dict[str, list[dict]] = defaultdict(list)
     href_by_identifier: dict[str, str] = {}
+    activity_written: set[Path] = set()
+    activity_pages: list[str] = []
+    browse_rows: list[list] = []
     for path, doc in records:
         class_dir = path.parent.name
         sources = sorted({c["source"] for c in (doc.get("source_concepts") or [])})
 
         record = build_record(path, doc, index, root="../")
+        publication = render_activity_pages(doc, path, out_dir, env, stats)
+        activity_written.update(publication["written"])
+        activity_pages.extend(publication["pages"])
+        if "activity" in publication:
+            record["activity"] = publication["activity"]
+            record["activity_spectrum"] = publication["preview"]
         (out_dir / class_dir / f"{path.stem}.html").write_text(
             env.get_template("record.html").render(r=record, root="../", stats=stats),
             encoding="utf-8",
         )
 
         href_by_identifier[str(doc.get("identifier"))] = f"{class_dir}/{path.stem}.html"
+        idents = [
+            doc["identifier"], *(doc.get("xrefs") or []),
+            (doc.get("chemical_structure") or {}).get("standard_inchi_key"),
+            *(c.get("source_id") for c in doc.get("source_concepts") or []),
+        ]
         by_class[class_dir].append(
             {
                 "label": doc["label"],
+                "identifier": doc["identifier"],
+                "identifiers": idents,
                 "slug": path.stem,
                 "structural_class": doc.get("structural_class") or "",
                 "grounding": doc.get("grounding_status", "?"),
                 "status": doc.get("curation_status", "?"),
                 "sources": sources,
             }
+        )
+        bits = (
+            (1 if doc.get("molecular_targets") else 0)
+            | (2 if doc.get("mode_of_action") else 0)
+            | (4 if doc.get("resistance_mechanisms") else 0)
+            | (8 if doc.get("activity_spectrum") else 0)
+        )
+        browse_rows.append(
+            [
+                doc["label"],
+                path.stem,
+                class_dir,
+                doc.get("antimicrobial_class", ""),
+                doc.get("structural_class") or "—",
+                doc.get("grounding_status", "?"),
+                doc.get("curation_status", "?"),
+                ", ".join(sources),
+                " ".join(filter(None, idents)),
+                bits,
+            ]
         )
 
     # Filing is exclusive but the classes are not disjoint: mycobacteria are
@@ -566,7 +683,7 @@ def build(out_dir: Path) -> None:
         (out_dir / "class" / f"{class_dir}.json").write_text(
             json.dumps(
                 [[r["label"], r["slug"], r["structural_class"], r["grounding"], r["status"],
-                  ", ".join(r["sources"])] for r in ordered],
+                  ", ".join(r["sources"]), " ".join(filter(None, r["identifiers"]))] for r in ordered],
                 separators=(",", ":"), ensure_ascii=False,
             ),
             encoding="utf-8",
@@ -580,6 +697,11 @@ def build(out_dir: Path) -> None:
     )
     (out_dir / "browse.html").write_text(
         env.get_template("browse.html").render(stats=stats, classes=classes, root=""),
+        encoding="utf-8",
+    )
+    browse_rows.sort(key=lambda r: r[0])
+    (out_dir / "browse-index.json").write_text(
+        json.dumps(browse_rows, separators=(",", ":"), ensure_ascii=False),
         encoding="utf-8",
     )
     # The corpus map, when its JSON has been built. Committed and small, so the
@@ -604,6 +726,23 @@ def build(out_dir: Path) -> None:
                 .replace("\u2029", "\\u2029"), root=""),
             encoding="utf-8")
 
+    seq_map_path = REPO_ROOT / "data" / "embeddings" / "sequence_map.json"
+    seq_map_rendered = seq_map_path.exists()
+    if seq_map_rendered:
+        seq_map = json.loads(seq_map_path.read_text(encoding="utf-8"))
+        (out_dir / "sequence-map.html").write_text(
+            env.get_template("sequence_map.html").render(
+                stats=stats,
+                seq_map=seq_map,
+                seq_map_json=json.dumps(seq_map, separators=(",", ":"))
+                .replace("<", "\\u003c").replace("\u2028", "\\u2028")
+                .replace("\u2029", "\\u2029"),
+                root="",
+            ),
+            encoding="utf-8",
+        )
+        shutil.copyfile(seq_map_path, out_dir / "data" / "sequence_map.json")
+
     (out_dir / "chemical-map.html").write_text(
         env.get_template("chemical_map.html").render(
             stats=stats,
@@ -614,7 +753,7 @@ def build(out_dir: Path) -> None:
         encoding="utf-8",
     )
     (out_dir / "404.html").write_text(
-        env.get_template("not_found.html").render(root="", stats=stats),
+        env.get_template("not_found.html").render(root=SITE_BASE, stats=stats),
         encoding="utf-8",
     )
     shutil.copyfile(TEMPLATES_DIR / "style.css", out_dir / "style.css")
@@ -622,16 +761,32 @@ def build(out_dir: Path) -> None:
     # "mech-theme", sets data-theme before paint, injects the toggle button.
     shutil.copyfile(TEMPLATES_DIR / "theme-toggle.js", out_dir / "theme-toggle.js")
     shutil.copyfile(TEMPLATES_DIR / "chemical_map.js", out_dir / "chemical-map.js")
+    shutil.copyfile(TEMPLATES_DIR / "activity_browser.js", out_dir / "activity-browser.js")
+    shutil.copyfile(TEMPLATES_DIR / "membership_browser.js", out_dir / "membership-browser.js")
     shutil.copyfile(
         CHEMICAL_MAP_ARTIFACT,
         out_dir / "data" / "chemical-structure-map.json",
+    )
+    # Search metadata is a presentation sidecar: it cannot change scientific
+    # distances, coordinates or the hash-bound structure-map artifact.
+    search_ids = {
+        doc["identifier"]: list(filter(None, [
+            doc["identifier"], (doc.get("chemical_structure") or {}).get("standard_inchi_key"),
+            *(doc.get("xrefs") or []),
+            *(item.get("source_id") for item in doc.get("source_concepts") or []),
+        ])) for _, doc in records
+    }
+    (out_dir / "data" / "chemical-search.json").write_text(
+        json.dumps(search_ids, ensure_ascii=False, sort_keys=True), encoding="utf-8"
     )
     # Without this, Pages runs Jekyll over the site and silently drops any
     # path beginning with an underscore — a 404 rather than a visible error.
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
 
     listed = ["index.html", "browse.html", "chemical-map.html", "404.html"] + class_pages
-    listed += [f"{path.parent.name}/{path.stem}.html" for path, _ in records]
+    if seq_map_rendered:
+        listed.insert(3, "sequence-map.html")
+    listed += [f"{path.parent.name}/{path.stem}.html" for path, _ in records] + activity_pages
     urls = "\n".join(f"  <url><loc>{SITE_BASE}{page}</loc></url>" for page in listed)
     (out_dir / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -648,17 +803,25 @@ def build(out_dir: Path) -> None:
     # shrinks and shifts, not just grows; without this, pages/ keeps serving a
     # stale page forever and --check would have nothing to catch it with.
     written = {
-        out_dir / "index.html", out_dir / "browse.html", out_dir / "chemical-map.html",
+        out_dir / "index.html", out_dir / "browse.html", out_dir / "browse-index.json",
+        out_dir / "chemical-map.html",
         out_dir / "chemical-map.js", out_dir / "data" / "chemical-structure-map.json",
+        out_dir / "data" / "chemical-search.json",
         out_dir / "404.html", out_dir / "style.css", out_dir / "theme-toggle.js",
+        out_dir / "activity-browser.js",
+        out_dir / "membership-browser.js",
         out_dir / ".nojekyll",
         out_dir / "sitemap.xml", out_dir / "robots.txt",
     }
     if map_rendered:
         written.add(out_dir / "map.html")
+    if seq_map_rendered:
+        written.add(out_dir / "sequence-map.html")
+        written.add(out_dir / "data" / "sequence_map.json")
     written |= {out_dir / page for page in class_pages}
     written |= {out_dir / "class" / f"{d}.json" for d in class_dirs}
     written |= {out_dir / path.parent.name / f"{path.stem}.html" for path, _ in records}
+    written |= activity_written
     marker = out_dir / ".antibioticmech-site"
     written.add(marker)
     marker.write_text("Generated by scripts/render_pages.py; safe to prune.\n", encoding="utf-8")
@@ -694,6 +857,8 @@ def main(argv: list[str] | None = None) -> int:
 
     if not args.check:
         build(args.out)
+        if args.out.resolve() == PAGES_DIR.resolve():
+            shutil.copyfile(PAGES_DIR / "404.html", REPO_ROOT / "404.html")
         return 0
 
     import tempfile
@@ -702,6 +867,9 @@ def main(argv: list[str] | None = None) -> int:
         target = Path(tmp) / "site"
         build(target)
         stale = []
+        root_404 = REPO_ROOT / "404.html"
+        if not root_404.exists() or root_404.read_bytes() != (target / "404.html").read_bytes():
+            stale.append("../404.html")
         for rendered in sorted(target.rglob("*")):
             if rendered.is_dir():
                 continue

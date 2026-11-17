@@ -6,6 +6,7 @@ reader hits before anyone else does.
 
 from __future__ import annotations
 
+import json
 import re
 import subprocess
 import sys
@@ -27,13 +28,21 @@ def _skill_docs() -> list[str]:
 
 
 DOC_FILES = ["README.md", "CLAUDE.md", "pyproject.toml", "docs/HARMONIZATION.md",
-             "docs/CURATION.md", "NEXT_TASKS.md",
+             "docs/CURATION.md", "docs/NCBI_AST_INVENTORY.md", "NEXT_TASKS.md",
              # Skills are instructions an agent will follow literally, so a
              # command that does not exist is worse here than in prose.
              *_skill_docs()]
 
 SCRIPT_REF = re.compile(r"scripts/[a-z_]+\.py")
 JUST_REF = re.compile(r"just ([a-z][a-z-]*)")
+
+
+def test_ncbi_ast_inventory_guide_pins_the_current_reviewed_cohort(repo_root):
+    review = json.loads((repo_root / "curation/ncbi_ast_biosample_review.json").read_text())
+    guide = (repo_root / "docs/NCBI_AST_INVENTORY.md").read_text()
+    assert f"`{review['activity_report_sha256']}`" in guide, (
+        "Refresh the inventory guide's example cohort and logical checksum when its review changes"
+    )
 
 
 def test_every_skill_declares_the_frontmatter_the_loader_needs(repo_root):
@@ -108,12 +117,17 @@ def test_no_document_quotes_a_stale_record_count(repo_root):
         pytest.skip("no corpus")
 
     pattern = re.compile(r"([\d,]{3,})\s+(?:of\s+the\s+)?records\b")
+    canonical_block = re.compile(
+        r"<!-- canonical:begin [^\n]+ -->.*?<!-- canonical:end [^\n]+ -->",
+        re.DOTALL,
+    )
     stale = []
     for name in DOC_FILES + ["ATTRIBUTION.md"]:
         path = repo_root / name
         if not path.exists():
             continue
-        for match in pattern.finditer(path.read_text(encoding="utf-8")):
+        text = canonical_block.sub("", path.read_text(encoding="utf-8"))
+        for match in pattern.finditer(text):
             value = int(match.group(1).replace(",", ""))
             # A count is either the corpus total or a documented subset; only a
             # claim about the whole corpus can be checked mechanically.
@@ -146,8 +160,8 @@ NUMERIC_CLAIMS = [
     ("curation/source_queue.tsv", "maps {} of them", "mapped_roles"),
     # Producer figures. Both halves are derivable, so the tripwire accepts them
     # swapped; only this table checks a number against ITS OWN claim (#230).
-    ("docs/CURATION.md", "22 of the {} seeded assertions", "mibig_producer_items"),
-    ("docs/CURATION.md", "{} of the 64 seeded assertions", "cluster_inherited"),
+    ("docs/CURATION.md", "99 of the {} seeded assertions", "mibig_producer_items"),
+    ("docs/CURATION.md", "{} of the 184 seeded assertions", "cluster_inherited"),
     # The adoption record. Its shape carries no corpus noun, so the tripwire
     # cannot see it at all and only this table can (#230).
     ("curation/source_queue.tsv", "of which it publishes {}", "mibig_producer_items"),
@@ -155,6 +169,8 @@ NUMERIC_CLAIMS = [
     ("docs/HARMONIZATION.md", "{} records carry one from the MIBiG import",
      "mibig_producer_records"),
     ("NEXT_TASKS.md", "the {} minted records", "minted_records"),
+    ("NEXT_TASKS.md", "Start with the {} records that already have target or resistance evidence",
+     "target_or_resistance_records"),
     ("NEXT_TASKS.md", "{} antiviral records still carry an empty `resistance_mechanisms`",
      "antiviral_without_resistance"),
     ("curation/source_queue.tsv", "supplies {} product-level APPROVED assertions",
@@ -201,6 +217,8 @@ def _derived(repo_root):
             "host_shared_target": scopes["HOST_SHARED_TARGET"],
             "minted_records": sum(
                 1 for r in records if r.get("grounding_status") == "MINTED"),
+            "target_or_resistance_records": sum(
+                1 for r in records if r.get("molecular_targets") or r.get("resistance_mechanisms")),
             "antiviral_without_resistance": sum(
                 1 for r in records
                 if r.get("antimicrobial_class") == "ANTIVIRAL"
@@ -519,7 +537,9 @@ def test_no_unregistered_numeric_claim_about_the_corpus(repo_root):
     sys.path.insert(0, str(repo_root / "scripts"))
     sys.path.insert(0, str(repo_root / "src"))
 
-    records = [yaml.safe_load(p.read_text(encoding="utf-8"))
+    from antibioticmech.activity_collections import load_record
+
+    records = [load_record(p)
                for p in (repo_root / "data" / "antibiotics").rglob("*.yaml")]
     conf = yaml.safe_load((repo_root / "conf" / "sources.yaml").read_text(encoding="utf-8"))
 

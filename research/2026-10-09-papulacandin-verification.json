@@ -1,0 +1,115 @@
+{
+  "all_current_record_hashes_verified": 2939,
+  "browser_limitation": "CUA inventory returned no enabled browsers or apps at this checkpoint.",
+  "corpus_research_complete": false,
+  "curated_record_identifiers": [
+    "CHEBI:569624",
+    "CHEBI:72630"
+  ],
+  "curation_dossier": {
+    "path": "research/2026-10-09-papulacandin-curation.json",
+    "sha256": "ca9a68ae87d8b877448ddb61744a9ad2fe0d5f4001d6fc7286f7ca60c825324b"
+  },
+  "current_census": {
+    "path": "reports/resistance-grounding-2026-10-09-papulacandins/corpus.json",
+    "sha256": "07afc1e49a810be5cadbdd66b87488bac27e51682117e135a897c0da6bafe3b2"
+  },
+  "current_counts": {
+    "pending_discovery": 2626,
+    "records": 2939,
+    "resistance_assertions": 4788,
+    "score_rules": 467,
+    "with_resistance_mechanisms": 300,
+    "with_score_rules": 16
+  },
+  "current_ledger": {
+    "path": "research/2026-10-09-papulacandin-resistance-grounding.tsv",
+    "sha256": "8a48eb84b87fda0a7ab06e4569da9f2e9d6b9e440649d5e195b9c7cee5f83029"
+  },
+  "date": "2026-10-09",
+  "experimental_alleles_validated": false,
+  "final_focused_suite": {
+    "errors": 0,
+    "failures": 0,
+    "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/curation-tests-final.xml",
+    "seconds": 2.24,
+    "sha256": "62eafc74be0702461144e8930ec2a0cab6708e5034baa31c4a0683a3b7a57a89",
+    "skipped": 0,
+    "tests": 10
+  },
+  "final_full_qc": {
+    "command": "PYTHONPATH=/private/tmp/antibioticmech-qc-science-20261009.GtY47E:src:.venv/lib/python3.13/site-packages /private/tmp/npmech-rdkit-2026.03.5/bin/python -u scripts/run_qc.py",
+    "exit_code": 0,
+    "passed": 2181,
+    "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/full-qc-final.log",
+    "sha256": "c0b9c46f557a9c7e6a208798af9b9ccafa0bad25a964f0fb427749f3ecd9a3e7",
+    "skip_reason": "Three empty command-frontmatter parameter sets, not biological tests.",
+    "skipped": 3,
+    "stages": [
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "test_seconds": 1852.34,
+    "warning": "Existing sssom_schema LinkML dataclass-extension deprecation.",
+    "warnings": 1
+  },
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "initial_failure_resolution": "Two new tests incorrectly required merged dictionary order to match loaded YAML. Tests now exercise the seeder no-op check and separately verify byte-identical emission of the loaded record; gates unchanged.",
+  "initial_focused_suite": {
+    "errors": 0,
+    "failures": 2,
+    "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/focused-tests.xml",
+    "seconds": 362.676,
+    "sha256": "a019f2a3c8d1db4990f3d62a793560a3cc5915c65d19a4835be96d844d29bf1d",
+    "skipped": 0,
+    "tests": 117
+  },
+  "interrupted_qc": {
+    "exit_code": 130,
+    "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/full-qc.log",
+    "reason": "Deliberately interrupted to fix verified review findings; not a pass.",
+    "sha256": "e85502e59d10e71e66ae75c285c8d59ed8caf8939120e06dda4656d9596fe5a4"
+  },
+  "live_browser_verification": false,
+  "map_wording_review": {
+    "path": "research/2026-10-09-papulacandin-map-wording.json",
+    "sha256": "052791db2bcf695c3b772f938063b8a86398f1ac988e2cab165cf825dedf0c8a"
+  },
+  "map_wording_tests": {
+    "errors": 0,
+    "failures": 0,
+    "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/map-wording-tests.xml",
+    "seconds": 0.1,
+    "sha256": "88f814eeba9242b42b74c36c26f1bf883a794cf29ea0ad61f0a6c1674ca336b3",
+    "skipped": 0,
+    "tests": 2
+  },
+  "ncbi_endpoint_requests": 0,
+  "publication_audit": {
+    "path": "research/2026-10-09-papulacandin-publication.json",
+    "sha256": "b26d02c5e795fa62121a72e3bbf45ac5229dc921b75089f7c0c6ea5a798e014e"
+  },
+  "reference_dossier": {
+    "path": "research/2026-10-09-glucan-inhibitor-grounding.json",
+    "sha256": "8d23998d36e78f9f6da30813fae1837f23837c961f99d8dafd07389b6fbffd21"
+  },
+  "rendered_map_payload_matches_artifact": true,
+  "rendered_map_record_links_verified": 2939,
+  "scope": "CURATION_AND_PUBLICATION_VERIFICATION_NOT_COMPLETED_CORPUS_RESEARCH",
+  "skip_reason_check": {
+    "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/skip-reasons.log",
+    "sha256": "7d4b9e8d809873845a9834977894646d49e86f69e69b7809b90df63c8efd9bd2"
+  },
+  "status": "ALL_AUTHORITATIVE_QC_GATES_PASSED",
+  "whole_record_primary_review_complete": false
+}

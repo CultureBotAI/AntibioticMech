@@ -1,5 +1,35 @@
 # Curation
 
+## Cross-corpus pathway context
+
+`related_records` uses the governed `CrossCorpusLink` class. It is curator-owned
+and survives re-seeding. Each PathwayMech link records the exact record ID,
+the full commit in `conf/pathwaymech_pin.json`, and an evidence basis including
+organism limits. `TARGETS_PATHWAY_COMPONENT` connects a supported target to
+the pathway containing it. `RELATED_PATHWAY_ACTIVITY` is qualified biochemical
+context; it does not assert exact pathway identity, drug susceptibility of the
+linked organism, or inhibition of every reaction. Do not put either in `xrefs`.
+
+`conf/pathwaymech_index.json` is the byte-identical published index at the
+pinned commit; its SHA-256 is checked offline. `scripts/check_pathway_links.py`
+runs in QC and refuses unknown records, unsupported relations, empty bases,
+and mismatched source revisions. When refreshing, review the complete index
+and all existing link bases before updating the pin and record versions.
+
+The first reviewed plan is `curation/pathway_links.yaml`. Apply it with
+`python scripts/curate_pathway_links.py` (dry run), then `--apply --only
+CHEBI:28915` for the canary, inspect that record, and run `--apply`. The script
+uses `write_validated_antibiotic`, appends curation history only when changed,
+and refuses to overwrite a differing link or mutate source-owned targets.
+Fosfomycin's MurA example is grounded in UniProtKB:P0A749's organism and its
+PMID:8994972 / PDB:1UAE structure mapping, retrieved 2026-10-05. The parent
+target retains the primary compound-binding citation.
+
+The added cross-organism sterol links cite the primary Candida experiments
+in [PMID:10991846](https://pubmed.ncbi.nlm.nih.gov/10991846/); the carboxin
+activity link cites [PMID:4336692](https://pubmed.ncbi.nlm.nih.gov/4336692/).
+Their bases distinguish those experiments from the linked yeast record.
+
 ## The decision file
 
 `curation/decisions.tsv` is the curator's half of seeding. One row per source
@@ -138,8 +168,8 @@ the natural thing to do, and appending is the case that needs the token.
   provenance inventory but are not promoted to target edges. A database linking
   an activity row to a protein page does not establish that the protein was the
   measured target.
-- An MIC without units is not a measurement. The schema keeps `mic_units`
-  separate and a test fails on a value without them.
+- A numeric MIC or disk-diffusion diameter without units is not a measurement.
+  The schema keeps units separate and a test fails on a value without them.
 
 ## The organismal evidence model
 
@@ -178,7 +208,7 @@ citation or a characterized MIBiG BGC accession. Two distinctions carry weight:
   which the experiment followed. Nor are those compounds necessarily congeners:
   one MIBiG entry lists a tripeptide precursor, an intermediate and a finished
   penicillin under a single enzymatic-assay grading. `link_evidence_scope` records which case a claim is in, and
-  22 of the 64 seeded assertions are the weaker one. Read it before trusting
+  99 of the 184 seeded assertions are the weaker one. Read it before trusting
   `link_evidence` about a particular molecule.
 - *How the link was established matters, and is separate from who reviewed it.*
   `link_evidence` carries the source's own grading of the compound-to-producer
@@ -204,13 +234,122 @@ exists in one protein in one lineage, so on `ResistanceMechanism` the accession
 is the most precise honest identifier available. Same identifier type, opposite
 rule, for a reason.
 
-**An activity claim** is the strictest of the three: an `ActivityObservation`
-requires evidence, and a reported MIC requires its units and the assay that
-produced it. A definition sentence supplies none of these. "Active against
-Gram-positive bacteria" names a group, which is a legitimate `taxon_label` but
-can never carry an NCBITaxon CURIE; "used to treat tuberculosis" names an
-indication, which is a disease and not an organism in an assay. Neither is an
+PHI-base identifier reviews live in `curation/phibase_grounding_reviews.json`.
+They pin both the complete adopted inventory and each reviewed row. The seeder
+can withhold `taxon_id`, `strain_taxon_id`, and `protein_accession` when
+primary evidence identifies them as reference context rather than experimental
+subject identity. It retains the original IDs as explicitly reference-only
+provenance, the source organism/strain labels, alteration, phenotype and citation.
+An optional `misassigned` list distinguishes a wrong `taxon_id`, `protein_accession` or
+`gene_id` from a valid reference identifier. Its entries must also be in
+`withhold`; withholding `gene_id` requires this explicit rejection. Rejected
+identifiers remain in labeled provenance, never as reference proteins for the
+claim. Supported reference crosswalks belong in the review note unless the
+exact experimental subject is independently resolved. An optional `subject_strain`
+can replace a source background label with the tested derivative's name explicitly
+established in primary evidence. It requires withholding any nonempty source
+`strain_taxon_id`; an absent source ID stays absent. The original background
+label remains in provenance. When primary evidence establishes that the label
+is only a background for multiple subjects and does not support one replacement,
+`withhold_strain: true` removes it from the subject slot while retaining the
+original label in provenance. This is mutually exclusive with `subject_strain`,
+requires a nonempty source label, and requires withholding any nonempty source
+`strain_taxon_id`; an unexpected seeded strain ID is rejected. It does not
+choose a representative derivative, merge source rows, or assert strain absence.
+An optional `subject_taxon` object supplies a
+verified replacement `taxon_id` (numeric string) and `taxon_label` when primary
+evidence establishes a different species. It must explicitly reject the source
+`taxon_id` as misassigned and withhold every nonempty source identifier, including
+protein, gene and strain IDs; the original organism label remains in provenance.
+This prevents reference identifiers from following a claim across species. Each
+decision still pins the exact source row and citation. It does not mint a strain
+identifier, replace a protein accession, or alter the source phenotype or allele.
+No replacement identifier or biological claim is inferred by the review loader.
+Unknown fields, stale pins, ambiguous rows and unsupported removals fail closed.
+The raw source inventory is unchanged; normal seeding and corpus reproduction
+apply the review. Missing subject IDs remain unresolved, not inferred from a
+reference organism. This does not constitute whole-record review or a new AST
 observation.
+
+CARD evidence-scope qualifications live in `curation/card_evidence_reviews.json`.
+They pin the adopted resistance inventory, each source row, and the destination
+record identifier and InChIKey. The seeder adds only a `note`, preserving the
+original mechanism, determinant, ARO evidence and CARD ownership. Primary
+references in that note support the qualification, not an upgrade of the
+database assertion. Conflicting functional contexts and derivative-versus-parent
+compound limits must remain explicit. This lane cannot assign experimental
+proteins, organisms, alleles, genomes or AST observations, or suppress source
+claims. Unknown fields, stale pins, ambiguous source ownership and changed
+chemical bindings fail closed. Use the normal dry run, validated-writer canary,
+seeding, reproduction and rendering checks. Full experimental grounding remains
+separate work; a qualification is not a whole-record scientific signoff.
+Duplicate JSON keys are rejected at every level. Evidence URLs must be valid
+HTTPS locations without embedded credentials; validation makes no network requests.
+
+**An activity claim** is the strictest of the three: an `ActivityObservation`
+requires evidence, and a reported MIC or disk-diffusion diameter requires its
+units and the assay that produced it. A definition sentence supplies none of
+these. "Active against Gram-positive bacteria" names a group, which is a
+legitimate `taxon_label` but can never carry an NCBITaxon CURIE; "used to treat
+tuberculosis" names an indication, which is a disease and not an organism in an
+assay. Neither is an observation.
+
+When an AST source names the assayed isolate's sequencing context, preserve it
+as structured provenance: `taxon_id`, `biosample_accession`,
+`bioproject_accession`, NCBI Pathogen Detection's own
+`pathogen_detection_target_accession`, `assembly_accession` and
+`sra_accessions` live on `ActivityObservation` beside the taxon and strain they
+identify. Genome and sample accessions are not organism identifiers, so
+`taxon_id` still carries only the NCBITaxon CURIE for the written
+`taxon_label`. Imported activity rows also carry `source`,
+`source_version`, `source_retrieved_on` and `source_observation_id` so a re-run
+can replace exactly the observations owned by that upstream lane.
+
+Grouped CRyPTIC observations retain their original assay claims in YAML, while
+`activity_membership_collections` references one bounded, content-addressed
+`membership-<sha256>.json.gz` sibling per compound and source version. Its
+`subjects` registry pairs each `source_isolate_id` (CRyPTIC UNIQUEID) with a
+`sequencing_context` containing BioSample, BioProject, and run accessions, or
+explicit `null` for no join to the pinned WGS snapshot. Source IDs are not strain
+names, TaxIDs, or assemblies. Shared BioSamples do not collapse distinct source
+IDs; missing joins do not establish that an isolate was never sequenced.
+
+Each `groups` entry names a `source_observation_id`, binds the entire observation
+with `observation_sha256`, and lists `{subject_index, measurement_count}` members.
+Indices are zero-based; counts preserve repeated measurements within a group.
+The canonical observation checksum covers ASCII-escaped, key-sorted, compact JSON
+with a trailing newline. The Python writer is the canonical serializer, including
+its distinction between integer and floating-point number representations. The
+loader rejects stale observation hashes, incomplete group coverage, duplicate IDs,
+dangling or unused indices, partial sequencing contexts, identity/provenance/count
+drift, and artifacts above 16 MiB compressed or expanded. YAML descriptors retain
+the WGS snapshot checksum and retrieval date separately from the phenotype
+inventory checksum. Changing an assay requires regenerating its membership binding.
+
+The reproducible CRyPTIC inputs are `data/raw/cryptic_activity.tsv`,
+`cryptic_isolates.tsv.gz`, and `cryptic_memberships.tsv.gz`, pinned in `MANIFEST.yaml`
+alongside the exact drug map and WGS snapshot. Stage them with
+`just extract-cryptic-memberships --wgs-retrieved-on <actual-date> --output-dir
+reports/<new-directory>`; inspect the full-cohort report before repeating with
+`--apply` and a new staging directory. This extraction is offline and verifies the
+pinned release files. Use the standard dry-run, validated-writer canary, and bulk
+seed workflow afterward. Reseeding replaces only the `CRYPTIC` membership slice
+and records a curation event; unrelated sources and curated observations survive.
+`just verify-corpus` reproduces the references and validates the physical artifacts.
+Generated activity pages link each group to a paginated source-isolate view, index
+source IDs and paired accessions, and offer lossless registry downloads. The complete
+JSON record uses the same relative sibling references as the YAML record.
+
+`just audit-cryptic-memberships --raw-release downloads/cryptic_3.4.0 --pages pages`
+checks every member against the adopted inputs, original typed Parquet groups,
+paired sequencing contexts, published observation links, and searchable accessions.
+Browser QA is repeatable with `node tests/membership_browser.playwright.cjs pages
+reports/<new-directory>` when Playwright and Chrome are installed. Set
+`PLAYWRIGHT_MODULE` to an existing module path when it is not on Node's module
+search path. The loopback-only test blocks external browser requests and checks
+pagination, accession search, invalid selections, corrupt-data retry, and readable
+desktop/mobile geometry; it saves screenshots and a JSON report. Node unit tests
+run under pytest separately; the Playwright check is an explicit local QA step.
 
 Hence `just worklist --queue producer-candidate` and `--queue activity-candidate`
 are **queues, not extractions**. Each row carries the matched phrase, what that
@@ -238,7 +377,12 @@ that an unread natural product is.
   restore the link, move it to `parent_compounds`, or agree it was wrong.
 - **A protein target should be taxon-agnostic.** Prefer a family, complex or
   function term (GO, InterPro, ComplexPortal); a UniProt accession is an example
-  of the target in one organism, and belongs in `protein_examples`.
+  of the target in one organism, and belongs in `protein_examples` on
+  `MolecularTarget` (`source: PRIMARY_LITERATURE`) or `CausalNode`
+  (`node_type: GENE_OR_PROTEIN`). Reviewed UniProtKB protein examples and
+  explicitly held non-protein or multi-paralog targets are maintained in
+  `curation/uniprot_protein_examples.yaml` and applied through
+  `scripts/curate_uniprot_protein_examples.py`.
 - **A producer organism claim needs a citation or a MIBiG BGC accession.** "This
   compound is made by *Streptomyces*" is a biological claim like any other.
 - **Do not read a mode of action off a drug class.** Most macrolides inhibit

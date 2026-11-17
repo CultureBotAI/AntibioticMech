@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-15",
+  "scope": "UNRESOLVED_SOURCE_NAMES_NOT_EXPERIMENTAL_SUBJECTS",
+  "previous_goal_turn_assessment": "PROGRESS: prior gene-reference dossier and verification pins checked against the worktree",
+  "base_commit": "9d967d482277d4c762b3c56424b4e83d0dea83f5",
+  "branch": "research/acr-reference-context",
+  "artifacts": {
+    "dossier": {
+      "path": "research/2026-10-15-card-unresolved-name-context.json",
+      "sha256": "14bb9b37bf62a385f897707dbeb5b91372e56c6da669b8368238f103979276a5"
+    },
+    "plan": {
+      "path": "research/2026-10-15-card-unresolved-name-context-plan.json",
+      "sha256": "df64baa97ff059f4c8f524b8f90f842019fa4a0488068cd66ee80717a1b17c6e"
+    },
+    "canary": {
+      "path": "research/2026-10-15-card-unresolved-name-context-canary.json",
+      "sha256": "1924e41f864b24a45d54f9eb37175741e56207676ed285d8399848dac703c950"
+    },
+    "script": {
+      "path": "scripts/audit_card_unresolved_names.py",
+      "sha256": "c6ee943d76f56d69d3f751b8288182ec79847f1cbc059c089808e989bc7e8ce5"
+    },
+    "tests": {
+      "path": "tests/test_card_unresolved_names.py",
+      "sha256": "3025779a19934fa79454ee8b19384cb06a307325e96e559e84fe3da5014a70b2"
+    },
+    "report": {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "8490182d9d360ac804583ae36ed0ae745dee049595c43f35e6b8a10e14ff33a1"
+    }
+  },
+  "coverage": {
+    "selected_terms": 43,
+    "source_claims": 50,
+    "complete_collection_aware_records_read": 31,
+    "source_name_strings": 18,
+    "reused_complete_name_queries": 7,
+    "new_complete_name_queries": 8,
+    "non_individual_name_strings_not_queried": 3,
+    "native_candidate_node_occurrences": 25,
+    "resolved_reference_species_names": 5,
+    "resolved_reference_terms": 7,
+    "resolved_reference_claim_memberships": 12,
+    "resolved_reference_records": 10,
+    "unresolved_queried_names": 10,
+    "unresolved_queried_terms": 32,
+    "names_with_only_otherNames_matches": 6,
+    "queried_names_without_candidates": 3,
+    "non_individual_name_terms": 4,
+    "new_protein_queries": 0,
+    "new_protein_or_allele_assignments": 0,
+    "prior_dossiers_rewritten": false
+  },
+  "checks": {
+    "initial_focused_pytest": {"passed": 38, "failed": 0, "skipped": 0},
+    "combined_pytest": {
+      "command": ".venv/bin/pytest -q -rs tests/test_card_unresolved_names.py tests/test_card_gene_reference_followup.py tests/test_card_species_gene_context.py tests/test_acr_reference_context.py tests/test_card_complex_members.py tests/test_card_literature_expansion.py tests/test_card_literature_proteins.py tests/test_card_reference_lineages.py tests/test_mex_component_references.py",
+      "passed": 308,
+      "failed": 0,
+      "skipped": 1,
+      "new_audit_tests_in_combined_run": 40,
+      "skip": "test_card_reference_lineages.test_offline_native_replay: known qualification deltas lack historical fixtures; public artifact checks still run"
+    },
+    "ruff": "PASS",
+    "git_diff_check": "PASS",
+    "read_only_offline_replay": "PASS_WITH_NETWORK_AND_PYTHON_FILE_WRITES_DENIED",
+    "explicit_source_pins_before_this_receipt": {
+      "occurrences": 50,
+      "distinct_local_paths": 34,
+      "all_verified": true
+    },
+    "corpus_record_hashes": {"checked": 2939, "changed": 0},
+    "prior_acr_species_gene_and_gene_followup_artifacts_unchanged": true,
+    "previous_report": {
+      "sha256": "c667a795d449590f965af0431657ec4867d81d350b3f0828ceea7afa5b8074a5",
+      "bytes": 953508,
+      "all_bytes_preserved": true,
+      "sole_remaining_work_heading_preserved": true
+    },
+    "protein_query_history_preflight": {
+      "root": "reports",
+      "ignored_files_included": true,
+      "scope": "Native top-level receipt or attempt URLs containing gene_exact and taxonomy_id for the five resolved species IDs",
+      "taxon_ids": ["220686", "28037", "36080", "4959", "63405"],
+      "matches": 0,
+      "protein_absence_inferred": false
+    }
+  },
+  "adversarial_review": {
+    "reviewer": "SAME_AGENT_SEPARATE_PASS",
+    "finding": "Canary approval initially bound only the receipt and result count, not its selected TaxID, scientific name and exact-match count.",
+    "disposition": "FIXED: all three selected-identity fields must agree with the replayed native response. Synthetic regression fixtures test each mismatch without depending on ignored caches.",
+    "additional_checks": [
+      "Exact active scientific names and explicit synonyms are distinguished from otherNames, substrings, inactive nodes and other ranks.",
+      "Multiple exact candidates remain ambiguous instead of selecting a representative.",
+      "Phage and species-group query hits do not become the queried organism.",
+      "Mucor species neighbours remain separate; source Microsporum spelling is preserved alongside the native synonym mapping.",
+      "Non-individual source strings are not presented as failed searches.",
+      "All 43 selected terms and 50 claim memberships remain represented."
+    ],
+    "github_issues_created": 0
+  },
+  "full_authoritative_qc": {
+    "run": false,
+    "limitation": "RDKit remains absent in this Intel macOS environment; pinned RDKit 2026.3.5 lacks an Intel macOS wheel. No full-QC or biological-curation verification is claimed."
+  },
+  "access": {
+    "new_uniprot_taxonomy_name_requests": 8,
+    "native_attempt_files": 8,
+    "new_protein_requests": 0,
+    "new_primary_publication_requests": 0,
+    "ncbi_requests": 0,
+    "retries": 0,
+    "redirects_followed": 0,
+    "outreach": false,
+    "reuse_terms_review_resumed": false
+  },
+  "remaining_work": [
+    "Investigate protein references for the seven newly species-resolved terms, preserving unreviewed, alias, strain and allele scope where justified.",
+    "Resolve otherNames-only and spelling or rank ambiguities with independent source-backed name evidence; do not silently repair labels.",
+    "Continue primary-evidence review and supported source-owned curation across the full corpus."
+  ],
+  "biological_record_writes": 0,
+  "experimental_identifiers_assigned": 0,
+  "whole_record_primary_signoffs": 0,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "full_corpus_goal_status": "OPEN"
+}

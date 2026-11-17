@@ -1,0 +1,55 @@
+identifier: CHEBI:17521
+label: Quinic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A tetrahydroxycyclohexanecarboxylic acid with antibacterial and antibiofilm
+  activity against wound-associated bacterial pathogens.
+definition_source: DOI:10.1128/spectrum.01336-26
+synonyms:
+- synonym_text: D-(-)-quinic acid
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: (-)-quinic acid
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(O)[C@]1(O)C[C@@H](O)[C@@H](O)[C@H](O)C1
+  standard_inchi: InChI=1S/C7H12O6/c8-3-1-7(13,6(11)12)2-4(9)5(3)10/h3-5,8-10,13H,1-2H2,(H,11,12)/t3-,4-,5-,7+/m1/s1
+  standard_inchi_key: AAWZDTNXLSGCEK-WYWMIBKRSA-N
+  molecular_formula: C7H12O6
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/6508
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 192.17
+  monoisotopic_mass: 192.0633881
+xrefs:
+- pubchem.compound:6508
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/spectrum.01336-26#quinic-acid
+  source_label: Quinic acid
+  minted_identifier: antibioticmech:curator-a44d2a3727
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/spectrum.01336-26
+    snippet: Barzdina et al. reported that quinic acid inhibited Bacillus subtilis
+      ATCC 6633 and Pseudomonas aeruginosa ATCC 27853 at a MIC of 2.5 mg/mL and the
+      remaining 8 tested wound-associated bacterial strains at 5.0 mg/mL (Table 1),
+      with MBC values of 2.5 to 5.0 mg/mL (Table 2).
+    notes: PubChem CID 6508 and ChEBI CHEBI:17521 (CAS 77-95-2) supply the standard
+      InChI, InChIKey, formula, and isomeric SMILES for D-(-)-quinic acid.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:32:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, chemical_structure, source_concepts, grounding_status.
+    Curator inputs 2026-09-10, unchanged.'

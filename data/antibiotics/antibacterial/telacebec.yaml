@@ -1,0 +1,119 @@
+identifier: antibioticmech:curator-17023fe654
+label: telacebec
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: An imidazo[1,2-a]pyridine-3-carboxamide antimycobacterial agent (Q203)
+  that inhibits the QcrB subunit of the respiratory cytochrome bc1:aa3 complex and
+  depletes mycobacterial ATP.
+definition_source: DOI:10.1038/nm.3262
+synonyms:
+- synonym_text: Q203
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: Q-203
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCc1nc2ccc(Cl)cn2c1C(=O)NCc1ccc(N2CCC(c3ccc(OC(F)(F)F)cc3)CC2)cc1
+  standard_inchi: InChI=1S/C29H28ClF3N4O2/c1-2-25-27(37-18-22(30)7-12-26(37)35-25)28(38)34-17-19-3-8-23(9-4-19)36-15-13-21(14-16-36)20-5-10-24(11-6-20)39-29(31,32)33/h3-12,18,21H,2,13-17H2,1H3,(H,34,38)
+  standard_inchi_key: OJICYBSWSZGRFB-UHFFFAOYSA-N
+  molecular_formula: C29H28ClF3N4O2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/68234908
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 557.016
+  monoisotopic_mass: 556.1853
+xrefs:
+- pubchem.compound:68234908
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/nm.3262#telacebec
+  source_label: telacebec
+  minted_identifier: antibioticmech:curator-17023fe654
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/nm.3262
+    snippet: Here, we report on a promising class of imidazopyridine amide (IPA) compounds
+      that block Mycobacterium tuberculosis growth by targeting the respiratory cytochrome
+      bc1 complex. The optimized IPA compound Q203 inhibited the growth of MDR and
+      XDR M. tuberculosis clinical isolates in culture broth medium in the low nanomolar
+      range and was efficacious in a mouse model of tuberculosis at a dose less than
+      1 mg per kg body weight.
+    notes: Reported by Pethe et al. 2013 (Nat Med 19:1157-1160; PMID:23913123) as
+      an imidazo[1,2-a]pyridine-3-carboxamide (Q203) targeting the QcrB subunit of
+      the mycobacterial respiratory cytochrome bc1:aa3 complex, with MIC50 = 2.7 nM
+      (~1.5 ng/mL) against Mycobacterium tuberculosis H37Rv in broth and MIC50 = 0.28
+      nM inside macrophages.
+  source_version: '2026-10-23'
+molecular_targets:
+- target_label: mycobacterial cytochrome bc1 complex QcrB subunit
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+  experimental_context: Whole-genome sequencing of spontaneous resistant mutants in
+    Mycobacterium tuberculosis H37Rv (QcrB Thr313Ala) and rapid intracellular ATP
+    depletion assays (DOI:10.1038/nm.3262).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2013-08
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1038/nm.3262
+    snippet: Here, we report on a promising class of imidazopyridine amide (IPA) compounds
+      that block Mycobacterium tuberculosis growth by targeting the respiratory cytochrome
+      bc1 complex. The optimized IPA compound Q203 inhibited the growth of MDR and
+      XDR M. tuberculosis clinical isolates in culture broth medium in the low nanomolar
+      range and was efficacious in a mouse model of tuberculosis at a dose less than
+      1 mg per kg body weight.
+    notes: Pethe et al. 2013 (Nat Med 19:1157-1160; PMID:23913123) identified the
+      QcrB cytochrome b subunit (Rv2196, UniProtKB:P9WP37) of the Mycobacterium tuberculosis
+      H37Rv cytochrome bc1:aa3 complex as the target of telacebec (Q203) via resistance
+      mutation Thr313Ala and ATP depletion.
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WP37
+    protein_label: Cytochrome b-c1 complex cytochrome b subunit
+    gene_symbol: qcrB
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Respiratory cytochrome bc1 complex cytochrome b subunit QcrB (Rv2196) targeted
+      by telacebec (Q203) in Mycobacterium tuberculosis H37Rv, where the Thr313Ala
+      substitution confers high-level resistance (DOI:10.1038/nm.3262; PMID:23913123).
+biosynthesis_origin: SYNTHETIC
+mode_of_action: ENERGY_METABOLISM_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic imidazopyridine amide antitubercular agent
+  (Q203) that targets the cytochrome b subunit QcrB (Rv2196) of the mycobacterial
+  respiratory cytochrome bc1:aa3 supercomplex, blocking oxidative phosphorylation
+  and depleting ATP in Mycobacterium tuberculosis (DOI:10.1038/nm.3262).'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial cytochrome
+    bc1 complex QcrB subunit backed by DOI:10.1038/nm.3262.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WP37 (Mycobacterium tuberculosis H37Rv QcrB,
+    Rv2196) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1038/nm.3262).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Populated biosynthesis_origin=SYNTHETIC, mode_of_action=ENERGY_METABOLISM_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and CURATOR mode_of_action_notes
+    from primary literature (DOI:10.1038/nm.3262); retained curation_status=PROPOSED
+    while grounding_status=MINTED awaits upstream ChEBI accession (#1273).
+  llm_assisted: true

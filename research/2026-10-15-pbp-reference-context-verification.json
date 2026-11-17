@@ -1,0 +1,215 @@
+{
+  "all_biological_records_and_previous_dossiers_unchanged": true,
+  "authoritative_qc": {
+    "limitation": "Pinned RDKit 2026.3.5 lacks a compatible Intel macOS distribution. Earlier Linux QC does not validate this change.",
+    "run_for_this_change": false
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-pbp-reference-context/protected-before.json",
+    "sha256": "327b683c1081a6c35034eb5d0c207f12a96011e4c013531904a1ecc93ded3f11"
+  },
+  "baseline_files_checked": 7890,
+  "biological_records_hash_checked": 2939,
+  "checks": {
+    "diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "offline_replay": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/audit_pbp_reference_context.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\n  \"terms\": 14,\n  \"complete_records_read\": 12,\n  \"source_claims\": 25,\n  \"named_source_species_grounded\": 8,\n  \"source_names_unresolved\": 1,\n  \"native_name_matched_entries\": 20,\n  \"native_reference_taxa\": 8,\n  \"qualified_reference_entries\": 13,\n  \"terms_with_qualified_reference_context\": 8,\n  \"claims_with_qualified_reference_context\": 16,\n  \"withheld_name_matched_candidates\": 7,\n  \"complete_new_protein_queries\": 12,\n  \"reused_citation_queries\": 29,\n  \"selected_primary_text_contexts_reviewed\": 2,\n  \"claims_with_scope_qualifications\": 9,\n  \"corpus_records_hash_checked\": 2939\n}\n"
+    },
+    "provenance": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_provenance.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "provenance OK: 14 inventories, 23 upstream files, retrieved 2026-08-30\n"
+    },
+    "ruff": {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "scripts/audit_pbp_reference_context.py",
+        "tests/test_pbp_reference_context.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    "ruff_format": {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "scripts/audit_pbp_reference_context.py",
+        "tests/test_pbp_reference_context.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "2 files already formatted\n"
+    },
+    "source_queue": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_source_queue.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "source queue OK: 37 sources \u2014 10 adopted, 12 blocked, 11 candidate, 4 evaluating\nnext up: chebi-citations (P3, evidence), lotus (P3, producer_organisms), antismash-db (P4, producer_organisms)\n"
+    }
+  },
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "352e309e3f48aad88d22e2619cc082f11f4732d16e8d4970826fbe9de98f2fb3"
+    },
+    {
+      "path": "research/2026-10-15-pbp-reference-context-alias-plan.json",
+      "sha256": "70b97de28fb036c45386a81a9ecbc5bfcc87415b366b3993e2c11024d724a9b4"
+    },
+    {
+      "path": "research/2026-10-15-pbp-reference-context-assessment.json",
+      "sha256": "77fce6ffe46f86075bd79d717814901ed56315e0d1817cd6946161c5d22b4bab"
+    },
+    {
+      "path": "research/2026-10-15-pbp-reference-context-native-plan.json",
+      "sha256": "be5d5b05fd13329a9a0729d8e84c6f1256fba65c06680b1301d9a1afda25c528"
+    },
+    {
+      "path": "research/2026-10-15-pbp-reference-context-network-plan.json",
+      "sha256": "69bcd5c3f7792f647ba3e299d00fa91a56a7571f3de7d34aec9cce5d21c42d50"
+    },
+    {
+      "path": "research/2026-10-15-pbp-reference-context-plan.json",
+      "sha256": "ae4bf51c18c0dac9aae028d569376a42d6341ca06b9feb77c4f51d71cbad30c2"
+    },
+    {
+      "path": "research/2026-10-15-pbp-reference-context-taxonomy-plan.json",
+      "sha256": "5d47ca518dea572e502cdd2d524bb6c043628198348912607922e809ef2fd4d8"
+    },
+    {
+      "path": "research/2026-10-15-pbp-reference-context.json",
+      "sha256": "91e6001b83982be61c51371ce534983f57478664369eefaa6c9540dba14c0543"
+    },
+    {
+      "path": "scripts/audit_pbp_reference_context.py",
+      "sha256": "daec8d87d0ce55b9ab8cf75cc0851bf555a11c4d14e3970c19e3cd9caede7455"
+    },
+    {
+      "path": "tests/test_pbp_reference_context.py",
+      "sha256": "6455c3b23d8fd6271bdbd1279d348ae6417bbc43256321337cfa3b3bdd99187d"
+    }
+  ],
+  "ignored_files_included_in_membership_check": true,
+  "limits": {
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "manual_primary_reading_verified_by_code": false,
+    "ncbi_requests": 0,
+    "new_primary_results_reviews": 2,
+    "new_taxonomy_responses": 1,
+    "numeric_ast_exports": 0,
+    "operational_exports": false,
+    "outreach": 0,
+    "primary_figures_and_supplements_reviewed": false,
+    "reuse_terms_review_resumed": false,
+    "reviewed_query_subset_is_exhaustive_gene_family_coverage": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "manual_primary_reading_is_not_independently_reproduced_by_tests": true,
+  "new_files_before_receipt": [
+    "research/2026-10-15-pbp-reference-context-alias-plan.json",
+    "research/2026-10-15-pbp-reference-context-assessment.json",
+    "research/2026-10-15-pbp-reference-context-native-plan.json",
+    "research/2026-10-15-pbp-reference-context-network-plan.json",
+    "research/2026-10-15-pbp-reference-context-plan.json",
+    "research/2026-10-15-pbp-reference-context-taxonomy-plan.json",
+    "research/2026-10-15-pbp-reference-context.json",
+    "scripts/audit_pbp_reference_context.py",
+    "tests/test_pbp_reference_context.py"
+  ],
+  "previous_report_preserved_except_appended_section": true,
+  "prior_file_changes": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "352e309e3f48aad88d22e2619cc082f11f4732d16e8d4970826fbe9de98f2fb3",
+      "before_sha256": "c71655f92ac8e8f695afbddf168f23de3aa37a6c1f1e6d7147e31393cd9578bd"
+    }
+  },
+  "publication": {
+    "commits": 0,
+    "issue_mutations": 0,
+    "pull_requests": 0,
+    "pushes": 0
+  },
+  "scope": "ALL_CURRENT_PBP_LABELS_REFERENCE_METADATA_NOT_RESISTANT_ALLELES",
+  "summary": {
+    "claims_with_qualified_reference_context": 16,
+    "claims_with_scope_qualifications": 9,
+    "complete_new_protein_queries": 12,
+    "complete_records_read": 12,
+    "corpus_records_hash_checked": 2939,
+    "named_source_species_grounded": 8,
+    "native_name_matched_entries": 20,
+    "native_reference_taxa": 8,
+    "qualified_reference_entries": 13,
+    "reused_citation_queries": 29,
+    "selected_primary_text_contexts_reviewed": 2,
+    "source_claims": 25,
+    "source_names_unresolved": 1,
+    "terms": 14,
+    "terms_with_qualified_reference_context": 8,
+    "withheld_name_matched_candidates": 7
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-pbp-reference-context/tests.xml",
+      "sha256": "81a8172b955ae85629ebefc6ef7d03eb15c55e3b8ec932f48a14bceec3507eaf"
+    },
+    "modules": [
+      "test_card_complex_members",
+      "test_card_literature_expansion",
+      "test_card_literature_proteins",
+      "test_card_reference_lineages",
+      "test_erm_name_context",
+      "test_pbp_reference_context"
+    ],
+    "native_replay_network_and_python_file_writes_blocked": true,
+    "new_audit_tests_passed": 53,
+    "passed": 230,
+    "skipped": 1,
+    "skips": [
+      {
+        "message": "known qualification deltas lack historical fixtures; public artifact checks still run",
+        "name": "test_offline_native_replay"
+      }
+    ],
+    "tests": 231
+  }
+}

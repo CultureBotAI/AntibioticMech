@@ -1,0 +1,47 @@
+{
+  "after": {
+    "path": "data/antibiotics/antiviral/bictegravir.yaml",
+    "sha256": "b35a828fe64ccafdc638b5e7449e9e3fe4200efd0dbdd8490189c9a470cee168"
+  },
+  "before": {
+    "complete_collection_aware_record_loaded": true,
+    "identifier": "CHEBI:172943",
+    "path": "data/antibiotics/antiviral/bictegravir.yaml",
+    "sha256": "ac88ec7d91f9fe520740a84623e1024bfce36c338d16da4c63398a5f2079466e",
+    "standard_inchi_key": "SOLUWJRYJLAZCX-LYOVBCGYSA-N"
+  },
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-14-antiviral-taxa/bictegravir-canary.yaml",
+    "sha256": "b35a828fe64ccafdc638b5e7449e9e3fe4200efd0dbdd8490189c9a470cee168"
+  },
+  "census": {
+    "path": "research/2026-10-14-antiviral-taxa-resistance-grounding.tsv",
+    "sha256": "b15465f26802dae7fc099e52d3dc4898cd6397fd2bc37f4055443d2e40fe2935"
+  },
+  "claims_grounded": 1,
+  "context": {
+    "path": "research/2026-10-14-antiviral-taxa.json",
+    "sha256": "33af9423fd6c089338decc9d87b46d225ddb5a468691ef3c53672905d338ec72"
+  },
+  "curation_event": {
+    "action": "GROUNDED_RESISTANCE_TAXONOMY",
+    "changes": "Grounded the existing bictegravir laboratory HIV-1 resistance claim at species rank as Lentivirus humimdef1 (NCBITaxon:3418650), using PMID:27645238 primary Results organism context and cached UniProt taxonomy release 2026_03. Preserved inherited claim wording, mechanism, gene-family label, quantitative statement and citation. Distinguished selected populations, test viruses and patient-derived isolates without assigning an experimental protein, strain, allele or genome. No new variants or numeric AST were added; exact formulation and whole-record primary review remain open.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-14T10:55:30Z"
+  },
+  "experimental_alleles_assigned": 0,
+  "experimental_genomes_or_samples_assigned": 0,
+  "fixture": {
+    "path": "tests/fixtures/bictegravir-before-2026-10-14.yaml",
+    "sha256": "ac88ec7d91f9fe520740a84623e1024bfce36c338d16da4c63398a5f2079466e"
+  },
+  "fresh_seed_merge_equal": true,
+  "history_events_added": 1,
+  "identifier": "CHEBI:172943",
+  "new_resistance_claims": 0,
+  "other_records_byte_identical": 2938,
+  "records_changed": 1,
+  "unrelated_fields_preserved": true,
+  "whole_record_primary_signoffs": 0
+}

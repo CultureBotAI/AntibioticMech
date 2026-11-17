@@ -1,0 +1,50 @@
+identifier: CHEBI:94557
+label: Thiocolchicoside
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A semi-synthetic sulfur-substituted colchicoside derivative with antibacterial
+  and antifungal activity.
+definition_source: DOI:10.7759/cureus.110122
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)N[C@H]1CCC2=CC(=C(C(=C2C3=CC=C(C(=O)C=C13)SC)OC)OC)O[C@H]4[C@@H]([C@H]([C@@H]([C@H](O4)CO)O)O)O
+  standard_inchi: InChI=1S/C27H33NO10S/c1-12(30)28-16-7-5-13-9-18(37-27-24(34)23(33)22(32)19(11-29)38-27)25(35-2)26(36-3)21(13)14-6-8-20(39-4)17(31)10-15(14)16/h6,8-10,16,19,22-24,27,29,32-34H,5,7,11H2,1-4H3,(H,28,30)/t16-,19+,22+,23-,24+,27+/m0/s1
+  standard_inchi_key: LEQAKWQJCITZNK-AXHKHJLKSA-N
+  molecular_formula: C27H33NO10S
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/9915886
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 563.63
+  monoisotopic_mass: 563.18251726
+xrefs:
+- pubchem.compound:9915886
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.7759/cureus.110122#thiocolchicoside
+  source_label: Thiocolchicoside
+  minted_identifier: antibioticmech:curator-1a3190f911
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.7759/cureus.110122
+    snippet: Devi and Khanwelkar reported that thiocolchicoside inhibited Streptococcus
+      mutans, Staphylococcus aureus, Lactobacillus acidophilus, Escherichia coli,
+      and Candida albicans with MICs of 125 ug/mL, Aspergillus niger at 250 ug/mL,
+      and Klebsiella pneumoniae at 500 ug/mL.
+    notes: PubChem CID 9915886 and ChEBI CHEBI:94557 supply the standard InChI, InChIKey,
+      formula, and isomeric SMILES for thiocolchicoside.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

@@ -1,0 +1,3095 @@
+{
+  "follow_up_review": "2026-10-08-fungal-oa-context-grounding.json",
+  "snapshot_scope": "HISTORICAL_CHECKPOINT_BEFORE_SIX_OA_IDENTITY_REVIEWS",
+  "attribution": "PHI-base pinned AMR export and UniProt Consortium release 2026_03, CC BY 4.0; citation metadata via EMBL-EBI Europe PMC; primary Results at the cited publishers.",
+  "before_snapshot_sha256": "136d9cf359ac82f9709102e898caf804063d48062797271ec346bc5eb2401904",
+  "changes": {
+    "checksum_only_claims": 141,
+    "new_scoped_claims": 9
+  },
+  "corpus_phi_scope": {
+    "identifier_scoped": 150,
+    "pending_associations": 67,
+    "pending_papers": 31,
+    "retained": 217
+  },
+  "current_pending_access_counts": {
+    "NON_OA_NO_PMC": 21,
+    "NON_OA_WITH_PMC": 2,
+    "OA_WITH_PMC": 8
+  },
+  "limitations": [
+    "Identifier scope is not complete phenotype validation or whole-record signoff.",
+    "Two primary Results reviews remain incomplete; the corresponding claims are unchanged.",
+    "All four completed primary-text reviews are manual, not locally cached or offline replayable.",
+    "The T1FOA-associated source claim needs compound-context review: Table 4 labels a different analogue.",
+    "Shared protein deposits do not establish a unique experimental allele or isolate.",
+    "No new alteration, strain label, protein, gene, TaxID, genome or activity is assigned.",
+    "EC50, MIC and enzyme endpoints are not interconverted or treated as clinical categories.",
+    "Metadata-only export: no protocols, sequences, primers, constructs or enhancement designs.",
+    "No NCBI requests, outreach, terms work, source adoption or GitHub mutations.",
+    "The whole-corpus primary investigation remains incomplete."
+  ],
+  "literature_access": [
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-10919801-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:14:45.083679+00:00",
+        "sha256": "50b13dc8072e3008840e27507d4f59420b5c04c73a782f59ab5ac60186e65207",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10919801+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1128/aem.66.8.3421-3426.2000",
+      "europe_pmc_access_category": "NON_OA_WITH_PMC",
+      "locations": [
+        "Results, Figure 4 and Table 2: separate parent, donor and tested derivatives",
+        "Nucleotide accession statement: distinct source-isolate deposits"
+      ],
+      "offline_verification_limit": "Citation and database pins replay; manually inspected publisher Results do not.",
+      "pending_associations": 0,
+      "primary_access": "PUBLISHER_RESULTS_INSPECTED_WITH_WEB_TOOL_NOT_CACHED",
+      "reference": "PMID:10919801",
+      "source_url": "https://journals.asm.org/doi/10.1128/aem.66.8.3421-3426.2000",
+      "status": "IDENTIFIER_SCOPE_CURATED"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-11036010-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:14:49.476541+00:00",
+        "sha256": "9c14e2993601c7c1eaf97720c9f990c36d4831172470419f106d474a99cf85f8",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11036010+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1128/aac.44.11.2985-2990.2000",
+      "europe_pmc_access_category": "NON_OA_WITH_PMC",
+      "limitation": "Indexed primary snippets and reference metadata are insufficient for full subject and phenotype review. Existing claim unchanged.",
+      "pending_associations": 1,
+      "primary_access": "PUBLISHER_FETCH_ERRORS_AFTER_INDEXED_DISCOVERY",
+      "reference": "PMID:11036010",
+      "status": "FULL_PRIMARY_RESULTS_UNAVAILABLE_NO_CURATION"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-11600353-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:14:53.471337+00:00",
+        "sha256": "5a0d1509ec33d0718135850078b33366f9ac34fac9659175db17fb0c09e01cb7",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11600353+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1128/aac.45.11.3037-3045.2001",
+      "europe_pmc_access_category": "NON_OA_WITH_PMC",
+      "limitation": "Indexed primary snippets and reference metadata are insufficient for full subject and phenotype review. Existing claim unchanged.",
+      "pending_associations": 1,
+      "primary_access": "PUBLISHER_FETCH_ERRORS_AFTER_INDEXED_DISCOVERY",
+      "reference": "PMID:11600353",
+      "status": "FULL_PRIMARY_RESULTS_UNAVAILABLE_NO_CURATION"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-16048935-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:14:56.816568+00:00",
+        "sha256": "f0bd7fc59f81656ae69aafd272eb362edc4485085e4f49b0c44054e657b4a91e",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16048935+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1128/aac.49.8.3264-3273.2005",
+      "europe_pmc_access_category": "NON_OA_WITH_PMC",
+      "locations": [
+        "Results and Tables 1, 3 and 4: parental backgrounds versus separately tested derivatives",
+        "Table 4 footnote a: L-733560 is distinct from the caspofungin endpoint in Table 3"
+      ],
+      "offline_verification_limit": "Citation and database pins replay; manually inspected publisher Results do not.",
+      "pending_associations": 0,
+      "primary_access": "PUBLISHER_RESULTS_INSPECTED_WITH_WEB_TOOL_NOT_CACHED",
+      "reference": "PMID:16048935",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.49.8.3264-3273.2005",
+      "status": "IDENTIFIER_SCOPE_CURATED"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-22155829-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:15:02.839633+00:00",
+        "sha256": "80e5ce930a54fea4c0689d55892bbc331c7122ca39546f6f3a77e79cf84430c8",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22155829+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1128/aac.05502-11",
+      "europe_pmc_access_category": "NON_OA_WITH_PMC",
+      "locations": [
+        "Results and Discussion, Table 1: reference parent, clinical isolate and tested derivatives",
+        "Nucleotide accession statement: paper deposits differ from the imported entry cross-reference"
+      ],
+      "offline_verification_limit": "Citation and database pins replay; manually inspected publisher Results do not.",
+      "pending_associations": 0,
+      "primary_access": "PUBLISHER_RESULTS_INSPECTED_WITH_WEB_TOOL_NOT_CACHED",
+      "reference": "PMID:22155829",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.05502-11",
+      "status": "IDENTIFIER_SCOPE_CURATED"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/carboxin-followup-wang-2015-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T10:43:27.539423+00:00",
+        "sha256": "52d18c932962da559f3b1cca0ffa413b96d17d8dc447bf581a8842e67ed633af",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1111%2Fmpp.12222&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1111/mpp.12222",
+      "europe_pmc_access_category": "NON_OA_WITH_PMC",
+      "locations": [
+        "Results, Fungicide sensitivity and Table 2: parent and distinct tested groups",
+        "Fungal strain identity paragraph: JK19 parental context"
+      ],
+      "offline_verification_limit": "Citation and database pins replay; manually inspected publisher Results do not.",
+      "pending_associations": 0,
+      "primary_access": "PUBLISHER_RESULTS_INSPECTED_WITH_WEB_TOOL_NOT_CACHED",
+      "reference": "PMID:25441450",
+      "source_url": "https://bsppjournals.onlinelibrary.wiley.com/doi/10.1111/mpp.12222",
+      "status": "IDENTIFIER_SCOPE_CURATED"
+    }
+  ],
+  "pending_associations": [
+    {
+      "identifier": "CHEBI:10023",
+      "pmid": "22897872",
+      "row_sha256": "2a8f7937bee39b0a600e82cbd915ebf8cca429731ece623cac08c6ab6faa9bac"
+    },
+    {
+      "identifier": "CHEBI:10023",
+      "pmid": "22897872",
+      "row_sha256": "7f5ac6464af1e2de3025434685d35a4ffb72b2da7669c636d8a75eef84386fbc"
+    },
+    {
+      "identifier": "CHEBI:10023",
+      "pmid": "22897872",
+      "row_sha256": "01690c1e90aecca6b33301ede8565b86185e7b59ee9022e9312f2bb1ee8909ad"
+    },
+    {
+      "identifier": "CHEBI:10023",
+      "pmid": "22897872",
+      "row_sha256": "458ef05507951358d184841bd01e91e98f6fb5abf943cbffc856f645190c5939"
+    },
+    {
+      "identifier": "CHEBI:136340",
+      "pmid": "34490974",
+      "row_sha256": "33aee8150ea264cc2eb50df3722ca4aa90b94800c97ed9ea96c2f12075a74ae7"
+    },
+    {
+      "identifier": "CHEBI:136340",
+      "pmid": "34490974",
+      "row_sha256": "36f4aa112c3d9b1d8efe85da82d2365dd17084bed1930b4ff469d02d7bfe75fc"
+    },
+    {
+      "identifier": "CHEBI:16240",
+      "pmid": "28743081",
+      "row_sha256": "40bcb3f89eb4c68dedb1590d149ae227e26cd024a1b7ba711308d7f41af33f38"
+    },
+    {
+      "identifier": "CHEBI:16240",
+      "pmid": "38056173",
+      "row_sha256": "e4941d5b2177b1078abb959c35d0c3329fa377b3f7365e137310aa53650c4602"
+    },
+    {
+      "identifier": "CHEBI:16240",
+      "pmid": "41277790",
+      "row_sha256": "ee72d0ca2628c7773c1c8db9de77a642e1ea8a44878db1955147638676b17cf4"
+    },
+    {
+      "identifier": "CHEBI:16240",
+      "pmid": "30044782",
+      "row_sha256": "f6437026791c1c7093da45791cb7b557f97cd725daac5d416e99239ec4cd8b1a"
+    },
+    {
+      "identifier": "CHEBI:16240",
+      "pmid": "22591226",
+      "row_sha256": "eeee294d942ac7a63143980086deeaceb80622490d503cc6d9331afd39dc1020"
+    },
+    {
+      "identifier": "CHEBI:16240",
+      "pmid": "21138346",
+      "row_sha256": "a591c301ebb65b88b35145347e1d65c34234d6c9220d309bdb9bc2cbd1aef8a9"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "17073308",
+      "row_sha256": "e9970c191a147615d701d638225912add989160001a184e5dd5c3b0c1295c822"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "30686204",
+      "row_sha256": "12d3479af3b72c58ffe819b4feaff550d3275d6bd64019778db6fe330390eb14"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "30686204",
+      "row_sha256": "16560e038f9b572c69ec95fd757288ee17dd1ddbde47e4a738c303e116d28124"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "30686204",
+      "row_sha256": "a4bd4db6a345833b668ccb40c7a4dca41c5ee63aed723c40d6465638332ad73c"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "30686204",
+      "row_sha256": "a0df7865d44f7ef7cd35204e9fbbe937a8b1c4ab3df46e947c87579474560193"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "38374637",
+      "row_sha256": "6a547a0c6c6ea614cd7c62b24211763a0ff5f1b5f83204586e112c67a2846c7c"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "38374637",
+      "row_sha256": "af434560aa89a613a0b3cfd3651e1ba2a1fa2f440ce61d4b24f02bf0c8c7c73c"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "pmid": "30732567",
+      "row_sha256": "0b57476b39d6710277cfcc0f139609734c31a2e14d439eac1092c1acef62c321"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "pmid": "42112916",
+      "row_sha256": "d6d7e25e1e88fb670048a1e3278b52ffd08ef9f171416ff8027e9ccd16b5e83a"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "pmid": "30732567",
+      "row_sha256": "c822e7609cbf2bee565065d025214200f7685c3407207da35f9f75d8adfc4284"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "pmid": "1388107",
+      "row_sha256": "7ace37c6427c588526fb1cc75a5b8d5ac8325c9a71230497df9e8cf18f319626"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "pmid": "21077124",
+      "row_sha256": "4af21522c270dd57d695d4942aa8ad6e105b72e4130ad9c5789009351d4164f3"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "pmid": "21077124",
+      "row_sha256": "12898536c16060cc524e80db9486f43c008c87faf4db42a3e879acaa5425d144"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "pmid": "21077124",
+      "row_sha256": "809a90c390dc6e1ea9c84ab09475aa973967e58ef7ea75a345b45c5b9124cfe5"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "pmid": "21077124",
+      "row_sha256": "8c9b75dc37f89c9830f84d36b09d733aa287e6b7346ba8498a448e82599c48cc"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "pmid": "21077124",
+      "row_sha256": "6541832d4da4b70eb4e318f01993e01707d60780560ef3bae1cbe32f79959ad4"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "pmid": "19900007",
+      "row_sha256": "1d8916c059b96bc65131bdd692cb8027f57eb53c5e69a07abccd9d2bee577bd9"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "pmid": "19900007",
+      "row_sha256": "0c7e48c5c6ee8bf0fc585a5ed5708d11a1129121844607012e2f7f5d629c60c8"
+    },
+    {
+      "identifier": "CHEBI:3405",
+      "pmid": "9871122",
+      "row_sha256": "634af1b980eaa9b4d28dd5e75534fe26e9f557354fbf2eb370568641c6bdc37b"
+    },
+    {
+      "identifier": "CHEBI:3405",
+      "pmid": "27644008",
+      "row_sha256": "b2d31c0d1d586328e8a9a47df94e4e9646e5bc4af64318b8e7d002d624e98662"
+    },
+    {
+      "identifier": "CHEBI:3405",
+      "pmid": "27644008",
+      "row_sha256": "0aa2d26b23d8f83121b1d935b98f5e92409b6171959c40046784d5b17c7a1f41"
+    },
+    {
+      "identifier": "CHEBI:3405",
+      "pmid": "27644008",
+      "row_sha256": "e7ed266727bd07b8b7bd50a0ce9a182a1db14bac0bdf6af8a68cef328a0d13dc"
+    },
+    {
+      "identifier": "CHEBI:3405",
+      "pmid": "18992352",
+      "row_sha256": "6920ff524a58c4452527cc9a3f932c2fef7a30e477b813dbad9d0ef265ce26c0"
+    },
+    {
+      "identifier": "CHEBI:3405",
+      "pmid": "18992352",
+      "row_sha256": "216a2748f12ee432ae9c8b2b1f8183d8c7ac14559999c1bd24a37729928e1ea1"
+    },
+    {
+      "identifier": "CHEBI:3405",
+      "pmid": "1423716",
+      "row_sha256": "6cd5e5fd14b9960870ab78fdcab70513796b317391d58999fb8d3b61bdbbafdb"
+    },
+    {
+      "identifier": "CHEBI:40909",
+      "pmid": "41745253",
+      "row_sha256": "42cd2b92d7dbf247bba29ae4760d636c3ac3110fe15b35e84f5732cc35e13f00"
+    },
+    {
+      "identifier": "CHEBI:40909",
+      "pmid": "40934067",
+      "row_sha256": "0699d6a693747486681c5979dc056b1e5190566e8388bdbecc71e73f6a7e86a3"
+    },
+    {
+      "identifier": "CHEBI:40909",
+      "pmid": "12612806",
+      "row_sha256": "6b0cda8a58e1e41d0759e4fe2bae76f77190b5ef2b722844f8b6ba1644beb0ef"
+    },
+    {
+      "identifier": "CHEBI:40909",
+      "pmid": "12612806",
+      "row_sha256": "69ea8ca2bb4393baa2290f5402f322c11d5217ea18d3dac94cd8738ea5bd942b"
+    },
+    {
+      "identifier": "CHEBI:40909",
+      "pmid": "26596626",
+      "row_sha256": "043b211a3e5459b43815781c93a278e0ff9587d2d5ebac0049965ea49b95bb96"
+    },
+    {
+      "identifier": "CHEBI:45979",
+      "pmid": "1423663",
+      "row_sha256": "4f00e3a6ded3613d3a630c1dc3e137ddff88c7ab222263f237235f2459fd7422"
+    },
+    {
+      "identifier": "CHEBI:45979",
+      "pmid": "1423663",
+      "row_sha256": "475c8124458e97a7d7b785ae9334e3e63fd40d1a659aa0df7f4336b1c76a74f0"
+    },
+    {
+      "identifier": "CHEBI:45979",
+      "pmid": "1423663",
+      "row_sha256": "f1c3931ece36caca5d600577facdf495b3984038e91984ce34b3c8b607308508"
+    },
+    {
+      "identifier": "CHEBI:45979",
+      "pmid": "1423663",
+      "row_sha256": "83698774ec3629d80020df2e499f131d60103c31207ee43da6f6211845772abd"
+    },
+    {
+      "identifier": "CHEBI:45979",
+      "pmid": "1423663",
+      "row_sha256": "f8cbeca910e5f7b0a865df243969e808fa6ecfca100d7373661d1dcc228dde37"
+    },
+    {
+      "identifier": "CHEBI:45979",
+      "pmid": "1423663",
+      "row_sha256": "d16cbf8eaae75082d48c11ae7744cc0f17975a68bc6bf1505c6165146245d311"
+    },
+    {
+      "identifier": "CHEBI:46081",
+      "pmid": "12519188",
+      "row_sha256": "4fabfdb6e0e4b06bde7d76adfebeaab8694aa3e503a69eda76131560ece33e89"
+    },
+    {
+      "identifier": "CHEBI:46081",
+      "pmid": "39403939",
+      "row_sha256": "c6aebb57526938ad3ff75835d58bf1a33b1056fd17dc349ad144c3ea16613a39"
+    },
+    {
+      "identifier": "CHEBI:46081",
+      "pmid": "11036010",
+      "row_sha256": "c71d9939d9ef63717ea9fb61a15521064b7fb1525a7ae2a15ecf3caa83c3f046"
+    },
+    {
+      "identifier": "CHEBI:46081",
+      "pmid": "11600353",
+      "row_sha256": "a451e066b9b8c2bedc7648c7faf18b6b083d3f2cd94e281f6be33adfad2dda53"
+    },
+    {
+      "identifier": "CHEBI:81760",
+      "pmid": "30497711",
+      "row_sha256": "ae8fb2dd0560572b63b08cc8e75876dfc6cf2a18ba0f63298fd7420f14822fa2"
+    },
+    {
+      "identifier": "CHEBI:81760",
+      "pmid": "30497711",
+      "row_sha256": "56658c358ef1d150e881418e42dbdab1cbf8db6dfce7e2c707925c606c3629cb"
+    },
+    {
+      "identifier": "CHEBI:81760",
+      "pmid": "30497711",
+      "row_sha256": "e7f97258b540d01a85caf0d2dd1e58996e07f98b7756efa91b5c09570ab32df9"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "17073308",
+      "row_sha256": "9b6ad9dcd0279f1321fd5897f1969474f46a65b84e4d7e773ec7d1ffcb690948"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "30686204",
+      "row_sha256": "ccb25cd155ad2678e397f26413d13ef8a6a11c0f365e4795bba9cfab165e8af9"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "30686204",
+      "row_sha256": "7e517057ccb4b3d576da2aca08528227857b4d937d32f44e2f749b367447ebb3"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "30686204",
+      "row_sha256": "ee7c92d51308f55fb8c6c2e966b7437047148619fab93fcd63935b02d8da0337"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "30686204",
+      "row_sha256": "78bfd787b439a0c34169e5a846543694de58aea646c6b2dcf96f7046413b6075"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "38374637",
+      "row_sha256": "f177428e52f4619cd334e023e642c1d6ab12911646a153824c1d90dd9e6f5c2f"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "38374637",
+      "row_sha256": "ae814e8587fbd05c1051d3da866cb17ecb9474102bbff8b6c8d94239022d79ad"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "24903410",
+      "row_sha256": "7aeeeb95c55881dacc634131c410392afbc5a2561d79ae81162b433a9245e262"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "24903410",
+      "row_sha256": "a1a1bc2ef20255470d46f95ce69a59ff5538973733e29f516d2c39e60f841d71"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "22591226",
+      "row_sha256": "db3586159399f0df98f90dced097ad2d1f7cf2d3766c99cd0246e3f3e9bae26c"
+    },
+    {
+      "identifier": "CHEBI:8434",
+      "pmid": "30497711",
+      "row_sha256": "21853d9f769e8205cb98183d12734d71204621e2b16b133553e9d7328f5a28c7"
+    },
+    {
+      "identifier": "CHEBI:8434",
+      "pmid": "30497711",
+      "row_sha256": "e578169af19530a5aa83ed93d20465416d9a530d9d6f2d6670c41edc8a44405f"
+    }
+  ],
+  "previous_review_sha256": "0e74ab5f85578ab373f3ce0c5717d2ec78a44442d4fdb7409fef3e7adc068278",
+  "primary_reviews": [
+    {
+      "curator": "codex",
+      "locations": [
+        "Results, Figure 4 and Table 2: separate parent, donor and tested derivatives",
+        "Nucleotide accession statement: distinct source-isolate deposits",
+        "UniProtKB release 2026_03: Q9P340 entry 120, sequence version 1; two EMBL deposit cross-references and species taxonomy"
+      ],
+      "note": "PD5 is the parent background, not one uniquely identified tested derivative. Q9P340 links deposits from two source isolates and does not identify an exact experimental allele. Source labels and biological fields are retained; subject protein and genome remain unresolved. EC50 and MIC are distinct endpoints; no measurement is added.",
+      "pmid": "10919801",
+      "reference": "DOI:10.1128/aem.66.8.3421-3426.2000",
+      "review_id": "hamamoto-2000-source-protein-context",
+      "reviewed_on": "2026-10-08",
+      "source_rows": [
+        {
+          "identifier": "CHEBI:81784",
+          "row_sha256": "c6e0ebe856db76a293064177865c092b3441a23c13570bf0b3e23dc66ae0083b"
+        },
+        {
+          "identifier": "CHEBI:81784",
+          "row_sha256": "186a65919a2c248db6f58a09c0ce7b4a4cbc6d2c84000bc63a28c4378f7d6d8b"
+        },
+        {
+          "identifier": "CHEBI:81972",
+          "row_sha256": "79fcfbefc04f219bf60727ec3f62d9cb20eec12e2d3f4f6d739369341153977b"
+        },
+        {
+          "identifier": "CHEBI:81972",
+          "row_sha256": "1ad4a3923ff44ada7d7b1950207539f30ede1371fa53f796f07902285145f44d"
+        }
+      ],
+      "source_url": "https://journals.asm.org/doi/10.1128/aem.66.8.3421-3426.2000",
+      "withhold": [
+        "protein_accession"
+      ]
+    },
+    {
+      "curator": "codex",
+      "locations": [
+        "Results and Tables 1, 3 and 4: parental backgrounds versus separately tested derivatives",
+        "Table 4 footnote a: L-733560 is distinct from the caspofungin endpoint in Table 3",
+        "UniProtKB release 2026_03: A0A1D8PCT0 entry 36, sequence version 1; SC5314 reference taxonomy"
+      ],
+      "note": "CAI4 and T1FOA are parent or recipient backgrounds, not unique later tested derivatives. A0A1D8PCT0 and TaxID 237561 identify SC5314 reference context. Table 4 reports L-733560, not caspofungin; the T1FOA-associated compound interpretation remains unresolved. This identity review does not validate that source phenotype. Biological fields remain unchanged; no new measurement or experimental allele is assigned.",
+      "pmid": "16048935",
+      "reference": "DOI:10.1128/aac.49.8.3264-3273.2005",
+      "review_id": "park-2005-parent-and-compound-context",
+      "reviewed_on": "2026-10-08",
+      "source_rows": [
+        {
+          "identifier": "CHEBI:474180",
+          "row_sha256": "b4e8b42a68500e5f255eda39e295760c4dbaf50789025b86bd939ca9327f5e1e"
+        },
+        {
+          "identifier": "CHEBI:474180",
+          "row_sha256": "dfe301aef21adfbff0093ab696d4de7b397e9c1d5d67589fe29ccb8cbeeaacbb"
+        }
+      ],
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.49.8.3264-3273.2005",
+      "withhold": [
+        "strain_taxon_id",
+        "protein_accession"
+      ]
+    },
+    {
+      "curator": "codex",
+      "locations": [
+        "Results and Discussion, Table 1: reference parent, clinical isolate and tested derivatives",
+        "Nucleotide accession statement: paper deposits differ from the imported entry cross-reference",
+        "UniProtKB release 2026_03: Q870D1 entry 121, sequence version 1; species taxonomy and EMBL cross-reference"
+      ],
+      "note": "H99 is the parent/reference background, distinct from the clinical isolate and tested derivatives. Q870D1 has species-level taxonomy and a deposit cross-reference different from those reported in this paper; it does not resolve an exact subject allele. Source biological fields remain unchanged. No replacement protein, strain TaxID, genome or measurement is inferred.",
+      "pmid": "22155829",
+      "reference": "DOI:10.1128/aac.05502-11",
+      "review_id": "sionov-2012-parent-and-deposit-context",
+      "reviewed_on": "2026-10-08",
+      "source_rows": [
+        {
+          "identifier": "CHEBI:10023",
+          "row_sha256": "8e3d90f900638c22e6b0633433aadbd67df24c88a0604e6ddd92dc4a8faba912"
+        },
+        {
+          "identifier": "CHEBI:46081",
+          "row_sha256": "49ba3ea8d7911b548fc260a6570c0a80db0b6d282da3c042543637451ac9cf1c"
+        }
+      ],
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.05502-11",
+      "withhold": [
+        "protein_accession"
+      ]
+    },
+    {
+      "curator": "codex",
+      "locations": [
+        "Results, Fungicide sensitivity and Table 2: parent and distinct tested groups",
+        "Fungal strain identity paragraph: JK19 parental context",
+        "UniProtKB release 2026_03: A7EGE3 entry 112, sequence version 1; ATCC 18683 / 1980 / Ss-1 reference taxonomy"
+      ],
+      "note": "JK19 is the parent background, not one uniquely identified tested derivative. A7EGE3 and TaxID 665079 describe the ATCC 18683 / 1980 / Ss-1 reference, not that experimental subject. Table 2 reports EC50, not MIC. Source biological fields remain unchanged; exact subject protein, strain TaxID and genome remain unresolved. No activity measurement is added.",
+      "pmid": "25441450",
+      "reference": "DOI:10.1111/mpp.12222",
+      "review_id": "wang-2015-parent-and-reference-context",
+      "reviewed_on": "2026-10-08",
+      "source_rows": [
+        {
+          "identifier": "CHEBI:3405",
+          "row_sha256": "2e2e5cd8f0b56bd8265a0b93020007ed18aafab0fdebf821a699c8496d91e243"
+        }
+      ],
+      "source_url": "https://bsppjournals.onlinelibrary.wiley.com/doi/10.1111/mpp.12222",
+      "withhold": [
+        "strain_taxon_id",
+        "protein_accession"
+      ]
+    }
+  ],
+  "proteins": {
+    "A0A1D8PCT0": {
+      "entryAudit": {
+        "entryVersion": 36,
+        "firstPublicDate": "2017-01-18",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2017-01-18",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "1f2576558d3a0ecbfd6b26abb449ca65129b1cb68fa2f221d6d176a0306fddb8",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "CAL0000176780",
+                "source": "CGD"
+              },
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AOW25926.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "GSC1"
+          },
+          "orderedLocusNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AOW25926.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "CAALFM_C102420CA"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "CAL0000176780",
+                  "source": "CGD"
+                }
+              ],
+              "value": "orf19.10446"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Yeast",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AOW25926.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000000559",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Saccharomycotina",
+          "Pichiomycetes",
+          "Debaryomycetaceae",
+          "Candida/Lodderomyces clade",
+          "Candida"
+        ],
+        "scientificName": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+        "taxonId": 237561
+      },
+      "primaryAccession": "A0A1D8PCT0"
+    },
+    "A7EGE3": {
+      "entryAudit": {
+        "entryVersion": 112,
+        "firstPublicDate": "2007-09-11",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2007-09-11",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "555f0b0d0bfb9d954622d8ec872883db50959e060120480d30797c73d0bec515",
+      "genes": [
+        {
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "EDO01909.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "SS1G_04384"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "White mold",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "EDO01909.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000001312",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Sclerotinia"
+        ],
+        "scientificName": "Sclerotinia sclerotiorum (strain ATCC 18683 / 1980 / Ss-1)",
+        "synonyms": [
+          "Whetzelinia sclerotiorum"
+        ],
+        "taxonId": 665079
+      },
+      "primaryAccession": "A7EGE3"
+    },
+    "P10613": {
+      "entryAudit": {
+        "entryVersion": 179,
+        "firstPublicDate": "1989-07-01",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "1995-11-01",
+        "sequenceVersion": 2
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_object_sha256": "a32b0c37edc660bfab70b4a8eead80fe21a6cba2796e1f216528ae1d740074e1",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "10991846",
+                "source": "PubMed"
+              }
+            ],
+            "value": "ERG11"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "CAALFM_C500660CA"
+            }
+          ],
+          "orfNames": [
+            {
+              "value": "CaO19.922"
+            }
+          ],
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "id": "10393548",
+                  "source": "PubMed"
+                }
+              ],
+              "value": "CYP51"
+            },
+            {
+              "value": "ERG16"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Yeast",
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Saccharomycotina",
+          "Pichiomycetes",
+          "Debaryomycetaceae",
+          "Candida/Lodderomyces clade",
+          "Candida"
+        ],
+        "scientificName": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+        "taxonId": 237561
+      },
+      "primaryAccession": "P10613"
+    },
+    "P50859": {
+      "entryAudit": {
+        "entryVersion": 162,
+        "firstPublicDate": "1996-10-01",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "1996-10-01",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_object_sha256": "603e397a774e51a4592f6c51a693380ec545fc6f7efc99fbcd57405cbc58bad6",
+      "genes": [
+        {
+          "geneName": {
+            "value": "ERG11"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "CAGL0E04334g"
+            }
+          ],
+          "synonyms": [
+            {
+              "value": "CYP51"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Yeast",
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Saccharomycotina",
+          "Saccharomycetes",
+          "Saccharomycetales",
+          "Saccharomycetaceae",
+          "Nakaseomyces"
+        ],
+        "scientificName": "Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 / NRRL Y-65 / CBS 138)",
+        "synonyms": [
+          "Nakaseomyces glabratus"
+        ],
+        "taxonId": 284593
+      },
+      "primaryAccession": "P50859"
+    },
+    "Q870D1": {
+      "entryAudit": {
+        "entryVersion": 121,
+        "firstPublicDate": "2003-06-01",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2003-06-01",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "64000ac6e07cb3d1cac38d583899414bfa5079713cfab6d71adca6944250dde6",
+      "organism": {
+        "commonName": "Filobasidiella neoformans",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AEQ63271.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Basidiomycota",
+          "Agaricomycotina",
+          "Tremellomycetes",
+          "Tremellales",
+          "Cryptococcaceae",
+          "Cryptococcus",
+          "Cryptococcus neoformans species complex"
+        ],
+        "scientificName": "Cryptococcus neoformans",
+        "taxonId": 5207
+      },
+      "primaryAccession": "Q870D1"
+    },
+    "Q9P340": {
+      "entryAudit": {
+        "entryVersion": 120,
+        "firstPublicDate": "2000-10-01",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2000-10-01",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "b8709e03eedf0062a7900274bf1a200d70c77cf5f2e37aaa8359488139879af9",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "BAB03659.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "PDCYP51"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Green mold",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "BAB03659.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Eurotiomycetes",
+          "Eurotiomycetidae",
+          "Eurotiales",
+          "Aspergillaceae",
+          "Penicillium"
+        ],
+        "scientificName": "Penicillium digitatum",
+        "taxonId": 36651
+      },
+      "primaryAccession": "Q9P340"
+    }
+  },
+  "records": [
+    {
+      "after_record_sha256": "68516a9277fd5fa156346b9ba54b03d1cd85bd23644759e9fca0a4a242438277",
+      "before_record_sha256": "092c7f17933e337c1396eb56c1478d22bb7a643d3f18e49e931caa41571bc7c0",
+      "changed_claims": [
+        {
+          "after_sha256": "ea4657e7bc0566fd210d08c9cdf295a4d45814b094e384aaf99b33b0cb728707",
+          "before_sha256": "efcf4d93b8c77260111bbc5782118ff8cbedf109076d8beb5341b1c486a89e60",
+          "claim_index": 39
+        },
+        {
+          "after_sha256": "c0c5629170cfbb17c7d7c56386005b26696daf7a0100c4ccaff1d3bc9ba14491",
+          "before_sha256": "13251af9dd839d430b0f711a9c30b40153dbb3f811242ecd5afc63756da5d150",
+          "claim_index": 40
+        },
+        {
+          "after_sha256": "3b4eb270db69b66d4a8bdd121974e2e39803adcc91991519876c1bf14e54108c",
+          "before_sha256": "e17dcce04ec292fef9a51173b0e9332803159bc253a5901a2485926b498349eb",
+          "claim_index": 41
+        },
+        {
+          "after_sha256": "6e2b86c070b968bc52c8d468173e901d13f9c39b0b691005b1e6bf27e2e69a9f",
+          "before_sha256": "9fafe5f56acece39e5aca817c63cd76b1cf5c39228fef73b7f35bdf65ef5f9f8",
+          "claim_index": 42
+        },
+        {
+          "after_sha256": "b01727c92aa1b1aeb2484854f57d237bdab2723990b28bb84e9482a13d901ea9",
+          "before_sha256": "533d1ca055b6582932e492ca3686ae37de5be4d5ac80704236586e2ab68c5d37",
+          "claim_index": 43
+        },
+        {
+          "after_sha256": "b0aa56ae70eed52e688f7d752ee861c3fee87c1e592aa8157edf5f3d8d4e1d79",
+          "before_sha256": "609b80f12031a7fb452cc4f4aa7043f40a9f42904fcae344f8c99bcf41056a72",
+          "claim_index": 44
+        },
+        {
+          "after_sha256": "22fa21748b82297fce261c974b1851b683e9254bf842f58ea35893798b5984cc",
+          "before_sha256": "8a24fe61f1f1ff44a72b77d347ac3b56e055297ec6abd5feecaeadc66eec171e",
+          "claim_index": 45
+        },
+        {
+          "after_sha256": "18043342fd1d7f875f6c5f8d705903c9b5a4b301e6c34d6e587b8f1973def1d6",
+          "before_sha256": "04e88e901fdcfa4717ef4f74b16e022a1d2b311612f53f8a2e46e4db97d92352",
+          "claim_index": 46
+        },
+        {
+          "after_sha256": "e4c563453e0f95672ae26a6cbb050f8868823f05425e863f7752ee0a5b0c531b",
+          "before_sha256": "7c52c3efa77b99f1b4408f081222c95ffd058825a7efd72ed5c31ece6032921d",
+          "claim_index": 47
+        },
+        {
+          "after_sha256": "3eaad6acf9f36cce25a80f6540e2103dc60d0b72272296394d0246a88e3634e1",
+          "before_sha256": "6825d41c615db581f5e7bb19d3ec5b3d6352eb8c9524bb4ac288a6c67c563abd",
+          "claim_index": 48
+        },
+        {
+          "after_sha256": "e6f2b7d7fc193d3c9f257d532bf359111063f055d5b67cb464fe7dafc0a963ab",
+          "before_sha256": "ceea0fea612035b457b5fe8f6a8d2fc27441dc53e9d30d0084ed58b4bc5b1dda",
+          "claim_index": 49
+        },
+        {
+          "after_sha256": "a643e0af1dc01f068e96a902d4fde9592e6fed2a5769ec0f178253019f01d50b",
+          "before_sha256": "5749ea02ddf5a2757970696f850cfeed9105bb82dbc7b5f305d6e15e7a671de0",
+          "claim_index": 50
+        },
+        {
+          "after_sha256": "7c06d87886dcb8cfe567e624ec5d1779c78be99fb494f1b50504fcb971461b82",
+          "before_sha256": "f97fe68e5fbeab136adcbac1a04f1365ca11d5058df85a75bd7feb94d30c542b",
+          "claim_index": 51
+        },
+        {
+          "after_sha256": "0e97e71c792e4b2e11c02da0af39e054c2469c31491ce4e92b5db23e3d947829",
+          "before_sha256": "785500437950bb8fc5f21d0b6b3fb69eaf1214ac799b9d18cf7899309f261508",
+          "claim_index": 52
+        },
+        {
+          "after_sha256": "5cb8921c40739cbe043c06f6500271abbadc4ce5f40ae818290c81d4ed504559",
+          "before_sha256": "17177066c53572025a1f14899574f46b0f07b43ad87c72b6f0e6f3cb9b0ca08d",
+          "claim_index": 53
+        },
+        {
+          "after_sha256": "a73e6631e0fb432c4e728db17fa5946207c2751745fc2a8e2afdd2c44e3140d7",
+          "before_sha256": "b35136e12ee5b8db71dd917a57711033b576a772fd42be4cafb7c7bd28aaa062",
+          "claim_index": 54
+        },
+        {
+          "after_sha256": "99ed6c953bcf3ae49bed55b042dc0e62114be929e8f13652b8f57e2e3990c9ea",
+          "before_sha256": "69addbf02938d67b3b20a66f2f351034038de19ab4b287da75b16c014e7088c9",
+          "claim_index": 59
+        },
+        {
+          "after_sha256": "129a19f186e1c92f76a1ca7c90ce3b61445a48d5e4e871aa0b24516cf02e5925",
+          "before_sha256": "16fb106ab19d1cedcc4d6631ad445c585e469193d812a83a3bf90ca537886cdc",
+          "claim_index": 60
+        }
+      ],
+      "identifier": "CHEBI:10023",
+      "original_history_sha256": "e1056a9c81a3f745f6351ac6cbf135443b693b9e3215571f8ccb2bc0ad7d6ce2",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "unchanged_fields_sha256": "e18a231b9e228852d94d27b017a845d52c36d88424f5a24cef571ef6266f8964"
+    },
+    {
+      "after_record_sha256": "53ce11902a6211bfcf69ded8ab479ad93d817bb9f0354e274a6d12cd46f6a84b",
+      "before_record_sha256": "cce34dd0300cc1ca72f7d44a30e0731204f0d21f6bfd27d4d90674b8b6429c88",
+      "changed_claims": [
+        {
+          "after_sha256": "9bb93ba698c74c37d4492f892b1770ceba68300fcef7ce1933f3f6d41f9ece16",
+          "before_sha256": "03d390f525b3954f9328720c654fe16f163387df843c6215660cf8ef34b7169a",
+          "claim_index": 2
+        }
+      ],
+      "identifier": "CHEBI:27641",
+      "original_history_sha256": "d81789dcdf48d26e7dc883160b1a91a3fa06e4ea8b509da12b90308a33b1b5dd",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml",
+      "standard_inchi_key": "YPHMISFOHDHNIV-FSZOTQKASA-N",
+      "unchanged_fields_sha256": "f78d8b7e0fbc7e9733fe3c284ba8b72ee2a9c419c6f263a74a693df00a8124ea"
+    },
+    {
+      "after_record_sha256": "a0f2ba1cba720f3c7233eefdd022b87167a8bcc8d6b7d5a38c9751f7530560fb",
+      "before_record_sha256": "b60e2c9dc7774d35534f158b06e166271958db8f42e35abb7b6349d6177c5738",
+      "changed_claims": [
+        {
+          "after_sha256": "6ef521e07d8611bc6b4b9c36246c7ee87c003274c457ef738c2f78ce20547ed5",
+          "before_sha256": "8b7747aa12f3473c351dbc7cdba8aaea63cfcc3dcf3d8306417c68756e5ff444",
+          "claim_index": 5
+        },
+        {
+          "after_sha256": "5738a1fb5bd258bd5eba6f649af57b29b2436e1f6e1269be589297be51b21e9d",
+          "before_sha256": "ed491914a199f937dd6087cda27968c168df668f042627e8947b8199847ad727",
+          "claim_index": 6
+        },
+        {
+          "after_sha256": "c9a4bf64db8599e10db6db560972f7700137245591fb05c1789bfea8c603754f",
+          "before_sha256": "0ebb920eb259198bc4ccb2f834500efbdebeac07b6443fbd88660a23fc1bc34a",
+          "claim_index": 7
+        },
+        {
+          "after_sha256": "30ff16881ab799d0fd026d667786a6fe38d6a1d3c27616b5f5923cf54f623b6f",
+          "before_sha256": "d444054e29017ce51b8a497dbef8a61cfbe6153a2e6ba477632f5ec489c0ce0c",
+          "claim_index": 8
+        },
+        {
+          "after_sha256": "05e17badf973b822a508ee29a6be85f752802ae6fb4a1e01f0f0b394d2d58f27",
+          "before_sha256": "53593eef3ba50d86972229583e22c87f93f59038b80108ca553ab52fc7f868da",
+          "claim_index": 9
+        },
+        {
+          "after_sha256": "113d3001664fc2a22817bd9d1569b204ed175a105974e2d27c933285bf61b1c5",
+          "before_sha256": "e804da16e0f57b5aabd0abeb640507556bf4069582db965cc4dbaac6a8990480",
+          "claim_index": 10
+        },
+        {
+          "after_sha256": "55f8f721f698e85c586008588356da1cd35d3b0d2edc3e60b816f2b1a17bde62",
+          "before_sha256": "8d6c30f7ea9db9d14839d16f8b8b73a30722ade0e944ed9d5649ae07513ddb0d",
+          "claim_index": 11
+        },
+        {
+          "after_sha256": "021c7f09dc382bae032051cd36192236a00e68dbc30586f636c8643b8c2bd852",
+          "before_sha256": "af90b121a72198d56bac8f7ccf24fa4d180f75039b4190fd8f9a9267c9c90838",
+          "claim_index": 12
+        }
+      ],
+      "identifier": "CHEBI:28909",
+      "original_history_sha256": "6bf0dc573637394954599b27ca274bedcd4c354f6640bf16392fa88460007e21",
+      "path": "data/antibiotics/antifungal/iprodione.yaml",
+      "standard_inchi_key": "ONUFESLQCSAYKA-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "64cf04cc417a43041af5befc3f433d8697aea28f3b0e4601f71f1f64590c307f"
+    },
+    {
+      "after_record_sha256": "457bc1a1118f4851728eb8ff89ebb71ca921aa8d9307c88c5a45fac19a7f5df1",
+      "before_record_sha256": "8e843d0faed4f079a329c60c70d3cb06fd8f4fc2d3813c2f08867fe374a99140",
+      "changed_claims": [
+        {
+          "after_sha256": "8e46e8ab5aa513f7d29f5160b5f02dd2283919b99815c7550c1cc05951284124",
+          "before_sha256": "6962baf9fde2e08e95256c05ffe3f0337caf454e4442fd29c81f94159a3fd2b6",
+          "claim_index": 9
+        }
+      ],
+      "identifier": "CHEBI:3392",
+      "original_history_sha256": "2929da06f5b6dd4aeac8e3de624a8d184646fc4dc408c12e2ad6fbe8da5dee98",
+      "path": "data/antibiotics/antifungal/carbendazim.yaml",
+      "standard_inchi_key": "TWFZGCMQGLPBSX-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "780cdaaaf9cc86f7a5882fbe6f1b80431774d6d696db42056ae73e5b0269aab4"
+    },
+    {
+      "after_record_sha256": "a3ed780e6177233625e2e1f217eeb0517420a09b63c10cf4a0c98a1855cb61ac",
+      "before_record_sha256": "5f53281cf2166c8a477ec7b5f0bafbe0beb38f36f44c77c76e1628b1824c271a",
+      "changed_claims": [
+        {
+          "after_sha256": "0889151e55dd34a5bb3947ce061fd4ad2ee4f417f64a1eb1e008cb0eab39ef88",
+          "before_sha256": "0bd77770bd471bb523e6d29ab02b3a6c9742a04871760454a63cedd17b105d33",
+          "claim_index": 1
+        },
+        {
+          "after_sha256": "de65ceb4a511cafb25a5dc30c35d6f468570b905233e3499d8890b7d3c9d2e1b",
+          "before_sha256": "c68403b8a97282525b0b1090437f8c017bcf3827372ce58d0a1577a96742bb1a",
+          "claim_index": 2
+        },
+        {
+          "after_sha256": "c77371faef9a69fbece82ffb21f5d55466a27e0e527a8b5f67b2292a1a49313b",
+          "before_sha256": "846214faea0e7fa900c95073adaf92dba2a34c21106a92f4468bbb344988ed68",
+          "claim_index": 3
+        },
+        {
+          "after_sha256": "6af2ec0b169d36b52d62a0e2fe8b2ced3a7726a26ed20f87e2c60e32a2867061",
+          "before_sha256": "4433a8ceaecc2f280ac9dc6b43589ee75a80799cc232827df9ca278348345dbc",
+          "claim_index": 4
+        },
+        {
+          "after_sha256": "54c3348ad864404f98fb63a9b89ee3a6f5034fb7d70ef61cff455ed779ec8e45",
+          "before_sha256": "29166b02140cd0092332fe13d3c8b0d70c80427805bf4d49c624ba2a80dd8b21",
+          "claim_index": 5
+        },
+        {
+          "after_sha256": "ef9bd34f27fa3a0a033cc884e01d87bad87264167c6c474d39bc7b87202a954c",
+          "before_sha256": "853612776ba6826fcfacb2a8df7af0930dab8a69afcef41c302cd7b6df527d12",
+          "claim_index": 6
+        },
+        {
+          "after_sha256": "0faaa6c299d74c5f343e2def04d43a073b333be4b1535c032db3f76e33b2faf7",
+          "before_sha256": "ce7d6b66e9857c2a7f725af7170e3459d0014557b2aba33034302d5cae056962",
+          "claim_index": 7
+        },
+        {
+          "after_sha256": "62fcdc4f3eec762c504dd8d21ddeabac6d606d6a22522f68adcf5f9737aacf5f",
+          "before_sha256": "b0b8e2593584b27ad7515f41311f95769139190cec8429918261a4a4c0112244",
+          "claim_index": 8
+        },
+        {
+          "after_sha256": "80a3f0030b5d3b88fac8048761436bd9ba8f5a3d25a4566dc02fe9df226b6676",
+          "before_sha256": "e034ec4e3fd7b35271a8542a511371f2f279ae77e78a87384f43984560946544",
+          "claim_index": 9
+        },
+        {
+          "after_sha256": "fc9b5c7dd9cd5afdc72fca4fa0b7a6495b228e07543d0cb4311ee9e91da2cc6f",
+          "before_sha256": "ba06743fd3c816d107a0a16c1f9050a4a701451c630fe1387df0de557a533739",
+          "claim_index": 10
+        },
+        {
+          "after_sha256": "1ba79e6ba3d2b9d8f329806e748a1bd0f1059b8bd0b24b0ef8e2512d2a8dda9f",
+          "before_sha256": "433ab93485804b3cae1fe9343fdb5cf36f84d8b4c9e68083d25cd5b2985283b2",
+          "claim_index": 11
+        },
+        {
+          "after_sha256": "df2182115a19f37f4ed55e060ac6f6490cbe9bd3a4c77fb0160417f83b495fb0",
+          "before_sha256": "3c1f80984efa6cf4c01612360d4506145d5542a25c5359c0e275a9970bb56930",
+          "claim_index": 12
+        },
+        {
+          "after_sha256": "854213481eea4a6bf3477c765e8273d4b1121f1cf1a968f3eeaea74b64a271e4",
+          "before_sha256": "9f7cb62348649fda5d6a3e92f09ee9b62b23c68672f5058bd348086c2efba6e2",
+          "claim_index": 13
+        },
+        {
+          "after_sha256": "f4d4cd5281fefd63e7ae4d53ca3011cfd7d0957d30b9322133a1c0213b505871",
+          "before_sha256": "20c15879a576bfa7ceb296b50dd89c80326357126cfcf99465349a3459d92c0d",
+          "claim_index": 14
+        },
+        {
+          "after_sha256": "d64e74fcc49a81094274068b23eb6a19a80c85e394cd603c52651333747b0e17",
+          "before_sha256": "3840e5cb2ec7a2ada5e90e8726b4a53f124fc6a198babca5bea7703630f7f141",
+          "claim_index": 15
+        },
+        {
+          "after_sha256": "f31daadca2ffd79931bf91afa6648052372ebc280f1d7e13a1dea91f6396e071",
+          "before_sha256": "90f0ff7c330ed81ef3f6814a65c3928e067fc5cb122f5df72c8f52931320ce7c",
+          "claim_index": 16
+        },
+        {
+          "after_sha256": "14332d69d92dd3bc2116cab2dc649b5cdc6ee89bc6fe98d08fb8946617bb446b",
+          "before_sha256": "80cb3eac22fd0ee8bf17706bdbe2643956ac9b52a92b3e4bced11c16bb87ccf6",
+          "claim_index": 17
+        },
+        {
+          "after_sha256": "d167cff6a9d116cc8b1f9f5cb750e153ba319071dc640ad0a98739498e4685b3",
+          "before_sha256": "6a6955f58b1ddf23b84db377eb05800ff8a6472e6ffacf21dcd5a1c9f8e91300",
+          "claim_index": 18
+        },
+        {
+          "after_sha256": "01987bcc4a5a5071801db077382413e055059ac642ee870d965fabc3714261b1",
+          "before_sha256": "be3a128670b9134ac865d18477acf143af55ec7efa0c8d24e19d2d64b051e65b",
+          "claim_index": 19
+        },
+        {
+          "after_sha256": "2dbac8f110df3c557fdf8cf5a532e7485bf0fc69a029131ab7536ec35f32aa79",
+          "before_sha256": "adadbbf1b1b47f8c795010de59e91a5d645a1192b95f78eaa61a296336d2db77",
+          "claim_index": 20
+        },
+        {
+          "after_sha256": "8e3f92db0ff23192052fc7292e8ccbc82bac0c436e0f0c34929b235df7fe82dc",
+          "before_sha256": "c70ce4fd51ca7512b328ece813957377837457d84b8698304c739e02fb05dba5",
+          "claim_index": 21
+        },
+        {
+          "after_sha256": "a9c441f56f996b1260042a14328d1c8ff441a5f8c67066af0c706e8feb86124f",
+          "before_sha256": "e0bed8f99571a492a31cf8d7c5f8baf7010dfba2c5b1e35f956714a3c6f1ff0d",
+          "claim_index": 22
+        },
+        {
+          "after_sha256": "b9da5652e1751c04848991a77f0e18343826f28e66cfe633366b7f5606a11eac",
+          "before_sha256": "5a93ace4ba7ddbc3c048c55868cb129852f992a37c15ae81af75fe0eff09f7d4",
+          "claim_index": 23
+        },
+        {
+          "after_sha256": "78dd14ae1086f2b2827dac996d028571f1a3a3b6b2edca79c39ed572f6129517",
+          "before_sha256": "39119329e9a720cfb6b71639bf07eefbb6f93f287ef3c5130c56c6c111b8e05d",
+          "claim_index": 24
+        },
+        {
+          "after_sha256": "c3eda1ff0cca4aac4430283ae2f682a283876367f8fb1c29bbd24565526bd418",
+          "before_sha256": "e7193a6c79cd65fe45c45a3da2e345ac00484b5765f38980b4f9303c488d028e",
+          "claim_index": 25
+        },
+        {
+          "after_sha256": "c1517ab480891a81ef3e896f17918a5cd0587d8ea42dbb45d9ccb3d34fb1e972",
+          "before_sha256": "cf8b39b17ce61388fe6498c5e6a9746c1231bf94e7927276cf8b3471438f93a2",
+          "claim_index": 26
+        },
+        {
+          "after_sha256": "de223f1a14007de6f6d30b40f78bd20dbfd7ff386bae5d99ccd982c864d7f77d",
+          "before_sha256": "3b946a722d85caef3ada7dff1cc39eeafbd2fa52e601d315fe0c8449c66a0774",
+          "claim_index": 27
+        },
+        {
+          "after_sha256": "4dd953268b185736fd0e12ba40a0f2cd38f29b508dd07879b7ab93b53c8b5b3d",
+          "before_sha256": "cf950a34045c4f878a3b07f2ffed7561d26c288967444a97f49fc7aea536c571",
+          "claim_index": 31
+        },
+        {
+          "after_sha256": "3d5dac676f527fca02d481c0e3f3d6a7117000d68a86925c4b4dfe01c0417ea3",
+          "before_sha256": "ff0d0fe2f5cad574c091bf28bf38045511311af0989c98aa37a44a82ec62a7da",
+          "claim_index": 34
+        }
+      ],
+      "identifier": "CHEBI:3405",
+      "original_history_sha256": "dd20fec40670ff7fb5fe19c079626396a1d69205cf3375a80a3aaeb7996665b4",
+      "path": "data/antibiotics/antifungal/carboxin.yaml",
+      "standard_inchi_key": "GYSSRZJIHXQEHQ-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "c0482f3a3f184b09fac2b2bec803d68cf6e7e5e46c6a4baff4aa37625645e81c"
+    },
+    {
+      "after_record_sha256": "941f1a9102e40ad53ae6cca4c60b245c2fd928d4d07aedba2d0eecb9f1f614bf",
+      "before_record_sha256": "ee2bc0914ee75991cd4ce47c666ea8c68d4f7e5159f8845a8d7be7d3ef3d4f9a",
+      "changed_claims": [
+        {
+          "after_sha256": "347a1c075d9b5ea9f15e2bb2b5d8d8552863f771001b813f9a33a696629a4dbb",
+          "before_sha256": "14e3f7424ec9ebb78c3ebbd1d278add3f908134e06087e7e592f0141842c8852",
+          "claim_index": 46
+        },
+        {
+          "after_sha256": "0ac87aeccc11c002492518caf7c08db0b94618e2b1a24adb5dc13e14d319cfdb",
+          "before_sha256": "2664649b6254852cbc413bc28ca494e8af098b0eca3eafb120e2ff68ffbf3c85",
+          "claim_index": 49
+        },
+        {
+          "after_sha256": "0a14e43aad62e8173c96af135373d32a1c11e682ea4eb8bc674533eaa00722c8",
+          "before_sha256": "90277a14f49580941d1ad16e4743f25f8509e7d0a7d77753b566c04337c1fce6",
+          "claim_index": 51
+        },
+        {
+          "after_sha256": "0d0b4bbb490da078ee45da120789ab00c4758e099c79150a2613ed048f05a24e",
+          "before_sha256": "834dc233c21655e4b22b61b6c5b909f475eb8231d0ee4a8cba07cd09edc8f257",
+          "claim_index": 52
+        },
+        {
+          "after_sha256": "136aa44017e4cbcb365bd9453d9813cb259439a53a4881d39afeca93e9b0947d",
+          "before_sha256": "b94e48ee8dac461a44691e0f1e55aaee5b439aa482fd6e92fadb85e219029de1",
+          "claim_index": 53
+        },
+        {
+          "after_sha256": "cc5280202210c4f466d4043bdbbdf11e1d0000357829e6f9fdcc88efad00c7c7",
+          "before_sha256": "220bb5ebc6e1e630f502ea00239dbd5a3eaa45523bc3181bce16315a647ed07a",
+          "claim_index": 54
+        },
+        {
+          "after_sha256": "6d745ecabdce7513cdd7de64b3a51285203fb98ac6863117311af43df5f48973",
+          "before_sha256": "008ddef9909fd4410c3932dbaf2c7eebb675c491c8368ef91bc3dc9f4cea03b5",
+          "claim_index": 55
+        },
+        {
+          "after_sha256": "e7486f6459e2fe2837886a3ad8f87d029ebbdc84e5ed8c3806f0324358418b83",
+          "before_sha256": "d8d004fb0993ac1fcc2e3e3986b8adc70fa2d79fd6c4b408c27e6d462762c1c1",
+          "claim_index": 56
+        },
+        {
+          "after_sha256": "9c74ca080908233ff704f321579a053e4ebbae4367b9fba44b19c6177f38e8fa",
+          "before_sha256": "2bc957cff9cf73e1bb91c8223343119f485219c52175b2a66fc3a011d405b2b0",
+          "claim_index": 57
+        },
+        {
+          "after_sha256": "5cff4592e20d2e346907364611458df17acee5ee8adb30579180b569f3c58272",
+          "before_sha256": "654e42eef1303dce063f4e679de15f52d514ea7dab96d3697f9785b02c7d211a",
+          "claim_index": 58
+        },
+        {
+          "after_sha256": "2ea539981f072de578bb7990ca40b3a6541e98ff63be9be803c1903cc9d97dba",
+          "before_sha256": "d6dab45ac814070c5461286650b461e290baf4d8be5d09d29d572555a4ba90d1",
+          "claim_index": 59
+        },
+        {
+          "after_sha256": "e7a0edf4e045441cfca302f9d6bfca77e099608db7e8b46b93f11f5760a0765b",
+          "before_sha256": "9d8acdf5267a8d46727694c560f3b69b6dec74d89c781ca159074b958ae4b7b7",
+          "claim_index": 60
+        },
+        {
+          "after_sha256": "b7fc26bfc693fd0965a936267deaae37be11c9a3d3cb15fdc02168f23b2f4836",
+          "before_sha256": "ca6aae7d15420beff448004b7067d640f591964623c1fe2ff5e32ba2afbd36a7",
+          "claim_index": 61
+        },
+        {
+          "after_sha256": "669d0e27b8042552f928e025a6feee008704fadc792bf6ee6d97b8a12f0478dd",
+          "before_sha256": "d188d3c7df82cacc74c9e13ed01bd0bffa08571d21b908595f1a7cdec42e80db",
+          "claim_index": 62
+        },
+        {
+          "after_sha256": "e03c2b9e0193771fcf0072a8b526c35b0840808c8f1bfaffe7ef547536874df8",
+          "before_sha256": "0efc1ecdd5c74f6774ebcbff83b3575d82fbd321e945b6d6997109e49a0327aa",
+          "claim_index": 63
+        },
+        {
+          "after_sha256": "0174ddbb0d2d041cf22ec9960882417d044737c58ffd8b3277028442934358e1",
+          "before_sha256": "dbc08336bb92ef50c85f903888317ba124a71157431a5c0b0ec1320f557c47d0",
+          "claim_index": 64
+        },
+        {
+          "after_sha256": "3f8246b0f98592682aa83cf0761ca18000c3bcc2b54e52fc7f333b0b9573c12d",
+          "before_sha256": "42c4ddedcc983ed207fb88a00394220cdc64f34716b3610a5455db0afdcbff9c",
+          "claim_index": 65
+        },
+        {
+          "after_sha256": "8dc1459b7efb506e4b150ddd87bf2b0c82f422f6b715f8509bec74a60343bc67",
+          "before_sha256": "8679a3cc8774a4ac24848ca7c4fa2adb220b64b87d3d6aadee0a06d3d21a5518",
+          "claim_index": 66
+        },
+        {
+          "after_sha256": "8206d7caa6c1d3d1bc2e61ebca18e2bacb0399c8fd52807e0bb7a713ced1f08a",
+          "before_sha256": "2091214e79aff805266d9d4cf38d69d2b217e75e37e129dff9123d48393b4ca0",
+          "claim_index": 67
+        },
+        {
+          "after_sha256": "63be371bdb8b536ad50d54c7da6455144155147e4edde025b16633a55397e364",
+          "before_sha256": "cb509354a4d4c5a6985cbf48fedb116d21273f80301247b3d3dc1245bd4d193e",
+          "claim_index": 68
+        },
+        {
+          "after_sha256": "fc2e38e602c6d0a9a1879d64f086037e88339f85b7f6bcb9fe02266e033a3c5c",
+          "before_sha256": "cecbc18bcd934b9d0b0e80baf6d524a5e838a44b238d000c3d1cb5c67daaf07f",
+          "claim_index": 69
+        },
+        {
+          "after_sha256": "5c4a594686cab9788c11eb509b2b49e20f2792c739deaabaafde0717834ce71b",
+          "before_sha256": "189c20b8258c6adcccfdf34def41d2dbefc9b0a56ce0a6d2f22772e128992a74",
+          "claim_index": 70
+        },
+        {
+          "after_sha256": "9976110a98a615a82915f3238a5d49a23004d2cd286bb471d72d8f04e0a92955",
+          "before_sha256": "ed5ef0e58b32056b0ae0371c5a93e94d65707bb890c3911ac036fb2451838175",
+          "claim_index": 71
+        },
+        {
+          "after_sha256": "3effcb088063b3774f18f11685c1896e5aa23d5626168be924479ce230f2c245",
+          "before_sha256": "62e6cf19310c1469ba1d81c7aace02366829dca408788279ae7e9293df47ee32",
+          "claim_index": 73
+        },
+        {
+          "after_sha256": "364abd35efe1669a9903865dc6689a5ccc42c89645368c5936c9d5f1186689ee",
+          "before_sha256": "83dda4b06202e432203f9e549130a8eb508bd4e15a7ca0f07afe631416caca8b",
+          "claim_index": 74
+        },
+        {
+          "after_sha256": "5783c196e2f43515eb6978b823327f9cea2871d15a85f59efe2da53921a3a382",
+          "before_sha256": "99a6d050c51f917cbd19f3843154934dbacdda8180199572abeb188cd5fe399e",
+          "claim_index": 75
+        }
+      ],
+      "identifier": "CHEBI:46081",
+      "original_history_sha256": "a157dd64d8f0af8feb1fde08abfac3439d1efd546c11206b165f8fb080898739",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "4395373f5ed5e670ab499bf1245795e7b834fa413a98df7f21705ea6d67ed5d0"
+    },
+    {
+      "after_record_sha256": "365d30a2a547f98bb22c573e2c1d55f2784b04ddd87bee8d8a930e09b0a22a95",
+      "before_record_sha256": "e66f67500e8c6d65f14ae3ecbb2a2c265ae1f83e5d33e1a0c211ee16f43e2147",
+      "changed_claims": [
+        {
+          "after_sha256": "4fd1cfa1438cf57834eae7e765e46bebc00ab04bf68f7bd11497b5dfd3529cad",
+          "before_sha256": "166d77408da816c48d813d808f2384b2903e2d126d943af9c37fbc7cc78b2b5e",
+          "claim_index": 22
+        },
+        {
+          "after_sha256": "3978e72c8164bbc3392339d2d677f1df20c80e5cbf04978543782886a25cab8d",
+          "before_sha256": "6b564e9d3d210b490afbac5aa075c52a05177fb15668baa1e1a636a8737a9976",
+          "claim_index": 23
+        },
+        {
+          "after_sha256": "95d7567f97e55eadfeaf94b71a128a807d224376bd42bcf04cf73e096dd909be",
+          "before_sha256": "d827749dc97e1270f0eec2c0756c63deff92ed4803daa1a6edec69a429fc4a66",
+          "claim_index": 24
+        },
+        {
+          "after_sha256": "4f0bbc4c2a7991e410e1bc3659dcbd8759f29974df1556b6254805daeaaf0228",
+          "before_sha256": "2c969c9092f33ce4ab7d9899c255c6bc24050a2d1d642cd3b53f1099767f0a89",
+          "claim_index": 25
+        },
+        {
+          "after_sha256": "81961b192c2f9a9170ec9d9a7e8280e82fba2607dab6d905ce3db5f1e39885a7",
+          "before_sha256": "bfb7a78933593831773367a42bc4dfbfa67dad757c0d5ac9e7c4f7ad09c5be77",
+          "claim_index": 26
+        },
+        {
+          "after_sha256": "9adbfbafe3dc67cffe8f4756a173c5a00d98654e57faf9ddb42d321617ac6253",
+          "before_sha256": "faa95f1e36d9ece7897d7e133654c92f1c2486f6f4f9d7540755767a1c08a3e5",
+          "claim_index": 27
+        },
+        {
+          "after_sha256": "b3c8e907f17c38e11474383d05f3a3ad7b087a9d10ea53c85a2177a393fb6922",
+          "before_sha256": "70421d9d1ef7991f2239799d10e55e502b0fe897c75346010a3c0c70c89f7b07",
+          "claim_index": 28
+        },
+        {
+          "after_sha256": "23c335fde7fe3f1a5625a9c669e8041bdbecb78fee1d5d3293ab4e0efb2f41cf",
+          "before_sha256": "d84d5e6e8ad965f6682383cd1e2e439b8d3050cc0ea81890a61267a29b6f348b",
+          "claim_index": 29
+        },
+        {
+          "after_sha256": "75d0207cacbaaf47c0f3ab52222c186ad55bdcfcb4c067f47c03868d647a0405",
+          "before_sha256": "c8b7c4cb9c81a80de71ffa53341fc06d8fd10214091db31b2d6b3433ce0deddf",
+          "claim_index": 30
+        },
+        {
+          "after_sha256": "7b6e8d0a7827f8e7f2b573dd28c193697c622de291a6bcf48746af0b2fd65873",
+          "before_sha256": "f6fdecd4c20d8bbae77d6e06aed92a990947644d123458b9ba5e2fbdebd9460c",
+          "claim_index": 31
+        },
+        {
+          "after_sha256": "efbf9f706ad380e443f772b983c430132a863642b45825772b917ebc57e613e1",
+          "before_sha256": "b8e7a6ac185e58ef3c008ff753f5e273c2cb614563ecdedc19b73c1915f14058",
+          "claim_index": 32
+        }
+      ],
+      "identifier": "CHEBI:474180",
+      "original_history_sha256": "b88a51c0d2c70738a9b1c9c43b8d72f14bce59436c1648bbf727bbac2959c5b6",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml",
+      "standard_inchi_key": "JYIKNQVWKBUSNH-WVDDFWQHSA-N",
+      "unchanged_fields_sha256": "ef086d0dcd43e29e4faec73af510b03d6f8f9b27653bce544e8a79149d50e998"
+    },
+    {
+      "after_record_sha256": "62fdb18429541b04e541ccb6f3ac989ccebeedd3cd9728bacbabf5970e11e9b5",
+      "before_record_sha256": "871f20d85824cbf3a1f50b693522e2fbafc4e66918f5b6a3331ddf0c331993cf",
+      "changed_claims": [
+        {
+          "after_sha256": "fe7c942b39f8e20fc6aef020f3196220120a729d29196221cb4e28fbec5941bf",
+          "before_sha256": "e9e7c03c241a681a58197dbad802bfb4e0acb60cc3bab8acd3d9c572e876361c",
+          "claim_index": 0
+        }
+      ],
+      "identifier": "CHEBI:48080",
+      "original_history_sha256": "35556b2dc05ec59f164808efa9eae088ff79ad34a2e0b8aeea0d3627cd21c66a",
+      "path": "data/antibiotics/antibacterial/brefeldin-a.yaml",
+      "standard_inchi_key": "KQNZDYYTLMIZCT-KQPMLPITSA-N",
+      "unchanged_fields_sha256": "8fd100a30a8aef7b8dfed2198c6f166cbbaf609cb85ec981b1d57441fbf7eb76"
+    },
+    {
+      "after_record_sha256": "402149ac1072e3f2b0c11c4ac9aea217e10a8f34bcd130dc6128497346af8183",
+      "before_record_sha256": "24db3fb58938e966b42c8455a5d31c829ff41d86380ec5a144a990820d31b938",
+      "changed_claims": [
+        {
+          "after_sha256": "66691161b630555f3f4f6afea971ada29a7f88a1942cb5242c98fe32bfcd57bb",
+          "before_sha256": "287eca6914b9543ec456bfe4d7d9768cd3e1b6f4bb603aecad607c881be12cc5",
+          "claim_index": 12
+        },
+        {
+          "after_sha256": "fbb14002eedfbd0b728355e2c055e46a3833435a0ae12e89696fee17f12212c0",
+          "before_sha256": "92af86a5ce8c4a27b0fc9e069707d8ad522aba23cd9fac3cde1c453853737800",
+          "claim_index": 13
+        },
+        {
+          "after_sha256": "a99dbf7c5e5b08eb954eb4956c8be166835fe641c7f5db7d7e91ec90a595c1b9",
+          "before_sha256": "a845f494389ac0a2149be9485baf890add3ba87f131984ab5b70ee26ff5564c7",
+          "claim_index": 14
+        },
+        {
+          "after_sha256": "7dc3de9dbdd28b374daa398e0c7689ec0219672e4e251f0fa11147d94d80c2df",
+          "before_sha256": "4575c48ea2aca9a4ff4fee3e777d95b14d597326620bcea754fb5ea3113d4ba3",
+          "claim_index": 15
+        },
+        {
+          "after_sha256": "76cec87346dfb6e611063767c03429d5761f9bf60faf83c14facaba6e6199d22",
+          "before_sha256": "798e6ed0a6738f33161cf2907379d7575e4a1758e3c5a6664008c8e073f7aa24",
+          "claim_index": 16
+        },
+        {
+          "after_sha256": "d4b1b5f5695627678721eb234093e8fbfd1ba11249acaf72a649826065f5c329",
+          "before_sha256": "c3bcff17bb205974ee4202275e35167fca5737153aa48612a60767da90851c39",
+          "claim_index": 17
+        },
+        {
+          "after_sha256": "0580d3bbe3aff2ceb7d381e509346b0e75f734e930cb26aee01315d8aeeb96fe",
+          "before_sha256": "5e03db1a873b1f99cbe253a1efb49c2198d56c00ab76a15e42bb66fd8222d0e6",
+          "claim_index": 18
+        },
+        {
+          "after_sha256": "dc8766707ac156d61e06dbf2233a5b0273f186f0a26a87b5fe856b1b6a97523f",
+          "before_sha256": "14d93da8de07182fdff71aea9d87ba8037817b9640ffa6fd3258842aa4d15e08",
+          "claim_index": 19
+        },
+        {
+          "after_sha256": "87f530a7a418b9d249d0b43e2cea8a376a91d0cee200e8238a1f82be1b1e4b06",
+          "before_sha256": "e133d92195c7e5c32806cd0653d7cd45e5936cef8051bc9944b8d065c751babd",
+          "claim_index": 20
+        }
+      ],
+      "identifier": "CHEBI:55346",
+      "original_history_sha256": "ed050158d642a7f5170236efdbd25485cac5dd5ada863ad7c0f2f0267927ddae",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml",
+      "standard_inchi_key": "JHVAMHSQVVQIOT-MFAJLEFUSA-N",
+      "unchanged_fields_sha256": "519983a9ed72285e8969c834af012f0f3ac770b1ea17e126a430d7071ee3ce27"
+    },
+    {
+      "after_record_sha256": "ac939012549c3aee226edf09e26c630185b8458bc8f8b119398248310b292beb",
+      "before_record_sha256": "9af2910be48ce08e7806ae51fdbba72849da6c87b8c7b9961e9a0a0194c7a99a",
+      "changed_claims": [
+        {
+          "after_sha256": "ba8bc32a001e69cc19305553f5582edd14c9eabaff26490e186d816eb7e414a1",
+          "before_sha256": "d91393a26ab333121b732094086543dfb0d2253cdd82c78dd42c4b2eae4e525f",
+          "claim_index": 13
+        },
+        {
+          "after_sha256": "94fb2a266809d4362dd263138c9e6fd0e33cb7fa1673c1b79f92b8579118db12",
+          "before_sha256": "d6902689e0dd219135227cc6fffec8e71ad411d5fffa8a204346d371384d295e",
+          "claim_index": 14
+        },
+        {
+          "after_sha256": "d2b879c6f9d11516786a916eb01096e539e7408757f27c95486c5f5a74e3baf6",
+          "before_sha256": "f1e793a022460497db6c3acc858789f48c8285af53677a7f1d52632df0c52d2d",
+          "claim_index": 15
+        },
+        {
+          "after_sha256": "20ea30e40e1a33f5772a229a6a68d9edc990e50102ec16b4e4cb769099d1f385",
+          "before_sha256": "72bea63445a4eeb2b69687a074057c2695376a52d5e020d8c35cf99bfc4d340c",
+          "claim_index": 16
+        },
+        {
+          "after_sha256": "3f12c11f3a86153508db1c3117152b9bfef6414831876978448028d10628a6f4",
+          "before_sha256": "66d02b0a78bc33e71341c77a8704df4d759efe02417df92919a5ac1a34c7bfd6",
+          "claim_index": 17
+        },
+        {
+          "after_sha256": "29045639ac525ebe083e5291076e61821755bce56bd9573c1ec1608fccf007a2",
+          "before_sha256": "f2c76ea3a2195d66b48edbdbeec0dd54eb2a34968e79a5d770ae516071d4f265",
+          "claim_index": 18
+        },
+        {
+          "after_sha256": "d8bd0648302210c32d864fdb29007d316886a5ee11edad95423eb7c3a5103603",
+          "before_sha256": "38905e18c3d86094ade1912def8ae3334ce9314974d287da3cd158f6e5552b4e",
+          "claim_index": 19
+        },
+        {
+          "after_sha256": "fe8cb89aa2ae28bf313a0576f7204ff0818573ba8d2b16fb9ae70382e8a85e20",
+          "before_sha256": "fcbb42de620b97a3cb09b1f6a31cce7d536f2886cdf6b44dc3d2dc8f43d219be",
+          "claim_index": 20
+        },
+        {
+          "after_sha256": "035c155e62d6a9a351d6ae81fa3f6460e0443f50aa8cc912fd62eb095b2b0232",
+          "before_sha256": "3e4edbe0c42f8fe5f0b7d93bd8550a9bef610cb5875dc55ef88688a8a503f664",
+          "claim_index": 21
+        }
+      ],
+      "identifier": "CHEBI:600520",
+      "original_history_sha256": "9fa7fdac8f42c454eb2ea15ab6614867ba5998a8f0ee0f2414df1fc04427a3ac",
+      "path": "data/antibiotics/antifungal/micafungin.yaml",
+      "standard_inchi_key": "PIEUQSKUWLMALL-YABMTYFHSA-N",
+      "unchanged_fields_sha256": "fa9f88e278ba497dbd512994248a004eb486cf894ce25ba9ef0e32237361c2d3"
+    },
+    {
+      "after_record_sha256": "3596bca4c69cafbba5d710c55f2e6f5d25a7dc7c784df12fdf37b861c7577bf3",
+      "before_record_sha256": "0347aa11eaf4c548519bb3b9e2c1d65b8f4cc705624f79a1ed5e8c016c61ea21",
+      "changed_claims": [
+        {
+          "after_sha256": "7611233b97a8807fabb5a6a22bbac172608c63647f99ee2fb2f62446215e9cca",
+          "before_sha256": "30020d187e399291ae66ef237561bf2027873672e5674f8d06c695bf9a28e88b",
+          "claim_index": 35
+        },
+        {
+          "after_sha256": "95e9012fcc4359b3a4cab4063b17b8434f9de128914a1a3a6a11e59141802576",
+          "before_sha256": "6717b605f2e4961b686f420a6d5d66efec9231149f22e4ab6c3ac10eaaf556dd",
+          "claim_index": 36
+        },
+        {
+          "after_sha256": "df5156706036f9171811bcc6dfa5dde83ed9082cc96ed14b548797663aeaf800",
+          "before_sha256": "7023bfaeb87f4c9b197f7c2354ca19c3bce3f806bdfbbb669fec4defc4f3b096",
+          "claim_index": 37
+        },
+        {
+          "after_sha256": "f9dc7351182fd3d6123376364692778dacc36d1d05a911f919d7233dd30790bd",
+          "before_sha256": "1c34e2bda1341b4ff6795b6e207d0af12ff26780a23e4c9a0c4a62248588f692",
+          "claim_index": 38
+        },
+        {
+          "after_sha256": "60e809a30a4ac8e5324110136122cd1dce21f18e3205ac051322a9c285f9ca50",
+          "before_sha256": "5881dafc1ad05033cb315b045bcf49629bb06200dd166ceb0a7602a58eee2189",
+          "claim_index": 39
+        },
+        {
+          "after_sha256": "5cc8a29334403dbcc178a2f2fe82404c3001233b819df8d4b60f2086a3ffbd67",
+          "before_sha256": "a0e4be0aaba118547c7089cfdab63084f5bc961c4fae7115cf063ce10a51cad1",
+          "claim_index": 40
+        },
+        {
+          "after_sha256": "3506c415cbc2799fbf515ff7557ee3755df5b649adab4bb9f535b657886f08aa",
+          "before_sha256": "f35c5799af2dd8b47b6ca6e343ac2e44a1620eb6056262ad09d9fddaf5c18c6d",
+          "claim_index": 41
+        },
+        {
+          "after_sha256": "8907463a8a0c74e3683f7b0c55806fbe217e4b2f5124915483c5e2276b0bf996",
+          "before_sha256": "5f102b272e7cdcf6fa3120b3d55549c7a2b28e4a34407d0172579e4f395745de",
+          "claim_index": 42
+        },
+        {
+          "after_sha256": "3eaa3487d86611c87989581eb641560dc6101ec32f85241e25cc278b996dbf50",
+          "before_sha256": "b4d6695e27f260b7277163bfa215bb3e72467d2007ec20ab0217d400d16a4f3d",
+          "claim_index": 43
+        },
+        {
+          "after_sha256": "b591cc2761f82af0b07da4958ba38156b8cc32e7b26bec7b4d0636be6d6934e6",
+          "before_sha256": "01f3506a3fbc30b3398381b1a6755280d041107ca68ed504dbc5fb7412168cfd",
+          "claim_index": 44
+        },
+        {
+          "after_sha256": "abbb435441456b393ddb034ea8ea4744787418af244a976d7f7fac366033c14b",
+          "before_sha256": "7c3a10b5eb9a4a5de9ba165f9cb47b473b773bbad8bb76038bb8982eda6bcd50",
+          "claim_index": 45
+        },
+        {
+          "after_sha256": "4dd11929f9bd0874d43b5849d38610db5d1001f527be64abdac28644a8458726",
+          "before_sha256": "138a5cdd833f243c4d17ee3dba1c968b45f8473b8152749a6556e0c827d2ac59",
+          "claim_index": 46
+        },
+        {
+          "after_sha256": "534cfe1bd258ccde6a9707b865e03e1a8df308c91c269dfaf0375c7e5fcef587",
+          "before_sha256": "9c9dd5e70893bc4ba07dba929c0de1bb3db1ff638b2b68e87b5f84e39c442e8c",
+          "claim_index": 47
+        },
+        {
+          "after_sha256": "0b95733d46bbb5b61e60de70c50ad050eaf0919d60b27fe88e52f6d656d1398c",
+          "before_sha256": "04b86885a8aad654986a48a1abb685effc8649b40d2cbd4356ec055eae4ef390",
+          "claim_index": 48
+        },
+        {
+          "after_sha256": "9da2542780eb9338cafc4741617d09d0762051ecf0aad2623beb171ae8ffce98",
+          "before_sha256": "b2f0b3dff503bb5c3676b9b6f60c41235e6e6903ce37cfb766cd1b48a6875879",
+          "claim_index": 49
+        },
+        {
+          "after_sha256": "619b9aff13fb0b689555277dd2087955da82653a08610f9f179c5e5be3edef97",
+          "before_sha256": "9e01d5ef64ced0afaa2e6b2de79ae2bf6926499170b971ae73130541a4e882cc",
+          "claim_index": 50
+        },
+        {
+          "after_sha256": "aa93f46d941700a5e58cfeb4d4fffda8d5db13c9acb51f19cf173334dc575a7a",
+          "before_sha256": "d178831b3981098eb3ed4c44b86249ff15a24bb244bcd04319cd49635d04873a",
+          "claim_index": 51
+        },
+        {
+          "after_sha256": "09788ce213b24133db61cf242fef395dd49bd5fcb219cf12873509527fa28924",
+          "before_sha256": "7ad23daf93092e24f0ca0bd6ef4bacd76c28670269c720d73785170a34dba705",
+          "claim_index": 52
+        },
+        {
+          "after_sha256": "c3d95f4004b96966923eec9698b52b6d71230f33ed3eeaa5d9ecaa6752437e1d",
+          "before_sha256": "58f172bc7e850e2a73ce1adc4136b5d6f8ec055b1de9c2d37af7c54fdddb0816",
+          "claim_index": 53
+        }
+      ],
+      "identifier": "CHEBI:6076",
+      "original_history_sha256": "63c11fca8e03d9def526485dd9587cd0581e63d848dfeec745d06a587eb2b828",
+      "path": "data/antibiotics/antifungal/itraconazole.yaml",
+      "standard_inchi_key": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "unchanged_fields_sha256": "e72dfea6d40de2bb1b43843cf50c2ead8a86556167ad2f51681a2ad02a9bc510"
+    },
+    {
+      "after_record_sha256": "38799794e2a4eeba919bfd144e72af2fc903c63840a420f29f06cff6aa78559b",
+      "before_record_sha256": "14502f502c00efc058f349262be2c5d7c155f941aa68178c7e67056c323a8d4f",
+      "changed_claims": [
+        {
+          "after_sha256": "d451aa3f8e0d8236480080bc75620a80bac885e9c50bbf1417f9dfe3d83b35c3",
+          "before_sha256": "974d77e747ee8b7f55f64c605dc7c779199019b3d0adec1af051b5c8ba45d819",
+          "claim_index": 23
+        },
+        {
+          "after_sha256": "ce5984d23ba8c07165917665870ad2d615de1cf847d81afa3dcf2b6290026d8d",
+          "before_sha256": "63bfcf6f17e1d71a4046b9abb3f80bf75a4f845c0c48f4dda2f6f4442588b86d",
+          "claim_index": 24
+        },
+        {
+          "after_sha256": "928185174864f7daa384f7536db8e5e7da51583ff93e2365d7c482b3169206d8",
+          "before_sha256": "66ddca1d78bae59ef539c0dcc02f8d679013fc89e441bf0cafdaa480c9138952",
+          "claim_index": 25
+        },
+        {
+          "after_sha256": "eca26ff42942f270d9eddf90dce5722f0d38ed677350e5d31cd46472a965a2c0",
+          "before_sha256": "ed397d360ec99f39ae424f2c80b750022ebe0b1db4355d0fb198a20d3f17b654",
+          "claim_index": 26
+        },
+        {
+          "after_sha256": "05f17f987a5fd485903a54337600b690e600a7b5c209bee33597f7b96268422b",
+          "before_sha256": "d7d181faac546b8393c13f720192b1be1fb6bbfd075f58e227640edd47e01845",
+          "claim_index": 27
+        }
+      ],
+      "identifier": "CHEBI:64355",
+      "original_history_sha256": "364cd0af42ad6eade87ea4e1629fe5e64604767286741cefa3dee692c7cd1c0f",
+      "path": "data/antibiotics/antifungal/posaconazole.yaml",
+      "standard_inchi_key": "RAGOYPUPXAKGKH-XAKZXMRKSA-N",
+      "unchanged_fields_sha256": "d543a872714265b2e07e206fb73fe9a9dda39f3ee5d2731dfc278a28afbd913c"
+    },
+    {
+      "after_record_sha256": "dbd842667111a41e46c8cdc009e8637d258acdff0cf918a2d63152db5f2162f0",
+      "before_record_sha256": "3b6c406a5522fb6a0c295e7e05ab6c32dffb83b5b0d12d508b83e116745a54f1",
+      "changed_claims": [
+        {
+          "after_sha256": "9d3562a5eac7fb1cf61a2ee2f0f663eea1a387af8054e03704d26e77f260d954",
+          "before_sha256": "3dc577d64a178c141cd0035f8e47a2dc830b9e229b26f2f1a8fee942b128bff6",
+          "claim_index": 6
+        }
+      ],
+      "identifier": "CHEBI:81760",
+      "original_history_sha256": "31007d91260418a6109abbaed3c913126d913b4ca334797816348cbf3e0af5a7",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml",
+      "standard_inchi_key": "BQYJATMQXGBDHF-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "cb2bdf1a75d128bdba8df48c79bcf293132298d782fd7137e335b7e2e887d81d"
+    },
+    {
+      "after_record_sha256": "a4396e6bd30da7514f81e1f5d6f3a3b2614310b777dca5a8008fe502b7a86e64",
+      "before_record_sha256": "8dbf721ee6bf9e04ee9ff94c4e1e5e3e359c874142ba9e9e9263f6e9b72ff999",
+      "changed_claims": [
+        {
+          "after_sha256": "b1f0cdc9cd66f6ac1b2b9b730bd7b3b18af664e74b3c3a455755ba74e8bac2b4",
+          "before_sha256": "7b1198cbb59ebfac83925351c3671a8b899705466acb0c1d3938ebfb1e3f1159",
+          "claim_index": 1
+        },
+        {
+          "after_sha256": "b0256b43728bf6012346f37068ea37788c047a6d843f848c24be3a3dbe20c44e",
+          "before_sha256": "3eb6b1e275fd785f419b997bb8051f2158a46b2959ae3afd9fa21b47753984f2",
+          "claim_index": 2
+        },
+        {
+          "after_sha256": "ca1c04e8172ce1888425dcf99594bab2109dda4b34615cd5ee3f7f097dfc1a52",
+          "before_sha256": "8096fb6330fc9dc367cdf9b0f4f841b6ec001a064e8972ca585fb7ca39b66d2e",
+          "claim_index": 3
+        }
+      ],
+      "identifier": "CHEBI:81763",
+      "original_history_sha256": "c534151db56cd66e236ecb5f0ce173990d52423d7a8cf68245771544fa05e9cd",
+      "path": "data/antibiotics/antifungal/fludioxonil.yaml",
+      "standard_inchi_key": "MUJOIMFVNIBMKC-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "b68bf07441b6cb40371c28845b8054654e30de3957fcd80837c36b0c7f700812"
+    },
+    {
+      "after_record_sha256": "f5333514107b716432b5e0574aa602b502452788072b098b4d998d6434a4f370",
+      "before_record_sha256": "dc773311dfdabca3754a08bbb09778f986adff1adcee0ed91f6bf4446fcc9517",
+      "changed_claims": [
+        {
+          "after_sha256": "0841950286238cc1fb6c97610bc11ddb9dfa3fabef90ba8148e24ecea07610ca",
+          "before_sha256": "5c5583dff5a77f4932c5ad9ff949410c1a2f5e413d871081c8e40f464a2204d4",
+          "claim_index": 0
+        },
+        {
+          "after_sha256": "b991a42378d9e636e7bddb21fc98f3381bc63c414ddac217c8e9ac1134083c31",
+          "before_sha256": "a9da076e2fcab73f9e38c2eb8a1adfca246688818a267f278e06a885031b7a39",
+          "claim_index": 1
+        }
+      ],
+      "identifier": "CHEBI:81784",
+      "original_history_sha256": "0d6d7046fba03817ed145432ec45a0075d21f94656a227ff97d54fe7df1bed40",
+      "path": "data/antibiotics/antifungal/triflumizole.yaml",
+      "standard_inchi_key": "HSMVPDGQOIQYSR-KGENOOAVSA-N",
+      "unchanged_fields_sha256": "348f4037daa731897348a87f43e4d2ef3b0aa1da56140a6381bc30baa430fd84"
+    },
+    {
+      "after_record_sha256": "e4976bcb0f682a2e89798cfc0bccf9a22ef763817865c2a1354b29d111394a36",
+      "before_record_sha256": "7183859e22fb686c1a3842cbde8bbd48c683a53bd959aa13ea4746870cab8027",
+      "changed_claims": [
+        {
+          "after_sha256": "9795b3bd5513e1b88c7288eceb613cff88fb933f95887eee9206b72aec8d9eb2",
+          "before_sha256": "d4d5511cbb51a6a7cc2a38686d30a236e006b99f754e5510b26e0cd6d8e61db6",
+          "claim_index": 0
+        },
+        {
+          "after_sha256": "444f6a5759359c64ead27366e2f04a6ed3da5ddebe0c6f9fac17336ce51fdc6e",
+          "before_sha256": "474544ff72a84a64534742452e4498ea353de957fd08912e657d62a5451f9823",
+          "claim_index": 1
+        }
+      ],
+      "identifier": "CHEBI:81972",
+      "original_history_sha256": "817398fa9d8aa81d80764183bfca554b7a43f3bc6bb443e3bd19fa56b19d3d30",
+      "path": "data/antibiotics/antifungal/pyrifenox.yaml",
+      "standard_inchi_key": "CKPCAYZTYMHQEX-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "54d53354f35d0f63c78a09a104472a9e8f02d8d32f8c7d56243a3368f37c521b"
+    },
+    {
+      "after_record_sha256": "910d5301245d71fb1fc27ac82c76eb2ce85c12c967707ab1477d716a30c7b7a8",
+      "before_record_sha256": "02a62bea0efd003d60795abc99bda6e07265fe94f4ea3e7769c6a95f29d14fcd",
+      "changed_claims": [
+        {
+          "after_sha256": "5d2961a6216b2c55ce83587612bbbe7d8c710c65c80e42e67877907698d74c0d",
+          "before_sha256": "8a89ad9a51fff50afaf95f88b3fd306aafb53278a1f223b5298a6fee6933d62e",
+          "claim_index": 6
+        }
+      ],
+      "identifier": "CHEBI:8434",
+      "original_history_sha256": "7039c0f61ed1917125d8697a88c6ef0c900bd6e1aa08ec48a18c7c5e7c0ebcc2",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml",
+      "standard_inchi_key": "TVLSRXXIMLFWEO-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "0a0c06f9d9b341c2ba282b7fc25ac37b9e833bbd31db5806a7dd2e18b9b328e0"
+    },
+    {
+      "after_record_sha256": "9ea1a575315782aaea7c0f31ad090e0f5bf99b11220a37b65cc2d3a2c949f278",
+      "before_record_sha256": "913bfb9a9d724c68948b8395bd1c74a908e86de36dd72db75ec40406e670ec7e",
+      "changed_claims": [
+        {
+          "after_sha256": "fd80f4f142d52e93e632f4f1f5b6f193ef08dc94f48ffc4d7384c7fb849779f2",
+          "before_sha256": "bea820521f597efc85cbb56c63fa74ee55fd6ffb6036af0e5fa4720660bed3f3",
+          "claim_index": 5
+        }
+      ],
+      "identifier": "CHEBI:8489",
+      "original_history_sha256": "a9ee18b3cb4d089d0293aed846fef6957c960966fb50bcfa794c809e8f04d32b",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml",
+      "standard_inchi_key": "STJLVHWMYQXCPB-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "8b58ffacf69aab5d67bd2cb6754d05723b02bc0f962b21dcb89a40a2f44d50c9"
+    },
+    {
+      "after_record_sha256": "6cc198fdab8eb038f6e6f0d5845c29acc1a0f66fde6dc6b582e2ea8db6da19e7",
+      "before_record_sha256": "d559e1d6460de0b29ee0b292b7e519d91bc2d87cd48e8caf0d342394b7c02677",
+      "changed_claims": [
+        {
+          "after_sha256": "e07262c0bdac896ed959cc5e798cb49e5c3403f1d38329206e5cec6045c74796",
+          "before_sha256": "da86f9c08354871f360838e80de7f8ad9fb6806701bcda2d2ac709abd2dbb926",
+          "claim_index": 8
+        },
+        {
+          "after_sha256": "d0201845e840eac13e5a01933ede9487a5fa139ff830e48ffc1c6ed16b79deb5",
+          "before_sha256": "975d057038c32081c9cd9a4957fd7c3ab0ceb5959cc6d0ac6742d71c94d3a030",
+          "claim_index": 9
+        },
+        {
+          "after_sha256": "4fc4074ca2ddd35d6af79710d79236db313c7ea80cad330483a615617f5780f7",
+          "before_sha256": "004e82cc1c9b18319161f4daeef82cec38ba70e3f4a14a65a87b420540a95eea",
+          "claim_index": 10
+        }
+      ],
+      "identifier": "CHEBI:9448",
+      "original_history_sha256": "dc8d8210f80df1f64fda3e17ca0dc8abb8eb045100e583ba05a92cc545a475fc",
+      "path": "data/antibiotics/antifungal/terbinafine.yaml",
+      "standard_inchi_key": "DOMXUEMWDBAQBQ-WEVVVXLNSA-N",
+      "unchanged_fields_sha256": "81b8180f42bb2a3d788118ae88a0f392b594b9f9a643c205d0ec2bdc1209952b"
+    }
+  ],
+  "reference_crosswalks": [
+    {
+      "cross_references": [
+        {
+          "database": "EMBL",
+          "id": "CP017623",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AOW25926.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "XP_721429.2",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "XM_716336.2"
+            }
+          ]
+        },
+        {
+          "database": "CGD",
+          "id": "CAL0000176780",
+          "properties": [
+            {
+              "key": "GeneName",
+              "value": "GSC1"
+            }
+          ]
+        }
+      ],
+      "scope": "SOURCE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "uniprot_accession": "A0A1D8PCT0"
+    },
+    {
+      "cross_references": [
+        {
+          "database": "EMBL",
+          "id": "CH476625",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "EDO01909.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "XP_001594577.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "XM_001594527.1"
+            }
+          ]
+        }
+      ],
+      "scope": "SOURCE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "uniprot_accession": "A7EGE3"
+    },
+    {
+      "cross_references": [
+        {
+          "database": "EMBL",
+          "id": "X13296",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CAA31658.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "EU819548",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ACF34636.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "EU819551",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ACF34639.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "FJ002303",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ACH91036.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "FJ403378",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ACJ23064.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "CP017627",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AOW29509.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "U67192",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAB08099.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "U67193",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAB08100.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "XP_716761.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "XM_711668.2"
+            }
+          ]
+        },
+        {
+          "database": "EnsemblFungi",
+          "id": "C5_00660C_A-T",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "C5_00660C_A-T-p1"
+            },
+            {
+              "key": "GeneId",
+              "value": "C5_00660C_A"
+            }
+          ]
+        },
+        {
+          "database": "CGD",
+          "id": "CAL0000176310",
+          "properties": [
+            {
+              "key": "GeneName",
+              "value": "ERG11"
+            }
+          ]
+        }
+      ],
+      "scope": "SOURCE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "uniprot_accession": "P10613"
+    },
+    {
+      "cross_references": [
+        {
+          "database": "EMBL",
+          "id": "L40389",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAB02329.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "CR380951",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CAG58795.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "S75389",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAB32679.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "XP_445876.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "XM_445876.1"
+            }
+          ]
+        },
+        {
+          "database": "EnsemblFungi",
+          "id": "CAGL0E04334g-T",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CAGL0E04334g-T-p1"
+            },
+            {
+              "key": "GeneId",
+              "value": "CAGL0E04334g"
+            }
+          ]
+        },
+        {
+          "database": "CGD",
+          "id": "CAL0128884",
+          "properties": [
+            {
+              "key": "GeneName",
+              "value": "ERG11"
+            }
+          ]
+        }
+      ],
+      "scope": "SOURCE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "uniprot_accession": "P50859"
+    },
+    {
+      "cross_references": [
+        {
+          "database": "EMBL",
+          "id": "JF965441",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AEQ63271.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "mRNA"
+            }
+          ]
+        }
+      ],
+      "scope": "SOURCE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "uniprot_accession": "Q870D1"
+    },
+    {
+      "cross_references": [
+        {
+          "database": "EMBL",
+          "id": "AB030178",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "BAB03658.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "AB030179",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "BAB03659.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "scope": "SOURCE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "uniprot_accession": "Q9P340"
+    }
+  ],
+  "remaining_papers": [
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/fungal-reference-1388107-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T12:33:33.576774+00:00",
+        "sha256": "cea255b4e710f543eac057fa45116f9296ce1f1798945bd1418efdd95986beb5",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A1388107+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1007/bf00351701",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:1388107"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/fungal-reference-1423663-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T12:32:44.484254+00:00",
+        "sha256": "c7a516340fddb63a90cb098045273e8fae1b8211129baf7c453929576b969265",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A1423663+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1002/cm.970220304",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 6,
+      "reference": "PMID:1423663"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/carboxin-followup-broomfield-1992-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T10:43:29.441475+00:00",
+        "sha256": "04c98e9e7cb80156159ea8a6da66f5fb74b0c4b7df90398f6c903fec6f3176da",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1007%2Fbf00351470&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1007/bf00351470",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:1423716"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/carboxin-followup-skinner-1998-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T10:43:28.829650+00:00",
+        "sha256": "717bfde7198b94b689a4efbac5b8637ee917f188fe3314f2bbd691be26f5878d",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1007%2Fs002940050412&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1007/s002940050412",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:9871122"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-11036010-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:14:49.476541+00:00",
+        "sha256": "9c14e2993601c7c1eaf97720c9f990c36d4831172470419f106d474a99cf85f8",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11036010+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1128/aac.44.11.2985-2990.2000",
+      "europe_pmc_access_category": "NON_OA_WITH_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:11036010"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-11600353-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:14:53.471337+00:00",
+        "sha256": "5a0d1509ec33d0718135850078b33366f9ac34fac9659175db17fb0c09e01cb7",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11600353+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1128/aac.45.11.3037-3045.2001",
+      "europe_pmc_access_category": "NON_OA_WITH_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:11600353"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-12519188-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:14:54.149607+00:00",
+        "sha256": "9cd8a92e17e6a223505106379613886d0bbb9be70865aedd66ac085357596450",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12519188+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1046/j.1365-2958.2003.03281.x",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:12519188"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-12612806-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:14:55.524937+00:00",
+        "sha256": "e8beca3aaad03eb07330653284d2855d3fcadcf9db2b2780d4b4c0330b205b21",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12612806+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1007/s00294-002-0356-1",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 2,
+      "reference": "PMID:12612806"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-mehrabi-2006-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:18:37.513090+00:00",
+        "sha256": "5aaa202566425725107d1943d1f7adabf94bf0621d80777f354dc4969db749ad",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1094%2Fmpmi-19-1262&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1094/mpmi-19-1262",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 2,
+      "reference": "PMID:17073308"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/carboxin-followup-shima-2009-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T10:43:28.213414+00:00",
+        "sha256": "9dc4440ad805eecb1bc6b868d945b0cd750f65e8493754ec9db7459e513999db",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.fgb.2008.10.005&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1016/j.fgb.2008.10.005",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 2,
+      "reference": "PMID:18992352"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/fungal-reference-19900007-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T12:33:30.793480+00:00",
+        "sha256": "b55759e2d010b16ce4652ec3cfb9ed68a6644222cf172c5ca4797b0c24883727",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A19900007+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1094/phyto-99-12-1403",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 2,
+      "reference": "PMID:19900007"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/fungal-reference-21077124-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T12:33:25.291090+00:00",
+        "sha256": "b1bc189fa5ba578d3456e6bc39082ab9d1f11c068bc8408b758ac5c4f732b0ed",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21077124+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1002/ps.2050",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 5,
+      "reference": "PMID:21077124"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-21138346-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:14:58.184747+00:00",
+        "sha256": "adb80d9d37a02d5fac0fac337fdbf2af4ff6f53277445ccd8a79e71ce3f8bd85",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21138346+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1094/mpmi-10-10-0233",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:21138346"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-fg-os2-2012-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:18:44.435705+00:00",
+        "sha256": "d64aa5f9f4b7e5b0718138cf242c853acda3d806b74bc79b5393ec311143674c",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1094%2Fmpmi-02-12-0047-r&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1094/mpmi-02-12-0047-r",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 2,
+      "reference": "PMID:22591226"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/fumigatus-natesan-2012-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:56:23.683167+00:00",
+        "sha256": "bde32c645b140fc0461148d4b29352b15192a2cc634b786456e1bcb2b95c07ec",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.diagmicrobio.2012.06.030&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1016/j.diagmicrobio.2012.06.030",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 4,
+      "reference": "PMID:22897872"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-fg-sch9-2015-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:18:43.814145+00:00",
+        "sha256": "049a1c0572f2898b6d34de9f901a5010dbd1226e3490e2484dcf7fc55f1794cd",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1111%2F1462-2920.12522&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1111/1462-2920.12522",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 2,
+      "reference": "PMID:24903410"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-26596626-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:15:06.658344+00:00",
+        "sha256": "63d34b673737f30eae526664a696b081e4d6f1aa0b7d51048def4b4dc70eb4c5",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A26596626+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1038/srep16881",
+      "europe_pmc_access_category": "OA_WITH_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:26596626"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/carboxin-followup-piotrowska-2017-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T10:43:19.831546+00:00",
+        "sha256": "13fe53cd935921f425438b766bf9cfa81c15b4a648271a89a4b08a0cfed62d00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1002%2Fps.4442&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1002/ps.4442",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 3,
+      "reference": "PMID:27644008"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-28743081-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:15:09.616454+00:00",
+        "sha256": "c337d8d18d8496f9e272f516d139ec314a593205c23ac9377fd293784e400c03",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28743081+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1016/j.intimp.2017.06.028",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:28743081"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-30044782-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:15:10.261307+00:00",
+        "sha256": "be69a991d0ed392be2c72a1a070dae80eda7a4ec3b826f137682ce8845857a48",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A30044782+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1371/journal.pgen.1007546",
+      "europe_pmc_access_category": "OA_WITH_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:30044782"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/fungal-reference-30497711-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T12:33:25.900659+00:00",
+        "sha256": "25722726845296e9064726dca5116f13ff899fab559f7e6cbbd07010635c3471",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A30497711+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1016/j.pestbp.2018.08.011",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 5,
+      "reference": "PMID:30497711"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-ren-2016-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:18:36.834007+00:00",
+        "sha256": "eae74d32737ee983dd2c5e7bbc210ef26d518fb1c9ed03ac44612ba67356c1c7",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1094%2Fpdis-11-15-1290-re&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1094/pdis-11-15-1290-re",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 8,
+      "reference": "PMID:30686204"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/fungal-reference-30732567-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T12:33:29.009585+00:00",
+        "sha256": "03576a10b8746b2a44223232d6476b06aba4277c95f98a22846cb09f06e33f12",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A30732567+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1186/s12864-019-5479-6",
+      "europe_pmc_access_category": "OA_WITH_PMC",
+      "pending_associations": 2,
+      "reference": "PMID:30732567"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-34490974-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:15:10.987168+00:00",
+        "sha256": "fb5e7525893a8eeea5d29fc2e5540063df90b69eacaa0f138ff8a75a9e88ab02",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A34490974+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1111/1462-2920.15760",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 2,
+      "reference": "PMID:34490974"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-38056173-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:15:11.626159+00:00",
+        "sha256": "164dc14b6c144819ba2a511aad4de3d4f1448577c8189b77174efaa3a42c3850",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A38056173+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1016/j.micres.2023.127554",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:38056173"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-ss-hog1-shk1-2024-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:18:38.125568+00:00",
+        "sha256": "31171c06004df44fd33bbc173e9964ca22f80e17d55c994f54c8b79f2ffd1608",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1021%2Facs.jafc.3c08093&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1021/acs.jafc.3c08093",
+      "europe_pmc_access_category": "NON_OA_NO_PMC",
+      "pending_associations": 4,
+      "reference": "PMID:38374637"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-39403939-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:15:14.049170+00:00",
+        "sha256": "0b18e646447545153db3cb187b3aed0319ed8ece79dc6906bb6e66a3e33b1812",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A39403939+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1080/21505594.2024.2405000",
+      "europe_pmc_access_category": "OA_WITH_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:39403939"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-40934067-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:15:17.070995+00:00",
+        "sha256": "7a3b49c76667be90c212b83377a7b50e83288cef77da075ecfe9f5c0ef3fbdfa",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A40934067+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1080/21505594.2025.2555419",
+      "europe_pmc_access_category": "OA_WITH_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:40934067"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-41277790-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:15:18.985784+00:00",
+        "sha256": "01897e1b52577c9fafed2f91eff5e9b212496456133de2e20cf48493261b76a0",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A41277790+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1111/mpp.70174",
+      "europe_pmc_access_category": "OA_WITH_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:41277790"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-41745253-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:15:19.615346+00:00",
+        "sha256": "2fa63e46c4ca6dacd2818e3e25d6458b1821723cac4e5e13d8d03de17524a511",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A41745253+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.3390/jof12020111",
+      "europe_pmc_access_category": "OA_WITH_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:41745253"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-42112916-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T13:15:20.261661+00:00",
+        "sha256": "259b6546309ef495ee69c48ca91fdec23758697401359fb723a70ff5c8940c4c",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A42112916+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1128/spectrum.02761-25",
+      "europe_pmc_access_category": "OA_WITH_PMC",
+      "pending_associations": 1,
+      "reference": "PMID:42112916"
+    }
+  ],
+  "review_sha256": "291a28c20e07da95c4d1cac48a4359b9a552bf70c66bdc47d7ab88111ede7bee",
+  "reviewed_on": "2026-10-08",
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "status": "NINE_PRIMARY_PAPER_SCOPE_CORRECTIONS_CURATED",
+  "taxonomy": {
+    "237561": {
+      "active": true,
+      "parent": {
+        "commonName": "Yeast",
+        "scientificName": "Candida albicans",
+        "taxonId": 5476
+      },
+      "rank": "strain",
+      "scientificName": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "taxonId": 237561
+    },
+    "284593": {
+      "active": true,
+      "parent": {
+        "commonName": "Yeast",
+        "scientificName": "Candida glabrata",
+        "synonyms": [
+          "Torulopsis glabrata"
+        ],
+        "taxonId": 5478
+      },
+      "rank": "strain",
+      "scientificName": "Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 / NRRL Y-65 / CBS 138)",
+      "taxonId": 284593
+    },
+    "36651": {
+      "active": true,
+      "parent": {
+        "scientificName": "Penicillium",
+        "taxonId": 5073
+      },
+      "rank": "species",
+      "scientificName": "Penicillium digitatum",
+      "taxonId": 36651
+    },
+    "5180": {
+      "active": true,
+      "parent": {
+        "scientificName": "Sclerotinia",
+        "taxonId": 5179
+      },
+      "rank": "species",
+      "scientificName": "Sclerotinia sclerotiorum",
+      "taxonId": 5180
+    },
+    "5207": {
+      "active": true,
+      "parent": {
+        "scientificName": "Cryptococcus neoformans species complex",
+        "taxonId": 1897064
+      },
+      "rank": "species",
+      "scientificName": "Cryptococcus neoformans",
+      "taxonId": 5207
+    },
+    "5476": {
+      "active": true,
+      "parent": {
+        "scientificName": "Candida",
+        "taxonId": 5475
+      },
+      "rank": "species",
+      "scientificName": "Candida albicans",
+      "taxonId": 5476
+    },
+    "5478": {
+      "active": true,
+      "parent": {
+        "scientificName": "Nakaseomyces",
+        "taxonId": 374468
+      },
+      "rank": "species",
+      "scientificName": "Candida glabrata",
+      "taxonId": 5478
+    },
+    "665079": {
+      "active": true,
+      "parent": {
+        "commonName": "White mold",
+        "scientificName": "Sclerotinia sclerotiorum",
+        "synonyms": [
+          "Whetzelinia sclerotiorum"
+        ],
+        "taxonId": 5180
+      },
+      "rank": "strain",
+      "scientificName": "Sclerotinia sclerotiorum (strain ATCC 18683 / 1980 / Ss-1)",
+      "taxonId": 665079
+    }
+  },
+  "unchanged_lead_claims": [
+    {
+      "claim_index": 50,
+      "claim_sha256": "cf26b30e0a4804ed15ec02e02df1fa25a03ab1120e78201f669e3750d31fb20d",
+      "identifier": "CHEBI:46081",
+      "pmid": "11036010"
+    },
+    {
+      "claim_index": 72,
+      "claim_sha256": "914cd28144d5f48802d9e4a12801072195d3945a83503a2ae74d8e1142c71b7f",
+      "identifier": "CHEBI:46081",
+      "pmid": "11600353"
+    }
+  ],
+  "uniprot_requests": [
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-29e26464b281e72ab19880eb0c3e57844b4ae1654a105f1a6c8fe00bbe2a7361.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-total-results": "15",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:12.208720+00:00",
+      "sha256": "3c0624fde2890f6c12bacc34268d4a4f52164ef2a329cf969c095d48deb06ef1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AO42772+OR+accession%3AP02557+OR+accession%3AP05220+OR+accession%3AP0C431+OR+accession%3AP10613+OR+accession%3AP10653+OR+accession%3AP14263+OR+accession%3AP32420+OR+accession%3AP38631+OR+accession%3AP38637+OR+accession%3AP50859+OR+accession%3AP53373+OR+accession%3AP53374+OR+accession%3AP9WHZ3+OR+accession%3AQ1KTF2&format=json&size=500"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-f15fc8114757fa2e03d5ebd3aebdfb5133c54758aa34ca2ec0c5d4224791f50c.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-total-results": "15",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:18.453523+00:00",
+      "sha256": "69894dd64e4e62361f8bb211b064f7807d0aed93f1b93602ef2621c7796186b5",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AQ2TWM0+OR+accession%3AQ2U3V9+OR+accession%3AQ4HZS8+OR+accession%3AQ4WDM9+OR+accession%3AQ4WNT5+OR+accession%3AQ59VG6+OR+accession%3AQ59X67+OR+accession%3AQ5A4G2+OR+accession%3AQ5ALV2+OR+accession%3AQ6X9S4+OR+accession%3AQ870D1+OR+accession%3AQ8X0Z3+OR+accession%3AQ9P340+OR+accession%3AW7LTW3+OR+accession%3AW7LX41&format=json&size=500"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-f43b8b1499392d9b768377aa959918742e738b6706023857dac21b3b31a1f840.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-total-results": "15",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:04:32.351224+00:00",
+      "sha256": "3c6cd700fbf6ba3771e6100a026b9b081b94b25a3363b0bd46ed182805113169",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AA0A089QDC9+OR+accession%3AA0A1D8PCT0+OR+accession%3AA0A1D8PGP5+OR+accession%3AA0A1S6KZ79+OR+accession%3AA0A1S6KZ87+OR+accession%3AA0A384J5Y1+OR+accession%3AA0A8E5ME34+OR+accession%3AA7EGE3+OR+accession%3AA7EQI8+OR+accession%3AA7F519+OR+accession%3AB0XYD8+OR+accession%3AB0Y628+OR+accession%3AB8N2C8+OR+accession%3AB8NFL5+OR+accession%3AB8NUK6&format=json&size=500"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-36f6474e1fc51417a926549a17585bedaffde80775527d70b5554b0dcc3475e3.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:30.714134+00:00",
+      "sha256": "735a5aabe2c86ecf4b074afd2fe856401ce74cd17cb6416febd08c3898fd88f5",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5180"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-6680d98d4897b4b8241658744e31fe09913eabf3981b3b510fe88d40ec7bebba.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:33.748362+00:00",
+      "sha256": "7c5fa5f8ea017fa0637d4ed5e8c88051c8ec48cfcc169c3a5f2328b839d01648",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5478"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-9d036d44f591f80869d504c6744dad453ed1dc77abdf94dfd3f56fb054643755.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:55.768606+00:00",
+      "sha256": "81f3b0a70104fb717fa1bfa734a936d9ab9318542268c6ca9d25e953b756f989",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/665079"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-e6b6b80db984a936e72dd6aec4428784294b201ece82c35fc945c8217d9067d8.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:45.328349+00:00",
+      "sha256": "d8802917d21477ba28a3dfc6a3ba34385878ec1b439d931894f708ee04e3b42c",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/284593"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-7c397babddc1327428ebb5b06370508431e61493117fd6e5b58de7eda0804577.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:32.998940+00:00",
+      "sha256": "f8497b30125f28bfe598a321aad98d24c008d56f2e8ce9c6db8ef6ffcda76f7e",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5476"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-ca976043951f1517725986b344f0f505764d27cc80da295ff257ef82f84c480e.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:37.652263+00:00",
+      "sha256": "9aa795cec07ab952fc420b3e7bc8b81e7d117f73575758696ab13289f5fcc52b",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/36651"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-443359d3070c321040125a1a24511fd9e811fc9a8b56a742052e640db394bae6.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:31.473753+00:00",
+      "sha256": "d04cbf719db74542f6e5daa8fbb3834e8155d68451a9e9ef9c41d718c1e0df3d",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5207"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-ac4b1724ccccec8ef27ec669d7755fe12398cdb72853f39023db7b09f727315f.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:43.807271+00:00",
+      "sha256": "d71eb389651e17d41497dac2345b9c1b834076af092f60aecd281d0b9c9bba24",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/237561"
+    }
+  ]
+}

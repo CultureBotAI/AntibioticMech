@@ -1,0 +1,263 @@
+{
+  "after_record_sha256": "b7044c3753d7b4e7f96357592b449e9967616b889056c43bf837b87e9ccb96b1",
+  "attribution": "UniProt Consortium, UniProtKB release 2026_03, CC BY 4.0",
+  "before_record_sha256": "de09fbfa3cc55b4642ed1f3ebd6faa4c353dbedae69e46c3f26137248e484f8b",
+  "gs77_database_variant": {
+    "alternativeSequence": {
+      "alternativeSequences": [
+        "F"
+      ],
+      "originalSequence": "I"
+    },
+    "description": "in strain: GS77; resistant to cerulenin",
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000269",
+        "id": "11325930",
+        "source": "PubMed"
+      }
+    ],
+    "featureId": "",
+    "location": {
+      "end": {
+        "modifier": "EXACT",
+        "value": 109
+      },
+      "start": {
+        "modifier": "EXACT",
+        "value": 109
+      }
+    },
+    "type": "Natural variant"
+  },
+  "identifier": "CHEBI:171741",
+  "limitations": [
+    "MIC methods were not established from inspected text; no ActivityObservation added.",
+    "Source protein numbering differs from the current reference; source strings remain unchanged.",
+    "GS76 has no strain-specific protein accession assigned; reference strain 168 does not identify GS76 or GS77.",
+    "E. coli complementation and enzyme measurements were not relabeled as B. subtilis whole-cell AST."
+  ],
+  "pdb_crossrefs": [
+    {
+      "database": "PDB",
+      "id": "4LS5",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=1-413"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4LS6",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.56 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=1-413"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4LS7",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.67 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=1-413"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4LS8",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.10 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=1-413"
+        }
+      ]
+    }
+  ],
+  "primary_locations": [
+    "Results",
+    "Tables 2, 4, 5",
+    "Figure 2"
+  ],
+  "primary_reference": "PMID:24641521",
+  "primary_source": "https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.12785",
+  "protein": {
+    "entryAudit": {
+      "entryVersion": 140,
+      "firstPublicDate": "2009-01-20",
+      "lastAnnotationUpdateDate": "2026-09-02",
+      "lastSequenceUpdateDate": "1998-01-01",
+      "sequenceVersion": 1
+    },
+    "entryType": "UniProtKB reviewed (Swiss-Prot)",
+    "genes": [
+      {
+        "geneName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "id": "11325930",
+              "source": "PubMed"
+            }
+          ],
+          "value": "fabF"
+        },
+        "orderedLocusNames": [
+          {
+            "value": "BSU11340"
+          }
+        ],
+        "synonyms": [
+          {
+            "value": "yjaY"
+          }
+        ]
+      }
+    ],
+    "organism": {
+      "lineage": [
+        "Bacteria",
+        "Bacillati",
+        "Bacillota",
+        "Bacilli",
+        "Caryophanales",
+        "Bacillaceae",
+        "Bacillus"
+      ],
+      "scientificName": "Bacillus subtilis (strain 168)",
+      "taxonId": 224308
+    },
+    "primaryAccession": "O34340"
+  },
+  "reported_mics_pending_assay_review": [
+    {
+      "assay_method": null,
+      "breakpoint_standard": null,
+      "clinical_interpretation": null,
+      "normalized_unit": "mg/L",
+      "normalized_value": 5,
+      "original_unit_text": "\u03bcg\u00b7mL\u22121",
+      "original_value": 5,
+      "strain": "JH642"
+    },
+    {
+      "assay_method": null,
+      "breakpoint_standard": null,
+      "clinical_interpretation": null,
+      "normalized_unit": "mg/L",
+      "normalized_value": 20,
+      "original_unit_text": "\u03bcg\u00b7mL\u22121",
+      "original_value": 20,
+      "strain": "GS76"
+    },
+    {
+      "assay_method": null,
+      "breakpoint_standard": null,
+      "clinical_interpretation": null,
+      "normalized_unit": "mg/L",
+      "normalized_value": 40,
+      "original_unit_text": "\u03bcg\u00b7mL\u22121",
+      "original_value": 40,
+      "strain": "GS77"
+    }
+  ],
+  "requests": [
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 03:23:45 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "1",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T03:23:46.392172+00:00",
+      "sha256": "708b7c57e14115e5ddcf04f0ca860962f9b6f8ae53fdd8f5d221c5585f27980c",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A11325930+OR+lit_pubmed%3A24641521&format=json&size=100"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 03:25:03 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T03:25:03.451976+00:00",
+      "sha256": "fe370b94f1ed89c853e6b8f1584e037dc8a7ba4892fddcb3df9190164eaacecc",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/1423"
+    }
+  ],
+  "standard_inchi_key": "GVEZIHKRYBHEFX-NQQPLRFYSA-N",
+  "taxonomy": {
+    "active": true,
+    "rank": "species",
+    "scientificName": "Bacillus subtilis",
+    "taxonId": 1423
+  }
+}

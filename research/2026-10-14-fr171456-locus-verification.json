@@ -1,0 +1,112 @@
+{
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-14-fr171456-locus/canary-reviewed.json",
+    "sha256": "d0a5376fe05ed3a89431ecc440d92e12aa300392bd18e4dff7c434fd61969a37"
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-fr171456-locus/cohort.json",
+    "sha256": "da44bc11f042ea7e1b4179d494f2b70153ce2911ff0e77743ee309dcf21bd750"
+  },
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "dossier": {
+    "path": "research/2026-10-14-fr171456-locus.json",
+    "sha256": "9f2cbf0f305d731f46339c0453f2088e2f68d6eb630b29e7f9cc58f7840fecb4"
+  },
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-14-fr171456-locus/focused-tests.xml",
+      "sha256": "659a91da4ac367db767c6a2deeb56a859c4dd9cd29276d428a09af4e2fd34284"
+    },
+    "passed": 101,
+    "skipped": 0,
+    "tests": 101
+  },
+  "implementation": [
+    {
+      "path": "scripts/audit_fr171456_locus.py",
+      "sha256": "3f21cc04292e8633d4e7c38737302aa220dd56e5f14a4f8716f9b095b82f1d04"
+    },
+    {
+      "path": "tests/test_fr171456_locus.py",
+      "sha256": "129fe5c4d4008e63edfd47ffc96d59e327672f06ec3cf896a72b85ccf05ec8f1"
+    }
+  ],
+  "limits": {
+    "biological_record_changes": 0,
+    "experimental_alleles_or_subjects_assigned": 0,
+    "full_authoritative_qc_rerun": false,
+    "full_corpus_goal_status": "OPEN",
+    "full_corpus_records_in_scope": 2939,
+    "full_qc_reason": "Reference research only; biological, production and generated files unchanged.",
+    "github_mutations": 0,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_network_requests": 2,
+    "rendering_or_embedding_refresh": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "offline_native_replay": "PASS",
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-fr171456-locus/protected-before.json",
+      "sha256": "f92e59bb561c1d0a441b9f9c270d1a1afc110ed834941a69ef8f0d1e8ec49583"
+    },
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "pages_embeddings_source_inputs_and_prior_checkpoints_unchanged": true,
+    "protected_files_checked": 7283,
+    "record_files_unchanged": 2939,
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "dde5df28739feffd1edcc4640f5d58ab4903ab95212ba1688eeb2d66f9ae9a07"
+  },
+  "same_agent_adversarial_review": [
+    "The ORF-name match differs from the current ordered locus; neither identifies the historical deletion.",
+    "The empty reviewed-entry query is scoped; all five alternative-query suggestions were excluded.",
+    "The source paragraph and native figure retain their conflicting text label, without typo correction.",
+    "The focal hypersensitivity result is not converted to a resistance claim or a protein mechanism.",
+    "The background-paper bibliography is not a fresh primary review or evidence of an experimental join.",
+    "The existing ERG26 claim and all other records remain byte-identical; earlier access holds remain."
+  ],
+  "scope": "REFERENCE_ORF_NAME_MAPPING_NOT_EXPERIMENTAL_DELETION_OR_RESISTANCE_ASSIGNMENT",
+  "status": "PASS",
+  "summary": {
+    "biological_record_changes": 0,
+    "corpus_record_hashes_checked": 2939,
+    "experimental_deletion_or_allele_assignments": 0,
+    "new_network_requests": 2,
+    "new_reference_entries": 1,
+    "whole_record_reviews_completed": 0
+  }
+}

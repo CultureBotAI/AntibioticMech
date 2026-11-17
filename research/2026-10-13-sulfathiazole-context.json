@@ -1,0 +1,238 @@
+{
+  "attribution": "UniProt Consortium, UniProtKB/Taxonomy release 2026_03, CC BY 4.0; RCSB PDB reference metadata, CC0. Original interpretation; source assets remain local.",
+  "date": "2026-10-13",
+  "disposition": {
+    "bcr_direct_efflux_claim": false,
+    "claims_added": 2,
+    "curated_records": 1,
+    "holds": [
+      "Exact experimental allele and genome crosswalks",
+      "Broader primary-evidence review",
+      "Independent chemical-preparation identification"
+    ],
+    "primary_support_papers": 1,
+    "reason_to_curate": "Exact experimental identifiers are not required for a qualified gene-level claim; unavailable identifiers remain unset.",
+    "sux_reference_assignment": false,
+    "whole_corpus_status": "OPEN",
+    "whole_record_reviews_completed": 0
+  },
+  "earlier_citation": {
+    "doi": "10.1128/aac.33.12.2042",
+    "reference": "PMID:2694948",
+    "review_scope": "PUBLISHER_ABSTRACT_ONLY",
+    "url": "https://journals.asm.org/doi/10.1128/aac.33.12.2042",
+    "used_as_independent_replication": false
+  },
+  "endpoint_policy": {
+    "clinical_category_inferred": false,
+    "enzyme_activity_is_mic": false,
+    "new_activity_observations": 0,
+    "preferred_mic_unit": "mg/L",
+    "ug_per_mL_to_mg_per_L_factor": 1
+  },
+  "identifier": "CHEBI:9337",
+  "identity": {
+    "basis": "Existing ChEBI structure and exact source name; no alternative form is asserted by this curation.",
+    "complete_collection_aware_record_loaded": true,
+    "curation_scope": "QUALITATIVE_NAMED_COMPOUND_EVIDENCE_NOT_ANALYTICAL_REIDENTIFICATION",
+    "record_charge": 0,
+    "separate_salt_or_combination_assigned": false,
+    "source_named_compound": "sulfathiazole",
+    "tested_preparation_independently_reidentified": false
+  },
+  "label": "sulfathiazole",
+  "limits": {
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "raw_source_assets_redistributed": false,
+    "reuse_terms_review_resumed": false,
+    "sequences_variant_specifications_constructs_or_protocols_exported": false,
+    "source_adoptions": 0
+  },
+  "previous_census": {
+    "path": "research/2026-10-13-bcr-resistance-grounding.tsv",
+    "sha256": "efe2761de9ec1b70b75482a1cc53b2d1723d8d66edc24a99787e9d5957d1d641"
+  },
+  "primary": {
+    "doi": "10.1128/aac.42.1.88",
+    "native_figure_1": {
+      "bytes": 29844,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-bcr/vedantam-figure-1.jpg",
+        "sha256": "b6d3c38b5ee6b61af9a0922fa848065712737111f58b4b7e959d702f81a40561"
+      },
+      "content_type": "image/jpeg;charset=UTF-8",
+      "endpoint": "BIOCHEMICAL_ENZYME_ACTIVITY_NOT_MIC",
+      "redirects_followed": false,
+      "retrieved_at": "2026-10-13T00:40:49.269484+00:00",
+      "sha256": "b6d3c38b5ee6b61af9a0922fa848065712737111f58b4b7e959d702f81a40561",
+      "status": 200,
+      "url": "https://journals.asm.org/cms/10.1128/aac.42.1.88/asset/653d13b4-6828-44d6-a1fb-a7df38dccd2f/assets/images/medium/ac0180370001.jpg",
+      "visually_inspected": true
+    },
+    "native_pdf_inspected": false,
+    "numerical_results_imported": false,
+    "reference": "PMID:9449266",
+    "review_scope": "SELECTED_PUBLISHER_RESULTS_TABLES_1_2_DISCUSSION_AND_REUSED_NATIVE_FIGURE_1",
+    "url": "https://journals.asm.org/doi/10.1128/aac.42.1.88",
+    "whole_paper_review_complete": false
+  },
+  "record_before": {
+    "path": "data/antibiotics/unspecified/sulfathiazole.yaml",
+    "sha256": "4d15a1b9d6617cde9c2b397e0d5d5c9aef7f72c41299174aa39f978d34961992"
+  },
+  "reference_predecessor": {
+    "path": "research/2026-10-13-bcr-context.json",
+    "sha256": "0dde19aed74b3ccbaff161fce71d2503ddade0dc4a3fa354d37b1efcf3aebc96"
+  },
+  "reference_proteins": {
+    "bcr": {
+      "aliases": [
+        "bicA",
+        "bicR",
+        "sur",
+        "suxA"
+      ],
+      "canonical_gene": "bcr",
+      "entry_version": 179,
+      "experimental_resistance_assignment": false,
+      "ordered_locus_names": [
+        "b2182",
+        "JW5363"
+      ],
+      "protein_accession": "UniProtKB:P28246",
+      "reference_taxon_id": "NCBITaxon:83333",
+      "reference_taxon_label": "Escherichia coli (strain K12)",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-bcr/request-e33995a2bb3b4ff19bbe384799fe740b5fe30fad0c2475ad9a4e2e6a0638e4ec.json",
+          "sha256": "bf4d158710148cd4a80ea51305a5c2d96e1a1cf2c4ad98fe570dc7593c0fdc33"
+        },
+        "completeness_scope": "EXACT_REFERENCE_QUERY_ONLY",
+        "pagination_complete": true,
+        "release": "2026_03",
+        "result_count": 1,
+        "retrieved_at": "2026-10-13T00:40:44.733906+00:00",
+        "sha256": "bbec1af9f540aca9ecc6063f8107b00de028296a3983fdb46a960ba6bdb9f72a",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP28246&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Cxref_pdb%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "returned_card_ids": [],
+      "returned_pubmed_ids": [
+        "PMID:15919996",
+        "PMID:16738553",
+        "PMID:20067529",
+        "PMID:2694948",
+        "PMID:8486276",
+        "PMID:9278503"
+      ],
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_NOT_RESISTANCE_ALLELE",
+      "sequence_version": 4
+    },
+    "folP": {
+      "aliases": [
+        "dhpS"
+      ],
+      "canonical_gene": "folP",
+      "entry_version": 147,
+      "experimental_resistance_assignment": false,
+      "ordered_locus_names": [
+        "b3177",
+        "JW3144"
+      ],
+      "protein_accession": "UniProtKB:P0AC13",
+      "reference_taxon_id": "NCBITaxon:83333",
+      "reference_taxon_label": "Escherichia coli (strain K12)",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-bcr/request-5843f6f9a2fe2cc0cf38b32780338b72cf9ad45d633824b63025c2ebf9e85ba1.json",
+          "sha256": "4a02f204db8b80f31cb170e3c9ba6612a6c6aec0a181569c457992468d47708f"
+        },
+        "completeness_scope": "EXACT_REFERENCE_QUERY_ONLY",
+        "pagination_complete": true,
+        "release": "2026_03",
+        "result_count": 1,
+        "retrieved_at": "2026-10-13T00:41:15.195814+00:00",
+        "sha256": "81290544c145b4857b05d9bde47574f1cb7bcecba75c65232cc22f20fd1ef505",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AfolP+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Cxref_pdb%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "returned_card_ids": [],
+      "returned_pubmed_ids": [
+        "PMID:1522070",
+        "PMID:1657875",
+        "PMID:16738553",
+        "PMID:29171692",
+        "PMID:368012",
+        "PMID:37419898",
+        "PMID:4304228",
+        "PMID:8304179",
+        "PMID:9187658",
+        "PMID:9278503"
+      ],
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_NOT_RESISTANCE_ALLELE",
+      "sequence_version": 1
+    }
+  },
+  "scope": "SCOPED_QUALITATIVE_GENE_CURATION_NOT_WHOLE_RECORD_REVIEW",
+  "standard_inchi_key": "JNMRHUJNCSQMMB-UHFFFAOYSA-N",
+  "subject_scope": {
+    "experimental_allele_assigned": false,
+    "experimental_protein_assigned": false,
+    "experimental_strain_taxon_assigned": false,
+    "genome_or_sample_assigned": false,
+    "labels_are_not_a_single_tested_subject": true,
+    "paper_background_labels": [
+      "BN122",
+      "BN123",
+      "MG1655"
+    ],
+    "species_taxon_id": "NCBITaxon:562"
+  },
+  "taxonomy": [
+    {
+      "active": true,
+      "label": "Escherichia coli (strain K12)",
+      "parent_taxon_id": "NCBITaxon:562",
+      "rank": "strain",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-11-emrd-primary/request-366d9a2614b6f8e20200b4e74eeb57cac3965ea080c702c9cf8eae3a8dc3f28e.json",
+          "sha256": "99190e339e349e4a533dad2bf3da18c4cfdd368e901ef88e2adcfbda6a2af616"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-11T08:46:28.226700+00:00",
+        "sha256": "83c59ae9694d1874b8a175d7ce7608f77f5688d35adf307a0859dbb20f9e1c17",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/83333.json"
+      },
+      "reused_cache": true,
+      "taxon_id": "NCBITaxon:83333"
+    },
+    {
+      "active": true,
+      "label": "Escherichia coli",
+      "parent_taxon_id": "NCBITaxon:561",
+      "rank": "species",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-ee6dbf6e3f09c6cab02e184352e45e77bb32a7adbb024d9ceea31aaf75599c37.json",
+          "sha256": "6f15a516e89969828b9950036cd9d5a791d2070e8fb836f0ba068f921f2e822e"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-12T18:28:08.166925+00:00",
+        "sha256": "20aa358053d2fae1e2cd74636ed5aca1efbc372e5b8bcfdb10d3fa80be6789a1",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/562.json"
+      },
+      "reused_cache": true,
+      "taxon_id": "NCBITaxon:562"
+    }
+  ]
+}

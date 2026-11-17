@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>nocardamine</h1>
 <p class="meta">
   <code class="curie">CHEBI:50437</code>
@@ -37,15 +48,18 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000053">peptide antibiotic</a><code class="curie">ARO:3000053</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000053">ARO:3000053</a>      <code class="curie">ARO:3000053</code></li>
+  <li>peptide antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_3000053"><code class="curie">ARO:3000053</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C27H48N6O9</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>600.714 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>600.34828 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">NHKCCADZVLTPPO-UHFFFAOYSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">O=C1CCC(=O)N(O)CCCCCNC(=O)CCC(=O)N(O)CCCCCNC(=O)CCC(=O)N(O)CCCCCN1</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C27H48N6O9/c34-22-10-14-26(38)32(41)20-8-3-6-18-30-24(36)12-15-27(39)33(42)21-9-2-5-17-29-23(35)11-13-25(37)31(40)19-7-1-4-16-28-22/h40-42H,1-21H2,(H,28,34)(H,29,35)(H,30,36)</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -56,7 +70,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3007785">ARO:3007785</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3007785">nocardamine</a><code class="curie">ARO:3007785</code></li>
   <li><a href="https://www.ebi.ac.uk/chembl/id_lookup/CHEMBL505734">chembl:CHEMBL505734</a></li>
   <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/161532">pubchem.compound:161532</a></li>
 </ul>
@@ -67,6 +81,7 @@ both rather than shown here, since it names at most one of them.</p>
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -78,6 +93,8 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <td class="meta">2026-08-30</td>
   </tr>
 </table>
+
+</div>
 
 
 
@@ -93,22 +110,25 @@ several compounds, the evidence is marked inherited, meaning it covers this
 compound together with the cluster's other products rather than singling it out.
 Those products need not be related to each other: a cluster can list an
 intermediate, a precursor and a finished antibiotic side by side.</p>
+<div class="table-scroll" role="region" aria-label="Producer organisms" tabindex="0">
 <table>
   <caption>Producer organisms</caption>
   <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Cluster link evidence</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Evidence</th></tr></thead>
   <tr>
-    <td><em>Streptomyces coelicolor</em> <code class="curie">NCBITaxon:100226</code><br><span class="meta">strain A3(2)</span></td>
-    <td>BGC0000940</td>
+    <td><em>Streptomyces coelicolor</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=100226">NCBITaxon:100226</a><br><span class="meta">strain A3(2)</span></td>
+    <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000940">BGC0000940</a></td>
     <td class="meta">Enzymatic assays; Knock-out studies<br><span class="pill warn">cluster inherited</span></td>
     <td class="meta">MIBIG 4.0.1 (entry 5)</td>
     <td class="meta">questionable</td>
     <td class="meta">MIBiG active entry; compound &#39;desferrioxamine E&#39; joined by exact Standard InChIKey.</td>
     <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">PMID:15600304</span> <span class="meta">(MIBiG&#39;s first legacy reference for the entry, inherited rather than attached to the compound. It supports that the entry exists; it is NOT established as evidence for this specific producer/compound link.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15600304">PMID:15600304</a></span> <span class="meta">(MIBiG&#39;s first legacy reference for the entry, inherited rather than attached to the compound. It supports that the entry exists; it is NOT established as evidence for this specific producer/compound link.)</span></li>
 </ul>
 </td>
   </tr>
 </table>
+
+</div>
 
 
 
@@ -147,26 +167,36 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/nocardamine.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/nocardamine.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=nocardamine">MediaIngredientMech (nocardamine)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=nocardamine">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=nocardamine">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=nocardamine">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=nocardamine">TraitMech</a>
+&middot; <a href="https://culturebotai.github.io/TaxonMech/browse.html?q=Streptomyces%20coelicolor">TaxonMech (Streptomyces coelicolor)</a></p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

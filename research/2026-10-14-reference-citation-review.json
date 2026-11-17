@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-14",
+  "scope": "SAME_AGENT_ADVERSARIAL_CODE_REVIEW_NOT_NEW_SCIENTIFIC_GROUNDING",
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "baseline": {
+    "path": "research/2026-10-14-reference-citation-verification.json",
+    "sha256": "084e303307b73443bf49162a4d87de57996b28c945c60a608f88d2a8ad2e902e",
+    "historical_full_qc_receipt_not_reissued": true
+  },
+  "findings": [
+    {
+      "id": "REFERENCE-CITATION-REVIEW-1",
+      "severity": "P2",
+      "status": "FIXED_LOCALLY",
+      "github_issue": null,
+      "title": "URL aliases bypass canonical-accession duplicate checks",
+      "file": "scripts/resistance_reference_citations.py",
+      "functions": ["citation", "add_citations"],
+      "cause": "citation accepted identifiers recognized by normalize_reference, including URLs, while add_citations compared raw reference accession strings for duplicates.",
+      "reproduction": "Synthetic UniProtKB:P00001 was already present as a CURIE; a plan using its UniProt entry URL appended a duplicate. A mixed CURIE/URL pair within one plan was also accepted.",
+      "impact": "A malformed future plan could append duplicate evidence and inflate citation counts. This does not establish additional independent evidence.",
+      "current_curation_affected": false,
+      "current_curation_reason": "The saved plan uses canonical CURIEs. All three existing citation transitions still reproduce byte-exactly.",
+      "fix": "Require UniProtKB and NCBITaxon reference metadata values to equal their canonical parsed identifiers. Evidence URLs remain supported in the existing citation index; only plan metadata is narrowed.",
+      "regression_cases_added": 5,
+      "regressions_failed_before_fix": 5,
+      "regressions_passed_after_fix": 5,
+      "input_record_preservation_tested": true
+    }
+  ],
+  "changed_files": [
+    {
+      "path": "scripts/resistance_reference_citations.py",
+      "before_sha256": "bd780a5c36818d7f48cb31275736837a842f8c32c532f1e357868cefc8a9e03b",
+      "after_sha256": "81577df449d77af02eb3c101ac4a6e4084219fda22d7b6795c20611707948bab"
+    },
+    {
+      "path": "tests/test_resistance_reference_citations.py",
+      "before_sha256": "a0ab39e39a943ac1d3272987581b2e2794e1479655ab340fd3115a174abba603",
+      "after_sha256": "4356a289e846a77751af064dfe5dda1b37a62f5a861ce76b60df77bb57af999e"
+    }
+  ],
+  "verification": {
+    "focused_suites": [
+      "tests/test_resistance_reference_citations.py",
+      "tests/test_resistance_checkpoint_records.py",
+      "tests/test_tropodithietic_context.py",
+      "tests/test_blasticidin_curation.py",
+      "tests/test_kasugamycin_curation.py",
+      "tests/test_curated_resistance_grounding.py"
+    ],
+    "tests_passed": 255,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-14-reference-review/focused-tests.xml",
+      "sha256": "1d6a7852367a4d62bca39ddadfe62e906171bfb4dd16444355345aca59ccaa43"
+    },
+    "repository_ruff_check": "PASS",
+    "changed_code_ruff_format_check": "PASS",
+    "git_diff_check": "PASS",
+    "public_checkpoint_reconstruction": "PASS in temporary directories containing only the public receipt and corresponding record",
+    "offline_tropodithietic_replay": "PASS",
+    "prior_verification_file_pins_checked": 27,
+    "prior_verification_files_changed": 2,
+    "changed_pins_are_only_the_two_reviewed_code_files": true,
+    "current_census_records_checked": 2939,
+    "current_census_record_hash_drift": 0,
+    "full_qc_rerun_after_this_code_fix": false,
+    "limitation": "Focused regression verification only. The earlier 12-gate full-QC result applies to the pre-review code and remains an immutable historical receipt. Its RDKit environment limitation remains documented there."
+  },
+  "limits": {
+    "biological_records_changed_by_review": 0,
+    "new_primary_findings": 0,
+    "new_experimental_identifiers": 0,
+    "new_numeric_AST_variants_sequences_constructs_or_protocols": false,
+    "scientific_network_requests": 0,
+    "ncbi_requests": 0,
+    "ncbi_contact": 0,
+    "source_holds_retried": 0,
+    "source_adoptions": 0,
+    "reuse_terms_review_resumed": false,
+    "issue_1040": "DEFERRED",
+    "github_mutations": 0,
+    "full_corpus_goal_status": "OPEN"
+  }
+}

@@ -1,0 +1,161 @@
+identifier: CHEBI:68241
+label: platencin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide obtained by the formal condensation of the
+  amino group of 3-amino-2,4-dihydroxybenzoic acid with the carboxy group of the polycyclic
+  cage component. It is an antibiotic isolated from Streptomyces platensis and exhibits
+  inhibitory activity against fatty acid synthase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,4-dihydroxy-3-({3-[(4aS,8S,8aR)-8-methyl-3-methylidene-7-oxo-1,3,4,7,8,8a-hexahydro-2H-2,4a-ethanonaphthalen-8-yl]propanoyl}amino)benzoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-platencin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23778
+- CHEBI:29347
+- CHEBI:33640
+- CHEBI:3992
+- CHEBI:62733
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CC[C@@]3(C=CC(=O)[C@@](C)(CCC(=O)Nc4c(O)ccc(C(=O)O)c4O)[C@]3([H])C1)CC2=C'
+  standard_inchi: InChI=1S/C24H27NO6/c1-13-12-24-9-5-14(13)11-17(24)23(2,18(27)6-10-24)8-7-19(28)25-20-16(26)4-3-15(21(20)29)22(30)31/h3-4,6,10,14,17,26,29H,1,5,7-9,11-12H2,2H3,(H,25,28)(H,30,31)/t14-,17-,23-,24+/m0/s1
+  standard_inchi_key: DWUHGPPFFABTIY-RLWZQHMASA-N
+  molecular_formula: C24H27NO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 425.481
+  monoisotopic_mass: 425.18384
+xrefs:
+- cas:869898-86-2
+- chemspider:20576369
+- knapsack:C00056080
+- pdb-ccd:N32
+- reaxys:11140608
+document_xrefs:
+- patent:CA2770486
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68241
+  source_label: platencin
+  minted_identifier: antibioticmech:chebi-4254659185
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:58346
+  taxon_label: Streptomyces platensis
+  biosynthetic_gene_cluster: BGC0001140
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'platencin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:17456595
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:26Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:59:15Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T15:32:07Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-09T17:18:00Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added two qualitative primary-paper resistance claims, preserving donor/background/derivative
+    identity and the compound-specific response. Coarse routes retain author-interpretation
+    limits. Donor reference grounding does not assign exact experimental alleles.
+    Existing MIBiG producer and chemical evidence preserved; whole-record review remains
+    open.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  label: ptmP3-associated reported resistance to platencin in a laboratory Streptomyces
+    albus derivative
+  gene_families:
+  - ptmP3
+  taxon_label: Streptomyces albus
+  strain: SB12011
+  phenotype_label: reported resistance to platencin
+  assay: Source-reported growth susceptibility assays; qualitative result only
+  note: Primary functional evidence in a laboratory S. albus derivative; S. albus
+    J1074 is the host background, not the derivative. Streptomyces platensis MA7327
+    is the native donor, not the tested host. The coarse route follows the authors'
+    interpretation; it is not an independent kinetic or exact-allele validation. Donor
+    reference UniProtKB:D8L2W8 (entry version 45, sequence version 1; EMBL:FJ655920
+    / ACS13710.1) matches the paper's PtmP3 archive accession. This is not an experimental
+    construct or allele assignment. PtnP3 is not substituted for the tested PtmP3.
+    NCBITaxon:58346 is a donor species reference; NCBITaxon:1888 is a host species-name
+    reference. The J1074 taxonomy search is ambiguous. No exact allele, strain TaxID,
+    genome, numerical AST or clinical category is assigned.
+  evidence:
+  - reference: PMID:24560608
+    notes: Accepted author manuscript, Results pages 4-5, Discussion pages 6-7, Figure
+      2 and Table 1. Donor, host background and derivative are distinct; the coarse
+      route is the authors' interpretation. Supplements were not inspected.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: fabF-associated partial resistance / reduced susceptibility to platencin
+    in a laboratory Streptomyces albus derivative
+  gene_families:
+  - fabF
+  taxon_label: Streptomyces albus
+  strain: SB12013
+  phenotype_label: partial resistance / reduced susceptibility to platencin
+  assay: Source-reported growth susceptibility assays; qualitative result only
+  note: Primary functional evidence in a laboratory S. albus derivative; S. albus
+    J1074 is the host background, not the derivative. Streptomyces platensis MA7327
+    is the native donor, not the tested host. The coarse route follows the authors'
+    interpretation; it is not an independent kinetic or exact-allele validation. The
+    paper reports donor gene archive KF543053; no matching UniProt protein was resolved.
+    Same-species DSM 40041 proteins are not MA7327 assignments. The precise basis
+    of the reported intrinsic insensitivity is unresolved. The partial platencin response
+    is not equivalent to full resistance. NCBITaxon:58346 is a donor species reference;
+    NCBITaxon:1888 is a host species-name reference. The J1074 taxonomy search is
+    ambiguous. No exact allele, strain TaxID, genome, numerical AST or clinical category
+    is assigned.
+  evidence:
+  - reference: PMID:24560608
+    notes: Accepted author manuscript, Results pages 4-5, Discussion pages 6-7, Figure
+      2 and Table 1. Donor, host background and derivative are distinct; the coarse
+      route is the authors' interpretation. Supplements were not inspected.

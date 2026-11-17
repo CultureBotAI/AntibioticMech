@@ -1,0 +1,171 @@
+{
+  "access_request_metadata_unchanged_since_expanded_review": true,
+  "baseline_commit": "b0950a9c3256aacee226834e0e8a88d1022c9948",
+  "biological_records_changed": 0,
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-15-vgb-evidence/offline-projection-canary-review.json",
+    "sha256": "c6599382ba2a7b8cabce5f2b4a61e87e18fb602847196c6fa140a49bb583975a"
+  },
+  "captured_at": "2026-10-15T08:07:14.693993+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-15-vgb-evidence/cohort.json",
+    "sha256": "f36d8954536f9d61876a91ca09e61c86ab98983285a95dcd833362d1fe87a07d"
+  },
+  "complete_collection_aware_records_read": 9,
+  "corpus_records_hash_checked": 2939,
+  "expanded_access_inventory": {
+    "path": "reports/resistance-grounding-2026-10-15-vgb-evidence/expanded-access-inventory.json",
+    "sha256": "3ed28857e1511d803301da10d3432dc2ec2628674907303902fe1af0d71cc408"
+  },
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 708,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-vgb-evidence/expanded-tests.xml",
+      "sha256": "f35ab0e0f001b1c927f6568bcb42ba0e1a4df85ee6f3e67ffcd303b3c78f63dd"
+    },
+    "skip_details": [
+      {
+        "classname": "tests.test_card_structure_links",
+        "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+        "test": "test_cached_export_reproduces_when_research_cache_is_available"
+      }
+    ],
+    "skipped": 1,
+    "tests": 709
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "d1eee26f6311f6adba13d8a4c0c2461268f866bf76442dbbe4cc0b81d789427a"
+    },
+    {
+      "path": "research/2026-10-15-vgb-evidence.json",
+      "sha256": "c2e6ac2bceff744758ce373ec5b92a590a02482f66b62984aeecb7ac6cf331e2"
+    },
+    {
+      "path": "scripts/audit_vgb_evidence.py",
+      "sha256": "b47a3c6a535b0cc1ceef1a5dc2d6276a376955d55416e772a68af926e05b6ba4"
+    },
+    {
+      "path": "tests/test_vgb_evidence.py",
+      "sha256": "a6cbe0f248b2b11745d5c5860a07cdf64fd0edb1ef9a70eb227048c8b3239c59"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 37,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-vgb-evidence/focused-tests-final.xml",
+      "sha256": "edad32aaf724b0f1e45cf844a2eeae50f139a040546d871a33b96225331697e5"
+    },
+    "skipped": 0,
+    "tests": 37
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_vgb_evidence_20261015.py",
+      "sha256": "67a0976d97b82ca902efe146a17b780f5dbc9b84a480e4d38ba1ab4d71100bd3"
+    },
+    {
+      "path": "/private/tmp/prepare_vgb_review_20261015.py",
+      "sha256": "ac0831582ad98dd53a386dd52cde34a4bed025519c2ab8725e67921cb7c2e1b7"
+    },
+    {
+      "path": "/private/tmp/save_vgb_evidence_20261015.py",
+      "sha256": "0b55e7e102dc39be5ebd872f55ec7f62bb899e2699b41e6e80b40fd8280304d2"
+    },
+    {
+      "path": "/private/tmp/correct_vgb_scope_20261015.py",
+      "sha256": "3a21cbf2ee7a93a59101f8ff5b46a428ca9959aca50e7099fa642d0d50a445bb"
+    },
+    {
+      "path": "/private/tmp/verify_vgb_evidence_20261015.py",
+      "sha256": "f9beee8891a21abaa517cfd6475567d459b713c92be7fac337b63c45327a22e1"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "initial_filename_filter_gap_and_repeated_metadata_lookup_acknowledged": true,
+  "issue_1040": "DEFERRED",
+  "native_ontology_definition_and_citation_binding_replayed": true,
+  "native_primary_table_cells_and_footnote_replayed": true,
+  "ncbi_requests": 0,
+  "network_and_file_writes_blocked_during_replay": true,
+  "network_requests": 1,
+  "new_access_holds": 0,
+  "new_experimental_gene_allele_assignments": 0,
+  "new_primary_texts": 0,
+  "new_uniprot_requests": 0,
+  "new_verified_resistance_results": 0,
+  "no_new_source_owned_or_rendered_files": true,
+  "offline_native_current_corpus_replay": "PASS",
+  "outreach": 0,
+  "previous_uncommitted_work_preserved": true,
+  "prior_research_checkpoints_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-vgb-evidence/protected-before.json",
+    "sha256": "525162001210378a19e78125fb989af6b5813bc4b5d91774e4e8abc77ba3c124"
+  },
+  "protected_files_checked": 7729,
+  "repository_ruff_check": "PASS",
+  "reuse_terms_review_resumed": false,
+  "reused_primary_papers_with_new_selected_context_review": 1,
+  "review_findings_addressed": [
+    "The Table 1 determinant MIC cell is blank; NA* occupies the control column. Neither is imputed.",
+    "The broad Results statement does not override the solubility-limited comparator or establish a quantitative VgbC MIC effect.",
+    "Native-isolate phenotype, prediction, heterologous-host and biochemical evidence remain separate.",
+    "The Table S3 VgbA-relative host is not assigned to LC231 VgbC.",
+    "LC231 remains species-ranked in native taxonomy despite its strain-like name.",
+    "The inactive 2Z2P reference and its second entity do not ground a resistant allele or transfer taxonomy.",
+    "A shared citation does not assign all three reference proteins to vgbA.",
+    "A direct VgbB CARD link is not new experimental grounding or an exact allele assignment.",
+    "Linopristin evidence is not propagated to the nine inherited compound memberships.",
+    "The WGS project and determinant accession range do not select an experimental genome or allele.",
+    "Empty UniProt searches remain query-scoped; no biological absence is inferred.",
+    "The initial filename-filtered access search missed older wrappers. The repeated metadata lookup and expanded all-JSON inventory are retained."
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "VGB_REFERENCE_AND_PRIMARY_CONTEXT_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+  "scope_wording_correction": {
+    "path": "reports/resistance-grounding-2026-10-15-vgb-evidence/scope-wording-correction.json",
+    "sha256": "673c56dadbb5fc4cd29f9c66581e05cf3c7609334078f0f178ee487fc5844800"
+  },
+  "source_adoptions": 0,
+  "source_claims_checked": 27,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "source_review": {
+    "path": "reports/resistance-grounding-2026-10-15-vgb-evidence/source-review.json",
+    "sha256": "30ecd4db3877dd7eb90632bb426e89b94cd30f4355d8aa8abfa0bae39463c90f"
+  },
+  "summary": {
+    "cohort_records": 9,
+    "corpus_records_hash_checked": 2939,
+    "reused_complete_literature_queries": 4,
+    "selected_primary_context_reviews": 1,
+    "selected_supplement_pages_reviewed": 5,
+    "source_claims": 27,
+    "source_terms": 3
+  },
+  "supplement_archive_member_and_render_pins_checked": true,
+  "total_tests_passed": 745,
+  "verification_limit": "Selected primary context, not whole-record or whole-corpus signoff. Pinned RDKit has no Intel macOS wheel; historical Linux CI is not current signoff.",
+  "visually_reviewed_pdf_pages_one_based": [
+    1,
+    7,
+    8,
+    9,
+    11
+  ],
+  "whole_record_primary_signoffs": 0
+}

@@ -1,0 +1,116 @@
+{
+  "adversarial_self_review": [
+    "The cohort complements the prior 59-term query audit, not every other historical follow-up.",
+    "Source citations, successful metadata searches and name matches do not establish experimental identity.",
+    "Failed, absent and incomplete queries are separate from complete zero-result searches.",
+    "Only complete cursor chains contribute candidates; response identity, hashes, order and release are checked.",
+    "Prior-query copies retain their original provenance and are verified byte-identical.",
+    "RNA and whole-cluster terms do not inherit single-protein candidates; other granularity remains open.",
+    "Fixed a scope regression: rplD's reviewed protein identity is retained separately from source RNA ancestry.",
+    "Reference taxonomy is not assigned to experimental organisms or alleles.",
+    "All records remain visible, and repeated assertions are not counted as distinct terms or experiments.",
+    "Same-agent review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "9dc22b459c51ec339cb8798ef5bdd2d84d7e74c9dee3cb79d395972c9fa2e06d"
+    },
+    {
+      "path": "research/2026-10-13-card-literature-expansion.json",
+      "sha256": "10e54ecdb88eadca391cf246bd10c514d2498ab76167c66f98ff9b7e115eb9d6"
+    },
+    {
+      "path": "scripts/audit_card_literature_expansion.py",
+      "sha256": "1a90ceb23c83c3d28a926b97e45d5ecf029a9d4eb1340bde8446af8cd2d63bbd"
+    },
+    {
+      "path": "tests/test_card_literature_expansion.py",
+      "sha256": "c39fe2ce9423eff0846177b7ca34dc2ad65130a43bee003d6f8c1dc78af4f05f"
+    }
+  ],
+  "biological_record_changes": 0,
+  "date": "2026-10-13",
+  "focused_checks": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_card_literature_expansion.py",
+      "tests/test_card_literature_proteins.py",
+      "tests/test_card_citation_concordance.py",
+      "tests/test_card_definition_citations.py",
+      "tests/test_card_term_scope.py",
+      "tests/test_card_grounding_audit.py",
+      "tests/test_docs.py::test_numeric_claims_in_prose_match_the_corpus",
+      "tests/test_docs.py::test_no_unregistered_numeric_claim_about_the_corpus",
+      "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-card-literature-expansion/focused-reviewed-tests.xml"
+    ],
+    "exit_code": 0,
+    "finished": "2026-10-13T13:10:26.000404+00:00",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/focused-reviewed.log",
+      "sha256": "749d136c3b118fe4a4e09cc8ef43097e83c1b5cebce5d59644270ef2b9dbab73"
+    },
+    "output": "........................................................................ [ 37%]\n........................................................................ [ 74%]\n.................................................                        [100%]\n193 passed in 124.05s (0:02:04)\n",
+    "started": "2026-10-13T13:08:20.839469+00:00"
+  },
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_full_qc_or_ci_claimed": false,
+  "offline_export_reproduced_with_network_disabled": true,
+  "preservation": {
+    "added_files_before_this_receipt": [
+      "research/2026-10-13-card-literature-expansion.json",
+      "scripts/audit_card_literature_expansion.py",
+      "tests/test_card_literature_expansion.py"
+    ],
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/protected-before.json",
+      "sha256": "78c1ebd293e827621d29beda3b24152d411439afd51ec240ffcb0fff37541617"
+    },
+    "baseline_files_checked": 7094,
+    "ignored_files_included": true,
+    "old_files_changed": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "raw_curation_site_and_embedding_artifacts_preserved": true
+  },
+  "records_byte_identical": 2939,
+  "scope": "LITERATURE_CONSTRAINED_REFERENCE_CANDIDATES_NOT_EXPERIMENTAL_ALLELES_OR_PHENOTYPES",
+  "source_adoptions": 0,
+  "summary": {
+    "biological_records_changed": 0,
+    "citation_queries": 825,
+    "complete_query_zero_results": 619,
+    "corpus_records_checked": 2939,
+    "experimental_alleles_assigned": 0,
+    "query_status_counts": {
+      "COMPLETE_QUERY_NOT_PRIMARY_REVIEW": 825
+    },
+    "reference_candidate_links": 44,
+    "reference_proteins": 44,
+    "reference_taxa": 33,
+    "reviewed_scope_conflicts": 1,
+    "selected_assertion_memberships": 1837,
+    "selected_records": 237,
+    "selected_terms": 965,
+    "terms_with_reference_candidates": 37,
+    "terms_with_unqueried_other_citations": 1,
+    "terms_without_source_citations": 322,
+    "unique_entries_in_complete_queries": 12699,
+    "whole_records_completed": 0
+  },
+  "test_results": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/focused-reviewed-tests.xml",
+      "sha256": "4b28f3a5de5b21eb16e53083237fe2d484da4be40d61f314c79304409469ca45"
+    },
+    "passed": 193,
+    "skipped": 0
+  }
+}

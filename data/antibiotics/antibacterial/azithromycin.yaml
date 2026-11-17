@@ -103,18 +103,51 @@ source_concepts:
   - CHEBI:36047
   source_version: '2026-08-30'
 activity_spectrum:
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration
+    3.0 mg/L
+  measurement_count: 6
+  isolate_count: 6
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:4d1e7eca77db3e10
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:4d1e7eca77db3e10; drug_code=AZM; row_count=6;
+      isolate_count=6; source=SEQTREAT2020; method_1=solid media; method_2=middlebrook;
+      method_3=7H10; method_cc=3.0; phenotype=R; quality=MEDIUM.'
+  activity: RESISTANT
 - taxon_id: NCBITaxon:485
   taxon_label: Neisseria gonorrhoeae
   mic_value: 2.0
   mic_units: mg/L
   assay: Azithromycin MIC; interpreted using CLSI 2026 M100 Ed36.
   strain: '1281'
+  biosample_accession: SAMN35332251
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10572&PanelID=10
     snippet: Azithromycin  | 2  | R
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1281, Study ID NEW-38,
       BioSample SAMN35332251, Neisseria gonorrhoeae, azithromycin MIC 2 micrograms/mL,
       and interpretation R.
+activity_membership_collections:
+- format: antibioticmech-activity-memberships-v1
+  path: membership-171e7ef1bfdd98f039beb6874dcb02ba53cc7bc953035f097e82db1b0e3c50ff.json.gz
+  sha256: 171e7ef1bfdd98f039beb6874dcb02ba53cc7bc953035f097e82db1b0e3c50ff
+  byte_size: 586
+  uncompressed_byte_size: 1422
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_reference: https://zenodo.org/records/15680920
+  source_retrieved_on: '2026-10-05'
+  source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+  activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+  subject_count: 6
+  observation_count: 1
+  membership_count: 6
+  measurement_count: 6
+  unlinked_subject_count: 6
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3000250
@@ -499,6 +532,31 @@ resistance_mechanisms:
   - reference: ARO:3009647
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000158 (azithromycin);
       database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  label: mef(F)/msr(G)-associated reduced azithromycin susceptibility in native isolate
+    Epi0082
+  gene_families:
+  - mef(F)
+  - msr(G)
+  taxon_id: NCBITaxon:1855823
+  taxon_label: Macrococcoides canis
+  strain: Epi0082
+  phenotype_label: source-reported reduced azithromycin susceptibility
+  assay: Source-reported broth microdilution phenotype
+  note: Same-isolate gene-family/phenotype co-occurrence, not individual-gene or allele-specific
+    causation. The source name Macrococcus canis matches otherNames in the cached
+    UniProt taxonomy entry. The separate type-strain comparator KM45013 and expression
+    host are not this isolate. No exact protein, allele, strain TaxID or numerical
+    AST is assigned; the UniProt mef(F) reference belongs to another species and strain.
+    Source-reported genome components CP046363.1, CP046364.1, CP046365.1, CP046366.1
+    and CP046367.1 share BioSample SAMN13342681 and BioProject PRJNA590936 in ENA
+    metadata; these are not assembly accessions or new gene calls. Compound scope
+    follows named azithromycin; the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:33118027
+    notes: Native Epi0082 row in Table 1 and selected Results/accession statement
+      inspected as publisher-indexed text. Both gene families co-occur; the separate
+      expression-host experiment is not assigned to the native isolate.
 molecular_targets:
 - target_id: ARO:3000757
   target_label: 50S ribosomal subunit P-site
@@ -540,4 +598,29 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 azithromycin-resistant
     Neisseria gonorrhoeae activity observation for AR-1281.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:35Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 1 activity_spectrum observation(s) where
+    evidence notes already named exactly one accession.
+  llm_assisted: true
+- timestamp: '2026-09-26T12:07:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
+    date 2026-08-30, unchanged.'
+- timestamp: '2026-10-05T07:25:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
+    retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-10T06:38:30Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added one native Epi0082 mef(F)/msr(G) and azithromycin co-occurrence claim
+    with verified species-name and source-reported genome-component context. Kept
+    the different-species UniProt reference and expression-host experiment separate;
+    preserved every source-owned claim and membership. Whole-record review remains
+    open.
   llm_assisted: true

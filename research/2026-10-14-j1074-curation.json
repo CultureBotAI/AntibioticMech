@@ -1,0 +1,116 @@
+{
+  "census": {
+    "path": "research/2026-10-14-j1074-resistance-grounding.tsv",
+    "sha256": "425c2852b7443e73c5e79cfd5b30a3d4cba895c321ffa9e59c9c18afb2ed8aab"
+  },
+  "claims_grounded": 5,
+  "context": {
+    "path": "research/2026-10-14-j1074-taxonomy.json",
+    "sha256": "d9e2e075b8199ff9dd8f252642b82af4a29097f0d4df4b941ba029a376b64946"
+  },
+  "experimental_alleles_assigned": 0,
+  "experimental_genomes_or_samples_assigned": 0,
+  "history_events_added": 3,
+  "new_resistance_claims": 0,
+  "other_records_byte_identical": 2936,
+  "records": [
+    {
+      "after": {
+        "path": "data/antibiotics/antifungal/borrelidin.yaml",
+        "sha256": "0e2b27e4fffca44ed9a334c72589a058e2cbf2e9ad9822f975394f6b05f138f9"
+      },
+      "before": {
+        "complete_collection_aware_record_loaded": true,
+        "identifier": "CHEBI:78661",
+        "path": "data/antibiotics/antifungal/borrelidin.yaml",
+        "sha256": "264f89429273999ddda4f850bf45929897b8b5f33ef0ae6a01433811a9a8ee58",
+        "standard_inchi_key": "OJCKRNPLOZHAOU-JTHVHBRGSA-N"
+      },
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/borrelidin-canary.yaml",
+        "sha256": "0e2b27e4fffca44ed9a334c72589a058e2cbf2e9ad9822f975394f6b05f138f9"
+      },
+      "claims_grounded": 1,
+      "curation_event": {
+        "action": "GROUNDED_RESISTANCE_TAXONOMY",
+        "changes": "Grounded the source-reported J1074 host lineage to species Streptomyces albidoflavus (NCBITaxon:1886), using primary lineage context, sequence-free ENA metadata for the published background chromosome and UniProt taxonomy. Preserved source historical names, donor identities, strain labels, phenotype and mechanism limits. Assigned no experimental allele, strain TaxID, sample or genome. No new resistance claim or numeric AST added; whole-record review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-14T07:32:26Z"
+      },
+      "fixture": {
+        "path": "tests/fixtures/borrelidin-before-2026-10-14.yaml",
+        "sha256": "264f89429273999ddda4f850bf45929897b8b5f33ef0ae6a01433811a9a8ee58"
+      },
+      "fresh_seed_merge_equal": true,
+      "identifier": "CHEBI:78661",
+      "unrelated_fields_preserved": true
+    },
+    {
+      "after": {
+        "path": "data/antibiotics/antibacterial/platencin.yaml",
+        "sha256": "d28d043dfb2adcb9d6cb3f9c86d17f0e5da4c8b6a580f5baa2617eb9f8bfdc7f"
+      },
+      "before": {
+        "complete_collection_aware_record_loaded": true,
+        "identifier": "CHEBI:68241",
+        "path": "data/antibiotics/antibacterial/platencin.yaml",
+        "sha256": "5bdf0cc6feda78dd54eee8f5a7bbf37b7c8515344790fc01cb833c20953580b7",
+        "standard_inchi_key": "DWUHGPPFFABTIY-RLWZQHMASA-N"
+      },
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/platencin-canary.yaml",
+        "sha256": "d28d043dfb2adcb9d6cb3f9c86d17f0e5da4c8b6a580f5baa2617eb9f8bfdc7f"
+      },
+      "claims_grounded": 2,
+      "curation_event": {
+        "action": "GROUNDED_RESISTANCE_TAXONOMY",
+        "changes": "Grounded the source-reported J1074 host lineage to species Streptomyces albidoflavus (NCBITaxon:1886), using primary lineage context, sequence-free ENA metadata for the published background chromosome and UniProt taxonomy. Preserved source historical names, donor identities, strain labels, phenotype and mechanism limits. Assigned no experimental allele, strain TaxID, sample or genome. No new resistance claim or numeric AST added; whole-record review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-14T07:34:06Z"
+      },
+      "fixture": {
+        "path": "tests/fixtures/platencin-before-2026-10-14.yaml",
+        "sha256": "5bdf0cc6feda78dd54eee8f5a7bbf37b7c8515344790fc01cb833c20953580b7"
+      },
+      "fresh_seed_merge_equal": true,
+      "identifier": "CHEBI:68241",
+      "unrelated_fields_preserved": true
+    },
+    {
+      "after": {
+        "path": "data/antibiotics/antibacterial/platensimycin.yaml",
+        "sha256": "8baffa64e37818f750df4ab55b5ed0d16783b1158c5f4a6845b85536e979839a"
+      },
+      "before": {
+        "complete_collection_aware_record_loaded": true,
+        "identifier": "CHEBI:68236",
+        "path": "data/antibiotics/antibacterial/platensimycin.yaml",
+        "sha256": "f75a55971c4629c13895681a48dc43f5b43143e380431503d6a28c1e16576a84",
+        "standard_inchi_key": "CSOMAHTTWTVBFL-OFBLZTNGSA-N"
+      },
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/platensimycin-canary.yaml",
+        "sha256": "8baffa64e37818f750df4ab55b5ed0d16783b1158c5f4a6845b85536e979839a"
+      },
+      "claims_grounded": 2,
+      "curation_event": {
+        "action": "GROUNDED_RESISTANCE_TAXONOMY",
+        "changes": "Grounded the source-reported J1074 host lineage to species Streptomyces albidoflavus (NCBITaxon:1886), using primary lineage context, sequence-free ENA metadata for the published background chromosome and UniProt taxonomy. Preserved source historical names, donor identities, strain labels, phenotype and mechanism limits. Assigned no experimental allele, strain TaxID, sample or genome. No new resistance claim or numeric AST added; whole-record review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-14T07:34:06Z"
+      },
+      "fixture": {
+        "path": "tests/fixtures/platensimycin-before-2026-10-14.yaml",
+        "sha256": "f75a55971c4629c13895681a48dc43f5b43143e380431503d6a28c1e16576a84"
+      },
+      "fresh_seed_merge_equal": true,
+      "identifier": "CHEBI:68236",
+      "unrelated_fields_preserved": true
+    }
+  ],
+  "records_changed": 3,
+  "whole_record_primary_signoffs": 0
+}

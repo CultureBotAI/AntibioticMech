@@ -1,0 +1,443 @@
+{
+  "assessments": [
+    {
+      "disposition": "HOLD_NATIVE_PHENOTYPE_AND_EXACT_EXPERIMENTAL_IDENTITY",
+      "experimental_allele_assigned": false,
+      "experimental_gene_locus_id": null,
+      "experimental_genome_accession": null,
+      "experimental_protein_accession": null,
+      "experimental_strain_taxon_id": null,
+      "experimental_taxon_id": null,
+      "gene_symbol": "pac",
+      "missing_evidence": "Original native-organism primary evidence and exact tested protein/chemical context.",
+      "new_resistance_claim": false,
+      "primary_doi": "10.1038/s41598-021-84551-9",
+      "record_id": "CHEBI:17939",
+      "reference_protein": "UniProtKB:P13249",
+      "reference_role": "ENZYME_ORIGIN",
+      "reference_taxon": "NCBITaxon:132473",
+      "standardized_mic_extracted": false
+    },
+    {
+      "disposition": "HOLD_EXACT_EXPERIMENTAL_IDENTITY",
+      "experimental_allele_assigned": false,
+      "experimental_gene_locus_id": null,
+      "experimental_genome_accession": null,
+      "experimental_protein_accession": null,
+      "experimental_strain_taxon_id": null,
+      "experimental_taxon_id": null,
+      "gene_symbol": "bsr",
+      "missing_evidence": "The gene/donor label corroborates a reference, not an exact experimental allele or genome.",
+      "new_resistance_claim": false,
+      "primary_doi": "10.1248/bpb.21.893",
+      "record_id": "CHEBI:15353",
+      "reference_protein": "UniProtKB:P33967",
+      "reference_role": "DONOR_REFERENCE",
+      "reference_taxon": "NCBITaxon:1396",
+      "standardized_mic_extracted": false
+    },
+    {
+      "disposition": "HOLD_FUNGAL_PRIMARY_REVIEW",
+      "experimental_allele_assigned": false,
+      "experimental_gene_locus_id": null,
+      "experimental_genome_accession": null,
+      "experimental_protein_accession": null,
+      "experimental_strain_taxon_id": null,
+      "experimental_taxon_id": null,
+      "gene_symbol": "bsd",
+      "missing_evidence": "The fungal entry's own primary experiments remain unreviewed; BSR is not BSD.",
+      "new_resistance_claim": false,
+      "primary_doi": null,
+      "record_id": "CHEBI:15353",
+      "reference_protein": "UniProtKB:P0C2P0",
+      "reference_role": "DISTINCT_FUNGAL_COMPARATOR",
+      "reference_taxon": "NCBITaxon:33178",
+      "standardized_mic_extracted": false
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-detox/baseline.json",
+    "sha256": "01d0911d4f040375a0fd072866ae06cb6e9dfe99fa3177f6d69a453456de856b"
+  },
+  "chemical_scope": "Exact corpus structures retained; salts, acetylated/deaminated products and other congeners are not automatically equivalent assay compounds.",
+  "date": "2026-10-13",
+  "limits": {
+    "biological_record_changes": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_experimental_identifiers": 0,
+    "new_resistance_claims": 0,
+    "records_in_scope": 2939,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "source_adoptions": 0,
+    "whole_corpus_status": "OPEN",
+    "whole_record_reviews_completed": 0
+  },
+  "primary_sources": [
+    {
+      "asset": {
+        "path": "reports/resistance-grounding-2026-10-13-detox/kawa-1998.pdf",
+        "sha256": "47419dad5a2781439b91024dee0c013a5c512e52fb31a0bd72c3c6d439be334c"
+      },
+      "bibliographic_caution": "Publisher metadata renders the first author's family name KAWA, while the native PDF appears to read NAWA. The DOI identifies the source; no author correction is asserted.",
+      "doi": "10.1248/bpb.21.893",
+      "full_text_cached": true,
+      "interpretation": "Bacillus cereus K55-S1 is the bsr donor; Escherichia coli TK121 is a laboratory host. The study discusses BSR deaminase activity and distinguishes fungal BSD. Fixed-concentration growth comparisons are not standardized MIC endpoints. Some activity comparisons are described as data not shown.",
+      "media_type": "application/pdf;charset=UTF-8",
+      "native_pages_visually_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "rendered_pages": [
+        {
+          "path": "reports/resistance-grounding-2026-10-13-detox/kawa-1998-page-1.png",
+          "sha256": "46b711de7fd5b984400bed63aeddeddec20aecd2d502a9cdfe653d0bbf507ad4"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-13-detox/kawa-1998-page-2.png",
+          "sha256": "86fe0e3b027c2fd73450f6f9618aac6303611781276f0d465607051874744345"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-13-detox/kawa-1998-page-3.png",
+          "sha256": "cbd4b3c4b48e2a36d6445ec3428d1ce802ed3337d1794cf25b88566b25582713"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-13-detox/kawa-1998-page-4.png",
+          "sha256": "6e7be5d23417849834db76b337cde885ed01610ac910634bc60af4ddc418b2c2"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-13-detox/kawa-1998-page-5.png",
+          "sha256": "9dd980876a2e909b62aa6d8a565bd1fee4bd57a8400a8be461f17a17743b2bf1"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-13-detox/kawa-1998-page-6.png",
+          "sha256": "0bae44ac830b33de58717f2cdebde143e3fdf2f223f001ada4ee67e4e5b1f4d8"
+        }
+      ],
+      "retrieved_at": "2026-10-13T11:23:16.748033+00:00",
+      "scope": "HIGH_LEVEL_DONOR_HOST_AND_BIOCHEMICAL_CONTEXT",
+      "source_locations": [
+        "Pages 893-894: donor and host context",
+        "Pages 895-898: experimental scope and enzyme comparison"
+      ],
+      "status": 200,
+      "supplements_reviewed": false,
+      "url": "https://www.jstage.jst.go.jp/article/bpb1993/21/9/21_9_893/_pdf"
+    },
+    {
+      "asset": {
+        "path": "reports/resistance-grounding-2026-10-13-detox/caputo-2021.html-redirect-3",
+        "sha256": "0baf76de82c09e4c768072d731f2d34ae6377167a8268b93216fbdc1dfabb6c9"
+      },
+      "doi": "10.1038/s41598-021-84551-9",
+      "full_text_cached": true,
+      "interpretation": "Recombinant PAC structure work distinguishes cofactor-bound and reaction-product complexes. This is not a native Streptomyces susceptibility experiment. Mammalian-cell experiments are outside microbial AST; native figures and supplements were not visually reviewed here.",
+      "media_type": "text/html; charset=utf-8",
+      "native_pages_visually_reviewed": [],
+      "rendered_pages": [],
+      "retrieved_at": "2026-10-13T11:26:10.371249+00:00",
+      "scope": "SELECTED_PRIMARY_HTML_RESULTS_AND_FIGURE_1_CAPTION",
+      "source_locations": [
+        "Results: Crystal structure of recombinant PAC; Figure 1 caption"
+      ],
+      "status": 200,
+      "supplements_reviewed": false,
+      "url": "https://www.nature.com/articles/s41598-021-84551-9"
+    }
+  ],
+  "protein_lookups": [
+    {
+      "hits": [
+        {
+          "accession": "UniProtKB:P13249",
+          "citations": [
+            {
+              "doi": "10.1016/0378-1119(89)90220-5",
+              "pmid": "2676728",
+              "primary_text_independently_reviewed_this_checkpoint": false,
+              "source_strain_labels": [
+                "ATCC 12461 / DSM 40043 / JCM 4309 / NBRC 12738 / NCIMB 13007 / NRRL B-2403"
+              ]
+            },
+            {
+              "doi": "10.1021/bi00348a036",
+              "pmid": "4092057",
+              "primary_text_independently_reviewed_this_checkpoint": false,
+              "source_strain_labels": [
+                "ATCC 12461 / DSM 40043 / JCM 4309 / NBRC 12738 / NCIMB 13007 / NRRL B-2403"
+              ]
+            },
+            {
+              "doi": "10.1038/s41598-021-84551-9",
+              "pmid": "33664348",
+              "primary_text_independently_reviewed_this_checkpoint": true,
+              "source_strain_labels": []
+            }
+          ],
+          "disposition": "REFERENCE_ONLY",
+          "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+          "entry_version": 94,
+          "experimental_subject_assigned": false,
+          "gene_symbols": [
+            "pac"
+          ],
+          "pdb_references": [
+            "7K09",
+            "7K0A"
+          ],
+          "protein_name": "Puromycin N-acetyltransferase",
+          "sequence_version": 2,
+          "source_organism_label": "Streptomyces alboniger",
+          "taxon_id": "NCBITaxon:132473"
+        }
+      ],
+      "request": {
+        "body_sha256": "8012c62ea422d0ebb4585419335e7e330bdc7c35c5eaa933286a22bfaa9b32a5",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-detox/request-79fc42cda3e6d256fbc371e33b25259e8f48731c394f94ab9c93a7912aa7e59d.json",
+          "sha256": "7507ac1e198dce37111bde1af4cfaec97a235702e062b65fc68734ac1485e8ed"
+        },
+        "pagination_complete": true,
+        "query": "accession:P13249",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T11:23:02.880083+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP13249&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    },
+    {
+      "hits": [
+        {
+          "accession": "UniProtKB:P0C2P0",
+          "citations": [
+            {
+              "doi": "10.1007/bf00391004",
+              "pmid": "8159161",
+              "primary_text_independently_reviewed_this_checkpoint": false,
+              "source_strain_labels": [
+                "S-712 / ATCC 28865"
+              ]
+            },
+            {
+              "doi": "10.1093/oxfordjournals.jbchem.a022711",
+              "pmid": "10833262",
+              "primary_text_independently_reviewed_this_checkpoint": false,
+              "source_strain_labels": []
+            },
+            {
+              "doi": "10.1107/s0907444998011809",
+              "pmid": "10089374",
+              "primary_text_independently_reviewed_this_checkpoint": false,
+              "source_strain_labels": []
+            },
+            {
+              "doi": "10.1074/jbc.m704476200",
+              "pmid": "17959604",
+              "primary_text_independently_reviewed_this_checkpoint": false,
+              "source_strain_labels": []
+            }
+          ],
+          "disposition": "REFERENCE_ONLY",
+          "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+          "entry_version": 79,
+          "experimental_subject_assigned": false,
+          "gene_symbols": [
+            "bsd"
+          ],
+          "pdb_references": [
+            "1WN5",
+            "1WN6",
+            "2Z3G",
+            "2Z3H",
+            "2Z3I",
+            "2Z3J"
+          ],
+          "protein_name": "Blasticidin-S deaminase",
+          "sequence_version": 1,
+          "source_organism_label": "Aspergillus terreus",
+          "taxon_id": "NCBITaxon:33178"
+        }
+      ],
+      "request": {
+        "body_sha256": "70d8dd265115024955b759e050d187339b3f57d9f64f1f701ea2de0352ceda41",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-detox/request-6b3ad492d9a505aea487438bf619e227b7901e3bdc049b2d070d286630d8d9b2.json",
+          "sha256": "92ca2bba63327dbc23875734d3dc902189897fa05e1298306eb3b485d6728e86"
+        },
+        "pagination_complete": true,
+        "query": "accession:P0C2P0",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T11:23:30.465841+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP0C2P0&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    },
+    {
+      "hits": [
+        {
+          "accession": "UniProtKB:A0KLG5",
+          "citations": [
+            {
+              "doi": "10.1128/jb.00621-06",
+              "pmid": "16980456",
+              "primary_text_independently_reviewed_this_checkpoint": false,
+              "source_strain_labels": [
+                "ATCC 7966 / DSM 30187 / BCRC 13018 / CCUG 14551 / JCM 1027 / KCTC 2358 / NCIMB 9240 / NCTC 8049"
+              ]
+            },
+            {
+              "doi": "10.1107/s1399004713024838",
+              "pmid": "24419381",
+              "primary_text_independently_reviewed_this_checkpoint": false,
+              "source_strain_labels": []
+            }
+          ],
+          "disposition": "EXCLUDE_UNRELATED_RACEMASE",
+          "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+          "entry_version": 130,
+          "experimental_subject_assigned": false,
+          "gene_symbols": [
+            "bsr"
+          ],
+          "pdb_references": [
+            "4BF5"
+          ],
+          "protein_name": "Broad specificity amino-acid racemase",
+          "sequence_version": 1,
+          "source_organism_label": "Aeromonas hydrophila subsp. hydrophila (strain ATCC 7966 / DSM 30187 / BCRC 13018 / CCUG 14551 / JCM 1027 / KCTC 2358 / NCIMB 9240 / NCTC 8049)",
+          "taxon_id": "NCBITaxon:380703"
+        },
+        {
+          "accession": "UniProtKB:P33967",
+          "citations": [
+            {
+              "doi": "10.1271/bbb1961.55.3155",
+              "pmid": "1368770",
+              "primary_text_independently_reviewed_this_checkpoint": false,
+              "source_strain_labels": [
+                "K55-S1"
+              ]
+            }
+          ],
+          "disposition": "REFERENCE_ONLY",
+          "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+          "entry_version": 95,
+          "experimental_subject_assigned": false,
+          "gene_symbols": [
+            "bsr"
+          ],
+          "pdb_references": [],
+          "protein_name": "Blasticidin-S deaminase",
+          "sequence_version": 1,
+          "source_organism_label": "Bacillus cereus",
+          "taxon_id": "NCBITaxon:1396"
+        }
+      ],
+      "request": {
+        "body_sha256": "804ef6b6f1dce394ac98063d5557959abaabad41590b5d57b5da325d33087b3f",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-detox/request-659b341c58aa74aacda899a2eaf4c6e24d4e0a5f5156232850fb1534bbfdf9d8.json",
+          "sha256": "05c18bea13f48259fdcd068f58780a88d1c3f47fb18a6a770794076cfdd8f66e"
+        },
+        "pagination_complete": true,
+        "query": "gene_exact:bsr AND reviewed:true",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T11:26:06.018958+00:00",
+        "status": 200,
+        "total_results": 2,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Absr+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    }
+  ],
+  "records": [
+    {
+      "complete_collection_aware_record_loaded": true,
+      "existing_resistance_claims": 4,
+      "identifier": "CHEBI:17939",
+      "label": "puromycin",
+      "path": "data/antibiotics/antibacterial/puromycin.yaml",
+      "sha256": "ff0f0d0fd0bb8522bf88c3225e827cc8635fa7b7237abbba66e8b076758de522",
+      "standard_inchi_key": "RXWNCPJZOCPEPQ-NVWDDTSBSA-N"
+    },
+    {
+      "complete_collection_aware_record_loaded": true,
+      "existing_resistance_claims": 2,
+      "identifier": "CHEBI:15353",
+      "label": "blasticidin S",
+      "path": "data/antibiotics/antifungal/blasticidin-s.yaml",
+      "sha256": "081fcfdb19f92cb018d6300bbdb1f141ab81659a14b132c8687ddba9d6b795da",
+      "standard_inchi_key": "CXNPLSGKWMLZPZ-ZNIXKSQXSA-N"
+    }
+  ],
+  "scope": "DETOX_REFERENCE_GROUNDING_NOT_RESISTANCE_CURATION",
+  "symbol_collision": {
+    "excluded_hit": "UniProtKB:A0KLG5",
+    "query": "gene_exact:bsr AND reviewed:true",
+    "reason": "The other reviewed bsr hit is an amino-acid racemase, not this deaminase.",
+    "relevant_reference": "UniProtKB:P33967"
+  },
+  "taxonomy_references": [
+    {
+      "experimental_subject_assigned": false,
+      "rank": "species",
+      "request": {
+        "body_sha256": "f9f521dddd67992a68307297d9a1da5398d938c22c0ffe0c54f608bd220887b2",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-detox/request-bba94da0e5697f8634de4e7eee9a0dfa405618b9f3d5dcda0b913e633ecd3e68.json",
+          "sha256": "a1dbda9958ccf21859668896c39afb5368712c80874d8370f33eb5646ea3c70b"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T11:26:12.275055+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/132473"
+      },
+      "scientific_name": "Streptomyces alboniger",
+      "scope": "REFERENCE_SPECIES_NOT_EXPERIMENTAL_STRAIN",
+      "taxon_id": "NCBITaxon:132473"
+    },
+    {
+      "experimental_subject_assigned": false,
+      "rank": "species",
+      "request": {
+        "body_sha256": "e730e267f3e9f1ee30538d03d8fe9bb43f1a4a3e628992e0ebb860ef53860867",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-detox/request-5eee15d0e294e3e267ae350028883d14f5e8e008a2f9f0e9e18c84bf387f829d.json",
+          "sha256": "61a456760670209d1655e5e7865949f48a9dfd8b771dd8e9beca67469aa74efe"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T11:30:31.258425+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/1396"
+      },
+      "scientific_name": "Bacillus cereus",
+      "scope": "REFERENCE_SPECIES_NOT_EXPERIMENTAL_STRAIN",
+      "taxon_id": "NCBITaxon:1396"
+    },
+    {
+      "experimental_subject_assigned": false,
+      "rank": "species",
+      "request": {
+        "body_sha256": "83d904b58b8fb2d3a3f730ab4c8bee1b5f0cdbfd1ab16cc13509e2c1852ed7c9",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-detox/request-15e1cb5696a3b9f94d1539e214c28753de818f758f84759047dc907a30e55856.json",
+          "sha256": "856842ba61b158210daf2dcc14d5e9577e2392618cc0102d2894d9e8da5f0e8f"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T11:30:34.944426+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/33178"
+      },
+      "scientific_name": "Aspergillus terreus",
+      "scope": "REFERENCE_SPECIES_NOT_EXPERIMENTAL_STRAIN",
+      "taxon_id": "NCBITaxon:33178"
+    }
+  ]
+}

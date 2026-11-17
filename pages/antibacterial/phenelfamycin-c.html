@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>phenelfamycin C</h1>
 <p class="meta">
   <code class="curie">antibioticmech:aro-a78f888bde</code>
@@ -37,15 +48,18 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3001219">elfamycin antibiotic</a><code class="curie">ARO:3001219</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3001219">ARO:3001219</a>      <code class="curie">ARO:3001219</code></li>
+  <li>elfamycin antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_3001219"><code class="curie">ARO:3001219</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C58H83NO18</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>1082.3 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>1081.5610148 Da</td></tr><tr><th scope="row">Source</th><td>PubChem · retrieved 2026-08-29</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">CFQHTKGGWFGEKG-WYJATRNTSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">C/C=C/C=C/C1C(C(C(C(O1)(C(COC2CC(C(C(O2)C)OC3CC(C(C(O3)C)O)OC)OC)C(=O)NC/C=C/C=C(\C)/C(C(C)C4CC(C(O4)/C=C/C=C/C=C/C(=O)O)O)OC)O)OC(=O)CC5=CC=CC=C5)O)(C)C</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C58H83NO18/c1-11-12-16-27-46-57(6,7)54(65)55(75-48(63)30-39-24-17-15-18-25-39)58(67,77-46)40(34-71-49-33-45(69-9)53(38(5)73-49)76-50-32-44(68-8)51(64)37(4)72-50)56(66)59-29-22-21-23-35(2)52(70-10)36(3)43-31-41(60)42(74-43)26-19-13-14-20-28-47(61)62/h11-28,36-38,40-46,49-55,60,64-65,67H,29-34H2,1-10H3,(H,59,66)(H,61,62)/b12-11+,14-13+,22-21+,26-19+,27-16+,28-20+,35-23+</pre>
 
 <h2>Cross-references</h2>
@@ -53,7 +67,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3001251">ARO:3001251</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3001251">phenelfamycin C</a><code class="curie">ARO:3001251</code></li>
   <li><a href="http://purl.obolibrary.org/obo/CHEBI_222040">CHEBI:222040</a></li>
   <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/6443945">pubchem.compound:6443945</a></li>
 </ul>
@@ -64,6 +78,7 @@ both rather than shown here, since it names at most one of them.</p>
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -75,6 +90,8 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <td class="meta">2026-08-30</td>
   </tr>
 </table>
+
+</div>
 
 
 
@@ -109,26 +126,36 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/phenelfamycin-c.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/phenelfamycin-c.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=phenelfamycin%20C">MediaIngredientMech (phenelfamycin C)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=phenelfamycin%20C">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=phenelfamycin%20C">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=phenelfamycin%20C">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=phenelfamycin%20C">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

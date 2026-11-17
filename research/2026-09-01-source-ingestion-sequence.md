@@ -10,9 +10,9 @@ public source endpoints.
 
 - PHI-base is adopted and seeded: 217 resistance associations on 23 exact
   ChEBI-grounded corpus structures.
-- CRyPTIC remains `EVALUATING`: its measurements are valuable, but release
-  3.4.0 supplies drug names/codes rather than structures or stable chemical
-  identifiers, so zero observations pass the structure-identity gate.
+- CRyPTIC is adopted and seeded: the hand-audited drug-code crosswalk and
+  compact inventory seed 4,012 grouped DST/UKMYC activity observations on 26
+  exact structure records.
 - AMRFinderPlus remains a reference audit: it adds family/class coverage but
   cannot support structure-specific resistance claims without another mapping
   and evidence layer.
@@ -54,6 +54,27 @@ observations and never writes an inventory.
 Required unblocking evidence: a versioned CRyPTIC drug-code crosswalk carrying
 an exact structure identifier or Standard InChIKey, including an explicit rule
 for combinations, salts, stereoisomers and assay reagent forms.
+
+2026-09-26 follow-up: `curation/cryptic_drug_map.tsv` now supplies that v3.4.0
+crosswalk. It maps 29 of 39 drug codes to exact structure records and leaves
+combinations, drug classes, mixtures, absent structures and ambiguous
+stereochemical names unmapped. The evaluator validates the crosswalk against the
+upstream `DRUG_CODES.csv.gz` names and the current corpus InChIKeys; on the
+pinned CRyPTIC 3.4.0 parquet files, 26 of those mapped codes occur and
+858,402 of 949,865 DST/UKMYC rows become structure-grounded. The committed
+`data/raw/cryptic_activity.tsv` inventory compacts them into 4,012 grouped
+activity rows by grouping DST on drug, method, phenotype and quality and UKMYC
+on drug, plate design, primary method, quality, MIC and binary phenotype; each
+row retains a stable group id plus the row, isolate and site counts needed to
+audit the grouping without checking in a giant row-for-row activity table. It
+also standardizes CRyPTIC MIC strings into `mic_value`, `mic_qualifier` and
+`mic_units`, using mg/L for both DST `METHOD_MIC` and UKMYC `MIC` while
+preserving the raw columns. The seed merge path treats CRyPTIC-owned
+`activity_spectrum` rows as a replaceable source slice, so future re-seeds can
+replace stale upstream observations without touching curated activity rows. The
+`ActivityObservation` writer consumes the compact inventory, keeps the source's
+Mycobacterium tuberculosis complex label without inventing a species-level taxon
+CURIE, and stores the row, isolate and site counts needed to audit the grouping.
 
 ## 2. PHI-base AMR adoption
 
@@ -124,19 +145,56 @@ Sources:
 
 The AST Browser offers downloadable, submitter-provided phenotypic observations
 with BioSample, organism, antibiotic, S/R phenotype, MIC or disk measurement,
-measurement sign, platform, reagent, testing standard and BioProject. NCBI says
-it does not verify relationships between submitted fields. Its general policy
-places no NCBI restriction on molecular data, but also says rights are not
-transferred from submitters and NCBI cannot transfer them to third parties.
-The BigQuery route is an alpha release and its documentation asks users to make
-contact before production use.
+measurement sign, laboratory typing method, platform, reagent, testing standard,
+isolation type, location, collection and create dates, host, isolation source
+and BioProject. NCBI says it does not verify relationships between submitted
+fields. Its general policy places no NCBI restriction on molecular data, but
+also says rights are not transferred from submitters and NCBI cannot transfer
+them to third parties. The BigQuery route is an alpha release and its
+documentation asks users to make contact before production use.
 
 Disposition: no corpus import. Per project direction, license resolution is
 deferred and is not treated as the blocker in this pass. The remaining
-technical gates are structure-grounded antibiotic identity, validation of the
-submitted field relationships needed for a claim, and deduplication of
-BioSample/BioProject rows already present in CRyPTIC or other project datasets.
+technical gates are curated structure-grounded antibiotic identity, validation
+of the submitted field relationships needed for a claim, and curated
+deduplication of BioSample/BioProject rows already present in CRyPTIC or other
+project datasets.
 No contact was made.
+
+2026-09-26 follow-up: `scripts/evaluate_ncbi_ast.py` now preflights AST
+Browser CSV/TSV and BigQuery-shaped exports without seeding rows. It summarizes
+submitted antibiotic strings by lexical exact-corpus candidates, ambiguous
+matches, unmatched names, taxon/BioSample/BioProject/target-accession coverage,
+source isolation metadata coverage, MIC or disk-diffusion coverage, and
+measurement signs standardized to qualifiers and units, treating `mg/L` and
+`ug/mL` MIC headings as the same numeric unit. It can also emit the fillable
+source-versioned drug-map template that a curator turns into the exact-structure
+crosswalk. When supplied
+with a partially curated crosswalk, it writes a compact grouped activity report
+for exact-mapped rows with valid MIC or disk-diffusion measurements,
+optional NCBI Taxonomy identifiers normalized to `NCBITaxon` CURIEs,
+BioSample/BioProject context for deduplication, source isolation metadata, and
+source-versioning and retrieval-date columns. Its audits report how many
+otherwise eligible exact rows a curated BioSample/BioProject map excludes before
+the grouped exact report is written. That report keeps NCBI Pathogen
+Detection `target_acc` values separate from source TaxIDs and `GCA_`/`GCF_`
+Assembly accessions so the former can audit source isolate grouping without
+being mislabeled as an NCBI Assembly accession, and it keeps isolation type,
+location, collection and create dates, host, and isolation source as audit
+columns. A second curated deduplication TSV can exclude BioSample or
+whole-BioProject contexts that are already represented by CRyPTIC or another
+source before those exact groups are written. Curated crosswalk rows must
+explicitly separate exact single-structure mappings from mixtures, drug classes,
+combinations, ambiguous stereochemical names, and missing corpus records; the
+evaluator now refuses ragged map rows and requires a mapping basis, notes, and
+dedupe source versions before writing an exact report. Exact rows are validated
+against current corpus Standard InChIKeys so a stale mapping cannot silently
+promote observations onto the wrong structure. The seeder validates the report
+header, source metadata, BioSample/BioProject dedupe fields, activity calls, and
+MIC or disk-diffusion measurement shape before consuming that compact activity
+report as an NCBI_AST-owned source slice, replacing only those NCBI AST
+observations on future re-seeds while preserving CRyPTIC and curator-owned
+`activity_spectrum` rows.
 
 ## 5. RCSB PDB candidate audit
 
@@ -166,5 +224,16 @@ just evaluate-cryptic --dst DST_MEASUREMENTS.parquet \
 just extract-phibase-dry --amr phibase_amr_export.csv --phenotypes phipo.csv
 just evaluate-amrfinder --catalog ReferenceGeneCatalog.txt --families fam.tsv \
   --aro data/raw/aro_resistance_edges.tsv
+just evaluate-ncbi-ast --ast ast.tsv --source-version 2026-09-26-ast-browser \
+  --antibiotic-report ncbi_ast_antibiotics.tsv \
+  --drug-map-template ncbi_ast_drug_map.tsv
+just evaluate-ncbi-ast --ast ast.tsv --drug-map ncbi_ast_drug_map.tsv \
+  --project-dedupe-report ncbi_ast_project_dedupe_report.tsv \
+  --project-dedupe-map-template ncbi_ast_project_dedupe.tsv \
+  --source-version 2026-09-26-ast-browser
+just evaluate-ncbi-ast --ast ast.tsv --drug-map ncbi_ast_drug_map.tsv \
+  --project-dedupe-map ncbi_ast_project_dedupe.tsv \
+  --activity-report ncbi_ast_activity.tsv \
+  --source-version 2026-09-26-ast-browser --source-retrieved-on 2026-09-26
 just evaluate-rcsb-pdb
 ```

@@ -1,0 +1,107 @@
+{
+  "scope": "LIMITED_REFERENCE_IDENTITY_REVIEW_NOT_EXPERIMENTAL_ALLELE_GROUNDING",
+  "reviewed_on": "2026-10-12",
+  "pmid": "38374637",
+  "doi": "10.1021/acs.jafc.3c08093",
+  "record_ids": ["CHEBI:28909", "CHEBI:81763"],
+  "source_associations": 4,
+  "source_inventory": {
+    "path": "data/raw/phibase_amr.tsv",
+    "sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+    "commit": "62e6a87a49397cba6ceb211b254d7ac8e5d09ff8",
+    "retrieved_on": "2026-09-01"
+  },
+  "primary_evidence": {
+    "main_text_status": "ACCESS_LIMITED_NOT_FULLY_INSPECTED",
+    "supplement_doi": "10.1021/acs.jafc.3c08093.s001",
+    "metadata_url": "https://api.figshare.com/v2/articles/25249210",
+    "metadata_sha256": "11311d241ecb4af51c7c9d40c008d7674d74053f4a7e590994e6bb7f532fcf28",
+    "publisher_version": 1,
+    "file_id": 44607115,
+    "download_url": "https://ndownloader.figshare.com/files/44607115",
+    "filename": "jf3c08093_si_001.pdf",
+    "pdf_sha256": "308aea69f5da416e1669287e0862a7a5853483d80a15ffe8f2f4daaab021d36e",
+    "pdf_bytes": 619520,
+    "publisher_md5_verified": "2f01ebaa7d1284f6610ba676245c410b",
+    "retrieved_at": "2026-10-12T20:05:52.118453+00:00",
+    "license": "CC BY-NC 4.0",
+    "raw_artifacts": "LOCAL_IGNORED_CACHE_ONLY_NOT_ADOPTED_OR_REDISTRIBUTED",
+    "inspection": "Six-page supplement headings checked; opening subject-label lines of Figure S4 caption on PDF page 5 text-extracted and visually inspected as a crop. Main text, figure sequence panels, protocols, primers and assay results were not reviewed for curation.",
+    "finding": "The caption separately names Scl02-05, 1980 UF-70 and derived subjects. It does not provide a verified one-to-one source-row/experimental-subject crosswalk in the inspected material. The caption label 1980 UF-70 is not independently established as an exact synonym of the UniProt reference strain."
+  },
+  "reference_proteins": [
+    {
+      "accession": "UniProtKB:A7EQI8",
+      "url": "https://www.uniprot.org/uniprotkb/A7EQI8/entry",
+      "release": "2026_03",
+      "entry_version": 111,
+      "sequence_version": 1,
+      "reviewed": false,
+      "taxon_id": "NCBITaxon:665079",
+      "organism": "Sclerotinia sclerotiorum (strain ATCC 18683 / 1980 / Ss-1)",
+      "response_sha256": "1f775feb024849863a4b56fce16a7e0e16f2e99a61b0b4dc515a151f2927dd5e",
+      "retrieved_at": "2026-10-12T20:05:22.974707+00:00",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_SUBJECT"
+    },
+    {
+      "accession": "UniProtKB:A7F519",
+      "url": "https://www.uniprot.org/uniprotkb/A7F519/entry",
+      "release": "2026_03",
+      "entry_version": 97,
+      "sequence_version": 1,
+      "reviewed": false,
+      "taxon_id": "NCBITaxon:665079",
+      "organism": "Sclerotinia sclerotiorum (strain ATCC 18683 / 1980 / Ss-1)",
+      "response_sha256": "31afd6c971a4fc4ac6c5a096f030e5932d69d19bd1dd4c85ac8b964a5a07c70d",
+      "retrieved_at": "2026-10-12T20:05:54.211706+00:00",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_SUBJECT"
+    }
+  ],
+  "taxonomy": [
+    {
+      "taxon_id": "NCBITaxon:5180",
+      "url": "https://rest.uniprot.org/taxonomy/5180.json",
+      "name": "Sclerotinia sclerotiorum",
+      "rank": "species",
+      "release": "2026_03",
+      "response_sha256": "735a5aabe2c86ecf4b074afd2fe856401ce74cd17cb6416febd08c3898fd88f5",
+      "retrieved_at": "2026-10-12T20:08:21.224277+00:00",
+      "disposition": "RETAIN_SPECIES_NOT_SPECIES_WIDE_RESISTANCE"
+    },
+    {
+      "taxon_id": "NCBITaxon:665079",
+      "url": "https://rest.uniprot.org/taxonomy/665079.json",
+      "name": "Sclerotinia sclerotiorum (strain ATCC 18683 / 1980 / Ss-1)",
+      "rank": "strain",
+      "parent_taxon_id": "NCBITaxon:5180",
+      "release": "2026_03",
+      "response_sha256": "81f3b0a70104fb717fa1bfa734a936d9ab9318542268c6ca9d25e953b756f989",
+      "retrieved_at": "2026-10-12T20:08:31.487330+00:00",
+      "disposition": "REFERENCE_ONLY_NOT_SCL02_05_SUBJECT_ID"
+    }
+  ],
+  "decision": {
+    "review_id": "ma-2024-reference-context",
+    "owner": "curation/phibase_grounding_reviews.json",
+    "withhold_subject_fields": ["strain_taxon_id", "protein_accession"],
+    "retain_source_strain_label": "Scl02-05",
+    "strain_label_scope": "SOURCE_BACKGROUND_CONTEXT_EXACT_TESTED_SUBJECT_UNRESOLVED",
+    "preserve": ["species", "source alteration", "phenotype", "assay", "mechanism", "primary source citation"],
+    "new_measurements": 0,
+    "new_genome_or_experimental_protein_ids": 0,
+    "whole_record_review": "OPEN",
+    "primary_phenotype_review": "OPEN"
+  },
+  "limitations": [
+    "Reference-only scope is supported; exact experimental subjects and their accessions remain unresolved.",
+    "Retaining source phenotype and alteration fields does not independently validate them. No mechanism or quantitative susceptibility conclusion was added.",
+    "The supplement is a limited identity reference, not an adopted dataset. No sequence, primer, procedure or figure is redistributed.",
+    "No NCBI endpoint requests, outreach, source-terms work or GitHub mutations; issue 1040 remains deferred.",
+    "The corpus-wide research goal remains open; four identifier-scope decisions are not four completed primary resistance reviews."
+  ],
+  "reference_attribution": {
+    "source": "UniProt Consortium, UniProtKB and UniProt Taxonomy release 2026_03",
+    "license": "CC BY 4.0",
+    "changes": "Selected reference identity metadata summarized; not experimental-subject or allele assignments."
+  }
+}

@@ -1,0 +1,124 @@
+identifier: CHEBI:65484
+label: bevirimat
+antimicrobial_class: ANTIVIRAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: A pentacyclic triterpenoid obtained by the formal condensation of 2,2-dimethylsuccinic
+  acid with the 3-hydroxy group of betulinic acid. It is isolated from the Chinese
+  herb Syzygium claviflorum. The first in the class of HIV-1 maturation inhibitors
+  to be studied in humans, bevirimat was identified as a potent HIV drug candidate
+  and several clinical trials were conducted, but development into a new drug was
+  plagued by numerous resistance-related problems.
+definition_source: ChEBI
+synonyms:
+- synonym_text: bevirimatum
+  synonym_type: INN
+  source: chebi
+- synonym_text: bévirimat
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3β)-3-[(3-carboxy-3-methylbutanoyl)oxy]lup-20(29)-en-28-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-O-(3',3'-dimethylsuccinyl) betulinic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BVM
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PA-457
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:25872
+- CHEBI:36244
+activity_roles:
+- CHEBI:71168
+mode_of_action: VIRAL_ASSEMBLY_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:22151792 used bevirimat photoaffinity analogs
+  and mass spectrometry to demonstrate direct binding in immature HIV-1 Gag at or
+  near the CA-SP1 cleavage site. This blocks the final protease-mediated Gag cleavage
+  and produces immature, noninfectious particles; it does not inhibit the viral protease
+  active site.'
+mode_of_action_target_scope: MICROBIAL_TARGET
+chemical_structure:
+  smiles: '[H][C@]12CC[C@@]3([H])[C@@](C)(CC[C@@]4(C(=O)O)CC[C@@H](C(=C)C)[C@@]43[H])[C@]1(C)CC[C@@]1([H])C(C)(C)[C@@H](OC(=O)CC(C)(C)C(=O)O)CC[C@]21C'
+  standard_inchi: InChI=1S/C36H56O6/c1-21(2)22-12-17-36(30(40)41)19-18-34(8)23(28(22)36)10-11-25-33(7)15-14-26(42-27(37)20-31(3,4)29(38)39)32(5,6)24(33)13-16-35(25,34)9/h22-26,28H,1,10-20H2,2-9H3,(H,38,39)(H,40,41)/t22-,23+,24-,25+,26-,28+,33-,34+,35+,36-/m0/s1
+  standard_inchi_key: YJEJKUQEXFSVCJ-WRFMNRASSA-N
+  molecular_formula: C36H56O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 584.838
+  monoisotopic_mass: 584.40769
+molecular_targets:
+- target_label: HIV-1 Gag CA-SP1 cleavage-site region in immature particles
+  target_type: VIRAL_PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: Photoaffinity bevirimat analog crosslinking in immature virus-like
+    particles and mass spectrometry mapped interactions at or near CA-SP1 and in the
+    major homology region.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2011-12
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:22151792
+    notes: Primary direct-interaction mapping study in immature Gag particles.
+xrefs:
+- cas:174022-42-5
+- reaxys:7504927
+document_xrefs:
+- wikipedia.en:Bevirimat
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65484
+  source_label: bevirimat
+  minted_identifier: antibioticmech:chebi-009a7f7ad5
+  role_terms:
+  - CHEBI:71168
+  source_version: '2026-08-30'
+evidence:
+- reference: PMID:22151792
+  notes: Primary direct-target and maturation-mechanism study.
+- reference: PMID:19279107
+  notes: Primary in-vitro resistance-evolution study.
+- reference: PMID:20406463
+  notes: Primary CA-SP1 polymorphism and susceptibility study.
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: HIV-1 Gag CA-SP1 cleavage-site substitutions
+  gene_families:
+  - HIV-1 Gag CA-SP1
+  note: Resistance substitutions cluster at or near the CA-SP1 cleavage site. SP1-A1V
+    remained robustly replicative under bevirimat, while SP1-V7A caused high-level
+    resistance and V7M or T8 deletion caused intermediate resistance.
+  evidence:
+  - reference: PMID:19279107
+    notes: Primary in-vitro resistance-evolution study.
+  - reference: PMID:20406463
+    notes: Primary mutational susceptibility study.
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:37Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:54:30Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antiviral class; added direct
+    HIV-1 Gag CA-SP1 binding, the maturation mechanism, and compound-specific target-alteration
+    resistance evidence.
+  llm_assisted: true
+- timestamp: '2026-09-10T07:43:35Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

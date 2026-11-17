@@ -1,0 +1,103 @@
+identifier: CHEBI:28429
+label: (2R,3R)-dihydromyricetin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: A (2R,3R)-3,3',4',5,5',7-hexahydroxyflavanone (ampelopsin) natural product
+  with direct antibacterial and antibiofilm activity against Gram-positive and Gram-negative
+  bacterial pathogens.
+definition_source: DOI:10.1177/15353141261501298
+synonyms:
+- synonym_text: dihydromyricetin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: ampelopsin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: (+)-dihydromyricetin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1c2c(O)cc(O)cc2O[C@H](c2cc(O)c(O)c(O)c2)[C@H]1O
+  standard_inchi: InChI=1S/C15H12O8/c16-6-3-7(17)11-10(4-6)23-15(14(22)13(11)21)5-1-8(18)12(20)9(19)2-5/h1-4,14-20,22H/t14-,15+/m0/s1
+  standard_inchi_key: KJXSIXMJHKAJOD-LSDHHAIUSA-N
+  molecular_formula: C15H12O8
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/161557
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 320.253
+  monoisotopic_mass: 320.0532
+xrefs:
+- pubchem.compound:161557
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1177/15353141261501298#dihydromyricetin
+  source_label: (2R,3R)-dihydromyricetin
+  minted_identifier: antibioticmech:curator-99cf0ecc2c
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1177/15353141261501298
+    snippet: DMY exhibited significant antibacterial activity against GBS2, with a
+      minimum inhibitory concentration and minimum bactericidal concentration of 0.5
+      mg/mL. Crystal violet staining and confocal laser scanning microscopy analyses
+      demonstrated that DMY effectively inhibited and disrupted biofilm formation.
+    notes: Reported by Ma et al. 2026 (Foodborne Pathog Dis; PMID:42908502) as a natural
+      dihydroflavonol (ampelopsin) with direct antibacterial and antibiofilm activity
+      against Streptococcus agalactiae (MIC = 0.5 mg/mL, MBC = 0.5 mg/mL) and synergy
+      with beta-lactams, ciprofloxacin, and vancomycin.
+  source_version: '2026-10-23'
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Disrupts bacterial cell envelope integrity and biofilm
+  matrix formation in Streptococcus agalactiae (DOI:10.1177/15353141261501298).'
+molecular_targets:
+- target_label: Streptococcus agalactiae cell envelope and biofilm matrix
+  target_type: MEMBRANE
+  target_relation: ATTACKED_COMPONENT
+  taxon_id: NCBITaxon:1311
+  taxon_label: Streptococcus agalactiae
+  strain: GBS2
+  experimental_context: Bactericidal (MIC = MBC = 0.5 mg/mL) and confocal/crystal-violet
+    antibiofilm assays against Streptococcus agalactiae isolate GBS2 (DOI:10.1177/15353141261501298).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2026-03
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1177/15353141261501298
+    snippet: DMY exhibited significant antibacterial activity against GBS2, with a
+      minimum inhibitory concentration and minimum bactericidal concentration of 0.5
+      mg/mL. Crystal violet staining and confocal laser scanning microscopy analyses
+      demonstrated that DMY effectively inhibited and disrupted biofilm formation.
+    notes: Ma et al. 2026 (Foodborne Pathog Dis; PMID:42908502) demonstrated direct
+      bactericidal cell-envelope disruption and biofilm matrix eradication by (2R,3R)-dihydromyricetin
+      in Streptococcus agalactiae GBS2.
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T04:34:55Z'
+  curator: curate_mechanism
+  action: CURATED_MODE_OF_ACTION
+  changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=MEMBRANE_DISRUPTION
+    (MICROBIAL_TARGET) with primary-literature provenance.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for Streptococcus agalactiae
+    cell envelope and biofilm matrix backed by DOI:10.1177/15353141261501298.
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: PROMOTED_TO_REVIEWED
+  changes: Promoted curation_status from PROPOSED to REVIEWED after verifying EXACT
+    ChEBI chemical grounding, complete chemical_structure, settled biosynthesis_origin
+    and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets
+    (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).
+  llm_assisted: true

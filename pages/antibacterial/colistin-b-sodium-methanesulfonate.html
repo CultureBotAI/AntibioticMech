@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>colistin B sodium methanesulfonate</h1>
 <p class="meta">
   <code class="curie">CHEBI:59664</code>
@@ -36,17 +47,20 @@ signed off on this record yet.</p></div>
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_25903">CHEBI:25903</a>      <code class="curie">CHEBI:25903</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_38700">CHEBI:38700</a>      <code class="curie">CHEBI:38700</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_59062">CHEBI:59062</a>      <code class="curie">CHEBI:59062</code></li>
+  <li>peptide antibiotic  <a href="http://purl.obolibrary.org/obo/CHEBI_25903"><code class="curie">CHEBI:25903</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_38700"><code class="curie">CHEBI:38700</code></a></li>
+  <li>polymyxin  <a href="http://purl.obolibrary.org/obo/CHEBI_59062"><code class="curie">CHEBI:59062</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C57H103N16O28S5.5Na</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>1735.82 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>1734.52197 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">WZLRYLCDDODFHL-WSNMVEPOSA-I</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">CC(C)CCCCC(=O)N[C@@H](CCNCS(=O)(=O)[O-])C(=O)N[C@H](C(=O)N[C@@H](CCNCS(=O)(=O)[O-])C(=O)N[C@H]1CCNC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H](CCNCS(=O)(=O)[O-])NC(=O)[C@H](CCNCS(=O)(=O)[O-])NC(=O)[C@H](CC(C)C)NC(=O)[C@@H](CC(C)C)NC(=O)[C@H](CCNCS(=O)(=O)[O-])NC1=O)[C@@H](C)O.[Na+].[Na+].[Na+].[Na+].[Na+]</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C57H108N16O28S5.5Na/c1-32(2)11-9-10-12-45(76)64-37(13-19-58-27-102(87,88)89)52(81)73-47(36(8)75)57(86)69-40(16-22-61-30-105(96,97)98)49(78)67-42-18-24-63-56(85)46(35(7)74)72-53(82)41(17-23-62-31-106(99,100)101)66-48(77)38(14-20-59-28-103(90,91)92)68-54(83)43(25-33(3)4)71-55(84)44(26-34(5)6)70-51(80)39(65-50(42)79)15-21-60-29-104(93,94)95;;;;;/h32-44,46-47,58-62,74-75H,9-31H2,1-8H3,(H,63,85)(H,64,76)(H,65,79)(H,66,77)(H,67,78)(H,68,83)(H,69,86)(H,70,80)(H,71,84)(H,72,82)(H,73,81)(H,87,88,89)(H,90,91,92)(H,93,94,95)(H,96,97,98)(H,99,100,101);;;;;/q;5*+1/p-5/t35-,36-,37+,38+,39+,40+,41+,42+,43+,44-,46+,47+;;;;;/m1...../s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -59,13 +73,14 @@ signed off on this record yet.</p></div>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33282">CHEBI:33282</a>    <code class="curie">CHEBI:33282</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antibacterial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33282"><code class="curie">CHEBI:33282</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -77,6 +92,8 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <td class="meta">2026-08-30</td>
   </tr>
 </table>
+
+</div>
 
 
 
@@ -111,26 +128,36 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/colistin-b-sodium-methanesulfonate.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/colistin-b-sodium-methanesulfonate.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=colistin%20B%20sodium%20methanesulfonate">MediaIngredientMech (colistin B sodium methanesulfonate)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=colistin%20B%20sodium%20methanesulfonate">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=colistin%20B%20sodium%20methanesulfonate">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=colistin%20B%20sodium%20methanesulfonate">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=colistin%20B%20sodium%20methanesulfonate">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

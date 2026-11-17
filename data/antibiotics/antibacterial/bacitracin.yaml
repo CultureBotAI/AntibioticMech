@@ -118,3 +118,19 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-05T17:40:19Z'
+  curator: codex
+  action: ADD_PATHWAY_LINKS
+  changes: Added reviewed PathwayMech relationships and any supported protein example
+    from curation/pathway_links.yaml; organism and evidence limits are recorded in
+    each basis.
+  llm_assisted: true
+related_records:
+- corpus: PathwayMech
+  identifier: WikiPathways:WP5060
+  relation: RELATED_PATHWAY_ACTIVITY
+  basis: ARO:3000719 and ARO:3003251 on this record assert the isoprenyl/undecaprenyl
+    pyrophosphate carrier target. The linked E. coli pathway provides peptidoglycan
+    context; source-level process correspondence only, with no organism-specific drug
+    efficacy claim.
+  source_version: aa305727458c44ab05614901334540e2c87a9f3a

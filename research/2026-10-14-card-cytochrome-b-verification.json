@@ -1,0 +1,143 @@
+{
+  "baseline_commit": "b0950a9c3256aacee226834e0e8a88d1022c9948",
+  "biological_records_changed": 0,
+  "cache_independent_full_source_cohort_test": "PASS",
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/offline-projection-canary-review.json",
+    "sha256": "3f6867583acd422c7b73831e65b202292c4600124a65d50d0f412f7297aecfb8"
+  },
+  "captured_at": "2026-10-15T05:28:08.076847+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/cohort.json",
+    "sha256": "2ce4b4ce1f1e1684c796d02fd58a87d0447ecffa2359e4d57f441ef4bfcdc36b"
+  },
+  "complete_collection_aware_records_read": 4,
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 317,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/expanded-tests.xml",
+      "sha256": "8064f580352657fb8a3e399c953e07d14b201c94ccfa3a57b75edc189763308d"
+    },
+    "skipped": 0,
+    "tests": 317
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "6dfad2e06e902f0baefdd44ebd06ce4e4b1ad5417542d9dddb22265e1b122a66"
+    },
+    {
+      "path": "research/2026-10-14-card-cytochrome-b-references.json",
+      "sha256": "19b910e1f1275825900c90f6e72a01be5d18c9d3250d1937073f41d536e880e7"
+    },
+    {
+      "path": "scripts/audit_card_cytochrome_b_references.py",
+      "sha256": "2ad3abd5a2868e26ebf7730335def891eb5c1b654111b1a31e6121c9414561e9"
+    },
+    {
+      "path": "tests/test_card_cytochrome_b_references.py",
+      "sha256": "92fe667f724da2d81b692abbe0159241f2b8cb3b7843f7943170c832740b3ee8"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 52,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/focused-tests.xml",
+      "sha256": "9ef12327b00ade7d63ceb3eb8cdb5c3950a0aabfac1646e04ff4c9f263c3ab35"
+    },
+    "skipped": 0,
+    "tests": 52
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_card_cytochrome_b_20261014.py",
+      "sha256": "8789b63f4f98aba6acf78c904c54a08f50edad131fdcd6ed8de8282d79263c2a"
+    },
+    {
+      "path": "/private/tmp/publish_card_cytochrome_b_20261014.py",
+      "sha256": "f4a4b3238f69ceb949d212ef8b139e61ea0f4f63a8b2fd55db45ae02008f7ed4"
+    },
+    {
+      "path": "/private/tmp/verify_card_cytochrome_b_20261014.py",
+      "sha256": "db1cc5a5cd85ad9daf3b9cd39efecb5288ae433091ea5a6d9f78f50624694e79"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "ncbi_requests": 0,
+  "network_and_file_writes_blocked_during_replay": true,
+  "network_requests": 8,
+  "new_experimental_allele_subject_or_genome_assignments": 0,
+  "new_primary_result_reviews": 0,
+  "no_new_data_source_owned_or_rendered_files": true,
+  "offline_native_current_corpus_replay": "PASS",
+  "outreach": 0,
+  "previous_uncommitted_beta_index_files_preserved": true,
+  "primary_requests": 0,
+  "prior_research_checkpoints_and_receipts_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/protected-before.json",
+    "sha256": "55d9e46e5e15ebde1b2086e1a350448e474ace46618aff45a27c32e8fff092d5"
+  },
+  "protected_files_checked": 7699,
+  "repository_ruff_check": "PASS",
+  "reuse_terms_review_resumed": false,
+  "review_checks": [
+    "All six terms selected against the complete current CARD term index",
+    "All records hash-checked and four selected records completely expanded",
+    "Exact species excludes mixed EST library; reference strain is not experimental subject",
+    "All five same-species candidates retained, including fragments and differing native gene labels",
+    "Related protein-name hits excluded with provenance; ORF-only entry does not acquire a symbol",
+    "Malformed native DOI flagged without repair or primary citation borrowing",
+    "Historical drafts retained; current checkpoint bytes match inspected successor canary"
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "ALL_CARD_CYTOCHROME_B_PROTEIN_NAME_REFERENCES_NOT_EXPERIMENTAL_ALLELES",
+  "source_adoptions": 0,
+  "source_claim_content_hashes_and_positions_checked": 6,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "source_terms_checked": 6,
+  "summary": {
+    "bibliography_identifier_issue_memberships": 2,
+    "complete_records_read": 4,
+    "corpus_records_hash_checked": 2939,
+    "entry_types": {
+      "UniProtKB unreviewed (TrEMBL)": 7
+    },
+    "fragment_references": 2,
+    "new_experimental_assignments": 0,
+    "reference_proteins": 7,
+    "reference_statuses": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 1,
+      "UNREVIEWED_CANDIDATE": 5
+    },
+    "resolved_source_names": 3,
+    "source_claims": 6,
+    "source_name_contexts": 3,
+    "source_terms": 6,
+    "term_protein_links": 10,
+    "terms_with_references": 6,
+    "terms_without_own_definition_citations": 6,
+    "whole_record_primary_signoffs": 0
+  },
+  "verification_limit": "Reference grounding only, not primary biological signoff. Pinned RDKit has no Intel macOS wheel; earlier Linux CI is historical.",
+  "whole_record_primary_signoffs": 0
+}

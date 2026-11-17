@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/unspecified.html">ANTIMICROBIAL_UNSPECIFIED</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>lancovutide</h1>
 <p class="meta">
   <code class="curie">CHEBI:77834</code>
@@ -36,16 +47,19 @@ signed off on this record yet.</p></div>
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_24533">CHEBI:24533</a>      <code class="curie">CHEBI:24533</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_51026">CHEBI:51026</a>      <code class="curie">CHEBI:51026</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_24533"><code class="curie">CHEBI:24533</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_51026"><code class="curie">CHEBI:51026</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C89H125N23O25S3</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>2013.316 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>2011.83791 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">SFWLDKQAUHFCBS-WWXQEMPQSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">[H][C@@]12NC(=O)[C@H](Cc3ccccc3)NC(=O)[C@@H]3CCCN3C(=O)CNC(=O)[C@H](Cc3ccccc3)NC(=O)[C@@H]3CNCCCC[C@@H](C(=O)O)NC(=O)[C@@H]4NC(=O)[C@H](CC(N)=O)NC(=O)CNC(=O)[C@]([H])([C@@H](O)C(=O)O)NC(=O)[C@H](CSC[C@@H](NC(=O)[C@H](CCC(N)=O)NC(=O)[C@H](CCCCN)NC(=O)[C@@H](N)CSC4C)C(=O)N[C@@H](CS[C@H]1C)C(=O)N3)NC(=O)[C@H](C(C)C)NC(=O)[C@H](Cc1ccccc1)NC2=O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C89H125N23O25S3/c1-44(2)67-85(131)107-60-42-138-41-59-80(126)106-61-43-140-46(4)69(87(133)103-56(76(122)108-67)35-49-23-12-7-13-24-49)109-77(123)55(34-48-21-10-6-11-22-48)102-83(129)62-27-18-32-112(62)66(116)39-96-73(119)54(33-47-19-8-5-9-20-47)101-79(125)58(104-81(61)127)37-94-31-17-15-26-53(88(134)135)100-86(132)68(110-78(124)57(36-64(93)114)97-65(115)38-95-84(130)70(111-82(60)128)71(117)89(136)137)45(3)139-40-50(91)72(118)98-51(25-14-16-30-90)74(120)99-52(75(121)105-59)28-29-63(92)113/h5-13,19-24,44-46,50-62,67-71,94,117H,14-18,25-43,90-91H2,1-4H3,(H2,92,113)(H2,93,114)(H,95,130)(H,96,119)(H,97,115)(H,98,118)(H,99,120)(H,100,132)(H,101,125)(H,102,129)(H,103,133)(H,104,127)(H,105,121)(H,106,126)(H,107,131)(H,108,122)(H,109,123)(H,110,124)(H,111,128)(H,134,135)(H,136,137)/t45?,46-,50-,51-,52-,53-,54-,55-,56-,57-,58-,59+,60-,61-,62-,67-,68+,69+,70-,71+/m0/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -81,12 +95,13 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -99,10 +114,45 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
 
 
 
 
+
+<h2>Resistance mechanisms</h2>
+<p class="meta">2 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
+<details class="details-group" open>
+  <summary>UNKNOWN <span class="pill plain">2</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
+<table>
+    <caption>UNKNOWN</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>Cinorf10-associated reduced susceptibility to duramycin<br><span class="meta">Both compared subjects are laboratory derivatives of the 1326 background, including a vector control. Protection varies with expression context; gene presence alone did not predict protection across the tested contexts. NCBITaxon:1200984 denotes the background, not either derivative. UniProtKB:Q83VX7 is reference-only: its source strain DSM 40005 differs from the study&#39;s DSM 40646 donor. Source-reported duramycin maps to the existing ChEBI exact synonym of lancovutide; this is not direct cinnamycin AST. No clinical category, numerical AST or exact allele is assigned.</span></td>
+      <td>—</td>
+      <td><em>Streptomyces lividans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1916"><code class="curie">NCBITaxon:1916</code></a></td>
+      <td class="meta">cinorf10</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/27858169">PMID:27858169</a></span> <span class="meta">(Relevant primary Results and native Figures 3-5 were inspected. The claims retain qualitative comparisons and do not complete whole-record review.)</span></li>
+</ul>
+<span class="meta">Qualitative source-reported disk-growth comparison with accompanying lipid analysis</span></td>
+    </tr>
+    <tr>
+      <td>cinorf10/CinKR contribution to native-host duramycin protection<br><span class="meta">Separate laboratory derivatives of the reported DSM 40646 background provide loss-of-protection evidence, not resistant alterations or individual gene sufficiency. Production-indicator assays are distinct. These comparisons do not establish direct CinK ligand binding. UniProtKB:Q83VX7, UniProtKB:Q83VX8 and UniProtKB:Q83VX9 remain reference candidates with different strain context; no derivative TaxID or genome is assigned. Source-reported duramycin maps to the existing ChEBI exact synonym of lancovutide; this is not direct cinnamycin AST. No clinical category, numerical AST or exact allele is assigned.</span></td>
+      <td>—</td>
+      <td><em>Streptomyces cinnamoneus</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_53446"><code class="curie">NCBITaxon:53446</code></a></td>
+      <td class="meta">cinorf10, cinK, cinR</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/27858169">PMID:27858169</a></span> <span class="meta">(Relevant primary Results and native Figures 3-5 were inspected. The claims retain qualitative comparisons and do not complete whole-record review.)</span></li>
+</ul>
+<span class="meta">Qualitative source-reported disk-growth comparisons</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
 
 
 
@@ -131,32 +181,47 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Added two qualitative primary-backed duramycin susceptibility associations, retaining host, comparator and regulatory context. UniProt references and background taxonomy remain distinct from experimental alleles and derivatives. Existing source fields preserved; whole-record review remains open.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/unspecified/lancovutide.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/unspecified/lancovutide.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=lancovutide">MediaIngredientMech (lancovutide)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=lancovutide">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=lancovutide">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=lancovutide">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=lancovutide">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

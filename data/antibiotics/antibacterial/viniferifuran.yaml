@@ -1,0 +1,51 @@
+identifier: CHEBI:180720
+label: Viniferifuran
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A benzofuran resveratrol dimer stilbenoid with antibacterial activity
+  against methicillin-resistant Staphylococcus aureus.
+definition_source: DOI:10.1002/biof.70128
+synonyms:
+- synonym_text: amurensin H
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1=CC(=CC=C1/C=C\C2=C3C(=CC(=C2)O)OC(=C3C4=CC(=CC(=C4)O)O)C5=CC=C(C=C5)O)O
+  standard_inchi: InChI=1S/C28H20O6/c29-20-7-2-16(3-8-20)1-4-18-11-24(33)15-25-26(18)27(19-12-22(31)14-23(32)13-19)28(34-25)17-5-9-21(30)10-6-17/h1-15,29-33H/b4-1-
+  standard_inchi_key: MTRJOEZPTJRJOB-RJRFIUFISA-N
+  molecular_formula: C28H20O6
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/131751470
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 452.46
+  monoisotopic_mass: 452.12598836
+xrefs:
+- pubchem.compound:131751470
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1002/biof.70128#viniferifuran
+  source_label: Viniferifuran
+  minted_identifier: antibioticmech:curator-2eccc93f3a
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1002/biof.70128
+    snippet: Johnsen et al. reported that viniferifuran inhibited methicillin-resistant
+      Staphylococcus aureus USA300 and cefoxitin-treated USA300Cef with a MIC of 8
+      ug/mL and MBC values of 32 to 64 ug/mL.
+    notes: PubChem CID 131751470 and ChEBI CHEBI:180720 supply the standard InChI,
+      InChIKey, formula, and isomeric SMILES for viniferifuran.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:32:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

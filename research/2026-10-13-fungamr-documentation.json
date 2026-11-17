@@ -1,0 +1,552 @@
+{
+  "constraints": {
+    "failed_source_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "numeric_ast_exported": false,
+    "sequences_variants_protocols_exported": false,
+    "source_adoptions": 0
+  },
+  "date": "2026-10-13",
+  "evidence_categories": {
+    "antibiotic_measurement": false,
+    "assigned_to_any_selected_term": false,
+    "categories": {
+      "1": {
+        "method": "SAME_SPECIES_FUNCTIONAL_TEST",
+        "source_line": 16,
+        "source_row_sha256": "401be7009af841fd855ef92f06bce6a4d32af3a1d94ccaea4adaeefc3e58ee21"
+      },
+      "2": {
+        "method": "HETEROLOGOUS_FUNCTIONAL_TEST",
+        "source_line": 17,
+        "source_row_sha256": "344c4db2c11b019b324fbbbd088209aada0f362009f3f9b9b97081853643b853"
+      },
+      "3": {
+        "method": "POOLED_MEASUREMENT",
+        "source_line": 18,
+        "source_row_sha256": "c3f3a783971f692497971143c039d8c43f02de48c7744125a6fda8c216644013"
+      },
+      "4": {
+        "method": "EXPERIMENTAL_EVOLUTION_ASSOCIATION",
+        "source_line": 19,
+        "source_row_sha256": "a6a98c4455650443f4edd83d24b1d1b6cad84688f88fd1d57fd5b98dee80ac5e"
+      },
+      "5": {
+        "method": "GENE_DELETION_EFFECT",
+        "source_line": 20,
+        "source_row_sha256": "10093b2cb3bd42c98daef631ef31a916ad64e8b849d3c39323a748cdc9944eca"
+      },
+      "6": {
+        "method": "EXPRESSION_OR_COPY_NUMBER_EFFECT",
+        "source_line": 21,
+        "source_row_sha256": "d2468df662e7ac52aa9f54f2ea34f888a5cce6c673795e11a1e05e0304e7c3ee"
+      },
+      "7": {
+        "method": "POPULATION_ASSOCIATION",
+        "source_line": 22,
+        "source_row_sha256": "40a0c70c91ba0415a7ddaa5faaadc9f9a6c57fd1e86e028c64ecb53679633db2"
+      },
+      "8": {
+        "method": "NATURAL_ISOLATE_COOCCURRENCE",
+        "source_line": 23,
+        "source_row_sha256": "23cbe24824788a9cd0ccae3f51d6b26ed0ada7581a366e1b3e3aa62bfa137d2a"
+      },
+      "Negative scores (-)": {
+        "method": "NEGATIVE_RESULT_FOR_CORRESPONDING_METHOD",
+        "source_line": 24,
+        "source_row_sha256": "d97319f8cfdb5f5d38a959faf5d6404a0bc929b0a8b727a828889d4fc1955dc3"
+      }
+    },
+    "mic_conversion_permitted": false,
+    "negative_result_is_species_wide_susceptibility": false,
+    "numeric_probability": false
+  },
+  "inputs": {
+    "canary": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/documentation-canary.json",
+      "sha256": "3fcbbbf1b06c6064e9dc9999507020c5061fe3121c48967067733b13edcb0df2"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/cohort.json",
+      "sha256": "e0952da42e13e02cd37a25ef236ef5691281bdc487ee1146481962ab2e1dbed6"
+    },
+    "local_licenses": [
+      {
+        "path": "LICENSE-DATA",
+        "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94"
+      },
+      {
+        "path": "ATTRIBUTION.md",
+        "sha256": "38957c043dc9d62ac324b9ab93714a806a195a3a61235169171923ef5c7a11d2"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "093799dfe5ea2fa02c19bc9233167e23a9e46cc390aa8d1470f3921dbbde0fc3"
+      }
+    ],
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/native-plan.json",
+      "sha256": "b260252123941a65beea13427816c171326566f0b09134ed6f0b826083adfb45"
+    }
+  },
+  "limitations": [
+    "README blob identities are not database release versions.",
+    "A shared database citation does not resolve a primary row, its method score or tested subject.",
+    "Previously established reference identities remain reference-only; this checkpoint adds none.",
+    "The CYP51B drug-label discrepancy and qualified URA6 species question remain open.",
+    "Full corpus investigation remains incomplete; same-agent review is not independent validation."
+  ],
+  "publisher_access": {
+    "primary_full_text_read": false,
+    "redirect_followed": false,
+    "retry_performed": false,
+    "status": 303
+  },
+  "records": [
+    {
+      "identifier": "CHEBI:55346",
+      "label": "anidulafungin",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml",
+      "sha256": "e29724e94ef2922be6d6afaaf181f2a6052f6a95e1c7daf5aec031dea2bb6cae",
+      "standard_inchi_key": "JHVAMHSQVVQIOT-MFAJLEFUSA-N"
+    },
+    {
+      "identifier": "CHEBI:474180",
+      "label": "caspofungin",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml",
+      "sha256": "40e52f8e7a1ef2388925e682bed0241d368812c5b71c9299edacf7361966f36b",
+      "standard_inchi_key": "JYIKNQVWKBUSNH-WVDDFWQHSA-N"
+    },
+    {
+      "identifier": "CHEBI:3764",
+      "label": "clotrimazole",
+      "path": "data/antibiotics/antifungal/clotrimazole.yaml",
+      "sha256": "3875eec5827ded3ae1291d6b265a71b065d66a0143d9c605fbb7236b2edf4678",
+      "standard_inchi_key": "VNFPBHJOKIVQEB-UHFFFAOYSA-N"
+    },
+    {
+      "identifier": "antibioticmech:aro-e63825b7e1",
+      "label": "epoxiconazole",
+      "path": "data/antibiotics/antifungal/epoxiconazole.yaml",
+      "sha256": "323f9511185c623815d33900730a37d6e09bbd88bf2e0ec38556a783a2b41466",
+      "standard_inchi_key": "ZMYFCFLJBGAQRS-IAGOWNOFSA-N"
+    },
+    {
+      "identifier": "CHEBI:46081",
+      "label": "fluconazole",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "sha256": "1fa11ad3cd37df521216044f5b822573510e9083be72af322e94929fafc94e55",
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N"
+    },
+    {
+      "identifier": "CHEBI:5100",
+      "label": "flucytosine",
+      "path": "data/antibiotics/antifungal/flucytosine.yaml",
+      "sha256": "ee344f13f6ae69b0ea7f39af994d505cc03b5f1bd3a5a41524ed947cbf97ae92",
+      "standard_inchi_key": "XRECTZIEBJDKEO-UHFFFAOYSA-N"
+    },
+    {
+      "identifier": "CHEBI:64355",
+      "label": "posaconazole",
+      "path": "data/antibiotics/antifungal/posaconazole.yaml",
+      "sha256": "41ff3ee41d2ce4d716a7192152f5e7cb54bfd991f5edafe7de462daf9550d067",
+      "standard_inchi_key": "RAGOYPUPXAKGKH-XAKZXMRKSA-N"
+    },
+    {
+      "identifier": "CHEBI:83779",
+      "label": "tebuconazole",
+      "path": "data/antibiotics/antifungal/tebuconazole.yaml",
+      "sha256": "0c6380aed52552a312323986c4baddb7f3e065d9c553876b127bbdf357db6dda",
+      "standard_inchi_key": "PXMNMQRDXWABCY-UHFFFAOYSA-N"
+    },
+    {
+      "identifier": "CHEBI:10023",
+      "label": "voriconazole",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "sha256": "fb2ab7299b55c82b2fb1eaced93f4c57798abd181becf20d4104fd40a739df50",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N"
+    },
+    {
+      "identifier": "antibioticmech:aro-2e3b34cc67",
+      "label": "tacrolimus",
+      "path": "data/antibiotics/unspecified/tacrolimus.yaml",
+      "sha256": "c78b76727b23e17eb186b45746e63a146fc21e4e1608b6c09591822e21154e08",
+      "standard_inchi_key": "QJJXYPPXXYFBGM-LFZNUXCKSA-N"
+    }
+  ],
+  "retrieval_date_utc": "2026-10-14",
+  "reuse_gate": {
+    "companion_readme_declared_license": "CC-BY-NC-ND-4.0",
+    "decision": "NO_DIRECT_DATABASE_IMPORT_UNDER_CURRENT_SOURCE_GATE",
+    "destination_data_license": "CC-BY-4.0",
+    "existing_aro_assertions_relicensed_or_removed": false,
+    "license_file_inspected": false,
+    "repository_api_is_permission": false,
+    "repository_api_license": "NOASSERTION",
+    "scope": "Companion documentation states terms for both resources; not legal advice or a row-level rights audit.",
+    "source_line": 252,
+    "source_queue_changed": false
+  },
+  "scope": "DOCUMENTATION_ONLY_NO_SOURCE_ROW_CROSSWALK",
+  "sources": {
+    "publisher": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/publisher-attempt.json",
+        "sha256": "8b36d4a936a43730d2d53a8fd0094d8915a789e70d5bdbeb3f83c13606935b43"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/publisher-response.bin",
+        "sha256": "dc9b4d151c92806167d1b4f230201c05e72a44690ce4c52e25ee7af9c1c31dac"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/publisher-receipt.json",
+        "sha256": "83a960bfbfadf329657ebbb05a62ee1f957e1411fba8212c62fc5acf2af5e2b3"
+      },
+      "retrieved_at": "2026-10-14T01:34:13.237252+00:00",
+      "status": 303,
+      "url": "https://www.nature.com/articles/s41564-025-02084-7"
+    },
+    "repository-metadata": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/repository-metadata-attempt.json",
+        "sha256": "b6ef96d1911930e0b595d52066d5f1e41d47b8b1557159205e109087ea8bf170"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/repository-metadata-response.bin",
+        "sha256": "63b61d5b014096cf220aeaab89debda1424ccd63d09e335b2a37ab9038ee9256"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/repository-metadata-receipt.json",
+        "sha256": "ec60c463eefe30fac9d149319b28dc03e57a3ccfb80d5dd5f16d1c7fca29d25b"
+      },
+      "retrieved_at": "2026-10-14T01:30:50.954404+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/Landrylab/FungAMR"
+    },
+    "repository-readme": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/repository-readme-attempt.json",
+        "sha256": "5e7bea0209c56bb5f6237dbda9a3948115ac72d561c02eb4b7e1027b650e8358"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/repository-readme-response.bin",
+        "sha256": "c02ee35bfd2c4741e77aaecd50e4adcd7dadba98c9a0f5a89d6aac59b25cb3b8"
+      },
+      "decoded_sha256": "6b63ee6bc5166ffbb532f2584636bf778fe14a7b56156fa2304c463dfc8735a4",
+      "git_blob_sha1": "7d9bff7b3b3ee7582bead1da972206588b8fbb9f",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/repository-readme-receipt.json",
+        "sha256": "7b523664f1416baea0c95395230f79ffe575d0901a9b2ec0d5ed53b399b0d1f6"
+      },
+      "retrieved_at": "2026-10-14T01:31:29.991269+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/Landrylab/FungAMR/readme"
+    },
+    "tool-readme": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/tool-readme-attempt.json",
+        "sha256": "3046b64e4baeae667094aad1400c4ea4e42bf36ec0f8122753cb385efa7cf4d1"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/tool-readme-response.bin",
+        "sha256": "b5bfe55c76a9d40f3a19230b2aafdf3eb3bd14d9a6c408124c2dabffc669343b"
+      },
+      "decoded_sha256": "43674a0cef18473196dc5193d0c202679d086726589fefecd641d1addb751033",
+      "git_blob_sha1": "5280e917fa27bc337b2bbe2c61a40c1fa87ea9ad",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-source-crosswalk/tool-readme-receipt.json",
+        "sha256": "bb160e3a40453ba2ba62d15e15153dcdeccfcc40500228c61ca9fc19965f3878"
+      },
+      "retrieved_at": "2026-10-14T01:34:02.455531+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/nmquijada/ChroQueTas/readme"
+    }
+  },
+  "summary": {
+    "biological_records_changed": 0,
+    "cohort_records": 10,
+    "cohort_terms": 19,
+    "corpus_records_hash_verified": 2939,
+    "database_rows_downloaded": 0,
+    "native_documentation_requests": 4,
+    "new_resistance_assertions": 0,
+    "whole_record_reviews_completed": 0
+  },
+  "terms": {
+    "ARO:3009201": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "cyp51a",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:10023"
+      ],
+      "source_score": null
+    },
+    "ARO:3009213": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "ERG11",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "source_score": null
+    },
+    "ARO:3009239": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "mrr2",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "source_score": null
+    },
+    "ARO:3009287": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "Fks1",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:55346"
+      ],
+      "source_score": null
+    },
+    "ARO:3009347": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "ATP1",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:3764"
+      ],
+      "source_score": null
+    },
+    "ARO:3009350": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "ATP2",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:3764"
+      ],
+      "source_score": null
+    },
+    "ARO:3009372": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "MRPL11",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:474180"
+      ],
+      "source_score": null
+    },
+    "ARO:3009390": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "Cdc6",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:474180"
+      ],
+      "source_score": null
+    },
+    "ARO:3009396": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "ERG11",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "source_score": null
+    },
+    "ARO:3009397": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "ERG11",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "source_score": null
+    },
+    "ARO:3009407": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "Cyp51",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:83779"
+      ],
+      "source_score": null
+    },
+    "ARO:3009437": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "CDR1",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "antibioticmech:aro-2e3b34cc67"
+      ],
+      "source_score": null
+    },
+    "ARO:3009486": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "Cyp51B",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:83779"
+      ],
+      "source_score": null
+    },
+    "ARO:3009534": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "Cyp51",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "antibioticmech:aro-e63825b7e1"
+      ],
+      "source_score": null
+    },
+    "ARO:3009559": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "FKS1",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "source_score": null
+    },
+    "ARO:3009575": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "ERG11",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:64355"
+      ],
+      "source_score": null
+    },
+    "ARO:3009578": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "ERG11",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "source_score": null
+    },
+    "ARO:3009588": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "ERG11",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "source_score": null
+    },
+    "ARO:3009633": {
+      "disposition": "PRIMARY_EVIDENCE_REQUIRED_NO_DATABASE_ROW_IMPORT",
+      "exact_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "fungamr_row_id": null,
+      "gene_label": "Ura6",
+      "new_taxon_assignment": null,
+      "new_uniprot_assignment": null,
+      "primary_row_crosswalk_verified": false,
+      "record_memberships": [
+        "CHEBI:5100"
+      ],
+      "source_score": null
+    }
+  },
+  "tool_limitations": {
+    "full_database_coverage": false,
+    "installed_or_executed": false,
+    "source_section": "Limitations",
+    "tool_prediction_is_measured_phenotype": false
+  }
+}

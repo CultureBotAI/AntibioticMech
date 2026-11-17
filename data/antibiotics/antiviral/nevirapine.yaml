@@ -1,7 +1,7 @@
 identifier: CHEBI:63613
 label: nevirapine
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A dipyridodiazepine that is 5,11-dihydro-6H-dipyrido[3,2-b:2',3'-e][1,4]diazepine
   which is substituted by methyl, oxo, and cyclopropyl groups at positions 4, 6, and
@@ -35,10 +35,9 @@ activity_roles:
 - CHEBI:36044
 - CHEBI:53756
 mode_of_action: VIRAL_POLYMERASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:53756 (HIV-1 reverse transcriptase
-  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
-  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
+mode_of_action_notes: 'CURATOR: Confirmed as non-nucleoside allosteric pocket binding
+  and inhibition of HIV-1 reverse transcriptase primer-active-site alignment and polymerase
+  activity. PMID:1377403; PMID:22266819.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Cc1ccnc2c1NC(=O)c1cccnc1N2C1CC1
@@ -1347,6 +1346,483 @@ molecular_targets:
     entry_status: UNREVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 1
+- target_label: HIV-1 reverse transcriptase
+  target_type: VIRAL_PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:11676
+  taxon_label: Human immunodeficiency virus 1
+  experimental_context: Crystal structures of HIV-1 reverse transcriptase-DNA-nevirapine
+    complexes resolving NNRTI-pocket binding, primer displacement, and dNTP-pocket
+    distortion (PMID:22266819; PMID:1377403).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-02
+  source_retrieved_on: '2026-10-23'
+  protein_examples:
+  - uniprot_id: UniProtKB:P04585
+    protein_label: Gag-Pol polyprotein
+    gene_symbol: gag-pol
+    taxon_id: NCBITaxon:11706
+    taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer
+      noncompetitively bound at the NNRTI pocket by nevirapine (BI-RG-587) (PMID:1700970;
+      PMID:7540824, PDB 1VRT; HXB2 reference isolate context).
+  evidence:
+  - reference: PMID:22266819
+    notes: Das et al. resolved crystal structures of HIV-1 RT-DNA-nevirapine complexes
+      showing NNRTI-pocket occupancy and primer displacement from the polymerase active
+      site.
+  - reference: PMID:1377403
+    notes: Kohlstaedt et al. resolved the HIV-1 reverse transcriptase crystal structure
+      in complex with nevirapine.
+genotype_resistance_score_rules:
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:03ac90a396895f72
+  score_term_index: 1
+  score_term: 98G => 30
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 1: 98G => 30'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:2418e27676580885
+  score_term_index: 2
+  score_term: MAX(100I => 60, 100V => 30)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 2: MAX(100I => 60, 100V => 30)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:3bf3da7ab908d83d
+  score_term_index: 3
+  score_term: MAX(101E => 30, 101P => 60, 101H => 15)
+  score_assignments: 3
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 3: MAX(101E => 30, 101P => 60, 101H => 15)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:b30cafcd1c833391
+  score_term_index: 4
+  score_term: MAX(106A => 60, 106I => 5, 106L => 30, 106M => 60)
+  score_assignments: 4
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 4: MAX(106A => 60, 106I => 5, 106L => 30, 106M => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:69d3a70eab284414
+  score_term_index: 5
+  score_term: 108I => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 5: 108I => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:43ae2400d1777aae
+  score_term_index: 6
+  score_term: MAX(138K => 10, 138G => 10, 138Q => 10, 138R => 10)
+  score_assignments: 4
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 6: MAX(138K => 10, 138G => 10, 138Q => 10, 138R => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:3625658a635ec5b4
+  score_term_index: 7
+  score_term: MAX(179F => 15, 179D => 10, 179E => 10, 179L => 10)
+  score_assignments: 4
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 7: MAX(179F => 15, 179D => 10, 179E => 10, 179L => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:ffeecaebab805e45
+  score_term_index: 8
+  score_term: MAX(181C => 60, 181I => 60, 181V => 60, 181F => 60, 181G => 60, 181S
+    => 60)
+  score_assignments: 6
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 8: MAX(181C => 60, 181I => 60, 181V => 60, 181F => 60, 181G
+      => 60, 181S => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:d85e0be4ad08cdea
+  score_term_index: 9
+  score_term: MAX(188F => 60, 188L => 60, 188C => 60, 188H => 60)
+  score_assignments: 4
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 9: MAX(188F => 60, 188L => 60, 188C => 60, 188H => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:da95390b5ea03ad6
+  score_term_index: 10
+  score_term: MAX(190C => 60, 190E => 60, 190Q => 60, 190S => 60, 190T => 60, 190V
+    => 60, 190A => 60)
+  score_assignments: 7
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 10: MAX(190C => 60, 190E => 60, 190Q => 60, 190S => 60,
+      190T => 60, 190V => 60, 190A => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:2e802efd98eff8a2
+  score_term_index: 11
+  score_term: 221Y => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 11: 221Y => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:644e74f2526ed262
+  score_term_index: 12
+  score_term: 225H => 45
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 45.0
+  max_score: 45.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 12: 225H => 45'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:01dae33a452e8224
+  score_term_index: 13
+  score_term: MAX(227C => 45, 227I => 30, 227L => 30, 227V => 30, 227Y => 10)
+  score_assignments: 5
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 45.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 13: MAX(227C => 45, 227I => 30, 227L => 30, 227V => 30,
+      227Y => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:1ab69d9045caaed7
+  score_term_index: 14
+  score_term: MAX(230I => 30, 230L => 60)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 14: MAX(230I => 30, 230L => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:9a1c769aecc7c363
+  score_term_index: 15
+  score_term: 318F => 30
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 15: 318F => 30'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:b4ebbd3a66065649
+  score_term_index: 16
+  score_term: 98G AND 234I => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 16: 98G AND 234I => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:abc63c5a8ed845f2
+  score_term_index: 17
+  score_term: 106I AND 227CLIVY => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 17: 106I AND 227CLIVY => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:8a2a057b617bea21
+  score_term_index: 18
+  score_term: 98G AND 227CL => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 18: 98G AND 227CL => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:e0374110753ca68c
+  score_term_index: 19
+  score_term: MAX(103H => 60, 103N => 60, 103S => 60, 103T => 60)
+  score_assignments: 4
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 19: MAX(103H => 60, 103N => 60, 103S => 60, 103T => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:b7a7a32ec0eb2cd6
+  score_term_index: 20
+  score_term: MAX(238N => 10, 238T => 30)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 20: MAX(238N => 10, 238T => 30)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:fa8c9eb6e756e3f0
+  score_term_index: 21
+  score_term: 103R AND 179D => 20
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 20.0
+  max_score: 20.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 21: 103R AND 179D => 20'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NVP
+  source_rule_id: hivdb_hivfacts:633af4da9094c30e
+  score_term_index: 22
+  score_term: 348I => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NVP score term 22: 348I => 15'
 causal_graphs:
 - graph_id: nevirapine_hiv1_reverse_transcriptase_inhibition
   title: Nevirapine allosterically inhibits HIV-1 reverse transcriptase
@@ -1367,6 +1843,18 @@ causal_graphs:
       region; a family-level exact term was not asserted.
     xrefs:
     - UniProtKB:P04585
+    protein_examples:
+    - uniprot_id: UniProtKB:P04585
+      protein_label: Gag-Pol polyprotein
+      gene_symbol: gag-pol
+      taxon_id: NCBITaxon:11706
+      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate
+        HXB2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer
+        noncompetitively bound at the NNRTI pocket by nevirapine (BI-RG-587) (PMID:1700970;
+        PMID:7540824, PDB 1VRT; HXB2 reference isolate context).
   - node_id: nnrti_pocket
     label: HIV-1 reverse transcriptase non-nucleoside inhibitor pocket
     node_type: STATE
@@ -2078,3 +2566,22 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-28T17:24:17Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: genotype_resistance_score_rules (HIVDB_HIVFACTS be1c11a5145fea9073fdb71801919d4a34265336).
+    Upstream retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein
+    example on the nevirapine_hiv1_reverse_transcriptase_inhibition hiv1_reverse_transcriptase
+    causal graph node.
+  llm_assisted: true
+- timestamp: '2026-10-23T18:15:00Z'
+  curator: antigravity
+  action: RESOLVED_REVIEW_FINDINGS
+  changes: Confirmed nevirapine mode_of_action_notes, added PRIMARY_LITERATURE DIRECT_BINDING_TARGET
+    for HIV-1 reverse transcriptase (PMID:22266819; PMID:1377403), and promoted nevirapine
+    to REVIEWED (#1255).
+  llm_assisted: true

@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>erythromycin A</h1>
 <p class="meta">
   <code class="curie">CHEBI:42355</code>
@@ -37,17 +48,20 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000000">macrolide antibiotic</a><code class="curie">ARO:0000000</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_3992">CHEBI:3992</a>      <code class="curie">CHEBI:3992</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_48923">CHEBI:48923</a>      <code class="curie">CHEBI:48923</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000000">ARO:0000000</a>      <code class="curie">ARO:0000000</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_3992"><code class="curie">CHEBI:3992</code></a></li>
+  <li>erythromycin  <a href="http://purl.obolibrary.org/obo/CHEBI_48923"><code class="curie">CHEBI:48923</code></a></li>
+  <li>macrolide antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_0000000"><code class="curie">ARO:0000000</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C37H67NO13</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>733.937 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>733.46124 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">ULGZDMOVFRHVEP-RWJQBGPGSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C37H67NO13/c1-14-25-37(10,45)30(41)20(4)27(39)18(2)16-35(8,44)32(51-34-28(40)24(38(11)12)15-19(3)47-34)21(5)29(22(6)33(43)49-25)50-26-17-36(9,46-13)31(42)23(7)48-26/h18-26,28-32,34,40-42,44-45H,14-17H2,1-13H3/t18-,19-,20+,21+,22-,23+,24+,25-,26+,28-,29+,30-,31+,32-,34+,35-,36-,37-/m1/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -58,7 +72,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000006">ARO:0000006</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_0000006">erythromycin</a><code class="curie">ARO:0000006</code></li>
   <li>beilstein:75000</li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=114-07-8">cas:114-07-8</a></li>
   <li><a href="https://www.kegg.jp/entry/C01912">kegg.compound:C01912</a></li>
@@ -92,12 +106,13 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -117,13 +132,15 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>50S ribosomal subunit P-site <span class="pill plain">RIBOSOMAL_SUBUNIT</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000757">ARO:3000757</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. The 50S P-site is asserted as the target site. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000757</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000757">ARO:3000757</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
@@ -134,12 +151,12 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">110 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">110 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">51</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -148,7 +165,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005099</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005099">ARO:3005099</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -158,7 +175,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004546</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004546">ARO:3004546</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -168,7 +185,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004174</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004174">ARO:3004174</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -178,7 +195,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004132</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004132">ARO:3004132</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -188,7 +205,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004654</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004654">ARO:3004654</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -198,7 +215,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000599</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000599">ARO:3000599</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -208,7 +225,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000600</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000600">ARO:3000600</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -218,7 +235,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000604</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000604">ARO:3000604</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -228,7 +245,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000605</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000605">ARO:3000605</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -238,7 +255,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000392</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000392">ARO:3000392</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -248,7 +265,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000601</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000601">ARO:3000601</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -258,7 +275,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000602</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000602">ARO:3000602</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -268,7 +285,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000603</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000603">ARO:3000603</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -278,7 +295,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003106</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003106">ARO:3003106</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -288,7 +305,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003205</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003205">ARO:3003205</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -298,7 +315,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003971</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003971">ARO:3003971</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -308,7 +325,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003908</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003908">ARO:3003908</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -318,7 +335,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004094</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004094">ARO:3004094</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -328,7 +345,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004626</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004626">ARO:3004626</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -338,7 +355,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007033</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007033">ARO:3007033</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -348,7 +365,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004643</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004643">ARO:3004643</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -358,7 +375,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004652</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004652">ARO:3004652</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -368,7 +385,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000347</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000347">ARO:3000347</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -378,7 +395,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000375</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000375">ARO:3000375</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -388,7 +405,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000250</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000250">ARO:3000250</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -398,7 +415,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000495</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000495">ARO:3000495</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -408,7 +425,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000326</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000326">ARO:3000326</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -418,7 +435,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000498</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000498">ARO:3000498</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -428,7 +445,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000522</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000522">ARO:3000522</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -438,7 +455,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002823</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002823">ARO:3002823</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -448,7 +465,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000592</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000592">ARO:3000592</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -458,7 +475,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000593</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000593">ARO:3000593</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -468,7 +485,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000594</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000594">ARO:3000594</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -478,7 +495,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000595</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000595">ARO:3000595</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -488,7 +505,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002824</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002824">ARO:3002824</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -498,7 +515,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3001306</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3001306">ARO:3001306</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -508,7 +525,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000596</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000596">ARO:3000596</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -518,7 +535,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002825</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002825">ARO:3002825</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -528,7 +545,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004131</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004131">ARO:3004131</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -538,7 +555,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004138</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004138">ARO:3004138</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -548,7 +565,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3009654</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3009654">ARO:3009654</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -558,7 +575,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004176</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004176">ARO:3004176</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -568,7 +585,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004179</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004179">ARO:3004179</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -578,7 +595,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004177</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004177">ARO:3004177</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -588,7 +605,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004161</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004161">ARO:3004161</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -598,7 +615,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004170</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004170">ARO:3004170</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -608,7 +625,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007759</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007759">ARO:3007759</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -618,7 +635,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004606</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004606">ARO:3004606</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -628,7 +645,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004595</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004595">ARO:3004595</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -638,7 +655,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004596</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004596">ARO:3004596</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -648,15 +665,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007654</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007654">ARO:3007654</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">32</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_EFFLUX</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -665,7 +685,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004577</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004577">ARO:3004577</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -675,7 +695,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004141</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004141">ARO:3004141</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -685,7 +705,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000773</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000773">ARO:3000773</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -695,7 +715,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003947</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003947">ARO:3003947</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -705,7 +725,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004108</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004108">ARO:3004108</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -715,7 +735,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004039</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004039">ARO:3004039</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -725,7 +745,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004585</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004585">ARO:3004585</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -735,7 +755,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004598</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004598">ARO:3004598</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -745,7 +765,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004098</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004098">ARO:3004098</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -755,7 +775,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000545</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000545">ARO:3000545</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -765,7 +785,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000788</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000788">ARO:3000788</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -775,7 +795,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000386</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000386">ARO:3000386</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -785,7 +805,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000797</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000797">ARO:3000797</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -795,7 +815,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003694</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003694">ARO:3003694</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -805,7 +825,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003697</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003697">ARO:3003697</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -815,7 +835,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003029</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003029">ARO:3003029</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -825,7 +845,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003038</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003038">ARO:3003038</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -835,7 +855,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003032</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003032">ARO:3003032</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -845,7 +865,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000369</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000369">ARO:3000369</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -855,7 +875,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004076</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004076">ARO:3004076</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -865,7 +885,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004851</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004851">ARO:3004851</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -875,7 +895,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004572</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004572">ARO:3004572</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -885,7 +905,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007669</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007669">ARO:3007669</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -895,7 +915,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000768</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000768">ARO:3000768</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -905,7 +925,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003954</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003954">ARO:3003954</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -915,7 +935,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003965</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003965">ARO:3003965</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -925,7 +945,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003969</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003969">ARO:3003969</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -935,7 +955,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003107</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003107">ARO:3003107</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -945,7 +965,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005089</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005089">ARO:3005089</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -955,7 +975,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000614</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000614">ARO:3000614</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -965,7 +985,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007044</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007044">ARO:3007044</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -975,15 +995,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007050</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007050">ARO:3007050</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">19</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_INACTIVATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -992,7 +1015,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000361</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000361">ARO:3000361</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1002,7 +1025,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002826</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002826">ARO:3002826</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1012,7 +1035,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000363</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000363">ARO:3000363</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1022,7 +1045,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004608</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004608">ARO:3004608</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1032,7 +1055,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003839</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003839">ARO:3003839</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1042,7 +1065,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000462</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000462">ARO:3000462</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1052,7 +1075,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000316</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000316">ARO:3000316</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1062,7 +1085,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000318</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000318">ARO:3000318</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1072,7 +1095,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000319</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000319">ARO:3000319</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1082,7 +1105,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003741</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003741">ARO:3003741</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1092,7 +1115,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003071</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003071">ARO:3003071</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1102,7 +1125,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003742</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003742">ARO:3003742</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1112,7 +1135,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003991</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003991">ARO:3003991</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1122,7 +1145,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004544</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004544">ARO:3004544</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1132,7 +1155,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003072</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003072">ARO:3003072</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1142,7 +1165,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003767</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003767">ARO:3003767</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1152,7 +1175,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004542</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004542">ARO:3004542</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1162,7 +1185,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004543</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004543">ARO:3004543</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1172,15 +1195,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000865</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000865">ARO:3000865</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_PROTECTION <span class="pill plain">8</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_PROTECTION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_PROTECTION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -1189,7 +1215,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000616</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000616">ARO:3000616</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1199,7 +1225,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007042</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007042">ARO:3007042</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1209,7 +1235,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000251</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000251">ARO:3000251</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1219,7 +1245,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002818</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002818">ARO:3002818</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1229,7 +1255,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002819</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002819">ARO:3002819</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1239,7 +1265,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003109</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003109">ARO:3003109</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1249,7 +1275,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005087</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005087">ARO:3005087</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1259,11 +1285,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005088</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005088">ARO:3005088</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000006 (erythromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 <h2>Producer organisms</h2>
@@ -1275,22 +1303,25 @@ several compounds, the evidence is marked inherited, meaning it covers this
 compound together with the cluster's other products rather than singling it out.
 Those products need not be related to each other: a cluster can list an
 intermediate, a precursor and a finished antibiotic side by side.</p>
+<div class="table-scroll" role="region" aria-label="Producer organisms" tabindex="0">
 <table>
   <caption>Producer organisms</caption>
   <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Cluster link evidence</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Evidence</th></tr></thead>
   <tr>
-    <td><em>Saccharopolyspora erythraea</em> <code class="curie">NCBITaxon:405948</code><br><span class="meta">strain NRRL 2338</span></td>
-    <td>BGC0000055</td>
+    <td><em>Saccharopolyspora erythraea</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=405948">NCBITaxon:405948</a><br><span class="meta">strain NRRL 2338</span></td>
+    <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000055">BGC0000055</a></td>
     <td class="meta">Enzymatic assays; Gene expression correlated with compound production; Heterologous expression; Knock-out studies<br><span class="pill warn">cluster inherited</span></td>
     <td class="meta">MIBIG 4.0.1 (entry 5)</td>
     <td class="meta">questionable</td>
     <td class="meta">MIBiG active entry; compound &#39;erythromycin A&#39; joined by exact Standard InChIKey.</td>
     <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">PMID:11336289</span> <span class="meta">(MIBiG&#39;s first legacy reference for the entry, inherited rather than attached to the compound. It supports that the entry exists; it is NOT established as evidence for this specific producer/compound link.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11336289">PMID:11336289</a></span> <span class="meta">(MIBiG&#39;s first legacy reference for the entry, inherited rather than attached to the compound. It supports that the entry exists; it is NOT established as evidence for this specific producer/compound link.)</span></li>
 </ul>
 </td>
   </tr>
 </table>
+
+</div>
 
 
 
@@ -1354,26 +1385,36 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/erythromycin-a.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/erythromycin-a.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=erythromycin%20A">MediaIngredientMech (erythromycin A)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=erythromycin%20A">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=erythromycin%20A">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=erythromycin%20A">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=erythromycin%20A">TraitMech</a>
+&middot; <a href="https://culturebotai.github.io/TaxonMech/browse.html?q=Saccharopolyspora%20erythraea">TaxonMech (Saccharopolyspora erythraea)</a></p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

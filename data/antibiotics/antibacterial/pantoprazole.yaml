@@ -1,0 +1,48 @@
+identifier: CHEBI:7915
+label: Pantoprazole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A substituted benzimidazole sulfoxide proton-pump inhibitor with bactericidal
+  membrane-permeabilizing activity against Acinetobacter baylyi and Escherichia coli.
+definition_source: DOI:10.1099/mic.0.001619
+synonyms:
+- synonym_text: SKF-96022
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COC1=C(C(=NC=C1)CS(=O)C2=NC3=C(N2)C=C(C=C3)OC(F)F)OC
+  standard_inchi: InChI=1S/C16H15F2N3O4S/c1-23-13-5-6-19-12(14(13)24-2)8-26(22)16-20-10-4-3-9(25-15(17)18)7-11(10)21-16/h3-7,15H,8H2,1-2H3,(H,20,21)
+  standard_inchi_key: IQPSEEYGBUAQFF-UHFFFAOYSA-N
+  molecular_formula: C16H15F2N3O4S
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/4679
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 383.38
+  monoisotopic_mass: 383.0751334
+xrefs:
+- pubchem.compound:4679
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1099/mic.0.001619#pantoprazole
+  source_label: Pantoprazole
+  minted_identifier: antibioticmech:curator-1e77a25c03
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1099/mic.0.001619
+    snippet: 'Salcedo-Sora and Kell identified the benzimidazole proton-pump inhibitor
+      pantoprazole as a top hit in a flow-cytometric Prestwick library membrane-permeabilization
+      screen and reported growth inhibition (Fig. 7a-b median IC50 across the three
+      validated hits: 0.57 to 0.59 mg/L against Acinetobacter baylyi ADP1 and 0.68
+      to 0.72 mg/L against Escherichia coli BW25113).'
+    notes: PubChem CID 4679 and ChEBI CHEBI:7915 supply the standard InChI, InChIKey,
+      formula, and SMILES for pantoprazole.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-22T05:32:22Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

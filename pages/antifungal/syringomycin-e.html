@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antifungal.html">ANTIFUNGAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>syringomycin E</h1>
 <p class="meta">
   <code class="curie">CHEBI:77762</code>
@@ -36,16 +47,19 @@ signed off on this record yet.</p></div>
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_25061">CHEBI:25061</a>      <code class="curie">CHEBI:25061</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_32174">CHEBI:32174</a>      <code class="curie">CHEBI:32174</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_25061"><code class="curie">CHEBI:25061</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_32174"><code class="curie">CHEBI:32174</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C53H85ClN14O17</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>1225.797 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>1224.59056 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">ZQVJBRJGDVZANE-MTGUCJNSSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">C/C=C1\NC(=O)[C@H](Cc2ccccc2)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H](CCN)NC(=O)[C@H](CCN)NC(=O)[C@@H](CO)NC(=O)[C@@H](NC(=O)C[C@H](O)CCCCCCCCC)COC(=O)[C@H]([C@H](O)CCl)NC(=O)[C@H]([C@H](O)C(=O)O)NC1=O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C53H85ClN14O17/c1-3-5-6-7-8-9-13-17-30(70)25-39(72)60-37-28-85-52(84)40(38(71)26-54)67-50(81)41(42(73)51(82)83)68-43(74)31(4-2)61-47(78)35(24-29-15-11-10-12-16-29)65-44(75)32(18-14-23-59-53(57)58)62-45(76)33(19-21-55)63-46(77)34(20-22-56)64-48(79)36(27-69)66-49(37)80/h4,10-12,15-16,30,32-38,40-42,69-71,73H,3,5-9,13-14,17-28,55-56H2,1-2H3,(H,60,72)(H,61,78)(H,62,76)(H,63,77)(H,64,79)(H,65,75)(H,66,80)(H,67,81)(H,68,74)(H,82,83)(H4,57,58,59)/b31-4-/t30-,32+,33-,34+,35+,36-,37+,38-,40+,41+,42+/m1/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -67,13 +81,14 @@ both rather than shown here, since it names at most one of them.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_35718">CHEBI:35718</a>    <code class="curie">CHEBI:35718</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antifungal agent  <a href="http://purl.obolibrary.org/obo/CHEBI_35718"><code class="curie">CHEBI:35718</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -86,10 +101,88 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
 
 
 
 
+
+<h2>Resistance mechanisms</h2>
+<p class="meta">6 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
+<details class="details-group" open>
+  <summary>UNKNOWN <span class="pill plain">6</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
+<table>
+    <caption>UNKNOWN</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>ELO2-associated laboratory syringomycin E resistance<br><span class="meta">Qualified laboratory association in a W303C-derived yeast model; the parent background is not an exact experimental isolate identifier. Lipid-biosynthesis context does not identify a direct protein target or clinical resistance. No experimental allele, protein, strain-TaxID, genome or numerical AST is assigned. A versioned UniProt crosswalk remains pending.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a></td>
+      <td class="meta">ELO2</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22046175">PMID:22046175</a></span> <span class="meta">(Methods, Yeast strains; Table 1 SRE column; Figure 1B SRE comparison; DOI:10.3389/fmicb.2011.00216. Named purified syringomycin E evidence, not SP22A/SP25A transfer or independent reidentification of the preparation.)</span></li>
+</ul>
+<span class="meta">Comparative laboratory growth and susceptibility assays</span></td>
+    </tr>
+    <tr>
+      <td>ELO3-associated laboratory syringomycin E resistance<br><span class="meta">Qualified laboratory association in a W303C-derived yeast model; the parent background is not an exact experimental isolate identifier. Lipid-biosynthesis context does not identify a direct protein target or clinical resistance. No experimental allele, protein, strain-TaxID, genome or numerical AST is assigned. A versioned UniProt crosswalk remains pending.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a></td>
+      <td class="meta">ELO3</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22046175">PMID:22046175</a></span> <span class="meta">(Methods, Yeast strains; Table 1 SRE column; Figure 1B SRE comparison; DOI:10.3389/fmicb.2011.00216. Named purified syringomycin E evidence, not SP22A/SP25A transfer or independent reidentification of the preparation.)</span></li>
+</ul>
+<span class="meta">Comparative laboratory growth and susceptibility assays</span></td>
+    </tr>
+    <tr>
+      <td>ERG3-associated laboratory syringomycin E resistance<br><span class="meta">Qualified laboratory association in a 8A-1B-derived yeast model; the parent background is not an exact experimental isolate identifier. Lipid-biosynthesis context does not identify a direct protein target or clinical resistance. No experimental allele, protein, strain-TaxID, genome or numerical AST is assigned. A versioned UniProt crosswalk remains pending.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a></td>
+      <td class="meta">ERG3</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22046175">PMID:22046175</a></span> <span class="meta">(Methods, Yeast strains; Table 1 SRE column; Figure 1B SRE comparison; DOI:10.3389/fmicb.2011.00216. Named purified syringomycin E evidence, not SP22A/SP25A transfer or independent reidentification of the preparation.)</span></li>
+</ul>
+<span class="meta">Comparative laboratory growth and susceptibility assays</span></td>
+    </tr>
+    <tr>
+      <td>FAH1-associated laboratory syringomycin E resistance<br><span class="meta">Qualified laboratory association in a BY4741-derived yeast model; the parent background is not an exact experimental isolate identifier. Lipid-biosynthesis context does not identify a direct protein target or clinical resistance. No experimental allele, protein, strain-TaxID, genome or numerical AST is assigned.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a></td>
+      <td class="meta">FAH1</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22046175">PMID:22046175</a></span> <span class="meta">(Methods, Yeast strains; Table 1 SRE column; Figure 1B SRE comparison; DOI:10.3389/fmicb.2011.00216. Named purified syringomycin E evidence, not SP22A/SP25A transfer or independent reidentification of the preparation.)</span></li>
+  <li><span class="meta">UniProtKB:Q03529</span> <span class="meta">(Reference identity only: FAH1 maps to SCS7, YMR272C; UniProtKB 2026_03 entry 203, sequence 1. S288c NCBITaxon:559292 is reference context, not the tested derivative.)</span></li>
+</ul>
+<span class="meta">Comparative laboratory growth and susceptibility assays</span></td>
+    </tr>
+    <tr>
+      <td>IPT1-associated laboratory syringomycin E resistance<br><span class="meta">Qualified laboratory association in a W303C-derived yeast model; the parent background is not an exact experimental isolate identifier. Lipid-biosynthesis context does not identify a direct protein target or clinical resistance. No experimental allele, protein, strain-TaxID, genome or numerical AST is assigned.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a></td>
+      <td class="meta">IPT1</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22046175">PMID:22046175</a></span> <span class="meta">(Methods, Yeast strains; Table 1 SRE column; Figure 1B SRE comparison; DOI:10.3389/fmicb.2011.00216. Named purified syringomycin E evidence, not SP22A/SP25A transfer or independent reidentification of the preparation.)</span></li>
+  <li><span class="meta">UniProtKB:P38954</span> <span class="meta">(Reference identity only: IPT1 maps to IPT1, YDR072C; UniProtKB 2026_03 entry 175, sequence 2. S288c NCBITaxon:559292 is reference context, not the tested derivative.)</span></li>
+</ul>
+<span class="meta">Comparative laboratory growth and susceptibility assays</span></td>
+    </tr>
+    <tr>
+      <td>SYR2-associated laboratory syringomycin E resistance<br><span class="meta">Qualified laboratory association in a W303C-derived yeast model; the parent background is not an exact experimental isolate identifier. Lipid-biosynthesis context does not identify a direct protein target or clinical resistance. No experimental allele, protein, strain-TaxID, genome or numerical AST is assigned.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a></td>
+      <td class="meta">SYR2</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22046175">PMID:22046175</a></span> <span class="meta">(Methods, Yeast strains; Table 1 SRE column; Figure 1B SRE comparison; DOI:10.3389/fmicb.2011.00216. Named purified syringomycin E evidence, not SP22A/SP25A transfer or independent reidentification of the preparation.)</span></li>
+  <li><span class="meta">UniProtKB:P38992</span> <span class="meta">(Reference identity only: SYR2 maps to SUR2, YDR297W; UniProtKB 2026_03 entry 177, sequence 1. S288c NCBITaxon:559292 is reference context, not the tested derivative.)</span></li>
+</ul>
+<span class="meta">Comparative laboratory growth and susceptibility assays</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
 
 
 
@@ -113,32 +206,47 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-14 · codex · LLM-assisted</span>
+    <p>Added six primary-backed qualitative yeast gene associations for named syringomycin E. Kept experimental identifiers unset and UniProt proteins reference-only; excluded the incompletely described SKN1 row and related syringopeptin evidence. No numerical AST, exact resistance variant, construct or protocol was added. Whole-record review remains open.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antifungal/syringomycin-e.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antifungal/syringomycin-e.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=syringomycin%20E">MediaIngredientMech (syringomycin E)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=syringomycin%20E">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=syringomycin%20E">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=syringomycin%20E">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=syringomycin%20E">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

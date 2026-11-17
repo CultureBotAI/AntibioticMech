@@ -1,0 +1,94 @@
+{
+  "all_other_fields_preserved": true,
+  "before_record_sha256": "8a6d4cd692aa30e634f4bf91b977aac9996044add22591fec5bd77c638b7918b",
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-09-duramycin/lancovutide-canary.yaml",
+    "sha256": "d649e159e49b8f347db3ea56ddcc6eb51d99aa4108e6bc53ed0cebab6823352a"
+  },
+  "chemical_scope": "Source-reported duramycin matched through the existing exact ChEBI synonym; not physical sample or complete stereochemical re-identification.",
+  "claims": [
+    {
+      "assay": "Qualitative source-reported disk-growth comparison with accompanying lipid analysis",
+      "evidence": [
+        {
+          "notes": "Relevant primary Results and native Figures 3-5 were inspected. The claims retain qualitative comparisons and do not complete whole-record review.",
+          "reference": "PMID:27858169"
+        }
+      ],
+      "gene_families": [
+        "cinorf10"
+      ],
+      "label": "Cinorf10-associated reduced susceptibility to duramycin",
+      "mechanism_type": "UNKNOWN",
+      "note": "Both compared subjects are laboratory derivatives of the 1326 background, including a vector control. Protection varies with expression context; gene presence alone did not predict protection across the tested contexts. NCBITaxon:1200984 denotes the background, not either derivative. UniProtKB:Q83VX7 is reference-only: its source strain DSM 40005 differs from the study's DSM 40646 donor. Source-reported duramycin maps to the existing ChEBI exact synonym of lancovutide; this is not direct cinnamycin AST. No clinical category, numerical AST or exact allele is assigned.",
+      "phenotype_label": "reduced duramycin susceptibility in laboratory derivatives",
+      "taxon_id": "NCBITaxon:1916",
+      "taxon_label": "Streptomyces lividans"
+    },
+    {
+      "assay": "Qualitative source-reported disk-growth comparisons",
+      "evidence": [
+        {
+          "notes": "Relevant primary Results and native Figures 3-5 were inspected. The claims retain qualitative comparisons and do not complete whole-record review.",
+          "reference": "PMID:27858169"
+        }
+      ],
+      "gene_families": [
+        "cinorf10",
+        "cinK",
+        "cinR"
+      ],
+      "label": "cinorf10/CinKR contribution to native-host duramycin protection",
+      "mechanism_type": "UNKNOWN",
+      "note": "Separate laboratory derivatives of the reported DSM 40646 background provide loss-of-protection evidence, not resistant alterations or individual gene sufficiency. Production-indicator assays are distinct. These comparisons do not establish direct CinK ligand binding. UniProtKB:Q83VX7, UniProtKB:Q83VX8 and UniProtKB:Q83VX9 remain reference candidates with different strain context; no derivative TaxID or genome is assigned. Source-reported duramycin maps to the existing ChEBI exact synonym of lancovutide; this is not direct cinnamycin AST. No clinical category, numerical AST or exact allele is assigned.",
+      "phenotype_label": "increased duramycin susceptibility after separate native-host perturbations",
+      "taxon_id": "NCBITaxon:53446",
+      "taxon_label": "Streptomyces cinnamoneus"
+    }
+  ],
+  "claims_added": 2,
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added two qualitative primary-backed duramycin susceptibility associations, retaining host, comparator and regulatory context. UniProt references and background taxonomy remain distinct from experimental alleles and derivatives. Existing source fields preserved; whole-record review remains open.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-09T21:48:45Z"
+  },
+  "curation_status": "SEEDED",
+  "date": "2026-10-09",
+  "exact_experimental_alleles_assigned": 0,
+  "experimental_genomes_assigned": 0,
+  "figures_visually_inspected": [
+    3,
+    4,
+    5
+  ],
+  "fresh_seed": {
+    "path": "reports/resistance-grounding-2026-10-09-duramycin/fresh-seed.json",
+    "sha256": "08f2c1d155601e4ec8ffd6f0d70836840c4c0fc0ea31cc5df0128a520bf994c6"
+  },
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "identifier": "CHEBI:77834",
+  "label": "lancovutide",
+  "ncbi_endpoint_requests": 0,
+  "numerical_ast_added": 0,
+  "original": {
+    "path": "reports/resistance-grounding-2026-10-09-duramycin/lancovutide-original.yaml",
+    "sha256": "8a6d4cd692aa30e634f4bf91b977aac9996044add22591fec5bd77c638b7918b"
+  },
+  "original_bytes_preserved_as_prefix": true,
+  "primary_reference": "PMID:27858169",
+  "primary_review_medium": "PRIMARY_FULLTEXT_XML_AND_NATIVE_PUBLISHER_FIGURES",
+  "record": {
+    "path": "data/antibiotics/unspecified/lancovutide.yaml",
+    "sha256": "d649e159e49b8f347db3ea56ddcc6eb51d99aa4108e6bc53ed0cebab6823352a"
+  },
+  "records_changed": 1,
+  "source_adoptions": 0,
+  "source_ownership": "CURATOR; original source-owned fields unchanged",
+  "standard_inchi_key": "SFWLDKQAUHFCBS-WWXQEMPQSA-N",
+  "status": "CURATED_QUALITATIVE_PRIMARY_ASSOCIATIONS",
+  "whole_paper_review_complete": false,
+  "whole_record_review_complete": false
+}

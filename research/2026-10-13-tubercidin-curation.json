@@ -1,0 +1,75 @@
+{
+  "before": {
+    "path": "data/antibiotics/antifungal/tubercidin.yaml",
+    "sha256": "68f43e55af1ac377e2ff416b2000e6bbf35e52ec3f54a52ca8d5c655d43da976"
+  },
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-13-tubercidin/tubercidin-canary.yaml",
+    "sha256": "ade2bc7dcd430773ae72a168a2addd740b3e043be2d697c1387e924fa10ece76"
+  },
+  "claims": [
+    {
+      "assay": "Comparative growth inhibition (IC50-based)",
+      "evidence": [
+        {
+          "notes": "DOI:10.1371/journal.pntd.0004972; Results and native Table 1 and Figures 2-3. Qualitative association only; no numerical AST imported.",
+          "reference": "PMID:27606425"
+        },
+        {
+          "notes": "Reference-only UniProtKB:Q4Q661, unreviewed entry 78, sequence version 1, release 2026_03; exact source-reported RefSeq cross-reference. Species context only, not an exact tested derivative.",
+          "reference": "https://www.uniprot.org/uniprotkb/Q4Q661/entry"
+        }
+      ],
+      "gene_id": "LmjF.31.2010",
+      "label": "Laboratory TRP-associated tubercidin resistance",
+      "mechanism_type": "UNKNOWN",
+      "note": "Qualified association in Friedlin laboratory derivatives, not a species-wide or clinical phenotype. Molecular route unresolved; reference proteins are not experimental allele or genome assignments.",
+      "phenotype_label": "Source-reported relative tubercidin resistance",
+      "taxon_id": "NCBITaxon:5664",
+      "taxon_label": "Leishmania major"
+    },
+    {
+      "assay": "Comparative growth inhibition (IC50-based)",
+      "evidence": [
+        {
+          "notes": "DOI:10.1371/journal.pntd.0004972; Results and native S1 Figure and rendered S1 Table. Qualitative association only; no numerical AST imported.",
+          "reference": "PMID:27606425"
+        },
+        {
+          "notes": "Reference-only UniProtKB:Q4Q668, unreviewed entry 71, sequence version 1, release 2026_03; exact source-reported RefSeq cross-reference. Species context only, not an exact tested derivative.",
+          "reference": "https://www.uniprot.org/uniprotkb/Q4Q668/entry"
+        }
+      ],
+      "gene_id": "LmjF.31.1940",
+      "label": "Laboratory NUPM1-associated tubercidin resistance",
+      "mechanism_type": "UNKNOWN",
+      "note": "Qualified association in Friedlin laboratory derivatives, not a species-wide or clinical phenotype. Molecular route unresolved; reference proteins are not experimental allele or genome assignments.",
+      "phenotype_label": "Source-reported relative tubercidin resistance",
+      "taxon_id": "NCBITaxon:5664",
+      "taxon_label": "Leishmania major"
+    }
+  ],
+  "context": {
+    "path": "research/2026-10-13-tubercidin-context.json",
+    "sha256": "62aa88b09210ca7f29f6d5d07e4d19e0d6bba4f5c7398bebb7e2982c13e3da27"
+  },
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added two qualified laboratory gene associations from primary results and native table/figure review. Molecular routes remain UNKNOWN; UniProt proteins remain reference-only. No experimental allele, sample, genome or numeric AST assigned; existing owners preserved and whole-record review left open.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-13T15:39:12Z"
+  },
+  "existing_claims_preserved": 0,
+  "fixture": {
+    "path": "tests/fixtures/tubercidin-before-2026-10-13.yaml",
+    "sha256": "68f43e55af1ac377e2ff416b2000e6bbf35e52ec3f54a52ca8d5c655d43da976"
+  },
+  "fresh_seed_merge_equal": true,
+  "identifier": "CHEBI:48267",
+  "record": {
+    "path": "data/antibiotics/antifungal/tubercidin.yaml",
+    "sha256": "ade2bc7dcd430773ae72a168a2addd740b3e043be2d697c1387e924fa10ece76"
+  },
+  "whole_record_review_complete": false
+}

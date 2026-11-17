@@ -189,13 +189,18 @@ def test_causal_graph_edges_reference_declared_nodes(records):
     assert dangling == [], dangling[:20]
 
 
-def test_mic_values_carry_units(records):
+def test_activity_measurements_carry_units(records):
     """A number without units is not a measurement; it is a number."""
     bad = []
     for path, record in records:
         for item in record.get("activity_spectrum") or []:
             if item.get("mic_value") is not None and not item.get("mic_units"):
-                bad.append((path.name, item.get("taxon_label")))
+                bad.append((path.name, item.get("taxon_label"), "mic_value"))
+            if (
+                item.get("disk_diffusion_value") is not None
+                and not item.get("disk_diffusion_units")
+            ):
+                bad.append((path.name, item.get("taxon_label"), "disk_diffusion_value"))
     assert bad == [], bad[:20]
 
 

@@ -1,0 +1,240 @@
+identifier: CHEBI:199965
+label: obafluorin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: A 2,3-dihydroxybenzoyl-derived beta-lactone nonribosomal peptide antibiotic
+  from Pseudomonas fluorescens that covalently inhibits bacterial threonyl-tRNA synthetase.
+definition_source: DOI:10.1038/nchembio.2374
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: OC1=C(O)C(=CC=C1)C(=O)N[C@H]1[C@@H](CC2=CC=C(C=C2)N(=O)=O)OC1=O
+  standard_inchi: InChI=1S/C17H14N2O7/c20-12-3-1-2-11(15(12)21)16(22)18-14-13(26-17(14)23)8-9-4-6-10(7-5-9)19(24)25/h1-7,13-14,20-21H,8H2,(H,18,22)/t13-,14+/m1/s1
+  standard_inchi_key: AINNQKIVZOTQBB-KGLIPLIRSA-N
+  molecular_formula: C17H14N2O7
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001437/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 358.306
+  monoisotopic_mass: 358.0801
+xrefs:
+- pubchem.compound:146354
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/nchembio.2374#obafluorin
+  source_label: obafluorin
+  minted_identifier: antibioticmech:curator-81f7a3a21d
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/nchembio.2374
+    snippet: Schaffer et al. elucidated the nonribosomal peptide synthetase assembly
+      line in Pseudomonas fluorescens ATCC 39502 that catalyzes beta-lactone ring
+      formation to release the antibiotic obafluorin, a covalent inhibitor of bacterial
+      threonyl-tRNA synthetase.
+    notes: Reported by Schaffer et al. 2017 (Nat Chem Biol 13:737-744; PMID:28504677;
+      DOI:10.1038/nchembio.2374), Scott et al. 2017 (Nat Commun 8:15935; PMID:28649989;
+      DOI:10.1038/ncomms15935), Scott et al. 2019 (ACS Chem Biol 14:2663-2671; PMID:31675206;
+      DOI:10.1021/acschembio.9b00590), and Wells et al. 1984 (J Antibiot 37:802-803;
+      PMID:6432765; DOI:10.7164/antibiotics.37.802) as a 2,3-dihydroxybenzoyl-derived
+      beta-lactone antibiotic from Pseudomonas fluorescens ATCC 39502 that covalently
+      inhibits bacterial threonyl-tRNA synthetase (ThrRS). MIBiG 4.0.1 entry BGC0001437,
+      ChEBI CHEBI:199965, and PubChem CID 146354 supply the stereo-complete SMILES,
+      Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:294
+  taxon_label: Pseudomonas fluorescens
+  biosynthetic_gene_cluster: BGC0001437
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'obafluorin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:28504677
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-05T09:15:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and PROTEIN_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Schaffer et al. 2017 (PMID:28504677), Scott
+    et al. 2017 (PMID:28649989), and Scott et al. 2019 (PMID:31675206).
+  llm_assisted: true
+- timestamp: '2026-11-05T12:15:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial threonyl-tRNA
+    synthetase (ThrRS / ThrS; GO:0004829, PROTEIN, DIRECT_BINDING_TARGET) backed by
+    Schaffer et al. 2017 (DOI:10.1038/nchembio.2374, PMID:28504677), Scott et al.
+    2017 (DOI:10.1038/ncomms15935, PMID:28649989), and Scott et al. 2019 (DOI:10.1021/acschembio.9b00590,
+    PMID:31675206).
+  llm_assisted: true
+- timestamp: '2026-11-05T12:20:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 1 reviewed UniProtKB protein_example (P0A8M3) to the primary-literature
+    bacterial threonyl-tRNA synthetase (ThrRS / ThrS) target on obafluorin (DOI:10.1038/nchembio.2374).
+  llm_assisted: true
+- timestamp: '2026-11-05T21:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:199965) with complete 4/4 chemical_structure,
+    curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0A8M3;
+    DOI:10.1038/nchembio.2374, PMID:28504677; DOI:10.1021/acschembio.9b00590, PMID:31675206)
+    from PROPOSED to REVIEWED (issue #1333).'
+  llm_assisted: true
+- timestamp: '2026-11-06T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph obafluorin_thrs_threonyl_trna_synthetase_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8M3)
+    and primary literature (DOI:10.1038/nchembio.2374, DOI:10.7164/antibiotics.37.802).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Beta-lactone aminoacyl antibiotic from Pseudomonas
+  fluorescens ATCC 39502 that covalently inhibits bacterial threonyl-tRNA synthetase
+  (ThrRS) and blocks bacterial translation (Schaffer et al. 2017, DOI:10.1038/nchembio.2374,
+  PMID:28504677; Scott et al. 2017, DOI:10.1038/ncomms15935, PMID:28649989; Scott
+  et al. 2019, DOI:10.1021/acschembio.9b00590, PMID:31675206).'
+molecular_targets:
+- target_id: GO:0004829
+  target_label: bacterial threonyl-tRNA synthetase (ThrRS / ThrS)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Covalent acylation and inhibition of bacterial threonyl-tRNA
+    synthetase (ThrRS / ThrS) by the strained beta-lactone ring of obafluorin, with
+    producer immunity conferred by the auxiliary threonyl-tRNA synthetase homolog
+    ObaO (Schaffer et al. 2017, DOI:10.1038/nchembio.2374, PMID:28504677; Scott et
+    al. 2017, DOI:10.1038/ncomms15935, PMID:28649989; Scott et al. 2019, DOI:10.1021/acschembio.9b00590,
+    PMID:31675206).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2017-07
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.1038/nchembio.2374
+    snippet: Schaffer et al. characterized the nonribosomal peptide synthetase ObiF
+      that releases the beta-lactone antibiotic obafluorin, a covalent inhibitor of
+      bacterial threonyl-tRNA synthetase.
+    notes: Schaffer et al. 2017 (Nat Chem Biol 13:737-744; PMID:28504677) characterized
+      biosynthesis of the beta-lactone antibiotic obafluorin and its covalent inhibition
+      of bacterial threonyl-tRNA synthetase (ThrRS).
+  - reference: PMID:28504677
+    notes: PubMed record for Schaffer et al. 2017 on obafluorin beta-lactone biosynthesis
+      and ThrRS inhibition.
+  - reference: DOI:10.1021/acschembio.9b00590
+    notes: Scott et al. 2019 (ACS Chem Biol 14:2663-2671; PMID:31675206) established
+      covalent active-site acylation of bacterial threonyl-tRNA synthetase (ThrRS)
+      by obafluorin and target-based immunity via ObaO.
+  - reference: PMID:31675206
+    notes: PubMed record for Scott et al. 2019 on bacterial threonyl-tRNA synthetase
+      inhibition by obafluorin.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8M3
+    protein_label: Threonine--tRNA ligase
+    gene_symbol: thrS
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-05'
+    role: Escherichia coli K-12 threonyl-tRNA synthetase (ThrRS / ThrS, EC 6.1.1.3)
+      whose catalytic active-site nucleophile is covalently acylated by the strained
+      beta-lactone warhead of obafluorin (DOI:10.1038/nchembio.2374; PMID:28504677;
+      DOI:10.1021/acschembio.9b00590; PMID:31675206).
+causal_graphs:
+- graph_id: obafluorin_thrs_threonyl_trna_synthetase_inhibition
+  title: Obafluorin inhibits bacterial threonyl-tRNA synthetase (ThrRS) to block bacterial
+    protein synthesis
+  description: Obafluorin, a pseudomonal beta-lactone antibacterial natural product,
+    targets and inhibits bacterial threonyl-tRNA synthetase (ThrRS / ThrS), blocking
+    L-threonyl-tRNA(Thr) aminoacylation and arresting bacterial translation.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: obafluorin
+    label: obafluorin
+    node_type: COMPOUND
+    grounding: CHEBI:199965
+  - node_id: bacterial_threonyl_trna_synthetase_thrs
+    label: bacterial threonyl-tRNA synthetase (ThrRS)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial threonyl-tRNA synthetase (ThrRS / ThrS, EC 6.1.1.3);
+      kept label-only with Escherichia coli K-12 ThrS (UniProtKB:P0A8M3) protein_example.
+    gene_symbols:
+    - thrS
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A8M3
+      protein_label: Threonine--tRNA ligase
+      gene_symbol: thrS
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-05'
+      role: Escherichia coli K-12 threonyl-tRNA synthetase (ThrRS / ThrS, EC 6.1.1.3)
+        whose catalytic active-site nucleophile is covalently acylated by the strained
+        beta-lactone warhead of obafluorin (DOI:10.1038/nchembio.2374; PMID:28504677;
+        DOI:10.1021/acschembio.9b00590; PMID:31675206).
+  - node_id: threonyl_trna_aminoacylation_activity
+    label: threonyl-tRNA aminoacylation catalytic activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: ATP-dependent L-threonine charging of tRNA(Thr) catalyzed by
+      bacterial threonyl-tRNA synthetase (ThrRS) and inhibited by obafluorin (DOI:10.1038/nchembio.2374).
+  - node_id: bacterial_translation_and_protein_biosynthesis
+    label: bacterial translation and protein biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial ribosomal protein biosynthesis dependent on charged
+      L-threonyl-tRNA(Thr) and arrested upon ThrRS inhibition by obafluorin (DOI:10.1038/nchembio.2374).
+  edges:
+  - subject: obafluorin
+    predicate: inhibits
+    object: threonyl_trna_aminoacylation_activity
+    description: Obafluorin inhibits bacterial threonyl-tRNA synthetase (ThrRS) catalytic
+      activity.
+    evidence:
+    - reference: DOI:10.1038/nchembio.2374
+      notes: Schaffer et al. 2017 (PMID:28504677) identified bacterial threonyl-tRNA
+        synthetase (ThrRS) as the molecular target of the beta-lactone antibiotic
+        obafluorin alongside its self-resistance ThrRS homolog ObaO.
+    - reference: DOI:10.7164/antibiotics.37.802
+      notes: Wells et al. 1984 (PMID:6432765) reported the discovery and antibacterial
+        activity of the beta-lactone antibiotic obafluorin from Pseudomonas fluorescens.
+  - subject: bacterial_threonyl_trna_synthetase_thrs
+    predicate: enables
+    object: threonyl_trna_aminoacylation_activity
+    description: Bacterial threonyl-tRNA synthetase (ThrRS / ThrS) catalyzes the aminoacylation
+      of tRNA(Thr) with L-threonine.
+    evidence:
+    - reference: DOI:10.1038/nchembio.2374
+      notes: Escherichia coli ThrRS (ThrS) catalyzes threonyl-tRNA aminoacylation
+        and is complemented by the self-resistance homolog ObaO under obafluorin exposure
+        (PMID:28504677).
+  - subject: threonyl_trna_aminoacylation_activity
+    predicate: supports
+    object: bacterial_translation_and_protein_biosynthesis
+    description: Threonyl-tRNA aminoacylation supplies charged tRNA(Thr) required
+      for bacterial protein synthesis.
+    evidence:
+    - reference: DOI:10.1038/nchembio.2374
+      notes: Inhibition of bacterial ThrRS by obafluorin blocks protein synthesis
+        and bacterial growth unless rescued by the ThrRS immunity determinant ObaO
+        (PMID:28504677).

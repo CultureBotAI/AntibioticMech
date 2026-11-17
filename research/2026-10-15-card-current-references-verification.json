@@ -1,0 +1,108 @@
+{
+  "adversarial_review": {
+    "method": "Separate self-review of source joins, scope preservation, current transitions and output accounting",
+    "remaining": [
+      "604 terms have no selected reference; many are RNA, cluster or complex contexts.",
+      "Primary experimental identity and genotype-phenotype joins remain separate unfinished work.",
+      "PHI-base, curator claims and score-rule interpretation were accounted for but not reassessed."
+    ],
+    "resolved": [
+      "Shared native reference provenance is deduplicated across terms without hiding identity conflicts.",
+      "Context-only dossiers without a top-level claims list are retained by explicit term membership.",
+      "Reference-only mappings and component/lead evidence cannot assign experimental alleles or whole complexes.",
+      "Stable TSV columns do not depend on JSON object ordering."
+    ]
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-card-current-references/baseline.json",
+    "sha256": "eee4e4fcd26a0eab6ce54799219e13d22ab0e09e1a670389defc43522a89739c"
+  },
+  "baseline_files_checked": 7999,
+  "checks": {
+    "format_changed_code": "PASS",
+    "full_authoritative_qc_rerun": false,
+    "git_diff_check": "PASS",
+    "ruff_changed_code": "PASS"
+  },
+  "constraints": {
+    "biological_record_writes": false,
+    "experimental_identifiers_assigned": false,
+    "full_investigation_complete": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "network_requests": 0,
+    "new_primary_reviews": 0
+  },
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-15-card-current-references.json",
+      "sha256": "f98aaf50c76aaab8917fd470d4622e8ec2ababfbcdf970ce2b89439e614d71e7"
+    },
+    {
+      "path": "research/2026-10-15-card-current-references.tsv",
+      "sha256": "664c8af53af360dce6d87d878c18cc3956b3b18449a79ab6ed54b3faa30845fa"
+    },
+    {
+      "path": "research/2026-10-15-card-current-references-plan.json",
+      "sha256": "4f64f47e31af3897a176982c1239f3c7040f928bb5942773a67305275c12147b"
+    },
+    {
+      "path": "scripts/audit_card_current_references.py",
+      "sha256": "6b51cd9a88ca10862b3494a8f859d0c6697a80982a5f45a0b58476aed27daf6a"
+    },
+    {
+      "path": "tests/test_card_current_references.py",
+      "sha256": "ee2423304ddf21eab29da2afe6379a8abc8ca96a4c5e52bb57179f59fa7a44a3"
+    }
+  ],
+  "full_investigation_complete": false,
+  "github_mutations": 0,
+  "replay": {
+    "all_2939_collection_aware_records": true,
+    "file_writes_denied": true,
+    "json_equal": true,
+    "network_denied": true,
+    "tsv_equal": true
+  },
+  "report": {
+    "after_sha256": "f2805a020e0094d0e2424eab80488e283701fd68c9c0587c38f622c73a7642e2",
+    "before_sha256": "d25a2d8999ac8b8e143573f319c5247d7045a2b899d24ac59f44b55d49cf5283",
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "prior_bytes_restored_after_removing_append_and_reverting_two_count_lines": true
+  },
+  "status": "CURRENT_CORPUS_REFERENCE_RECONCILIATION_VERIFIED_FULL_INVESTIGATION_OPEN",
+  "summary": {
+    "added_claim_memberships_with_references": 146,
+    "added_reference_links": 265,
+    "added_reference_proteins": 236,
+    "added_reference_terms": 116,
+    "card_claims": 4538,
+    "card_terms": 2002,
+    "complete_collection_aware_records_read": 2939,
+    "context_only_dossiers": 20,
+    "curator_claims_not_reassessed": 133,
+    "current_source_qualified_claims": 4,
+    "phi_claims_not_reassessed": 217,
+    "qualified_followup_dossiers": 10,
+    "records_with_reference_context": 242,
+    "records_without_card_assertions": 2666,
+    "reference_links": 3064,
+    "score_rules_not_reassessed": 467,
+    "selected_reference_proteins": 1920,
+    "selected_reference_terms": 1398,
+    "unresolved_reference_terms": 604,
+    "whole_record_primary_signoffs": 0
+  },
+  "tests": {
+    "errors": 0,
+    "failed": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-card-current-references/tests.xml",
+      "sha256": "7e1d644c4cc512dccca12a1cd8cca77856a1cb7bf11ecb104293c9c6eb77ddc4"
+    },
+    "passed": 60,
+    "skipped": 0
+  },
+  "unchanged_existing_files": 7998
+}

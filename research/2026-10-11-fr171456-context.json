@@ -1,0 +1,295 @@
+{
+  "access_history": {
+    "ebi_supplement_archive": "READ_TIMEOUT_TERMINAL_NO_COMPLETE_BODY",
+    "paywall_bypass": false,
+    "publisher_cookie_redirects": 3,
+    "publisher_credentials_used": false,
+    "repository_access_restored": true
+  },
+  "chemical_identity": {
+    "smiles_inchi_key_agree": true,
+    "standard_inchi_key": "JAHGNOXPMXOEJS-BSPLYONXSA-N",
+    "tested_preparation_independently_reidentified": false
+  },
+  "complete_record_read": true,
+  "date": "2026-10-11",
+  "github_mutations": 0,
+  "holds": [
+    {
+      "reason": "Results names conflict; Figure 2 labels YPR090w. No silent locus correction or protein assignment.",
+      "scope": "YPR090w / YPL090w"
+    },
+    {
+      "reason": "Reference identities verified; modifier and transport interpretations remain separate from the accepted ERG26 claim.",
+      "scope": "HMG1 / HMG2 / YOR1"
+    },
+    {
+      "reason": "Reference S288c protein and TaxID are not assigned to experimental derivatives.",
+      "scope": "Experimental identifiers"
+    }
+  ],
+  "identifier": "CHEBI:88298",
+  "label": "FR171456",
+  "ncbi_endpoint_requests": 0,
+  "primary": {
+    "doi": "10.1038/ncomms9613",
+    "native_figures_inspected": [
+      "2",
+      "3"
+    ],
+    "reference": "PMID:26456460",
+    "review_scope": "SELECTED_GENE_LEVEL_RESISTANCE_RESULTS_NOT_WHOLE_PAPER",
+    "supplement_locations": [
+      "Figure 6",
+      "Figure 9",
+      "Table 3"
+    ],
+    "supplement_pages_visually_inspected": [
+      6,
+      9,
+      13
+    ],
+    "text_locations": [
+      "Genomic profiling Results",
+      "Resistant yeast Results",
+      "Enzyme activity Results"
+    ],
+    "url": "https://www.nature.com/articles/ncomms9613"
+  },
+  "prior_checkpoint": {
+    "path": "research/2026-10-10-efflux-entities-verification.json",
+    "sha256": "5a65fe24427810f6b2d3bdf0ccacbf1645f26111567ecabac58a407ea9b6e690"
+  },
+  "public_export": "IDENTIFIERS_BIBLIOGRAPHY_AND_QUALITATIVE_CONTEXT_ONLY",
+  "record_before": {
+    "path": "data/antibiotics/antifungal/fr171456.yaml",
+    "sha256": "33143ba30833e56efdfe27d692ee59becb1353e7a7ba0350b62276b6d8e9e580"
+  },
+  "reference_proteins": {
+    "P12683": {
+      "accession": "UniProtKB:P12683",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 231,
+      "exact_allele_assignment": false,
+      "experimental_assignment": false,
+      "focal_paper_cited": false,
+      "gene_names": [
+        "HMG1"
+      ],
+      "loci": [
+        "YML075C"
+      ],
+      "reference_organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": "modifiers",
+      "sequence_version": 1
+    },
+    "P12684": {
+      "accession": "UniProtKB:P12684",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 217,
+      "exact_allele_assignment": false,
+      "experimental_assignment": false,
+      "focal_paper_cited": false,
+      "gene_names": [
+        "HMG2"
+      ],
+      "loci": [
+        "YLR450W"
+      ],
+      "reference_organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": "modifiers",
+      "sequence_version": 1
+    },
+    "P53049": {
+      "accession": "UniProtKB:P53049",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 218,
+      "exact_allele_assignment": false,
+      "experimental_assignment": false,
+      "focal_paper_cited": false,
+      "gene_names": [
+        "YOR1"
+      ],
+      "loci": [
+        "YGR281W"
+      ],
+      "reference_organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": "modifiers",
+      "sequence_version": 1
+    },
+    "P53199": {
+      "accession": "UniProtKB:P53199",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 201,
+      "exact_allele_assignment": false,
+      "experimental_assignment": false,
+      "focal_paper_cited": true,
+      "gene_names": [
+        "ERG26"
+      ],
+      "loci": [
+        "YGL001C"
+      ],
+      "reference_organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": "erg26",
+      "sequence_version": 1
+    }
+  },
+  "reference_release": "2026_03",
+  "request_plan": {
+    "path": "reports/resistance-grounding-2026-10-11-fr171456/plan.json",
+    "sha256": "9dd63e51d762f322f4cea1acc5a82926b1ba1343064e967d8d5e6f5f69e00d95"
+  },
+  "requests": {
+    "erg26": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/erg26-response.json",
+        "sha256": "b962cf8eb0dbe1353385983840f26aab4c23d5e7a4600173bd194e6b8ff1f182"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/erg26-receipt.json",
+        "sha256": "f94190aa7f0da82d83459ab768d77241e5d0b1075472e29f16e92ec5089b763c"
+      },
+      "retrieved_at": "2026-10-10T23:51:19.702035+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AERG26+AND+taxonomy_id%3A4932+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "figure-2": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/figure-2.jpg",
+        "sha256": "3ef0666b2ecc49dc3b14d5d4987907a9e111b7e01b1fed6c2006226c72b59230"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/figure-2-asset-receipt.json",
+        "sha256": "a4b5ec0d4adbae0e29327ab2e8d7ce3eb4672625fbadd902ac4215e6cfeac7b1"
+      },
+      "retrieved_at": "2026-10-11T02:38:46.059055+00:00",
+      "status": 200,
+      "url": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fncomms9613/MediaObjects/41467_2015_Article_BFncomms9613_Fig2_HTML.jpg"
+    },
+    "figure-3": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/figure-3.jpg",
+        "sha256": "9d8b185024e8364295a43ca1de3e5044803c0f5d7945cdf093558a80c4b7d2c9"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/figure-3-asset-receipt.json",
+        "sha256": "ff83debe2bf025a97e853aeec02f8527eb8c375226f34fdd2b7b98098b694938"
+      },
+      "retrieved_at": "2026-10-11T02:39:25.355980+00:00",
+      "status": 200,
+      "url": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fncomms9613/MediaObjects/41467_2015_Article_BFncomms9613_Fig3_HTML.jpg"
+    },
+    "modifiers": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/modifiers-response.bin",
+        "sha256": "7746e9a33667fddf1782eda7e2e56cfef07248302710b1f9b07531510dfbec62"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/modifiers-receipt.json",
+        "sha256": "016259a02bdf240fd61b28f0020488ba3f36c1c9fb6f386590d09ac68890502c"
+      },
+      "retrieved_at": "2026-10-11T02:37:05.991217+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AHMG1+OR+gene_exact%3AHMG2+OR+gene_exact%3AYOR1%29+AND+taxonomy_id%3A4932+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "primary": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/primary.xml",
+        "sha256": "7364cf1e078b711ee9533017797f01c274543f2d088fc1eb05fc27381a70d293"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/primary-receipt.json",
+        "sha256": "237390b39185db5825968bfa1817bc45fb45a972a7575b64e19eca9718ad80c9"
+      },
+      "retrieved_at": "2026-10-10T23:53:08.094137+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4633953/fullTextXML"
+    },
+    "publisher": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/publisher.html",
+        "sha256": "8dfe317cbaf695991cdc56a1d5130012bf26af696bf542f2b6ce24aeb20b52de"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/publisher-receipt.json",
+        "sha256": "95843dcb7b65ed427cca224b5f6334b46dd1b591846186ce8164ea9ecbddcb80"
+      },
+      "retrieved_at": "2026-10-11T02:38:11.567921+00:00",
+      "status": 200,
+      "url": "https://www.nature.com/articles/ncomms9613"
+    },
+    "reference-strain": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/tax-559292-response.json",
+        "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/tax-559292-receipt.json",
+        "sha256": "043cf3c40d60dc5270243248e3b5e3a51f6f1a3bf019b860e783e27d1fa2f812"
+      },
+      "retrieved_at": "2026-10-10T23:51:32.286745+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/559292"
+    },
+    "species": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/tax-4932-response.json",
+        "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/tax-4932-receipt.json",
+        "sha256": "eedd4194af7d37aec782c51c32258dcc730c5ef850853235cb4a7074c687cb9e"
+      },
+      "retrieved_at": "2026-10-10T23:51:28.574271+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/4932"
+    },
+    "supplement": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/supplement.pdf",
+        "sha256": "1dfad9101df80ec6c6609eafa66f8cff0f5bb2bfa2e33ae761b80be0a057807f"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/supplement-asset-receipt.json",
+        "sha256": "b9bf596e463222ea1d139c498ff603429d412489f563190205f97acd1a30279a"
+      },
+      "retrieved_at": "2026-10-11T02:39:22.630469+00:00",
+      "status": 200,
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fncomms9613/MediaObjects/41467_2015_BFncomms9613_MOESM514_ESM.pdf"
+    }
+  },
+  "scope": {
+    "claims_to_add": 1,
+    "corpus_records": 2939,
+    "selected_records": 1,
+    "whole_corpus_primary_review": "OPEN",
+    "whole_record_reviews_completed": 0
+  },
+  "source_adoptions": 0,
+  "taxonomy": {
+    "4932": {
+      "parent": {
+        "scientificName": "Saccharomyces",
+        "taxonId": 4930
+      },
+      "rank": "species",
+      "scientificName": "Saccharomyces cerevisiae",
+      "taxonId": 4932
+    },
+    "559292": {
+      "parent": {
+        "commonName": "Baker's yeast",
+        "scientificName": "Saccharomyces cerevisiae",
+        "taxonId": 4932
+      },
+      "rank": "strain",
+      "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "taxonId": 559292
+    }
+  }
+}

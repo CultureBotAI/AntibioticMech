@@ -1,0 +1,478 @@
+{
+  "attribution": "Xu et al. 2019, DOI:10.1186/s12864-019-5479-6; PHI-base adopted export; UniProt Consortium release 2026_03, CC BY 4.0.",
+  "before_corpus_sha256": "352a410277d13b6333b58703601b9ca7c2003ca1db008c495345ff56325b9ea7",
+  "before_review_sha256": "27ef01db1628e4a4deefd3aa1c488b4c5969721f53d83c2cc166daf3402d9a6e",
+  "changes": {
+    "byte_identical_records": 2918,
+    "changed_records": 21,
+    "checksum_only_claims": 174,
+    "new_scoped_claims": 2
+  },
+  "corpus_phi_scope": {
+    "identifier_scoped": 176,
+    "pending_associations": 41,
+    "pending_papers": 19,
+    "retained": 217
+  },
+  "limitations": [
+    "Source allele wording, phenotype, assay and all other-source claims remain unchanged.",
+    "SJ51M and HC30M are paper-reported subjects; neither receives a protein accession, strain TaxID or genome.",
+    "HC30M species is grounded through the paper's reported name and UniProt synonym, not independent resequencing.",
+    "The retained protein entries describe reference contexts, not exact experimental alleles.",
+    "No new variant, sequence, construct, protocol, numeric measurement or MIC was curated.",
+    "No NCBI endpoints, outreach, terms reassessment, source adoption or GitHub mutations.",
+    "Corpus-wide investigation remains incomplete; full QC is not claimed."
+  ],
+  "primary_locations": [
+    "Abstract",
+    "Results Sec5 and Sec7",
+    "Figure 2",
+    "Table 1"
+  ],
+  "primary_request": {
+    "cache_path": "reports/resistance-grounding-2026-10-07/fungal-reference-30732567-fulltext.json",
+    "cache_sha256": "ca70b9304bf3d293d60662b30a514c710deefe17b49b5082f89f3613baedf458",
+    "release": null,
+    "retrieved_at": "2026-10-08T12:33:30.197762+00:00",
+    "sha256": "21b5dc6a97cc32b652380a8dd1f57babbe32819342ce42ffaef0d1d480923d37",
+    "status": 200,
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6367828/fullTextXML"
+  },
+  "proteins": {
+    "A0A1L7VSA4": {
+      "entryAudit": {
+        "entryVersion": 21,
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "genes": [
+        {
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "CZR43304.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "FPRO_07779"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Orchid endophyte fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "CZR43304.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000183971",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Sordariomycetes",
+          "Hypocreomycetidae",
+          "Hypocreales",
+          "Nectriaceae",
+          "Fusarium",
+          "Fusarium fujikuroi species complex"
+        ],
+        "scientificName": "Fusarium proliferatum (strain ET1)",
+        "taxonId": 1227346
+      },
+      "primaryAccession": "A0A1L7VSA4",
+      "request_cache_path": "reports/resistance-grounding-2026-10-07/request-28b321805499dafafad9123a67d9bfd44f66d7bde81c38a3c2f598d947317b14.json",
+      "strain_comments": []
+    },
+    "P53374": {
+      "entryAudit": {
+        "entryVersion": 110,
+        "firstPublicDate": "1996-10-01",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "1996-10-01",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "genes": [
+        {
+          "geneName": {
+            "value": "TUB2"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Bakanae and foot rot disease fungus",
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Sordariomycetes",
+          "Hypocreomycetidae",
+          "Hypocreales",
+          "Nectriaceae",
+          "Fusarium",
+          "Fusarium fujikuroi species complex"
+        ],
+        "scientificName": "Fusarium fujikuroi",
+        "synonyms": [
+          "Gibberella fujikuroi"
+        ],
+        "taxonId": 5127
+      },
+      "primaryAccession": "P53374",
+      "request_cache_path": "reports/resistance-grounding-2026-10-07/request-29e26464b281e72ab19880eb0c3e57844b4ae1654a105f1a6c8fe00bbe2a7361.json",
+      "strain_comments": [
+        "A 102"
+      ]
+    },
+    "W7M0I3": {
+      "entryAudit": {
+        "entryVersion": 62,
+        "firstPublicDate": "2014-04-16",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2014-04-16",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "genes": [
+        {
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "EWG44461.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "FVEG_05512"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Maize ear and stalk rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "EWG44461.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000009096",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Sordariomycetes",
+          "Hypocreomycetidae",
+          "Hypocreales",
+          "Nectriaceae",
+          "Fusarium",
+          "Fusarium fujikuroi species complex"
+        ],
+        "scientificName": "Gibberella moniliformis (strain M3125 / FGSC 7600)",
+        "synonyms": [
+          "Fusarium verticillioides"
+        ],
+        "taxonId": 334819
+      },
+      "primaryAccession": "W7M0I3",
+      "request_cache_path": "reports/resistance-grounding-2026-10-07/request-1739d35a91197f4d72829d36075d01e74d223301abe67ebee7660f1ae794980a.json",
+      "strain_comments": [
+        "M3125 / FGSC 7600"
+      ]
+    }
+  },
+  "records": [
+    {
+      "after_sha256": "8158341259c3913e788c0831e2782bb6ffb3a413e41fa3a4cfaa2a561e4768dd",
+      "before_sha256": "59eed91be4c35447e40f763f1139dffed6a5f1f3b8cdda4ca001ea764d6555d1",
+      "identifier": "CHEBI:48080",
+      "path": "data/antibiotics/antibacterial/brefeldin-a.yaml"
+    },
+    {
+      "after_sha256": "9669cc7d5eed9c80aa3a7f5e9b9ed582571bb0fb3899fe0f7b46e30d3ab3281e",
+      "before_sha256": "2b256c89e658de4f748bef8a1e9b2ecf76a38b86cd63157d2869a25589d88ad7",
+      "identifier": "CHEBI:55346",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml"
+    },
+    {
+      "after_sha256": "d2c83332e2395f249ac4226d82ca21cf117b1b3b8bb244c243037e41686bbc74",
+      "before_sha256": "eedcadb7008976039f3138e1f6e3787857034c05a612cfb983a75ca010b2fc13",
+      "identifier": "CHEBI:40909",
+      "path": "data/antibiotics/antifungal/azoxystrobin.yaml"
+    },
+    {
+      "after_sha256": "727b10380d1d60602516e0ca49c572e36446573f13ed225574048e55b8a89494",
+      "before_sha256": "072d6a081385e3b412cc6ea2ea4260250bfd2f2093555c988814c72a1b76d010",
+      "identifier": "CHEBI:3392",
+      "path": "data/antibiotics/antifungal/carbendazim.yaml"
+    },
+    {
+      "after_sha256": "fcf8bfffe69b98ae031407ce791ea913be087aff3da85c26ff70dfffa8d69f5e",
+      "before_sha256": "d85704427ab006db7dfaef4086e4daeffd18a438c41dec77394c5cec7c4f5498",
+      "identifier": "CHEBI:3405",
+      "path": "data/antibiotics/antifungal/carboxin.yaml"
+    },
+    {
+      "after_sha256": "379e171af290b19983517bf6ef6cff7a8e966ed6cf7e7b11d23bb38819b5c6b2",
+      "before_sha256": "5ea4ea4635bc31dfbbbc6b8706238e8366a1e0d8e6ba5559364e44a725ec99ef",
+      "identifier": "CHEBI:474180",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml"
+    },
+    {
+      "after_sha256": "ade7a92e7d564bf1a87dd73135431c2c5f023352eb76b21b174640b0882d1733",
+      "before_sha256": "83f22188750335967faf7f8882677b15a68d85dfe280cd935addba04921aa1f6",
+      "identifier": "CHEBI:27641",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml"
+    },
+    {
+      "after_sha256": "c35eed2fecb7428908d5e0f6e56185c39721fedd8d1803fdf0f24daccb142cde",
+      "before_sha256": "6cbe4c90f0c486ecbfab47887ecc606f8e5571dbd874e195988ec84450220154",
+      "identifier": "CHEBI:81760",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml"
+    },
+    {
+      "after_sha256": "cf75aad60399feda6d3ca04b7b60f14f39bb2111c2502afc3500705c8b76e107",
+      "before_sha256": "ac03c41458296b240c8fcfa8e31c891b01058ad618cecb2d960434f32fd6be78",
+      "identifier": "CHEBI:46081",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml"
+    },
+    {
+      "after_sha256": "345efd8eca72dddcb420f951b3d503c94f3be0a8089b0268b5a68b837a1be07d",
+      "before_sha256": "5a4e493e62ed67094fd0dcc89d4553a3df3bec8aff6ae8f211c0c59890328864",
+      "identifier": "CHEBI:81763",
+      "path": "data/antibiotics/antifungal/fludioxonil.yaml"
+    },
+    {
+      "after_sha256": "883f24e72ced6fda067af4baef704374048424bf218da67b21628377dbceba76",
+      "before_sha256": "ee511529f07c836ca1593632026f6bc01f734d5fdce5b7565fc3970ee4cc5d6e",
+      "identifier": "CHEBI:28909",
+      "path": "data/antibiotics/antifungal/iprodione.yaml"
+    },
+    {
+      "after_sha256": "6d138c5abe431f25453738e028226ce2bd751cc9f124770a01a3565bc3c14e09",
+      "before_sha256": "0c113b12853b82d0f3bad0528f72d86b280f16b8ffa274dbe7620326e2e2bfb8",
+      "identifier": "CHEBI:6076",
+      "path": "data/antibiotics/antifungal/itraconazole.yaml"
+    },
+    {
+      "after_sha256": "8d2c644c4b371c1a592fb93f86142033383158a2274884de23d823b27c0eeabf",
+      "before_sha256": "59f5abe771f63c9910d341c86190cb3c91a11a6c44504ab96750d7dda7fd9f3b",
+      "identifier": "CHEBI:600520",
+      "path": "data/antibiotics/antifungal/micafungin.yaml"
+    },
+    {
+      "after_sha256": "e1d84fc4f3522673106f81f1f5db18eb74aab828a01f5137ba50737ac36f7e8b",
+      "before_sha256": "142ea9f70937b971867e0f62ba779e44e9c1ed4ba3b52a2c068fa0141bc9d59b",
+      "identifier": "CHEBI:64355",
+      "path": "data/antibiotics/antifungal/posaconazole.yaml"
+    },
+    {
+      "after_sha256": "104eecca55d143495f38fece8fe6b2399215fada4b9da408bf3a89297b34979d",
+      "before_sha256": "25f310b31ccf82c7c81f06c3e873215c5833d621ba18001d4ef781981e339aa6",
+      "identifier": "CHEBI:8434",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml"
+    },
+    {
+      "after_sha256": "c96b48f77d6d15f56440b9ace4cc9bcaae46dc4dbefbc6a2631b4a7d4d7685c1",
+      "before_sha256": "416bf92f64e064032abe3ae1535e49fe219dd5252a0d8b223bcbda668f93dcf1",
+      "identifier": "CHEBI:8489",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml"
+    },
+    {
+      "after_sha256": "689510a8dc8efde863b26438b5a0d868ec4daf91a78b5d3c387cd2db46eaed7f",
+      "before_sha256": "1155647a1716cf1c35555b1550e012d9f8e6948ae0710289ef4b11b4bc0d648e",
+      "identifier": "CHEBI:81972",
+      "path": "data/antibiotics/antifungal/pyrifenox.yaml"
+    },
+    {
+      "after_sha256": "68631826dfcde7920b6057b4da6104abbab645278bfd80ec589d453d0e03ea38",
+      "before_sha256": "d46fd68ecb9eb483f75137ea32e1fb21b09cda80c79961f8d0b718c1851fc9e1",
+      "identifier": "CHEBI:9448",
+      "path": "data/antibiotics/antifungal/terbinafine.yaml"
+    },
+    {
+      "after_sha256": "ee263d7d316f7a245be8ec172e3f419b89b18d695c7329f3a46816e3252c4541",
+      "before_sha256": "20a56c29ede8d892670310788d815413c50cdd627e965887380335f12527a2fe",
+      "identifier": "CHEBI:81784",
+      "path": "data/antibiotics/antifungal/triflumizole.yaml"
+    },
+    {
+      "after_sha256": "890343391b864bf541521144a62290a2ab6a17a3dd585c006c61b4576c5618f6",
+      "before_sha256": "917bc614345019bc1083f1c4bd7b54dce0c49dedff90349395f91fb538cdcbbf",
+      "identifier": "CHEBI:10023",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml"
+    },
+    {
+      "after_sha256": "5ae6a7d7f70561eb2e6832fb33eb24e64653be0b5fbb72568d85534e58bc26eb",
+      "before_sha256": "df1f39b6ac6bfe5e078555752aaef5695fa586f7fb3256d8000dc181ac29bf5c",
+      "identifier": "CHEBI:16240",
+      "path": "data/antibiotics/biocide/hydrogen-peroxide.yaml"
+    }
+  ],
+  "reference_locus_query": {
+    "candidate": "UniProtKB:A0A1L7VSA4",
+    "experimental_accession_assigned": false,
+    "hits": 1,
+    "limitation": "No FVER_09254 match in this bounded name query; not gene absence. Candidate protein-name annotation differs from the paper's terminology and is not treated as functional validation.",
+    "query": "gene:FPRO_07779 OR gene:FVER_09254",
+    "reference_locus": "FPRO_07779",
+    "reference_strain": "ET1",
+    "scope": "EXACT_REFERENCE_LOCUS_NAME_MATCH_NOT_EXPERIMENTAL_ALLELE_OR_FUNCTION_VALIDATION",
+    "unresolved_query_term": "FVER_09254"
+  },
+  "review_sha256": "095bc6e5c50ce2a103eebe33fea3849c7ad9164ecc91aa380d7b471032d25fb5",
+  "reviewed_on": "2026-10-08",
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "source_rows": [
+    {
+      "identifier": "CHEBI:3392",
+      "row_sha256": "0b57476b39d6710277cfcc0f139609734c31a2e14d439eac1092c1acef62c321"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "row_sha256": "c822e7609cbf2bee565065d025214200f7685c3407207da35f9f75d8adfc4284"
+    }
+  ],
+  "status": "SUBJECT_AND_SPECIES_CORRECTIONS_CURATED_EXACT_PROTEINS_UNRESOLVED",
+  "taxonomy": {
+    "117187": {
+      "parent": {
+        "scientificName": "Fusarium fujikuroi species complex",
+        "taxonId": 171627
+      },
+      "rank": "species",
+      "scientificName": "Gibberella moniliformis",
+      "synonyms": [
+        "Fusarium verticillioides"
+      ],
+      "taxonId": 117187
+    },
+    "334819": {
+      "parent": {
+        "commonName": "Maize ear and stalk rot fungus",
+        "scientificName": "Gibberella moniliformis",
+        "synonyms": [
+          "Fusarium verticillioides"
+        ],
+        "taxonId": 117187
+      },
+      "rank": "strain",
+      "scientificName": "Gibberella moniliformis (strain M3125 / FGSC 7600)",
+      "synonyms": [
+        "Fusarium verticillioides"
+      ],
+      "taxonId": 334819
+    },
+    "5127": {
+      "parent": {
+        "scientificName": "Fusarium fujikuroi species complex",
+        "taxonId": 171627
+      },
+      "rank": "species",
+      "scientificName": "Fusarium fujikuroi",
+      "synonyms": [
+        "Gibberella fujikuroi"
+      ],
+      "taxonId": 5127
+    },
+    "948311": {
+      "parent": {
+        "scientificName": "Fusarium fujikuroi species complex",
+        "taxonId": 171627
+      },
+      "rank": "species",
+      "scientificName": "Gibberella intermedia",
+      "synonyms": [
+        "Fusarium proliferatum"
+      ],
+      "taxonId": 948311
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-1739d35a91197f4d72829d36075d01e74d223301abe67ebee7660f1ae794980a.json",
+      "cache_sha256": "8542849fce33aafe24972bcfc176283195153ada54c12550e47a7a86113c7478",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:25.425166+00:00",
+      "sha256": "ae2c678afe4203e87cd735af817d7df85835656bbda701a6718d78ff296266b2",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AW7M0I3+OR+accession%3AW7M468+OR+accession%3AW7MZ22&format=json&size=500"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-29e26464b281e72ab19880eb0c3e57844b4ae1654a105f1a6c8fe00bbe2a7361.json",
+      "cache_sha256": "4f6570ffbec8320c440a8276ecfea03ab836993b75c2f92b7272d6de85a2ba59",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:12.208720+00:00",
+      "sha256": "3c0624fde2890f6c12bacc34268d4a4f52164ef2a329cf969c095d48deb06ef1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AO42772+OR+accession%3AP02557+OR+accession%3AP05220+OR+accession%3AP0C431+OR+accession%3AP10613+OR+accession%3AP10653+OR+accession%3AP14263+OR+accession%3AP32420+OR+accession%3AP38631+OR+accession%3AP38637+OR+accession%3AP50859+OR+accession%3AP53373+OR+accession%3AP53374+OR+accession%3AP9WHZ3+OR+accession%3AQ1KTF2&format=json&size=500"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-28b321805499dafafad9123a67d9bfd44f66d7bde81c38a3c2f598d947317b14.json",
+      "cache_sha256": "5bba840e35a8d0bacd818069f4186c52644e4e53570e781c1073ede5b9550bbd",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T21:50:40.747932+00:00",
+      "sha256": "c764b7de4123a23ee25c64e1a1dcb95ba799c3f182b3844ab4e7694934af1645",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene%3AFPRO_07779+OR+gene%3AFVER_09254&format=json&size=25&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-cd6875b8735f42da0e1f5cce0e5494d3af7723eff80f44b9aa0e255e8beb76dd.json",
+      "cache_sha256": "ba5f715d3dbd41d967eb21e1d716adfcff220f1af8beff6689cd3dcc1b836ec3",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T21:50:13.700337+00:00",
+      "sha256": "8c5698dda6b5f2f63be203d30cfec6c411cd7e206e46ee871a9c4870a4fef1f8",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/948311"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-68c6d15dda5a9da2702bc18e24081fb0076d1b4bcb6e878824eebefce0d4768e.json",
+      "cache_sha256": "1491e340666d8b80d69a8ee1d8d7b3f26bb39a82f854128bb343e6958a4b8d45",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:29.209366+00:00",
+      "sha256": "89616845a228713a5ecd2254818121a26959cb50d7adb9282f82d1f3da520828",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5127"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-01f1e22ea1fa2d84c3ffe2745fd621630fb73773d0ecb48ad76ee257f01f4b57.json",
+      "cache_sha256": "2e6d390c885cc5d00af3d6be93a052cd9cb8205aa6355c64f85e1d31aef42840",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:49.661361+00:00",
+      "sha256": "efdc06cc141128534084f301f050c6025ef43e0fcb63734b423409d7bbcd4f96",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/334819"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-e5593c19fb79dd547531eba6d8f50639b06ec562d96978e29ad12dbd026a03a2.json",
+      "cache_sha256": "93bebbcbe77742b147571d4323ecac9567dd0184535970eda230831fa4c645e3",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:40.706688+00:00",
+      "sha256": "e9e7c1cd22f9a20612023358e64061bc68a47d8eef83d837b51cb8adb0ca0cf1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/117187"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "baseline_commit": "ce909b1d8034970defb6c421db3de54b1fcccf00",
+  "branch": "research/card-reference-memberships",
+  "code": [
+    {
+      "path": "scripts/audit_brefeldin_yeast.py",
+      "sha256": "f8ad9de21424f022b4be85f79b26f448d0848360907a60f024214db914fdc30b"
+    },
+    {
+      "path": "tests/test_brefeldin_yeast.py",
+      "sha256": "82920d8fd720cfdab56e440b1c1b4cef821a1635915830e647b3c4d688116bbb"
+    }
+  ],
+  "date": "2026-10-14",
+  "dossier": {
+    "path": "research/2026-10-14-brefeldin-yeast-context.json",
+    "sha256": "b3fb2c947a1e9f1763cb7e555e18bf755a3e042765d70f2ddb0d06b3252c9100"
+  },
+  "finished_at": "2026-10-14T13:19:01.687533+00:00",
+  "limits": {
+    "biological_changes": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_experimental_allele_or_genome_assignments": 0,
+    "new_scientific_http_attempts": 5,
+    "publication": "LOCAL_UNCOMMITTED_RESEARCH_CHECKPOINT",
+    "reuse_terms_review_resumed": false,
+    "sequences_variants_constructs_protocols_or_numeric_AST_exported": false,
+    "source_adoptions": 0,
+    "web_search_queries": 1,
+    "whole_record_primary_signoffs": 0
+  },
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/protected-before.json",
+      "sha256": "7f8b894dabbdb26211cc31af450f62752595225197db18d4d9b8a97d05bf5395"
+    },
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "embedding_files_unchanged": 6,
+    "new_or_changed_files_in_data_src_curation_pages": 0,
+    "page_files_unchanged": 3353,
+    "preceding_membership_checkpoint_artifacts_unchanged": true,
+    "protected_files": 7537,
+    "record_yaml_hashes_unchanged": 2939,
+    "source_inputs_unchanged": true,
+    "unchanged_protected_files": 7536
+  },
+  "primary_status": {
+    "PMID:11410665": "TECHNICAL_HTTP_500_NO_FULL_TEXT_REVIEW",
+    "PMID:7646493": "NOT_REQUESTED_AFTER_EBI_CANARY_FAILURE",
+    "PMID:7883711": "NOT_REQUESTED_AFTER_EBI_CANARY_FAILURE",
+    "PMID:8070655": "PUBLISHER_HTTP_403_SEARCH_ABSTRACT_ONLY_NOT_PRIMARY_RESULTS_REVIEW"
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "3dee6d735b0c7530536ae017701452b46ce1d97ad688d46e1bf0d418390f4e75"
+  },
+  "review": {
+    "checks": [
+      "Both species-specific reference identities reject accession, version, lineage and locus-field drift.",
+      "Multiple ORF labels and citation strain annotations are retained without experimental assignments.",
+      "Discovered paper identity is replayed against checksum-pinned successful source metadata.",
+      "HTTP 500, HTTP 403 and unrequested primary papers remain separate outcomes.",
+      "Incidental held-paper search text does not bypass the hold or become native primary review.",
+      "The preceding CARD membership checkpoint and all biological records remain unchanged."
+    ],
+    "scope": "SAME_AGENT_ADVERSARIAL_PASS_NOT_INDEPENDENT_SCIENTIFIC_SIGNOFF"
+  },
+  "scope": "REFERENCE_IDENTITY_AND_ACCESS_CHECKPOINT_NOT_PRIMARY_RESISTANCE_SIGNOFF",
+  "started_at": "2026-10-14T13:18:46.260011+00:00",
+  "verification": {
+    "focused_tests_passed": 217,
+    "focused_tests_skipped": 0,
+    "full_qc": "NOT_RERUN_RESEARCH_ONLY_NO_BIOLOGICAL_OR_RUNTIME_MODEL_CHANGES",
+    "git_diff_check_exit_code": 0,
+    "http_and_socket_disabled": true,
+    "lint_log": {
+      "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/lint.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "new_tests": 43,
+    "offline_replay_exit_code": 0,
+    "offline_replay_log": {
+      "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/offline-replay.log",
+      "sha256": "ca8ccb48d99f985c1354caa37b71d3aff5b31af1de79c8037d06227c5b4c5aba"
+    },
+    "selected_discovery_cache_files_verified": 67,
+    "test_files": [
+      "tests/test_brefeldin_yeast.py",
+      "tests/test_topoisomerase_reference_followup.py",
+      "tests/test_caspofungin_context.py",
+      "tests/test_eugenol_context.py",
+      "tests/test_card_reference_memberships.py"
+    ],
+    "tests_log": {
+      "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/focused-tests.log",
+      "sha256": "3f6795f0dd4a70d2294f19da7bd4ab31d10e21b7d0267987aa97a4e5c362a78c"
+    }
+  }
+}

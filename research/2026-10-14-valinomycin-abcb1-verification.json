@@ -1,0 +1,102 @@
+{
+  "baseline_commit": "ce909b1d8034970defb6c421db3de54b1fcccf00",
+  "branch": "research/card-reference-memberships",
+  "code": [
+    {
+      "path": "scripts/audit_valinomycin_abcb1.py",
+      "sha256": "a92c6f4b2ceb61c485b519b9e1a8552e31d8380dc8a1d9c407bd3aaf98694c9b"
+    },
+    {
+      "path": "tests/test_valinomycin_abcb1.py",
+      "sha256": "71a4d436827acce3287fb03238b8313ffc65cf5068bcb88f5de74f9ab3ecb23a"
+    }
+  ],
+  "date": "2026-10-14",
+  "dossier": {
+    "path": "research/2026-10-14-valinomycin-abcb1-context.json",
+    "sha256": "eff9677ff3ece52444f3da76468ebecf4c765111a867881d39766b618e7dbea2"
+  },
+  "finished_at": "2026-10-14T13:32:21.264204+00:00",
+  "limits": {
+    "biological_changes": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_experimental_allele_or_genome_assignments": 0,
+    "new_scientific_http_attempts": 5,
+    "publication": "LOCAL_UNCOMMITTED_RESEARCH_CHECKPOINT",
+    "reuse_terms_review_resumed": false,
+    "sequences_variants_constructs_protocols_or_numeric_AST_exported": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/protected-before.json",
+      "sha256": "09458e78cb9493bb0ee79f7e792affd51546af8ff7fbd49a4179a2d1e688e969"
+    },
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "embedding_files_unchanged": 6,
+    "new_or_changed_files_in_data_src_curation_pages": 0,
+    "page_files_unchanged": 3353,
+    "preceding_checkpoint_artifacts_unchanged": true,
+    "protected_files": 7541,
+    "record_yaml_hashes_unchanged": 2939,
+    "source_inputs_unchanged": true,
+    "unchanged_protected_files": 7540
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "e767177a4f361a15a888d9246bfcd56f38b4c51bd18474de0037585ddde5fb7a"
+  },
+  "review": {
+    "checks": [
+      "Donor accession, versions and species cannot be replaced by yeast host context.",
+      "The cached yeast reference strain is not assigned to an experimental subject.",
+      "EC30, incomplete supplement review and differing drug backgrounds stay explicit.",
+      "Native article and figure identity, request plans and redirects are checksum-bound.",
+      "A cohort label cannot relabel the pinned compound baseline; regression tests cover both IDs.",
+      "Prior research artifacts and all biological records remain unchanged."
+    ],
+    "scope": "SAME_AGENT_ADVERSARIAL_PASS_NOT_INDEPENDENT_SCIENTIFIC_SIGNOFF"
+  },
+  "scope": "PRIMARY_DONOR_HOST_CONTEXT_NOT_EXPERIMENTAL_ALLELE_SIGNOFF",
+  "started_at": "2026-10-14T13:32:08.983568+00:00",
+  "verification": {
+    "focused_tests_passed": 256,
+    "focused_tests_skipped": 0,
+    "full_qc": "NOT_RERUN_RESEARCH_ONLY_NO_BIOLOGICAL_OR_RUNTIME_MODEL_CHANGES",
+    "git_diff_check_exit_code": 0,
+    "http_and_socket_disabled": true,
+    "lint_log": {
+      "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/lint.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "new_tests": 39,
+    "offline_replay_exit_code": 0,
+    "offline_replay_log": {
+      "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/offline-replay.log",
+      "sha256": "9bc79ee6d7eee91d84d441be759e90bdef13dfa0e08b761e6fa17b9e7dda2e5b"
+    },
+    "test_files": [
+      "tests/test_valinomycin_abcb1.py",
+      "tests/test_brefeldin_yeast.py",
+      "tests/test_topoisomerase_reference_followup.py",
+      "tests/test_caspofungin_context.py",
+      "tests/test_eugenol_context.py",
+      "tests/test_card_reference_memberships.py"
+    ],
+    "test_results": {
+      "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/tests.xml",
+      "sha256": "194e07ee5599ee70ae9997c2e10a788d9916fdb5b92bba08f29f0d9ca776de17"
+    },
+    "tests_log": {
+      "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/focused-tests.log",
+      "sha256": "decfa3d7703c0d51d2d32fdfd76e2b3c83facfcb6a943a39ec1dcb90327065e7"
+    }
+  }
+}

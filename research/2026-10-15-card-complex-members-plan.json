@@ -1,0 +1,721 @@
+{
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-card-complex-members/protected-before.json",
+    "sha256": "866061d4ce66b60987c770379cd422c549b68cbb1a346fdfecee69767a7d5c76"
+  },
+  "cache_search_included_ignored_files": true,
+  "cache_search_patterns": [
+    "reports/**/request-*.json",
+    "reports/**/*receipt.json"
+  ],
+  "date": "2026-10-15",
+  "discovery_plan": {
+    "path": "reports/resistance-grounding-2026-10-15-card-complex-members/discovery-plan.json",
+    "sha256": "e45b76bb0c8a22256c7679719716a9eea020a17227e8c9d0815c28528d4159b4"
+  },
+  "inputs": {
+    "corpus_update": {
+      "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+      "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+    },
+    "index": {
+      "path": "research/2026-10-15-card-aph-memberships.json",
+      "sha256": "66fc408ae1bd53b78376d08f4cb9cecb1d587e95ce0c99f740ac4e186e966595"
+    }
+  },
+  "member_terms": {
+    "ARO:3000005": "vanD",
+    "ARO:3000010": "vanA",
+    "ARO:3000013": "vanB",
+    "ARO:3000024": "patA",
+    "ARO:3000025": "patB",
+    "ARO:3000027": "emrA",
+    "ARO:3000074": "emrB",
+    "ARO:3000206": "emrK",
+    "ARO:3000207": "acrA",
+    "ARO:3000216": "acrB",
+    "ARO:3000237": "TolC",
+    "ARO:3000254": "emrY",
+    "ARO:3000368": "vanC",
+    "ARO:3000377": "MexA",
+    "ARO:3000378": "MexB",
+    "ARO:3000379": "OprM",
+    "ARO:3000499": "AcrE",
+    "ARO:3000502": "AcrF",
+    "ARO:3000533": "macA",
+    "ARO:3000535": "macB",
+    "ARO:3000656": "AcrS",
+    "ARO:3000774": "adeA",
+    "ARO:3000775": "adeB",
+    "ARO:3000777": "adeF",
+    "ARO:3000778": "adeG",
+    "ARO:3000779": "adeH",
+    "ARO:3000780": "adeI",
+    "ARO:3000781": "adeJ",
+    "ARO:3000782": "adeK",
+    "ARO:3000783": "cmeA",
+    "ARO:3000784": "cmeB",
+    "ARO:3000785": "cmeC",
+    "ARO:3000789": "mdsA",
+    "ARO:3000790": "mdsB",
+    "ARO:3000791": "mdsC",
+    "ARO:3000792": "mdtA",
+    "ARO:3000793": "mdtB",
+    "ARO:3000794": "mdtC",
+    "ARO:3000795": "mdtE",
+    "ARO:3000796": "mdtF",
+    "ARO:3000800": "MexC",
+    "ARO:3000801": "MexD",
+    "ARO:3000802": "OprJ",
+    "ARO:3000803": "MexE",
+    "ARO:3000804": "MexF",
+    "ARO:3000805": "OprN",
+    "ARO:3000806": "MexG",
+    "ARO:3000807": "MexH",
+    "ARO:3000808": "MexI",
+    "ARO:3000809": "OpmD",
+    "ARO:3000810": "mtrC",
+    "ARO:3000811": "mtrD",
+    "ARO:3000812": "mtrE",
+    "ARO:3000813": "MexS",
+    "ARO:3000814": "MexT",
+    "ARO:3002813": "lmrB",
+    "ARO:3002907": "vanE",
+    "ARO:3002908": "vanF",
+    "ARO:3002909": "vanG",
+    "ARO:3002910": "vanL",
+    "ARO:3002911": "vanM",
+    "ARO:3002912": "vanN",
+    "ARO:3002913": "vanO",
+    "ARO:3002919": "vanR gene in vanA cluster",
+    "ARO:3002921": "vanR gene in vanB cluster",
+    "ARO:3002922": "vanR gene in vanC cluster",
+    "ARO:3002923": "vanR gene in vanD cluster",
+    "ARO:3002924": "vanR gene in vanE cluster",
+    "ARO:3002925": "vanR gene in vanF cluster",
+    "ARO:3002926": "vanR gene in vanG cluster",
+    "ARO:3002927": "vanR gene in vanL cluster",
+    "ARO:3002928": "vanR gene in vanM cluster",
+    "ARO:3002929": "vanR gene in vanN cluster",
+    "ARO:3002930": "vanR gene in vanO cluster",
+    "ARO:3002931": "vanS gene in vanA cluster",
+    "ARO:3002932": "vanS gene in vanB cluster",
+    "ARO:3002933": "vanS gene in vanC cluster",
+    "ARO:3002934": "vanS gene in vanD cluster",
+    "ARO:3002935": "vanS gene in vanE cluster",
+    "ARO:3002936": "vanS gene in vanF cluster",
+    "ARO:3002937": "vanS gene in vanG cluster",
+    "ARO:3002938": "vanS gene in vanL cluster",
+    "ARO:3002939": "vanS gene in vanM cluster",
+    "ARO:3002940": "vanS gene in vanN cluster",
+    "ARO:3002941": "vanS gene in vanO cluster",
+    "ARO:3002942": "vanH gene in vanA cluster",
+    "ARO:3002943": "vanH gene in vanB cluster",
+    "ARO:3002944": "vanH gene in vanD cluster",
+    "ARO:3002945": "vanH gene in vanF cluster",
+    "ARO:3002947": "vanH gene in vanM cluster",
+    "ARO:3002948": "vanH gene in vanO cluster",
+    "ARO:3002949": "vanX gene in vanA cluster",
+    "ARO:3002950": "vanX gene in vanB cluster",
+    "ARO:3002952": "vanX gene in vanF cluster",
+    "ARO:3002953": "vanX gene in vanM cluster",
+    "ARO:3002954": "vanX gene in vanO cluster",
+    "ARO:3002955": "vanY gene in vanA cluster",
+    "ARO:3002956": "vanY gene in vanB cluster",
+    "ARO:3002957": "vanY gene in vanD cluster",
+    "ARO:3002958": "vanY gene in vanF cluster",
+    "ARO:3002959": "vanY gene in vanG cluster",
+    "ARO:3002961": "vanY gene in vanM cluster",
+    "ARO:3002962": "vanZ gene in vanA cluster",
+    "ARO:3002963": "vanZ gene in vanF cluster",
+    "ARO:3002964": "vanW gene in vanB cluster",
+    "ARO:3002965": "vanW gene in vanG cluster",
+    "ARO:3002966": "vanXY gene in vanC cluster",
+    "ARO:3002967": "vanXY gene in vanE cluster",
+    "ARO:3002968": "vanXY gene in vanL cluster",
+    "ARO:3002969": "vanXY gene in vanN cluster",
+    "ARO:3002970": "vanT gene in vanC cluster",
+    "ARO:3002971": "vanT gene in vanE cluster",
+    "ARO:3002972": "vanT gene in vanG cluster",
+    "ARO:3002973": "vanTm gene in vanL cluster",
+    "ARO:3002974": "vanTr gene in vanL cluster",
+    "ARO:3002975": "vanT gene in vanN cluster",
+    "ARO:3002982": "amrA",
+    "ARO:3002983": "amrB",
+    "ARO:3003030": "MexV",
+    "ARO:3003031": "MexW",
+    "ARO:3003033": "mexY",
+    "ARO:3003034": "mexX",
+    "ARO:3003039": "OprA",
+    "ARO:3003048": "rosA",
+    "ARO:3003049": "rosB",
+    "ARO:3003055": "smeD",
+    "ARO:3003056": "smeE",
+    "ARO:3003057": "smeF",
+    "ARO:3003063": "ykkC",
+    "ARO:3003064": "ykkD",
+    "ARO:3003069": "vanXY gene in vanG cluster",
+    "ARO:3003070": "vanX gene in vanD cluster",
+    "ARO:3003548": "mdtN",
+    "ARO:3003549": "mdtO",
+    "ARO:3003550": "mdtP",
+    "ARO:3003679": "TriA",
+    "ARO:3003680": "TriB",
+    "ARO:3003681": "TriC",
+    "ARO:3003682": "OpmH",
+    "ARO:3003692": "MexJ",
+    "ARO:3003693": "MexK",
+    "ARO:3003698": "mexP",
+    "ARO:3003699": "mexQ",
+    "ARO:3003700": "opmE",
+    "ARO:3003704": "mexM",
+    "ARO:3003705": "mexN",
+    "ARO:3003723": "vanI",
+    "ARO:3003724": "vanW gene in vanI cluster",
+    "ARO:3003725": "vanX gene in vanI cluster",
+    "ARO:3003726": "vanS gene in vanI cluster",
+    "ARO:3003727": "vanK gene in vanI cluster",
+    "ARO:3003728": "vanR gene in vanI cluster",
+    "ARO:3003811": "adeC",
+    "ARO:3003841": "kdpE",
+    "ARO:3003922": "oqxA",
+    "ARO:3003923": "oqxB",
+    "ARO:3003948": "efrA",
+    "ARO:3003949": "efrB",
+    "ARO:3003961": "farA",
+    "ARO:3003962": "farB",
+    "ARO:3004032": "tetA(46)",
+    "ARO:3004033": "tetB(46)",
+    "ARO:3004035": "tetA(60)",
+    "ARO:3004036": "tetB(60)",
+    "ARO:3004047": "kdpD",
+    "ARO:3004069": "MvaT",
+    "ARO:3004072": "OpmB",
+    "ARO:3004073": "MuxA",
+    "ARO:3004074": "MuxB",
+    "ARO:3004075": "MuxC",
+    "ARO:3004099": "LpeA",
+    "ARO:3004100": "LpeB",
+    "ARO:3004142": "OprZ",
+    "ARO:3004143": "AxyX",
+    "ARO:3004144": "AxyY",
+    "ARO:3004145": "AxyZ",
+    "ARO:3004253": "vanU gene in vanG cluster",
+    "ARO:3004254": "vanV gene in vanB cluster",
+    "ARO:3004364": "almG",
+    "ARO:3004580": "Klebsiella pneumoniae KpnE",
+    "ARO:3004583": "Klebsiella pneumoniae KpnF",
+    "ARO:3004588": "Klebsiella pneumoniae KpnG",
+    "ARO:3004597": "Klebsiella pneumoniae KpnH",
+    "ARO:3005004": "Neisseria gonorrhoeae mtrC with mutation conferring resistance to azithromycin",
+    "ARO:3005041": "mlaF",
+    "ARO:3005042": "mlaD",
+    "ARO:3007188": "vanH gene in vanP cluster",
+    "ARO:3007189": "vanP",
+    "ARO:3007190": "vanX gene in vanP cluster",
+    "ARO:3007191": "vanR gene in vanP cluster",
+    "ARO:3007192": "vanS gene in vanP cluster",
+    "ARO:3007431": "almF",
+    "ARO:3007433": "almE"
+  },
+  "missing_taxonomy": [
+    "1003200",
+    "1076179",
+    "1212764",
+    "122586",
+    "122587",
+    "1328",
+    "1391465",
+    "208962",
+    "208963",
+    "2583588",
+    "272620",
+    "32021",
+    "32022",
+    "320371",
+    "357348",
+    "537010",
+    "656447",
+    "742813",
+    "909420",
+    "91891",
+    "990282",
+    "999408"
+  ],
+  "native_source_plan": {
+    "path": "research/2026-10-15-mex-component-xrefs-plan.json",
+    "sha256": "03ca5b14555593d3146895ce32c8a56887afd0fa591a601b249e6242f884e4c5"
+  },
+  "native_taxonomy": {
+    "1003200": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-1003200-receipt.json",
+        "sha256": "958feefeca2190bac53c5820e5db3de9cf5c17162829c19e520b890b37a57576"
+      }
+    },
+    "1076179": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-1076179-receipt.json",
+        "sha256": "2ca2cf20a2b6949ee8ae1393871df1900d8d62716b0984bb878f408f02291f10"
+      }
+    },
+    "113107": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/tax-113107-response.bin",
+        "sha256": "6b1e5cd5461a538eaf9763c1cd631616a1b05108167fbce6d66aa20594767c7e"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/tax-113107-receipt.json",
+        "sha256": "65739b1545744e62c4f29f5c3fb9ab16f2326fd49153056b9eb1d6b4066983df"
+      }
+    },
+    "1212764": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-1212764-receipt.json",
+        "sha256": "edd06b3afa7ec02472b5f43d25a6ea623dff43984bb957c7eae05130c8891d31"
+      }
+    },
+    "122586": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-122586-receipt.json",
+        "sha256": "760789d403c5d47f008dc1de06bea60092bf019d57628aeba524cc66d4351da3"
+      }
+    },
+    "122587": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-122587-receipt.json",
+        "sha256": "30c61dd2f593e80dd3efcb4e4ae8d85f385cca5dbc97283a82d8b5d1a0f2cb44"
+      }
+    },
+    "1307": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-069788bc8c72766bb93a20d309ad7ad6c67978faee17acb03a7387b3ec778521.json",
+        "sha256": "49e41c518518c1984c120c0cb73d5a1848bfa42b9a245f9a9254e287a852ad51"
+      }
+    },
+    "1313": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1313-response.bin",
+        "sha256": "bfe5c4163819d1a00e9a38100ae7b17c881db2e15accb0d2147cc727d0074d5d"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1313-receipt.json",
+        "sha256": "efe4c3d9397e4efd5848f569c5c9a2b4e9677e4e482c2411df99ead70d87aa78"
+      }
+    },
+    "1328": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-1328-receipt.json",
+        "sha256": "85ad98799504efdada1e01c10d07a94a8321ef4af419260ae088ae8641a71f66"
+      }
+    },
+    "1351": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-33c25f76b8f5cccda53e6ed08dafbeab75d97faa17f39f1e85ad0663a85434b0.json",
+        "sha256": "8f21bd5cf03a6bcee2c8a5fe983e8c8ccef74a00bda83b28d62af6f7f03d0a3d"
+      }
+    },
+    "1352": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-0510a5b100526190c09a3739ac2472d25dc2432f8dc72a07a0a410f1a7346b52.json",
+        "sha256": "a592652c3ddb8273c37d2c1ebda3b816f28a4789c493854fa224525d95b11363"
+      }
+    },
+    "1353": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/tax-1353-response.bin",
+        "sha256": "9f8bdf1de61cb3435e8f4c9035354a4d33c881fe44f020a65f50ada37c367ceb"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/tax-1353-receipt.json",
+        "sha256": "af2372f9d67ce0110bceea07d2a18f70b46b9d37b1c49a1c65a1d2bfa81750b5"
+      }
+    },
+    "138119": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/tax-138119-response.bin",
+        "sha256": "690d3332860bd1e90d05ab9a4e60732df5eab5f0eb6602f3f7e4ffa9c8e4cfd5"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/tax-138119-receipt.json",
+        "sha256": "9ceb898f1d546be779731ba1b25712e55fa669e49c1672f9a9bfcc8565604628"
+      }
+    },
+    "1391465": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-1391465-receipt.json",
+        "sha256": "f9a29564d658c45d3cf61a16d0fb659e3c5fa20ef0932e4d100026d2f01650b2"
+      }
+    },
+    "1409923": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-1258a45f4e7ce29233bd1f5586d498fb79c6587b40ef2cf2753f3355958d660c.json",
+        "sha256": "af5342cf00f8e39c2d077d97eefa2c2ea47562e1e43c9f454269530454b456d7"
+      }
+    },
+    "1420013": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-a370a90245c766e7c6f85d78b7c8c6c0b99af39fc642983bbd7e334f393da1c6.json",
+        "sha256": "9b962063ab61db72c137e65a6489f0e208000157f8b7ab2a044f3f6ec960e3c5"
+      }
+    },
+    "170187": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/reference-tax-170187-response.bin",
+        "sha256": "282dd4a41e4d90dfb44c9899c27aa68c40415bbd93fac6687e93f6207ed6145e"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/reference-tax-170187-receipt.json",
+        "sha256": "67028d52498eb6cc94e08ee2ede518fb6efe25cfa34468a12e98428eee2fb680"
+      }
+    },
+    "208962": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-208962-receipt.json",
+        "sha256": "5501b89fa4986739a01c3cfcf07bb4f0ac64f0648d3b26170756ee77ef9bacf0"
+      }
+    },
+    "208963": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-208963-receipt.json",
+        "sha256": "517fc3ef4724f2dde7ddd1ac5416c7daa7fd0c301ebc5e0e190074fe4b5fd4ee"
+      }
+    },
+    "208964": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-3519d68c3f49d13ba53e1fa6275a9dd80e4abdcfe75a742747e3105c3c01bf25.json",
+        "sha256": "8ba6eb4810e70facaf6b8f1056e8a6f827a9932592e3c3526f6f33ccb1a48799"
+      }
+    },
+    "224308": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-84c3e9c0aa01e2963476ab52ce883c8fec641faac7191a1fb03f29138ef8652c.json",
+        "sha256": "b4a32efd842430503201bb6caebc0223344de98169ba863f933ef4ed06809e30"
+      }
+    },
+    "226185": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-10-glycopeptide-clusters/tax-226185-response.bin",
+        "sha256": "74a732061277819bbeab86c6126c0b4d1d3476680f73f80a044c0bc98e399ab3"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-10-glycopeptide-clusters/tax-226185-receipt.json",
+        "sha256": "be57de8b4c721c3bcce37878733c15c73c2c57fb2a86427c353e6c7890d95d80"
+      }
+    },
+    "2583588": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-2583588-receipt.json",
+        "sha256": "97c57b7255d6e5f1f1b7f0baf2e834a2e2e239d22f12eccb9b7dfe1d41442f53"
+      }
+    },
+    "272620": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-272620-receipt.json",
+        "sha256": "54907d7465d8f5ba46cd3797919722907477a820f7d0197f18052b068faca216"
+      }
+    },
+    "287": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-4bbd28383b3f1605787c22f019f974a4e70d9c85458753fd6b133c4498744057.json",
+        "sha256": "1ef1df6197f9c8fa81b3bb269e23ebaf319b7de98f12fb1eae58cd894f331e66"
+      }
+    },
+    "294": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-15c14a9fe32b718596b3be2469e77ec8019ebeb74c834620b8860f2016750d96.json",
+        "sha256": "3471d384a802b784d18205547c112c681bae49c13e6ddad2fa467504f5a6e932"
+      }
+    },
+    "32021": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-32021-receipt.json",
+        "sha256": "20b3fccb284fb03e8f6241fb86069a6c3791e5b196ee0996480b0143d3ae53bf"
+      }
+    },
+    "32022": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-32022-receipt.json",
+        "sha256": "372e00dcd01c934e5b8bff411ef33178676a614e593baeb49f922c81c4279222"
+      }
+    },
+    "320371": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-320371-receipt.json",
+        "sha256": "482b45946010694dc9187e5477dec0289bfbd744a8d77cd8b4f8303b5039fff6"
+      }
+    },
+    "34054": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/tax-34054-response.bin",
+        "sha256": "969e1ef524479a4268277909096261808eebbba98a8171eb5fd0cc94424bc16b"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/tax-34054-receipt.json",
+        "sha256": "dc8847309b8b978f2f1837a98ab8c7eaf31b2445d371463797f908f69c54dc96"
+      }
+    },
+    "345072": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-66f5a11e05679eaf9fe9f6c1afa490d8cd8e5835171acf90018d9bcd77b22c66.json",
+        "sha256": "37a81137ea81b2063c86d86663dd0b693b4cb971a36a1592665d16f6fe9a6aed"
+      }
+    },
+    "357348": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-357348-receipt.json",
+        "sha256": "2ccd5fca78cfccafaa9dc3afe4e695c1fd72503c31b2a696ce807565d4744a2f"
+      }
+    },
+    "40324": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-07701e181aa7c4e5fa6a339466f4701dc3fe07b8947dc9a38c117fa7fbe12fc6.json",
+        "sha256": "3229e6cd77aed4026495939cd3747b69e80e885d0f09428e9de545ecdb947bc6"
+      }
+    },
+    "43767": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-c00685f55275346ce3878da3cc7802fa9104aa882f7a8d30d7340d5bf1e1daf0.json",
+        "sha256": "ff80628f2fd501cabf93efce4950e980f0a5aceb335203d6b227772d33c7a7f1"
+      }
+    },
+    "470": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-a29d6d1078f311832e3850c8f3294d8b7f4f13ea97c4efcca4de21b83aaef485.json",
+        "sha256": "7994e389db9afbdb9a5bf0d89d270b07874230e9adf4b36cebc0241096b0fda4"
+      }
+    },
+    "485": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-a843be5ac6f570cc16f2421d9327e01032f1cb8ce7677f5916c11f4c11f8994f.json",
+        "sha256": "ac8ad9b8d439d05e99dc7bb535e9e63a7b1ffc9559838082ccdbe099b46236f1"
+      }
+    },
+    "49338": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-10-glycopeptide-clusters/tax-49338-response.bin",
+        "sha256": "f1fb45738f44bbac3c7892978d0651492b0c78b5a694c68b3f21931f8fae5e1d"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-10-glycopeptide-clusters/tax-49338-receipt.json",
+        "sha256": "bc8395432d7df6315d1b2cc6f8f02ec469570ec429f894a6ebd6d39852b5f837"
+      }
+    },
+    "497978": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-topoisomerase-unreviewed/reference-tax-497978-response.bin",
+        "sha256": "949a2a33a35835b4913dee50c7b1a19e154f727a8c7cc2c9f74a6c16c19df0b9"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-topoisomerase-unreviewed/reference-tax-497978-receipt.json",
+        "sha256": "811c94590dfafa6f263fd65df196f510d6f821c1e2d51cbc0b1006ce2bdfb962"
+      }
+    },
+    "537010": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-537010-receipt.json",
+        "sha256": "4401b856c53f15b5230e31a6e78c5f659c788ef2a22701e39e48ce27ed7194e1"
+      }
+    },
+    "573": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-316524182aff1ac5eb0436beadaeb8d9483fef4ece3e95bf92b6c4366117a0c1.json",
+        "sha256": "874ec356d95fd6c2c8167bf6e3f2790985aa2e09d3f620e27587249f612203e1"
+      }
+    },
+    "656447": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-656447-receipt.json",
+        "sha256": "f1b37d5904db02ae6ebb8929315ef91d36c3668189a578b05377f7b3c150c3d2"
+      }
+    },
+    "742813": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-742813-receipt.json",
+        "sha256": "7462e20c45338767fc9ac8300b53a3d89884ad45361cbd0fa4d9bb7874750c8d"
+      }
+    },
+    "83333": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-5bb14d6f1fb091d5ec596c51990d122b059d006670135e99c308ef0bb1eb7734.json",
+        "sha256": "50bb456e3ae9c94ef4070970795c8628009cd5042ab742a754c828b235712eec"
+      }
+    },
+    "909420": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-909420-receipt.json",
+        "sha256": "967b842238df5fa584e20253c72d704ab9568dc1275f5f1ec573ec8bb85ac39e"
+      }
+    },
+    "91891": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-91891-receipt.json",
+        "sha256": "fec64e46ba2e58320954b9bc6abb41f3a32f33b429c6d09b4549cec9afb83d99"
+      }
+    },
+    "990282": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-990282-receipt.json",
+        "sha256": "4c27220f677b35263a9953b3fbf05383c0704375afe4876bddcee25ddb768189"
+      }
+    },
+    "999408": {
+      "body": null,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-999408-receipt.json",
+        "sha256": "e2dd6f343bca1f81852695e0dbd5c1e0c2828533c9466a8057180e422ec19e70"
+      }
+    }
+  },
+  "ncbi_requests": 0,
+  "new_taxonomy_requests": 22,
+  "parent_terms": [
+    "ARO:3000236",
+    "ARO:3000238",
+    "ARO:3000246",
+    "ARO:3000253",
+    "ARO:3000255",
+    "ARO:3000256",
+    "ARO:3000257",
+    "ARO:3000259",
+    "ARO:3000260",
+    "ARO:3000344",
+    "ARO:3000369",
+    "ARO:3000373",
+    "ARO:3000384",
+    "ARO:3000386",
+    "ARO:3000545",
+    "ARO:3000769",
+    "ARO:3000770",
+    "ARO:3000771",
+    "ARO:3000772",
+    "ARO:3000773",
+    "ARO:3000786",
+    "ARO:3000787",
+    "ARO:3000788",
+    "ARO:3000797",
+    "ARO:3000798",
+    "ARO:3000799",
+    "ARO:3002917",
+    "ARO:3002918",
+    "ARO:3002981",
+    "ARO:3003027",
+    "ARO:3003029",
+    "ARO:3003032",
+    "ARO:3003038",
+    "ARO:3003054",
+    "ARO:3003062",
+    "ARO:3003678",
+    "ARO:3003691",
+    "ARO:3003694",
+    "ARO:3003697",
+    "ARO:3003703",
+    "ARO:3003722",
+    "ARO:3003921",
+    "ARO:3003947",
+    "ARO:3003960",
+    "ARO:3004030",
+    "ARO:3004031",
+    "ARO:3004034",
+    "ARO:3004046",
+    "ARO:3004066",
+    "ARO:3004068",
+    "ARO:3004070",
+    "ARO:3004076",
+    "ARO:3004083",
+    "ARO:3004098",
+    "ARO:3004101",
+    "ARO:3004141",
+    "ARO:3004585",
+    "ARO:3004598",
+    "ARO:3005058",
+    "ARO:3007187",
+    "ARO:3007434",
+    "ARO:3009148",
+    "ARO:3009153"
+  ],
+  "planned_taxonomy_urls": {
+    "1003200": "https://rest.uniprot.org/taxonomy/1003200.json",
+    "1076179": "https://rest.uniprot.org/taxonomy/1076179.json",
+    "1212764": "https://rest.uniprot.org/taxonomy/1212764.json",
+    "122586": "https://rest.uniprot.org/taxonomy/122586.json",
+    "122587": "https://rest.uniprot.org/taxonomy/122587.json",
+    "1328": "https://rest.uniprot.org/taxonomy/1328.json",
+    "1391465": "https://rest.uniprot.org/taxonomy/1391465.json",
+    "208962": "https://rest.uniprot.org/taxonomy/208962.json",
+    "208963": "https://rest.uniprot.org/taxonomy/208963.json",
+    "2583588": "https://rest.uniprot.org/taxonomy/2583588.json",
+    "272620": "https://rest.uniprot.org/taxonomy/272620.json",
+    "32021": "https://rest.uniprot.org/taxonomy/32021.json",
+    "32022": "https://rest.uniprot.org/taxonomy/32022.json",
+    "320371": "https://rest.uniprot.org/taxonomy/320371.json",
+    "357348": "https://rest.uniprot.org/taxonomy/357348.json",
+    "537010": "https://rest.uniprot.org/taxonomy/537010.json",
+    "656447": "https://rest.uniprot.org/taxonomy/656447.json",
+    "742813": "https://rest.uniprot.org/taxonomy/742813.json",
+    "909420": "https://rest.uniprot.org/taxonomy/909420.json",
+    "91891": "https://rest.uniprot.org/taxonomy/91891.json",
+    "990282": "https://rest.uniprot.org/taxonomy/990282.json",
+    "999408": "https://rest.uniprot.org/taxonomy/999408.json"
+  },
+  "redirects_followed": 0,
+  "relations": {
+    "http://purl.obolibrary.org/obo/ARO_2000002": "inner_membrane_protein_of",
+    "http://purl.obolibrary.org/obo/ARO_2000003": "outer_membrane_protein_of",
+    "http://purl.obolibrary.org/obo/ARO_2000004": "periplasmic_adaptor_protein_of",
+    "http://purl.obolibrary.org/obo/BFO_0000050": "part_of"
+  },
+  "remaining_missing_taxonomy": [],
+  "request_plan": {
+    "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-request-plan.json",
+    "sha256": "3ffa9e021a6ac5a802add7ef151d73f65e3eb20758b9ec0c3d47b248403805a4"
+  },
+  "retries": 0,
+  "scope": "EXPLICIT_ONTOLOGY_MEMBER_REFERENCE_GROUNDING_NOT_COMPLEX_OR_EXPERIMENTAL_IDENTITY",
+  "selection": "ALL_2002_SOURCE_DETERMINANTS_EXPLICIT_INCOMING_MEMBERSHIP",
+  "source_canary": {
+    "path": "reports/resistance-grounding-2026-10-15-card-complex-members/source-member-canary.json",
+    "sha256": "b3a9d7539902843e33c2bb31248cd9a2421cb31439c0a61b5fda29d483975bf7"
+  },
+  "taxonomy_canary_inspected": {
+    "path": "reports/resistance-grounding-2026-10-15-card-complex-members/taxonomy-canary-inspected.json",
+    "sha256": "70f11c662bbc008ce88ea9ca8b57782e7ed54804af43945584670646a0f448f4"
+  }
+}

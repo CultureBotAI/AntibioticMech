@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>bromodeoxytopsentin</h1>
 <p class="meta">
   <code class="curie">CHEBI:144087</code>
@@ -33,18 +44,21 @@
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_24780">CHEBI:24780</a>      <code class="curie">CHEBI:24780</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_38958">CHEBI:38958</a>      <code class="curie">CHEBI:38958</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_52514">CHEBI:52514</a>      <code class="curie">CHEBI:52514</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_76224">CHEBI:76224</a>      <code class="curie">CHEBI:76224</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_24780"><code class="curie">CHEBI:24780</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_38958"><code class="curie">CHEBI:38958</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_52514"><code class="curie">CHEBI:52514</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_76224"><code class="curie">CHEBI:76224</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C20H13BrN4O</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>405.255 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>404.02727 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">RMAWSNVDVKZXDX-UHFFFAOYSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">O=C(c1ncc(-c2cnc3cc(Br)ccc23)n1)c1cnc2ccccc12</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C20H13BrN4O/c21-11-5-6-13-14(8-23-17(13)7-11)18-10-24-20(25-18)19(26)15-9-22-16-4-2-1-3-12(15)16/h1-10,22-23H,(H,24,25)</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -65,12 +79,13 @@ both rather than shown here, since it names at most one of them.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33282">CHEBI:33282</a>    <code class="curie">CHEBI:33282</code></li>
+  <li>antibacterial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33282"><code class="curie">CHEBI:33282</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -83,13 +98,28 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>pyruvate kinase <span class="pill plain">PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
 <p class="meta">Purified-enzyme assays measured 16-60 nM inhibition for the most active bis-indoles and compared human isoforms; the exact-compound cocrystal was not reported. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2011-10 (retrieved 2026-09-02).</p>
-<p><em>Staphylococcus aureus</em> <code class="curie">NCBITaxon:1280</code></p><ul class="plain evidence">
-  <li><span class="meta">PMID:22030393</span> <span class="meta">(Primary MRSA pyruvate-kinase inhibition and antibacterial study (DOI:10.1074/jbc.M111.289033).)</span></li>
+<p><em>Staphylococcus aureus</em> <code class="curie">NCBITaxon:1280</code></p><div class="table-scroll" role="region" aria-label="pyruvate kinase organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Pyruvate kinase <a href="https://www.uniprot.org/uniprotkb/Q6G8M9"><code class="curie">UniProtKB:Q6G8M9</code></a><br><span class="meta">Staphylococcus aureus strain MRSA252 pyruvate kinase (pyk, SAR1776) cloned, purified, and inhibited by bromodeoxytopsentin with nanomolar potency (IC50 = 60 nM, Ki = 34 nM) in the PMID:22030393 enzymatic assays; the cocrystal structure in the same study (PDB:3T07) bound the synthetic bis-indole analog IS130 to the dimer interface of this MRSA252 enzyme.</span></td>
+    <td>pyk</td>
+    <td><em>Staphylococcus aureus (strain MRSA252)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_282458"><code class="curie">NCBITaxon:282458</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22030393">PMID:22030393</a></span> <span class="meta">(Primary MRSA pyruvate-kinase inhibition and antibacterial study (DOI:10.1074/jbc.M111.289033).)</span></li>
 </ul>
 
 
@@ -101,12 +131,82 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Bromodeoxytopsentin inhibits Staphylococcus aureus pyruvate kinase to suppress bacterial growth <span class="pill">MECHANISTIC</span></h3>
+<p>Bromodeoxytopsentin potently and selectively inhibits Staphylococcus aureus (MRSA) pyruvate kinase over human orthologs and suppresses Gram-positive bacterial growth.</p><div class="table-scroll" role="region" aria-label="Nodes: bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">bromodeoxytopsentin</code></td>
+    <td>bromodeoxytopsentin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/bromodeoxytopsentin.html"><code class="curie">CHEBI:144087</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">staphylococcal_pyruvate_kinase</code></td>
+    <td>MRSA pyruvate kinase<br><span class="meta">Examples: Pyruvate kinase (pyk) <a href="https://www.uniprot.org/uniprotkb/Q6G8M9"><code class="curie">UniProtKB:Q6G8M9</code></a>, <em>Staphylococcus aureus (strain MRSA252)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_282458"><code class="curie">NCBITaxon:282458</code></a> <span class="pill">REVIEWED</span> — Staphylococcus aureus strain MRSA252 pyruvate kinase (pyk, SAR1776) cloned, purified, and inhibited by bromodeoxytopsentin with nanomolar potency (IC50 = 60 nM, Ki = 34 nM) in the PMID:22030393 enzymatic assays; the cocrystal structure in the same study (PDB:3T07) bound the synthetic bis-indole analog IS130 to the dimer interface of this MRSA252 enzyme.</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">pyruvate_kinase_catalysis</code></td>
+    <td>staphylococcal pyruvate kinase catalytic activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">staphylococcal_glycolytic_growth</code></td>
+    <td>Staphylococcus aureus bacterial growth</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition" tabindex="0">
+<table>
+  <caption>Edges — bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">bromodeoxytopsentin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">pyruvate_kinase_catalysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22030393">PMID:22030393</a></span> <span class="meta">(Biochemical enzyme assays demonstrated nanomolar inhibition of MRSA pyruvate kinase by bromodeoxytopsentin with high selectivity over human pyruvate kinase isoforms.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">staphylococcal_pyruvate_kinase</code></td>
+    <td>enables</td>
+    <td><code class="curie">pyruvate_kinase_catalysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22030393">PMID:22030393</a></span> <span class="meta">(Purified MRSA pyruvate kinase enzyme catalyzed the reaction targeted by marine bisindole alkaloids.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">pyruvate_kinase_catalysis</code></td>
+    <td>supports</td>
+    <td><code class="curie">staphylococcal_glycolytic_growth</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22030393">PMID:22030393</a></span> <span class="meta">(Inhibition of MRSA pyruvate kinase by bisindole alkaloids correlated with antibacterial activity against S. aureus.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
 <h2>Record-level evidence</h2>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:22030393</span> <span class="meta">(Primary bromodeoxytopsentin MRSA pyruvate-kinase and antibacterial study.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22030393">PMID:22030393</a></span> <span class="meta">(Primary bromodeoxytopsentin MRSA pyruvate-kinase and antibacterial study.)</span></li>
 </ul>
 
 
@@ -132,32 +232,52 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-09-02 · codex · LLM-assisted</span>
     <p>Verified exact ChEBI identity, structure, role, and antibacterial class; added energy-metabolism inhibition and a measured MRSA pyruvate-kinase association without transferring the related-compound cocrystal claim.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_UNIPROT_PROTEIN_EXAMPLES</span>
+    <span class="meta">2026-10-25 · antigravity · LLM-assisted</span>
+    <p>Added reviewed UniProtKB:Q6G8M9 (Staphylococcus aureus MRSA252 pyk, SAR1776) protein example to the pyruvate kinase PRIMARY_LITERATURE molecular target (PMID:22030393).</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-25 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:Q6G8M9) and primary literature (PMID:22030393).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/bromodeoxytopsentin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/bromodeoxytopsentin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=bromodeoxytopsentin">MediaIngredientMech (bromodeoxytopsentin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=bromodeoxytopsentin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=bromodeoxytopsentin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=bromodeoxytopsentin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=bromodeoxytopsentin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

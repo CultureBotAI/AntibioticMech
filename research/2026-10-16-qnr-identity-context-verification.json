@@ -1,0 +1,118 @@
+{
+  "active_reference_index_unchanged": true,
+  "all_current_record_hashes_verified": 2939,
+  "artifacts": {
+    "assessment": {
+      "path": "research/2026-10-16-qnr-identity-context-assessment.json",
+      "sha256": "5ce0f869846d9f3bbe104038443142dc3352f1fae1d7c3183eb258c258bd6fa5"
+    },
+    "audit_plan": {
+      "path": "research/2026-10-16-qnr-identity-context-audit-plan.json",
+      "sha256": "1daaeba4767136e282e2bed2150267f8f0ee1636d47838b5eabe3a1bcb4bc6d1"
+    },
+    "dossier": {
+      "path": "research/2026-10-16-qnr-identity-context.json",
+      "sha256": "52c9d777dd01dbca82d1b577669a9ea5e4c67d58761c4415c5e3f3f5f54ca1ed"
+    },
+    "native_projection": {
+      "path": "research/2026-10-16-qnr-identity-context-native.json",
+      "sha256": "5e68c0c2917fe27952855a5986864f7da0dfe8ccc5024f4ebfe379de2eb69081"
+    },
+    "report": {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "bc70ed289af9084311ed820fd4bcd261c8b69e2ba432077d5c0a9afb35df559a"
+    },
+    "request_plan": {
+      "path": "research/2026-10-16-qnr-identity-context-plan.json",
+      "sha256": "d175878c78cd77af1ed963920d796d2cd2f4e1f8f2d3d7fff612b3bf46dfadc9"
+    },
+    "script": {
+      "path": "scripts/audit_qnr_identity_context.py",
+      "sha256": "59313a4035838a29c4b28ceef4fb6da36522858c05b3670ed313efd7026920d1"
+    },
+    "tests": {
+      "path": "tests/test_qnr_identity_context.py",
+      "sha256": "0e8337257035ebbba7392af9994e4b757d65b1a683746f827a814c932598da1c"
+    }
+  },
+  "authoritative_ci": "PENDING_PR_CHECKS_NOT_CLAIMED_PASSED_BY_THIS_RECEIPT",
+  "authoritative_local_qc": "NOT_RUN_FOR_THIS_RESEARCH_ONLY_CHANGE",
+  "base_commit": "80f56366f74ee5e160fe8a6f5ff716d604305d59",
+  "broader_regression_before_adversarial_fix": {
+    "errors": 0,
+    "failed_cases": [],
+    "failures": 0,
+    "junit": {
+      "path": "reports/qnr-parent-followup-2026-10-16/regression.xml",
+      "sha256": "448e10b045392c2c0f62af7ae6a5101fa32fecb0ebfe42bb45aba0a34d629a3a"
+    },
+    "passed": 116,
+    "skipped": 0,
+    "tests": 116
+  },
+  "date": "2026-10-16",
+  "existing_maintained_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "final_cache_free": {
+    "errors": 0,
+    "failed_cases": [],
+    "failures": 0,
+    "junit": {
+      "path": "reports/qnr-parent-followup-2026-10-16/final-cache-free.xml",
+      "sha256": "3f244ceca9384b7f4f4f9308f74873a32e95a181944b02a3a641f1efedeb00b9"
+    },
+    "passed": 30,
+    "skipped": 1,
+    "tests": 31
+  },
+  "final_focused": {
+    "errors": 0,
+    "failed_cases": [],
+    "failures": 0,
+    "junit": {
+      "path": "reports/qnr-parent-followup-2026-10-16/final-focused.xml",
+      "sha256": "a217750ff26486f2a36f5c8f4e08c7d696f66ee352f4abceb159391397d088d6"
+    },
+    "passed": 31,
+    "skipped": 0,
+    "tests": 31
+  },
+  "full_investigation_complete": false,
+  "initial_focused": {
+    "errors": 0,
+    "failed_cases": [],
+    "failures": 0,
+    "junit": {
+      "path": "reports/qnr-parent-followup-2026-10-16/focused.xml",
+      "sha256": "7210ecadea45dca411e879a3f23cee0515070253fbab25e4346012620c3943d8"
+    },
+    "passed": 29,
+    "skipped": 0,
+    "tests": 29
+  },
+  "issue_1040": "DEFERRED",
+  "new_ncbi_requests": 0,
+  "new_taxonomy_requests": 0,
+  "new_uniprot_requests": 1,
+  "production_code_and_biological_records_unchanged": true,
+  "report_bytes_preserved_except_appended_section": true,
+  "report_sha256_before_append": "9d2425eff7d6c4357de675d2b115cb1f9009529804b92efc33019d52af080d3f",
+  "reproduced_review_failure": {
+    "errors": 0,
+    "failed_cases": [
+      "test_qnrc_among_multiple_gene_names_is_not_ignored"
+    ],
+    "failures": 1,
+    "junit": {
+      "path": "reports/qnr-parent-followup-2026-10-16/adversarial-before.xml",
+      "sha256": "f0187a01ba697ed05179935901c7fd349aab6264ba59ce82ef1ea5b95bd56bf3"
+    },
+    "passed": 0,
+    "skipped": 0,
+    "tests": 1
+  },
+  "review_fix_changes_evidence_or_corpus": false,
+  "review_issue": 1155,
+  "status": "SCOPED_RESEARCH_REPLAY_AND_PRESERVATION_VERIFIED"
+}

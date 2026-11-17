@@ -1,0 +1,1389 @@
+{
+  "assay_scope": {
+    "clinical_category_assigned": false,
+    "curation_decision": "HOLD_UNCONDITIONAL_SINGLE_DRUG_ASSERTIONS",
+    "quantitative_mic_imported": false,
+    "single_agent_controls": "Reported non-inhibitory only at tested conditions in Figure 1 caption",
+    "source_method": "MIC-labelled relative-growth assays with fixed fluconazole co-exposure"
+  },
+  "attribution": [
+    {
+      "doi": "10.1371/journal.pgen.1003390",
+      "license": "Creative Commons Attribution (as stated by publisher)",
+      "source": "Hill, Ammar, Torti, Nislow and Cowen (2013), PLOS Genetics"
+    },
+    {
+      "license": "CC BY 4.0",
+      "license_url": "https://www.uniprot.org/help/license",
+      "source": "UniProt Consortium"
+    }
+  ],
+  "conditional_findings": [
+    {
+      "geldanamycin_plus_fluconazole": "FUNCTIONAL_SUPPORT",
+      "gene": "HSC82",
+      "lineage": "Sc-G-14",
+      "locations": [
+        "Results HSP90 subsection",
+        "Figure 2C",
+        "Figure 4A-B",
+        "Table S5"
+      ],
+      "radicicol_plus_fluconazole": "LINEAGE_CROSS_RESISTANCE_NOT_INDEPENDENT_ALLELE_TEST"
+    },
+    {
+      "geldanamycin_plus_fluconazole": "FUNCTIONAL_PHENOCOPY_SUPPORT",
+      "gene": "HSC82",
+      "lineage": "Sc-G-12",
+      "locations": [
+        "Results HSP90 subsection",
+        "Figure 2D",
+        "Figure 4A,C",
+        "Table S5"
+      ],
+      "radicicol_plus_fluconazole": "LINEAGE_CROSS_RESISTANCE_NOT_INDEPENDENT_ALLELE_TEST"
+    },
+    {
+      "geldanamycin_plus_fluconazole": "FUNCTIONAL_SUPPORT",
+      "gene": "HSP90",
+      "lineage": "Ca-G-10",
+      "locations": [
+        "Results HSP90 subsection",
+        "Figure 2E",
+        "Figure 4D-E",
+        "Table S5"
+      ],
+      "radicicol_plus_fluconazole": "NO_INCREASED_CROSS_RESISTANCE_REPORTED_IN_TESTED_CONTEXT"
+    }
+  ],
+  "constraints": {
+    "github_mutations_this_checkpoint": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0
+  },
+  "date": "2026-10-13",
+  "genome_context": {
+    "archive_endpoint_requested": false,
+    "archive_role": "SOURCE_REPORTED_SEQUENCE_ARCHIVE_ONLY",
+    "no_genome_anywhere_inferred": false,
+    "reference_assembly_labels_are_experimental_accessions": false,
+    "reference_genomes": [
+      "S. cerevisiae S288c 2010 / SGD reference as of February 2011",
+      "C. albicans SC5314 / CGD assembly 21"
+    ],
+    "selected_lineages_in_table_s1": [],
+    "source_archive_accession": "SRA065341",
+    "table_s1_wgs_lineages": [
+      "Sc-F-1",
+      "Sc-G-13",
+      "Ca-F-4",
+      "Ca-F-5",
+      "Ca-F-6",
+      "Ca-F-7",
+      "Ca-F-8",
+      "Ca-F-9"
+    ]
+  },
+  "hsp82_disposition": "COMPENSATORY_ROLE_SUGGESTED_IN_DISCUSSION_NOT_EXPERIMENTALLY_ESTABLISHED",
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-13-tubercidin-resistance-grounding.tsv",
+      "sha256": "0a9d4c8c48eb8c29a7f7fe59c8b455ce586ed6648be8e6d6759ab1b23706f6b2"
+    },
+    "inspection": {
+      "path": "reports/resistance-grounding-2026-10-13-hsp90/inspection.json",
+      "sha256": "f5708c74ae24a97cb7d12dc127a6a5087e452f5c82c80df08a76070255fbc136"
+    },
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-13-hsp90/cohort.json",
+      "sha256": "8ce8fd82b3eb4de25184083c65c12aed4be3fee59f931968426e181f8099c025"
+    },
+    "prior_checkpoint": {
+      "path": "research/2026-10-13-tubercidin-verification.json",
+      "sha256": "bd6ccf96668bcc90e8a3fba9daf66b38a9eb3908424f5d5831b19128fae18e84"
+    },
+    "prior_progress": {
+      "path": "research/2026-10-13-tubercidin-resistance-progress.json",
+      "sha256": "4b290eabd54e28aadd0990c4c74b07c1bcb8f6362dc8be77e90a59b827d923d6"
+    },
+    "resume": {
+      "path": "reports/resistance-grounding-2026-10-13-hsp90/resume.json",
+      "sha256": "049813cf3cb58ee2dc02032d12b533075b6d7c2bdb7c0d9d1724cebaad7ddf7d"
+    }
+  },
+  "limitations": [
+    "Reference proteins and reference-strain TaxIDs are not the tested alleles or laboratory subjects.",
+    "Combination findings do not establish single-drug resistance or species-wide susceptibility.",
+    "Different laboratory backgrounds and negative cross-resistance comparisons remain distinct.",
+    "An archive accession and an alignment reference are not a sample-to-genome crosswalk.",
+    "Absence from Table S1 is bounded to that table, not absence of sequencing data everywhere.",
+    "No focal citation in returned UniProt bibliographies does not negate inspected primary results.",
+    "PDR1 and other determinants in the study require their own assessment; the whole paper remains open.",
+    "Drug analogues and findings from other papers are not transferred to these exact structures.",
+    "Offline replay verifies metadata and source bytes, not the truth of the manual scientific interpretation.",
+    "No sequences, variant specifications, constructs, protocols or numerical AST are exported."
+  ],
+  "primary": {
+    "assets": {
+      "article": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/article-response.bin",
+          "sha256": "0694b721f086ddc1b2ed64b649445561773691dbafa7bd4b4cfa5d613c0643b9"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/article-receipt.json",
+          "sha256": "a42f66e7f47a0d6a2c297495d4d906d904fb556955e8312dff2cb03e9a7580eb"
+        },
+        "final_url_without_query": "https://journals.plos.org/plosgenetics/article",
+        "raw_payload_redistributed": false,
+        "retrieved_at": "2026-10-13T16:51:57.650678+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/article-receipt.json",
+          "sha256": "a42f66e7f47a0d6a2c297495d4d906d904fb556955e8312dff2cb03e9a7580eb"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1003390",
+        "status": 200,
+        "validated_redirects": 0
+      },
+      "figure2": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/figure2-storage-response.bin",
+          "sha256": "fb8a45809e91619fcdd4c30fb823ec4f43978a415819ffc908ad357c2ecd632b"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/figure2-storage-receipt.json",
+          "sha256": "7fd65f2aa697bba5dd50b2740401b6dd2fba67a4241f83206401b4e8f9faeee1"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1003390/1/pgen.1003390.g002.PNG_L",
+        "raw_payload_redistributed": false,
+        "retrieved_at": "2026-10-13T17:50:45.300382+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/figure2-receipt.json",
+          "sha256": "98ce76802c050498157e98ac43933721f710111ad7df7436b8d0e7482973621e"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/figure/image?download&size=large&id=10.1371/journal.pgen.1003390.g002",
+        "status": 200,
+        "validated_redirects": 1
+      },
+      "figure4": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/figure4-storage-response.bin",
+          "sha256": "1c3a8fe3376252c30dab5baf1463d5b1d6bbfbda6b7e36f542a19ce4a98fd7a0"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/figure4-storage-receipt.json",
+          "sha256": "965dafb7697ac20ababb35fa9ca75f89999124ed594ed9b260e009c7773e92a4"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1003390/1/pgen.1003390.g004.PNG_L",
+        "raw_payload_redistributed": false,
+        "retrieved_at": "2026-10-13T16:57:34.166719+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/figure4-receipt.json",
+          "sha256": "81301150ca1d3844cf9100b5923e801298811a5de9ae48077699cc482d4316a5"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/figure/image?download&size=large&id=10.1371/journal.pgen.1003390.g004",
+        "status": 200,
+        "validated_redirects": 1
+      },
+      "table-s1": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s1-storage-response.bin",
+          "sha256": "702d4768298a45795b86fd84b8cfe2ef1605d703e90ee820dfeebbda3956b1e0"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s1-storage-receipt.json",
+          "sha256": "36b8692a95dfddd8a99531d687a93d4c75cb71086466f7660394cb2d4a66a057"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1003390/1/pgen.1003390.s003.docx",
+        "raw_payload_redistributed": false,
+        "retrieved_at": "2026-10-13T17:51:08.985859+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s1-receipt.json",
+          "sha256": "72eb6959bee7cbdce3b6a4e4f6fb7bc6eb18ae9c00ed2e4bb85825b66320936e"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1003390.s003",
+        "status": 200,
+        "validated_redirects": 1
+      },
+      "table-s5": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s5-storage-response.bin",
+          "sha256": "6c39cf5f38bbaf88578bb65b32404a147d3d0ca007a61fea3517277fcc7e00c6"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s5-storage-receipt.json",
+          "sha256": "08b75e8e9012b80fcf23b70331142168fb8d0acf94102e02ed184f2c5298df08"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1003390/1/pgen.1003390.s007.docx",
+        "raw_payload_redistributed": false,
+        "retrieved_at": "2026-10-13T17:52:54.873393+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s5-receipt.json",
+          "sha256": "2c41dbcd3f923c8486e43f393b57b72451bd4652179532e062e67b37b080b3c7"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1003390.s007",
+        "status": 200,
+        "validated_redirects": 1
+      }
+    },
+    "doi": "10.1371/journal.pgen.1003390",
+    "manual_review": {
+      "figure1_control_description": "CAPTION_REVIEWED_NATIVE_FIGURE_NOT_RETRIEVED",
+      "figure2_and_figure4_visually_inspected": true,
+      "selected_results_and_discussion_reviewed": true,
+      "sequence_variant_construct_protocol_or_numeric_ast_exported": false,
+      "source_layout_limit": "Several nonselected Table S5 rows have crowded columns in the unchanged source rendering. Selected lineage IDs are legible and independently checked against OOXML.",
+      "table_s1_is_coverage_not_strain_catalog": true,
+      "table_s5_selected_rows_cross_checked_against_ooxml": true,
+      "whole_article_review_complete": false
+    },
+    "pmid": "23593013",
+    "renders": {
+      "table-s1": {
+        "all_pages_visually_inspected": true,
+        "pages": [
+          {
+            "path": "reports/resistance-grounding-2026-10-13-hsp90/rendered/table-s1-page-1.png",
+            "sha256": "ca1f3111fb84de65f5f606d9244cbc4d0dbf070b331cddc728d0854b8c66ab76"
+          }
+        ],
+        "pdf": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/rendered/table-s1.pdf",
+          "sha256": "8d4b8ac1b0a30d1323db032c49f60791e2eb1780c4f00afe31d4f8d5a95717d9"
+        }
+      },
+      "table-s5": {
+        "all_pages_visually_inspected": true,
+        "pages": [
+          {
+            "path": "reports/resistance-grounding-2026-10-13-hsp90/rendered/table-s5-page-1.png",
+            "sha256": "dd7147f3872be61ef989a85cee1287766347615ab11bf37de07a84a4be650d3e"
+          },
+          {
+            "path": "reports/resistance-grounding-2026-10-13-hsp90/rendered/table-s5-page-2.png",
+            "sha256": "c95b17a1e88b52e52e272adb79bf929e68daedb26176285c859521064caca7d9"
+          },
+          {
+            "path": "reports/resistance-grounding-2026-10-13-hsp90/rendered/table-s5-page-3.png",
+            "sha256": "b06d57e4ca141752f7e42fddc1ac1d03c1dbdbad27ac805dc77978d7b784083d"
+          },
+          {
+            "path": "reports/resistance-grounding-2026-10-13-hsp90/rendered/table-s5-page-4.png",
+            "sha256": "8634420c8c3ce0f1bb6d68afbee4cb70a8170c78408202013821adbcc96e2e93"
+          }
+        ],
+        "pdf": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/rendered/table-s5.pdf",
+          "sha256": "a0b23657e07d3430238fd63cbbb296a28aad2a71a9345058f13811a2baa15baa"
+        }
+      }
+    },
+    "url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1003390"
+  },
+  "query_validation_error": {
+    "basis": "Separately preplanned gene-name query supported by the inspected PLOS primary Results.",
+    "failed_query": "lit_pubmed_id:19236053",
+    "invalid_query_repaired_or_reissued": false,
+    "next_canary": "hsc82",
+    "next_query": "gene_exact:HSC82 AND organism_id:559292 AND reviewed:true",
+    "planned_2011_publication_query": "NOT_RUN_SAME_INVALID_FIELD",
+    "protein_absence_inferred": false,
+    "publication_query_retried": false,
+    "reason": "QUERY_VALIDATION_ERROR_INVALID_SEARCH_FIELD_NOT_ACCESS_DENIAL_OR_ZERO_RESULTS",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-hsp90/hsp90-2009-receipt.json",
+      "sha256": "17406e2b1ba3d3833840c7b1cd2e625c51bfd9e980be85d00f2e2fdd0f12402d"
+    },
+    "response": {
+      "path": "reports/resistance-grounding-2026-10-13-hsp90/hsp90-2009-response.bin",
+      "sha256": "8e9113173dce5ecda187063c5dd305b6ed626e4f1e7566ddf400011bfcbdd4d0"
+    },
+    "status": 400
+  },
+  "records": [
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:5292",
+      "label": "geldanamycin",
+      "path": "data/antibiotics/antiviral/geldanamycin.yaml",
+      "sha256": "80d27d088eb4b732c2abc4b413335b6cd1ed5dba9b644663863e6643aebeedca",
+      "standard_inchi_key": "QTQAWLPCGQOSGP-KSRBKZBZSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:556075",
+      "label": "radicicol",
+      "path": "data/antibiotics/antifungal/radicicol.yaml",
+      "sha256": "d5838a617a62b6963863d2281aa38f9089da02f1c379181f85954710fb02b2ff",
+      "standard_inchi_key": "WYZWZEOGROVVHK-GTMNPGAYSA-N",
+      "whole_record_review": "OPEN"
+    }
+  ],
+  "reference_proteins": {
+    "ca-hsp90": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/iai.63.11.4506-4514.1995"
+            },
+            {
+              "database": "PubMed",
+              "id": "7591093"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1995"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/iai.64.2.680-680.1996"
+            },
+            {
+              "database": "PubMed",
+              "id": "8550228"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1996"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/genetics.104.034652"
+            },
+            {
+              "database": "PubMed",
+              "id": "15937140"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2005"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1186/gb-2007-8-4-r52"
+            },
+            {
+              "database": "PubMed",
+              "id": "17419877"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2007"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1186/gb-2013-14-9-r97"
+            },
+            {
+              "database": "PubMed",
+              "id": "24025428"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2013"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.0401648101"
+            },
+            {
+              "database": "PubMed",
+              "id": "15123810"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2004"
+        }
+      ],
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 149,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "gene_names": [
+        "HSP90"
+      ],
+      "gene_orf_names": [
+        "CaJ7.0234",
+        "CaO19.13868",
+        "CaO19.6515"
+      ],
+      "ordered_locus_names": [
+        "CAALFM_C702030WA"
+      ],
+      "primary_gene_name": "HSP90",
+      "protein_accession": "UniProtKB:P46598",
+      "protein_name": "Heat shock protein 90 homolog",
+      "reference_organism_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "reference_taxon_id": "NCBITaxon:237561",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "role": "REFERENCE_FOR_CONDITIONAL_FINDING",
+      "sequence_version": 1,
+      "single_drug_resistance_established": false,
+      "source_species_taxon_id": "NCBITaxon:5476",
+      "species_lineage_verified": true
+    },
+    "hsc82": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.9.9.3919-3930.1989"
+            },
+            {
+              "database": "PubMed",
+              "id": "2674684"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1989"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s090"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169872"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/yea.320110702"
+            },
+            {
+              "database": "PubMed",
+              "id": "7483834"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1995"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1242/jcs.110.16.1879"
+            },
+            {
+              "database": "PubMed",
+              "id": "9296388"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.20.24.9262-9270.2000"
+            },
+            {
+              "database": "PubMed",
+              "id": "11094077"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2000"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m203038200"
+            },
+            {
+              "database": "PubMed",
+              "id": "12121981"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2002"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.24.18.8069-8079.2004"
+            },
+            {
+              "database": "PubMed",
+              "id": "15340069"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2004"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02026"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562095"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.2135385100"
+            },
+            {
+              "database": "PubMed",
+              "id": "14576278"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.01035-07"
+            },
+            {
+              "database": "PubMed",
+              "id": "18086883"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/mcp.m700468-mcp200"
+            },
+            {
+              "database": "PubMed",
+              "id": "18407956"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        }
+      ],
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 236,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "gene_names": [
+        "HSC82"
+      ],
+      "gene_orf_names": [
+        "YM8010.16"
+      ],
+      "ordered_locus_names": [
+        "YMR186W"
+      ],
+      "primary_gene_name": "HSC82",
+      "protein_accession": "UniProtKB:P15108",
+      "protein_name": "ATP-dependent molecular chaperone HSC82",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "REFERENCE_FOR_CONDITIONAL_FINDING",
+      "sequence_version": 4,
+      "single_drug_resistance_established": false,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "hsp82": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0021-9258(18)91077-x"
+            },
+            {
+              "database": "PubMed",
+              "id": "6325446"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1984"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s103"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169875"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.9.9.3919-3930.1989"
+            },
+            {
+              "database": "PubMed",
+              "id": "2674684"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1989"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0021-9258(18)54100-4"
+            },
+            {
+              "database": "PubMed",
+              "id": "8419347"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1993"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.90.23.11424"
+            },
+            {
+              "database": "PubMed",
+              "id": "8248264"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1993"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0021-9258(17)31486-2"
+            },
+            {
+              "database": "PubMed",
+              "id": "7929182"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1994"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.15.7.3917"
+            },
+            {
+              "database": "PubMed",
+              "id": "7791797"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1995"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1126/science.274.5293.1713"
+            },
+            {
+              "database": "PubMed",
+              "id": "8939862"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1996"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1242/jcs.110.16.1879"
+            },
+            {
+              "database": "PubMed",
+              "id": "9296388"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1083/jcb.143.4.901"
+            },
+            {
+              "database": "PubMed",
+              "id": "9817749"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1998"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.18.7.3727"
+            },
+            {
+              "database": "PubMed",
+              "id": "9632755"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1998"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.18.7.3819"
+            },
+            {
+              "database": "PubMed",
+              "id": "9632766"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1998"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.18.12.7344"
+            },
+            {
+              "database": "PubMed",
+              "id": "9819421"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1998"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.274.38.26654"
+            },
+            {
+              "database": "PubMed",
+              "id": "10480867"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1999"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.19.12.8422"
+            },
+            {
+              "database": "PubMed",
+              "id": "10567567"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1999"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0092-8674(00)80830-2"
+            },
+            {
+              "database": "PubMed",
+              "id": "10786835"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2000"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1093/emboj/19.16.4383"
+            },
+            {
+              "database": "PubMed",
+              "id": "10944121"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2000"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0014-5793(00)01134-0"
+            },
+            {
+              "database": "PubMed",
+              "id": "10664467"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2000"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s1097-2765(02)00785-2"
+            },
+            {
+              "database": "PubMed",
+              "id": "12504007"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2002"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02026"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562095"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1242/dev.018150"
+            },
+            {
+              "database": "PubMed",
+              "id": "18256191"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/mcp.m700468-mcp200"
+            },
+            {
+              "database": "PubMed",
+              "id": "18407956"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nsb0697-477"
+            },
+            {
+              "database": "PubMed",
+              "id": "9187656"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0092-8674(00)80314-1"
+            },
+            {
+              "database": "PubMed",
+              "id": "9230303"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s1097-2765(03)00065-0"
+            },
+            {
+              "database": "PubMed",
+              "id": "12667448"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0092-8674(03)01027-4"
+            },
+            {
+              "database": "PubMed",
+              "id": "14718169"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2004"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/sj.emboj.7600060"
+            },
+            {
+              "database": "PubMed",
+              "id": "14739935"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2004"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/sj.emboj.7600141"
+            },
+            {
+              "database": "PubMed",
+              "id": "15039704"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2004"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/embor.2009.153"
+            },
+            {
+              "database": "PubMed",
+              "id": "19696785"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2009"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1021/jm980403y"
+            },
+            {
+              "database": "PubMed",
+              "id": "9925731"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1999"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/j.chembiol.2006.09.015"
+            },
+            {
+              "database": "PubMed",
+              "id": "17114002"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2006"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m510142200"
+            },
+            {
+              "database": "PubMed",
+              "id": "16461354"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2006"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature04716"
+            },
+            {
+              "database": "PubMed",
+              "id": "16625188"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2006"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1021/jm701558c"
+            },
+            {
+              "database": "PubMed",
+              "id": "18357975"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1021/cb9000316"
+            },
+            {
+              "database": "PubMed",
+              "id": "19236053"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2009"
+        }
+      ],
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 255,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "gene_names": [
+        "HSP82",
+        "HSP90"
+      ],
+      "gene_orf_names": [],
+      "ordered_locus_names": [
+        "YPL240C"
+      ],
+      "primary_gene_name": "HSP82",
+      "protein_accession": "UniProtKB:P02829",
+      "protein_name": "ATP-dependent molecular chaperone HSP82",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "ISOFORM_HYPOTHESIS_ONLY",
+      "sequence_version": 1,
+      "single_drug_resistance_established": false,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    }
+  },
+  "remaining_primary_leads": [
+    {
+      "access_mode": "MANUAL_WEB_TOOL_OBSERVATION",
+      "doi": "10.1021/cb9000316",
+      "local_primary_bytes_saved": false,
+      "observation": "Publisher web result explicitly labels the full article Available to Purchase.",
+      "pmid": "19236053",
+      "primary_results_reviewed": false,
+      "retry_or_alternate_full_text_route": false,
+      "url": "https://pubs.acs.org/doi/10.1021/cb9000316"
+    },
+    {
+      "doi": "10.1096/fj.11-188821",
+      "pmid": "21778327",
+      "primary_request_status": "NOT_REQUESTED",
+      "protein_or_allele_assigned": false
+    },
+    {
+      "doi": "10.1016/j.bcp.2010.01.031",
+      "human_protein_in_yeast_is_native_yeast_protein": false,
+      "pmid": "20138026",
+      "primary_request_status": "NOT_REQUESTED"
+    }
+  ],
+  "scope": "CONDITIONAL_COMBINATION_EVIDENCE_NOT_SINGLE_DRUG_RESISTANCE",
+  "subjects": {
+    "Ca-G-10": {
+      "exact_experimental_protein_assigned": false,
+      "listed_in_table_s1_wgs_coverage": false,
+      "reference_key": "ca-hsp90",
+      "sample_or_genome_accession_assigned": false,
+      "source_laboratory_id": "CaLC1486",
+      "source_lineage": "Ca-G-10",
+      "source_species": "C. albicans",
+      "species_grounding_basis": "PRIMARY_SPECIES_NAME_AND_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:5476",
+      "strain_taxon_id_assigned": false,
+      "table_s5_locator": {
+        "count_includes_header": true,
+        "row": 14
+      }
+    },
+    "Sc-G-12": {
+      "exact_experimental_protein_assigned": false,
+      "listed_in_table_s1_wgs_coverage": false,
+      "reference_key": "hsc82",
+      "sample_or_genome_accession_assigned": false,
+      "source_laboratory_id": "ScLC1539",
+      "source_lineage": "Sc-G-12",
+      "source_species": "S. cerevisiae",
+      "species_grounding_basis": "PRIMARY_SPECIES_NAME_AND_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:4932",
+      "strain_taxon_id_assigned": false,
+      "table_s5_locator": {
+        "count_includes_header": true,
+        "row": 16
+      }
+    },
+    "Sc-G-14": {
+      "exact_experimental_protein_assigned": false,
+      "listed_in_table_s1_wgs_coverage": false,
+      "reference_key": "hsc82",
+      "sample_or_genome_accession_assigned": false,
+      "source_laboratory_id": "ScLC1541",
+      "source_lineage": "Sc-G-14",
+      "source_species": "S. cerevisiae",
+      "species_grounding_basis": "PRIMARY_SPECIES_NAME_AND_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:4932",
+      "strain_taxon_id_assigned": false,
+      "table_s5_locator": {
+        "count_includes_header": true,
+        "row": 18
+      }
+    }
+  },
+  "summary": {
+    "biological_records_changed": 0,
+    "complete_uniprot_queries": 3,
+    "corpus_records_in_scope": 2939,
+    "experimental_alleles_assigned": 0,
+    "genome_accessions_assigned": 0,
+    "invalid_queries": 1,
+    "new_taxonomy_requests": 0,
+    "reference_proteins": 3,
+    "selected_records": 2,
+    "skipped_publication_queries": 1,
+    "source_lineages": 3,
+    "whole_records_completed": 0
+  },
+  "taxonomy_reuse": {
+    "237561": {
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-237561-response.bin",
+          "sha256": "d71eb389651e17d41497dac2345b9c1b834076af092f60aecd281d0b9c9bba24"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-237561-receipt.json",
+          "sha256": "004bd1f86dd4cf11611cd60ecaab541bbcb30e9a71e4867fa2e32031d59c02f1"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T15:40:37.883821+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/237561.json"
+      },
+      "source": {
+        "path": "research/2026-10-09-transport-followup-context.json",
+        "sha256": "98ca3da8b16a940759af2195f0f745213a3609597526b18702f880fd86e0eb75"
+      }
+    },
+    "559292": {
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+          "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+          "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/559292"
+      },
+      "source": {
+        "path": "research/2026-10-13-myriocin-reference-context.json",
+        "sha256": "4661b24e563e5424b6dad16b6ba6b63768bbb00c13a5239e370f47d001344ac1"
+      }
+    }
+  },
+  "uniprot_requests": {
+    "ca-hsp90": {
+      "all_strains_and_unreviewed_entries_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-hsp90/ca-hsp90-response.bin",
+        "sha256": "ad789e50fd925060beb0d742778b117ca8213b5a1bf7f0b0a6fa36e35c1b0574"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-hsp90/ca-hsp90-receipt.json",
+        "sha256": "a811e4498e73a5a30695272cc119ed1733e921de471f171db43dea49f035fecb"
+      },
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-13T17:49:31.827586+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AHSP90+AND+organism_id%3A237561+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "hsc82": {
+      "all_strains_and_unreviewed_entries_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-hsp90/hsc82-response.bin",
+        "sha256": "38638c4da78bd7b9dd4b6c2e006004020c33fb5097c5ebffa9b68fb8c85e4239"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-hsp90/hsc82-receipt.json",
+        "sha256": "ddc39381c0784fd0e876a9067fa0dc11c31c1467bd3428d3e7a240fc3f690fae"
+      },
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-13T16:54:52.389192+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AHSC82+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "hsp82": {
+      "all_strains_and_unreviewed_entries_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-hsp90/hsp82-response.bin",
+        "sha256": "4b7cd1a673836faafa29dc3c2ad2f5dee0e1b36b2de5f87c8377018f99a133e0"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-hsp90/hsp82-receipt.json",
+        "sha256": "3f3b99e6f60fdb4898930f787d4c724bf02844f029dc7900cae267e22a810060"
+      },
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-13T16:57:37.672391+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AHSP82+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  }
+}

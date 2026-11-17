@@ -7,7 +7,7 @@
 <meta name="description" content="Sitafloxacin (CHEBI:4304): Sitafloxacin is a fluoroquinolone active against multi-resistant Gram-positive and negative pathogens. Sitafloxacin shows inhibitory activity against DNA gyrase and topoisomerase IV, which blocks bacterial DNA replication, thereby causing double-stranded breaks in the bacterial chromosome.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>Sitafloxacin</h1>
 <p class="meta">
   <code class="curie">CHEBI:4304</code>
@@ -37,18 +48,21 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000001">fluoroquinolone antibiotic</a><code class="curie">ARO:0000001</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_26513">CHEBI:26513</a>      <code class="curie">CHEBI:26513</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_86324">CHEBI:86324</a>      <code class="curie">CHEBI:86324</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_87211">CHEBI:87211</a>      <code class="curie">CHEBI:87211</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000001">ARO:0000001</a>      <code class="curie">ARO:0000001</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_26513"><code class="curie">CHEBI:26513</code></a></li>
+  <li>quinolone antibiotic  <a href="http://purl.obolibrary.org/obo/CHEBI_86324"><code class="curie">CHEBI:86324</code></a></li>
+  <li>fluoroquinolone antibiotic  <a href="http://purl.obolibrary.org/obo/CHEBI_87211"><code class="curie">CHEBI:87211</code></a></li>
+  <li>fluoroquinolone antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_0000001"><code class="curie">ARO:0000001</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C19H18ClF2N3O3</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>409.82 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>409.10048 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">PNUZDKCDAWUEGK-CYZMBNFOSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">N[C@@H]1CN(c2c(F)cc3c(=O)c(C(=O)O)cn([C@@H]4C[C@@H]4F)c3c2Cl)CC12CC2</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C19H18ClF2N3O3/c20-14-15-8(17(26)9(18(27)28)5-25(15)12-4-10(12)21)3-11(22)16(14)24-6-13(23)19(7-24)1-2-19/h3,5,10,12-13H,1-2,4,6-7,23H2,(H,27,28)/t10-,12+,13+/m0/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -59,7 +73,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3003690">ARO:3003690</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3003690">sitafloxacin</a><code class="curie">ARO:3003690</code></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=127254-12-0">cas:127254-12-0</a></li>
   <li><a href="https://www.kegg.jp/entry/C11248">kegg.compound:C11248</a></li>
   <li><a href="https://www.ebi.ac.uk/chembl/id_lookup/CHEMBL3989504">chembl:CHEMBL3989504</a></li>
@@ -79,12 +93,13 @@ corpus keeps as separate records, so it is not an equivalence of structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -104,17 +119,123 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
 
 
+
+
+<h2 id="activity">Activity spectrum</h2>
+<p class="meta">Measured or curated activity against specific taxa. A number
+without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">6 observations &middot; <a href="sitafloxacin/activity-1.html">Browse all observations</a> &middot; <a href="sitafloxacin/record-517f6e5ae07befaa660ef2ff74de78a4c65469632b6ad91400b24b43596d9b40.json.gz" download>Complete record (JSON.gz)</a></p>
+<div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
+<table>
+  <caption>Activity observations</caption>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">0.0312 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; colourmetric</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="sitafloxacin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aad04fdb05e0e7a79">7 source isolates</a><br>7 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="6" data-identifier="CHEBI:4304" data-key="PNUZDKCDAWUEGK-CYZMBNFOSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="sitafloxacin/activity-1-21f2877dddb4d1c09063225b9157b608a85dbb16a27ce15b2753849d766f6489.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-2">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">0.0625 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; colourmetric</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="sitafloxacin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A8e262c515b9aeffb">5 source isolates</a><br>5 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="6" data-identifier="CHEBI:4304" data-key="PNUZDKCDAWUEGK-CYZMBNFOSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="sitafloxacin/activity-1-21f2877dddb4d1c09063225b9157b608a85dbb16a27ce15b2753849d766f6489.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-3">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">0.125 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; colourmetric</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="sitafloxacin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A3580b3aaeaeb6163">6 source isolates</a><br>6 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="2" data-offset="0" data-total="6" data-identifier="CHEBI:4304" data-key="PNUZDKCDAWUEGK-CYZMBNFOSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="sitafloxacin/activity-1-21f2877dddb4d1c09063225b9157b608a85dbb16a27ce15b2753849d766f6489.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-4">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">0.25 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; colourmetric</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="sitafloxacin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A20e267f9c175aaeb">13 source isolates</a><br>13 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="3" data-offset="0" data-total="6" data-identifier="CHEBI:4304" data-key="PNUZDKCDAWUEGK-CYZMBNFOSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="sitafloxacin/activity-1-21f2877dddb4d1c09063225b9157b608a85dbb16a27ce15b2753849d766f6489.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-5">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">0.5 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; colourmetric</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="sitafloxacin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A477a610b089bf8f9">5 source isolates</a><br>5 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="4" data-offset="0" data-total="6" data-identifier="CHEBI:4304" data-key="PNUZDKCDAWUEGK-CYZMBNFOSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="sitafloxacin/activity-1-21f2877dddb4d1c09063225b9157b608a85dbb16a27ce15b2753849d766f6489.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-6">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration 2.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="sitafloxacin/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A7571dc008555871e">36 source isolates</a><br>36 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="5" data-offset="0" data-total="6" data-identifier="CHEBI:4304" data-key="PNUZDKCDAWUEGK-CYZMBNFOSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="sitafloxacin/activity-1-21f2877dddb4d1c09063225b9157b608a85dbb16a27ce15b2753849d766f6489.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  </tbody>
+</table>
+
+</div>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">3 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">3 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">3</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -123,7 +244,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003928</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003690 (sitafloxacin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003928">ARO:3003928</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003690 (sitafloxacin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -133,7 +254,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003929</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003690 (sitafloxacin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003929">ARO:3003929</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003690 (sitafloxacin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -143,11 +264,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003684</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003690 (sitafloxacin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003684">ARO:3003684</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003690 (sitafloxacin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -177,32 +300,52 @@ type — expand a group to see its determinants.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-26 · seed_from_sources</span>
+    <p>Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-10-05 · seed_from_sources</span>
+    <p>Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/sitafloxacin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/sitafloxacin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=Sitafloxacin">MediaIngredientMech (Sitafloxacin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=Sitafloxacin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=Sitafloxacin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=Sitafloxacin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=Sitafloxacin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

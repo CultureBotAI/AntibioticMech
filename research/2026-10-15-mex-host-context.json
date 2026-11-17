@@ -1,0 +1,4342 @@
+{
+  "assay_host_species": {
+    "basis": "EXACT_SOURCE_NAME_TO_CACHED_UNIPROT_SPECIES_NODE",
+    "experimental_strain_taxon_assigned": false,
+    "record_taxon_assignment": false,
+    "reference_protein_assigned_to_host": false,
+    "source_name": "Escherichia coli",
+    "species_node": {
+      "rank": "species",
+      "scientificName": "Escherichia coli",
+      "taxonId": 562
+    },
+    "taxon_id": "NCBITaxon:562"
+  },
+  "assessment": {
+    "path": "research/2026-10-15-mex-host-context-assessment.json",
+    "sha256": "1fb36dea98fc7e4f9820df7b3bda6f2c94600ed11aeab1a1bdc7fb6af63f35b4"
+  },
+  "attribution": "CARD/ARO and UniProt CC BY 4.0; manual publisher-text assessment separately cited.",
+  "claim_dispositions": [
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "99ae38dc4af24669de63ccd4ba8c463d1dff091b4ba5ced35fbf2c6acca5f9c9",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:100241",
+      "record_label": "ciprofloxacin",
+      "selected_primary_qualification": {
+        "aro_id": "ARO:3000386",
+        "location": "Table 2 and Activity of MexAB-OprM in E. coli",
+        "record_identifier": "CHEBI:100241",
+        "status": "NO_INCREASE_IN_SELECTED_HETEROLOGOUS_COMPARISON_NOT_DONOR_SPECIES_ABSENCE"
+      },
+      "source_claim_removed": false,
+      "standard_inchi_key": "MYSWGUAQZAJSOK-UHFFFAOYSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "86a19074b7648ee8a36f22c533cca04a0f66e25d6cc67974ac531473acd9bf8b",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:161680",
+      "record_label": "aztreonam",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "WZPBZJONDBGPKJ-VEHQQRBSSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "5dfce64ffc13daf6c0afe8c8c7b1d6daeb5dc8e8a15371f9e5e21a5611d60158",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:17698",
+      "record_label": "chloramphenicol",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "WIIZWVCIJKGZOK-RKDXNWHRSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "fb83641393b1a427bd2178d01bc5fe42012d92cccaabe82e23dd5925df436aea",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:17698",
+      "record_label": "chloramphenicol",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "WIIZWVCIJKGZOK-RKDXNWHRSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "ca89aa06bc893779ed841e99aff568238c15cbfb5ebe818a013406a9431ae08e",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:27902",
+      "record_label": "tetracycline",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "OFVLGDICTFRJMM-WESIUVDSSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "ecac0080fe3429fe93015e8457f768ed6ee73dc8f7a683010f6d46aad0be0709",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:27902",
+      "record_label": "tetracycline",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "OFVLGDICTFRJMM-WESIUVDSSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "6483a31214f94528e91b49a779271f8352cd5c51908289c1a0a081a7a12a6768",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:28368",
+      "record_label": "novobiocin",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "YJQPYGGHQPGBLI-KGSXXDOSSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "e64d5fea19974710eb65945a59634564b1f191e71cfdb9eb546b4438ba559955",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:28368",
+      "record_label": "novobiocin",
+      "selected_primary_qualification": {
+        "aro_id": "ARO:3000797",
+        "location": "Activity of MexCD-OprJ in E. coli",
+        "record_identifier": "CHEBI:28368",
+        "status": "NO_INCREASE_IN_SELECTED_HETEROLOGOUS_COMPARISON_NOT_DONOR_SPECIES_ABSENCE"
+      },
+      "source_claim_removed": false,
+      "standard_inchi_key": "YJQPYGGHQPGBLI-KGSXXDOSSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "7db1f30af0a3fd905b705389323279d4fdb82656fbed036dc9eb189312b3d4b4",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:28971",
+      "record_label": "ampicillin",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "AVKUERGKIZMTKX-NJBDSQKTSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "00a178d353af9e90dfbe8b19925d3603d04b44fe9b4e7546dee3d592f4e5f415",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:29007",
+      "record_label": "ceftriaxone",
+      "selected_primary_qualification": {
+        "aro_id": "ARO:3000386",
+        "location": "Activity of MexAB-OprM in E. coli",
+        "record_identifier": "CHEBI:29007",
+        "status": "MINIMAL_OR_LACKING_HETEROLOGOUS_EFFECT_NOT_DONOR_SPECIES_ABSENCE"
+      },
+      "source_claim_removed": false,
+      "standard_inchi_key": "VAAUVRVFOQPIGI-SPQHTLEESA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "7e18d81cbc0382c334eff36308c6b5ea57c8cb37c71edb7f7d3ecd12c83d9089",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:2955",
+      "record_label": "azithromycin",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "MQTOSJVFKKJCRP-BICOPXKESA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "0188d6e8eba6f1e30c193793b2581c805b4647981f7c56eca87e1fcf7c697bb7",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:3508",
+      "record_label": "ceftazidime",
+      "selected_primary_qualification": {
+        "aro_id": "ARO:3000386",
+        "location": "Activity of MexAB-OprM in E. coli",
+        "record_identifier": "CHEBI:3508",
+        "status": "MINIMAL_OR_LACKING_HETEROLOGOUS_EFFECT_NOT_DONOR_SPECIES_ABSENCE"
+      },
+      "source_claim_removed": false,
+      "standard_inchi_key": "ORFOPKXBNMVMKC-DWVKKRMSSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "323491ec46a7bc0d9a6da19f14a6ce9feea90c81268edbd8a536769fd21732ed",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:42355",
+      "record_label": "erythromycin A",
+      "selected_primary_qualification": {
+        "aro_id": "ARO:3000386",
+        "location": "Antimicrobial agents; Table 2 footnote b",
+        "record_identifier": "CHEBI:42355",
+        "status": "ERYTHROMYCIN_LABEL_NOT_EXACT_ERYTHROMYCIN_A_FORM_CONFIRMATION"
+      },
+      "source_claim_removed": false,
+      "standard_inchi_key": "ULGZDMOVFRHVEP-RWJQBGPGSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "cb05d05e37701e9f237ae3930e6b8c760b3cff89a1d2a96759565450be950203",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:42355",
+      "record_label": "erythromycin A",
+      "selected_primary_qualification": {
+        "aro_id": "ARO:3000797",
+        "location": "Antimicrobial agents; Table 2 footnote b",
+        "record_identifier": "CHEBI:42355",
+        "status": "ERYTHROMYCIN_LABEL_NOT_EXACT_ERYTHROMYCIN_A_FORM_CONFIRMATION"
+      },
+      "source_claim_removed": false,
+      "standard_inchi_key": "ULGZDMOVFRHVEP-RWJQBGPGSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "1920bfbc0d60044ab6b1f1b97a092fc74a0d800ebcf6d257e7e38f97c1b0c4db",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:43968",
+      "record_label": "meropenem",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "DMJNNHOOLUXYBV-PQTSNVLCSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "226720cd1886f9197c583ed69b09939045ce7ebb0d1318302e3e4803741d7057",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:45924",
+      "record_label": "trimethoprim",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "IEDVJHCEMCRBQM-UHFFFAOYSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "0a674811f28743e8b7713cb13812f13b1f46fa57e3b20c8f1d9d3d08aff0b6b1",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:45924",
+      "record_label": "trimethoprim",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "IEDVJHCEMCRBQM-UHFFFAOYSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "0c97098f67655e963de7380451176f2d3d886fe394748a0c3629920a62e51155",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:59064",
+      "record_label": "colistin A",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "XDJYMJULXQKGMM-RVYUQJQSSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "ffb9dacc5c969c92bf5f7d5bcb35fc82faee99d8fdcf9191d34afdf1c4191fe2",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:59673",
+      "record_label": "colistin B",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "KNIWPHSUTGNZST-SSWRVQTPSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "405a12bc46b40388a4cfdc56beb039937753149bc65353c2da7d8ab8839bc570",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "CHEBI:7911",
+      "record_label": "panipenem",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "TYMABNNERDVXID-DLYFRVTGSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "93f9f8b62fd05fc7fae2097b0ec535fb9ec6529712ef6e8f6d408ef0a60be760",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "antibioticmech:aro-2eea3233f3",
+      "record_label": "ofloxacin",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "GSDSWSVVBLHKDQ-UHFFFAOYSA-N",
+      "whole_claim_primary_signoff": false
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "ca1ddf8e73421f6b601a83720e913cd6479b04c6ad98e2243e7c022f5b703c6f",
+      "clinical_resistance_call_assigned": false,
+      "disposition": "KEEP_SOURCE_ASSERTION_WITHHOLD_EXPERIMENTAL_JOIN",
+      "exact_chemical_form_verified": false,
+      "experimental_allele_assigned": false,
+      "record_identifier": "antibioticmech:aro-6407ce57f1",
+      "record_label": "gentamicin C",
+      "selected_primary_qualification": null,
+      "source_claim_removed": false,
+      "standard_inchi_key": "VEGXETMJINRLTH-ALRICIOSSA-N",
+      "whole_claim_primary_signoff": false
+    }
+  ],
+  "claims": [
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "99ae38dc4af24669de63ccd4ba8c463d1dff091b4ba5ced35fbf2c6acca5f9c9",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:100241",
+      "record_path": "data/antibiotics/antibacterial/ciprofloxacin.yaml",
+      "record_sha256": "de4e65076e0a69a82637f3af5a824c0bd198a1b49ee22d85a424d67ca0c9fedd",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "MYSWGUAQZAJSOK-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "86a19074b7648ee8a36f22c533cca04a0f66e25d6cc67974ac531473acd9bf8b",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:161680",
+      "record_path": "data/antibiotics/antibacterial/aztreonam.yaml",
+      "record_sha256": "a9aff230bf5f40d45a5d722c477996d8d74127dde47cfa46eeb3af3246c237a4",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "WZPBZJONDBGPKJ-VEHQQRBSSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "5dfce64ffc13daf6c0afe8c8c7b1d6daeb5dc8e8a15371f9e5e21a5611d60158",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:17698",
+      "record_path": "data/antibiotics/antibacterial/chloramphenicol.yaml",
+      "record_sha256": "aa85b6ffcb39d19950f2c8397ec4c37d5472a959130a79eb1d27aecb62404498",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 2,
+      "standard_inchi_key": "WIIZWVCIJKGZOK-RKDXNWHRSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "fb83641393b1a427bd2178d01bc5fe42012d92cccaabe82e23dd5925df436aea",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:17698",
+      "record_path": "data/antibiotics/antibacterial/chloramphenicol.yaml",
+      "record_sha256": "aa85b6ffcb39d19950f2c8397ec4c37d5472a959130a79eb1d27aecb62404498",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 5,
+      "standard_inchi_key": "WIIZWVCIJKGZOK-RKDXNWHRSA-N",
+      "term_pointer": "/terms/ARO:3000797"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "ca89aa06bc893779ed841e99aff568238c15cbfb5ebe818a013406a9431ae08e",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:27902",
+      "record_path": "data/antibiotics/antibacterial/tetracycline.yaml",
+      "record_sha256": "68de808f0457c1c59f0c1decf4ad4b958d872b52b175e37795db0e85bccc8258",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 27,
+      "standard_inchi_key": "OFVLGDICTFRJMM-WESIUVDSSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "ecac0080fe3429fe93015e8457f768ed6ee73dc8f7a683010f6d46aad0be0709",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:27902",
+      "record_path": "data/antibiotics/antibacterial/tetracycline.yaml",
+      "record_sha256": "68de808f0457c1c59f0c1decf4ad4b958d872b52b175e37795db0e85bccc8258",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 43,
+      "standard_inchi_key": "OFVLGDICTFRJMM-WESIUVDSSA-N",
+      "term_pointer": "/terms/ARO:3000797"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "6483a31214f94528e91b49a779271f8352cd5c51908289c1a0a081a7a12a6768",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:28368",
+      "record_path": "data/antibiotics/antibacterial/novobiocin.yaml",
+      "record_sha256": "0493eb6364990e579ac5acaadb12281981ce6831f643b8797e56f2371d0cd568",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "YJQPYGGHQPGBLI-KGSXXDOSSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "e64d5fea19974710eb65945a59634564b1f191e71cfdb9eb546b4438ba559955",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:28368",
+      "record_path": "data/antibiotics/antibacterial/novobiocin.yaml",
+      "record_sha256": "0493eb6364990e579ac5acaadb12281981ce6831f643b8797e56f2371d0cd568",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 3,
+      "standard_inchi_key": "YJQPYGGHQPGBLI-KGSXXDOSSA-N",
+      "term_pointer": "/terms/ARO:3000797"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "7db1f30af0a3fd905b705389323279d4fdb82656fbed036dc9eb189312b3d4b4",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:28971",
+      "record_path": "data/antibiotics/antibacterial/ampicillin.yaml",
+      "record_sha256": "3983eac47db2f393481b546bb5ab5579a11c7c25da07b0c541a5a608d1a7f5cf",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 2,
+      "standard_inchi_key": "AVKUERGKIZMTKX-NJBDSQKTSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "00a178d353af9e90dfbe8b19925d3603d04b44fe9b4e7546dee3d592f4e5f415",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:29007",
+      "record_path": "data/antibiotics/antibacterial/ceftriaxone.yaml",
+      "record_sha256": "7294a0606c41257f1589c2aa54119527ccf09778c7d84f7258d74e4253f12135",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "VAAUVRVFOQPIGI-SPQHTLEESA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "7e18d81cbc0382c334eff36308c6b5ea57c8cb37c71edb7f7d3ecd12c83d9089",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:2955",
+      "record_path": "data/antibiotics/antibacterial/azithromycin.yaml",
+      "record_sha256": "3b6f8f139da665be8e33d6db6500c3fd019d12510b99fe586b28567bc2450d51",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 9,
+      "standard_inchi_key": "MQTOSJVFKKJCRP-BICOPXKESA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "0188d6e8eba6f1e30c193793b2581c805b4647981f7c56eca87e1fcf7c697bb7",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:3508",
+      "record_path": "data/antibiotics/antibacterial/ceftazidime.yaml",
+      "record_sha256": "51c8151de51d168a17f89ac72d4a11ac67ca40f881071d1061476444f1332ac1",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "ORFOPKXBNMVMKC-DWVKKRMSSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "323491ec46a7bc0d9a6da19f14a6ce9feea90c81268edbd8a536769fd21732ed",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:42355",
+      "record_path": "data/antibiotics/antibacterial/erythromycin-a.yaml",
+      "record_sha256": "4639a9ca3005a92edabbab64b412731187bbe2a540971f251ce4a856bd6fe65f",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 11,
+      "standard_inchi_key": "ULGZDMOVFRHVEP-RWJQBGPGSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "cb05d05e37701e9f237ae3930e6b8c760b3cff89a1d2a96759565450be950203",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:42355",
+      "record_path": "data/antibiotics/antibacterial/erythromycin-a.yaml",
+      "record_sha256": "4639a9ca3005a92edabbab64b412731187bbe2a540971f251ce4a856bd6fe65f",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 35,
+      "standard_inchi_key": "ULGZDMOVFRHVEP-RWJQBGPGSA-N",
+      "term_pointer": "/terms/ARO:3000797"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "1920bfbc0d60044ab6b1f1b97a092fc74a0d800ebcf6d257e7e38f97c1b0c4db",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:43968",
+      "record_path": "data/antibiotics/antibacterial/meropenem.yaml",
+      "record_sha256": "4973d4c24516b071d6195b63b4a82e66269b0cb5cb8932a6c49320c8585ff767",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "DMJNNHOOLUXYBV-PQTSNVLCSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "226720cd1886f9197c583ed69b09939045ce7ebb0d1318302e3e4803741d7057",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:45924",
+      "record_path": "data/antibiotics/antibacterial/trimethoprim.yaml",
+      "record_sha256": "b9c93a0d1282a00392d687872b31e15ae97a16a9dbadce2eb3760c80fe3be861",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "IEDVJHCEMCRBQM-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "0a674811f28743e8b7713cb13812f13b1f46fa57e3b20c8f1d9d3d08aff0b6b1",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:45924",
+      "record_path": "data/antibiotics/antibacterial/trimethoprim.yaml",
+      "record_sha256": "b9c93a0d1282a00392d687872b31e15ae97a16a9dbadce2eb3760c80fe3be861",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 2,
+      "standard_inchi_key": "IEDVJHCEMCRBQM-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3000797"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "0c97098f67655e963de7380451176f2d3d886fe394748a0c3629920a62e51155",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:59064",
+      "record_path": "data/antibiotics/antibacterial/colistin-a.yaml",
+      "record_sha256": "2b8020dd24bb1b98b69d0b5286ee979baa65c123be1bf2cf3344a034049f74cd",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "XDJYMJULXQKGMM-RVYUQJQSSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "ffb9dacc5c969c92bf5f7d5bcb35fc82faee99d8fdcf9191d34afdf1c4191fe2",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:59673",
+      "record_path": "data/antibiotics/antibacterial/colistin-b.yaml",
+      "record_sha256": "6a7050a96a3bd4403760cefc7a1c502bd67b4a235790a6c9bff98fcd9053e10c",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "KNIWPHSUTGNZST-SSWRVQTPSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000386",
+      "claim_sha256": "405a12bc46b40388a4cfdc56beb039937753149bc65353c2da7d8ab8839bc570",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:7911",
+      "record_path": "data/antibiotics/antibacterial/panipenem.yaml",
+      "record_sha256": "01c96f6ed951acb012fa0f93133c18cc45b0a372f5b62e17d4328ba96bdefd59",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "TYMABNNERDVXID-DLYFRVTGSA-N",
+      "term_pointer": "/terms/ARO:3000386"
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "93f9f8b62fd05fc7fae2097b0ec535fb9ec6529712ef6e8f6d408ef0a60be760",
+      "experimental_subject_assignment": false,
+      "record_identifier": "antibioticmech:aro-2eea3233f3",
+      "record_path": "data/antibiotics/antibacterial/ofloxacin.yaml",
+      "record_sha256": "5ddd8f63ce90ff0d26ed37026628e52f56d1b75925adb269a832ed9e2b2bc407",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 1,
+      "standard_inchi_key": "GSDSWSVVBLHKDQ-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3000797"
+    },
+    {
+      "aro_id": "ARO:3000797",
+      "claim_sha256": "ca1ddf8e73421f6b601a83720e913cd6479b04c6ad98e2243e7c022f5b703c6f",
+      "experimental_subject_assignment": false,
+      "record_identifier": "antibioticmech:aro-6407ce57f1",
+      "record_path": "data/antibiotics/antibacterial/gentamicin-c.yaml",
+      "record_sha256": "b307020c0603c33989e7fcf9112897cdf36b7cbc17d10f1a2e9bb159c905836d",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "VEGXETMJINRLTH-ALRICIOSSA-N",
+      "term_pointer": "/terms/ARO:3000797"
+    }
+  ],
+  "component_bindings": {
+    "ARO:3000386": {
+      "mexA": "UniProtKB:P52477",
+      "mexB": "UniProtKB:P52002",
+      "oprM": "UniProtKB:Q51487"
+    },
+    "ARO:3000797": {
+      "mexC": "UniProtKB:G3XD25",
+      "mexD": "UniProtKB:Q9HVI9",
+      "oprJ": "UniProtKB:Q51397"
+    }
+  },
+  "component_references": {
+    "UniProtKB:G3XD25": {
+      "accession": "UniProtKB:G3XD25",
+      "bibliography_counts": {
+        "journal article": 6
+      },
+      "component_annotations": [
+        {
+          "complex_label": "MexCD-OprJ",
+          "evidence_scope": "WHOLE_NATIVE_TEXT_NOT_RELATION_LEVEL_PRIMARY_PROOF",
+          "native_relation_qualifiers": [],
+          "pointer": "/comments/0/texts/0",
+          "primary_results_independently_reviewed": false,
+          "text_sha256": "38b37129f0c01f3d9a4577ee4e0c8bb3b9dfdad1d695b601398263d88a4c1783",
+          "whole_text_evidence": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "id": "11506922",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "id": "12654738",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "id": "8878035",
+              "source": "PubMed"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 80,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_field_present": true,
+      "gene_match_alone_proves_component_membership": false,
+      "gene_symbols": [
+        "mexC"
+      ],
+      "gene_symbols_inferred_from_names": false,
+      "native_bibliography": [
+        {
+          "citation_sha256": "3a4b3c9547a8580c3a556043a097be5d27b90b673103a699dd4fa6d9cdf3e6bf",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10984043"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/35023079"
+            }
+          ],
+          "reference_number": 1
+        },
+        {
+          "citation_sha256": "0f190b652f26409a3ba3a239348461897789287af91613a7a5b93dca04881075",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8878035"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1046/j.1365-2958.1996.281397.x"
+            }
+          ],
+          "reference_number": 2
+        },
+        {
+          "citation_sha256": "7a556f25bdb0abfaef892a1f4177e2a46436c16e192bc1c84d218e5629903f66",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "11506922"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/j.1574-6968.2001.tb10794.x"
+            }
+          ],
+          "reference_number": 3
+        },
+        {
+          "citation_sha256": "6788e9a53a99e0e77c966dce45f5587eb0e43bf5f79befc39d7d82e365118115",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "12654738"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1093/jac/dkg173"
+            }
+          ],
+          "reference_number": 4
+        },
+        {
+          "citation_sha256": "229de3e92646af68c3eb4c6febfb965226644a03b0c300ada05c04d750d9d222",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "30532741"
+            },
+            {
+              "database": "DOI",
+              "id": "10.3389/fmicb.2018.02752"
+            }
+          ],
+          "reference_number": 5
+        },
+        {
+          "citation_sha256": "547735bbff598fc916cd2bafced0a08c2da67286627e18ab0714f08a79df32bd",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "31501142"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.01095-19"
+            }
+          ],
+          "reference_number": 6
+        }
+      ],
+      "native_card_cross_references": [
+        {
+          "database": "CARD",
+          "id": "ARO:3000800",
+          "properties": [
+            {
+              "key": "CARD short name",
+              "value": "MexC"
+            },
+            {
+              "key": "Resistance mechanism identifier",
+              "value": "ARO:0010000"
+            },
+            {
+              "key": "Resistance mechanism name",
+              "value": "antibiotic efflux"
+            }
+          ]
+        }
+      ],
+      "native_entry_sha256": "cf73b655940749f6127ac71a354c2854dc8b7d872c536d0929bef9c6c92a64c5",
+      "native_identifier_anomalies": [],
+      "native_protein_flag": "Precursor",
+      "new_primary_results_review": false,
+      "protein_names": [
+        {
+          "path": "recommendedName/0/fullName",
+          "value": "Multidrug efflux pump subunit MexC"
+        },
+        {
+          "path": "alternativeNames/0/fullName",
+          "value": "Membrane fusion protein MexC"
+        },
+        {
+          "path": "alternativeNames/1/fullName",
+          "value": "MexCD-OprJ multidrug efflux pump subunit MexC"
+        }
+      ],
+      "reference_taxonomy": {
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Bacteria",
+            "taxonId": 2
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Pseudomonadati",
+            "taxonId": 3379134
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Pseudomonadota",
+            "taxonId": 1224
+          },
+          {
+            "rank": "class",
+            "scientificName": "Gammaproteobacteria",
+            "taxonId": 1236
+          },
+          {
+            "rank": "order",
+            "scientificName": "Pseudomonadales",
+            "taxonId": 72274
+          },
+          {
+            "rank": "family",
+            "scientificName": "Pseudomonadaceae",
+            "taxonId": 135621
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Pseudomonas",
+            "taxonId": 286
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Pseudomonas aeruginosa group",
+            "taxonId": 136841
+          },
+          {
+            "rank": "species",
+            "scientificName": "Pseudomonas aeruginosa",
+            "taxonId": 287
+          },
+          {
+            "rank": "strain",
+            "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+            "taxonId": 208964
+          }
+        ],
+        "native_rank": "strain",
+        "parent": {
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "provider": "UniProt taxonomy cached response; no NCBI request",
+        "scientific_name": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+        "species": {
+          "rank": "species",
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "taxon_id": "NCBITaxon:208964"
+      },
+      "unflagged_means_complete": false
+    },
+    "UniProtKB:P52002": {
+      "accession": "UniProtKB:P52002",
+      "bibliography_counts": {
+        "journal article": 14
+      },
+      "component_annotations": [
+        {
+          "complex_label": "MexAB-OprM",
+          "evidence_scope": "WHOLE_NATIVE_TEXT_NOT_RELATION_LEVEL_PRIMARY_PROOF",
+          "native_relation_qualifiers": [],
+          "pointer": "/comments/0/texts/0",
+          "primary_results_independently_reviewed": false,
+          "text_sha256": "64f7a69ef5050f8e44212fd66c654941544426a62600bd5fcd1044d8f08a0332",
+          "whole_text_evidence": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "10187844",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "25901994",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "30944318",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "33009415",
+              "source": "PubMed"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 149,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_field_present": true,
+      "gene_match_alone_proves_component_membership": false,
+      "gene_symbols": [
+        "mexB"
+      ],
+      "gene_symbols_inferred_from_names": false,
+      "native_bibliography": [
+        {
+          "citation_sha256": "26f0d0c6896b5e068d0e31a4d002dd9bfa28e8385739deb1ee24736d692aea4d",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "7968531"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/j.1365-2958.1993.tb00925.x"
+            }
+          ],
+          "reference_number": 1
+        },
+        {
+          "citation_sha256": "3a4b3c9547a8580c3a556043a097be5d27b90b673103a699dd4fa6d9cdf3e6bf",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10984043"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/35023079"
+            }
+          ],
+          "reference_number": 2
+        },
+        {
+          "citation_sha256": "8aa191cc0b45f5c7adda44a61739ab99449f208128c329512f9eb13169324efc",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9989496"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/s0092-8674(00)80958-7"
+            }
+          ],
+          "reference_number": 3
+        },
+        {
+          "citation_sha256": "386dd64a052b8affe90831753fbc4bf78c4597617e2e4d807328d335a99280dc",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15253424"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1021/pr034074w"
+            }
+          ],
+          "reference_number": 4
+        },
+        {
+          "citation_sha256": "64406b6581ced183879c58120962e33ef3bbda3b4e7580bf747c585e329363c4",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8226684"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.175.22.7363-7372.1993"
+            }
+          ],
+          "reference_number": 5
+        },
+        {
+          "citation_sha256": "ad8debe32a9e7d4f3b86c7c71891fa9a7e2971d31f40844f5829d379854a3593",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8540696"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.39.9.1948"
+            }
+          ],
+          "reference_number": 6
+        },
+        {
+          "citation_sha256": "b1b7e952419257d79e3ae6e508bee5d10a2a7ed7dd1c06fe759bf2cb72c2ab6a",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9603892"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.180.11.2987-2991.1998"
+            }
+          ],
+          "reference_number": 7
+        },
+        {
+          "citation_sha256": "ae6750b3da62843c1412bf83980dd1f0fda2842d7f4e2f91c94d0823d8ee8487",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9973347"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.181.4.1203-1210.1999"
+            }
+          ],
+          "reference_number": 8
+        },
+        {
+          "citation_sha256": "66b11a9dae423bfd67acf32f77a2abad0f2cbba52e8be50b6db8433010bdb0e0",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10187844"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.274.15.10517"
+            }
+          ],
+          "reference_number": 9
+        },
+        {
+          "citation_sha256": "41e645876812e9e51c27ec2e9f8d8ebc98cd708ae5cfa05418fc202f3c3ea6c8",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "25901994"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/ncomms7890"
+            }
+          ],
+          "reference_number": 10
+        },
+        {
+          "citation_sha256": "0a8a82aa5a8b005049e49e4db0cc9c5581e2dbc5d297ae0cb4de4ebcb5e00267",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "32715566"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/1462-2920.15177"
+            }
+          ],
+          "reference_number": 11
+        },
+        {
+          "citation_sha256": "e5aca75d367af4c68d8b29ee3ec0b96ab64bbd92ead816704746c387df04de8f",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "23812586"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/nature12300"
+            }
+          ],
+          "reference_number": 12
+        },
+        {
+          "citation_sha256": "4d95a0ac62fc31c06e69cc5928aa9d575f058182a6611f6dd46a41af85bf66a8",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "30944318"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/s41467-019-09463-9"
+            }
+          ],
+          "reference_number": 13
+        },
+        {
+          "citation_sha256": "0f01652aa4f89c0ffcdba6010ec871a47b3d0ca68ad22bf157346c93f3ec8056",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "33009415"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/s41467-020-18770-5"
+            }
+          ],
+          "reference_number": 14
+        }
+      ],
+      "native_card_cross_references": [],
+      "native_entry_sha256": "b944453a998ba6cfadbfbba595ebc352fe0eaf2bdda27a110dbe5ca4cdc1f97e",
+      "native_identifier_anomalies": [],
+      "native_protein_flag": null,
+      "new_primary_results_review": false,
+      "protein_names": [
+        {
+          "path": "recommendedName/0/fullName",
+          "value": "Multidrug resistance protein MexB"
+        },
+        {
+          "path": "alternativeNames/0/fullName",
+          "value": "Multidrug-efflux transporter MexB"
+        }
+      ],
+      "reference_taxonomy": {
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Bacteria",
+            "taxonId": 2
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Pseudomonadati",
+            "taxonId": 3379134
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Pseudomonadota",
+            "taxonId": 1224
+          },
+          {
+            "rank": "class",
+            "scientificName": "Gammaproteobacteria",
+            "taxonId": 1236
+          },
+          {
+            "rank": "order",
+            "scientificName": "Pseudomonadales",
+            "taxonId": 72274
+          },
+          {
+            "rank": "family",
+            "scientificName": "Pseudomonadaceae",
+            "taxonId": 135621
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Pseudomonas",
+            "taxonId": 286
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Pseudomonas aeruginosa group",
+            "taxonId": 136841
+          },
+          {
+            "rank": "species",
+            "scientificName": "Pseudomonas aeruginosa",
+            "taxonId": 287
+          },
+          {
+            "rank": "strain",
+            "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+            "taxonId": 208964
+          }
+        ],
+        "native_rank": "strain",
+        "parent": {
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "provider": "UniProt taxonomy cached response; no NCBI request",
+        "scientific_name": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+        "species": {
+          "rank": "species",
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "taxon_id": "NCBITaxon:208964"
+      },
+      "unflagged_means_complete": false
+    },
+    "UniProtKB:P52477": {
+      "accession": "UniProtKB:P52477",
+      "bibliography_counts": {
+        "journal article": 17
+      },
+      "component_annotations": [
+        {
+          "complex_label": "MexAB-OprM",
+          "evidence_scope": "WHOLE_NATIVE_TEXT_NOT_RELATION_LEVEL_PRIMARY_PROOF",
+          "native_relation_qualifiers": [],
+          "pointer": "/comments/0/texts/0",
+          "primary_results_independently_reviewed": false,
+          "text_sha256": "7f74f1fd693c5307d9f9ee8e38d9f33a9cffcd822f793cfd08944a5c30dc78e4",
+          "whole_text_evidence": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "15117957",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "15226509",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "15325256",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "25901994",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "30944318",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "33009415",
+              "source": "PubMed"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 160,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_field_present": true,
+      "gene_match_alone_proves_component_membership": false,
+      "gene_symbols": [
+        "mexA"
+      ],
+      "gene_symbols_inferred_from_names": false,
+      "native_bibliography": [
+        {
+          "citation_sha256": "26f0d0c6896b5e068d0e31a4d002dd9bfa28e8385739deb1ee24736d692aea4d",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "7968531"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/j.1365-2958.1993.tb00925.x"
+            }
+          ],
+          "reference_number": 1
+        },
+        {
+          "citation_sha256": "3a4b3c9547a8580c3a556043a097be5d27b90b673103a699dd4fa6d9cdf3e6bf",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10984043"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/35023079"
+            }
+          ],
+          "reference_number": 2
+        },
+        {
+          "citation_sha256": "386dd64a052b8affe90831753fbc4bf78c4597617e2e4d807328d335a99280dc",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15253424"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1021/pr034074w"
+            }
+          ],
+          "reference_number": 3
+        },
+        {
+          "citation_sha256": "8aa191cc0b45f5c7adda44a61739ab99449f208128c329512f9eb13169324efc",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9989496"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/s0092-8674(00)80958-7"
+            }
+          ],
+          "reference_number": 4
+        },
+        {
+          "citation_sha256": "64406b6581ced183879c58120962e33ef3bbda3b4e7580bf747c585e329363c4",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8226684"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.175.22.7363-7372.1993"
+            }
+          ],
+          "reference_number": 5
+        },
+        {
+          "citation_sha256": "ad8debe32a9e7d4f3b86c7c71891fa9a7e2971d31f40844f5829d379854a3593",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8540696"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.39.9.1948"
+            }
+          ],
+          "reference_number": 6
+        },
+        {
+          "citation_sha256": "b1b7e952419257d79e3ae6e508bee5d10a2a7ed7dd1c06fe759bf2cb72c2ab6a",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9603892"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.180.11.2987-2991.1998"
+            }
+          ],
+          "reference_number": 7
+        },
+        {
+          "citation_sha256": "ae6750b3da62843c1412bf83980dd1f0fda2842d7f4e2f91c94d0823d8ee8487",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9973347"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.181.4.1203-1210.1999"
+            }
+          ],
+          "reference_number": 8
+        },
+        {
+          "citation_sha256": "020d996c2b4f47a2f10be68df7306f03a42fa9501dd83f7c0c7a95d10801729f",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10671490"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.275.7.4628"
+            }
+          ],
+          "reference_number": 9
+        },
+        {
+          "citation_sha256": "39e6c3a9188393bb32b85d415b5cafc7f5df65cb3a8ab31aff52b0dcc98e9bfb",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15325256"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.bbrc.2004.07.140"
+            }
+          ],
+          "reference_number": 10
+        },
+        {
+          "citation_sha256": "e5aca75d367af4c68d8b29ee3ec0b96ab64bbd92ead816704746c387df04de8f",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "23812586"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/nature12300"
+            }
+          ],
+          "reference_number": 11
+        },
+        {
+          "citation_sha256": "41e645876812e9e51c27ec2e9f8d8ebc98cd708ae5cfa05418fc202f3c3ea6c8",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "25901994"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/ncomms7890"
+            }
+          ],
+          "reference_number": 12
+        },
+        {
+          "citation_sha256": "0a8a82aa5a8b005049e49e4db0cc9c5581e2dbc5d297ae0cb4de4ebcb5e00267",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "32715566"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/1462-2920.15177"
+            }
+          ],
+          "reference_number": 13
+        },
+        {
+          "citation_sha256": "f9af62df23582ce702b3339c7b9175254efced2c051d39097ae44997b66a42b3",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15117957"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.c400164200"
+            }
+          ],
+          "reference_number": 14
+        },
+        {
+          "citation_sha256": "4e2b1937b3160f3cc16e43d201629a6169c198d1db7f0818354833c163aba6d9",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15226509"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.0400375101"
+            }
+          ],
+          "reference_number": 15
+        },
+        {
+          "citation_sha256": "4d95a0ac62fc31c06e69cc5928aa9d575f058182a6611f6dd46a41af85bf66a8",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "30944318"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/s41467-019-09463-9"
+            }
+          ],
+          "reference_number": 16
+        },
+        {
+          "citation_sha256": "0f01652aa4f89c0ffcdba6010ec871a47b3d0ca68ad22bf157346c93f3ec8056",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "33009415"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/s41467-020-18770-5"
+            }
+          ],
+          "reference_number": 17
+        }
+      ],
+      "native_card_cross_references": [
+        {
+          "database": "CARD",
+          "id": "ARO:3000377",
+          "properties": [
+            {
+              "key": "CARD short name",
+              "value": "MexA"
+            },
+            {
+              "key": "Resistance mechanism identifier",
+              "value": "ARO:0010000"
+            },
+            {
+              "key": "Resistance mechanism name",
+              "value": "antibiotic efflux"
+            }
+          ]
+        }
+      ],
+      "native_entry_sha256": "5dea67b5cdd3b9bb8772cda4e8e0f892aa5dd6093a6951fea65ffd5d537a4205",
+      "native_identifier_anomalies": [],
+      "native_protein_flag": "Precursor",
+      "new_primary_results_review": false,
+      "protein_names": [
+        {
+          "path": "recommendedName/0/fullName",
+          "value": "Multidrug resistance protein MexA"
+        }
+      ],
+      "reference_taxonomy": {
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Bacteria",
+            "taxonId": 2
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Pseudomonadati",
+            "taxonId": 3379134
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Pseudomonadota",
+            "taxonId": 1224
+          },
+          {
+            "rank": "class",
+            "scientificName": "Gammaproteobacteria",
+            "taxonId": 1236
+          },
+          {
+            "rank": "order",
+            "scientificName": "Pseudomonadales",
+            "taxonId": 72274
+          },
+          {
+            "rank": "family",
+            "scientificName": "Pseudomonadaceae",
+            "taxonId": 135621
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Pseudomonas",
+            "taxonId": 286
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Pseudomonas aeruginosa group",
+            "taxonId": 136841
+          },
+          {
+            "rank": "species",
+            "scientificName": "Pseudomonas aeruginosa",
+            "taxonId": 287
+          },
+          {
+            "rank": "strain",
+            "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+            "taxonId": 208964
+          }
+        ],
+        "native_rank": "strain",
+        "parent": {
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "provider": "UniProt taxonomy cached response; no NCBI request",
+        "scientific_name": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+        "species": {
+          "rank": "species",
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "taxon_id": "NCBITaxon:208964"
+      },
+      "unflagged_means_complete": false
+    },
+    "UniProtKB:Q51397": {
+      "accession": "UniProtKB:Q51397",
+      "bibliography_counts": {
+        "journal article": 7
+      },
+      "component_annotations": [
+        {
+          "complex_label": "MexCD-OprJ",
+          "evidence_scope": "WHOLE_NATIVE_TEXT_NOT_RELATION_LEVEL_PRIMARY_PROOF",
+          "native_relation_qualifiers": [
+            "Probable"
+          ],
+          "pointer": "/comments/0/texts/0",
+          "primary_results_independently_reviewed": false,
+          "text_sha256": "9f7ab47048a1940dacdd159357523397c94b30b66579daf19043fbc3e46731cc",
+          "whole_text_evidence": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "26914226",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "id": "11506922",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "id": "12654738",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "id": "31501142",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "id": "8878035",
+              "source": "PubMed"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 132,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_field_present": true,
+      "gene_match_alone_proves_component_membership": false,
+      "gene_symbols": [
+        "oprJ"
+      ],
+      "gene_symbols_inferred_from_names": false,
+      "native_bibliography": [
+        {
+          "citation_sha256": "0f190b652f26409a3ba3a239348461897789287af91613a7a5b93dca04881075",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8878035"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1046/j.1365-2958.1996.281397.x"
+            }
+          ],
+          "reference_number": 1
+        },
+        {
+          "citation_sha256": "3a4b3c9547a8580c3a556043a097be5d27b90b673103a699dd4fa6d9cdf3e6bf",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10984043"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/35023079"
+            }
+          ],
+          "reference_number": 2
+        },
+        {
+          "citation_sha256": "7a556f25bdb0abfaef892a1f4177e2a46436c16e192bc1c84d218e5629903f66",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "11506922"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/j.1574-6968.2001.tb10794.x"
+            }
+          ],
+          "reference_number": 3
+        },
+        {
+          "citation_sha256": "6788e9a53a99e0e77c966dce45f5587eb0e43bf5f79befc39d7d82e365118115",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "12654738"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1093/jac/dkg173"
+            }
+          ],
+          "reference_number": 4
+        },
+        {
+          "citation_sha256": "229de3e92646af68c3eb4c6febfb965226644a03b0c300ada05c04d750d9d222",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "30532741"
+            },
+            {
+              "database": "DOI",
+              "id": "10.3389/fmicb.2018.02752"
+            }
+          ],
+          "reference_number": 5
+        },
+        {
+          "citation_sha256": "547735bbff598fc916cd2bafced0a08c2da67286627e18ab0714f08a79df32bd",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "31501142"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.01095-19"
+            }
+          ],
+          "reference_number": 6
+        },
+        {
+          "citation_sha256": "e3633da815721a9a997b403899ccc462106bf7e0f715bb1653ce10f49b4cfff5",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "26914226"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1002/prot.25022"
+            }
+          ],
+          "reference_number": 7
+        }
+      ],
+      "native_card_cross_references": [],
+      "native_entry_sha256": "eaf51f798260092828d1fb6403e8cd8edad39100102b9f930b8bbbeb4f27edca",
+      "native_identifier_anomalies": [],
+      "native_protein_flag": "Precursor",
+      "new_primary_results_review": false,
+      "protein_names": [
+        {
+          "path": "recommendedName/0/fullName",
+          "value": "Outer membrane protein OprJ"
+        }
+      ],
+      "reference_taxonomy": {
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Bacteria",
+            "taxonId": 2
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Pseudomonadati",
+            "taxonId": 3379134
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Pseudomonadota",
+            "taxonId": 1224
+          },
+          {
+            "rank": "class",
+            "scientificName": "Gammaproteobacteria",
+            "taxonId": 1236
+          },
+          {
+            "rank": "order",
+            "scientificName": "Pseudomonadales",
+            "taxonId": 72274
+          },
+          {
+            "rank": "family",
+            "scientificName": "Pseudomonadaceae",
+            "taxonId": 135621
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Pseudomonas",
+            "taxonId": 286
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Pseudomonas aeruginosa group",
+            "taxonId": 136841
+          },
+          {
+            "rank": "species",
+            "scientificName": "Pseudomonas aeruginosa",
+            "taxonId": 287
+          },
+          {
+            "rank": "strain",
+            "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+            "taxonId": 208964
+          }
+        ],
+        "native_rank": "strain",
+        "parent": {
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "provider": "UniProt taxonomy cached response; no NCBI request",
+        "scientific_name": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+        "species": {
+          "rank": "species",
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "taxon_id": "NCBITaxon:208964"
+      },
+      "unflagged_means_complete": false
+    },
+    "UniProtKB:Q51487": {
+      "accession": "UniProtKB:Q51487",
+      "bibliography_counts": {
+        "journal article": 21
+      },
+      "component_annotations": [
+        {
+          "complex_label": "MexAB-OprM",
+          "evidence_scope": "WHOLE_NATIVE_TEXT_NOT_RELATION_LEVEL_PRIMARY_PROOF",
+          "native_relation_qualifiers": [],
+          "pointer": "/comments/0/texts/0",
+          "primary_results_independently_reviewed": false,
+          "text_sha256": "52938412088e83e6eba4f3bef1c3aa03e75f88e3a08cb7286199abe49170abf6",
+          "whole_text_evidence": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "15507433",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "15797729",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "25901994",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "30944318",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "33009415",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "id": "15325256",
+              "source": "PubMed"
+            }
+          ]
+        },
+        {
+          "complex_label": "MexXY-OprM",
+          "evidence_scope": "WHOLE_NATIVE_TEXT_NOT_RELATION_LEVEL_PRIMARY_PROOF",
+          "native_relation_qualifiers": [
+            "Probable"
+          ],
+          "pointer": "/comments/0/texts/0",
+          "primary_results_independently_reviewed": false,
+          "text_sha256": "52938412088e83e6eba4f3bef1c3aa03e75f88e3a08cb7286199abe49170abf6",
+          "whole_text_evidence": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "15507433",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "15797729",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "25901994",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "30944318",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "id": "33009415",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "id": "15325256",
+              "source": "PubMed"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 170,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_field_present": true,
+      "gene_match_alone_proves_component_membership": false,
+      "gene_symbols": [
+        "oprM"
+      ],
+      "gene_symbols_inferred_from_names": false,
+      "native_bibliography": [
+        {
+          "citation_sha256": "64406b6581ced183879c58120962e33ef3bbda3b4e7580bf747c585e329363c4",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8226684"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.175.22.7363-7372.1993"
+            }
+          ],
+          "reference_number": 1
+        },
+        {
+          "citation_sha256": "a6634ac14d53647a3d8e77708eb9ffadd6dfbcb5696a0976ea261f5ff2385ec1",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10889211"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m005742200"
+            }
+          ],
+          "reference_number": 2
+        },
+        {
+          "citation_sha256": "3a4b3c9547a8580c3a556043a097be5d27b90b673103a699dd4fa6d9cdf3e6bf",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10984043"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/35023079"
+            }
+          ],
+          "reference_number": 3
+        },
+        {
+          "citation_sha256": "26f0d0c6896b5e068d0e31a4d002dd9bfa28e8385739deb1ee24736d692aea4d",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "7968531"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/j.1365-2958.1993.tb00925.x"
+            }
+          ],
+          "reference_number": 4
+        },
+        {
+          "citation_sha256": "386dd64a052b8affe90831753fbc4bf78c4597617e2e4d807328d335a99280dc",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15253424"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1021/pr034074w"
+            }
+          ],
+          "reference_number": 5
+        },
+        {
+          "citation_sha256": "ad8debe32a9e7d4f3b86c7c71891fa9a7e2971d31f40844f5829d379854a3593",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8540696"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.39.9.1948"
+            }
+          ],
+          "reference_number": 6
+        },
+        {
+          "citation_sha256": "14f5ec88aca20a26ac338f8418916504e11a28a7794e5403a319db46c31be96f",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9401051"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.179.24.7875-7881.1997"
+            }
+          ],
+          "reference_number": 7
+        },
+        {
+          "citation_sha256": "b1b7e952419257d79e3ae6e508bee5d10a2a7ed7dd1c06fe759bf2cb72c2ab6a",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9603892"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.180.11.2987-2991.1998"
+            }
+          ],
+          "reference_number": 8
+        },
+        {
+          "citation_sha256": "4dcd0e49669193329e8a39882d782483b0e4a05697e883f8075be31157ae23cc",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10543738"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.43.11.2624"
+            }
+          ],
+          "reference_number": 9
+        },
+        {
+          "citation_sha256": "ae6750b3da62843c1412bf83980dd1f0fda2842d7f4e2f91c94d0823d8ee8487",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9973347"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.181.4.1203-1210.1999"
+            }
+          ],
+          "reference_number": 10
+        },
+        {
+          "citation_sha256": "cc02c988c750561f0639676b4ba8480396f311863bbb3674e5a366684cd4e6e2",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10952562"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.44.9.2242-2246.2000"
+            }
+          ],
+          "reference_number": 11
+        },
+        {
+          "citation_sha256": "4d618f9d4ae67c76dc087284e4a5ec33575414bf66f21b73182e7bf023dd1fd9",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "11083635"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.44.12.3322-3327.2000"
+            }
+          ],
+          "reference_number": 12
+        },
+        {
+          "citation_sha256": "471e451c12b2d0d2c8596d968b4c36b391dfec34a2218783381e868524432edc",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "11114896"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.183.1.12-27.2001"
+            }
+          ],
+          "reference_number": 13
+        },
+        {
+          "citation_sha256": "39e6c3a9188393bb32b85d415b5cafc7f5df65cb3a8ab31aff52b0dcc98e9bfb",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15325256"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.bbrc.2004.07.140"
+            }
+          ],
+          "reference_number": 14
+        },
+        {
+          "citation_sha256": "e5aca75d367af4c68d8b29ee3ec0b96ab64bbd92ead816704746c387df04de8f",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "23812586"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/nature12300"
+            }
+          ],
+          "reference_number": 15
+        },
+        {
+          "citation_sha256": "41e645876812e9e51c27ec2e9f8d8ebc98cd708ae5cfa05418fc202f3c3ea6c8",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "25901994"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/ncomms7890"
+            }
+          ],
+          "reference_number": 16
+        },
+        {
+          "citation_sha256": "0a8a82aa5a8b005049e49e4db0cc9c5581e2dbc5d297ae0cb4de4ebcb5e00267",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "32715566"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/1462-2920.15177"
+            }
+          ],
+          "reference_number": 17
+        },
+        {
+          "citation_sha256": "2dfa6aa387738c0d7563bec4c28207e20f80c61c296fdeb8d94678409272df11",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15507433"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.c400445200"
+            }
+          ],
+          "reference_number": 18
+        },
+        {
+          "citation_sha256": "7e0cc7ae791920590c450a0b5ca4bfa31dca1ea5f1d8f3406471b240934d6937",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15797729"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.jsb.2005.01.001"
+            }
+          ],
+          "reference_number": 19
+        },
+        {
+          "citation_sha256": "4d95a0ac62fc31c06e69cc5928aa9d575f058182a6611f6dd46a41af85bf66a8",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "30944318"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/s41467-019-09463-9"
+            }
+          ],
+          "reference_number": 20
+        },
+        {
+          "citation_sha256": "0f01652aa4f89c0ffcdba6010ec871a47b3d0ca68ad22bf157346c93f3ec8056",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "33009415"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/s41467-020-18770-5"
+            }
+          ],
+          "reference_number": 21
+        }
+      ],
+      "native_card_cross_references": [
+        {
+          "database": "CARD",
+          "id": "ARO:3000379",
+          "properties": [
+            {
+              "key": "CARD short name",
+              "value": "OprM"
+            },
+            {
+              "key": "Resistance mechanism identifier",
+              "value": "ARO:0010000"
+            },
+            {
+              "key": "Resistance mechanism name",
+              "value": "antibiotic efflux"
+            }
+          ]
+        }
+      ],
+      "native_entry_sha256": "af3107874bdd544cb6c2cc7acec754ca296d78055232e3d2b98080b8d9d90c78",
+      "native_identifier_anomalies": [],
+      "native_protein_flag": "Precursor",
+      "new_primary_results_review": false,
+      "protein_names": [
+        {
+          "path": "recommendedName/0/fullName",
+          "value": "Outer membrane protein OprM"
+        }
+      ],
+      "reference_taxonomy": {
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Bacteria",
+            "taxonId": 2
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Pseudomonadati",
+            "taxonId": 3379134
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Pseudomonadota",
+            "taxonId": 1224
+          },
+          {
+            "rank": "class",
+            "scientificName": "Gammaproteobacteria",
+            "taxonId": 1236
+          },
+          {
+            "rank": "order",
+            "scientificName": "Pseudomonadales",
+            "taxonId": 72274
+          },
+          {
+            "rank": "family",
+            "scientificName": "Pseudomonadaceae",
+            "taxonId": 135621
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Pseudomonas",
+            "taxonId": 286
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Pseudomonas aeruginosa group",
+            "taxonId": 136841
+          },
+          {
+            "rank": "species",
+            "scientificName": "Pseudomonas aeruginosa",
+            "taxonId": 287
+          },
+          {
+            "rank": "strain",
+            "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+            "taxonId": 208964
+          }
+        ],
+        "native_rank": "strain",
+        "parent": {
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "provider": "UniProt taxonomy cached response; no NCBI request",
+        "scientific_name": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+        "species": {
+          "rank": "species",
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "taxon_id": "NCBITaxon:208964"
+      },
+      "unflagged_means_complete": false
+    },
+    "UniProtKB:Q9HVI9": {
+      "accession": "UniProtKB:Q9HVI9",
+      "bibliography_counts": {
+        "journal article": 8
+      },
+      "component_annotations": [
+        {
+          "complex_label": "MexCD-OprJ",
+          "evidence_scope": "WHOLE_NATIVE_TEXT_NOT_RELATION_LEVEL_PRIMARY_PROOF",
+          "native_relation_qualifiers": [],
+          "pointer": "/comments/0/texts/0",
+          "primary_results_independently_reviewed": false,
+          "text_sha256": "38b37129f0c01f3d9a4577ee4e0c8bb3b9dfdad1d695b601398263d88a4c1783",
+          "whole_text_evidence": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "id": "11506922",
+              "source": "PubMed"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "id": "8878035",
+              "source": "PubMed"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 127,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_field_present": true,
+      "gene_match_alone_proves_component_membership": false,
+      "gene_symbols": [
+        "mexD"
+      ],
+      "gene_symbols_inferred_from_names": false,
+      "native_bibliography": [
+        {
+          "citation_sha256": "3a4b3c9547a8580c3a556043a097be5d27b90b673103a699dd4fa6d9cdf3e6bf",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10984043"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/35023079"
+            }
+          ],
+          "reference_number": 1
+        },
+        {
+          "citation_sha256": "0f190b652f26409a3ba3a239348461897789287af91613a7a5b93dca04881075",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8878035"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1046/j.1365-2958.1996.281397.x"
+            }
+          ],
+          "reference_number": 2
+        },
+        {
+          "citation_sha256": "45e05031d9dc9bfcdf0f24b873f2df48b0ea80474ccf2a0b2a0d3dd921abac2e",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10518928"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/s0014-5793(99)01116-3"
+            }
+          ],
+          "reference_number": 3
+        },
+        {
+          "citation_sha256": "7a556f25bdb0abfaef892a1f4177e2a46436c16e192bc1c84d218e5629903f66",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "11506922"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/j.1574-6968.2001.tb10794.x"
+            }
+          ],
+          "reference_number": 4
+        },
+        {
+          "citation_sha256": "585b3af4b4599f2df8af2654ee3d1a694f47aa22cc51e09ff49be2f685375ebf",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "12410844"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1046/j.1365-2958.2002.03223.x"
+            }
+          ],
+          "reference_number": 5
+        },
+        {
+          "citation_sha256": "6788e9a53a99e0e77c966dce45f5587eb0e43bf5f79befc39d7d82e365118115",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "12654738"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1093/jac/dkg173"
+            }
+          ],
+          "reference_number": 6
+        },
+        {
+          "citation_sha256": "229de3e92646af68c3eb4c6febfb965226644a03b0c300ada05c04d750d9d222",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "30532741"
+            },
+            {
+              "database": "DOI",
+              "id": "10.3389/fmicb.2018.02752"
+            }
+          ],
+          "reference_number": 7
+        },
+        {
+          "citation_sha256": "547735bbff598fc916cd2bafced0a08c2da67286627e18ab0714f08a79df32bd",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "31501142"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.01095-19"
+            }
+          ],
+          "reference_number": 8
+        }
+      ],
+      "native_card_cross_references": [],
+      "native_entry_sha256": "9d215a399ba27bb13ea5fa244f675d3cf4c9b1898cba1a34bf32738ddbcbfc7d",
+      "native_identifier_anomalies": [],
+      "native_protein_flag": null,
+      "new_primary_results_review": false,
+      "protein_names": [
+        {
+          "path": "recommendedName/0/fullName",
+          "value": "Multidrug efflux pump subunit MexD"
+        },
+        {
+          "path": "alternativeNames/0/fullName",
+          "value": "Efflux pump membrane transporter"
+        },
+        {
+          "path": "alternativeNames/1/fullName",
+          "value": "MexCD-OprJ multidrug efflux pump subunit MexD"
+        }
+      ],
+      "reference_taxonomy": {
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Bacteria",
+            "taxonId": 2
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Pseudomonadati",
+            "taxonId": 3379134
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Pseudomonadota",
+            "taxonId": 1224
+          },
+          {
+            "rank": "class",
+            "scientificName": "Gammaproteobacteria",
+            "taxonId": 1236
+          },
+          {
+            "rank": "order",
+            "scientificName": "Pseudomonadales",
+            "taxonId": 72274
+          },
+          {
+            "rank": "family",
+            "scientificName": "Pseudomonadaceae",
+            "taxonId": 135621
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Pseudomonas",
+            "taxonId": 286
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Pseudomonas aeruginosa group",
+            "taxonId": 136841
+          },
+          {
+            "rank": "species",
+            "scientificName": "Pseudomonas aeruginosa",
+            "taxonId": 287
+          },
+          {
+            "rank": "strain",
+            "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+            "taxonId": 208964
+          }
+        ],
+        "native_rank": "strain",
+        "parent": {
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "provider": "UniProt taxonomy cached response; no NCBI request",
+        "scientific_name": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+        "species": {
+          "rank": "species",
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "taxon_id": "NCBITaxon:208964"
+      },
+      "unflagged_means_complete": false
+    }
+  },
+  "date": "2026-10-15",
+  "distinct_mexd_references": {
+    "accessions": [
+      "UniProtKB:Q51396",
+      "UniProtKB:Q9HVI9"
+    ],
+    "one_reference_selected_as_representative": false,
+    "same_experimental_allele_established": false
+  },
+  "inputs": {
+    "corpus_update": {
+      "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+      "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+    },
+    "index": {
+      "path": "research/2026-10-15-card-aph-memberships.json",
+      "sha256": "66fc408ae1bd53b78376d08f4cb9cecb1d587e95ce0c99f740ac4e186e966595"
+    }
+  },
+  "limits": {
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_primary_results_reviews": 1,
+    "new_review_is_text_only_not_whole_paper_signoff": true,
+    "operational_exports": false,
+    "outreach": 0,
+    "reuse_terms_review_resumed": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "member_reference_views": {
+    "UniProtKB:G3XD25": {
+      "accession": "UniProtKB:G3XD25",
+      "bibliography_counts": {
+        "journal article": 6
+      },
+      "entry_audit": {
+        "entryVersion": 80,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_field_present": true,
+      "gene_symbols": [
+        "mexC"
+      ],
+      "gene_symbols_inferred_from_names": false,
+      "native_bibliography": [
+        {
+          "citation_sha256": "3a4b3c9547a8580c3a556043a097be5d27b90b673103a699dd4fa6d9cdf3e6bf",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10984043"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/35023079"
+            }
+          ],
+          "reference_number": 1
+        },
+        {
+          "citation_sha256": "0f190b652f26409a3ba3a239348461897789287af91613a7a5b93dca04881075",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8878035"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1046/j.1365-2958.1996.281397.x"
+            }
+          ],
+          "reference_number": 2
+        },
+        {
+          "citation_sha256": "7a556f25bdb0abfaef892a1f4177e2a46436c16e192bc1c84d218e5629903f66",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "11506922"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/j.1574-6968.2001.tb10794.x"
+            }
+          ],
+          "reference_number": 3
+        },
+        {
+          "citation_sha256": "6788e9a53a99e0e77c966dce45f5587eb0e43bf5f79befc39d7d82e365118115",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "12654738"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1093/jac/dkg173"
+            }
+          ],
+          "reference_number": 4
+        },
+        {
+          "citation_sha256": "229de3e92646af68c3eb4c6febfb965226644a03b0c300ada05c04d750d9d222",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "30532741"
+            },
+            {
+              "database": "DOI",
+              "id": "10.3389/fmicb.2018.02752"
+            }
+          ],
+          "reference_number": 5
+        },
+        {
+          "citation_sha256": "547735bbff598fc916cd2bafced0a08c2da67286627e18ab0714f08a79df32bd",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "31501142"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.01095-19"
+            }
+          ],
+          "reference_number": 6
+        }
+      ],
+      "native_card_cross_references": [
+        {
+          "database": "CARD",
+          "id": "ARO:3000800",
+          "properties": [
+            {
+              "key": "CARD short name",
+              "value": "MexC"
+            },
+            {
+              "key": "Resistance mechanism identifier",
+              "value": "ARO:0010000"
+            },
+            {
+              "key": "Resistance mechanism name",
+              "value": "antibiotic efflux"
+            }
+          ]
+        }
+      ],
+      "native_entry_sha256": "e02c024e74885516aed16ab393a8f1d946f410ae3e94899e9f7dfd94c3ee5937",
+      "native_identifier_anomalies": [],
+      "native_protein_flag": "Precursor",
+      "native_protein_taxonomy": {
+        "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+        "taxonId": 208964
+      },
+      "new_primary_results_review": false,
+      "ordered_locus_names": [
+        "PA4599"
+      ],
+      "orf_names": [],
+      "protein_names": [
+        {
+          "path": "recommendedName/0/fullName",
+          "value": "Multidrug efflux pump subunit MexC"
+        },
+        {
+          "path": "alternativeNames/0/fullName",
+          "value": "Membrane fusion protein MexC"
+        },
+        {
+          "path": "alternativeNames/1/fullName",
+          "value": "MexCD-OprJ multidrug efflux pump subunit MexC"
+        }
+      ],
+      "reference_taxonomy": {
+        "active": true,
+        "label_flags": [],
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Bacteria",
+            "taxonId": 2
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Pseudomonadati",
+            "taxonId": 3379134
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Pseudomonadota",
+            "taxonId": 1224
+          },
+          {
+            "rank": "class",
+            "scientificName": "Gammaproteobacteria",
+            "taxonId": 1236
+          },
+          {
+            "rank": "order",
+            "scientificName": "Pseudomonadales",
+            "taxonId": 72274
+          },
+          {
+            "rank": "family",
+            "scientificName": "Pseudomonadaceae",
+            "taxonId": 135621
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Pseudomonas",
+            "taxonId": 286
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Pseudomonas aeruginosa group",
+            "taxonId": 136841
+          },
+          {
+            "rank": "species",
+            "scientificName": "Pseudomonas aeruginosa",
+            "taxonId": 287
+          },
+          {
+            "rank": "strain",
+            "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+            "taxonId": 208964
+          }
+        ],
+        "lineage_species_is_experimental_subject": false,
+        "native_rank": "strain",
+        "native_species_rank_establishes_individual_organism": false,
+        "parent": {
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "provider": "UniProt taxonomy cached response; no NCBI request",
+        "scientific_name": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+        "species": {
+          "rank": "species",
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "taxon_id": "NCBITaxon:208964"
+      },
+      "taxonomy_name_comparison": "EXACT_NATIVE_SCIENTIFIC_NAME_AGREEMENT",
+      "unflagged_means_complete": false,
+      "whole_complex_identity_assignment": false
+    },
+    "UniProtKB:P52477": {
+      "accession": "UniProtKB:P52477",
+      "bibliography_counts": {
+        "journal article": 17
+      },
+      "entry_audit": {
+        "entryVersion": 160,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_field_present": true,
+      "gene_symbols": [
+        "mexA"
+      ],
+      "gene_symbols_inferred_from_names": false,
+      "native_bibliography": [
+        {
+          "citation_sha256": "26f0d0c6896b5e068d0e31a4d002dd9bfa28e8385739deb1ee24736d692aea4d",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "7968531"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/j.1365-2958.1993.tb00925.x"
+            }
+          ],
+          "reference_number": 1
+        },
+        {
+          "citation_sha256": "3a4b3c9547a8580c3a556043a097be5d27b90b673103a699dd4fa6d9cdf3e6bf",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10984043"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/35023079"
+            }
+          ],
+          "reference_number": 2
+        },
+        {
+          "citation_sha256": "386dd64a052b8affe90831753fbc4bf78c4597617e2e4d807328d335a99280dc",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15253424"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1021/pr034074w"
+            }
+          ],
+          "reference_number": 3
+        },
+        {
+          "citation_sha256": "8aa191cc0b45f5c7adda44a61739ab99449f208128c329512f9eb13169324efc",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9989496"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/s0092-8674(00)80958-7"
+            }
+          ],
+          "reference_number": 4
+        },
+        {
+          "citation_sha256": "64406b6581ced183879c58120962e33ef3bbda3b4e7580bf747c585e329363c4",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8226684"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.175.22.7363-7372.1993"
+            }
+          ],
+          "reference_number": 5
+        },
+        {
+          "citation_sha256": "ad8debe32a9e7d4f3b86c7c71891fa9a7e2971d31f40844f5829d379854a3593",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8540696"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.39.9.1948"
+            }
+          ],
+          "reference_number": 6
+        },
+        {
+          "citation_sha256": "b1b7e952419257d79e3ae6e508bee5d10a2a7ed7dd1c06fe759bf2cb72c2ab6a",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9603892"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.180.11.2987-2991.1998"
+            }
+          ],
+          "reference_number": 7
+        },
+        {
+          "citation_sha256": "ae6750b3da62843c1412bf83980dd1f0fda2842d7f4e2f91c94d0823d8ee8487",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9973347"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.181.4.1203-1210.1999"
+            }
+          ],
+          "reference_number": 8
+        },
+        {
+          "citation_sha256": "020d996c2b4f47a2f10be68df7306f03a42fa9501dd83f7c0c7a95d10801729f",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10671490"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.275.7.4628"
+            }
+          ],
+          "reference_number": 9
+        },
+        {
+          "citation_sha256": "39e6c3a9188393bb32b85d415b5cafc7f5df65cb3a8ab31aff52b0dcc98e9bfb",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15325256"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.bbrc.2004.07.140"
+            }
+          ],
+          "reference_number": 10
+        },
+        {
+          "citation_sha256": "e5aca75d367af4c68d8b29ee3ec0b96ab64bbd92ead816704746c387df04de8f",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "23812586"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/nature12300"
+            }
+          ],
+          "reference_number": 11
+        },
+        {
+          "citation_sha256": "41e645876812e9e51c27ec2e9f8d8ebc98cd708ae5cfa05418fc202f3c3ea6c8",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "25901994"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/ncomms7890"
+            }
+          ],
+          "reference_number": 12
+        },
+        {
+          "citation_sha256": "0a8a82aa5a8b005049e49e4db0cc9c5581e2dbc5d297ae0cb4de4ebcb5e00267",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "32715566"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/1462-2920.15177"
+            }
+          ],
+          "reference_number": 13
+        },
+        {
+          "citation_sha256": "f9af62df23582ce702b3339c7b9175254efced2c051d39097ae44997b66a42b3",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15117957"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.c400164200"
+            }
+          ],
+          "reference_number": 14
+        },
+        {
+          "citation_sha256": "4e2b1937b3160f3cc16e43d201629a6169c198d1db7f0818354833c163aba6d9",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15226509"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.0400375101"
+            }
+          ],
+          "reference_number": 15
+        },
+        {
+          "citation_sha256": "4d95a0ac62fc31c06e69cc5928aa9d575f058182a6611f6dd46a41af85bf66a8",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "30944318"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/s41467-019-09463-9"
+            }
+          ],
+          "reference_number": 16
+        },
+        {
+          "citation_sha256": "0f01652aa4f89c0ffcdba6010ec871a47b3d0ca68ad22bf157346c93f3ec8056",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "33009415"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/s41467-020-18770-5"
+            }
+          ],
+          "reference_number": 17
+        }
+      ],
+      "native_card_cross_references": [
+        {
+          "database": "CARD",
+          "id": "ARO:3000377",
+          "properties": [
+            {
+              "key": "CARD short name",
+              "value": "MexA"
+            },
+            {
+              "key": "Resistance mechanism identifier",
+              "value": "ARO:0010000"
+            },
+            {
+              "key": "Resistance mechanism name",
+              "value": "antibiotic efflux"
+            }
+          ]
+        }
+      ],
+      "native_entry_sha256": "9bb490667cbf0e01aa74bb75475d584761e10247bf066f90c0d0dc0513ca19cd",
+      "native_identifier_anomalies": [],
+      "native_protein_flag": "Precursor",
+      "native_protein_taxonomy": {
+        "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+        "taxonId": 208964
+      },
+      "new_primary_results_review": false,
+      "ordered_locus_names": [
+        "PA0425"
+      ],
+      "orf_names": [],
+      "protein_names": [
+        {
+          "path": "recommendedName/0/fullName",
+          "value": "Multidrug resistance protein MexA"
+        }
+      ],
+      "reference_taxonomy": {
+        "active": true,
+        "label_flags": [],
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Bacteria",
+            "taxonId": 2
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Pseudomonadati",
+            "taxonId": 3379134
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Pseudomonadota",
+            "taxonId": 1224
+          },
+          {
+            "rank": "class",
+            "scientificName": "Gammaproteobacteria",
+            "taxonId": 1236
+          },
+          {
+            "rank": "order",
+            "scientificName": "Pseudomonadales",
+            "taxonId": 72274
+          },
+          {
+            "rank": "family",
+            "scientificName": "Pseudomonadaceae",
+            "taxonId": 135621
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Pseudomonas",
+            "taxonId": 286
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Pseudomonas aeruginosa group",
+            "taxonId": 136841
+          },
+          {
+            "rank": "species",
+            "scientificName": "Pseudomonas aeruginosa",
+            "taxonId": 287
+          },
+          {
+            "rank": "strain",
+            "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+            "taxonId": 208964
+          }
+        ],
+        "lineage_species_is_experimental_subject": false,
+        "native_rank": "strain",
+        "native_species_rank_establishes_individual_organism": false,
+        "parent": {
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "provider": "UniProt taxonomy cached response; no NCBI request",
+        "scientific_name": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+        "species": {
+          "rank": "species",
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "taxon_id": "NCBITaxon:208964"
+      },
+      "taxonomy_name_comparison": "EXACT_NATIVE_SCIENTIFIC_NAME_AGREEMENT",
+      "unflagged_means_complete": false,
+      "whole_complex_identity_assignment": false
+    },
+    "UniProtKB:Q51396": {
+      "accession": "UniProtKB:Q51396",
+      "bibliography_counts": {
+        "journal article": 1
+      },
+      "entry_audit": {
+        "entryVersion": 72,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_field_present": true,
+      "gene_symbols": [
+        "mexD"
+      ],
+      "gene_symbols_inferred_from_names": false,
+      "native_bibliography": [
+        {
+          "citation_sha256": "0f190b652f26409a3ba3a239348461897789287af91613a7a5b93dca04881075",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8878035"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1046/j.1365-2958.1996.281397.x"
+            }
+          ],
+          "reference_number": 1
+        }
+      ],
+      "native_card_cross_references": [
+        {
+          "database": "CARD",
+          "id": "ARO:3000801",
+          "properties": [
+            {
+              "key": "CARD short name",
+              "value": "MexD"
+            },
+            {
+              "key": "Resistance mechanism identifier",
+              "value": "ARO:0010000"
+            },
+            {
+              "key": "Resistance mechanism name",
+              "value": "antibiotic efflux"
+            }
+          ]
+        }
+      ],
+      "native_entry_sha256": "065bb2de12ae5e09e23a5a288f77553b11e8bf03639206f81a354ef1ddf20d41",
+      "native_identifier_anomalies": [],
+      "native_protein_flag": null,
+      "native_protein_taxonomy": {
+        "scientificName": "Pseudomonas aeruginosa",
+        "taxonId": 287
+      },
+      "new_primary_results_review": false,
+      "ordered_locus_names": [],
+      "orf_names": [],
+      "protein_names": [
+        {
+          "path": "recommendedName/0/fullName",
+          "value": "Efflux pump membrane transporter"
+        }
+      ],
+      "reference_taxonomy": {
+        "active": true,
+        "label_flags": [],
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Bacteria",
+            "taxonId": 2
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Pseudomonadati",
+            "taxonId": 3379134
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Pseudomonadota",
+            "taxonId": 1224
+          },
+          {
+            "rank": "class",
+            "scientificName": "Gammaproteobacteria",
+            "taxonId": 1236
+          },
+          {
+            "rank": "order",
+            "scientificName": "Pseudomonadales",
+            "taxonId": 72274
+          },
+          {
+            "rank": "family",
+            "scientificName": "Pseudomonadaceae",
+            "taxonId": 135621
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Pseudomonas",
+            "taxonId": 286
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Pseudomonas aeruginosa group",
+            "taxonId": 136841
+          },
+          {
+            "rank": "species",
+            "scientificName": "Pseudomonas aeruginosa",
+            "taxonId": 287
+          }
+        ],
+        "lineage_species_is_experimental_subject": false,
+        "native_rank": "species",
+        "native_species_rank_establishes_individual_organism": false,
+        "parent": {
+          "scientificName": "Pseudomonas aeruginosa group",
+          "taxonId": 136841
+        },
+        "provider": "UniProt taxonomy cached response; no NCBI request",
+        "scientific_name": "Pseudomonas aeruginosa",
+        "species": {
+          "rank": "species",
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "taxon_id": "NCBITaxon:287"
+      },
+      "taxonomy_name_comparison": "EXACT_NATIVE_SCIENTIFIC_NAME_AGREEMENT",
+      "unflagged_means_complete": false,
+      "whole_complex_identity_assignment": false
+    },
+    "UniProtKB:Q51487": {
+      "accession": "UniProtKB:Q51487",
+      "bibliography_counts": {
+        "journal article": 21
+      },
+      "entry_audit": {
+        "entryVersion": 170,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_field_present": true,
+      "gene_symbols": [
+        "oprM"
+      ],
+      "gene_symbols_inferred_from_names": false,
+      "native_bibliography": [
+        {
+          "citation_sha256": "64406b6581ced183879c58120962e33ef3bbda3b4e7580bf747c585e329363c4",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8226684"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.175.22.7363-7372.1993"
+            }
+          ],
+          "reference_number": 1
+        },
+        {
+          "citation_sha256": "a6634ac14d53647a3d8e77708eb9ffadd6dfbcb5696a0976ea261f5ff2385ec1",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10889211"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m005742200"
+            }
+          ],
+          "reference_number": 2
+        },
+        {
+          "citation_sha256": "3a4b3c9547a8580c3a556043a097be5d27b90b673103a699dd4fa6d9cdf3e6bf",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10984043"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/35023079"
+            }
+          ],
+          "reference_number": 3
+        },
+        {
+          "citation_sha256": "26f0d0c6896b5e068d0e31a4d002dd9bfa28e8385739deb1ee24736d692aea4d",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "7968531"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/j.1365-2958.1993.tb00925.x"
+            }
+          ],
+          "reference_number": 4
+        },
+        {
+          "citation_sha256": "386dd64a052b8affe90831753fbc4bf78c4597617e2e4d807328d335a99280dc",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15253424"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1021/pr034074w"
+            }
+          ],
+          "reference_number": 5
+        },
+        {
+          "citation_sha256": "ad8debe32a9e7d4f3b86c7c71891fa9a7e2971d31f40844f5829d379854a3593",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8540696"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.39.9.1948"
+            }
+          ],
+          "reference_number": 6
+        },
+        {
+          "citation_sha256": "14f5ec88aca20a26ac338f8418916504e11a28a7794e5403a319db46c31be96f",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9401051"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.179.24.7875-7881.1997"
+            }
+          ],
+          "reference_number": 7
+        },
+        {
+          "citation_sha256": "b1b7e952419257d79e3ae6e508bee5d10a2a7ed7dd1c06fe759bf2cb72c2ab6a",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9603892"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.180.11.2987-2991.1998"
+            }
+          ],
+          "reference_number": 8
+        },
+        {
+          "citation_sha256": "4dcd0e49669193329e8a39882d782483b0e4a05697e883f8075be31157ae23cc",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10543738"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.43.11.2624"
+            }
+          ],
+          "reference_number": 9
+        },
+        {
+          "citation_sha256": "ae6750b3da62843c1412bf83980dd1f0fda2842d7f4e2f91c94d0823d8ee8487",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9973347"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.181.4.1203-1210.1999"
+            }
+          ],
+          "reference_number": 10
+        },
+        {
+          "citation_sha256": "cc02c988c750561f0639676b4ba8480396f311863bbb3674e5a366684cd4e6e2",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10952562"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.44.9.2242-2246.2000"
+            }
+          ],
+          "reference_number": 11
+        },
+        {
+          "citation_sha256": "4d618f9d4ae67c76dc087284e4a5ec33575414bf66f21b73182e7bf023dd1fd9",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "11083635"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aac.44.12.3322-3327.2000"
+            }
+          ],
+          "reference_number": 12
+        },
+        {
+          "citation_sha256": "471e451c12b2d0d2c8596d968b4c36b391dfec34a2218783381e868524432edc",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "11114896"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.183.1.12-27.2001"
+            }
+          ],
+          "reference_number": 13
+        },
+        {
+          "citation_sha256": "39e6c3a9188393bb32b85d415b5cafc7f5df65cb3a8ab31aff52b0dcc98e9bfb",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15325256"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.bbrc.2004.07.140"
+            }
+          ],
+          "reference_number": 14
+        },
+        {
+          "citation_sha256": "e5aca75d367af4c68d8b29ee3ec0b96ab64bbd92ead816704746c387df04de8f",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "23812586"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/nature12300"
+            }
+          ],
+          "reference_number": 15
+        },
+        {
+          "citation_sha256": "41e645876812e9e51c27ec2e9f8d8ebc98cd708ae5cfa05418fc202f3c3ea6c8",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "25901994"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/ncomms7890"
+            }
+          ],
+          "reference_number": 16
+        },
+        {
+          "citation_sha256": "0a8a82aa5a8b005049e49e4db0cc9c5581e2dbc5d297ae0cb4de4ebcb5e00267",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "32715566"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/1462-2920.15177"
+            }
+          ],
+          "reference_number": 17
+        },
+        {
+          "citation_sha256": "2dfa6aa387738c0d7563bec4c28207e20f80c61c296fdeb8d94678409272df11",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15507433"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.c400445200"
+            }
+          ],
+          "reference_number": 18
+        },
+        {
+          "citation_sha256": "7e0cc7ae791920590c450a0b5ca4bfa31dca1ea5f1d8f3406471b240934d6937",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15797729"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.jsb.2005.01.001"
+            }
+          ],
+          "reference_number": 19
+        },
+        {
+          "citation_sha256": "4d95a0ac62fc31c06e69cc5928aa9d575f058182a6611f6dd46a41af85bf66a8",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "30944318"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/s41467-019-09463-9"
+            }
+          ],
+          "reference_number": 20
+        },
+        {
+          "citation_sha256": "0f01652aa4f89c0ffcdba6010ec871a47b3d0ca68ad22bf157346c93f3ec8056",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "33009415"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/s41467-020-18770-5"
+            }
+          ],
+          "reference_number": 21
+        }
+      ],
+      "native_card_cross_references": [
+        {
+          "database": "CARD",
+          "id": "ARO:3000379",
+          "properties": [
+            {
+              "key": "CARD short name",
+              "value": "OprM"
+            },
+            {
+              "key": "Resistance mechanism identifier",
+              "value": "ARO:0010000"
+            },
+            {
+              "key": "Resistance mechanism name",
+              "value": "antibiotic efflux"
+            }
+          ]
+        }
+      ],
+      "native_entry_sha256": "a19ad44b3b56ea58b80adfdab2cb40561754bc5018b3f4352cf8d934fc3ee51c",
+      "native_identifier_anomalies": [],
+      "native_protein_flag": "Precursor",
+      "native_protein_taxonomy": {
+        "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+        "taxonId": 208964
+      },
+      "new_primary_results_review": false,
+      "ordered_locus_names": [
+        "PA0427"
+      ],
+      "orf_names": [],
+      "protein_names": [
+        {
+          "path": "recommendedName/0/fullName",
+          "value": "Outer membrane protein OprM"
+        }
+      ],
+      "reference_taxonomy": {
+        "active": true,
+        "label_flags": [],
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Bacteria",
+            "taxonId": 2
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Pseudomonadati",
+            "taxonId": 3379134
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Pseudomonadota",
+            "taxonId": 1224
+          },
+          {
+            "rank": "class",
+            "scientificName": "Gammaproteobacteria",
+            "taxonId": 1236
+          },
+          {
+            "rank": "order",
+            "scientificName": "Pseudomonadales",
+            "taxonId": 72274
+          },
+          {
+            "rank": "family",
+            "scientificName": "Pseudomonadaceae",
+            "taxonId": 135621
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Pseudomonas",
+            "taxonId": 286
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Pseudomonas aeruginosa group",
+            "taxonId": 136841
+          },
+          {
+            "rank": "species",
+            "scientificName": "Pseudomonas aeruginosa",
+            "taxonId": 287
+          },
+          {
+            "rank": "strain",
+            "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+            "taxonId": 208964
+          }
+        ],
+        "lineage_species_is_experimental_subject": false,
+        "native_rank": "strain",
+        "native_species_rank_establishes_individual_organism": false,
+        "parent": {
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "provider": "UniProt taxonomy cached response; no NCBI request",
+        "scientific_name": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+        "species": {
+          "rank": "species",
+          "scientificName": "Pseudomonas aeruginosa",
+          "taxonId": 287
+        },
+        "taxon_id": "NCBITaxon:208964"
+      },
+      "taxonomy_name_comparison": "EXACT_NATIVE_SCIENTIFIC_NAME_AGREEMENT",
+      "unflagged_means_complete": false,
+      "whole_complex_identity_assignment": false
+    }
+  },
+  "own_citation_query": {
+    "complete_for_query": true,
+    "establishes_biological_absence": false,
+    "pages": [
+      {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-9449262-response.bin",
+          "sha256": "5925643ffdef80cc4b580493b6d72ebe18f784c88c7657f0ce688544011f2adf"
+        },
+        "page": 1,
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-9449262-receipt.json",
+          "sha256": "05f87448ef9e92f66b2fbd01708ae166778f4f6336e3aada8e10b2c529dd1a6f"
+        },
+        "retrieved_at": "2026-10-13T12:41:08.287259+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A9449262&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    ],
+    "query": "lit_pubmed:9449262",
+    "release": "2026_03",
+    "result_count": 0,
+    "status": "COMPLETE_QUERY_NOT_PRIMARY_REVIEW"
+  },
+  "plan": {
+    "path": "research/2026-10-15-mex-host-context-plan.json",
+    "sha256": "7efa6c6f43dea77cce3d06f63226e057e9d998bf0b466bb370a55c11abc11432"
+  },
+  "prior_members": {
+    "path": "research/2026-10-15-card-complex-members.json",
+    "sha256": "008d915100f8c36ca43b39b891a97a418e4e9d60dcd807cbfe9e2ed9284779ac"
+  },
+  "prior_mex": {
+    "path": "research/2026-10-15-mex-component-references.json",
+    "sha256": "3f2d562cd3f0d8c5365cbc3ea67d021639ac186d3a61f0d985bee0289aa96699"
+  },
+  "records": [
+    {
+      "activity_observations": "21",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:28971",
+      "label": "ampicillin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/ampicillin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "3983eac47db2f393481b546bb5ab5579a11c7c25da07b0c541a5a608d1a7f5cf",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "37",
+      "score_rules": "0",
+      "standard_inchi_key": "AVKUERGKIZMTKX-NJBDSQKTSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "2",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:2955",
+      "label": "azithromycin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/azithromycin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "3b6f8f139da665be8e33d6db6500c3fd019d12510b99fe586b28567bc2450d51",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "55",
+      "score_rules": "0",
+      "standard_inchi_key": "MQTOSJVFKKJCRP-BICOPXKESA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "26",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:161680",
+      "label": "aztreonam",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/aztreonam.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "a9aff230bf5f40d45a5d722c477996d8d74127dde47cfa46eeb3af3246c237a4",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "7",
+      "score_rules": "0",
+      "standard_inchi_key": "WZPBZJONDBGPKJ-VEHQQRBSSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "34",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:3508",
+      "label": "ceftazidime",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/ceftazidime.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "51c8151de51d168a17f89ac72d4a11ac67ca40f881071d1061476444f1332ac1",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "258",
+      "score_rules": "0",
+      "standard_inchi_key": "ORFOPKXBNMVMKC-DWVKKRMSSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "13",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:29007",
+      "label": "ceftriaxone",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/ceftriaxone.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "7294a0606c41257f1589c2aa54119527ccf09778c7d84f7258d74e4253f12135",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "23",
+      "score_rules": "0",
+      "standard_inchi_key": "VAAUVRVFOQPIGI-SPQHTLEESA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "2",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:17698",
+      "label": "chloramphenicol",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/chloramphenicol.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "aa85b6ffcb39d19950f2c8397ec4c37d5472a959130a79eb1d27aecb62404498",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "93",
+      "score_rules": "0",
+      "standard_inchi_key": "WIIZWVCIJKGZOK-RKDXNWHRSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "59",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:100241",
+      "label": "ciprofloxacin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/ciprofloxacin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "de4e65076e0a69a82637f3af5a824c0bd198a1b49ee22d85a424d67ca0c9fedd",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "188",
+      "score_rules": "0",
+      "standard_inchi_key": "MYSWGUAQZAJSOK-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:59064",
+      "label": "colistin A",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/colistin-a.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "2b8020dd24bb1b98b69d0b5286ee979baa65c123be1bf2cf3344a034049f74cd",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "123",
+      "score_rules": "0",
+      "standard_inchi_key": "XDJYMJULXQKGMM-RVYUQJQSSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:59673",
+      "label": "colistin B",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/colistin-b.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "6a7050a96a3bd4403760cefc7a1c502bd67b4a235790a6c9bff98fcd9053e10c",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "123",
+      "score_rules": "0",
+      "standard_inchi_key": "KNIWPHSUTGNZST-SSWRVQTPSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:42355",
+      "label": "erythromycin A",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/erythromycin-a.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "4639a9ca3005a92edabbab64b412731187bbe2a540971f251ce4a856bd6fe65f",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "110",
+      "score_rules": "0",
+      "standard_inchi_key": "ULGZDMOVFRHVEP-RWJQBGPGSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "antibioticmech:aro-6407ce57f1",
+      "label": "gentamicin C",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/gentamicin-c.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "b307020c0603c33989e7fcf9112897cdf36b7cbc17d10f1a2e9bb159c905836d",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "14",
+      "score_rules": "0",
+      "standard_inchi_key": "VEGXETMJINRLTH-ALRICIOSSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "28",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:43968",
+      "label": "meropenem",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/meropenem.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "4973d4c24516b071d6195b63b4a82e66269b0cb5cb8932a6c49320c8585ff767",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "20",
+      "score_rules": "0",
+      "standard_inchi_key": "DMJNNHOOLUXYBV-PQTSNVLCSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:28368",
+      "label": "novobiocin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/novobiocin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "0493eb6364990e579ac5acaadb12281981ce6831f643b8797e56f2371d0cd568",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "15",
+      "score_rules": "0",
+      "standard_inchi_key": "YJQPYGGHQPGBLI-KGSXXDOSSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "76",
+      "coordinate_flags": "0",
+      "identifier": "antibioticmech:aro-2eea3233f3",
+      "label": "ofloxacin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/ofloxacin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "5ddd8f63ce90ff0d26ed37026628e52f56d1b75925adb269a832ed9e2b2bc407",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "35",
+      "score_rules": "0",
+      "standard_inchi_key": "GSDSWSVVBLHKDQ-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:7911",
+      "label": "panipenem",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/panipenem.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "01c96f6ed951acb012fa0f93133c18cc45b0a372f5b62e17d4328ba96bdefd59",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "1",
+      "score_rules": "0",
+      "standard_inchi_key": "TYMABNNERDVXID-DLYFRVTGSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "20",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:27902",
+      "label": "tetracycline",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/tetracycline.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "68de808f0457c1c59f0c1decf4ad4b958d872b52b175e37795db0e85bccc8258",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "116",
+      "score_rules": "0",
+      "standard_inchi_key": "OFVLGDICTFRJMM-WESIUVDSSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:45924",
+      "label": "trimethoprim",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/trimethoprim.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "b9c93a0d1282a00392d687872b31e15ae97a16a9dbadce2eb3760c80fe3be861",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "69",
+      "score_rules": "0",
+      "standard_inchi_key": "IEDVJHCEMCRBQM-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    }
+  ],
+  "scope": "MEX_PRIMARY_HOST_CONTEXT_NOT_EXPERIMENTAL_ALLELE_OR_DONOR_PHENOTYPE_ASSIGNMENT",
+  "source_species": {
+    "basis": "EXACT_SOURCE_NAME_TO_CACHED_UNIPROT_SPECIES_NODE",
+    "experimental_strain_taxon_assigned": false,
+    "record_taxon_assignment": false,
+    "reference_protein_assigned_to_host": false,
+    "source_name": "Pseudomonas aeruginosa",
+    "species_node": {
+      "rank": "species",
+      "scientificName": "Pseudomonas aeruginosa",
+      "taxonId": 287
+    },
+    "taxon_id": "NCBITaxon:287"
+  },
+  "summary": {
+    "complete_selected_records_read": 17,
+    "corpus_records_hash_checked": 2939,
+    "distinct_reference_proteins_preserved": 7,
+    "native_card_entries_replayed": 4182,
+    "native_card_pages_replayed": 9,
+    "native_mex_entries_replayed": 20,
+    "new_primary_text_contexts_reviewed": 1,
+    "new_uniprot_requests": 0,
+    "selected_claim_qualifications": 6,
+    "source_claims": 22,
+    "source_terms": 2,
+    "species_name_crosswalks": 2
+  },
+  "taxonomy_sources": {
+    "287": {
+      "body": null,
+      "body_sha256": "62aff78ebd85ab5433dbceb5e5c4d53a49622f82f085485435eb7ed77282935c",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-4bbd28383b3f1605787c22f019f974a4e70d9c85458753fd6b133c4498744057.json",
+        "sha256": "1ef1df6197f9c8fa81b3bb269e23ebaf319b7de98f12fb1eae58cd894f331e66"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T03:03:52.113787+00:00",
+      "url": "https://rest.uniprot.org/taxonomy/287"
+    },
+    "562": {
+      "body": null,
+      "body_sha256": "20aa358053d2fae1e2cd74636ed5aca1efbc372e5b8bcfdb10d3fa80be6789a1",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-b37438d139cabeff14d8fff73da60ff02883c14f8607f400fe790db4799cc9ac.json",
+        "sha256": "56c5cdcec44f05a573796c091acdccc5142f9cc7eeef32a72ebb0bdeab0f6b40"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T03:04:03.650418+00:00",
+      "url": "https://rest.uniprot.org/taxonomy/562"
+    }
+  }
+}

@@ -1,0 +1,246 @@
+identifier: CHEBI:136050
+label: ozenoxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: A nonfluorinated 1-cyclopropyl-8-methyl-7-[5-methyl-6-(methylamino)pyridin-3-yl]-4-oxo-1,4-dihydroquinoline-3-carboxylic
+  acid quinolone antibacterial that inhibits bacterial DNA gyrase and topoisomerase
+  IV.
+definition_source: DOI:10.1128/AAC.01509-13
+synonyms:
+- synonym_text: T-3912
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: GF-001001-00
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CNc1ncc(-c2ccc3c(=O)c(C(=O)O)cn(C4CC4)c3c2C)cc1C
+  standard_inchi: InChI=1S/C21H21N3O3/c1-11-8-13(9-23-20(11)22-3)15-6-7-16-18(12(15)2)24(14-4-5-14)10-17(19(16)25)21(26)27/h6-10,14H,4-5H2,1-3H3,(H,22,23)(H,26,27)
+  standard_inchi_key: XPIJWUTXQAGSLK-UHFFFAOYSA-N
+  molecular_formula: C21H21N3O3
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/9863827
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 363.417
+  monoisotopic_mass: 363.1583
+xrefs:
+- pubchem.compound:9863827
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/AAC.01509-13#ozenoxacin
+  source_label: ozenoxacin
+  minted_identifier: antibioticmech:curator-e58120938c
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/AAC.01509-13
+    snippet: Tato et al. evaluated the nonfluorinated quinolone ozenoxacin (T-3912)
+      against 1,031 Gram-positive clinical isolates from skin and soft tissue infections
+      and reported MIC50 and MIC90 values of 0.002 and 0.004 ug/mL for methicillin-susceptible
+      Staphylococcus aureus, 0.004 and 0.12 ug/mL for methicillin-resistant S. aureus,
+      and 0.015 and 0.03 ug/mL for Streptococcus pyogenes.
+    notes: Reported by Tato et al. 2014 (Antimicrob Agents Chemother 58:591-595; PMID:24080666)
+      and Yamakawa et al. 2002 (Antimicrob Agents Chemother 46:1229-1234; DOI:10.1128/AAC.46.5.1229-1234.2002)
+      as a nonfluorinated pyridone quinolone antibacterial (T-3912) that dually inhibits
+      DNA gyrase and topoisomerase IV. PubChem CID 9863827 and ChEBI CHEBI:136050
+      supply the standard InChI, InChIKey, formula, and SMILES for ozenoxacin.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
+  llm_assisted: true
+- timestamp: '2026-10-26T07:00:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added primary-literature molecular_targets entry for bacterial DNA gyrase
+    and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.46.5.1229-1234.2002
+    (PMID:11959549; issue #1285).'
+  llm_assisted: true
+- timestamp: '2026-10-26T07:05:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed Streptococcus pneumoniae TIGR4 ParC (UniProtKB:P72525) and
+    Escherichia coli K-12 GyrA/ParC (UniProtKB:P0AES4, UniProtKB:P0AFI2) protein_examples
+    to the primary-literature DNA gyrase and topoisomerase IV target (DOI:10.1128/AAC.46.5.1229-1234.2002;
+    PMID:11959549).
+  llm_assisted: true
+- timestamp: '2026-10-26T07:10:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted curation_status from PROPOSED to REVIEWED after curating primary-literature
+    molecular_targets and reviewed UniProtKB protein_examples and verifying exact
+    ChEBI:136050 identity (issue #1285).'
+  llm_assisted: true
+- timestamp: '2026-10-31T16:20:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph ozenoxacin_dual_gyrase_topoisomerase_iv_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P72525,
+    UniProtKB:P0AES4, UniProtKB:P0AFI2) and primary literature (DOI:10.1128/AAC.46.5.1229-1234.2002,
+    DOI:10.1128/AAC.01509-13).
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: Non-fluorinated des-fluoro(6)-quinolone that dually inhibits
+  bacterial DNA gyrase and topoisomerase IV DNA replication enzymes in staphylococci
+  and streptococci (PMID:24752267).
+molecular_targets:
+- target_label: bacterial DNA gyrase and topoisomerase IV
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Bacterial DNA gyrase and topoisomerase IV inhibition and GyrA/ParC
+    QRDR mutant-panel profiling with non-fluorinated quinolone T-3912 / ozenoxacin
+    (Yamakawa et al. 2002, DOI:10.1128/AAC.46.5.1229-1234.2002, PMID:11959549).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2002-05
+  source_retrieved_on: '2026-10-26'
+  evidence:
+  - reference: DOI:10.1128/AAC.46.5.1229-1234.2002
+    snippet: Yamakawa et al. reported that the nonfluorinated topical quinolone T-3912
+      (ozenoxacin) exhibited potent antibacterial activity against Gram-positive and
+      Gram-negative pathogens, including fluoroquinolone-resistant Staphylococcus
+      aureus and Streptococcus pneumoniae, by inhibiting DNA gyrase and topoisomerase
+      IV.
+    notes: Yamakawa et al. 2002 (PMID:11959549) characterized T-3912 (ozenoxacin)
+      activity against GyrA/ParC target-mutant staphylococcal and pneumococcal strains
+      and established dual inhibition of bacterial DNA gyrase and topoisomerase IV.
+  protein_examples:
+  - uniprot_id: UniProtKB:P72525
+    protein_label: DNA topoisomerase 4 subunit A
+    gene_symbol: parC
+    taxon_id: NCBITaxon:170187
+    taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-26'
+    role: Streptococcus pneumoniae topoisomerase IV ParC subunit targeted by the nonfluorinated
+      quinolone T-3912 / ozenoxacin across wild-type and QRDR-mutant strains (DOI:10.1128/AAC.46.5.1229-1234.2002;
+      PMID:11959549).
+  - uniprot_id: UniProtKB:P0AES4
+    protein_label: DNA gyrase subunit A
+    gene_symbol: gyrA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-26'
+    role: Bacterial DNA gyrase GyrA catalytic subunit targeted by T-3912 / ozenoxacin
+      in Gram-positive and Gram-negative topoisomerase inhibition assays (DOI:10.1128/AAC.46.5.1229-1234.2002;
+      PMID:11959549).
+  - uniprot_id: UniProtKB:P0AFI2
+    protein_label: DNA topoisomerase 4 subunit A
+    gene_symbol: parC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-26'
+    role: Bacterial topoisomerase IV ParC catalytic subunit targeted by T-3912 / ozenoxacin
+      alongside DNA gyrase (DOI:10.1128/AAC.46.5.1229-1234.2002; PMID:11959549).
+causal_graphs:
+- graph_id: ozenoxacin_dual_gyrase_topoisomerase_iv_inhibition
+  title: Ozenoxacin dually inhibits bacterial DNA gyrase and topoisomerase IV to block
+    bacterial DNA replication
+  description: Ozenoxacin (T-3912), a nonfluorinated quinolone, dually inhibits bacterial
+    DNA gyrase (GyrA/GyrB) supercoiling and topoisomerase IV (ParC/ParE) decatenation
+    across Gram-positive and Gram-negative bacteria, retaining potent bactericidal
+    activity against QRDR-mutant strains.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ozenoxacin
+    label: ozenoxacin
+    node_type: COMPOUND
+    grounding: CHEBI:136050
+  - node_id: bacterial_type_ii_topoisomerases_gyra_parc
+    label: bacterial DNA gyrase and topoisomerase IV
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial DNA gyrase and topoisomerase IV complexes; kept label-only
+      with Streptococcus pneumoniae TIGR4 ParC (UniProtKB:P72525) and Escherichia
+      coli K-12 GyrA (UniProtKB:P0AES4) and ParC (UniProtKB:P0AFI2) protein_examples.
+    gene_symbols:
+    - gyrA
+    - parC
+    protein_examples:
+    - uniprot_id: UniProtKB:P72525
+      protein_label: DNA topoisomerase 4 subunit A
+      gene_symbol: parC
+      taxon_id: NCBITaxon:170187
+      taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-26'
+      role: Streptococcus pneumoniae topoisomerase IV ParC subunit targeted by the
+        nonfluorinated quinolone T-3912 / ozenoxacin across wild-type and QRDR-mutant
+        strains (DOI:10.1128/AAC.46.5.1229-1234.2002; PMID:11959549).
+    - uniprot_id: UniProtKB:P0AES4
+      protein_label: DNA gyrase subunit A
+      gene_symbol: gyrA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-26'
+      role: Bacterial DNA gyrase GyrA catalytic subunit targeted by T-3912 / ozenoxacin
+        in Gram-positive and Gram-negative topoisomerase inhibition assays (DOI:10.1128/AAC.46.5.1229-1234.2002;
+        PMID:11959549).
+    - uniprot_id: UniProtKB:P0AFI2
+      protein_label: DNA topoisomerase 4 subunit A
+      gene_symbol: parC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-26'
+      role: Bacterial topoisomerase IV ParC catalytic subunit targeted by T-3912 /
+        ozenoxacin alongside DNA gyrase (DOI:10.1128/AAC.46.5.1229-1234.2002; PMID:11959549).
+  - node_id: gyrase_and_topo_iv_catalytic_activity
+    label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Type II topoisomerase supercoiling and decatenation catalytic
+      activities inhibited by T-3912 / ozenoxacin.
+  - node_id: bacterial_dna_replication
+    label: bacterial DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: ozenoxacin
+    predicate: inhibits
+    object: gyrase_and_topo_iv_catalytic_activity
+    description: Ozenoxacin (T-3912) dually inhibits bacterial DNA gyrase supercoiling
+      and topoisomerase IV decatenation.
+    evidence:
+    - reference: DOI:10.1128/AAC.46.5.1229-1234.2002
+      notes: Topoisomerase inhibition and QRDR-mutant susceptibility assays demonstrated
+        potent dual inhibition of DNA gyrase and topoisomerase IV by T-3912 (PMID:11959549).
+    - reference: DOI:10.1128/AAC.01509-13
+      notes: Comparative susceptibility and mutant-prevention studies confirmed potent
+        ozenoxacin activity across gyrA and grlA/parC mutant staphylococci and streptococci
+        (PMID:24080666).
+  - subject: bacterial_type_ii_topoisomerases_gyra_parc
+    predicate: enables
+    object: gyrase_and_topo_iv_catalytic_activity
+    description: Bacterial DNA gyrase and topoisomerase IV catalyze DNA supercoiling
+      and chromosome decatenation.
+    evidence:
+    - reference: DOI:10.1128/AAC.46.5.1229-1234.2002
+      notes: Enzymatic and genetic target analyses established GyrA and ParC as the
+        catalytic topoisomerase subunits inhibited by T-3912.
+  - subject: gyrase_and_topo_iv_catalytic_activity
+    predicate: supports
+    object: bacterial_dna_replication
+    description: Type II topoisomerase supercoiling and decatenation activities are
+      required for bacterial DNA replication.
+    evidence:
+    - reference: DOI:10.1128/AAC.46.5.1229-1234.2002
+      notes: Dual inhibition of DNA gyrase and topoisomerase IV by T-3912 arrested
+        bacterial replication and growth across Gram-positive and Gram-negative pathogens.

@@ -1,0 +1,101 @@
+identifier: antibioticmech:curator-daae3d88a3
+label: sanfetrinem
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A tricyclic beta-lactam (trinem) antibacterial agent (GV104326) that acylates
+  bacterial penicillin-binding proteins and L,D-transpeptidases to inhibit peptidoglycan
+  cross-linking.
+definition_source: DOI:10.1128/AAC.40.9.2142
+synonyms:
+- synonym_text: GV104326
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: GV-104326
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CO[C@H]1CCC[C@H]2C1=C(C(=O)O)N1C(=O)[C@H]([C@@H](C)O)[C@@H]21
+  standard_inchi: InChI=1S/C14H19NO5/c1-6(16)9-11-7-4-3-5-8(20-2)10(7)12(14(18)19)15(11)13(9)17/h6-9,11,16H,3-5H2,1-2H3,(H,18,19)/t6-,7+,8+,9-,11-/m1/s1
+  standard_inchi_key: ICFDDEJRXZSWTA-KJFVXYAMSA-N
+  molecular_formula: C14H19NO5
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/71452
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 281.308
+  monoisotopic_mass: 281.1263
+xrefs:
+- pubchem.compound:71452
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/AAC.40.9.2142#sanfetrinem
+  source_label: sanfetrinem
+  minted_identifier: antibioticmech:curator-daae3d88a3
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/AAC.40.9.2142
+    snippet: Singh et al. tested the tricyclic beta-lactam (trinem) sanfetrinem (GV104326)
+      against 287 Gram-positive organisms and reported MIC90 values of <=0.03 to 0.06
+      ug/mL for Streptococcus pyogenes, Streptococcus agalactiae, and penicillin-susceptible
+      Streptococcus pneumoniae, 0.125 ug/mL for methicillin-susceptible Staphylococcus
+      aureus, and 1 ug/mL for ampicillin-susceptible Enterococcus faecalis.
+    notes: Reported by Singh et al. 1996 (Antimicrob Agents Chemother 40:2142-2146;
+      PMID:8878596) and Di Modugno et al. 1994 (Antimicrob Agents Chemother 38:2362-2368;
+      DOI:10.1128/AAC.38.10.2362) as a broad-spectrum tricyclic carbapenem/trinem
+      beta-lactam antibiotic (GV104326) with high stability to beta-lactamases and
+      potent activity against Gram-positive, Gram-negative, anaerobic, and mycobacterial
+      pathogens. PubChem CID 71452 supplies the standard InChI, InChIKey, formula,
+      and isomeric SMILES for sanfetrinem.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes;
+    corrected 'acrylates' typo to 'acylates' in definition.
+  llm_assisted: true
+- timestamp: '2026-10-26T07:00:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added primary-literature molecular_targets entry for bacterial penicillin-binding
+    proteins (PBPs) (PROTEIN, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.40.9.2142
+    (PMID:8878596; issue #1286).'
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: Tricyclic beta-lactam (trinem, GV104326) that covalently acylates
+  bacterial penicillin-binding proteins (PBPs) to inhibit peptidoglycan cell-wall
+  cross-linking (PMID:8540693).
+molecular_targets:
+- target_label: bacterial penicillin-binding proteins (PBPs)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Acylation of essential bacterial penicillin-binding proteins
+    (PBPs) to inhibit peptidoglycan transpeptidation by the tricyclic beta-lactam
+    (trinem) GV104326 / sanfetrinem (Singh et al. 1996, DOI:10.1128/AAC.40.9.2142,
+    PMID:8878596).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1996-09
+  source_retrieved_on: '2026-10-26'
+  evidence:
+  - reference: DOI:10.1128/AAC.40.9.2142
+    snippet: Singh et al. reported that the tricyclic beta-lactam (trinem) sanfetrinem
+      (GV104326) exhibited potent broad-spectrum bactericidal activity against Gram-positive,
+      Gram-negative, and anaerobic bacteria by inhibiting bacterial penicillin-binding
+      proteins and cell wall synthesis.
+    notes: Singh et al. 1996 (PMID:8878596) and Di Modugno et al. 1994 (DOI:10.1128/AAC.38.10.2362,
+      PMID:7840571) established that GV104326 (sanfetrinem) binds essential bacterial
+      PBPs across Gram-positive and Gram-negative pathogens and resists hydrolysis
+      by common beta-lactamases.

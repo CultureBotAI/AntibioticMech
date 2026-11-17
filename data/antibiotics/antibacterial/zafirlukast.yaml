@@ -1,0 +1,224 @@
+identifier: CHEBI:10100
+label: zafirlukast
+antimicrobial_class: ANTIBACTERIAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: An indole-based sulfonylcarbamate (leukotriene receptor antagonist) with
+  direct anti-Gram-positive and antimycobacterial activity mediated by inhibition
+  of staphylococcal lipoteichoic acid synthase (LtaS) and mycobacterial Lsr2.
+definition_source: DOI:10.3390/antibiotics15090914
+synonyms:
+- synonym_text: ICI 204219
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: ICI-204219
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(C)c2ccc(NC(=O)OC3CCCC3)cc12
+  standard_inchi: InChI=1S/C31H33N3O6S/c1-20-8-4-7-11-29(20)41(37,38)33-30(35)22-13-12-21(28(17-22)39-3)16-23-19-34(2)27-15-14-24(18-26(23)27)32-31(36)40-25-9-5-6-10-25/h4,7-8,11-15,17-19,25H,5-6,9-10,16H2,1-3H3,(H,32,36)(H,33,35)
+  standard_inchi_key: YEEZWCHGZNKEEK-UHFFFAOYSA-N
+  molecular_formula: C31H33N3O6S
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/5717
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 575.687
+  monoisotopic_mass: 575.209
+xrefs:
+- pubchem.compound:5717
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3390/antibiotics15090914#zafirlukast
+  source_label: zafirlukast
+  minted_identifier: antibioticmech:curator-1bcc363e8e
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3390/antibiotics15090914
+    snippet: Zafirlukast showed modest direct-acting antimicrobial activity (0.5-32
+      ug/mL) against a panel of Gram-positive bacteria, including MRSA. It was also
+      found that Zafirlukast synergised with a number of existing antibiotics. Mutational
+      analysis suggested the target of Zafirlukast in Staphylococci is LtaS (Lipoteichoic
+      acid synthase).
+    notes: Reported by Siegwart et al. 2026 (Antibiotics 15:914; PMID:42792065) to
+      exhibit direct antibacterial activity (MIC 0.5-32 ug/mL) against Gram-positive
+      bacteria including methicillin-resistant Staphylococcus aureus (MRSA) via inhibition
+      of lipoteichoic acid synthase (LtaS), in addition to antimycobacterial activity
+      targeting nucleoid-associated protein Lsr2.
+  source_version: '2026-10-23'
+biosynthesis_origin: SYNTHETIC
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Inhibits staphylococcal lipoteichoic acid synthase
+  (LtaS) in Gram-positive bacteria including MRSA (DOI:10.3390/antibiotics15090914).'
+molecular_targets:
+- target_label: mycobacterial nucleoid-associated protein Lsr2
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+  experimental_context: Direct inhibition of Mycobacterium tuberculosis Lsr2-DNA complexation
+    and transcriptional repression in vitro and in whole mycobacterial cells (PMID:23650171;
+    DOI:10.1128/AAC.02407-12).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2013-08
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: PMID:23650171
+    snippet: Here, we show that the asthma drug zafirlukast inhibits the complexation
+      between the nucleoid-associated protein Lsr2 and DNA, resulting in dysregulation
+      of transcription and severely impeding the growth of M. tuberculosis.
+    notes: Pinault et al. 2013 (Antimicrob Agents Chemother 57:3949-3953; DOI:10.1128/AAC.02407-12)
+      demonstrated that zafirlukast directly binds and inhibits Mycobacterium tuberculosis
+      H37Rv nucleoid-associated protein Lsr2 (Rv3597c, UniProtKB:P9WIP7), blocking
+      Lsr2-DNA complexation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WIP7
+    protein_label: Nucleoid-associated protein Lsr2
+    gene_symbol: lsr2
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Mycobacterial nucleoid-associated protein Lsr2 (Rv3597c) whose complexation
+      with DNA and transcriptional regulatory activity are directly inhibited by zafirlukast
+      in Mycobacterium tuberculosis H37Rv (PMID:23650171).
+- target_label: staphylococcal lipoteichoic acid synthase (LtaS)
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  experimental_context: Whole-genome resistance mutation mapping and antibiotic synergy
+    assays in Staphylococcus aureus including MRSA (DOI:10.3390/antibiotics15090914).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2026-09
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.3390/antibiotics15090914
+    snippet: Zafirlukast showed modest direct-acting antimicrobial activity (0.5-32
+      ug/mL) against a panel of Gram-positive bacteria, including MRSA. It was also
+      found that Zafirlukast synergised with a number of existing antibiotics. Mutational
+      analysis suggested the target of Zafirlukast in Staphylococci is LtaS (Lipoteichoic
+      acid synthase).
+    notes: Siegwart et al. 2026 (Antibiotics 15:914; PMID:42792065) identified lipoteichoic
+      acid synthase (LtaS) as the staphylococcal target of zafirlukast by resistance
+      mutation analysis in Staphylococcus aureus; held from single-strain UniProtKB
+      accession assignment because S. aureus LtaS is split across strain-specific
+      Swiss-Prot entries (e.g. NCTC 8325 UniProtKB:Q2G093, MW2 UniProtKB:Q7A1I3, MRSA252
+      UniProtKB:Q6GIU0).
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T04:34:55Z'
+  curator: curate_mechanism
+  action: CURATED_MODE_OF_ACTION
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) with primary-literature provenance.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added 2 PRIMARY_LITERATURE molecular_targets (mycobacterial Lsr2 from PMID:23650171
+    and staphylococcal LtaS from DOI:10.3390/antibiotics15090914).
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WIP7 (Mycobacterium tuberculosis H37Rv Lsr2,
+    Rv3597c) protein example to the mycobacterial Lsr2 PRIMARY_LITERATURE molecular
+    target (PMID:23650171).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: PROMOTED_TO_REVIEWED
+  changes: Promoted curation_status from PROPOSED to REVIEWED after verifying EXACT
+    ChEBI chemical grounding, complete chemical_structure, settled biosynthesis_origin
+    and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets
+    (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).
+  llm_assisted: true
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph zafirlukast_mycobacterial_lsr2_dna_complex_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P9WIP7)
+    and primary literature (PMID:23650171).
+  llm_assisted: true
+causal_graphs:
+- graph_id: zafirlukast_mycobacterial_lsr2_dna_complex_inhibition
+  title: Zafirlukast inhibits Mycobacterium tuberculosis Lsr2 DNA binding and compaction
+    to arrest mycobacterial growth
+  description: Zafirlukast binds the Mycobacterium tuberculosis nucleoid-associated
+    protein Lsr2, blocks Lsr2-DNA complexation and DNA bridging/compaction, dysregulates
+    Lsr2-controlled transcription, and inhibits mycobacterial growth.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: zafirlukast
+    label: zafirlukast
+    node_type: COMPOUND
+    grounding: CHEBI:10100
+  - node_id: mycobacterial_lsr2_protein
+    label: mycobacterial nucleoid-associated protein Lsr2
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Mycobacterial nucleoid-associated global transcriptional regulator
+      Lsr2; kept label-only with Mycobacterium tuberculosis H37Rv Lsr2 (UniProtKB:P9WIP7)
+      protein_examples.
+    gene_symbols:
+    - lsr2
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WIP7
+      protein_label: Nucleoid-associated protein Lsr2
+      gene_symbol: lsr2
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-24'
+      role: Mycobacterial nucleoid-associated protein Lsr2 (Rv3597c) whose complexation
+        with DNA and transcriptional regulatory activity are directly inhibited by
+        zafirlukast in Mycobacterium tuberculosis H37Rv (PMID:23650171).
+  - node_id: lsr2_dna_bridging_and_compaction
+    label: Lsr2-DNA complexation and nucleoid compaction activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Lsr2 DNA binding and DNA compaction activity assayed with purified
+      M. tuberculosis Lsr2.
+  - node_id: mycobacterial_transcription_and_growth
+    label: Lsr2-regulated mycobacterial transcription and cell growth
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Lsr2-dependent transcriptional regulation and growth in Mycobacterium
+      tuberculosis and Mycobacterium smegmatis.
+  edges:
+  - subject: zafirlukast
+    predicate: inhibits
+    object: lsr2_dna_bridging_and_compaction
+    description: Zafirlukast directly inhibits Mycobacterium tuberculosis Lsr2 DNA
+      binding and DNA compaction.
+    evidence:
+    - reference: PMID:23650171
+      notes: Biochemical gel-shift and DNA-binding assays showed that zafirlukast
+        blocks complexation between purified M. tuberculosis Lsr2 and DNA.
+  - subject: mycobacterial_lsr2_protein
+    predicate: enables
+    object: lsr2_dna_bridging_and_compaction
+    description: Mycobacterial Lsr2 binds and compacts AT-rich DNA regions across
+      the chromosome.
+    evidence:
+    - reference: PMID:23650171
+      notes: Purified M. tuberculosis Lsr2 protein mediated the DNA-binding and compaction
+        activity targeted by zafirlukast.
+  - subject: lsr2_dna_bridging_and_compaction
+    predicate: supports
+    object: mycobacterial_transcription_and_growth
+    description: Lsr2-DNA organization maintains global transcriptional regulation
+      and is essential for mycobacterial growth.
+    evidence:
+    - reference: PMID:23650171
+      notes: Zafirlukast-mediated disruption of Lsr2 function dysregulated hundreds
+        of Lsr2-target genes and inhibited mycobacterial growth.

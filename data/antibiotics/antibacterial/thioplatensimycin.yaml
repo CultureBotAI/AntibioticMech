@@ -1,0 +1,158 @@
+identifier: antibioticmech:curator-2dc46eb39e
+label: thioplatensimycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A thiocarboxylic acid diterpenoid-aminobenzoate antibiotic congener of
+  platensimycin from Streptomyces platensis that inhibits bacterial beta-ketoacyl-ACP
+  synthase II (FabF) with antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.1038/s41467-018-04747-y
+synonyms:
+- synonym_text: thioPTM
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12C[C@@]3(O[C@]1(C[C@]4(C=CC([C@@](CCC(NC5=C(C=CC(C(S)=O)=C5O)O)=O)([C@]34[H])C)=O)C2)C)[H]'
+  standard_inchi: InChI=1S/C24H27NO6S/c1-22(7-6-17(28)25-18-14(26)4-3-13(19(18)29)21(30)32)16(27)5-8-24-10-12-9-15(20(22)24)31-23(12,2)11-24/h3-5,8,12,15,20,26,29H,6-7,9-11H2,1-2H3,(H,25,28)(H,30,32)/t12-,15+,20+,22-,23+,24+/m1/s1
+  standard_inchi_key: ZQYLQHFOXSDSHJ-OFBLZTNGSA-N
+  molecular_formula: C24H27NO6S
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001140/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 457.548
+  monoisotopic_mass: 457.1559
+xrefs:
+- pubchem.compound:132528337
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/s41467-018-04747-y#thioplatensimycin
+  source_label: thioplatensimycin
+  minted_identifier: antibioticmech:curator-2dc46eb39e
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/s41467-018-04747-y
+    snippet: Dong et al. discovered the thiocarboxylic acid antibiotic thioplatensimycin
+      from Streptomyces platensis SB12026 and demonstrated that it acts as a potent
+      inhibitor of bacterial beta-ketoacyl-ACP synthase II (FabF) with strong antibacterial
+      activity against Staphylococcus aureus.
+    notes: 'Reported by Dong et al. 2018 (Nat Commun 9:2362; PMID:29915173; DOI:10.1038/s41467-018-04747-y)
+      and Zheng et al. 2021 (ACS Chem Biol 16:96-101; PMID:33314918; DOI:10.1021/acschembio.0c00773)
+      as the natural thiocarboxylic acid congener of platensimycin from Streptomyces
+      platensis. MIBiG 4.0.1 entry BGC0001140 and PubChem CID 132528337 supply the
+      stereo-complete SMILES, Standard InChI, and InChIKey ZQYLQHFOXSDSHJ-OFBLZTNGSA-N
+      (note: ChEBI CHEBI:212325 Thioplatensimycin lacks an exact InChIKey match in
+      OLS4 and is omitted from xrefs).'
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:58346
+  taxon_label: Streptomyces platensis
+  biosynthetic_gene_cluster: BGC0001140
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'thioplatensimycin' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:29915173
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-03T23:20:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and CELL_MEMBRANE_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Dong et al. 2018 (PMID:29915173) and Zheng
+    et al. 2021 (PMID:33314918).
+  llm_assisted: true
+- timestamp: '2026-11-04T02:18:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial beta-ketoacyl-ACP
+    synthase II (FabF; PROTEIN, DIRECT_BINDING_TARGET) backed by Dong et al. 2018
+    (DOI:10.1038/s41467-018-04747-y, PMID:29915173) and Zheng et al. 2021 (DOI:10.1021/acschembio.0c00773,
+    PMID:33314918).
+  llm_assisted: true
+- timestamp: '2026-11-04T02:20:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed UniProtKB protein_examples (Q7A6F8, P0AAI5) to the primary-literature
+    bacterial beta-ketoacyl-ACP synthase II (FabF) target on thioplatensimycin (DOI:10.1038/s41467-018-04747-y).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Thiocarboxylic acid diterpenoid-aminobenzoate congener
+  of platensimycin from Streptomyces platensis SB12026 that potently inhibits bacterial
+  beta-ketoacyl-ACP synthase II (FabF) in type II fatty acid biosynthesis (Dong et
+  al. 2018, DOI:10.1038/s41467-018-04747-y, PMID:29915173; Zheng et al. 2021, DOI:10.1021/acschembio.0c00773,
+  PMID:33314918).'
+molecular_targets:
+- target_id: GO:0004315
+  target_label: bacterial beta-ketoacyl-ACP synthase II (FabF)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Selective inhibition of bacterial type II fatty acid synthase
+    condensing enzyme beta-ketoacyl-ACP synthase II (FabF) in Staphylococcus aureus
+    and Escherichia coli by binding the malonyl-ACP binding site of the acyl-enzyme
+    intermediate (Dong et al. 2018, DOI:10.1038/s41467-018-04747-y, PMID:29915173;
+    Zheng et al. 2021, DOI:10.1021/acschembio.0c00773, PMID:33314918).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2018-06
+  source_retrieved_on: '2026-11-04'
+  evidence:
+  - reference: DOI:10.1038/s41467-018-04747-y
+    snippet: Dong et al. BIOS-guided genome mining and pathway engineering yielded
+      thioplatensimycin, a natural thia-analogue of platensimycin with potent antibacterial
+      activity against Staphylococcus aureus via FabF inhibition.
+    notes: Dong et al. 2018 (Nat Commun 9:2362; PMID:29915173) characterized thioplatensimycin
+      biosynthesis and its potent antibacterial activity against methicillin-resistant
+      Staphylococcus aureus via inhibition of bacterial beta-ketoacyl-ACP synthase
+      II (FabF).
+  - reference: PMID:29915173
+    notes: PubMed record for Dong et al. 2018 on thioplatensimycin discovery and FabF
+      target inhibition.
+  - reference: DOI:10.1021/acschembio.0c00773
+    notes: Zheng et al. 2021 (ACS Chem Biol 16:96-101; PMID:33314918) characterized
+      bacterial FabF active-site interactions with thioplatensimycin and platensimycin.
+  - reference: PMID:33314918
+    notes: PubMed record for Zheng et al. 2021 on FabF inhibition by thioplatensimycin.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q7A6F8
+    protein_label: 3-oxoacyl-[acyl-carrier-protein] synthase 2
+    gene_symbol: fabF
+    taxon_id: NCBITaxon:158879
+    taxon_label: Staphylococcus aureus (strain N315)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-04'
+    role: Reviewed reference Staphylococcus aureus N315 beta-ketoacyl-ACP synthase
+      II (FabF, EC 2.3.1.179) representing the Gram-positive bacterial FASII condensing
+      enzyme inhibited by thioplatensimycin (DOI:10.1038/s41467-018-04747-y; PMID:29915173;
+      DOI:10.1021/acschembio.0c00773; PMID:33314918).
+  - uniprot_id: UniProtKB:P0AAI5
+    protein_label: 3-oxoacyl-[acyl-carrier-protein] synthase 2
+    gene_symbol: fabF
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-04'
+    role: Escherichia coli K-12 beta-ketoacyl-ACP synthase II (FabF, EC 2.3.1.179)
+      inhibited in the acyl-enzyme intermediate state by thioplatensimycin (DOI:10.1038/s41467-018-04747-y;
+      PMID:29915173; DOI:10.1021/acschembio.0c00773; PMID:33314918).

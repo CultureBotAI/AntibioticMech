@@ -1,0 +1,147 @@
+{
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-fungamr-reference-followup.json",
+      "sha256": "8523aa65b57204632b51903a0e4d783e9ada0a1e63b7156bd43291ba76f078df"
+    },
+    {
+      "path": "scripts/audit_fungamr_references.py",
+      "sha256": "30f2a0263f724c5e3b97d1e65cb125ad011cf965469026bfbdbdf489c69c9348"
+    },
+    {
+      "path": "tests/test_fungamr_references.py",
+      "sha256": "913e228f6d57320b35579b0ecd50a5b3086267230b4eb79c2e2ccb0edd30ff82"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "bb121c8478a41e4ead973a7d6171c7e0f2e0c5e58013ad9359015ef1077b93b9"
+    }
+  ],
+  "checks": {
+    "focused_tests": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 202
+    },
+    "full_qc_note": "Previous curation's 12-gate result and RDKit deviation remain historical; no domain, biological-record or page changes in this step.",
+    "full_qc_rerun": false,
+    "git_diff_check": "PASS",
+    "native_request_hosts": {
+      "rest.uniprot.org": 29,
+      "www.jstage.jst.go.jp": 1
+    },
+    "native_request_receipts_verified": 30,
+    "primary_pdf_pages_visually_inspected": [
+      126,
+      128
+    ],
+    "puccinia_primary_medium": "PUBLISHER_INDEXED_ABSTRACT_AND_SECTION_SNIPPETS_ONLY",
+    "socket_and_http_disabled_replay": "PASS",
+    "test_result": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-references/focused-tests.xml",
+      "sha256": "8076ea5ccda4154d2c1719b7a5138e68d36d432dcefcdc5465a823612ebfc757"
+    },
+    "web_tool_calls": {
+      "find": 1,
+      "open": 1,
+      "search": 2
+    }
+  },
+  "classification": "PROGRESS",
+  "constraints": {
+    "failed_request_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "sequence_requests": 0,
+    "source_adoptions": 0
+  },
+  "git_head": "a919685f72e8e07624ffbf8ee32211913c5da1bd",
+  "goal_status": "OPEN",
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-references/protected-before.json",
+      "sha256": "222db5b84ea1f9f36d6556646f58a4fd6df1fe37eac17a61672604236522aa6b"
+    },
+    "baseline_files": 7183,
+    "biological_records_byte_identical": 2939,
+    "byte_identical_baseline_files": 7182,
+    "changed_baseline_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "embedding_artifacts_changed": 0,
+    "generated_pages_changed": 0,
+    "ignored_files_included": true,
+    "source_inventories_changed": 0
+  },
+  "prior_artifact_pins_superseded": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "prior_artifact_pins_unchanged": 3,
+  "prior_verification": {
+    "path": "research/2026-10-13-fungamr-cohort-verification.json",
+    "sha256": "d0e965d98510f1176dd88639974aec3bcf904c7cbb946bbd0d0f1a5120658307"
+  },
+  "review": {
+    "findings": [
+      {
+        "disposition": "Excluded hybrid, virus and otherNames-only matches; the latter required a separate primary nomenclatural assessment.",
+        "id": "taxonomy-near-matches",
+        "status": "ADDRESSED"
+      },
+      {
+        "disposition": "Only native results count. Suggested searches with altered taxonomy IDs were not followed.",
+        "id": "query-suggestions",
+        "status": "ADDRESSED"
+      },
+      {
+        "disposition": "The unreviewed singleton is a reference candidate, not a verified canonical protein or resistant allele.",
+        "id": "unreviewed-not-canonical",
+        "status": "SCOPE_GUARD_APPLIED"
+      },
+      {
+        "disposition": "The submission title and related publisher abstract do not establish a causal resistant allele; inspect full primary results, figures and source-row context before replacing the CARD claim.",
+        "id": "puccinia-primary-scope",
+        "status": "OPEN"
+      },
+      {
+        "disposition": "CYP51B identity does not resolve ARO:3009486's voriconazole-label versus tebuconazole-edge discrepancy.",
+        "id": "fungamr-drug-label-discrepancy",
+        "status": "OPEN"
+      }
+    ],
+    "independent_scientific_review": false,
+    "scope": "Same-agent adversarial tests and source inspection; metadata replay is not independent biological validation."
+  },
+  "scope": "REFERENCE_AND_TAXONOMIC_GROUNDING_NOT_EXPERIMENTAL_ALLELE_OR_WHOLE_RECORD_SIGNOFF",
+  "summary": {
+    "additional_unreviewed_candidate_contexts": 1,
+    "biological_records_changed": 0,
+    "cohort_records": 10,
+    "cohort_terms": 19,
+    "corpus_records_hash_verified": 2939,
+    "exact_alleles_assigned": 0,
+    "new_resistance_assertions": 0,
+    "pending_terms_investigated": 13,
+    "primary_pdf_retrievals": 1,
+    "prior_reviewed_reference_contexts": 6,
+    "source_names_resolved": 10,
+    "term_dispositions": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 4,
+      "NO_EXACT_GENE_RESULTS_NOT_ABSENCE": 5,
+      "REVIEWED_REFERENCE": 3,
+      "UNREVIEWED_CANDIDATE": 1
+    },
+    "total_reviewed_reference_contexts": 9,
+    "uniprot_api_requests": 29,
+    "web_tool_calls": {
+      "find": 1,
+      "open": 1,
+      "search": 2
+    },
+    "whole_record_reviews_completed": 0
+  },
+  "verified_at": "2026-10-14T00:06:42.977250+00:00",
+  "whole_record_reviews_completed": 0
+}

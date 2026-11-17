@@ -1,0 +1,194 @@
+{
+  "adversarial_self_review": [
+    "Reference proteins and K-12 taxonomy are not experimental allele or strain assignments.",
+    "The Bcr association does not establish direct efflux; the unresolved sux modifier remains separate.",
+    "Historical tests replay an immutable fixture without freezing the evolving live record.",
+    "No exact variant, construct, protocol, sequence, genome, clinical category or numerical AST is exported.",
+    "Independent byte comparison verifies exactly one changed vector, not a fingerprint-only edit.",
+    "Same-agent review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-sulfathiazole-context.json",
+      "sha256": "7197bd9794975c2c9beb3aa5a0cd3c56ff6cd983ffb74c56257e4a1a8016f85e"
+    },
+    {
+      "path": "research/2026-10-13-sulfathiazole-curation.json",
+      "sha256": "0445dc27abd6e1ae4ea845231006f65862dfa9932db0277bc0ade2fbb29fb37a"
+    },
+    {
+      "path": "research/2026-10-13-sulfathiazole-reconciliation.json",
+      "sha256": "4ebf87637d8b109239ab0e96430ee2b12df8cb240d74ee0e77b00a9361e74571"
+    },
+    {
+      "path": "research/2026-10-13-sulfathiazole-resistance-grounding.tsv",
+      "sha256": "d25415f2977aec6665e20388e79b5190c468f7f74bd3f7bb82fa439833983876"
+    },
+    {
+      "path": "research/2026-10-13-sulfathiazole-resistance-progress.json",
+      "sha256": "7a0643a2fe86cc102ca380f799576cf0dea6f89c3b6425abe9426afd6cb0ad4d"
+    },
+    {
+      "path": "research/2026-10-13-sulfathiazole-resistance-progress.tsv",
+      "sha256": "1190e481865bb2c1a418d13a39abb346279ac2b1af93d2427068912dd5822dfe"
+    },
+    {
+      "path": "data/antibiotics/unspecified/sulfathiazole.yaml",
+      "sha256": "8a6421e1fc541f135afb68de5981aed6a06920b4414746ebbed9cf5295d97adc"
+    },
+    {
+      "path": "tests/fixtures/sulfathiazole-before-2026-10-13.yaml",
+      "sha256": "4d15a1b9d6617cde9c2b397e0d5d5c9aef7f72c41299174aa39f978d34961992"
+    },
+    {
+      "path": "tests/test_sulfathiazole_curation.py",
+      "sha256": "a20e1f1fb297c860434266c68638955709fcde4878de0cf839fbac6db49efef7"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "7325e5475b27a4f83df313cea21e669d2bba3c65d01a32c4ba79115f8a270ac0"
+    },
+    {
+      "path": "pages/unspecified/sulfathiazole.html",
+      "sha256": "3e7ba17c7e724984ec1e52d0c6c320013bed7cf35bcd286745a409ba0c564409"
+    }
+  ],
+  "cached_sources_verified": 5,
+  "date": "2026-10-13",
+  "embedding": {
+    "actual_reencoding": true,
+    "model_pins": {
+      "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+      "weights_sha256": "45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7"
+    },
+    "projection_method": "pacmap",
+    "published": {
+      "corpus_map.json": "d517c214f9e4889087f798838dcb89c206f92327ca5549620bf6e6bfbff42f69",
+      "meta.json": "bff12835c41cea4ebdbb427ba34dbe1574a0a900a318ca2a02117f2d5ab40909",
+      "vectors.f16.npy": "94e294d3bba2fbaf852e9c67980418b2e4e1303897d9665cd5ba38f819b515da"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-13-sulfathiazole/embedding-stage/reuse-proof.json",
+      "sha256": "c1b6b87761f38423ef693ef4bf847c57b8a7d43f8cd6a26263ed517110aedfbc"
+    },
+    "seed": 42,
+    "unchanged_rows_independently_checked_against_pinned_local_baseline": true,
+    "vector_baseline": {
+      "path": "reports/resistance-grounding-2026-10-12-thiolutin/embedding-stage/bulk/vectors.f16.npy",
+      "sha256": "a733d607bb99809053ae6fb6bfc9f7685dcea2c318df9bde81107968c9dd2828"
+    }
+  },
+  "embedding_reuse_proof": {
+    "baseline_sha256": "788e71fc1277d120415286141540e4d94286a3fcdde0a3f5dce84335d2cd629f",
+    "byte_identical_reused_rows": 2938,
+    "changed_documents": [
+      "CHEBI:9337"
+    ],
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows": 16,
+    "dimension": 1024,
+    "fingerprint": "4784f9c8a4e143e2",
+    "finite": true,
+    "normalized": true,
+    "vector_rows": 2939
+  },
+  "environment_limitation": "Local RDKit 2025.03.6 differs from project pin 2026.3.5. No new CI or pinned-environment result is claimed.",
+  "experimental_proteins_or_genomes_assigned": 0,
+  "focused_tests": "60 passed in 3.57s; progress suite 36 passed in 39.71s",
+  "full_local_qc": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "current_ci_run": false,
+    "elapsed_seconds": 2314.69,
+    "exit_code": 0,
+    "finished": "2026-10-13T02:16:01.718123+00:00",
+    "local_rdkit_version": "2025.03.6",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-sulfathiazole/qc.log",
+      "sha256": "1bbab58d90a2b9af4292d5339f96c22470714ee72a0c028aec0a7791bf1114ce"
+    },
+    "pinned_environment_reproduced": false,
+    "project_rdkit_version": "2026.3.5",
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "started": "2026-10-13T01:37:27.004075+00:00",
+    "test_summary": "3118 passed, 4 skipped in 1816.20s (0:30:16)"
+  },
+  "generated_site": {
+    "full_render_completed": true,
+    "live_browser_verification": false,
+    "scope_notes_visible": true
+  },
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_claims": 2,
+  "offline_source_replay": {
+    "network_requests": 0,
+    "sources": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-bcr/request-e33995a2bb3b4ff19bbe384799fe740b5fe30fad0c2475ad9a4e2e6a0638e4ec.json",
+        "sha256": "bf4d158710148cd4a80ea51305a5c2d96e1a1cf2c4ad98fe570dc7593c0fdc33"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-bcr/request-5843f6f9a2fe2cc0cf38b32780338b72cf9ad45d633824b63025c2ebf9e85ba1.json",
+        "sha256": "4a02f204db8b80f31cb170e3c9ba6612a6c6aec0a181569c457992468d47708f"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-11-emrd-primary/request-366d9a2614b6f8e20200b4e74eeb57cac3965ea080c702c9cf8eae3a8dc3f28e.json",
+        "sha256": "99190e339e349e4a533dad2bf3da18c4cfdd368e901ef88e2adcfbda6a2af616"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-ee6dbf6e3f09c6cab02e184352e45e77bb32a7adbb024d9ceea31aaf75599c37.json",
+        "sha256": "6f15a516e89969828b9950036cd9d5a791d2070e8fb836f0ba068f921f2e822e"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-bcr/vedantam-figure-1.jpg",
+        "sha256": "b6d3c38b5ee6b61af9a0922fa848065712737111f58b4b7e959d702f81a40561"
+      }
+    ]
+  },
+  "preservation": {
+    "all_memberships_unchanged": true,
+    "all_raw_and_curation_files_byte_identical": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-sulfathiazole/baseline.json",
+      "sha256": "bc91586cb5cbce006717f0857a1aedf8c752f727d5cd43c6cb968421f1ae0a2c"
+    },
+    "changed_records": [
+      "data/antibiotics/unspecified/sulfathiazole.yaml"
+    ],
+    "ignored_files_included": true,
+    "previous_bcr_record_and_page_byte_identical": true,
+    "protected_files_checked": 3385,
+    "records_checked": 2939
+  },
+  "protected_files_changed": [
+    "data/embeddings/corpus_map.json",
+    "data/embeddings/meta.json",
+    "data/embeddings/vectors.f16.npy",
+    "pages/index.html",
+    "pages/map.html",
+    "pages/unspecified/sulfathiazole.html"
+  ],
+  "records_byte_identical": 2938,
+  "scope": "TWO_QUALITATIVE_GENE_ASSOCIATIONS_ON_ONE_RECORD",
+  "source_adoptions": 0,
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}

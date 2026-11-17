@@ -14,6 +14,9 @@
   const legend = document.getElementById("map-legend");
   const selection = document.getElementById("map-selection");
   const results = document.getElementById("map-results");
+  const resultCount = document.getElementById("map-search-count");
+  const showMore = document.getElementById("map-show-more");
+  let resultLimit = 20;
   const tooltip = document.getElementById("map-tooltip");
 
   const classColors = {
@@ -194,20 +197,24 @@
   function updateResults() {
     const query = search.value.trim().toLocaleLowerCase();
     results.replaceChildren();
+    showMore.hidden = true;
+    resultCount.textContent = "";
     if (!query) {
       const item = document.createElement("li");
       item.textContent = "Enter a name, synonym, or identifier.";
       results.append(item);
       return;
     }
-    const matches = state.visible.filter((record) => record.search.includes(query)).slice(0, 20);
+    const matches = state.visible.filter((record) => record.search.includes(query));
+    resultCount.textContent = `${matches.length} matching compounds; ${Math.min(matches.length, resultLimit)} shown.`;
+    showMore.hidden = matches.length <= resultLimit;
     if (!matches.length) {
       const item = document.createElement("li");
       item.textContent = "No visible compounds match.";
       results.append(item);
       return;
     }
-    matches.forEach((record) => {
+    matches.slice(0, resultLimit).forEach((record) => {
       const item = document.createElement("li");
       const button = document.createElement("button");
       button.type = "button";
@@ -225,11 +232,19 @@
     state.visible = state.records.filter(
       (record) => !selectedClass || record.antimicrobial_class === selectedClass
     );
+    const url = new URL(window.location.href);
+    if (selectedClass) url.searchParams.set("class", selectedClass);
+    else url.searchParams.delete("class");
+    if (colorMode.value && colorMode.value !== "class") url.searchParams.set("color", colorMode.value);
+    else url.searchParams.delete("color");
     if (state.selected && !state.visible.includes(state.selected)) {
       state.selected = null;
+      url.searchParams.delete("id");
       selection.innerHTML = "<h2>Select a compound</h2><p>The previous selection is hidden by the class filter.</p>";
     }
+    history.replaceState(null, "", url);
     status.textContent = `Showing ${state.visible.length} of ${state.records.length} compounds.`;
+    resultLimit = 20;
     rebuildLegend();
     updateResults();
     draw();
@@ -252,9 +267,17 @@
       const response = await fetch(root.dataset.source);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const artifact = await response.json();
+      const idResponse = await fetch(root.dataset.identifiers);
+      if (!idResponse.ok) throw new Error(`Search identifiers unavailable (${idResponse.status})`);
+      const identifiers = await idResponse.json();
+      if (Object.keys(identifiers).length !== artifact.records.length || artifact.records.some(
+        record => !Array.isArray(identifiers[record.identifier]) ||
+          !identifiers[record.identifier].every(value => typeof value === "string")
+      )) throw new Error("Search identifiers do not match this map.");
       state.records = artifact.records.map((record) => ({
         ...record,
-        search: [record.identifier, record.label, record.structural_class, ...record.synonyms]
+        search: [record.identifier, record.label, record.structural_class, ...record.synonyms,
+          ...identifiers[record.identifier]]
           .join("\n").toLocaleLowerCase()
       }));
       state.records.forEach((record) => state.byId.set(record.identifier, record));
@@ -273,11 +296,21 @@
           option.textContent = name.replaceAll("_", " ");
           classFilter.append(option);
         });
+      const urlParams = new URL(window.location.href).searchParams;
+      const qParam = urlParams.get("q");
+      if (qParam) search.value = qParam;
+      const classParam = urlParams.get("class");
+      if (classParam) classFilter.value = classParam;
+      const colorParam = urlParams.get("color");
+      if (colorParam && ["class", "input", "fragments"].includes(colorParam)) colorMode.value = colorParam;
+      state.visible = state.records.filter(
+        (record) => !classFilter.value || record.antimicrobial_class === classFilter.value
+      );
       rebuildLegend();
       resizeCanvas();
       updateResults();
-      status.textContent = `Showing all ${state.records.length} compounds.`;
-      const requested = new URL(window.location.href).searchParams.get("id");
+      status.textContent = `Showing ${state.visible.length} of ${state.records.length} compounds.`;
+      const requested = urlParams.get("id");
       if (requested && state.byId.has(requested)) selectRecord(state.byId.get(requested), false);
     } catch (error) {
       status.textContent = `Chemical map could not be loaded: ${error.message}`;
@@ -285,9 +318,21 @@
     }
   }
 
-  search.addEventListener("input", updateResults);
+  search.addEventListener("input", () => {
+    resultLimit = 20;
+    const url = new URL(window.location.href);
+    if (search.value.trim()) url.searchParams.set("q", search.value.trim());
+    else url.searchParams.delete("q");
+    history.replaceState(null, "", url);
+    updateResults();
+  });
+  showMore.addEventListener("click", () => { resultLimit += 20; updateResults(); });
   classFilter.addEventListener("change", applyFilters);
   colorMode.addEventListener("change", () => {
+    const url = new URL(window.location.href);
+    if (colorMode.value && colorMode.value !== "class") url.searchParams.set("color", colorMode.value);
+    else url.searchParams.delete("color");
+    history.replaceState(null, "", url);
     rebuildLegend();
     draw();
   });
@@ -295,8 +340,13 @@
     search.value = "";
     classFilter.value = "";
     colorMode.value = "class";
+    state.selected = null;
+    selection.innerHTML = "<h2>Select a compound</h2><p>Search by name or select a point.</p>";
     const url = new URL(window.location.href);
     url.searchParams.delete("id");
+    url.searchParams.delete("q");
+    url.searchParams.delete("class");
+    url.searchParams.delete("color");
     history.replaceState(null, "", url);
     applyFilters();
   });

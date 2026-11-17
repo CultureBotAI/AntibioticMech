@@ -1,0 +1,601 @@
+{
+  "attribution": {
+    "primary": "Taylor et al. (2022), G3, DOI:10.1093/g3journal/jkac246, CC BY 4.0",
+    "reference": "UniProt Consortium, UniProtKB and UniProt Taxonomy, release 2026_03, CC BY 4.0"
+  },
+  "constraints": {
+    "cli_automatic_redirects": false,
+    "failed_source_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "sequence_requests": 0,
+    "source_adoptions": 0,
+    "web_public_publisher_redirect_observed": true
+  },
+  "curation_decision": "HOLD_EXACT_SOURCE_ROW_SUBJECT_AND_CONDITIONAL_EFFECT_RECONCILIATION",
+  "database_citation": {
+    "all_claims_from_this_citation_are_original_experiments": false,
+    "database_rows_inspected_or_imported": false,
+    "doi": "10.1038/s41564-025-02084-7",
+    "isOpenAccess": "N",
+    "pmid": "40790106",
+    "terms": {
+      "ARO:3009201": {
+        "definition_citation_ids": [
+          "PMID:25896700",
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:10023"
+        ]
+      },
+      "ARO:3009213": {
+        "definition_citation_ids": [
+          "PMID:27988485",
+          "PMID:29593275",
+          "PMID:30082281",
+          "PMID:34060660",
+          "PMID:34633842",
+          "PMID:37026059",
+          "PMID:39472696",
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:46081"
+        ]
+      },
+      "ARO:3009239": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:46081"
+        ]
+      },
+      "ARO:3009287": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:55346"
+        ]
+      },
+      "ARO:3009347": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:3764"
+        ]
+      },
+      "ARO:3009350": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:3764"
+        ]
+      },
+      "ARO:3009372": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:474180"
+        ]
+      },
+      "ARO:3009390": {
+        "definition_citation_ids": [
+          "PMID:22615574",
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:474180"
+        ]
+      },
+      "ARO:3009396": {
+        "definition_citation_ids": [
+          "PMID:24867987",
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:46081"
+        ]
+      },
+      "ARO:3009397": {
+        "definition_citation_ids": [
+          "PMID:25132632",
+          "PMID:34699784",
+          "PMID:39354378",
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:46081"
+        ]
+      },
+      "ARO:3009407": {
+        "definition_citation_ids": [
+          "PMID:26631591",
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:83779"
+        ]
+      },
+      "ARO:3009437": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "antibioticmech:aro-2e3b34cc67"
+        ]
+      },
+      "ARO:3009486": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:83779"
+        ]
+      },
+      "ARO:3009534": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "antibioticmech:aro-e63825b7e1"
+        ]
+      },
+      "ARO:3009559": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:46081"
+        ]
+      },
+      "ARO:3009575": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:64355"
+        ]
+      },
+      "ARO:3009578": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:46081"
+        ]
+      },
+      "ARO:3009588": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:46081"
+        ]
+      },
+      "ARO:3009633": {
+        "definition_citation_ids": [
+          "PMID:40790106"
+        ],
+        "record_memberships": [
+          "CHEBI:5100"
+        ]
+      }
+    },
+    "title": "FungAMR: a comprehensive database for investigating fungal mutations associated with antimicrobial resistance."
+  },
+  "date": "2026-10-13",
+  "independent_primary": {
+    "ATP1": {
+      "independent_allele_effect_established_here": false,
+      "limitation": "Recurring changes occurred in evolved multi-gene backgrounds; association is not an isolated effect.",
+      "same_clone_gene_association": true
+    },
+    "ATP2": {
+      "counterevidence": "The tested single mutants grew more slowly than the wild-type comparator.",
+      "limitation": "The comparison is genotype-background dependent and measures doubling time, not a clinical resistance category.",
+      "same_clone_gene_association": true,
+      "single_mutant_growth_benefit_in_reported_comparison": false
+    },
+    "background_labels": [
+      "BY4741",
+      "BY4742"
+    ],
+    "diploid_derivatives_also_reported": true,
+    "doi": "10.1093/g3journal/jkac246",
+    "evidence_scope": "LABORATORY_YEAST_ASSOCIATION_AND_CONDITIONAL_GROWTH_COMPARISON",
+    "experimental_protein_allele_or_genome_assignment": false,
+    "figure_5_hypothesis_edges_are_verified_causal_edges": false,
+    "figure_caption_xml_sha256": "d15f0f1b6b55a3522b7e836a110bacbacb8e2ba509e0bc1effd8dcc22c874d0c",
+    "fungamr_row_to_independent_paper_crosswalk_verified": false,
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "locations": {
+      "associations": {
+        "section_id": "sec27",
+        "xml_sha256": "b4add98d4a6de3febb30bffcf92e15c27d3f399c3f367e3109709779060b614d"
+      },
+      "comparison": {
+        "section_id": "sec29",
+        "xml_sha256": "f17dfa0f5de7b19b1e8c87e915369127c5557fd05190caa6302f0a04f631f9ca"
+      },
+      "discussion": {
+        "section_id": "sec35",
+        "xml_sha256": "192d668a553c0778d16b4ca2b5b55af4a02fa1d14d4fca5683ec651ae0b04f32"
+      },
+      "subjects": {
+        "section_id": "sec3",
+        "xml_sha256": "7ba731577fc970a8cd01dc0112867232c0433b2093dd646e1aadd67d8bd829cb"
+      }
+    },
+    "pmcid": "PMC9635649",
+    "pmid": "36173330",
+    "reference_strain_is_exact_tested_derivative": false,
+    "repeated_clones_are_independent_mutation_events": false,
+    "source_mechanism_classification_newly_confirmed": false,
+    "source_study_accession": "PRJNA742704",
+    "study_accession_is_genome_assignment": false,
+    "study_accession_requested": false,
+    "supplementary_tables_or_figure_s3_reviewed": false,
+    "whole_record_review": "OPEN"
+  },
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-13-fpr1-primary-resistance-grounding.tsv",
+      "sha256": "5199994e1415dd11a99621c21dd6cd0e131da330fff954708895a0c99ac58c90"
+    },
+    "definitions": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "expansion": {
+      "path": "research/2026-10-13-card-literature-expansion.json",
+      "sha256": "10e54ecdb88eadca391cf246bd10c514d2498ab76167c66f98ff9b7e115eb9d6"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-13-irek-2022-verification.json",
+      "sha256": "5857cc3c540689fd84f1d92a1eeedf25ee5ec6252c628bee4372d73fd47d4f18"
+    }
+  },
+  "limitations": [
+    "A reference gene identity is not the identity or effect of a tested allele.",
+    "The independent 2022 study has not been crosswalked to exact FungAMR source rows.",
+    "The source-owned CARD target-alteration classification is retained, not newly validated.",
+    "Supplementary tables and Figure S3 have not been inspected; broad assay review remains open.",
+    "No single clone, species-wide resistance, clinical phenotype or direct ATP-synthase target is inferred.",
+    "No sequences, exact variant specifications, protocols or numeric AST are exported."
+  ],
+  "plans": {
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-13-yeast-atp/cohort.json",
+      "sha256": "aeec9b44103fd27340637c0adb8e6378815bd6ad12c7f4d305a6bb02b86a2619"
+    },
+    "inspection": {
+      "path": "reports/resistance-grounding-2026-10-13-yeast-atp/inspection.json",
+      "sha256": "ae64f2013c8b182e229cdef13274694e0a6a6e7de10fc93f09a3f1a1ad1e5e99"
+    }
+  },
+  "prior_literature_query": {
+    "complete_for_query": true,
+    "establishes_biological_absence": false,
+    "pages": [
+      {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-40790106-response.bin",
+          "sha256": "45e2e9776e2395433498c5e197d7e0627165f05044c1c269617b1bf7eaace4aa"
+        },
+        "page": 1,
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-40790106-receipt.json",
+          "sha256": "9ac03b7368b1726305ab79d86c4c97d30a4cc36d2be34da6909223dfb1b28380"
+        },
+        "retrieved_at": "2026-10-13T12:54:06.995725+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A40790106&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    ],
+    "query": "lit_pubmed:40790106",
+    "release": "2026_03",
+    "result_count": 0,
+    "status": "COMPLETE_QUERY_NOT_PRIMARY_REVIEW"
+  },
+  "records": [
+    {
+      "citation_terms": [
+        "ARO:3009287"
+      ],
+      "identifier": "CHEBI:55346",
+      "label": "anidulafungin",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml",
+      "record_sha256": "e29724e94ef2922be6d6afaaf181f2a6052f6a95e1c7daf5aec031dea2bb6cae",
+      "standard_inchi_key": "JHVAMHSQVVQIOT-MFAJLEFUSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009372",
+        "ARO:3009390"
+      ],
+      "identifier": "CHEBI:474180",
+      "label": "caspofungin",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml",
+      "record_sha256": "40e52f8e7a1ef2388925e682bed0241d368812c5b71c9299edacf7361966f36b",
+      "standard_inchi_key": "JYIKNQVWKBUSNH-WVDDFWQHSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009347",
+        "ARO:3009350"
+      ],
+      "identifier": "CHEBI:3764",
+      "label": "clotrimazole",
+      "path": "data/antibiotics/antifungal/clotrimazole.yaml",
+      "record_sha256": "a20523175943481166351a5178707948ef52441c2a907cf1a286695f66ad95a6",
+      "standard_inchi_key": "VNFPBHJOKIVQEB-UHFFFAOYSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009534"
+      ],
+      "identifier": "antibioticmech:aro-e63825b7e1",
+      "label": "epoxiconazole",
+      "path": "data/antibiotics/antifungal/epoxiconazole.yaml",
+      "record_sha256": "323f9511185c623815d33900730a37d6e09bbd88bf2e0ec38556a783a2b41466",
+      "standard_inchi_key": "ZMYFCFLJBGAQRS-IAGOWNOFSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009213",
+        "ARO:3009239",
+        "ARO:3009396",
+        "ARO:3009397",
+        "ARO:3009559",
+        "ARO:3009578",
+        "ARO:3009588"
+      ],
+      "identifier": "CHEBI:46081",
+      "label": "fluconazole",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "record_sha256": "1fa11ad3cd37df521216044f5b822573510e9083be72af322e94929fafc94e55",
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009633"
+      ],
+      "identifier": "CHEBI:5100",
+      "label": "flucytosine",
+      "path": "data/antibiotics/antifungal/flucytosine.yaml",
+      "record_sha256": "4ffd0f50d00448664a2aec8b152d62231ec7c6fabc5e91a67fc42c27a3ed7ada",
+      "standard_inchi_key": "XRECTZIEBJDKEO-UHFFFAOYSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009575"
+      ],
+      "identifier": "CHEBI:64355",
+      "label": "posaconazole",
+      "path": "data/antibiotics/antifungal/posaconazole.yaml",
+      "record_sha256": "41ff3ee41d2ce4d716a7192152f5e7cb54bfd991f5edafe7de462daf9550d067",
+      "standard_inchi_key": "RAGOYPUPXAKGKH-XAKZXMRKSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009407",
+        "ARO:3009486"
+      ],
+      "identifier": "CHEBI:83779",
+      "label": "tebuconazole",
+      "path": "data/antibiotics/antifungal/tebuconazole.yaml",
+      "record_sha256": "0c6380aed52552a312323986c4baddb7f3e065d9c553876b127bbdf357db6dda",
+      "standard_inchi_key": "PXMNMQRDXWABCY-UHFFFAOYSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009201"
+      ],
+      "identifier": "CHEBI:10023",
+      "label": "voriconazole",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "record_sha256": "fb2ab7299b55c82b2fb1eaced93f4c57798abd181becf20d4104fd40a739df50",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009437"
+      ],
+      "identifier": "antibioticmech:aro-2e3b34cc67",
+      "label": "tacrolimus",
+      "path": "data/antibiotics/unspecified/tacrolimus.yaml",
+      "record_sha256": "c78b76727b23e17eb186b45746e63a146fc21e4e1608b6c09591822e21154e08",
+      "standard_inchi_key": "QJJXYPPXXYFBGM-LFZNUXCKSA-N"
+    }
+  ],
+  "reference_proteins": {
+    "ATP1": {
+      "database_paper_in_bibliography": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 238,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene": "ATP1",
+      "gene_names": [
+        "ATP1"
+      ],
+      "independent_primary_in_bibliography": false,
+      "ordered_locus_names": [
+        "YBL099W"
+      ],
+      "protein_accession": "UniProtKB:P07251",
+      "protein_name": "ATP synthase subunit alpha, mitochondrial",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "REFERENCE_IDENTITY_NOT_EXPERIMENTAL_ALLELE_OR_PHENOTYPE",
+      "sequence_version": 5,
+      "sgd_id": "S000000195",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "ATP2": {
+      "database_paper_in_bibliography": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 242,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene": "ATP2",
+      "gene_names": [
+        "ATP2"
+      ],
+      "independent_primary_in_bibliography": false,
+      "ordered_locus_names": [
+        "YJR121W"
+      ],
+      "protein_accession": "UniProtKB:P00830",
+      "protein_name": "ATP synthase subunit beta, mitochondrial",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "REFERENCE_IDENTITY_NOT_EXPERIMENTAL_ALLELE_OR_PHENOTYPE",
+      "sequence_version": 2,
+      "sgd_id": "S000003882",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    }
+  },
+  "reference_taxonomy_reused": {
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+    },
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+      "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/559292"
+  },
+  "scope": "REFERENCE_GROUNDING_WITH_PRIMARY_COUNTEREVIDENCE_NOT_ALLELE_ASSIGNMENT",
+  "sources": {
+    "figure": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/figure-attempt.json",
+        "sha256": "15f389eb74ee1facfb625d08a2fb7e1c8c7b5c0f8cead837b1f82344c5bfbcff"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/figure-receipt.json",
+        "sha256": "8a875ffabc3d4f0757ca87b7e344e79098e2345afe9b94b5756cbcfaf30e75d4"
+      },
+      "response": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/figure-response.bin",
+        "sha256": "b4de6dc54c4c38cb77d1e2244a467dc75f676e9786da2a6e8f86e396872e66a1"
+      },
+      "retrieved_at": "2026-10-13T22:45:24.507156+00:00",
+      "status": 200,
+      "url_without_query": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/g3journal/12/11/10.1093_g3journal_jkac246/1/m_jkac246f5.jpeg"
+    },
+    "metadata": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/metadata-attempt.json",
+        "sha256": "29f73e03a55513e048ad72c9475dbae9556c1457b4282ee39457d5b00df65830"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/metadata-receipt.json",
+        "sha256": "1abfc665eae3c1b2e811be33374d04ff22968e634002df0952b766c80fa4bbd8"
+      },
+      "response": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/metadata-response.bin",
+        "sha256": "9928e8584849f147986d0a6537abfec28d453bd2a9998968a59df6ced1a836a4"
+      },
+      "retrieved_at": "2026-10-13T22:41:46.450171+00:00",
+      "status": 200,
+      "url_without_query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+    },
+    "primary": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/primary-attempt.json",
+        "sha256": "e3f9381d0d544311904aeb4f32fe688404e94a9a5dd7115fe6a36fd8ac57aadd"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/primary-receipt.json",
+        "sha256": "87710f1665bc40e6c92e3eb56112f052b41760e4d4c74a5815c15f1ccf38cc5e"
+      },
+      "response": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/primary-response.bin",
+        "sha256": "106349a1dcdcc1ee303367cef77fe3454e428fa4ae8ec16aa6a5bd8398cac755"
+      },
+      "retrieved_at": "2026-10-13T22:43:28.210227+00:00",
+      "status": 200,
+      "url_without_query": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9635649/fullTextXML"
+    },
+    "publisher": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/publisher-attempt.json",
+        "sha256": "2a58e3134c8195d9f9d5b83904be635a09d25a5d1c190004d608edd180dc4198"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/publisher-receipt.json",
+        "sha256": "746c108c4e6959730e782588c28e9693afdfa9882a69488012d3010a0ed76ec0"
+      },
+      "response": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/publisher-response.bin",
+        "sha256": "b78e56fc5b64067843661b5dbed0d8ad63bd49256725cbd530d316044fdc3814"
+      },
+      "retrieved_at": "2026-10-13T22:44:44.088130+00:00",
+      "status": 200,
+      "url_without_query": "https://oup.silverchair-cdn.com/article-minimal/6730751"
+    }
+  },
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_checked": 2939,
+    "experimental_allele_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "independent_primary_texts_inspected": 1,
+    "native_figures_reviewed": 1,
+    "new_reference_proteins": 2,
+    "shared_citation_records": 10,
+    "shared_citation_terms": 19,
+    "whole_record_reviews_completed": 0
+  },
+  "uniprot_queries": {
+    "ATP1": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/ATP1-response.bin",
+        "sha256": "656f9965456e5314dee54dcf3e1370c82af97ec7941b271468af499a9168ece6"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/ATP1-receipt.json",
+        "sha256": "57f8991912d9375375c11af4ba41f46c8fac45d44c976ea0eea5d28985a189f1"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T22:41:53.994450+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AATP1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "ATP2": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/ATP2-response.bin",
+        "sha256": "29399783ba380d0667f245206c60ce3aed89613d96e94256646e7dc8934bb941"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp/ATP2-receipt.json",
+        "sha256": "841c7acd3b0e290bb723321e60ac1b6616eb40eb99e4f5d8ee6a32a4122ef38e"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T22:42:26.749657+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AATP2+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "adversarial_self_review": [
+    "Combination phenotypes are not unconditional single-drug resistance assertions.",
+    "Lineage cross-resistance is not an independent allele test for the second inhibitor.",
+    "The Candida negative comparison is not a clinical susceptible category.",
+    "HSP82's proposed role is not promoted to a demonstrated determinant.",
+    "Reference genes, ORF names, strain TaxIDs and tested laboratory IDs remain distinct.",
+    "Table S1 covers eight sequenced lineages, not the whole Table S5 strain catalog.",
+    "SRA065341 and alignment references do not establish exact subject-to-genome joins.",
+    "An invalid-field HTTP 400 is not access denial, a zero-hit query or protein absence.",
+    "Reference and native-figure canaries are bound to their intended response and receipt.",
+    "Historical tests do not freeze live biological records or require ignored source caches.",
+    "A rendering limitation is retained rather than claiming flawless source layout.",
+    "Same-agent review, not independent scientific signoff or whole-record completion."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "3d820b3550276eb8f44a44f235873abfa3f9cb220df6c4402c745eb011ebfada"
+    },
+    {
+      "path": "research/2026-10-13-hsp90-context.json",
+      "sha256": "77b9185a3ed7cf6e2944f61dc8821d78079370059b7779cdc45d08a9caa36fa1"
+    },
+    {
+      "path": "scripts/audit_hsp90_context.py",
+      "sha256": "33a75c1c4424e3d9895a043400059e43a53a3812f7b7b5a98d3415b135198043"
+    },
+    {
+      "path": "tests/test_hsp90_context.py",
+      "sha256": "7763010f8c08ffcac77d20526da0d5cf589c483ae09985fbcea76e8392dba018"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-hsp90/resume-before.json",
+    "sha256": "dc4487a27b50c7844c00d56a50f6a42f474b1527641aa24ac54ac292412dec99"
+  },
+  "baseline_files_checked": 7132,
+  "date": "2026-10-13",
+  "experimental_accessions_assigned": 0,
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations_this_checkpoint": 0,
+  "ignored_files_included_in_protected_trees": true,
+  "issue_1040": "DEFERRED",
+  "metadata_source_bytes_and_dossier_replayed_offline_with_network_disabled": true,
+  "native_figures_visually_inspected": 2,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_biological_assertions": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-hsp90-context.json",
+    "scripts/audit_hsp90_context.py",
+    "tests/test_hsp90_context.py"
+  ],
+  "new_full_qc_or_ci_claimed": false,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "previous_baseline_reconciled_to_publication_commit": {
+    "all_prior_biological_record_hashes_preserved": true,
+    "completed_publication": "PR 1091 merged; review issue 1092 fixed and closed.",
+    "current_baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-hsp90/resume-before.json",
+      "sha256": "dc4487a27b50c7844c00d56a50f6a42f474b1527641aa24ac54ac292412dec99"
+    },
+    "git_head": "1d200223dfc64f331ee4176ee3d523e4196082bb",
+    "ignored_files_included": true,
+    "intervening_files_added": [
+      "tests/test_reference_canary_binding.py"
+    ],
+    "intervening_files_changed": [
+      "scripts/audit_myriocin_references.py",
+      "scripts/audit_vatpase_references.py"
+    ],
+    "new_github_mutations_authorized_for_this_research_checkpoint": false,
+    "previous_baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-hsp90/protected-before.json",
+      "sha256": "172bc502dbb6bb9063ce2b3df6c2228e0e74b15c3a09cc2749c2a86fa4e62385"
+    },
+    "previous_turn_classification": "PROGRESS"
+  },
+  "primary_assets_checked": 5,
+  "progress_ledger_check_passed": true,
+  "raw_curation_site_embedding_history_and_prior_snapshots_preserved": true,
+  "records_byte_identical": 2939,
+  "reuse_terms_review_resumed": false,
+  "scientific_interpretation_automatically_revalidated": false,
+  "source_adoptions": 0,
+  "source_layout_limit_retained": "Several nonselected Table S5 rows have crowded columns in the unchanged source rendering. Selected lineage IDs are legible and independently checked against OOXML.",
+  "summary": {
+    "biological_records_changed": 0,
+    "complete_uniprot_queries": 3,
+    "corpus_records_in_scope": 2939,
+    "experimental_alleles_assigned": 0,
+    "genome_accessions_assigned": 0,
+    "invalid_queries": 1,
+    "new_taxonomy_requests": 0,
+    "reference_proteins": 3,
+    "selected_records": 2,
+    "skipped_publication_queries": 1,
+    "source_lineages": 3,
+    "whole_records_completed": 0
+  },
+  "supplement_pages_visually_inspected": 5,
+  "test_results": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_hsp90_context.py",
+      "tests/test_reference_canary_binding.py",
+      "tests/test_myriocin_references.py",
+      "tests/test_vatpase_reference_context.py",
+      "tests/test_tubercidin_curation.py",
+      "tests/test_topoisomerase_reference_followup.py",
+      "tests/test_resistance_grounding_audit.py",
+      "tests/test_resistance_progress.py",
+      "tests/test_record_review_contract.py",
+      "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-hsp90/checkpoint-tests.xml"
+    ],
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-hsp90/checkpoint-tests.xml",
+      "sha256": "dd1c61ee6d833e1bfdaa470ddb5015ef4220424de5695c08868fd745adacc84d"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-hsp90/checkpoint-tests.log",
+      "sha256": "c291f1c7d2bd014a77964ede4ed1ba3943d3af7bf44d409dde442210e1fe4a72"
+    },
+    "new_tests_run_without_inherited_pythonpath": true,
+    "passed": 172,
+    "skipped": 0
+  }
+}

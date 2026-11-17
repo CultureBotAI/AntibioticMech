@@ -146,3 +146,66 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph thiostrepton_70s_gac_elongation_factor_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:21908407).
+  llm_assisted: true
+causal_graphs:
+- graph_id: thiostrepton_70s_gac_elongation_factor_inhibition
+  title: Thiostrepton targets the 70S ribosome GTPase-associated center to block EF-G
+    and EF4 engagement
+  description: Thiostrepton targets the GTPase-associated center of the bacterial
+    70S ribosome and prevents stable ribosome binding and ribosome-dependent GTP hydrolysis
+    by elongation factors EF-G and EF4.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: thiostrepton
+    label: thiostrepton
+    node_type: COMPOUND
+    grounding: CHEBI:29693
+  - node_id: ribosome_70s_gac
+    label: 70S ribosome GTPase-associated center
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 23S rRNA/L11 GTPase-associated center of the bacterial 70S ribosome.
+  - node_id: thiostrepton_perturbed_gac
+    label: thiostrepton-modified 70S GTPase-associated center
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 70S ribosomal state at 0.15 micromolar thiostrepton that blocks
+      domain IV/V-dependent factor accommodation.
+  - node_id: efg_ef4_ribosome_gtpase_engagement
+    label: EF-G and EF4 stable 70S binding and ribosome-dependent GTP hydrolysis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Elongation factor accommodation and GTPase activation during
+      bacterial translation.
+  edges:
+  - subject: thiostrepton
+    predicate: binds
+    object: thiostrepton_perturbed_gac
+    description: Thiostrepton acts on the 70S ribosome GTPase-associated center.
+    evidence:
+    - reference: PMID:21908407
+      notes: 70S binding, GTPase, EF-G domain IV/V truncation, and footprinting assays
+        localized thiostrepton action to the 70S GTPase-associated center.
+  - subject: ribosome_70s_gac
+    predicate: participates in
+    object: thiostrepton_perturbed_gac
+    description: The 70S ribosome GTPase-associated center forms the factor-docking
+      region disrupted by thiostrepton.
+    evidence:
+    - reference: PMID:21908407
+      notes: Truncation of EF-G domains IV and V rendered factor activity insensitive
+        to thiostrepton on 70S ribosomes.
+  - subject: thiostrepton_perturbed_gac
+    predicate: inhibits
+    object: efg_ef4_ribosome_gtpase_engagement
+    description: Thiostrepton at the 70S GTPase-associated center inhibits stable
+      EF-G and EF4 binding and ribosome-stimulated GTP hydrolysis.
+    evidence:
+    - reference: PMID:21908407
+      notes: Submicromolar thiostrepton abolished stable 70S binding and uncoupled
+        GTPase activity of full-length EF-G and EF4.

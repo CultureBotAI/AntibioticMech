@@ -1,0 +1,504 @@
+{
+  "constraints": {
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "numeric_ast_exported": false,
+    "reference_taxon_transferred_to_clinical_isolates": false,
+    "sequence_requests": 0,
+    "sequences_variants_protocols_exported": false,
+    "source_adoption": false,
+    "whole_record_signoffs": 0
+  },
+  "date": "2026-10-13",
+  "goal_status": "OPEN",
+  "independent_scientific_review": false,
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-13-yeast-atp-supplement-resistance-grounding.tsv",
+      "sha256": "645f772ce07961c3c19ea0c925d3808abf10919c6fb769e5f03669b3204b62a8"
+    },
+    "prior": {
+      "path": "research/2026-10-13-fungamr-reference-followup.json",
+      "sha256": "8523aa65b57204632b51903a0e4d783e9ada0a1e63b7156bd43291ba76f078df"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-13-fungamr-reference-verification.json",
+      "sha256": "30e564885b131a57d98407b543b574c7733dac92dd7666bbbcfffa52586eb405"
+    },
+    "record": {
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:474180",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml",
+      "sha256": "40e52f8e7a1ef2388925e682bed0241d368812c5b71c9299edacf7361966f36b",
+      "standard_inchi_key": "JYIKNQVWKBUSNH-WVDDFWQHSA-N"
+    },
+    "selection": {
+      "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/selection.json",
+      "sha256": "12bd1f44941235558313c2d7e3d731ba08e535b0aba832215c493631a2e2fb73"
+    }
+  },
+  "limitations": [
+    "The exact FungAMR rows were not inspected; MRPL11's database definition cites the database paper, not this primary paper directly.",
+    "The two unreviewed entries establish reference loci, not resistant alleles, clinical subjects or genome assemblies.",
+    "UniProt lacks a gene-name field and GeneID cross-reference in these responses; empty exact-symbol and GeneID searches do not establish absence.",
+    "No source-specific resistant/susceptible category or numeric MIC was extracted from the heatmap; assay type alone does not establish a clinical breakpoint call.",
+    "Exact chemical form, supplements and broader caspofungin evidence remain unreviewed; all 2939 records remain in scope."
+  ],
+  "primary": {
+    "all_figures_reviewed": false,
+    "article": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/article-attempt.json",
+        "sha256": "aa53ba155763736348a8d5a3ce317b2399dce5ac82c44152b997746921c81d27"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/article-response.bin",
+        "sha256": "dd6987c1e88bdb43ba94a2ad6aa50f2418f640d4bf05c0ceb5274574e22536f4"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/article-receipt.json",
+        "sha256": "033bf26bbc513038f3860cfe2f1ffb7c71130df2d30e4633c366e072b6f2d131"
+      },
+      "retrieved_at": "2026-10-14T00:11:51.488571+00:00",
+      "status": 200,
+      "url": "https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1002718"
+    },
+    "assets": {
+      "figure5": {
+        "image": {
+          "attempt": {
+            "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/figure5-storage-attempt.json",
+            "sha256": "7b4585da3770b6807200d90d07642098a9f90b5fca5deae447421d2f1b03ab8e"
+          },
+          "body": {
+            "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/figure5-storage-response.bin",
+            "sha256": "7d3199978869b8eff1f723cf0f4e8402e30ccf3b3b2a0f3b3a066090553a436f"
+          },
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/figure5-storage-receipt.json",
+            "sha256": "ec90b2b90ef8705ba23a8198b2e8b2e3f86ced12af22a61c97d8ea9c19ec0e4d"
+          },
+          "retrieved_at": "2026-10-14T00:14:59.769402+00:00",
+          "status": 200,
+          "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.ppat.1002718/1/ppat.1002718.g005.PNG_L"
+        },
+        "publisher": {
+          "attempt": {
+            "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/figure5-attempt.json",
+            "sha256": "39652cca55605c2dd88eb866921187fb170637fed2b84f8a442c5ef2cff8b16d"
+          },
+          "body": {
+            "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/figure5-response.bin",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/figure5-receipt.json",
+            "sha256": "c64838478033ee4135a4cc2fd15f7763113c949ac0837ace5ca15d844434d1f1"
+          },
+          "retrieved_at": "2026-10-14T00:14:27.371174+00:00",
+          "status": 302,
+          "url": "https://journals.plos.org/plospathogens/article/figure/image?download&size=large&id=10.1371/journal.ppat.1002718.g005"
+        }
+      },
+      "table1": {
+        "image": {
+          "attempt": {
+            "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/table1-storage-attempt.json",
+            "sha256": "ef8add776b28063bd88ff1bba1d34c823341ef2687bf763a20862d0e9a328332"
+          },
+          "body": {
+            "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/table1-storage-response.bin",
+            "sha256": "801e88b0cb1a31ecf11d509d82ae42cd831a80efbf9f913d8735cf5785e2abe9"
+          },
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/table1-storage-receipt.json",
+            "sha256": "adfc619b7d67e9e374d86317d185c3f647cfd5d02210c259d6b3239f6eb17bf9"
+          },
+          "retrieved_at": "2026-10-14T00:13:54.216381+00:00",
+          "status": 200,
+          "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.ppat.1002718/1/ppat.1002718.t001.PNG_L"
+        },
+        "publisher": {
+          "attempt": {
+            "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/table1-attempt.json",
+            "sha256": "b7f4c56ddef3379beb656cfa1945ae371246062e25f53036c2ccaedd8a4c767a"
+          },
+          "body": {
+            "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/table1-response.bin",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/table1-receipt.json",
+            "sha256": "5ae65c4409194b0ad7426896757c7532545db4bc5f9642a102a5498f4e0fd3ff"
+          },
+          "retrieved_at": "2026-10-14T00:13:34.224566+00:00",
+          "status": 302,
+          "url": "https://journals.plos.org/plospathogens/article/figure/image?download&size=large&id=10.1371/journal.ppat.1002718.t001"
+        }
+      }
+    },
+    "attribution": "Singh-Babak et al., PLOS Pathogens (2012), e1002718; publisher CC BY attribution.",
+    "doi": "10.1371/journal.ppat.1002718",
+    "exact_chemical_form_resolved": false,
+    "native_assets_visually_inspected": [
+      "Table 1",
+      "Figure 5"
+    ],
+    "numeric_mic_extracted_from_heatmap": false,
+    "pmid": "22615574",
+    "review_scope": "Relevant Results and Discussion; native Table 1 and Figure 5",
+    "supplements_reviewed": false,
+    "url": "https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1002718"
+  },
+  "review_findings": [
+    {
+      "disposition": "Mapped only explicit primary-table systematic loci; preserved unreviewed status and versions.",
+      "finding": "Homolog names were not indexed UniProt gene symbols."
+    },
+    {
+      "disposition": "Kept CBS138 reference taxonomy separate from clinical and BG2 contexts; no genome or exact-allele assignment.",
+      "finding": "Reference strain identifiers could be mistaken for experimental-subject identifiers."
+    },
+    {
+      "disposition": "MRPL11 remains non-causal in this assessment; CDC6 functional evidence does not establish direct drug-target alteration. Source-owned assertions unchanged.",
+      "finding": "Co-occurrence and target alteration could be conflated."
+    },
+    {
+      "disposition": "Retained the annotation evidence code; did not promote a generated protein name to independent functional validation.",
+      "finding": "MRPL11's protein-name annotation uses ECO:0008006 (ProtNLM)."
+    }
+  ],
+  "scope": "TWO_SOURCE_TERMS_NOT_WHOLE_RECORD_REVIEW",
+  "summary": {
+    "biological_records_changed": 0,
+    "cohort_ambiguous_terms": 4,
+    "cohort_reviewed_references": 9,
+    "cohort_terms_without_reference_candidates_after_followup": 3,
+    "cohort_unreviewed_candidates": 3,
+    "corpus_records_hash_verified": 2939,
+    "empty_geneid_queries": 2,
+    "exact_alleles_assigned": 0,
+    "new_resistance_assertions": 0,
+    "new_uniprot_queries": 4,
+    "new_unreviewed_reference_locus_contexts": 2,
+    "source_terms_investigated": 2,
+    "whole_record_reviews_completed": 0
+  },
+  "terms": {
+    "ARO:3009372": {
+      "exact_fungamr_row_crosswalk_verified": false,
+      "gene_id_endpoint_requested": false,
+      "gene_id_is_experimental_allele_or_genome": false,
+      "new_queries": [
+        {
+          "query": "xref:geneid-2889720 AND taxonomy_id:5478",
+          "result_count": 0,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/mrpl11-attempt.json",
+              "sha256": "f2522d8e6d0c9afcd8222873f4ad0e2cab5bf6d487f4339b3bbabfa52034cf96"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/mrpl11-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/mrpl11-receipt.json",
+              "sha256": "19eeea51502da64d9fcafb01bc941687da042c3e572788e50e6a7ea7962dd135"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-14T00:13:50.025304+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Ageneid-2889720+AND+taxonomy_id%3A5478&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_geneid%2Csequence_version%2Cversion"
+          },
+          "zero_results_establish_absence": false
+        },
+        {
+          "query": "gene:CAGL0J09724g AND taxonomy_id:5478",
+          "result_count": 1,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/mrpl11-locus-attempt.json",
+              "sha256": "3310fd167356b7749d5f8880a16a9b5a376c5b51fb054f37477410fd17d67483"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/mrpl11-locus-response.bin",
+              "sha256": "b3d463341d08fab189b3edb1d33d548678942d6350476ed54f1f31e51abe6534"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/mrpl11-locus-receipt.json",
+              "sha256": "e4e0b762d6984883d7d5251e9fb59a13b284b8b717d7e06088af52c67586e6a8"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-14T00:14:54.669907+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene%3ACAGL0J09724g+AND+taxonomy_id%3A5478&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_geneid%2Csequence_version%2Cversion"
+          },
+          "zero_results_establish_absence": false
+        }
+      ],
+      "new_resistance_assertion": false,
+      "paper_gene_label": "MRPL11",
+      "paper_organism_name": "Candida glabrata",
+      "paper_reported_gene_id": "NCBIGene:2889720",
+      "primary_assessment": {
+        "direct_antibiotic_target_alteration_established": false,
+        "direct_card_definition_primary_citation": false,
+        "evidence_type": "CO_OCCURRENCE_IN_CLINICAL_LINEAGE_NOT_ISOLATED_CAUSALITY",
+        "exact_fungamr_row_to_paper_link_verified": false,
+        "finding": "The change accompanies other changes in the clinical lineage. The discussion retains non-resistance and fitness-related explanations.",
+        "isolated_causal_effect_established_by_reviewed_material": false,
+        "locations": [
+          "Results: genome-sequencing subsection",
+          "Table 1",
+          "Discussion: evolutionary dynamics",
+          "Accession numbers"
+        ]
+      },
+      "prior_exact_symbol_queries_reused": [
+        {
+          "key": "gene-3009372-unreviewed",
+          "result_count": 0,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009372-unreviewed-attempt.json",
+              "sha256": "4380bb0d317596d52e38310b6c1ad2aaaba450eb0d891c193cfc38483876abda"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009372-unreviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009372-unreviewed-receipt.json",
+              "sha256": "5c0f26085d0164a17baa4f6344fd3a7aa2554b1178c319f509abe43b27261c78"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:58:00.646788+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AMRPL11+AND+taxonomy_id%3A5478+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        },
+        {
+          "key": "gene-3009372-reviewed",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009372-reviewed-attempt.json",
+              "sha256": "aaa5e598caf655af589ccd19c89dfef927b2d6674c26eff3d20ab4a721902c93"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009372-reviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009372-reviewed-receipt.json",
+              "sha256": "dbe1b701e010a541abc7dee99be4894d4b5feaf4db4d08e3d7e657f5fdd4ea55"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:56:19.235200+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AMRPL11+AND+taxonomy_id%3A5478+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "reference": {
+        "canonical_reference_established": false,
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 102,
+        "experimental_allele_assignment": null,
+        "experimental_genome_assignment": null,
+        "experimental_subject_taxon_assignment": false,
+        "paper_symbol_is_uniprot_gene_name": false,
+        "protein_accession": "UniProtKB:Q6FNR2",
+        "protein_name": "54S ribosomal protein L11, mitochondrial",
+        "protein_name_evidence_codes": [
+          "ECO:0008006"
+        ],
+        "protein_name_is_independent_experimental_validation": false,
+        "reference_organism_name": "Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 / NRRL Y-65 / CBS 138)",
+        "reference_role": "UNREVIEWED_REFERENCE_LOCUS_NOT_TESTED_ALLELE",
+        "reference_taxon_id": "NCBITaxon:284593",
+        "reference_taxon_rank": "strain",
+        "sequence_version": 1,
+        "species_taxon_id": "NCBITaxon:5478",
+        "systematic_locus": "CAGL0J09724g"
+      },
+      "source_organism_name": "Nakaseomyces glabratus",
+      "taxonomy_source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:45.328349+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/284593",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-e6b6b80db984a936e72dd6aec4428784294b201ece82c35fc945c8217d9067d8.json",
+          "sha256": "f45e35a8f67500a1a6bf1445bcec377879aa874e6602a1f4c89b20e0e7876d72"
+        }
+      }
+    },
+    "ARO:3009390": {
+      "exact_fungamr_row_crosswalk_verified": false,
+      "gene_id_endpoint_requested": false,
+      "gene_id_is_experimental_allele_or_genome": false,
+      "new_queries": [
+        {
+          "query": "xref:geneid-2890231 AND taxonomy_id:5478",
+          "result_count": 0,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/cdc6-attempt.json",
+              "sha256": "15bea6a9ce9575bc79ecce6f3d1a2090c1ff75746f5fa7a6c15c78d02c176ad5"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/cdc6-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/cdc6-receipt.json",
+              "sha256": "c72c07bf8043ac523d6406a0802c8f86d61ebbd9fb4c51fbd807abd9c300c63c"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-14T00:13:09.748048+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Ageneid-2890231+AND+taxonomy_id%3A5478&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_geneid%2Csequence_version%2Cversion"
+          },
+          "zero_results_establish_absence": false
+        },
+        {
+          "query": "gene:CAGL0K00605g AND taxonomy_id:5478",
+          "result_count": 1,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/cdc6-locus-attempt.json",
+              "sha256": "38e0539add8b8f4a46120c3afbc01e6bc64daa262c447bfe88025e8773cac4ba"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/cdc6-locus-response.bin",
+              "sha256": "5133a3153983bb9ab95625d3c97828f6a127cc734350753ab5e663bbe6519bf0"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/cdc6-locus-receipt.json",
+              "sha256": "6599017a5eefae23880fed4aa6605be966c9055628f04970bc6b3700d0b34587"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-14T00:14:22.171533+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene%3ACAGL0K00605g+AND+taxonomy_id%3A5478&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_geneid%2Csequence_version%2Cversion"
+          },
+          "zero_results_establish_absence": false
+        }
+      ],
+      "new_resistance_assertion": false,
+      "paper_gene_label": "CDC6",
+      "paper_organism_name": "Candida glabrata",
+      "paper_reported_gene_id": "NCBIGene:2890231",
+      "primary_assessment": {
+        "all_gene_alleles_are_resistant": false,
+        "clinical_isolate_labels_are_study_local": true,
+        "direct_antibiotic_target_alteration_established": false,
+        "evidence_type": "FUNCTIONAL_COMPARISON_IN_LABORATORY_BACKGROUND",
+        "finding": "The paper reports a modest susceptibility shift in a laboratory comparison, distinct from the clinical-isolate series.",
+        "laboratory_background_label": "BG2",
+        "locations": [
+          "Results: CDC6 subsection",
+          "Figure 5",
+          "Table 1",
+          "Accession numbers"
+        ],
+        "reference_background_is_tested_background": false,
+        "reference_background_label": "CBS138"
+      },
+      "prior_exact_symbol_queries_reused": [
+        {
+          "key": "gene-3009390-unreviewed",
+          "result_count": 0,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009390-unreviewed-attempt.json",
+              "sha256": "faac2e03ef9dc8fdb1e9883dd12479c22698e2fcfc24c4f83acf975ec56dc3b1"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009390-unreviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009390-unreviewed-receipt.json",
+              "sha256": "39ad55cccb355fce0ed46b072f910f08522852a79da54baee62a3b7eb0e484b9"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:58:01.346650+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACdc6+AND+taxonomy_id%3A5478+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        },
+        {
+          "key": "gene-3009390-reviewed",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009390-reviewed-attempt.json",
+              "sha256": "d6deda0286cf33316909e9492ef569c50a1083236921b6ef8b00f92094ab732e"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009390-reviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009390-reviewed-receipt.json",
+              "sha256": "8eb64bbfc86550c424a488633ec46af6af4b63ef2c017f737668591afdeddc38"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:56:19.946119+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACdc6+AND+taxonomy_id%3A5478+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "reference": {
+        "canonical_reference_established": false,
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 136,
+        "experimental_allele_assignment": null,
+        "experimental_genome_assignment": null,
+        "experimental_subject_taxon_assignment": false,
+        "paper_symbol_is_uniprot_gene_name": false,
+        "protein_accession": "UniProtKB:Q6FNE4",
+        "protein_name": "Cell division control protein",
+        "protein_name_evidence_codes": [
+          "ECO:0000256"
+        ],
+        "protein_name_is_independent_experimental_validation": false,
+        "reference_organism_name": "Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 / NRRL Y-65 / CBS 138)",
+        "reference_role": "UNREVIEWED_REFERENCE_LOCUS_NOT_TESTED_ALLELE",
+        "reference_taxon_id": "NCBITaxon:284593",
+        "reference_taxon_rank": "strain",
+        "sequence_version": 1,
+        "species_taxon_id": "NCBITaxon:5478",
+        "systematic_locus": "CAGL0K00605g"
+      },
+      "source_organism_name": "Nakaseomyces glabratus",
+      "taxonomy_source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:45.328349+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/284593",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-e6b6b80db984a936e72dd6aec4428784294b201ece82c35fc945c8217d9067d8.json",
+          "sha256": "f45e35a8f67500a1a6bf1445bcec377879aa874e6602a1f4c89b20e0e7876d72"
+        }
+      }
+    }
+  }
+}

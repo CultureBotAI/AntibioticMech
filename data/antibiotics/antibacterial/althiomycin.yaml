@@ -163,3 +163,68 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph althiomycin_50s_peptidyl_transferase_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:4917791).
+  llm_assisted: true
+causal_graphs:
+- graph_id: althiomycin_50s_peptidyl_transferase_inhibition
+  title: Althiomycin inhibits the bacterial ribosomal peptidyl-transferase reaction
+  description: Althiomycin inhibits the bacterial ribosomal peptidyl-transferase (puromycin)
+    reaction without blocking aminoacyl-tRNA synthesis or aminoacyl-tRNA binding,
+    thereby arresting bacterial protein synthesis in Escherichia coli.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: althiomycin
+    label: althiomycin
+    node_type: COMPOUND
+    grounding: CHEBI:157683
+  - node_id: bacterial_50s_peptidyl_transferase_center
+    label: bacterial 50S ribosomal subunit peptidyl-transferase center
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Peptidyl-transferase center of the bacterial 50S ribosomal subunit
+      assayed via the puromycin reaction in Escherichia coli B.
+  - node_id: ribosomal_peptidyl_transferase_reaction
+    label: bacterial ribosomal peptidyl-transferase reaction
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Peptide-bond formation assayed via the puromycin reaction in
+      Escherichia coli B extracts without impairment of aminoacyl-tRNA charging or
+      binding.
+  - node_id: bacterial_protein_synthesis
+    label: bacterial protein synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Intact-cell and cell-free Escherichia coli B polypeptide synthesis.
+  edges:
+  - subject: althiomycin
+    predicate: inhibits
+    object: ribosomal_peptidyl_transferase_reaction
+    description: Althiomycin inhibits the ribosomal peptidyl-transferase (puromycin)
+      reaction in Escherichia coli B.
+    evidence:
+    - reference: PMID:4917791
+      notes: Cell-free Escherichia coli B assays showed that althiomycin inhibits
+        the puromycin reaction without inhibiting aminoacyl-tRNA synthesis or ribosome
+        binding.
+  - subject: bacterial_50s_peptidyl_transferase_center
+    predicate: enables
+    object: ribosomal_peptidyl_transferase_reaction
+    description: The 50S peptidyl-transferase center catalyzes ribosomal peptide-bond
+      formation in the puromycin reaction.
+    evidence:
+    - reference: PMID:4917791
+      notes: The puromycin reaction assay localized althiomycin action to the ribosomal
+        peptide-bond-forming step.
+  - subject: ribosomal_peptidyl_transferase_reaction
+    predicate: supports
+    object: bacterial_protein_synthesis
+    description: Ribosomal peptidyl-transferase catalysis drives intact-cell and cell-free
+      bacterial protein synthesis.
+    evidence:
+    - reference: PMID:4917791
+      notes: Both intact-cell and cell-free E. coli B experiments confirmed inhibition
+        of bacterial protein synthesis by althiomycin.

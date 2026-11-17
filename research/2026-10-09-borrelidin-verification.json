@@ -1,0 +1,197 @@
+{
+  "adversarial_self_review": {
+    "checks": [
+      "Data-not-shown report is qualified; proposed target replacement remains UNKNOWN",
+      "Donor, reference, host background and derivative are not interchangeable",
+      "All J1074 taxonomy candidates retained; no representative strain chosen",
+      "Biochemical inhibition and insensitivity do not become organism resistance",
+      "BorO and ObaO, compound scopes and study MIC drug panel kept distinct",
+      "Archive sequence-version flags and taxonomic ranks retained",
+      "No sequences, variant specifications, engineering details or numeric AST exported",
+      "Fresh-seed merge, validated round-trip and existing target preservation checked"
+    ],
+    "corrected_private_checks": [
+      "Initial canary incorrectly used the already curated record as a fresh seed; corrected to verify_corpus.rebuild before production writing. No merge-code change.",
+      "Sorted JSON staging changed YAML key order; corrected through a validated canary and write while preserving the identical biological content and single event. Original bytes remain a prefix."
+    ],
+    "independent_review": false,
+    "remaining_scope": "Fourteen discovery papers, full paper/supplement review, experimental identity and broader corpus review remain open"
+  },
+  "all_current_record_hashes_verified": 2939,
+  "artifacts": [
+    {
+      "path": "research/2026-10-09-borrelidin-curation.json",
+      "sha256": "35d53e12c78b8cfd1450a8a44f3c59b7d64a8548be6615c50a06047adf130950"
+    },
+    {
+      "path": "research/2026-10-09-borrelidin-primary-context.json",
+      "sha256": "ff6824c3ec68aef5162eb0b6776faf5a520186d75b006989d44e18b78278453b"
+    },
+    {
+      "path": "research/2026-10-09-borrelidin-checkpoint-reconciliation.json",
+      "sha256": "6042ad7501c6c6a6ddb2690899ba0555031e9680515ce0682b0bacf251a61846"
+    },
+    {
+      "path": "research/2026-10-09-borrelidin-resistance-progress.json",
+      "sha256": "2a4faf7d2b2c500aed6df40239270311f305d9fc9086e89f761e37cc390b411c"
+    },
+    {
+      "path": "research/2026-10-09-borrelidin-resistance-progress.tsv",
+      "sha256": "8003aa7fc7efc80668ff088a6dbf6aee699c0a4eec1691646492cd7280bcbe0f"
+    },
+    {
+      "path": "tests/test_borrelidin_curation.py",
+      "sha256": "6b25f8436a2f9bda6fb62347c107a5c4579e3ef5028911690b4f038a197b64e5"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "bbdff597dac67e648ebdd33134d233208559fe7bef46a9e90e00e5b458a93bfc"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "fdd3cb4db92e952933f1ea51d46ec21b8582b29cbb0df4a063cfe2648d28c5e1"
+    }
+  ],
+  "changed_documents_encoded": 1,
+  "changed_protected_files": {
+    "data/antibiotics/antifungal/borrelidin.yaml": {
+      "after_sha256": "264f89429273999ddda4f850bf45929897b8b5f33ef0ae6a01433811a9a8ee58",
+      "before_sha256": "f98c4cba9c9a9e8fb74c1c156176c0ff939c8d8db1a236dfb6b0a2fb0b1ab414"
+    },
+    "data/embeddings/corpus_map.json": {
+      "after_sha256": "8d9fb2324024edb110bef628ca54ceab6ff9401be6307922bc0756485e782226",
+      "before_sha256": "c814c43f378a4fa7524b1765d35ff49d9be4d8a9f591481a9f6d397eec1472be"
+    },
+    "data/embeddings/meta.json": {
+      "after_sha256": "16b16adaac0edb5f458d4961985121bea0a1e5b99204040cfef6a636f1540d71",
+      "before_sha256": "ed6a3a0984da32f20c320434718f4d3b541e77e92890eea68cb3b2ef61d0f871"
+    },
+    "data/embeddings/vectors.f16.npy": {
+      "after_sha256": "e5d27f7bb33cb374a2c26073b6655bea8235bfdb4bfdb368966dedf47c787bc9",
+      "before_sha256": "b3f7e847a26ee741e20a870684fca0868d3b1ce5b809da51748fda2a86773989"
+    },
+    "pages/antifungal/borrelidin.html": {
+      "after_sha256": "a3746f3a95c9a02773f4932b908c65df1e8bc44fbcd61a9a7e57deeddefd872f",
+      "before_sha256": "38574788f63fdfb4500c37d07f156cea53aa1f6555dd73b5bb0a08677c1056bb"
+    },
+    "pages/index.html": {
+      "after_sha256": "25f6f4bbc6d8bbf7ecf7f42567024f9bb4e6e0dcf093e71cc2b600bf22101cc1",
+      "before_sha256": "9fabe631efcfffdfb7c9ce9c0362e7be42d10f6ca94ba3e0855b370d70b9d4c3"
+    },
+    "pages/map.html": {
+      "after_sha256": "4495134eca0fad2e9a2330f90f3f2efc479871bcbc6002d1a0473e64a40dd352",
+      "before_sha256": "b766012015f82fe56a4c727f81d5811a6b5101568f3294606324c0eb9895f524"
+    },
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "fdd3cb4db92e952933f1ea51d46ec21b8582b29cbb0df4a063cfe2648d28c5e1",
+      "before_sha256": "b4b38c5cc1e0cb445a8a5dd3f0d7f4ad768d966fdc5ebb5d6f3fcb912adf2712"
+    },
+    "scripts/summarize_resistance_progress.py": {
+      "after_sha256": "bbdff597dac67e648ebdd33134d233208559fe7bef46a9e90e00e5b458a93bfc",
+      "before_sha256": "8ff69abb06ecc12f50ba4c706241f15ea069f08aa490a7d7af3d734877b58ae3"
+    }
+  },
+  "chemical_map_unchanged": true,
+  "control_max_abs_delta": 3.0517578125e-05,
+  "control_rows": 16,
+  "corpus_research_complete": false,
+  "curation_inputs_unchanged": true,
+  "current_ledger": {
+    "path": "research/2026-10-09-borrelidin-resistance-grounding.tsv",
+    "sha256": "a3937a548004e2f276077b260c131225d009d50c44d66f977d77fe1a79b5fd7a"
+  },
+  "date": "2026-10-09",
+  "embedding_reuse_proof": {
+    "path": "reports/resistance-grounding-2026-10-09-borrelidin/embedding-stage/reuse-proof.json",
+    "sha256": "2715ca3e20cfe528d35722d6d9b2329cf5ba39bc5ffcf594a2ad4f4cf0cb3d84"
+  },
+  "embedding_scripts_unchanged": true,
+  "existing_molecular_targets_preserved": 1,
+  "experimental_alleles_validated": false,
+  "focused_tests": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-09-borrelidin/focused-tests.xml",
+      "sha256": "c1f63dfcc00b3210a77f8bb806275f2076afd3e96ed08a98ded1dd9936e4f580"
+    },
+    "passed": 173,
+    "skipped": 0
+  },
+  "full_qc": {
+    "execution": {
+      "path": "reports/resistance-grounding-2026-10-09-borrelidin/qc-exit.json",
+      "sha256": "08a8fffe0cdcb7e5a8faccbf7b852384499dd85030060d9d8eb5a44830315094"
+    },
+    "exit_code": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-09-borrelidin/full-tests.xml",
+      "sha256": "a0771857d8082f375e2c19315ce2634204805afe278798667f2375710cbf91bc"
+    },
+    "passed": 2376,
+    "path": "reports/resistance-grounding-2026-10-09-borrelidin/full-qc.log",
+    "sha256": "82370f8bc590ede15907b038ea18dbb849f28977f0e9f735efde8aecadea8206",
+    "skip_reasons": [
+      "historical checkpoint no longer matches the live corpus; public invariants still run",
+      "got empty parameter set for (path)",
+      "got empty parameter set for (path)",
+      "got empty parameter set for (path)"
+    ],
+    "skipped": 4,
+    "stages": [
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "test_seconds": 1645.81,
+    "warnings": 1
+  },
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "ignored_files_included": true,
+  "live_browser_verification": false,
+  "model_revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+  "ncbi_endpoint_requests": 0,
+  "network_used_for_embedding": false,
+  "protected_files": 6739,
+  "protected_files_unchanged": 6730,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-borrelidin/protected-before.json",
+    "sha256": "19b00843f3dfaf0078d218b9da3978acd1c50eef4be26f3855d91f495ec5d6dc"
+  },
+  "records_byte_identical": 2938,
+  "records_changed": 1,
+  "rendered_claims_and_caveats_checked": true,
+  "rendered_map_payload_matches_artifact": true,
+  "rendered_map_record_links_verified": 2939,
+  "root_documents": [
+    {
+      "path": "NEXT_TASKS.md",
+      "sha256": "de77e4952bc300d6227071441e136ed6b3e66de6150431d88e89e870112ae2df"
+    },
+    {
+      "path": "README.md",
+      "sha256": "7ea0cbf2032b32be0501f48d4a6f96234b7d95509d128b7befe3c5b8c8ed5a18"
+    }
+  ],
+  "scope": "QUALIFIED_PRIMARY_REPORT_AND_REFERENCE_CONTEXT_NOT_COMPLETED_CORPUS_RESEARCH",
+  "semantic_map": {
+    "fingerprint": "9abdb4c539712d79",
+    "method": "pacmap",
+    "points": 2939,
+    "seed": 42
+  },
+  "serialization_order_preservation": {
+    "path": "reports/resistance-grounding-2026-10-09-borrelidin/order-preservation.json",
+    "sha256": "fb6eb3be206c1e8cceaafe0ca7781c81656a99f598c8d534087d3dde7db6f95e"
+  },
+  "status": "ALL_AUTHORITATIVE_QC_GATES_PASSED",
+  "unchanged_vector_rows_reused": 2938,
+  "whole_record_primary_review_complete": false
+}

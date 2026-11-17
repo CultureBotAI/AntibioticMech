@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>bacitracin</h1>
 <p class="meta">
   <code class="curie">antibioticmech:aro-736d7660a3</code>
@@ -37,15 +48,18 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3009657">nonribosomal peptide antibiotics</a><code class="curie">ARO:3009657</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3009657">ARO:3009657</a>      <code class="curie">ARO:3009657</code></li>
+  <li>nonribosomal peptide antibiotics  <a href="http://purl.obolibrary.org/obo/ARO_3009657"><code class="curie">ARO:3009657</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C66H101N17O16SZn</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>1486.1 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>1483.662433 Da</td></tr><tr><th scope="row">Source</th><td>PubChem · retrieved 2026-08-29</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">NKULICGUDKGGRL-FCHFGNCGSA-L</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">CC[C@H](C)[C@H]1C(=O)N[C@@H](C(=O)N[C@H](C(=O)N[C@@H](C(=O)N[C@H](C(=O)NCCCC[C@@H](C(=O)N[C@@H](C(=O)N1)CCCN)NC(=O)[C@H]([C@@H](C)CC)NC(=O)[C@@H](CCC(=O)[O-])NC(=O)[C@H](CC(C)C)NC(=O)C2CN=C(S2)C(C(C)CC)N)CC(=O)N)CC(=O)[O-])CC3=CN=CN3)CC4=CC=CC=C4.[Zn+2]</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C66H103N17O16S.Zn/c1-9-35(6)52(69)66-72-32-48(100-66)63(97)80-43(26-34(4)5)59(93)75-42(22-23-50(85)86)58(92)83-53(36(7)10-2)64(98)76-40-20-15-16-25-71-55(89)46(29-49(68)84)78-62(96)47(30-51(87)88)79-61(95)45(28-39-31-70-33-73-39)77-60(94)44(27-38-18-13-12-14-19-38)81-65(99)54(37(8)11-3)82-57(91)41(21-17-24-67)74-56(40)90;/h12-14,18-19,31,33-37,40-48,52-54H,9-11,15-17,20-30,32,67,69H2,1-8H3,(H2,68,84)(H,70,73)(H,71,89)(H,74,90)(H,75,93)(H,76,98)(H,77,94)(H,78,96)(H,79,95)(H,80,97)(H,81,99)(H,82,91)(H,83,92)(H,85,86)(H,87,88);/q;+2/p-2/t35?,36-,37-,40-,41+,42+,43-,44+,45-,46-,47+,48?,52?,53-,54-;/m0./s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -56,7 +70,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000041">ARO:0000041</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_0000041">bacitracin</a><code class="curie">ARO:0000041</code></li>
   <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/57402735">pubchem.compound:57402735</a></li>
 </ul>
 
@@ -66,6 +80,7 @@ both rather than shown here, since it names at most one of them.</p>
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -78,19 +93,25 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
+<h2>Related pathway records</h2>
+<p class="meta">Evidence-qualified relationships to a pinned corpus revision.</p>
+<p><a href="https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP5060.html">PathwayMech: WikiPathways:WP5060</a><span class="pill plain">RELATED_PATHWAY_ACTIVITY</span><br>ARO:3000719 and ARO:3003251 on this record assert the isoprenyl/undecaprenyl pyrophosphate carrier target. The linked E. coli pathway provides peptidoglycan context; source-level process correspondence only, with no organism-specific drug efficacy claim.<br>
+<span class="meta">Source revision: <code>aa305727458c44ab05614901334540e2c87a9f3a</code></span></p>
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>bacitracin sensitive isoprenyl pyrophosphate <span class="pill plain">CELL_WALL_COMPONENT</span> <span class="pill">ATTACKED_COMPONENT</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000719">ARO:3000719</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. Isoprenyl pyrophosphate is a cell-wall carrier intermediate rather than a protein. Evidence status: DATABASE_ASSERTION_ONLY. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000719</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000041 (bacitracin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000719">ARO:3000719</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000041 (bacitracin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>undecaprenyl pyrophosphate <span class="pill plain">CELL_WALL_COMPONENT</span> <span class="pill">ATTACKED_COMPONENT</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3003251">ARO:3003251</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. Undecaprenyl pyrophosphate is a cell-wall carrier intermediate. Evidence status: DATABASE_ASSERTION_ONLY. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3003251</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000041 (bacitracin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003251">ARO:3003251</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000041 (bacitracin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
@@ -98,12 +119,12 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">1 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">1 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">1</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_INACTIVATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -112,11 +133,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003984</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000041 (bacitracin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003984">ARO:3003984</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000041 (bacitracin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -146,32 +169,47 @@ type — expand a group to see its determinants.</p>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">ADD_PATHWAY_LINKS</span>
+    <span class="meta">2026-10-05 · codex · LLM-assisted</span>
+    <p>Added reviewed PathwayMech relationships and any supported protein example from curation/pathway_links.yaml; organism and evidence limits are recorded in each basis.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/bacitracin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/bacitracin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=bacitracin">MediaIngredientMech (bacitracin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=bacitracin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=bacitracin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=bacitracin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=bacitracin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

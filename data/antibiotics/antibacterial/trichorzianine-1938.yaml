@@ -1,0 +1,48 @@
+identifier: antibioticmech:curator-c44fe436b2
+label: Trichorzianine 1938
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 19-residue fungal peptaibol with antibacterial activity against Vibrio
+  harveyi.
+definition_source: DOI:10.3390/ijms27177714
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@H](C)[C@@H](C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CCC(=O)N)C(=O)N[C@@H](CC1=CC=CC=C1)CO)NC(=O)C(C)(C)NC(=O)[C@H](CC(C)C)NC(=O)[C@@H]2CCCN2C(=O)C(C)(C)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CO)NC(=O)C(C)(C)NC(=O)C(C)(C)NC(=O)C(C)(C)NC(=O)[C@H](CCC(=O)N)NC(=O)C(C)(CC)NC(=O)C(C)(C)NC(=O)[C@H](C)NC(=O)[C@H](C)NC(=O)C(C)(C)NC(=O)C
+  standard_inchi: InChI=1S/C91H151N21O25/c1-26-49(7)65(75(129)98-56(37-40-64(118)119)69(123)97-55(35-38-62(92)116)68(122)96-54(45-113)44-53-32-29-28-30-33-53)103-78(132)85(13,14)107-72(126)59(43-48(5)6)100-74(128)61-34-31-41-112(61)83(137)90(23,24)108-73(127)58(42-47(3)4)99-70(124)60(46-114)102-77(131)86(15,16)109-80(134)89(21,22)110-79(133)87(17,18)106-71(125)57(36-39-63(93)117)101-82(136)91(25,27-2)111-81(135)88(19,20)105-67(121)51(9)94-66(120)50(8)95-76(130)84(11,12)104-52(10)115/h28-30,32-33,47-51,54-61,65,113-114H,26-27,31,34-46H2,1-25H3,(H2,92,116)(H2,93,117)(H,94,120)(H,95,130)(H,96,122)(H,97,123)(H,98,129)(H,99,124)(H,100,128)(H,101,136)(H,102,131)(H,103,132)(H,104,115)(H,105,121)(H,106,125)(H,107,126)(H,108,127)(H,109,134)(H,110,133)(H,111,135)(H,118,119)/t49-,50-,51-,54-,55-,56-,57-,58-,59-,60-,61-,65-,91?/m0/s1
+  standard_inchi_key: WIRZFKLONQWNLG-IFHSPPQHSA-N
+  molecular_formula: C91H151N21O25
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/163114856
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 1939.33
+  monoisotopic_mass: 1938.11899933
+xrefs:
+- pubchem.compound:163114856
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3390/ijms27177714#trichorzianine-1938
+  source_label: Trichorzianine 1938
+  minted_identifier: antibioticmech:curator-c44fe436b2
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3390/ijms27177714
+    snippet: Chen et al. isolated trichorzianine 1938 from marine-derived Trichoderma
+      longibrachiatum ST-27 and reported antibacterial activity against the aquaculture
+      pathogen Vibrio harveyi VH306 with a MIC of 300 ug/mL.
+    notes: Table 5 of DOI:10.3390/ijms27177714 explicitly cites PubChem CID 163114856
+      for trichorzianine 1938, supplying the standard InChI, InChIKey, formula, and
+      isomeric SMILES (with the C-91 isovaline stereocenter left unassigned in the
+      primary source).
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: source_concepts. Curator inputs 2026-09-10, unchanged.'

@@ -1,0 +1,243 @@
+{
+  "adversarial_self_review": [
+    "Role rules are scoped to exact database and field names, never identifier spelling.",
+    "Transcript and protein roles overlap for eight rows; they are not exclusive objects.",
+    "Six gene-annotation matches do not override the documented transcript field.",
+    "The rejected source mapping stays rejected even with a documented field role.",
+    "Current documentation does not prove historical or experimental object identity.",
+    "All 122 empty source values remain empty; no linked gene ID is substituted.",
+    "Saved-export tests require no live corpus, mutable source inventories or private cache.",
+    "Same-agent review only; no independent scientific signoff or fresh full-QC claim."
+  ],
+  "artifacts": [
+    {
+      "path": "scripts/audit_phibase_identifier_roles.py",
+      "sha256": "e13bea66a97eaf63c97abfe0397eba79f9c607cb4e7db81bbea49ef0f3cfbe9d"
+    },
+    {
+      "path": "tests/test_phibase_identifier_roles.py",
+      "sha256": "c2d38fdf963de686d9ce3f4d7b9ce2533aabde41772ffa41cc91e8d71fed0484"
+    },
+    {
+      "path": "research/2026-10-13-uniprot-ensemblfungi-fields.json",
+      "sha256": "886f61295f8c3bad48b00b4da777f0cd9478d4f08767ab50d7675c11b467b074"
+    },
+    {
+      "path": "research/2026-10-13-phibase-identifier-roles.json",
+      "sha256": "e549705f3650bde6fb5566a28951e6b1fbec51cd2339e8e2287acdf440e52109"
+    }
+  ],
+  "biological_claims_added": 0,
+  "checks": [
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_phibase_identifier_roles.py",
+        "tests/test_phibase_gene_id_types.py",
+        "tests/test_resistance_progress.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:38:18.740992+00:00",
+      "label": "focused",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-phibase-id-roles/focused.log",
+        "sha256": "922a0dcb64bcc79e1290472362c13ca809884072e1a7f1c21c69de40716a254d"
+      },
+      "output": "........................................................................ [ 94%]\n....                                                                     [100%]\n76 passed in 36.63s\n",
+      "started": "2026-10-13T08:37:41.499096+00:00"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:38:18.834085+00:00",
+      "label": "lint",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-phibase-id-roles/lint.log",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      },
+      "output": "All checks passed!\n",
+      "started": "2026-10-13T08:38:18.741856+00:00"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "scripts/check_docs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:38:54.295089+00:00",
+      "label": "documentation",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-phibase-id-roles/documentation.log",
+        "sha256": "4e35248929325fef11134949b3f16dc729df9c28d017e999898555d14bcb0afd"
+      },
+      "output": "README statistics are current.\n",
+      "started": "2026-10-13T08:38:18.834772+00:00"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "scripts/check_provenance.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:38:57.148738+00:00",
+      "label": "provenance",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-phibase-id-roles/provenance.log",
+        "sha256": "68c76ba32a2734dee9a016ec9d2fe6838468bcaf7abf9b221dfa6e696bf98e33"
+      },
+      "output": "provenance OK: 14 inventories, 23 upstream files, retrieved 2026-08-30\n",
+      "started": "2026-10-13T08:38:54.295839+00:00"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "scripts/check_source_queue.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:38:57.437531+00:00",
+      "label": "source_queue",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-phibase-id-roles/source_queue.log",
+        "sha256": "3b2102be916d52253b62ecc2af38f5c018c5ea536815eddbe2ffcb4106c3fa64"
+      },
+      "output": "source queue OK: 37 sources \u2014 10 adopted, 12 blocked, 11 candidate, 4 evaluating\nnext up: chebi-citations (P3, evidence), lotus (P3, producer_organisms), antismash-db (P4, producer_organisms)\n",
+      "started": "2026-10-13T08:38:57.149524+00:00"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:38:57.515657+00:00",
+      "label": "diff",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-phibase-id-roles/diff.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": "",
+      "started": "2026-10-13T08:38:57.438355+00:00"
+    }
+  ],
+  "date": "2026-10-13",
+  "full_qc_rerun": false,
+  "github_mutations": 0,
+  "initial_sandbox_attempt": "Public manual retrieval failed local DNS; authorized network access then succeeded. No auth response was bypassed.",
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-phibase-id-roles/baseline.json",
+      "sha256": "7b78fe4bd4eb5c0fcf96ee8a985a098299c9611ebce3bc96dfdce5ca3b1e47e6"
+    },
+    "biological_records_byte_identical": 2939,
+    "historical_research_files_byte_identical_except_main_report": 391,
+    "ignored_files_included": true,
+    "protected_files_byte_identical": 3385
+  },
+  "previous_full_qc": {
+    "historical_not_new_pass": true,
+    "receipt": {
+      "path": "research/2026-10-13-abd1-verification.json",
+      "sha256": "7729b9a032f6fd1f11a98ab83b1580ea02c0b50c19a08c57520ee11a5f4fef22"
+    },
+    "test_summary": "3183 passed, 4 skipped in 1718.18s (0:28:38)"
+  },
+  "requests": [
+    {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-phibase-id-roles/uniprot-userman.html",
+        "sha256": "d0f6fb87527060c99217412e9a87b0d223d8cdb6cb6cf87fdb802a3426b47504"
+      },
+      "bytes": 325535,
+      "content_type": "text/html; charset=UTF-8",
+      "location": null,
+      "redirects_followed": false,
+      "retrieved_at": "2026-10-13T08:33:22.103923+00:00",
+      "status": 200,
+      "url": "https://web.expasy.org/docs/userman.html"
+    },
+    {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-phibase-id-roles/ensemblfungi-database.json",
+        "sha256": "ad6f399423f009778f30fcb4695064f42b136f0fde14e8746636dfab3149d58b"
+      },
+      "bytes": 369,
+      "content_type": "application/json",
+      "location": null,
+      "redirects_followed": false,
+      "retrieved_at": "2026-10-13T08:33:35.554834+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/database/DB-0148.json"
+    },
+    {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-phibase-id-roles/uniprot-core-tree.json",
+        "sha256": "a57aa71956d313c63bbe0035eb858352d2a8e3cb6ea3f53a2d7f0d9ebb71bf29"
+      },
+      "bytes": 811982,
+      "content_type": "application/json; charset=utf-8",
+      "location": null,
+      "redirects_followed": false,
+      "retrieved_at": "2026-10-13T08:33:50.659166+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/ebi-uniprot/uniprot-core/git/trees/main?recursive=1"
+    },
+    {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-phibase-id-roles/DrLineConverter.java",
+        "sha256": "d39878ffe1285b3f1d7d6eaa0e349e3c47ffa9ec48a4b485be34f36075fe1838"
+      },
+      "bytes": 3677,
+      "content_type": "text/plain; charset=utf-8",
+      "location": null,
+      "redirects_followed": false,
+      "retrieved_at": "2026-10-13T08:34:06.875780+00:00",
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/ebi-uniprot/uniprot-core/f2e1f8f6c537d80d5501bb0af04fb47a91bf8296/ff-parser/src/main/java/org/uniprot/core/flatfile/parser/impl/dr/DrLineConverter.java"
+    },
+    {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-phibase-id-roles/UniProtKBCrossReferenceTest.java",
+        "sha256": "91966ed3b89ec90e0f5cf3761889b1909a02f0304d502f7a21449f3c8a3529be"
+      },
+      "bytes": 4110,
+      "content_type": "text/plain; charset=utf-8",
+      "location": null,
+      "redirects_followed": false,
+      "retrieved_at": "2026-10-13T08:34:15.781170+00:00",
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/ebi-uniprot/uniprot-core/f2e1f8f6c537d80d5501bb0af04fb47a91bf8296/json-parser/src/test/java/org/uniprot/core/json/parser/uniprot/UniProtKBCrossReferenceTest.java"
+    }
+  ],
+  "scope": "DOCUMENTED_IDENTIFIER_FIELD_ROLES_ONLY",
+  "source_adoptions": 0,
+  "summary": {
+    "documented_role_counts": {
+      "PROTEIN": 8,
+      "TRANSCRIPT": 95
+    },
+    "empty_source_gene_ids": 122,
+    "experimental_identifiers_assigned": 0,
+    "multiple_documented_roles": 8,
+    "no_documented_role": 0,
+    "nonempty_source_gene_ids": 95,
+    "rejected_source_gene_ids_preserved": 1,
+    "source_rows": 217
+  },
+  "typed_roles_reproduced_byte_identically": true,
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}

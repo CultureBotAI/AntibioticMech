@@ -1,0 +1,137 @@
+{
+  "additional_unmatched_lead": {
+    "compound_name": "echinomycin",
+    "curated": false,
+    "doi": "10.1038/s41598-023-34437-9",
+    "name_absence_is_structure_absence": false,
+    "publisher_access": "TOOL_INACCESSIBLE_IDENTITY_PROVIDER_REDIRECT",
+    "reported_http_status": 500,
+    "retried_or_alternate_transport_used": false,
+    "search_included_ignored_files": true,
+    "status": "NO_RECORD_NAME_MATCH_AND_PRIMARY_ACCESS_HOLD"
+  },
+  "adversarial_review": [
+    "Reference strain and species lineage remain separate from unverified experimental subjects.",
+    "NAM2 is a separate mitochondrial enzyme, not an alias or resistance assignment for CDC60.",
+    "Bounded reviewed-reference queries are not exhaustive gene-wide or strain-wide searches.",
+    "Bibliographic absence and publisher failures do not establish negative biological results.",
+    "The existing target mechanism remains unchanged and was not revalidated by this follow-up.",
+    "No sequence, variant specification, protocol, numeric AST or sample/genome join is exported.",
+    "Historical snapshots are tested without depending on mutable live biological records.",
+    "Same-agent adversarial review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "806144285e1052263cea6a573910f0069a8d4fd49b90620a35b982dca6526beb"
+    },
+    {
+      "path": "research/2026-10-13-tavaborole-reference-context.json",
+      "sha256": "6f021d40120fc2ff0c66a38ca7e71acd573438a694a6d023bbd9c1f574ccf75f"
+    },
+    {
+      "path": "tests/test_tavaborole_references.py",
+      "sha256": "13a43ba4a7b273ea23f52682532eadc5b43e0b27a9448b714322d5fadf70fd74"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-tavaborole/protected-before.json",
+    "sha256": "faf2634043a07a5023cd1e2ff73dcb85364633f29d23ab8b47c1bf8f2958217f"
+  },
+  "baseline_files_checked": 7104,
+  "date": "2026-10-13",
+  "experimental_accessions_assigned": 0,
+  "focused_checks": {
+    "focused": {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_tavaborole_references.py",
+        "tests/test_factumycin_references.py",
+        "tests/test_card_book_citations.py",
+        "tests/test_card_literature_expansion.py",
+        "tests/test_card_literature_proteins.py",
+        "tests/test_card_citation_concordance.py",
+        "tests/test_card_definition_citations.py",
+        "tests/test_card_term_scope.py",
+        "tests/test_card_grounding_audit.py",
+        "tests/test_docs.py::test_numeric_claims_in_prose_match_the_corpus",
+        "tests/test_docs.py::test_no_unregistered_numeric_claim_about_the_corpus",
+        "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-tavaborole/focused-tests.xml"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T13:44:33.199973+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-tavaborole/focused.log",
+        "sha256": "a5bad017ce6aa4335937d9cd2945820ae13205494dd6b63252c056eb8dec801f"
+      },
+      "output": "........................................................................ [ 32%]\n........................................................................ [ 65%]\n........................................................................ [ 97%]\n.....                                                                    [100%]\n221 passed in 64.99s (0:01:04)\n",
+      "started": "2026-10-13T13:43:27.413292+00:00"
+    },
+    "projection": {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_topoisomerase_reference_followup.py",
+        "tests/test_unreviewed_topoisomerase.py",
+        "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-tavaborole/projection-tests.xml"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T13:45:01.475365+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-tavaborole/projection.log",
+        "sha256": "4f57d642c5dd291146a1b9b83ecbb27190427f14f2910ac0a41b602424f0a1f1"
+      },
+      "output": ".................................................                        [100%]\n49 passed in 1.33s\n",
+      "started": "2026-10-13T13:44:59.471234+00:00"
+    }
+  },
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_biological_assertions": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-tavaborole-reference-context.json",
+    "tests/test_tavaborole_references.py"
+  ],
+  "new_full_qc_or_ci_claimed": false,
+  "offline_replay_with_network_disabled": true,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "raw_curation_site_embedding_history_and_prior_snapshots_preserved": true,
+  "records_byte_identical": 2939,
+  "source_adoptions": 0,
+  "summary": {
+    "biological_records_changed": 0,
+    "complete_queries": 2,
+    "corpus_records_in_scope": 2939,
+    "experimental_accessions_assigned": 0,
+    "primary_access_holds": 2,
+    "reference_proteins_distinguished": 2,
+    "reference_taxa_checked": 1,
+    "selected_records": 1,
+    "whole_records_completed": 0
+  },
+  "test_results": {
+    "junit": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-tavaborole/focused-tests.xml",
+        "sha256": "77743e4e3ebb0482a2ee64cc0b76f877705e3e13dd8ab394b12e5113815dc8e1"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-tavaborole/projection-tests.xml",
+        "sha256": "e1d9c82435efb9f2eb2716163710a2a781c5f99db68c339f66378b3551794b62"
+      }
+    ],
+    "passed": 270,
+    "skipped": 0
+  }
+}

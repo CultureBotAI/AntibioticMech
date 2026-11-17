@@ -1,0 +1,150 @@
+{
+  "checks": [
+    {
+      "command": ".venv/bin/ruff check .",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/ruff format --check scripts/audit_mex_component_references.py tests/test_mex_component_references.py",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/check_source_queue.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/check_provenance.py",
+      "exit_code": 0
+    }
+  ],
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-15-mex-component-references-plan.json",
+      "sha256": "6d9e36a892ffdcd8e8043ae62999f6291f464b3c0694160e961356e5678dcc82"
+    },
+    {
+      "path": "research/2026-10-15-mex-component-references-unreviewed-plan.json",
+      "sha256": "13b9210a9d3e2b1b23449be30d8a1bcf23cb9dbe2d18984a347a0a4848bd8966"
+    },
+    {
+      "path": "research/2026-10-15-mex-component-references-native-plan.json",
+      "sha256": "3246328fd0c97a3b08e80180b4fd63ce8d9ba0daeb027ac96fedb03a019801dd"
+    },
+    {
+      "path": "research/2026-10-15-mex-component-references.json",
+      "sha256": "3f2d562cd3f0d8c5365cbc3ea67d021639ac186d3a61f0d985bee0289aa96699"
+    },
+    {
+      "path": "research/2026-10-15-erm36-access-hold.json",
+      "sha256": "c7aa5bda57cf4ff51ea20173f5f3f1e7dd202e45357c30489edb68733fc6e02c"
+    },
+    {
+      "path": "scripts/audit_mex_component_references.py",
+      "sha256": "5bcd1a20c1ec912d2b0252d32600ffec61210b8945840843e3f6611a4941feb0"
+    },
+    {
+      "path": "tests/test_mex_component_references.py",
+      "sha256": "cd161fa9027779486e0f3469f677b54f0524b7a4439427f6d2402700cc075e26"
+    },
+    {
+      "path": "tests/test_card_reference_lineages.py",
+      "sha256": "792fef7e500cb72657e7223f69e13808b271be56e7f178ecfe6de476033d9f49"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "f3a10a07baad3ec10e973825fefa2daafe86398317530ad1d7ae9f0ec01204c6"
+    }
+  ],
+  "full_qc": {
+    "prior_attempt": {
+      "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+      "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+    },
+    "reason": "Prior just qc could not start: locked RDKit 2026.3.5 lacks an Intel macOS wheel/sdist. This pass is research-only.",
+    "run_this_pass": false,
+    "status": "NOT_A_FULL_QC_PASS"
+  },
+  "limits": {
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_primary_results_reviews": 0,
+    "outreach": 0,
+    "reuse_terms_review_resumed": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "offline_replay_matches": true,
+  "preservation": {
+    "all_earlier_report_bytes_preserved": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-15-erm36-identity/protected-before.json",
+      "sha256": "5aa74da505a39aa3f77cb87f70656693522d15cfed7c607bd64befcd99ab49c5"
+    },
+    "baseline_files_checked": 7801,
+    "biological_records_changed": 0,
+    "biological_records_checked": 2939,
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md",
+      "tests/test_card_reference_lineages.py"
+    ],
+    "historical_artifacts_and_reviews_preserved": true,
+    "historical_replay_test_change": "Recognizes only the three pinned note-only qualification deltas without historical fixtures; other census drift still fails and portable artifact checks remain active."
+  },
+  "regression": {
+    "errors": 0,
+    "failures": 0,
+    "initial_attempt": {
+      "failed": 1,
+      "junit": {
+        "path": "reports/resistance-grounding-2026-10-15-mex-components/regression-initial.xml",
+        "sha256": "31849a9d5ddf653535fb23e9ea76380dcb8d8d95024dad43b844f1c35f4e2685"
+      },
+      "passed": 200,
+      "reason": "Historical lineage replay compared pre-qualification record hashes to current records. Optional replay now recognizes only pinned known qualification deltas; immutable artifact checks still run.",
+      "skipped": 1,
+      "tests": 202
+    },
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-mex-components/regression.xml",
+      "sha256": "5d96d71baa881911f4f0666909edcb1b04bffdf9cc662cc7c4c2654acdeb5e4b"
+    },
+    "passed": 200,
+    "skipped": 2,
+    "tests": 202
+  },
+  "regression_command": ".venv/bin/python -m pytest -q tests/test_mex_component_references.py tests/test_card_protein_name_screen.py tests/test_card_reference_lineages.py tests/test_card_evidence_reviews.py tests/test_card_aph_memberships.py --junitxml=reports/resistance-grounding-2026-10-15-mex-components/regression.xml",
+  "status": "OFFLINE_REPLAY_AND_FOCUSED_CHECKS_PASSED_PRIMARY_REVIEW_OPEN",
+  "summary": {
+    "claims_with_all_label_components_annotated": 43,
+    "complete_records_read": 27,
+    "corpus_records_hash_checked": 2939,
+    "matched_symbols": 19,
+    "native_component_annotations": 12,
+    "new_taxonomy_requests": 0,
+    "new_uniprot_searches": 4,
+    "queried_symbols": 29,
+    "reference_entries": 20,
+    "reference_entry_types": {
+      "UniProtKB reviewed (Swiss-Prot)": 13,
+      "UniProtKB unreviewed (TrEMBL)": 7
+    },
+    "reference_taxa": 2,
+    "source_claims": 77,
+    "source_terms": 16,
+    "terms_with_all_label_components_annotated": 7
+  }
+}

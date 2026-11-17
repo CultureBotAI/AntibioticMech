@@ -1,0 +1,11 @@
+version: 1
+repository: CultureBotAI/AntibioticMech
+skills:
+  - .claude/skills/review-yaml-record/SKILL.md
+  - .claude/skills/review-yaml-category/SKILL.md
+  - .claude/skills/curate-yaml-record/SKILL.md
+  - .claude/skills/research-resistant-taxa/SKILL.md
+rubrics:
+  - .claude/skills/curate-yaml-record/references/review-checklist.md
+  - docs/CURATION.md
+  - docs/HARMONIZATION.md

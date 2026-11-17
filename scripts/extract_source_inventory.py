@@ -41,6 +41,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 CONF_PATH = REPO_ROOT / "conf" / "sources.yaml"
 DOWNLOAD_DIR = REPO_ROOT / "downloads"
 RAW_DIR = REPO_ROOT / "data" / "raw"
+DECISIONS_TSV = REPO_ROOT / "curation" / "decisions.tsv"
+CURATOR_ANTIBIOTICS_TSV = REPO_ROOT / "curation" / "curator_antibiotics.tsv"
 
 CHEBI_INVENTORY = "chebi_antimicrobials.tsv"
 ARO_INVENTORY = "aro_antibiotics.tsv"
@@ -173,9 +175,46 @@ def role_name_rows(conf: dict, compounds: dict, acc2id: dict) -> list[dict]:
     return rows
 
 
-def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> list[dict]:
+def load_curation_chebi_ids(
+    decisions_tsv: Path = DECISIONS_TSV,
+    curator_tsv: Path = CURATOR_ANTIBIOTICS_TSV,
+) -> set[str]:
+    """Return ChEBI CURIEs referenced in `curation/decisions.tsv` or `curation/curator_antibiotics.tsv`.
+
+    Including curator-selected 3-star ChEBI terms in `chebi_antimicrobials.tsv`
+    (with `in_role_scope=false`) allows `seed_from_sources.py` to ground ARO
+    and CURATOR records whose 3-star ChEBI entries lack an antimicrobial role edge.
+    """
+    chebi_ids: set[str] = set()
+    if decisions_tsv.exists():
+        with decisions_tsv.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                decision = (row.get("decision") or row.get("action") or "").strip().upper()
+                if decision == "EXCLUDE":
+                    continue
+                for col in ("identifier", "grounding_target_id", "chebi_id", "aro_chebi_xref"):
+                    target = (row.get(col) or "").strip()
+                    if target.startswith("CHEBI:"):
+                        chebi_ids.add(target)
+    if curator_tsv.exists():
+        with curator_tsv.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                for token in (row.get("xrefs") or "").split("|"):
+                    tok = token.strip()
+                    if tok.startswith("CHEBI:"):
+                        chebi_ids.add(tok)
+    return chebi_ids
+
+
+def extract_chebi(
+    conf: dict,
+    *,
+    offline: bool,
+    aro_chebi_xrefs: set[str],
+    curation_chebi_ids: set[str] | None = None,
+) -> tuple[list[dict], list[dict]]:
     """ChEBI compounds bearing an in-scope antimicrobial role, plus any ChEBI id
-    cross-referenced by an ARO antibiotic molecule.
+    cross-referenced by an ARO antibiotic molecule or curation overlay.
 
     The second group matters: an ARO molecule whose ChEBI term happens not to
     carry an antimicrobial role (ChEBI files roles inconsistently for older
@@ -255,7 +294,7 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
     wanted: dict[str, list[str]] = {}
     for cid, roles in list(direct.items()) + list(inherited.items()):
         wanted.setdefault(cid, []).extend(roles)
-    for acc in aro_chebi_xrefs:
+    for acc in aro_chebi_xrefs | (curation_chebi_ids or set()):
         cid = acc2id.get(acc)
         if cid:
             wanted.setdefault(cid, [])
@@ -614,8 +653,13 @@ def main() -> int:
     print(f"  {len(resistance_rows)} resistance edges, {len(target_rows)} target edges", file=sys.stderr)
 
     print("=== ChEBI ===", file=sys.stderr)
-    chebi_rows, role_names = extract_chebi(conf, offline=args.offline,
-                                           aro_chebi_xrefs=aro_chebi_xrefs)
+    curation_chebi_ids = load_curation_chebi_ids()
+    chebi_rows, role_names = extract_chebi(
+        conf,
+        offline=args.offline,
+        aro_chebi_xrefs=aro_chebi_xrefs,
+        curation_chebi_ids=curation_chebi_ids,
+    )
     with_structure = sum(1 for r in chebi_rows if r["standard_inchi_key"])
     in_scope = sum(1 for r in chebi_rows if r["in_role_scope"] == "true")
     print(f"  {len(chebi_rows)} compounds ({in_scope} in role scope, "
@@ -641,32 +685,13 @@ def main() -> int:
         print(f"  wrote {path.relative_to(REPO_ROOT)} ({len(rows)} rows)", file=sys.stderr)
 
     manifest = build_manifest(conf, written)
-    # Inventories written by independent extractors are carried forward rather
-    # than dropping their provenance on a ChEBI/ARO refresh.
+    # Only this extractor's entries may change. Keep independent pins even for
+    # missing files so provenance checking still detects the missing inputs.
     old_path = RAW_DIR / MANIFEST
     if old_path.exists():
         previous = yaml.safe_load(old_path.read_text(encoding="utf-8")) or {}
-        for name in (
-            "pubchem_structures.tsv",
-            "mibig_producers.tsv",
-            "fda_clinical_status.tsv",
-        ):
-            carried = previous.get("inventories", {}).get(name)
-            if carried and (RAW_DIR / name).exists():
-                manifest["inventories"][name] = carried
-        for name in ("mibig", "fda_drugsfda", "fda_gsrs"):
-            carried = previous.get("sources", {}).get(name)
-            if carried:
-                manifest["sources"][name] = carried
-        for name in (
-            "mibig_json_4.0.tar.gz",
-            "drugsatfda.zip",
-            "other-unii-0001-of-0001.json.zip",
-            "fda_gsrs_candidates.jsonl",
-        ):
-            carried = previous.get("downloads", {}).get(name)
-            if carried:
-                manifest["downloads"][name] = carried
+        for section in ("sources", "downloads", "inventories"):
+            manifest[section] = previous.get(section, {}) | manifest[section]
     (RAW_DIR / MANIFEST).write_text(
         yaml.safe_dump(manifest, sort_keys=False, allow_unicode=True), encoding="utf-8")
     print(f"  wrote {(RAW_DIR / MANIFEST).relative_to(REPO_ROOT)}", file=sys.stderr)

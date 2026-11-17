@@ -1,0 +1,270 @@
+{
+  "baseline_commit": "b0950a9c3256aacee226834e0e8a88d1022c9948",
+  "biological_records_changed": 0,
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-15-card-bla-memberships/canary-review.json",
+    "sha256": "95bedc16ead19d7d50f24efbdd86b2f62442ae032970c8c0e160e2c3cb89001d"
+  },
+  "captured_at": "2026-10-15T09:50:45.528738+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "complete_collection_aware_corpus_read_by_canary": 2939,
+  "corpus_records_hash_checked": 2939,
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "da4b83734384d0b64cd3d4167c763caee9a843026a016031b98877016a17c6c3"
+    },
+    {
+      "path": "research/2026-10-15-card-bla-memberships-plan.json",
+      "sha256": "396842fc23aafc028ff2f92e8cc67dc271f0b85444b96cbac8bafa7f6a5abb8a"
+    },
+    {
+      "path": "research/2026-10-15-card-bla-memberships.json",
+      "sha256": "a1d25fde388ec82ff5d8d1f46ec847face83b38ff7b497b7ac7a22952e756491"
+    },
+    {
+      "path": "research/2026-10-15-card-bla-memberships.tsv",
+      "sha256": "d54e6d78463eadb27214a8e4e84e594a5fd424bc404c249d811a18cbdfdb0836"
+    },
+    {
+      "path": "scripts/audit_card_bla_memberships.py",
+      "sha256": "281a03194132428ba84639d42fa1a395acf5679e8f6e55331a9f61299542a3c7"
+    },
+    {
+      "path": "tests/test_card_bla_memberships.py",
+      "sha256": "3933fd230374cd16bacedfa8d2e10cfa189dd2b55a44b805c54562520160c449"
+    }
+  ],
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "full_native_canary_replay": "PASS",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/prepare_card_bla_memberships_20261015.py",
+      "sha256": "9f7f83d3d4e08e7ad1c5b3c5904997ee9746a4da2e52f3a534445b60517b74a6"
+    },
+    {
+      "path": "/private/tmp/finalize_card_bla_memberships_20261015.py",
+      "sha256": "29d442fa3726fc14bb0ac3462e196218247fd5e495f6f7d52e8d1540257bea39"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "membership_index_updated": true,
+  "native_canary_receipt": {
+    "path": "reports/resistance-grounding-2026-10-15-card-bla-memberships/native-canary-receipt.json",
+    "sha256": "f7271188c8228f806c2ec59cc4efb41840ca93cadc953d8c206c8f1908687ff8"
+  },
+  "ncbi_requests": 0,
+  "network_and_python_file_writes_blocked_during_native_replay": true,
+  "network_requests": 0,
+  "new_experimental_assignments": 0,
+  "new_native_reference_entries_reviewed": 2,
+  "new_verified_resistance_results": 0,
+  "offline_projection_replay": "PASS",
+  "outreach": 0,
+  "plan": {
+    "path": "research/2026-10-15-card-bla-memberships-plan.json",
+    "sha256": "396842fc23aafc028ff2f92e8cc67dc271f0b85444b96cbac8bafa7f6a5abb8a"
+  },
+  "previous_sco1_references_reconciled": 2,
+  "prior_index_discovery_and_sco1_native_dossiers_reproduced": true,
+  "prior_research_checkpoints_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-card-bla-memberships/protected-before.json",
+    "sha256": "c6204fff133cef2882353b6658bd3855207cbf0f953c25e85083520298f7de12"
+  },
+  "protected_files_checked": 7751,
+  "repository_ruff_check": "PASS",
+  "reuse_terms_review_resumed": false,
+  "review_findings_addressed": [
+    "Different source traversal orders must compare claim multisets, not silently drop or reorder claims.",
+    "All 37 Q0GA57 and 20 G3K399 native citations are accounted; only the two focal source citations support this join.",
+    "Q0GA57 has conflicting allele-style synonyms; no synonym equivalence or exact experimental allele is asserted.",
+    "G3K399 has a broader blaNDM synonym; gene-family membership alone does not assign NDM-5 experiments.",
+    "UniProt reference taxonomy 562 is species rank, not a tested isolate, strain or assembly identity.",
+    "Both new references are unreviewed and lack explicit CARD xrefs; bibliography metadata is not primary results.",
+    "Native version booleans are rejected rather than accepted as integer version one.",
+    "Two previously reviewed SCO-1 references are reconciled with the later 403 primary hold still explicit.",
+    "All 2939 rows, 4538 CARD claims and prior pointers are retained; 13 claims gain 21 reference memberships.",
+    "The 723 remaining candidate-free terms are relative to selected inputs, not biological absence.",
+    "No new request, source adoption, biological curation or GitHub mutation occurred."
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "CARD_REFERENCE_INDEX_WITH_NATIVE_BLA_CITATIONS_NOT_EXPERIMENTAL_ALLELES",
+  "source_adoptions": 0,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "added_reference_links": 4,
+    "added_reference_memberships": 21,
+    "added_reference_proteins": 4,
+    "added_reference_terms": 3,
+    "additional_evidence_for_existing_links": 1,
+    "beta_bibliography_summary": {
+      "complete_records_read": 7,
+      "corpus_records_hash_checked": 2939,
+      "journal_references_without_identifiers": 11,
+      "native_identifier_issues": 1,
+      "native_reference_memberships": 81,
+      "new_network_requests": 2,
+      "new_primary_access_holds": 1,
+      "new_primary_result_reviews": 0,
+      "primary_access_terms": 2,
+      "reference_proteins": 26,
+      "reference_types": {
+        "journal article": 45,
+        "submission": 36
+      },
+      "references_without_identifiers": 47,
+      "source_claims": 15,
+      "source_terms": 15,
+      "terms_with_own_source_citation_matches": 0,
+      "whole_record_primary_signoffs": 0
+    },
+    "beta_followup_dispositions": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 6,
+      "REVIEWED_REFERENCE": 8,
+      "UNREVIEWED_CANDIDATE": 1
+    },
+    "beta_source_claims": 15,
+    "beta_source_terms": 15,
+    "card_assertions": 4538,
+    "card_terms": 2002,
+    "claim_statuses": {
+      "CITATION_AND_LITERAL_GENE_CANDIDATE_ONLY": 131,
+      "EXPLICIT_CARD_XREF_REFERENCE_ONLY": 2543,
+      "MULTIPLE_REFERENCE_EVIDENCE_KINDS_NOT_EXPERIMENTAL_SELECTION": 6,
+      "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE": 1291,
+      "REVIEWED_BETA_TUBULIN_PROTEIN_NAME_REFERENCE_ONLY": 11,
+      "REVIEWED_FOLP_RPO_GENE_AND_TAXON_REFERENCE_ONLY": 46,
+      "REVIEWED_FUNGAL_GENE_AND_SPECIES_REFERENCE_ONLY": 68,
+      "REVIEWED_GENE_AND_SPECIES_REFERENCE_ONLY": 190,
+      "REVIEWED_OUTER_LABEL_GENE_TAXON_REFERENCE_ONLY": 12,
+      "UNREVIEWED_AAC3_IIIB_EXACT_GENE_TAXON_REFERENCE_ONLY": 9,
+      "UNREVIEWED_BETA_TUBULIN_PROTEIN_NAME_CANDIDATE_ONLY": 4,
+      "UNREVIEWED_BLA_GENE_CITATION_TAXON_REFERENCE_ONLY": 13,
+      "UNREVIEWED_CYTOCHROME_B_PROTEIN_NAME_REFERENCE_ONLY": 6,
+      "UNREVIEWED_FOLP_RPO_GENE_AND_TAXON_CANDIDATE_ONLY": 3,
+      "UNREVIEWED_FUNGAL_GENE_AND_SPECIES_CANDIDATE_ONLY": 78,
+      "UNREVIEWED_GENE_AND_SPECIES_CANDIDATE_ONLY": 112,
+      "UNREVIEWED_OUTER_LABEL_GENE_TAXON_CANDIDATE_ONLY": 15
+    },
+    "corpus_records": 2939,
+    "curator_claims_not_reassessed": 133,
+    "followup_claims": 13,
+    "followup_records": 11,
+    "followup_terms": 3,
+    "folp_rpo_followup_dispositions": {
+      "folp": {
+        "MULTIPLE_CANDIDATES_NO_SELECTION": 2,
+        "NO_EXACT_GENE_RESULTS_NOT_ABSENCE": 1,
+        "REVIEWED_REFERENCE": 1,
+        "UNREVIEWED_CANDIDATE": 1
+      },
+      "rpo": {
+        "MULTIPLE_CANDIDATES_NO_SELECTION": 10,
+        "REVIEWED_REFERENCE": 4,
+        "SOURCE_NAME_UNRESOLVED_NO_PROTEIN_QUERY": 2
+      }
+    },
+    "folp_rpo_source_claims": 53,
+    "folp_rpo_source_terms": 21,
+    "fungal_followup_dispositions": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 61,
+      "NO_EXACT_GENE_RESULTS_NOT_ABSENCE": 29,
+      "REVIEWED_REFERENCE": 68,
+      "SOURCE_NAME_UNRESOLVED_NO_PROTEIN_QUERY": 9,
+      "UNREVIEWED_CANDIDATE": 17
+    },
+    "fungal_source_claims": 188,
+    "fungal_source_terms": 184,
+    "new_cohort_summaries": {
+      "focal_native_citations_matched": 2,
+      "native_citations_accounted": 57,
+      "new_primary_results_reviews": 0,
+      "new_taxonomy_nodes_requested": 0
+    },
+    "newly_checked_native_reference_entries": 2,
+    "phi_claims_not_reassessed": 217,
+    "qualified_salmonella_terms_without_selected_protein": 4,
+    "reconciled_prior_reference_entries": 2,
+    "records_with_selected_references": 223,
+    "records_without_card_assertions": 2666,
+    "reference_links": 2796,
+    "score_rules_not_reassessed": 467,
+    "selected_reference_proteins": 1681,
+    "selected_reference_terms": 1279,
+    "term_statuses": {
+      "CITATION_AND_LITERAL_GENE_CANDIDATE_ONLY": 49,
+      "EXPLICIT_CARD_XREF_REFERENCE_ONLY": 976,
+      "MULTIPLE_REFERENCE_EVIDENCE_KINDS_NOT_EXPERIMENTAL_SELECTION": 2,
+      "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE": 723,
+      "REVIEWED_BETA_TUBULIN_PROTEIN_NAME_REFERENCE_ONLY": 11,
+      "REVIEWED_FOLP_RPO_GENE_AND_TAXON_REFERENCE_ONLY": 16,
+      "REVIEWED_FUNGAL_GENE_AND_SPECIES_REFERENCE_ONLY": 68,
+      "REVIEWED_GENE_AND_SPECIES_REFERENCE_ONLY": 37,
+      "REVIEWED_OUTER_LABEL_GENE_TAXON_REFERENCE_ONLY": 6,
+      "UNREVIEWED_AAC3_IIIB_EXACT_GENE_TAXON_REFERENCE_ONLY": 1,
+      "UNREVIEWED_BETA_TUBULIN_PROTEIN_NAME_CANDIDATE_ONLY": 4,
+      "UNREVIEWED_BLA_GENE_CITATION_TAXON_REFERENCE_ONLY": 3,
+      "UNREVIEWED_CYTOCHROME_B_PROTEIN_NAME_REFERENCE_ONLY": 6,
+      "UNREVIEWED_FOLP_RPO_GENE_AND_TAXON_CANDIDATE_ONLY": 2,
+      "UNREVIEWED_FUNGAL_GENE_AND_SPECIES_CANDIDATE_ONLY": 78,
+      "UNREVIEWED_GENE_AND_SPECIES_CANDIDATE_ONLY": 16,
+      "UNREVIEWED_OUTER_LABEL_GENE_TAXON_CANDIDATE_ONLY": 4
+    },
+    "unreviewed_fragment_references": 281,
+    "whole_record_primary_signoffs": 0
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 944,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-card-bla-memberships/tests.xml",
+      "sha256": "911b10f68eb8c70edd5072a41bdcd7452f2b764d49aab3f56a494b8c1e342945"
+    },
+    "skip_details": [
+      {
+        "classname": "tests.test_card_structure_links",
+        "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+        "test": "test_cached_export_reproduces_when_research_cache_is_available"
+      }
+    ],
+    "skipped": 1,
+    "test_classes": [
+      "tests.test_aac3_evidence",
+      "tests.test_card_beta_tubulin_memberships",
+      "tests.test_card_bla_alias_screen",
+      "tests.test_card_bla_memberships",
+      "tests.test_card_cytb_outer_memberships",
+      "tests.test_card_cytochrome_b_references",
+      "tests.test_card_definition_citations",
+      "tests.test_card_followup_memberships",
+      "tests.test_card_grounding_audit",
+      "tests.test_card_literature_expansion",
+      "tests.test_card_outer_membrane_references",
+      "tests.test_card_reference_lineages",
+      "tests.test_card_structure_links",
+      "tests.test_cipa_evidence",
+      "tests.test_cytochrome_b_evidence",
+      "tests.test_fungamr_cohort",
+      "tests.test_kasugamycin_card_context",
+      "tests.test_kpn_evidence",
+      "tests.test_outer_membrane_evidence",
+      "tests.test_sco1_evidence",
+      "tests.test_structure_primary_context",
+      "tests.test_valinomycin_abcb1",
+      "tests.test_vgb_evidence"
+    ],
+    "tests": 945
+  },
+  "verification_limit": "Native database-reference review and index reconciliation, not experimental allele or whole-corpus primary signoff. Pinned RDKit lacks an Intel macOS wheel; historical Linux CI is not current signoff.",
+  "whole_record_primary_signoffs": 0
+}

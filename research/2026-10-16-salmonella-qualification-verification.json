@@ -1,0 +1,522 @@
+{
+  "artifacts": {
+    "dossier": {
+      "path": "research/2026-10-16-card-qualified-current.json",
+      "sha256": "53a7ab7b1347168aded19c0901f7beb825a014b174a546823eb89b3f2c7d167f"
+    },
+    "index_plan": {
+      "path": "research/2026-10-16-card-qualified-current-plan.json",
+      "sha256": "f718ddeaf5a9204deaed5cb6223f6c1241dfadf9cc806ae66f8338cc07ea57a2"
+    },
+    "tsv": {
+      "path": "research/2026-10-16-card-qualified-current.tsv",
+      "sha256": "7731856c04fede8409649fe6d13761aa2e5cbc17e5ecfa5c520f026fecc17d41"
+    }
+  },
+  "authoritative_runner": {
+    "path": "scripts/run_qc.py",
+    "sha256": "14c7eb66f38c078e2fe51331e98525a1bc5e189894b5e4ba22564ad6c85095d2"
+  },
+  "baseline": {
+    "path": "reports/salmonella-qualification-2026-10-16/baseline.json",
+    "sha256": "443832bf028d7aa8965ffa93372b95b232853a06e2f967f48bdcf8fac49840ff"
+  },
+  "baseline_files_checked": 7854,
+  "cache_free_regression": {
+    "errors": 0,
+    "failed_cases": [],
+    "failures": 0,
+    "junit": {
+      "path": "reports/salmonella-qualification-2026-10-16/cache-free-fixed.xml",
+      "sha256": "3e8b7dce8671bd691d0b5148523952c7013d39e65a54d672982d7eba55483785"
+    },
+    "passed": 325,
+    "seconds": 173.124,
+    "skipped": 110,
+    "tests": 435
+  },
+  "canary": {
+    "path": "reports/salmonella-qualification-2026-10-16/canary.json",
+    "sha256": "7fb69080a5868a31a0bcd194b1d31a174d37e0c3c26bb5f85afb3ecd78740590"
+  },
+  "changed_existing_files": [
+    {
+      "after_sha256": "584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687",
+      "before_sha256": "6b38d17c52d8b0123e7bb2ece35341322269f0efb79b47d66d513b3c6bf6830d",
+      "path": "curation/card_evidence_reviews.json"
+    },
+    {
+      "after_sha256": "a75d11277db999ad7221eb07998519cff7119874274f3e5a18cd906c855f9850",
+      "before_sha256": "de4e65076e0a69a82637f3af5a824c0bd198a1b49ee22d85a424d67ca0c9fedd",
+      "path": "data/antibiotics/antibacterial/ciprofloxacin.yaml"
+    },
+    {
+      "after_sha256": "e569de04595ae50322e5a78d256e10c5999d76c50ade774e856c56b45ac0fb3b",
+      "before_sha256": "280f96b6f76fa056b70bceb1e5c748fe9dd74850abcae39ac8cdf3e6e81ceccc",
+      "path": "data/antibiotics/antibacterial/colistin-a.yaml"
+    },
+    {
+      "after_sha256": "8305a41ae76d7a713beac695fa2353449f23bcbea7b8e6bcc958fb503a75005f",
+      "before_sha256": "cfd403df2e48958b40fc4354605c363170d6d52b2569e8fe77b701151c5b6350",
+      "path": "data/antibiotics/antibacterial/colistin-b.yaml"
+    },
+    {
+      "after_sha256": "f51adec1f114ac3ef729fb0c919fb35cccd9b367dfbd14bd60ef7b0ab2a334a8",
+      "before_sha256": "47f0b5131772bc7593b52243400a379e6a9d299a63dd3a982b1fd22098839511",
+      "path": "data/antibiotics/antibacterial/daptomycin.yaml"
+    },
+    {
+      "after_sha256": "f19a07208438b3e59d9168ca31c64aeb2856ae5b2c68f24c0499b8e9d84d921a",
+      "before_sha256": "634f340fe359de5ce62f2aa04523590a8c313fad7812c7b3b57cf611d534628d",
+      "path": "data/antibiotics/antibacterial/enoxacin.yaml"
+    },
+    {
+      "after_sha256": "1a31fc90aa55a35dd92173028d86b098c668f97699b6b58e7f1f36e9077af851",
+      "before_sha256": "e3883d708a297d9271617e256fdbbc2f7d50c5520e9a9995ef553861ddce4c27",
+      "path": "data/antibiotics/antibacterial/gatifloxacin.yaml"
+    },
+    {
+      "after_sha256": "c236186276c3aad7566ec2e06273b92d785fa3143ac2c52c8757f779de6728ee",
+      "before_sha256": "20511dc1a7296b36409e28f12b48f73686fe44437bc4bc2ec5683306aa5332fa",
+      "path": "data/antibiotics/antibacterial/grepafloxacin.yaml"
+    },
+    {
+      "after_sha256": "70c59c1c093c02d5b7883284bc2a178f76d26c10958cff8ad15d7fa396125785",
+      "before_sha256": "b82bb978640eed811d1b22f4e67bad840ff2fdd891f9cbd055d68449eb835d64",
+      "path": "data/antibiotics/antibacterial/levofloxacin.yaml"
+    },
+    {
+      "after_sha256": "db2ec4cc6bf2a13c37d68241a41effc938db28dee1b3ebf851fd3b03e633374e",
+      "before_sha256": "dc255b90dd786a273de2a1ae299d37fb8772e7ffbb1542df4c909227266f08e7",
+      "path": "data/antibiotics/antibacterial/moxifloxacin.yaml"
+    },
+    {
+      "after_sha256": "09df8e476fed3bbaf84272af1728d88728fe478d061a3a1f430064826a4294ad",
+      "before_sha256": "5470f715f502919e640578403614317d7bc8d06899756d6d1d08d2f065856aa6",
+      "path": "data/antibiotics/antibacterial/nalidixic-acid.yaml"
+    },
+    {
+      "after_sha256": "d7bc99cbddc740406fe115ece62c51d2ce3324391a165d8787adaf4e2748aafa",
+      "before_sha256": "a021e7b416bd35303fcb3762ba9627410c09052d5e0f08130c1503384c5cb1dc",
+      "path": "data/antibiotics/antibacterial/norfloxacin.yaml"
+    },
+    {
+      "after_sha256": "081c5e6d5b5fa90bb6e7517894fca427ca6376c594d012c539cdfa43dea89dbd",
+      "before_sha256": "5ddd8f63ce90ff0d26ed37026628e52f56d1b75925adb269a832ed9e2b2bc407",
+      "path": "data/antibiotics/antibacterial/ofloxacin.yaml"
+    },
+    {
+      "after_sha256": "6913eb1fed11af07faf170d1fbfc6920d8b957060421963b26c99038c8537136",
+      "before_sha256": "0626ce3d51674b59c8cb7e00ee56c5320c46bc5def630ccb59bf5da0a9a121f8",
+      "path": "data/antibiotics/antibacterial/pefloxacin.yaml"
+    },
+    {
+      "after_sha256": "b34748423fa1dc8fb543166ff2b38959c500e83841b3c2d7054cc9a56614a256",
+      "before_sha256": "2d14fa9991be8f9cebf525c9b74a3ba87822d4f85a59efc07caeb006a83a4d82",
+      "path": "data/antibiotics/antibacterial/pleuromutilin.yaml"
+    },
+    {
+      "after_sha256": "2958a99484601e1b1415583c0e9b0c9e256f898d23a3a47138b0ce2b5d39d3e7",
+      "before_sha256": "924813552af17502f9756d5ac75534bc9a5739854a1064bd8882098f96f249c2",
+      "path": "data/antibiotics/antibacterial/sparfloxacin.yaml"
+    },
+    {
+      "after_sha256": "5b71edb2bfd36d2a3ecd7331f53ac3fab707cf6d29bee6e525a9d51d0b71557b",
+      "before_sha256": "cf5a408c9e221962c84822511365e9038d3435214d8584fdf0723ce8baeb787c",
+      "path": "data/antibiotics/antibacterial/trovafloxacin.yaml"
+    },
+    {
+      "after_sha256": "768da834c0810a301bafa219a0a0f1c257737de2993a2e15cbba7ef12fe85c39",
+      "before_sha256": "36671240485980d7a7439b31a482520f454fc054f17f4d7207de499ae5b15159",
+      "path": "data/antibiotics/antimycobacterial/lomefloxacin.yaml"
+    },
+    {
+      "after_sha256": "fce3ac6264c7bba04a44b05711b6134aa1f0221c3a1f4a46159a0c3644ea3fc0",
+      "before_sha256": "2eebc3d594451c7100eb436e6cf7c840d6fff7b81fddc5a6e2f79df3fcd53ce1",
+      "path": "pages/antibacterial/ciprofloxacin/activity-1.html"
+    },
+    {
+      "after_sha256": "5fa6b5c2f66150e1363bfd9f00202233e86b9b3dd203bd0946d394a9e8da45f1",
+      "before_sha256": "cf7c7ba0a1f566506d4c86f3f94c5ce5e46f8a580bb476d59edde8c2319edc15",
+      "path": "pages/antibacterial/ciprofloxacin.html"
+    },
+    {
+      "after_sha256": "a63ac28c7cf2675bd7d9d9a1146aad368314473f82e7594f9fa139315d2e0f9b",
+      "before_sha256": "23b6d27fcf03324f300fb9beef86c408da990a6a633aa69d991671490ff1e5e2",
+      "path": "pages/antibacterial/colistin-a.html"
+    },
+    {
+      "after_sha256": "08014ab8164ab8035153cb022b2eae3ad9b71d52901f956d7eff3275a3290ece",
+      "before_sha256": "4473908b287d244172b03f58f0573b6976b601b37ee433e896dded8f092d0df3",
+      "path": "pages/antibacterial/colistin-b.html"
+    },
+    {
+      "after_sha256": "c3ba3c94c64cac3ccf1194644fb053b2b532697c0b278b3b0aa51fd4ac5f53a6",
+      "before_sha256": "d0a2aef7e9bad68d001aa7c28f1d47126092981426e449b0484938f94c1fe66c",
+      "path": "pages/antibacterial/daptomycin/activity-1.html"
+    },
+    {
+      "after_sha256": "2c8139984ff5f4d774e9b951046d4672d644215424c8a0745a13c4a433fab0e8",
+      "before_sha256": "a1954794780d006e560644f9d1731e78b8481a087b151cf579e1dbb409a80fe6",
+      "path": "pages/antibacterial/daptomycin.html"
+    },
+    {
+      "after_sha256": "ee2ab0d8c6c33d8d30da03f68e200884c2ac9c6495c5c2a04b6568cebd39a156",
+      "before_sha256": "cb02e8434cf83d2641eafa1d90c0c03f9d65785d6cb7ec3766ebe6ee7b1a00ff",
+      "path": "pages/antibacterial/enoxacin.html"
+    },
+    {
+      "after_sha256": "ed7e9be92ff8e316a64a407f87440c97714d565ffc7c6ba83cc23603c28c2fd1",
+      "before_sha256": "b9fdf65a90ce6c14742617631236fa85c9d54a3dd22f70c7eae6ff8ad1284142",
+      "path": "pages/antibacterial/gatifloxacin/activity-1.html"
+    },
+    {
+      "after_sha256": "76b4709782cb40d8a76f93e4803888cbbe10a65ab6e5a36c533d4611916e69fc",
+      "before_sha256": "854306d3750839628d3c24c64de8cc3167df93f5b12fd3801eef55f990811957",
+      "path": "pages/antibacterial/gatifloxacin.html"
+    },
+    {
+      "after_sha256": "9c8ce9b2f8dab49ce4fffabd55fbec0ae5e1511e1dda6691d49813d8b59f1d7c",
+      "before_sha256": "c571de558077af8af2537642f3c5a53e0f29afcfcd2043abe7e9828bae12d977",
+      "path": "pages/antibacterial/grepafloxacin.html"
+    },
+    {
+      "after_sha256": "ba30b5d77a5665746b4544cb4764916b3400d30a83d0795827bb2d6acd4405c6",
+      "before_sha256": "9c00af15d83d804535ddd1a7d98e2574f1b73b0d9e171d1507af3a58ef757889",
+      "path": "pages/antibacterial/levofloxacin/activity-1.html"
+    },
+    {
+      "after_sha256": "8ba892dea10954b1f214ee7c46fa409864e3ea780532ec3d8a0ec91278561391",
+      "before_sha256": "df7fc0609a536894823f0d3e572a0ec8fca49e513ebc6cdbc81ec7e275bbd771",
+      "path": "pages/antibacterial/levofloxacin/activity-2.html"
+    },
+    {
+      "after_sha256": "6fa43136a1c13c2ad38b063928dc27b1a6bb1c5dfb25e226727a6f5d923d718e",
+      "before_sha256": "50d337273b9164fe3e327732a5652e5461ceafcca168624f797f0d1bc2906132",
+      "path": "pages/antibacterial/levofloxacin/activity-3.html"
+    },
+    {
+      "after_sha256": "a2b0e585a815a2672990f6e2bd9a11edeb7e93025381bad85169ec608461b3c3",
+      "before_sha256": "9ab9b837d4a6ab5b0f3a4711d9e7f1bab6bdd1cc2f666031c7429276c48e9fb2",
+      "path": "pages/antibacterial/levofloxacin/activity-4.html"
+    },
+    {
+      "after_sha256": "49274d2ae621d409a14b701d3728132da4a12b3366454735f6c16ed25bcb4c33",
+      "before_sha256": "b941f1420bb8e05b16ee1532f0b1148b66c8bc435a89a7c00cf125ad4d641c77",
+      "path": "pages/antibacterial/levofloxacin.html"
+    },
+    {
+      "after_sha256": "42b1a83e7c4f5201465a1b1dbe8357aa90fa9c281168080f24cf3d2b44f66c3f",
+      "before_sha256": "e8d489e94ee1954102f59e14b678187fc7dbf95f2281611c7a77801e1d4f3f4c",
+      "path": "pages/antibacterial/moxifloxacin/activity-1.html"
+    },
+    {
+      "after_sha256": "02571293651934113a00e7498c7246f9a83cf4c08d77cefc39b19206f0bf6da1",
+      "before_sha256": "18b612a10916eb261e3a8d96daeb90ad4f8327925235a8c14f6d7ab4a1f2117d",
+      "path": "pages/antibacterial/moxifloxacin/activity-2.html"
+    },
+    {
+      "after_sha256": "9a30cb359e9e5327b780a0ea82da62d5db097061bb57554e1c07a74f384d5dc9",
+      "before_sha256": "98d0bca537e6b179dd8eefd0f4b573adec85bbf6ed7a3e3fdd2dc6951f4b2f40",
+      "path": "pages/antibacterial/moxifloxacin/activity-3.html"
+    },
+    {
+      "after_sha256": "dcf83fe67ab1fe7914681f9f40da586595d2a5ea982fb356331ec1d2dbf17969",
+      "before_sha256": "c204d24d7f76a148c6a5f8f41796adc1e4d7c2b781b1cb46a1d309f71dbaa249",
+      "path": "pages/antibacterial/moxifloxacin/activity-4.html"
+    },
+    {
+      "after_sha256": "b11b0f150ab27b1641a148a1e94afa6ba8b462e6996803030e100f327a8affcd",
+      "before_sha256": "145d11bd1c137a14bc2157ae00b5a579395c51d29ad1681fdf606301a08baf46",
+      "path": "pages/antibacterial/moxifloxacin.html"
+    },
+    {
+      "after_sha256": "f6c511d85985ef3537dd568c07d1ac0b588960458a19905b6de9b94d288341af",
+      "before_sha256": "8684f45b4596b2e9bf4be16e8b9b706477307a2c8e6b287c2c9a755b340e95c8",
+      "path": "pages/antibacterial/nalidixic-acid.html"
+    },
+    {
+      "after_sha256": "4787b69c2991d531702dba88ea6874f6699b3c0df0b6a34d5826bad91f96724c",
+      "before_sha256": "28757b49cdc58bdd7c43bc3a14f5300bf954e50ec4b3b070bd03ff48a509abd7",
+      "path": "pages/antibacterial/norfloxacin.html"
+    },
+    {
+      "after_sha256": "f862507965adb92282eb22e5c4c885ba74ae613c4648132896184f48bf00724a",
+      "before_sha256": "02d1bc9726842c720058227a9b125ae4dbc938bec1404c3100ae7e5d4e2f7ce1",
+      "path": "pages/antibacterial/ofloxacin/activity-1.html"
+    },
+    {
+      "after_sha256": "c4c487b3d3de5292c031910b1a976d13a88176f06621fcc8e389599a640b3d59",
+      "before_sha256": "dfbfe87349c4ea0a4e6e4c662e599d1d6947ed35281b14b06f9f67ce8bba98af",
+      "path": "pages/antibacterial/ofloxacin.html"
+    },
+    {
+      "after_sha256": "855017929a0753eb88917bdf71e5a541a8d4cd209bb5023c6a2df85277fe525a",
+      "before_sha256": "db2ef1d8baaadac737f25f46f4522e3f67ec9e88bd7ebd034cb11d300beb13ea",
+      "path": "pages/antibacterial/pefloxacin.html"
+    },
+    {
+      "after_sha256": "b70bdf7037d9a1883642fdeb55c9859a183a8e36bd2108dbc110ba0430a86c6a",
+      "before_sha256": "1018fb03c15915aa301b7e34bf0eecab6f54ab4553e5ca7f36ce88b16e2a9b25",
+      "path": "pages/antibacterial/pleuromutilin.html"
+    },
+    {
+      "after_sha256": "32454f1fff05a0abeae0782e2ea9e4f3b48ac98dd7a1a8aa963965ee23f1591b",
+      "before_sha256": "0fc85010cbabe4100e830a577928638548a467bc057d5dad44abb01aaadc7511",
+      "path": "pages/antibacterial/sparfloxacin.html"
+    },
+    {
+      "after_sha256": "049974b167c431b90454700a55497ee218ec950c1795a2314efc8285aded72f7",
+      "before_sha256": "28ff12b324ad4fb45eeea94333d695c29de674c326285a4e66d2d3aae2076021",
+      "path": "pages/antibacterial/trovafloxacin.html"
+    },
+    {
+      "after_sha256": "bae62b59b6c22db64f373660d8dc86bee15f83ead46aee59c7f014e8cf86c54f",
+      "before_sha256": "ac9acbd6d6fa68d477dc70ef1192bec54cc5fc36cc0f1804dc9b5ef01089aed6",
+      "path": "pages/antimycobacterial/lomefloxacin.html"
+    },
+    {
+      "after_sha256": "34fca55fa58cf4ca90162b0dc697c983e4e11527f942e9364c2fa655f65e903b",
+      "before_sha256": "495f1180d14b2867777daa4b36935d0d0b5a0ea4729446cc603d5d8cd1c144b2",
+      "path": "tests/conftest.py"
+    },
+    {
+      "after_sha256": "88de5edd183782429c469ed94bab8738d61fd73ab74db358f9a1323b522709b5",
+      "before_sha256": "a34a85d99e53a72af9f84b16d32a803e9b0e87a43052957250dc02dd1f3d0bfb",
+      "path": "tests/test_aph_mph_primary.py"
+    },
+    {
+      "after_sha256": "3d4668025c406c6343ef93d0dc4f2d129e0c22324465e604399561387f63b57e",
+      "before_sha256": "1391c4cf69591e2ba0273ec5437acf366ca2ad9df43e49980c2190f6c05f6170",
+      "path": "tests/test_bla_recent_identifiers.py"
+    },
+    {
+      "after_sha256": "c8cf2bc7bb45a976fcceb28b08efffdac19a85f8af4a7fd8e90f2239ee8d7b32",
+      "before_sha256": "ee2423304ddf21eab29da2afe6379a8abc8ca96a4c5e52bb57179f59fa7a44a3",
+      "path": "tests/test_card_current_references.py"
+    },
+    {
+      "after_sha256": "e2cfada5fbdba47183641e248726d3800ebf9154bf062eb010f0707a0ac79219",
+      "before_sha256": "bd0c8cbce0c1c8ec85277f9c907db1fc54458d3db10c15d6c6e1b54bc77f27f0",
+      "path": "tests/test_card_evidence_reviews.py"
+    },
+    {
+      "after_sha256": "b0183742015dcdf8512f94aae33a99eb8231738a76b968d6794487e4ffbb97f9",
+      "before_sha256": "14c4d18937c31c51da79f5bfdf8bf116ea8a8e2ecb735a9d9925e60a0a98b07c",
+      "path": "tests/test_card_reference_reconciled.py"
+    },
+    {
+      "after_sha256": "c8b267aa0441895db6e415ef7a88c5b8d19ab86ae0e36bb90190add4fb7ec378",
+      "before_sha256": "b70951bb5449397701c4e088fec3b023c62d7a16a9dd65ba6dcae951b5fb6527",
+      "path": "tests/test_card_reference_successor.py"
+    },
+    {
+      "after_sha256": "dad01b4960ce7fa8b0d35466f1e4b1872c025e7ec9aa2fa2437f867637f133c5",
+      "before_sha256": "3cbe32932f5fa5fd2a47985fa50aa4a87b46a82361737d0018ee14dc2f653bfd",
+      "path": "tests/test_cdsa_qualification_checkpoint.py"
+    },
+    {
+      "after_sha256": "09e89f94a4c821a55c6eb4f0d6f3c41ad2589f5403e02ee970a5d9859d80aaf7",
+      "before_sha256": "16e1e53f44f8a841d0243af3feffd7f0a03fd0b81ddb8a7e8d70fea21408e87d",
+      "path": "tests/test_msh_hmg_reference.py"
+    },
+    {
+      "after_sha256": "8c7efb03b85babc17a6e9c0816e13b76166425316e4cfaf1999ea740a3c7dc10",
+      "before_sha256": "ac7f5b20e8db59b76061aa15105c00963c11c13bf80dd941ca3649b4163c3fa4",
+      "path": "tests/test_rifampin_inactivation_context.py"
+    },
+    {
+      "after_sha256": "8f55336c34ac13a562b488295561051b7ed82f1ce5cb3fe02b8eea858dbbe271",
+      "before_sha256": "8591be6006ba1615efd2ce1ea8daac21cf92a0ce0a7d8593a1c38d2471f863c7",
+      "path": "tests/test_sal_reference_context.py"
+    },
+    {
+      "after_sha256": "e21da4f36239c350f0aa6da43127052a4edaeadd01e55933b1f8256ee5799bcd",
+      "before_sha256": "0ffdae7d749656a4636506da92fd4034f0603325abc878ab11bb166ba677b58c",
+      "path": "tests/test_salmonella_evidence_scope.py"
+    }
+  ],
+  "complete_downloads_match_collection_aware_records": [
+    {
+      "path": "pages/antibacterial/ciprofloxacin/record-de8ba5140954940871f44e94d0f7b22a9ab9a7945e7f5c13f398c4b09fb05259.json.gz",
+      "sha256": "de8ba5140954940871f44e94d0f7b22a9ab9a7945e7f5c13f398c4b09fb05259"
+    },
+    {
+      "path": "pages/antibacterial/daptomycin/record-2360db375b1d654c4626880df8fb6df12a322dcab08f4db0499708c07082cfe3.json.gz",
+      "sha256": "2360db375b1d654c4626880df8fb6df12a322dcab08f4db0499708c07082cfe3"
+    },
+    {
+      "path": "pages/antibacterial/gatifloxacin/record-82b74421fdcb2f794da8db24e9cc2cc49f9f540f86fa0247e3d6a0c4910149e2.json.gz",
+      "sha256": "82b74421fdcb2f794da8db24e9cc2cc49f9f540f86fa0247e3d6a0c4910149e2"
+    },
+    {
+      "path": "pages/antibacterial/levofloxacin/record-e7226445d7d85051cdf45730cbf39b9efe6ae5a58f71b813a8eac1c4eadf0355.json.gz",
+      "sha256": "e7226445d7d85051cdf45730cbf39b9efe6ae5a58f71b813a8eac1c4eadf0355"
+    },
+    {
+      "path": "pages/antibacterial/moxifloxacin/record-dfc1dd9c2b94ff8d968c71cfd4d0be447e72c7bfe9292b4927b655fe46cdc77f.json.gz",
+      "sha256": "dfc1dd9c2b94ff8d968c71cfd4d0be447e72c7bfe9292b4927b655fe46cdc77f"
+    },
+    {
+      "path": "pages/antibacterial/ofloxacin/record-3157142012d09e678f3abd6d0eb26e710774429f180d85590098dfc0eaae499b.json.gz",
+      "sha256": "3157142012d09e678f3abd6d0eb26e710774429f180d85590098dfc0eaae499b"
+    }
+  ],
+  "date": "2026-10-16",
+  "earlier_research_artifacts_unchanged": true,
+  "environment_receipt": {
+    "path": "research/2026-10-15-qc-environment-verification.json",
+    "sha256": "fddcb62bfaa3cb9808f0cf6c8b65057997c1e5ce3896041d2e4ad44d1a15a366"
+  },
+  "experimental_identifiers_assigned": 0,
+  "full_investigation_complete": false,
+  "initial_focused_regression": {
+    "errors": 0,
+    "failed_cases": [
+      {
+        "class": "tests.test_card_evidence_reviews",
+        "name": "test_qualifications_retain_both_conflicting_results_and_exact_compound_limits"
+      }
+    ],
+    "failures": 1,
+    "junit": {
+      "path": "reports/salmonella-qualification-2026-10-16/focused.xml",
+      "sha256": "dad340fb637af836598a112f17e9658a5754b0508ca13e02e400ae1b0e05e49b"
+    },
+    "passed": 434,
+    "seconds": 187.281,
+    "skipped": 0,
+    "tests": 435
+  },
+  "issue_1040": "DEFERRED",
+  "ncbi_requests": 0,
+  "numeric_ast_exported": false,
+  "preservation_scope": "Measured before appending the final report section; earlier report bytes remain reconstructible",
+  "production_implementation_unchanged": true,
+  "protocols_exported": false,
+  "qc": {
+    "command": [
+      "/private/tmp/antibioticmech-qc-2026-10-15/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "elapsed_seconds": 3140.386,
+    "errors": 0,
+    "exit_code": 0,
+    "failed_cases": [],
+    "failures": 0,
+    "junit": {
+      "path": "reports/salmonella-qualification-2026-10-16/qc-1-tests.xml",
+      "sha256": "437d19b61c26bad07b9550b2f269db2948550b7b8df3a4e43d9d4245d5b452b0"
+    },
+    "log": {
+      "path": "reports/salmonella-qualification-2026-10-16/qc-1.log",
+      "sha256": "e3ccf54660a88ead7feb3b6ddaf2813e7a8edd5ad26c100608a44501cdffb5eb"
+    },
+    "passed": 9598,
+    "pytest_addopts": "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/salmonella-qualification-2026-10-16/qc-1-tests.xml -ra --maxfail=1",
+    "seconds": 2722.277,
+    "skipped": 7,
+    "started_at_utc": "2026-10-16T06:14:11.199061+00:00",
+    "tests": 9605
+  },
+  "removed_stale_generated_downloads": [
+    "pages/antibacterial/ciprofloxacin/record-75a119cebeb71cb0daaad877be84bed132d1ea17e3332e276353ae1411680c06.json.gz",
+    "pages/antibacterial/daptomycin/record-63f18034083b43d6a564dc42dfa3e6040344cc84305776218a3b116c2e441ab6.json.gz",
+    "pages/antibacterial/gatifloxacin/record-57186acd4351fe62e5b89d28963ecf5942c4cbd0aeecf7d5322a7e45fea03145.json.gz",
+    "pages/antibacterial/levofloxacin/record-da576e8557c51b39dac9a6a5ea686fe13b0ff8b074f2590a5539431556fe23cf.json.gz",
+    "pages/antibacterial/moxifloxacin/record-b1be557e93a2cbfba500bcd14d388fcfb26798f69cd8750f2d3ca1e2c1b7591e.json.gz",
+    "pages/antibacterial/ofloxacin/record-0ebe9bf58f4c66c0652aa5d34c02f81222142f5b708534e1e3075fcf47f63511.json.gz"
+  ],
+  "rendered_qualification_notes_verified": [
+    {
+      "path": "pages/antibacterial/ciprofloxacin.html",
+      "sha256": "5fa6b5c2f66150e1363bfd9f00202233e86b9b3dd203bd0946d394a9e8da45f1"
+    },
+    {
+      "path": "pages/antibacterial/colistin-a.html",
+      "sha256": "a63ac28c7cf2675bd7d9d9a1146aad368314473f82e7594f9fa139315d2e0f9b"
+    },
+    {
+      "path": "pages/antibacterial/colistin-b.html",
+      "sha256": "08014ab8164ab8035153cb022b2eae3ad9b71d52901f956d7eff3275a3290ece"
+    },
+    {
+      "path": "pages/antibacterial/daptomycin.html",
+      "sha256": "2c8139984ff5f4d774e9b951046d4672d644215424c8a0745a13c4a433fab0e8"
+    },
+    {
+      "path": "pages/antibacterial/enoxacin.html",
+      "sha256": "ee2ab0d8c6c33d8d30da03f68e200884c2ac9c6495c5c2a04b6568cebd39a156"
+    },
+    {
+      "path": "pages/antibacterial/gatifloxacin.html",
+      "sha256": "76b4709782cb40d8a76f93e4803888cbbe10a65ab6e5a36c533d4611916e69fc"
+    },
+    {
+      "path": "pages/antibacterial/grepafloxacin.html",
+      "sha256": "9c8ce9b2f8dab49ce4fffabd55fbec0ae5e1511e1dda6691d49813d8b59f1d7c"
+    },
+    {
+      "path": "pages/antibacterial/levofloxacin.html",
+      "sha256": "49274d2ae621d409a14b701d3728132da4a12b3366454735f6c16ed25bcb4c33"
+    },
+    {
+      "path": "pages/antibacterial/moxifloxacin.html",
+      "sha256": "b11b0f150ab27b1641a148a1e94afa6ba8b462e6996803030e100f327a8affcd"
+    },
+    {
+      "path": "pages/antibacterial/nalidixic-acid.html",
+      "sha256": "f6c511d85985ef3537dd568c07d1ac0b588960458a19905b6de9b94d288341af"
+    },
+    {
+      "path": "pages/antibacterial/norfloxacin.html",
+      "sha256": "4787b69c2991d531702dba88ea6874f6699b3c0df0b6a34d5826bad91f96724c"
+    },
+    {
+      "path": "pages/antibacterial/ofloxacin.html",
+      "sha256": "c4c487b3d3de5292c031910b1a976d13a88176f06621fcc8e389599a640b3d59"
+    },
+    {
+      "path": "pages/antibacterial/pefloxacin.html",
+      "sha256": "855017929a0753eb88917bdf71e5a541a8d4cd209bb5023c6a2df85277fe525a"
+    },
+    {
+      "path": "pages/antibacterial/pleuromutilin.html",
+      "sha256": "b70bdf7037d9a1883642fdeb55c9859a183a8e36bd2108dbc110ba0430a86c6a"
+    },
+    {
+      "path": "pages/antibacterial/sparfloxacin.html",
+      "sha256": "32454f1fff05a0abeae0782e2ea9e4f3b48ac98dd7a1a8aa963965ee23f1591b"
+    },
+    {
+      "path": "pages/antibacterial/trovafloxacin.html",
+      "sha256": "049974b167c431b90454700a55497ee218ec950c1795a2314efc8285aded72f7"
+    },
+    {
+      "path": "pages/antimycobacterial/lomefloxacin.html",
+      "sha256": "bae62b59b6c22db64f373660d8dc86bee15f83ead46aee59c7f014e8cf86c54f"
+    }
+  ],
+  "report_sha256_before_append": "0ec6b5da663ade99eec129ebdf2aad0ecf5560f7b896d698a1ea93b490306a9a",
+  "review_issue": 1154,
+  "status": "SOURCE_OWNED_QUALIFICATION_CURATED_AND_AUTHORITATIVE_QC_PASSED",
+  "targeted_review_fix": {
+    "errors": 0,
+    "failed_cases": [],
+    "failures": 0,
+    "junit": {
+      "path": "reports/salmonella-qualification-2026-10-16/review-fix.xml",
+      "sha256": "37f906474a150ef3413f0de72904dbad877266ab187354b53efda1227370f65d"
+    },
+    "passed": 1,
+    "seconds": 1.666,
+    "skipped": 0,
+    "tests": 1
+  },
+  "transition": {
+    "path": "research/2026-10-16-salmonella-qualification-transition.json",
+    "sha256": "95953c299ce1d257958070a37882b22febb878f3c0194d54cd119eb3eb8ec4ef"
+  },
+  "unchanged_embedding_documents": 17,
+  "variant_specifications_exported": false
+}

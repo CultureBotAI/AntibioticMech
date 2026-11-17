@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/biocide.html">BIOCIDE</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>hydrogen peroxide</h1>
 <p class="meta">
   <code class="curie">CHEBI:16240</code>
@@ -36,16 +47,19 @@ signed off on this record yet.</p></div>
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_24837">CHEBI:24837</a>      <code class="curie">CHEBI:24837</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_26523">CHEBI:26523</a>      <code class="curie">CHEBI:26523</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_24837"><code class="curie">CHEBI:24837</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_26523"><code class="curie">CHEBI:26523</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>H2O2</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>34.014 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>34.00548 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">MHAJPDPJQMAIIY-UHFFFAOYSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">[H]OO[H]</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/H2O2/c1-2/h1-2H</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -87,13 +101,14 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_48219">CHEBI:48219</a>    <code class="curie">CHEBI:48219</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>disinfectant  <a href="http://purl.obolibrary.org/obo/CHEBI_48219"><code class="curie">CHEBI:48219</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -106,6 +121,8 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
@@ -114,21 +131,22 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">6 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">6 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>UNKNOWN <span class="pill plain">6</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
+<table>
     <caption>UNKNOWN</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
-      <td>ATG9delta (deletion) associated with resistance to hydrogen peroxide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ATG9delta (deletion) associated with resistance to hydrogen peroxide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review fungal-2018-parent-reference-context: PH-1 is the parental background, not a unique tested derivative. I1S9X9, the retained source gene_id and TaxID 229533 describe PH-1 reference context. The paper locus and current reference-locus names are not an independently established exact allele crosswalk. The EMBL ALT_SEQ flag in UniProt does not identify the experimental alteration. Source biological fields are unchanged; growth-inhibition comparisons are not MIC or clinical resistance categories. Exact subject protein, strain TaxID and genome remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:229533; protein_accession=UniProtKB:I1S9X9.</span></td>
       <td>—</td>
-      <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain PH-1</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_229533"><code class="curie">NCBITaxon:229533</code></a><br> <a href="https://www.uniprot.org/uniprotkb/I1S9X9"><code class="curie">UniProtKB:I1S9X9</code></a> <span class="meta">FGRAMPH1_01T26133</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
+      <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain PH-1</span> <span class="meta">FGRAMPH1_01T26133</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">PMID:30044782</span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:264; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/30044782">PMID:30044782</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:264; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1371/journal.pgen.1007546">DOI:10.1371/journal.pgen.1007546</a></span> <span class="meta">(Identifier-scope review: Results sections sec005 and sec011: parent versus tested derivatives; Figure 8, UniProtKB release 2026_03: I1S9X9 entry 57, sequence version 1; PH-1 reference locus and taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
@@ -138,27 +156,29 @@ type — expand a group to see its determinants.</p>
       <td><em>Magnaporthe oryzae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_318829"><code class="curie">NCBITaxon:318829</code></a><br><span class="meta">strain Guy11</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_242507"><code class="curie">NCBITaxon:242507</code></a><br> <a href="https://www.uniprot.org/uniprotkb/G4N021"><code class="curie">UniProtKB:G4N021</code></a><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">PMID:38056173</span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:10915; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/38056173">PMID:38056173</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:10915; joined to this record by exact ChEBI identifier.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>Hdf1delta (deletion) associated with resistance to hydrogen peroxide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>Hdf1delta (deletion) associated with resistance to hydrogen peroxide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review li-2011-hdf1-subject-context: Primary evidence identifies YM1 as the tested subject, distinct from parent PH-1 and comparator YM11. I1RCN2 and TaxID 229533 describe PH-1 reference context, not YM1. The paper&#39;s FGSG_01353 and UniProt&#39;s FGRAMPH1_01T03337 are not asserted equivalent without an authoritative alias crosswalk. The empty source gene_id remains empty. Source alteration, phenotype and assay are unchanged; the growth comparison is not an MIC or clinical resistance category. No exact experimental accession, genome or numeric measurement is inferred. Original source background label: PH-1. Reference-only source identifiers: strain_taxon_id=NCBITaxon:229533; protein_accession=UniProtKB:I1RCN2.</span></td>
       <td>—</td>
-      <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain PH-1</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_229533"><code class="curie">NCBITaxon:229533</code></a><br> <a href="https://www.uniprot.org/uniprotkb/I1RCN2"><code class="curie">UniProtKB:I1RCN2</code></a><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
+      <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain YM1</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">PMID:21138346</span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:8901; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/21138346">PMID:21138346</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:8901; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1094/MPMI-10-10-0233">DOI:10.1094/MPMI-10-10-0233</a></span> <span class="meta">(Identifier-scope review: Author-affiliated USDA archived published PDF: p. 488 Results distinguishes YM1 from parent PH-1; p. 489 Table 1 lists subjects; p. 492 Figure 9C and caption identify YM1, parent PH-1 and separate complemented comparator YM11; pages visually inspected, UniProtKB release 2026_03: I1RCN2 entry 85, sequence version 1; PH-1 reference locus FGRAMPH1_01T03337; TaxID 229533 under species 5518; paper locus FGSG_01353 alias remains unresolved. Reviewed 2026-10-09 by codex; curation/phibase_grounding_reviews.json SHA-256 1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>Ndk1delta (deletion) associated with resistance to hydrogen peroxide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>Ndk1delta (deletion) associated with resistance to hydrogen peroxide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review fungal-2025-peroxide-parent-context: PH-1 is the parental background, not a unique tested derivative. I1RPK0 and TaxID 229533 describe PH-1 reference context; that lineage does not establish exact experimental subject identity. The reported growth-inhibition comparison is not an MIC or clinical resistance classification. Source biological fields remain unchanged; no new measurement, allele or genome is assigned, and exact subject protein and strain TaxID remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:229533; protein_accession=UniProtKB:I1RPK0.</span></td>
       <td>—</td>
-      <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain PH-1</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_229533"><code class="curie">NCBITaxon:229533</code></a><br> <a href="https://www.uniprot.org/uniprotkb/I1RPK0"><code class="curie">UniProtKB:I1RPK0</code></a><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
+      <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain PH-1</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">PMID:41277790</span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:10429; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/41277790">PMID:41277790</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:10429; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1111/mpp.70174">DOI:10.1111/mpp.70174</a></span> <span class="meta">(Identifier-scope review: Results section mpp70174-sec-0009: parent and separate derivative comparisons; Figure 5a-b, Strain identity in mpp70174-sec-0014, UniProtKB release 2026_03: I1RPK0 entry 74, sequence version 1; PH-1 reference taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
@@ -168,7 +188,7 @@ type — expand a group to see its determinants.</p>
       <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain PH-1</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_229533"><code class="curie">NCBITaxon:229533</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P0C431"><code class="curie">UniProtKB:P0C431</code></a> <span class="meta">FGRAMPH1_01T26671</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">PMID:22591226</span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:7590; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22591226">PMID:22591226</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:7590; joined to this record by exact ChEBI identifier.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
@@ -178,11 +198,13 @@ type — expand a group to see its determinants.</p>
       <td><em>Mycobacterium tuberculosis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1773"><code class="curie">NCBITaxon:1773</code></a><br><span class="meta">strain H37Rv</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83332"><code class="curie">NCBITaxon:83332</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P9WHZ3"><code class="curie">UniProtKB:P9WHZ3</code></a><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">PMID:28743081</span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:11310; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/28743081">PMID:28743081</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:11310; joined to this record by exact ChEBI identifier.)</span></li>
 </ul>
 <span class="meta">Macroscopic observation (quantitative observation)</span></td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -237,32 +259,122 @@ type — expand a group to see its determinants.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Scoped source protein and reference-strain identifiers to provenance after primary-paper review; parent labels, source biological claims and gene IDs retained. No experimental allele, genome or activity measurement inferred.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed the shared PHI-base review checksum after eight subject-identity corrections; previous decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Darlington subject correction; prior review decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Nakayama reference-scope review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Duan reference-scope review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Piotrowska parent-reference review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Xu subject and species corrections; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Shima parent-reference review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Mehrabi parent-reference review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Huang parent-reference review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Corrected the tested subject from PH-1 parent to YM1 after primary identity review. Reference protein and strain TaxID moved to provenance; source biology preserved, historical locus alias and experimental accessions unresolved.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Fouche parent-cohort review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_REFERENCE_CONTEXT</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the SDH8 reference-alias correction; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Refreshed the shared PHI-base review checksum after the Posteraro subject-context review; previous decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_REFERENCE_CONTEXT</span>
+    <span class="meta">2026-10-12 · codex · LLM-assisted</span>
+    <p>Refreshed the shared PHI-base review checksum after four reference-identifier scope corrections; previous decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-13 · codex · LLM-assisted</span>
+    <p>Refreshed the shared PHI-base review checksum after one Neurospora subject-context correction; previous decisions, biological fields and activities unchanged.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/biocide/hydrogen-peroxide.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/biocide/hydrogen-peroxide.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=hydrogen%20peroxide">MediaIngredientMech (hydrogen peroxide)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=hydrogen%20peroxide">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=hydrogen%20peroxide">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=hydrogen%20peroxide">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=hydrogen%20peroxide">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

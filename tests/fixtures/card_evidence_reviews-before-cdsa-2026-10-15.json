@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "source_inventory_sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df",
+  "reviews": [
+    {
+      "review_id": "2026-10-15-eatav-parent-compound-scope",
+      "curator": "Codex",
+      "reviewed_on": "2026-10-15",
+      "note": "The functional study tested tiamulin, a pleuromutilin derivative, not the parent pleuromutilin structure represented here. Its results do not establish resistance to this exact compound. Retain CARD's route-level assertion as database evidence only; no experimental allele, protein, organism or susceptibility observation is assigned.",
+      "evidence": [
+        {
+          "reference": "DOI:10.1128/AAC.01030-13",
+          "source_url": "https://journals.asm.org/doi/10.1128/aac.01030-13",
+          "locations": ["Results and discussion", "Table 3 compound headers"],
+          "inspected": "publisher primary HTML text; table not visually verified; supplements not reviewed"
+        }
+      ],
+      "source_rows": [
+        {
+          "row_sha256": "ebe19e2f0d40672700c85456bcc7f94b959fb9abf88dbace62315a09b5889c95",
+          "identifier": "CHEBI:8269",
+          "standard_inchi_key": "ZRZNJUXESFHSIO-ZXVYJXQESA-N"
+        }
+      ]
+    },
+    {
+      "review_id": "2026-10-15-mcr43-conflicting-contexts",
+      "curator": "Codex",
+      "reviewed_on": "2026-10-15",
+      "note": "Earlier studies reported no independent resistance contribution in their tested contexts, including work using the historical mcr-4.2 name later corrected to mcr-4.3. A later clinical Acinetobacter study reported contrasting functional and lipid A results. These are context-dependent, conflicting findings, not universal activity or inactivity. They do not establish resistance to purified colistin A or B separately. Retain CARD's assertion as database evidence only; no experimental protein, organism or susceptibility observation is assigned.",
+      "evidence": [
+        {
+          "reference": "DOI:10.1128/JCM.01562-17",
+          "source_url": "https://journals.asm.org/doi/10.1128/JCM.01562-17",
+          "locations": ["Functional interpretation in primary letter"],
+          "inspected": "publisher primary text; no figure or table visual verification"
+        },
+        {
+          "reference": "DOI:10.1128/AAC.00649-18",
+          "source_url": "https://journals.asm.org/doi/10.1128/aac.00649-18",
+          "locations": ["Naming correction", "Functional results and Figure 2 interpretation"],
+          "inspected": "publisher primary text; figures and supplements not visually verified"
+        },
+        {
+          "reference": "DOI:10.1093/jac/dkz413",
+          "source_url": "https://academic.oup.com/jac/article/75/1/60/5580312",
+          "locations": ["Results and discussion: functional and lipid A results", "Conclusions"],
+          "inspected": "publisher primary HTML text accessed 2026-10-15; figures and supplements not reviewed"
+        }
+      ],
+      "source_rows": [
+        {
+          "row_sha256": "6fd79eb334a9c47104b10a564ae50d6e5c41ebebbc24d0ab3012e8555efa8b09",
+          "identifier": "CHEBI:59064",
+          "standard_inchi_key": "XDJYMJULXQKGMM-RVYUQJQSSA-N"
+        },
+        {
+          "row_sha256": "5ab029a71f7dbb0365fc67b86797ebd040c573a11dd8b2d6de023af4cf400dd8",
+          "identifier": "CHEBI:59673",
+          "standard_inchi_key": "KNIWPHSUTGNZST-SSWRVQTPSA-N"
+        }
+      ]
+    }
+  ]
+}

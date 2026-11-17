@@ -1,0 +1,127 @@
+identifier: antibioticmech:curator-df25925bde
+label: PC190723
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 2,6-difluorobenzamide thiazolopyridine antibacterial agent that allosterically
+  binds the interdomain cleft of staphylococcal cell division protein FtsZ and blocks
+  cytokinesis.
+definition_source: DOI:10.1126/science.1159961
+synonyms:
+- synonym_text: PC-190723
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: NC(=O)c1c(F)ccc(OCc2nc3cc(Cl)cnc3s2)c1F
+  standard_inchi: InChI=1S/C14H8ClF2N3O2S/c15-6-3-8-14(19-4-6)23-10(20-8)5-22-9-2-1-7(16)11(12(9)17)13(18)21/h1-4H,5H2,(H2,18,21)
+  standard_inchi_key: INYJNSBDHOVLAH-UHFFFAOYSA-N
+  molecular_formula: C14H8ClF2N3O2S
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/25016417
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 355.753
+  monoisotopic_mass: 354.9994
+xrefs:
+- pubchem.compound:25016417
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1126/science.1159961#pc190723
+  source_label: PC190723
+  minted_identifier: antibioticmech:curator-df25925bde
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1126/science.1159961
+    snippet: Haydon et al. reported that the difluorobenzamide derivative PC190723
+      inhibited cell division FtsZ GTPase activity in a concentration-dependent manner
+      (IC50 = 55 ng/mL), exhibited potent bactericidal activity against all tested
+      Staphylococcus strains including methicillin- and multidrug-resistant Staphylococcus
+      aureus at MICs of 0.5 to 1.0 ug/mL, and cured mice in a lethal S. aureus septicemia
+      model.
+    notes: Reported by Haydon et al. 2008 (Science 321:1673-1675; PMID:18801997) as
+      a 3-[(6-chloro[1,3]thiazolo[5,4-b]pyridin-2-yl)methoxy]-2,6-difluorobenzamide
+      antibacterial that binds the interdomain cleft of the bacterial cytokinetic
+      protein FtsZ and blocks Z-ring constriction. PubChem CID 25016417 supplies the
+      standard InChI, InChIKey, formula, and SMILES for PC190723.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
+  llm_assisted: true
+- timestamp: '2026-10-25T21:55:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for bacterial cell division protein
+    FtsZ backed by DOI:10.1126/science.1159961.
+  llm_assisted: true
+- timestamp: '2026-10-25T22:03:25Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P0A031 (Staphylococcus aureus ftsZ) and UniProtKB:P17865
+    (Bacillus subtilis 168 ftsZ) protein examples to the PRIMARY_LITERATURE molecular
+    target (DOI:10.1126/science.1159961).
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 2,6-Difluorobenzamide cell-division inhibitor that binds the
+  interdomain cleft of bacterial FtsZ, stabilizes FtsZ polymer assembly, and blocks
+  cytokinetic Z-ring constriction (DOI:10.1126/science.1159961; PMID:18801997).
+molecular_targets:
+- target_label: bacterial cell division protein FtsZ
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  experimental_context: Concentration-dependent inhibition of Staphylococcus aureus
+    FtsZ GTPase activity (IC50 = 55 ng/mL), FtsZ resistance mutation mapping (including
+    G193D, G196C/S/A, and N263K), and Z-ring mislocalization in Bacillus subtilis
+    168 (DOI:10.1126/science.1159961; PMID:18801997).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2008-09
+  source_retrieved_on: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1126/science.1159961
+    snippet: Haydon et al. reported that the difluorobenzamide derivative PC190723
+      inhibited cell division FtsZ GTPase activity in a concentration-dependent manner
+      (IC50 = 55 ng/mL), exhibited potent bactericidal activity against all tested
+      Staphylococcus strains including methicillin- and multidrug-resistant Staphylococcus
+      aureus at MICs of 0.5 to 1.0 ug/mL, and cured mice in a lethal S. aureus septicemia
+      model.
+    notes: Haydon et al. 2008 (Science 321:1673-1675; PMID:18801997) established that
+      PC190723 binds the interdomain cleft between the C-terminal domain and helix
+      H7 of bacterial FtsZ in Staphylococcus aureus (UniProtKB:P0A031; cocrystallized
+      in PDB:4DXD, PMID:22440737) and Bacillus subtilis 168 (UniProtKB:P17865).
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A031
+    protein_label: Cell division protein FtsZ
+    gene_symbol: ftsZ
+    taxon_id: NCBITaxon:1280
+    taxon_label: Staphylococcus aureus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Staphylococcus aureus cell division GTPase FtsZ whose GTPase activity is
+      inhibited by PC190723 (IC50 = 55 ng/mL) and whose interdomain cleft binds PC190723
+      in the cocrystal structure (PDB:4DXD) and harbors resistance mutations (G193D,
+      G196C/S/A, N263K; DOI:10.1126/science.1159961; PMID:18801997; PMID:22440737).
+  - uniprot_id: UniProtKB:P17865
+    protein_label: Cell division protein FtsZ
+    gene_symbol: ftsZ
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis (strain 168)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Bacillus subtilis strain 168 cell division protein FtsZ (BSU15290) shown
+      by GFP-FtsZ fluorescence microscopy in DOI:10.1126/science.1159961 (PMID:18801997)
+      to mislocalize into discrete foci and fail to constrict the cytokinetic Z-ring
+      upon PC190723 exposure.

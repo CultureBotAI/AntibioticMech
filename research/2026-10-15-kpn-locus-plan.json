@@ -1,0 +1,73 @@
+{
+  "assessment": {
+    "path": "research/2026-10-15-kpn-locus-assessment.json",
+    "sha256": "a00cc646f038c62931bd623fe7bf00072c1d3f367c86fb9eda6c40c5a8f6e8f2"
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-kpn-locus/protected-before.json",
+    "sha256": "0e69bfc525f6a7a4c031e4317dfd2193f24bc48f28176ca57eb92e4e52370896"
+  },
+  "biological_record_writes": false,
+  "canary": "KP1_2583",
+  "date": "2026-10-15",
+  "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version,xref_embl,xref_refseq",
+  "inputs": {
+    "corpus_update": {
+      "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+      "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+    },
+    "index": {
+      "path": "research/2026-10-15-card-aph-memberships.json",
+      "sha256": "66fc408ae1bd53b78376d08f4cb9cecb1d587e95ce0c99f740ac4e186e966595"
+    }
+  },
+  "issue_1040": "DEFERRED",
+  "loci": [
+    "KP1_2583",
+    "KP1_2584"
+  ],
+  "ncbi_requests": 0,
+  "prior_kpn": {
+    "path": "research/2026-10-15-kpn-evidence.json",
+    "sha256": "19a9ec3564901476e8d047b6b541e0b2cd950c34cdde643e8dd48db8de51b679"
+  },
+  "prior_members": {
+    "path": "research/2026-10-15-card-complex-members.json",
+    "sha256": "008d915100f8c36ca43b39b891a97a418e4e9d60dcd807cbfe9e2ed9284779ac"
+  },
+  "queries": {
+    "KP1_2583": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version,xref_embl,xref_refseq",
+        "format": "json",
+        "query": "gene_exact:KP1_2583 AND taxonomy_id:573",
+        "size": 100,
+        "sort": "accession asc"
+      },
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AKP1_2583+AND+taxonomy_id%3A573&format=json&size=100&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion%2Cxref_embl%2Cxref_refseq"
+    },
+    "KP1_2584": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version,xref_embl,xref_refseq",
+        "format": "json",
+        "query": "gene_exact:KP1_2584 AND taxonomy_id:573",
+        "size": 100,
+        "sort": "accession asc"
+      },
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AKP1_2584+AND+taxonomy_id%3A573&format=json&size=100&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion%2Cxref_embl%2Cxref_refseq"
+    }
+  },
+  "redirects_followed": 0,
+  "request_cache_search_included_ignored_files": true,
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "scope": "KPN_PAPER_LOCUS_REFERENCE_GROUNDING_NOT_EXPERIMENTAL_ALLELE_OR_AST_ASSIGNMENT",
+  "source_plan": {
+    "path": "research/2026-10-15-mex-component-xrefs-plan.json",
+    "sha256": "03ca5b14555593d3146895ce32c8a56887afd0fa591a601b249e6242f884e4c5"
+  },
+  "terms": {
+    "ARO:3004585": "Klebsiella pneumoniae KpnEF",
+    "ARO:3004598": "Klebsiella pneumoniae KpnGH-TolC"
+  }
+}

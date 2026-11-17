@@ -1,0 +1,67 @@
+{
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/map-wording-before.json",
+    "sha256": "ea3078c5d1bcf11553059b6849d69f207bac17e5339160c355ec1d677c281eae"
+  },
+  "biological_records_unchanged": 2939,
+  "changed_files": {
+    "docs/HARMONIZATION.md": {
+      "after_sha256": "fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060",
+      "before_sha256": "913b88b0fe922fe406fab587d955594721236c658bc9af61372304a8ad348aa1"
+    },
+    "pages/map.html": {
+      "after_sha256": "7dd4d549ba2144d9ca90a2230fef5218eee92e3a95490435c50e53588a47e615",
+      "before_sha256": "dbfb0471723eb237a0a1ebce921fd2a2a5625890ec922ba6dfadafeb72964dcd"
+    },
+    "src/antibioticmech/templates/map.html": {
+      "after_sha256": "5d826dcefb81ce3f6881da8daf0b7d2293093d819a21254f0013151c8d58a452",
+      "before_sha256": "789f95d66baefba05f6d55e5f5999ba7bba0ec0adc03f1db3c7ca1e75aa96610"
+    },
+    "tests/test_embeddings.py": {
+      "after_sha256": "559d3edfd2531f11884d60a08a834eed4035a065b526898156d2726591e04570",
+      "before_sha256": "b019d19705b90a9648b020b049a282acd4146ede95bcecb5ed293973bc76b1f1"
+    }
+  },
+  "current_census": {
+    "path": "reports/resistance-grounding-2026-10-09-papulacandins/corpus.json",
+    "sha256": "07afc1e49a810be5cadbdd66b87488bac27e51682117e135a897c0da6bafe3b2"
+  },
+  "date": "2026-10-09",
+  "diagnostic_metrics": {
+    "embedding": 0.8340251786321878,
+    "projection": 0.8771010547805376,
+    "random_other_record_baseline": 0.22615602802711174
+  },
+  "embedding_artifacts_unchanged": true,
+  "github_issues_created": 0,
+  "ignored_files_included": true,
+  "interrupted_qc": {
+    "exit_code": 130,
+    "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/full-qc.log",
+    "reason": "Deliberately interrupted to fix verified review findings; not a pass.",
+    "sha256": "e85502e59d10e71e66ae75c285c8d59ed8caf8939120e06dda4656d9596fe5a4"
+  },
+  "map_page_change_is_only_removed_paragraph": true,
+  "metric_method": "10 nearest neighbors excluding self; published rounded 2D coordinates, Euclidean distance; normalized float16 vectors promoted to float32, cosine",
+  "metrics_are_not_biological_validation": true,
+  "previous_publication": {
+    "path": "research/2026-10-09-papulacandin-publication.json",
+    "sha256": "b26d02c5e795fa62121a72e3bbf45ac5229dc921b75089f7c0c6ea5a798e014e"
+  },
+  "protected_existing_files_verified": 6479,
+  "regression_test": "tests/test_embeddings.py::test_map_text_avoids_unbound_class_quality_claims",
+  "review_findings": [
+    {
+      "finding": "The map's hard-coded 86% is stale for the current projection.",
+      "id": "MAP-1",
+      "resolution": "Removed the unbound numerical class-separation paragraph from the template."
+    },
+    {
+      "finding": "Class is an encoded input, so class separation is not independent evidence that the encoder recovers classes without being told them.",
+      "id": "MAP-2",
+      "resolution": "Corrected the harmonization explanation and removed the claim from the page."
+    }
+  ],
+  "status": "ADVERSARIAL_REVIEW_FINDINGS_FIXED",
+  "whole_record_review_complete": false
+}

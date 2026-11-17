@@ -123,6 +123,27 @@ def test_curator_inventory_accepts_https_references(tmp_path):
     assert concepts[0].evidence[0]["reference"] == "https://example.org/stable/widgetmycin"
 
 
+def test_curator_inventory_with_chebi_xref_grounds_to_chebi_exact(tmp_path):
+    concepts = load_curator_concepts(_curator_inventory(
+        tmp_path,
+        xrefs="CHEBI:16183|PubChem:297",
+    ))
+    for concept in concepts:
+        concept.minted = mint(concept.source, concept.source_id)
+
+    records, skipped = merge(concepts, {}, CONF, {}, "2026-09-01")
+    record = records["CHEBI:16183"]
+
+    assert skipped == []
+    assert record["identifier"] == "CHEBI:16183"
+    assert record["grounding_status"] == "EXACT"
+    assert record["curation_status"] == "PROPOSED"
+    assert record["xrefs"] == ["pubchem.compound:297"]
+    assert record["source_concepts"][0]["minted_identifier"] == mint(
+        "CURATOR", "DOI:10.1000/widget#compound-1"
+    )
+
+
 def test_curator_inventory_requires_a_doi_or_stable_url(tmp_path):
     path = _curator_inventory(tmp_path, reference="PMID:123")
 
@@ -1744,9 +1765,15 @@ def test_a_lane_change_names_the_lane_and_its_upstream_version():
                           "notes": "CARD/ARO asserts this determinant"}]}
     bindingdb = {"target_label": "z", "target_type": "PROTEIN", "source": "BINDINGDB",
                  "source_version": "2026-09"}
+    activity = {"taxon_label": "Mycobacterium tuberculosis complex", "source": "CRYPTIC",
+                "source_version": "3.4.0"}
+    score_rule = {"pathogen_label": "Human immunodeficiency virus 1", "source": "HIVDB_HIVFACTS",
+                  "source_version": "be1c11a", "source_rule_id": "hivdb_hivfacts:1"}
     fresh = _seeded_record(producer_organisms=[producer],
                            resistance_mechanisms=[resistance, card],
-                           molecular_targets=[bindingdb])
+                           molecular_targets=[bindingdb],
+                           activity_spectrum=[activity],
+                           genotype_resistance_score_rules=[score_rule])
     changes = _event(fresh, _seeded_record())
     # Every lane the delta compares, so deleting any one of them from the
     # delta fails here. The first version exercised MIBiG and PHI-base only,
@@ -1755,6 +1782,8 @@ def test_a_lane_change_names_the_lane_and_its_upstream_version():
     assert "resistance_mechanisms (PHIBASE abc123)" in changes
     assert "resistance_mechanisms (CARD)" in changes
     assert "molecular_targets (BINDINGDB 2026-09)" in changes
+    assert "activity_spectrum (CRYPTIC 3.4.0)" in changes
+    assert "genotype_resistance_score_rules (HIVDB_HIVFACTS be1c11a)" in changes
     assert "Upstream retrieval date 2026-08-30, unchanged." in changes
 
 

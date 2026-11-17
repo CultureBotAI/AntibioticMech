@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-16",
+  "review_type": "SCOPED_SELF_REVIEW_NOT_WHOLE_RECORD_SIGNOFF",
+  "sources": {
+    "qnrb5": {
+      "reference": "PMID:16804843",
+      "doi": "10.1086/505397",
+      "url": "https://academic.oup.com/cid/article-pdf/43/3/297/950340/43-3-297.pdf",
+      "medium": "PUBLISHER_INDEXED_ABSTRACT_ONLY_NOT_PDF_INSPECTION",
+      "locator": "Abstract, Results and Conclusions",
+      "assessment": "The study reports qnrB variants in Salmonella and includes carriers considered quinolone susceptible by its stated criteria. The abstract does not establish the exact QnrB5 allele-to-isolate crosswalk."
+    },
+    "qnrb65": {
+      "reference": "PMID:24247140",
+      "doi": "10.1128/AAC.01849-13",
+      "url": "https://journals.asm.org/doi/10.1128/aac.01849-13",
+      "medium": "INHERITED_CITATION_IDENTITY_NEW_OPEN_UNAVAILABLE",
+      "locator": "Earlier pinned protein-name assessment; current publisher open returned web internal error without HTTP status",
+      "assessment": "No new primary results were obtained. The existing R4NN96 name candidate remains unselected; a protein submission name does not supply its missing native gene field or identify a measured allele."
+    },
+    "qnrvc-naming": {
+      "reference": "PMID:23800600",
+      "doi": "10.1099/jmm.0.062661-0",
+      "url": "https://www.microbiologyresearch.org/content/journal/jmm/10.1099/jmm.0.062661-0",
+      "medium": "PUBLISHER_BIBLIOGRAPHY_AND_CARD_CITATION_POINTER_ONLY",
+      "locator": "Publisher title and issue category Correspondence; CARD ontology pages 39236 and 39237 identify the PMID/title; primary body unavailable",
+      "assessment": "The two terms cite the same correspondence. Publisher bibliography and a citation pointer do not resolve their allele-specific results. Neither its title nor the shared PMID proves equivalent biological subjects.",
+      "citation_pointer_urls": [
+        "https://card.csu.mcmaster.ca/ontology/39236",
+        "https://card.mcmaster.ca/ontology/39237"
+      ]
+    },
+    "qnrs12": {
+      "reference": "PMID:29415140",
+      "doi": "10.1093/jac/dky025",
+      "url": "https://academic.oup.com/jac/article/73/5/1213/4837263",
+      "medium": "PUBLISHER_ABSTRACT_AND_STUDY_DESIGN_TEXT",
+      "locator": "Abstract and Introduction; detailed allele rows not obtained",
+      "assessment": "This is an analysis of database nomenclature and sequence-identification errors, not an allele-specific susceptibility experiment. The exact QnrS12 row and deposition crosswalk remain unreviewed; the title is not evidence that QnrS12 itself is erroneous."
+    },
+    "qnre1": {
+      "reference": "PMID:28193666",
+      "doi": "10.1128/AAC.02555-16",
+      "url": "https://journals.asm.org/doi/10.1128/aac.02555-16",
+      "medium": "PUBLISHER_PRIMARY_TEXT_SELECTED_IDENTITY_AND_RESULT_CONTEXT",
+      "locator": "TEXT opening; Identification of a new qnr gene; Source and mobilization; Accession number(s)",
+      "assessment": "The paper identifies qnrE1 in Klebsiella pneumoniae Q1130 and separately reports laboratory-host results. KY073238 is the deposited region, not an assembly or BioSample. Other Enterobacter chromosomal matches are proposed source context, not interchangeable experimental subjects. No clinical category is newly derived.",
+      "source_organism": "Klebsiella pneumoniae",
+      "source_isolate_label": "Q1130",
+      "deposition_accession": "KY073238",
+      "deposition_is_genome_assembly": false,
+      "heterologous_host_results_are_separate": true
+    },
+    "qnrvc2": {
+      "reference": "PMID:18598639",
+      "doi": "10.3201/eid1407.080132",
+      "url": "https://wwwnc.cdc.gov/eid/article/14/7/08-0132_article",
+      "medium": "PUBLISHER_PRIMARY_TEXT_SELECTED_IDENTITY_AND_RESULT_CONTEXT",
+      "locator": "The Study, qnrVC1 identity paragraph; in-silico qnrVC2 paragraph; concluding susceptibility paragraph",
+      "assessment": "The source distinguishes QnrVC1 in VC627 from QnrVC2 identified in silico in a previously deposited Vibrio cholerae O1 sequence from Vietnam. The measured phenotype described for VC627 is not a QnrVC2-specific result. AB200915 is a deposition accession, not a genome assembly or BioSample. This scoped distinction is not a universal claim that QnrVC2 lacks activity.",
+      "source_organism": "Vibrio cholerae",
+      "source_organism_label": "Vibrio cholerae O1",
+      "source_isolate_label": null,
+      "deposition_accession": "AB200915",
+      "deposition_is_genome_assembly": false,
+      "qnrvc1_phenotype_transfer_allowed": false
+    }
+  },
+  "reviews": {
+    "ARO:3002719": {"source": "qnrb5", "status": "ABSTRACT_ONLY_EXACT_ALLELE_CROSSWALK_PENDING"},
+    "ARO:3002777": {"source": "qnrb65", "status": "PRIMARY_RESULTS_UNAVAILABLE_NAME_CANDIDATE_UNSELECTED"},
+    "ARO:3002802": {"source": "qnrvc-naming", "status": "CORRESPONDENCE_IDENTITY_ONLY_ALLELE_RESULTS_PENDING"},
+    "ARO:3002803": {"source": "qnrvc-naming", "status": "CORRESPONDENCE_IDENTITY_ONLY_ALLELE_RESULTS_PENDING"},
+    "ARO:3004625": {"source": "qnrs12", "status": "NOMENCLATURE_STUDY_EXACT_ROW_PENDING_NOT_AST_EVIDENCE"},
+    "ARO:3004636": {"source": "qnre1", "status": "PRIMARY_IDENTITY_REVIEWED_UNIPROT_CROSSWALK_UNRESOLVED"},
+    "ARO:3005007": {"source": "qnrvc2", "status": "SEQUENCE_CONTEXT_NOT_QNRVC1_MEASURED_PHENOTYPE"}
+  },
+  "retrieval_limitations": [
+    "QnrB65 publisher open returned an internal web-tool error without HTTP status; its earlier limitation remains. A guessed QnrB5 HTML URL likewise failed; only the publisher-indexed abstract at the listed PDF URL was used, not the PDF body.",
+    "QnrS12 initial publisher text was available, but later find/open calls returned internal errors. Detailed allele rows and supplements were not inspected.",
+    "The shared QnrVC5/QnrVC6 correspondence has no abstract in the inspected publisher listing. Its full text was not obtained. Europe PMC page and metadata opens were unavailable via the web tool; these are not demonstrated HTTP 403 responses.",
+    "The two exact UniProt deposition queries were complete and empty. Service spelling suggestions were retained but not followed. Empty query results do not establish accession or biological absence.",
+    "Primary assessments are dated web-text observations, not offline replay of publisher bodies. No native article files, figure images or supplements were inspected. Incidental HTML table text was not used to extract numeric AST or categorical calls.",
+    "No NCBI endpoint was opened. Source-reported NCBI identifiers and existing UniProt taxonomy snapshots were used only as labeled reference context. Existing access holds, NCBI AST/#1040 and reuse-terms deferral remain in force."
+  ],
+  "limits": {
+    "experimental_identifiers_assigned": false,
+    "new_reference_selection": false,
+    "biological_record_writes": false,
+    "native_primary_files_cached": false,
+    "whole_record_primary_signoff": false,
+    "all_primary_results_reviewed": false,
+    "numeric_ast_exported": false,
+    "sequences_exported": false,
+    "variant_specifications_exported": false,
+    "constructs_or_protocols_exported": false,
+    "biological_absence_inferred": false,
+    "reuse_terms_review_resumed": false,
+    "ncbi_requests": 0,
+    "new_taxonomy_requests": 0,
+    "issue_1040": "DEFERRED",
+    "full_corpus_goal_status": "OPEN"
+  }
+}

@@ -1,0 +1,447 @@
+{
+  "baseline_census": {
+    "path": "research/2026-10-12-blasticidin-resistance-grounding.tsv",
+    "sha256": "ea6b93962d2495c9acc97beb31e6fbddb28bbd80aed88cbca748867343d22c4f"
+  },
+  "chemical_identity": {
+    "molecular_formula": "C14H25N3O9",
+    "primary_identity_location": "Corrected Figure 3A depicts neutral kasugamycin.",
+    "rdkit_version": "2025.03.6",
+    "smiles_inchi_key_agree": true,
+    "standard_inchi_key": "PVTHJAPFENJVNC-MHRBZPPQSA-N",
+    "tested_preparation_independently_reidentified": false
+  },
+  "comparator": {
+    "original_mic": 50,
+    "original_units": "ug/mL",
+    "scope": "LABORATORY_COMPARATOR_NOT_RESISTANCE_CLAIM",
+    "source_label": "MG1655",
+    "strain": "CAG454"
+  },
+  "curated_subjects": [
+    {
+      "genotype_scope": "OPERON",
+      "join": "Table 2 label to matching Table S2 derivative within the same study",
+      "key": "opp",
+      "original_mic": 100,
+      "original_units": "ug/mL",
+      "source_genotype": "MG1655 opp::FRT",
+      "strain": "CAG67776",
+      "symbols": [
+        "opp"
+      ]
+    },
+    {
+      "genotype_scope": "SINGLE_GENE",
+      "join": "Table 2 label to matching Table S2 derivative within the same study",
+      "key": "oppA",
+      "original_mic": 100,
+      "original_units": "ug/mL",
+      "source_genotype": "MG1655 oppA::FRT",
+      "strain": "CAG67774",
+      "symbols": [
+        "oppA"
+      ]
+    },
+    {
+      "genotype_scope": "SINGLE_GENE",
+      "join": "Table 2 label to matching Table S2 derivative within the same study",
+      "key": "oppB",
+      "original_mic": 100,
+      "original_units": "ug/mL",
+      "source_genotype": "MG1655 oppB::FRT",
+      "strain": "CAG67775",
+      "symbols": [
+        "oppB"
+      ]
+    },
+    {
+      "genotype_scope": "COMBINED_OPERONS",
+      "join": "Table 2 label to matching Table S2 derivative within the same study",
+      "key": "opp+dpp",
+      "original_mic": 200,
+      "original_units": "ug/mL",
+      "source_genotype": "MG1655 opp::FRT dpp::FRT",
+      "strain": "CAG67781",
+      "symbols": [
+        "opp",
+        "dpp"
+      ]
+    },
+    {
+      "genotype_scope": "COMBINED_GENES",
+      "join": "Table 2 label to matching Table S2 derivative within the same study",
+      "key": "oppA+dppA",
+      "original_mic": 200,
+      "original_units": "ug/mL",
+      "source_genotype": "MG1655 oppA::FRT dppA::FRT",
+      "strain": "CAG67780",
+      "symbols": [
+        "oppA",
+        "dppA"
+      ]
+    },
+    {
+      "genotype_scope": "COMBINED_GENES",
+      "join": "Table 2 label to matching Table S2 derivative within the same study",
+      "key": "oppB+dppB",
+      "original_mic": 200,
+      "original_units": "ug/mL",
+      "source_genotype": "MG1655 oppB::FRT dppB::FRT",
+      "strain": "CAG67788",
+      "symbols": [
+        "oppB",
+        "dppB"
+      ]
+    }
+  ],
+  "identifier": "CHEBI:81419",
+  "label": "kasugamycin",
+  "limitations": [
+    "All laboratory subjects stay distinct; reference proteins/taxa/genome are not derivative identities.",
+    "Single dpp-operon loss has condition-dependent evidence; no exact MIC is inferred from prose describing at most a two-fold increase.",
+    "No species-wide or pathogen-homology phenotype is asserted.",
+    "The three inherited CARD assertions are preserved as database assertions, not primary-validated here.",
+    "No NCBI requests, source adoption, GitHub mutation or new experimental pipeline occurred."
+  ],
+  "measurement_policy": {
+    "clinical_categories_inferred": false,
+    "combined_effect_assigned_to_single_component": false,
+    "comparator_is_separate_observation": true,
+    "normalization": "ug/mL to mg/L, factor 1"
+  },
+  "primary": {
+    "backgrounds": "BW25113 screening, MG1655 susceptibility derivatives and purified tagged OppA assays remain distinct.",
+    "correction_doi": "10.1371/journal.pgen.1006902",
+    "correction_inspected": true,
+    "correction_scope": "Screen normalization and duplicate-condition handling were corrected; follow-up Table 2 and Table S2 were not replaced.",
+    "doi": "10.1371/journal.pgen.1006124",
+    "interpretation_boundary": "Figures 4A and 5A use translation inhibition as an uptake proxy, not direct drug flux. Figure 5B supports a competitive-binding interpretation; the authors do not exclude an indirect effect on OppA peptide affinity.",
+    "license": "CC BY; Shiver et al. (2016), with Shiver et al. (2017) correction",
+    "native_visual_review": [
+      "Corrected Figure 3",
+      "Original Figure 4",
+      "Original Figure 5",
+      "Original Table 2"
+    ],
+    "reference": "PMID:27355376",
+    "structured_supplement_review": "Table S2 Word XML strain rows"
+  },
+  "record_before": {
+    "path": "data/antibiotics/antifungal/kasugamycin.yaml",
+    "sha256": "e11ba477fd0df8c964dd57efc14786575cfd7ddf1992fe3c94790e0f768ea40f"
+  },
+  "reference_attribution": "UniProt Consortium, UniProtKB and UniProt Taxonomy, CC BY 4.0; https://www.uniprot.org/help/license",
+  "reference_genome": {
+    "accession": "U00096.3",
+    "assembly_accession_assigned": false,
+    "scope": "REFERENCE_GENOME_NOT_SEQUENCED_EXPERIMENTAL_DERIVATIVE",
+    "source_location": "Figure 6A legend"
+  },
+  "reference_proteins": {
+    "dppA": {
+      "accession": "UniProtKB:P23847",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 195,
+      "loci": [
+        "b3544",
+        "JW3513"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1,
+      "synonyms": []
+    },
+    "dppB": {
+      "accession": "UniProtKB:P0AEF8",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 136,
+      "loci": [
+        "b3543",
+        "JW3512"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1,
+      "synonyms": []
+    },
+    "dppC": {
+      "accession": "UniProtKB:P0AEG1",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 133,
+      "loci": [
+        "b3542",
+        "JW3511"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1,
+      "synonyms": []
+    },
+    "dppD": {
+      "accession": "UniProtKB:P0AAG0",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 147,
+      "loci": [
+        "b3541",
+        "JW3510"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1,
+      "synonyms": []
+    },
+    "dppF": {
+      "accession": "UniProtKB:P37313",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 182,
+      "loci": [
+        "b3540",
+        "JW3509"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1,
+      "synonyms": [
+        "dppE"
+      ]
+    },
+    "oppA": {
+      "accession": "UniProtKB:P23843",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 171,
+      "loci": [
+        "b1243",
+        "JW1235"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 2
+    },
+    "oppB": {
+      "accession": "UniProtKB:P0AFH2",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 126,
+      "loci": [
+        "b1244",
+        "JW1236"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1
+    },
+    "oppC": {
+      "accession": "UniProtKB:P0AFH6",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 130,
+      "loci": [
+        "b1245",
+        "JW1237"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1
+    },
+    "oppD": {
+      "accession": "UniProtKB:P76027",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 179,
+      "loci": [
+        "b1246",
+        "JW1238"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 2
+    },
+    "oppF": {
+      "accession": "UniProtKB:P77737",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 169,
+      "loci": [
+        "b1247",
+        "JW1239"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1
+    }
+  },
+  "reference_release": "2026_03",
+  "reused_primary_context": {
+    "path": "research/2026-10-12-blasticidin-context.json",
+    "sha256": "dfb54be7e4f93f65a8c835881d1bc209fa454eef909ab6e3bdc8bc8dee39239b"
+  },
+  "reviewed_on": "2026-10-12",
+  "scope": "SELECTED_PRIMARY_TABLE_NOT_WHOLE_RECORD_REVIEW",
+  "source_assets": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/primary.xml",
+        "sha256": "90b5ebf3467a8be752bb323114f784554e042f9565521e94931a80426b0fae96"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 158328,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4927156/fullTextXML"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/correction.xml",
+        "sha256": "3ca45c72d7bd26a42f6bc4c83c4dacd2affe76a7475ebb4b2787328fdc7e2230"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 16168,
+      "url": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1006902&type=manuscript"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/corrected-figure-3.png",
+        "sha256": "6ac2a503b68e52d7b2abeaddf37681688d3b0e35a45fe5742829125b5623e710"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 768166,
+      "url": "https://journals.plos.org/plosgenetics/article/figure/image?size=large&id=10.1371/journal.pgen.1006902.g003"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/figure-4.png",
+        "sha256": "079e370bb3315bf8feccaa2b50d401bbb611a4cae8bc923d00d37d31ee5df74e"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 142339,
+      "url": "https://journals.plos.org/plosgenetics/article/figure/image?size=large&id=10.1371/journal.pgen.1006124.g004"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/table-2.png",
+        "sha256": "eb60458c591b67f97fa3fbbd4947197dbd86f26b1dc36f75ac82d8886756f50f"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 33863,
+      "url": "https://journals.plos.org/plosgenetics/article/figure/image?size=large&id=10.1371/journal.pgen.1006124.t002"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/strains.docx",
+        "sha256": "ff9e0dedb88745090fe17350975f7cd3a3fa06fbdb83aa3b7b980276f86de93e"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 100109,
+      "url": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1006124.s007&type=supplementary"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin/figure-5.png",
+        "sha256": "c069886a1234df1387012204c58ab33c73afd7b606017e99878e2623c959a0d9"
+      },
+      "retrieved_on": "2026-10-12",
+      "size_bytes": 274190,
+      "url": "https://journals.plos.org/plosgenetics/article/figure/image?size=large&id=10.1371/journal.pgen.1006124.g005"
+    }
+  ],
+  "table_coverage": {
+    "curated_mic_rows": 7,
+    "derivative_claims": 6,
+    "kasugamycin_rows": 7,
+    "other_drug_rows_imported": 0,
+    "whole_record_complete": false
+  },
+  "taxonomy": {
+    "511145": {
+      "parent": {
+        "scientificName": "Escherichia coli (strain K12)",
+        "taxonId": 83333
+      },
+      "rank": "no rank",
+      "scientificName": "Escherichia coli str. K-12 substr. MG1655",
+      "taxonId": 511145
+    },
+    "562": {
+      "parent": {
+        "scientificName": "Escherichia",
+        "taxonId": 561
+      },
+      "rank": "species",
+      "scientificName": "Escherichia coli",
+      "taxonId": 562
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-136b4ff93496b30b58d477d03a4e63a4ca7269d8df40ea9d16abac7789ec625e.json",
+        "sha256": "5684c068142914917d1c663dc55e3d285505a0685fcc3bbe01fdc6a3cad4cf91"
+      },
+      "complete_for_requested_reference_query": true,
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-12T18:27:37.986619+00:00",
+      "sha256": "ae0525d2e2d90f5ea34afbdfe88bc301b5af73226dfaa4aa84796a784351cf1b",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AoppA+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-4d5bd364d3cce6dad75915c2d1dbdc32c6fb3f631504289e0ad4aad1395ee699.json",
+        "sha256": "05e90d6ba2be46b42c721bf9e3d4baf36e48eb6610390858ddb4d75dbc4b3b4a"
+      },
+      "complete_for_requested_reference_query": true,
+      "release": "2026_03",
+      "result_count": 4,
+      "retrieved_at": "2026-10-12T18:28:06.439981+00:00",
+      "sha256": "24e29c92fbb26c3936d9bbb047ecc0e53a17db038f6a7e000ab59c2daff28b7a",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AoppB+OR+gene_exact%3AoppC+OR+gene_exact%3AoppD+OR+gene_exact%3AoppF%29+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-d68fc2e2fe607ee8638a3846e3b1897fb0918c3c55d5478b9419ac5f53a11248.json",
+        "sha256": "dd4cdba062905bc43bab188606f682cefd67d40aae43c6c1f695f00d4dfcc2f3"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-12T18:28:07.266256+00:00",
+      "sha256": "8c7240ff98ba3f1a09ede2ff2d6f6f3e61d4b7de276f8126112586f92685c931",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/511145.json"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-ee6dbf6e3f09c6cab02e184352e45e77bb32a7adbb024d9ceea31aaf75599c37.json",
+        "sha256": "6f15a516e89969828b9950036cd9d5a791d2070e8fb836f0ba068f921f2e822e"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-12T18:28:08.166925+00:00",
+      "sha256": "20aa358053d2fae1e2cd74636ed5aca1efbc372e5b8bcfdb10d3fa80be6789a1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/562.json"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin/request-8f6b2ed43c42337427e65ea1a2d3406e6b6a85808afa96345b79811bd60f7765.json",
+        "sha256": "1b63267549f31137674811a59d80bf07b852b3a76dd9ffcd0bd401260b4535f3"
+      },
+      "complete_for_requested_reference_query": true,
+      "release": "2026_03",
+      "result_count": 4,
+      "retrieved_at": "2026-10-12T19:11:15.999519+00:00",
+      "sha256": "a192fc7ad26627e22fd17ffe37d4b4d0abb6474387e3d4280f30a22e756e69e3",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AdppB+OR+gene_exact%3AdppC+OR+gene_exact%3AdppD+OR+gene_exact%3AdppF%29+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin/request-98fa233e1b9311915ce14e4a406910ca5be8a103acb57a0ef4b1ebc2012d413b.json",
+        "sha256": "e14417b74a6fa893c2be59d07778d81250a68a0d1232b7acfb177a8d0f23a19e"
+      },
+      "complete_for_requested_reference_query": true,
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-12T19:10:42.147074+00:00",
+      "sha256": "1de21a503f810e3c69f92a2f555e6e66ed69c4766a4765ba4ae0f55433f04d3f",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AdppA+AND+organism_id%3A83333+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+    }
+  ],
+  "whole_corpus_primary_review": "OPEN",
+  "whole_record_review_complete": false
+}

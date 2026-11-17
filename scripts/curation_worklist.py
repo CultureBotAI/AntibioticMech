@@ -49,6 +49,8 @@ from seed_from_sources import (  # noqa: E402
     merge,
 )
 
+from antibioticmech.activity_collections import load_record  # noqa: E402
+
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 
 
@@ -76,7 +78,7 @@ def no_structure_queue() -> list[dict]:
 
 
 def corpus_records() -> list[dict]:
-    return [yaml.safe_load(p.read_text(encoding="utf-8")) for p in sorted(CORPUS_DIR.rglob("*.yaml"))]
+    return [load_record(p) for p in sorted(CORPUS_DIR.rglob("*.yaml"))]
 
 
 def mechanism_queue(records: list[dict]) -> list[dict]:
@@ -550,9 +552,10 @@ def activity_candidate_queue(records: list[dict]) -> list[dict]:
       * "broad-spectrum antibiotic" names a spectrum with no subject at all.
 
     None of the three is an observation, because `ActivityObservation` requires
-    evidence, and a reported MIC requires its units and its assay. A definition
-    supplies none of those. So this queue carries the matched phrase, what that
-    phrase actually claims, and the candidate subject, and asserts nothing.
+    evidence, and a reported MIC or disk-diffusion diameter requires its units
+    and its assay. A definition supplies none of those. So this queue carries
+    the matched phrase, what that phrase actually claims, and the candidate
+    subject, and asserts nothing.
 
     Ranked activity-stated first, then by whether a subject was found at all.
     """

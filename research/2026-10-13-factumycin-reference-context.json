@@ -1,0 +1,224 @@
+{
+  "accepted_protein_references": [],
+  "aro_id": "ARO:3001313",
+  "attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "source": "UniProt Consortium"
+  },
+  "complete_collection_aware_record_loaded": true,
+  "date": "2026-10-13",
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-13-blasticidin-deaminase-resistance-grounding.tsv",
+      "sha256": "b630521072e27883b1dac381e5473a838edc7ecd6a7c9d1170af19277deea0d4"
+    },
+    "citation_audit": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "context_plan": {
+      "path": "reports/resistance-grounding-2026-10-13-factumycin/context-plan.json",
+      "sha256": "089275b415ec67801b2586bae28a5df0b8e25baff6d1b0802f5eec777fbee479"
+    },
+    "literature_expansion": {
+      "path": "research/2026-10-13-card-literature-expansion.json",
+      "sha256": "10e54ecdb88eadca391cf246bd10c514d2498ab76167c66f98ff9b7e115eb9d6"
+    },
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-13-factumycin/cohort.json",
+      "sha256": "6cf4b201c9ceec71618433369a35ef7638dad8695f35c6d7f321be9889326106"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    }
+  },
+  "limits": [
+    "The source-owned CARD assertion is unchanged and not independently verified here.",
+    "The empty compound query is not proof that the gene or protein is absent.",
+    "No reference TaxID is transferred from rejected homonyms to the resistance assertion.",
+    "Primary DOI access remains on hold; no retry or alternate transport was used.",
+    "No sequence, variant specification, construct, protocol, numeric AST or genome is exported.",
+    "No NCBI requests, contact, source adoption or GitHub mutations; issue 1040 remains deferred."
+  ],
+  "primary_access": {
+    "checked_on": "2026-10-13",
+    "doi": "10.1039/C2MD20038D",
+    "primary_results_reviewed": false,
+    "retried_or_alternate_transport_used": false,
+    "status": "TOOL_INACCESSIBLE_NO_HTTP_STATUS_AVAILABLE",
+    "tool": "web.open",
+    "url": "https://doi.org/10.1039/C2MD20038D"
+  },
+  "queries": {
+    "facT": {
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-factumycin/facT-response.bin",
+          "sha256": "f3cfbe447944815cfb9c22b24e793c7dc343319c9ac0fd9864ce2bb0a8da6f65"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-factumycin/facT-receipt.json",
+          "sha256": "497975593e63c6b5f2db0efeced597ab5246d1c33119779d5629e40064d21e1c"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T13:15:18.461502+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AfacT&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "results": 3
+    },
+    "factumycin": {
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-factumycin/factumycin-response.bin",
+          "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-factumycin/factumycin-receipt.json",
+          "sha256": "79e28e75988bccec17e5796ece9296f623c6c9e94c05fdaa8d90cda23843086f"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T13:16:39.391073+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=factumycin&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "results": 0
+    }
+  },
+  "record": {
+    "identifier": "antibioticmech:aro-fdb0f4de1c",
+    "path": "data/antibiotics/antibacterial/factumycin.yaml",
+    "sha256": "8b414bcc53c3e339dc082b536424a9d63746cc0bb87e8d48d826bb938ce76d0f",
+    "standard_inchi_key": "HMBDLBWGDMNPDW-SUXULKRESA-N"
+  },
+  "rejected_name_matches": [
+    {
+      "accession": "UniProtKB:A0AAV6MSF6",
+      "bibliography": [
+        {
+          "identifiers": [
+            "PMID:33931618"
+          ],
+          "reference_number": 1,
+          "unresolved_identifiers": []
+        }
+      ],
+      "description_flag": "Fragment",
+      "disposition": "REJECTED_AS_FACTUMYCIN_REFERENCE_UNRELATED_HOMONYM",
+      "entry_reported_organism": "Cucurbita argyrosperma subsp. sororia",
+      "entry_reported_taxon_id": "NCBITaxon:37648",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 5,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "gene_names_and_synonyms": [
+        "FACT"
+      ],
+      "protein_names": [
+        "Fatty alcohol:caffeoyl-CoA acyltransferase"
+      ],
+      "reason": "Gene spelling alone does not overcome unrelated protein annotation and absent source-citation concordance.",
+      "sequence_version": 1,
+      "source_doi_in_bibliography": false,
+      "taxonomy_endpoint_checked": false
+    },
+    {
+      "accession": "UniProtKB:F7EL37",
+      "bibliography": [],
+      "description_flag": null,
+      "disposition": "REJECTED_AS_FACTUMYCIN_REFERENCE_UNRELATED_HOMONYM",
+      "entry_reported_organism": "Xenopus tropicalis",
+      "entry_reported_taxon_id": "NCBITaxon:8364",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 88,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "gene_names_and_synonyms": [
+        "cdc68",
+        "fact",
+        "factp140",
+        "spt16/cdc68",
+        "supt16h"
+      ],
+      "protein_names": [
+        "FACT complex subunit"
+      ],
+      "reason": "Gene spelling alone does not overcome unrelated protein annotation and absent source-citation concordance.",
+      "sequence_version": 3,
+      "source_doi_in_bibliography": false,
+      "taxonomy_endpoint_checked": false
+    },
+    {
+      "accession": "UniProtKB:Q9FFQ7",
+      "bibliography": [
+        {
+          "identifiers": [
+            "DOI:10.1093/dnares/4.3.215",
+            "PMID:9330910"
+          ],
+          "reference_number": 1,
+          "unresolved_identifiers": []
+        },
+        {
+          "identifiers": [
+            "DOI:10.1111/tpj.13415",
+            "PMID:27862469"
+          ],
+          "reference_number": 2,
+          "unresolved_identifiers": []
+        },
+        {
+          "identifiers": [
+            "DOI:10.1126/science.1088305",
+            "PMID:14593172"
+          ],
+          "reference_number": 4,
+          "unresolved_identifiers": []
+        },
+        {
+          "identifiers": [
+            "DOI:10.1104/pp.112.201822",
+            "PMID:22797656"
+          ],
+          "reference_number": 6,
+          "unresolved_identifiers": []
+        }
+      ],
+      "description_flag": null,
+      "disposition": "REJECTED_AS_FACTUMYCIN_REFERENCE_UNRELATED_HOMONYM",
+      "entry_reported_organism": "Arabidopsis thaliana",
+      "entry_reported_taxon_id": "NCBITaxon:3702",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 133,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "gene_names_and_synonyms": [
+        "FACT"
+      ],
+      "protein_names": [
+        "Fatty alcohol:caffeoyl-CoA acyltransferase"
+      ],
+      "reason": "Gene spelling alone does not overcome unrelated protein annotation and absent source-citation concordance.",
+      "sequence_version": 1,
+      "source_doi_in_bibliography": false,
+      "taxonomy_endpoint_checked": false
+    }
+  ],
+  "scope": "NAME_DISAMBIGUATION_NOT_EXPERIMENTAL_RESISTANCE_GROUNDING",
+  "source_gene_label": "facT",
+  "summary": {
+    "accepted_references": 0,
+    "biological_records_changed": 0,
+    "complete_queries": 2,
+    "experimental_proteins_assigned": 0,
+    "experimental_taxa_assigned": 0,
+    "rejected_homonyms": 3,
+    "whole_records_completed": 0
+  }
+}

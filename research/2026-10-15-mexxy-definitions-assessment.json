@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-15",
+  "scope": "MEXXY_DEFINITION_CITATION_SCOPE_AND_REGULATOR_REFERENCE_GROUNDING",
+  "citations": {
+    "12654672": {
+      "doi": "10.1128/aac.47.4.1371-1375.2003",
+      "url": "https://journals.asm.org/doi/10.1128/aac.47.4.1371-1375.2003",
+      "classification": "PRIMARY_TEXT_CONTEXT_REVIEW_NOT_WHOLE_PAPER_SIGNOFF",
+      "locations": ["Bacterial strains, media, and growth conditions", "Results and discussion", "Figures 1-4 captions"],
+      "assay_species": "Pseudomonas aeruginosa",
+      "source_background_label": "PAO1",
+      "selected_subject_labels": ["PAO1", "11B", "PAO1T"],
+      "evidence_scope": "TRANSIENT_ADAPTATION_NOT_A_NEW_HERITABLE_ALLELE",
+      "source_compound_label": "gentamicin",
+      "killing_endpoint_is_mic": false,
+      "source_label_establishes_exact_gentamicin_c_structure": false,
+      "laboratory_ecoli_hosts_are_resistance_assay_subjects": false,
+      "reference_protein_is_tested_derivative": false
+    },
+    "21149619": {
+      "doi": "10.1128/aac.01252-10",
+      "url": "https://journals.asm.org/doi/10.1128/aac.01252-10",
+      "classification": "PRIMARY_TEXT_CONTEXT_REVIEW_NOT_WHOLE_PAPER_SIGNOFF",
+      "locations": ["Results and discussion", "Table 1", "Table 3", "Figure 6 caption"],
+      "assay_species": "Pseudomonas aeruginosa",
+      "source_background_label": "PAO1Bes",
+      "background_label_is_pinned_pao1_reference_identity": false,
+      "regulator_locus_labels": {"PA1799": "parR", "PA1798": "parS"},
+      "regulators_are_structural_efflux_components": false,
+      "multimechanism_phenotype_is_direct_mexxy_transport": false,
+      "induction_establishes_transport": false,
+      "clinical_association_is_functional_validation_of_each_isolate": false,
+      "negative_or_background_dependent_results_discarded": false,
+      "disk_diffusion_and_mic_collapsed": false,
+      "source_reference_identifier": "NC-002516",
+      "reference_identifier_silently_normalized": false,
+      "reference_identifier_is_experimental_assembly_assignment": false
+    },
+    "23233851": {
+      "doi": "10.3389/fmicb.2012.00408",
+      "url": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2012.00408/full",
+      "classification": "SECONDARY_REVIEW_NOT_NEW_PRIMARY_EXPERIMENT",
+      "locations": ["Publisher article-type heading", "MexXY discovery history", "Structure and function of MexY"],
+      "publisher_article_type": "REVIEW article",
+      "cached_discovery_pub_type": "research-article; journal article",
+      "cached_metadata_rewritten": false,
+      "secondary_summary_promoted_to_primary_results": false,
+      "historical_sequence_difference_explanation_independently_verified": false,
+      "held_opra_paper_reconstructed_from_review": false
+    }
+  },
+  "claim_qualifications": [
+    {"record_identifier": "antibioticmech:aro-6407ce57f1", "pmids": ["12654672", "21149619"], "status": "GENERIC_GENTAMICIN_NOT_EXACT_GENTAMICIN_C_CONFIRMATION"},
+    {"record_identifier": "CHEBI:43968", "pmids": ["21149619"], "status": "MULTIMECHANISM_PHENOTYPE_NOT_DIRECT_MEXXY_TRANSPORT_PROOF"},
+    {"record_identifier": "CHEBI:17698", "pmids": ["21149619"], "status": "INDUCTION_NOT_TRANSPORT_OR_GLOBAL_SUBSTRATE_ABSENCE"}
+  ],
+  "figure_images_visually_reviewed": false,
+  "typeset_tables_visually_verified": false,
+  "numeric_ast_exported": false,
+  "clinical_resistance_calls_assigned": false,
+  "exact_experimental_alleles_assigned": false,
+  "experimental_genomes_assigned": false,
+  "biological_curation_completed": false,
+  "all_definition_citations_are_primary_studies": false,
+  "all_definition_citation_statuses_complete_means_whole_claim_signoff": false,
+  "other_claims_without_selected_qualification_are_verified": false,
+  "sequence_variant_primer_construct_protocol_exports": false,
+  "manual_primary_reading_independently_verified_by_code": false,
+  "access": {
+    "web_search_queries": 2,
+    "web_reader_open_operations": 6,
+    "web_reader_find_operations": 9,
+    "web_service_upstream_http_request_count_known": false,
+    "new_native_publisher_requests": 0,
+    "new_uniprot_requests": 2,
+    "ncbi_requests": 0,
+    "access_holds_retried": false,
+    "outreach": false,
+    "reuse_terms_review_resumed": false
+  }
+}

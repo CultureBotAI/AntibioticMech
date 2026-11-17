@@ -1,0 +1,197 @@
+{
+  "all_biological_records_and_previous_dossiers_unchanged": true,
+  "authoritative_qc": {
+    "limitation": "Pinned RDKit 2026.3.5 lacks a compatible Intel macOS distribution. Earlier Linux QC does not validate this change.",
+    "run_for_this_change": false
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-mexxy-context/protected-before.json",
+    "sha256": "3b9ef0913910b5805e384030cf34809a56034294af59a7b13cca3150d2a79d7e"
+  },
+  "baseline_files_checked": 7866,
+  "biological_records_hash_checked": 2939,
+  "checks": {
+    "diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "offline_replay": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/audit_mexxy_context.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\n  \"complete_selected_records_read\": 12,\n  \"source_claims\": 21,\n  \"source_terms\": 2,\n  \"distinct_component_reference_candidates\": 7,\n  \"native_bibliography_contexts\": 5,\n  \"regulators_excluded_from_structural_components\": 1,\n  \"new_primary_text_contexts_reviewed\": 1,\n  \"held_primary_citations\": 1,\n  \"native_card_entries_replayed\": 4182,\n  \"native_card_pages_replayed\": 9,\n  \"native_mex_entries_replayed\": 20,\n  \"new_native_publisher_requests\": 1,\n  \"new_uniprot_requests\": 0,\n  \"corpus_records_hash_checked\": 2939\n}\n"
+    },
+    "provenance": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_provenance.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "provenance OK: 14 inventories, 23 upstream files, retrieved 2026-08-30\n"
+    },
+    "ruff": {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "scripts/audit_mexxy_context.py",
+        "tests/test_mexxy_context.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    "ruff_format": {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "scripts/audit_mexxy_context.py",
+        "tests/test_mexxy_context.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "2 files already formatted\n"
+    },
+    "source_queue": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_source_queue.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "source queue OK: 37 sources \u2014 10 adopted, 12 blocked, 11 candidate, 4 evaluating\nnext up: chebi-citations (P3, evidence), lotus (P3, producer_organisms), antismash-db (P4, producer_organisms)\n"
+    }
+  },
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "bc67479ca6e4953872a2ffe1a55046fb20268f5d7dcc0a7da245fb9dce102d3f"
+    },
+    {
+      "path": "research/2026-10-15-mexxy-context-assessment.json",
+      "sha256": "a714572166172c89c7ddc7c37533125b21c9c105d05275eed69e803326ff7d04"
+    },
+    {
+      "path": "research/2026-10-15-mexxy-context-plan.json",
+      "sha256": "f954f5e3e6684ff94189dbd84c5f32d1e1e6f902bcdb3f0dc31cfada2024948a"
+    },
+    {
+      "path": "research/2026-10-15-mexxy-context.json",
+      "sha256": "f861aaedd543a1994a328096b7e9055be990a3f97534c7f2becf44cb7f8936f7"
+    },
+    {
+      "path": "scripts/audit_mexxy_context.py",
+      "sha256": "2cc72e5dae15c25b57248f33ada7438cf42028b7f9d7fa07e39ac179bdb49a63"
+    },
+    {
+      "path": "tests/test_mexxy_context.py",
+      "sha256": "3e20a4298534a1f781494451dfeeb47ad4832114e007f00791dbfc23053e3d28"
+    }
+  ],
+  "ignored_files_included_in_membership_check": true,
+  "limits": {
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_primary_results_reviews": 1,
+    "new_review_is_text_only_not_whole_paper_signoff": true,
+    "numeric_ast_exports": 0,
+    "operational_exports": false,
+    "outreach": 0,
+    "reuse_terms_review_resumed": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "manual_primary_reading_is_not_independently_reproduced_by_tests": true,
+  "new_files_before_receipt": [
+    "research/2026-10-15-mexxy-context-assessment.json",
+    "research/2026-10-15-mexxy-context-plan.json",
+    "research/2026-10-15-mexxy-context.json",
+    "scripts/audit_mexxy_context.py",
+    "tests/test_mexxy_context.py"
+  ],
+  "previous_report_preserved_except_appended_section": true,
+  "prior_file_changes": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "bc67479ca6e4953872a2ffe1a55046fb20268f5d7dcc0a7da245fb9dce102d3f",
+      "before_sha256": "9f973f799d424b55e08e11cee143feec3639bfb0e54969feefaeadcfb42b5378"
+    }
+  },
+  "publication": {
+    "commits": 0,
+    "issue_mutations": 0,
+    "pull_requests": 0,
+    "pushes": 0
+  },
+  "scope": "MEXXY_REFERENCE_BIBLIOGRAPHY_AND_PRIMARY_HOST_CONTEXT_NOT_EXPERIMENTAL_ALLELES",
+  "summary": {
+    "complete_selected_records_read": 12,
+    "corpus_records_hash_checked": 2939,
+    "distinct_component_reference_candidates": 7,
+    "held_primary_citations": 1,
+    "native_bibliography_contexts": 5,
+    "native_card_entries_replayed": 4182,
+    "native_card_pages_replayed": 9,
+    "native_mex_entries_replayed": 20,
+    "new_native_publisher_requests": 1,
+    "new_primary_text_contexts_reviewed": 1,
+    "new_uniprot_requests": 0,
+    "regulators_excluded_from_structural_components": 1,
+    "source_claims": 21,
+    "source_terms": 2
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "initial_run": {
+      "correction": "Added missing proteinDescription to the synthetic native-entry fixture; production projection unchanged.",
+      "errors": 0,
+      "failures": 11,
+      "junit": {
+        "path": "reports/resistance-grounding-2026-10-15-mexxy-context/tests.xml",
+        "sha256": "67cbeaab34a9a49eac1ccc925098b7773d117e4f374842a035cf5548f7582a3b"
+      },
+      "skipped": 2,
+      "tests": 338
+    },
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-mexxy-context/tests-final.xml",
+      "sha256": "d29517ef8a26969459990e28f4bd87801cadd024256874be919752ac629494ef"
+    },
+    "native_replay_network_and_python_file_writes_blocked": true,
+    "new_audit_tests_passed": 56,
+    "passed": 336,
+    "skipped": 2,
+    "skips": [
+      {
+        "message": "historical corpus changed; immutable public snapshot tested separately",
+        "name": "test_native_replay_without_network_or_file_writes"
+      },
+      {
+        "message": "known qualification deltas lack historical fixtures; public artifact checks still run",
+        "name": "test_offline_native_replay"
+      }
+    ],
+    "tests": 338
+  }
+}

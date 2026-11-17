@@ -237,6 +237,96 @@ resistance_mechanisms:
   - reference: ARO:3007671
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
       database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  label: nimB-associated reduced metronidazole susceptibility in clinical isolate
+    ARU 7420
+  gene_families:
+  - nimB
+  taxon_id: NCBITaxon:817
+  taxon_label: Bacteroides fragilis
+  strain: ARU 7420
+  phenotype_label: source-reported reduced metronidazole susceptibility
+  assay: Source-reported gradient diffusion (Etest) phenotype
+  note: Same-isolate gene-type/phenotype co-occurrence, not allele-specific causation.
+    Gene type was assigned by PCR-RFLP, not exact allele sequencing. No protein accession,
+    strain TaxID, genome or numerical AST is assigned. Compound scope follows named
+    metronidazole; the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10970359
+    notes: Primary Table 2 clinical isolate, distinct from controls and nimE rows;
+      Methods and Results inspected as publisher text.
+- mechanism_type: UNKNOWN
+  label: nimB-associated reduced metronidazole susceptibility in clinical isolate
+    ARU 9750
+  gene_families:
+  - nimB
+  taxon_id: NCBITaxon:817
+  taxon_label: Bacteroides fragilis
+  strain: ARU 9750
+  phenotype_label: source-reported reduced metronidazole susceptibility
+  assay: Source-reported gradient diffusion (Etest) phenotype
+  note: Same-isolate gene-type/phenotype co-occurrence, not allele-specific causation.
+    Gene type was assigned by PCR-RFLP, not exact allele sequencing. No protein accession,
+    strain TaxID, genome or numerical AST is assigned. Compound scope follows named
+    metronidazole; the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10970359
+    notes: Primary Table 2 clinical isolate, distinct from controls and nimE rows;
+      Methods and Results inspected as publisher text.
+- mechanism_type: UNKNOWN
+  label: nimB-associated reduced metronidazole susceptibility in clinical isolate
+    ARU 11562
+  gene_families:
+  - nimB
+  taxon_id: NCBITaxon:817
+  taxon_label: Bacteroides fragilis
+  strain: ARU 11562
+  phenotype_label: source-reported reduced metronidazole susceptibility
+  assay: Source-reported gradient diffusion (Etest) phenotype
+  note: Same-isolate gene-type/phenotype co-occurrence, not allele-specific causation.
+    Gene type was assigned by PCR-RFLP, not exact allele sequencing. No protein accession,
+    strain TaxID, genome or numerical AST is assigned. Compound scope follows named
+    metronidazole; the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10970359
+    notes: Primary Table 2 clinical isolate, distinct from controls and nimE rows;
+      Methods and Results inspected as publisher text.
+- mechanism_type: UNKNOWN
+  label: nimB-associated reduced metronidazole susceptibility in clinical isolate
+    ARU 12371
+  gene_families:
+  - nimB
+  taxon_id: NCBITaxon:818
+  taxon_label: Bacteroides thetaiotaomicron
+  strain: ARU 12371
+  phenotype_label: source-reported reduced metronidazole susceptibility
+  assay: Source-reported gradient diffusion (Etest) phenotype
+  note: Same-isolate gene-type/phenotype co-occurrence, not allele-specific causation.
+    Gene type was assigned by PCR-RFLP, not exact allele sequencing. No protein accession,
+    strain TaxID, genome or numerical AST is assigned. Compound scope follows named
+    metronidazole; the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10970359
+    notes: Primary Table 2 clinical isolate, distinct from controls and nimE rows;
+      Methods and Results inspected as publisher text.
+- mechanism_type: UNKNOWN
+  label: nimB-associated reduced metronidazole susceptibility in clinical isolate
+    ARU 12963
+  gene_families:
+  - nimB
+  taxon_id: NCBITaxon:817
+  taxon_label: Bacteroides fragilis
+  strain: ARU 12963
+  phenotype_label: source-reported reduced metronidazole susceptibility
+  assay: Source-reported gradient diffusion (Etest) phenotype
+  note: Same-isolate gene-type/phenotype co-occurrence, not allele-specific causation.
+    Gene type was assigned by PCR-RFLP, not exact allele sequencing. No protein accession,
+    strain TaxID, genome or numerical AST is assigned. Compound scope follows named
+    metronidazole; the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10970359
+    notes: Primary Table 2 clinical isolate, distinct from controls and nimE rows;
+      Methods and Results inspected as publisher text.
 molecular_targets:
 - target_id: ARO:3000742
   target_label: anaerobe DNA
@@ -2447,3 +2537,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-10T05:41:42Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added five clinical-isolate nimB/metronidazole gene-type co-occurrence
+    claims from primary Table 2, with species taxonomy and no exact allele/protein
+    assignment. Preserved source-owned claims, separate controls and nimE distinctions.
+    Whole-record review remains open.
+  llm_assisted: true

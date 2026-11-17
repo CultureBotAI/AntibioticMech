@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>Genipin</h1>
 <p class="meta">
   <code class="curie">antibioticmech:curator-a1214aecf9</code>
@@ -32,11 +43,14 @@
 
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C11H14O5</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>226.23 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>226.08412354 Da</td></tr><tr><th scope="row">Source</th><td>https://pubchem.ncbi.nlm.nih.gov/compound/442424 · retrieved 2026-09-08</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">AZKVWQKMDGGDSV-BCMRRPTOSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">COC(=O)C1=CO[C@H]([C@H]2[C@@H]1CC=C2CO)O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C11H14O5/c1-15-10(13)8-5-16-11(14)9-6(4-12)2-3-7(8)9/h2,5,7,9,11-12,14H,3-4H2,1H3/t7-,9-,11-/m1/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -56,12 +70,13 @@ both rather than shown here, since it names at most one of them.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33282">CHEBI:33282</a>    <code class="curie">CHEBI:33282</code></li>
+  <li>antibacterial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33282"><code class="curie">CHEBI:33282</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th><th scope="col">Evidence</th></tr></thead>
@@ -72,10 +87,12 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <td><code class="curie">antibioticmech:curator-a1214aecf9</code></td>
     <td class="meta">2026-09-08</td>
 <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">DOI:10.1167/iovs.67.3.18</span> — "Slenter et al. tested genipin against canine ocular Staphylococcus pseudintermedius, Pseudomonas aeruginosa, and Streptococcus canis isolates, reported minimum bactericidal concentrations, and measured concentration-dependent bactericidal activity against staphylococci." <span class="meta">(PubChem CID 442424 supplies the standard InChI, InChIKey, formula, and isomeric SMILES for genipin.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1167/iovs.67.3.18">DOI:10.1167/iovs.67.3.18</a></span> — "Slenter et al. tested genipin against canine ocular Staphylococcus pseudintermedius, Pseudomonas aeruginosa, and Streptococcus canis isolates, reported minimum bactericidal concentrations, and measured concentration-dependent bactericidal activity against staphylococci." <span class="meta">(PubChem CID 442424 supplies the standard InChI, InChIKey, formula, and isomeric SMILES for genipin.)</span></li>
 </ul>
 </td>  </tr>
 </table>
+
+</div>
 
 
 
@@ -100,26 +117,36 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/genipin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/genipin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=Genipin">MediaIngredientMech (Genipin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=Genipin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=Genipin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=Genipin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=Genipin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

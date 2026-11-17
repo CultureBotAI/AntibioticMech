@@ -1,0 +1,222 @@
+identifier: CHEBI:188153
+label: oteseconazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: A tetrazole antifungal agent that selectively coordinates the heme iron
+  of fungal lanosterol 14-alpha-demethylase (CYP51) to block ergosterol biosynthesis.
+definition_source: DOI:10.1128/aac.00778-22
+synonyms:
+- synonym_text: VT-1161
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: O[C@@](Cn1cnnn1)(c1ccc(F)cc1F)C(F)(F)c1ccc(-c2ccc(OCC(F)(F)F)cc2)cn1
+  standard_inchi: InChI=1S/C23H16F7N5O2/c24-16-4-7-18(19(25)9-16)21(36,11-35-13-32-33-34-35)23(29,30)20-8-3-15(10-31-20)14-1-5-17(6-2-14)37-12-22(26,27)28/h1-10,13,36H,11-12H2/t21-/m0/s1
+  standard_inchi_key: IDUYJRXRDSPPRC-NRFANRHFSA-N
+  molecular_formula: C23H16F7N5O2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/77050711
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 527.4
+  monoisotopic_mass: 527.1192
+xrefs:
+- pubchem.compound:77050711
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aac.00778-22#oteseconazole
+  source_label: oteseconazole
+  minted_identifier: antibioticmech:curator-fa06b7d4d5
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1128/aac.00778-22
+    snippet: Oteseconazole (VT-1161) is a novel fungal CYP51 inhibitor specifically
+      designed to selectively target the fungal enzyme over human cytochrome P450
+      enzymes. Against C. glabrata clinical isolates, VT-1161 MICs ranged from <=0.015
+      to 2 ug/mL (MIC50, 0.06 ug/mL; MIC90, 0.5 ug/mL), and against C. krusei isolates,
+      VT-1161 MICs ranged from 0.03 to 0.5 ug/mL (MIC50, 0.12 ug/mL; MIC90, 0.25 ug/mL).
+    notes: Reported by Nishimoto et al. 2022 (Antimicrob Agents Chemother 66:e0077822;
+      PMID:35969069) as a selective tetrazole inhibitor (VT-1161) of fungal lanosterol
+      14-alpha-demethylase (CYP51), with MIC50/MIC90 of 0.06/0.5 ug/mL against Candida
+      glabrata and 0.12/0.25 ug/mL against Candida krusei clinical isolates.
+  source_version: '2026-10-23'
+biosynthesis_origin: SYNTHETIC
+mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Selectively coordinates the heme iron of fungal lanosterol
+  14-alpha-demethylase (CYP51) to inhibit ergosterol biosynthesis (DOI:10.1128/aac.00778-22).'
+molecular_targets:
+- target_label: fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:237561
+  taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+  experimental_context: Selective tetrazole coordination of the fungal CYP51 heme
+    iron and antifungal susceptibility testing against Candida glabrata, Candida krusei,
+    and Candida albicans (DOI:10.1128/aac.00778-22; PMID:25056938).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2022-08
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1128/aac.00778-22
+    snippet: Oteseconazole (VT-1161) is a novel fungal CYP51 inhibitor specifically
+      designed to selectively target the fungal enzyme over human cytochrome P450
+      enzymes. Against C. glabrata clinical isolates, VT-1161 MICs ranged from <=0.015
+      to 2 ug/mL (MIC50, 0.06 ug/mL; MIC90, 0.5 ug/mL), and against C. krusei isolates,
+      VT-1161 MICs ranged from 0.03 to 0.5 ug/mL (MIC50, 0.12 ug/mL; MIC90, 0.25 ug/mL).
+    notes: Nishimoto et al. 2022 (Antimicrob Agents Chemother 66:e0077822; PMID:35969069)
+      and Warrilow et al. 2014 (Antimicrob Agents Chemother 58:7121-7127; PMID:25056938)
+      establish oteseconazole (VT-1161) as a selective tight-binding tetrazole inhibitor
+      of Candida albicans CYP51 (Erg11, UniProtKB:P10613) and Candida glabrata CYP51
+      (Erg11, UniProtKB:P50859).
+  protein_examples:
+  - uniprot_id: UniProtKB:P10613
+    protein_label: Lanosterol 14-alpha demethylase
+    gene_symbol: ERG11
+    taxon_id: NCBITaxon:237561
+    taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida albicans
+      whose heme iron is selectively coordinated by the tetrazole ring of oteseconazole
+      (VT-1161, Kd <= 39 nM; PMID:25056938; DOI:10.1128/aac.00778-22).
+  - uniprot_id: UniProtKB:P50859
+    protein_label: Lanosterol 14-alpha demethylase
+    gene_symbol: ERG11
+    taxon_id: NCBITaxon:284593
+    taxon_label: Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC
+      0622 / NRRL Y-65 / CBS 138)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida glabrata,
+      the primary clinical target species evaluated in DOI:10.1128/aac.00778-22 (MIC50
+      = 0.06 ug/mL, MIC90 = 0.5 ug/mL; PMID:35969069).
+curation_history:
+- timestamp: '2026-10-24T00:49:49Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T04:34:55Z'
+  curator: curate_mechanism
+  action: CURATED_MODE_OF_ACTION
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ERGOSTEROL_PATHWAY_INHIBITION
+    (MICROBIAL_TARGET) with primary-literature provenance.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for fungal lanosterol 14-alpha-demethylase
+    (CYP51 / Erg11) backed by DOI:10.1128/aac.00778-22.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P10613 (Candida albicans SC5314 ERG11) and UniProtKB:P50859
+    (Candida glabrata CBS 138 ERG11) protein examples to the fungal CYP51 PRIMARY_LITERATURE
+    molecular target (DOI:10.1128/aac.00778-22).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: PROMOTED_TO_REVIEWED
+  changes: Promoted curation_status from PROPOSED to REVIEWED after verifying EXACT
+    ChEBI chemical grounding, complete chemical_structure, settled biosynthesis_origin
+    and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets
+    (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).
+  llm_assisted: true
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph oteseconazole_fungal_cyp51_ergosterol_depletion
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P10613,
+    UniProtKB:P50859) and primary literature (DOI:10.1128/aac.00778-22, PMID:25056938).
+  llm_assisted: true
+causal_graphs:
+- graph_id: oteseconazole_fungal_cyp51_ergosterol_depletion
+  title: Oteseconazole coordinates the heme iron of fungal CYP51 (Erg11) to block
+    ergosterol biosynthesis
+  description: Oteseconazole (VT-1161) binds the active-site heme iron of fungal lanosterol
+    14-alpha-demethylase (CYP51 / Erg11) via its 1-tetrazole ring, inhibits 14-alpha-demethylation
+    of sterol precursors, and depletes membrane ergosterol in Candida species.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: oteseconazole
+    label: oteseconazole
+    node_type: COMPOUND
+    grounding: CHEBI:188153
+  - node_id: fungal_cyp51_erg11
+    label: fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Fungal cytochrome P450 lanosterol 14-alpha-demethylase (CYP51
+      / Erg11); kept label-only with Candida albicans (UniProtKB:P10613) and Nakaseomyces
+      glabratus (UniProtKB:P50859) protein_examples.
+    gene_symbols:
+    - ERG11
+    protein_examples:
+    - uniprot_id: UniProtKB:P10613
+      protein_label: Lanosterol 14-alpha demethylase
+      gene_symbol: ERG11
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-24'
+      role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida albicans
+        whose heme iron is selectively coordinated by the tetrazole ring of oteseconazole
+        (VT-1161, Kd <= 39 nM; PMID:25056938; DOI:10.1128/aac.00778-22).
+    - uniprot_id: UniProtKB:P50859
+      protein_label: Lanosterol 14-alpha demethylase
+      gene_symbol: ERG11
+      taxon_id: NCBITaxon:284593
+      taxon_label: Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC
+        0622 / NRRL Y-65 / CBS 138)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-24'
+      role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida glabrata,
+        the primary clinical target species evaluated in DOI:10.1128/aac.00778-22
+        (MIC50 = 0.06 ug/mL, MIC90 = 0.5 ug/mL; PMID:35969069).
+  - node_id: lanosterol_14alpha_demethylation
+    label: CYP51-catalyzed sterol 14-alpha-demethylation
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Heme-dependent oxidative 14-alpha-demethylation of lanosterol
+      / eburicol in fungal sterol synthesis.
+  - node_id: fungal_ergosterol_biosynthesis
+    label: ergosterol biosynthetic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006696
+  edges:
+  - subject: oteseconazole
+    predicate: inhibits
+    object: lanosterol_14alpha_demethylation
+    description: Oteseconazole coordinates the active-site heme iron of fungal CYP51
+      and inhibits sterol 14-alpha-demethylation.
+    evidence:
+    - reference: PMID:25056938
+      notes: Type II spectral binding and sterol-biosynthesis assays showed tight
+        binding of VT-1161 (oteseconazole) to Candida albicans CYP51 and complete
+        blockade of ergosterol synthesis.
+    - reference: DOI:10.1128/aac.00778-22
+      notes: Antifungal susceptibility and Erg11 amino-acid substitution profiling
+        in Candida glabrata confirmed CYP51 target engagement by oteseconazole.
+  - subject: fungal_cyp51_erg11
+    predicate: enables
+    object: lanosterol_14alpha_demethylation
+    description: Fungal CYP51 (Erg11) catalyzes the rate-limiting 14-alpha-demethylation
+      step in sterol biosynthesis.
+    evidence:
+    - reference: PMID:25056938
+      notes: Purified Candida albicans CYP51 catalyzed the sterol demethylation step
+        inhibited by VT-1161.
+  - subject: lanosterol_14alpha_demethylation
+    predicate: supports
+    object: fungal_ergosterol_biosynthesis
+    description: CYP51-mediated 14-alpha-demethylation drives fungal membrane ergosterol
+      biosynthesis.
+    evidence:
+    - reference: PMID:25056938
+      notes: Inhibition of CYP51 by VT-1161 depleted cellular ergosterol and accumulated
+        14-alpha-methylated sterols in Candida albicans.

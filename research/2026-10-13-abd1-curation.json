@@ -1,0 +1,55 @@
+{
+  "before": {
+    "path": "data/antibiotics/antifungal/sinefungin.yaml",
+    "sha256": "3264f6081cdfc48b9ae4e345cc89a940bb543bcc7f53e882bb26c9d44aa2807c"
+  },
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-13-abd1/sinefungin-canary.yaml",
+    "sha256": "8e28863f19c58332ad21f312c7ff6c1a2b726dc5e0760549320cae35121aa80e"
+  },
+  "claims": [
+    {
+      "assay": "Comparative yeast growth with corroborating biochemical inhibition assays",
+      "evidence": [
+        {
+          "notes": "Results and native Figures 3-4; DOI:10.1093/nar/gkaf538. Relative growth and enzyme inhibition are distinct endpoints, not standardized MICs.",
+          "reference": "PMID:40682821"
+        },
+        {
+          "notes": "Reference-only archive link, release 2026_03: historical UniProtKB:A6ZLH5 (YJM789, NCBITaxon:307796) is inactive; UniProtKB:P32783 (S288c, NCBITaxon:559292) remains active. Same archived reference sequence does not establish strain or experimental-allele equivalence.",
+          "reference": "https://www.uniprot.org/uniparc/UPI000005318F"
+        },
+        {
+          "notes": "Current reference only: entry version 191, sequence version 1, release 2026_03. Not assigned as an experimental resistance protein accession.",
+          "reference": "https://www.uniprot.org/uniprotkb/P32783/entry"
+        }
+      ],
+      "gene_id": "ABD1",
+      "label": "Laboratory ABD1 target-alteration association with sinefungin resistance",
+      "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+      "note": "Distinct 2025 laboratory association, not the earlier expression-context finding or a species-wide phenotype. Reference-sequence identity does not identify experimental alleles, strains or genomes; none is assigned. K. lactis biochemical results and modeled orthologs are not organismal resistance evidence.",
+      "phenotype_label": "Source-reported relative sinefungin resistance",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    }
+  ],
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added a distinct 2025 laboratory ABD1 target-alteration association from primary figures. Grounded historical/current reference correspondence through UniParc without transferring reference strain or protein IDs to tested alleles. Preserved four earlier claims; no genome or numerical AST assigned. Whole-record review remains open.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-13T07:19:35Z"
+  },
+  "existing_claims_preserved": 4,
+  "fixture": {
+    "path": "tests/fixtures/sinefungin-before-abd1-2026-10-13.yaml",
+    "sha256": "3264f6081cdfc48b9ae4e345cc89a940bb543bcc7f53e882bb26c9d44aa2807c"
+  },
+  "fresh_seed_merge_equal": true,
+  "identifier": "CHEBI:45453",
+  "record": {
+    "path": "data/antibiotics/antifungal/sinefungin.yaml",
+    "sha256": "8e28863f19c58332ad21f312c7ff6c1a2b726dc5e0760549320cae35121aa80e"
+  },
+  "whole_record_review_complete": false
+}

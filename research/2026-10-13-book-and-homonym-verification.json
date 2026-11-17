@@ -1,0 +1,142 @@
+{
+  "additional_primary_access_hold": {
+    "aro_id": "ARO:3003007",
+    "observed_on": "2026-10-13",
+    "observed_with": "web.open",
+    "primary_results_reviewed": false,
+    "reported_http_status": 403,
+    "retried_or_alternate_transport_used": false,
+    "source_pmid": "1675788",
+    "url": "https://www.pnas.org/doi/10.1073/pnas.88.11.4781"
+  },
+  "adversarial_review": [
+    "Fixed misleading no-citation interpretation by separating PMID/DOI absence from ISBN bibliography.",
+    "ISBN checksums and exact RDF bindings are validated; no parent, class or synonym propagation.",
+    "WHO catalogue identity does not validate its rows, experimental alleles or organism assignments.",
+    "Rejected facT homonyms retain source-reported TaxIDs only as rejected hit metadata.",
+    "Empty queries and inaccessible primary sources are not treated as biological absence.",
+    "Historical snapshots and all biological records are preserved; duplicate assertions are not experiments.",
+    "Same-agent adversarial review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "ea8a2b34b15b22d0ad35bc53092aa4270ef165442e9f8962bfa8d4fec2119147"
+    },
+    {
+      "path": "research/2026-10-13-card-book-citations.json",
+      "sha256": "52901412b7442e4029e1dc4185ffac7af41fa06e28c2aad2b4d49283ff7c7f1f"
+    },
+    {
+      "path": "research/2026-10-13-factumycin-reference-context.json",
+      "sha256": "610e81d875ab0a691903373156154d6786e03592e45fcb991c7e7ab83df74dfd"
+    },
+    {
+      "path": "scripts/audit_card_book_citations.py",
+      "sha256": "cc7e5c7742be1647a75df8dfa6abb8bd547fb46890dfad4946b1bb27445aa46c"
+    },
+    {
+      "path": "tests/test_card_book_citations.py",
+      "sha256": "880c7283af17b5f2315ffe9e1b57dc0d2bf5911a71a20a5d69dd1aa47c6ce9c4"
+    },
+    {
+      "path": "tests/test_factumycin_references.py",
+      "sha256": "48ba5adbb17e0133b54f78a358de47c1cba34170de5cbc7e089a3a2b58d430f8"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-factumycin/protected-before.json",
+    "sha256": "05e1945d73e71d60ec7d6eba7cd1d35c65f8bda2c514f5b0272eba9619aed492"
+  },
+  "baseline_files_checked": 7098,
+  "book_audit_summary": {
+    "bibliography_status_counts": {
+      "BOOK_REFERENCE_WITHOUT_PUBMED_DOI": 14,
+      "NO_DEFINITION_BIBLIOGRAPHY_IN_PINNED_SOURCE": 408,
+      "PUBMED_DOI_AND_BOOK_REFERENCES": 22,
+      "PUBMED_DOI_REFERENCES": 1558
+    },
+    "biological_records_changed": 0,
+    "book_identifiers": [
+      "ISBN:9789240082410"
+    ],
+    "book_reference_assertion_memberships": 65,
+    "book_reference_records": 30,
+    "card_terms_checked": 2002,
+    "experimental_assignments": 0,
+    "historical_expansion_terms_without_pubmed_doi": 322,
+    "historical_uncited_terms_still_without_recognized_references": 308,
+    "historical_uncited_terms_with_book_references": 14,
+    "records_checked": 2939,
+    "terms_with_book_references": 36,
+    "whole_records_completed": 0
+  },
+  "date": "2026-10-13",
+  "experimental_accessions_assigned": 0,
+  "factumycin_summary": {
+    "accepted_references": 0,
+    "biological_records_changed": 0,
+    "complete_queries": 2,
+    "experimental_proteins_assigned": 0,
+    "experimental_taxa_assigned": 0,
+    "rejected_homonyms": 3,
+    "whole_records_completed": 0
+  },
+  "focused_checks": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_card_book_citations.py",
+      "tests/test_factumycin_references.py",
+      "tests/test_card_literature_expansion.py",
+      "tests/test_card_literature_proteins.py",
+      "tests/test_card_citation_concordance.py",
+      "tests/test_card_definition_citations.py",
+      "tests/test_card_term_scope.py",
+      "tests/test_card_grounding_audit.py",
+      "tests/test_docs.py::test_numeric_claims_in_prose_match_the_corpus",
+      "tests/test_docs.py::test_no_unregistered_numeric_claim_about_the_corpus",
+      "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-factumycin/focused-tests.xml"
+    ],
+    "exit_code": 0,
+    "finished": "2026-10-13T13:31:08.646845+00:00",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-factumycin/focused.log",
+      "sha256": "ed8d0cd3e259047fae6869142b5a73fea637e5200fea28d5c9331b9f07a37dcd"
+    },
+    "output": "........................................................................ [ 33%]\n........................................................................ [ 66%]\n.......................................................................  [100%]\n215 passed in 83.85s (0:01:23)\n",
+    "started": "2026-10-13T13:29:44.020345+00:00"
+  },
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_biological_assertions": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-card-book-citations.json",
+    "research/2026-10-13-factumycin-reference-context.json",
+    "scripts/audit_card_book_citations.py",
+    "tests/test_card_book_citations.py",
+    "tests/test_factumycin_references.py"
+  ],
+  "new_full_qc_or_ci_claimed": false,
+  "offline_replay_with_network_disabled": true,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "raw_curation_site_embedding_history_and_prior_snapshots_preserved": true,
+  "records_byte_identical": 2939,
+  "source_adoptions": 0,
+  "test_results": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-factumycin/focused-tests.xml",
+      "sha256": "276ff290cebde084562110c6f7eec4a6a6846b3612d43cd94747061b9b29fb9a"
+    },
+    "passed": 215,
+    "skipped": 0
+  }
+}

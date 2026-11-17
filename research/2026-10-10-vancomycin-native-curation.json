@@ -1,0 +1,99 @@
+{
+  "added_claims": [
+    {
+      "aro_id": "ARO:3000256",
+      "assay": "Etest",
+      "evidence": [
+        {
+          "notes": "Publisher Table 1, native-isolate Results, precursor analysis and accession statement; qualitative finding only.",
+          "reference": "PMID:20733041"
+        }
+      ],
+      "gene_families": [
+        "vanM"
+      ],
+      "label": "VanM-cluster-associated vancomycin resistance in native Efm-HS0661",
+      "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+      "note": "Native-isolate phenotype and precursor analysis support a cluster-associated target-alteration route, not isolated VanM sufficiency. UniProtKB:B8XGS3 and FJ349556.1 are source-bound ligase references only; CP039730.1 belongs to a different isolate. No exact experimental protein, allele or genome is assigned. Laboratory-recipient findings are not assigned here.",
+      "phenotype_label": "source-reported vancomycin resistance",
+      "strain": "Efm-HS0661",
+      "taxon_id": "NCBITaxon:1352",
+      "taxon_label": "Enterococcus faecium"
+    },
+    {
+      "assay": "Disk diffusion and Etest",
+      "evidence": [
+        {
+          "notes": "Publisher native susceptibility Results, locus identification and separate biochemical Results/Table 2; qualitative finding only.",
+          "reference": "PMID:19414574"
+        }
+      ],
+      "gene_families": [
+        "VanA-like ligase"
+      ],
+      "gene_id": "DSY3690",
+      "label": "DSY3690-associated vancomycin resistance in native Desulfitobacterium hafniense Y51",
+      "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+      "note": "Native resistance and separate recombinant-ligase biochemistry support the proposed target-alteration route, not isolated DSY3690 necessity or sufficiency. UniProtKB:Q24R63 is locus-matched reference context only; DSY1579/UniProtKB:Q24X74 is the distinct biochemical comparator. No exact experimental protein, allele or genome is assigned. AP008230.1 and its sample are reference context, not an assay-genome assignment.",
+      "phenotype_label": "source-reported vancomycin resistance",
+      "strain": "Y51",
+      "strain_taxon_id": "NCBITaxon:138119",
+      "taxon_id": "NCBITaxon:49338",
+      "taxon_label": "Desulfitobacterium hafniense"
+    }
+  ],
+  "batch_started_on": "2026-10-10",
+  "before_record_sha256": "6bd289af5f5e569870f56e66c3cde211aae4f15ee2802a87ee941cbfdef5d750",
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-10-vancomycin-native/vancomycin-canary.yaml",
+    "sha256": "4c15c1109b300ab16d7e95a34ef01b8e752ced4aa47540b2a874d36449f6cf7e"
+  },
+  "claims_added": 2,
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added two primary-supported native vancomycin resistance claims with species/strain taxonomy and explicitly reference-only UniProt context. Kept VanM cluster evidence, Y51 native phenotype, recombinant biochemistry and comparator identity distinct. Preserved prior assertions and all other fields; whole-record review remains open.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-10T20:06:52Z"
+  },
+  "curation_status": "SEEDED",
+  "embedding_documents_changed": 0,
+  "embedding_fingerprint": "18ff581531b8bd9d",
+  "embedding_preservation": {
+    "path": "reports/resistance-grounding-2026-10-10-vancomycin-native/embedding-preservation.json",
+    "sha256": "a3a68fbdb76027cb9e7c9eea50368d589f54948f7cd8553ff147d855794dd495"
+  },
+  "exact_alleles_assigned": 0,
+  "existing_claims_preserved": 20,
+  "experimental_genomes_assigned": 0,
+  "experimental_proteins_assigned": 0,
+  "fresh_seed": {
+    "path": "reports/resistance-grounding-2026-10-10-vancomycin-native/vancomycin-seed.json",
+    "sha256": "54e48b3ded3621554b32da0fbfafd15cd7721a54e9e96185bd0619ef88437cb7"
+  },
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "identifier": "CHEBI:28001",
+  "ncbi_endpoint_requests": 0,
+  "numerical_ast_added": 0,
+  "original": {
+    "path": "reports/resistance-grounding-2026-10-10-vancomycin-native/vancomycin-original.yaml",
+    "sha256": "6bd289af5f5e569870f56e66c3cde211aae4f15ee2802a87ee941cbfdef5d750"
+  },
+  "preserved_fields_sha256": "c8cdc6787d4ef2c515f357f369a627047f8709f78117618d3af299afffa03dfa",
+  "preserved_history_sha256": "fd1106e50fca847c42557b68ed75723460a570964d62cb15a48f5784b5c843e6",
+  "preserved_resistance_claims_sha256": "be2a2353dabcab5198044edde28e24407bf442b1e59f547cac208c8e7f86c275",
+  "primary_context": {
+    "path": "research/2026-10-10-vancomycin-native-context.json",
+    "sha256": "b47ee3cb0df6ee843b50b3e1bcb677b1202fe01f507242a17cf37dfc8961d194"
+  },
+  "record": {
+    "path": "data/antibiotics/antibacterial/vancomycin.yaml",
+    "sha256": "4c15c1109b300ab16d7e95a34ef01b8e752ced4aa47540b2a874d36449f6cf7e"
+  },
+  "records_changed": 1,
+  "source_adoptions": 0,
+  "status": "CURATED_QUALITATIVE_NATIVE_RESISTANCE",
+  "whole_corpus_primary_review": "OPEN",
+  "whole_record_review_complete": false
+}

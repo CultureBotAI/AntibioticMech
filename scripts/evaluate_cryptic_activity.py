@@ -2,10 +2,10 @@
 """Evaluate CRyPTIC release 3.4 activity data without writing corpus claims.
 
 CRyPTIC's release tables carry drug codes and names but no structures or stable
-chemical identifiers.  This evaluator quantifies usable phenotypes and reports
-name-only corpus candidates, while treating every one as identity-unresolved.
-That distinction is deliberate: a plausible name match cannot attach an assay
-to this repository's individual-structure records.
+chemical identifiers. This evaluator quantifies usable phenotypes and reports
+candidate corpus records by lexical name while keeping those matches separate
+from the versioned curation crosswalk in ``curation/cryptic_drug_map.tsv``.
+Only crosswalked drug codes are eligible for future ActivityObservation rows.
 """
 
 from __future__ import annotations
@@ -14,8 +14,12 @@ import argparse
 import csv
 import gzip
 import hashlib
+import io
+import math
 import re
 from collections import defaultdict
+from collections.abc import Iterable
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 import yaml
@@ -23,11 +27,86 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parents[1]
 VERSION = "3.4.0"
 ZENODO_RECORD = "15680920"
+DEFAULT_DRUG_MAP = REPO_ROOT / "curation" / "cryptic_drug_map.tsv"
+DRUG_MAP_COLUMNS = [
+    "source_version",
+    "source_record_id",
+    "source_name",
+    "mapping_status",
+    "identifier",
+    "standard_inchi_key",
+    "mapping_basis",
+    "notes",
+]
+EXACT_MAPPING_STATUS = "EXACT"
+MAPPING_STATUSES = {
+    EXACT_MAPPING_STATUS,
+    "AMBIGUOUS_STEREOCHEMISTRY",
+    "COMBINATION",
+    "DRUG_CLASS",
+    "MISSING_CORPUS_RECORD",
+    "MIXTURE",
+}
+CURATED_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 EXPECTED_MD5 = {
     "DRUG_CODES.csv.gz": "923d3a193df21698bd6a00f857ab337e",
     "DST_MEASUREMENTS.parquet": "45b4501ea7c3925af565dbbc6188dec0",
     "UKMYC_PHENOTYPES.parquet": "020b6c0af6c05e19610a59f5ef97b832",
+    "WGS_SAMPLES.parquet": "ea798f4cfc28525cf394ff9196c93021",
 }
+DST_TABLE = "DST_MEASUREMENTS"
+UKMYC_TABLE = "UKMYC_PHENOTYPES"
+DST_GROUP_COLUMNS = [
+    "source",
+    "method_1",
+    "method_2",
+    "method_3",
+    "method_cc",
+    "method_mic",
+    "phenotype",
+    "quality",
+]
+UKMYC_GROUP_COLUMNS = [
+    "platedesign",
+    "belongs_gpi",
+    "phenotype_quality",
+    "readingday",
+    "primary_method",
+    "phenotype_description",
+    "mic",
+    "log2mic",
+    "binary_phenotype",
+]
+STANDARDIZED_MIC_COLUMNS = ["mic_value", "mic_qualifier", "mic_units"]
+INVENTORY_COLUMNS = [
+    "source_version",
+    "source_table",
+    "activity_group_id",
+    "drug_code",
+    "source_name",
+    "identifier",
+    "standard_inchi_key",
+    *STANDARDIZED_MIC_COLUMNS,
+    "row_count",
+    "isolate_count",
+    "site_count",
+    *DST_GROUP_COLUMNS,
+    *UKMYC_GROUP_COLUMNS,
+]
+REQUIRED_INVENTORY_COLUMNS = (
+    "source_version",
+    "source_table",
+    "activity_group_id",
+    "drug_code",
+    "source_name",
+    "identifier",
+    "standard_inchi_key",
+    "row_count",
+    "isolate_count",
+)
+MIC_PATTERN = re.compile(r"^(?P<qualifier><=|>=|<|>)?(?P<value>(?:\d+(?:\.\d*)?|\.\d+))$")
+MIC_UNITS = "mg/L"
+MIC_QUALIFIERS = {"", "<", "<=", ">", ">="}
 
 
 def md5_of(path: Path) -> str:
@@ -74,7 +153,402 @@ def corpus_name_candidates() -> dict[str, set[str]]:
     return candidates
 
 
-def evaluate(dst: Path, ukmyc: Path, drug_codes: Path) -> dict:
+def corpus_structure_keys() -> dict[str, str]:
+    keys = {}
+    for path in sorted((REPO_ROOT / "data" / "antibiotics").rglob("*.yaml")):
+        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        keys[record["identifier"]] = record["chemical_structure"]["standard_inchi_key"]
+    return keys
+
+
+def require_exact_table_row(row: dict, path: Path, line_number: int) -> None:
+    prefix = f"{path}:{line_number}"
+    if None in row:
+        raise ValueError(f"{prefix}: unexpected extra delimited field")
+    for field, value in row.items():
+        if value is None:
+            raise ValueError(f"{prefix}: {field} is missing")
+
+
+def require_non_blank_fields(
+    row: dict[str, str],
+    fields: Iterable[str],
+    path: Path,
+    line_number: int,
+) -> None:
+    for field in fields:
+        if not row[field].strip():
+            raise ValueError(f"{path}:{line_number}: {field} is required")
+
+
+def strip_curated_tsv_row(
+    row: dict[str, str],
+    path: Path,
+    line_number: int,
+) -> dict[str, str]:
+    for field, value in row.items():
+        if any(char in value for char in CURATED_TSV_CONTROL_CHARS):
+            raise ValueError(f"{path}:{line_number}: {field} contains a tab or newline")
+    return {field: value.strip() for field, value in row.items()}
+
+
+def read_drug_map(path: Path) -> dict[str, dict[str, str]]:
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if reader.fieldnames != DRUG_MAP_COLUMNS:
+            raise ValueError(f"unexpected CRyPTIC drug map columns: {reader.fieldnames}")
+        rows = {}
+        for line_number, row in enumerate(reader, start=2):
+            require_exact_table_row(row, path, line_number)
+            row = strip_curated_tsv_row(row, path, line_number)
+            require_non_blank_fields(
+                row,
+                (
+                    "source_version",
+                    "source_record_id",
+                    "source_name",
+                    "mapping_status",
+                    "mapping_basis",
+                    "notes",
+                ),
+                path,
+                line_number,
+            )
+            code = row["source_record_id"]
+            if code in rows:
+                raise ValueError(f"duplicate CRyPTIC drug map code: {code}")
+            if row["source_version"] != VERSION:
+                raise ValueError(f"{code}: source_version {row['source_version']!r} != {VERSION!r}")
+            if row["mapping_status"] not in MAPPING_STATUSES:
+                raise ValueError(f"{code}: unknown mapping_status {row['mapping_status']!r}")
+            has_mapping = bool(row["identifier"] or row["standard_inchi_key"])
+            if row["mapping_status"] == EXACT_MAPPING_STATUS:
+                if not row["identifier"] or not row["standard_inchi_key"]:
+                    raise ValueError(f"{code}: EXACT mapping needs identifier and standard_inchi_key")
+            elif has_mapping:
+                raise ValueError(f"{code}: non-EXACT mapping must not carry structure fields")
+            rows[code] = row
+        return rows
+
+
+def validated_drug_mappings(path: Path, drug_codes: dict[str, str]) -> dict[str, dict[str, str]]:
+    mappings = read_drug_map(path)
+    missing = set(drug_codes) - set(mappings)
+    extra = set(mappings) - set(drug_codes)
+    if missing or extra:
+        raise ValueError(
+            "CRyPTIC drug map/code mismatch: "
+            f"missing={sorted(missing)} extra={sorted(extra)}"
+        )
+
+    structure_keys = corpus_structure_keys()
+    for code, source_name in drug_codes.items():
+        mapping = mappings[code]
+        if mapping["source_name"] != source_name:
+            raise ValueError(
+                f"{code}: mapped source_name {mapping['source_name']!r} != "
+                f"DRUG_CODES name {source_name!r}"
+            )
+        if mapping["mapping_status"] != EXACT_MAPPING_STATUS:
+            continue
+        identifier = mapping["identifier"]
+        expected = structure_keys.get(identifier)
+        if expected is None:
+            raise ValueError(f"{code}: mapped identifier {identifier} is not in the corpus")
+        if mapping["standard_inchi_key"] != expected:
+            raise ValueError(
+                f"{code}: mapped InChIKey {mapping['standard_inchi_key']} "
+                f"does not match {identifier} ({expected})"
+            )
+    return mappings
+
+
+def tsv_cell(value) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, float) and math.isnan(value):
+        return ""
+    if isinstance(value, bool):
+        return str(value).lower()
+    text = str(value)
+    if text.casefold() == "nan":
+        return ""
+    return text
+
+
+def parse_mic(value) -> tuple[str, str, str]:
+    raw = tsv_cell(value).strip()
+    if not raw or raw.casefold() == "nan":
+        return "", "", ""
+
+    match = MIC_PATTERN.match(raw)
+    if match is None:
+        raise ValueError(f"unsupported CRyPTIC MIC value: {raw!r}")
+    return match.group("value"), match.group("qualifier") or "", MIC_UNITS
+
+
+def standardized_mic(source_table: str, group: dict) -> tuple[str, str, str]:
+    if source_table == DST_TABLE:
+        return parse_mic(group.get("method_mic"))
+    if source_table == UKMYC_TABLE:
+        return parse_mic(group.get("mic"))
+    raise ValueError(f"unrecognized CRyPTIC activity table: {source_table}")
+
+
+def activity_group_id(source_table: str, group_values: list[object]) -> str:
+    digest = hashlib.sha256()
+    for value in [VERSION, source_table, *group_values]:
+        digest.update(tsv_cell(value).encode("utf-8"))
+        digest.update(b"\0")
+    return f"{source_table.lower()}:{digest.hexdigest()[:16]}"
+
+
+def group_columns_for_table(source_table: str) -> list[str]:
+    if source_table == DST_TABLE:
+        return DST_GROUP_COLUMNS
+    if source_table == UKMYC_TABLE:
+        return UKMYC_GROUP_COLUMNS
+    raise ValueError(f"unrecognized CRyPTIC activity table: {source_table}")
+
+
+def unused_inventory_columns_for_table(source_table: str) -> list[str]:
+    if source_table == DST_TABLE:
+        return ["site_count", *UKMYC_GROUP_COLUMNS]
+    if source_table == UKMYC_TABLE:
+        return DST_GROUP_COLUMNS
+    raise ValueError(f"unrecognized CRyPTIC activity table: {source_table}")
+
+
+def activity_inventory_row(
+    source_table: str,
+    group_columns: list[str],
+    group: dict,
+    drug_codes: dict[str, str],
+    mappings: dict[str, dict[str, str]],
+) -> dict[str, str] | None:
+    code = group["drug_code"]
+    mapping = mappings[code]
+    if mapping["mapping_status"] != EXACT_MAPPING_STATUS:
+        return None
+
+    mic_value, mic_qualifier, mic_units = standardized_mic(source_table, group)
+    row = {column: "" for column in INVENTORY_COLUMNS}
+    row.update({
+        "source_version": VERSION,
+        "source_table": source_table,
+        "activity_group_id": activity_group_id(
+            source_table,
+            [code, *(group[column] for column in group_columns)],
+        ),
+        "drug_code": code,
+        "source_name": drug_codes[code],
+        "identifier": mapping["identifier"],
+        "standard_inchi_key": mapping["standard_inchi_key"],
+        "mic_value": mic_value,
+        "mic_qualifier": mic_qualifier,
+        "mic_units": mic_units,
+        "row_count": tsv_cell(group["row_count"]),
+        "isolate_count": tsv_cell(group["isolate_count"]),
+        "site_count": tsv_cell(group.get("site_count")),
+    })
+    row.update({column: tsv_cell(group[column]) for column in group_columns})
+    return row
+
+
+def fetch_dict_rows(connection, query: str, params: list[str]) -> list[dict]:
+    cursor = connection.execute(query, params)
+    names = [column[0] for column in cursor.description]
+    return [dict(zip(names, values, strict=True)) for values in cursor.fetchall()]
+
+
+def activity_inventory(connection, dst: Path, ukmyc: Path, drug_codes: dict[str, str],
+                       mappings: dict[str, dict[str, str]]) -> list[dict[str, str]]:
+    dst_groups = fetch_dict_rows(
+        connection,
+        """
+        SELECT DRUG AS drug_code, SOURCE AS source, METHOD_1 AS method_1,
+               METHOD_2 AS method_2, METHOD_3 AS method_3, METHOD_CC AS method_cc,
+               METHOD_MIC AS method_mic, PHENOTYPE AS phenotype, QUALITY AS quality,
+               count(*) AS row_count, count(DISTINCT UNIQUEID) AS isolate_count
+        FROM read_parquet(?)
+        GROUP BY DRUG, SOURCE, METHOD_1, METHOD_2, METHOD_3, METHOD_CC, METHOD_MIC,
+                 PHENOTYPE, QUALITY
+        ORDER BY DRUG, SOURCE, METHOD_1, METHOD_2, METHOD_3, METHOD_CC, METHOD_MIC,
+                 PHENOTYPE, QUALITY
+        """,
+        [str(dst)],
+    )
+    ukmyc_groups = fetch_dict_rows(
+        connection,
+        """
+        SELECT DRUG AS drug_code, PLATEDESIGN AS platedesign, BELONGS_GPI AS belongs_gpi,
+               PHENOTYPE_QUALITY AS phenotype_quality, READINGDAY AS readingday,
+               PRIMARY_METHOD AS primary_method,
+               PHENOTYPE_DESCRIPTION AS phenotype_description, MIC AS mic,
+               LOG2MIC AS log2mic, BINARY_PHENOTYPE AS binary_phenotype,
+               count(*) AS row_count, count(DISTINCT UNIQUEID) AS isolate_count,
+               count(DISTINCT SITEID) AS site_count
+        FROM read_parquet(?)
+        GROUP BY DRUG, PLATEDESIGN, BELONGS_GPI, PHENOTYPE_QUALITY, READINGDAY,
+                 PRIMARY_METHOD, PHENOTYPE_DESCRIPTION, MIC, LOG2MIC, BINARY_PHENOTYPE
+        ORDER BY DRUG, PLATEDESIGN, BELONGS_GPI, PHENOTYPE_QUALITY, READINGDAY,
+                 PRIMARY_METHOD, PHENOTYPE_DESCRIPTION, MIC, LOG2MIC, BINARY_PHENOTYPE
+        """,
+        [str(ukmyc)],
+    )
+
+    rows = []
+    for source_table, columns, groups in (
+        (DST_TABLE, DST_GROUP_COLUMNS, dst_groups),
+        (UKMYC_TABLE, UKMYC_GROUP_COLUMNS, ukmyc_groups),
+    ):
+        for group in groups:
+            row = activity_inventory_row(source_table, columns, group, drug_codes, mappings)
+            if row is not None:
+                rows.append(row)
+    return rows
+
+
+def require_inventory_rows(rows: list[dict[str, str]], path: Path) -> None:
+    if not rows:
+        raise ValueError(f"{path}: CRyPTIC activity inventory has no rows")
+
+    seen_ids = set()
+    for row_number, row in enumerate(rows, start=1):
+        prefix = f"{path}: inventory row {row_number}"
+        missing = [column for column in INVENTORY_COLUMNS if column not in row]
+        if missing:
+            columns = ", ".join(missing)
+            raise ValueError(f"{prefix} is missing columns: {columns}")
+        unexpected = [column for column in row if column not in INVENTORY_COLUMNS]
+        if unexpected:
+            columns = ", ".join(unexpected)
+            raise ValueError(f"{prefix} has unexpected columns: {columns}")
+
+        for field, value in row.items():
+            if value is None:
+                raise ValueError(f"{prefix}: {field} is missing")
+            string_value = str(value)
+            if any(char in string_value for char in CURATED_TSV_CONTROL_CHARS):
+                raise ValueError(f"{prefix}: {field} contains a tab or newline")
+            if string_value != string_value.strip():
+                raise ValueError(f"{prefix}: {field} has leading or trailing whitespace")
+
+        for field in REQUIRED_INVENTORY_COLUMNS:
+            if not row[field]:
+                raise ValueError(f"{prefix}: {field} is required")
+
+        if row["source_version"] != VERSION:
+            raise ValueError(f"{prefix}: source_version {row['source_version']!r} != {VERSION!r}")
+
+        group_columns = group_columns_for_table(row["source_table"])
+        require_table_specific_inventory_fields(row, prefix)
+        expected_group_id = activity_group_id(
+            row["source_table"],
+            [row["drug_code"], *(row[column] for column in group_columns)],
+        )
+        if row["activity_group_id"] != expected_group_id:
+            raise ValueError(
+                f"{prefix}: activity_group_id must be {expected_group_id!r}"
+            )
+
+        group_id = row["activity_group_id"]
+        if group_id in seen_ids:
+            raise ValueError(f"{prefix}: duplicate CRyPTIC activity_group_id")
+        seen_ids.add(group_id)
+
+        for field in ("row_count", "isolate_count"):
+            require_positive_inventory_integer(row, field, prefix)
+        if row["site_count"]:
+            require_positive_inventory_integer(row, "site_count", prefix)
+        require_inventory_mic(row, prefix)
+        require_standardized_inventory_mic(row, prefix)
+
+
+def require_positive_inventory_integer(
+    row: dict[str, str],
+    field: str,
+    prefix: str,
+) -> None:
+    try:
+        parsed = int(row[field])
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an integer") from error
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: {field} must be positive")
+    canonical = str(parsed)
+    if row[field] != canonical:
+        raise ValueError(f"{prefix}: {field} must use canonical integer {canonical!r}")
+
+
+def require_inventory_mic(row: dict[str, str], prefix: str) -> None:
+    value = row["mic_value"]
+    qualifier = row["mic_qualifier"]
+    units = row["mic_units"]
+
+    if not value:
+        if qualifier:
+            raise ValueError(f"{prefix}: mic_qualifier requires mic_value")
+        if units:
+            raise ValueError(f"{prefix}: mic_units requires mic_value")
+        return
+
+    if qualifier not in MIC_QUALIFIERS:
+        raise ValueError(f"{prefix}: mic_qualifier has invalid qualifier {qualifier!r}")
+    if units != MIC_UNITS:
+        raise ValueError(f"{prefix}: mic_units must be {MIC_UNITS!r}")
+    try:
+        parsed = Decimal(value)
+    except InvalidOperation as error:
+        raise ValueError(f"{prefix}: mic_value must be numeric") from error
+    if not parsed.is_finite():
+        raise ValueError(f"{prefix}: mic_value must be finite")
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: mic_value must be positive")
+
+
+def require_table_specific_inventory_fields(row: dict[str, str], prefix: str) -> None:
+    for field in unused_inventory_columns_for_table(row["source_table"]):
+        if row[field]:
+            raise ValueError(
+                f"{prefix}: {row['source_table']} rows must not carry {field}"
+            )
+
+
+def require_standardized_inventory_mic(row: dict[str, str], prefix: str) -> None:
+    expected = standardized_mic(row["source_table"], row)
+    actual = (row["mic_value"], row["mic_qualifier"], row["mic_units"])
+    if actual != expected:
+        expected_value, expected_qualifier, expected_units = expected
+        raise ValueError(
+            f"{prefix}: standardized MIC must be {expected_value!r}, "
+            f"{expected_qualifier!r}, {expected_units!r} for the raw "
+            f"{row['source_table']} MIC"
+        )
+
+
+def write_inventory(path: Path, rows: list[dict[str, str]]) -> None:
+    require_inventory_rows(rows, path)
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    buffer = io.StringIO()
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            buffer,
+            fieldnames=INVENTORY_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        handle.write(buffer.getvalue())
+        for row in rows:
+            buffer.seek(0)
+            buffer.truncate(0)
+            writer.writerow(row)
+            handle.write(buffer.getvalue().rstrip("\n").rstrip("\t") + "\n")
+
+
+def evaluate(dst: Path, ukmyc: Path, drug_codes: Path, drug_map: Path) -> dict:
     try:
         import duckdb
     except ImportError as error:  # pragma: no cover - command gives installation path
@@ -83,6 +557,7 @@ def evaluate(dst: Path, ukmyc: Path, drug_codes: Path) -> dict:
     for path in (dst, ukmyc, drug_codes):
         verify_release_file(path)
     codes = read_drug_codes(drug_codes)
+    mappings = validated_drug_mappings(drug_map, codes)
     names = corpus_name_candidates()
     connection = duckdb.connect()
     dst_summary = connection.execute(
@@ -120,20 +595,26 @@ def evaluate(dst: Path, ukmyc: Path, drug_codes: Path) -> dict:
     drug_rows = []
     for code, dst_rows, ukmyc_rows, mic_rows in per_drug:
         source_name = codes.get(code, "")
+        mapping = mappings[code]
         matches = sorted(names.get(normalize(source_name), set()))
+        eligible_rows = dst_rows + ukmyc_rows if mapping["mapping_status"] == EXACT_MAPPING_STATUS else 0
         drug_rows.append({
             "code": code,
             "name": source_name,
+            "mapping_status": mapping["mapping_status"],
+            "identifier": mapping["identifier"],
+            "standard_inchi_key": mapping["standard_inchi_key"],
             "dst_rows": dst_rows,
             "ukmyc_rows": ukmyc_rows,
             "mic_rows": mic_rows,
             "name_only_candidates": matches,
-            "eligible_rows": 0,
+            "eligible_rows": eligible_rows,
         })
     return {
         "dst": dst_summary,
         "ukmyc": ukmyc_summary,
         "drugs": drug_rows,
+        "inventory": activity_inventory(connection, dst, ukmyc, codes, mappings),
     }
 
 
@@ -142,11 +623,21 @@ def main() -> int:
     parser.add_argument("--dst", type=Path, required=True)
     parser.add_argument("--ukmyc", type=Path, required=True)
     parser.add_argument("--drug-codes", type=Path, required=True)
+    parser.add_argument("--drug-map", type=Path, default=DEFAULT_DRUG_MAP)
+    parser.add_argument(
+        "--inventory-out",
+        type=Path,
+        help="Write the compact exact-mapped CRyPTIC activity inventory TSV.",
+    )
     args = parser.parse_args()
-    missing = [str(path) for path in (args.dst, args.ukmyc, args.drug_codes) if not path.exists()]
+    missing = [
+        str(path)
+        for path in (args.dst, args.ukmyc, args.drug_codes, args.drug_map)
+        if not path.exists()
+    ]
     if missing:
         raise SystemExit(f"missing pinned CRyPTIC input(s): {', '.join(missing)}")
-    result = evaluate(args.dst, args.ukmyc, args.drug_codes)
+    result = evaluate(args.dst, args.ukmyc, args.drug_codes, args.drug_map)
     dst_rows, dst_isolates, dst_drugs, classified, high_quality = result["dst"]
     uk_rows, uk_isolates, uk_drugs, mic_rows, uk_classified = result["ukmyc"]
     print(f"CRyPTIC {VERSION} (Zenodo {ZENODO_RECORD})")
@@ -159,14 +650,31 @@ def main() -> int:
         f"MIC={mic_rows} S/R/I={uk_classified}"
     )
     candidates = [row for row in result["drugs"] if row["name_only_candidates"]]
-    print(f"  name-only corpus candidates={len(candidates)}; structure-grounded drugs=0")
-    for row in candidates:
+    grounded = [row for row in result["drugs"] if row["eligible_rows"]]
+    eligible_rows = sum(row["eligible_rows"] for row in grounded)
+    inventory_rows = result["inventory"]
+    print(
+        f"  name-only corpus candidates={len(candidates)}; "
+        f"structure-grounded drugs={len(grounded)}; eligible rows={eligible_rows}"
+    )
+    print(f"  compact exact-mapped activity groups={len(inventory_rows)}")
+    reported = [row for row in result["drugs"] if row["name_only_candidates"] or row["eligible_rows"]]
+    for row in reported:
+        if row["mapping_status"] == EXACT_MAPPING_STATUS:
+            suffix = f"ELIGIBLE {row['identifier']}"
+        else:
+            suffix = f"NOT ELIGIBLE {row['mapping_status']}"
         print(
             f"    {row['code']} {row['name']}: "
-            f"{','.join(row['name_only_candidates'])}; "
-            f"rows={row['dst_rows'] + row['ukmyc_rows']} MIC={row['mic_rows']}; NOT ELIGIBLE"
+            f"{','.join(row['name_only_candidates']) or '-'}; "
+            f"rows={row['dst_rows'] + row['ukmyc_rows']} MIC={row['mic_rows']}; "
+            f"{suffix}"
         )
-    print("--dry-run: 0 observations eligible; nothing written")
+    if args.inventory_out:
+        write_inventory(args.inventory_out, inventory_rows)
+        print(f"wrote compact activity inventory: {args.inventory_out}")
+    else:
+        print(f"--dry-run: {eligible_rows} observations eligible; nothing written")
     return 0
 
 

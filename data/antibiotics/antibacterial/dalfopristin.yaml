@@ -372,3 +372,67 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph dalfopristin_50s_ptc_rrna_rearrangement_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:15059283).
+  llm_assisted: true
+causal_graphs:
+- graph_id: dalfopristin_50s_ptc_rrna_rearrangement_inhibition
+  title: Dalfopristin binds the 50S peptidyl-transferase center and perturbs tRNA
+    positioning
+  description: Dalfopristin binds the peptidyl-transferase center of the bacterial
+    50S ribosomal subunit, induces a nonproductive 23S rRNA conformation that overlaps
+    A- and P-site tRNA substrates, and inhibits bacterial protein synthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: dalfopristin
+    label: dalfopristin
+    node_type: COMPOUND
+    grounding: CHEBI:4309
+  - node_id: bacterial_50s_ptc
+    label: 50S ribosomal peptidyl-transferase center
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Catalytic peptidyl-transferase center of the Deinococcus radiodurans
+      50S ribosomal subunit.
+  - node_id: dalfopristin_perturbed_ptc_state
+    label: dalfopristin-bound nonproductive peptidyl-transferase-center conformation
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Cocrystal-resolved 50S PTC conformation perturbing A- and P-site
+      tRNA occupation.
+  - node_id: bacterial_peptide_bond_formation
+    label: bacterial ribosomal peptide-bond formation and translation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Peptidyl transfer during bacterial protein synthesis.
+  edges:
+  - subject: dalfopristin
+    predicate: binds
+    object: dalfopristin_perturbed_ptc_state
+    description: Dalfopristin binds the peptidyl-transferase center of the bacterial
+      50S ribosomal subunit.
+    evidence:
+    - reference: PMID:15059283
+      notes: A Deinococcus radiodurans 50S cocrystal resolved dalfopristin bound in
+        the peptidyl-transferase center.
+  - subject: bacterial_50s_ptc
+    predicate: participates in
+    object: dalfopristin_perturbed_ptc_state
+    description: The 50S peptidyl-transferase center 23S rRNA undergoes a conformational
+      rearrangement upon dalfopristin binding.
+    evidence:
+    - reference: PMID:15059283
+      notes: The 50S structure showed a nonproductive 23S rRNA rearrangement stabilized
+        by dalfopristin and quinupristin.
+  - subject: dalfopristin_perturbed_ptc_state
+    predicate: inhibits
+    object: bacterial_peptide_bond_formation
+    description: Perturbation of A- and P-site tRNA positioning in the peptidyl-transferase
+      center blocks bacterial translation.
+    evidence:
+    - reference: PMID:15059283
+      notes: Dalfopristin overlaps both A- and P-site tRNA substrate positions in
+        the 50S catalytic center.

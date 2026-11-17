@@ -109,7 +109,7 @@ def test_only_exact_one_to_one_structure_matches_are_seeded(records):
         ("CHEBI:60828", "BGC0000432"),
         ("CHEBI:28001", "BGC0000455"),
     } <= claims
-    assert len(claims) == 64
+    assert len(claims) == 184
     # BGC0000311 balhimycin shares only a connectivity block with a corpus
     # record, so it must stay out. This does NOT guard the stereochemistry gate,
     # whatever its old comment claimed: balhimycin has no exact key match at all,
@@ -247,7 +247,7 @@ def test_link_evidence_scope_reads_the_source_entry_not_the_surviving_rows(recor
                         if by_accession[producer["biosynthetic_gene_cluster"]] == "1"
                         else "CLUSTER_INHERITED")
             assert producer.get("link_evidence_scope") == expected, record["identifier"]
-    assert seen == 64
+    assert seen == 184
 
 
 def test_a_producer_naming_no_organism_is_refused_and_queued(records):
@@ -301,8 +301,13 @@ def test_a_producer_naming_no_organism_is_refused_and_queued(records):
     assert published == set()
     # Refused, not lost: the cluster and its citation stay reachable.
     queued = unnamed_producer_queue([record for _, record in records])
-    assert {row["key"] for row in queued} == {"CHEBI:156313", "CHEBI:156314"}
-    assert all(row["source_id"] == "BGC0001336" for row in queued)
+    assert {(row["key"], row["source_id"]) for row in queued} == {
+        ("CHEBI:156313", "BGC0001336"),
+        ("CHEBI:156314", "BGC0001336"),
+        ("antibioticmech:curator-c5ee6affaf", "BGC0001875"),
+        ("antibioticmech:curator-bd79c24607", "BGC0000223"),
+        ("CHEBI:204430", "BGC0000274"),
+    }
 
 
 def test_closed_validation_rejects_a_link_evidence_value_outside_the_vocabulary(repo_root):
@@ -554,7 +559,7 @@ def test_every_seeded_producer_says_which_experiment_supports_it(records):
     reviewed = sum(1 for _, record in records
                    for producer in record.get("producer_organisms") or []
                    if producer.get("source") == "MIBIG" and producer.get("reviewed") is True)
-    assert reviewed == 3, reviewed
+    assert reviewed == 10, reviewed
 
 
 def test_reseed_replaces_only_the_mibig_owned_producer_slice():

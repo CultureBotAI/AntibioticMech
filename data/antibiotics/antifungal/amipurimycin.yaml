@@ -1,0 +1,125 @@
+identifier: CHEBI:223870
+label: amipurimycin
+antimicrobial_class: ANTIFUNGAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: A 2-aminopurine C9-sugar peptidyl nucleoside antibiotic bearing a cis-2-aminocyclopentanecarboxylic
+  acid moiety from Streptomyces novoguineensis with potent antifungal activity against
+  Pyricularia oryzae.
+definition_source: DOI:10.1021/acs.orglett.9b00840
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C1C[C@H]([C@H](C1)N)C(=O)N[C@H]([C@H]2C[C@]([C@@H]([C@@H](O2)N3C=NC4=CN=C(N=C43)N)O)([C@H](CO)O)O)C(=O)O
+  standard_inchi: InChI=1S/C20H29N7O8/c21-9-3-1-2-8(9)16(31)25-13(18(32)33)11-4-20(34,12(29)6-28)14(30)17(35-11)27-7-24-10-5-23-19(22)26-15(10)27/h5,7-9,11-14,17,28-30,34H,1-4,6,21H2,(H,25,31)(H,32,33)(H2,22,23,26)/t8-,9+,11-,12+,13-,14-,17-,20-/m1/s1
+  standard_inchi_key: BHAUQSKSOITMND-KVKUBTPSSA-N
+  molecular_formula: C20H29N7O8
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002054/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 495.493
+  monoisotopic_mass: 495.2078
+xrefs:
+- pubchem.compound:139589160
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acs.orglett.9b00840#amipurimycin
+  source_label: amipurimycin
+  minted_identifier: antibioticmech:curator-3858d175be
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1021/acs.orglett.9b00840
+    snippet: Kang et al. identified and experimentally confirmed the biosynthetic
+      gene cluster of the C9-sugar peptidyl nucleoside antifungal antibiotic amipurimycin
+      in Streptomyces novoguineensis, which exhibits potent antifungal activity against
+      the rice blast pathogen Pyricularia oryzae.
+    notes: Reported by Kang et al. 2019 (Org Lett 21:3148-3152; PMID:30990701; DOI:10.1021/acs.orglett.9b00840)
+      and Harada et al. 1977 (J Antibiot 30:11-16; PMID:838626; DOI:10.7164/antibiotics.30.11)
+      as a 2-aminopurine C9-pyranose peptidyl nucleoside antifungal antibiotic bearing
+      a cis-2-aminocyclopentanecarboxylic acid moiety from Streptomyces novoguineensis.
+      MIBiG 4.0.1 entry BGC0002054, ChEBI CHEBI:223870, and PubChem CID 139589160
+      supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:2586640
+  taxon_label: Streptomyces novoguineensis
+  biosynthetic_gene_cluster: BGC0002054
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'amipurimycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:30990701
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-05T09:15:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin from Guo et al. 2019 (PMID:30970216)
+    and Harada and Kishi 1977 (PMID:559746).
+  llm_assisted: true
+- timestamp: '2026-11-05T21:25:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET)
+    and primary-literature molecular_targets entry for fungal cell-wall chitin biosynthesis
+    (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.7164/antibiotics.30.11
+    (PMID:557042) and DOI:10.1021/acschembio.8b01076 (PMID:30698415; issue #1334).'
+  llm_assisted: true
+- timestamp: '2026-11-05T21:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:223870) with complete 4/4 chemical_structure,
+    curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and
+    primary-literature molecular_targets (DOI:10.7164/antibiotics.30.11, PMID:557042;
+    DOI:10.1021/acschembio.8b01076, PMID:30698415) from PROPOSED to REVIEWED (issue
+    #1334).'
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Peptidyl nucleoside antifungal antibiotic from Streptomyces
+  novoguineensis that belongs to the miharamycin/nikkomycin/polyoxin peptidyl-nucleoside
+  class and inhibits fungal cell-wall chitin biosynthesis and hyphal morphogenesis
+  in phytopathogenic fungi such as Pyricularia oryzae (Iwasa et al. 1977, DOI:10.7164/antibiotics.30.11,
+  PMID:557042; Chen et al. 2019, DOI:10.1021/acschembio.8b01076, PMID:30698415).'
+molecular_targets:
+- target_label: fungal cell-wall chitin biosynthesis
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  experimental_context: Antifungal susceptibility and hyphal growth-inhibition assays
+    against Pyricularia oryzae (Magnaporthe oryzae), Cochliobolus miyabeanus, and
+    Alternaria kikuchiana alongside peptidyl-nucleoside biosynthesis and structure-activity
+    characterization (Iwasa et al. 1977, DOI:10.7164/antibiotics.30.11, PMID:557042;
+    Chen et al. 2019, DOI:10.1021/acschembio.8b01076, PMID:30698415).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2019-02
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.7164/antibiotics.30.11
+    snippet: Iwasa et al. isolated the peptidyl nucleoside antibiotic amipurimycin
+      from Streptomyces novoguineensis sp. nov. and demonstrated potent curative and
+      protective antifungal activity against Pyricularia oryzae (rice blast) and phytopathogenic
+      fungi.
+    notes: Iwasa et al. 1977 (J Antibiot 30:1-10; PMID:557042) discovered amipurimycin
+      from Streptomyces novoguineensis T-36496 and characterized its antifungal spectrum
+      against Pyricularia oryzae, Cochliobolus miyabeanus, and Alternaria kikuchiana.
+  - reference: DOI:10.1021/acschembio.8b01076
+    notes: Chen et al. 2019 (ACS Chem Biol 14:150-155; PMID:30698415) established
+      the revised cis-cyclopentane stereostructure and biosynthetic pathway of the
+      peptidyl nucleoside antifungal amipurimycin.

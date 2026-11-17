@@ -36,14 +36,54 @@ import shutil
 import sys
 from collections import Counter, defaultdict
 from datetime import date
+from decimal import Decimal, InvalidOperation
 from functools import lru_cache
 from pathlib import Path
 
 import yaml
+from card_evidence_reviews import DEFAULT_REVIEW as CARD_EVIDENCE_REVIEW
+from card_evidence_reviews import apply_review as apply_card_evidence_review
+from card_evidence_reviews import load_reviews as load_card_evidence_reviews
+from ncbi_ast_assays import (
+    DEFAULT_REVIEW_MAP,
+    REVIEW_REFERENCE,
+    AssayReview,
+    has_informative_assay_context,
+    read_assay_review,
+)
+from ncbi_ast_biosamples import activity_observations as ncbi_ast_observations
+from ncbi_ast_inventory import open_activity_text, resolve_inventory
+from ncbi_ast_isolates import ISOLATE_REFERENCE, require_isolate_provenance
+from phibase_grounding_reviews import DEFAULT_REVIEW as PHIBASE_GROUNDING_REVIEW
+from phibase_grounding_reviews import apply_review as apply_phibase_grounding_review
+from phibase_grounding_reviews import load_reviews as load_phibase_grounding_reviews
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
+from cryptic_membership_inventory import attach as attach_membership_inventory  # noqa: E402
+from cryptic_membership_inventory import sourced_view as cryptic_membership_view  # noqa: E402
+
+from antibioticmech.activity_collections import (  # noqa: E402
+    expand_activities,
+    load_record,
+    orphaned_activity_artifacts,
+)
+from antibioticmech.activity_memberships import (  # noqa: E402
+    FIELD as MEMBERSHIP_FIELD,
+)
+from antibioticmech.activity_memberships import (
+    collection_bytes as membership_bytes,
+)
+from antibioticmech.activity_memberships import (
+    orphaned_membership_artifacts,
+)
 from antibioticmech.curate.curation_event import record_curation_event  # noqa: E402
+from antibioticmech.hivdb_score_rules import (  # noqa: E402
+    HIVDB_SCORE_ASSIGNMENT_PATTERN,
+    HIVDB_SCORE_RULE_COLUMNS,
+    HIVDB_SCORE_RULE_GENE_BY_DRUG_CLASS,
+    hivdb_score_rule_id,
+)
 from antibioticmech.validation.write_validated import (  # noqa: E402
     ValidationFailedError,
     write_validated_antibiotic,
@@ -393,6 +433,7 @@ CURATOR_FIELDS = [
     "cidality", "biosynthesis_origin",
     "activity_spectrum", "causal_graphs", "datasets",
     "contributors",
+    "related_records",
 ]
 
 SYNONYM_TYPE = {
@@ -980,6 +1021,39 @@ def seeded_structural_view(record: dict) -> set[str]:
             if item.get("source") in SEEDER_STRUCTURE_SOURCES}
 
 
+_SEEDED_STRUCTURE_KEYS = frozenset({
+    "structure_id",
+    "relevance",
+    "evidence_status",
+    "source",
+    "source_version",
+    "retrieved_on",
+})
+
+
+def is_curated_structural_observation(item: dict) -> bool:
+    """Whether a seeded structural observation has been classified or enriched by a curator."""
+    return (
+        item.get("relevance") not in (None, "UNREVIEWED")
+        or item.get("evidence_status") not in (None, "PRIMARY_EVIDENCE_NEEDED")
+        or bool(set(item) - _SEEDED_STRUCTURE_KEYS)
+    )
+
+
+def _seeded_structural_reseed_view(record: dict) -> set[tuple]:
+    """Seeder-owned identity and snapshot metadata for structural observations."""
+    return {
+        (
+            item.get("structure_id"),
+            item.get("source"),
+            item.get("source_version"),
+            item.get("retrieved_on"),
+        )
+        for item in (record.get("structural_observations") or [])
+        if item.get("source") in SEEDER_STRUCTURE_SOURCES
+    }
+
+
 def _cas_numbers(raw: str) -> set[str]:
     """CAS values, ignoring empty ones.
 
@@ -1022,7 +1096,10 @@ def resolve_identity(concept: Concept, chebi_rows: dict[str, dict]) -> tuple[str
     if concept.source == "CHEBI":
         return concept.source_id, "EXACT"
     chebi_id = next((x for x in concept.xrefs if x.startswith("CHEBI:")), "")
-    if chebi_id and chebi_rows.get(chebi_id, {}).get("standard_inchi_key"):
+    if chebi_id and (
+        chebi_rows.get(chebi_id, {}).get("standard_inchi_key")
+        or (concept.source == "CURATOR" and concept.structure.get("standard_inchi_key"))
+    ):
         return chebi_id, "EXACT"
     return concept.minted, "MINTED"
 
@@ -1692,7 +1769,10 @@ def flag_structure_collisions(records: dict[str, dict], source_version: str) -> 
     return flagged
 
 
-def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
+def attach_aro_mechanism(
+    records: dict[str, dict], source_version: str, *,
+    evidence_review: Path | None = CARD_EVIDENCE_REVIEW,
+) -> None:
     """Attach CARD's resistance determinants and drug targets to seeded records.
 
     Both are database assertions, cited as such: CARD's own ARO term is the
@@ -1706,6 +1786,9 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
                 by_aro[concept["source_id"]] = identifier
 
     resistance = load_tsv(RAW_DIR / "aro_resistance_edges.tsv")
+    reviews = load_card_evidence_reviews(
+        RAW_DIR / "aro_resistance_edges.tsv", resistance, records, evidence_review,
+    )
     targets = load_tsv(RAW_DIR / "aro_target_edges.tsv")
     target_roles = {row["target_id"]: row for row in load_tsv(ARO_TARGET_ROLES_PATH)}
     target_ids = {row["target_id"] for row in targets}
@@ -1722,7 +1805,7 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
     for identifier, rows in grouped.items():
         items = []
         for row in sorted(rows, key=lambda r: r["determinant_id"]):
-            items.append({
+            item = {
                 "mechanism_type": row["mechanism"] or "UNKNOWN",
                 "aro_id": row["determinant_id"],
                 "label": row["determinant_name"],
@@ -1732,7 +1815,9 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
                               f"{row['antibiotic_id']} ({row['antibiotic_name']}); "
                               "database assertion, not a primary citation."),
                 }],
-            })
+            }
+            apply_card_evidence_review(item, row, reviews)
+            items.append(item)
         records[identifier]["resistance_mechanisms"] = items
         _history_last(records[identifier])
 
@@ -1802,7 +1887,9 @@ def phibase_sourced_resistance_view(record: dict) -> list[dict]:
     ]
 
 
-def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
+def attach_phibase_resistance(
+    records: dict[str, dict], *, grounding_review: Path | None = PHIBASE_GROUNDING_REVIEW,
+) -> Counter:
     """Attach ChEBI-grounded PHI-base resistance associations.
 
     The source supports an alteration--chemical resistance phenotype but does
@@ -1811,23 +1898,26 @@ def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
     target alteration, efflux, or another mechanism category.
     """
     rows = load_tsv(RAW_DIR / "phibase_amr.tsv")
+    reviews = load_phibase_grounding_reviews(RAW_DIR / "phibase_amr.tsv", rows, grounding_review)
     counts: Counter = Counter()
     grouped: dict[str, list[dict]] = defaultdict(list)
     for row in rows:
-        record = records.get(row["identifier"])
-        if record is None:
-            counts["missing_identifier"] += 1
-            continue
-        if record["chemical_structure"]["standard_inchi_key"] != row["standard_inchi_key"]:
-            counts["identity_drift"] += 1
-            continue
+        require_seed_row_identity(
+            records,
+            row,
+            source=PHIBASE_RESISTANCE_SOURCE,
+            row_id=row["phig_id"],
+        )
         grouped[row["identifier"]].append(row)
-        counts["matched_associations"] += 1
 
     for identifier, matched_rows in sorted(grouped.items()):
         items = []
         seen = set()
         for row in matched_rows:
+            refusal = non_organism_taxon_reason(row["taxon_id"], row["taxon_label"])
+            if refusal:
+                counts["refused_non_organism_taxon"] += 1
+                continue
             key = (
                 row["phig_id"], row["taxon_id"], row["strain_taxon_id"],
                 row["strain_label"], row["modification"], row["phenotype_id"], row["pmid"],
@@ -1876,8 +1966,268 @@ def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
                     ),
                 }],
             }
+            if apply_phibase_grounding_review(item, row, reviews):
+                counts["reviewed_identifier_context"] += 1
             items.append({k: v for k, v in item.items() if v is not None})
+            counts["matched_associations"] += 1
+        if not items:
+            continue
         records[identifier].setdefault("resistance_mechanisms", []).extend(items)
+        _history_last(records[identifier])
+        counts["matched_records"] += 1
+    return counts
+
+
+HIVDB_SCORE_RULE_SOURCE = "HIVDB_HIVFACTS"
+HIVDB_SCORE_RULE_INVENTORY = RAW_DIR / "hivdb_algorithm_terms.tsv"
+HIVDB_SCORE_RULE_REFERENCE = "https://github.com/hivdb/hivfacts"
+HIVDB_SCORE_RULE_TSV_CONTROL_CHARS = frozenset("\t\r\n")
+
+
+def is_hivdb_sourced_score_rule(item: dict) -> bool:
+    """True only for a genotype score rule owned by the HIVDB lane."""
+    return item.get("source") == HIVDB_SCORE_RULE_SOURCE
+
+
+def hivdb_sourced_score_rule_view(record: dict) -> list[dict]:
+    return [
+        item
+        for item in (record.get("genotype_resistance_score_rules") or [])
+        if is_hivdb_sourced_score_rule(item)
+    ]
+
+
+def _require_hivdb_integer(
+    row: dict[str, str],
+    field: str,
+    path: Path,
+    line_number: int,
+    *,
+    minimum: int,
+) -> int:
+    prefix = f"{path}:{line_number}"
+    try:
+        parsed = int(row[field])
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an integer") from error
+    if parsed < minimum:
+        raise ValueError(f"{prefix}: {field} must be at least {minimum}")
+    if row[field] != str(parsed):
+        raise ValueError(f"{prefix}: {field} must use canonical integer {parsed!r}")
+    return parsed
+
+
+def _require_hivdb_score(
+    row: dict[str, str],
+    field: str,
+    path: Path,
+    line_number: int,
+) -> Decimal:
+    prefix = f"{path}:{line_number}"
+    try:
+        parsed = Decimal(row[field])
+    except InvalidOperation as error:
+        raise ValueError(f"{prefix}: {field} must be numeric") from error
+    if not parsed.is_finite():
+        raise ValueError(f"{prefix}: {field} must be finite")
+    return parsed
+
+
+def _require_hivdb_score_term_stats(
+    row: dict[str, str],
+    *,
+    score_assignments: int,
+    negative_score_assignments: int,
+    min_score: Decimal,
+    max_score: Decimal,
+    path: Path,
+    line_number: int,
+) -> None:
+    prefix = f"{path}:{line_number}"
+    scores = [
+        Decimal(score)
+        for score in HIVDB_SCORE_ASSIGNMENT_PATTERN.findall(row["score_term"])
+    ]
+    if not scores:
+        raise ValueError(f"{prefix}: score_term has no score assignments")
+    if score_assignments != len(scores):
+        raise ValueError(f"{prefix}: score_assignments must match score_term")
+    if negative_score_assignments != sum(score < 0 for score in scores):
+        raise ValueError(
+            f"{prefix}: negative_score_assignments must match score_term"
+        )
+    if min_score != min(scores):
+        raise ValueError(f"{prefix}: min_score must match score_term")
+    if max_score != max(scores):
+        raise ValueError(f"{prefix}: max_score must match score_term")
+
+
+def load_hivdb_score_rule_inventory(path: Path) -> list[dict[str, str]]:
+    """Load a curated exact HIVDB algorithm-term report."""
+    if not path.exists():
+        raise SystemExit(f"missing inventory {path}; run `just evaluate-hivdb`")
+
+    rows = []
+    seen_rule_ids = set()
+    seen_term_positions = set()
+    expected_algorithm = None
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if reader.fieldnames != HIVDB_SCORE_RULE_COLUMNS:
+            raise ValueError(
+                f"{path}: expected HIVDB score-rule header "
+                f"{HIVDB_SCORE_RULE_COLUMNS!r}, found {reader.fieldnames!r}"
+            )
+        for line_number, row in enumerate(reader, start=2):
+            prefix = f"{path}:{line_number}"
+            if None in row:
+                raise ValueError(f"{prefix}: unexpected extra TSV field")
+            for field, value in row.items():
+                if value is None:
+                    raise ValueError(f"{prefix}: {field} is missing")
+                if any(char in value for char in HIVDB_SCORE_RULE_TSV_CONTROL_CHARS):
+                    raise ValueError(f"{prefix}: {field} contains a tab or newline")
+                if value != value.strip():
+                    raise ValueError(f"{prefix}: {field} has leading or trailing whitespace")
+                if not value:
+                    raise ValueError(f"{prefix}: {field} is required")
+
+            if row["mapping_status"] != "EXACT":
+                raise ValueError(f"{prefix}: mapping_status must be 'EXACT'")
+            expected_gene = HIVDB_SCORE_RULE_GENE_BY_DRUG_CLASS.get(row["drug_class"])
+            if expected_gene is None:
+                raise ValueError(
+                    f"{prefix}: drug_class {row['drug_class']!r} "
+                    "has no score-rule gene mapping"
+                )
+            if row["gene"] != expected_gene:
+                raise ValueError(f"{prefix}: gene must be {expected_gene!r}")
+            if row["full_name_matches"] not in {"true", "false"}:
+                raise ValueError(f"{prefix}: full_name_matches must be 'true' or 'false'")
+            try:
+                algorithm_date = date.fromisoformat(row["algorithm_date"])
+            except ValueError as error:
+                raise ValueError(f"{prefix}: algorithm_date must be an ISO date") from error
+            if algorithm_date.isoformat() != row["algorithm_date"]:
+                raise ValueError(f"{prefix}: algorithm_date must be an ISO date")
+
+            algorithm = (
+                row["source_version"],
+                row["algorithm_name"],
+                row["algorithm_version"],
+                row["algorithm_date"],
+            )
+            if expected_algorithm is None:
+                expected_algorithm = algorithm
+            elif algorithm != expected_algorithm:
+                raise ValueError(f"{prefix}: HIVDB rows must come from one algorithm")
+
+            score_assignments = _require_hivdb_integer(
+                row,
+                "score_assignments",
+                path,
+                line_number,
+                minimum=1,
+            )
+            negative_score_assignments = _require_hivdb_integer(
+                row,
+                "negative_score_assignments",
+                path,
+                line_number,
+                minimum=0,
+            )
+            score_term_index = _require_hivdb_integer(
+                row, "score_term_index", path, line_number, minimum=1
+            )
+            term_position = (row["source_record_id"], score_term_index)
+            if term_position in seen_term_positions:
+                raise ValueError(
+                    f"{prefix}: duplicate score_term_index {score_term_index} "
+                    f"for source_record_id {row['source_record_id']!r}"
+                )
+            seen_term_positions.add(term_position)
+            if negative_score_assignments > score_assignments:
+                raise ValueError(
+                    f"{prefix}: negative_score_assignments exceeds score_assignments"
+                )
+            min_score = _require_hivdb_score(row, "min_score", path, line_number)
+            max_score = _require_hivdb_score(row, "max_score", path, line_number)
+            if min_score > max_score:
+                raise ValueError(f"{prefix}: min_score exceeds max_score")
+            _require_hivdb_score_term_stats(
+                row,
+                score_assignments=score_assignments,
+                negative_score_assignments=negative_score_assignments,
+                min_score=min_score,
+                max_score=max_score,
+                path=path,
+                line_number=line_number,
+            )
+
+            expected_rule_id = hivdb_score_rule_id(row)
+            if row["source_rule_id"] != expected_rule_id:
+                raise ValueError(f"{prefix}: source_rule_id must be {expected_rule_id!r}")
+            if row["source_rule_id"] in seen_rule_ids:
+                raise ValueError(f"{prefix}: duplicate source_rule_id")
+            seen_rule_ids.add(row["source_rule_id"])
+            rows.append(row)
+
+    if not rows:
+        raise ValueError(f"{path}: HIVDB score-rule inventory has no rows")
+    return rows
+
+
+def hivdb_score_rule(row: dict[str, str]) -> dict:
+    return {
+        "pathogen_label": "Human immunodeficiency virus 1",
+        "gene": row["gene"],
+        "drug_class": row["drug_class"],
+        "algorithm_name": row["algorithm_name"],
+        "algorithm_version": row["algorithm_version"],
+        "algorithm_date": row["algorithm_date"],
+        "source_record_id": row["source_record_id"],
+        "source_rule_id": row["source_rule_id"],
+        "score_term_index": int(row["score_term_index"]),
+        "score_term": row["score_term"],
+        "score_assignments": int(row["score_assignments"]),
+        "negative_score_assignments": int(row["negative_score_assignments"]),
+        "min_score": float(row["min_score"]),
+        "max_score": float(row["max_score"]),
+        "source": HIVDB_SCORE_RULE_SOURCE,
+        "source_version": row["source_version"],
+        "evidence": [{
+            "reference": HIVDB_SCORE_RULE_REFERENCE,
+            "notes": (
+                f"Stanford HIVDB hivfacts {row['source_version']} "
+                f"{row['algorithm_name']} {row['algorithm_version']} "
+                f"{row['source_record_id']} score term {row['score_term_index']}: "
+                f"{row['score_term']}"
+            ),
+        }],
+    }
+
+
+def attach_hivdb_score_rules(records: dict[str, dict]) -> Counter:
+    """Attach exact HIVDB score rules when their curated term report is present."""
+    counts: Counter = Counter()
+    if not HIVDB_SCORE_RULE_INVENTORY.exists():
+        counts["missing_inventory"] = 1
+        return counts
+
+    rules_by_record: dict[str, list[dict]] = defaultdict(list)
+    for row in load_hivdb_score_rule_inventory(HIVDB_SCORE_RULE_INVENTORY):
+        identifier = row["identifier"]
+        require_seed_row_identity(
+            records,
+            row,
+            source=HIVDB_SCORE_RULE_SOURCE,
+            row_id=row["source_rule_id"],
+        )
+        rules_by_record[identifier].append(hivdb_score_rule(row))
+        counts["matched_rules"] += 1
+
+    for identifier, rules in rules_by_record.items():
+        records[identifier].setdefault("genotype_resistance_score_rules", []).extend(rules)
         _history_last(records[identifier])
         counts["matched_records"] += 1
     return counts
@@ -1934,9 +2284,16 @@ def bindingdb_row_supports_target_association(row: dict[str, str]) -> bool:
     return "review article" not in assay_description
 
 
-def record_yaml_matches(existing_text: str | None, record: dict) -> bool:
+def record_yaml_matches(existing_text: str | None, record: dict, *, record_path: Path | None = None) -> bool:
     """Compare record data without treating YAML mapping order as a change."""
-    return existing_text is not None and yaml.safe_load(existing_text) == record
+    if existing_text is None:
+        return False
+    existing = yaml.safe_load(existing_text)
+    if isinstance(existing, dict) and "activity_collections" in existing:
+        if record_path is None:
+            raise ValueError("collection comparison requires a record path")
+        existing = expand_activities(existing, record_path)
+    return existing == record
 
 
 def attach_bindingdb_targets(records: dict[str, dict]) -> Counter:
@@ -2042,6 +2399,986 @@ def attach_bindingdb_targets(records: dict[str, dict]) -> Counter:
 
     for identifier, assertions in assertions_by_record.items():
         records[identifier].setdefault("molecular_targets", []).extend(assertions)
+        _history_last(records[identifier])
+        counts["matched_records"] += 1
+    return counts
+
+
+CRYPTIC_ACTIVITY_SOURCE = "CRYPTIC"
+CRYPTIC_ACTIVITY_INVENTORY = RAW_DIR / "cryptic_activity.tsv"
+CRYPTIC_REFERENCE = "DOI:10.5281/zenodo.15680920"
+CRYPTIC_TAXON_LABEL = "Mycobacterium tuberculosis complex"
+CRYPTIC_CALLS = {
+    "S": "SUSCEPTIBLE",
+    "I": "INTERMEDIATE",
+    "R": "RESISTANT",
+}
+CRYPTIC_ACTIVITY_COLUMNS = [
+    "source_version",
+    "source_table",
+    "activity_group_id",
+    "drug_code",
+    "source_name",
+    "identifier",
+    "standard_inchi_key",
+    "mic_value",
+    "mic_qualifier",
+    "mic_units",
+    "row_count",
+    "isolate_count",
+    "site_count",
+    "source",
+    "method_1",
+    "method_2",
+    "method_3",
+    "method_cc",
+    "method_mic",
+    "phenotype",
+    "quality",
+    "platedesign",
+    "belongs_gpi",
+    "phenotype_quality",
+    "readingday",
+    "primary_method",
+    "phenotype_description",
+    "mic",
+    "log2mic",
+    "binary_phenotype",
+]
+CRYPTIC_REQUIRED_ACTIVITY_COLUMNS = (
+    "source_version",
+    "source_table",
+    "activity_group_id",
+    "drug_code",
+    "source_name",
+    "identifier",
+    "standard_inchi_key",
+    "row_count",
+    "isolate_count",
+)
+CRYPTIC_DST_TABLE = "DST_MEASUREMENTS"
+CRYPTIC_UKMYC_TABLE = "UKMYC_PHENOTYPES"
+CRYPTIC_ACTIVITY_TABLES = {CRYPTIC_DST_TABLE, CRYPTIC_UKMYC_TABLE}
+CRYPTIC_DST_GROUP_COLUMNS = (
+    "source",
+    "method_1",
+    "method_2",
+    "method_3",
+    "method_cc",
+    "method_mic",
+    "phenotype",
+    "quality",
+)
+CRYPTIC_UKMYC_GROUP_COLUMNS = (
+    "platedesign",
+    "belongs_gpi",
+    "phenotype_quality",
+    "readingday",
+    "primary_method",
+    "phenotype_description",
+    "mic",
+    "log2mic",
+    "binary_phenotype",
+)
+CRYPTIC_MIC_QUALIFIERS = {"", "<", "<=", ">", ">="}
+CRYPTIC_MIC_PATTERN = re.compile(r"^(?P<qualifier><=|>=|<|>)?(?P<value>(?:\d+(?:\.\d*)?|\.\d+))$")
+CRYPTIC_TSV_CONTROL_CHARS = frozenset("\t\r\n")
+
+
+def cryptic_group_columns_for_table(source_table: str) -> tuple[str, ...]:
+    if source_table == CRYPTIC_DST_TABLE:
+        return CRYPTIC_DST_GROUP_COLUMNS
+    if source_table == CRYPTIC_UKMYC_TABLE:
+        return CRYPTIC_UKMYC_GROUP_COLUMNS
+    raise ValueError(f"unsupported source_table {source_table!r}")
+
+
+def cryptic_activity_group_id(row: dict[str, str]) -> str:
+    digest = hashlib.sha256()
+    columns = (
+        "source_version",
+        "source_table",
+        "drug_code",
+        *cryptic_group_columns_for_table(row["source_table"]),
+    )
+    for column in columns:
+        digest.update(row[column].encode("utf-8"))
+        digest.update(b"\0")
+    return f"{row['source_table'].lower()}:{digest.hexdigest()[:16]}"
+
+
+def cryptic_unused_columns_for_table(source_table: str) -> tuple[str, ...]:
+    if source_table == CRYPTIC_DST_TABLE:
+        return ("site_count", *CRYPTIC_UKMYC_GROUP_COLUMNS)
+    if source_table == CRYPTIC_UKMYC_TABLE:
+        return CRYPTIC_DST_GROUP_COLUMNS
+    raise ValueError(f"unsupported source_table {source_table!r}")
+
+
+def cryptic_parse_mic(value: str) -> tuple[str, str, str]:
+    raw = value.strip()
+    if not raw or raw.casefold() == "nan":
+        return "", "", ""
+
+    match = CRYPTIC_MIC_PATTERN.match(raw)
+    if match is None:
+        raise ValueError(f"unsupported CRyPTIC MIC value {raw!r}")
+    return match.group("value"), match.group("qualifier") or "", "mg/L"
+
+
+def cryptic_standardized_mic(row: dict[str, str]) -> tuple[str, str, str]:
+    if row["source_table"] == CRYPTIC_DST_TABLE:
+        return cryptic_parse_mic(row["method_mic"])
+    if row["source_table"] == CRYPTIC_UKMYC_TABLE:
+        return cryptic_parse_mic(row["mic"])
+    raise ValueError(f"unsupported source_table {row['source_table']!r}")
+
+
+def _require_cryptic_table_fields(
+    row: dict[str, str],
+    path: Path,
+    line_number: int,
+) -> None:
+    prefix = f"{path}:{line_number}"
+    for field in cryptic_unused_columns_for_table(row["source_table"]):
+        if row[field]:
+            raise ValueError(
+                f"{prefix}: {row['source_table']} rows must not carry {field}"
+            )
+
+
+def _require_cryptic_positive_integer(
+    row: dict[str, str],
+    field: str,
+    path: Path,
+    line_number: int,
+) -> None:
+    prefix = f"{path}:{line_number}"
+    try:
+        parsed = int(row[field])
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an integer") from error
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: {field} must be positive")
+    canonical = str(parsed)
+    if row[field] != canonical:
+        raise ValueError(
+            f"{prefix}: {field} must use canonical integer {canonical!r}"
+        )
+
+
+def _require_cryptic_mic(
+    row: dict[str, str],
+    path: Path,
+    line_number: int,
+) -> None:
+    prefix = f"{path}:{line_number}"
+    value = row["mic_value"]
+    qualifier = row["mic_qualifier"]
+    units = row["mic_units"]
+
+    if not value:
+        if qualifier:
+            raise ValueError(f"{prefix}: mic_qualifier requires mic_value")
+        if units:
+            raise ValueError(f"{prefix}: mic_units requires mic_value")
+        return
+
+    if qualifier not in CRYPTIC_MIC_QUALIFIERS:
+        raise ValueError(f"{prefix}: mic_qualifier has invalid qualifier {qualifier!r}")
+    if units != "mg/L":
+        raise ValueError(f"{prefix}: mic_units must be 'mg/L'")
+    try:
+        parsed = Decimal(value)
+    except InvalidOperation as error:
+        raise ValueError(f"{prefix}: mic_value must be numeric") from error
+    if not parsed.is_finite():
+        raise ValueError(f"{prefix}: mic_value must be finite")
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: mic_value must be positive")
+
+
+def _require_cryptic_standardized_mic(
+    row: dict[str, str],
+    path: Path,
+    line_number: int,
+) -> None:
+    prefix = f"{path}:{line_number}"
+    expected = cryptic_standardized_mic(row)
+    actual = (row["mic_value"], row["mic_qualifier"], row["mic_units"])
+    if actual != expected:
+        expected_value, expected_qualifier, expected_units = expected
+        raise ValueError(
+            f"{prefix}: standardized MIC must be {expected_value!r}, "
+            f"{expected_qualifier!r}, {expected_units!r} for the raw "
+            f"{row['source_table']} MIC"
+        )
+
+
+def load_cryptic_activity_inventory(path: Path) -> list[dict[str, str]]:
+    """Load a compact CRyPTIC activity inventory and reject malformed rows."""
+    if not path.exists():
+        raise SystemExit(f"missing inventory {path}; run `just evaluate-cryptic`")
+
+    rows = []
+    seen_activity_group_ids = set()
+    expected_source_version = None
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if reader.fieldnames != CRYPTIC_ACTIVITY_COLUMNS:
+            raise ValueError(
+                f"{path}: expected CRyPTIC activity header "
+                f"{CRYPTIC_ACTIVITY_COLUMNS!r}, found {reader.fieldnames!r}"
+            )
+        for line_number, row in enumerate(reader, start=2):
+            prefix = f"{path}:{line_number}"
+            if None in row:
+                raise ValueError(f"{prefix}: unexpected extra TSV field")
+            row = {
+                field: "" if value is None else value
+                for field, value in row.items()
+            }
+            for field, value in row.items():
+                if any(char in value for char in CRYPTIC_TSV_CONTROL_CHARS):
+                    raise ValueError(f"{prefix}: {field} contains a tab or newline")
+                if value != value.strip():
+                    raise ValueError(
+                        f"{prefix}: {field} has leading or trailing whitespace"
+                    )
+            for field in CRYPTIC_REQUIRED_ACTIVITY_COLUMNS:
+                if not row[field]:
+                    raise ValueError(f"{prefix}: {field} is required")
+
+            if row["source_table"] not in CRYPTIC_ACTIVITY_TABLES:
+                raise ValueError(f"{prefix}: unsupported source_table {row['source_table']!r}")
+            _require_cryptic_table_fields(row, path, line_number)
+            if expected_source_version is None:
+                expected_source_version = row["source_version"]
+            elif row["source_version"] != expected_source_version:
+                raise ValueError(
+                    f"{prefix}: source_version must be {expected_source_version!r}"
+                )
+            expected_activity_group_id = cryptic_activity_group_id(row)
+            if row["activity_group_id"] != expected_activity_group_id:
+                raise ValueError(
+                    f"{prefix}: activity_group_id must be "
+                    f"{expected_activity_group_id!r}"
+                )
+            for field in ("row_count", "isolate_count"):
+                _require_cryptic_positive_integer(row, field, path, line_number)
+            if row["site_count"]:
+                _require_cryptic_positive_integer(row, "site_count", path, line_number)
+            _require_cryptic_mic(row, path, line_number)
+            _require_cryptic_standardized_mic(row, path, line_number)
+
+            activity_group_id = row["activity_group_id"]
+            if activity_group_id in seen_activity_group_ids:
+                raise ValueError(f"{prefix}: duplicate CRyPTIC activity_group_id")
+            seen_activity_group_ids.add(activity_group_id)
+            rows.append(row)
+    if not rows:
+        raise ValueError(f"{path}: CRyPTIC activity inventory has no rows")
+    return rows
+
+
+def is_cryptic_sourced_activity(item: dict) -> bool:
+    """True only for an activity observation owned by the CRyPTIC lane."""
+    return item.get("source") == CRYPTIC_ACTIVITY_SOURCE
+
+
+def cryptic_sourced_activity_view(record: dict) -> list[dict]:
+    return [
+        item
+        for item in (record.get("activity_spectrum") or [])
+        if is_cryptic_sourced_activity(item)
+    ]
+
+
+def cryptic_activity_assay(row: dict[str, str]) -> str:
+    if row["source_table"] == "UKMYC_PHENOTYPES":
+        parts = [f"CRyPTIC UKMYC {row['platedesign']}"]
+        if row.get("primary_method"):
+            parts.append(f"primary method {row['primary_method']}")
+        if row.get("readingday"):
+            parts.append(f"reading day {row['readingday']}")
+        return "; ".join(parts)
+
+    if row["source_table"] != "DST_MEASUREMENTS":
+        raise ValueError(f"unrecognized CRyPTIC activity table: {row['source_table']}")
+    parts = ["CRyPTIC DST"]
+    for column in ("source", "method_1", "method_2", "method_3"):
+        if row.get(column):
+            parts.append(row[column])
+    if row.get("method_cc"):
+        parts.append(f"critical concentration {row['method_cc']} mg/L")
+    return "; ".join(parts)
+
+
+def cryptic_activity_observation(row: dict[str, str]) -> dict:
+    """Convert one compact CRyPTIC group into one grouped activity observation."""
+    note_fields = [
+        "source_table",
+        "activity_group_id",
+        "drug_code",
+        "row_count",
+        "isolate_count",
+        "site_count",
+        "source",
+        "method_1",
+        "method_2",
+        "method_3",
+        "method_cc",
+        "method_mic",
+        "phenotype",
+        "quality",
+        "platedesign",
+        "belongs_gpi",
+        "phenotype_quality",
+        "readingday",
+        "primary_method",
+        "phenotype_description",
+        "mic",
+        "log2mic",
+        "binary_phenotype",
+    ]
+    notes = "; ".join(f"{field}={row[field]}" for field in note_fields if row.get(field))
+    observation = {
+        "taxon_label": CRYPTIC_TAXON_LABEL,
+        "assay": cryptic_activity_assay(row),
+        "measurement_count": int(row["row_count"]),
+        "isolate_count": int(row["isolate_count"]),
+        "source": CRYPTIC_ACTIVITY_SOURCE,
+        "source_version": row["source_version"],
+        "source_observation_id": row["activity_group_id"],
+        "evidence": [{
+            "reference": CRYPTIC_REFERENCE,
+            "notes": f"Compact CRyPTIC {row['source_version']} grouped activity row: {notes}.",
+        }],
+    }
+    if row["mic_value"]:
+        observation["mic_value"] = float(row["mic_value"])
+        observation["mic_units"] = row["mic_units"]
+        if row["mic_qualifier"]:
+            observation["mic_qualifier"] = row["mic_qualifier"]
+    if row["site_count"]:
+        observation["site_count"] = int(row["site_count"])
+    call = CRYPTIC_CALLS.get(row.get("phenotype") or row.get("binary_phenotype"))
+    if call:
+        observation["activity"] = call
+    return observation
+
+
+def attach_cryptic_activity(records: dict[str, dict]) -> Counter:
+    """Attach compact CRyPTIC phenotype groups when their inventory is present."""
+    counts: Counter = Counter()
+    if not CRYPTIC_ACTIVITY_INVENTORY.exists():
+        counts["missing_inventory"] = 1
+        return counts
+
+    observations_by_record: dict[str, list[dict]] = defaultdict(list)
+    for row in load_cryptic_activity_inventory(CRYPTIC_ACTIVITY_INVENTORY):
+        identifier = row["identifier"]
+        require_seed_row_identity(
+            records,
+            row,
+            source="CRYPTIC",
+            row_id=row["activity_group_id"],
+        )
+        observations_by_record[identifier].append(cryptic_activity_observation(row))
+        counts["matched_observations"] += 1
+
+    for identifier, observations in observations_by_record.items():
+        records[identifier].setdefault("activity_spectrum", []).extend(observations)
+        _history_last(records[identifier])
+        counts["matched_records"] += 1
+    return counts
+
+
+def attach_cryptic_memberships(records: dict[str, dict]) -> dict[str, bytes]:
+    artifacts = attach_membership_inventory(
+        records, load_cryptic_activity_inventory(CRYPTIC_ACTIVITY_INVENTORY), raw_dir=RAW_DIR,
+    )
+    for record in records.values():
+        if MEMBERSHIP_FIELD in record:
+            _history_last(record)
+    return artifacts
+
+
+NCBI_AST_ACTIVITY_SOURCE = "NCBI_AST"
+NCBI_AST_ACTIVITY_INVENTORY = RAW_DIR / "ncbi_ast_activity.tsv"
+NCBI_AST_REFERENCE = "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
+# Bump with NCBI_AST_ACTIVITY_GROUP_COLUMNS because those columns define the
+# stable source_observation_id digest for committed exact reports.
+NCBI_AST_ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v7"
+NCBI_AST_ACTIVITY_GROUP_COLUMNS = [
+    "source_name",
+    "normalized_antibiotic",
+    "identifier",
+    "standard_inchi_key",
+    "taxon_id",
+    "taxon_label",
+    "strain",
+    "biosample_accession",
+    "bioproject_accession",
+    "target_accession",
+    "assembly_accession",
+    "sra_accessions",
+    "isolation_type",
+    "location",
+    "collection_date",
+    "create_date",
+    "host",
+    "isolation_source",
+    "phenotype",
+    "activity",
+    "mic_value",
+    "mic_qualifier",
+    "mic_units",
+    "disk_diffusion_value",
+    "disk_diffusion_qualifier",
+    "disk_diffusion_units",
+    "method",
+    "platform",
+    "vendor",
+    "reagent",
+    "standard",
+]
+NCBI_AST_ACTIVITY_COLUMNS = [
+    "activity_group_id",
+    "source_version",
+    "source_retrieved_on",
+    "isolate_source_version",
+    "isolate_source_retrieved_on",
+    "ast_row_count",
+    "isolate_count",
+    *NCBI_AST_ACTIVITY_GROUP_COLUMNS,
+]
+NCBI_AST_REQUIRED_ACTIVITY_COLUMNS = (
+    "activity_group_id",
+    "source_version",
+    "source_retrieved_on",
+    "ast_row_count",
+    "isolate_count",
+    "source_name",
+    "normalized_antibiotic",
+    "identifier",
+    "standard_inchi_key",
+    "taxon_label",
+    "biosample_accession",
+    "bioproject_accession",
+)
+NCBI_AST_ACTIVITY_BY_PHENOTYPE = {
+    "i": "INTERMEDIATE",
+    "intermediate": "INTERMEDIATE",
+    "ns": "NONSUSCEPTIBLE",
+    "nonsusceptible": "NONSUSCEPTIBLE",
+    "r": "RESISTANT",
+    "resistant": "RESISTANT",
+    "s": "SUSCEPTIBLE",
+    "sensitive": "SUSCEPTIBLE",
+    "susceptible": "SUSCEPTIBLE",
+    "hlar": "RESISTANT",
+    "highlevelaminoglycosideresistance": "RESISTANT",
+    "ssd": "SUSCEPTIBLE_DOSE_DEPENDENT",
+    "susceptibledosedependent": "SUSCEPTIBLE_DOSE_DEPENDENT",
+}
+NCBI_AST_NO_ACTIVITY_CALL_PHENOTYPES = {"n", "nd", "notdefined"}
+NCBI_AST_MEASUREMENT_QUALIFIERS = {"", "<", "<=", ">", ">="}
+NCBI_AST_MIC_MAX_VALUE = Decimal("1024")
+NCBI_AST_DISK_DIFFUSION_MIN_VALUE = Decimal("6")
+NCBI_AST_DISK_DIFFUSION_MAX_VALUE = Decimal("150")
+NCBI_AST_BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
+NCBI_AST_BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
+NCBI_AST_TARGET_PATTERN = re.compile(r"^PDT[0-9]+(\.[0-9]+)?$")
+NCBI_AST_ASSEMBLY_PATTERN = re.compile(r"^GC[AF]_[0-9]+(\.[0-9]+)?$")
+NCBI_AST_SRA_ACCESSION_PATTERN = re.compile(
+    r"^(SRR|ERR|DRR|SRX|ERX|DRX|SRP|ERP|DRP|SRS|ERS|DRS)[0-9]+$"
+)
+NCBI_AST_TAXON_PATTERN = re.compile(r"^NCBITaxon:[1-9][0-9]*$")
+NCBI_AST_STANDARD_INCHI_KEY_PATTERN = re.compile(r"^[A-Z]{14}-[A-Z]{10}-[A-Z]$")
+NCBI_AST_NORMALIZED_NAME_PATTERN = re.compile(r"[^a-z0-9]+")
+NCBI_AST_TSV_CONTROL_CHARS = frozenset("\t\r\n")
+NCBI_AST_SOURCE_CONTEXT_FIELDS = {
+    "isolation_type": "isolation_type",
+    "location": "isolation_location",
+    "collection_date": "collection_date",
+    "create_date": "source_create_date",
+    "host": "host_label",
+    "isolation_source": "isolation_source",
+}
+
+
+def require_seed_row_identity(
+    records: dict[str, dict],
+    row: dict[str, str],
+    *,
+    source: str,
+    row_id: str,
+) -> None:
+    """Reject stale exact source rows before they look like source deletions."""
+    identifier = row["identifier"]
+    record = records.get(identifier)
+    if record is None:
+        raise ValueError(
+            f"{source} {row_id}: mapped identifier {identifier} is not in the corpus"
+        )
+
+    expected_inchi_key = record["chemical_structure"].get("standard_inchi_key")
+    if row["standard_inchi_key"] != expected_inchi_key:
+        raise ValueError(
+            f"{source} {row_id}: mapped InChIKey {row['standard_inchi_key']} "
+            f"does not match {identifier} ({expected_inchi_key})"
+        )
+
+
+def normalized_ncbi_ast_name(value: str) -> str:
+    return NCBI_AST_NORMALIZED_NAME_PATTERN.sub("", value.casefold())
+
+
+def normalized_ncbi_ast_phenotype(value: str) -> str:
+    return normalized_ncbi_ast_name(value)
+
+
+def is_ncbi_ast_sourced_activity(item: dict) -> bool:
+    """True only for an activity observation owned by the NCBI AST lane."""
+    return item.get("source") == NCBI_AST_ACTIVITY_SOURCE
+
+
+def ncbi_ast_sourced_activity_view(record: dict) -> list[dict]:
+    return [
+        item
+        for item in (record.get("activity_spectrum") or [])
+        if is_ncbi_ast_sourced_activity(item)
+    ]
+
+
+def ncbi_ast_activity_assay(row: dict[str, str]) -> str:
+    parts = ["NCBI Pathogen Detection AST"]
+    if row.get("method"):
+        parts.append(f"method {row['method']}")
+    if row.get("platform"):
+        parts.append(f"platform {row['platform']}")
+    if row.get("vendor"):
+        parts.append(f"vendor {row['vendor']}")
+    if row.get("reagent"):
+        parts.append(f"reagent {row['reagent']}")
+    if row.get("standard"):
+        parts.append(f"standard {row['standard']}")
+    return "; ".join(parts)
+
+
+def ncbi_ast_activity_observation(row: dict[str, str], assay_review: AssayReview | None = None) -> dict:
+    """Convert one compact NCBI AST group into one grouped activity observation."""
+    note_fields = [
+        "activity_group_id",
+        "ast_row_count",
+        "isolate_count",
+        "source_name",
+        "normalized_antibiotic",
+        "taxon_id",
+        "taxon_label",
+        "strain",
+        "biosample_accession",
+        "bioproject_accession",
+        "target_accession",
+        "assembly_accession",
+        "sra_accessions",
+        "isolation_type",
+        "location",
+        "collection_date",
+        "create_date",
+        "host",
+        "isolation_source",
+        "phenotype",
+        "method",
+        "platform",
+        "vendor",
+        "reagent",
+        "standard",
+    ]
+    notes = "; ".join(f"{field}={row[field]}" for field in note_fields if row.get(field))
+    observation = {
+        "taxon_label": row["taxon_label"],
+        "assay": ncbi_ast_activity_assay(row),
+        "measurement_count": int(row["ast_row_count"]),
+        "isolate_count": int(row["isolate_count"]),
+        "source": NCBI_AST_ACTIVITY_SOURCE,
+        "source_version": row["source_version"],
+        "source_retrieved_on": row["source_retrieved_on"],
+        "source_observation_id": row["activity_group_id"],
+        "evidence": [{
+            "reference": NCBI_AST_REFERENCE,
+            "notes": (
+                "Compact NCBI Pathogen Detection AST grouped activity row. "
+                "The underlying AST rows are submitter-provided; source BioSample, "
+                "BioProject, target, assembly, SRA and isolation context are "
+                "retained for audit: "
+                f"{notes}."
+            ),
+        }],
+    }
+    if row.get("isolate_source_version"):
+        observation["evidence"].append({
+            "reference": ISOLATE_REFERENCE,
+            "notes": (
+                "Isolate identity metadata joined on exact versioned target_accession="
+                f"{row['target_accession']}; BioSample, BioProject and scientific name "
+                "were checked for agreement. "
+                f"source_version={row['isolate_source_version']}; "
+                f"source_retrieved_on={row['isolate_source_retrieved_on']}. "
+                "This source supports taxon/strain/assembly context, not a resistance call."
+            ),
+        })
+
+    if assay_review is not None:
+        decision = assay_review.require_accepted(row)
+        observation["evidence"].append({
+            "reference": REVIEW_REFERENCE,
+            "notes": (
+                f"assay_review_version={assay_review.version}; reviewed_on={assay_review.reviewed_on}; "
+                f"basis={decision['basis']}; {decision['explanation']} "
+                f"References: {'; '.join(decision['references'])}. "
+                "Review supports assay-context compatibility, not independent verification of the result."
+            ),
+        })
+
+    if row.get("activity"):
+        observation["activity"] = row["activity"]
+    if row.get("taxon_id"):
+        observation["taxon_id"] = row["taxon_id"]
+    if row.get("strain"):
+        observation["strain"] = row["strain"]
+    if row.get("mic_value"):
+        observation["mic_value"] = float(row["mic_value"])
+        observation["mic_units"] = row["mic_units"]
+        if row.get("mic_qualifier"):
+            observation["mic_qualifier"] = row["mic_qualifier"]
+    if row.get("disk_diffusion_value"):
+        observation["disk_diffusion_value"] = float(row["disk_diffusion_value"])
+        observation["disk_diffusion_units"] = row["disk_diffusion_units"]
+        if row.get("disk_diffusion_qualifier"):
+            observation["disk_diffusion_qualifier"] = row["disk_diffusion_qualifier"]
+    if row.get("target_accession"):
+        observation["pathogen_detection_target_accession"] = row["target_accession"]
+    for field in ("biosample_accession", "bioproject_accession", "assembly_accession"):
+        if row.get(field):
+            observation[field] = row[field]
+    if row.get("sra_accessions"):
+        observation["sra_accessions"] = row["sra_accessions"].split("|")
+    for source_field, observation_field in NCBI_AST_SOURCE_CONTEXT_FIELDS.items():
+        if row.get(source_field):
+            observation[observation_field] = row[source_field]
+    return observation
+
+
+def ncbi_ast_activity_group_id(row: dict[str, str]) -> str:
+    digest = hashlib.sha256()
+    digest.update(NCBI_AST_ACTIVITY_GROUP_ID_VERSION.encode("utf-8"))
+    digest.update(b"\0")
+    for column in NCBI_AST_ACTIVITY_GROUP_COLUMNS:
+        digest.update(row[column].encode("utf-8"))
+        digest.update(b"\0")
+    return f"ncbi_ast:{digest.hexdigest()[:16]}"
+
+
+def _require_ncbi_ast_measurement(
+    row: dict[str, str],
+    *,
+    value_field: str,
+    qualifier_field: str,
+    units_field: str,
+    expected_units: str,
+    minimum: Decimal | None = None,
+    maximum: Decimal | None = None,
+    path: Path,
+    line_number: int,
+) -> bool:
+    prefix = f"{path}:{line_number}"
+    value = row[value_field]
+    qualifier = row[qualifier_field]
+    units = row[units_field]
+
+    if not value:
+        if qualifier:
+            raise ValueError(f"{prefix}: {qualifier_field} requires {value_field}")
+        if units:
+            raise ValueError(f"{prefix}: {units_field} requires {value_field}")
+        return False
+
+    if qualifier not in NCBI_AST_MEASUREMENT_QUALIFIERS:
+        raise ValueError(f"{prefix}: {qualifier_field} has invalid qualifier {qualifier!r}")
+    if units != expected_units:
+        raise ValueError(f"{prefix}: {units_field} must be {expected_units!r}")
+    try:
+        parsed = Decimal(value)
+    except InvalidOperation as error:
+        raise ValueError(f"{prefix}: {value_field} must be numeric") from error
+    if not parsed.is_finite():
+        raise ValueError(f"{prefix}: {value_field} must be finite")
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: {value_field} must be positive")
+    if minimum is not None and parsed < minimum:
+        raise ValueError(f"{prefix}: {value_field} must be at least {minimum:f}")
+    if maximum is not None and parsed > maximum:
+        raise ValueError(f"{prefix}: {value_field} must be at most {maximum:f}")
+    canonical = format(parsed.normalize(), "f")
+    if value != canonical:
+        raise ValueError(
+            f"{prefix}: {value_field} must use canonical decimal {canonical!r}"
+        )
+    return True
+
+
+def _require_ncbi_ast_positive_integer(
+    row: dict[str, str],
+    field: str,
+    path: Path,
+    line_number: int,
+) -> int:
+    prefix = f"{path}:{line_number}"
+    try:
+        parsed = int(row[field])
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an integer") from error
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: {field} must be positive")
+    canonical = str(parsed)
+    if row[field] != canonical:
+        raise ValueError(
+            f"{prefix}: {field} must use canonical integer {canonical!r}"
+        )
+    return parsed
+
+
+def _require_ncbi_ast_iso_date(
+    row: dict[str, str],
+    field: str,
+    path: Path,
+    line_number: int,
+) -> None:
+    value = row[field]
+    if not value:
+        return
+    prefix = f"{path}:{line_number}"
+    try:
+        parsed = date.fromisoformat(value)
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an ISO date") from error
+    if parsed.isoformat() != value:
+        raise ValueError(f"{prefix}: {field} must be an ISO date")
+
+
+def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
+    """Load a curated NCBI AST exact report and reject malformed source rows."""
+    if not path.exists():
+        raise SystemExit(f"missing inventory {path}; run `just evaluate-ncbi-ast`")
+
+    rows = []
+    seen_group_ids = set()
+    expected_source_version = None
+    expected_source_retrieved_on = None
+    expected_isolate_provenance = None
+    with open_activity_text(path) as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if reader.fieldnames != NCBI_AST_ACTIVITY_COLUMNS:
+            raise ValueError(
+                f"{path}: expected NCBI AST activity header "
+                f"{NCBI_AST_ACTIVITY_COLUMNS!r}, found {reader.fieldnames!r}"
+            )
+        for line_number, row in enumerate(reader, start=2):
+            prefix = f"{path}:{line_number}"
+            if None in row:
+                raise ValueError(f"{prefix}: unexpected extra TSV field")
+            for field, value in row.items():
+                if value is None:
+                    raise ValueError(f"{prefix}: {field} is missing")
+                if any(char in value for char in NCBI_AST_TSV_CONTROL_CHARS):
+                    raise ValueError(f"{prefix}: {field} contains a tab or newline")
+            for field in NCBI_AST_REQUIRED_ACTIVITY_COLUMNS:
+                if not row[field].strip():
+                    raise ValueError(f"{prefix}: {field} is required")
+            for field, value in row.items():
+                if value != value.strip():
+                    raise ValueError(
+                        f"{prefix}: {field} has leading or trailing whitespace"
+                    )
+            isolate_provenance = require_isolate_provenance(row, prefix)
+            if expected_isolate_provenance is None:
+                expected_isolate_provenance = isolate_provenance
+            elif isolate_provenance != expected_isolate_provenance:
+                raise ValueError(f"{prefix}: inconsistent isolate snapshot provenance")
+            if NCBI_AST_BIOSAMPLE_PATTERN.match(row["biosample_accession"]) is None:
+                raise ValueError(f"{prefix}: invalid BioSample accession")
+            if NCBI_AST_BIOPROJECT_PATTERN.match(row["bioproject_accession"]) is None:
+                raise ValueError(f"{prefix}: invalid BioProject accession")
+            if row["taxon_id"] and NCBI_AST_TAXON_PATTERN.match(row["taxon_id"]) is None:
+                raise ValueError(f"{prefix}: invalid NCBI Taxonomy CURIE")
+            if (
+                row["target_accession"]
+                and NCBI_AST_TARGET_PATTERN.match(row["target_accession"]) is None
+            ):
+                raise ValueError(f"{prefix}: invalid Pathogen Detection target accession")
+            if (
+                row["assembly_accession"]
+                and NCBI_AST_ASSEMBLY_PATTERN.match(row["assembly_accession"]) is None
+            ):
+                raise ValueError(f"{prefix}: invalid Assembly accession")
+            if row["sra_accessions"]:
+                sra_accessions = row["sra_accessions"].split("|")
+                invalid_sra_accessions = [
+                    accession
+                    for accession in sra_accessions
+                    if NCBI_AST_SRA_ACCESSION_PATTERN.match(accession) is None
+                ]
+                if invalid_sra_accessions:
+                    raise ValueError(f"{prefix}: invalid SRA accession")
+                canonical_sra_accessions = "|".join(sorted(set(sra_accessions)))
+                if row["sra_accessions"] != canonical_sra_accessions:
+                    raise ValueError(
+                        f"{prefix}: sra_accessions must be unique and sorted"
+                    )
+            if row["normalized_antibiotic"] != normalized_ncbi_ast_name(row["source_name"]):
+                raise ValueError(f"{prefix}: normalized_antibiotic must match source_name")
+            if (
+                NCBI_AST_STANDARD_INCHI_KEY_PATTERN.match(
+                    row["standard_inchi_key"]
+                )
+                is None
+            ):
+                raise ValueError(
+                    f"{prefix}: invalid standard_inchi_key value "
+                    f"{row['standard_inchi_key']!r}"
+                )
+            if not has_informative_assay_context(row["method"], row["platform"], row["reagent"]):
+                raise ValueError(f"{prefix}: informative method, platform or reagent is required")
+            if expected_source_version is None:
+                expected_source_version = row["source_version"]
+            elif row["source_version"] != expected_source_version:
+                raise ValueError(
+                    f"{prefix}: source_version must be {expected_source_version!r}"
+                )
+            _require_ncbi_ast_iso_date(
+                row,
+                "source_retrieved_on",
+                path,
+                line_number,
+            )
+            _require_ncbi_ast_iso_date(
+                row,
+                "create_date",
+                path,
+                line_number,
+            )
+            if expected_source_retrieved_on is None:
+                expected_source_retrieved_on = row["source_retrieved_on"]
+            elif row["source_retrieved_on"] != expected_source_retrieved_on:
+                raise ValueError(
+                    f"{prefix}: source_retrieved_on must be "
+                    f"{expected_source_retrieved_on!r}"
+                )
+            _require_ncbi_ast_positive_integer(
+                row,
+                "ast_row_count",
+                path,
+                line_number,
+            )
+            isolate_count = _require_ncbi_ast_positive_integer(
+                row,
+                "isolate_count",
+                path,
+                line_number,
+            )
+            if isolate_count != 1:
+                raise ValueError(
+                    f"{prefix}: isolate_count must be 1 for a BioSample-grouped row"
+                )
+            phenotype = normalized_ncbi_ast_phenotype(row["phenotype"])
+            if phenotype in NCBI_AST_NO_ACTIVITY_CALL_PHENOTYPES:
+                expected_activity = ""
+            elif phenotype:
+                expected_activity = NCBI_AST_ACTIVITY_BY_PHENOTYPE.get(phenotype)
+                if expected_activity is None:
+                    raise ValueError(
+                        f"{prefix}: unsupported phenotype {row['phenotype']!r}"
+                    )
+            else:
+                expected_activity = ""
+            if row["activity"] != expected_activity:
+                raise ValueError(
+                    f"{prefix}: activity must match phenotype {row['phenotype']!r}"
+                )
+            expected_group_id = ncbi_ast_activity_group_id(row)
+            if row["activity_group_id"] != expected_group_id:
+                raise ValueError(
+                    f"{prefix}: activity_group_id must be {expected_group_id!r}"
+                )
+            if row["activity_group_id"] in seen_group_ids:
+                raise ValueError(f"{prefix}: duplicate activity_group_id")
+            seen_group_ids.add(row["activity_group_id"])
+
+            has_mic = _require_ncbi_ast_measurement(
+                row,
+                value_field="mic_value",
+                qualifier_field="mic_qualifier",
+                units_field="mic_units",
+                expected_units="mg/L",
+                maximum=NCBI_AST_MIC_MAX_VALUE,
+                path=path,
+                line_number=line_number,
+            )
+            has_disk_diffusion = _require_ncbi_ast_measurement(
+                row,
+                value_field="disk_diffusion_value",
+                qualifier_field="disk_diffusion_qualifier",
+                units_field="disk_diffusion_units",
+                expected_units="mm",
+                minimum=NCBI_AST_DISK_DIFFUSION_MIN_VALUE,
+                maximum=NCBI_AST_DISK_DIFFUSION_MAX_VALUE,
+                path=path,
+                line_number=line_number,
+            )
+            if not has_mic and not has_disk_diffusion:
+                raise ValueError(
+                    f"{prefix}: mic_value or disk_diffusion_value is required"
+                )
+            rows.append(row)
+    if not rows:
+        raise ValueError(f"{path}: NCBI AST activity inventory has no rows")
+    return rows
+
+
+def attach_ncbi_ast_activity(
+    records: dict[str, dict], *, inventory: Path | None = None,
+) -> Counter:
+    """Attach compact NCBI AST groups when their curated exact report is present."""
+    counts: Counter = Counter()
+    if inventory is None:
+        inventory = resolve_inventory(NCBI_AST_ACTIVITY_INVENTORY)
+    elif not inventory.is_file():
+        raise ValueError(f"explicit NCBI AST inventory does not exist: {inventory}")
+    if not inventory.exists():
+        counts["missing_inventory"] = 1
+        return counts
+
+    assay_review = read_assay_review(DEFAULT_REVIEW_MAP)
+    observations_by_record: dict[str, list[dict]] = defaultdict(list)
+    rows = load_ncbi_ast_activity_inventory(inventory)
+    for row in rows:
+        identifier = row["identifier"]
+        require_seed_row_identity(
+            records,
+            row,
+            source="NCBI_AST",
+            row_id=row["activity_group_id"],
+        )
+    for identifier, observation in ncbi_ast_observations(
+        rows, inventory, lambda row: ncbi_ast_activity_observation(row, assay_review),
+    ):
+        observations_by_record[identifier].append(observation)
+        counts["matched_observations"] += 1
+
+    for identifier, observations in observations_by_record.items():
+        records[identifier].setdefault("activity_spectrum", []).extend(observations)
         _history_last(records[identifier])
         counts["matched_records"] += 1
     return counts
@@ -2188,15 +3525,24 @@ def producer_refusal_reason(taxon_id: str, taxon_label: str) -> str | None:
     and the drift was undetectable, because the only row exercising it matches
     no corpus record, so both versions produced the same queue.
     """
-    bucket = _NON_ORGANISM_TAXA.get(taxon_id)
-    if bucket:
-        return (f"NCBITaxon:{taxon_id} is {bucket}, not an organism, while the label "
-                f"reads {taxon_label.rstrip('.')!r}. The identifier and the name "
-                "disagree about what is being claimed.")
+    reason = non_organism_taxon_reason(taxon_id, taxon_label)
+    if reason:
+        return reason
     if not names_an_organism(taxon_label):
         return (f"{taxon_label!r} (NCBITaxon:{taxon_id}) identifies no organism. The "
                 "producer claim would say only that some microbe makes this.")
     return None
+
+
+def non_organism_taxon_reason(taxon_id: str, taxon_label: str) -> str | None:
+    bucket = _NON_ORGANISM_TAXA.get(taxon_id)
+    if not bucket:
+        return None
+    return (
+        f"NCBITaxon:{taxon_id} is {bucket}, not an organism, while the label "
+        f"reads {taxon_label.rstrip('.')!r}. The identifier and the name "
+        "disagree about what is being claimed."
+    )
 
 
 def names_an_organism(label: str) -> bool:
@@ -2684,6 +4030,14 @@ def reseed_delta(existing: dict, record: dict, merged: dict,
     for field, view, source in (
         ("molecular_targets", bindingdb_sourced_target_view, BINDINGDB_TARGET_SOURCE),
         ("resistance_mechanisms", phibase_sourced_resistance_view, PHIBASE_RESISTANCE_SOURCE),
+        (
+            "genotype_resistance_score_rules",
+            hivdb_sourced_score_rule_view,
+            HIVDB_SCORE_RULE_SOURCE,
+        ),
+        ("activity_spectrum", cryptic_sourced_activity_view, CRYPTIC_ACTIVITY_SOURCE),
+        (MEMBERSHIP_FIELD, cryptic_membership_view, CRYPTIC_ACTIVITY_SOURCE),
+        ("activity_spectrum", ncbi_ast_sourced_activity_view, NCBI_AST_ACTIVITY_SOURCE),
         ("producer_organisms", mibig_sourced_producer_view, MIBIG_PRODUCER_SOURCE),
         ("clinical_status_assertions", fda_sourced_clinical_view, FDA_CLINICAL_SOURCE),
     ):
@@ -2693,6 +4047,8 @@ def reseed_delta(existing: dict, record: dict, merged: dict,
                 for item in (record.get(field) or [])
                 if item.get("source") == source and item.get("source_version")})
             moved.append(f"{field} ({source}{' ' + ', '.join(versions) if versions else ''})")
+    if _seeded_structural_reseed_view(existing) != _seeded_structural_reseed_view(record):
+        moved.append("structural_observations")
     if not curator_owns_clinical and existing.get("clinical_status") != merged.get("clinical_status"):
         moved.append("clinical_status")
     moved += [f for f in ("mode_of_action", "mode_of_action_notes", "mode_of_action_target_scope")
@@ -2756,6 +4112,41 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     for field in CURATOR_FIELDS:
         if field in existing:
             merged[field] = existing[field]
+
+    seeded_activities = list(record.get("activity_spectrum") or [])
+    existing_activities = list(existing.get("activity_spectrum") or [])
+    curator_activities = [
+        item
+        for item in existing_activities
+        if not is_cryptic_sourced_activity(item)
+        and not is_ncbi_ast_sourced_activity(item)
+    ]
+    if seeded_activities or curator_activities:
+        merged["activity_spectrum"] = seeded_activities + curator_activities
+    elif existing_activities:
+        merged.pop("activity_spectrum", None)
+
+    memberships = list(record.get(MEMBERSHIP_FIELD, [])) + [
+        item for item in existing.get(MEMBERSHIP_FIELD, [])
+        if item.get("source") != CRYPTIC_ACTIVITY_SOURCE
+    ]
+    if memberships:
+        merged[MEMBERSHIP_FIELD] = memberships
+    else:
+        merged.pop(MEMBERSHIP_FIELD, None)
+
+    seeded_score_rules = list(record.get("genotype_resistance_score_rules") or [])
+    curator_score_rules = [
+        item
+        for item in (existing.get("genotype_resistance_score_rules") or [])
+        if not is_hivdb_sourced_score_rule(item)
+    ]
+    if seeded_score_rules or curator_score_rules:
+        merged["genotype_resistance_score_rules"] = (
+            seeded_score_rules + curator_score_rules
+        )
+    else:
+        merged.pop("genotype_resistance_score_rules", None)
 
     # MIBiG owns only the assertions explicitly marked with its source. A fresh
     # extraction replaces that slice while hand-curated producers survive after
@@ -2855,6 +4246,38 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
             merged[field] = seeded_items + curator_items
         else:
             merged.pop(field, None)
+
+    existing_seeded_structures = {
+        (item.get("structure_id"), item.get("source")): item
+        for item in (existing.get("structural_observations") or [])
+        if item.get("source") in SEEDER_STRUCTURE_SOURCES
+    }
+    merged_seeded_structures: list[dict] = []
+    for seeded_item in record.get("structural_observations") or []:
+        key = (seeded_item.get("structure_id"), seeded_item.get("source"))
+        existing_item = existing_seeded_structures.get(key)
+        if existing_item and is_curated_structural_observation(existing_item):
+            preserved = dict(existing_item)
+            if "source_version" in seeded_item:
+                preserved["source_version"] = seeded_item["source_version"]
+            else:
+                preserved.pop("source_version", None)
+            if "retrieved_on" in seeded_item:
+                preserved["retrieved_on"] = seeded_item["retrieved_on"]
+            else:
+                preserved.pop("retrieved_on", None)
+            merged_seeded_structures.append(preserved)
+        else:
+            merged_seeded_structures.append(seeded_item)
+    curator_structures = [
+        item
+        for item in (existing.get("structural_observations") or [])
+        if item.get("source") not in SEEDER_STRUCTURE_SOURCES
+    ]
+    if merged_seeded_structures or curator_structures:
+        merged["structural_observations"] = merged_seeded_structures + curator_structures
+    else:
+        merged.pop("structural_observations", None)
 
     history = list(existing.get("curation_history") or [])
     # The comparison covers the CARD mechanism sections too: a refresh that adds
@@ -3051,6 +4474,10 @@ def main() -> int:
     attach_aro_mechanism(records, source_version)
     phibase_counts = attach_phibase_resistance(records)
     bindingdb_counts = attach_bindingdb_targets(records)
+    cryptic_counts = attach_cryptic_activity(records)
+    membership_artifacts = attach_cryptic_memberships(records)
+    ncbi_ast_counts = attach_ncbi_ast_activity(records)
+    hivdb_counts = attach_hivdb_score_rules(records)
     mibig_counts = attach_mibig_producers(
         records,
         str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
@@ -3094,8 +4521,7 @@ def main() -> int:
     print(
         "  PHI-base resistance: "
         f"associations={phibase_counts['matched_associations']} "
-        f"records={phibase_counts['matched_records']} "
-        f"identity_drift={phibase_counts['identity_drift']}",
+        f"records={phibase_counts['matched_records']}",
         file=sys.stderr,
     )
     print(
@@ -3106,6 +4532,24 @@ def main() -> int:
         f"rejected_non_target_specific="
         f"{bindingdb_counts['rejected_non_target_specific_measurement']} "
         f"ambiguous_or_missing={bindingdb_counts['ambiguous_or_missing_identity']}",
+        file=sys.stderr,
+    )
+    print(
+        "  CRyPTIC activity: "
+        f"observations={cryptic_counts['matched_observations']} "
+        f"records={cryptic_counts['matched_records']}",
+        file=sys.stderr,
+    )
+    print(
+        "  NCBI AST activity: "
+        f"observations={ncbi_ast_counts['matched_observations']} "
+        f"records={ncbi_ast_counts['matched_records']}",
+        file=sys.stderr,
+    )
+    print(
+        "  HIVDB score rules: "
+        f"rules={hivdb_counts['matched_rules']} "
+        f"records={hivdb_counts['matched_records']}",
         file=sys.stderr,
     )
     print(
@@ -3155,7 +4599,7 @@ def main() -> int:
         source = path if path.exists() else (old_path if old_path and old_path.exists() else None)
         existing_text = source.read_text(encoding="utf-8") if source else None
         if existing_text is not None:
-            record = merge_with_existing(record, yaml.safe_load(existing_text))
+            record = merge_with_existing(record, load_record(source))
         # Compare the PARSED record, not its serialized text. YAML mapping order
         # carries no meaning, and comparing text would rewrite every reviewed
         # record after an otherwise unrelated source refresh.
@@ -3168,12 +4612,19 @@ def main() -> int:
         if (
             source == path
             and not args.force
-            and record_yaml_matches(existing_text, record)
+            and record_yaml_matches(existing_text, record, record_path=source)
         ):
             unchanged += 1
             continue
         try:
-            write_validated_antibiotic(record, path)
+            record_artifacts = {}
+            for reference in record.get(MEMBERSHIP_FIELD, []):
+                name = reference["path"]
+                if name in membership_artifacts:
+                    record_artifacts[name] = membership_artifacts[name]
+                elif source is not None and source.parent != path.parent:
+                    record_artifacts[name] = membership_bytes(reference, source)
+            write_validated_antibiotic(record, path, membership_artifacts=record_artifacts)
             written += 1
         except ValidationFailedError as exc:
             print(exc.summary(), file=sys.stderr)
@@ -3199,10 +4650,15 @@ def main() -> int:
             if path not in keep:
                 path.unlink()
                 removed += 1
+        orphaned = orphaned_activity_artifacts(CORPUS_DIR) + orphaned_membership_artifacts(CORPUS_DIR)
+        for artifact in orphaned:
+            artifact.unlink()
         for directory in sorted(CORPUS_DIR.iterdir()):
             if directory.is_dir() and not any(directory.iterdir()):
                 shutil.rmtree(directory)
         print(f"  pruned {removed} records no longer produced", file=sys.stderr)
+        if orphaned:
+            print(f"  pruned {len(orphaned)} unreferenced activity artifacts", file=sys.stderr)
 
     print(f"wrote {written} records ({unchanged} already current"
           + (f", {moved} moved between classes" if moved else "") + ")", file=sys.stderr)

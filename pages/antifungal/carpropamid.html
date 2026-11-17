@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antifungal.html">ANTIFUNGAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>carpropamid</h1>
 <p class="meta">
   <code class="curie">CHEBI:3434</code>
@@ -33,17 +44,20 @@
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_51456">CHEBI:51456</a>      <code class="curie">CHEBI:51456</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_60600">CHEBI:60600</a>      <code class="curie">CHEBI:60600</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_83403">CHEBI:83403</a>      <code class="curie">CHEBI:83403</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_51456"><code class="curie">CHEBI:51456</code></a></li>
+  <li>amide fungicide  <a href="http://purl.obolibrary.org/obo/CHEBI_60600"><code class="curie">CHEBI:60600</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_83403"><code class="curie">CHEBI:83403</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C15H18Cl3NO</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>334.674 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>333.0454 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">RXDMAYSSBPYBFW-UHFFFAOYSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">CCC1(C(=O)NC(C)c2ccc(Cl)cc2)C(C)C1(Cl)Cl</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C15H18Cl3NO/c1-4-14(10(3)15(14,17)18)13(20)19-9(2)11-5-7-12(16)8-6-11/h5-10H,4H2,1-3H3,(H,19,20)</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -75,14 +89,15 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_24127">CHEBI:24127</a>    <code class="curie">CHEBI:24127</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_35718">CHEBI:35718</a>    <code class="curie">CHEBI:35718</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_86328">CHEBI:86328</a>    <code class="curie">CHEBI:86328</code></li>
+  <li>fungicide  <a href="http://purl.obolibrary.org/obo/CHEBI_24127"><code class="curie">CHEBI:24127</code></a></li>
+  <li>antifungal agent  <a href="http://purl.obolibrary.org/obo/CHEBI_35718"><code class="curie">CHEBI:35718</code></a></li>
+  <li>antifungal agrochemical  <a href="http://purl.obolibrary.org/obo/CHEBI_86328"><code class="curie">CHEBI:86328</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -95,13 +110,28 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>fungal scytalone dehydratase <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta">A 2.1-angstrom inhibitor-enzyme cocrystal directly located carpropamid in the hydrophobic cavity. The publication uses the historical organism name Pyricularia oryzae. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 1998-07 (retrieved 2026-09-02).</p>
-<p><em>Magnaporthe oryzae</em> <code class="curie">NCBITaxon:318829</code></p><ul class="plain evidence">
-  <li><span class="meta">PMID:9665698</span> <span class="meta">(Primary compound-enzyme cocrystal study (DOI:10.1021/bi980321b).)</span></li>
+<p><em>Magnaporthe oryzae</em> <code class="curie">NCBITaxon:318829</code></p><div class="table-scroll" role="region" aria-label="fungal scytalone dehydratase organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Scytalone dehydratase <a href="https://www.uniprot.org/uniprotkb/P56221"><code class="curie">UniProtKB:P56221</code></a><br><span class="meta">Scytalone dehydratase catalytic monomer resolved at 2.1 angstroms with carpropamid bound in the hydrophobic active-site cavity (PMID:9665698, PDB 2STD).</span></td>
+    <td>SDH1</td>
+    <td><em>Pyricularia oryzae (strain 70-15 / ATCC MYA-4617 / FGSC 8958)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_242507"><code class="curie">NCBITaxon:242507</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9665698">PMID:9665698</a></span> <span class="meta">(Primary compound-enzyme cocrystal study (DOI:10.1021/bi980321b).)</span></li>
 </ul>
 
 
@@ -113,12 +143,82 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Carpropamid binds fungal scytalone dehydratase to inhibit 1,8-dihydroxynaphthalene melanin biosynthesis <span class="pill">MECHANISTIC</span></h3>
+<p>Carpropamid binds tightly inside the narrow hydrophobic active-site cavity of Pyricularia oryzae scytalone dehydratase (SDH1), displaces the catalytic water molecules required for dehydration of scytalone and vermelone, and blocks fungal 1,8-dihydroxynaphthalene melanin biosynthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: carpropamid_scytalone_dehydratase_melanin_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — carpropamid_scytalone_dehydratase_melanin_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">carpropamid</code></td>
+    <td>carpropamid</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antifungal/carpropamid.html"><code class="curie">CHEBI:3434</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">scytalone_dehydratase</code></td>
+    <td>fungal scytalone dehydratase (SDH1)<br><span class="meta">Examples: Scytalone dehydratase (SDH1) <a href="https://www.uniprot.org/uniprotkb/P56221"><code class="curie">UniProtKB:P56221</code></a>, <em>Pyricularia oryzae (strain 70-15 / ATCC MYA-4617 / FGSC 8958)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_242507"><code class="curie">NCBITaxon:242507</code></a> <span class="pill">REVIEWED</span> — Scytalone dehydratase catalytic monomer resolved at 2.1 angstroms with carpropamid bound in the hydrophobic active-site cavity (PMID:9665698, PDB 2STD).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">carpropamid_bound_sdh1_active_site</code></td>
+    <td>carpropamid-bound scytalone dehydratase active-site complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_dhn_melanin_biosynthesis</code></td>
+    <td>scytalone dehydration and fungal 1,8-dihydroxynaphthalene melanin biosynthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: carpropamid_scytalone_dehydratase_melanin_inhibition" tabindex="0">
+<table>
+  <caption>Edges — carpropamid_scytalone_dehydratase_melanin_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">carpropamid</code></td>
+    <td>binds</td>
+    <td><code class="curie">carpropamid_bound_sdh1_active_site</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9665698">PMID:9665698</a></span> <span class="meta">(A 2.1-angstrom X-ray crystal structure of Magnaporthe grisea (Pyricularia oryzae) scytalone dehydratase complexed with carpropamid (PDB:2STD) resolved tight active-site binding.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">scytalone_dehydratase</code></td>
+    <td>participates in</td>
+    <td><code class="curie">carpropamid_bound_sdh1_active_site</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9665698">PMID:9665698</a></span> <span class="meta">(The 2.1-angstrom cocrystal mapped aromatic, hydrophobic, and water-displacement interactions in the scytalone dehydratase active site.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">carpropamid_bound_sdh1_active_site</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">fungal_dhn_melanin_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9665698">PMID:9665698</a></span> <span class="meta">(Structural and biochemical analyses established potent scytalone dehydratase inhibition that blocks melanin biosynthesis in the rice-blast pathogen.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
 <h2>Record-level evidence</h2>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:9665698</span> <span class="meta">(Primary structural mechanism study of the exact compound.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9665698">PMID:9665698</a></span> <span class="meta">(Primary structural mechanism study of the exact compound.)</span></li>
 </ul>
 
 
@@ -149,32 +249,52 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_UNIPROT_PROTEIN_EXAMPLES</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added curated Pyricularia oryzae 70-15 scytalone dehydratase SDH1 (P56221) UniProtKB protein example on the PRIMARY_LITERATURE fungal scytalone dehydratase molecular target.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-24 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph carpropamid_scytalone_dehydratase_melanin_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:9665698).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antifungal/carpropamid.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antifungal/carpropamid.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=carpropamid">MediaIngredientMech (carpropamid)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=carpropamid">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=carpropamid">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=carpropamid">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=carpropamid">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

@@ -1,0 +1,74 @@
+{
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-14-platen-archive/curation-canary.json",
+    "sha256": "b1d70aaefc42ad7c13a4f49a427338636c8c3baa0630415fafca4a1451098be7"
+  },
+  "experimental_protein_assignments": 0,
+  "issue_1040": "DEFERRED",
+  "ncbi_requests": 0,
+  "new_network_requests": 0,
+  "new_resistance_assertions": 0,
+  "plan": {
+    "path": "research/2026-10-14-platen-archive-curation-plan.json",
+    "sha256": "162959a6adc76359d9d82372f64399e3fa1330fd70687d5ba8e57153e341fed6"
+  },
+  "records": [
+    {
+      "after": {
+        "path": "data/antibiotics/antibacterial/platencin.yaml",
+        "sha256": "35c1dd14232c709cd4a4a97fd118bc5c399e9e2c6ac27ec24aab5dc350300be5"
+      },
+      "before": {
+        "path": "data/antibiotics/antibacterial/platencin.yaml",
+        "sha256": "d28d043dfb2adcb9d6cb3f9c86d17f0e5da4c8b6a580f5baa2617eb9f8bfdc7f"
+      },
+      "before_claim_sha256": "4c94b072de2a5d7c44effef4296bc6d9e3ebe69c6a72d48d6fed048cf1643771",
+      "curation_event": {
+        "action": "GROUNDED_DONOR_ARCHIVE_REFERENCE",
+        "changes": "Appended reference-only donor FabF archive crosswalk and three source citations. ENA KF543053.1 / AHA90851.1 links through UniParc UPI0003C98D16 to historical inactive UniProtKB V5NR11; no active current UniProtKB mapping established. Preserved tested-host identity, all phenotypes and mechanisms, original evidence, PtmP3 claims and source-owned slices. No protein slot, experimental allele, genome, strain TaxID, quantitative endpoint or new resistance claim assigned. Whole-record primary review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-14T20:50:04Z"
+      },
+      "embedding_document_unchanged": true,
+      "fresh_seed_merge_equal": true,
+      "identifier": "CHEBI:68241",
+      "resistance_index": 1,
+      "roundtrip_equal": true,
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-platen-archive/CHEBI-68241-before.yaml",
+        "sha256": "d28d043dfb2adcb9d6cb3f9c86d17f0e5da4c8b6a580f5baa2617eb9f8bfdc7f"
+      },
+      "standard_inchi_key": "DWUHGPPFFABTIY-RLWZQHMASA-N"
+    },
+    {
+      "after": {
+        "path": "data/antibiotics/antibacterial/platensimycin.yaml",
+        "sha256": "508e74c27714e851bc6a0e047c863384a8eb79e822f3f4229fd47b33b88ff3b1"
+      },
+      "before": {
+        "path": "data/antibiotics/antibacterial/platensimycin.yaml",
+        "sha256": "8baffa64e37818f750df4ab55b5ed0d16783b1158c5f4a6845b85536e979839a"
+      },
+      "before_claim_sha256": "87c9122c18b976d465d31682b3d325210b5d9975c773b7c5a605bd9439de58e7",
+      "curation_event": {
+        "action": "GROUNDED_DONOR_ARCHIVE_REFERENCE",
+        "changes": "Appended reference-only donor FabF archive crosswalk and three source citations. ENA KF543053.1 / AHA90851.1 links through UniParc UPI0003C98D16 to historical inactive UniProtKB V5NR11; no active current UniProtKB mapping established. Preserved tested-host identity, all phenotypes and mechanisms, original evidence, PtmP3 claims and source-owned slices. No protein slot, experimental allele, genome, strain TaxID, quantitative endpoint or new resistance claim assigned. Whole-record primary review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-14T20:50:04Z"
+      },
+      "embedding_document_unchanged": true,
+      "fresh_seed_merge_equal": true,
+      "identifier": "CHEBI:68236",
+      "resistance_index": 1,
+      "roundtrip_equal": true,
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-platen-archive/CHEBI-68236-before.yaml",
+        "sha256": "8baffa64e37818f750df4ab55b5ed0d16783b1158c5f4a6845b85536e979839a"
+      },
+      "standard_inchi_key": "CSOMAHTTWTVBFL-OFBLZTNGSA-N"
+    }
+  ],
+  "scope": "DONOR_ARCHIVE_REFERENCE_ONLY"
+}

@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>bicozamycin</h1>
 <p class="meta">
   <code class="curie">CHEBI:60584</code>
@@ -34,17 +45,20 @@
 <p><a href="http://purl.obolibrary.org/obo/ARO_3007150">bicyclomycin-like antibiotic</a><code class="curie">ARO:3007150</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_35990">CHEBI:35990</a>      <code class="curie">CHEBI:35990</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_38295">CHEBI:38295</a>      <code class="curie">CHEBI:38295</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3007150">ARO:3007150</a>      <code class="curie">ARO:3007150</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_35990"><code class="curie">CHEBI:35990</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_38295"><code class="curie">CHEBI:38295</code></a></li>
+  <li>bicyclomycin-like antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_3007150"><code class="curie">ARO:3007150</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C12H18N2O7</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>302.283 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>302.1114 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">WOUDXEYYJPOSNE-VKZDFBPFSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">C=C1CCO[C@]2([C@@H](O)[C@@](C)(O)CO)NC(=O)[C@@]1(O)NC2=O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C12H18N2O7/c1-6-3-4-21-12(7(16)10(2,19)5-15)9(18)13-11(6,20)8(17)14-12/h7,15-16,19-20H,1,3-5H2,2H3,(H,13,18)(H,14,17)/t7-,10-,11+,12-/m0/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -55,7 +69,7 @@
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000055">ARO:0000055</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_0000055">bicyclomycin</a><code class="curie">ARO:0000055</code></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=38129-37-2">cas:38129-37-2</a></li>
   <li><a href="https://www.kegg.jp/entry/C11259">kegg.compound:C11259</a></li>
   <li><a href="http://www.knapsackfamily.com/knapsack_core/information.php?word=C00018850">knapsack:C00018850</a></li>
@@ -70,12 +84,13 @@ both rather than shown here, since it names at most one of them.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33282">CHEBI:33282</a>    <code class="curie">CHEBI:33282</code></li>
+  <li>antibacterial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33282"><code class="curie">CHEBI:33282</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -95,19 +110,35 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>rho transcription terminator factor <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000736">ARO:3000736</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. Rho termination factor is asserted as the antibiotic target. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000736</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000055 (bicyclomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000736">ARO:3000736</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000055 (bicyclomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>Rho transcription termination factor <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta">A 3.15-angstrom Rho-bicyclomycin crystal structure directly localized the drug next to ATP- and RNA-binding sites and showed occlusion of the water required for ATP hydrolysis. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2005-01 (retrieved 2026-09-02).</p>
+<p><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></p><div class="table-scroll" role="region" aria-label="Rho transcription termination factor organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Transcription termination factor Rho <a href="https://www.uniprot.org/uniprotkb/P0AG30"><code class="curie">UniProtKB:P0AG30</code></a><br><span class="meta">Reviewed Rho reference (UniProt entry 164, sequence 1), mapped by PDB 1XPO entity 2. One Rho subunit, not the whole complex or a resistance allele. K-12 is the UniProt reference scope, not an assigned experimental strain; PDB reports the source species as Escherichia coli (NCBITaxon:562).</span></td>
+    <td>rho</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:15642265</span> <span class="meta">(Primary bicyclomycin-bound Rho structural mechanism study (DOI:10.1016/j.str.2004.10.013).)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15642265">PMID:15642265</a></span> <span class="meta">(Primary bicyclomycin-bound Rho structural mechanism study (DOI:10.1016/j.str.2004.10.013).)</span></li>
+  <li><span class="meta">PDB:1XPO</span> <span class="meta">(Reference crosswalk checked 2026-10-13: PDB entry 1.4 (2024-12-25), entity 2 maps to UniProtKB:P0AG30 and source species NCBITaxon:562. BCM has exact Standard InChIKey WOUDXEYYJPOSNE-VKZDFBPFSA-N. PDB and UniProt cite PMID:15642265; this supplements the existing primary cocrystal claim, not a new resistance or MIC assertion. https://www.rcsb.org/structure/1XPO K-12 is reference context, not an assigned experimental strain; P0AG30 identifies one subunit, not the whole complex.)</span></li>
 </ul>
 
 
@@ -118,12 +149,12 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">1 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">1 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">1</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_EFFLUX</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -132,11 +163,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003801</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000055 (bicyclomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003801">ARO:3003801</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000055 (bicyclomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 <h2>Producer organisms</h2>
@@ -148,29 +181,111 @@ several compounds, the evidence is marked inherited, meaning it covers this
 compound together with the cluster's other products rather than singling it out.
 Those products need not be related to each other: a cluster can list an
 intermediate, a precursor and a finished antibiotic side by side.</p>
+<div class="table-scroll" role="region" aria-label="Producer organisms" tabindex="0">
 <table>
   <caption>Producer organisms</caption>
   <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Cluster link evidence</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Evidence</th></tr></thead>
   <tr>
-    <td><em>Streptomyces cinnamoneus</em> <code class="curie">NCBITaxon:53446</code></td>
-    <td>BGC0001468</td>
+    <td><em>Streptomyces cinnamoneus</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=53446">NCBITaxon:53446</a></td>
+    <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001468">BGC0001468</a></td>
     <td class="meta">Enzymatic assays; Heterologous expression<br><span class="pill plain">compound specific</span></td>
     <td class="meta">MIBIG 4.0.1 (entry 5)</td>
     <td class="meta">questionable</td>
     <td class="meta">MIBiG active entry; compound &#39;bicyclomycin&#39; joined by exact Standard InChIKey.</td>
     <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">PMID:29053243</span> <span class="meta">(MIBiG&#39;s first legacy reference for the entry, inherited rather than attached to the compound. It supports that the entry exists; it is NOT established as evidence for this specific producer/compound link.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/29053243">PMID:29053243</a></span> <span class="meta">(MIBiG&#39;s first legacy reference for the entry, inherited rather than attached to the compound. It supports that the entry exists; it is NOT established as evidence for this specific producer/compound link.)</span></li>
 </ul>
 </td>
   </tr>
 </table>
 
+</div>
+
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Bicozamycin noncompetitively blocks Rho ATP hydrolysis and transcription termination <span class="pill">MECHANISTIC</span></h3>
+<p>Bicozamycin (bicyclomycin) binds Escherichia coli transcription termination factor Rho adjacent to the ATP- and RNA-binding sites, occludes the nucleophilic water required for ATP hydrolysis, and disrupts Rho-dependent bacterial transcription termination.</p><div class="table-scroll" role="region" aria-label="Nodes: bicozamycin_rho_atpase_transcription_termination_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — bicozamycin_rho_atpase_transcription_termination_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">bicozamycin</code></td>
+    <td>bicozamycin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/bicozamycin.html"><code class="curie">CHEBI:60584</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rho_termination_factor</code></td>
+    <td>Rho transcription termination factor<br><span class="meta">Examples: Transcription termination factor Rho (rho) <a href="https://www.uniprot.org/uniprotkb/P0AG30"><code class="curie">UniProtKB:P0AG30</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Reviewed Rho reference (UniProt entry 164, sequence 1), mapped by PDB 1XPO entity 2. One Rho subunit, not the whole complex or a resistance allele. K-12 is the UniProt reference scope, not an assigned experimental strain; PDB reports the source species as Escherichia coli (NCBITaxon:562).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rho_atp_hydrolysis</code></td>
+    <td>Rho-catalyzed ATP hydrolysis</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rho_dependent_transcription_termination</code></td>
+    <td>Rho-dependent bacterial transcription termination</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: bicozamycin_rho_atpase_transcription_termination_inhibition" tabindex="0">
+<table>
+  <caption>Edges — bicozamycin_rho_atpase_transcription_termination_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">bicozamycin</code></td>
+    <td>binds</td>
+    <td><code class="curie">rho_termination_factor</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15642265">PMID:15642265</a></span> <span class="meta">(A 3.15-angstrom Escherichia coli Rho-bicyclomycin crystal structure localized the antibiotic adjacent to the ATP- and RNA-binding sites.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bicozamycin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">rho_atp_hydrolysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15642265">PMID:15642265</a></span> <span class="meta">(The Rho-bicyclomycin cocrystal showed steric occlusion of the attack water required for ATP hydrolysis.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">rho_termination_factor</code></td>
+    <td>enables</td>
+    <td><code class="curie">rho_atp_hydrolysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15642265">PMID:15642265</a></span> <span class="meta">(The structural study mapped the ATP-hydrolysis active site within the Rho hexamer.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">rho_atp_hydrolysis</code></td>
+    <td>supports</td>
+    <td><code class="curie">rho_dependent_transcription_termination</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15642265">PMID:15642265</a></span> <span class="meta">(Occlusion of Rho ATP hydrolysis explains bicyclomycin disruption of Rho-dependent transcription termination.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
 <h2>Record-level evidence</h2>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:15642265</span> <span class="meta">(Primary exact-bicyclomycin/bicozamycin Rho cocrystal and ATPase-mechanism study.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15642265">PMID:15642265</a></span> <span class="meta">(Primary exact-bicyclomycin/bicozamycin Rho cocrystal and ATPase-mechanism study.)</span></li>
 </ul>
 
 
@@ -211,32 +326,52 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-09-08 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">REGROUNDED</span>
+    <span class="meta">2026-10-13 · codex · LLM-assisted</span>
+    <p>Added a versioned Rho protein example and source-species context to the literature-owned bicyclomycin target through the exact-ligand PDB 1XPO/UniProt crosswalk. Preserved all CARD and MIBiG assertions; no resistance allele, genome, or numerical AST assignment.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph bicozamycin_rho_atpase_transcription_termination_inhibition (4 nodes, 4 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:15642265).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/bicozamycin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/bicozamycin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=bicozamycin">MediaIngredientMech (bicozamycin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=bicozamycin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=bicozamycin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=bicozamycin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=bicozamycin">TraitMech</a>
+&middot; <a href="https://culturebotai.github.io/TaxonMech/browse.html?q=Streptomyces%20cinnamoneus">TaxonMech (Streptomyces cinnamoneus)</a></p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

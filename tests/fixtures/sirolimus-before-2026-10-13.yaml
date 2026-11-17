@@ -1,0 +1,636 @@
+identifier: CHEBI:9168
+label: sirolimus
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide lactam isolated from Streptomyces hygroscopicus consisting
+  of a 29-membered ring containing 4 trans double bonds, three of which are conjugated.
+  It is an antibiotic, immunosupressive and antineoplastic agent.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Rapamune
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: sirolimusum
+  synonym_type: INN
+  source: chebi
+- synonym_text: sirolimús
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3S,6R,7E,9R,10R,12R,14S,15E,17E,19E,21S,23S,26R,27R,34aS)-9,27-dihydroxy-3-{(2R)-1-[(1S,3R,4R)-4-hydroxy-3-methoxycyclohexyl]propan-2-yl}-10,21-dimethoxy-6,8,12,14,20,26-hexamethyl-9,10,12,13,14,21,22,23,24,25,26,27,32,33,34,34a-hexadecahydro-3H-23,27-epoxypyrido[2,1-c][1,4]oxazacyclohentriacontine-1,5,11,28,29(4H,6H,31H)-pentone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-Rapamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,9S,12S,15R,16E,18R,19R,21R,23S,24E,26E,28E,30S,32S,35R)-1,18-dihydroxy-12-{(2S)-1-[(1S,3R,4R)-4-hydroxy-3-methoxycyclohexyl]propan-2-yl}-19,30-dimethoxy-15,17,21,23,29,35-hexamethyl-11,36-dioxa-4-azatricyclo[30.3.1.04,9]hexatriaconta-16,24,26,28-tetraene-2,3,10,14,20-pentone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic AY 22989
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sirolimus
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rapamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:145565
+- CHEBI:25698
+- CHEBI:26979
+- CHEBI:35681
+- CHEBI:3992
+- CHEBI:59770
+- CHEBI:87113
+activity_roles:
+- CHEBI:149553
+- CHEBI:35718
+- CHEBI:36047
+- CHEBI:86327
+chemical_structure:
+  smiles: '[H][C@@]1(C[C@@H](C)[C@]2([H])CC(=O)[C@H](C)/C=C(\C)[C@@H](O)[C@@H](OC)C(=O)[C@H](C)C[C@H](C)/C=C/C=C/C=C(\C)[C@@H](OC)C[C@]3([H])CC[C@@H](C)[C@@](O)(O3)C(=O)C(=O)N3CCCC[C@@]3([H])C(=O)O2)CC[C@@H](O)[C@H](OC)C1'
+  standard_inchi: InChI=1S/C51H79NO13/c1-30-16-12-11-13-17-31(2)42(61-8)28-38-21-19-36(7)51(60,65-38)48(57)49(58)52-23-15-14-18-39(52)50(59)64-43(33(4)26-37-20-22-40(53)44(27-37)62-9)29-41(54)32(3)25-35(6)46(56)47(63-10)45(55)34(5)24-30/h11-13,16-17,25,30,32-34,36-40,42-44,46-47,53,56,60H,14-15,18-24,26-29H2,1-10H3/b13-11+,16-12+,31-17+,35-25+/t30-,32-,33-,34-,36-,37+,38+,39+,40-,42+,43+,44-,46-,47+,51-/m1/s1
+  standard_inchi_key: QFJCIRLUMZQUOT-HPLJOQBZSA-N
+  molecular_formula: C51H79NO13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 914.187
+  monoisotopic_mass: 913.55514
+xrefs:
+- cas:53123-88-9
+- hmdb:HMDB0015015
+- kegg.compound:C07909
+- knapsack:C00018055
+- lipidmaps:LMPK06000003
+- pdb-ccd:RAP
+- reaxys:5848501
+drug_xrefs:
+- drugbank:DB00877
+- drugcentral:2446
+- kegg.drug:D00753
+document_xrefs:
+- wikipedia.en:Rapamycin
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9168
+  source_label: sirolimus
+  minted_identifier: antibioticmech:chebi-6b754382a1
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:35718
+  - CHEBI:36047
+  - CHEBI:86327
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 021083
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: PF PRISM CV
+  drug_name: RAPAMUNE
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '1999-09-15'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021083
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021110'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: PF PRISM CV
+  drug_name: RAPAMUNE
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2000-08-25'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021110
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021110'
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: PF PRISM CV
+  drug_name: RAPAMUNE
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2000-08-25'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021110
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021110'
+  application_type: NDA
+  product_number: '003'
+  sponsor_name: PF PRISM CV
+  drug_name: RAPAMUNE
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2000-08-25'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021110
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021110'
+  application_type: NDA
+  product_number: '004'
+  sponsor_name: PF PRISM CV
+  drug_name: RAPAMUNE
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2000-08-25'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021110
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '201578'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: DR REDDYS
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2014-10-27'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=201578
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '201578'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: DR REDDYS
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2014-10-27'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=201578
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '201676'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ZYDUS PHARMS
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2014-01-08'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=201676
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '201676'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: ZYDUS PHARMS
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2014-01-08'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=201676
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '201676'
+  application_type: ANDA
+  product_number: '003'
+  sponsor_name: ZYDUS PHARMS
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2014-01-08'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=201676
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '208691'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: GLENMARK PHARMS LTD
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2020-10-16'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208691
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '208691'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: GLENMARK PHARMS LTD
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2020-10-16'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208691
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '208691'
+  application_type: ANDA
+  product_number: '003'
+  sponsor_name: GLENMARK PHARMS LTD
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2020-10-16'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208691
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '211040'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: NOVITIUM PHARMA
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2019-01-28'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211040
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '211212'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AMNEAL
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2019-10-18'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211212
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '211406'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: APOTEX
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2019-10-22'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211406
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '213312'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: AADI
+  drug_name: FYARRO
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2021-11-22'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213312
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '213478'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: NOBELPHARMA
+  drug_name: HYFTOR
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2022-03-22'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213478
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '214753'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ALKEM LABS LTD
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2021-03-12'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214753
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '214753'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: ALKEM LABS LTD
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2021-03-12'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214753
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '214753'
+  application_type: ANDA
+  product_number: '003'
+  sponsor_name: ALKEM LABS LTD
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2021-03-12'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214753
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '215016'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: TORRENT
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2021-12-27'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215016
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '215080'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: HETERO LABS LTD V
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2024-09-16'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215080
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '215116'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: RISING
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2025-07-15'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215116
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '216728'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: MSN
+  drug_name: SIROLIMUS
+  ingredient_name: SIROLIMUS
+  substance_id: UNII:W36ZG6FT64
+  approval_date: '2023-01-19'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '108'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=216728
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:17:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,156 @@
+{
+  "reviewed_on": "2026-10-12",
+  "scope": "CHEMICAL_IDENTITY_HOLD_AND_REFERENCE_IDENTITIES_NOT_PHENOTYPE_CURATION",
+  "baseline_census": {
+    "path": "research/2026-10-12-thiolutin-resistance-grounding.tsv",
+    "sha256": "bf61f96c90214ed76721c506289e9bbc03ea03953237983ad58a02bb65239564"
+  },
+  "records": [
+    {
+      "identifier": "CHEBI:9470",
+      "path": "data/antibiotics/antibacterial/tetracenomycin-c.yaml",
+      "review_time_sha256": "0d02e86d0d7e413314a887fa74bd6950dc7245e5930490189a9259f925d47c7b",
+      "standard_inchi_key": "ULHJWHCSSAEMLW-UEVCKROQSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:32209",
+      "path": "data/antibiotics/antibacterial/tetracenomycin-x.yaml",
+      "review_time_sha256": "4994e01a65583c0629830b9a134cb3bde712efc23ae2eebca922faca5507a875",
+      "standard_inchi_key": "CCDBRFCICQZPPE-DNQXCXABSA-N",
+      "whole_record_review": "OPEN"
+    }
+  ],
+  "chemical_identity": {
+    "source_owner": "data/raw/chebi_antimicrobials.tsv",
+    "review_time_structure": {
+      "molecular_formula": "C24H20O11",
+      "standard_inchi_key": "CCDBRFCICQZPPE-DNQXCXABSA-N",
+      "smiles": "COC(=O)c1c(OC)cc2cc3c(c(O)c2c1C)C(=O)[C@]1(OC)C(=O)C=C(OC)C(=O)[C@]1(O)C3=O",
+      "hydroxyl_count": 2,
+      "carbonyl_count_including_ester": 5,
+      "chiral_center_count": 2
+    },
+    "paper_ligand": {
+      "identifier": "PDB:OCW",
+      "molecular_formula": "C24H22O11",
+      "standard_inchi_key": "QSPIPUXWSNFXCK-AGILITTLSA-N",
+      "smiles": "Cc1c2c(cc3c(c2O)C(=O)[C@@]4(C(=O)C=C([C@H]([C@@]4(C3=O)O)O)OC)OC)cc(c1C(=O)OC)OC",
+      "hydroxyl_count": 3,
+      "carbonyl_count_including_ester": 4,
+      "chiral_center_count": 3,
+      "entry": "PDB:6Y69",
+      "entity_id": "55",
+      "entity_annotation": "SUBJECT_OF_INVESTIGATION"
+    },
+    "live_chebi_matches_pinned_inventory_and_record": true,
+    "graph_check_rdkit_version": "2025.03.6",
+    "project_rdkit_version": "2026.3.5",
+    "decision": "HOLD_EXACT_STRUCTURE_CLAIM_TRANSFER",
+    "difference": "Constitutional oxidation-state difference, not only stereochemistry or coordinate formatting.",
+    "existing_claim_scope": "The pre-existing PMID:32601485 target and mode-of-action interpretation also require source-owned identity reconciliation.",
+    "replacement_structure_assigned": false,
+    "cause_established": false
+  },
+  "sources": [
+    {
+      "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/32209/",
+      "cache_name": "chebi-32209.json",
+      "sha256": "627bed7e22a604a3368e2459f0f18db4c8085b5a1ceb6fd3e9fedf3a5a05d476"
+    },
+    {
+      "url": "https://data.rcsb.org/rest/v1/core/chemcomp/OCW",
+      "cache_name": "ocw.json",
+      "sha256": "8f780e20d53542679b1e9de2e18903214d8ae9d561fabc05cabd1ce1816f44c8"
+    },
+    {
+      "url": "https://data.rcsb.org/rest/v1/core/entry/6Y69",
+      "cache_name": "6y69.json",
+      "sha256": "a733a491799d4d05c441843d78cf870ab97bb21f43a21a67a39e51662bb186c1"
+    },
+    {
+      "url": "https://data.rcsb.org/rest/v1/core/nonpolymer_entity/6Y69/55",
+      "cache_name": "6y69-55.json",
+      "sha256": "b8ee9e124a5d650504c79dff2049174962bc85fb2f1d51af6085663d6ab792a6"
+    },
+    {
+      "url": "https://edoc.ub.uni-muenchen.de/27062/2/Wieland_Maximiliane.pdf",
+      "cache_name": "wieland-thesis.pdf",
+      "sha256": "44516d063052b2d669e2266c294d1a031f92c3188a359f9c4da16ad17f154235",
+      "repository_md5_verified": "e99235c75870d7915a20b29b4d2e1f1c"
+    }
+  ],
+  "primary_review": {
+    "reference": "PMID:32601485",
+    "doi": "10.1038/s41589-020-0578-x",
+    "author_copy": "Maximiliane Wieland, 2020 dissertation, DOI:10.5282/edoc.27062",
+    "pdf_pages": 177,
+    "selected_text_pages_one_based": [163, 164, 165, 166, 169, 170],
+    "visually_inspected_pages_one_based": [164, 165],
+    "chemical_figure": "Figure 1c on PDF page 164",
+    "finding": "The hydroxyl-bearing chemical diagram and reported mass agree with the deposited ligand, not the pinned ChEBI structure.",
+    "rna_boundary": "The reported 23S rRNA determinant is not a protein; a UniProt protein accession is not applicable and no nearby protein is substituted.",
+    "whole_paper_review_complete": false,
+    "measurements_imported": false,
+    "source_assets_redistributed": false
+  },
+  "tetracenomycin_c_reference_context": {
+    "primary_reference": "PMID:1592819",
+    "doi": "10.1128/jb.174.11.3651-3658.1992",
+    "review_scope": "SELECTED_PRIMARY_TEXT_NOT_NATIVE_FIGURE_REVIEW",
+    "secondary_reference": "PMID:1592820",
+    "secondary_doi": "10.1128/jb.174.11.3659-3666.1992",
+    "secondary_review_scope": "PUBLISHER_ABSTRACT_ONLY",
+    "boundary": "TcmA resistance evidence, proposed export mechanism and TcmR regulation are distinct. Transcriptional induction is not MIC evidence.",
+    "producer_species": "NCBITaxon:1907",
+    "producer_label": "Streptomyces glaucescens",
+    "heterologous_host_species": "NCBITaxon:1916",
+    "heterologous_host_label": "Streptomyces lividans",
+    "taxonomy_source": "UniProt Taxonomy 2026_03; both identifiers are species, not strain IDs",
+    "experimental_protein_or_genome_assigned": false,
+    "references": [
+      {
+        "gene": "tcmA",
+        "accession": "UniProtKB:P39886",
+        "entry_version": 106,
+        "sequence_version": 1,
+        "returned_citations": ["PMID:1592819"],
+        "request_body_sha256": "d602daa054806d299c6c089bbd920514594f5f7c4f9006bdce37b35045c4f03f"
+      },
+      {
+        "gene": "tcmR",
+        "accession": "UniProtKB:P39885",
+        "entry_version": 97,
+        "sequence_version": 1,
+        "returned_citations": ["PMID:1592819", "PMID:1592820"],
+        "request_body_sha256": "107fdc425ca2ad31c42ed1a20108de93d9e2a0f4822433fba9cae3f5d956d9c3"
+      }
+    ],
+    "reference_scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELES",
+    "reference_query": "gene_exact:{gene} AND organism_id:1907 AND reviewed:true",
+    "results_per_query": 1,
+    "pagination_complete": true,
+    "release": "2026_03",
+    "historical_card_direct_link_counts_changed": false
+  },
+  "access_limits": {
+    "local_cache_directory": "reports/resistance-grounding-2026-10-12-tetracenomycin",
+    "primary_1992_download_status": 403,
+    "primary_1992_download_is_pdf": false,
+    "publisher_2020_native_route": "AUTHORIZATION_REDIRECT_NOT_RETRIED",
+    "access_bypass_or_outreach": false,
+    "ncbi_endpoint_requests": 0,
+    "ncbi_contact": 0,
+    "issue_1040": "DEFERRED",
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0
+  },
+  "disposition": {
+    "records_curated": 0,
+    "new_resistance_claims": 0,
+    "new_measurements": 0,
+    "whole_records_completed": 0,
+    "whole_corpus_review": "OPEN"
+  },
+  "attribution": "UniProt Consortium (CC BY 4.0), ChEBI (CC BY 4.0), RCSB PDB metadata, and cited primary authors. Full source assets remain local."
+}

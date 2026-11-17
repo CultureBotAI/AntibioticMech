@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 
+import yaml
 from linkml_runtime.utils.schemaview import SchemaView
 
 
@@ -32,7 +33,7 @@ def test_mech_shared_is_vendored_byte_identical(repo_root):
     by pinning the sha of the copy we shipped."""
     path = repo_root / "src" / "antibioticmech" / "schema" / "mech_shared.yaml"
     digest = hashlib.sha256(path.read_bytes()).hexdigest()
-    expected = "1a5e21eb2ee9f3584ff6af3a6906b1d442e18c41de405b1bf907c20f44eafa2a"
+    expected = "c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895"
     assert digest == expected, (
         "mech_shared.yaml has been edited locally. It is vendored byte-identical "
         "across the Mech repos — change it once upstream and re-vendor everywhere, "
@@ -42,6 +43,59 @@ def test_mech_shared_is_vendored_byte_identical(repo_root):
 
 def _permissible(view, enum_name: str) -> set[str]:
     return set(view.get_enum(enum_name).permissible_values)
+
+
+def test_ncbi_taxon_patterns_accept_only_positive_canonical_curies(schema_path):
+    schema = yaml.safe_load(schema_path.read_text(encoding="utf-8"))
+    expected = "^NCBITaxon:[1-9][0-9]*$"
+    expected_slots = {
+        "ActivityObservation.taxon_id",
+        "MolecularTarget.taxon_id",
+        "ProducerOrganism.taxon_id",
+        "ProteinExample.taxon_id",
+        "ResistanceMechanism.strain_taxon_id",
+        "ResistanceMechanism.taxon_id",
+        "StructuralObservation.taxon_id",
+    }
+
+    seen = set()
+    problems = []
+    for class_name, class_body in schema["classes"].items():
+        for slot_name, slot in (class_body.get("attributes") or {}).items():
+            if not slot_name.endswith("taxon_id"):
+                continue
+            seen.add(f"{class_name}.{slot_name}")
+            if slot.get("pattern") != expected:
+                problems.append(f"{class_name}.{slot_name}: {slot.get('pattern')!r}")
+
+    assert seen == expected_slots
+    assert problems == []
+
+
+def test_activity_observation_count_slots_are_positive(schema_path):
+    attributes = yaml.safe_load(schema_path.read_text(encoding="utf-8"))[
+        "classes"]["ActivityObservation"]["attributes"]
+    count_slots = {
+        name: slot
+        for name, slot in attributes.items()
+        if name.endswith("_count")
+    }
+
+    assert set(count_slots) == {
+        "isolate_count",
+        "measurement_count",
+        "site_count",
+        "source_export_row_count",
+    }
+    assert {
+        name: slot.get("minimum_value")
+        for name, slot in count_slots.items()
+    } == {
+        "isolate_count": 1,
+        "measurement_count": 1,
+        "site_count": 1,
+        "source_export_row_count": 1,
+    }
 
 
 def test_corpus_uses_only_declared_enum_values(schema_path, records):
@@ -79,8 +133,6 @@ def test_class_hierarchy_is_declared_where_consumers_will_find_it(schema_path):
     those records are NOT also under antibacterial. A consumer asking "what acts
     on bacteria?" has to take both, and the only honest place to say so is the
     schema. The generated site derives its cross-links from here."""
-    import yaml
-
     values = yaml.safe_load(schema_path.read_text(encoding="utf-8"))[
         "enums"]["AntimicrobialClassEnum"]["permissible_values"]
     assert (values["ANTIMYCOBACTERIAL"] or {}).get("is_a") == "ANTIBACTERIAL"
@@ -99,8 +151,6 @@ def test_every_class_the_schema_declares_has_a_directory(schema_path):
     the enum without a directory fails here rather than at seed time."""
     import sys
     from pathlib import Path
-
-    import yaml
 
     sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
     from seed_from_sources import CLASS_DIRS

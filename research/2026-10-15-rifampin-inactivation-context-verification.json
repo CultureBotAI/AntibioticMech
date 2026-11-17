@@ -1,0 +1,119 @@
+{
+  "adversarial_review": {
+    "method": "Separate self-review and mutated-input tests for source identity, host and reference scope",
+    "remaining": [
+      "The two complete protein queries are empty, not exhaustive biological absence findings.",
+      "Experimental alleles, genomes, exact strain identities and whole-record primary reviews remain open.",
+      "The older Arr primary source and selected-study figures/supplements remain unreviewed."
+    ],
+    "resolved": [
+      "Retain Arr as a family with one structure-linked member, not a universal protein identity.",
+      "Do not replace WAC1438 with its 16S-related species or recast native species nodes as strain ranks.",
+      "Do not assign rphB an accession by ordering a source-reported determinant range.",
+      "Preserve PDB source species, unreported source strain and expression host as distinct contexts."
+    ]
+  },
+  "audit_plan": {
+    "path": "research/2026-10-15-rifampin-inactivation-context-audit-plan.json",
+    "sha256": "1a275cb4c66945f4093658c5f7c61c84e1614a1a88a13cb2688ef5119546616d"
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-rifampin-inactivation-context/baseline.json",
+    "sha256": "e4ecb00e0498b7e4eda24354602102d43b696cc3bf4528689d01a0ecf3adab91"
+  },
+  "checks": {
+    "errors": 0,
+    "failures": 0,
+    "focused_tests_passed": 144,
+    "full_authoritative_qc_rerun": false,
+    "offline_write_disabled_replay": true,
+    "report_only_appended_section": true,
+    "rgt_and_arr_native_primary_bodies_replayed": false,
+    "saved_projection_equal": true,
+    "selected_cached_lc231_primary_elements_replayed": true,
+    "skipped": 0,
+    "unchanged_data_curation_site_files": 6353
+  },
+  "constraints": {
+    "biological_record_writes": false,
+    "broad_index_rewritten": false,
+    "experimental_identifiers_assigned": false,
+    "figure_pixels_reviewed": false,
+    "full_investigation_complete": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "redirects_followed": 0,
+    "retries": 0,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "source_adoption": false,
+    "supplements_reviewed_this_followup": false,
+    "whole_papers_reviewed": false
+  },
+  "date": "2026-10-15",
+  "dossier": {
+    "path": "research/2026-10-15-rifampin-inactivation-context.json",
+    "sha256": "7ec57fa49cbdd392d23f8f74adedada966729e2bb1883f8b7bb41bd98217990e"
+  },
+  "github_mutations": 0,
+  "new_native_requests": 4,
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "2517b0514f2250e3d07a8dbeee55134123ccaf3231aa2d38c082b8f1914f1e71"
+  },
+  "script": {
+    "path": "scripts/audit_rifampin_inactivation_context.py",
+    "sha256": "1bc8762953d21b6f64a25bd92b8ebba1eb70458dfeb54237d8019d623427e77b"
+  },
+  "shared_helpers": [
+    {
+      "path": "scripts/audit_bla_primary_identifiers.py",
+      "sha256": "d3a6cf163b9be1ca37f0670e98cc6753ef5f6f4b1cd36dfeec6f198c0fe9d77f"
+    },
+    {
+      "path": "scripts/audit_card_gene_reference_followup.py",
+      "sha256": "50f9c57b425a432a83eedae3699f80b9ba246d3e7ddb8164444def3e1b3af732"
+    },
+    {
+      "path": "scripts/audit_card_reference_lineages.py",
+      "sha256": "71474aa505ffdea55c2147eb934d9885ebdb040806f818b27490c51d8197aaa5"
+    },
+    {
+      "path": "scripts/audit_card_reference_memberships.py",
+      "sha256": "a247908f66360b08d8a1e8bd400b71ce30f5ecf95b81fe92d29057e4186be81d"
+    },
+    {
+      "path": "scripts/audit_sal_reference_context.py",
+      "sha256": "39cb77220df99b8f07bd17749a84bf50f8923263f89d59158ffa3fb3ff53d27f"
+    },
+    {
+      "path": "scripts/audit_curator_resistance_fields.py",
+      "sha256": "bcc3493cca199a418b6eb69cec5b51a293fe3a8aa15ed3272f7f285616e0d5dd"
+    },
+    {
+      "path": "scripts/audit_topoisomerase_references.py",
+      "sha256": "440bc495fbc08e9e02b4365a61a41b50893638ac7a222cd3990dceb44676442a"
+    }
+  ],
+  "status": "ARR_FAMILY_MEMBER_AND_SOURCE_TAXONOMY_VERIFIED_EXPERIMENTAL_ALLELES_OPEN",
+  "summary": {
+    "complete_records_loaded": 4,
+    "current_corpus_hashes_verified": 2939,
+    "new_native_requests": 4,
+    "new_native_taxonomy_nodes": 1,
+    "reused_native_taxonomy_nodes": 3,
+    "selected_family_member_references": 1,
+    "source_claims_bound": 12,
+    "source_species_name_contexts": 3,
+    "terms_investigated": 3,
+    "unresolved_protein_queries": 2,
+    "whole_record_primary_signoffs": 0
+  },
+  "test_report": {
+    "path": "reports/resistance-grounding-2026-10-15-rifampin-inactivation-context/tests.xml",
+    "sha256": "2919bb8e8ccb4318fa16bef8af4ce3af27a2d2dfce46bc00ec8832c9de9f92ee"
+  },
+  "tests": {
+    "path": "tests/test_rifampin_inactivation_context.py",
+    "sha256": "6a0e9f3bda4af28d156d8c959b7ae08c19b901f4b60330615ced16565c55024e"
+  }
+}

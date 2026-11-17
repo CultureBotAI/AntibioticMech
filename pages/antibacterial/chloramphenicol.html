@@ -7,7 +7,7 @@
 <meta name="description" content="chloramphenicol (CHEBI:17698): An organochlorine compound that is dichloro-substituted acetamide containing a nitrobenzene ring, an amide bond and two alcohol functions.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>chloramphenicol</h1>
 <p class="meta">
   <code class="curie">CHEBI:17698</code>
@@ -34,19 +45,22 @@
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000387">phenicol antibiotic</a><code class="curie">ARO:3000387</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_23824">CHEBI:23824</a>      <code class="curie">CHEBI:23824</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_35716">CHEBI:35716</a>      <code class="curie">CHEBI:35716</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_36683">CHEBI:36683</a>      <code class="curie">CHEBI:36683</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_37622">CHEBI:37622</a>      <code class="curie">CHEBI:37622</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000387">ARO:3000387</a>      <code class="curie">ARO:3000387</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_23824"><code class="curie">CHEBI:23824</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_35716"><code class="curie">CHEBI:35716</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_36683"><code class="curie">CHEBI:36683</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_37622"><code class="curie">CHEBI:37622</code></a></li>
+  <li>phenicol antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_3000387"><code class="curie">ARO:3000387</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C11H12Cl2N2O5</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>323.132 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>322.01233 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">WIIZWVCIJKGZOK-RKDXNWHRSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">O=C(N[C@H](CO)[C@H](O)c1ccc([N+](=O)[O-])cc1)C(Cl)Cl</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C11H12Cl2N2O5/c12-10(13)11(18)14-8(5-16)9(17)6-1-3-7(4-2-6)15(19)20/h1-4,8-10,16-17H,5H2,(H,14,18)/t8-,9-/m1/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -57,7 +71,7 @@
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000385">ARO:3000385</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3000385">chloramphenicol</a><code class="curie">ARO:3000385</code></li>
   <li>beilstein:2225532</li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=56-75-7">cas:56-75-7</a></li>
   <li><a href="http://www.chemspider.com/Chemical-Structure.5744.html">chemspider:5744</a></li>
@@ -99,13 +113,14 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_36047">CHEBI:36047</a>    <code class="curie">CHEBI:36047</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antibacterial drug  <a href="http://purl.obolibrary.org/obo/CHEBI_36047"><code class="curie">CHEBI:36047</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -125,19 +140,21 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>antibiotic sensitive peptidyl transferase (23S rRNA) <span class="pill plain">NUCLEIC_ACID</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000754">ARO:3000754</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. 23S rRNA peptidyl-transferase center is asserted as the target. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000754</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000754">ARO:3000754</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>50S ribosomal peptidyl-transferase center <span class="pill plain">RIBOSOMAL_SUBUNIT</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta">An approximately 3.3-3.4-angstrom E. coli ribosome cocrystal directly localized chloramphenicol near the peptidyl-transferase center and resolved species-specific contacts. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2010-09 (retrieved 2026-09-02).</p>
 <p><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></p><ul class="plain evidence">
-  <li><span class="meta">PMID:20876128</span> <span class="meta">(Primary chloramphenicol-bound E. coli ribosome structure (DOI:10.1073/pnas.1007988107).)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/20876128">PMID:20876128</a></span> <span class="meta">(Primary chloramphenicol-bound E. coli ribosome structure (DOI:10.1073/pnas.1007988107).)</span></li>
 </ul>
 
 
@@ -146,35 +163,58 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: PMID:20876128 resolved chloramphenicol on the Escherichia coli ribosome at approximately 3.3-3.4 angstrom resolution, directly defining its binding near the 50S peptidyl-transferase center. The study also showed why archaeal or other bacterial ribosome structures cannot always be transferred without species-specific qualification.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
-<h2>Activity spectrum</h2>
+<h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">2 observations &middot; <a href="chloramphenicol/activity-1.html">Browse all observations</a> &middot; <a href="chloramphenicol/record-0250e349c2881a4364b9bd2491bc302aa503283cd562d376d460ee4b57337312.json.gz" download>Complete record (JSON.gz)</a></p>
+<div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
-  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Assay</th><th scope="col">Strain</th></tr></thead>
-  <tr>
-    <td><em>Enterococcus faecalis</em> <code class="curie">NCBITaxon:1351</code></td>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Enterococcus faecalis</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1351">NCBITaxon:1351</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution chloramphenicol MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0782</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN15040081">SAMN15040081</a><br>    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="2" data-identifier="CHEBI:17698" data-key="WIIZWVCIJKGZOK-RKDXNWHRSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="chloramphenicol/activity-1-1e3bba73fec9027ae70f69d6921bb4ea34c45a39adca1e85a8f85cb32d4ac613.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterococcus faecalis</em> <code class="curie">NCBITaxon:1351</code></td>
+  <tr id="observation-2">
+    <td><em>Enterococcus faecalis</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1351">NCBITaxon:1351</a></td>
     <td>—</td>
     <td class="num">&gt;32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution chloramphenicol MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0780</td>
+    <td class="meta">
+—    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="2" data-identifier="CHEBI:17698" data-key="WIIZWVCIJKGZOK-RKDXNWHRSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="chloramphenicol/activity-1-1e3bba73fec9027ae70f69d6921bb4ea34c45a39adca1e85a8f85cb32d4ac613.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
+  </tbody>
 </table>
 
+</div>
+
+
 <h2>Resistance mechanisms</h2>
-<p class="meta">87 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">93 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">39</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_EFFLUX</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -183,7 +223,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000384</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000384">ARO:3000384</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -193,7 +233,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000772</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000772">ARO:3000772</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -203,7 +243,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003374</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003374">ARO:3003374</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -213,7 +253,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3001328</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3001328">ARO:3001328</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -223,7 +263,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000786</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000786">ARO:3000786</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -233,7 +273,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000386</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000386">ARO:3000386</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -243,7 +283,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000797</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000797">ARO:3000797</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -253,7 +293,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000798</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000798">ARO:3000798</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -263,7 +303,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004068</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004068">ARO:3004068</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -273,7 +313,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004066</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004066">ARO:3004066</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -283,7 +323,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004070</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004070">ARO:3004070</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -293,7 +333,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003703</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003703">ARO:3003703</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -303,7 +343,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003697</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003697">ARO:3003697</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -313,7 +353,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003029</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003029">ARO:3003029</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -323,7 +363,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003032</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003032">ARO:3003032</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -333,7 +373,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002701</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002701">ARO:3002701</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -343,7 +383,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002691</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002691">ARO:3002691</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -353,7 +393,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003054</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003054">ARO:3003054</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -363,7 +403,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004572</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004572">ARO:3004572</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -373,7 +413,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002690</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002690">ARO:3002690</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -383,7 +423,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003007</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003007">ARO:3003007</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -393,7 +433,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002693</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002693">ARO:3002693</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -403,7 +443,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002694</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002694">ARO:3002694</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -413,7 +453,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002695</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002695">ARO:3002695</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -423,7 +463,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002696</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002696">ARO:3002696</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -433,7 +473,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004665</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004665">ARO:3004665</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -443,7 +483,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005043</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005043">ARO:3005043</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -453,7 +493,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002698</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002698">ARO:3002698</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -463,7 +503,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002699</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002699">ARO:3002699</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -473,7 +513,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002702</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002702">ARO:3002702</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -483,7 +523,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002703</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002703">ARO:3002703</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -493,7 +533,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000309</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000309">ARO:3000309</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -503,7 +543,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002704</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002704">ARO:3002704</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -513,7 +553,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003963</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003963">ARO:3003963</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -523,7 +563,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002705</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002705">ARO:3002705</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -533,7 +573,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3001214</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3001214">ARO:3001214</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -543,7 +583,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004666</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004666">ARO:3004666</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -553,7 +593,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002812</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002812">ARO:3002812</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -563,15 +603,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003062</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003062">ARO:3003062</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">34</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_INACTIVATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -580,7 +623,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004451</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004451">ARO:3004451</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -590,7 +633,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004452</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004452">ARO:3004452</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -600,7 +643,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002672</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002672">ARO:3002672</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -610,7 +653,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004454</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004454">ARO:3004454</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -620,7 +663,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003983</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003983">ARO:3003983</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -630,7 +673,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002674</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002674">ARO:3002674</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -640,7 +683,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004458</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004458">ARO:3004458</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -650,7 +693,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004456</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004456">ARO:3004456</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -660,7 +703,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002671</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002671">ARO:3002671</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -670,7 +713,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002689</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002689">ARO:3002689</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -680,7 +723,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002678</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002678">ARO:3002678</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -690,7 +733,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002679</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002679">ARO:3002679</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -700,7 +743,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004457</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004457">ARO:3004457</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -710,7 +753,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004455</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004455">ARO:3004455</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -720,7 +763,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004460</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004460">ARO:3004460</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -730,7 +773,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002670</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002670">ARO:3002670</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -740,7 +783,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002683</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002683">ARO:3002683</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -750,7 +793,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004657</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004657">ARO:3004657</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -760,7 +803,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004658</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004658">ARO:3004658</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -770,7 +813,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003110</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003110">ARO:3003110</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -780,7 +823,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004660</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004660">ARO:3004660</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -790,7 +833,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002675</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002675">ARO:3002675</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -800,7 +843,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002676</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002676">ARO:3002676</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -810,7 +853,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002680</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002680">ARO:3002680</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -820,7 +863,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002681</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002681">ARO:3002681</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -830,7 +873,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002682</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002682">ARO:3002682</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -840,7 +883,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002684</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002684">ARO:3002684</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -850,7 +893,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004656</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004656">ARO:3004656</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -860,7 +903,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002685</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002685">ARO:3002685</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -870,7 +913,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002686</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002686">ARO:3002686</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -880,7 +923,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002687</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002687">ARO:3002687</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -890,7 +933,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002688</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002688">ARO:3002688</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -900,7 +943,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004357</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004357">ARO:3004357</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -910,15 +953,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002700</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002700">ARO:3002700</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">11</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -927,7 +973,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004150</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004150">ARO:3004150</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -937,7 +983,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003381</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003381">ARO:3003381</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -947,7 +993,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003511</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003511">ARO:3003511</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -957,7 +1003,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004180</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004180">ARO:3004180</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -967,7 +1013,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004649</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004649">ARO:3004649</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -977,7 +1023,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003441</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003441">ARO:3003441</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -987,7 +1033,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004146</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004146">ARO:3004146</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -997,7 +1043,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003907</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003907">ARO:3003907</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1007,7 +1053,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002814</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002814">ARO:3002814</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1017,7 +1063,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002815</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002815">ARO:3002815</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1027,15 +1073,88 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002816</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002816">ARO:3002816</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
+</details>
+<details class="details-group">
+  <summary>UNKNOWN <span class="pill plain">6</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
+<table>
+    <caption>UNKNOWN</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>CMLA6-associated chloramphenicol resistance in native isolate SOF-1<br><span class="meta">Same-isolate gene/phenotype co-occurrence, not proof that CMLA6 alone caused resistance. The paper names CMLA6 and reports the native isolate phenotype as data not shown; no zone diameter or clinical breakpoint interpretation is inferred. Its beta-lactam experiments in other hosts are not chloramphenicol evidence for this isolate. UniProtKB:Q933G9 is retained as reference context only: it combines CmlA6 and cmlA1 annotations from separate source contexts. The source-reported deposit AF294653.1 is not a genome assembly. No exact experimental protein, allele, strain TaxID or genome is assigned. Compound scope follows named chloramphenicol; the tested preparation was not independently re-identified.</span></td>
+      <td>—</td>
+      <td><em>Pseudomonas aeruginosa</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_287"><code class="curie">NCBITaxon:287</code></a><br><span class="meta">strain SOF-1</span></td>
+      <td class="meta">cmlA-like</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11353602">PMID:11353602</a></span> <span class="meta">(Selected publisher Results and Discussion: native SOF-1 disk-diffusion resistance statement and CMLA6 identification; accession statement AF294653. The beta-lactam MIC table does not supply a chloramphenicol measurement.)</span></li>
+</ul>
+<span class="meta">Source-reported disk diffusion</span></td>
+    </tr>
+    <tr>
+      <td>flo co-occurrence with chloramphenicol resistance in avian isolate 5334<br><span class="meta">Same-isolate co-occurrence, not isolated-gene causation or a new clinical breakpoint interpretation. Other determinants were not excluded. No exact experimental protein, allele, strain TaxID or genome is assigned. Bovine UniProtKB:Q9F0D9/AF252855 is not assigned to these avian isolates. Named compound identity is retained; the tested preparation was not independently re-identified.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a><br><span class="meta">strain 5334</span></td>
+      <td class="meta">flo</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/10639375">PMID:10639375</a></span> <span class="meta">(Table 1 and adjacent native-isolate phenotype and hybridization results. Qualitative co-occurrence only.)</span></li>
+</ul>
+<span class="meta">Source-reported disk diffusion</span></td>
+    </tr>
+    <tr>
+      <td>flo co-occurrence with chloramphenicol resistance in avian isolate 5790<br><span class="meta">Same-isolate co-occurrence, not isolated-gene causation or a new clinical breakpoint interpretation. Other determinants were not excluded. No exact experimental protein, allele, strain TaxID or genome is assigned. Bovine UniProtKB:Q9F0D9/AF252855 is not assigned to these avian isolates. Named compound identity is retained; the tested preparation was not independently re-identified.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a><br><span class="meta">strain 5790</span></td>
+      <td class="meta">flo</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/10639375">PMID:10639375</a></span> <span class="meta">(Table 1 and adjacent native-isolate phenotype and hybridization results. Qualitative co-occurrence only.)</span></li>
+</ul>
+<span class="meta">Source-reported disk diffusion</span></td>
+    </tr>
+    <tr>
+      <td>flo co-occurrence with chloramphenicol resistance in avian isolate 5840<br><span class="meta">Same-isolate co-occurrence, not isolated-gene causation or a new clinical breakpoint interpretation. Other determinants were not excluded. No exact experimental protein, allele, strain TaxID or genome is assigned. Bovine UniProtKB:Q9F0D9/AF252855 is not assigned to these avian isolates. Named compound identity is retained; the tested preparation was not independently re-identified.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a><br><span class="meta">strain 5840</span></td>
+      <td class="meta">flo</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/10639375">PMID:10639375</a></span> <span class="meta">(Table 1 and adjacent native-isolate phenotype and hybridization results. Qualitative co-occurrence only.)</span></li>
+</ul>
+<span class="meta">Source-reported disk diffusion</span></td>
+    </tr>
+    <tr>
+      <td>flo co-occurrence with chloramphenicol resistance in avian isolate 6468<br><span class="meta">Same-isolate co-occurrence, not isolated-gene causation or a new clinical breakpoint interpretation. Other determinants were not excluded. No exact experimental protein, allele, strain TaxID or genome is assigned. Bovine UniProtKB:Q9F0D9/AF252855 is not assigned to these avian isolates. Named compound identity is retained; the tested preparation was not independently re-identified.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a><br><span class="meta">strain 6468</span></td>
+      <td class="meta">flo, cmlA</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/10639375">PMID:10639375</a></span> <span class="meta">(Table 1 and adjacent native-isolate phenotype and hybridization results. Qualitative co-occurrence only.)</span></li>
+</ul>
+<span class="meta">Source-reported disk diffusion</span></td>
+    </tr>
+    <tr>
+      <td>flo/cmlA-positive bovine subgroup associated with chloramphenicol resistance<br><span class="meta">Subgroup co-occurrence, not sole-gene causation or an assertion about every study isolate. Discordant source subgroups are not merged. Florfenicol categories borrow bovine-respiratory criteria; no E. coli clinical breakpoint is inferred. UniProtKB:Q9F0D9/AF252855.1 is study-linked reference context, not a subgroup-wide allele or genome assignment. EC56 belongs to a later submission and is not substituted for this subgroup. No exact experimental protein, allele, strain TaxID or genome is assigned. Named compound identity is retained; the tested preparation was not independently re-identified.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a></td>
+      <td class="meta">flo, cmlA</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11101601">PMID:11101601</a></span> <span class="meta">(Table 2 flo/cmlA-positive row and adjacent cohort results; assay and accession statements. Qualitative subgroup association only.)</span></li>
+</ul>
+<span class="meta">NCCLS broth microdilution</span></td>
+    </tr>
+  </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_PROTECTION <span class="pill plain">2</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_PROTECTION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_PROTECTION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -1044,7 +1163,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003746</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003746">ARO:3003746</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -1054,15 +1173,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004470</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004470">ARO:3004470</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>REDUCED_PERMEABILITY <span class="pill plain">1</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: REDUCED_PERMEABILITY" tabindex="0">
+<table>
     <caption>REDUCED_PERMEABILITY</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -1071,11 +1193,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004128</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004128">ARO:3004128</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -1084,20 +1208,21 @@ type — expand a group to see its determinants.</p>
 target, what the target does, and how the effect propagates to growth inhibition
 or death.</p>
 <h3>Chloramphenicol blocks the 50S peptidyl-transferase center <span class="pill">MECHANISTIC</span></h3>
-<p>Chloramphenicol binds the 23S rRNA peptidyl-transferase center of the bacterial large ribosomal subunit and blocks peptide-bond formation by the translation elongation complex.</p><table>
+<p>Chloramphenicol binds the 23S rRNA peptidyl-transferase center of the bacterial large ribosomal subunit and blocks peptide-bond formation by the translation elongation complex.</p><div class="table-scroll" role="region" aria-label="Nodes: chloramphenicol_50s_peptidyl_transferase_inhibition" tabindex="0">
+<table>
   <caption>Nodes — chloramphenicol_50s_peptidyl_transferase_inhibition</caption>
   <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
   <tr>
     <td><code class="curie">chloramphenicol</code></td>
     <td>chloramphenicol</td>
     <td class="meta">COMPOUND</td>
-    <td><code class="curie">CHEBI:17698</code></td>
+    <td> <a href="../antibacterial/chloramphenicol.html"><code class="curie">CHEBI:17698</code></a></td>
   </tr>
   <tr>
     <td><code class="curie">peptidyl_transferase_center_23s_rrna</code></td>
     <td>23S rRNA peptidyl-transferase center</td>
     <td class="meta">RNA</td>
-    <td><code class="curie">ARO:3000754</code></td>
+    <td> <a href="http://purl.obolibrary.org/obo/ARO_3000754"><code class="curie">ARO:3000754</code></a></td>
   </tr>
   <tr>
     <td><code class="curie">chloramphenicol_bound_ptc</code></td>
@@ -1118,6 +1243,9 @@ or death.</p>
     <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
   </tr>
 </table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: chloramphenicol_50s_peptidyl_transferase_inhibition" tabindex="0">
 <table>
   <caption>Edges — chloramphenicol_50s_peptidyl_transferase_inhibition</caption>
   <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
@@ -1126,7 +1254,7 @@ or death.</p>
     <td>binds</td>
     <td><code class="curie">chloramphenicol_bound_ptc</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:12860128</span> <span class="meta">(Hansen and colleagues solved a chloramphenicol-bound large ribosomal subunit structure with the drug in a peptidyl-transferase-center crevice.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/12860128">PMID:12860128</a></span> <span class="meta">(Hansen and colleagues solved a chloramphenicol-bound large ribosomal subunit structure with the drug in a peptidyl-transferase-center crevice.)</span></li>
 </ul>
 </td>
   </tr>
@@ -1135,8 +1263,8 @@ or death.</p>
     <td>participates in</td>
     <td><code class="curie">chloramphenicol_bound_ptc</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:12860128</span> <span class="meta">(The comparative large-subunit structures localized chloramphenicol to a ribosomal RNA site adjacent to the catalytic center.)</span></li>
-  <li><span class="meta">PMID:35165455</span> <span class="meta">(Syroegin and colleagues resolved bacterial 70S complexes that place chloramphenicol in the catalytic peptidyl-transferase center.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/12860128">PMID:12860128</a></span> <span class="meta">(The comparative large-subunit structures localized chloramphenicol to a ribosomal RNA site adjacent to the catalytic center.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/35165455">PMID:35165455</a></span> <span class="meta">(Syroegin and colleagues resolved bacterial 70S complexes that place chloramphenicol in the catalytic peptidyl-transferase center.)</span></li>
 </ul>
 </td>
   </tr>
@@ -1145,7 +1273,7 @@ or death.</p>
     <td>decreases</td>
     <td><code class="curie">peptide_bond_formation</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:35165455</span> <span class="meta">(Nascent-chain ribosome structures explained the context-specific blockade of peptide-bond formation by peptidyl-transferase-center chloramphenicol.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/35165455">PMID:35165455</a></span> <span class="meta">(Nascent-chain ribosome structures explained the context-specific blockade of peptide-bond formation by peptidyl-transferase-center chloramphenicol.)</span></li>
 </ul>
 </td>
   </tr>
@@ -1154,17 +1282,19 @@ or death.</p>
     <td>supports</td>
     <td><code class="curie">protein_synthesis</code></td>
     <td><ul class="plain evidence">
-  <li><span class="meta">PMID:12860128</span> <span class="meta">(The antibiotic-bound ribosome study interpreted chloramphenicol action as competitive inhibition of peptide-bond formation in the large subunit.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/12860128">PMID:12860128</a></span> <span class="meta">(The antibiotic-bound ribosome study interpreted chloramphenicol action as competitive inhibition of peptide-bond formation in the large subunit.)</span></li>
 </ul>
 </td>
   </tr>
 </table>
 
+</div>
+
 
 
 <h2>Record-level evidence</h2>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:20876128</span> <span class="meta">(Primary exact-chloramphenicol E. coli ribosome structural study.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/20876128">PMID:20876128</a></span> <span class="meta">(Primary exact-chloramphenicol E. coli ribosome structural study.)</span></li>
 </ul>
 
 
@@ -1225,32 +1355,57 @@ or death.</p>
     <span class="meta">2026-09-13 · codex · LLM-assisted</span>
     <p>Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 chloramphenicol-resistant Enterococcus faecalis activity observation for AR-0780.</p>
   </li>
+  <li>
+    <span class="pill">STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS</span>
+    <span class="meta">2026-09-26 · codex · LLM-assisted</span>
+    <p>Structured BioSample accessions on 1 activity_spectrum observation(s) where evidence notes already named exactly one accession.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-10 · codex · LLM-assisted</span>
+    <p>Added native SOF-1 CMLA6/chloramphenicol co-occurrence from primary results, without assigning individual causation, an exact experimental UniProt protein, allele or genome. Preserved source-owned assertions and all other fields; whole-record review remains open.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-10 · codex · LLM-assisted</span>
+    <p>Added four named native flo co-occurrences and one separate flo/cmlA-positive subgroup association from primary results. Kept mechanism UNKNOWN and UniProt/archive context reference-only; did not assign exact alleles, genomes, a subgroup strain or new clinical breakpoints. Preserved all prior claims, observations, history and other fields; whole-record review remains open.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/chloramphenicol.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/chloramphenicol.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=chloramphenicol">MediaIngredientMech (chloramphenicol)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=chloramphenicol">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=chloramphenicol">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=chloramphenicol">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=chloramphenicol">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

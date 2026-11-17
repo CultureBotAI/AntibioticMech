@@ -1,0 +1,128 @@
+{
+  "biological_records_source_inputs_and_pages_changed_by_fix": false,
+  "captured_at": "2026-10-14T12:02:38.024827+00:00",
+  "checkpoint_commit": "cf397366d5ac4e478e50d7a2888a0f1c5884cf19",
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "current_census": {
+    "path": "research/2026-10-14-antiviral-taxa-resistance-grounding.tsv",
+    "sha256": "b15465f26802dae7fc099e52d3dc4898cd6397fd2bc37f4055443d2e40fe2935"
+  },
+  "finding": "Four audit CLIs lacked explicit historical replay despite resolver-aware tests.",
+  "fix": "--historical-records selects registered identity/path/hash fixtures; default remains live.",
+  "fixture_and_cli_guard_tests": {
+    "errors": 0,
+    "failures": 0,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-species-publication/antibioticmech-pr-replay-regressions.xml",
+      "sha256": "c350f81f8ab92cbecc7bab95c6b4aead14ac3f2577aa3e93a626dd3f8688def8"
+    },
+    "skipped": 0,
+    "tests": 62
+  },
+  "full_corpus_goal_status": "OPEN",
+  "full_qc": "PR_HEAD_AND_MERGE_QUEUE_CI_RESULTS_TO_BE_RECORDED_ON_PR_BEFORE_MERGE",
+  "historical_full_qc_receipt": {
+    "path": "research/2026-10-14-antiviral-taxa-verification.json",
+    "sha256": "d4c510c4991ac83e62bab6a8cd8b486a984f1c1e6f0e748792c78033d7d269b4"
+  },
+  "historical_research_dossiers_changed_by_fix": false,
+  "implementations": [
+    {
+      "path": "scripts/audit_card_reference_lineages.py",
+      "sha256": "71474aa505ffdea55c2147eb934d9885ebdb040806f818b27490c51d8197aaa5"
+    },
+    {
+      "path": "scripts/audit_card_species_nodes.py",
+      "sha256": "b62cb29d3d6662c065a46b7171ecf69057afad146af0379102274adff42edd02"
+    },
+    {
+      "path": "scripts/audit_fr171456_locus.py",
+      "sha256": "5d9cf3fb02f3445471c22c2869e27415a7d966ff86fde00a6e6a80d1a456ac35"
+    },
+    {
+      "path": "scripts/audit_thevissen_2007_access.py",
+      "sha256": "df1bcc9edbc14284dc79fce4ea21a067ff87f8fad7c148804df34ad401f19d8c"
+    },
+    {
+      "path": "tests/test_card_reference_lineages.py",
+      "sha256": "56c378542f23c185e321a316a451230fad1d86f5cb5fdf62f0d8edad27f64020"
+    },
+    {
+      "path": "tests/test_card_species_nodes.py",
+      "sha256": "0b65ec5157bc16102157d48feb8811bd0ccbc25897c792358e3b441b24743ef9"
+    },
+    {
+      "path": "tests/test_fr171456_locus.py",
+      "sha256": "0eadad8bcea3e83be6e993a44f6bc735c265e6b1d23d3bf426c333110f6de12c"
+    },
+    {
+      "path": "tests/test_resistance_checkpoint_records.py",
+      "sha256": "3846fcc342bb6506737426e80099ac87c622c6525ae350d1b31016124116d079"
+    },
+    {
+      "path": "tests/test_thevissen_2007_access.py",
+      "sha256": "1d336ab2362b0b1a0b96244ae46582b841935c4b6b464993e71a9359d232eff2"
+    }
+  ],
+  "initial_checkpoint_tests": {
+    "errors": 0,
+    "failures": 0,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-species-publication/antibioticmech-pr-initial-tests.xml",
+      "sha256": "e4c0a84b3a60dcf3d9c34b924804eec173e72ab5a6548b0ef1a6209be1d2dd07"
+    },
+    "skipped": 0,
+    "tests": 460
+  },
+  "issue_1040": "DEFERRED",
+  "live_record_hashes_checked": 2939,
+  "local_runtime_limitation": "RDKit 2025.3.6 differs from project pin 2026.3.5; final CI uses lock.",
+  "ncbi_requests": 0,
+  "post_fix_tests": {
+    "errors": 0,
+    "failures": 0,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-species-publication/antibioticmech-pr-final-focused.xml",
+      "sha256": "5394f6137f3671d829b54d4bf30f1f44b7088a470ac3a4931ed9304d2ef0309c"
+    },
+    "skipped": 0,
+    "tests": 558
+  },
+  "pull_request": "https://github.com/CultureBotAI/AntibioticMech/pull/1109",
+  "regression_before_fix": {
+    "failed": 4,
+    "passed": 4,
+    "reason": "unrecognized CLI option"
+  },
+  "review_independence": "SAME_AGENT_SEPARATE_ADVERSARIAL_PASS",
+  "review_issue": "https://github.com/CultureBotAI/AntibioticMech/issues/1110",
+  "scientific_network_requests_during_publication": 0,
+  "scope": "PUBLICATION_CODE_REVIEW_NOT_NEW_SCIENTIFIC_OR_WHOLE_RECORD_SIGNOFF",
+  "source_adoptions": 0,
+  "source_queue": {
+    "path": "curation/source_queue.tsv",
+    "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+  },
+  "verification_helper": {
+    "path": "reports/resistance-grounding-2026-10-14-species-publication/verify_publication.py",
+    "sha256": "9b7b49a797c68f91a2ef8795b4a649b46d076d6a434358aeff3b4ba05d4e8b07"
+  },
+  "whole_record_primary_signoffs": 0
+}

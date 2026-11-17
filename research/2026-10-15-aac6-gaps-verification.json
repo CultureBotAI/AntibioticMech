@@ -1,0 +1,179 @@
+{
+  "baseline_commit": "b0950a9c3256aacee226834e0e8a88d1022c9948",
+  "biological_records_changed": 0,
+  "cache_free_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 65,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-aac6-gaps/cache-free-tests.xml",
+      "sha256": "6e2e7b0dcb193b73a7b6ccbbf200db7daae8491d6bb680506a42295233a1f92c"
+    },
+    "skip_details": [
+      {
+        "classname": "tests.test_aac6_gaps",
+        "reason": "native research caches unavailable; public invariants and synthetic guards still run",
+        "test": "test_native_replay_when_caches_available"
+      }
+    ],
+    "skipped": 1,
+    "test_classes": [
+      "tests.test_aac6_gaps"
+    ]
+  },
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-15-aac6-gaps/canary-review.json",
+    "sha256": "598b32cc073a5989344820131aadafcebfe17ebcd225dfa2465275129c5b0f82"
+  },
+  "captured_at": "2026-10-15T10:19:31.049273+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-15-aac6-gaps/cohort.json",
+    "sha256": "808d085c947f01a94aa4b9b8b0f205bf076735d883351c86f3864cb6e4e2aea8"
+  },
+  "complete_collection_aware_records_read": 12,
+  "corpus_records_hash_checked": 2939,
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "1d0a0c1287e7a88633c1b42746809587a3864b30c13894b9d52115df555fd330"
+    },
+    {
+      "path": "research/2026-10-15-aac6-gaps.json",
+      "sha256": "11c2c59fcd16228ef5156755b11037aba44888dd0c3dd0aa56695cf85584bfb7"
+    },
+    {
+      "path": "scripts/audit_aac6_gaps.py",
+      "sha256": "b8d0f662c2861deb97d806bf4b3442ac2ef17d3d86432e97a1e8efc68155d408"
+    },
+    {
+      "path": "tests/test_aac6_gaps.py",
+      "sha256": "b9d1936659ead189d845bc54a82fc7b70c945cc42b8de6d91c5734b38cc67132"
+    }
+  ],
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_aac6_gaps_20261015.py",
+      "sha256": "583d0c4b6228e92558680a5418ead43563489c907af199890311b4cd2460ff05"
+    },
+    {
+      "path": "/private/tmp/finalize_aac6_gaps_20261015.py",
+      "sha256": "9e99dec61ee61361894d60a3974545232a4a9910246a3e91bd5bd174dc649ab3"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "membership_index_updated": false,
+  "native_offline_replay": "PASS",
+  "ncbi_requests": 0,
+  "network_and_python_file_writes_blocked_during_replay": true,
+  "network_requests": 2,
+  "new_curated_AST_observations": 0,
+  "new_experimental_allele_or_genome_assignments": 0,
+  "new_metadata_requests": 1,
+  "new_primary_access_holds": 1,
+  "new_primary_requests": 1,
+  "new_reference_links": 2,
+  "new_reference_memberships": 10,
+  "new_uniprot_requests": 0,
+  "outreach": 0,
+  "prior_research_checkpoints_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-aac6-gaps/protected-before.json",
+    "sha256": "40e0372461ef98c84109423a2f1fd986a98f801d3b1b4ba93196f1b39f4c8d14"
+  },
+  "protected_files_checked": 7757,
+  "repository_ruff_check": "PASS",
+  "request_cache_absence_simulated_without_moving_or_deleting_files": true,
+  "reuse_terms_review_resumed": false,
+  "review_findings_addressed": [
+    "Case-insensitive source selection includes two lowercase labels: 15 terms and 70 claims, not 13 and 62.",
+    "All 12 complete cached citation queries and 153 distinct entries are accounted without biological absence claims.",
+    "The 29a and 29b native submission names, distinct genes, source-cited bibliography and species taxonomy support separate references only.",
+    "Unreviewed names are not expert review, unflagged is not proven complete, and neither reference has an explicit CARD xref.",
+    "Generic II gene versus type I description, seven unnamed Iw-neighbor entries, and unnumbered Ib-cr names are withheld from exact subtype assignment.",
+    "The advertised primary PDF route returned a 403 challenge, not a PDF; no retry, redirect or alternate route was used.",
+    "AAC34 Table 1 is a heterologous E. coli assay, not a native Paenibacillus MIC.",
+    "The source-isolate taxon contains the word strain but has native species rank; it is not the assay-host taxon.",
+    "The censored MIC and control retain their comparators when ug/mL is represented numerically in mg/L; no clinical category is inferred.",
+    "The Kanamycin table label is not silently mapped to the kanamycin A structure record.",
+    "No sequence, variant, construct, experimental strain assignment or protocol is exported.",
+    "All biological records and old checkpoint files remain unchanged; broad-index reconciliation is still pending."
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "ALL_UNLINKED_AAC6_LABEL_TERMS_REFERENCE_AND_PRIMARY_CONTEXT_NOT_EXACT_ALLELES",
+  "source_adoptions": 0,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "cached_primary_table_context_reviews": 1,
+    "citation_query_entries": 154,
+    "cohort_records": 12,
+    "complete_cached_citation_queries": 12,
+    "corpus_records_hash_checked": 2939,
+    "distinct_citation_entries": 153,
+    "new_primary_access_holds": 1,
+    "new_reference_links": 2,
+    "new_reference_memberships": 10,
+    "source_claims": 70,
+    "source_terms": 15,
+    "term_statuses": {
+      "COMPLETE_CITATION_QUERIES_EMPTY_NOT_BIOLOGICAL_ABSENCE": 5,
+      "NO_DEFINITION_CITATION_NO_CITATION_QUERY": 4,
+      "RELATED_FAMILY_CONTEXT_NOT_EXACT_ALLELE_SELECTION": 4,
+      "UNREVIEWED_PROTEIN_NAME_GENE_TAXON_REFERENCE_ONLY": 2
+    }
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 1010,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-aac6-gaps/tests.xml",
+      "sha256": "85c5c1d74d1c9fec7a2ac8e0de55afd492625c1c6c761ca00de3f00313d1cb6f"
+    },
+    "skip_details": [
+      {
+        "classname": "tests.test_card_structure_links",
+        "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+        "test": "test_cached_export_reproduces_when_research_cache_is_available"
+      }
+    ],
+    "skipped": 1,
+    "test_classes": [
+      "tests.test_aac3_evidence",
+      "tests.test_aac6_gaps",
+      "tests.test_card_beta_tubulin_memberships",
+      "tests.test_card_bla_alias_screen",
+      "tests.test_card_bla_memberships",
+      "tests.test_card_cytb_outer_memberships",
+      "tests.test_card_cytochrome_b_references",
+      "tests.test_card_definition_citations",
+      "tests.test_card_followup_memberships",
+      "tests.test_card_grounding_audit",
+      "tests.test_card_literature_expansion",
+      "tests.test_card_outer_membrane_references",
+      "tests.test_card_reference_lineages",
+      "tests.test_card_structure_links",
+      "tests.test_cipa_evidence",
+      "tests.test_cytochrome_b_evidence",
+      "tests.test_fungamr_cohort",
+      "tests.test_kasugamycin_card_context",
+      "tests.test_kpn_evidence",
+      "tests.test_outer_membrane_evidence",
+      "tests.test_sco1_evidence",
+      "tests.test_structure_primary_context",
+      "tests.test_valinomycin_abcb1",
+      "tests.test_vgb_evidence"
+    ]
+  },
+  "verification_limit": "Unreviewed gene/protein reference metadata and one cached primary-table context, not exact allele or whole-record signoff. Broad-index reconciliation remains pending. Pinned RDKit lacks an Intel macOS wheel; historical Linux CI is not current signoff.",
+  "whole_record_primary_signoffs": 0
+}

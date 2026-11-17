@@ -1,0 +1,88 @@
+{
+  "artifacts": {
+    "export": {
+      "path": "research/2026-10-09-card-structure-links.json",
+      "sha256": "c4ccbd533f5cc328cd015f9b95eaa0ff6044f13b62c46f1ddfb7bce17bea0183"
+    },
+    "report": {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "cfe15cf5c4712d42125c5c18db1a6349a71acf052835c541abe08c5412560800"
+    },
+    "script": {
+      "path": "scripts/audit_card_structure_links.py",
+      "sha256": "79e3a458daf03b30062f42938137469d8b8179290a1a45fd461642c832c6bf4f"
+    },
+    "tests": {
+      "path": "tests/test_card_structure_links.py",
+      "sha256": "987d38d069a7876c657fb307728b0f1caebcd81ccb96e5ca1d886ebb95b3e91d"
+    }
+  },
+  "census": {
+    "path": "research/2026-10-09-canthin-resistance-grounding.tsv",
+    "sha256": "0ca15b8dac7b4cb77a67d60337e2cdc8a86d8a0061fc7199af0a3116d0ffe08c"
+  },
+  "checks": {
+    "documentation_statistics": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_docs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "README statistics are current."
+    },
+    "lint": {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!"
+    },
+    "tracked_diff_whitespace": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  },
+  "focused_tests": {
+    "failed": 0,
+    "includes_offline_export_replay": true,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-09-card-structures/focused-tests.xml",
+      "sha256": "6a12c397ff02593e52b4cfc28bce3ee991376c8f6d8b5ebe7775bd3aad5f3074"
+    },
+    "passed": 159,
+    "skipped": 0
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_primary_review": "OPEN",
+  "full_qc_scope_note": "No biological or production-behavior change; prior canthin full QC remains historical.",
+  "ncbi_requests": 0,
+  "preservation": {
+    "biological_record_changes": 0,
+    "changed": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "curation_events_added": 0,
+    "ignored_files_included": true,
+    "preexisting_files_checked": 6722,
+    "preexisting_files_unchanged": 6721,
+    "record_hashes_unchanged": 2939,
+    "snapshot": {
+      "path": "reports/resistance-grounding-2026-10-09-card-structures/protected-before.json",
+      "sha256": "623dd69818687ee569bddc2df8e0c230ade57be3679ca6d036b7986201e644fd"
+    }
+  },
+  "scope": "RESEARCH_METADATA_ONLY_NOT_BIOLOGICAL_CURATION_OR_WHOLE_RECORD_COMPLETION"
+}

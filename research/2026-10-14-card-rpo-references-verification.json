@@ -1,0 +1,151 @@
+{
+  "all_new_taxonomy_scopes_without_prior_request_or_hold": true,
+  "automatic_redirects": 0,
+  "baseline_commit": "1c75f9126071ef9563a545c0780b861616a7e9d8",
+  "biological_records_changed": 0,
+  "cache_independent_fixture_and_public_snapshot_tests": "PASS",
+  "cache_search_included_ignored_files": true,
+  "captured_at": "2026-10-15T02:58:31.942717+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-card-rpo/cohort.json",
+    "sha256": "7078bc16f498f0ac65d3f1d3e6c603ae814bbb14a74b940087c413b69a9385d1"
+  },
+  "complete_selected_collection_aware_records_read": 7,
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 393,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-rpo/expanded-tests.xml",
+      "sha256": "ec8aac3c828c661bcfa64a8d66f8f10879ab9a937dc90f991625a259972148f8"
+    },
+    "skipped": 0,
+    "tests": 393
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "66b538f01e2035fbe253e21881e614af8bf23208e02fcedd374a033d9c1d21c1"
+    },
+    {
+      "path": "research/2026-10-14-card-rpo-references.json",
+      "sha256": "2d37d6a07035b923d9378ffc27ad656e8a49d63ee9432434479c8655fe15be7b"
+    },
+    {
+      "path": "scripts/audit_card_rpo_references.py",
+      "sha256": "b99cbde7fc9ae94e1e6afc8ae09f5cabc0dd8f86a08b8d2db6c63aae0f3bf5d1"
+    },
+    {
+      "path": "tests/test_card_rpo_references.py",
+      "sha256": "482893ed636514b772d6c856227020da71af5519ff2526c7e17e5d0d3a551ea5"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 54,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-rpo/focused-tests.xml",
+      "sha256": "f1ac0c001d68ac515d133ef23e9ff07d4bdbf7c03571ca763af301ef4a23c9a5"
+    },
+    "skipped": 0,
+    "tests": 54
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_environment_limit": "Pinned RDKit 2026.3.5 has no Intel macOS wheel; prior merged Linux QC remains historical.",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_rpo_20261014.py",
+      "sha256": "3ee2e3347902f1083fd3279bdbaca70735275339fff4d1bbbafb61193a87a4dc"
+    },
+    {
+      "path": "/private/tmp/verify_rpo_20261014.py",
+      "sha256": "5cfb1157d1972decb2980921e4bee19a908994e562473d9961057a7afff157c3"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "native_http_attempts": 42,
+  "native_http_status_counts": {
+    "200": 42
+  },
+  "ncbi_requests": 0,
+  "network_blocked_during_replay": true,
+  "new_candidate_taxonomy_queries": 27,
+  "new_experimental_allele_subject_or_genome_assignments": 0,
+  "new_name_queries": 2,
+  "new_primary_result_reviews": 0,
+  "new_reviewed_gene_queries": 12,
+  "new_unreviewed_gene_queries": 1,
+  "no_new_data_source_owned_or_rendered_files": true,
+  "offline_native_replay": "PASS",
+  "outreach": 0,
+  "primary_access_holds_preserved": true,
+  "primary_paper_requests": 0,
+  "prior_research_checkpoints_unchanged": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-card-rpo/protected-before.json",
+    "sha256": "4a40a854a7c29df97f53e0645a7a52321f256f89cd837420e762b33581f6d7dc"
+  },
+  "protected_files_checked": 7669,
+  "repository_ruff_check": "PASS",
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "reused_candidate_taxonomy_contexts": 24,
+  "reused_name_contexts": 7,
+  "review_fixes": [
+    "Copy and validate membership artifacts before loading frozen complete records",
+    "Keep rpoB and rpoC contexts distinct for the same source taxon",
+    "Require the term's own definition and cited title for the abbreviation bridge",
+    "Retain fusion-component names, explicit native aliases, fragment flags and all candidates",
+    "Keep unidentified organism terms and compensation-versus-resistance causality open",
+    "Reject stale fallback evidence, wrong query contexts and checkpoint overwrites"
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "ALL_CARD_RPO_REFERENCE_CONTEXTS_NOT_EXPERIMENTAL_ALLELES_OR_PHENOTYPES",
+  "snapshot_membership_artifacts": {
+    "path": "reports/resistance-grounding-2026-10-14-card-rpo/snapshot-artifacts.json",
+    "sha256": "29a5e32cca46af464af1edb32cc3202c7378802f8c72ca3a62c1a1642ad31dd9"
+  },
+  "source_adoptions": 0,
+  "source_claim_content_hashes_and_positions_checked": 32,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_hash_checked": 2939,
+    "experimental_assignments": 0,
+    "gene_contexts": 12,
+    "native_protein_flags": {
+      "Fragment": 2,
+      "None": 64
+    },
+    "reference_proteins": 66,
+    "reference_taxa": 51,
+    "resolved_source_names": 9,
+    "source_assertions": 32,
+    "source_names": 9,
+    "source_records": 7,
+    "source_terms": 16,
+    "term_status_counts": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 10,
+      "REVIEWED_REFERENCE": 4,
+      "SOURCE_NAME_UNRESOLVED_NO_PROTEIN_QUERY": 2
+    },
+    "terms_with_candidates": 14,
+    "whole_record_primary_signoffs": 0
+  },
+  "verification_limit": "Reference identity only; no tested allele, compound-specific phenotype or primary-results signoff.",
+  "whole_record_primary_signoffs": 0
+}

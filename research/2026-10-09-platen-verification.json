@@ -1,0 +1,254 @@
+{
+  "adversarial_self_review": {
+    "checks": [
+      "Partial platencin response not flattened into full resistance",
+      "Coarse routes retain author-interpretation and exact-mechanism limits",
+      "Donor, host background and derivatives kept distinct; no representative J1074 TaxID",
+      "Explicit archive lookup resolves a reference despite zero gene-name and focal-citation hits",
+      "Seven DSM 40041 candidates rejected for exact MA7327 assignment",
+      "Negative gene comparisons and multi-gene necessity limits retained",
+      "Later S. aureus study, unadjudicated text discrepancy and condition-specific negative kept separate",
+      "MIBiG and chemical evidence, prior history, all other records and curator inputs preserved",
+      "No sequences, variant specifications, engineering details or numerical AST exported",
+      "Two changed embedding rows genuinely encoded; remaining rows byte-identical"
+    ],
+    "independent_review": false,
+    "remaining_scope": "Nine MED papers, one CBA candidate, supplements, experimental identity and all whole-record reviews remain open"
+  },
+  "all_current_record_hashes_verified": 2939,
+  "all_other_record_fields_preserved": true,
+  "artifacts": [
+    {
+      "path": "research/2026-10-09-platen-curation.json",
+      "sha256": "98fe498885ec0ab242fe8d94946d4b5f167bb8db0a47cf7b7d7a6b7624b34bc9"
+    },
+    {
+      "path": "research/2026-10-09-platen-primary-context.json",
+      "sha256": "fa10f4e8dc83d7f58adc4a434f87822d13aa9f51d34db56c5a90a697f3bacec6"
+    },
+    {
+      "path": "research/2026-10-09-platen-checkpoint-reconciliation.json",
+      "sha256": "07d72e5a02f9969d8e7461e8e1d0c4563eb472034a496ff48f71e6bbd806de8a"
+    },
+    {
+      "path": "research/2026-10-09-platen-resistance-progress.json",
+      "sha256": "bdcc316af2cba7273a2c08a8c9f39fbe325fd287aff77c00612b59633004f472"
+    },
+    {
+      "path": "research/2026-10-09-platen-resistance-progress.tsv",
+      "sha256": "263521aad4e2d89d1758e17286654f6e0f5e8132cdea4fb10ec675c55cfdb314"
+    },
+    {
+      "path": "tests/test_platen_curation.py",
+      "sha256": "5079f573ec6c769e9ec1cefaba1c226cb9d914f3c9a5f290b7f5e1823191b653"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "a76d3dd49a7d42248f5c4bbf7cae3686528fb78ec43cde28a7a278448d87835c"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "5dd0e24dc618ab3cd273ceb6cacc98235b4cd10f1f37ce1d0d9ed9a3a69d5249"
+    }
+  ],
+  "changed_documents_encoded": 2,
+  "changed_protected_files": {
+    "data/antibiotics/antibacterial/platencin.yaml": {
+      "after_sha256": "5bdf0cc6feda78dd54eee8f5a7bbf37b7c8515344790fc01cb833c20953580b7",
+      "before_sha256": "f85dd2de00b370021d0ff2a6b875c51421e8b699135c89048bcc0a2056281358"
+    },
+    "data/antibiotics/antibacterial/platensimycin.yaml": {
+      "after_sha256": "f75a55971c4629c13895681a48dc43f5b43143e380431503d6a28c1e16576a84",
+      "before_sha256": "028eb0e48c8783213fc18a7212a032f47db16cef28e94b227c94b93e7470481a"
+    },
+    "data/embeddings/corpus_map.json": {
+      "after_sha256": "5e3146d54f1c9cb5ade139880c76a2eed2db5c1b225e5251b00d70ed38981e31",
+      "before_sha256": "8d9fb2324024edb110bef628ca54ceab6ff9401be6307922bc0756485e782226"
+    },
+    "data/embeddings/meta.json": {
+      "after_sha256": "279966af6698be92b4f4c72e9a5e6aeadf5e7078ca989367ff37886491a92bca",
+      "before_sha256": "16b16adaac0edb5f458d4961985121bea0a1e5b99204040cfef6a636f1540d71"
+    },
+    "data/embeddings/vectors.f16.npy": {
+      "after_sha256": "7c1057472eb880b73e9ed7666a6449da6118e38f4f807ef75f97b49d2594fff3",
+      "before_sha256": "e5d27f7bb33cb374a2c26073b6655bea8235bfdb4bfdb368966dedf47c787bc9"
+    },
+    "pages/antibacterial/platencin.html": {
+      "after_sha256": "d7de7a1acbe06432c29a21fd8b52d708a33471af074a5f23d42a791283df59f0",
+      "before_sha256": "a6002cb6bd761d717f182d6d0d77977a680b4656907c89a2a747f2013ec61d74"
+    },
+    "pages/antibacterial/platensimycin.html": {
+      "after_sha256": "db72ac1a30fa6586ba8b3c079cc4094bb2cf0d75c55a8689acb63e28ba9cae68",
+      "before_sha256": "38a3dd58b3206660747dc29c841d0e2da3f114b4874a7a1cc0e71990c02452cc"
+    },
+    "pages/index.html": {
+      "after_sha256": "7bc3a8ac450ff30a8d6dd7cc5545ace928dd270fc9806e648e9cab74087fd697",
+      "before_sha256": "25f6f4bbc6d8bbf7ecf7f42567024f9bb4e6e0dcf093e71cc2b600bf22101cc1"
+    },
+    "pages/map.html": {
+      "after_sha256": "be7ce18a74f435737add5386bfc4f9a2eedb263c342c1f966d80e266f046e4a9",
+      "before_sha256": "4495134eca0fad2e9a2330f90f3f2efc479871bcbc6002d1a0473e64a40dd352"
+    },
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "5dd0e24dc618ab3cd273ceb6cacc98235b4cd10f1f37ce1d0d9ed9a3a69d5249",
+      "before_sha256": "fdd3cb4db92e952933f1ea51d46ec21b8582b29cbb0df4a063cfe2648d28c5e1"
+    },
+    "scripts/summarize_resistance_progress.py": {
+      "after_sha256": "a76d3dd49a7d42248f5c4bbf7cae3686528fb78ec43cde28a7a278448d87835c",
+      "before_sha256": "bbdff597dac67e648ebdd33134d233208559fe7bef46a9e90e00e5b458a93bfc"
+    }
+  },
+  "chemical_map_unchanged": true,
+  "control_max_abs_delta": 3.0517578125e-05,
+  "control_rows": 16,
+  "corpus_research_complete": false,
+  "corrected_validation_finding": {
+    "collection": {
+      "path": "reports/resistance-grounding-2026-10-09-platen/collection.log",
+      "sha256": "0b9160981130bc5a8daa08ebef7c635a78fd39bc979dc89330258a86db8cfb35"
+    },
+    "failed_nodes": [
+      "tests/test_docs.py::test_numeric_claims_in_prose_match_the_corpus"
+    ],
+    "failure_identity_basis": "Collected node order and pytest progress; first failure traceback not emitted before termination",
+    "finding": "NEXT_TASKS.md target-or-resistance count was stale after two new records gained evidence",
+    "first_run_completed": false,
+    "first_run_disposition": "Task-owned childless worker terminated after reported failure; not a completed QC run",
+    "first_run_execution": {
+      "path": "reports/resistance-grounding-2026-10-09-platen/full-qc-exit.json",
+      "sha256": "b7513474beacdb27cf3ab160edfd1c31801c84e6a174705e343e13ece3de01c7"
+    },
+    "first_run_junit": null,
+    "first_run_log": {
+      "path": "reports/resistance-grounding-2026-10-09-platen/full-qc.log",
+      "sha256": "497c37beb7a38a1265574a171531835a7b25681bb34b40815c7917b73b559b3f"
+    },
+    "fix": "405 changed to 407; original test retained, all authoritative gates rerun"
+  },
+  "curation_inputs_unchanged": true,
+  "current_ledger": {
+    "path": "research/2026-10-09-platen-resistance-grounding.tsv",
+    "sha256": "06db72d176386403e94f2c1580d6a48ae1336a2f2d548e55c2a97b5c0ff71cbc"
+  },
+  "date": "2026-10-09",
+  "embedding_reuse_proof": {
+    "path": "reports/resistance-grounding-2026-10-09-platen/embedding-stage/reuse-proof.json",
+    "sha256": "afcd4a266dbebc2496525a3cce7776f1866331d403d0b97e252d5d79a748edae"
+  },
+  "embedding_scripts_unchanged": true,
+  "experimental_alleles_validated": false,
+  "focused_tests": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-09-platen/focused-tests.xml",
+      "sha256": "95fadad45c3f95d7e506bb8e386b3cf821cb4a8800c6a3f9f859a42db4c90070"
+    },
+    "passed": 155,
+    "skipped": 0
+  },
+  "full_qc": {
+    "execution": {
+      "path": "reports/resistance-grounding-2026-10-09-platen/full-qc-retry-exit.json",
+      "sha256": "b75077c778720be84ffbcb31d6786a230275f376cbb36bef63b6ff935fb57de0"
+    },
+    "exit_code": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-09-platen/full-tests-retry.xml",
+      "sha256": "17ebd86438d059643a2dff81a06a6ffe1a3c556a4f5825ed4e92236ba02b37a5"
+    },
+    "passed": 2384,
+    "path": "reports/resistance-grounding-2026-10-09-platen/full-qc-retry.log",
+    "sha256": "fc10bdb9e3107121a5482aebd337d16fb8dd86426b088df0964f5dbc810978be",
+    "skip_reasons": [
+      "historical checkpoint no longer matches the live corpus; public invariants still run",
+      "got empty parameter set for (path)",
+      "got empty parameter set for (path)",
+      "got empty parameter set for (path)"
+    ],
+    "skipped": 4,
+    "stages": [
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "test_seconds": 1699.83,
+    "warnings": 1
+  },
+  "github_mutations": 0,
+  "history_events_added": 2,
+  "ignored_files_included": true,
+  "live_browser_verification": false,
+  "model_revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+  "ncbi_endpoint_requests": 0,
+  "network_used_for_embedding": false,
+  "new_files_before_verification_receipt": [
+    {
+      "path": "research/2026-10-09-platen-checkpoint-reconciliation.json",
+      "sha256": "07d72e5a02f9969d8e7461e8e1d0c4563eb472034a496ff48f71e6bbd806de8a"
+    },
+    {
+      "path": "research/2026-10-09-platen-curation.json",
+      "sha256": "98fe498885ec0ab242fe8d94946d4b5f167bb8db0a47cf7b7d7a6b7624b34bc9"
+    },
+    {
+      "path": "research/2026-10-09-platen-primary-context.json",
+      "sha256": "fa10f4e8dc83d7f58adc4a434f87822d13aa9f51d34db56c5a90a697f3bacec6"
+    },
+    {
+      "path": "research/2026-10-09-platen-resistance-grounding.tsv",
+      "sha256": "06db72d176386403e94f2c1580d6a48ae1336a2f2d548e55c2a97b5c0ff71cbc"
+    },
+    {
+      "path": "research/2026-10-09-platen-resistance-progress.json",
+      "sha256": "bdcc316af2cba7273a2c08a8c9f39fbe325fd287aff77c00612b59633004f472"
+    },
+    {
+      "path": "research/2026-10-09-platen-resistance-progress.tsv",
+      "sha256": "263521aad4e2d89d1758e17286654f6e0f5e8132cdea4fb10ec675c55cfdb314"
+    },
+    {
+      "path": "tests/test_platen_curation.py",
+      "sha256": "5079f573ec6c769e9ec1cefaba1c226cb9d914f3c9a5f290b7f5e1823191b653"
+    }
+  ],
+  "original_record_bytes_preserved_as_prefix": true,
+  "protected_files": 6747,
+  "protected_files_unchanged": 6736,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-platen/protected-before.json",
+    "sha256": "1b707fc3cc5368a1c58478a9d3e7fe51af7ea22c8888d37bbff3c877c2e75094"
+  },
+  "records_byte_identical": 2937,
+  "records_changed": 2,
+  "rendered_claims_and_caveats_checked": true,
+  "rendered_map_payload_matches_artifact": true,
+  "rendered_map_record_links_verified": 2939,
+  "root_documents": [
+    {
+      "path": "NEXT_TASKS.md",
+      "sha256": "ef6e855f424b1e247a87c0881162c31b20e0294277b0e93ad9ee83740747c5b7"
+    },
+    {
+      "path": "README.md",
+      "sha256": "465637e4410603217c23e4c9188f79b95998de1ae8590c199404cdc96e6fb77e"
+    }
+  ],
+  "scope": "QUALITATIVE_PRIMARY_CURATION_AND_REFERENCE_GROUNDING_NOT_COMPLETED_CORPUS_RESEARCH",
+  "semantic_map": {
+    "fingerprint": "d3ad62728785d526",
+    "method": "pacmap",
+    "points": 2939,
+    "seed": 42
+  },
+  "source_owned_evidence_preserved": true,
+  "status": "ALL_AUTHORITATIVE_QC_GATES_PASSED",
+  "unchanged_vector_rows_reused": 2937,
+  "whole_record_primary_review_complete": false
+}

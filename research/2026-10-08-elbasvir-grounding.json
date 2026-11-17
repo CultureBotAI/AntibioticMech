@@ -1,0 +1,570 @@
+{
+  "added_evidence": {
+    "notes": "Taxonomic identity only: active species with Hepatitis C virus as an explicit alias. Retrieved 2026-10-08 UTC.",
+    "reference": "https://rest.uniprot.org/taxonomy/3052230"
+  },
+  "after_record_sha256": "faeedf917832dae5bf006c6cdcc315df267377b3eb4e4396ad42c837c7d59361",
+  "attribution": "UniProt Consortium, release 2026_03, CC BY 4.0",
+  "before_record_sha256": "e9b478f68d92c7bd7907692ab7e01e8486aead64bce938fe0ba41aa9ff4f760b",
+  "claim_note_suffix": " Taxon grounding only: the source calls the virus HCV. Its genotype-specific replicon results and clinical sequencing observations are distinct evidence contexts. The aggregate claim does not identify one patient, experimental allele or reference polyprotein. No protein accession, strain TaxID, genome or quantitative resistance endpoint is assigned by this curation.",
+  "doi": "10.1128/AAC.01390-15",
+  "identifier": "CHEBI:132967",
+  "inspected_primary_pdf": "https://journals.asm.org/doi/pdf/10.1128/aac.01390-15",
+  "limitations": [
+    "A zero-result reference-index query is not evidence that a protein or genomic record does not exist.",
+    "Con1 and S52 UniProt accessions identify reference polyproteins, not mutant-specific sequences or patient viruses.",
+    "Source genotypes and reference taxa were not assigned as one experimental strain.",
+    "No sequence, coordinate conversion, variant expansion, quantitative endpoint or clinical resistance interpretation added.",
+    "The pre-existing REVIEWED status is retained, not renewed; this is not whole-record or whole-literature signoff.",
+    "No requests to NCBI endpoints were made."
+  ],
+  "locations": [
+    "Viral quantification, sequencing, and resistance analyses, page 6923",
+    "Preclinical Results, pages 6923-6925",
+    "Phase 1b clinical trial Results, pages 6925-6926"
+  ],
+  "original_claim_sha256": "e2bc8835fc87fd69e032a291f6c1bf03e71bfc53f8fdb8b36dabc6beac0aefbd",
+  "original_history_sha256": "f5938dafb9df3727d9740c562961137eb6bb1da039c0f42527e157b5d158ffce",
+  "path": "data/antibiotics/antiviral/elbasvir.yaml",
+  "primary_reference": "PMID:26303801",
+  "primary_scope": "HCV genotype-specific replicon susceptibility and clinical sequencing are distinct contexts. Study referents are not exact experimental or patient alleles.",
+  "reference_candidates": [
+    {
+      "accession": "UniProtKB:Q9WMX2",
+      "assigned_to_resistance_claim": false,
+      "entry_audit": {
+        "entryVersion": 212,
+        "sequenceVersion": 3
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "explicit_cross_reference": {
+        "database": "EMBL",
+        "id": "AJ238799",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "CAB46677.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_RNA"
+          }
+        ]
+      },
+      "protein_name": "Genome polyprotein",
+      "reference_organism": {
+        "commonName": "HCV",
+        "lineage": [
+          "Viruses",
+          "Riboviria",
+          "Orthornavirae",
+          "Kitrinoviricota",
+          "Flasuviricetes",
+          "Amarillovirales",
+          "Flaviviridae",
+          "Orthohepacivirus",
+          "Orthohepacivirus hominis"
+        ],
+        "scientificName": "Hepatitis C virus genotype 1b (isolate Con1)",
+        "taxonId": 333284
+      },
+      "reference_taxonomy": {
+        "active": true,
+        "commonName": "HCV",
+        "hidden": true,
+        "hosts": [
+          {
+            "commonName": "Human",
+            "mnemonic": "HUMAN",
+            "scientificName": "Homo sapiens",
+            "taxonId": 9606
+          }
+        ],
+        "lineage": [
+          {
+            "hidden": false,
+            "rank": "no rank",
+            "scientificName": "Viruses",
+            "taxonId": 10239
+          },
+          {
+            "commonName": "RNA viruses and retroviruses",
+            "hidden": false,
+            "rank": "realm",
+            "scientificName": "Riboviria",
+            "taxonId": 2559587
+          },
+          {
+            "hidden": false,
+            "rank": "kingdom",
+            "scientificName": "Orthornavirae",
+            "taxonId": 2732396
+          },
+          {
+            "hidden": false,
+            "rank": "phylum",
+            "scientificName": "Kitrinoviricota",
+            "taxonId": 2732406
+          },
+          {
+            "hidden": false,
+            "rank": "class",
+            "scientificName": "Flasuviricetes",
+            "taxonId": 2732462
+          },
+          {
+            "hidden": false,
+            "rank": "order",
+            "scientificName": "Amarillovirales",
+            "taxonId": 2732545
+          },
+          {
+            "hidden": false,
+            "rank": "family",
+            "scientificName": "Flaviviridae",
+            "taxonId": 11050
+          },
+          {
+            "hidden": false,
+            "rank": "genus",
+            "scientificName": "Orthohepacivirus",
+            "taxonId": 11102
+          },
+          {
+            "hidden": false,
+            "rank": "species",
+            "scientificName": "Orthohepacivirus hominis",
+            "taxonId": 3052230
+          },
+          {
+            "hidden": true,
+            "rank": "genotype",
+            "scientificName": "Hepatitis C virus genotype 1",
+            "taxonId": 41856
+          },
+          {
+            "commonName": "HCV",
+            "hidden": true,
+            "rank": "no rank",
+            "scientificName": "Hepatitis C virus genotype 1b",
+            "taxonId": 31647
+          }
+        ],
+        "mnemonic": "HCVCO",
+        "otherNames": [
+          "Hepatitis C virus (isolate Con1)"
+        ],
+        "parent": {
+          "commonName": "HCV",
+          "scientificName": "Hepatitis C virus genotype 1b",
+          "taxonId": 31647
+        },
+        "rank": "no rank",
+        "scientificName": "Hepatitis C virus genotype 1b (isolate Con1)",
+        "statistics": {
+          "proteomeCount": 1,
+          "referenceProteomeCount": 0,
+          "reviewedProteinCount": 1,
+          "unreviewedProteinCount": 0
+        },
+        "taxonId": 333284
+      },
+      "source_reference_accession": "AJ238799",
+      "source_reference_label": "con1"
+    },
+    {
+      "accession": "UniProtKB:D6P444",
+      "assigned_to_resistance_claim": false,
+      "entry_audit": {
+        "entryVersion": 99,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "explicit_cross_reference": {
+        "database": "EMBL",
+        "id": "GU814263",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "ADF97231.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_RNA"
+          }
+        ]
+      },
+      "protein_name": "Genome polyprotein",
+      "reference_organism": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "ADF97231.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Viruses",
+          "Riboviria",
+          "Orthornavirae",
+          "Kitrinoviricota",
+          "Flasuviricetes",
+          "Amarillovirales",
+          "Flaviviridae",
+          "Orthohepacivirus",
+          "Orthohepacivirus hominis"
+        ],
+        "scientificName": "Hepatitis C virus S52",
+        "taxonId": 759939
+      },
+      "reference_taxonomy": {
+        "active": true,
+        "hidden": true,
+        "lineage": [
+          {
+            "hidden": false,
+            "rank": "no rank",
+            "scientificName": "Viruses",
+            "taxonId": 10239
+          },
+          {
+            "commonName": "RNA viruses and retroviruses",
+            "hidden": false,
+            "rank": "realm",
+            "scientificName": "Riboviria",
+            "taxonId": 2559587
+          },
+          {
+            "hidden": false,
+            "rank": "kingdom",
+            "scientificName": "Orthornavirae",
+            "taxonId": 2732396
+          },
+          {
+            "hidden": false,
+            "rank": "phylum",
+            "scientificName": "Kitrinoviricota",
+            "taxonId": 2732406
+          },
+          {
+            "hidden": false,
+            "rank": "class",
+            "scientificName": "Flasuviricetes",
+            "taxonId": 2732462
+          },
+          {
+            "hidden": false,
+            "rank": "order",
+            "scientificName": "Amarillovirales",
+            "taxonId": 2732545
+          },
+          {
+            "hidden": false,
+            "rank": "family",
+            "scientificName": "Flaviviridae",
+            "taxonId": 11050
+          },
+          {
+            "hidden": false,
+            "rank": "genus",
+            "scientificName": "Orthohepacivirus",
+            "taxonId": 11102
+          },
+          {
+            "hidden": false,
+            "rank": "species",
+            "scientificName": "Orthohepacivirus hominis",
+            "taxonId": 3052230
+          },
+          {
+            "hidden": true,
+            "rank": "no rank",
+            "scientificName": "Hepatitis C virus subtype 3a",
+            "taxonId": 356426
+          }
+        ],
+        "mnemonic": "9HEPC",
+        "otherNames": [
+          "Hepatitis C virus strain S52"
+        ],
+        "parent": {
+          "scientificName": "Hepatitis C virus subtype 3a",
+          "taxonId": 356426
+        },
+        "rank": "no rank",
+        "scientificName": "Hepatitis C virus S52",
+        "statistics": {
+          "proteomeCount": 1,
+          "referenceProteomeCount": 0,
+          "reviewedProteinCount": 0,
+          "unreviewedProteinCount": 1
+        },
+        "taxonId": 759939
+      },
+      "source_reference_accession": "GU814263",
+      "source_reference_label": "S52"
+    }
+  ],
+  "requests": [
+    {
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Length": "484",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 03:48:23 GMT",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "hit cached"
+      },
+      "retrieved_at": "2026-10-08T03:48:23.231564+00:00",
+      "sha256": "9937380c4376178516d8f6b14893b728bb7e70986be245a62f39b137b0a59de3",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/3052230"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 04:58:37 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "1",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T04:58:37.491116+00:00",
+      "sha256": "bd921f1049a01f5a0a647afb66ec4ccc41472524386a7c65d6d024d2aef9f09a",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-AJ238799&format=json&size=100&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cversion%2Csequence_version"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 05:00:15 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T05:00:15.135118+00:00",
+      "sha256": "193f65f1e145eb7915f30a8284f2f9b54d772c98eec41b30ed56902b20859d97",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/333284"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 04:58:59 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "1",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T04:58:59.344099+00:00",
+      "sha256": "bd707b5d146ca489635f8b34ed25291e6de9105cef8f9da3aad09e51a1699f17",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-GU814263&format=json&size=100&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Cversion%2Csequence_version"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 05:00:15 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T05:00:15.954790+00:00",
+      "sha256": "99a9d4e79b7d5043e9fa4f1fa7c2057688d0c5d08c8ff7d98cd54b7034e60c00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/759939"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 04:59:00 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "0",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T04:59:00.191414+00:00",
+      "sha256": "c27e6cf388bad4b982bdf2a024d23bb4aacddebb046f3a1b539137e7bf7617fd",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Arefseq-NC_004102&format=json&size=100&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Cversion%2Csequence_version"
+    }
+  ],
+  "reviewed_on": "2026-10-08",
+  "standard_inchi_key": "BVAZQCUMNICBAQ-PZHYSIFUSA-N",
+  "status": "TAXON_GROUNDED_REFERENCES_SEPARATE",
+  "taxonomy": {
+    "active": true,
+    "hidden": false,
+    "lineage": [
+      {
+        "hidden": false,
+        "rank": "no rank",
+        "scientificName": "Viruses",
+        "taxonId": 10239
+      },
+      {
+        "commonName": "RNA viruses and retroviruses",
+        "hidden": false,
+        "rank": "realm",
+        "scientificName": "Riboviria",
+        "taxonId": 2559587
+      },
+      {
+        "hidden": false,
+        "rank": "kingdom",
+        "scientificName": "Orthornavirae",
+        "taxonId": 2732396
+      },
+      {
+        "hidden": false,
+        "rank": "phylum",
+        "scientificName": "Kitrinoviricota",
+        "taxonId": 2732406
+      },
+      {
+        "hidden": false,
+        "rank": "class",
+        "scientificName": "Flasuviricetes",
+        "taxonId": 2732462
+      },
+      {
+        "hidden": false,
+        "rank": "order",
+        "scientificName": "Amarillovirales",
+        "taxonId": 2732545
+      },
+      {
+        "hidden": false,
+        "rank": "family",
+        "scientificName": "Flaviviridae",
+        "taxonId": 11050
+      },
+      {
+        "hidden": false,
+        "rank": "genus",
+        "scientificName": "Orthohepacivirus",
+        "taxonId": 11102
+      }
+    ],
+    "mnemonic": "9HEPC",
+    "otherNames": [
+      "HCV",
+      "Hepacivirus C",
+      "post-transfusion hepatitis non A non B virus",
+      "human hepatitis C virus HCV",
+      "human hepatitis virus C HCV",
+      "human hepatitis C virus",
+      "hepatitis C virus HCV",
+      "Hepatitis C virus",
+      "Hepacivirus hominis"
+    ],
+    "parent": {
+      "scientificName": "Orthohepacivirus",
+      "taxonId": 11102
+    },
+    "rank": "species",
+    "scientificName": "Orthohepacivirus hominis",
+    "statistics": {
+      "proteomeCount": 469,
+      "referenceProteomeCount": 0,
+      "reviewedProteinCount": 46,
+      "unreviewedProteinCount": 17759
+    },
+    "taxonId": 3052230
+  },
+  "unchanged_fields_sha256": "5c814ca8f2fbf89bcd56d56e85e975ed2666e26bc54b77f347178feeb15c4acb",
+  "unresolved_reference": {
+    "query": "xref:refseq-NC_004102",
+    "result_count": 0,
+    "source_accession": "NC_004102",
+    "source_label": "H77",
+    "status": "NO_EXPLICIT_CROSSWALK_IN_THIS_QUERY",
+    "suggestions_followed": false
+  }
+}

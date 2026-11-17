@@ -1,0 +1,332 @@
+{
+  "attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "release": "2026_03",
+    "source": "UniProt Consortium"
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/cohort.json",
+    "sha256": "8dc20610c2fb3e4a2284abaea82a942e13c6f723eb0c068ef8fe61cd6935a97c"
+  },
+  "date": "2026-10-14",
+  "discovery": {
+    "incidental_held_paper_search_result_received": true,
+    "incidental_result_used_as_native_primary_review": false,
+    "local": {
+      "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/discovery.json",
+      "sha256": "5ce53a016321e901d1552b2f549b58f5f4e6e7003f55fee60d4d734578a56a1d"
+    },
+    "local_candidates": 35,
+    "local_metadata_files": 190,
+    "web_plan": {
+      "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/independent-discovery-plan.json",
+      "sha256": "460f15afcbea52f48d48216fbb6e3cf78bfd0c33cf04b6c7539bba6dab6f444a"
+    },
+    "web_result": {
+      "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/independent-discovery-result.json",
+      "sha256": "e7764c466910e8c717f9077c24d55a725b02fb62c1c3ab4f6b714a0c33f1c349"
+    }
+  },
+  "identity_decisions": {
+    "existing_phibase_claim_changed": false,
+    "multiple_pombe_orf_names_reduced_to_one": false,
+    "ordered_locus_and_orf_name_fields_interchangeable": false,
+    "reference_organism_is_experimental_subject": false,
+    "shared_symbol_establishes_same_gene_or_orthology": false,
+    "whole_record_primary_review": "OPEN"
+  },
+  "inputs": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/baseline-record.yaml",
+      "sha256": "dba707b5e2190c62d2ec4b12e3902d804d7838888dfe39bf88514e9ed48bf775"
+    },
+    "census": {
+      "path": "research/2026-10-14-antiviral-taxa-resistance-grounding.tsv",
+      "sha256": "b15465f26802dae7fc099e52d3dc4898cd6397fd2bc37f4055443d2e40fe2935"
+    },
+    "previous_checkpoint": {
+      "path": "research/2026-10-14-card-reference-memberships-verification.json",
+      "sha256": "cde9ac2e189ae73fad69b618fe64bbaf8cbe81ef3964950ae39ab1bf14baba62"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "limitations": [
+    "Database names and citations do not verify the compound-specific experimental effect.",
+    "S288c and 972 are reference backgrounds; citation strain labels are not assigned genomes.",
+    "The 1994 budding-yeast citation annotation names FL100, not the S288c reference strain.",
+    "The two fission-yeast ORF names remain separate labels; neither is chosen as a tested allele.",
+    "The 2001 citation is absent from this returned bibliography, not disproven or globally absent.",
+    "Primary access holds are local observations, not scientific negatives or global unavailability.",
+    "Search-index text is not native figure, table, supplement or primary-result review.",
+    "Earlier organism-specific claims and later manual investigations remain separate."
+  ],
+  "limits": {
+    "biological_changes": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_experimental_allele_or_genome_assignments": 0,
+    "new_scientific_http_attempts": 5,
+    "reuse_terms_review_resumed": false,
+    "sequences_variants_constructs_protocols_or_numeric_AST_exported": false,
+    "source_adoptions": 0,
+    "web_search_queries": 1,
+    "whole_record_primary_signoffs": 0
+  },
+  "primary_status": {
+    "PMID:11410665": "TECHNICAL_HTTP_500_NO_FULL_TEXT_REVIEW",
+    "PMID:7646493": "NOT_REQUESTED_AFTER_EBI_CANARY_FAILURE",
+    "PMID:7883711": "NOT_REQUESTED_AFTER_EBI_CANARY_FAILURE",
+    "PMID:8070655": "PUBLISHER_HTTP_403_SEARCH_ABSTRACT_ONLY_NOT_PRIMARY_RESULTS_REVIEW"
+  },
+  "proteins": {
+    "cerevisiae-bfr1": {
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 182,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "BFR1"
+      ],
+      "missing_citation_proves_no_relationship": false,
+      "ordered_locus_names": [
+        "YOR198C"
+      ],
+      "protein_accession": "UniProtKB:P38934",
+      "protein_name": "Nuclear segregation protein BFR1",
+      "reference_orf_names": [],
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_species_name": "Saccharomyces cerevisiae",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "resistant_phenotype_inferred_from_protein_name": false,
+      "scope": "DATABASE_REFERENCE_NOT_TESTED_ALLELE",
+      "selected_citation_contexts": [
+        {
+          "citation_identifiers": [
+            "DOI:10.1093/genetics/137.2.423",
+            "PubMed:8070655"
+          ],
+          "experimental_subject_assignment": false,
+          "matched_citations": [
+            "PubMed:8070655"
+          ],
+          "primary_results_reviewed": false,
+          "raw_role_annotations_exported": false,
+          "reference_number": 1,
+          "source_title_sha256": "d503b9b9a2984094055565f75c635ca1caa314d35511eedefdc5f03bb64e5df5",
+          "study_strain_annotations": [
+            "ATCC 28383 / FL100 / VTT C-80102"
+          ]
+        }
+      ],
+      "selected_pmids_not_in_returned_bibliography": [
+        "11410665"
+      ],
+      "sequence_version": 1,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "source_symbol": "BFR1",
+      "species_lineage_verified": true
+    },
+    "pombe-bfr1": {
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 178,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "bfr1",
+        "hba2"
+      ],
+      "missing_citation_proves_no_relationship": false,
+      "ordered_locus_names": [],
+      "protein_accession": "UniProtKB:P41820",
+      "protein_name": "Pleiotropic ABC efflux transporter of multiple drugs bfr1",
+      "reference_orf_names": [
+        "SPCC18B5.01c",
+        "SPCPJ732.04c"
+      ],
+      "reference_organism_name": "Schizosaccharomyces pombe (strain 972 / ATCC 24843)",
+      "reference_species_name": "Schizosaccharomyces pombe",
+      "reference_taxon_id": "NCBITaxon:284812",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Schizosaccharomyces pombe (strain 972 / ATCC 24843)",
+      "resistant_phenotype_inferred_from_protein_name": false,
+      "scope": "DATABASE_REFERENCE_NOT_TESTED_ALLELE",
+      "selected_citation_contexts": [
+        {
+          "citation_identifiers": [
+            "DOI:10.1128/jb.177.6.1536-1543.1995",
+            "PubMed:7883711"
+          ],
+          "experimental_subject_assignment": false,
+          "matched_citations": [
+            "PubMed:7883711"
+          ],
+          "primary_results_reviewed": false,
+          "raw_role_annotations_exported": false,
+          "reference_number": 1,
+          "source_title_sha256": "b31884721017768ea34472af4e771eb714fda280ca11ee088acd53930de5416a",
+          "study_strain_annotations": []
+        },
+        {
+          "citation_identifiers": [
+            "DOI:10.1006/bbrc.1995.2147",
+            "PubMed:7646493"
+          ],
+          "experimental_subject_assignment": false,
+          "matched_citations": [
+            "PubMed:7646493"
+          ],
+          "primary_results_reviewed": false,
+          "raw_role_annotations_exported": false,
+          "reference_number": 2,
+          "source_title_sha256": "ff48a54e78dbe39f370b0f08a8ac9e090dbf10cdfe28afd9102ab16a0e131c3b",
+          "study_strain_annotations": [
+            "BAP1"
+          ]
+        }
+      ],
+      "selected_pmids_not_in_returned_bibliography": [],
+      "sequence_version": 1,
+      "source_species_taxon_id": "NCBITaxon:4896",
+      "source_symbol": "bfr1",
+      "species_lineage_verified": true
+    }
+  },
+  "record": {
+    "identifier": "CHEBI:48080",
+    "path": "data/antibiotics/antibacterial/brefeldin-a.yaml",
+    "sha256": "dba707b5e2190c62d2ec4b12e3902d804d7838888dfe39bf88514e9ed48bf775",
+    "standard_inchi_key": "KQNZDYYTLMIZCT-KQPMLPITSA-N"
+  },
+  "scope": "YEAST_BFR1_REFERENCE_DISAMBIGUATION_NOT_PRIMARY_RESISTANCE_SIGNOFF",
+  "sources": {
+    "bfr1-1994-publisher": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/bfr1-1994-publisher-attempt.json",
+        "sha256": "245b964f3b4d15e86a177ddcca16fca9dc22c0b9771f58846affc0132cd9d6e7"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/bfr1-1994-publisher-response.bin",
+        "sha256": "bd3cb8068d41b334fdafcc77ad799631d70d017f01975d8d9b3180d18a88a526"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/followup-plan.json",
+        "sha256": "1ce6a15fbee0ca19dfd1193e780b8965ca268a6b493328cac3ffbbc6ed871ade"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/bfr1-1994-publisher-receipt.json",
+        "sha256": "aecb1a0879d7634cecba90a273ad7f30f0395d8abd966544798319a6c7fcad4a"
+      },
+      "retrieved_at": "2026-10-14T13:11:14.583404+00:00",
+      "status": 403,
+      "url": "https://academic.oup.com/genetics/article-abstract/137/2/423/6012527"
+    },
+    "bfr1-cerevisiae-primary": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/bfr1-cerevisiae-primary-attempt.json",
+        "sha256": "0f51f0dc26eaec409db1a25d71d86d2bbb3b4a7d695260b9fd239fd558ef2c13"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/bfr1-cerevisiae-primary-response.bin",
+        "sha256": "d66e56d9623149dca6b247d6a88da80c3527320b883ea4ea46ffa3db5b48bea6"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/request-plan.json",
+        "sha256": "bc9b25d3c793972117d5b6c4f6e46dd6d7e9cc49a1f11d66cac9627ebee4d0e9"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/bfr1-cerevisiae-primary-receipt.json",
+        "sha256": "aa20ae07dcfc96270bf4a71b3b0c4e65cbf76d78ad0349caa113042a715723c2"
+      },
+      "retrieved_at": "2026-10-14T13:08:46.143649+00:00",
+      "status": 500,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC55738/fullTextXML"
+    },
+    "cerevisiae-bfr1": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/cerevisiae-bfr1-attempt.json",
+        "sha256": "480cf41ca111c9e6c0910e2b49c920977639cdb8bdb4a23246bccce55a4f0998"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/cerevisiae-bfr1-response.bin",
+        "sha256": "e227479d31ae640abd9d05acbac930209594a3d6c2fff005bb708b8c92a1e5b0"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/reference-plan.json",
+        "sha256": "3d42b95f2f6c7966f4d1fc5447ea96985029704a8152b89560ad8c8b03c3fada"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/cerevisiae-bfr1-receipt.json",
+        "sha256": "2baf90f686952670c011e9189960d3d063db604c82fe9d154f38a5245ff949c3"
+      },
+      "retrieved_at": "2026-10-14T13:09:35.875002+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ABFR1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "pombe-bfr1": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/pombe-bfr1-attempt.json",
+        "sha256": "8ac10cefda1301f999c8c80c61415c928975834bcb3047e859230ad129221480"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/pombe-bfr1-response.bin",
+        "sha256": "210c006e7fa0827079becc88542542c65b65cacd4f1656bc245a9ce49ae5f220"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/reference-plan.json",
+        "sha256": "3d42b95f2f6c7966f4d1fc5447ea96985029704a8152b89560ad8c8b03c3fada"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/pombe-bfr1-receipt.json",
+        "sha256": "c078f516d68aa207d7396ac8a6d8fa39a71a447bd9e9be6e211b134ecb1d1f1b"
+      },
+      "retrieved_at": "2026-10-14T13:10:23.895061+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Abfr1+AND+organism_name%3A%22Schizosaccharomyces+pombe%22+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "tax-284812": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/tax-284812-attempt.json",
+        "sha256": "f571a7cf6550aedc9b31b0164ddba1cc63683d4f5f21d127508be8480a2c3fcc"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/tax-284812-response.bin",
+        "sha256": "3b78267f00e0ce7d290c9899372e09e2cb7f25d9d13fb832d21f45c9e24a39ce"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/followup-plan.json",
+        "sha256": "1ce6a15fbee0ca19dfd1193e780b8965ca268a6b493328cac3ffbbc6ed871ade"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-brefeldin-yeast/tax-284812-receipt.json",
+        "sha256": "35896c250edd4365e92cb8256186241babfdc0deddfd2593dee3e4cba6000b56"
+      },
+      "retrieved_at": "2026-10-14T13:11:10.396152+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/284812"
+    }
+  },
+  "taxonomy_reuse": {
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+    },
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+      "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/559292"
+  }
+}

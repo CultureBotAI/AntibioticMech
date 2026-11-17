@@ -1,0 +1,79 @@
+{
+  "before": {
+    "path": "data/antibiotics/antifungal/cycloheximide.yaml",
+    "sha256": "1b8f1dd12a79c5a71b7b45ced0935f9b403cc67ea91775860ab638fe51964879"
+  },
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-13-cyh2/canary.yaml",
+    "sha256": "288877066ad5b8d7ad9492315347e2ba0d5aeae6487477c8e14ca048476bce8c"
+  },
+  "claims": [
+    {
+      "assay": "Laboratory genetic and protein comparisons",
+      "evidence": [
+        {
+          "notes": "Selected Results and Discussion, pp. 3125 and 3132; DOI:10.1093/nar/11.10.3123. Author-uploaded primary text inspected; native figures not inspected.",
+          "reference": "PMID:6304624"
+        },
+        {
+          "notes": "Reference identity only: RPL28, YGL103W; UniProtKB 2026_03, entry 210, sequence 3. S288c NCBITaxon:559292 is reference context, not an experimental strain assignment.",
+          "reference": "UniProtKB:P02406"
+        }
+      ],
+      "gene_families": [
+        "RPL28"
+      ],
+      "label": "CYH2/RPL28-associated laboratory cycloheximide resistance",
+      "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+      "note": "Historical CYH2/L29 maps to current RPL28/uL15, not modern RPL29/eL29. Gene-level laboratory evidence does not establish direct drug binding to this protein. Historical variant coordinates remain unresolved; reference identity is not an experimental allele assignment.",
+      "phenotype_label": "Source-reported relative cycloheximide resistance",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    },
+    {
+      "assay": "Comparative plate and liquid growth",
+      "evidence": [
+        {
+          "notes": "Results and Discussion; native Figures 1, 8 and 10 inspected, pp. 7, 15 and 19.",
+          "reference": "DOI:10.1371/journal.pone.0303747"
+        },
+        {
+          "notes": "Reference identity only: AGP2, YBR132C; UniProtKB 2026_03, entry 177, sequence 1. S288c NCBITaxon:559292 is reference context, not an experimental strain assignment.",
+          "reference": "UniProtKB:P38090"
+        }
+      ],
+      "gene_families": [
+        "AGP2"
+      ],
+      "label": "AGP2-associated laboratory cycloheximide resistance",
+      "mechanism_type": "UNKNOWN",
+      "note": "Laboratory phenotype association. PDR5-mediated causality and direct cycloheximide transport by Agp2 were not established. Figure 1B units conflict with Results; no numerical AST imported. Reference identity is not an experimental allele assignment.",
+      "phenotype_label": "Source-reported relative cycloheximide resistance",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    }
+  ],
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added qualified CYH2/RPL28 and AGP2 laboratory cycloheximide resistance associations. Distinguished historical L29 from modern RPL29, kept UniProt proteins and S288c taxonomy reference-only, and retained mechanistic and numerical-endpoint limitations. Existing source-owned claims are unchanged; whole-record review remains open.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-13T02:32:03Z"
+  },
+  "existing_claims_preserved": 3,
+  "experimental_proteins_or_genomes_assigned": 0,
+  "fixture": {
+    "path": "tests/fixtures/cycloheximide-before-2026-10-13.yaml",
+    "sha256": "1b8f1dd12a79c5a71b7b45ced0935f9b403cc67ea91775860ab638fe51964879"
+  },
+  "fresh_seed_merge_equal": true,
+  "history_events_added": 1,
+  "new_resistance_claims": 2,
+  "numerical_ast_added": 0,
+  "record": {
+    "path": "data/antibiotics/antifungal/cycloheximide.yaml",
+    "sha256": "288877066ad5b8d7ad9492315347e2ba0d5aeae6487477c8e14ca048476bce8c"
+  },
+  "records_changed": 1,
+  "whole_record_review_complete": false
+}

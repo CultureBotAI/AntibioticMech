@@ -1,0 +1,140 @@
+{
+  "cases": [
+    {
+      "biological_conclusion": "NONE; search recall only",
+      "complementary_probe": "probe-a0d602d867f72d3a",
+      "identifier": "CHEBI:133127",
+      "initial_retained_candidates": 7,
+      "interpretation": "The v1 genetics clause excludes this known primary paper; gene* recovers it under the same API settings.",
+      "known_primary_present_in_initial_snapshot": false,
+      "old_clause_probe": "probe-c6be5075333ff717",
+      "reference": "PMID:33106269"
+    },
+    {
+      "biological_conclusion": "NONE; search recall only",
+      "complementary_probe": "probe-344b9b62c310ab13",
+      "identifier": "CHEBI:141991",
+      "initial_retained_candidates": 5,
+      "interpretation": "The v1 resistance/susceptibility/tolerance clause excludes this known primary paper; immunity/sensitivity terms recover it.",
+      "known_primary_present_in_initial_snapshot": false,
+      "old_clause_probe": "probe-8df5f1ec131c2383",
+      "reference": "PMID:27858169"
+    }
+  ],
+  "criteria_at_review": "canonical-title-abstract-resistance-genetics-v1",
+  "date": "2026-10-09",
+  "discovery_code_changed": false,
+  "full_corpus_supplemental_search_run": false,
+  "github_mutations": 0,
+  "historical_snapshots_rewritten": false,
+  "initial_candidates": {
+    "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+    "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+  },
+  "limitations": [
+    "Known-paper probes do not estimate overall recall or precision.",
+    "Broader terms can introduce irrelevant papers; exact compound, organism and primary evidence still require review.",
+    "The probes restrict to two known MED IDs and test clauses, not an exhaustive new compound-name search."
+  ],
+  "ncbi_endpoint_requests": 0,
+  "pipeline_at_review": {
+    "path": "scripts/discover_resistance_literature.py",
+    "sha256": "cb9d278bc8d50f1075a0cbc2d8577393a9a2de1dbeb455698732086d8e631c9a"
+  },
+  "requests": {
+    "probe-344b9b62c310ab13": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-peptide-followup/probe-344b9b62c310ab13-response.bin",
+        "sha256": "df097e10255074a96b2aa8fe6e187adc1c17483741b8eaeba5d50a2e55fdb2c7"
+      },
+      "candidate_ids": [
+        "MED:27858169"
+      ],
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "hit_count": 1,
+      "params": {
+        "cursorMark": "*",
+        "format": "json",
+        "pageSize": "100",
+        "query": "EXT_ID:27858169 AND SRC:MED AND (TITLE_ABS:immun* OR TITLE_ABS:sensitiv*)",
+        "resultType": "lite",
+        "synonym": "false"
+      },
+      "retrieved_at": "2026-10-09T19:58:19.040626+00:00",
+      "sha256": "df097e10255074a96b2aa8fe6e187adc1c17483741b8eaeba5d50a2e55fdb2c7",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27858169+AND+SRC%3AMED+AND+%28TITLE_ABS%3Aimmun%2A+OR+TITLE_ABS%3Asensitiv%2A%29&format=json&resultType=lite&pageSize=100&cursorMark=%2A&synonym=false"
+    },
+    "probe-8df5f1ec131c2383": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-peptide-followup/probe-8df5f1ec131c2383-response.bin",
+        "sha256": "67528271db1b4eaa6d01ef1b1fec8ca36d9ca6570d063e9b95705b0163e2ce18"
+      },
+      "candidate_ids": [],
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "hit_count": 0,
+      "params": {
+        "cursorMark": "*",
+        "format": "json",
+        "pageSize": "100",
+        "query": "EXT_ID:27858169 AND SRC:MED AND (TITLE_ABS:resistan* OR TITLE_ABS:susceptib* OR TITLE_ABS:toleran*)",
+        "resultType": "lite",
+        "synonym": "false"
+      },
+      "retrieved_at": "2026-10-09T19:58:15.432868+00:00",
+      "sha256": "67528271db1b4eaa6d01ef1b1fec8ca36d9ca6570d063e9b95705b0163e2ce18",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27858169+AND+SRC%3AMED+AND+%28TITLE_ABS%3Aresistan%2A+OR+TITLE_ABS%3Asusceptib%2A+OR+TITLE_ABS%3Atoleran%2A%29&format=json&resultType=lite&pageSize=100&cursorMark=%2A&synonym=false"
+    },
+    "probe-a0d602d867f72d3a": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-peptide-followup/probe-a0d602d867f72d3a-response.bin",
+        "sha256": "52d40093c8fb9a07718d260d2a76869cede5ae9619434c8b43551a28c4ec35ce"
+      },
+      "candidate_ids": [
+        "MED:33106269"
+      ],
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "hit_count": 1,
+      "params": {
+        "cursorMark": "*",
+        "format": "json",
+        "pageSize": "100",
+        "query": "EXT_ID:33106269 AND SRC:MED AND TITLE_ABS:gene*",
+        "resultType": "lite",
+        "synonym": "false"
+      },
+      "retrieved_at": "2026-10-09T19:58:12.337364+00:00",
+      "sha256": "52d40093c8fb9a07718d260d2a76869cede5ae9619434c8b43551a28c4ec35ce",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A33106269+AND+SRC%3AMED+AND+TITLE_ABS%3Agene%2A&format=json&resultType=lite&pageSize=100&cursorMark=%2A&synonym=false"
+    },
+    "probe-c6be5075333ff717": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-peptide-followup/probe-c6be5075333ff717-response.bin",
+        "sha256": "388a88a9c2afc2e2ea2bf4e1b794cc3bc7fd3adffc63ae14589ff0479d45ebbe"
+      },
+      "candidate_ids": [],
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "hit_count": 0,
+      "params": {
+        "cursorMark": "*",
+        "format": "json",
+        "pageSize": "100",
+        "query": "EXT_ID:33106269 AND SRC:MED AND (TITLE_ABS:gene OR TITLE_ABS:allele* OR TITLE_ABS:mutan* OR TITLE_ABS:mutation* OR TITLE_ABS:genetic* OR TITLE_ABS:genom*)",
+        "resultType": "lite",
+        "synonym": "false"
+      },
+      "retrieved_at": "2026-10-09T19:58:08.384892+00:00",
+      "sha256": "388a88a9c2afc2e2ea2bf4e1b794cc3bc7fd3adffc63ae14589ff0479d45ebbe",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A33106269+AND+SRC%3AMED+AND+%28TITLE_ABS%3Agene+OR+TITLE_ABS%3Aallele%2A+OR+TITLE_ABS%3Amutan%2A+OR+TITLE_ABS%3Amutation%2A+OR+TITLE_ABS%3Agenetic%2A+OR+TITLE_ABS%3Agenom%2A%29&format=json&resultType=lite&pageSize=100&cursorMark=%2A&synonym=false"
+    }
+  },
+  "required_followup": "Add a separately versioned complementary discovery lane with tested vocabulary and a canary before a corpus-wide batch; preserve and union with all v1 citations. Do not reinterpret complete v1 traversals as complete scientific coverage.",
+  "scope": "TWO_KNOWN_PAPER_FILTER_COUNTEREXAMPLES_NOT_CORPUS_RECALL_ESTIMATE"
+}

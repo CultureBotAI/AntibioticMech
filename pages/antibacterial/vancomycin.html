@@ -7,7 +7,7 @@
 <meta name="description" content="vancomycin (CHEBI:28001): A complex glycopeptide from Streptomyces orientalis. It inhibits a specific step in the synthesis of the peptidoglycan layer in the Gram-positive bacteria Staphylococcus aureus and Clostridium difficile.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>vancomycin</h1>
 <p class="meta">
   <code class="curie">CHEBI:28001</code>
@@ -37,16 +48,19 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000081">glycopeptide antibiotic</a><code class="curie">ARO:3000081</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_24396">CHEBI:24396</a>      <code class="curie">CHEBI:24396</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000081">ARO:3000081</a>      <code class="curie">ARO:3000081</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_24396"><code class="curie">CHEBI:24396</code></a></li>
+  <li>glycopeptide antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_3000081"><code class="curie">ARO:3000081</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C66H75Cl2N9O24</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>1449.271 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>1447.4302 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">MYPYJXKWCTUITO-LYRMYLQWSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">CN[C@H](CC(C)C)C(=O)N[C@H]1C(=O)N[C@@H](CC(N)=O)C(=O)N[C@H]2C(=O)N[C@H]3C(=O)N[C@H](C(=O)N[C@H](C(=O)O)c4cc(O)cc(O)c4-c4cc3ccc4O)[C@H](O)c3ccc(c(Cl)c3)Oc3cc2cc(c3O[C@@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O[C@H]2C[C@](C)(N)[C@H](O)[C@H](C)O2)Oc2ccc(cc2Cl)[C@H]1O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C66H75Cl2N9O24/c1-23(2)12-34(71-5)58(88)76-49-51(83)26-7-10-38(32(67)14-26)97-40-16-28-17-41(55(40)101-65-56(54(86)53(85)42(22-78)99-65)100-44-21-66(4,70)57(87)24(3)96-44)98-39-11-8-27(15-33(39)68)52(84)50-63(93)75-48(64(94)95)31-18-29(79)19-37(81)45(31)30-13-25(6-9-36(30)80)46(60(90)77-50)74-61(91)47(28)73-59(89)35(20-43(69)82)72-62(49)92/h6-11,13-19,23-24,34-35,42,44,46-54,56-57,65,71,78-81,83-87H,12,20-22,70H2,1-5H3,(H2,69,82)(H,72,92)(H,73,89)(H,74,91)(H,75,93)(H,76,88)(H,77,90)(H,94,95)/t24-,34+,35-,42+,44-,46+,47+,48-,49+,50-,51+,52+,53+,54-,56+,57+,65-,66-/m0/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -57,7 +71,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000028">ARO:0000028</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_0000028">vancomycin</a><code class="curie">ARO:0000028</code></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=1404-90-6">cas:1404-90-6</a></li>
   <li><a href="https://www.kegg.jp/entry/C06689">kegg.compound:C06689</a></li>
   <li><a href="http://www.knapsackfamily.com/knapsack_core/information.php?word=C00016052">knapsack:C00016052</a></li>
@@ -90,13 +104,14 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_36047">CHEBI:36047</a>    <code class="curie">CHEBI:36047</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antibacterial drug  <a href="http://purl.obolibrary.org/obo/CHEBI_36047"><code class="curie">CHEBI:36047</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -116,13 +131,15 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>acyl-D-alanyl-D-alanine <span class="pill plain">CELL_WALL_COMPONENT</span> <span class="pill">ATTACKED_COMPONENT</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000720">ARO:3000720</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. The D-Ala-D-Ala chemical group is bound as a cell-wall precursor component. Evidence status: DATABASE_ASSERTION_ONLY. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000720</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000720">ARO:3000720</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
@@ -131,42 +148,73 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
-<h2>Activity spectrum</h2>
+<h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">3 observations &middot; <a href="vancomycin/activity-1.html">Browse all observations</a> &middot; <a href="vancomycin/record-e61d42b82aa2b259c7c9b5f54843a8490b46cd08366e1f40979fa91c77093b0b.json.gz" download>Complete record (JSON.gz)</a></p>
+<div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
-  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Assay</th><th scope="col">Strain</th></tr></thead>
-  <tr>
-    <td><em>Enterococcus faecalis</em> <code class="curie">NCBITaxon:1351</code></td>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Enterococcus faecalis</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1351">NCBITaxon:1351</a></td>
     <td>—</td>
     <td class="num">&gt;64.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution vancomycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0781</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN15040080">SAMN15040080</a><br>    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="3" data-identifier="CHEBI:28001" data-key="MYPYJXKWCTUITO-LYRMYLQWSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="vancomycin/activity-1-3ff72b769c3e395458602768dd5f5675c1be2b9e02b40a378a3d1b1b2473b8a4.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterococcus faecalis</em> <code class="curie">NCBITaxon:1351</code></td>
+  <tr id="observation-2">
+    <td><em>Enterococcus faecalis</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1351">NCBITaxon:1351</a></td>
     <td>—</td>
     <td class="num">32.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution vancomycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0782</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN15040081">SAMN15040081</a><br>    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="3" data-identifier="CHEBI:28001" data-key="MYPYJXKWCTUITO-LYRMYLQWSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="vancomycin/activity-1-3ff72b769c3e395458602768dd5f5675c1be2b9e02b40a378a3d1b1b2473b8a4.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
-    <td><em>Enterococcus faecium</em> <code class="curie">NCBITaxon:1352</code></td>
+  <tr id="observation-3">
+    <td><em>Enterococcus faecium</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1352">NCBITaxon:1352</a></td>
     <td>—</td>
     <td class="num">64.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution vancomycin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0783</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN15040082">SAMN15040082</a><br>    </td>
+    <td><details class="activity-evidence" data-row="2" data-offset="0" data-total="3" data-identifier="CHEBI:28001" data-key="MYPYJXKWCTUITO-LYRMYLQWSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="vancomycin/activity-1-3ff72b769c3e395458602768dd5f5675c1be2b9e02b40a378a3d1b1b2473b8a4.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
+  </tbody>
 </table>
 
+</div>
+
+
 <h2>Resistance mechanisms</h2>
-<p class="meta">20 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">27 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
-  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">18</span></summary>
-  <table>
+  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">23</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -175,7 +223,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004561</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004561">ARO:3004561</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -185,7 +233,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004681</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004681">ARO:3004681</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -195,9 +243,29 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003970</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003970">ARO:3003970</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
+    </tr>
+    <tr>
+      <td>DSY3690-associated vancomycin resistance in native Desulfitobacterium hafniense Y51<br><span class="meta">Native resistance and separate recombinant-ligase biochemistry support the proposed target-alteration route, not isolated DSY3690 necessity or sufficiency. UniProtKB:Q24R63 is locus-matched reference context only; DSY1579/UniProtKB:Q24X74 is the distinct biochemical comparator. No exact experimental protein, allele or genome is assigned. AP008230.1 and its sample are reference context, not an assay-genome assignment.</span></td>
+      <td>—</td>
+      <td><em>Desulfitobacterium hafniense</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_49338"><code class="curie">NCBITaxon:49338</code></a><br><span class="meta">strain Y51</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_138119"><code class="curie">NCBITaxon:138119</code></a> <span class="meta">DSY3690</span></td>
+      <td class="meta">VanA-like ligase</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/19414574">PMID:19414574</a></span> <span class="meta">(Publisher native susceptibility Results, locus identification and separate biochemical Results/Table 2; qualitative finding only.)</span></li>
+</ul>
+<span class="meta">Disk diffusion and Etest</span></td>
+    </tr>
+    <tr>
+      <td>VanM-cluster-associated vancomycin resistance in native Efm-HS0661<br><span class="meta">Native-isolate phenotype and precursor analysis support a cluster-associated target-alteration route, not isolated VanM sufficiency. UniProtKB:B8XGS3 and FJ349556.1 are source-bound ligase references only; CP039730.1 belongs to a different isolate. No exact experimental protein, allele or genome is assigned. Laboratory-recipient findings are not assigned here.</span></td>
+      <td><a href="http://purl.obolibrary.org/obo/ARO_3000256">ARO:3000256</a></td>
+      <td><em>Enterococcus faecium</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1352"><code class="curie">NCBITaxon:1352</code></a><br><span class="meta">strain Efm-HS0661</span></td>
+      <td class="meta">vanM</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/20733041">PMID:20733041</a></span> <span class="meta">(Publisher Table 1, native-isolate Results, precursor analysis and accession statement; qualitative finding only.)</span></li>
+</ul>
+<span class="meta">Etest</span></td>
     </tr>
     <tr>
       <td>cfr(D)</td>
@@ -205,7 +273,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005021</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005021">ARO:3005021</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -215,7 +283,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000236</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000236">ARO:3000236</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -225,7 +293,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000238</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000238">ARO:3000238</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -235,7 +303,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000246</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000246">ARO:3000246</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -245,7 +313,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000253</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000253">ARO:3000253</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -255,7 +323,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000259</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000259">ARO:3000259</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -265,7 +333,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000255</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000255">ARO:3000255</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -275,7 +343,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000257</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000257">ARO:3000257</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -285,7 +353,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003722</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003722">ARO:3003722</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -295,7 +363,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000260</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000260">ARO:3000260</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -305,7 +373,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000256</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000256">ARO:3000256</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -315,7 +383,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002917</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002917">ARO:3002917</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -325,7 +393,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002918</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002918">ARO:3002918</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -335,7 +403,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007187</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007187">ARO:3007187</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -345,15 +413,48 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004560</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004560">ARO:3004560</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
+    <tr>
+      <td>vanD cluster-associated vancomycin resistance in 10/96A<br><span class="meta">Native phenotype and precursor evidence support a cluster-associated route, not isolated VanD sufficiency. UniProtKB:Q9EZQ9/AY082011 is source-bound reference context. Other native strains and laboratory-host findings are not merged with 10/96A. No exact experimental protein, allele or genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Enterococcus faecium</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1352"><code class="curie">NCBITaxon:1352</code></a><br><span class="meta">strain 10/96A</span></td>
+      <td class="meta">vanD</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/12499162">PMID:12499162</a></span> <span class="meta">(Native Table 2, Results and AY082011 accession statement; Table 2 assay footnote. Qualitative finding only.)</span></li>
+</ul>
+<span class="meta">MIC determination (Steers et al. method)</span></td>
+    </tr>
+    <tr>
+      <td>vanE cluster-associated vancomycin resistance in BM4405<br><span class="meta">Native precursor evidence supports a cluster-associated route, not isolated ligase sufficiency. UniProtKB:Q9S4K1 is a fragment reference, not a complete experimental protein. No exact experimental protein, allele or genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Enterococcus faecalis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1351"><code class="curie">NCBITaxon:1351</code></a><br><span class="meta">strain BM4405</span></td>
+      <td class="meta">vanE</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/10471558">PMID:10471558</a></span> <span class="meta">(Native Results and precursor Table 2; susceptibility assay and accession statement. Qualitative finding only.)</span></li>
+</ul>
+<span class="meta">Agar dilution</span></td>
+    </tr>
+    <tr>
+      <td>vanN cluster-associated vancomycin resistance in UCN71<br><span class="meta">Native precursor evidence supports a cluster-associated route, not isolated ligase sufficiency. Further characterization used UCN71 only; it is not assigned to UCN72. UniProtKB:G4XFK8/JF802084 is reference context; its AB701345 link belongs to isolate 121.1, not UCN71. Laboratory recipients remain separate. No exact experimental protein, allele or genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Enterococcus faecium</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1352"><code class="curie">NCBITaxon:1352</code></a><br><span class="meta">strain UCN71</span></td>
+      <td class="meta">vanN</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/21807981">PMID:21807981</a></span> <span class="meta">(Native Results, precursor Table 4 and accession statement; susceptibility assay. Qualitative finding only.)</span></li>
+</ul>
+<span class="meta">Broth microdilution</span></td>
+    </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">2</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_EFFLUX</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -362,7 +463,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007843</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007843">ARO:3007843</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -372,11 +473,43 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005058</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005058">ARO:3005058</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
+</details>
+<details class="details-group">
+  <summary>UNKNOWN <span class="pill plain">2</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
+<table>
+    <caption>UNKNOWN</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>vanE co-occurrence with source-reported vancomycin resistance in N00-410<br><span class="meta">Same-isolate co-occurrence is retained without transferring BM4405 precursor findings. ENA replaces AF430807 with FJ872411, supporting reference context for UniProtKB:Q93A46. Source N00-410 and reference N00-0410 labels are preserved separately; archive succession does not prove allele equality. No exact experimental protein, allele or genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Enterococcus faecalis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1351"><code class="curie">NCBITaxon:1351</code></a><br><span class="meta">strain N00-410</span></td>
+      <td class="meta">vanE</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/12019119">PMID:12019119</a></span> <span class="meta">(Native susceptibility and locus findings; accession statement; induction data not shown. Qualitative finding only.)</span></li>
+</ul>
+<span class="meta">Etest</span></td>
+    </tr>
+    <tr>
+      <td>vanL co-occurrence with source-reported vancomycin resistance in N06-0364<br><span class="meta">The source reports low-level resistance with vanL but explicitly leaves functionality unproven. This is co-occurrence, not a demonstrated biochemical route or a new clinical category. UniProtKB:A9LN35 is reference context only. No exact experimental protein, allele or genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Enterococcus faecalis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1351"><code class="curie">NCBITaxon:1351</code></a><br><span class="meta">strain N06-0364</span></td>
+      <td class="meta">vanL</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18458129">PMID:18458129</a></span> <span class="meta">(Native susceptibility, locus findings and final functionality caveat; induction data not shown. Qualitative finding only.)</span></li>
+</ul>
+<span class="meta">Broth microdilution and Etest</span></td>
+    </tr>
+  </table>
+
+</div>
 </details>
 
 <h2>Producer organisms</h2>
@@ -388,22 +521,25 @@ several compounds, the evidence is marked inherited, meaning it covers this
 compound together with the cluster's other products rather than singling it out.
 Those products need not be related to each other: a cluster can list an
 intermediate, a precursor and a finished antibiotic side by side.</p>
+<div class="table-scroll" role="region" aria-label="Producer organisms" tabindex="0">
 <table>
   <caption>Producer organisms</caption>
   <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Cluster link evidence</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Evidence</th></tr></thead>
   <tr>
-    <td><em>Amycolatopsis orientalis</em> <code class="curie">NCBITaxon:1156913</code><br><span class="meta">strain HCCB10007 (ATCC43491)</span></td>
-    <td>BGC0000455</td>
+    <td><em>Amycolatopsis orientalis</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1156913">NCBITaxon:1156913</a><br><span class="meta">strain HCCB10007 (ATCC43491)</span></td>
+    <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000455">BGC0000455</a></td>
     <td class="meta">Knock-out studies<br><span class="pill plain">compound specific</span></td>
     <td class="meta">MIBIG 4.0.1 (entry 6); reviewed</td>
     <td class="meta">questionable</td>
     <td class="meta">MIBiG active entry; compound &#39;vancomycin&#39; joined by exact Standard InChIKey.</td>
     <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">DOI:10.1021/ja00361a029</span> <span class="meta">(MIBiG attaches this reference to the compound, as support for its STRUCTURE: every compound-level method in the release is structure elucidation (NMR, mass spectrometry, X-ray, total synthesis). It establishes what the molecule is. It is NOT evidence that this organism produces it; MIBiG attaches no reference to the producer link at all.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1021/ja00361a029">DOI:10.1021/ja00361a029</a></span> <span class="meta">(MIBiG attaches this reference to the compound, as support for its STRUCTURE: every compound-level method in the release is structure elucidation (NMR, mass spectrometry, X-ray, total synthesis). It establishes what the molecule is. It is NOT evidence that this organism produces it; MIBiG attaches no reference to the producer link at all.)</span></li>
 </ul>
 </td>
   </tr>
 </table>
+
+</div>
 
 
 
@@ -476,32 +612,57 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-09-12 · codex · LLM-assisted</span>
     <p>Added three stable-URL CDC/FDA AR Isolate Bank vancomycin-resistant Enterococcus faecalis/faecium isolate MIC observations.</p>
   </li>
+  <li>
+    <span class="pill">STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS</span>
+    <span class="meta">2026-09-26 · codex · LLM-assisted</span>
+    <p>Structured BioSample accessions on 3 activity_spectrum observation(s) where evidence notes already named exactly one accession.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-10 · codex · LLM-assisted</span>
+    <p>Added two primary-supported native vancomycin resistance claims with species/strain taxonomy and explicitly reference-only UniProt context. Kept VanM cluster evidence, Y51 native phenotype, recombinant biochemistry and comparator identity distinct. Preserved prior assertions and all other fields; whole-record review remains open.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-10 · codex · LLM-assisted</span>
+    <p>Added five qualitative native vancomycin findings with species taxonomy and reference-only UniProt context. Distinguished three precursor-supported cluster routes from two gene/phenotype co-occurrences; preserved explicit functional uncertainty and archive succession without exact allele assignments. Preserved all previous claims, observations and other fields; whole-record review remains open.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/vancomycin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/vancomycin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=vancomycin">MediaIngredientMech (vancomycin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=vancomycin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=vancomycin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=vancomycin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=vancomycin">TraitMech</a>
+&middot; <a href="https://culturebotai.github.io/TaxonMech/browse.html?q=Amycolatopsis%20orientalis">TaxonMech (Amycolatopsis orientalis)</a></p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

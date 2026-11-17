@@ -1,0 +1,129 @@
+{
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "d4c241a443f14b67f80cdfd782d4cf515176f5b2721e47a4a6d02d767bef3294"
+    },
+    {
+      "path": "research/2026-10-10-card-parents-context.json",
+      "sha256": "1347616959bc2308fe64db5da4f7f5e26a0378bc9ed41d8c8f593ccd38b81f3d"
+    },
+    {
+      "path": "scripts/audit_card_parent_references.py",
+      "sha256": "e3d0a97025d014ed88a2f480d160f06afb1fe41b9c3ef9e9c8653a48e4d1fc63"
+    },
+    {
+      "path": "tests/test_card_parent_references.py",
+      "sha256": "f83a6b8bcecb9e229797ce658f7a003d380d1bfee2fd6fb679f8a3169532be99"
+    }
+  ],
+  "biological_record_writes": 0,
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-10-card-parents/canary.json",
+    "sha256": "115939ed07d3d53c12b978b857c16c45615f23af9927e90cf4066635414e3405"
+  },
+  "changed_protected_files": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "d4c241a443f14b67f80cdfd782d4cf515176f5b2721e47a4a6d02d767bef3294",
+      "before_sha256": "ad6461b4b99386c6f315bfa61443984b2eadf61e046538814b8c10c9b2d9d54d"
+    }
+  },
+  "checks": [
+    {
+      "path": "reports/resistance-grounding-2026-10-10-card-parents/lint-exit.json",
+      "sha256": "6199367994311c635c188fe0f11bb4096e7bc54a6f4064718a105f14c06b76e4"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-10-card-parents/focused-exit.json",
+      "sha256": "464c3f199fd64b2bfe914f5769ea33b4ff9c9ffeca6ece6c2124f99ce8b22f0a"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-10-card-parents/reproduce-exit.json",
+      "sha256": "13385ab8a568bf1d1333c70d51e6376403e81727a3260cb033a3db49b0666290"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-10-card-parents/documentation-exit.json",
+      "sha256": "133a16ad3b6bcbc341e037feb2c1ee670662f096a4a638d37fb4556ca22086c1"
+    }
+  ],
+  "curator_claims": 73,
+  "curator_records": 37,
+  "current_census": {
+    "path": "research/2026-10-10-vancomycin-followup-resistance-grounding.tsv",
+    "sha256": "9aab2c2f908e7b10d461d3cd394ac192d9372882877623686c1ecb2f12373e71"
+  },
+  "current_record_hashes_verified": 2939,
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-10-card-parents/focused-tests.xml",
+    "sha256": "0abb63348eca608eaef76094fcdb49e71456ad4f81c6adfd81843ec3440061c3"
+  },
+  "focused_tests_passed": 250,
+  "focused_tests_skipped": 0,
+  "full_qc_rerun": false,
+  "github_mutations": 0,
+  "ignored_files_included_in_protected_roots": true,
+  "initial_full_preview": {
+    "path": "reports/resistance-grounding-2026-10-10-card-parents/initial-full-preview.json",
+    "sha256": "30017da6c6d4a592069de2b5ff6716e3b647eee76dcb6f43554323b36b8ffa0e"
+  },
+  "limits": [
+    "Named subclass links are not same-entity or same-allele mappings.",
+    "Child references are not propagated to parent claims or their compound memberships.",
+    "Shared bibliography is a review lead, not primary experimental support.",
+    "Reference organism identifiers do not identify experimental isolates or genomes.",
+    "No matches in these bounded queries do not establish biological absence.",
+    "No NCBI endpoint, card.json, sequence, variant, protocol or numerical AST retrieval."
+  ],
+  "metadata_summary": {
+    "assertion_memberships": 75,
+    "biological_record_writes": 0,
+    "corpus_record_hashes_verified": 2939,
+    "direct_parent_reference_candidates": 0,
+    "entity_scopes": {
+      "EFFLUX_COMPLEX_OR_SUBUNIT_GRANULARITY_UNRESOLVED": 7,
+      "OTHER_TERM_ENTITY_GRANULARITY_UNRESOLVED": 35,
+      "RNA_TERM_NOT_A_PROTEIN_PRODUCT": 1
+    },
+    "experimental_protein_assignments": 0,
+    "literature_queries": 46,
+    "new_queries": 33,
+    "query_pages": 46,
+    "reference_proteins": 434,
+    "reference_taxa": 106,
+    "reused_queries": 13,
+    "selected_records": 50,
+    "selected_terms": 43,
+    "terms_with_child_references": 11,
+    "terms_with_literal_label_references": 2,
+    "terms_without_definition_citations": 13,
+    "unique_literature_entries": 126,
+    "unverified_reference_taxa": [],
+    "whole_record_reviews_completed": 0,
+    "zero_result_queries": 28
+  },
+  "ncbi_requests": 0,
+  "new_uniprot_metadata_responses": 35,
+  "pages_embeddings_source_inventories_existing_tests_unchanged": true,
+  "prior_checkpoint": {
+    "path": "research/2026-10-10-vancomycin-followup-verification.json",
+    "sha256": "d6021c015a0a0425e1d0c4cce655d063161692216b5e98ae9e79c16c053fbc58"
+  },
+  "prior_report_bytes_preserved": true,
+  "protected_files": 6897,
+  "protected_files_unchanged": 6896,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-10-card-parents/protected-before.json",
+    "sha256": "12649d5aa1e4d108b6dff3e4879737f4636c1bc37c36978c0589004940f2939d"
+  },
+  "qc_scope": "Research-only audit and tests; prior authoritative biological QC is preserved, not rerun.",
+  "records_byte_identical": 2939,
+  "resistance_assertions": 4828,
+  "self_review": {
+    "path": "reports/resistance-grounding-2026-10-10-card-parents/self-review.json",
+    "sha256": "babae325af470285547194f102596f6eafd1d34180e4018813b266d6321f623a"
+  },
+  "source_adoptions": 0,
+  "status": "METADATA_AUDIT_AND_PRESERVATION_CHECKS_PASSED",
+  "verified_at": "2026-10-10T22:21:30.253722+00:00",
+  "whole_record_primary_reviews_completed": 0
+}

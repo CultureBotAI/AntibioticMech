@@ -1,0 +1,111 @@
+{
+  "adversarial_review": {
+    "method": "Separate self-review plus adversarial tests of reference selection, joins, historical hashes and pointers",
+    "remaining": [
+      "600 terms have no selected reference; RNA and complex contexts must not be forced into single proteins.",
+      "Reference identity does not resolve experimental alleles, phenotype joins or whole-record primary review.",
+      "Primary access holds and source-specific qualifications remain in the pinned dossiers; no new primary review occurred."
+    ],
+    "resolved": [
+      "Require every expected sigma component so a comparator cannot silently disappear from both lists.",
+      "Preserve historical qualified-claim hashes when rebinding current source claims.",
+      "Keep inherited input names bound to the original pins instead of rebinding old evidence pointers."
+    ]
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-card-reference-successor/baseline.json",
+    "sha256": "d1bf3bfe3a79f3692db461539e2d8e1fa73f5b682afe8e5b7e9d01f622f85a5f"
+  },
+  "checks": {
+    "all_collection_aware_records_read": 2939,
+    "all_four_source_qualified_claim_histories_preserved": true,
+    "errors": 0,
+    "existing_files_unchanged_except_report": 7764,
+    "failures": 0,
+    "focused_tests_passed": 181,
+    "full_authoritative_qc_rerun": false,
+    "historical_dossiers_and_predecessor_index_unchanged": true,
+    "json_equal": true,
+    "offline_write_disabled_replay": true,
+    "report_only_new_section_and_current_count_lines": true,
+    "skipped": 0,
+    "tsv_equal": true,
+    "unchanged_data_curation_site_files": 6353
+  },
+  "constraints": {
+    "biological_record_writes": false,
+    "experimental_identifiers_assigned": false,
+    "full_investigation_complete": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "network_requests": 0,
+    "new_primary_reviews": 0
+  },
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-15-card-reference-successor-plan.json",
+      "sha256": "ec8c633148b8763955b44bf69a15723fb122dbdce57f02565d7ac0ab0c7a24d3"
+    },
+    {
+      "path": "research/2026-10-15-card-reference-successor.json",
+      "sha256": "ceae861cd595a44f45691e83f9bbe5ac5ca83e9a17a5b3bf24f73013210d9e3b"
+    },
+    {
+      "path": "research/2026-10-15-card-reference-successor.tsv",
+      "sha256": "d35b0273304e33360bb38be707ce2a5b5270f202d3f1134217dc12176b4c9765"
+    },
+    {
+      "path": "scripts/audit_card_reference_successor.py",
+      "sha256": "d7b3178fed09505e2d65aac6442482344597d78f5607e677aee5f4093b53e4ab"
+    },
+    {
+      "path": "tests/test_card_reference_successor.py",
+      "sha256": "b70951bb5449397701c4e088fec3b023c62d7a16a9dd65ba6dcae951b5fb6527"
+    }
+  ],
+  "github_mutations": 0,
+  "new_network_requests": 0,
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "d857120118b52673dbc92ec5ba29a79298be97909c620b442aa787c013379777"
+  },
+  "status": "SUCCESSOR_REFERENCE_INDEX_VERIFIED_EXPERIMENTAL_AND_WHOLE_RECORD_REVIEW_OPEN",
+  "summary": {
+    "added_claim_memberships_with_references": 16,
+    "added_reference_links": 4,
+    "added_reference_proteins": 4,
+    "added_reference_terms": 4,
+    "card_claims": 4538,
+    "card_terms": 2002,
+    "comparators_excluded_from_reference_counts": 1,
+    "complete_collection_aware_records_read": 2939,
+    "context_only_dossiers": 23,
+    "curator_claims_not_reassessed": 133,
+    "current_source_qualified_claims": 4,
+    "new_followup_claims": 74,
+    "new_followup_dossiers": 5,
+    "new_followup_records": 36,
+    "new_followup_terms": 18,
+    "phi_claims_not_reassessed": 217,
+    "qualified_followup_dossiers": 12,
+    "records_with_reference_context": 242,
+    "records_without_card_assertions": 2666,
+    "reference_links": 3068,
+    "score_rules_not_reassessed": 467,
+    "selected_reference_proteins": 1924,
+    "selected_reference_terms": 1402,
+    "unresolved_reference_scope_counts": {
+      "EFFLUX_COMPLEX_OR_SUBUNIT_GRANULARITY_UNRESOLVED": 105,
+      "GENE_CLUSTER_NOT_ONE_PROTEIN": 14,
+      "OTHER_TERM_ENTITY_GRANULARITY_UNRESOLVED": 394,
+      "RNA_TERM_NOT_A_PROTEIN_PRODUCT": 87
+    },
+    "unresolved_reference_terms": 600,
+    "whole_record_primary_signoffs": 0
+  },
+  "test_report": {
+    "path": "reports/resistance-grounding-2026-10-15-card-reference-successor/tests.xml",
+    "sha256": "816b88486b37e0276d63bf71b2e67871553ab72e382296950fe0a844d9949f0c"
+  }
+}

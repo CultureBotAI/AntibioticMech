@@ -1,0 +1,175 @@
+{
+  "card_species_error_proven": false,
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/cohort.json",
+    "sha256": "1357646d06ee48488f20492014f38f8d718995bcd96c993a82253d949d1458f1"
+  },
+  "constraints": {
+    "failed_source_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "numeric_ast_exported": false,
+    "sequences_variants_protocols_exported": false,
+    "source_adoptions": 0
+  },
+  "date": "2026-10-13",
+  "discussion": {
+    "attaches_to": [
+      "resistance_mechanisms#ARO:3009633"
+    ],
+    "discussion_id": "flucytosine-ura6-source-scope-2026-10-13",
+    "evidence": [
+      {
+        "evidence_source": "full_text",
+        "explanation": "Chang et al. (2021), Nature Communications, CC BY 4.0. Native JATS paragraph Par6 distinguishes C. neoformans H99 from C. gattii WM276. Paragraph Par12 identifies the URA6 locus CGB_F6195W; Table 2 (Tab2) places its comparison under WM276-derived strains. The reported URA6 comparison does not account for the entire phenotype of the initially observed derivative.",
+        "notes": "Selected native JATS paragraphs and table inspected; the PDF, figures and supplements were not visually reviewed. Independently identified primary evidence, not a verified FungAMR source-row crosswalk.",
+        "reference": "DOI:10.1038/s41467-021-23745-1"
+      },
+      {
+        "explanation": "Reference identity only: unreviewed UniProtKB:E6R8Q4, entry 91, sequence version 1, release 2026_03, ordered locus CGB_F6195W. Its reference strain is C. gattii WM276 (NCBITaxon:367775), within C. gattii (NCBITaxon:37769), as recorded by UniProt taxonomy. Not an experimental derivative, tested allele, genome assignment or assignment to the C. neoformans CARD term.",
+        "reference": "https://www.uniprot.org/uniprotkb/E6R8Q4/entry"
+      },
+      {
+        "explanation": "Separate H99 identity candidate only: unreviewed UniProtKB:J9VUG0, entry 71, sequence version 1, release 2026_03, ORF name CNAG_05935. UniProt places the H99 reference strain (NCBITaxon:235443) within C. neoformans (NCBITaxon:5207). The URA6 alias still lacks native primary-table verification; neither identity nor the WM276 experiment supports assigning an H99 resistance phenotype.",
+        "reference": "https://www.uniprot.org/uniprotkb/J9VUG0/entry"
+      }
+    ],
+    "kind": "CURATION_TODO",
+    "notes": "All taxonomy identifiers here are reference context from cached UniProt responses, not new NCBI lookups or experimentally tested subject assignments. No source claim is replaced and no resistance assertion, exact variant, sequence, numeric AST, sample or genome accession is added. Eight CARD assertions and two curated FUR1 associations remain unchanged; this discussion is not whole-record review.",
+    "posed_by": "codex",
+    "posed_date": "2026-10-13",
+    "prompt": "Resolve the URA6 species-scope discrepancy and exact FungAMR source-row mapping before assigning a tested allele or protein to ARO:3009633.",
+    "rationale": "The CARD label names Cryptococcus neoformans, but the independently identified primary study by Chang et al. (2021) places its URA6 comparison in Cryptococcus gattii WM276-derived material. This is a potential source species-scope conflict, not a proven correction to CARD: the exact FungAMR row-to-primary-paper crosswalk has not been verified. Preserve the source-owned assertion as database provenance and do not transfer the WM276 evidence to C. neoformans H99. The separate H99 UniProt identity candidate does not establish an H99 resistance phenotype.",
+    "status": "OPEN"
+  },
+  "fixture": {
+    "path": "tests/fixtures/flucytosine-before-2026-10-13.yaml",
+    "sha256": "4ffd0f50d00448664a2aec8b152d62231ec7c6fabc5e91a67fc42c27a3ed7ada"
+  },
+  "full_corpus_goal_status": "OPEN",
+  "fungamr_source_row_crosswalk_verified": false,
+  "new_experimental_allele_assignments": 0,
+  "new_resistance_assertions": 0,
+  "paragraph_pins": {
+    "Par12": "9b5e1152cfccb1457c67e6a238480b95405b3a4c3897b99d47cefc97d44a8fd7",
+    "Par6": "89fb7a60e96d4ff3a4ca911d76db9bc5f60f0415375db29119449dc39f3b294a"
+  },
+  "primary": {
+    "attempt": {
+      "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/ura6-primary-attempt.json",
+      "sha256": "4d351f8a25b868d7c7b68666de1f0b3bc4893f094f4c19e3ea568a233ff8caad"
+    },
+    "body": {
+      "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/ura6-primary-response.bin",
+      "sha256": "9caf4a94e284c6c26bf45a05ee9512fbfc74fd87f581e641413b02231d77bfb7"
+    },
+    "doi": "10.1038/s41467-021-23745-1",
+    "license": "CC BY 4.0",
+    "medium": "NATIVE_JATS_XML",
+    "pdf_or_figures_visually_inspected": false,
+    "pmid": "34103502",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/ura6-primary-receipt.json",
+      "sha256": "e464b0fe3cabfbeabfc0e13803d748919efe52e5c477cc79a51d55cb577f8c45"
+    },
+    "retrieved_at": "2026-10-14T00:25:10.231531+00:00",
+    "status": 200,
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8187385/fullTextXML"
+  },
+  "prior_context": {
+    "path": "research/2026-10-13-fungal-locus-gaps.json",
+    "sha256": "c960ec29f600eafa9cfb22d5c60b530f07660cccd41c2dcec656b143da7b8d0f"
+  },
+  "record_before": {
+    "path": "data/antibiotics/antifungal/flucytosine.yaml",
+    "sha256": "4ffd0f50d00448664a2aec8b152d62231ec7c6fabc5e91a67fc42c27a3ed7ada"
+  },
+  "reference_grounding": {
+    "h99-candidate": {
+      "canonical_reference_established": false,
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 71,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "locus": "CNAG_05935",
+      "paper_resistance_context_matches_card_species": false,
+      "primary_native_gene_alias_verified": false,
+      "protein_accession": "UniProtKB:J9VUG0",
+      "reference_organism_name": "Cryptococcus neoformans (strain H99 / ATCC 208821 / CBS 10515 / FGSC 9487)",
+      "reference_taxon_id": "NCBITaxon:235443",
+      "reference_taxon_rank": "strain",
+      "resistance_assertion_supported_by_identity_alone": false,
+      "role": "H99_IDENTITY_CANDIDATE_NOT_LINKED_RESISTANCE_EVIDENCE",
+      "sequence_version": 1,
+      "species_matches_card_term": true,
+      "species_name": "Cryptococcus neoformans",
+      "species_taxon_id": "NCBITaxon:5207",
+      "uniprot_locus_field": "orfNames"
+    },
+    "wm276": {
+      "canonical_reference_established": false,
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 91,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "locus": "CGB_F6195W",
+      "paper_resistance_context_matches_card_species": false,
+      "primary_native_gene_alias_verified": true,
+      "protein_accession": "UniProtKB:E6R8Q4",
+      "reference_organism_name": "Cryptococcus gattii serotype B (strain WM276 / ATCC MYA-4071)",
+      "reference_taxon_id": "NCBITaxon:367775",
+      "reference_taxon_rank": "strain",
+      "resistance_assertion_supported_by_identity_alone": false,
+      "role": "DIFFERENT_SPECIES_PRIMARY_REFERENCE_NOT_CARD_ASSIGNMENT",
+      "sequence_version": 1,
+      "species_matches_card_term": false,
+      "species_name": "Cryptococcus gattii",
+      "species_taxon_id": "NCBITaxon:37769",
+      "uniprot_locus_field": "orderedLocusNames"
+    }
+  },
+  "scope": "QUALIFIED_SPECIES_SCOPE_DISCUSSION_NOT_SOURCE_CORRECTION",
+  "table_scope": {
+    "group": "WM276 derived strains",
+    "row_index_zero_based": 20,
+    "table_id": "Tab2",
+    "table_xml_sha256": "ad0c81d4df4f141d81bda7911bd8cc99577e2d2b8ffb53b9998f3c7e55f14db3"
+  },
+  "taxonomy_sources": {
+    "h99": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-235443-response.bin",
+        "sha256": "76c0b459c2da93b9d45665468e88057feeb6c50b2fe9f5a53a44a3cfb77e0197"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-235443-receipt.json",
+        "sha256": "25c6da3a02e679e040f1f809ff62c11ff69db7d3a54f8a1af6dba842663ae9ad"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T15:40:28.581538+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/235443.json"
+    },
+    "wm276": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/taxonomy-367775-attempt.json",
+        "sha256": "25cf7f58db7738fa1b21dbe3ee832e831568f4661f4aa4b6601f4aee167a4b0a"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/taxonomy-367775-response.bin",
+        "sha256": "eb522e37e2b45e71467b9399efc1fea8593abdf24c30bade846de470dee68c92"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/taxonomy-367775-receipt.json",
+        "sha256": "9da130ddc76bb821523af1cfc3576ad94df5f629541ba2b5331a136eadb6c7ee"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-14T00:27:54.496353+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/367775"
+    }
+  },
+  "whole_record_reviews_completed": 0
+}

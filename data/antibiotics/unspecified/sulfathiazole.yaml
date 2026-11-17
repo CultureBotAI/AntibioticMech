@@ -115,3 +115,47 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-13T01:29:56Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added two qualified laboratory gene-level sulfathiazole resistance associations.
+    Kept FolP and Bcr reference proteins separate from experimental alleles and strains,
+    retained mechanistic uncertainty for Bcr, and assigned no numerical AST or genome
+    identifiers. Whole-record review remains open.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: FolP-associated laboratory sulfathiazole resistance
+  gene_families:
+  - folP
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  phenotype_label: Source-reported relative sulfathiazole resistance
+  assay: Comparative susceptibility and enzyme-inhibition assays
+  note: Laboratory comparisons show background dependence; FolP alone did not explain
+    the full phenotype. UniProtKB:P0AC13 is reference-only, not the tested allele.
+  evidence:
+  - reference: PMID:9449266
+    notes: Results; Figure 1; Table 2; Discussion; DOI:10.1128/aac.42.1.88.
+  - reference: UniProtKB:P0AC13
+    notes: 'Reference identity only: folP, b3177, JW3144; UniProtKB 2026_03, entry
+      147, sequence 1. K-12 NCBITaxon:83333 is reference context, not an experimental
+      strain assignment.'
+- mechanism_type: UNKNOWN
+  label: Bcr-associated laboratory sulfathiazole resistance
+  gene_families:
+  - bcr
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  phenotype_label: Source-reported relative sulfathiazole resistance
+  assay: Comparative susceptibility assays
+  note: Laboratory association; direct efflux was not demonstrated. UniProtKB:P28246
+    is reference-only. Historical sequence differences remain unresolved; sux is not
+    assigned to the bcr synonym suxA.
+  evidence:
+  - reference: PMID:9449266
+    notes: Results, Characterization of sur; Discussion; DOI:10.1128/aac.42.1.88.
+  - reference: UniProtKB:P28246
+    notes: 'Reference identity only: bcr, b2182, JW5363; UniProtKB 2026_03, entry
+      179, sequence 4. K-12 NCBITaxon:83333 is reference context, not an experimental
+      strain assignment.'

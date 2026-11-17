@@ -1,0 +1,71 @@
+{
+  "canary": "amz-protein",
+  "canary_review_file": "metadata-canary-reviewed.json",
+  "constraints": {
+    "biological_record_writes": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "primary_access_hold_retained": true,
+    "redirects_followed": 0,
+    "retries": 0
+  },
+  "date": "2026-10-15",
+  "inputs": {
+    "assessment": {
+      "path": "research/2026-10-15-pjm-amz-primary-assessment.json",
+      "sha256": "59988747d4dc3058b712c9b4cc2c3921535dbd588930d67ff4a241f004521fe9"
+    },
+    "cache_screen": {
+      "path": "reports/resistance-grounding-2026-10-15-pjm-amz-primary/taxonomy-cache-screen.json",
+      "sha256": "fd67468835fc6f79c995e7e74a4a33f510168d4a80d369d101e508fe85be63d9"
+    },
+    "primary_plan": {
+      "path": "research/2026-10-15-pjm-amz-primary-primary-plan.json",
+      "sha256": "2bbf98ac2a982380db5ed8e06870ad4ec0eda855d5d95fbfdf1c3ff2989b9478"
+    }
+  },
+  "max_bytes": 2000000,
+  "preflight": {
+    "cached_citation_queries_not_repeated": [
+      "35943258",
+      "37808287"
+    ],
+    "ignored_files_included": true,
+    "matching_identifier_or_exact_gene_query_requests": [],
+    "patterns": [
+      "OQ948417",
+      "CP123364",
+      "BOUK00000000",
+      "gene_exact:PJM",
+      "gene_exact:blaPJM"
+    ],
+    "roots": [
+      "reports",
+      "research"
+    ],
+    "scope": "REQUEST_RECEIPT_ATTEMPT_PLAN_GLOBS_NOT_ALL_EVIDENCE"
+  },
+  "release": "2026_03",
+  "requests": {
+    "amz-protein": {
+      "query": "xref:embl-OQ948417",
+      "taxonomy": false,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-OQ948417&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "amz-taxonomy": {
+      "query": "\"Achromobacter mucicolens\" AND rank:species",
+      "taxonomy": true,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Achromobacter+mucicolens%22+AND+rank%3Aspecies&format=json&size=500"
+    },
+    "pjm-protein": {
+      "query": "(gene_exact:blaPJM-1 OR gene_exact:PJM-1 OR gene_exact:PJM) AND organism_name:\"Pseudoxanthomonas japonensis\"",
+      "taxonomy": false,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AblaPJM-1+OR+gene_exact%3APJM-1+OR+gene_exact%3APJM%29+AND+organism_name%3A%22Pseudoxanthomonas+japonensis%22&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "pjm-taxonomy": {
+      "query": "\"Pseudoxanthomonas japonensis\" AND rank:species",
+      "taxonomy": true,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Pseudoxanthomonas+japonensis%22+AND+rank%3Aspecies&format=json&size=500"
+    }
+  }
+}

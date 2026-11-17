@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>balhimycin</h1>
 <p class="meta">
   <code class="curie">antibioticmech:aro-7abbaadfab</code>
@@ -37,15 +48,18 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000081">glycopeptide antibiotic</a><code class="curie">ARO:3000081</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000081">ARO:3000081</a>      <code class="curie">ARO:3000081</code></li>
+  <li>glycopeptide antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_3000081"><code class="curie">ARO:3000081</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C66H73Cl2N9O24</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>1447.2 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>1445.4145496 Da</td></tr><tr><th scope="row">Source</th><td>PubChem · retrieved 2026-08-29</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">WKNFBFHAYANQHF-QNSRRSNQSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">C[C@H]1C(=O)[C@@](C[C@@H](O1)O[C@H]2[C@H]3C(=O)N[C@@H](C4=C(C(=CC(=C4)O)O)C5=C(C=CC(=C5)[C@H](C(=O)N3)NC(=O)[C@H]6C7=CC(=C(C(=C7)OC8=C(C=C2C=C8)Cl)O[C@H]9[C@@H]([C@H]([C@@H]([C@H](O9)CO)O)O)O)OC1=C(C=C(C=C1)[C@H]([C@H](C(=O)N[C@H](C(=O)N6)CC(=O)N)NC(=O)[C@@H](CC(C)C)NC)O)Cl)O)C(=O)O)(C)N</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C66H73Cl2N9O24/c1-23(2)12-34(71-5)58(88)76-49-51(83)26-7-10-38(32(67)14-26)97-40-16-28-17-41(56(40)101-65-54(86)53(85)52(84)42(22-78)99-65)98-39-11-8-27(15-33(39)68)55(100-44-21-66(4,70)57(87)24(3)96-44)50-63(93)75-48(64(94)95)31-18-29(79)19-37(81)45(31)30-13-25(6-9-36(30)80)46(60(90)77-50)74-61(91)47(28)73-59(89)35(20-43(69)82)72-62(49)92/h6-11,13-19,23-24,34-35,42,44,46-55,65,71,78-81,83-86H,12,20-22,70H2,1-5H3,(H2,69,82)(H,72,92)(H,73,89)(H,74,91)(H,75,93)(H,76,88)(H,77,90)(H,94,95)/t24-,34+,35-,42+,44-,46+,47+,48-,49+,50-,51+,52+,53-,54+,55+,65-,66-/m0/s1</pre>
 
 <h2>Cross-references</h2>
@@ -53,7 +67,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000120">ARO:3000120</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3000120">balhimycin</a><code class="curie">ARO:3000120</code></li>
   <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/16134543">pubchem.compound:16134543</a></li>
 </ul>
 
@@ -63,6 +77,7 @@ both rather than shown here, since it names at most one of them.</p>
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -75,13 +90,15 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>acyl-D-alanyl-D-alanine <span class="pill plain">CELL_WALL_COMPONENT</span> <span class="pill">ATTACKED_COMPONENT</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000720">ARO:3000720</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. The D-Ala-D-Ala chemical group is bound as a cell-wall precursor component. Evidence status: DATABASE_ASSERTION_ONLY. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000720</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000120 (balhimycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000720">ARO:3000720</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000120 (balhimycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
@@ -122,26 +139,36 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/balhimycin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/balhimycin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=balhimycin">MediaIngredientMech (balhimycin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=balhimycin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=balhimycin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=balhimycin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=balhimycin">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

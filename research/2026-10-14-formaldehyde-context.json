@@ -1,0 +1,692 @@
+{
+  "attribution": [
+    {
+      "license": "CC BY",
+      "source": "Bazurto et al. (2021), PLOS Biology",
+      "transformation": "Qualitative scope summary and evidence-location hashes",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001208"
+    },
+    {
+      "license": "CC BY 4.0",
+      "release": "2026_03",
+      "source": "UniProt Consortium",
+      "url": "https://www.uniprot.org/help/license"
+    }
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/cohort.json",
+    "sha256": "52af45a23944c32575d7c9a71a1c2d1b244d637d186421afc7627ac865f38e3a"
+  },
+  "curation_decision": "TWO_QUALIFIED_NATIVE_GENE_CLAIMS_WITH_CONTEXT_LIMITS",
+  "date": "2026-10-14",
+  "efgb_queries": {
+    "efgb-name-reference": {
+      "protein_accession_assigned": null,
+      "result_count": 0,
+      "scope": "NO_RESULT_IN_THIS_EXACT_DATED_QUERY_NOT_PROTEIN_ABSENCE",
+      "suggestions_used": false
+    },
+    "efgb-reference": {
+      "protein_accession_assigned": null,
+      "result_count": 0,
+      "scope": "NO_RESULT_IN_THIS_EXACT_DATED_QUERY_NOT_PROTEIN_ABSENCE",
+      "suggestions_used": false
+    }
+  },
+  "inputs": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/baseline-record.yaml",
+      "sha256": "d08fcf405a7209c76c0f33749e3aa7a609504eff8c6de91737cc5f8e05c5b15c"
+    },
+    "census": {
+      "path": "research/2026-10-14-antiviral-taxa-resistance-grounding.tsv",
+      "sha256": "b15465f26802dae7fc099e52d3dc4898cd6397fd2bc37f4055443d2e40fe2935"
+    },
+    "discovery_cache": {
+      "path": "reports/resistance-grounding-2026-10-09-vocabulary-expansion/epmc-discovery-1f119bfb03f4a41daa5161d7f99489627d74b19efe4b845326641072a03aa73c.json",
+      "sha256": "ba7b1e76173488c91850293c8f722f71903f6d6a840ab95be4385af2e27594fc"
+    },
+    "previous_checkpoint": {
+      "path": "research/2026-10-14-aureobasidin-structure-verification.json",
+      "sha256": "8750ea6d468e5b62b23e077b00de27e29c48815de540ad6e7e484b1a63b9ff21"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "limits": {
+    "experimental_alleles_or_genomes_assigned": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_requests_this_continuation": 2,
+    "numeric_AST_exported": false,
+    "reuse_terms_review_resumed": false,
+    "scientific_http_attempts": 20,
+    "sequences_variants_constructs_or_protocols_exported": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "primary": {
+    "background": "PA1-derived laboratory strains; study baseline CM2730 is not unmodified PA1",
+    "clinical_category_inferred": false,
+    "crystal_density_identifies_unmodified_formaldehyde_unambiguously": false,
+    "doi": "DOI:10.1371/journal.pbio.3001208",
+    "efga": "LOSS_OF_FUNCTION_ASSOCIATED_WITH_EXOGENOUS_FORMALDEHYDE_GROWTH",
+    "efga_protective_in_endogenous_stress_context": true,
+    "efgb": "CONDITIONAL_CONTRIBUTION_IN_EFGA_ALTERED_BACKGROUNDS",
+    "efgb_alone_sufficient_in_sole_formaldehyde_carbon_comparison": false,
+    "efgb_cyclase_activity_experimentally_verified": false,
+    "endpoints": [
+      "LABORATORY_GROWTH",
+      "COLONY_FREQUENCY_DISTRIBUTION",
+      "DISK_DIFFUSION"
+    ],
+    "endpoints_converted_to_MIC": false,
+    "exact_allele_or_genome_crosswalk_completed": false,
+    "heterologous_claim_curated": false,
+    "heterologous_effect_transferred_to_native_background": false,
+    "heterologous_host": "Escherichia coli",
+    "locations": {
+      "chemical_derivatives": {
+        "normalized_text_sha256": "68127919ec6a85fa68f8de3fab0b10fa769aee1bc7c6c6050857700efe9ee400",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[6]/p[5]"
+      },
+      "efga_functional_comparisons": {
+        "normalized_text_sha256": "f4df7b93fae6f76aaa1ca7f6acbbba02ebfd26f2703310f830453fa450f7c2a3",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[3]/p[1]"
+      },
+      "efgb_annotation": {
+        "normalized_text_sha256": "02783fa2ee199680fdc34bd0a3c11ca52b6b63ffa191e37ce84155c694574737",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[4]/p[1]"
+      },
+      "efgb_conditional_comparison": {
+        "normalized_text_sha256": "2b4f364114fc375f62c3900b865063b0eace63cda42856f5b9b720d38371d588",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[4]/p[3]"
+      },
+      "efgb_negative_comparison": {
+        "normalized_text_sha256": "08a2d32db8ff5b3e9d729fb8edc8fe4ec59a2a43c41307011684636b2097b33c",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[4]/p[2]"
+      },
+      "endogenous_stress": {
+        "normalized_text_sha256": "597fe91fdf4cd93b2270ebd4ea68b058fdfce2dcef0c0c600c4d66e7abee4ac9",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[9]/p[2]"
+      },
+      "gene_names": {
+        "normalized_text_sha256": "806eb34f6d017a2dfab4f9506ccb36214f030aac2c762d44bbdafcabb0e652c7",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[1]/p[3]"
+      },
+      "heterologous_context": {
+        "normalized_text_sha256": "35887258243b8b57c59d50ff12a10f16bcc98eda7b700462a34d6e9d1b8d982f",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[11]/p[2]"
+      },
+      "host_backgrounds": {
+        "normalized_text_sha256": "697f7c63f97c5bfbd7824fc5fc3c35eb63d191c48e3e00e6a1da869a8ddc921c",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[4]/div[1]/p[2]"
+      },
+      "native_background": {
+        "normalized_text_sha256": "5a04edcb4f28127fd1e2f2fdffb9c76454e9b9ae70cb5070cbd017eb558f1726",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[4]/div[1]/p[1]"
+      },
+      "opposing_contexts": {
+        "normalized_text_sha256": "450ee9a1eb3c7afeba5e5f4acf5f0bf940ae01a7c96b253e2726363473308b99",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[6]/p[3]"
+      },
+      "phenotypic_tolerance": {
+        "normalized_text_sha256": "bd37b420e33fc439b2dff0eff1fb7774e7819d98950ebf488463af8e54a5e5f4",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[10]/p"
+      },
+      "source_loci": {
+        "normalized_text_sha256": "2d273b16472cc163a01447d05b7537173c38ea52fe059da7a6001fc0195902a6",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[1]/p[2]"
+      }
+    },
+    "native_species": "Methylorubrum extorquens",
+    "numeric_AST_exported": false,
+    "phenotypic_heterogeneity_explained_by_efga_genotype_alone": false,
+    "pmid": "PMID:34038406",
+    "source_gene_loci": {
+      "efgA": "Mext_4158",
+      "efgB": "Mext_0606"
+    },
+    "supplement_tables_reviewed": false,
+    "whole_record_primary_review": "OPEN"
+  },
+  "record": {
+    "identifier": "CHEBI:16842",
+    "path": "data/antibiotics/biocide/formaldehyde.yaml",
+    "sha256": "d08fcf405a7209c76c0f33749e3aa7a609504eff8c6de91737cc5f8e05c5b15c",
+    "standard_inchi_key": "WSFSSNUMVMOOMR-UHFFFAOYSA-N"
+  },
+  "reference_protein": {
+    "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+    "entry_version": 8,
+    "exact_resistance_allele": false,
+    "experimental_genome_assignment": null,
+    "experimental_subject_assignment": false,
+    "gene_names": [
+      "efgA"
+    ],
+    "ordered_locus_names": [
+      "Mext_4158"
+    ],
+    "protein_accession": "UniProtKB:P0DX96",
+    "protein_name": "Formaldehyde-sensing protein EfgA",
+    "reference_assigned_to_experimental_allele": false,
+    "reference_organism_name": "Methylorubrum extorquens (strain PA1)",
+    "reference_strain_assigned_to_all_tested_derivatives": false,
+    "reference_taxon_id": "NCBITaxon:419610",
+    "reference_taxon_rank": "strain",
+    "reference_taxon_scientific_name": "Methylorubrum extorquens (strain PA1)",
+    "sequence_version": 1,
+    "source_species_taxon_id": "NCBITaxon:408",
+    "species_lineage_verified": true
+  },
+  "reviewed_assets": {
+    "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/reviewed-assets.json",
+    "sha256": "cc494ad1449b15cf94ad1121536a1f2683619e5f65b2f2f00e8b4fd2711470fa"
+  },
+  "scope": "QUALIFIED_NATIVE_GENE_EVIDENCE_NOT_EXACT_ALLELE_OR_GENOME_GROUNDING",
+  "sources": {
+    "article": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/article-attempt.json",
+        "sha256": "ce871df82db48d8c554a64e8310208858522559716316fb082c292728a41d1a1"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/article-response.bin",
+        "sha256": "e755e7d471e35a43e67b8de8efe065629df126b3cebfa992cb32500fa512f47a"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/request-plan.json",
+        "sha256": "5168fc5b9520343b6ce78105888de87c31210058e03eaeb4f7cfc920c1b03248"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/article-receipt.json",
+        "sha256": "cf6557aa77d818571903dd564eb8be415e29730b85b806f8cecb6676e0303a6a"
+      },
+      "retrieved_at": "2026-10-14T13:50:22.852774+00:00",
+      "status": 200,
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001208"
+    },
+    "efga-reference": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efga-reference-response.bin",
+        "sha256": "ab4e678607bb960022f5e7fc1b2c01179b53f10dc061986e0f8c41cad590825c"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efga-reference-receipt.json",
+        "sha256": "6a66053e1ffcec575a6ac87f4622fd2f712aa7356dc36a1d8f232bc4e128fe19"
+      },
+      "release": "2026_03",
+      "request": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efga-reference-attempt.json",
+          "sha256": "ad56958222b6930aa067dfb74e3b247ae7a1b629c613f03b7ec54b8da1a8a98c"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efga-reference-response.bin",
+          "sha256": "ab4e678607bb960022f5e7fc1b2c01179b53f10dc061986e0f8c41cad590825c"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/followup-plan.json",
+          "sha256": "0d9dee90db2d90c3deba2bd2270d475ad9ae85f3e0b1fb1c77bf3d49a4ab8f08"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efga-reference-receipt.json",
+          "sha256": "6a66053e1ffcec575a6ac87f4622fd2f712aa7356dc36a1d8f232bc4e128fe19"
+        },
+        "retrieved_at": "2026-10-14T13:52:49.253382+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AMext_4158&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Csequence_version%2Cversion"
+      },
+      "retrieved_at": "2026-10-14T13:52:49.253382+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AMext_4158&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Csequence_version%2Cversion"
+    },
+    "efgb-name-reference": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efgb-name-reference-response.bin",
+        "sha256": "66e43dc60785230d1dfc3c1567511572cdc0326cc55cb482c1de7899f8657ec2"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efgb-name-reference-receipt.json",
+        "sha256": "fec738cfb43c7467b10105b3078785922bcad045b68b757cbacffb4e3d71a936"
+      },
+      "release": "2026_03",
+      "request": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efgb-name-reference-attempt.json",
+          "sha256": "c5ad6934ddaa7dc57bd775aa25eabd28db4ed9dba19c9701d5cc502c7c7bee6b"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efgb-name-reference-response.bin",
+          "sha256": "66e43dc60785230d1dfc3c1567511572cdc0326cc55cb482c1de7899f8657ec2"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/reference-followup-plan.json",
+          "sha256": "eb047657a9865fa47a3305eb7a360d81ecd7482fae2b0a49c2b4762d873c9987"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efgb-name-reference-receipt.json",
+          "sha256": "fec738cfb43c7467b10105b3078785922bcad045b68b757cbacffb4e3d71a936"
+        },
+        "retrieved_at": "2026-10-14T14:50:25.116985+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AefgB+AND+organism_id%3A419610&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Csequence_version%2Cversion"
+      },
+      "retrieved_at": "2026-10-14T14:50:25.116985+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AefgB+AND+organism_id%3A419610&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Csequence_version%2Cversion"
+    },
+    "efgb-reference": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efgb-reference-response.bin",
+        "sha256": "8a55a1157336b7e8a28b5740451ba3560fb19da84bfc86af1502db05e130ee46"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efgb-reference-receipt.json",
+        "sha256": "07e61e8e6c118e126210a3620f0260573d0f12f52db914d4588bc3552488279f"
+      },
+      "release": "2026_03",
+      "request": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efgb-reference-attempt.json",
+          "sha256": "288ff23f7315ce5b99b20516e0f2e26a10181cf0b95fd2a5796fcdd752465ae2"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efgb-reference-response.bin",
+          "sha256": "8a55a1157336b7e8a28b5740451ba3560fb19da84bfc86af1502db05e130ee46"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/followup-plan.json",
+          "sha256": "0d9dee90db2d90c3deba2bd2270d475ad9ae85f3e0b1fb1c77bf3d49a4ab8f08"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/efgb-reference-receipt.json",
+          "sha256": "07e61e8e6c118e126210a3620f0260573d0f12f52db914d4588bc3552488279f"
+        },
+        "retrieved_at": "2026-10-14T13:54:03.934392+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AMext_0606&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Csequence_version%2Cversion"
+      },
+      "retrieved_at": "2026-10-14T13:54:03.934392+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AMext_0606&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Csequence_version%2Cversion"
+    },
+    "g003": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g003-attempt.json",
+        "sha256": "645ddfae7fd6913bf7deed7a398f50ea9519d88595ed351ed073b92304e238ed"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g003-response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/followup-plan.json",
+        "sha256": "0d9dee90db2d90c3deba2bd2270d475ad9ae85f3e0b1fb1c77bf3d49a4ab8f08"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g003-receipt.json",
+        "sha256": "afae5df1978c156c1af320bcabc9d706cd7bbac0871e25b5808eebc5fa0eb9d5"
+      },
+      "retrieved_at": "2026-10-14T13:52:52.375827+00:00",
+      "status": 302,
+      "url": "https://journals.plos.org/plosbiology/article/figure/image?download&size=large&id=10.1371/journal.pbio.3001208.g003"
+    },
+    "g003-storage": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g003-storage-attempt.json",
+        "sha256": "5584e3f2c719636c33ec4e50ee3816c469836f15fde639f69555031ca1ea7fe9"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g003-storage-response.bin",
+        "sha256": "33630c4c061023b8a17f6955ddbdf8091829e54d6280b2351c3fe898f4780288"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/asset-g003-plan.json",
+        "sha256": "cf4f7bff3b8c5180814661b0f8f4a68ad3a5c0b7339f3e5614c0fc831eb600db"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g003-storage-receipt.json",
+        "sha256": "e907ba235a3de0451310040042663f292cffbc0bedc25b349ab83357e2a225fd"
+      },
+      "retrieved_at": "2026-10-14T13:53:59.880644+00:00",
+      "status": 200,
+      "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pbio.3001208/1/pbio.3001208.g003.PNG_L"
+    },
+    "g005": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g005-attempt.json",
+        "sha256": "760333f1637e5c3eda9e345b4567f334454541de9d2933000d24337e07800469"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g005-response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/followup-plan.json",
+        "sha256": "0d9dee90db2d90c3deba2bd2270d475ad9ae85f3e0b1fb1c77bf3d49a4ab8f08"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g005-receipt.json",
+        "sha256": "f68fefb4c8f92b73f6dcadac5cdbac6944baea1a3e4cca9caa00cbb2a3ea9fc8"
+      },
+      "retrieved_at": "2026-10-14T13:54:13.617273+00:00",
+      "status": 302,
+      "url": "https://journals.plos.org/plosbiology/article/figure/image?download&size=large&id=10.1371/journal.pbio.3001208.g005"
+    },
+    "g005-storage": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g005-storage-attempt.json",
+        "sha256": "616e625a5dc5432cbc630f49b31f75d8df51d59502e3635c9a6b4d139bbeb939"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g005-storage-response.bin",
+        "sha256": "d78319b5aa1bb23016471ccc60d9d63ddabca5f2b0c764d32f064e15373aeaf0"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/asset-g005-plan.json",
+        "sha256": "30dc5bfaa69a181e49c59e6cb1960a2c410b96f7b79ad1bb3f2b5d8fca12b8db"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g005-storage-receipt.json",
+        "sha256": "6da324f6d08ce8d454afde3b0f8dd0cece31b70276f610698883576f07d918e0"
+      },
+      "retrieved_at": "2026-10-14T13:54:53.881207+00:00",
+      "status": 200,
+      "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pbio.3001208/1/pbio.3001208.g005.PNG_L"
+    },
+    "g009": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g009-attempt.json",
+        "sha256": "1feb918eb8368a6fd2a21f437345ce537650477ce5f513e68c47a1dad4436eb3"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g009-response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/followup-plan.json",
+        "sha256": "0d9dee90db2d90c3deba2bd2270d475ad9ae85f3e0b1fb1c77bf3d49a4ab8f08"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g009-receipt.json",
+        "sha256": "3d4f24ac252ffe252d76120a1efe38eaf23a940f6762ff79b8db7a3a9f45be66"
+      },
+      "retrieved_at": "2026-10-14T13:54:14.193060+00:00",
+      "status": 302,
+      "url": "https://journals.plos.org/plosbiology/article/figure/image?download&size=large&id=10.1371/journal.pbio.3001208.g009"
+    },
+    "g009-storage": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g009-storage-attempt.json",
+        "sha256": "ab8a1c50a379359b20247a06d45ae399abb2efa7a4cc0e0e3a67e2723923b137"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g009-storage-response.bin",
+        "sha256": "77ee2fceaf849f109b6b7fb000d231d49430ea20e70aa803f9d965f2746bc428"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/asset-g009-plan.json",
+        "sha256": "fcfcae55526ea8b9c4423861af5624991ae382f20212387ecaa436c031229773"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g009-storage-receipt.json",
+        "sha256": "073542dea28e3fcc1e352026d9e4de636b8907bfae074238a01eb3c6a181b412"
+      },
+      "retrieved_at": "2026-10-14T13:54:54.513504+00:00",
+      "status": 200,
+      "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pbio.3001208/1/pbio.3001208.g009.PNG_L"
+    },
+    "g010": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g010-attempt.json",
+        "sha256": "3856d1dea701a0f4b65389b21e07a5ae452bd3f61187cf960e8f3f20b5117a26"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g010-response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/followup-plan.json",
+        "sha256": "0d9dee90db2d90c3deba2bd2270d475ad9ae85f3e0b1fb1c77bf3d49a4ab8f08"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g010-receipt.json",
+        "sha256": "9f619ab4f897cb769ef80acd9ec0927d7036c274b389b66063e47407f2e9d6a0"
+      },
+      "retrieved_at": "2026-10-14T13:54:14.742983+00:00",
+      "status": 302,
+      "url": "https://journals.plos.org/plosbiology/article/figure/image?download&size=large&id=10.1371/journal.pbio.3001208.g010"
+    },
+    "g010-storage": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g010-storage-attempt.json",
+        "sha256": "33a2afd3ea5e218d8a636c05e022d27de958a97034d2f015d0464811af6036ea"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g010-storage-response.bin",
+        "sha256": "6a7c8b283d8096b031d3047c21e66fdafa960cc3d1b81705bc81176a6f509361"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/asset-g010-plan.json",
+        "sha256": "cf57b291808bf070cd9803170646e324b4fa29e827c22b1b20c106309ad94712"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g010-storage-receipt.json",
+        "sha256": "465965b6219328d11acfa8c6225acbc76ae3feb379a55012230ba3cfb80e6235"
+      },
+      "retrieved_at": "2026-10-14T13:54:55.155615+00:00",
+      "status": 200,
+      "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pbio.3001208/1/pbio.3001208.g010.PNG_L"
+    },
+    "g011": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g011-attempt.json",
+        "sha256": "95a8918651da1137b660b3c8ed4d42895f80e6ad2c8f43349a754d59f8cc566d"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g011-response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/followup-plan.json",
+        "sha256": "0d9dee90db2d90c3deba2bd2270d475ad9ae85f3e0b1fb1c77bf3d49a4ab8f08"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g011-receipt.json",
+        "sha256": "66c9c7ce4a5f6fd63293dfeb612d53324883d6fcec3e0206770891e69d66d174"
+      },
+      "retrieved_at": "2026-10-14T13:54:15.256084+00:00",
+      "status": 302,
+      "url": "https://journals.plos.org/plosbiology/article/figure/image?download&size=large&id=10.1371/journal.pbio.3001208.g011"
+    },
+    "g011-storage": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g011-storage-attempt.json",
+        "sha256": "7409bcc0a351ca0b6a5cf2e721c36388f3a7bcef18bc0c3a7cd4676b88c16fe3"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g011-storage-response.bin",
+        "sha256": "b666ffb97c3bd61d6750922abac0ebe4635f1ae4383cd6ce4ce594b5552e5365"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/asset-g011-plan.json",
+        "sha256": "173f32644ecb1687b20b1cfe91f02d097ccaeb909e7b2896b0bae3b687143585"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g011-storage-receipt.json",
+        "sha256": "14ceab364b9effed7fc827914fee43c778c14cde6d1afd2ae7f23955d6a6f116"
+      },
+      "retrieved_at": "2026-10-14T13:54:55.757438+00:00",
+      "status": 200,
+      "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pbio.3001208/1/pbio.3001208.g011.PNG_L"
+    },
+    "g012": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g012-attempt.json",
+        "sha256": "17433bc7df57fb885d05e7815aa89a504652559d0051a56f5b9cec305b52021e"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g012-response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/followup-plan.json",
+        "sha256": "0d9dee90db2d90c3deba2bd2270d475ad9ae85f3e0b1fb1c77bf3d49a4ab8f08"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g012-receipt.json",
+        "sha256": "da0c2748543007684520e6f931acc18d82b7dd291232a4630a72834b22e83d1b"
+      },
+      "retrieved_at": "2026-10-14T13:54:15.757617+00:00",
+      "status": 302,
+      "url": "https://journals.plos.org/plosbiology/article/figure/image?download&size=large&id=10.1371/journal.pbio.3001208.g012"
+    },
+    "g012-storage": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g012-storage-attempt.json",
+        "sha256": "9a32507d3fd8d424bffe8ff0ec6cbf0e2e7785f6d72b96742b69d70c2413a5c4"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g012-storage-response.bin",
+        "sha256": "75c638563f93c9841f07d9940f1be29348d4dd9f429340acd270653dce1e7923"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/asset-g012-plan.json",
+        "sha256": "58cec58646e4836cd389887e646befaa7462c729bb04910831650f9611d4d360"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g012-storage-receipt.json",
+        "sha256": "2f24c3d5ab02a13c5451598b289b5c2d68f52ef2539da171f11c0ce7455547c7"
+      },
+      "retrieved_at": "2026-10-14T13:54:56.388919+00:00",
+      "status": 200,
+      "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pbio.3001208/1/pbio.3001208.g012.PNG_L"
+    },
+    "g013": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g013-attempt.json",
+        "sha256": "e90bc7ea03959fe7fac189974b5229d4c88edc8297f5bde9fc14c2510ca00efe"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g013-response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/followup-plan.json",
+        "sha256": "0d9dee90db2d90c3deba2bd2270d475ad9ae85f3e0b1fb1c77bf3d49a4ab8f08"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g013-receipt.json",
+        "sha256": "047da629321dabb5f0fee339ac826507b5451ecd96a03a143e3f5ae7dcd40df5"
+      },
+      "retrieved_at": "2026-10-14T13:54:16.506590+00:00",
+      "status": 302,
+      "url": "https://journals.plos.org/plosbiology/article/figure/image?download&size=large&id=10.1371/journal.pbio.3001208.g013"
+    },
+    "g013-storage": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g013-storage-attempt.json",
+        "sha256": "ecc9ed85c9bdee65d4ba381ceae4ceab89e865f00efde6994472740dccda2e47"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g013-storage-response.bin",
+        "sha256": "b7eb2c59c53e0b38fc75e1a1b48a36f28e241d1051bf82d6f01031be2ab74d87"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/asset-g013-plan.json",
+        "sha256": "7cb1acffcdef537a523d25ee4cf8f284faf2b4c1ff5e3adde6e4be94621ed19c"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/g013-storage-receipt.json",
+        "sha256": "6ca6a1e1ce0109f95d2824bba9e7e5344cc4ccfe9b16e07684f6f6dcca6caafa"
+      },
+      "retrieved_at": "2026-10-14T13:54:57.057020+00:00",
+      "status": 200,
+      "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pbio.3001208/1/pbio.3001208.g013.PNG_L"
+    },
+    "tax-408": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/tax-408-response.bin",
+        "sha256": "81219df0c5c7a682c84079c19fcd82b9c6f219e2abef40c90d54b6cdf2455924"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/tax-408-receipt.json",
+        "sha256": "289d4558303fe246185d2e2d2284bf15000dd9373470e5c04f2fa099209b6cfe"
+      },
+      "release": "2026_03",
+      "request": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/tax-408-attempt.json",
+          "sha256": "01c455e00eb8f87882aaf55215044e2dad97ce3a3be57c8250e3da426e51cf8b"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/tax-408-response.bin",
+          "sha256": "81219df0c5c7a682c84079c19fcd82b9c6f219e2abef40c90d54b6cdf2455924"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/species-plan.json",
+          "sha256": "01a468e2a714aa008b882767375b85aac49a3941b5c62760fa88730b27b73969"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/tax-408-receipt.json",
+          "sha256": "289d4558303fe246185d2e2d2284bf15000dd9373470e5c04f2fa099209b6cfe"
+        },
+        "retrieved_at": "2026-10-14T14:53:10.511497+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/408"
+      },
+      "retrieved_at": "2026-10-14T14:53:10.511497+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/408"
+    },
+    "tax-419610": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/tax-419610-response.bin",
+        "sha256": "7c98f5e827065cf618b18e3d0acc23efc0803853b6fd10e382b3a5a4045512ad"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/tax-419610-receipt.json",
+        "sha256": "1a7dfea2275a267000d3a0be3a04dda3d73dd483df867f7e2d45ba7d86e4f1f2"
+      },
+      "release": "2026_03",
+      "request": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/tax-419610-attempt.json",
+          "sha256": "0d8dbdf2ad660d27567ca373ebacdcff4078156eddf8d34a0e326a8725c55591"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/tax-419610-response.bin",
+          "sha256": "7c98f5e827065cf618b18e3d0acc23efc0803853b6fd10e382b3a5a4045512ad"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/reference-followup-plan.json",
+          "sha256": "eb047657a9865fa47a3305eb7a360d81ecd7482fae2b0a49c2b4762d873c9987"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/tax-419610-receipt.json",
+          "sha256": "1a7dfea2275a267000d3a0be3a04dda3d73dd483df867f7e2d45ba7d86e4f1f2"
+        },
+        "retrieved_at": "2026-10-14T13:55:02.049207+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/419610"
+      },
+      "retrieved_at": "2026-10-14T13:55:02.049207+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/419610"
+    }
+  },
+  "subject_species": {
+    "experimental_strain_taxon_assigned": false,
+    "name": "Methylorubrum extorquens",
+    "rank": "species",
+    "species_wide_resistance_inferred": false,
+    "taxon_id": "NCBITaxon:408"
+  }
+}

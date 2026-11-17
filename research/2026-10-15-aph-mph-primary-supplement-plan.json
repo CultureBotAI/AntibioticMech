@@ -1,0 +1,39 @@
+{
+  "canary": "mph-supplement",
+  "constraints": {
+    "aph_primary_http_403": "HOLD_NO_RETRY_OR_ALTERNATE_ROUTE",
+    "biological_record_writes": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "redirects_followed": 0,
+    "retries": 0
+  },
+  "date": "2026-10-15",
+  "inputs": {
+    "aph_denial": {
+      "path": "reports/resistance-grounding-2026-10-15-aph-mph-primary/aph-primary-receipt.json",
+      "sha256": "e06b24b465e8f2afc007ea86cafc543ad4ffb736cbec6e03a834328eca56704e"
+    },
+    "primary_body": {
+      "path": "reports/resistance-grounding-2026-10-15-aph-mph-primary/mph-primary-response.bin",
+      "sha256": "56ab398ae23b70347952be2c6b621726f6ec4e32f2fbf519466d2b25635e3067"
+    },
+    "primary_receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-aph-mph-primary/mph-primary-receipt.json",
+      "sha256": "980cfd34a445be069d68fda46479dd075a86903fe497cacefc4592a3ae527014"
+    }
+  },
+  "max_bytes": 20000000,
+  "preflight": {
+    "ignored_files_included": true,
+    "primary_request_reused_not_repeated": true,
+    "prior_supplement_request_matches": []
+  },
+  "requests": {
+    "mph-supplement": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5760710/supplementaryFiles"
+    }
+  },
+  "selected_member": "41467_2017_2680_MOESM1_ESM.pdf",
+  "selected_scope": "SUPPLEMENTARY_TABLE_1_PROTEIN_IDENTIFIERS_ONLY"
+}

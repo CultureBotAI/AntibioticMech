@@ -1,0 +1,126 @@
+{
+  "batch_terminal": {
+    "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/batch-terminal.json",
+    "sha256": "f6dd3f84bbf525707213baa508f6e829ca85e91d77fbe4e979438e91a399e4ea"
+  },
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/canary-reviewed.json",
+    "sha256": "a26a7661e1b75697d3fbdf2b5eaae50da4daed3849111d9f4defe4a28079f79c"
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/cohort.json",
+    "sha256": "f4e742bd6b0ba7b9a730fd7948dd03488aff52b23313ada908d06b53e666c06d"
+  },
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "dossier": {
+    "path": "research/2026-10-14-card-species-nodes.json",
+    "sha256": "cec4cf0881452bd79928ad159074efcb3e230ec4652243affdb63278d04ef3c7"
+  },
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/focused-tests.xml",
+      "sha256": "c0c4cad4822b69fc130cae46bdd75f4ade456072314d12d98c9565cec952ec97"
+    },
+    "passed": 229,
+    "skipped": 0,
+    "tests": 229
+  },
+  "implementation": [
+    {
+      "path": "scripts/audit_card_species_nodes.py",
+      "sha256": "267164b0ad6f78732de1a0416790366fe1b4aaaefeaa80982a008f321600b2d6"
+    },
+    {
+      "path": "tests/test_card_species_nodes.py",
+      "sha256": "8dc587a19f319b27bbd43d0ca73e1f5ee4b1429d5285e1c418411238aa8ff843"
+    }
+  ],
+  "limits": {
+    "biological_record_changes": 0,
+    "experimental_alleles_or_subjects_assigned": 0,
+    "full_authoritative_qc_rerun": false,
+    "full_corpus_goal_status": "OPEN",
+    "full_corpus_records_in_scope": 2939,
+    "full_qc_reason": "Reference research only; biological, production and generated files unchanged.",
+    "github_mutations": 0,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_network_requests": 34,
+    "new_primary_reviews": 0,
+    "rendering_or_embedding_refresh": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "offline_native_replay": "PASS",
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/protected-before.json",
+      "sha256": "3fe1eeaa0e5627b9a023833dcc897726a1553f9efc5991389b35808e0e6fec66"
+    },
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "pages_embeddings_source_inputs_and_prior_checkpoints_unchanged": true,
+    "protected_files_checked": 7279,
+    "record_files_unchanged": 2939,
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "c31ae545c822c2622fffd8aac8b6e60685dc43c58cea9fe401e3f9be09eae453"
+  },
+  "same_agent_adversarial_review": [
+    "The cohort is exactly the 34 previously lineage-only nodes, not a refresh of all 288 species.",
+    "Prior native evidence and source limitations remain intact in their dated checkpoints.",
+    "All new nodes are active species in the same UniProt release, with full ancestor-path agreement.",
+    "Aliases and species-node strain lists do not identify tested samples, proteins, or alleles.",
+    "The successor keeps all prior protein versions and candidate multiplicities unchanged.",
+    "Only UniProt taxonomy endpoints were requested; no held source or NCBI route was used."
+  ],
+  "scope": "STANDALONE_REFERENCE_SPECIES_VERIFICATION_NOT_EXPERIMENTAL_IDENTITY",
+  "status": "PASS",
+  "summary": {
+    "biological_record_changes": 0,
+    "card_terms_checked": 2002,
+    "compound_records": 65,
+    "corpus_records_checked": 2939,
+    "experimental_assignments": 0,
+    "label_warning_nodes_retained": 25,
+    "new_species_responses": 34,
+    "reference_proteins_with_new_species_evidence": 43,
+    "reference_taxa_checked": 36,
+    "reference_terms_with_new_species_evidence": 43,
+    "remaining_lineage_only_species": 0,
+    "species_with_standalone_responses_after": 288,
+    "total_direct_reference_proteins": 979,
+    "total_species_nodes": 288,
+    "whole_record_signoffs": 0
+  }
+}

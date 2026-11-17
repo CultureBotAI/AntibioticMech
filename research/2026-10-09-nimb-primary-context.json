@@ -1,0 +1,153 @@
+{
+  "chemical_identity": {
+    "identifier": "CHEBI:6909",
+    "key_matches_smiles_and_inchi": true,
+    "source_fields_changed": false,
+    "standard_inchi_key": "VAOCPAMSLUNLGC-UHFFFAOYSA-N",
+    "tested_preparation_independently_reidentified": false
+  },
+  "chemical_join_scope": "NAMED_COMPOUND_JOIN_NOT_INDEPENDENT_TESTED_PREPARATION_IDENTIFICATION",
+  "date": "2026-10-09",
+  "exact_alleles_assigned": 0,
+  "experimental_genomes_assigned": 0,
+  "experimental_proteins_assigned": 0,
+  "github_mutations": 0,
+  "limits": [
+    "Observational clinical association, not biochemical mechanism or causal proof.",
+    "Species grounding does not identify a strain TaxID, tested genome or exact allele.",
+    "The reference UniProt protein is not the experimental protein of these clinical isolates.",
+    "No source MIC is converted into a new breakpoint interpretation."
+  ],
+  "ncbi_endpoint_requests": 0,
+  "numerical_ast_added": 0,
+  "outreach": 0,
+  "primary_study": {
+    "clinical_association_not_functional_causation": true,
+    "doi": "10.1128/jcm.38.9.3209-3213.2000",
+    "inspection": "SELECTED_PUBLISHER_METHODS_RESULTS_TABLE_2_AND_DISCUSSION_TEXT",
+    "native_pdf_visually_inspected": false,
+    "reference": "PMID:10970359",
+    "url": "https://journals.asm.org/doi/10.1128/jcm.38.9.3209-3213.2000",
+    "whole_paper_review_complete": false
+  },
+  "prior_checkpoint": {
+    "path": "research/2026-10-09-literature-primary-context-verification.json",
+    "sha256": "cea81b960d7b4e137fe8faf2312a6e953c9d834c9135ccccd3ba4820ea9aa4e8"
+  },
+  "reference_candidate_basis": [
+    {
+      "explicit_card_xref": false,
+      "literal_gene_matches": [
+        {
+          "field": "geneName",
+          "value": "nimB"
+        }
+      ],
+      "protein_accession": "UniProtKB:Q45146",
+      "scope": "REFERENCE_CANDIDATE_NOT_EXPERIMENTAL_IDENTITY",
+      "source_citation_ids": [
+        "PMID:8067736"
+      ]
+    }
+  ],
+  "reference_dossier": {
+    "path": "research/2026-10-09-card-literature-proteins.json",
+    "sha256": "be1301bfa40cf1679510d5b08653305a450adbad9f742c9008c28ffb0e58a6b7"
+  },
+  "reference_limit": "Q45146 is reference context citing PMID:8067736; it is not assigned to any clinical isolate in PMID:10970359.",
+  "reference_protein": {
+    "accession": "UniProtKB:Q45146",
+    "bibliography": [
+      {
+        "identifiers": [
+          "PMID:8067736"
+        ],
+        "reference_number": 1,
+        "unresolved_identifiers": []
+      }
+    ],
+    "description_flag": null,
+    "entry_type": "UniProtKB unreviewed (TrEMBL)",
+    "entry_version": 68,
+    "exact_allele_assignment": false,
+    "experimental_subject_assignment": false,
+    "gene_names_and_synonyms": [
+      "nimB"
+    ],
+    "reference_organism_name": "Bacteroides fragilis",
+    "reference_taxon_id": "NCBITaxon:817",
+    "sequence_version": 1,
+    "taxonomy_identity_verified": true,
+    "taxonomy_rank": "species",
+    "taxonomy_scientific_name": "Bacteroides fragilis"
+  },
+  "reference_release": "2026_03",
+  "requests": {
+    "bibliography": {
+      "bytes": 12125,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-nimb-primary/bibliography-response.bin",
+        "sha256": "0c741d39d31dfa02618514d7dd37f1fec0967f4b81210fac406d1aed6973861e"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-nimb-primary/bibliography-receipt.json",
+        "sha256": "52db4c7b8f6b6d41b943bc1519a8d4075fe16869895d6bba114aaae8bd950727"
+      },
+      "retrieved_at": "2026-10-10T05:40:28.845554+00:00",
+      "sha256": "0c741d39d31dfa02618514d7dd37f1fec0967f4b81210fac406d1aed6973861e",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A10970359+OR+EXT_ID%3A8067736%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=10"
+    }
+  },
+  "scope": {
+    "clinical_isolate_associations": 5,
+    "corpus_records": 2939,
+    "curated_records": 1,
+    "whole_corpus_primary_review": "OPEN",
+    "whole_records_completed": 0
+  },
+  "source_adoptions": 0,
+  "table_review": {
+    "assay_negative_clinical_comparators": [
+      "ARU 2592",
+      "ARU 5589",
+      "ARU 12605"
+    ],
+    "clinical_isolate_taxa": {
+      "ARU 11562": "817",
+      "ARU 12371": "818",
+      "ARU 12963": "817",
+      "ARU 7420": "817",
+      "ARU 9750": "817"
+    },
+    "control_promoted_to_clinical_isolate": false,
+    "negative_gene_assay_is_gene_absence": false,
+    "nimE_isolates_excluded": [
+      "ARU 3690",
+      "ARU 6881",
+      "ARU 10769",
+      "ARU 11563",
+      "ARU 11564"
+    ],
+    "scope": "GENE_TYPE_COOCCURRENCE_NOT_EXACT_ALLELE_OR_CAUSATION",
+    "separate_positive_control": "Bf-8"
+  },
+  "taxonomy": {
+    "817": {
+      "active": true,
+      "rank": "species",
+      "scientificName": "Bacteroides fragilis",
+      "taxonId": 817
+    },
+    "818": {
+      "active": true,
+      "rank": "species",
+      "scientificName": "Bacteroides thetaiotaomicron",
+      "taxonId": 818
+    }
+  },
+  "taxonomy_cache": {
+    "path": "reports/resistance-grounding-2026-10-07/card-taxonomy.json",
+    "sha256": "d75a09d19145527c20d59928f4e3a44b0e827e7fae1e3220b8a6546ce5be6e6a"
+  }
+}

@@ -20,7 +20,7 @@ description: |
   CommunityMech and HabitatMech: one YAML per entity, ontology-grounded,
   evidence-backed, closed-schema validated, reproducible from committed inputs.
 
-license: https://creativecommons.org/publicdomain/zero/1.0/
+license: BSD-3-Clause
 
 prefixes:
   linkml: https://w3id.org/linkml/
@@ -277,6 +277,14 @@ classes:
         inlined_as_list: true
         range: MolecularTarget
 
+      related_records:
+        description: >-
+          Curator-owned cross-corpus relationships with an explicit evidence
+          basis and source revision. These are not exact-identity xrefs.
+        multivalued: true
+        inlined_as_list: true
+        range: CrossCorpusLink
+
       mode_of_action:
         description: >-
           Coarse mechanism bucket (cell-wall synthesis inhibition, protein
@@ -314,6 +322,27 @@ classes:
         description: Whether the compound kills or inhibits growth, where a source states it.
         range: CidalityEnum
 
+      activity_collections:
+        description: >-
+          Lossless compressed collections of source-owned ActivityObservation
+          rows. Resolve each content-addressed sibling artifact and insert its
+          rows at the declared expanded offset before interpreting activity.
+        multivalued: true
+        inlined_as_list: true
+        minimum_cardinality: 1
+        range: ActivityCollection
+
+      activity_membership_collections:
+        description: >-
+          Content-addressed source-isolate registries and measurement multiplicities
+          for grouped activity observations. Membership does not assert a strain,
+          taxon identifier, genome assembly, or species-wide resistance. Each group
+          is bound to the complete observation by its canonical JSON checksum.
+        multivalued: true
+        inlined_as_list: true
+        minimum_cardinality: 1
+        range: ActivityMembershipCollection
+
       activity_spectrum:
         description: >-
           Measured or curated activity against specific taxa. Each item is one
@@ -344,6 +373,16 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: ResistanceMechanism
+
+      genotype_resistance_score_rules:
+        description: >-
+          Drug-specific genotype interpretation rules that assign numerical
+          resistance scores to one or more source-named variants. These are
+          predictive algorithm terms, not biochemical routes, and must not be
+          flattened into `ResistanceMechanism` rows.
+        multivalued: true
+        inlined_as_list: true
+        range: GenotypeResistanceScoreRule
 
       clinical_status:
         description: Regulatory / use status, where a source states it.
@@ -558,7 +597,7 @@ classes:
         description: NCBITaxon CURIE of the producing organism.
         required: true
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       taxon_label:
         description: Scientific name of the producing organism.
         required: true
@@ -760,7 +799,7 @@ classes:
       taxon_id:
         description: Organism in which this target assertion was evaluated.
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       taxon_label:
         description: Source organism label for this assertion.
         range: string
@@ -881,7 +920,7 @@ classes:
       taxon_id:
         description: Source organism of the macromolecule.
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       taxon_label:
         range: string
       ligand_component:
@@ -998,7 +1037,7 @@ classes:
       taxon_id:
         required: true
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       taxon_label:
         required: true
         range: string
@@ -1012,11 +1051,185 @@ classes:
         description: Source-backed role in this mechanism, including component role for a complex.
         range: string
 
+  ActivityCollection:
+    description: >-
+      One bounded gzip-compressed JSON Lines artifact containing a format and
+      exact compound-identity header followed by complete ActivityObservation
+      objects. Checksums, counts, source context, and order are verified by the
+      record loader; compression never substitutes aggregated biological claims.
+    attributes:
+      format:
+        required: true
+        pattern: "^antibioticmech-activity-jsonl-v1$"
+      path:
+        required: true
+        pattern: "^activity-[a-f0-9]{64}\\.jsonl\\.gz$"
+      sha256:
+        required: true
+        pattern: "^[a-f0-9]{64}$"
+      byte_size:
+        required: true
+        range: integer
+        minimum_value: 1
+        maximum_value: 16777216
+      offset:
+        description: Zero-based insertion position in the fully expanded observation list.
+        required: true
+        range: integer
+        minimum_value: 0
+      observation_count:
+        required: true
+        range: integer
+        minimum_value: 1
+        maximum_value: 500
+      measurement_count:
+        required: true
+        range: integer
+        minimum_value: 1
+      source:
+        description: Source ownership; this collection lane currently admits only NCBI AST.
+        required: true
+        pattern: "^NCBI_AST$"
+      source_version:
+        required: true
+      source_retrieved_on:
+        required: true
+        range: date
+
+  ActivityMembershipCollection:
+    description: >-
+      One bounded gzip JSON artifact with exact compound identity, source provenance,
+      a source-isolate registry, and groups of registry indices and measurement
+      counts. A registry entry pairs its source_isolate_id with sequencing_context
+      (BioSample, BioProject, and run), or explicit null when absent from the pinned
+      sequencing snapshot. Missing context does not mean an isolate was never
+      sequenced; a run does not establish a successful assembly. The loader checks
+      all indices, observation hashes, group coverage, counts, and provenance.
+    attributes:
+      format:
+        required: true
+        pattern: "^antibioticmech-activity-memberships-v1$"
+      path:
+        required: true
+        pattern: "^membership-[a-f0-9]{64}\\.json\\.gz$"
+      sha256:
+        required: true
+        pattern: "^[a-f0-9]{64}$"
+      byte_size:
+        required: true
+        range: integer
+        minimum_value: 1
+        maximum_value: 16777216
+      uncompressed_byte_size:
+        required: true
+        range: integer
+        minimum_value: 1
+        maximum_value: 16777216
+      source:
+        required: true
+      source_version:
+        required: true
+      source_reference:
+        required: true
+        range: uri
+        pattern: "^https://[^/]+/.*$"
+      source_retrieved_on:
+        description: Retrieval date of the supporting sequencing snapshot, not the assays.
+        required: true
+        range: date
+      source_snapshot_sha256:
+        description: Checksum of the source sequencing snapshot used for the join.
+        required: true
+        pattern: "^[a-f0-9]{64}$"
+      activity_inventory_sha256:
+        description: Checksum of the adopted grouped phenotype inventory.
+        required: true
+        pattern: "^[a-f0-9]{64}$"
+      subject_count:
+        description: Distinct source isolate IDs within this compound, not across compounds.
+        required: true
+        range: integer
+        minimum_value: 1
+      observation_count:
+        required: true
+        range: integer
+        minimum_value: 1
+      membership_count:
+        description: Sum of source isolate IDs within groups; an isolate may occur in several groups.
+        required: true
+        range: integer
+        minimum_value: 1
+      measurement_count:
+        required: true
+        range: integer
+        minimum_value: 1
+      unlinked_subject_count:
+        description: Distinct source isolate IDs with no join to the pinned sequencing snapshot.
+        required: true
+        range: integer
+        minimum_value: 0
+
+  PathogenDetectionContext:
+    description: >-
+      One genome target associated with a measured BioSample result. Keep
+      target, assembly, project and source date paired when a single result
+      is exported under multiple genomes; these are not replicate assays.
+    attributes:
+      pathogen_detection_target_accession:
+        description: Versioned NCBI Pathogen Detection target accession.
+        required: true
+        range: string
+        pattern: "^PDT[0-9]+\\.[0-9]+$"
+      assembly_accession:
+        description: Assembly linked to this target, when provided.
+        range: string
+        pattern: "^GC[AF]_[0-9]+\\.[0-9]+$"
+      bioproject_accession:
+        description: BioProject for this genome target, not an assay replicate.
+        range: string
+        pattern: "^PRJ(NA|EB|DB)[0-9]+$"
+      sra_accessions:
+        description: Sequencing accessions associated with this target.
+        multivalued: true
+        range: string
+        pattern: "^(SRR|ERR|DRR|SRX|ERX|DRX|SRP|ERP|DRP|SRS|ERS|DRS)[0-9]+$"
+      source_create_date:
+        description: Creation date of this source genome target.
+        range: string
+      source_observation_id:
+        description: Original source export group represented by this context.
+        required: true
+        range: string
+
   ActivityObservation:
     description: >-
       One activity claim against one target organism, with the assay that
       produced it. A number without a method is not an observation.
     rules:
+      - description: >-
+          Multiple paired genome contexts replace the corresponding singleton
+          fields; no single target or project is selected as representative.
+        preconditions:
+          slot_conditions:
+            pathogen_detection_contexts:
+              value_presence: PRESENT
+        postconditions:
+          all_of:
+            - slot_conditions:
+                bioproject_accession:
+                  value_presence: ABSENT
+            - slot_conditions:
+                pathogen_detection_target_accession:
+                  value_presence: ABSENT
+            - slot_conditions:
+                assembly_accession:
+                  value_presence: ABSENT
+            - slot_conditions:
+                sra_accessions:
+                  value_presence: ABSENT
+            - slot_conditions:
+                source_create_date:
+                  value_presence: ABSENT
       - description: >-
           A reported MIC must carry its units and the method that produced it.
           Both were documented requirements enforced only by a test; expressing
@@ -1031,11 +1244,24 @@ classes:
               value_presence: PRESENT
             assay:
               value_presence: PRESENT
+      - description: >-
+          A disk-diffusion zone diameter must carry its units and the method
+          that produced it.
+        preconditions:
+          slot_conditions:
+            disk_diffusion_value:
+              value_presence: PRESENT
+        postconditions:
+          slot_conditions:
+            disk_diffusion_units:
+              value_presence: PRESENT
+            assay:
+              value_presence: PRESENT
     attributes:
       taxon_id:
         description: NCBITaxon CURIE of the organism tested.
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       taxon_label:
         description: Organism or group tested, as named by the source.
         required: true
@@ -1052,11 +1278,112 @@ classes:
       mic_qualifier:
         description: Relational qualifier for the reported value (e.g. ">", "<=", "MIC90").
         range: string
+      disk_diffusion_value:
+        description: Disk-diffusion inhibition zone diameter, in `disk_diffusion_units`.
+        range: float
+      disk_diffusion_units:
+        description: Units for `disk_diffusion_value`; usually mm. Required whenever `disk_diffusion_value` is set.
+        range: string
+      disk_diffusion_qualifier:
+        description: Relational qualifier for the reported disk-diffusion value (e.g. ">", "<=").
+        range: string
       assay:
         description: Method (e.g. "CLSI broth microdilution", "agar diffusion").
         range: string
       strain:
         description: Strain designation, where the source names one.
+        range: string
+      measurement_count:
+        description: >-
+          Number of upstream activity measurements represented by this
+          observation. Greater than 1 when a bulk source groups raw rows that
+          share the same organism, compound, method and result.
+        range: integer
+        minimum_value: 1
+      source_export_row_count:
+        description: >-
+          Number of source export rows represented, when different from the
+          measurement count. A single BioSample result repeated under several
+          genome targets is one measurement, not several assay replicates.
+        range: integer
+        minimum_value: 1
+      isolate_count:
+        description: >-
+          Number of distinct isolates represented by this observation, when the
+          source groups rows by isolate.
+        range: integer
+        minimum_value: 1
+      site_count:
+        description: >-
+          Number of distinct study or testing sites represented by this
+          observation, where the source reports site identifiers.
+        range: integer
+        minimum_value: 1
+      biosample_accession:
+        description: >-
+          NCBI/INSDC BioSample accession for the tested isolate or specimen,
+          where the source provides one.
+        range: string
+        pattern: "^SAM(N|D|EA)[0-9]+$"
+      pathogen_detection_contexts:
+        description: >-
+          Paired genome contexts for a source-verified result exported under
+          multiple Pathogen Detection targets. Replaces singleton genome fields
+          without choosing or losing any genome association.
+        multivalued: true
+        minimum_cardinality: 2
+        inlined_as_list: true
+        range: PathogenDetectionContext
+      bioproject_accession:
+        description: BioProject accession for the sequencing project behind this AST row.
+        range: string
+        pattern: "^PRJ(NA|EB|DB)[0-9]+$"
+      pathogen_detection_target_accession:
+        description: >-
+          NCBI Pathogen Detection target accession for the tested isolate.
+        range: string
+        pattern: "^PDT[0-9]+(\\.[0-9]+)?$"
+      assembly_accession:
+        description: NCBI Assembly accession for the genome tied to this AST row.
+        range: string
+        pattern: "^GC[AF]_[0-9]+(\\.[0-9]+)?$"
+      sra_accessions:
+        description: SRA, ENA or DRA run, experiment, sample or study accessions tied to this row.
+        multivalued: true
+        range: string
+        pattern: "^(SRR|ERR|DRR|SRX|ERX|DRX|SRP|ERP|DRP|SRS|ERS|DRS)[0-9]+$"
+      isolation_type:
+        description: Source isolation category for the tested isolate or specimen.
+        range: string
+      isolation_location:
+        description: Source geographic isolation label for the tested isolate or specimen.
+        range: string
+      collection_date:
+        description: Source collection date or year for the tested isolate or specimen.
+        range: string
+      source_create_date:
+        description: Date the upstream source record was created, where the source reports one.
+        range: string
+      host_label:
+        description: Host organism label for the tested isolate or specimen, where the source reports one.
+        range: string
+      isolation_source:
+        description: Source material or site from which the tested isolate was recovered.
+        range: string
+      source:
+        description: >-
+          Upstream resource owning this observation. Set by an extractor lane so
+          re-seeding can replace exactly what it wrote; absent on
+          curator-written observations.
+        range: string
+      source_version:
+        description: Version or release of the upstream source for this observation.
+        range: string
+      source_retrieved_on:
+        description: Date the source snapshot was retrieved.
+        range: date
+      source_observation_id:
+        description: Stable upstream row, isolate or measurement identifier for this observation.
         range: string
       evidence:
         description: Citation for this observation. Required.
@@ -1134,7 +1461,7 @@ classes:
           NCBITaxon CURIE of the organism the resistance was observed in.
           Absent for a route-level mechanism that is not tied to one organism.
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       taxon_label:
         description: Scientific name of that organism, as the source gives it.
         range: string
@@ -1149,7 +1476,7 @@ classes:
           NCBITaxon CURIE for the strain itself, where the source resolves one
           separately from the species.
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       alteration:
         description: >-
           The genetic or expression change associated with the phenotype, as
@@ -1207,6 +1534,84 @@ classes:
         range: string
       evidence:
         description: Citation for the resistance claim. Required.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+
+  GenotypeResistanceScoreRule:
+    description: >-
+      One term in a drug-specific genotype interpretation algorithm. A term can
+      name a single variant, a group expression such as `MAX(...)`, or another
+      source formula whose score contributes to an algorithmic resistance call.
+      The score is preserved as source evidence about that exact drug, not as a
+      claim that the variants establish a generic biochemical resistance route.
+    attributes:
+      pathogen_label:
+        description: Virus or organism whose genotype the algorithm interprets.
+        required: true
+        range: string
+      gene:
+        description: Source gene or protein region interpreted by this rule, when known.
+        range: string
+      drug_class:
+        description: Source drug-class grouping for the exact drug.
+        required: true
+        range: string
+      algorithm_name:
+        description: Source algorithm name.
+        required: true
+        range: string
+      algorithm_version:
+        description: Source algorithm version.
+        required: true
+        range: string
+      algorithm_date:
+        description: Source algorithm release date.
+        required: true
+        range: date
+      source_record_id:
+        description: Source drug identifier this score term applies to.
+        required: true
+        range: string
+      source_rule_id:
+        description: Stable digest of this source score term.
+        required: true
+        range: string
+      score_term_index:
+        description: One-based order of this top-level score term within the source rule.
+        required: true
+        range: integer
+      score_term:
+        description: Verbatim source score formula term.
+        required: true
+        range: string
+      score_assignments:
+        description: Number of variant-to-score assignments represented inside the term.
+        required: true
+        range: integer
+      negative_score_assignments:
+        description: Number of represented score assignments with negative scores.
+        required: true
+        range: integer
+      min_score:
+        description: Lowest score assigned inside this term.
+        required: true
+        range: float
+      max_score:
+        description: Highest score assigned inside this term.
+        required: true
+        range: float
+      source:
+        description: Upstream resource owning this score-rule assertion.
+        required: true
+        range: string
+      source_version:
+        description: Version or commit of the upstream source for this score rule.
+        required: true
+        range: string
+      evidence:
+        description: Citation for this source score rule.
         required: true
         multivalued: true
         inlined_as_list: true
@@ -1308,6 +1713,14 @@ classes:
         description: Gene symbols encoding this protein or the components of this complex.
         multivalued: true
         range: string
+      protein_examples:
+        description: >-
+          Organism-specific UniProt entries illustrating a GENE_OR_PROTEIN node
+          (or component subunits of a complex node), each with the organism in
+          which its role was established.
+        multivalued: true
+        inlined_as_list: true
+        range: ProteinExample
 
   CausalEdge:
     description: An evidence-backed directed relationship in a mechanism graph.
@@ -1500,6 +1913,18 @@ enums:
       ACTIVE:
       INACTIVE:
       VARIABLE:
+      SUSCEPTIBLE:
+        description: Phenotypic AST call reported as susceptible by the source.
+      SUSCEPTIBLE_DOSE_DEPENDENT:
+        description: >-
+          Phenotypic AST call reported as susceptible-dose dependent by the
+          source.
+      INTERMEDIATE:
+        description: Phenotypic AST call reported as intermediate by the source.
+      NONSUSCEPTIBLE:
+        description: Phenotypic AST call reported as nonsusceptible by the source.
+      RESISTANT:
+        description: Phenotypic AST call reported as resistant by the source.
       INTRINSICALLY_RESISTANT:
         description: The organism is intrinsically resistant, per the source.
 

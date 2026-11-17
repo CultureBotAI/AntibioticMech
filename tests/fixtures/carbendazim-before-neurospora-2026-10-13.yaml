@@ -1,0 +1,607 @@
+identifier: CHEBI:3392
+label: carbendazim
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzimidazoles that is 2-aminobenzimidazole in
+  which the primary amino group is substituted by a methoxycarbonyl group. A fungicide,
+  carbendazim controls Ascomycetes, Fungi Imperfecti, and Basidiomycetes on a wide
+  variety of crops, including bananas, cereals, cotton, fruits, grapes, mushrooms,
+  ornamentals, peanuts, sugarbeet, soybeans, tobacco, and vegetables.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl 1H-benzimidazol-2-ylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1H-benzimidazol-2-ylcarbamic acid methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(Methoxy-carbonylamino)-benzimidazol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(methoxycarbonylamino)-benzimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(methoxycarbonylamino)benzimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-benzimidazolecarbamic acid methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BMC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Carbendazim
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MBC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mecarzole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carbendazime
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl 2-benzimidazolecarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl benzimidazol-2-ylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22715
+- CHEBI:23003
+- CHEBI:87036
+- CHEBI:87064
+- ARO:3009317
+activity_roles:
+- CHEBI:24127
+- CHEBI:86328
+structural_class: benzimidazole antifungal
+structural_class_id: ARO:3009317
+chemical_structure:
+  smiles: COC(=O)Nc1nc2ccccc2n1
+  standard_inchi: InChI=1S/C9H9N3O2/c1-14-9(13)12-8-10-6-4-2-3-5-7(6)11-8/h2-5H,1H3,(H2,10,11,12,13)
+  standard_inchi_key: TWFZGCMQGLPBSX-UHFFFAOYSA-N
+  molecular_formula: C9H9N3O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 191.19
+  monoisotopic_mass: 191.06948
+xrefs:
+- ARO:3009175
+- cas:10605-21-7
+- hmdb:HMDB0031769
+- kegg.compound:C10897
+- pesticides:carbendazim
+- ppdb:116
+- reaxys:649044
+- chembl:CHEMBL70971
+- pubchem.compound:25429
+document_xrefs:
+- patent:US3010968
+- wikipedia.en:Carbendazim
+source_concepts:
+- source: ARO
+  source_id: ARO:3009175
+  source_label: carbendazim
+  minted_identifier: antibioticmech:aro-1153d9776c
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:86328
+  source_version: '2026-08-30'
+- source: CHEBI
+  source_id: CHEBI:3392
+  source_label: carbendazim
+  minted_identifier: antibioticmech:chebi-9061c38815
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:86328
+  source_version: '2026-08-30'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009320
+  label: Botrytis cinerea beta-tubulin with mutations conferring resistance against
+    carbendazim
+  evidence:
+  - reference: ARO:3009320
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009405
+  label: Zymoseptoria tritici Cyp51 with mutations conferring resistance to carbendazim
+  evidence:
+  - reference: ARO:3009405
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009470
+  label: Colletotrichum gloeosporioides beta-tubulin with mutations conferring resistance
+    against carbendazim
+  evidence:
+  - reference: ARO:3009470
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009474
+  label: Colletotrichum siamense beta tubulin with mutations conferring resistance
+    to carbendazim
+  evidence:
+  - reference: ARO:3009474
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009475
+  label: Colletotrichum truncatum beta tubulin with mutations conferring resistance
+    to carbendazim
+  evidence:
+  - reference: ARO:3009475
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009476
+  label: Aspergillus fumigatus beta-tubulin with mutations conferring resistance to
+    carbendazim
+  evidence:
+  - reference: ARO:3009476
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009544
+  label: Aspergillus fumigatus Cyp51A with mutations conferring resistance to carbendazim
+  evidence:
+  - reference: ARO:3009544
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  label: βtub-Q134L(Q134L) (amino acid mutation) [Not assayed] associated with resistance
+    to carbendazim
+  taxon_id: NCBITaxon:117187
+  taxon_label: Fusarium verticillioides
+  strain: SJ51M
+  alteration: βtub-Q134L(Q134L) (amino acid mutation) [Not assayed]
+  phenotype_id: PHIPO:0000383
+  phenotype_label: resistance to carbendazim
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review xu-2019-sj51-subject-context:
+    The tested subject is SJ51M, not parent SJ51. W7M0I3 and TaxID 334819 identify
+    a different reference strain. The paper''s FVER_09254 locus is not crosswalked
+    to FVEG_05512 or an experimental accession. Source alteration and phenotype remain
+    unchanged; EC50 is not MIC. No experimental protein, strain TaxID or genome is
+    inferred. Original source background label: SJ51. Reference-only source identifiers:
+    strain_taxon_id=NCBITaxon:334819; protein_accession=UniProtKB:W7M0I3.'
+  evidence:
+  - reference: PMID:30732567
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:9015; joined
+      to this record by exact ChEBI identifier.
+  - reference: DOI:10.1186/s12864-019-5479-6
+    notes: 'Identifier-scope review: Results Sec5 and Sec7; Figure 2 and Table 1 distinguish
+      SJ51M from parent SJ51, UniProtKB release 2026_03: W7M0I3 entry 62, sequence
+      version 1; FVEG_05512 in M3125 / FGSC 7600, TaxID 334819. Reviewed 2026-10-08
+      by codex; curation/phibase_grounding_reviews.json SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
+- mechanism_type: UNKNOWN
+  label: Mfs2delta (deletion) associated with resistance to carbendazim
+  taxon_id: NCBITaxon:27337
+  taxon_label: Verticillium dahliae
+  strain: V592
+  alteration: Mfs2delta (deletion)
+  phenotype_id: PHIPO:0000383
+  phenotype_label: resistance to carbendazim
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fungal-2026-carbendazim-reference-context:
+    The source V592 label is retained; the paper names the parent Vd592 and separately
+    compares derivatives. G2XFG4 and TaxID 498257 describe VdLs.17 / ATCC MYA-4575
+    / FGSC 10137 reference context, not that parent or an exact tested derivative.
+    Growth-inhibition and zone observations are not converted to MIC. Source biological
+    fields remain unchanged; exact subject protein, strain TaxID and genome remain
+    unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:498257;
+    protein_accession=UniProtKB:G2XFG4.'
+  evidence:
+  - reference: PMID:42112916
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:11441; joined
+      to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/spectrum.02761-25
+    notes: 'Identifier-scope review: Results sections s3-1 and s3-7: reference locus
+      and separate tested groups; Figure 8, Parental identity in s2-1, UniProtKB release
+      2026_03: G2XFG4 entry 50, sequence version 1; VdLs.17 / ATCC MYA-4575 / FGSC
+      10137 reference taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
+- mechanism_type: UNKNOWN
+  label: TUB2(F167Y) (amino acid mutation) [Not assayed] associated with resistance
+    to carbendazim
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  strain: WL167Y
+  alteration: TUB2(F167Y) (amino acid mutation) [Not assayed]
+  gene_id: YFL037W_mRNA
+  phenotype_id: PHIPO:0000383
+  phenotype_label: resistance to carbendazim
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review li-1996-yeast-subject-group-context:
+    The source W303-1A label denotes the parent background. Primary Results designate
+    the tested group WL167Y; that designation covers two isolates and does not resolve
+    a unique clone. UniProtKB:P02557 and TaxID 559292 identify the S288c reference,
+    not the tested group. The retained YFL037W_mRNA is a reference-locus identifier,
+    not an exact experimental allele. Species TaxID 4932 is retained. The paper reports
+    IC50, not MIC; no activity measurement is added. Source alteration, phenotype
+    and assay wording are unchanged; exact subject protein, strain TaxID and genome
+    remain unresolved. Original source background label: W303-1A. Reference-only source
+    identifiers: strain_taxon_id=NCBITaxon:559292; protein_accession=UniProtKB:P02557.'
+  evidence:
+  - reference: PMID:8641470
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:3596; joined
+      to this record by exact ChEBI identifier.
+  - reference: DOI:10.1016/0014-5793(96)00334-1
+    notes: 'Identifier-scope review: Results 3.1-3.2, page 8: parent and tested-group
+      identity, Table 1, page 9: separate parent and group columns, UniProtKB release
+      2026_03: P02557 entry 224, sequence version 2; reference locus and taxonomy.
+      Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
+      e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
+- mechanism_type: UNKNOWN
+  label: βtub-T351I(T351I) (amino acid mutation) [Not assayed] associated with resistance
+    to carbendazim
+  taxon_label: Fusarium proliferatum
+  strain: HC30M
+  alteration: βtub-T351I(T351I) (amino acid mutation) [Not assayed]
+  phenotype_id: PHIPO:0000383
+  phenotype_label: resistance to carbendazim
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review xu-2019-hc30-subject-species-context:
+    Primary evidence identifies HC30M in F. proliferatum, not the source F. fujikuroi
+    assignment or parent HC30. P53374 belongs to the conflicting source species and
+    is rejected for this subject. Species identity is grounded through UniProt Taxonomy;
+    no exact experimental protein or genome is assigned. Source alteration and phenotype
+    remain unchanged; EC50 is not MIC. Original source background label: HC30. Original
+    source organism label: Fusarium fujikuroi. Rejected misassigned source identifiers:
+    taxon_id=NCBITaxon:5127; protein_accession=UniProtKB:P53374.'
+  evidence:
+  - reference: PMID:30732567
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:2162; joined
+      to this record by exact ChEBI identifier.
+  - reference: DOI:10.1186/s12864-019-5479-6
+    notes: 'Identifier-scope review: Abstract identifies HC30M as Fusarium proliferatum;
+      Results Sec5 and Figure 2 distinguish it from parent HC30, UniProt Taxonomy
+      948311, active species Gibberella intermedia with synonym Fusarium proliferatum;
+      response SHA-256 8c5698dda6b5f2f63be203d30cfec6c411cd7e206e46ee871a9c4870a4fef1f8,
+      UniProtKB release 2026_03: P53374 entry 110, sequence version 1, F. fujikuroi
+      TaxID 5127, strain comment A 102; not the reported species or subject. Reviewed
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
+  taxon_id: NCBITaxon:948311
+- mechanism_type: UNKNOWN
+  label: βTub transformant(F914-βTub(E198G)) (transformant) [Ectopic] associated with
+    resistance to carbendazim
+  taxon_id: NCBITaxon:5141
+  taxon_label: Neurospora crassa
+  strain: 74-OR31-14a
+  strain_taxon_id: NCBITaxon:367110
+  alteration: βTub transformant(F914-βTub(E198G)) (transformant) [Ectopic]
+  protein_accession: UniProtKB:P05220
+  gene_id: EAA28433
+  phenotype_id: PHIPO:0000383
+  phenotype_label: resistance to carbendazim
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:1388107
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:2858; joined
+      to this record by exact ChEBI identifier.
+- mechanism_type: UNKNOWN
+  label: β2tub-E198K(E198K) (amino acid mutation) [Wild type product level] associated
+    with resistance to carbendazim
+  taxon_id: NCBITaxon:5518
+  taxon_label: Fusarium graminearum
+  strain: '2021'
+  strain_taxon_id: NCBITaxon:229533
+  alteration: β2tub-E198K(E198K) (amino acid mutation) [Wild type product level]
+  protein_accession: UniProtKB:Q4HZS8
+  gene_id: FGRAMPH1_01T26865
+  phenotype_id: PHIPO:0000383
+  phenotype_label: resistance to carbendazim
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:21077124
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:612; joined
+      to this record by exact ChEBI identifier.
+- mechanism_type: UNKNOWN
+  label: β2tub-E198Q(E198Q) (amino acid mutation) [Wild type product level] associated
+    with resistance to carbendazim
+  taxon_id: NCBITaxon:5518
+  taxon_label: Fusarium graminearum
+  strain: '2021'
+  strain_taxon_id: NCBITaxon:229533
+  alteration: β2tub-E198Q(E198Q) (amino acid mutation) [Wild type product level]
+  protein_accession: UniProtKB:Q4HZS8
+  gene_id: FGRAMPH1_01T26865
+  phenotype_id: PHIPO:0000383
+  phenotype_label: resistance to carbendazim
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:21077124
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:612; joined
+      to this record by exact ChEBI identifier.
+- mechanism_type: UNKNOWN
+  label: β2tub-F167Y(F167Y) (amino acid mutation) [Wild type product level] associated
+    with resistance to carbendazim
+  taxon_id: NCBITaxon:5518
+  taxon_label: Fusarium graminearum
+  strain: '2021'
+  strain_taxon_id: NCBITaxon:229533
+  alteration: β2tub-F167Y(F167Y) (amino acid mutation) [Wild type product level]
+  protein_accession: UniProtKB:Q4HZS8
+  gene_id: FGRAMPH1_01T26865
+  phenotype_id: PHIPO:0000383
+  phenotype_label: resistance to carbendazim
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:21077124
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:612; joined
+      to this record by exact ChEBI identifier.
+- mechanism_type: UNKNOWN
+  label: β2tub-F200Y(F200Y) (amino acid mutation) [Wild type product level] associated
+    with resistance to carbendazim
+  taxon_id: NCBITaxon:5518
+  taxon_label: Fusarium graminearum
+  strain: '2021'
+  strain_taxon_id: NCBITaxon:229533
+  alteration: β2tub-F200Y(F200Y) (amino acid mutation) [Wild type product level]
+  protein_accession: UniProtKB:Q4HZS8
+  gene_id: FGRAMPH1_01T26865
+  phenotype_id: PHIPO:0000383
+  phenotype_label: resistance to carbendazim
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:21077124
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:612; joined
+      to this record by exact ChEBI identifier.
+- mechanism_type: UNKNOWN
+  label: β2tub-Y50C(Y50C) (amino acid mutation) [Wild type product level] associated
+    with resistance to carbendazim
+  taxon_id: NCBITaxon:5518
+  taxon_label: Fusarium graminearum
+  strain: '2021'
+  strain_taxon_id: NCBITaxon:229533
+  alteration: β2tub-Y50C(Y50C) (amino acid mutation) [Wild type product level]
+  protein_accession: UniProtKB:Q4HZS8
+  gene_id: FGRAMPH1_01T26865
+  phenotype_id: PHIPO:0000383
+  phenotype_label: resistance to carbendazim
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:21077124
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:612; joined
+      to this record by exact ChEBI identifier.
+- mechanism_type: UNKNOWN
+  label: βTub transformant(JT04-βTub(Q73R E198L)) (transformant) [Ectopic] associated
+    with resistance to carbendazim
+  taxon_id: NCBITaxon:5518
+  taxon_label: Fusarium graminearum
+  strain: '2021'
+  strain_taxon_id: NCBITaxon:229533
+  alteration: βTub transformant(JT04-βTub(Q73R E198L)) (transformant) [Ectopic]
+  protein_accession: UniProtKB:Q4HZS8
+  gene_id: FGRAMPH1_01T26865
+  phenotype_id: PHIPO:0000383
+  phenotype_label: resistance to carbendazim
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:19900007
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:612; joined
+      to this record by exact ChEBI identifier.
+- mechanism_type: UNKNOWN
+  label: βTub transformant(R9-βTub(F167Y)) (transformant) [Ectopic] associated with
+    resistance to carbendazim
+  taxon_id: NCBITaxon:5518
+  taxon_label: Fusarium graminearum
+  strain: '2021'
+  strain_taxon_id: NCBITaxon:229533
+  alteration: βTub transformant(R9-βTub(F167Y)) (transformant) [Ectopic]
+  protein_accession: UniProtKB:Q4HZS8
+  gene_id: FGRAMPH1_01T26865
+  phenotype_id: PHIPO:0000383
+  phenotype_label: resistance to carbendazim
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:19900007
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:612; joined
+      to this record by exact ChEBI identifier.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T04:31:15Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:43:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T01:54:59Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T02:17:15Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: resistance_mechanisms (PHIBASE 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8).
+    Upstream retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-08T12:47:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Resolved the reported yeast subject-group label, preserving its parent
+    background; withheld S288c reference protein and strain TaxID from subject identity.
+    Group is not a uniquely resolved clone; source phenotype and alteration unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T13:24:16Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after twelve reference-scope
+    corrections; biological fields, activities and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:01:29Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after nine identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:40:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Scoped source protein and reference-strain identifiers to provenance after
+    primary-paper review; parent labels, source biological claims and gene IDs retained.
+    No experimental allele, genome or activity measurement inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T15:08:41Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after eight subject-identity
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:11:58Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Darlington subject
+    correction; prior review decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:44:03Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Nakayama reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T20:35:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Duan reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:06:58Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Piotrowska parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:54:39Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Corrected tested subject labels and the HC30 species context from primary
+    evidence; preserved parent labels and source reference identifiers in provenance.
+    Allele wording, phenotype and activities unchanged; no experimental protein inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:27:16Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Shima parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:54:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Mehrabi parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T23:22:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Huang parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T00:15:04Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the HDF1 subject-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T04:34:48Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Fouche parent-cohort
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T05:46:23Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the SDH8 reference-alias
+    correction; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T10:41:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
+    review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-12T20:12:16Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after four reference-identifier
+    scope corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true

@@ -59,13 +59,89 @@ extract-phibase *args:
 extract-phibase-dry *args:
     uv run python scripts/extract_phibase_amr.py --dry-run {{args}}
 
+# Census the corpus and audit PHI-base references; offline unless explicitly enabled.
+audit-resistance-grounding *args:
+    uv run python scripts/audit_resistance_grounding.py {{args}}
+
+# Audit CARD assertions against explicit UniProt reference links (offline by default).
+audit-card-grounding *args:
+    uv run python scripts/audit_card_grounding.py {{args}}
+
+# Verify HIVDB source-region context without assigning experimental alleles.
+audit-hivdb-grounding *args:
+    uv run python scripts/audit_hivdb_grounding.py {{args}}
+
+# Bounded citation discovery for ungrounded resistance records; offline by default.
+discover-resistance-literature *args:
+    uv run python scripts/discover_resistance_literature.py {{args}}
+
+# Expand citation discovery to every record's provenance-bearing names.
+discover-resistance-aliases *args:
+    uv run python scripts/discover_resistance_aliases.py {{args}}
+
+# Resume citation-only cursor expansion of truncated name searches; offline by default.
+expand-resistance-discovery *args:
+    uv run python scripts/expand_resistance_discovery.py {{args}}
+
 # Evaluate CRyPTIC phenotypes without attaching name-only drug codes to records.
 evaluate-cryptic *args:
     uv run --extra source-ingest python scripts/evaluate_cryptic_activity.py {{args}}
 
+# Recover per-group CRyPTIC source-isolate/sequencing membership without seeding.
+evaluate-cryptic-membership *args:
+    uv run --extra source-ingest python scripts/evaluate_cryptic_membership.py {{args}}
+
+# Stage normalized membership inputs; --apply requires the staged-cohort review.
+extract-cryptic-memberships *args:
+    uv run --extra source-ingest python scripts/extract_cryptic_memberships.py {{args}}
+
+# Independently check production membership, optionally against raw files and pages.
+audit-cryptic-memberships *args:
+    uv run --extra source-ingest python scripts/audit_cryptic_memberships.py {{args}}
+
+# Evaluate Stanford HIVDB hivfacts drugs without seeding resistance assertions.
+evaluate-hivdb *args:
+    uv run python scripts/evaluate_hivdb_hivfacts.py {{args}}
+
 # Compare AMRFinderPlus families/classes with the committed ARO resistance slice.
 evaluate-amrfinder *args:
     uv run python scripts/evaluate_amrfinderplus.py {{args}}
+
+# Download count-checked AST measurements or linked isolate metadata with a checksum manifest.
+fetch-ncbi-ast *args:
+    uv run python scripts/fetch_ncbi_ast.py {{args}}
+
+# Snapshot NCBI taxonomy lineages for the exact AST report plus the CRyPTIC complex.
+fetch-ncbi-ast-taxonomy *args:
+    uv run python scripts/ncbi_ast_taxonomy.py {{args}}
+
+# Check repeated genome-target exports against original BioSample antibiograms.
+review-ncbi-ast-biosamples *args:
+    uv run python scripts/ncbi_ast_biosamples.py {{args}}
+
+# Rebuild the BioSample review and validate all consolidated observations without seeding.
+audit-ncbi-ast-biosamples *args:
+    uv run python scripts/audit_ncbi_ast_biosamples.py {{args}}
+
+# Exercise full AST record writes and rendering in a private reports/ directory.
+audit-ncbi-ast-publication *args:
+    uv run python scripts/audit_ncbi_ast_publication.py {{args}}
+
+# Evaluate an NCBI Pathogen Detection AST export and optional curated structure crosswalk.
+evaluate-ncbi-ast *args:
+    uv run python scripts/evaluate_ncbi_ast.py {{args}}
+
+# Compare rebuilt AST reports with the adopted CRyPTIC phenotype/sample membership.
+audit-ncbi-ast-overlap *args:
+    uv run --extra source-ingest python scripts/audit_ncbi_ast_overlap.py {{args}}
+
+# Apply the pinned assay review before an AST inventory is eligible for seeding.
+review-ncbi-ast *args:
+    uv run python scripts/review_ncbi_ast_activity.py {{args}}
+
+# Evaluate BacDive v2 fetch exports without attaching name-only antibiotics to records.
+evaluate-bacdive *args:
+    uv run python scripts/evaluate_bacdive_activity.py {{args}}
 
 # Find exact-ligand PDB entries that overlap established BindingDB UniProt targets.
 evaluate-rcsb-pdb *args:
@@ -231,3 +307,16 @@ embed-map *args:
 # The authoritative quality gate used both locally and in CI.
 qc:
     uv run --extra chemical-map python scripts/run_qc.py
+
+# Validate retained structured review bundles and their route/profile contract.
+review-check:
+    uv run python scripts/record_review.py check
+    uv run pytest -q tests/test_record_review_contract.py
+
+# Validate an assessed review before immutable persistence.
+review-validate +paths:
+    uv run python scripts/record_review.py validate {{paths}}
+
+# Save authoritative YAML and derived Markdown without staging or committing.
+review-save content:
+    uv run python scripts/record_review.py save --content {{content}}

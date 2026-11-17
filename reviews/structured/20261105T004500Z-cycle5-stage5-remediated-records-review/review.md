@@ -1,0 +1,903 @@
+# Cycle 5 Stage 5 post-remediation review of 15 remediated AntibioticRecord files (Issues #1320, #1321, #1322)
+
+- Review: 20261105T004500Z-cycle5-stage5-remediated-records-review
+- Repository: culturebotai/AntibioticMech
+- Started UTC: 2026-11-05T00:35:00Z
+- Finished UTC: 2026-11-05T00:45:00Z
+- Reviewer: Antigravity (self_review)
+- Completion: completed
+- Verdict: pass
+- Scientific review: true
+
+## Summary
+
+Post-remediation batch review of the 15 AntibioticRecord YAML files updated in Cycle 5 Stage 5 to resolve all 3 open Stage 4 record and category review findings: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion (Issue #1320, 5 records: pentabromopseudilin CHEBI:70619, taromycin A CHEBI:219845, pneumocandin A0 CHEBI:198520, rustmicin CHEBI:206910 including companion single-record review 20261104T152500Z-rustmicin-record-review, and soraphen A CHEBI:9200), cycle5-stage1-proposed-exact-natural-products-missing-mechanism-and-targets (Issue #1321, 5 records: naphthomycin A CHEBI:197824, resistomycin CHEBI:29671, micacocidin CHEBI:198957, kendomycin CHEBI:191052, and endophenazine A CHEBI:218214), and seeded-exact-fluoroquinolones-with-card-only-targets-awaiting-primary-literature-promotion (Issue #1322, 5 records: cinoxacin CHEBI:3716, Grepafloxacin CHEBI:5543, moxifloxacin CHEBI:63611, sparfloxacin CHEBI:9212, and lomefloxacin CHEBI:116278). Verified that all 15 EXACT ChEBI records carry complete single-molecule chemical_structure, curated biosynthesis_origin, curator-verified mode_of_action and mode_of_action_target_scope, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed Swiss-Prot UniProtKB protein_examples on pneumocandin A0, rustmicin, soraphen A, cinoxacin, Grepafloxacin, moxifloxacin, sparfloxacin, and lomefloxacin, and documented held_targets rationales on pentabromopseudilin, taromycin A, naphthomycin A, resistomycin, micacocidin, kendomycin, and endophenazine A in curation/uniprot_protein_examples.yaml), and are promoted to curation_status: REVIEWED (raising corpus REVIEWED count from 112 to 127 and reducing the review-readiness worklist from 2,952 to 2,937).
+
+## Scope And Provenance
+
+Complete post-remediation review of all 15 AntibioticRecord YAML files modified in Cycle 5 Stage 5 across resolved finding groups 1-3 (Issues #1320, #1321, #1322).
+
+Selection: All 15 records in Cycle 5 Stage 5 resolved finding groups (Issues #1320, #1321, #1322).
+Coverage: full; 15 reviewed / 15 in the declared population.
+Source: working_tree at Git base bc39eed026559647f7bea8543ea5baaf6f21e687.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:70619 | data/antibiotics/antibacterial/pentabromopseudilin.yaml | maintained | pentabromopseudilin |
+| CHEBI:219845 | data/antibiotics/antibacterial/taromycin-a.yaml | maintained | taromycin A |
+| CHEBI:198520 | data/antibiotics/antifungal/pneumocandin-a0.yaml | maintained | pneumocandin A0 |
+| CHEBI:206910 | data/antibiotics/antifungal/rustmicin.yaml | maintained | rustmicin |
+| CHEBI:9200 | data/antibiotics/antifungal/soraphen-a.yaml | maintained | soraphen A |
+| CHEBI:197824 | data/antibiotics/antibacterial/naphthomycin-a.yaml | maintained | naphthomycin A |
+| CHEBI:29671 | data/antibiotics/antibacterial/resistomycin.yaml | maintained | resistomycin |
+| CHEBI:198957 | data/antibiotics/antibacterial/micacocidin.yaml | maintained | micacocidin |
+| CHEBI:191052 | data/antibiotics/antibacterial/kendomycin.yaml | maintained | kendomycin |
+| CHEBI:218214 | data/antibiotics/antibacterial/endophenazine-a.yaml | maintained | endophenazine A |
+| CHEBI:3716 | data/antibiotics/antibacterial/cinoxacin.yaml | maintained | cinoxacin |
+| CHEBI:5543 | data/antibiotics/antibacterial/grepafloxacin.yaml | maintained | Grepafloxacin |
+| CHEBI:63611 | data/antibiotics/antibacterial/moxifloxacin.yaml | maintained | moxifloxacin |
+| CHEBI:9212 | data/antibiotics/antibacterial/sparfloxacin.yaml | maintained | sparfloxacin |
+| CHEBI:116278 | data/antibiotics/antimycobacterial/lomefloxacin.yaml | maintained | lomefloxacin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Closed-schema and OAK ontology-label validation | passed | True | CHEBI:70619, CHEBI:219845, CHEBI:198520, CHEBI:206910, CHEBI:9200, CHEBI:197824, CHEBI:29671, CHEBI:198957, CHEBI:191052, CHEBI:218214, CHEBI:3716, CHEBI:5543, CHEBI:63611, CHEBI:9212, CHEBI:116278 | All 3,064 corpus records, including the 15 remediated records, pass closed LinkML schema validation and OAK label correspondence with 0 errors. |
+| Full corpus seed reproduction check | passed | True | CHEBI:70619, CHEBI:219845, CHEBI:198520, CHEBI:206910, CHEBI:9200, CHEBI:197824, CHEBI:29671, CHEBI:198957, CHEBI:191052, CHEBI:218214, CHEBI:3716, CHEBI:5543, CHEBI:63611, CHEBI:9212, CHEBI:116278 | All 3,064 records reproduce byte-for-byte from data/raw/ plus curator inputs with 0 missing, 0 unexpected, and 0 drifted fields. |
+| UniProt protein examples and causal graphs curation test suites | passed | True | CHEBI:70619, CHEBI:219845, CHEBI:198520, CHEBI:206910, CHEBI:9200, CHEBI:197824, CHEBI:29671, CHEBI:198957, CHEBI:191052, CHEBI:218214, CHEBI:3716, CHEBI:5543, CHEBI:63611, CHEBI:9212, CHEBI:116278 | All tests across test_uniprot_protein_examples.py, test_causal_graphs_curation.py, test_review_readiness_queue.py, and test_embeddings.py pass with exit code 0. |
+
+## Scientific And Domain Assessments
+
+### Promotion of 5 PROPOSED+EXACT records (pentabromopseudilin, taromycin A, pneumocandin A0, rustmicin, soraphen A) with complete mechanism and target curation to REVIEWED
+
+completeness: supported. Targets: CHEBI:70619, CHEBI:219845, CHEBI:198520, CHEBI:206910, CHEBI:9200.
+
+All 5 Group 1 records (pentabromopseudilin CHEBI:70619, taromycin A CHEBI:219845, pneumocandin A0 CHEBI:198520, rustmicin CHEBI:206910, and soraphen A CHEBI:9200) carry exact single-molecule ChEBI structures, curated biosynthesis_origin (NATURAL_PRODUCT), curator-settled mode_of_action and mode_of_action_target_scope, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed Swiss-Prot UniProtKB protein_examples on pneumocandin A0 [UniProtKB:P38631, UniProtKB:P40989], rustmicin [UniProtKB:P36107, UniProtKB:O13332], and soraphen A [UniProtKB:Q00955], and documented held_targets rationales on pentabromopseudilin and taromycin A GO:0005886 MEMBRANE targets in curation/uniprot_protein_examples.yaml), and are promoted to curation_status: REVIEWED with PROMOTED_TO_REVIEWED curation events.
+
+### Population of mode_of_action, PRIMARY_LITERATURE molecular_targets, and REVIEWED promotion on 5 Cycle 5 Stage 1 EXACT natural products
+
+completeness: supported. Targets: CHEBI:197824, CHEBI:29671, CHEBI:198957, CHEBI:191052, CHEBI:218214.
+
+All 5 Cycle 5 Stage 1 EXACT natural-product records (naphthomycin A CHEBI:197824, resistomycin CHEBI:29671, micacocidin CHEBI:198957, kendomycin CHEBI:191052, and endophenazine A CHEBI:218214) now carry curated mode_of_action, mode_of_action_target_scope: MICROBIAL_TARGET, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS, NCBITaxon:2 Bacteria, with all 5 downstream biological-process targets documented in curation/uniprot_protein_examples.yaml held_targets), and are promoted to curation_status: REVIEWED.
+
+### Population of PRIMARY_LITERATURE molecular_targets, reviewed UniProtKB protein_examples, and REVIEWED promotion on 5 SEEDED/EXACT quinolones and fluoroquinolones
+
+completeness: supported. Targets: CHEBI:3716, CHEBI:5543, CHEBI:63611, CHEBI:9212, CHEBI:116278.
+
+All 5 Group 3 EXACT quinolone and fluoroquinolone records (cinoxacin CHEBI:3716, Grepafloxacin CHEBI:5543, moxifloxacin CHEBI:63611, sparfloxacin CHEBI:9212, and lomefloxacin CHEBI:116278) now carry biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action_target_scope, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) molecular_targets (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET, NCBITaxon:2 Bacteria) with 4 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples per record (UniProtKB:P0AES4 gyrA, UniProtKB:P0AES6 gyrB, UniProtKB:P0AFI2 parC, UniProtKB:P20083 parE; 20 total across the 5 records, citing DOI:10.1128/AAC.45.12.3544-3547.2001 / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin), and are promoted from SEEDED to REVIEWED.
+
+## Findings
+
+### proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion: Promoted 5 PROPOSED+EXACT records (pentabromopseudilin, taromycin A, pneumocandin A0, rustmicin, soraphen A) with complete primary mechanism and target curation to REVIEWED
+
+major / resolved / confirmed; issue key: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion.
+
+Promoted CHEBI:70619 (pentabromopseudilin), CHEBI:219845 (taromycin A), CHEBI:198520 (pneumocandin A0), CHEBI:206910 (rustmicin), and CHEBI:9200 (soraphen A) from PROPOSED to REVIEWED via record_curation_event (PROMOTED_TO_REVIEWED) and write_validated_antibiotic, and registered their held_records entries in curation/causal_graphs.yaml.
+
+Disposition: Resolved in Cycle 5 Stage 5 (Issue #1320): promoted pentabromopseudilin (CHEBI:70619), taromycin A (CHEBI:219845), pneumocandin A0 (CHEBI:198520), rustmicin (CHEBI:206910), and soraphen A (CHEBI:9200) from PROPOSED to REVIEWED.
+
+### cycle5-stage1-proposed-exact-natural-products-missing-mechanism-and-targets: Populated mode_of_action, PRIMARY_LITERATURE molecular_targets, and promoted 5 Cycle 5 Stage 1 EXACT natural products to REVIEWED
+
+major / resolved / confirmed; issue key: cycle5-stage1-proposed-exact-natural-products-missing-mechanism-and-targets.
+
+Curated mode_of_action, mode_of_action_target_scope: MICROBIAL_TARGET, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS, NCBITaxon:2 Bacteria, with all 5 downstream biological-process targets documented in curation/uniprot_protein_examples.yaml held_targets), and promoted all 5 records from PROPOSED to REVIEWED via record_curation_event and write_validated_antibiotic.
+
+Disposition: Resolved in Cycle 5 Stage 5 (Issue #1321): curated mode_of_action and PRIMARY_LITERATURE molecular_targets and promoted all 5 Cycle 5 Stage 1 EXACT natural products to REVIEWED.
+
+### seeded-exact-fluoroquinolones-with-card-only-targets-awaiting-primary-literature-promotion: Populated PRIMARY_LITERATURE molecular_targets, reviewed UniProtKB protein_examples, and promoted 5 EXACT quinolones and fluoroquinolones to REVIEWED
+
+major / resolved / confirmed; issue key: seeded-exact-fluoroquinolones-with-card-only-targets-awaiting-primary-literature-promotion.
+
+Curated biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action_target_scope, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) molecular_targets (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET, NCBITaxon:2 Bacteria; DOI:10.1128/AAC.45.12.3544-3547.2001 / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin) with 20 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083 on each record) across cinoxacin (CHEBI:3716), Grepafloxacin (CHEBI:5543), moxifloxacin (CHEBI:63611), sparfloxacin (CHEBI:9212), and lomefloxacin (CHEBI:116278) via apply_uniprot_examples_plan, and promoted all 5 records from SEEDED to REVIEWED via record_curation_event and write_validated_antibiotic.
+
+Disposition: Resolved in Cycle 5 Stage 5 (Issue #1322): populated PRIMARY_LITERATURE molecular_targets and reviewed UniProtKB protein_examples and promoted all 5 EXACT ChEBI quinolones and fluoroquinolones to REVIEWED.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| remediated-records-content | curation/record_review_queue.tsv; 15 remediated YAML records and refreshed review-readiness worklist (2,937 items) | supports | All 15 records were updated through native validated writers (write_validated_antibiotic, apply_uniprot_examples_plan, record_curation_event): 5 Group 1 PROPOSED/EXACT records (pentabromopseudilin CHEBI:70619, taromycin A CHEBI:219845, pneumocandin A0 CHEBI:198520, rustmicin CHEBI:206910, soraphen A CHEBI:9200) promoted to REVIEWED; 5 Group 2 Cycle 5 Stage 1 PROPOSED/EXACT natural products (naphthomycin A CHEBI:197824, resistomycin CHEBI:29671, micacocidin CHEBI:198957, kendomycin CHEBI:191052, endophenazine A CHEBI:218214) populated with curated mode_of_action and PRIMARY_LITERATURE molecular_targets (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS, documented in curation/uniprot_protein_examples.yaml held_targets) and promoted to REVIEWED; and 5 Group 3 SEEDED/EXACT quinolones/fluoroquinolones (cinoxacin CHEBI:3716, Grepafloxacin CHEBI:5543, moxifloxacin CHEBI:63611, sparfloxacin CHEBI:9212, lomefloxacin CHEBI:116278) populated with biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action, and PRIMARY_LITERATURE molecular_targets (bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)) with 20 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples and promoted to REVIEWED (raising corpus REVIEWED count from 112 to 127 and reducing the review-readiness queue from 2,952 to 2,937). |
+| validate-strict-pass | scripts/validate_strict.py; 3064 files scanned, 0 files with ERROR, 0 total ERROR rows | supports | Closed-mode LinkML validation and OAK ontology label verification pass across all 3,064 records. |
+| verify-corpus-pass | scripts/verify_corpus.py; records expected: 3064, on disk: 3064, missing: 0, unexpected: 0, drifted fields: 0 | supports | Every curator-owned edit on the 15 remediated records survives seed_from_sources.py reproduction without drift. |
+| primary-literature-sources | PMID:38377384, PMID:24449899, PMID:1490879, PMID:7809096, PMID:9614099, PMID:15550663, PMID:8119858, PMID:3997669, PMID:4978971, PMID:1106088, PMID:12033902, PMID:9589068, PMID:26795276, PMID:10805582, PMID:12458770, PMID:19270122, PMID:11709337, PMID:2158274; Primary experimental mechanism and target studies cited across the 15 remediated records | supports | Primary studies support REVIEWED promotion on the 5 Group 1 records (pentabromopseudilin DOI:10.1021/acschembio.3c00773 / PMID:38377384, taromycin A DOI:10.1073/pnas.1319584111 / PMID:24449899, pneumocandin A0 DOI:10.7164/antibiotics.45.1886 / PMID:1490879 and DOI:10.1073/pnas.91.26.12907 / PMID:7809096, rustmicin DOI:10.1074/jbc.273.24.14942 / PMID:9614099, soraphen A DOI:10.1126/science.1103399 / PMID:15550663 and DOI:10.7164/antibiotics.47.23 / PMID:8119858), mode_of_action, PRIMARY_LITERATURE molecular_targets, and REVIEWED promotion on the 5 Cycle 5 Stage 1 natural products (naphthomycin A DOI:10.7164/antibiotics.38.230 / PMID:3997669 and DOI:10.1007/BF00409749 / PMID:4978971, resistomycin DOI:10.1002/jobm.19750150603 / PMID:1106088 and DOI:10.1021/ja026369d / PMID:12033902, micacocidin DOI:10.7164/antibiotics.51.323 / PMID:9589068 and DOI:10.7164/antibiotics.51.328, kendomycin DOI:10.1371/journal.pone.0146165 / PMID:26795276 and DOI:10.7164/antibiotics.53.199 / PMID:10805582, endophenazine A DOI:10.7164/antibiotics.55.802 / PMID:12458770 and DOI:10.1128/AEM.02738-08 / PMID:19270122), and PRIMARY_LITERATURE bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) molecular_targets with reviewed E. coli K-12 UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) and REVIEWED promotion on the 5 EXACT quinolones/fluoroquinolones (cinoxacin, Grepafloxacin, moxifloxacin, sparfloxacin, and lomefloxacin; DOI:10.1128/AAC.45.12.3544-3547.2001 / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin). |
+
+## Limits And Additional Notes
+
+- All 15 newly promoted REVIEWED records are registered in curation/causal_graphs.yaml held_records (bringing total held_records to 53) awaiting multi-step primary-literature causal_graphs in a subsequent Stage 2 goal.
+- Original Cycle 5 Stage 4 review bundles (20261104T152500Z-rustmicin-record-review and 20261104T152600Z-cycle5-frozen-inventory-cohort-review) are preserved byte-for-byte.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261105T004500Z-cycle5-stage5-remediated-records-review
+kind: batch
+repository: culturebotai/AntibioticMech
+title: 'Cycle 5 Stage 5 post-remediation review of 15 remediated AntibioticRecord
+  files (Issues #1320, #1321, #1322)'
+started_at: '2026-11-05T00:35:00Z'
+finished_at: '2026-11-05T00:45:00Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  independence: self_review
+  independence_basis: Cycle 5 Stage 5 post-remediation verification review of the
+    15 remediated records prior to independent adversarial PR review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass
+native_verdict: PASS
+scientific_review: true
+summary: 'Post-remediation batch review of the 15 AntibioticRecord YAML files updated
+  in Cycle 5 Stage 5 to resolve all 3 open Stage 4 record and category review findings:
+  proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion (Issue #1320,
+  5 records: pentabromopseudilin CHEBI:70619, taromycin A CHEBI:219845, pneumocandin
+  A0 CHEBI:198520, rustmicin CHEBI:206910 including companion single-record review
+  20261104T152500Z-rustmicin-record-review, and soraphen A CHEBI:9200), cycle5-stage1-proposed-exact-natural-products-missing-mechanism-and-targets
+  (Issue #1321, 5 records: naphthomycin A CHEBI:197824, resistomycin CHEBI:29671,
+  micacocidin CHEBI:198957, kendomycin CHEBI:191052, and endophenazine A CHEBI:218214),
+  and seeded-exact-fluoroquinolones-with-card-only-targets-awaiting-primary-literature-promotion
+  (Issue #1322, 5 records: cinoxacin CHEBI:3716, Grepafloxacin CHEBI:5543, moxifloxacin
+  CHEBI:63611, sparfloxacin CHEBI:9212, and lomefloxacin CHEBI:116278). Verified that
+  all 15 EXACT ChEBI records carry complete single-molecule chemical_structure, curated
+  biosynthesis_origin, curator-verified mode_of_action and mode_of_action_target_scope,
+  and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets
+  (with reviewed Swiss-Prot UniProtKB protein_examples on pneumocandin A0, rustmicin,
+  soraphen A, cinoxacin, Grepafloxacin, moxifloxacin, sparfloxacin, and lomefloxacin,
+  and documented held_targets rationales on pentabromopseudilin, taromycin A, naphthomycin
+  A, resistomycin, micacocidin, kendomycin, and endophenazine A in curation/uniprot_protein_examples.yaml),
+  and are promoted to curation_status: REVIEWED (raising corpus REVIEWED count from
+  112 to 127 and reducing the review-readiness worklist from 2,952 to 2,937).'
+source:
+  git_revision: bc39eed026559647f7bea8543ea5baaf6f21e687
+  state: working_tree
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    role: context
+    sha256: 4c438f137570d6c75a208422f04c0ad21873f5ee467f230a43ec8ed9709d2178
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    role: context
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+  - path: curation/causal_graphs.yaml
+    role: context
+    sha256: 1df9c01698a7681f9524f991212b8fe12c9c4736427d85dbec433a334b2bc8e0
+  - path: curation/curator_antibiotics.tsv
+    role: context
+    sha256: 78b63b403fd2c96f428b6cd37010b24d853a777199109c93db946c469878680d
+  - path: curation/cycle5_stage5_review_remediation_transition.json
+    role: context
+    sha256: 6278fc9de9ab3b1ceb3718f2760893b6e624f35e8fc362d65e713407c1de956b
+  - path: curation/record_review_queue.tsv
+    role: context
+    sha256: 540b92c8691c08813862fc5f8495bdb9d9e8c619bca5ae04e88321c939101683
+  - path: curation/uniprot_protein_examples.yaml
+    role: context
+    sha256: e7552fa9302bc985a7ea2b40c4e469255f104eb9000b60cc1a3853748827a44c
+  - path: curation/uniprot_protein_examples_transition.json
+    role: context
+    sha256: ae82243e571fd68591a17a2adf28a493267a01c3bf12f9eea9286c59eb75d584
+  - path: data/antibiotics/antibacterial/cinoxacin.yaml
+    role: target
+    sha256: fb8767b0c6513de1781f5c0285d09651a8771e1f5dc7b28cf79a2a1c1367262e
+  - path: data/antibiotics/antibacterial/endophenazine-a.yaml
+    role: target
+    sha256: a8da1829a29ba6ffa3712a8016dd59b45c03c2b97156de455d28d1f3bf9444f5
+  - path: data/antibiotics/antibacterial/grepafloxacin.yaml
+    role: target
+    sha256: cd89f5ff4f26ea1138f4de0a8062a8c0ac94f205726746569f668bbf4c734f3d
+  - path: data/antibiotics/antibacterial/kendomycin.yaml
+    role: target
+    sha256: 8ddd9014c496799869cf0941e4b3ba2d9a875891a7b5003ca26886b8bacd54f2
+  - path: data/antibiotics/antibacterial/micacocidin.yaml
+    role: target
+    sha256: 0ae791e034071b7b03224703dbccb6e64b51d296873fb68df544709d8d56def9
+  - path: data/antibiotics/antibacterial/moxifloxacin.yaml
+    role: target
+    sha256: 8aa3d4ea17d1ba14aade07ff09bbf513348b7a9962387543c4e4143f6b4f7bbe
+  - path: data/antibiotics/antibacterial/naphthomycin-a.yaml
+    role: target
+    sha256: 9ce2da1f7b19ad2461b112d2c64357475ef954ba1709514fdcbecf43635e67a5
+  - path: data/antibiotics/antibacterial/pentabromopseudilin.yaml
+    role: target
+    sha256: 9da2f52d5e33e183e9528fa9c936956f4918ea06031efc4d1a4c2de1155d59de
+  - path: data/antibiotics/antibacterial/resistomycin.yaml
+    role: target
+    sha256: 8f1a2f80b24278c2a3f26fed0d90e3a81ee621225e5cdca652ea26e6fc6b2388
+  - path: data/antibiotics/antibacterial/sparfloxacin.yaml
+    role: target
+    sha256: 90b5240f8e85616e841941b714e95c44ea719875175739ad838c7493b100d892
+  - path: data/antibiotics/antibacterial/taromycin-a.yaml
+    role: target
+    sha256: 3002711ea3d3359a35d3bcb311d9108150a7f108793e14e6dd25a6978ce091ab
+  - path: data/antibiotics/antifungal/pneumocandin-a0.yaml
+    role: target
+    sha256: 7955d6b30e3c450e1a09d652f7b8f57e9ffb2f6672caee02132e9ba98ed2e085
+  - path: data/antibiotics/antifungal/rustmicin.yaml
+    role: target
+    sha256: 3e45ef64bf7ec6b8a8188c534cac55b9e1bba85df2794e40aa8122caef117855
+  - path: data/antibiotics/antifungal/soraphen-a.yaml
+    role: target
+    sha256: a35a23bb0f08116f5afd4b4e4d48000e970ebc21ac870ef6c521b37397b0fb95
+  - path: data/antibiotics/antimycobacterial/lomefloxacin.yaml
+    role: target
+    sha256: 8e69ef26d0c69e0a796af949885d6aeb55bda5e2dc2a609ab7aa431fbe708548
+  - path: scripts/curation_worklist.py
+    role: context
+    sha256: 692fdcc39a0c8135c89b483a19ab0a428bfac3d851ff67a6a1ceac80225a2430
+  - path: scripts/seed_from_sources.py
+    role: context
+    sha256: 53cf79eb1417ff7758a94f2d18ac1ce47b0f8c91c8961023363cf37698d4a056
+  - path: scripts/validate_strict.py
+    role: context
+    sha256: d70e6739c881260927dfc99abea16e56be0f34f353f9f95353a43da76e8e7217
+  - path: scripts/verify_corpus.py
+    role: context
+    sha256: 7d881f9b4e17b02d7f3ec3eb48404ad0a41a0cefa915edc9a442f755b834df78
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    role: context
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+scope:
+  description: 'Complete post-remediation review of all 15 AntibioticRecord YAML files
+    modified in Cycle 5 Stage 5 across resolved finding groups 1-3 (Issues #1320,
+    #1321, #1322).'
+  selection: 'All 15 records in Cycle 5 Stage 5 resolved finding groups (Issues #1320,
+    #1321, #1322).'
+  coverage: full
+  population_size: 15
+  reviewed_target_ids:
+  - CHEBI:70619
+  - CHEBI:219845
+  - CHEBI:198520
+  - CHEBI:206910
+  - CHEBI:9200
+  - CHEBI:197824
+  - CHEBI:29671
+  - CHEBI:198957
+  - CHEBI:191052
+  - CHEBI:218214
+  - CHEBI:3716
+  - CHEBI:5543
+  - CHEBI:63611
+  - CHEBI:9212
+  - CHEBI:116278
+targets:
+- target_id: CHEBI:70619
+  path: data/antibiotics/antibacterial/pentabromopseudilin.yaml
+  label: pentabromopseudilin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/pentabromopseudilin.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:219845
+  path: data/antibiotics/antibacterial/taromycin-a.yaml
+  label: taromycin A
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/taromycin-a.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:198520
+  path: data/antibiotics/antifungal/pneumocandin-a0.yaml
+  label: pneumocandin A0
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/pneumocandin-a0.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:206910
+  path: data/antibiotics/antifungal/rustmicin.yaml
+  label: rustmicin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/rustmicin.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:9200
+  path: data/antibiotics/antifungal/soraphen-a.yaml
+  label: soraphen A
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/soraphen-a.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:197824
+  path: data/antibiotics/antibacterial/naphthomycin-a.yaml
+  label: naphthomycin A
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/naphthomycin-a.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:29671
+  path: data/antibiotics/antibacterial/resistomycin.yaml
+  label: resistomycin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/resistomycin.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:198957
+  path: data/antibiotics/antibacterial/micacocidin.yaml
+  label: micacocidin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/micacocidin.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:191052
+  path: data/antibiotics/antibacterial/kendomycin.yaml
+  label: kendomycin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/kendomycin.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:218214
+  path: data/antibiotics/antibacterial/endophenazine-a.yaml
+  label: endophenazine A
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/endophenazine-a.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:3716
+  path: data/antibiotics/antibacterial/cinoxacin.yaml
+  label: cinoxacin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/cinoxacin.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:5543
+  path: data/antibiotics/antibacterial/grepafloxacin.yaml
+  label: Grepafloxacin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/grepafloxacin.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:63611
+  path: data/antibiotics/antibacterial/moxifloxacin.yaml
+  label: moxifloxacin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/moxifloxacin.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:9212
+  path: data/antibiotics/antibacterial/sparfloxacin.yaml
+  label: sparfloxacin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/sparfloxacin.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:116278
+  path: data/antibiotics/antimycobacterial/lomefloxacin.yaml
+  label: lomefloxacin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antimycobacterial/lomefloxacin.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+checks:
+- check_id: strict-schema-remediated-records
+  name: Closed-schema and OAK ontology-label validation
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py --quiet
+  exit_code: 0
+  summary: All 3,064 corpus records, including the 15 remediated records, pass closed
+    LinkML schema validation and OAK label correspondence with 0 errors.
+  target_ids:
+  - CHEBI:70619
+  - CHEBI:219845
+  - CHEBI:198520
+  - CHEBI:206910
+  - CHEBI:9200
+  - CHEBI:197824
+  - CHEBI:29671
+  - CHEBI:198957
+  - CHEBI:191052
+  - CHEBI:218214
+  - CHEBI:3716
+  - CHEBI:5543
+  - CHEBI:63611
+  - CHEBI:9212
+  - CHEBI:116278
+  evidence_ids:
+  - validate-strict-pass
+  - remediated-records-content
+- check_id: corpus-reproduction-remediated-records
+  name: Full corpus seed reproduction check
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/verify_corpus.py
+  exit_code: 0
+  summary: All 3,064 records reproduce byte-for-byte from data/raw/ plus curator inputs
+    with 0 missing, 0 unexpected, and 0 drifted fields.
+  target_ids:
+  - CHEBI:70619
+  - CHEBI:219845
+  - CHEBI:198520
+  - CHEBI:206910
+  - CHEBI:9200
+  - CHEBI:197824
+  - CHEBI:29671
+  - CHEBI:198957
+  - CHEBI:191052
+  - CHEBI:218214
+  - CHEBI:3716
+  - CHEBI:5543
+  - CHEBI:63611
+  - CHEBI:9212
+  - CHEBI:116278
+  evidence_ids:
+  - verify-corpus-pass
+  - remediated-records-content
+- check_id: uniprot-and-causal-graphs-pytest
+  name: UniProt protein examples and causal graphs curation test suites
+  status: passed
+  required: true
+  command: .venv/bin/python -m pytest -q tests/test_uniprot_protein_examples.py tests/test_causal_graphs_curation.py
+    tests/test_review_readiness_queue.py tests/test_embeddings.py
+  exit_code: 0
+  summary: All tests across test_uniprot_protein_examples.py, test_causal_graphs_curation.py,
+    test_review_readiness_queue.py, and test_embeddings.py pass with exit code 0.
+  target_ids:
+  - CHEBI:70619
+  - CHEBI:219845
+  - CHEBI:198520
+  - CHEBI:206910
+  - CHEBI:9200
+  - CHEBI:197824
+  - CHEBI:29671
+  - CHEBI:198957
+  - CHEBI:191052
+  - CHEBI:218214
+  - CHEBI:3716
+  - CHEBI:5543
+  - CHEBI:63611
+  - CHEBI:9212
+  - CHEBI:116278
+  evidence_ids:
+  - remediated-records-content
+evidence:
+- evidence_id: remediated-records-content
+  kind: record_content
+  reference: curation/record_review_queue.tsv
+  locator: 15 remediated YAML records and refreshed review-readiness worklist (2,937
+    items)
+  accessed_at: '2026-11-05T00:40:00Z'
+  support: supports
+  snapshot_sha256: 540b92c8691c08813862fc5f8495bdb9d9e8c619bca5ae04e88321c939101683
+  summary: 'All 15 records were updated through native validated writers (write_validated_antibiotic,
+    apply_uniprot_examples_plan, record_curation_event): 5 Group 1 PROPOSED/EXACT
+    records (pentabromopseudilin CHEBI:70619, taromycin A CHEBI:219845, pneumocandin
+    A0 CHEBI:198520, rustmicin CHEBI:206910, soraphen A CHEBI:9200) promoted to REVIEWED;
+    5 Group 2 Cycle 5 Stage 1 PROPOSED/EXACT natural products (naphthomycin A CHEBI:197824,
+    resistomycin CHEBI:29671, micacocidin CHEBI:198957, kendomycin CHEBI:191052, endophenazine
+    A CHEBI:218214) populated with curated mode_of_action and PRIMARY_LITERATURE molecular_targets
+    (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS, documented in curation/uniprot_protein_examples.yaml
+    held_targets) and promoted to REVIEWED; and 5 Group 3 SEEDED/EXACT quinolones/fluoroquinolones
+    (cinoxacin CHEBI:3716, Grepafloxacin CHEBI:5543, moxifloxacin CHEBI:63611, sparfloxacin
+    CHEBI:9212, lomefloxacin CHEBI:116278) populated with biosynthesis_origin: SYNTHETIC,
+    MICROBIAL_TARGET mode_of_action, and PRIMARY_LITERATURE molecular_targets (bacterial
+    DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)) with 20 reviewed E. coli
+    K-12 Swiss-Prot UniProtKB protein_examples and promoted to REVIEWED (raising corpus
+    REVIEWED count from 112 to 127 and reducing the review-readiness queue from 2,952
+    to 2,937).'
+- evidence_id: validate-strict-pass
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: 3064 files scanned, 0 files with ERROR, 0 total ERROR rows
+  accessed_at: '2026-11-05T00:41:00Z'
+  support: supports
+  snapshot_sha256: d70e6739c881260927dfc99abea16e56be0f34f353f9f95353a43da76e8e7217
+  summary: Closed-mode LinkML validation and OAK ontology label verification pass
+    across all 3,064 records.
+- evidence_id: verify-corpus-pass
+  kind: validation
+  reference: scripts/verify_corpus.py
+  locator: 'records expected: 3064, on disk: 3064, missing: 0, unexpected: 0, drifted
+    fields: 0'
+  accessed_at: '2026-11-05T00:42:00Z'
+  support: supports
+  snapshot_sha256: 7d881f9b4e17b02d7f3ec3eb48404ad0a41a0cefa915edc9a442f755b834df78
+  summary: Every curator-owned edit on the 15 remediated records survives seed_from_sources.py
+    reproduction without drift.
+- evidence_id: primary-literature-sources
+  kind: primary_source
+  reference: PMID:38377384, PMID:24449899, PMID:1490879, PMID:7809096, PMID:9614099,
+    PMID:15550663, PMID:8119858, PMID:3997669, PMID:4978971, PMID:1106088, PMID:12033902,
+    PMID:9589068, PMID:26795276, PMID:10805582, PMID:12458770, PMID:19270122, PMID:11709337,
+    PMID:2158274
+  locator: Primary experimental mechanism and target studies cited across the 15 remediated
+    records
+  accessed_at: '2026-11-05T00:40:00Z'
+  support: supports
+  summary: Primary studies support REVIEWED promotion on the 5 Group 1 records (pentabromopseudilin
+    DOI:10.1021/acschembio.3c00773 / PMID:38377384, taromycin A DOI:10.1073/pnas.1319584111
+    / PMID:24449899, pneumocandin A0 DOI:10.7164/antibiotics.45.1886 / PMID:1490879
+    and DOI:10.1073/pnas.91.26.12907 / PMID:7809096, rustmicin DOI:10.1074/jbc.273.24.14942
+    / PMID:9614099, soraphen A DOI:10.1126/science.1103399 / PMID:15550663 and DOI:10.7164/antibiotics.47.23
+    / PMID:8119858), mode_of_action, PRIMARY_LITERATURE molecular_targets, and REVIEWED
+    promotion on the 5 Cycle 5 Stage 1 natural products (naphthomycin A DOI:10.7164/antibiotics.38.230
+    / PMID:3997669 and DOI:10.1007/BF00409749 / PMID:4978971, resistomycin DOI:10.1002/jobm.19750150603
+    / PMID:1106088 and DOI:10.1021/ja026369d / PMID:12033902, micacocidin DOI:10.7164/antibiotics.51.323
+    / PMID:9589068 and DOI:10.7164/antibiotics.51.328, kendomycin DOI:10.1371/journal.pone.0146165
+    / PMID:26795276 and DOI:10.7164/antibiotics.53.199 / PMID:10805582, endophenazine
+    A DOI:10.7164/antibiotics.55.802 / PMID:12458770 and DOI:10.1128/AEM.02738-08
+    / PMID:19270122), and PRIMARY_LITERATURE bacterial DNA gyrase (GyrA/GyrB) and
+    topoisomerase IV (ParC/ParE) molecular_targets with reviewed E. coli K-12 UniProtKB
+    protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083)
+    and REVIEWED promotion on the 5 EXACT quinolones/fluoroquinolones (cinoxacin,
+    Grepafloxacin, moxifloxacin, sparfloxacin, and lomefloxacin; DOI:10.1128/AAC.45.12.3544-3547.2001
+    / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin).
+assessments:
+- assessment_id: group1-five-proposed-exact-records-promoted-to-reviewed
+  area: completeness
+  topic: Promotion of 5 PROPOSED+EXACT records (pentabromopseudilin, taromycin A,
+    pneumocandin A0, rustmicin, soraphen A) with complete mechanism and target curation
+    to REVIEWED
+  outcome: supported
+  summary: 'All 5 Group 1 records (pentabromopseudilin CHEBI:70619, taromycin A CHEBI:219845,
+    pneumocandin A0 CHEBI:198520, rustmicin CHEBI:206910, and soraphen A CHEBI:9200)
+    carry exact single-molecule ChEBI structures, curated biosynthesis_origin (NATURAL_PRODUCT),
+    curator-settled mode_of_action and mode_of_action_target_scope, and source: PRIMARY_LITERATURE
+    (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed Swiss-Prot
+    UniProtKB protein_examples on pneumocandin A0 [UniProtKB:P38631, UniProtKB:P40989],
+    rustmicin [UniProtKB:P36107, UniProtKB:O13332], and soraphen A [UniProtKB:Q00955],
+    and documented held_targets rationales on pentabromopseudilin and taromycin A
+    GO:0005886 MEMBRANE targets in curation/uniprot_protein_examples.yaml), and are
+    promoted to curation_status: REVIEWED with PROMOTED_TO_REVIEWED curation events.'
+  target_ids:
+  - CHEBI:70619
+  - CHEBI:219845
+  - CHEBI:198520
+  - CHEBI:206910
+  - CHEBI:9200
+  evidence_ids:
+  - remediated-records-content
+  - primary-literature-sources
+  - validate-strict-pass
+  - verify-corpus-pass
+- assessment_id: group2-cycle5-stage1-natural-products-moa-targets-and-reviewed
+  area: completeness
+  topic: Population of mode_of_action, PRIMARY_LITERATURE molecular_targets, and REVIEWED
+    promotion on 5 Cycle 5 Stage 1 EXACT natural products
+  outcome: supported
+  summary: 'All 5 Cycle 5 Stage 1 EXACT natural-product records (naphthomycin A CHEBI:197824,
+    resistomycin CHEBI:29671, micacocidin CHEBI:198957, kendomycin CHEBI:191052, and
+    endophenazine A CHEBI:218214) now carry curated mode_of_action, mode_of_action_target_scope:
+    MICROBIAL_TARGET, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE
+    (evidence_status: PRIMARY_EVIDENCE) molecular_targets (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS,
+    NCBITaxon:2 Bacteria, with all 5 downstream biological-process targets documented
+    in curation/uniprot_protein_examples.yaml held_targets), and are promoted to curation_status:
+    REVIEWED.'
+  target_ids:
+  - CHEBI:197824
+  - CHEBI:29671
+  - CHEBI:198957
+  - CHEBI:191052
+  - CHEBI:218214
+  evidence_ids:
+  - remediated-records-content
+  - primary-literature-sources
+  - validate-strict-pass
+  - verify-corpus-pass
+- assessment_id: group3-seeded-exact-quinolones-primary-targets-and-reviewed
+  area: completeness
+  topic: Population of PRIMARY_LITERATURE molecular_targets, reviewed UniProtKB protein_examples,
+    and REVIEWED promotion on 5 SEEDED/EXACT quinolones and fluoroquinolones
+  outcome: supported
+  summary: 'All 5 Group 3 EXACT quinolone and fluoroquinolone records (cinoxacin CHEBI:3716,
+    Grepafloxacin CHEBI:5543, moxifloxacin CHEBI:63611, sparfloxacin CHEBI:9212, and
+    lomefloxacin CHEBI:116278) now carry biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET
+    mode_of_action_target_scope, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE
+    (evidence_status: PRIMARY_EVIDENCE) bacterial DNA gyrase (GyrA/GyrB) and topoisomerase
+    IV (ParC/ParE) molecular_targets (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET, NCBITaxon:2
+    Bacteria) with 4 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples per
+    record (UniProtKB:P0AES4 gyrA, UniProtKB:P0AES6 gyrB, UniProtKB:P0AFI2 parC, UniProtKB:P20083
+    parE; 20 total across the 5 records, citing DOI:10.1128/AAC.45.12.3544-3547.2001
+    / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin), and
+    are promoted from SEEDED to REVIEWED.'
+  target_ids:
+  - CHEBI:3716
+  - CHEBI:5543
+  - CHEBI:63611
+  - CHEBI:9212
+  - CHEBI:116278
+  evidence_ids:
+  - remediated-records-content
+  - primary-literature-sources
+  - validate-strict-pass
+  - verify-corpus-pass
+findings:
+- finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  issue_key: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  category: completeness
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Promoted 5 PROPOSED+EXACT records (pentabromopseudilin, taromycin A, pneumocandin
+    A0, rustmicin, soraphen A) with complete primary mechanism and target curation
+    to REVIEWED
+  description: Promoted CHEBI:70619 (pentabromopseudilin), CHEBI:219845 (taromycin
+    A), CHEBI:198520 (pneumocandin A0), CHEBI:206910 (rustmicin), and CHEBI:9200 (soraphen
+    A) from PROPOSED to REVIEWED via record_curation_event (PROMOTED_TO_REVIEWED)
+    and write_validated_antibiotic, and registered their held_records entries in curation/causal_graphs.yaml.
+  target_ids:
+  - CHEBI:70619
+  - CHEBI:219845
+  - CHEBI:198520
+  - CHEBI:206910
+  - CHEBI:9200
+  field_paths:
+  - curation_status
+  - curation_history
+  evidence_ids:
+  - remediated-records-content
+  - primary-literature-sources
+  - validate-strict-pass
+  - verify-corpus-pass
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/pentabromopseudilin.yaml
+    role: Curator-owned curation_status and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/taromycin-a.yaml
+    role: Curator-owned curation_status and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/pneumocandin-a0.yaml
+    role: Curator-owned curation_status and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/rustmicin.yaml
+    role: Curator-owned curation_status and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/soraphen-a.yaml
+    role: Curator-owned curation_status and curation_history
+  disposition_reason: 'Resolved in Cycle 5 Stage 5 (Issue #1320): promoted pentabromopseudilin
+    (CHEBI:70619), taromycin A (CHEBI:219845), pneumocandin A0 (CHEBI:198520), rustmicin
+    (CHEBI:206910), and soraphen A (CHEBI:9200) from PROPOSED to REVIEWED.'
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261104T152600Z-cycle5-frozen-inventory-cohort-review
+    finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261104T152500Z-rustmicin-record-review
+    finding_id: rustmicin-awaiting-reviewed-promotion
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1320
+- finding_id: cycle5-stage1-proposed-exact-natural-products-missing-mechanism-and-targets
+  issue_key: cycle5-stage1-proposed-exact-natural-products-missing-mechanism-and-targets
+  category: completeness
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Populated mode_of_action, PRIMARY_LITERATURE molecular_targets, and promoted
+    5 Cycle 5 Stage 1 EXACT natural products to REVIEWED
+  description: 'Curated mode_of_action, mode_of_action_target_scope: MICROBIAL_TARGET,
+    CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status:
+    PRIMARY_EVIDENCE) molecular_targets (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS,
+    NCBITaxon:2 Bacteria, with all 5 downstream biological-process targets documented
+    in curation/uniprot_protein_examples.yaml held_targets), and promoted all 5 records
+    from PROPOSED to REVIEWED via record_curation_event and write_validated_antibiotic.'
+  target_ids:
+  - CHEBI:197824
+  - CHEBI:29671
+  - CHEBI:198957
+  - CHEBI:191052
+  - CHEBI:218214
+  field_paths:
+  - mode_of_action
+  - mode_of_action_target_scope
+  - mode_of_action_notes
+  - molecular_targets
+  - curation_status
+  - curation_history
+  evidence_ids:
+  - remediated-records-content
+  - primary-literature-sources
+  - validate-strict-pass
+  - verify-corpus-pass
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/naphthomycin-a.yaml
+    role: Curator-owned mode_of_action, molecular_targets, curation_status, and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/resistomycin.yaml
+    role: Curator-owned mode_of_action, molecular_targets, curation_status, and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/micacocidin.yaml
+    role: Curator-owned mode_of_action, molecular_targets, curation_status, and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/kendomycin.yaml
+    role: Curator-owned mode_of_action, molecular_targets, curation_status, and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/endophenazine-a.yaml
+    role: Curator-owned mode_of_action, molecular_targets, curation_status, and curation_history
+  disposition_reason: 'Resolved in Cycle 5 Stage 5 (Issue #1321): curated mode_of_action
+    and PRIMARY_LITERATURE molecular_targets and promoted all 5 Cycle 5 Stage 1 EXACT
+    natural products to REVIEWED.'
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261104T152600Z-cycle5-frozen-inventory-cohort-review
+    finding_id: cycle5-stage1-proposed-exact-natural-products-missing-mechanism-and-targets
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1321
+- finding_id: seeded-exact-fluoroquinolones-with-card-only-targets-awaiting-primary-literature-promotion
+  issue_key: seeded-exact-fluoroquinolones-with-card-only-targets-awaiting-primary-literature-promotion
+  category: completeness
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Populated PRIMARY_LITERATURE molecular_targets, reviewed UniProtKB protein_examples,
+    and promoted 5 EXACT quinolones and fluoroquinolones to REVIEWED
+  description: 'Curated biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action_target_scope,
+    CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status:
+    PRIMARY_EVIDENCE) bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+    molecular_targets (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET, NCBITaxon:2 Bacteria;
+    DOI:10.1128/AAC.45.12.3544-3547.2001 / PMID:11709337, plus DOI:10.1128/AAC.34.1.8
+    / PMID:2158274 on cinoxacin) with 20 reviewed E. coli K-12 Swiss-Prot UniProtKB
+    protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083
+    on each record) across cinoxacin (CHEBI:3716), Grepafloxacin (CHEBI:5543), moxifloxacin
+    (CHEBI:63611), sparfloxacin (CHEBI:9212), and lomefloxacin (CHEBI:116278) via
+    apply_uniprot_examples_plan, and promoted all 5 records from SEEDED to REVIEWED
+    via record_curation_event and write_validated_antibiotic.'
+  target_ids:
+  - CHEBI:3716
+  - CHEBI:5543
+  - CHEBI:63611
+  - CHEBI:9212
+  - CHEBI:116278
+  field_paths:
+  - biosynthesis_origin
+  - mode_of_action
+  - mode_of_action_target_scope
+  - mode_of_action_notes
+  - molecular_targets
+  - curation_status
+  - curation_history
+  evidence_ids:
+  - remediated-records-content
+  - primary-literature-sources
+  - validate-strict-pass
+  - verify-corpus-pass
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/cinoxacin.yaml
+    role: Curator-owned biosynthesis_origin, mode_of_action, molecular_targets, curation_status,
+      and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/grepafloxacin.yaml
+    role: Curator-owned biosynthesis_origin, mode_of_action, molecular_targets, curation_status,
+      and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/moxifloxacin.yaml
+    role: Curator-owned biosynthesis_origin, mode_of_action, molecular_targets, curation_status,
+      and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/sparfloxacin.yaml
+    role: Curator-owned biosynthesis_origin, mode_of_action, molecular_targets, curation_status,
+      and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antimycobacterial/lomefloxacin.yaml
+    role: Curator-owned biosynthesis_origin, mode_of_action, molecular_targets, curation_status,
+      and curation_history
+  disposition_reason: 'Resolved in Cycle 5 Stage 5 (Issue #1322): populated PRIMARY_LITERATURE
+    molecular_targets and reviewed UniProtKB protein_examples and promoted all 5 EXACT
+    ChEBI quinolones and fluoroquinolones to REVIEWED.'
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261104T152600Z-cycle5-frozen-inventory-cohort-review
+    finding_id: seeded-exact-fluoroquinolones-with-card-only-targets-awaiting-primary-literature-promotion
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1322
+actions: []
+limitations:
+- All 15 newly promoted REVIEWED records are registered in curation/causal_graphs.yaml
+  held_records (bringing total held_records to 53) awaiting multi-step primary-literature
+  causal_graphs in a subsequent Stage 2 goal.
+notes:
+- Original Cycle 5 Stage 4 review bundles (20261104T152500Z-rustmicin-record-review
+  and 20261104T152600Z-cycle5-frozen-inventory-cohort-review) are preserved byte-for-byte.
+related_reviews:
+- repository: culturebotai/AntibioticMech
+  review_id: 20261104T152500Z-rustmicin-record-review
+  relationship: Predecessor Cycle 5 Stage 4 single-record review of rustmicin (CHEBI:206910)
+- repository: culturebotai/AntibioticMech
+  review_id: 20261104T152600Z-cycle5-frozen-inventory-cohort-review
+  relationship: Predecessor Cycle 5 Stage 4 full-inventory cohort review identifying
+    the 3 resolved finding groups
+tags:
+- batch-review
+- cycle-05
+- stage-05
+- remediation-verification
+```

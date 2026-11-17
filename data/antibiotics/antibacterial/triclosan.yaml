@@ -188,6 +188,16 @@ molecular_targets:
   - reference: PMID:21094257
     notes: Primary triclosan-bound E. coli FabI-mutant structures and resistance measurements
       (DOI:10.1016/j.jsb.2010.11.008).
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AEK4
+    protein_label: Enoyl-[acyl-carrier-protein] reductase [NADH] FabI
+    gene_symbol: fabI
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Direct enoyl-ACP reductase enzyme target forming the ternary FabI-NAD+-triclosan
+      complex in E. coli (PMID:21094257; K-12 reference strain context).
 evidence:
 - reference: PMID:21094257
   notes: Primary exact-triclosan FabI structural, enzyme-inhibition, and G93V-resistance
@@ -219,6 +229,17 @@ causal_graphs:
       reductase target.
     gene_symbols:
     - fabI
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AEK4
+      protein_label: Enoyl-[acyl-carrier-protein] reductase [NADH] FabI
+      gene_symbol: fabI
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Type II fatty-acid synthesis enoyl-ACP reductase that forms the noncovalent
+        FabI-NAD+-triclosan ternary complex in E. coli (PMID:9675027; PMID:10220315,
+        PDB 1QSG; PMID:21094257; K-12 reference strain context).
   - node_id: fabi_nad_triclosan_state
     label: inhibited FabI-NAD-triclosan state
     node_type: STATE
@@ -347,3 +368,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated E. coli K-12 FabI (P0AEK4) UniProtKB protein examples on
+    the triclosan_fabi_fatty_acid_synthesis_inhibition fabi causal graph node and
+    the PRIMARY_LITERATURE FabI molecular target.
+  llm_assisted: true

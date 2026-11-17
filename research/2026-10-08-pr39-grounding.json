@@ -1,0 +1,721 @@
+{
+  "added_evidence": {
+    "notes": "Taxonomic identity only: active species, UniProt release 2026_03; retrieved 2026-10-08 UTC.",
+    "reference": "https://rest.uniprot.org/taxonomy/28901"
+  },
+  "after_record_sha256": "272ab62a133779fb068f84c97fbeba1dfd1d3e101d7342d8994b2a632d6224bd",
+  "attribution": "UniProt Consortium, release 2026_03, CC BY 4.0",
+  "before_record_sha256": "ad5f9b0a8a5cb04d7cbf6c91288ff74608a41d914f48068c9e2fb537e30f0607",
+  "claim_note_suffix": " Aggregate of LT2-derived mutants, not one experimental allele. The LT2 reference-protein crosswalk is retained separately; no reference strain TaxID, protein accession or genome is assigned to the mutants. The source gene symbol sbmA is retained without variant-coordinate normalization.",
+  "current_claim_sha256": "a38794ccb609dec70486fa30595af08d703a7fe4fd19fd49a628072d4c78c878",
+  "doi": "10.1128/aac.00205-08",
+  "identifier": "CHEBI:131850",
+  "inspected_primary_url": "https://journals.asm.org/doi/10.1128/aac.00205-08",
+  "limitations": [
+    "This aggregate is not a single allele, patient or isolate; no genome or sample identity is inferred.",
+    "No quantitative endpoint, clinical breakpoint, sequence or normalized variant added.",
+    "The pre-existing REVIEWED status is retained, not renewed; whole-record and full literature review remain open.",
+    "No requests to NCBI endpoints were made."
+  ],
+  "locations": [
+    "Bacterial strains",
+    "Results: isolation and characterization",
+    "Results: SbmA inactivation"
+  ],
+  "original_claim": {
+    "evidence": [
+      {
+        "notes": "Primary PR-39 resistance selection, genetic analysis, and fitness study.",
+        "reference": "PMID:18519732"
+      }
+    ],
+    "gene_families": [
+      "sbmA"
+    ],
+    "label": "SbmA alterations reduce PR-39 susceptibility",
+    "mechanism_type": "OTHER",
+    "note": "Salmonella enterica serovar Typhimurium mutants with SbmA alterations were about fourfold less susceptible and showed slower killing without an obvious measured fitness cost. The study called SbmA a putative transport protein but did not directly measure uptake, so the specific resistance route remains unresolved."
+  },
+  "original_claim_sha256": "7e217760ec6ec1163d3525a5f5d9f4de7c1699b4312f8b6ef9c3dad1f9eacd53",
+  "original_history_sha256": "5b6d091421e042be56a0f0b4b725e5de03f634946f099ddb1eda4243f3aef2a3",
+  "path": "data/antibiotics/antibacterial/pr-39.yaml",
+  "primary_reference": "PMID:18519732",
+  "reference_candidate": {
+    "assigned_to_claim": false,
+    "limitations": [
+      "The paper gives an unversioned reference genome; UniProt reports NC_003197.2. No version or coordinate equivalence was established.",
+      "Q8ZRF5 and STM0376 identify a reference protein/locus, not one of the experimental mutant alleles.",
+      "The aggregate includes distinct mutants; LT2 TaxID 99287 is not assigned as their individual strain identity."
+    ],
+    "protein": {
+      "entryAudit": {
+        "entryVersion": 106,
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "extraAttributes": {
+        "uniParcId": "UPI00000CCEA8"
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AAL19330.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "sbmA"
+          },
+          "orderedLocusNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAL19330.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "STM0376"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AAL19330.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000001014",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Pseudomonadati",
+          "Pseudomonadota",
+          "Gammaproteobacteria",
+          "Enterobacterales",
+          "Enterobacteriaceae",
+          "Salmonella"
+        ],
+        "scientificName": "Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)",
+        "taxonId": 99287
+      },
+      "primaryAccession": "Q8ZRF5",
+      "proteinDescription": {
+        "submissionNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAL19330.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "ABC superfamily transporter"
+            }
+          }
+        ]
+      },
+      "uniProtKBCrossReferences": [
+        {
+          "database": "EMBL",
+          "id": "AE006468",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAL19330.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "NP_459371.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "NC_003197.2"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "WP_000477024.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "NC_003197.2"
+            }
+          ]
+        }
+      ]
+    },
+    "scope": "REFERENCE_ONLY; NOT_EXPERIMENTAL_MUTANT_IDENTITY",
+    "source_background": "LT2-derived mutants",
+    "source_gene": "sbmA",
+    "source_reference_genome": "NC_003197",
+    "source_reference_version": null,
+    "taxonomy": {
+      "active": true,
+      "hidden": true,
+      "lineage": [
+        {
+          "hidden": true,
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "commonName": "bacteria",
+          "hidden": false,
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "hidden": false,
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "commonName": "proteobacteria",
+          "hidden": false,
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "commonName": "g-proteobacteria",
+          "hidden": false,
+          "rank": "class",
+          "scientificName": "Gammaproteobacteria",
+          "taxonId": 1236
+        },
+        {
+          "hidden": false,
+          "rank": "order",
+          "scientificName": "Enterobacterales",
+          "taxonId": 91347
+        },
+        {
+          "commonName": "enterobacteria",
+          "hidden": false,
+          "rank": "family",
+          "scientificName": "Enterobacteriaceae",
+          "taxonId": 543
+        },
+        {
+          "hidden": false,
+          "rank": "genus",
+          "scientificName": "Salmonella",
+          "taxonId": 590
+        },
+        {
+          "hidden": true,
+          "rank": "species",
+          "scientificName": "Salmonella enterica",
+          "synonyms": [
+            "Salmonella choleraesuis"
+          ],
+          "taxonId": 28901
+        },
+        {
+          "hidden": true,
+          "rank": "subspecies",
+          "scientificName": "Salmonella enterica I",
+          "taxonId": 59201
+        },
+        {
+          "hidden": true,
+          "rank": "no rank",
+          "scientificName": "Salmonella typhimurium",
+          "taxonId": 90371
+        }
+      ],
+      "mnemonic": "SALTY",
+      "otherNames": [
+        "Salmonella enterica subsp. enterica serovar Typhimurium LT2",
+        "Salmonella enterica subsp. enterica serovar Typhimurium str. LT2",
+        "Salmonella enterica subsp. enterica serovar Typhimurium strain LT2",
+        "Salmonella typhimurium LT2",
+        "Salmonella enterica subsp. enterica serovar Typhimurium strain LT2-LTL2"
+      ],
+      "parent": {
+        "scientificName": "Salmonella typhimurium",
+        "taxonId": 90371
+      },
+      "rank": "strain",
+      "scientificName": "Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)",
+      "statistics": {
+        "proteomeCount": 1,
+        "referenceProteomeCount": 1,
+        "reviewedProteinCount": 1881,
+        "unreviewedProteinCount": 8023
+      },
+      "strains": [
+        {
+          "name": "LT2 / SGSC1412 / ATCC 700720",
+          "synonyms": [
+            "SGSC1412"
+          ]
+        },
+        {
+          "name": "LT2"
+        }
+      ],
+      "taxonId": 99287
+    }
+  },
+  "requests": [
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 03:05:49 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T03:05:49.379031+00:00",
+      "sha256": "aa833d5045292b85ee922673060f18f02bf5d38464232670ee7be952579fccd8",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/28901"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 05:38:26 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "1",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T05:38:26.749008+00:00",
+      "sha256": "eb1f81b09b786d83a29e78a63636d1b8b2814acca6e7d953d8ed43ff1b82d940",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AsbmA+AND+organism_id%3A99287&format=json&size=100&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_refseq%2Cxref_embl%2Cversion%2Csequence_version"
+    },
+    {
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Length": "576",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 03:06:55 GMT",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "hit cached"
+      },
+      "retrieved_at": "2026-10-08T03:06:55.084590+00:00",
+      "sha256": "107ebfece75c5a7147abe7547dec9166f87ff267e6cbc3f67bea9ab9df694a59",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/99287"
+    }
+  ],
+  "reviewed_on": "2026-10-08",
+  "standard_inchi_key": "JTJJGVCUEGCBHL-IWDHFESKSA-N",
+  "status": "SPECIES_GROUNDED_EXACT_ALLELES_UNRESOLVED",
+  "taxonomy": {
+    "active": true,
+    "hidden": true,
+    "lineage": [
+      {
+        "hidden": true,
+        "rank": "no rank",
+        "scientificName": "cellular organisms",
+        "taxonId": 131567
+      },
+      {
+        "commonName": "bacteria",
+        "hidden": false,
+        "rank": "domain",
+        "scientificName": "Bacteria",
+        "taxonId": 2
+      },
+      {
+        "hidden": false,
+        "rank": "kingdom",
+        "scientificName": "Pseudomonadati",
+        "taxonId": 3379134
+      },
+      {
+        "commonName": "proteobacteria",
+        "hidden": false,
+        "rank": "phylum",
+        "scientificName": "Pseudomonadota",
+        "taxonId": 1224
+      },
+      {
+        "commonName": "g-proteobacteria",
+        "hidden": false,
+        "rank": "class",
+        "scientificName": "Gammaproteobacteria",
+        "taxonId": 1236
+      },
+      {
+        "hidden": false,
+        "rank": "order",
+        "scientificName": "Enterobacterales",
+        "taxonId": 91347
+      },
+      {
+        "commonName": "enterobacteria",
+        "hidden": false,
+        "rank": "family",
+        "scientificName": "Enterobacteriaceae",
+        "taxonId": 543
+      },
+      {
+        "hidden": false,
+        "rank": "genus",
+        "scientificName": "Salmonella",
+        "taxonId": 590
+      }
+    ],
+    "mnemonic": "SALER",
+    "otherNames": [
+      "Salmonella sp. AMC 200",
+      "Salmonella sp. AMC 238",
+      "Salmonella sp. AMC 239",
+      "Salmonella sp. AMC 240",
+      "Salmonella sp. AMC 253",
+      "Salmonella sp. AMC 257",
+      "Salmonella sp. AMC 265",
+      "Salmonella sp. AMC 266",
+      "Salmonella sp. AMC 267",
+      "Salmonella sp. AMC 268",
+      "Salmonella sp. AMC 270",
+      "Salmonella sp. AMC 28",
+      "Salmonella sp. AMC 289",
+      "Salmonella sp. AMC 291",
+      "Salmonella sp. AMC 294",
+      "Salmonella sp. AMC 299",
+      "Salmonella sp. AMC 301",
+      "Salmonella sp. AMC 327",
+      "Salmonella sp. AMC 90",
+      "ATCC 13312 [[Salmonella choleraesuis]]",
+      "JCM 1651 [[Salmonella choleraesuis]]",
+      "Salmonella sp. 22OH10_CL01-S1",
+      "Salmonella sp. 23OH01_CG01-S1",
+      "Salmonella sp. 23OH01_GT01-S1",
+      "Salmonella sp. 23OH02_GT02-S1",
+      "Salmonella sp. 23OH05_CB01-S1",
+      "Salmonella sp. 23OH06_GT01-S1",
+      "Salmonella sp. 23OH07_GT04-S1",
+      "Salmonella sp. FDA00013420",
+      "Salmonella sp. FDA00013433",
+      "Salmonella sp. FDA00013434",
+      "Salmonella sp. FDA00013435",
+      "Salmonella sp. FDA00013436",
+      "Salmonella sp. FDA00013437",
+      "Salmonella sp. FDA00013438",
+      "Salmonella sp. FDA00013439",
+      "Salmonella sp. FDA00013440",
+      "Salmonella sp. FDA00013468",
+      "Salmonella sp. FDA00013469",
+      "Salmonella sp. FDA00013470",
+      "Salmonella sp. FDA00013495",
+      "Salmonella sp. FDA00013496",
+      "Salmonella sp. FDA00013499",
+      "Salmonella sp. FDA00013500",
+      "Salmonella sp. FDA00013513",
+      "Salmonella sp. FDA00013514",
+      "Salmonella sp. FDA00013515",
+      "Salmonella sp. FDA00013516",
+      "Salmonella sp. FDA00013517",
+      "Salmonella sp. FDA00013518",
+      "Salmonella sp. FDA00013519",
+      "Salmonella sp. FDA00013520",
+      "Salmonella sp. FDA00013521",
+      "Salmonella sp. FDA00013522",
+      "Salmonella sp. FDA00013523",
+      "Salmonella sp. FDA00013524",
+      "Salmonella sp. FDA00013525",
+      "Salmonella sp. FDA00013526",
+      "Salmonella sp. MH3-A1",
+      "Salmonella sp. MH3-A2",
+      "Salmonella sp. MH3-A3",
+      "Salmonella sp. MH3-C",
+      "Salmonella sp. MH3-D1",
+      "Salmonella sp. MH3-D2",
+      "Salmonella sp. MH3-D3",
+      "Salmonella sp. MH3-D4",
+      "Salmonella sp. MH3-Z1",
+      "Salmonella sp. MH3-Z2",
+      "Salmonella sp. MH4-A2",
+      "Salmonella sp. MH4-A3",
+      "Salmonella sp. MH4-A4",
+      "Salmonella sp. MH4-Z2",
+      "Salmonella sp. NYVetLIRN-85",
+      "Salmonella sp. NYVetLIRN-86",
+      "Salmonella sp. NYVetLIRN-87",
+      "Salmonella sp. NYVetLIRN-88",
+      "Salmonella sp. OH-18-15149",
+      "Salmonella sp. OH-18-15334",
+      "Salmonella sp. OH-18-15363",
+      "Salmonella sp. OH-18-16886",
+      "Salmonella sp. OH-18-16934",
+      "Salmonella sp. OH-18-18132-1",
+      "Salmonella sp. OH-18-18132-10",
+      "Salmonella sp. OH-18-18132-11",
+      "Salmonella sp. OH-18-18132-12",
+      "Salmonella sp. OH-18-18132-13",
+      "Salmonella sp. OH-18-18132-14",
+      "Salmonella sp. OH-18-18132-15",
+      "Salmonella sp. OH-18-18132-2",
+      "Salmonella sp. OH-18-18132-3",
+      "Salmonella sp. OH-18-18132-4",
+      "Salmonella sp. OH-18-18132-5",
+      "Salmonella sp. OH-18-18132-6",
+      "Salmonella sp. OH-18-18132-7",
+      "Salmonella sp. OH-18-18132-8",
+      "Salmonella sp. OH-18-18132-9",
+      "Salmonella sp. OH-18-18281-1",
+      "Salmonella sp. OH-18-18281-2",
+      "Salmonella sp. OH-18-18411",
+      "Salmonella sp. OH-18-18446",
+      "Salmonella sp. OH-18-18447",
+      "Salmonella sp. OH-18-18941",
+      "Salmonella sp. OH-18-19201",
+      "Salmonella sp. OH-18-19951-1",
+      "Salmonella sp. OH-18-20073-2T",
+      "Salmonella sp. OH-18-20117-1",
+      "Salmonella sp. OH-18-20132-7",
+      "Salmonella sp. OH-18-20225-1-S",
+      "Salmonella sp. OH-18-20225-2-S",
+      "Salmonella sp. OH-18-20299-1",
+      "Salmonella sp. OH-18-20299-2",
+      "Salmonella sp. OH-18-20299-3",
+      "Salmonella sp. OH-18-20299-4",
+      "Salmonella sp. OH-18-20299-5",
+      "Salmonella sp. OH-18-20299-6",
+      "Salmonella sp. OH-18-20299-7",
+      "Salmonella sp. OH-18-20299-8",
+      "Salmonella sp. OH-18-20386",
+      "Salmonella sp. SAL-18-VL-LA-TX-0007",
+      "Salmonella sp. SAL-18-VL-LA-TX-0008",
+      "Salmonella sp. SAL-18-VL-LA-TX-0009",
+      "Salmonella sp. SAL-18-VL-OH-IN-0001",
+      "Salmonella sp. SAL-18-VL-OH-IN-0002",
+      "Salmonella sp. SAL-18-VL-OH-IN-0003",
+      "Salmonella sp. SAL-18-VL-OH-IN-0005",
+      "Salmonella sp. SAL-18-VL-OH-IN-0007",
+      "Salmonella sp. TTU_251",
+      "Salmonella sp. TTU_258",
+      "Salmonella sp. TTU_262",
+      "Salmonella sp. TTU_264",
+      "Salmonella sp. TTU_265",
+      "Salmonella sp. TTU_266",
+      "Salmonella sp. TTU_267",
+      "Salmonella sp. TTU_269",
+      "Salmonella sp. TTU_274",
+      "Salmonella sp. TTU_279",
+      "Salmonella sp. TTU_282",
+      "Salmonella sp. TTU_284",
+      "Salmonella sp. TTU_287",
+      "Salmonella sp. TTU_289",
+      "Salmonella sp. TTU_297",
+      "Salmonella sp. TTU_298",
+      "Salmonella sp. TTU_299",
+      "Salmonella sp. TTU_303",
+      "Salmonella sp. TTU_304",
+      "Salmonella sp. TTU_305",
+      "Salmonella sp. TTU_306",
+      "Salmonella sp. TTU_307",
+      "Salmonella sp. TTU_308",
+      "Salmonella sp. TTU_309",
+      "Salmonella sp. TTU_310",
+      "Salmonella sp. TTU_311",
+      "Salmonella sp. TTU_312",
+      "Salmonella sp. TTU_313",
+      "Salmonella sp. TTU_314",
+      "Salmonella sp. TTU_315",
+      "Salmonella sp. TTU_316",
+      "Salmonella sp. TTU_317",
+      "Salmonella sp. TTU_318",
+      "Salmonella sp. TTU_319",
+      "Salmonella sp. TTU_320",
+      "Salmonella sp. TTU_321",
+      "Salmonella sp. TTU_322",
+      "Salmonella sp. TTU_323",
+      "Salmonella sp. TTU_324",
+      "Salmonella sp. TTU_325",
+      "Salmonella sp. TTU_326",
+      "Salmonella sp. TTU_327",
+      "Salmonella sp. TTU_328",
+      "Salmonella sp. TTU_329",
+      "Salmonella sp. TTU_330",
+      "Salmonella sp. TTU_331",
+      "Salmonella sp. TTU_332",
+      "Salmonella sp. TTU_333",
+      "Salmonella sp. TTU_334",
+      "Salmonella sp. TTU_335",
+      "Salmonella sp. TTU_338",
+      "Salmonella sp. TTU_345",
+      "Salmonella sp. TTU_352",
+      "Salmonella sp. TTU_353",
+      "Salmonella sp. TTU_357",
+      "Salmonella sp. TTU_358",
+      "Salmonella sp. TTU_359",
+      "Salmonella sp. TXACF1801691",
+      "\"Bacillus cholerae-suis\" Smith 1894",
+      "\"Salmonella enterica\" Kauffmann and Edwards 1952",
+      "Bacillus cholerae-suis",
+      "Salmonella cholerae-suis",
+      "Salmonella choleraesuis corrig. (Smith 1894) Weldin 1927 (Approved Lists 1980)",
+      "Salmonella enterica (ex Kauffmann and Edwards 1952) Le Minor and Popoff 1987",
+      "Salmonella enterica ser. choleraesuis",
+      "ATCC 700720",
+      "NCIMB 11450",
+      "NCTC:12694",
+      "SGSC 1412",
+      "Salmonella sp. FDA00013597",
+      "Salmonella sp. HC-257",
+      "Salmonella sp. IA1-174",
+      "Salmonella sp. OH-18-20895",
+      "Salmonella sp. OH-18-20897",
+      "Salmonella sp. OH-18-21102",
+      "Salmonella sp. OH-18-21112",
+      "Salmonella sp. OH-18-21175",
+      "Salmonella sp. OH-18-21493-S",
+      "Salmonella sp. OH-18-21628",
+      "Salmonella sp. OH-18-21629",
+      "Salmonella sp. OH-18-21765",
+      "Salmonella sp. OH-18-21865-2",
+      "Salmonella sp. OH-18-22026",
+      "Salmonella sp. OH-18-22045",
+      "Salmonella sp. OH-18-22168",
+      "Salmonella sp. OH-18-22269-1",
+      "Salmonella sp. OH-18-22479",
+      "Salmonella sp. SAL-18-VL-NY-MS-0001",
+      "Salmonella sp. SAL-18-VL-NY-MS-0002",
+      "Salmonella sp. SAL-18-VL-NY-MS-0003",
+      "Salmonella sp. SAL-18-VL-NY-NJ-0001",
+      "Salmonella sp. SAL-18-VL-NY-UP-NBC-0001",
+      "Salmonella sp. SAL-18-VL-NY-UP-NBC-0004",
+      "Salmonella sp. SAL-18-VL-NY-UP-NBC-0005",
+      "Salmonella sp. SAL-18-VL-NY-UP-NBC-0006",
+      "Salmonella sp. SAL-18-VL-NY-UP-NBC-0007",
+      "Salmonella sp. SAL-18-VL-OH-WA-0012",
+      "Salmonella sp. SAL-18-VL-OH-WA-0013",
+      "Salmonella sp. SAL-18-VL-OH-WA-0014",
+      "Salmonella sp. SAL-18-VL-OH-WA-0017",
+      "Salmonella sp. Z-172",
+      "Salmonella sp. ZH-248",
+      "Salmonella sp. 23OH10_CG01-S1",
+      "Salmonella sp. 23OH06_CH01-S1",
+      "NCTC 5735 [[Salmonella choleraesuis]]",
+      "Salmonella sp. 23OH10_CB03-S1",
+      "NBRC 105684 [[Salmonella choleraesuis]]",
+      "CIP 55.133 [[Salmonella choleraesuis]]",
+      "Salmonella sp. 23OH08_CG01-S1",
+      "CIP:55-133 [[Salmonella choleraesuis]]",
+      "Salmonella sp. 23OH01_GT02-S1",
+      "Salmonella sp. 23OH07_CB02-S1",
+      "CIP 55-133 [[Salmonella choleraesuis]]",
+      "Salmonella sp. 23OH06_CG01-S1",
+      "DSM 14846 [[Salmonella choleraesuis]]",
+      "Salmonella sp. 22OH12_PC07-S1",
+      "Salmonella sp. 23OH04_CG01-S1",
+      "CECT 915 [[Salmonella choleraesuis]]",
+      "ATCC 43971",
+      "NBRC 13245",
+      "ATCC13076",
+      "CIP 60.62",
+      "ATCC-13076",
+      "DSM 17058",
+      "ATCC:13076",
+      "NCTC 12694",
+      "CCUG 42060",
+      "ATCC 13076",
+      "NCTC12694",
+      "NCTC 12416",
+      "NCTC-12694",
+      "strain LT2",
+      "CIP 58.57 [[Salmonella choleraesuis]]"
+    ],
+    "parent": {
+      "scientificName": "Salmonella",
+      "taxonId": 590
+    },
+    "rank": "species",
+    "scientificName": "Salmonella enterica",
+    "statistics": {
+      "proteomeCount": 9365,
+      "referenceProteomeCount": 0,
+      "reviewedProteinCount": 12883,
+      "unreviewedProteinCount": 36506
+    },
+    "strains": [
+      {
+        "name": "RF-1"
+      },
+      {
+        "name": "CH12440 / Serotype C1"
+      },
+      {
+        "name": "SL2824"
+      },
+      {
+        "name": "ATCC 7001"
+      }
+    ],
+    "synonyms": [
+      "Salmonella choleraesuis"
+    ],
+    "taxonId": 28901
+  },
+  "unchanged_fields_sha256": "51bc6c9a73cd08d6263147891740bd18c34e172129e3520a687dfabe39714453"
+}

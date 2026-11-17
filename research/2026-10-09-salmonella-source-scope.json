@@ -1,0 +1,255 @@
+{
+  "bibliography": {
+    "PMID:19104017": {
+      "bibliography_provider": "EMBL-EBI Europe PMC",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/pmid-19104017-response.bin",
+        "sha256": "68739007f20d7cf83d0dfb90584efc8b9b00155956dd21c223a20883a3da6d04"
+      },
+      "doi": "DOI:10.1128/aac.01005-08",
+      "publication_year": "2009",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/pmid-19104017-receipt.json",
+        "sha256": "2e413e573d2495f9112f8bf93c10f5844fb9abbc4e4f9148faf24bb6088934a9"
+      },
+      "retrieved_at": "2026-10-10T04:36:37.033104+00:00",
+      "title_as_reported": "Multiple regulatory pathways associated with high-level ciprofloxacin and multidrug resistance in Salmonella enterica serovar enteritidis: involvement of RamA and other global regulators.",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A19104017+AND+SRC%3AMED&format=json&resultType=core&pageSize=10"
+    },
+    "PMID:37627729": {
+      "bibliography_provider": "EMBL-EBI Europe PMC",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/pmid-37627729-response.bin",
+        "sha256": "c3a98f29c09462c3975bc2fd81b8c59127ae39d7feef0e8a1e8e60626f51d946"
+      },
+      "doi": "DOI:10.3390/antibiotics12081309",
+      "publication_year": "2023",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/pmid-37627729-receipt.json",
+        "sha256": "1e78a3e9df06da0ba93d95d151521ac9e53e95eef728564aa149a2103bfd7f79"
+      },
+      "retrieved_at": "2026-10-10T04:36:46.058670+00:00",
+      "title_as_reported": "Genomic Characterization of <i>Salmonella</i> Isangi: A Global Perspective of a Rare Serovar.",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A37627729+AND+SRC%3AMED&format=json&resultType=core&pageSize=10"
+    }
+  },
+  "inputs": {
+    "citation_audit": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/cohort.json",
+      "sha256": "93a9b2088aa2c4acc035e3acd2e61283af024a531744d8b52b550b2e64b7e3b4"
+    }
+  },
+  "limits": [
+    "Historical strain otherNames are retained as ambiguity, not selected as isolate matches.",
+    "The 13 source-derived compound memberships are not 13 independently verified experimental effects.",
+    "Source-owned records are unchanged: this scoped review does not establish a replacement claim for every inherited compound edge.",
+    "No sequences, exact variants, constructs, primers, protocols, coordinates or numerical AST exported.",
+    "NCBI endpoints, outreach and reuse-term review remain deferred under #1040; no GitHub mutations or source adoption."
+  ],
+  "primary_review": {
+    "PMID:19104017": {
+      "disposition": "Do not promote ARO:3003317 bibliography to independently demonstrated causal resistance.",
+      "findings": [
+        "The study context is serovar Enteritidis, not evidence for every Salmonella serovar.",
+        "The reported parE complementation test did not change quinolone susceptibility in the tested background.",
+        "The authors did not exclude an indirect contribution; the negative result is not proof of no role in every background."
+      ],
+      "locations": [
+        "Results: Contribution of target gene mutations to quinolone resistance, second paragraph",
+        "Discussion: paragraph beginning Although complementation"
+      ],
+      "reviewed_on": "2026-10-09",
+      "scope": "SELECTED_NARRATIVE_RESULTS_AND_DISCUSSION_ONLY",
+      "tables_and_supplements_reviewed": false,
+      "url": "https://journals.asm.org/doi/10.1128/aac.01005-08",
+      "whole_paper_review_complete": false
+    },
+    "PMID:37627729": {
+      "bibliographic_metadata_only": true,
+      "primary_results_reviewed": false,
+      "publisher_access_status": "HTTP_429_STOPPED_WITHOUT_RETRY_OR_BYPASS",
+      "url": "https://www.mdpi.com/2079-6382/12/8/1309"
+    }
+  },
+  "scope": "QUALIFIED_TAXONOMY_AND_SOURCE_CITATION_REVIEW_NOT_EXACT_ALLELE_GROUNDING",
+  "summary": {
+    "bibliography_records_verified": 2,
+    "biological_records_changed": 0,
+    "compound_records": 13,
+    "exact_allele_assignments": 0,
+    "experimental_taxon_assignments": 0,
+    "new_protein_assignments": 0,
+    "selected_terms": 4,
+    "source_assertion_memberships": 30,
+    "whole_corpus_primary_review": "OPEN",
+    "whole_records_completed": 0
+  },
+  "taxonomy_context": {
+    "broad_serovars": {
+      "rank": "genus",
+      "scientific_name": "Salmonella",
+      "scope": "GENUS_CONTEXT_ONLY_NOT_A_SPECIES_OR_EXPERIMENTAL_SUBJECT_ASSIGNMENT",
+      "taxon_id": "NCBITaxon:590"
+    },
+    "isangi": {
+      "candidate_taxon_id": "NCBITaxon:1386015",
+      "lineage_context": {
+        "genus": "NCBITaxon:590",
+        "species": "NCBITaxon:28901",
+        "subspecies": "NCBITaxon:59201"
+      },
+      "matching_name_field": "otherNames",
+      "rank": "no rank",
+      "scientific_name": "Salmonella enterica subsp. enterica serovar Isangi",
+      "scope": "SEROVAR_NAME_CONTEXT_NOT_AUTOMATIC_SPECIES_SYNONYM_OR_EXPERIMENTAL_SUBJECT",
+      "source_name": "Salmonella isangi",
+      "synonym_match": false
+    },
+    "nomenclature": {
+      "record_id": "26125",
+      "reviewed_on": "2026-10-09",
+      "source": "https://lpsn.dsmz.de/species/salmonella-isangi",
+      "stable_id": "DOI:10.83108/rn.26125",
+      "status": "Species name not validly published; nomenclature status alone does not establish a serovar crosswalk."
+    },
+    "strain_candidates": [
+      {
+        "other_names": [
+          "Salmonella enterica subsp. enterica serovar Enteritidis str. C54"
+        ],
+        "rank": "strain",
+        "scientific_name": "Salmonella enterica subsp. enterica serovar Isangi str. C54",
+        "selected_as_experimental_subject": false,
+        "taxon_id": "NCBITaxon:1385953"
+      },
+      {
+        "other_names": [
+          "Salmonella enterica subsp. enterica serovar Enteritidis str. C58"
+        ],
+        "rank": "strain",
+        "scientific_name": "Salmonella enterica subsp. enterica serovar Isangi str. C58",
+        "selected_as_experimental_subject": false,
+        "taxon_id": "NCBITaxon:1385954"
+      },
+      {
+        "other_names": [
+          "Salmonella enterica subsp. enterica serovar Enteritidis str. C59"
+        ],
+        "rank": "strain",
+        "scientific_name": "Salmonella enterica subsp. enterica serovar Isangi str. C59",
+        "selected_as_experimental_subject": false,
+        "taxon_id": "NCBITaxon:1385955"
+      }
+    ]
+  },
+  "taxonomy_requests": {
+    "tax-name-isangi": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/tax-name-isangi-response.bin",
+        "sha256": "889661b5f9b587a3db1296586ad26e3f6e89b4fdd99e57951a782c8e4e40c547"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/tax-name-isangi-receipt.json",
+        "sha256": "548811b52eacc3717c46e5c533ec101a66c48ce29eb5223e67864ce3dc579759"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-10T04:31:08.702673+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Isangi%22&format=json&size=500"
+    },
+    "tax-name-salmonella-genus": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/tax-name-salmonella-genus-response.bin",
+        "sha256": "c77fb910023c8b0b69b41b47682fec40fd34598d9fd7b76f6b9db4857d91c093"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/tax-name-salmonella-genus-receipt.json",
+        "sha256": "9fe82c02df767d90b5dce02513e107c6dd9a22494a386c7c6899e2364c3d6ea5"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-10T04:31:32.806253+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Salmonella%22+AND+rank%3Agenus&format=json&size=500"
+    }
+  },
+  "terms": {
+    "ARO:3003307": {
+      "definition_citation": "PMID:19104017",
+      "exact_allele_assignment": false,
+      "experimental_protein_accession": null,
+      "experimental_subject_taxon_id": null,
+      "gene": "gyrB",
+      "record_ids": [
+        "CHEBI:100147",
+        "CHEBI:100241",
+        "CHEBI:100246",
+        "CHEBI:116278",
+        "CHEBI:157175",
+        "CHEBI:50199",
+        "CHEBI:5280",
+        "CHEBI:5543",
+        "CHEBI:63598",
+        "CHEBI:63611",
+        "CHEBI:9212",
+        "CHEBI:9763",
+        "antibioticmech:aro-2eea3233f3"
+      ],
+      "source_assertion_memberships": 13,
+      "source_organism_name": "Salmonella serovars"
+    },
+    "ARO:3003317": {
+      "definition_citation": "PMID:19104017",
+      "exact_allele_assignment": false,
+      "experimental_protein_accession": null,
+      "experimental_subject_taxon_id": null,
+      "gene": "parE",
+      "record_ids": [
+        "CHEBI:100147",
+        "CHEBI:100241",
+        "CHEBI:100246",
+        "CHEBI:116278",
+        "CHEBI:157175",
+        "CHEBI:50199",
+        "CHEBI:5280",
+        "CHEBI:5543",
+        "CHEBI:63598",
+        "CHEBI:63611",
+        "CHEBI:9212",
+        "CHEBI:9763",
+        "antibioticmech:aro-2eea3233f3"
+      ],
+      "source_assertion_memberships": 13,
+      "source_organism_name": "Salmonella serovars"
+    },
+    "ARO:3007751": {
+      "definition_citation": "PMID:37627729",
+      "exact_allele_assignment": false,
+      "experimental_protein_accession": null,
+      "experimental_subject_taxon_id": null,
+      "gene": "gyrA",
+      "record_ids": [
+        "CHEBI:100147",
+        "CHEBI:100241"
+      ],
+      "source_assertion_memberships": 2,
+      "source_organism_name": "Salmonella isangi"
+    },
+    "ARO:3007752": {
+      "definition_citation": "PMID:37627729",
+      "exact_allele_assignment": false,
+      "experimental_protein_accession": null,
+      "experimental_subject_taxon_id": null,
+      "gene": "gyrB",
+      "record_ids": [
+        "CHEBI:100147",
+        "CHEBI:100241"
+      ],
+      "source_assertion_memberships": 2,
+      "source_organism_name": "Salmonella isangi"
+    }
+  }
+}

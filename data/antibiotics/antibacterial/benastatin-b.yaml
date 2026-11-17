@@ -1,0 +1,126 @@
+identifier: CHEBI:200324
+label: benastatin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: A 5,6-dihydro pentacyclic benzo[a]naphthacenequinone aromatic polyketide
+  from Streptomyces sp. with potent antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.1038/s41429-024-00727-1
+synonyms:
+- synonym_text: Benastatin B
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCC1=C(C(O)=O)C(O)=C2C(CCC3=C(O)C4=C(C=C23)C(C)(C)C2=CC(O)=CC(O)=C2C4=O)=C1
+  standard_inchi: InChI=1S/C30H30O7/c1-4-5-6-7-14-10-15-8-9-17-18(22(15)27(34)23(14)29(36)37)13-20-25(26(17)33)28(35)24-19(30(20,2)3)11-16(31)12-21(24)32/h10-13,31-34H,4-9H2,1-3H3,(H,36,37)
+  standard_inchi_key: FUKMCLKFEWEFSC-UHFFFAOYSA-N
+  molecular_formula: C30H30O7
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000204/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 502.563
+  monoisotopic_mass: 502.1992
+xrefs:
+- pubchem.compound:126409
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/s41429-024-00727-1#benastatin-b
+  source_label: benastatin B
+  minted_identifier: antibioticmech:curator-8b0dedb93d
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/s41429-024-00727-1
+    snippet: Benastatin B (2) isolated from Streptomyces showed potent antibacterial
+      activity against Micrococcus luteus with an MIC value of 3.9 uM and inhibited
+      Gram-positive bacterial growth.
+    notes: MIBiG 4.0.1 entry BGC0000204 (Streptomyces sp. A2991200); Kawahara et al.
+      2024 (DOI:10.1038/s41429-024-00727-1, PMID:38664572) and Xu et al. 2009 (DOI:10.1016/j.jbiotec.2008.10.013,
+      PMID:19047004) report the type II PKS biosynthesis and Gram-positive antibacterial
+      MIC of benastatin B. ChEBI CHEBI:200324 and PubChem CID 126409 supply the SMILES,
+      Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:431672
+  taxon_label: Streptomyces sp.
+  strain: A2991200
+  biosynthetic_gene_cluster: BGC0000204
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'benastatin B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:19047004
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-06T02:51:46Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-06T06:00:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin from Kawahara et al. 2024 (DOI:10.1038/s41429-024-00727-1,
+    PMID:38664572) and Xu et al. 2009 (DOI:10.1016/j.jbiotec.2008.10.013, PMID:19047004).
+  llm_assisted: true
+- timestamp: '2026-11-08T23:25:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated mode_of_action (OTHER, MICROBIAL_TARGET) and primary-literature
+    molecular_targets entry for Gram-positive bacterial cellular growth and metabolism
+    (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.1038/s41429-024-00727-1
+    (PMID:38664572) and DOI:10.1016/j.jbiotec.2008.10.013 (PMID:19047004; issue #1346).'
+  llm_assisted: true
+- timestamp: '2026-11-08T23:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI pentacyclic polyketide record (CHEBI:200324) with
+    complete 4/4 chemical_structure, curated mode_of_action (OTHER, MICROBIAL_TARGET),
+    and primary-literature molecular_targets (DOI:10.1038/s41429-024-00727-1, PMID:38664572;
+    DOI:10.1016/j.jbiotec.2008.10.013, PMID:19047004) from PROPOSED to REVIEWED (issue
+    #1346).'
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: OTHER
+mode_of_action_notes: 'CURATOR: Pentacyclic 5,6-dihydro-benzo[a]naphthacenequinone
+  polyketide antibiotic produced by Streptomyces sp. MI384-DF12 that potently inhibits
+  Gram-positive bacteria including Micrococcus luteus (MIC 3.9 uM) and methicillin-resistant
+  Staphylococcus aureus while also inhibiting glutathione S-transferase (Kawahara
+  et al. 2024, DOI:10.1038/s41429-024-00727-1, PMID:38664572; Xu et al. 2009, DOI:10.1016/j.jbiotec.2008.10.013,
+  PMID:19047004).'
+mode_of_action_target_scope: MICROBIAL_TARGET
+molecular_targets:
+- target_label: Gram-positive bacterial cellular growth and metabolism
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Whole-cell antibacterial susceptibility assays against Gram-positive
+    bacteria including Micrococcus luteus (MIC 3.9 uM) and Staphylococcus aureus alongside
+    biosynthetic and structural characterization of pentacyclic benzo[a]naphthacenequinone
+    polyketides (Kawahara et al. 2024, DOI:10.1038/s41429-024-00727-1, PMID:38664572;
+    Xu et al. 2009, DOI:10.1016/j.jbiotec.2008.10.013, PMID:19047004).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2024-04
+  source_retrieved_on: '2026-11-08'
+  evidence:
+  - reference: DOI:10.1038/s41429-024-00727-1
+    snippet: Benastatin B exhibited potent antibacterial activity against Gram-positive
+      bacteria including Micrococcus luteus (MIC 3.9 uM) and Staphylococcus aureus.
+    notes: Kawahara et al. 2024 (J Antibiot 77:433-442; PMID:38664572) quantified
+      the whole-cell Gram-positive antibacterial activity of benastatin B against
+      Micrococcus luteus (MIC 3.9 uM) and comparator Gram-positive strains.
+  - reference: DOI:10.1016/j.jbiotec.2008.10.013
+    notes: Xu et al. 2009 (J Biotechnol 140:107-113; PMID:19047004) characterized
+      the type II polyketide biosynthetic pathway and aromatic pentacyclic scaffold
+      of benastatins in Streptomyces sp. A2991200.

@@ -1,0 +1,484 @@
+{
+  "snapshot_scope": "Historical checkpoint before the Liu subject-context review; original pins retained.",
+  "follow_up_review": "2026-10-08-voriconazole-subject-grounding.json",
+  "access": "Author-uploaded primary full text inspected; DOI/publisher tool opens unavailable.",
+  "attribution": "PHI-base pinned AMR export, CC BY 4.0; UniProt Consortium, release 2026_03, CC BY 4.0.",
+  "before_snapshot_sha256": "9f7354fdb3db709194155547e39be4a20d176a769633b50415206ecda5372691",
+  "citation_specific_reference": {
+    "citation": {
+      "authors": [
+        "Bissinger P.H.",
+        "Kuchler K."
+      ],
+      "citationCrossReferences": [
+        {
+          "database": "PubMed",
+          "id": "8307980"
+        },
+        {
+          "database": "DOI",
+          "id": "10.1016/s0021-9258(17)41760-1"
+        }
+      ],
+      "citationType": "journal article",
+      "firstPage": "4180",
+      "id": "8307980",
+      "journal": "J. Biol. Chem.",
+      "lastPage": "4186",
+      "publicationDate": "1994",
+      "title": "Molecular cloning and expression of the Saccharomyces cerevisiae STS1 gene product. A yeast ABC transporter conferring mycotoxin resistance.",
+      "volume": "269"
+    },
+    "referenceComments": [
+      {
+        "type": "STRAIN",
+        "value": "ATCC 204510 / AB320"
+      }
+    ],
+    "referenceNumber": 3,
+    "referencePositions": [
+      "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+    ]
+  },
+  "deposited_sequence_crosswalk": {
+    "database": "EMBL",
+    "id": "X74113",
+    "properties": [
+      {
+        "key": "ProteinId",
+        "value": "CAA52212.1"
+      },
+      {
+        "key": "Status",
+        "value": "-"
+      },
+      {
+        "key": "MoleculeType",
+        "value": "Genomic_DNA"
+      }
+    ]
+  },
+  "limitations": [
+    "Gene-identity correction only; not a completed allele or whole-record review.",
+    "AB320 citation-specific sequence context, S288c canonical protein, and the experimental parent label are distinct.",
+    "P33302 is not assigned as an exact experimental protein; no replacement strain, allele, genome or AST added.",
+    "Raw PHI-base row, phenotype, source alteration and mechanism_type UNKNOWN remain unchanged.",
+    "Four previously reviewed records receive checksum-only updates; biological fields are unchanged.",
+    "NCBI contact and requests remain deferred."
+  ],
+  "primary_identity_findings": {
+    "deposited_nucleotide_accession": "X74113",
+    "historical_STS1": "PDR5",
+    "quantitative_endpoints": "Not transcribed: Table I OCR columns require visual confirmation.",
+    "source_strain_role": "Parent-background label, not a uniquely resolved tested derivative."
+  },
+  "primary_reference": "DOI:10.1016/S0021-9258(17)41760-1",
+  "primary_source_url": "https://www.researchgate.net/publication/14891280_Molecular_cloning_and_expression_of_the_Saccharomyces_cerevisiae_STS1_gene_product_A_yeast_ABC_transporter_conferring_mycotoxin_resistance",
+  "proteins": {
+    "P33302": {
+      "claim_role": "SUPPORTED_REFERENCE_CROSSWALK_NOT_EXACT_SUBJECT",
+      "entryAudit": {
+        "entryVersion": 235,
+        "firstPublicDate": "1994-02-01",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "1994-02-01",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "genes": [
+        {
+          "geneName": {
+            "value": "PDR5"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "YOR153W"
+            }
+          ],
+          "synonyms": [
+            {
+              "value": "LEM1"
+            },
+            {
+              "value": "STS1"
+            },
+            {
+              "value": "YDR1"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Baker's yeast",
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Saccharomycotina",
+          "Saccharomycetes",
+          "Saccharomycetales",
+          "Saccharomycetaceae",
+          "Saccharomyces"
+        ],
+        "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "taxonId": 559292
+      },
+      "primaryAccession": "P33302",
+      "proteinDescription": {
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Pleiotropic drug resistance protein 5"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Suppressor of toxicity of sporidesmin"
+            }
+          }
+        ],
+        "recommendedName": {
+          "fullName": {
+            "value": "Pleiotropic ABC efflux transporter of multiple drugs"
+          }
+        }
+      }
+    },
+    "P38637": {
+      "claim_role": "REJECTED_WRONG_GENE",
+      "entryAudit": {
+        "entryVersion": 160,
+        "firstPublicDate": "1994-10-01",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "1994-10-01",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "genes": [
+        {
+          "geneName": {
+            "value": "STS1"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "YIR011C"
+            }
+          ],
+          "orfNames": [
+            {
+              "value": "YIB11C"
+            }
+          ],
+          "synonyms": [
+            {
+              "value": "DBF8"
+            },
+            {
+              "value": "SSM5"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Baker's yeast",
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Saccharomycotina",
+          "Saccharomycetes",
+          "Saccharomycetales",
+          "Saccharomycetaceae",
+          "Saccharomyces"
+        ],
+        "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "taxonId": 559292
+      },
+      "primaryAccession": "P38637",
+      "proteinDescription": {
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Dumbbell former protein 8"
+            }
+          },
+          {
+            "fullName": {
+              "value": "SEC23 suppressor 1"
+            }
+          }
+        ],
+        "recommendedName": {
+          "fullName": {
+            "value": "Tethering factor for nuclear proteasome STS1"
+          }
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "after_record_sha256": "31ef95de73ba8de79b618ef51b63f88647c8735ffecf044235cfb25d42ce2384",
+      "before_record_sha256": "a1b0ad5a0dfc926fec336e5010032509664a9e99b6433adbb21945329b38d1d5",
+      "change_scope": "REVIEW_FILE_CHECKSUM_ONLY",
+      "changed_claims": [
+        {
+          "after_sha256": "7e250bce9adcb0d6735aedb556957bad776181892aadf2643caa393a53b05bea",
+          "before_sha256": "a68b9c941620c47c645d3ca8101e4efd6315bcbf888b9a385f8313efd6c60d38",
+          "claim_index": 39
+        },
+        {
+          "after_sha256": "281061b47a38d9d7ca5c0a66d2a19742a6607071c2ca7b78cb03325db55551d1",
+          "before_sha256": "0d9edbaa995538a4a1557ea3f73975958f67e3fb4d9bd93e13eea4898d11a3ce",
+          "claim_index": 40
+        },
+        {
+          "after_sha256": "f5885c434166c964893db979c94e2f3707056c121ae67c5d79a9e7db5f6b0035",
+          "before_sha256": "b078123b90c3d015270f1470e5edd8bfdc9012c5d5e8828033bfa7648663c458",
+          "claim_index": 43
+        },
+        {
+          "after_sha256": "73d1ed604002f8d52023558268a2bc9c3e71e42d36bec83d12b6c87c25b28115",
+          "before_sha256": "6fcf14e7ce77e8f34022b2ee2f384aa95fa5a7a7da93a1b1734d615c01cef3a4",
+          "claim_index": 44
+        },
+        {
+          "after_sha256": "a29fcbb43b51068cf05402e8943dab1230fcb15d4d4c6ab9360b2c5e52836b09",
+          "before_sha256": "34b806405e1e5dacad1faef039b6631ab40f7e2da8186468b4860d807d1ea9bb",
+          "claim_index": 45
+        }
+      ],
+      "identifier": "CHEBI:10023",
+      "original_history_sha256": "f7019216082abb22e5113920e1f0b5aef33731eb65539797e4360047a3961740",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "unchanged_fields_sha256": "7c156d034c46968be1fcd7591d05735918cf44cc1588d0b4f6f9840fe4363fa0"
+    },
+    {
+      "after_record_sha256": "36bb661f84aa555f39a9f6b3c996ae40da168d16ce805bb38cf261ca8c1f6df6",
+      "before_record_sha256": "2294fed59627938f51e6cadfd330f774203d8d453cb8b1232a68d91fe32ae76b",
+      "change_scope": "MISASSIGNED_IDS_REJECTED_REFERENCE_STRAIN_WITHHELD",
+      "changed_claims": [
+        {
+          "after_sha256": "6545f7007e6999adeea6fef8855500d48dcfca0d6cfb4b3ac728e974d8a9697f",
+          "before_sha256": "7d148f4ed3c5fa2e1fb28b0277e090ba2384b933b8f4f8b8d85de68529380262",
+          "claim_index": 2
+        }
+      ],
+      "identifier": "CHEBI:27641",
+      "original_history_sha256": "f399d6bee581dbb8c75c7e234acba2501d308515bc83b72fde79278d494879e8",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml",
+      "unchanged_fields_sha256": "f78d8b7e0fbc7e9733fe3c284ba8b72ee2a9c419c6f263a74a693df00a8124ea"
+    },
+    {
+      "after_record_sha256": "fc6f0908a396897ecad48a0dd6e8f9bbcfe199d5b2311a141706058053a47411",
+      "before_record_sha256": "dedc576e96257590dc2e7a3563943be6044b3cd79f78fa069a9ca35b52ab8b94",
+      "change_scope": "REVIEW_FILE_CHECKSUM_ONLY",
+      "changed_claims": [
+        {
+          "after_sha256": "39735e7bf32e247e27fad04571e6e2c3fc8c2f1610812e9d516c6f044c448dd4",
+          "before_sha256": "8c8e6e8e0b2724dab2cdf78482d6b47bf12da26f805d4fbd43c217eb81befdd6",
+          "claim_index": 6
+        }
+      ],
+      "identifier": "CHEBI:81760",
+      "original_history_sha256": "212c40755dded378634c839a09324912391ac847909269788289254a1c1d5292",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml",
+      "unchanged_fields_sha256": "cb2bdf1a75d128bdba8df48c79bcf293132298d782fd7137e335b7e2e887d81d"
+    },
+    {
+      "after_record_sha256": "7901d6f83f0d35026f36b3e92d99b6ba575d60b0a5dc6636866c5e379f54f522",
+      "before_record_sha256": "8c76795bb71e8e53b6cd59efd445ccab24963e6cc58c79fd7c621eb4588d3071",
+      "change_scope": "REVIEW_FILE_CHECKSUM_ONLY",
+      "changed_claims": [
+        {
+          "after_sha256": "7195aab0122025853da1a2c1185b56927a410953b77eea56e9f840f833ef5c67",
+          "before_sha256": "5f6e2307123ed36c1f89fccac7c149c2a358d0b5d48c187418df3524e9995a9f",
+          "claim_index": 6
+        }
+      ],
+      "identifier": "CHEBI:8434",
+      "original_history_sha256": "43552377c5eb08a899271e04f8345e362e57ab277ae4dc86947a281b38601d3c",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml",
+      "unchanged_fields_sha256": "0a0c06f9d9b341c2ba282b7fc25ac37b9e833bbd31db5806a7dd2e18b9b328e0"
+    },
+    {
+      "after_record_sha256": "21aec337ee806e2fa0b83364307b4d00f844312c38752e643df3f41c6b125202",
+      "before_record_sha256": "657259f3a6066c0162142ab6016aa7121e5fcf5479fbf805d2c4e4a8442f6133",
+      "change_scope": "REVIEW_FILE_CHECKSUM_ONLY",
+      "changed_claims": [
+        {
+          "after_sha256": "3d3ecadb49a16a2c3b2a6912d9cd35fd850bb42fab1396504622e0e36a1a6379",
+          "before_sha256": "c86fb60ad60a857e2f0cff1110f3913f903f2927c0c8c25d1edef22f65bd65dc",
+          "claim_index": 5
+        }
+      ],
+      "identifier": "CHEBI:8489",
+      "original_history_sha256": "49f2a1e474ab6a457286470ce636d38c6fdbd8003d0ff60f29efd0976ff37d4a",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml",
+      "unchanged_fields_sha256": "8b58ffacf69aab5d67bd2cb6754d05723b02bc0f962b21dcb89a40a2f44d50c9"
+    }
+  ],
+  "requests": [
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:05:11 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "15",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T02:05:12.208720+00:00",
+      "sha256": "3c0624fde2890f6c12bacc34268d4a4f52164ef2a329cf969c095d48deb06ef1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AO42772+OR+accession%3AP02557+OR+accession%3AP05220+OR+accession%3AP0C431+OR+accession%3AP10613+OR+accession%3AP10653+OR+accession%3AP14263+OR+accession%3AP32420+OR+accession%3AP38631+OR+accession%3AP38637+OR+accession%3AP50859+OR+accession%3AP53373+OR+accession%3AP53374+OR+accession%3AP9WHZ3+OR+accession%3AQ1KTF2&format=json&size=500"
+    },
+    {
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Length": "2686",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:05:26 GMT",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "hit cached"
+      },
+      "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+      "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/4932"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:23:04 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "15",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T02:23:04.765069+00:00",
+      "sha256": "99957a17b3ba51090567ef042e37ac1c51fd978d79742567106f3ca6067ceb76",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A1388107+OR+lit_pubmed%3A1423663+OR+lit_pubmed%3A1423716+OR+lit_pubmed%3A8307980+OR+lit_pubmed%3A8641470+OR+lit_pubmed%3A9871122+OR+lit_pubmed%3A10919801+OR+lit_pubmed%3A11036010+OR+lit_pubmed%3A11600353+OR+lit_pubmed%3A12519188+OR+lit_pubmed%3A12543662+OR+lit_pubmed%3A12604551+OR+lit_pubmed%3A12612806+OR+lit_pubmed%3A12709346+OR+lit_pubmed%3A15215099&format=json&size=500"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "Keep-Alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:01:35 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/559292"
+    }
+  ],
+  "review_locations": [
+    "pp. 4180-4181: gene identity and strain context",
+    "Results and Table I",
+    "p. 4185: STS1/PDR5 allelism",
+    "UniProtKB release 2026_03: P33302 entry 235, P38637 entry 160, sequence versions 1"
+  ],
+  "review_sha256": "947c2b2a7f0505ecb5e1005b1d3ec6966ea0321e31389219beb99acd25b2cab3",
+  "reviewed_on": "2026-10-08",
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "source_row": {
+    "evidence_code": "Cell growth assay",
+    "gene_id": "YIR011C_mRNA",
+    "identifier": "CHEBI:27641",
+    "interaction_type": "antimicrobial_interaction",
+    "modification": "STS1+ (wild type) [Overexpression]",
+    "phenotype_id": "PHIPO:0000544",
+    "phenotype_label": "resistance to cycloheximide",
+    "phig_id": "PHIG:1805",
+    "pmid": "8307980",
+    "protein_accession": "P38637",
+    "source_commit": "62e6a87a49397cba6ceb211b254d7ac8e5d09ff8",
+    "source_retrieved_on": "2026-09-01",
+    "standard_inchi_key": "YPHMISFOHDHNIV-FSZOTQKASA-N",
+    "strain_label": "YPH501",
+    "strain_taxon_id": "559292",
+    "taxon_id": "4932",
+    "taxon_label": "Saccharomyces cerevisiae"
+  },
+  "status": "MISASSIGNED_GENE_PROTEIN_REJECTED_EXACT_SUBJECT_UNRESOLVED",
+  "taxonomy": {
+    "4932": {
+      "active": true,
+      "parent": {
+        "scientificName": "Saccharomyces",
+        "taxonId": 4930
+      },
+      "rank": "species",
+      "scientificName": "Saccharomyces cerevisiae",
+      "taxonId": 4932
+    },
+    "559292": {
+      "active": true,
+      "parent": {
+        "commonName": "Baker's yeast",
+        "scientificName": "Saccharomyces cerevisiae",
+        "taxonId": 4932
+      },
+      "rank": "strain",
+      "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "taxonId": 559292
+    }
+  }
+}

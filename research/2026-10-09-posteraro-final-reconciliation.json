@@ -1,0 +1,431 @@
+{
+  "changes": {
+    "byte_identical_records": 2917,
+    "changed_records": 22,
+    "checksum_only_claims": 184,
+    "new_scoped_claims": 1
+  },
+  "checkpoint": "2026-10-09-posteraro",
+  "current_census": {
+    "path": "reports/resistance-grounding-2026-10-09-posteraro/corpus.json",
+    "sha256": "98c1197508fd138d700979ad19184a62da8f209c0cc6281e2c6bdd5b893a320c"
+  },
+  "current_counts": {
+    "pending_discovery": 2626,
+    "records": 2939,
+    "resistance_assertions": 4788,
+    "score_rules": 467,
+    "with_resistance_mechanisms": 300,
+    "with_score_rules": 16
+  },
+  "current_ledger": {
+    "path": "research/2026-10-09-posteraro-resistance-grounding.tsv",
+    "sha256": "912e612ea24459847895f733311bf48d162c0968329bd2c58957a3ab3cc9b300"
+  },
+  "dossier": {
+    "path": "research/2026-10-09-posteraro-subject-reference-grounding.json",
+    "sha256": "028f6ccda054e1089a857af6f5dc8eb66abbffc768c7aef6b2536f52d07dd648"
+  },
+  "embedding_documents_changed": false,
+  "historical_census": {
+    "path": "reports/resistance-grounding-2026-10-09-posteraro/before-corpus.json",
+    "sha256": "07afc1e49a810be5cadbdd66b87488bac27e51682117e135a897c0da6bafe3b2"
+  },
+  "ignored_files_included": true,
+  "limitations": [
+    "Earlier dossiers retain their historical snapshot and preservation scope.",
+    "This audit pins seven existing-test expectation updates and preserves the earlier audit.",
+    "No discovery candidates or research statuses changed; no whole-record review was promoted.",
+    "Reference-accession and lineage ledger columns are PHI-base metadata, not subject assignments.",
+    "Shared review checksum updates do not revise previous biological decisions.",
+    "Root README was not in the preservation snapshot; its generated statistics have a separate QC gate."
+  ],
+  "map": {
+    "path": "data/embeddings/corpus_map.json",
+    "sha256": "dac6935acf0b5c6ce29a5c1847076e40aaed61377bfeb92a3f54c48c02aec8b8"
+  },
+  "phase": "AFTER_SCOPED_REGRESSION_EXPECTATION_FIXES",
+  "preserved_research_artifact_hashes": {
+    "research/2026-08-29-antimicrobial-data-sources.md": "c3eae274ff58529fbfdb2ac2fdb91f3bf4980d528970cbb353c5576ca5393349",
+    "research/2026-08-30-antibiotic-data-source-research.md": "1828b75e31c40fc2d3844392086a6cb0f677c2f247721e9b0a98f8d7bbf67270",
+    "research/2026-08-30-chemical-embedding-benchmark.json": "4418c3eda29e74976cb5806eb39bbee65b9723f42d0be64e84378cfac5e3643f",
+    "research/2026-08-30-chemical-embedding-implementation-plan.md": "4ad97026210275ff64eb036357381e63edb967ed0694e2ca38b1064fdb61124d",
+    "research/2026-08-30-chemical-structure-embedding-model.md": "da97f8940689c21a7f69969ef055814e972e0b8303c86f625d9c7ad082a40fa2",
+    "research/2026-08-31-aro-target-role-audit.md": "d42ba16016ec525a19eb074353c7caf008769b2a9b5697b7eddc0ceba06104bb",
+    "research/2026-08-31-bindingdb-target-dry-run.md": "d6b4b0a667f3781814ef309b921d3ac603bf0ea018491293289f62f1214cfefc",
+    "research/2026-08-31-bindingdb-target-evaluation-plan.md": "0671a345feecd5092d876c04146d88a1b170f406f5e63e6e167ce6d5849571bd",
+    "research/2026-08-31-bindingdb-target-import.md": "7c1ca65ca4fb2e17b6ba1c98e9771cad96525eb38ec15c263f943aa8d1b76413",
+    "research/2026-08-31-fda-clinical-status-dry-run.md": "203863f2baaf15eec03f3e205283ecb494c50227c42e25259d7fc8b21530fea6",
+    "research/2026-08-31-fda-clinical-status-implementation-plan.md": "0c38f3c77a0f916538eb1d107f5d2aa1a47ff4471c10747fcfc1d9d03ab86bec",
+    "research/2026-08-31-mibig-producer-dry-run.md": "cd180819fc03e770d883cbe2b11a49933283fd6eff4f5435f917ad22f003d2e1",
+    "research/2026-08-31-mibig-producer-implementation-plan.md": "ab64372873add6c5c1cf84a85773b01091b0f2b081766d75e405014e5f1484ef",
+    "research/2026-08-31-reuse-terms-audit.md": "178afb399ee8746a8719145edbc32938490192fd94e8ff2833409dcd686a8c25",
+    "research/2026-08-31-reuse-terms-outreach.md": "dc9555193673fcf5fb1962ea88f06b61994529162bebfbc08008d5c1df67f280",
+    "research/2026-09-01-source-ingestion-sequence.md": "66c5a4a6b7d856cdd5320af75c48037bff4da118e6c61885afa4d517c8d43ae4",
+    "research/2026-10-03-ncbi-ast-activity-collections.md": "9a699312b0eabb5a029789c2807962026025b7606cf46f2861c878752a1fa4d7",
+    "research/2026-10-03-ncbi-ast-adoption-audit.md": "cd2a2ff7adb62867259ca3e9f985ebb29c4a7b409388560ed388f6cb203039d8",
+    "research/2026-10-03-ncbi-ast-assay-review.md": "0ba126962bc14323a9a2a0b13f04bd6f66982f509bd817e31d7ac5e4e69d4c94",
+    "research/2026-10-03-ncbi-ast-biosample-consolidation.md": "a33c68eafcfff19efb72e8af82cb7f55f5b8f38a31224135e028489d1d2a4a09",
+    "research/2026-10-03-ncbi-ast-bounded-publication.md": "6bf5d4b65c8f7e0119082c3d60c947ec00635d540bd8a3cf92178fe2bced2b54",
+    "research/2026-10-03-ncbi-ast-compressed-inventory.md": "32f1b029fc80ca34aa5e0f35ec9c48ac67fcfddc75037501e62f09b58037fe7e",
+    "research/2026-10-03-ncbi-ast-drug-coverage.md": "8b3d42f151781ee7c88c1efa494180f6c00d4ee4a3b4b09149f88d1317ab9b9b",
+    "research/2026-10-03-ncbi-ast-existing-corpus-overlap.md": "9e84f223af43a1f1ba9ac3bb77c645c83d728f6858ec3480ea4331cd741ae16d",
+    "research/2026-10-03-ncbi-ast-expanded-publication.md": "6d63fdd5aa52a3547e4bb3ad6f390e5073cd49e74e2ce23162e4af09d8efb0a4",
+    "research/2026-10-03-ncbi-ast-isolate-enrichment.md": "eaa4eeb3df6c895c4ae200295482bd7e37af76f44a2131febb0dca05698c7751",
+    "research/2026-10-03-ncbi-ast-isolate-snapshot.json": "879da2dfe98a412bb011f5b6dfcbcad8173d3d1ef4b2c320ef3bbf8884b111ad",
+    "research/2026-10-03-ncbi-ast-live-evaluation.md": "aa9229ea3a524122dcd2a41a240c671611eafdc36e107cb6668b35b52198f637",
+    "research/2026-10-03-ncbi-ast-publication-audit.md": "40ea50de5d599a88421e939dd3ce9b1f81470195b2cafe8260d07c753d69b862",
+    "research/2026-10-03-ncbi-ast-snapshot.json": "e14e1523b7f449b1e4acda3f39c288f646a983df74254f0a244befce022891cd",
+    "research/2026-10-03-ncbi-ast-taxonomic-overlap.md": "b364da0c284da748dcf2604b4bdbafeb0ba1cbec15e9a9d0eaf272e0b695f8a3",
+    "research/2026-10-04-cryptic-membership-evaluation.md": "bc636c03d3091421c5fac13a2fa3f139b4e41fb98c831c56065a6c6883668c2f",
+    "research/2026-10-04-ncbi-ast-source-terms.md": "4f09cd2b31ba3600a294281ab75d6400c1b43587dcaa2028fac89ec8084a948c",
+    "research/2026-10-07-5-fluorouracil-fur1-lead.json": "5f8a34c9a67cb88a6f39d3fc41cccd83de18b7fbb90ae83face47e0e699a9eb9",
+    "research/2026-10-07-aculeacin-a-lead.json": "0a4475685998f4410ea1cbbc6aa789a27882e805d9c623776ccc3f7ac652b8e9",
+    "research/2026-10-07-card-reference-grounding.json": "bf01b0fef65240d2d1daf8298398ae171194420c0093a7aad2c9ba318b9b5961",
+    "research/2026-10-07-card-reference-ledger.tsv": "5b0e0fb215fd4113e3ceb5507d008b792c63c9e4eaf28cec1be2148919491356",
+    "research/2026-10-07-cerulenin-grounding.json": "d5338eef46e64d7567506cbd3ec479cf44ee4106240e5fd0c8975da1efef0f1c",
+    "research/2026-10-07-hivdb-reference-grounding.json": "b2ea18881e93d2e2555b333ccaf80a8cb05c8cfa385f5b32f7a2de7097bdf7f4",
+    "research/2026-10-07-narlaprevir-grounding.json": "d509b54100706aed174c94d89b5b0c88bcba5e0a1fe77fc267ff70f779874893",
+    "research/2026-10-07-phibase-grounding.json": "3efde0fc195bb2348eeabbeb1a25118613550981578f4cb60590f05e52cefdc3",
+    "research/2026-10-07-pyrisoxazole-protein-crosswalk.json": "861a009adad68fd42226457e858e26aaebcb610a693ebe52990e839aca6e9879",
+    "research/2026-10-07-resistance-citation-candidates.json": "cdd3cbacd57caf7160ecff44f8deed986043d23224d1a15497bba293d2388d43",
+    "research/2026-10-07-resistance-discovery-candidates.json": "62a15d016a329193679d52d34252b63dc91307909d75be8b92954477bfec551e",
+    "research/2026-10-07-resistance-discovery-current-candidates.json": "5404527e95ec2adc37faad773a8fc699433495503cf82f1bfe278385198d201f",
+    "research/2026-10-07-resistance-discovery-current-ledger.tsv": "b81519f6a74f1209af356a8eaa10e3d7bdd528ca89ed800e8f966bc3c14dc4c3",
+    "research/2026-10-07-resistance-discovery-current-plan.json": "c30ef8653e7db16d0554f7cdefe27f754a5fb8e56b2701efda5a6eba6ea6f112",
+    "research/2026-10-07-resistance-discovery-ledger.tsv": "9a398e22187d92929c9f24125baf7570c96c5c861e0f838e7516fb667dc71914",
+    "research/2026-10-07-resistance-discovery-plan.json": "dad0f3c57b0eada9c489996565d8acfd3906f7c7a2203145f162babfd2457e69",
+    "research/2026-10-07-resistance-grounding.tsv": "42e9bf6e5d3c5964c4fecc0620cbe29d8dc82ff4f89f02040f08214b20c9bb3c",
+    "research/2026-10-08-azole-yeast-subject-grounding.json": "c6d26059814a99572c28488ef67bb52446a2348a1ddf1462d080d66169afc020",
+    "research/2026-10-08-azoxystrobin-cytb-lead.json": "0c95ffb3dd003d47e54e6b04617e7ff36e1a8a89a8bd28a2dca92928a2b440de",
+    "research/2026-10-08-carboxin-followup-grounding.json": "9c199d398c10cd76468914df90be9913e7e0023794bac8f6f8160f960987b78b",
+    "research/2026-10-08-carboxin-reference-grounding.json": "b9eff0fc636215b90ab429ada520a6fa9030ad645e074ee4f3b12764fcf503bb",
+    "research/2026-10-08-cycloheximide-sts1-grounding.json": "ad66d009731e9ae61c5bfc4e58cca4d400b6af49f8699941d4097de6f91474e9",
+    "research/2026-10-08-daclatasvir-grounding.json": "892b4d12426f1ef259dc6e76b9f514abee7b5798c75c19625061c26c2163fdc9",
+    "research/2026-10-08-darlington-subject-grounding.json": "f894db727c6df65027cd183b2d085dbac3057c8337d0ddb78c438a192f2ec0b2",
+    "research/2026-10-08-dasabuvir-identity-lead.json": "129eedb70bc141f06d1e6469ea94fba02c73e5453bb99b09bb233bc97f404669",
+    "research/2026-10-08-duan-reference-grounding.json": "b625d75d006609f21d3c29e85c50005a901ede4b17a5fe729895d2a457f78283",
+    "research/2026-10-08-echinocandin-reference-context.json": "4e04802dc4c5a8713797d896b1216368db038e406ca4dbd7cef3944ddd0b1f66",
+    "research/2026-10-08-eddouzi-clinical-grounding.json": "49b15680986e4f3d5f45d77ce05a8612c12bbafbefcf779037d8227237ab091d",
+    "research/2026-10-08-eddouzi-deposit-lead.json": "aed537fcd16a778987f7f867484c6fe4ee1251d31b45b48584f12118f923a0e9",
+    "research/2026-10-08-elbasvir-grounding.json": "bc7d2bf57aea4963f431816883daf6fd2f2269d942a78bf51bb7447d9d38e4f9",
+    "research/2026-10-08-flavus-reference-context.json": "e9e07167649a67d46c947cc91b2aec5a3db5b6ed7f8e43d29c6e0e28e248abf4",
+    "research/2026-10-08-flowers-erg11-lead.json": "627e35a94ea2fdc3319855c27492291fe98066ea40f3e43d3cb61bbf802f975c",
+    "research/2026-10-08-flucytosine-fur1-grounding.json": "4951eeb93d3d915aa5cd41443b2f7bcd48c54cff2532d27ef076f5e34c2a9aaa",
+    "research/2026-10-08-fumigatus-reference-grounding.json": "3947eea25f7f016c42644d7a859e79f72b647bcf30338168758c5b4fe1ac8312",
+    "research/2026-10-08-fungal-identity-followup-grounding.json": "c07ee53c8306043d125e986a86cce1a73afa3ca5fc9c54b8778b3c624c4f91d0",
+    "research/2026-10-08-fungal-oa-context-grounding.json": "a1af82c8be7dbe1a99460698c1f1424d85b2811d9c814a0520bfe0679765d109",
+    "research/2026-10-08-fungal-primary-context-grounding.json": "4e5ad9b54110331d5658d16bd3f419682253349bde81941c07395d3d8746eda2",
+    "research/2026-10-08-fur1-cohort-grounding.json": "e878b1ca0824c064e304d495c152856c9e78e6dcef29b955ce7d13296772c182",
+    "research/2026-10-08-hcv-compound-form-reviews.json": "c69fd7dbcb4fafdca0a491a5d502134447cfdda36cc2d36e4acc60329a3f4172",
+    "research/2026-10-08-huang-parent-reference-grounding.json": "16a1c9652528a29aba690d0b2f076c54801f43d468a898a244739ef1987d59f7",
+    "research/2026-10-08-hygromycin-yeast-figure-followup.json": "ae84c2b65f383008dc7b2377df370ab0c0497816ce87e9e29ed7732a9d5c4d39",
+    "research/2026-10-08-hygromycin-yeast-modifier-grounding.json": "1e5f4ff07cdd202a57152f105951e6e9c328359990611672852bb1afb97d61c5",
+    "research/2026-10-08-iprodione-fludioxonil-grounding.json": "dd593559453c89c80cdb8672ba8f29aa424f913194b4c2b865d16d1fe806d270",
+    "research/2026-10-08-js67-reference-context.json": "564c08379f98b655fddbd1127362b130956606f0b86eefc7a6b1d73926d99323",
+    "research/2026-10-08-li-yeast-reference-grounding.json": "d58760d8200ab5b011773028a5c9cef2396ebd16d5a0992068e6322551584e21",
+    "research/2026-10-08-mehrabi-parent-reference-grounding.json": "0aebc5d1186ae1afcd23ca3c1a82aab70243c633f465b3ee7e7865afcb12bde6",
+    "research/2026-10-08-nakayama-reference-grounding.json": "097ef6f014aa6716e2fa2895e3c54c2c1a4cc908686cc9aee0a3935cd12d6c3e",
+    "research/2026-10-08-oligomycin-reference-grounding.json": "cc18b04738b286622dd942094e02b93d833f3f7806b1c73445693765a25c06d4",
+    "research/2026-10-08-pending-phi-identity-audit.json": "54fb4296401c7f93de1ed8140d799f5223cbbd4143492801e5333e4fa8216f86",
+    "research/2026-10-08-piotrowska-reference-grounding.json": "6693ca217386c46d90be20fc3ce030f5f6552363e9b9d3d0160831cfe854f5fd",
+    "research/2026-10-08-pr39-grounding.json": "a336458cbf51b20a1fd922d044c2df255bd7a817c12dfff5561803ce8313b82b",
+    "research/2026-10-08-raltegravir-model-grounding.json": "19a807950d77246111c7a69f2c4d7afbc67b40721ef135ba1864b8f2f013b968",
+    "research/2026-10-08-ren-subject-context-grounding.json": "1873c24756becb85b0d416d1fffe8cc1d98a44caaddf5795b1264f71f496d63f",
+    "research/2026-10-08-resistance-alias-discovery-candidates.json": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f",
+    "research/2026-10-08-resistance-alias-discovery-ledger.tsv": "724eac2a737d8c6847aead9cd3edbbd90ae0f20b50f85f1dc559bfd6e0e9a81b",
+    "research/2026-10-08-resistance-alias-discovery-plan.json": "674d96cf7c5b6d2a8577edf326b963e956b8ac5d7645cc02cd676291a0ce41fa",
+    "research/2026-10-08-resistance-discovery-expansion-candidates.json.gz": "6df989a88ca0e99f6280e981e91e5a3b4e45ed14565f45da3a7a37c9557adb92",
+    "research/2026-10-08-resistance-discovery-expansion-ledger.tsv": "7c02f4a7696ec6b2cafaa59537c2787b7baa8badd176e316ebc9c2c6617aa94f",
+    "research/2026-10-08-resistance-discovery-expansion-plan.json": "f80305760a82f31e7f6b3e2be8ea6e2074df4b77ea9597ed0bee98ce0bdca62f",
+    "research/2026-10-08-resistance-discovery-expansion.json": "e9173a03e3d91d4cc3160f4329ce55703c110f8f26171b71155e5a03e0b221dc",
+    "research/2026-10-08-rybak-reference-grounding.json": "d4a3f30e9c687ff418e3be254885658df8830d712d42c6002e351ccf02327fce",
+    "research/2026-10-08-shima-parent-reference-grounding.json": "197ba7f47a07445799e1e881f7765e4ad160b53ddb332e05b731aef5371f994e",
+    "research/2026-10-08-voriconazole-subject-grounding.json": "62f8ca23bfa4e03ccf107de63e1d37a800a60d5e17749da9959996297a9655a6",
+    "research/2026-10-08-xu-subject-species-grounding.json": "d6d6eabf92faffa41978b18ac0a938fb47a97af587127e71b3e64c11972aad3f",
+    "research/2026-10-09-card-archive-groups.json": "0275d0944d18f8a95ad57efb2b6bf73eb998baa27eda719350c650dcf30e8496",
+    "research/2026-10-09-card-citation-context.json": "2bf1c102685080c1a130af31be4cf9a8c9d81c64bf7b2774bf9fd0afa19bd07e",
+    "research/2026-10-09-card-fungal-reference-grounding.json": "a237c6376df3254aef5ee0b9866b2ffe36636f118ba8ba1789a374c8b2217bd3",
+    "research/2026-10-09-card-named-taxa.json": "9aec094dbd14d5e6b913477e1bee57acec8c5b5fd672c16dde5a513a282e2b91",
+    "research/2026-10-09-card-term-scope.json": "4de3f3c046e5f6822d0ed738906baf20089c712edaf493e32fff5551af040acd",
+    "research/2026-10-09-cordycepin-reference-lead.json": "9dbb2c85db09d3c1afe49ecbee56fb00c7e2fecb2946507d1326c845e4e3553c",
+    "research/2026-10-09-dkag124-cohort-reference-grounding.json": "bacce3929557d76e9735d4416832d3a3306caa2e74d79dea423e3536d27e8b81",
+    "research/2026-10-09-fouche-checkpoint-reconciliation.json": "0326863f0a8f100853cefa3527569e4998441a3407f79f48406cebccda31acfc",
+    "research/2026-10-09-fouche-subject-reference-grounding.json": "949c9c84dd2d2679b39df9f4bc32dd6f9c257820c8daa36402073662e86b2ff0",
+    "research/2026-10-09-glucan-inhibitor-grounding.json": "8d23998d36e78f9f6da30813fae1837f23837c961f99d8dafd07389b6fbffd21",
+    "research/2026-10-09-gm193663-checkpoint-reconciliation.json": "9b3769255db4af608aa3e1e12e2d52413c953ea076c74d346be20a554c041477",
+    "research/2026-10-09-gm193663-curation.json": "af443f0ef23f28ccaa5fca284f57b22cfb6c4989f091852a3110fff73ef14ce3",
+    "research/2026-10-09-gm193663-publication.json": "2de5af3757a4eb186de73ae91beb759f69647436c7657f944d0289f43485646a",
+    "research/2026-10-09-gm193663-resistance-grounding.tsv": "24ed1d91c1e66808be1dbfb6a46d964c6301d522bd04a4e67e1a344ad3a88e79",
+    "research/2026-10-09-gm193663-verification.json": "9a97aa49740017d85863e61f1c577a42597a9f075ef433d6ced6d8dc01d40c67",
+    "research/2026-10-09-hdf1-subject-reference-grounding.json": "f9abf4b33f459b233abe55fd002805bc21a8b7a09d729f259c0970181c920211",
+    "research/2026-10-09-hygromycin-additional-primary-grounding.json": "637418925374bfda1893854750b1dbcd1112248856b549b05afc582b3cc0aeaf",
+    "research/2026-10-09-hygromycin-discordance-followup.json": "7239211b2cfdd81ad68c8aa7fc90f0d0a9eeaeb18e0d7d0f2c8dc70cc1735583",
+    "research/2026-10-09-lmrc-primary-context.json": "195350c4637194c8586c25a2b8c5d119aca9e41ab859086a54e9b5a8af26152d",
+    "research/2026-10-09-nguyen-reference-lead.json": "c6e6569d383ed7aee7d4b0456f904472dabf821ad580ff3b9a59b8210c3f85f2",
+    "research/2026-10-09-papulacandin-checkpoint-reconciliation.json": "a0984e264f7e0ae5968d4e6354d11d23addb0a4889a41556d9f23f79f66aded4",
+    "research/2026-10-09-papulacandin-curation.json": "ca9a68ae87d8b877448ddb61744a9ad2fe0d5f4001d6fc7286f7ca60c825324b",
+    "research/2026-10-09-papulacandin-map-wording.json": "052791db2bcf695c3b772f938063b8a86398f1ac988e2cab165cf825dedf0c8a",
+    "research/2026-10-09-papulacandin-publication.json": "b26d02c5e795fa62121a72e3bbf45ac5229dc921b75089f7c0c6ea5a798e014e",
+    "research/2026-10-09-papulacandin-resistance-grounding.tsv": "8a48eb84b87fda0a7ab06e4569da9f2e9d6b9e440649d5e195b9c7cee5f83029",
+    "research/2026-10-09-papulacandin-verification.json": "7aef38e1db0bd2e08175d91a1d57e31e05db67f2e895588bb60b461c1634700b",
+    "research/2026-10-09-resistance-discovery-date-sort-candidates.json.gz": "fc28e63c67fe2b9c27e241dc37fefff12fa78e56891a2ec6a9e147fa2da828f6",
+    "research/2026-10-09-resistance-discovery-date-sort-ledger.tsv": "2401eaa200e8f03c9d06a86561dc0a8e455b5027bf19114ec34f8cc388bb9651",
+    "research/2026-10-09-resistance-discovery-date-sort.json": "e3e545520420d8109c8b0bd2ac07ea8c3c248ab5c829b29ba1eb2a2112436846",
+    "research/2026-10-09-resistance-discovery-query-local-candidates.json.gz": "7f09b34ddeedfb5a5b866ef48d8cb706d55197e9ed7588cbb86a0a1275bdb53e",
+    "research/2026-10-09-resistance-discovery-query-local-ledger.tsv": "65cac02c8ce0055dc27794799e4661220fbebd1308cfbfd39049d95a4d522b5b",
+    "research/2026-10-09-resistance-discovery-query-local.json": "45596e2d5842620ddca8f66f39dc477491635d02b0e10239597a0de5810a098a",
+    "research/2026-10-09-resistance-discovery-restart-candidates.json.gz": "1a24df51210772265636e307ab73e078140317c8c945d88e0ab427e6955c3326",
+    "research/2026-10-09-resistance-discovery-restart-ledger.tsv": "b35fce7af0687d01b9e7c0af5617a45e2df673a9d033972130fda5bddd7d921b",
+    "research/2026-10-09-resistance-discovery-restart.json": "86a041f3208d80b447a166d7b05137ece1bb253504256ad741e538a104ad6934",
+    "research/2026-10-09-resistance-grounding.tsv": "6661d239f05e844b2e0e89070522a16fbd436ad0a356d0d3bce3da378ad4a677",
+    "research/2026-10-09-rpld-reference-grounding.json": "803fb2091d65211f9e399c5a9e28899afa42c34af96484585229428f0fc2b56c",
+    "research/2026-10-09-sdh8-checkpoint-reconciliation.json": "f2e69a1829ef7c3d5817a5fe2c65f7350ffe805c5249102a5f7cfe6fafc09ba5",
+    "research/2026-10-09-sdh8-locus-crosswalk.json": "e9500844909e483eb0c6784fe58d307de1674f722c7c10ff6b608885f0d74e7c",
+    "research/2026-10-09-sdh8-resistance-grounding.tsv": "cf5908cc0a3e8447f8239fcb354977cc90294c7f950b7f40d9fe15ef3a9cc99a",
+    "research/2026-10-09-sordarin-compound-scope.json": "cfba8049d755e21af4bda2d0a0cda12a7c6de84da493a1e0f790dcd7f4e2d725"
+  },
+  "prior_publication_reconciliation": {
+    "path": "research/2026-10-09-posteraro-checkpoint-reconciliation.json",
+    "sha256": "c5d9b577089ad28d9eb320a06084fb72c0ebe4dd8c3c8d3363f2e347fbca7d96"
+  },
+  "protected_files_checked_unchanged": 6633,
+  "protected_snapshot": {
+    "path": "reports/resistance-grounding-2026-10-09-posteraro/protected-before.json",
+    "sha256": "407a5d652a507314729dda6effd147154ad16af94c7386e6557bbcff6f6b785c"
+  },
+  "publication": {
+    "activity_and_membership_datasets_unchanged": true,
+    "changed_pages": [
+      "pages/antibacterial/brefeldin-a.html",
+      "pages/antifungal/anidulafungin.html",
+      "pages/antifungal/azoxystrobin.html",
+      "pages/antifungal/carbendazim.html",
+      "pages/antifungal/carboxin.html",
+      "pages/antifungal/caspofungin.html",
+      "pages/antifungal/cycloheximide.html",
+      "pages/antifungal/difenoconazole.html",
+      "pages/antifungal/fenpicoxamid.html",
+      "pages/antifungal/fluconazole.html",
+      "pages/antifungal/fluconazole/activity-1.html",
+      "pages/antifungal/fludioxonil.html",
+      "pages/antifungal/iprodione.html",
+      "pages/antifungal/itraconazole.html",
+      "pages/antifungal/micafungin.html",
+      "pages/antifungal/posaconazole.html",
+      "pages/antifungal/prochloraz.html",
+      "pages/antifungal/propiconazole.html",
+      "pages/antifungal/pyrifenox.html",
+      "pages/antifungal/terbinafine.html",
+      "pages/antifungal/triflumizole.html",
+      "pages/antifungal/voriconazole.html",
+      "pages/antifungal/voriconazole/activity-1.html",
+      "pages/biocide/hydrogen-peroxide.html"
+    ],
+    "html_page_path_set_unchanged": true,
+    "index_and_sitemap_unchanged": true,
+    "record_download_replacements": [
+      {
+        "after_path": "pages/antifungal/fluconazole/record-d1df2ae983868280d3e34a4e8ca3e9a48173d52a9a9531b9356e56bf8260b777.json.gz",
+        "after_sha256": "d1df2ae983868280d3e34a4e8ca3e9a48173d52a9a9531b9356e56bf8260b777",
+        "before_path": "pages/antifungal/fluconazole/record-9acf8ff6c1c3195f0a0b7d6f8bfb782fa55406b7aecee63e0c54d8cb98f024eb.json.gz",
+        "before_sha256": "9acf8ff6c1c3195f0a0b7d6f8bfb782fa55406b7aecee63e0c54d8cb98f024eb"
+      },
+      {
+        "after_path": "pages/antifungal/voriconazole/record-c42f374aa914cafda64dfdda8aa036442d47bec3a3a624b238c1c564b548d9d3.json.gz",
+        "after_sha256": "c42f374aa914cafda64dfdda8aa036442d47bec3a3a624b238c1c564b548d9d3",
+        "before_path": "pages/antifungal/voriconazole/record-7b1dee83f9e8fba37c334d8264b82c58d2d9f5f6cb5645ac80a0949920b90e88.json.gz",
+        "before_sha256": "7b1dee83f9e8fba37c334d8264b82c58d2d9f5f6cb5645ac80a0949920b90e88"
+      }
+    ],
+    "subject_cells_verified": 1,
+    "visual_browser_review": false
+  },
+  "record_hash_crosswalk": [
+    {
+      "after_sha256": "8aef32b0a72d4f901dac6c4d105e7ae069f3c811839a5074472855f00ad16bb0",
+      "before_sha256": "605be22088cef40f66483f94945b901e08ff20f9c283f6abb30c8c843722b391",
+      "identifier": "CHEBI:48080",
+      "path": "data/antibiotics/antibacterial/brefeldin-a.yaml"
+    },
+    {
+      "after_sha256": "9316b3899b889427a6a5849c6eef2a2e54f869cd3c9b573655a81037605313ed",
+      "before_sha256": "2e775cef5bf92ea2774c260ddc41796c8f19b2bc35e67a221f0493028198f2e3",
+      "identifier": "CHEBI:55346",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml"
+    },
+    {
+      "after_sha256": "09a62059ec49ec2451f1796ac3d0b1f1df8b7a2d916b2860d21a97c2450fb10a",
+      "before_sha256": "50a3c1d3c755bf4b1014dc50c40d0b70f6887e7f2b6af5ea668645939e4ca7e8",
+      "identifier": "CHEBI:40909",
+      "path": "data/antibiotics/antifungal/azoxystrobin.yaml"
+    },
+    {
+      "after_sha256": "ec3877f836c2ae83311b6e2e0d3432d4019b18fbdebf17a2b19cedfd06c2672c",
+      "before_sha256": "c1c6109894a850ba4456425e17b8fbc7cd7bc203c2211c32f489f384478d3f5a",
+      "identifier": "CHEBI:3392",
+      "path": "data/antibiotics/antifungal/carbendazim.yaml"
+    },
+    {
+      "after_sha256": "e124daf7d195c913f0e77fa51561a066916e49ff1a3963ef5540207efe8923d7",
+      "before_sha256": "d5b8f4bb6dd611862df842c04f4a9e7208e5a17e3fd4120eaec7baa7b7e5b338",
+      "identifier": "CHEBI:3405",
+      "path": "data/antibiotics/antifungal/carboxin.yaml"
+    },
+    {
+      "after_sha256": "a4f783f645b5dc8718f4b1cf0643b9dca1d864113821f04d5d492d13f13dbd62",
+      "before_sha256": "ca08a24af1aaea18c481f7578b746f8bca8073d0e8ca6ad58a86e3eb95011350",
+      "identifier": "CHEBI:474180",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml"
+    },
+    {
+      "after_sha256": "fa31a9debef833431a13b4c5fec590cee8e21b7bc6819c34a09dc99add377524",
+      "before_sha256": "c0bd089334e4e4784d210db60eb23ba467105b3444fb2e208baf0785036eeed5",
+      "identifier": "CHEBI:27641",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml"
+    },
+    {
+      "after_sha256": "9fa1e8686f5bc2fc2aac7492af414f3c3ce1e11e7e0d480851b2d0641cea4ab8",
+      "before_sha256": "38bbbd758183aa4c158690d3338cd0b0482c55754b5288ac230d14683929bf50",
+      "identifier": "CHEBI:81760",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml"
+    },
+    {
+      "after_sha256": "c3d7dc14d3885ded1d0cfd6cb02c2fb79556385fc4b3b2a3e742879929b586c0",
+      "before_sha256": "05b1f78afde7a7b0801b1415f4aac401e6d19df746ba9084eedb79608930a138",
+      "identifier": "CHEBI:136340",
+      "path": "data/antibiotics/antifungal/fenpicoxamid.yaml"
+    },
+    {
+      "after_sha256": "8e99a6672effa7533da2ab8298e2b232de907e84687c4f5f4dfe1096e9e2ddda",
+      "before_sha256": "bd5894aec023b96096dbdf0c728d0d30365b1b783262a6a81573512aaffb8502",
+      "identifier": "CHEBI:46081",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml"
+    },
+    {
+      "after_sha256": "56142e12c1841028397d683d421f3f995eaaa8f081f962b5593c120d43f39b79",
+      "before_sha256": "684e4971ff38b5bc2f47f24321b6ff89ea2c1e1cce22c6ddff1c47f4d2555d19",
+      "identifier": "CHEBI:81763",
+      "path": "data/antibiotics/antifungal/fludioxonil.yaml"
+    },
+    {
+      "after_sha256": "57c6d3b06cd44cad644c2556e8758f7bcef19f6194aaaca20acaa9409a2df58f",
+      "before_sha256": "7706ddcf65013b426429358312b42c656e1263ec0d653e63b9da3d7c33ad81db",
+      "identifier": "CHEBI:28909",
+      "path": "data/antibiotics/antifungal/iprodione.yaml"
+    },
+    {
+      "after_sha256": "970ff9d085b16919b3e0fde32e1374f4833a90999dfd93daf8432de67d2edda7",
+      "before_sha256": "66f98a79711d9b12aa43faeba68e1804200502c749ed164ed77aabf3e5ed2fd4",
+      "identifier": "CHEBI:6076",
+      "path": "data/antibiotics/antifungal/itraconazole.yaml"
+    },
+    {
+      "after_sha256": "0eac9035ac1a3115fa792860a26aa4281032aceea18d58d1901e76295b6ebf35",
+      "before_sha256": "aff8895eb080fe8a13a9995af66331a8187e557c111ac9b7b8e8b4df7173961c",
+      "identifier": "CHEBI:600520",
+      "path": "data/antibiotics/antifungal/micafungin.yaml"
+    },
+    {
+      "after_sha256": "75b7c391c26cbbf7a7167f0968df21b8338b85000a4ad83c9836ca9c3512ff02",
+      "before_sha256": "ae8fb13d1ad6390a48e145e470249b9692ab2e2b9f346ef2f1ba6891e0bf3e31",
+      "identifier": "CHEBI:64355",
+      "path": "data/antibiotics/antifungal/posaconazole.yaml"
+    },
+    {
+      "after_sha256": "1c317b0e9d1aaeafbe3cfc23f0a88dd98aeafbdeffb38a41327402e87f7ea4d2",
+      "before_sha256": "c93e829fbb87cddc3840fa9f47b51a0f15a5ea8cfbbd58c2e18af88b62c4cc43",
+      "identifier": "CHEBI:8434",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml"
+    },
+    {
+      "after_sha256": "cd8831ee145625a5367f68b379c6fcc9d75d7fa03155d1df017d9d756108d4c2",
+      "before_sha256": "f462ee623e00bbe07faa3482184ed63a3e910bf75c32b8800448df37ce99347b",
+      "identifier": "CHEBI:8489",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml"
+    },
+    {
+      "after_sha256": "f834e3ba8de6082e6bd1bba8027240239ad17c9d39461a1c4f509254d870482f",
+      "before_sha256": "d6f8e34b70c638f3b24b63350ddcf4ef24020464fbaa942c907a1ac32961eaa0",
+      "identifier": "CHEBI:81972",
+      "path": "data/antibiotics/antifungal/pyrifenox.yaml"
+    },
+    {
+      "after_sha256": "d483410a916c9bf4f742b01be99b5413ce1b310cc0474271064515e06a2512a9",
+      "before_sha256": "aab25ee2ca5756c78a8ee21afae480a8d6ab4e6b204984eb545056dbb0346a98",
+      "identifier": "CHEBI:9448",
+      "path": "data/antibiotics/antifungal/terbinafine.yaml"
+    },
+    {
+      "after_sha256": "099ce4c68ee2128f3a662aef29433edf2b2c95d9ec4bb8687f366427afb95e9e",
+      "before_sha256": "6615354c4022529bf6b59a178f45e81c72e16e0229e9cc060135069fafc0c5ae",
+      "identifier": "CHEBI:81784",
+      "path": "data/antibiotics/antifungal/triflumizole.yaml"
+    },
+    {
+      "after_sha256": "678abcf3255bfb768da7d2db313e25561c5b352d4bb71b259559900cdc1c8f83",
+      "before_sha256": "b1ccc7ea86216c777011221a650baf2ba94dc72e204578f4f328848bcb6cebb6",
+      "identifier": "CHEBI:10023",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml"
+    },
+    {
+      "after_sha256": "d05267ec191f0e5cd0001fa0c53cc20557fc71b8fa327acd861edd8fd82b3189",
+      "before_sha256": "7a6584192efbc94b6d8ea115def3d1d030d7d12f3536f116b717954a2079aabf",
+      "identifier": "CHEBI:16240",
+      "path": "data/antibiotics/biocide/hydrogen-peroxide.yaml"
+    }
+  ],
+  "records": 2939,
+  "scope": "METADATA_RECONCILIATION_NOT_COMPLETED_PRIMARY_REVIEW",
+  "scoped_test_updates": [
+    {
+      "after": {
+        "path": "tests/test_phibase_grounding_reviews.py",
+        "sha256": "973bd7f79dc602e63a692eeea6a07c17856259871a9eba38ec8a13648612a9c7"
+      },
+      "before_sha256": "ff92fed0b5525417f63653e6cac12bbba1b5f455904ff9e645de72952d71efab"
+    },
+    {
+      "after": {
+        "path": "tests/test_organismal_context.py",
+        "sha256": "ffb8c0aa164b70a32be142153066af2cbbaca3cb823f863585b49afdd5ca4626"
+      },
+      "before_sha256": "a4a40440a0edbf0384e468ffb8de66fb071f7910f3b4deb8a925136488e6a65d"
+    },
+    {
+      "after": {
+        "path": "tests/test_fouche_grounding.py",
+        "sha256": "e42fcb1e737606f656bd5e4ea27867cdf0c90498390bcaf846ec8f3a6dae3115"
+      },
+      "before_sha256": "1535880ff17c93aa3639942041a90d28890ec989a75ddc82e8098954eb073780"
+    },
+    {
+      "after": {
+        "path": "tests/test_hdf1_grounding.py",
+        "sha256": "9aae98bc2fb7828bc0003849964000eb282192ddd487925ff66ceed7bde71bd8"
+      },
+      "before_sha256": "776c5ea739b066a7dccbf444157990e389181d8a2f09a6aafc62b3ed68a1980a"
+    },
+    {
+      "after": {
+        "path": "tests/test_huang_grounding.py",
+        "sha256": "9e9a206c4218ae30f1d017039a83ddeb37f64bd9b309ba236888ff7ade47b06a"
+      },
+      "before_sha256": "cc1414c5ee7bffcdc09cc4d4eb2ffed5c224386b6a42d3c37d392cadd276ae85"
+    },
+    {
+      "after": {
+        "path": "tests/test_mehrabi_grounding.py",
+        "sha256": "59ec2158a531568a223958d956e5fd562532058d77e6de3cdfe1a7b022eb0cd8"
+      },
+      "before_sha256": "25665042833f462302fbb182ffb7ce8d01048da35c8842cc608fe2b3dbe75993"
+    },
+    {
+      "after": {
+        "path": "tests/test_shima_grounding.py",
+        "sha256": "3bfa04262a54262ff270aa10018164a9857ac21f1be338b019d79432642a7975"
+      },
+      "before_sha256": "9c0dec4e05b8c1161619337d9b27ec6345ab0ac4366e1d45de0b27105d3e51b0"
+    }
+  ]
+}

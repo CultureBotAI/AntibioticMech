@@ -1,0 +1,314 @@
+{
+  "attribution": [
+    {
+      "license": "CC BY",
+      "source": "Jeong et al. (2007), PLOS Genetics",
+      "transformation": "Qualitative scope summary and source-location hashes",
+      "url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030039"
+    },
+    {
+      "license": "CC BY 4.0",
+      "release": "2026_03",
+      "source": "UniProt Consortium",
+      "url": "https://www.uniprot.org/help/license"
+    }
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/cohort.json",
+    "sha256": "85214b17204b2f9b9529db161b39b393f3ee8f1ae1a6eac0615461504a8d132f"
+  },
+  "curation": {
+    "decision": "RETAIN_RESEARCH_DOSSIER_NO_RESISTANCE_OR_ACTIVITY_RECORD_WRITE",
+    "proposed_model_followup": "Separate donor-protein reference from experimental host and endpoint.",
+    "reason": "DONOR_HOST_AND_EC30_CONTEXT_REQUIRE_EXPLICIT_REPRESENTATION",
+    "whole_record_primary_review": "OPEN"
+  },
+  "date": "2026-10-14",
+  "donor_reference": {
+    "citation_absence_disproves_paper_gene_relationship": false,
+    "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+    "entry_version": 258,
+    "exact_resistance_allele": false,
+    "experimental_subject_assignment": false,
+    "gene_names": [
+      "ABCB1",
+      "MDR1",
+      "PGY1"
+    ],
+    "ordered_locus_names": [],
+    "protein_accession": "UniProtKB:P08183",
+    "protein_name": "ATP-dependent translocase ABCB1",
+    "reference_organism_name": "Homo sapiens",
+    "reference_taxon_id": "NCBITaxon:9606",
+    "reference_taxon_rank": "species",
+    "reference_taxon_scientific_name": "Homo sapiens",
+    "role": "HUMAN_DONOR_REFERENCE_NOT_TESTED_ALLELE_OR_YEAST_GENE",
+    "selected_pmid_in_returned_bibliography": false,
+    "sequence_version": 3,
+    "source_species_taxon_id": "NCBITaxon:9606",
+    "species_lineage_verified": true,
+    "study_reference_allele_equated_to_current_uniprot_sequence": false
+  },
+  "host_species_context": {
+    "experimental_genome_assignment": null,
+    "experimental_strain_taxon_id": null,
+    "rank": "species",
+    "reference_strain_taxon_assigned_to_assay_host": false,
+    "source_species": "Saccharomyces cerevisiae",
+    "species_taxon_id": "NCBITaxon:4932"
+  },
+  "inputs": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/baseline-record.yaml",
+      "sha256": "5e207a225e71935edff0300cef97a9e86121f7a7faaa274d17b0902fde697760"
+    },
+    "census": {
+      "path": "research/2026-10-14-antiviral-taxa-resistance-grounding.tsv",
+      "sha256": "b15465f26802dae7fc099e52d3dc4898cd6397fd2bc37f4055443d2e40fe2935"
+    },
+    "previous_checkpoint": {
+      "path": "research/2026-10-14-brefeldin-yeast-verification.json",
+      "sha256": "5f142d29bbbb54a54269ba6e450b1cc12c4caac14cb6a3d029f1433e9a9723f9"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "limitations": [
+    "The reviewed figure is not a full supplement or per-allele audit.",
+    "The reference accession does not identify the tested reference or variant sequences.",
+    "Host species grounding does not assign a strain, genome or species-wide resistance phenotype.",
+    "EC30 is not MIC; solubility-limited EC50 is not a negative resistance result.",
+    "Drug-dependent effects and different assay backgrounds are not interchangeable.",
+    "The separate 2016 ionophore source hold and unresolved cohort remain unchanged."
+  ],
+  "limits": {
+    "biological_changes": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_experimental_allele_or_genome_assignments": 0,
+    "new_scientific_http_attempts": 5,
+    "reuse_terms_review_resumed": false,
+    "sequences_variants_constructs_protocols_or_numeric_AST_exported": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "primary": {
+    "actinomycin_host_transferred_to_valinomycin": false,
+    "assay_host_species": "Saccharomyces cerevisiae",
+    "chemical_scope": "PAPER_NAMES_VALINOMYCIN_AND_SHOWS_A_STRUCTURAL_DEPICTION",
+    "converted_to_MIC": false,
+    "doi": "DOI:10.1371/journal.pgen.0030039",
+    "donor_gene": "ABCB1",
+    "donor_species": "Homo sapiens",
+    "effect_transferred_across_drugs": false,
+    "endpoint": "EC30",
+    "endpoint_is_MIC": false,
+    "evidence_type": "HETEROLOGOUS_FUNCTIONAL_EXPERIMENT",
+    "exact_product_or_lot_structure_independently_verified": false,
+    "experimental_genome_assignment": null,
+    "host_context": "ENGINEERED_LABORATORY_BACKGROUND_NOT_NATIVE_YEAST_ABCB1",
+    "locations": {
+      "chemical_identity": {
+        "normalized_text_sha256": "b27231553f081bd570f7b6c9386b3eb88ac97c498b0dd24d2b2b1c1fdd6250c8",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[7]/div[3]/p"
+      },
+      "different_drug_host": {
+        "normalized_text_sha256": "eb57abcc9268d6fa6f1b843aee2c1dcdc61ed8d10c76edb7bae5b357fae0b330",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[5]/p[2]"
+      },
+      "donor_and_host": {
+        "normalized_text_sha256": "97ac300f8907366aa09ebf7f39b55553d89cc00c5c55c7440d40bba1332f4910",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[1]/p[2]"
+      },
+      "figure4_caption": {
+        "normalized_text_sha256": "e2a7d9076b57ff5622fbba7c5eb454ffc6790575f868d52dd8a25f4e42b8b641",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[5]/div/p[2]"
+      },
+      "measurement": {
+        "normalized_text_sha256": "86dd2dbf952681684ff0cd782f4b5da0532c25eba4cbac7ea066de111a3f5178",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[5]/p[1]"
+      },
+      "reported_gene_id": {
+        "normalized_text_sha256": "59f11e8535d8e6b0c3769d37ed8b1618ebfe726593268b990acd651c9d852346",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[8]/div[8]/p[1]"
+      },
+      "substrate_specificity": {
+        "normalized_text_sha256": "e43359697d29754dc4fc1da5db8b5bd8d81f11e1fdccdbafec48911297f3f71e",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[5]/p[3]"
+      }
+    },
+    "numeric_AST_exported": false,
+    "per_allele_signoff": false,
+    "pmid": "PMID:17352537",
+    "qualitative_result": "HUMAN_ABCB1_REFERENCE_AND_VARIANT_DEPENDENT_EC30_IN_YEAST",
+    "source_reported_donor_gene_id": "NCBIGene:5243",
+    "source_units": "micromolar",
+    "species_wide_or_clinical_resistance_inferred": false,
+    "supplement_tables_reviewed": false,
+    "valinomycin_EC50_unavailable_reason": "SOLUBILITY_LIMIT_IN_SOURCE_ASSAY"
+  },
+  "record": {
+    "identifier": "CHEBI:28545",
+    "path": "data/antibiotics/antiviral/valinomycin.yaml",
+    "sha256": "5e207a225e71935edff0300cef97a9e86121f7a7faaa274d17b0902fde697760",
+    "standard_inchi_key": "FCFNRCROJUBPLU-DNDCDFAISA-N"
+  },
+  "reviewed_asset": {
+    "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/reviewed-assets.json",
+    "sha256": "5b46c7ec3e8a1406a974ca20a5e99e83e96ed1dd92025885b17f5472d69601b8"
+  },
+  "scope": "HUMAN_DONOR_YEAST_HOST_PRIMARY_CONTEXT_NOT_ALLELE_CURATION",
+  "sources": {
+    "abcb1-reference-request": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/abcb1-reference-attempt.json",
+        "sha256": "940ae3851e0b0025dfd4ab20afd79aa8f97c8ad43741bc131d28725914c75251"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/abcb1-reference-response.bin",
+        "sha256": "e8835e9c914f736c871339c296c5503c5c5fcabcdd398f899070125f3b94667a"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/followup-plan.json",
+        "sha256": "da36177e4096525e1b9850feb40c840fddf38bbbb896867d70044337939ee8e0"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/abcb1-reference-receipt.json",
+        "sha256": "76faf6c5cbaf72a1ee997cc8c01563984dd4da5be8d6f3240a9caaa038b3bc80"
+      },
+      "retrieved_at": "2026-10-14T13:26:46.052029+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AABCB1+AND+organism_id%3A9606+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "article": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/article-attempt.json",
+        "sha256": "4270dcaf9242bc463a74a2c93ad69b5011f2b25cc7e9d9e1989598d0f3f4a886"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/article-response.bin",
+        "sha256": "90c6afb0a1bd7333a4467a9dd0e784a2b06d8c4e54a73f1751449a51ad649c05"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/request-plan.json",
+        "sha256": "c8f4ae0ea9f4db97a564868c5422d022c0ae213fe9bac2c04149f173164936ef"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/article-receipt.json",
+        "sha256": "621a875c7b2ad9a42fe67266bf19503d12473d80888a7c75f62e4ee820ddcfee"
+      },
+      "retrieved_at": "2026-10-14T13:23:18.713989+00:00",
+      "status": 200,
+      "url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030039"
+    },
+    "donor-reference": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/abcb1-reference-response.bin",
+        "sha256": "e8835e9c914f736c871339c296c5503c5c5fcabcdd398f899070125f3b94667a"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/abcb1-reference-receipt.json",
+        "sha256": "76faf6c5cbaf72a1ee997cc8c01563984dd4da5be8d6f3240a9caaa038b3bc80"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-14T13:26:46.052029+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AABCB1+AND+organism_id%3A9606+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "donor-taxonomy": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/tax-9606-response.bin",
+        "sha256": "cae20b2393c33b865e72a5546834f2d5d6e97929ecb7773eaa604d9fbd631fe1"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/tax-9606-receipt.json",
+        "sha256": "0899595675a33a8976b6512447dc1dcf50f033e5978ea9c8a25d42481ebf75bd"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-14T13:27:16.844886+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/9606"
+    },
+    "figure4": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/figure4-attempt.json",
+        "sha256": "fe3b5317945b8258f6dd3873fd92caac05d0201a04ea1a31085600d18a11e860"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/figure4-response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/followup-plan.json",
+        "sha256": "da36177e4096525e1b9850feb40c840fddf38bbbb896867d70044337939ee8e0"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/figure4-receipt.json",
+        "sha256": "19dbfee43ce03d63f0f324277f2fefdc9ea30214e9a11ab670b41fe70fd82308"
+      },
+      "retrieved_at": "2026-10-14T13:26:34.756789+00:00",
+      "status": 302,
+      "url": "https://journals.plos.org/plosgenetics/article/figure/image?download&size=large&id=10.1371/journal.pgen.0030039.g004"
+    },
+    "figure4-storage": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/figure4-storage-attempt.json",
+        "sha256": "0ee5483d5937ae8cab6843e867f02be0ed85cfbdecb68043a5a6d90e02725946"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/figure4-storage-response.bin",
+        "sha256": "076aa41bddb66d52fb070414773b6dddbffe65a4b49dc446bd67467fb77d8ee9"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/asset-plan.json",
+        "sha256": "acbb65bfe4e6113f2fa8e7863a1979ba28bb10e31e97a5a980f06a979b1e8cd6"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/figure4-storage-receipt.json",
+        "sha256": "bc7c75e92afdace832bc4eb38587936cef18e6019daf0338125f126724ff10c1"
+      },
+      "retrieved_at": "2026-10-14T13:27:04.241015+00:00",
+      "status": 200,
+      "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.0030039/1/pgen.0030039.g004.PNG_L"
+    },
+    "host-taxonomy-reused": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+        "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+        "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/559292"
+    },
+    "tax-9606-request": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/tax-9606-attempt.json",
+        "sha256": "5f3a4d1325bdccc139248a986a5bf2779f7d5e66c987518f2f0dc6e1d0e556e9"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/tax-9606-response.bin",
+        "sha256": "cae20b2393c33b865e72a5546834f2d5d6e97929ecb7773eaa604d9fbd631fe1"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/followup-plan.json",
+        "sha256": "da36177e4096525e1b9850feb40c840fddf38bbbb896867d70044337939ee8e0"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-valinomycin-abcb1/tax-9606-receipt.json",
+        "sha256": "0899595675a33a8976b6512447dc1dcf50f033e5978ea9c8a25d42481ebf75bd"
+      },
+      "retrieved_at": "2026-10-14T13:27:16.844886+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/9606"
+    }
+  }
+}

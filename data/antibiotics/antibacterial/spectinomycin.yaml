@@ -498,3 +498,66 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph spectinomycin_30s_head_swivel_translocation_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:17696316).
+  llm_assisted: true
+causal_graphs:
+- graph_id: spectinomycin_30s_head_swivel_translocation_inhibition
+  title: Spectinomycin traps the 30S ribosomal head domain to block mRNA/tRNA translocation
+  description: Spectinomycin binds helix 34 in the 30S ribosomal head domain of Escherichia
+    coli 70S ribosomes, traps a distinct small-subunit head-swivel state, and sterically
+    blocks the head motion required for mRNA/tRNA translocation.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: spectinomycin
+    label: spectinomycin
+    node_type: COMPOUND
+    grounding: CHEBI:9215
+  - node_id: ribosomal_30s_head_domain
+    label: 30S ribosomal head domain
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Small-subunit head domain (16S rRNA helix 34 neck region) of
+      the Escherichia coli 70S ribosome.
+  - node_id: spectinomycin_trapped_30s_head_swivel
+    label: spectinomycin-trapped 30S head-swivel state
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 70S cocrystal-resolved small-subunit head conformation with restricted
+      hinge mobility.
+  - node_id: ribosomal_mrna_trna_translocation
+    label: ribosomal mRNA-tRNA translocation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 30S head-swivel-dependent translocation step of the bacterial
+      translation elongation cycle.
+  edges:
+  - subject: spectinomycin
+    predicate: binds
+    object: spectinomycin_trapped_30s_head_swivel
+    description: Spectinomycin binds the 30S ribosomal head domain and traps a distinct
+      head-swivel conformation.
+    evidence:
+    - reference: PMID:17696316
+      notes: Escherichia coli 70S crystal structures with spectinomycin directly resolved
+        the drug bound in the 30S head domain trapping a distinct swivel state.
+  - subject: ribosomal_30s_head_domain
+    predicate: participates in
+    object: spectinomycin_trapped_30s_head_swivel
+    description: The 30S ribosomal head domain provides the helix 34 hinge pocket
+      rigidified by spectinomycin.
+    evidence:
+    - reference: PMID:17696316
+      notes: Structural comparison of ligand-free and spectinomycin-bound E. coli
+        70S ribosomes mapped the 30S head rotation block.
+  - subject: spectinomycin_trapped_30s_head_swivel
+    predicate: inhibits
+    object: ribosomal_mrna_trna_translocation
+    description: Steric restriction of 30S head rotation blocks mRNA and tRNA translocation.
+    evidence:
+    - reference: PMID:17696316
+      notes: Paired in-vitro translocation assays confirmed kinetic disruption of
+        ribosomal translocation by spectinomycin.

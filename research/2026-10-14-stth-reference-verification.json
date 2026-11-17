@@ -1,0 +1,122 @@
+{
+  "automatic_redirects": 0,
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "biological_record_hash_drift": 0,
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-stth/cohort.json",
+    "sha256": "e7464ea9d5fae7aee223866fd1805ddaf0a206310a69a574842b8a205eef79ee"
+  },
+  "commands_passed": [
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "check",
+      "."
+    ],
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "scripts/audit_stth_reference.py",
+      "tests/test_stth_reference.py"
+    ],
+    [
+      "git",
+      "diff",
+      "--check"
+    ]
+  ],
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-reference-citation-resistance-grounding.tsv",
+    "sha256": "5e37b4d2ee3a7bafab7d173896dcb084b0444e2f06c02f49542eda866109524a"
+  },
+  "date": "2026-10-14",
+  "embedding_files_unchanged": true,
+  "embedding_refresh_required": false,
+  "files": [
+    {
+      "path": "scripts/audit_stth_reference.py",
+      "sha256": "4e18cab34d4d7b5ebab2c56326985f37328e3ff722bc6a1efbe144dc9f686f2c"
+    },
+    {
+      "path": "tests/test_stth_reference.py",
+      "sha256": "402357b5af9f8576709a7e23c1d72bf8096a69de9dc734198c7f8f9821dea487"
+    },
+    {
+      "path": "research/2026-10-14-stth-reference-context.json",
+      "sha256": "28d1b11029d17fe2f78fb45e3ab2f85c52b0edf36b5f24cfda1a7bb95e0bef52"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "1337bfc814118c98d69adc04ac16cf011d36275caf1119255b90d182cdc05988"
+    }
+  ],
+  "focal_reference_candidates": 1,
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_rerun": false,
+  "full_qc_scope_note": "No biological or generated artifacts changed in this continuation. Focused and dependency regression checks do not renew the earlier full-QC receipt.",
+  "github_mutations": 0,
+  "http_status_counts": {
+    "200": 2,
+    "302": 2,
+    "403": 1
+  },
+  "issue_1040": "DEFERRED",
+  "local_review_fixes": [
+    "Require explicit manual-review flag for the HTML redirect, alongside pinned source body and receipt.",
+    "Require a taxonomy synonym list; neither a string substring nor protein common-name metadata establishes the synonym."
+  ],
+  "locator_http_200_is_primary_text": false,
+  "main_report_changes_are_exactly_the_new_section": true,
+  "manually_inspected_redirect_hops": 3,
+  "native_taxonomy_responses_reused": 1,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_experimental_identifiers": 0,
+  "new_resistance_assertions": 0,
+  "numeric_AST_or_variant_sequence_construct_or_protocol_exports": false,
+  "offline_replay": "PASS",
+  "primary_access_disposition": "ACCESS_HOLD",
+  "prior_uncommitted_work_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-stth/protected-before.json",
+    "sha256": "065edd9c5ee598a455f1f754910c05fdf36079572a8956eecf75485bac0683fb"
+  },
+  "protected_files_checked": 7580,
+  "publication_entries_checked": 7,
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "scientific_http_attempts": 5,
+  "scope": "READ_ONLY_PUBLICATION_REFERENCE_AND_SPECIES_SYNONYM_CHECKPOINT",
+  "shared_citation_entries_not_promoted": 6,
+  "source_adoptions": 0,
+  "structured_research_exports_source_inputs_and_generated_pages_preserved": true,
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 55,
+      "path": "reports/resistance-grounding-2026-10-14-stth/focused-tests.xml",
+      "sha256": "74f0265f2d248e147abeb4634fe268b9a83b99f42c54e1cc93e8f20ccda34f96",
+      "skipped": 0,
+      "tests": 55
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 412,
+      "path": "reports/resistance-grounding-2026-10-14-stth/expanded-tests.xml",
+      "sha256": "01291ecc53f6db7adacd38391ec60aaf0fbe276cbf5cacba011b450d50fed49c",
+      "skipped": 0,
+      "tests": 412
+    }
+  ],
+  "whole_record_primary_signoffs": 0
+}

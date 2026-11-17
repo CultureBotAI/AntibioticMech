@@ -1,0 +1,130 @@
+{
+  "automatic_redirects": 0,
+  "baseline_commit": "8861902da2991f045b2894621b1760a41d7eb061",
+  "biological_records_changed": 0,
+  "cache_independent_fixture_and_public_projection_tests": "PASS",
+  "captured_at": "2026-10-14T23:56:01.806777+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-afn1252/cohort.json",
+    "sha256": "9e711ff16957bfbc83d4d27550368154a5480fb9ed908f1574a3f4b79def627b"
+  },
+  "complete_selected_collection_aware_records_read": 1,
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "discovery_search_results": 0,
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 537,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-afn1252/expanded-tests.xml",
+      "sha256": "90538e9d7af5c9486f476e47a9827ea6d0726556b133e563b42c896f6eaf70e1"
+    },
+    "skipped": 0,
+    "tests": 537
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "66837cb7b907cc6f37233d301d3395ffda5b6d55227de2963a885979357efd22"
+    },
+    {
+      "path": "research/2026-10-14-afn1252-reference-context.json",
+      "sha256": "61d9228df8ba8f7d512b26c8e516d46d22847e5b37d7190fde3a98d8b2ae8274"
+    },
+    {
+      "path": "scripts/audit_afn1252_references.py",
+      "sha256": "4cb569aadff4510dc9a482030b609b0242c81e7ed634c85d04b161becf68e93c"
+    },
+    {
+      "path": "tests/test_afn1252_references.py",
+      "sha256": "10f2967549f0b7b6de55ec2a1b289e3d2e3aad4fa7921b08fc90da5ba9ff2df8"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 54,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-afn1252/focused-tests.xml",
+      "sha256": "2cdadcf57335c9f2dadbe030c090ffc09822e25c38a77603f7eb9bc1a9e45c91"
+    },
+    "skipped": 0,
+    "tests": 54
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_afn1252_20261014.py",
+      "sha256": "8d25527ebd954d39bf7586b350bd28e5815c87bf1c5a10c83ead47287be11cf9"
+    },
+    {
+      "path": "/private/tmp/verify_afn1252_20261014.py",
+      "sha256": "c16316241983e5bda7cb1c09b8faa38211a76966980a1a4485751dac15446c45"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "journal_domain_restricted_discovery_searches": 1,
+  "native_http_attempts": 8,
+  "native_http_status_counts": {
+    "200": 5,
+    "302": 1,
+    "403": 2
+  },
+  "ncbi_requests": 0,
+  "network_blocked_during_replay": true,
+  "new_experimental_allele_subject_or_genome_assignments": 0,
+  "new_held_primary_papers": [
+    "PMID:24189061",
+    "PMID:22948878"
+  ],
+  "new_taxonomy_requests": 0,
+  "offline_native_replay": "PASS",
+  "offline_planner_smoke": {
+    "request_planners": [
+      "reference-plan.json",
+      "publisher-plan.json",
+      "reference-followup-plan.json",
+      "journal-plan.json",
+      "named-reference-plan.json",
+      "second-primary-plan.json",
+      "metadata-plan.json"
+    ],
+    "status": "PASS",
+    "taxonomy_reuse": true
+  },
+  "outreach": 0,
+  "primary_results_reviews": 0,
+  "prior_card_topoisomerase_and_other_research_checkpoints_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-afn1252/protected-before.json",
+    "sha256": "e3c288c54fd6874f61dc06661acf8e6d7062f77a405c64a7785af4604f23be6f"
+  },
+  "protected_files_checked": 7638,
+  "reference_proteins": [
+    "UniProtKB:Q2FZQ3",
+    "UniProtKB:Q6GI75"
+  ],
+  "repository_ruff_check": "PASS",
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "reused_native_taxonomy_responses": 3,
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "AFN1252_REFERENCE_CANDIDATES_WITH_PRIMARY_ACCESS_HOLDS_NOT_ALLELE_CURATION",
+  "source_adoptions": 0,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "verification_limit": "Focused and related research tests only; no renewed full-QC or primary Results review.",
+  "whole_record_primary_signoffs": 0
+}

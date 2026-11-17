@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-15",
+  "citation": {"pmid": "35137182", "doi": "10.1093/nar/gkac058", "url": "https://eprints.whiterose.ac.uk/id/eprint/183494/1/gkac058.pdf"},
+  "review_scope": "SELECTED_PRIMARY_IDENTITY_AND_CONSTRUCT_TEXT_NOT_WHOLE_RECORD_SIGNOFF",
+  "visual_review": {"completed": false, "reason": "Web PDF screenshots timed out; text extraction only."},
+  "supplements_reviewed": false,
+  "terms": {
+    "salb": {"aro_id": "ARO:3007026", "source_species": "Staphylococcus lentus", "source_strain": "B3", "source_protein": "MBW0770001", "protein_namespace": "INSDC_PROTEIN", "protein_version_reported": false, "wgs_master": "JAHWBZ000000000", "source_location": "PDF page 4, Results", "query": "gene_exact:H3V22_03170"},
+    "salc": {"aro_id": "ARO:3007027", "source_species": "Staphylococcus fleurettii", "source_strain": "A6", "source_protein": "MBW0764195", "protein_namespace": "INSDC_PROTEIN", "protein_version_reported": false, "wgs_master": "JAAQPD000000000", "source_location": "PDF page 4, Results", "query": "MBW0764195"},
+    "sald": {"aro_id": "ARO:3007028", "source_species": "Staphylococcus gallinarum", "source_strain": null, "source_protein": "WP_082039181.1", "protein_namespace": "RefSeq", "protein_version_reported": true, "wgs_master": null, "source_location": "PDF pages 4-5, Results", "query": "xref:refseq-WP_082039181.1"},
+    "sale": {"aro_id": "ARO:3007029", "source_species": "Staphylococcus nepalensis", "source_strain": null, "source_protein": "WP_096809342.1", "protein_namespace": "RefSeq", "protein_version_reported": true, "wgs_master": null, "source_location": "PDF pages 4-5, Results", "query": "xref:refseq-WP_096809342.1"}
+  },
+  "identity_limits": [
+    "Paper-reported identifiers were not verified at NCBI. WGS masters are not versioned assembly accessions.",
+    "The paper separates donor organisms from heterologous S. aureus RN4220. No experimental strain TaxID is assigned.",
+    "Family membership alone is insufficient: related proteins did not all show the tested resistance phenotype.",
+    "The Sal(B) structural experiment uses an engineered NTPase-deficient construct (PDF page 7), not an established wild-type allele mapping.",
+    "The Sal(C) free-text identifier query is not an exhaustive CDS crosswalk; an empty result cannot establish absence."
+  ],
+  "pdb_context": {"entry": "7P48", "entity": "7P48_6", "locus": "H3V22_03170", "source_name": "Mammaliicoccus lentus", "native_verification_required": true, "url": "https://www.rcsb.org/structure/7P48"},
+  "constraints": {"ncbi_requests": 0, "issue_1040": "DEFERRED", "sequences_variants_protocols_or_numeric_ast_exported": false, "experimental_allele_assignment": false, "biological_record_writes": false}
+}

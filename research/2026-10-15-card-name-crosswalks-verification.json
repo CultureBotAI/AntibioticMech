@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-15",
+  "scope": "VERIFIED_NAME_CROSSWALKS_AND_REFERENCE_PROTEINS_NOT_EXPERIMENTAL_ALLELES",
+  "base_commit": "9d967d482277d4c762b3c56424b4e83d0dea83f5",
+  "branch": "research/acr-reference-context",
+  "artifacts": {
+    "dossier": {"path": "research/2026-10-15-card-name-crosswalks.json", "sha256": "97b4d759a080a35e9e2583bdf9b048fde4c3706d1acd3d5b8bd2a8ffafa6c5e1"},
+    "plan": {"path": "research/2026-10-15-card-name-crosswalks-plan.json", "sha256": "8ec2339dd7c26e8296fedca3b2fc4f332ca3569382f57b67877f7c40962f9acd"},
+    "protein_plan": {"path": "research/2026-10-15-card-name-crosswalks-protein-plan.json", "sha256": "94738da05c2eab5ec6b85e87980d6e6f9322f5619cb44393cc9f80c89199bd53"},
+    "script": {"path": "scripts/audit_card_name_crosswalks.py", "sha256": "5819d2fd28916473151cfcceb2563631a9d5d90e433478cc34677150016277f8"},
+    "tests": {"path": "tests/test_card_name_crosswalks.py", "sha256": "e337c16bde04a461df5e46635ccc6e358902fa075331f191e00a753ed6becc5e"},
+    "report": {"path": "research/2026-10-07-resistance-gene-grounding.md", "sha256": "4ad463d253a9e6117c313bfe40d31a0071d4f132a62870050c0cda67db5421c4"}
+  },
+  "coverage": {
+    "selected_terms": 36,
+    "source_name_contexts": 13,
+    "source_claims": 38,
+    "complete_collection_aware_records_read": 22,
+    "resolved_reference_name_contexts": 4,
+    "resolved_species_name_contexts": 3,
+    "resolved_non_species_name_contexts": 1,
+    "terms_with_resolved_reference_names": 5,
+    "remaining_name_unresolved_terms": 31,
+    "new_complete_protein_queries": 3,
+    "new_zero_result_protein_queries": 1,
+    "reused_complete_zero_result_status_queries": 4,
+    "native_reference_entries": 4,
+    "unreviewed_reference_entries": 4,
+    "cached_reference_taxa": 4,
+    "qualified_reference_terms": 2,
+    "qualified_reference_links": 4,
+    "qualified_reference_claim_memberships": 2,
+    "qualified_reference_records": 2,
+    "own_definition_citation_overlap": 0,
+    "selected_terms_without_qualified_references": 34,
+    "current_protein_status_counts": {
+      "QUALIFIED_REFERENCE_CONTEXT_NOT_EXPERIMENTAL_ALLELE": 2,
+      "COMPLETE_QUERY_ZERO_RESULTS": 3,
+      "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT": 31
+    },
+    "disjoint_qualified_terms_across_five_passes": [17, 71, 12, 1, 2],
+    "frozen_grammar_cohort_terms_with_reference_context": 103,
+    "frozen_grammar_cohort_terms_still_unresolved": 75,
+    "full_grammar_cohort": 178,
+    "broad_index_rewritten": false,
+    "all_name_contexts_claimed_newly_discovered": false
+  },
+  "checks": {
+    "initial_focused_tests_before_status_regression": {"passed": 29, "failed": 0, "deselected": 2},
+    "combined_pytest": {
+      "command": ".venv/bin/pytest -q -rs tests/test_card_name_crosswalks.py tests/test_card_source_aliases.py tests/test_card_all_status_genes.py tests/test_card_unresolved_names.py tests/test_card_gene_reference_followup.py tests/test_card_species_gene_context.py tests/test_acr_reference_context.py tests/test_card_complex_members.py tests/test_card_literature_expansion.py tests/test_card_literature_proteins.py tests/test_card_reference_lineages.py tests/test_mex_component_references.py",
+      "passed": 401,
+      "failed": 0,
+      "skipped": 1,
+      "duration_seconds": 162.74,
+      "new_audit_tests": 32,
+      "skip": "test_card_reference_lineages.test_offline_native_replay: known qualification deltas lack historical fixtures; public artifact checks still run"
+    },
+    "ruff_new_script_and_tests": "PASS",
+    "ruff_all_seven_pending_audit_script_test_pairs": "PASS",
+    "ruff_format_new_script_and_tests": "PASS",
+    "git_diff_check": "PASS",
+    "read_only_offline_replay": "PASS_WITH_NETWORK_AND_PYTHON_FILE_WRITES_DENIED",
+    "explicit_pins_before_this_receipt": {
+      "occurrences_including_prior_nonreport_artifacts": 157,
+      "distinct_paths": 91,
+      "all_verified": true
+    },
+    "prior_nonreport_artifacts_checked_unchanged": 33,
+    "corpus_record_hashes": {"checked": 2939, "changed": 0},
+    "previous_report": {
+      "sha256": "493cefe7a0d2daff21bd8223ea6d6cbdf45eff23fa5cdc97358c4f50bbcdf2ec",
+      "bytes": 965686,
+      "all_bytes_preserved": true,
+      "sole_remaining_work_heading_preserved": true
+    },
+    "current_report_bytes": 970419,
+    "reference_coverage_disjointness": "PASS_17_PLUS_71_PLUS_12_PLUS_1_PLUS_2_EQUALS_103_OF_178",
+    "biological_and_source_input_git_diff": "EMPTY"
+  },
+  "adversarial_review": {
+    "reviewer": "SAME_AGENT_SEPARATE_PASS",
+    "resolved_implementation_findings": [
+      {
+        "finding": "The two historical query audits use different list and dictionary shapes; treating them identically failed draft replay.",
+        "resolution": "Use explicit source-specific adapters and require the complete true/false reviewed-status partition, native scope, zero counts and pinned source provenance.",
+        "regression": "Both shapes and missing partitions, wrong taxon, wrong status and nonzero mutations are tested."
+      },
+      {
+        "finding": "Spreading the old term row into a new result retained not-queried and null-species fields beside newly resolved and queried context.",
+        "resolution": "Preserve the complete prior row under prior_name_assessment; derive current name and protein statuses from the actual resolution, new queries and reused queries. Preserve taxonomic rank in reference_name_context.",
+        "regression": "All 36 saved rows are checked for historical preservation, current status consistency and explicit non-experimental scope."
+      }
+    ],
+    "unresolved_implementation_findings": [],
+    "checks": [
+      "LPSN evidence binds the specific validly published 1992 homotypic synonym, not the invalid 1953 entry or a heterotypic relation.",
+      "The author-institution title, DOI and abstract must all bind the explicit synonym; unrelated mentions are insufficient.",
+      "Other-name matches require independent nomenclature evidence; duplicate, inactive and ambiguous taxon identities fail closed.",
+      "The exact unranked Salmonella name remains unranked and is not replaced by its species ancestor.",
+      "The earlier formal new-combination review is reused with its PDF, receipt and rendered-page pins; no new full-text review is claimed.",
+      "New protein queries bind the resolved name context, exact source gene token, metadata field scope and complete native response.",
+      "Protein candidates retain native review status and independent taxonomy; reference identity does not assign an allele, tested organism or genome.",
+      "The HTTP 302 source remains a no-redirect hold, with no retry, alternate route, full-text review or permanent-unavailability inference.",
+      "Request attempts, canaries, receipts, bodies and error sets reject unaccounted artifacts.",
+      "The CLI supports nested output parents and refuses to overwrite a differing saved audit; offline replay denies network and file writes."
+    ],
+    "residual_risks": [
+      "The Tapesia primary nomenclature source was not retrieved, and unsupported spellings and non-individual source labels remain unresolved.",
+      "Metadata-only exact gene searches do not establish resistant alleles, strain identity, source genome identity or genotype-phenotype joins.",
+      "The Pseudocercospora name crosswalk uses the title and abstract rather than full-text experimental or phylogenetic review.",
+      "All four new protein references are unreviewed UniProt entries and have no overlap with the terms' own definition citations.",
+      "The 103-term reference count covers the frozen 178-term cohort only; the full corpus investigation remains open."
+    ],
+    "github_issues_created": 0
+  },
+  "access": {
+    "new_native_nomenclature_requests": 3,
+    "successful_native_html_responses": 2,
+    "unfollowed_http_302_responses": 1,
+    "new_uniprot_protein_metadata_requests": 3,
+    "new_uniprot_taxonomy_requests": 0,
+    "ncbi_endpoint_requests": 0,
+    "source_retries": 0,
+    "redirects_followed": 0,
+    "outreach": false,
+    "reuse_terms_review_resumed": false,
+    "ignored_files_included_in_cache_discovery": true,
+    "discovery_search_note": "One web discovery search was mistakenly restricted to indexed PubMed results. No NCBI page was opened or NCBI endpoint requested, and those results are not evidence in this audit."
+  },
+  "full_authoritative_qc": {
+    "run": false,
+    "rdkit_availability_rechecked": true,
+    "rdkit_available": false,
+    "limitation": "RDKit is absent in the existing Intel macOS environment. No full authoritative QC or biological-curation verification is claimed."
+  },
+  "biological_record_writes": 0,
+  "experimental_identifiers_assigned": 0,
+  "new_primary_resistance_reviews": 0,
+  "whole_record_primary_signoffs": 0,
+  "source_adoptions": 0,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "full_corpus_goal_status": "OPEN"
+}

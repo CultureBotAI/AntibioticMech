@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-15",
+  "scope": "PRIMARY_IDENTIFIER_LEADS_AND_REFERENCE_CONTEXT_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+  "terms": {
+    "wus1": {
+      "aro_id": "ARO:3007435",
+      "label": "WUS-1",
+      "pmid": "36532482",
+      "doi": "10.3389/fmicb.2022.1059997",
+      "url": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2022.1059997/full",
+      "source_organism": "Myroides albus",
+      "source_strain": "P34",
+      "deposited_nucleotide_accessions": ["CP102754", "CP102755"],
+      "deposited_protein_accession_lead": "UPP01678.1",
+      "individual_chromosome_plasmid_crosswalk_verified": false,
+      "query": "UPP01678.1",
+      "query_scope": "LITERAL_METADATA_SEARCH_NOT_EXHAUSTIVE_CDS_CROSSWALK",
+      "locations": ["Results: Genome characteristics", "Table 3 subject headings", "Table 4 substrate headings", "Data availability statement"],
+      "review": "The paper names environmental M. albus P34 and reports a chromosomal WUS-1, but its availability statement lists deposits without individually assigning chromosome and plasmid accessions. Retain UPP01678.1 as a deposited protein lead pending a native crosswalk. Native-isolate susceptibility, heterologous-host effects and enzyme activity are different evidence types. Other beta-lactamases occur in P34; its entire phenotype cannot be attributed to WUS-1. Comparator genomes are not P34 identifiers.",
+      "primary_access": "PUBLISHER_WEB_READER_SELECTED_TEXT_AND_TABLE_HEADINGS"
+    },
+    "ssa": {
+      "aro_id": "ARO:3007442",
+      "label": "SSA",
+      "pmid": "36626997",
+      "doi": "10.1016/j.scitotenv.2023.161505",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0048969723001201",
+      "source_organism": null,
+      "source_strain": null,
+      "query": null,
+      "locations": ["Publisher search-index abstract and selected section previews"],
+      "review": "This is a functional-metagenomics study of wildlife and associated environments. Its accessible preview does not establish an exact native organism, isolate, allele accession or source-to-UniProt crosswalk for SSA. Taxonomic assignment of a metagenomic fragment is not isolation of a resistant organism. Do not guess a species from the gene symbol or treat the expression host as the native source.",
+      "primary_access": "SEARCH_INDEX_PREVIEW_ONLY_DIRECT_READER_TECHNICAL_ERRORS_NO_NATIVE_HTTP_STATUS",
+      "hold": "EXACT_SOURCE_IDENTITY_AND_PRIMARY_RESULTS_UNREVIEWED",
+      "card_model_metadata_adopted": false
+    },
+    "fri11": {
+      "aro_id": "ARO:3007632",
+      "label": "FRI-11",
+      "pmid": "36773190",
+      "doi": "10.1007/s10096-023-04565-1",
+      "url": "https://link.springer.com/article/10.1007/s10096-023-04565-1",
+      "source_organism": "Enterobacter",
+      "source_strain": "155105",
+      "source_nucleotide_accession_range": ["CP104976", "CP104979"],
+      "individual_gene_or_replicon_assigned_from_range": false,
+      "query": "xref:refseq-WP_223174987.1",
+      "locations": ["Abstract", "Data availability"],
+      "review": "The CARD-cited clinical report exposes an abstract and a deposit range for strain 155105, not its full results. The range is not a gene, protein or individual replicon crosswalk. Do not transfer an identifier from a different study's isolate into this clinical strain.",
+      "primary_access": "PUBLISHER_ABSTRACT_AND_DATA_AVAILABILITY_SUBSCRIPTION_PREVIEW",
+      "additional_primary": {
+        "doi": "10.1093/jac/dkac029",
+        "url": "https://academic.oup.com/jac/article/77/5/1237/6524127",
+        "source_protein_accession": "WP_223174987.1",
+        "source_protein_namespace": "RefSeq",
+        "locations": ["Results: carbapenemase identification", "Susceptibility testing and cloning experiments", "Enterobacter genomic analysis"],
+        "review": "The earlier environmental study explicitly identifies FRI-11 as WP_223174987.1. Its native Enterobacter isolates and heterologous assay are distinct subjects: no detectable carbapenem MIC increase occurred in the latter under the tested conditions. This does not establish universal inactivity or negate the clinical report. The comparison plasmid pJF-587 carries FRI-2, not FRI-11.",
+        "primary_access": "PUBLISHER_SEARCH_INDEX_SELECTED_TEXT_DIRECT_READER_TECHNICAL_ERRORS_NO_NATIVE_HTTP_STATUS",
+        "same_subject_as_card_cited_clinical_study": false
+      }
+    },
+    "vim92": {
+      "aro_id": "ARO:3009643",
+      "label": "VIM-92",
+      "pmid": "40078538",
+      "doi": "10.3389/fmicb.2025.1543509",
+      "url": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2025.1543509/full",
+      "source_organism": "Pseudomonas aeruginosa",
+      "source_strains": ["PJK40", "PJK43"],
+      "primary_analysis_strain": "PJK40",
+      "source_gene_nucleotide_accession": "PQ563311",
+      "source_accession_version_reported": false,
+      "query": "xref:embl-PQ563311",
+      "locations": ["Results 3.4", "Results 3.5 and Table 2 subject headings", "Data availability statement"],
+      "review": "Results 3.4 explicitly associate VIM-92 and PQ563311 with PJK40, with the same reported gene in PJK43. PQ563311 is a gene nucleotide accession, not a protein or whole-genome assembly. The availability list also includes comparison deposits; do not assign the entire list to PJK40. Host-dependent assay effects are not interchangeable with the clinical-isolate phenotype. VIM-24 is a comparator, not an alias for VIM-92.",
+      "primary_access": "PUBLISHER_WEB_READER_SELECTED_TEXT_AND_TABLE_HEADINGS"
+    }
+  },
+  "constraints": {
+    "native_primary_bodies_replayed": false,
+    "whole_papers_reviewed": false,
+    "figure_pixels_reviewed": false,
+    "supplements_reviewed": false,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "biological_record_writes": false,
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "full_investigation_complete": false
+  }
+}

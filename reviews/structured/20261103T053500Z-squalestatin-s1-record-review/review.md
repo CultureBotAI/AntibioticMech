@@ -1,0 +1,337 @@
+# Single-record review of squalestatin S1 (CHEBI:220211)
+
+- Review: 20261103T053500Z-squalestatin-s1-record-review
+- Repository: culturebotai/AntibioticMech
+- Started UTC: 2026-11-03T05:22:00Z
+- Finished UTC: 2026-11-03T05:35:00Z
+- Reviewer: Antigravity (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Whole-record review of PROPOSED/EXACT record CHEBI:220211 (squalestatin S1, data/antibiotics/antifungal/squalestatin-s1.yaml) verified exact single-molecule chemical structure (C35H46O13, InChIKey KKQOCSPYLTUDES-KVBVMKTNSA-N, PubChem CID 139586329), antifungal filing (CHEBI:35718), CURATOR discovery and biosynthetic evidence (Bonsch et al. 2016 DOI:10.1039/c6cc02130a / PMID:27032439; Dawson et al. 1992 DOI:10.7164/antibiotics.45.639 / PMID:1624366; Bergstrom et al. 1993 DOI:10.1073/pnas.90.1.80 / PMID:8419946), MIBiG 4.0.1 BGC0001339 producer provenance in Phoma sp. MF5453 (NCBITaxon:1828523), biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (ERGOSTEROL_PATHWAY_INHIBITION, HOST_SHARED_TARGET), and the PRIMARY_LITERATURE molecular_targets entry for fungal squalene synthase (Erg9; GO:0051996) carrying 3 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P78589 in Candida albicans NCBITaxon:5476, UniProtKB:A0A1D8PI71 in Candida albicans SC5314 NCBITaxon:237561, and UniProtKB:P29704 in Saccharomyces cerevisiae S288c NCBITaxon:559292). One open coherence finding requires Cycle 4 Stage 5 grouped remediation: despite having grounding_status: EXACT, complete chemical_structure, curated mode_of_action, and PRIMARY_LITERATURE molecular_targets with reviewed UniProtKB protein_examples, curation_status remains PROPOSED.
+
+## Scope And Provenance
+
+Complete single-record review of data/antibiotics/antifungal/squalestatin-s1.yaml (CHEBI:220211) across chemical identity, grounding, filing, source_concepts, producer_organisms, biosynthesis_origin, mode_of_action, molecular_targets, UniProtKB protein_examples accounting, and curation_status gate eligibility.
+
+Selection: Selected CHEBI:220211 (squalestatin S1) as the sole PROPOSED/EXACT record in the 3,042-record Cycle 4 Stage 4 inventory that already carries curated mode_of_action, PRIMARY_LITERATURE molecular_targets, and reviewed Swiss-Prot UniProtKB protein_examples and is immediately eligible for promotion to REVIEWED.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base fd66617286f55b8f9bf6802bf44d24bcee32959c.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:220211 | data/antibiotics/antifungal/squalestatin-s1.yaml | maintained | squalestatin S1 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Closed-schema and ontology-grounding validation | passed | True | CHEBI:220211 | CHEBI:220211 passes closed LinkML schema validation and OAK ontology label correspondence (CHEBI:220211, CHEBI:35718, GO:0051996, NCBITaxon:1828523, NCBITaxon:5476, NCBITaxon:237561, NCBITaxon:559292) with 0 errors. |
+| Corpus integrity and CURATOR provenance verification | passed | True | CHEBI:220211 | CHEBI:220211 passes verify_corpus.py with 0 errors; seeded fields match curation/curator_antibiotics.tsv and MIBiG 4.0.1 BGC0001339. |
+
+## Scientific And Domain Assessments
+
+### Exact ChEBI structure, mode_of_action, Erg9 squalene synthase target, and reviewed UniProtKB protein_examples
+
+evidence: supported. Targets: CHEBI:220211.
+
+Exact CHEBI:220211 identity, C35H46O13 chemical_structure, NATURAL_PRODUCT biosynthesis_origin, ERGOSTEROL_PATHWAY_INHIBITION mode_of_action (HOST_SHARED_TARGET), and PRIMARY_LITERATURE fungal squalene synthase (Erg9; GO:0051996) target with reviewed UniProtKB:P78589, UniProtKB:A0A1D8PI71, and UniProtKB:P29704 protein_examples are accurately grounded in DOI:10.7164/antibiotics.45.639 (PMID:1624366), DOI:10.1073/pnas.90.1.80 (PMID:8419946), and DOI:10.1039/c6cc02130a (PMID:27032439).
+
+### Eligibility of CHEBI:220211 for promotion from PROPOSED to REVIEWED
+
+completeness: concern. Targets: CHEBI:220211.
+
+squalestatin-s1.yaml satisfies every REVIEWED gate requirement (grounding_status: EXACT, complete chemical_structure, curated mode_of_action, and PRIMARY_LITERATURE molecular_targets with reviewed UniProtKB protein_examples), but still carries curation_status: PROPOSED.
+
+## Findings
+
+### squalestatin-s1-awaiting-reviewed-promotion: Squalestatin S1 (CHEBI:220211) has complete EXACT structure and primary-literature mechanism/target curation but remains curation_status: PROPOSED
+
+major / open / confirmed; issue key: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion.
+
+In data/antibiotics/antifungal/squalestatin-s1.yaml (CHEBI:220211), Cycle 4 Stage 1 seeded the exact ChEBI compound, Cycle 4 Stage 2 curated biosynthesis_origin: NATURAL_PRODUCT and mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION (HOST_SHARED_TARGET) with CURATOR mode_of_action_notes, and Cycle 4 Stage 3 curated a PRIMARY_LITERATURE molecular_targets entry for fungal squalene synthase (Erg9; GO:0051996) with 3 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P78589, UniProtKB:A0A1D8PI71, UniProtKB:P29704) backed by DOI:10.7164/antibiotics.45.639 (PMID:1624366) and DOI:10.1073/pnas.90.1.80 (PMID:8419946), yet curation_status remains PROPOSED.
+
+## Recommended Actions And Acceptance Checks
+
+### promote-squalestatin-s1-to-reviewed
+
+Promote CHEBI:220211 (squalestatin S1) from curation_status: PROPOSED to REVIEWED via record_curation_event and write_validated_antibiotic during Cycle 4 Stage 5 grouped remediation.
+
+- CHEBI:220211 carries curation_status: REVIEWED and survives seed_from_sources.py --apply --only CHEBI:220211.
+- scripts/validate_strict.py and scripts/verify_corpus.py pass with 0 errors.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| squalestatin-s1-record | data/antibiotics/antifungal/squalestatin-s1.yaml; lines 1-159 | supports | CHEBI:220211 carries exact C35H46O13 structure (InChIKey KKQOCSPYLTUDES-KVBVMKTNSA-N, PubChem CID 139586329), biosynthesis_origin: NATURAL_PRODUCT, mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION (HOST_SHARED_TARGET), and PRIMARY_LITERATURE molecular_targets[0] for fungal squalene synthase (Erg9; GO:0051996) with 3 reviewed UniProtKB protein_examples (P78589, A0A1D8PI71, P29704), while retaining curation_status: PROPOSED. |
+| dawson-1992-bergstrom-1993-squalestatin | DOI:10.7164/antibiotics.45.639; Dawson et al. 1992 J Antibiot 45:639-647 (PMID:1624366); Bergstrom et al. 1993 Proc Natl Acad Sci U S A 90:80-84 (DOI:10.1073/pnas.90.1.80; PMID:8419946) | supports | Characterizes squalestatin S1 (zaragozic acid A) as a picomolar competitive inhibitor of Candida albicans and Saccharomyces cerevisiae microsomal squalene synthase (Erg9, EC 2.5.1.21; C. albicans IC50 = 5 ng/mL) that blocks ergosterol biosynthesis and exhibits broad-spectrum antifungal activity. |
+| strict-validation-suite | scripts/validate_strict.py; validate_strict.py and verify_corpus.py | supports | Confirms zero schema or ontology-label errors on squalestatin-s1.yaml and verifies that CHEBI:220211 meets all REVIEWED gate requirements. |
+
+## Limits And Additional Notes
+
+- Stage 4 is a read-only review stage; no scientific YAML records were modified in this commit sequence.
+- Squalestatin S1 is also included in the companion Cycle 4 Stage 4 full-inventory cohort review (3,042 records) under the open finding proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261103T053500Z-squalestatin-s1-record-review
+kind: record
+repository: culturebotai/AntibioticMech
+title: Single-record review of squalestatin S1 (CHEBI:220211)
+started_at: '2026-11-03T05:22:00Z'
+finished_at: '2026-11-03T05:35:00Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  independence: self_review
+  independence_basis: Cycle 4 Stage 4 workflow record-review pass executed by the
+    repository curation agent prior to independent adversarial PR review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_CURATION
+scientific_review: true
+summary: 'Whole-record review of PROPOSED/EXACT record CHEBI:220211 (squalestatin
+  S1, data/antibiotics/antifungal/squalestatin-s1.yaml) verified exact single-molecule
+  chemical structure (C35H46O13, InChIKey KKQOCSPYLTUDES-KVBVMKTNSA-N, PubChem CID
+  139586329), antifungal filing (CHEBI:35718), CURATOR discovery and biosynthetic
+  evidence (Bonsch et al. 2016 DOI:10.1039/c6cc02130a / PMID:27032439; Dawson et al.
+  1992 DOI:10.7164/antibiotics.45.639 / PMID:1624366; Bergstrom et al. 1993 DOI:10.1073/pnas.90.1.80
+  / PMID:8419946), MIBiG 4.0.1 BGC0001339 producer provenance in Phoma sp. MF5453
+  (NCBITaxon:1828523), biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (ERGOSTEROL_PATHWAY_INHIBITION,
+  HOST_SHARED_TARGET), and the PRIMARY_LITERATURE molecular_targets entry for fungal
+  squalene synthase (Erg9; GO:0051996) carrying 3 reviewed Swiss-Prot UniProtKB protein_examples
+  (UniProtKB:P78589 in Candida albicans NCBITaxon:5476, UniProtKB:A0A1D8PI71 in Candida
+  albicans SC5314 NCBITaxon:237561, and UniProtKB:P29704 in Saccharomyces cerevisiae
+  S288c NCBITaxon:559292). One open coherence finding requires Cycle 4 Stage 5 grouped
+  remediation: despite having grounding_status: EXACT, complete chemical_structure,
+  curated mode_of_action, and PRIMARY_LITERATURE molecular_targets with reviewed UniProtKB
+  protein_examples, curation_status remains PROPOSED.'
+source:
+  git_revision: fd66617286f55b8f9bf6802bf44d24bcee32959c
+  state: working_tree
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    role: context
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+  - path: curation/curator_antibiotics.tsv
+    role: context
+    sha256: 9ddfcab29e24f39ab5c3850104fee40a0c4b98f0ba26f5e92f08aa6cdbade470
+  - path: curation/uniprot_protein_examples.yaml
+    role: context
+    sha256: 5c6a846a084434ea49c3a5b0492d14de58910ce74e419bd6e14f9abfb314fd04
+  - path: data/antibiotics/antifungal/squalestatin-s1.yaml
+    role: target
+    sha256: afee896944bfaba2ec4f799e5365ac27ad8880c1d4bc47829c5c30f8f4b38186
+  - path: docs/CURATION.md
+    role: context
+    sha256: 5b55c85389daa3e69eaed1376ed23ccf63b3103e9ed9b2033b42e1479e3ca924
+  - path: docs/record-reviews.md
+    role: context
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+  - path: scripts/curation_worklist.py
+    role: context
+    sha256: 692fdcc39a0c8135c89b483a19ab0a428bfac3d851ff67a6a1ceac80225a2430
+  - path: scripts/seed_from_sources.py
+    role: context
+    sha256: 53cf79eb1417ff7758a94f2d18ac1ce47b0f8c91c8961023363cf37698d4a056
+  - path: scripts/validate_strict.py
+    role: context
+    sha256: d70e6739c881260927dfc99abea16e56be0f34f353f9f95353a43da76e8e7217
+  - path: scripts/verify_corpus.py
+    role: context
+    sha256: 7d881f9b4e17b02d7f3ec3eb48404ad0a41a0cefa915edc9a442f755b834df78
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    role: context
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+scope:
+  description: Complete single-record review of data/antibiotics/antifungal/squalestatin-s1.yaml
+    (CHEBI:220211) across chemical identity, grounding, filing, source_concepts, producer_organisms,
+    biosynthesis_origin, mode_of_action, molecular_targets, UniProtKB protein_examples
+    accounting, and curation_status gate eligibility.
+  selection: Selected CHEBI:220211 (squalestatin S1) as the sole PROPOSED/EXACT record
+    in the 3,042-record Cycle 4 Stage 4 inventory that already carries curated mode_of_action,
+    PRIMARY_LITERATURE molecular_targets, and reviewed Swiss-Prot UniProtKB protein_examples
+    and is immediately eligible for promotion to REVIEWED.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:220211
+targets:
+- target_id: CHEBI:220211
+  path: data/antibiotics/antifungal/squalestatin-s1.yaml
+  label: squalestatin S1
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/squalestatin-s1.yaml
+    role: Curator-maintained slots (curation_status, mode_of_action, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Seeded CURATOR source_concepts, definition, and MIBiG/PubChem structure
+      provenance
+checks:
+- check_id: strict-schema-squalestatin-s1
+  name: Closed-schema and ontology-grounding validation
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py --quiet --workers 4 --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  summary: CHEBI:220211 passes closed LinkML schema validation and OAK ontology label
+    correspondence (CHEBI:220211, CHEBI:35718, GO:0051996, NCBITaxon:1828523, NCBITaxon:5476,
+    NCBITaxon:237561, NCBITaxon:559292) with 0 errors.
+  target_ids:
+  - CHEBI:220211
+  evidence_ids:
+  - squalestatin-s1-record
+  - strict-validation-suite
+- check_id: verify-corpus-squalestatin-s1
+  name: Corpus integrity and CURATOR provenance verification
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/verify_corpus.py --summary
+  exit_code: 0
+  summary: CHEBI:220211 passes verify_corpus.py with 0 errors; seeded fields match
+    curation/curator_antibiotics.tsv and MIBiG 4.0.1 BGC0001339.
+  target_ids:
+  - CHEBI:220211
+  evidence_ids:
+  - squalestatin-s1-record
+  - strict-validation-suite
+evidence:
+- evidence_id: squalestatin-s1-record
+  kind: record_content
+  reference: data/antibiotics/antifungal/squalestatin-s1.yaml
+  locator: lines 1-159
+  accessed_at: '2026-11-03T05:35:00Z'
+  support: supports
+  snapshot_sha256: afee896944bfaba2ec4f799e5365ac27ad8880c1d4bc47829c5c30f8f4b38186
+  summary: 'CHEBI:220211 carries exact C35H46O13 structure (InChIKey KKQOCSPYLTUDES-KVBVMKTNSA-N,
+    PubChem CID 139586329), biosynthesis_origin: NATURAL_PRODUCT, mode_of_action:
+    ERGOSTEROL_PATHWAY_INHIBITION (HOST_SHARED_TARGET), and PRIMARY_LITERATURE molecular_targets[0]
+    for fungal squalene synthase (Erg9; GO:0051996) with 3 reviewed UniProtKB protein_examples
+    (P78589, A0A1D8PI71, P29704), while retaining curation_status: PROPOSED.'
+- evidence_id: dawson-1992-bergstrom-1993-squalestatin
+  kind: primary_source
+  reference: DOI:10.7164/antibiotics.45.639
+  locator: Dawson et al. 1992 J Antibiot 45:639-647 (PMID:1624366); Bergstrom et al.
+    1993 Proc Natl Acad Sci U S A 90:80-84 (DOI:10.1073/pnas.90.1.80; PMID:8419946)
+  accessed_at: '2026-11-03T05:35:00Z'
+  support: supports
+  summary: Characterizes squalestatin S1 (zaragozic acid A) as a picomolar competitive
+    inhibitor of Candida albicans and Saccharomyces cerevisiae microsomal squalene
+    synthase (Erg9, EC 2.5.1.21; C. albicans IC50 = 5 ng/mL) that blocks ergosterol
+    biosynthesis and exhibits broad-spectrum antifungal activity.
+- evidence_id: strict-validation-suite
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: validate_strict.py and verify_corpus.py
+  accessed_at: '2026-11-03T05:35:00Z'
+  support: supports
+  snapshot_sha256: d70e6739c881260927dfc99abea16e56be0f34f353f9f95353a43da76e8e7217
+  summary: Confirms zero schema or ontology-label errors on squalestatin-s1.yaml and
+    verifies that CHEBI:220211 meets all REVIEWED gate requirements.
+assessments:
+- assessment_id: squalestatin-s1-identity-moa-and-target-grounding
+  area: evidence
+  topic: Exact ChEBI structure, mode_of_action, Erg9 squalene synthase target, and
+    reviewed UniProtKB protein_examples
+  outcome: supported
+  summary: Exact CHEBI:220211 identity, C35H46O13 chemical_structure, NATURAL_PRODUCT
+    biosynthesis_origin, ERGOSTEROL_PATHWAY_INHIBITION mode_of_action (HOST_SHARED_TARGET),
+    and PRIMARY_LITERATURE fungal squalene synthase (Erg9; GO:0051996) target with
+    reviewed UniProtKB:P78589, UniProtKB:A0A1D8PI71, and UniProtKB:P29704 protein_examples
+    are accurately grounded in DOI:10.7164/antibiotics.45.639 (PMID:1624366), DOI:10.1073/pnas.90.1.80
+    (PMID:8419946), and DOI:10.1039/c6cc02130a (PMID:27032439).
+  target_ids:
+  - CHEBI:220211
+  evidence_ids:
+  - squalestatin-s1-record
+  - dawson-1992-bergstrom-1993-squalestatin
+- assessment_id: squalestatin-s1-curation-status-gate-alignment
+  area: completeness
+  topic: Eligibility of CHEBI:220211 for promotion from PROPOSED to REVIEWED
+  outcome: concern
+  summary: 'squalestatin-s1.yaml satisfies every REVIEWED gate requirement (grounding_status:
+    EXACT, complete chemical_structure, curated mode_of_action, and PRIMARY_LITERATURE
+    molecular_targets with reviewed UniProtKB protein_examples), but still carries
+    curation_status: PROPOSED.'
+  target_ids:
+  - CHEBI:220211
+  evidence_ids:
+  - squalestatin-s1-record
+  - dawson-1992-bergstrom-1993-squalestatin
+  - strict-validation-suite
+findings:
+- finding_id: squalestatin-s1-awaiting-reviewed-promotion
+  issue_key: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  category: completeness
+  severity: major
+  status: open
+  certainty: confirmed
+  title: 'Squalestatin S1 (CHEBI:220211) has complete EXACT structure and primary-literature
+    mechanism/target curation but remains curation_status: PROPOSED'
+  description: 'In data/antibiotics/antifungal/squalestatin-s1.yaml (CHEBI:220211),
+    Cycle 4 Stage 1 seeded the exact ChEBI compound, Cycle 4 Stage 2 curated biosynthesis_origin:
+    NATURAL_PRODUCT and mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION (HOST_SHARED_TARGET)
+    with CURATOR mode_of_action_notes, and Cycle 4 Stage 3 curated a PRIMARY_LITERATURE
+    molecular_targets entry for fungal squalene synthase (Erg9; GO:0051996) with 3
+    reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P78589, UniProtKB:A0A1D8PI71,
+    UniProtKB:P29704) backed by DOI:10.7164/antibiotics.45.639 (PMID:1624366) and
+    DOI:10.1073/pnas.90.1.80 (PMID:8419946), yet curation_status remains PROPOSED.'
+  target_ids:
+  - CHEBI:220211
+  field_paths:
+  - curation_status
+  - curation_history
+  evidence_ids:
+  - squalestatin-s1-record
+  - dawson-1992-bergstrom-1993-squalestatin
+  - strict-validation-suite
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/squalestatin-s1.yaml
+    role: Curator-owned curation_status slot on EXACT record
+actions:
+- action_id: promote-squalestatin-s1-to-reviewed
+  description: 'Promote CHEBI:220211 (squalestatin S1) from curation_status: PROPOSED
+    to REVIEWED via record_curation_event and write_validated_antibiotic during Cycle
+    4 Stage 5 grouped remediation.'
+  finding_ids:
+  - squalestatin-s1-awaiting-reviewed-promotion
+  target_ids:
+  - CHEBI:220211
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/squalestatin-s1.yaml
+    role: Curator-owned curation_status slot
+  acceptance_checks:
+  - 'CHEBI:220211 carries curation_status: REVIEWED and survives seed_from_sources.py
+    --apply --only CHEBI:220211.'
+  - scripts/validate_strict.py and scripts/verify_corpus.py pass with 0 errors.
+limitations:
+- Stage 4 is a read-only review stage; no scientific YAML records were modified in
+  this commit sequence.
+notes:
+- Squalestatin S1 is also included in the companion Cycle 4 Stage 4 full-inventory
+  cohort review (3,042 records) under the open finding proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion.
+tags:
+- record-review
+- squalestatin-s1
+- antifungal
+- cycle-04
+- stage-04
+```

@@ -1,0 +1,159 @@
+{
+  "automatic_redirects": 0,
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "biological_record_hash_drift": 0,
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-beauvericin/cohort.json",
+    "sha256": "135215fd18e24a5934e72056627308563498deb72ea3dcd1d5b5c67029a3547d"
+  },
+  "commands_passed": [
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "check",
+      "."
+    ],
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "scripts/audit_beauvericin_references.py",
+      "tests/test_beauvericin_references.py"
+    ],
+    [
+      "git",
+      "diff",
+      "--check"
+    ]
+  ],
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-reference-citation-resistance-grounding.tsv",
+    "sha256": "5e37b4d2ee3a7bafab7d173896dcb084b0444e2f06c02f49542eda866109524a"
+  },
+  "date": "2026-10-14",
+  "embedding_files_unchanged": true,
+  "embedding_refresh_required": false,
+  "experimental_strain_taxon_protein_and_genome_assignments": 0,
+  "figures_visually_reviewed": false,
+  "files": [
+    {
+      "path": "scripts/audit_beauvericin_references.py",
+      "sha256": "def18c72e12b14bd7738a0aa46c3c0a9ada6e128f44eddeb348fb5b2cac663ce"
+    },
+    {
+      "path": "tests/test_beauvericin_references.py",
+      "sha256": "00a8dabf26c3c80e4198a33927d2047a00e0295c1b62c63200fad8a4b5666cda"
+    },
+    {
+      "path": "research/2026-10-14-beauvericin-reference-context.json",
+      "sha256": "5a803d4f62298d45a635b9731253fb72ecbddeb2b0d85d5a2c0d63333ce05685"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "b2b64a61b1fd1d3bab238ac3aa6917b5294066d02c3f32212e818bea7b11eafa"
+    },
+    {
+      "path": "/private/tmp/verify_beauvericin_20261014.py",
+      "sha256": "112ad58a7c4c09e92af8537cd9fe666017da07bd5b28611593b0df06fe703edb"
+    }
+  ],
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_rerun": false,
+  "full_qc_scope_note": "Research-only checks do not renew the earlier full-QC receipt.",
+  "github_mutations": 0,
+  "http_attempts": 5,
+  "http_status_counts": {
+    "200": 4,
+    "500": 1
+  },
+  "issue_1040": "DEFERRED",
+  "main_report_changes_are_exactly_the_new_section": true,
+  "native_taxonomy_responses_reused": 1,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_assertions": 0,
+  "numeric_AST_or_variant_sequence_construct_or_protocol_exports": false,
+  "offline_plan_helper_smoke_test": {
+    "functions": [
+      "reference_plan",
+      "reference_followup_plan",
+      "named_reference_plan",
+      "inclusive_reference_plan"
+    ],
+    "helper": {
+      "path": "/private/tmp/research_beauvericin_20261014.py",
+      "sha256": "e16039d88d04f280a0e7b3e3c17fd13d50f6cf267ec03d9530bd88ff907ed5ae"
+    },
+    "original_cache_writes": 0,
+    "requests_blocked": true,
+    "status": "PASS"
+  },
+  "offline_replay": "PASS",
+  "primary_2016_disposition": "TECHNICAL_HTTP_500_HOLD",
+  "primary_hold": {
+    "path": "reports/resistance-grounding-2026-10-14-beauvericin/primary-hold.json",
+    "sha256": "b2f0d79a9c04311b823a0dc5ff294392c8d3add8a125a19222211b6dca4d203b"
+  },
+  "primary_results_reviews": 0,
+  "primary_results_unreviewed_candidates": 58,
+  "prior_source_holds_preserved": true,
+  "prior_uncommitted_work_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-beauvericin/protected-before.json",
+    "sha256": "c78821ddcb8b3252ac3666eb8e3e74568970fa8554a54299c693976e6aefc72a"
+  },
+  "protected_files_checked": 7600,
+  "query_interpretation": {
+    "complete_result_counts": {
+      "reference-2016": 1,
+      "reference-2018": 0,
+      "reference-inclusive": 2,
+      "reference-names": 0
+    },
+    "empty_citation_or_reviewed_query_establishes_gene_absence": false,
+    "genome_citations_are_compound_specific_resistance_validation": false,
+    "same_strain_reference_is_experimental_subject_assignment": false,
+    "unreviewed_entries_promoted_to_reviewed": false
+  },
+  "reference_genes_grounded": 3,
+  "reference_species_taxon_id": "NCBITaxon:5476",
+  "reference_taxon_id": "NCBITaxon:237561",
+  "retained_candidate_identities": 58,
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "reviewed_entries": 1,
+  "scope": "REFERENCE_GENE_GROUNDING_NOT_PRIMARY_RESULTS_OR_ALLELE_CURATION",
+  "source_adoptions": 0,
+  "source_plans_or_receipts_rewritten": false,
+  "structured_research_exports_source_inputs_and_generated_pages_preserved": true,
+  "supplements_reviewed": false,
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 103,
+      "path": "reports/resistance-grounding-2026-10-14-beauvericin/focused-tests.xml",
+      "sha256": "94a56d01cfb97767a5a07b96ba55a7b75da6bd05f8ebd7dd0c0aa0ead5eb72d2",
+      "skipped": 0,
+      "tests": 103
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 770,
+      "path": "reports/resistance-grounding-2026-10-14-beauvericin/expanded-tests.xml",
+      "sha256": "c809c7eaaf765f68bca110d142aa6256b44536c5d1567e51511975b41be28766",
+      "skipped": 0,
+      "tests": 770
+    }
+  ],
+  "unreviewed_entries": 2,
+  "whole_record_primary_signoffs": 0
+}

@@ -7,7 +7,7 @@
 <meta name="description" content="teicoplanin (antibioticmech:aro-a71ef91d49): Teicoplanin is a glycopeptide antibiotic used in the prophylaxis and treatment of serious infections caused by Gram-positive bacteria. Teicoplanin has a unique acyl-aliphatic chain, and binds to cell wall precursors to inhibit transglycosylation and transpeptidation.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>teicoplanin</h1>
 <p class="meta">
   <code class="curie">antibioticmech:aro-a71ef91d49</code>
@@ -37,15 +48,18 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000081">glycopeptide antibiotic</a><code class="curie">ARO:3000081</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000081">ARO:3000081</a>      <code class="curie">ARO:3000081</code></li>
+  <li>glycopeptide antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_3000081"><code class="curie">ARO:3000081</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C89H99Cl2N9O33</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>1893.7 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>1891.572232 Da</td></tr><tr><th scope="row">Source</th><td>PubChem · retrieved 2026-08-29</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">FHBQKTSCJKPYIO-OXIGXJDJSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">CC(C)CCCCCCCC(=O)N[C@@H]1[C@H]([C@@H]([C@H](O[C@H]1OC2=C3C=C4C=C2OC5=C(C=C(C=C5)[C@H]([C@H]6C(=O)N[C@H](C7=C(C(=CC(=C7)O)O[C@@H]8[C@H]([C@H]([C@@H]([C@H](O8)CO)O)O)O)C9=C(C=CC(=C9)[C@H](C(=O)N6)NC(=O)[C@@H]4NC(=O)[C@@H]1C2=CC(=CC(=C2)OC2=C(C=CC(=C2)[C@@H](C(=O)N[C@H](CC2=CC(=C(O3)C=C2)Cl)C(=O)N1)N)O)O)O)C(=O)O)O[C@H]1[C@@H]([C@H]([C@@H]([C@H](O1)CO)O)O)NC(=O)C)Cl)CO)O)O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C89H99Cl2N9O33/c1-34(2)9-7-5-4-6-8-10-61(109)95-69-75(114)72(111)59(32-102)130-88(69)133-79-56-26-41-27-57(79)127-53-18-14-39(24-48(53)91)78(132-87-68(93-35(3)104)74(113)71(110)58(31-101)129-87)70-85(122)99-67(86(123)124)46-29-43(106)30-55(128-89-77(116)76(115)73(112)60(33-103)131-89)62(46)45-23-38(13-15-50(45)107)64(82(119)100-70)97-84(121)66(41)98-83(120)65-40-21-42(105)28-44(22-40)125-54-25-37(12-16-51(54)108)63(92)81(118)94-49(80(117)96-65)20-36-11-17-52(126-56)47(90)19-36/h11-19,21-30,34,49,58-60,63-78,87-89,101-103,105-108,110-116H,4-10,20,31-33,92H2,1-3H3,(H,93,104)(H,94,118)(H,95,109)(H,96,117)(H,97,121)(H,98,120)(H,99,122)(H,100,119)(H,123,124)/t49-,58-,59-,60-,63+,64-,65+,66-,67-,68-,69-,70+,71-,72-,73-,74-,75-,76+,77+,78-,87+,88+,89+/m1/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -56,9 +70,9 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_0000029">ARO:0000029</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_0000029">teicoplanin</a><code class="curie">ARO:0000029</code></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=61036-62-2">cas:61036-62-2</a></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_29687">CHEBI:29687</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/CHEBI_29687">teicoplanin</a><code class="curie">CHEBI:29687</code></li>
   <li><a href="https://www.ebi.ac.uk/chembl/id_lookup/CHEMBL2367892">chembl:CHEMBL2367892</a></li>
   <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/16129712">pubchem.compound:16129712</a></li>
 </ul>
@@ -69,13 +83,14 @@ both rather than shown here, since it names at most one of them.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_36047">CHEBI:36047</a>    <code class="curie">CHEBI:36047</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antibacterial drug  <a href="http://purl.obolibrary.org/obo/CHEBI_36047"><code class="curie">CHEBI:36047</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -88,40 +103,57 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>acyl-D-alanyl-D-alanine <span class="pill plain">CELL_WALL_COMPONENT</span> <span class="pill">ATTACKED_COMPONENT</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000720">ARO:3000720</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. The D-Ala-D-Ala chemical group is bound as a cell-wall precursor component. Evidence status: DATABASE_ASSERTION_ONLY. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000720</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000720">ARO:3000720</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
 
 
-<h2>Activity spectrum</h2>
+<h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">1 observations &middot; <a href="teicoplanin/activity-1.html">Browse all observations</a> &middot; <a href="teicoplanin/record-a3f8fc034644d3ba2eb5b1ba69f3e0f7a504d01291f2cd6071807ec6cdf92997.json.gz" download>Complete record (JSON.gz)</a></p>
+<div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
-  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Assay</th><th scope="col">Strain</th></tr></thead>
-  <tr>
-    <td><em>Enterococcus faecalis</em> <code class="curie">NCBITaxon:1351</code></td>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Enterococcus faecalis</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1351">NCBITaxon:1351</a></td>
     <td>—</td>
     <td class="num">&gt;64.0 mg/L</td>
+    <td class="num">—</td>
     <td class="meta">Broth microdilution teicoplanin MIC; modal MIC reported; interpreted using CLSI 2025 M100 S35.</td>
     <td class="meta">0781</td>
+    <td class="meta">
+BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN15040080">SAMN15040080</a><br>    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="1" data-identifier="antibioticmech:aro-a71ef91d49" data-key="FHBQKTSCJKPYIO-OXIGXJDJSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="teicoplanin/activity-1-d18b897b7ba0699b6a26de3d6fb9d69537a3e256e7dc0d1d53a0f124757adfd5.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
+  </tbody>
 </table>
 
+</div>
+
+
 <h2>Resistance mechanisms</h2>
-<p class="meta">7 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">7 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">7</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -130,7 +162,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005021</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005021">ARO:3005021</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -140,7 +172,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000236</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000236">ARO:3000236</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -150,7 +182,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000253</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000253">ARO:3000253</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -160,7 +192,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003722</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003722">ARO:3003722</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -170,7 +202,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000256</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000256">ARO:3000256</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -180,7 +212,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007187</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007187">ARO:3007187</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -190,11 +222,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002914</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002914">ARO:3002914</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 <h2>Producer organisms</h2>
@@ -206,22 +240,25 @@ several compounds, the evidence is marked inherited, meaning it covers this
 compound together with the cluster's other products rather than singling it out.
 Those products need not be related to each other: a cluster can list an
 intermediate, a precursor and a finished antibiotic side by side.</p>
+<div class="table-scroll" role="region" aria-label="Producer organisms" tabindex="0">
 <table>
   <caption>Producer organisms</caption>
   <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Cluster link evidence</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Evidence</th></tr></thead>
   <tr>
-    <td><em>Actinoplanes teichomyceticus</em> <code class="curie">NCBITaxon:1867</code></td>
-    <td>BGC0000440</td>
+    <td><em>Actinoplanes teichomyceticus</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1867">NCBITaxon:1867</a></td>
+    <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000440">BGC0000440</a></td>
     <td class="meta">Enzymatic assays<br><span class="pill warn">cluster inherited</span></td>
     <td class="meta">MIBIG 4.0.1 (entry 5)</td>
     <td class="meta">questionable</td>
     <td class="meta">MIBiG active entry; compound &#39;Teicoplanin A2-5&#39; joined by exact Standard InChIKey.</td>
     <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">DOI:10.1016/0195-6701(86)90011-3</span> <span class="meta">(MIBiG attaches this reference to the compound, as support for its STRUCTURE: every compound-level method in the release is structure elucidation (NMR, mass spectrometry, X-ray, total synthesis). It establishes what the molecule is. It is NOT evidence that this organism produces it; MIBiG attaches no reference to the producer link at all.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1016/0195-6701%2886%2990011-3">DOI:10.1016/0195-6701(86)90011-3</a></span> <span class="meta">(MIBiG attaches this reference to the compound, as support for its STRUCTURE: every compound-level method in the release is structure elucidation (NMR, mass spectrometry, X-ray, total synthesis). It establishes what the molecule is. It is NOT evidence that this organism produces it; MIBiG attaches no reference to the producer link at all.)</span></li>
 </ul>
 </td>
   </tr>
 </table>
+
+</div>
 
 
 
@@ -269,32 +306,47 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-09-12 · codex · LLM-assisted</span>
     <p>Added one stable-URL CDC/FDA AR Isolate Bank teicoplanin-resistant Enterococcus faecalis isolate MIC observation.</p>
   </li>
+  <li>
+    <span class="pill">STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS</span>
+    <span class="meta">2026-09-26 · codex · LLM-assisted</span>
+    <p>Structured BioSample accessions on 1 activity_spectrum observation(s) where evidence notes already named exactly one accession.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/teicoplanin.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/teicoplanin.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=teicoplanin">MediaIngredientMech (teicoplanin)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=teicoplanin">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=teicoplanin">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=teicoplanin">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=teicoplanin">TraitMech</a>
+&middot; <a href="https://culturebotai.github.io/TaxonMech/browse.html?q=Actinoplanes%20teichomyceticus">TaxonMech (Actinoplanes teichomyceticus)</a></p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

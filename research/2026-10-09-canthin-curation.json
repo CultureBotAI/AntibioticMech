@@ -1,0 +1,297 @@
+{
+  "before_record_sha256": "00dec16503cd665baf5ed6bc40efaa4d782f56c720d4f6262a141a4f69ac8dbc",
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-09-canthin/canary.yaml",
+    "sha256": "52208d3cd68878a512dc579026094a0125f2dac3125bc9fa5b4f7e795ee2dbe9"
+  },
+  "claims": [
+    {
+      "assay": "Qualitative plate and liquid growth comparisons",
+      "evidence": [
+        {
+          "notes": "Results 3.1 and 3.3; Figures 1, 4 and 5; Table 1; primary paper reprint in the author's university thesis, PDF pages 68-74. Relevant Results and Methods reviewed; Figures 1, 3, 4 and 5 visually inspected. Qualitative association only; distinct backgrounds and negative controls retained.",
+          "reference": "PMID:23912082"
+        },
+        {
+          "notes": "Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 230, sequence version 2.",
+          "reference": "UniProtKB:P19880"
+        }
+      ],
+      "gene_families": [
+        "YAP1"
+      ],
+      "gene_id": "YAP1",
+      "label": "YAP1-associated canthin-6-one tolerance in experimental yeast",
+      "mechanism_type": "OTHER",
+      "note": "Conditional gene associations from one study, not two independent studies or resistance inferred from gene presence. G175-W303, BY4742 / EUROSCARF Y10000 and YPH250 are distinct laboratory backgrounds, not one experimental strain. YCF1 was a negative comparison. These findings do not establish a direct drug target or direct transport of canthin-6-one. No MIC or clinical resistance category inferred. Impaired growth without drug complicates the YAP1-loss sensitivity comparison. Reference-only S288c mapping: UniProtKB:P19880 (YAP1, YML007W; NCBITaxon:559292), not an experimental allele or protein assignment.",
+      "phenotype_label": "Author-reported canthin-6-one tolerance",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    },
+    {
+      "assay": "Qualitative plate and liquid growth comparisons",
+      "evidence": [
+        {
+          "notes": "Results 3.3; Figures 3 and 4; Tables 1 and 2; primary paper reprint in the author's university thesis, PDF pages 68-74. Relevant Results and Methods reviewed; Figures 1, 3, 4 and 5 visually inspected. Qualitative association only; distinct backgrounds and negative controls retained.",
+          "reference": "PMID:23912082"
+        },
+        {
+          "notes": "Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 171, sequence version 1.",
+          "reference": "UniProtKB:P38124"
+        }
+      ],
+      "gene_families": [
+        "FLR1"
+      ],
+      "gene_id": "FLR1",
+      "label": "FLR1-associated canthin-6-one tolerance in experimental yeast",
+      "mechanism_type": "OTHER",
+      "note": "Conditional gene associations from one study, not two independent studies or resistance inferred from gene presence. G175-W303, BY4742 / EUROSCARF Y10000 and YPH250 are distinct laboratory backgrounds, not one experimental strain. YCF1 was a negative comparison. These findings do not establish a direct drug target or direct transport of canthin-6-one. No MIC or clinical resistance category inferred. The basal FLR1-loss comparison did not increase sensitivity in the tested context. Table 1 gives FLR1 locus YBR008C, whereas Table 2 prints YRR008C; no new alias is inferred from this discordance. Reference-only S288c mapping: UniProtKB:P38124 (FLR1, YBR008C; NCBITaxon:559292), not an experimental allele or protein assignment.",
+      "phenotype_label": "Author-reported canthin-6-one tolerance",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    }
+  ],
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added two qualitative canthin-6-one gene associations from one primary study; grounded species and reference-only UniProt identities. Preserved distinct backgrounds, negative comparisons and source locus discordance. No exact allele, tested-strain identifier, direct drug target or quantitative AST assigned.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-09T13:04:53Z"
+  },
+  "date": "2026-10-09",
+  "decision_change": "Applies only the qualitative canthin gene associations flagged ready in the parent checkpoint; other compound reviews remain open.",
+  "doi": "10.1016/j.febslet.2013.07.040",
+  "experimental_alleles_validated": false,
+  "history_events_added": 1,
+  "identifier": "CHEBI:3363",
+  "ignored_files_included": true,
+  "independent_studies": 1,
+  "limitations": [
+    "No species-wide resistance or exact experimental allele/protein assignment.",
+    "No tested-strain TaxID, assembly, BioSample, quantitative AST or clinical category assigned.",
+    "Not a direct drug-target or substrate-transport claim; two associations share one study.",
+    "Distinct experimental backgrounds and negative comparisons are retained, not pooled.",
+    "Reference-only YCF1 is a negative comparison, not a new resistance assertion.",
+    "Whole-record and additional-discovery review remain open."
+  ],
+  "primary_context": {
+    "background_labels": [
+      "G175-W303",
+      "BY4742 / EUROSCARF Y10000",
+      "YPH250"
+    ],
+    "curation_disposition": "READY_FOR_QUALITATIVE_GENE_ASSOCIATION_CURATION",
+    "doi": "10.1016/j.febslet.2013.07.040",
+    "exact_experimental_allele": "UNRESOLVED",
+    "figures_visually_inspected": [
+      1,
+      3,
+      4,
+      5
+    ],
+    "findings": [
+      "YAP1 and FLR1 affect canthin-6-one tolerance in laboratory yeast.",
+      "YCF1 does not explain the tested effect; basal FLR1 comparison was negative.",
+      "Baseline growth complicates the YAP1-loss comparison.",
+      "The tested backgrounds are distinct, not interchangeable with the S288c reference entry."
+    ],
+    "identifier": "CHEBI:3363",
+    "locations": [
+      "Table 1",
+      "Methods 2.2",
+      "Results 3.1 and 3.3",
+      "Figures 1, 3, 4 and 5"
+    ],
+    "locus_label_caveat": {
+      "alias_created": false,
+      "gene": "FLR1",
+      "table_1": "YBR008C",
+      "table_2": "YRR008C",
+      "uniprot_reference_locus": "YBR008C"
+    },
+    "medium": "PRIMARY_PAPER_REPRINT_IN_AUTHOR_UNIVERSITY_THESIS",
+    "numeric_ast_curated": false,
+    "paper_pdf_pages_one_based": [
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74
+    ],
+    "primary_url": "https://www.sciencedirect.com/science/article/pii/S0014579313005693",
+    "reference": "PMID:23912082",
+    "rendered_pages": [
+      {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-page-69.png",
+        "sha256": "26787053413be2bf3f772eed29391f0b70e9a85ea9efcf124929337c32c4adf2"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-page-70.png",
+        "sha256": "ee410fde8639b9fa50e11d76edaaa2c8f0f952dcc4498479d2386fd5fcb6e530"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-page-72.png",
+        "sha256": "019cd58f109a840492967484a91be18052418af5f1a96e94313d58c2c18fe0b9"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-page-73.png",
+        "sha256": "a3da043c6769f638c02ce407b88e4ec809f5dc466c102693434c2aa2c07f5896"
+      }
+    ],
+    "source_species_taxon": "NCBITaxon:4932"
+  },
+  "primary_url": "https://www.sciencedirect.com/science/article/pii/S0014579313005693",
+  "protected_files_before_render": 6669,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-canthin/protected-before.json",
+    "sha256": "c681babbc103e783d7e4102d53f56c6aaa7bf6485ee6afd203b42e3a9297f65b"
+  },
+  "quantitative_ast_added": false,
+  "record": {
+    "path": "data/antibiotics/antimycobacterial/canthin-6-one.yaml",
+    "sha256": "52208d3cd68878a512dc579026094a0125f2dac3125bc9fa5b4f7e795ee2dbe9"
+  },
+  "record_paths_changed": [
+    "data/antibiotics/antimycobacterial/canthin-6-one.yaml"
+  ],
+  "records_unchanged": 2938,
+  "reference": "PMID:23912082",
+  "reference_grounding": {
+    "path": "research/2026-10-09-transport-primary-context.json",
+    "sha256": "12d0c181f15cf8dc12bed88e8d488937038cbfd8861d78ef5d335e6f754175d4"
+  },
+  "reference_proteins": [
+    {
+      "accession": "UniProtKB:P19880",
+      "entry_audit": {
+        "entryVersion": 230,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "focal_citation_context": [],
+      "focal_papers_not_in_entry_references": [
+        "PMID:23912082"
+      ],
+      "gene_symbol": "YAP1",
+      "identifier": "CHEBI:3363",
+      "reference_loci": [
+        "YML007W"
+      ],
+      "reference_organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "role": "GENE_ASSOCIATION_REFERENCE",
+      "sgd_ids": [
+        "S000004466"
+      ]
+    },
+    {
+      "accession": "UniProtKB:P38124",
+      "entry_audit": {
+        "entryVersion": 171,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "focal_citation_context": [],
+      "focal_papers_not_in_entry_references": [
+        "PMID:23912082"
+      ],
+      "gene_symbol": "FLR1",
+      "identifier": "CHEBI:3363",
+      "reference_loci": [
+        "YBR008C"
+      ],
+      "reference_organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "role": "GENE_ASSOCIATION_REFERENCE",
+      "sgd_ids": [
+        "S000000212"
+      ]
+    },
+    {
+      "accession": "UniProtKB:P39109",
+      "entry_audit": {
+        "entryVersion": 236,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "focal_citation_context": [],
+      "focal_papers_not_in_entry_references": [
+        "PMID:23912082"
+      ],
+      "gene_symbol": "YCF1",
+      "identifier": "CHEBI:3363",
+      "reference_loci": [
+        "YDR135C"
+      ],
+      "reference_organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "role": "NEGATIVE_COMPARISON_REFERENCE",
+      "sgd_ids": [
+        "S000002542"
+      ]
+    }
+  ],
+  "source_ownership": "CURATOR; preserved by merge_with_existing; no source adoption",
+  "standard_inchi_key": "ZERVJPYNQLONEK-UHFFFAOYSA-N",
+  "status": "CURATED_QUALITATIVE_PRIMARY_GENE_ASSOCIATIONS",
+  "taxonomy": {
+    "4932": {
+      "active": true,
+      "lineage_taxids": [
+        131567,
+        2759,
+        33154,
+        4751,
+        451864,
+        4890,
+        716545,
+        147537,
+        4891,
+        4892,
+        4893,
+        4930
+      ],
+      "parent": {
+        "scientificName": "Saccharomyces",
+        "taxonId": 4930
+      },
+      "rank": "species",
+      "scientificName": "Saccharomyces cerevisiae",
+      "taxonId": 4932
+    },
+    "559292": {
+      "active": true,
+      "lineage_taxids": [
+        131567,
+        2759,
+        33154,
+        4751,
+        451864,
+        4890,
+        716545,
+        147537,
+        4891,
+        4892,
+        4893,
+        4930,
+        4932
+      ],
+      "parent": {
+        "commonName": "Baker's yeast",
+        "scientificName": "Saccharomyces cerevisiae",
+        "taxonId": 4932
+      },
+      "rank": "strain",
+      "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "taxonId": 559292
+    }
+  },
+  "uniprot_release": "2026_03",
+  "whole_record_review_complete": false
+}

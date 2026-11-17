@@ -1,0 +1,1437 @@
+{
+  "access_limits": [
+    {
+      "url": "https://www.pnas.org/doi/10.1073/pnas.91.10.4519",
+      "web_result": "403; no full text obtained"
+    },
+    {
+      "url": "https://journals.asm.org/doi/10.1128/jb.178.2.531-536.1996",
+      "web_result": "403; no full text obtained"
+    }
+  ],
+  "attribution": "UniProt Consortium release 2026_03, CC BY 4.0; EMBL-EBI ChEBI and Europe PMC; cited primary authors. Only metadata and qualitative paraphrases are exported.",
+  "background_taxonomy": {
+    "candidates": [
+      {
+        "otherNames": [
+          "Lactococcus lactis subsp. cremoris str. NZ9000",
+          "Lactococcus lactis subsp. cremoris strain NZ9000",
+          "Lactococcus cremoris subsp. cremoris NZ9000",
+          "Lactococcus lactis subsp. cremoris NZ9000"
+        ],
+        "parent": {
+          "scientificName": "Lactococcus cremoris subsp. cremoris",
+          "taxonId": 2816960
+        },
+        "rank": "strain",
+        "scientificName": "Lactococcus lactis subsp. cremoris (strain NZ9000)",
+        "taxonId": 746361
+      },
+      {
+        "otherNames": [
+          "Lactococcus lactis subsp. cremoris str. MG1363",
+          "Lactococcus lactis subsp. cremoris strain MG1363",
+          "Lactococcus lactis subsp. cremoris MG1363",
+          "Lactococcus cremoris subsp. cremoris MG1363"
+        ],
+        "parent": {
+          "scientificName": "Lactococcus cremoris subsp. cremoris",
+          "taxonId": 2816960
+        },
+        "rank": "strain",
+        "scientificName": "Lactococcus lactis subsp. cremoris (strain MG1363)",
+        "taxonId": 416870
+      }
+    ],
+    "note": "NZ9000 is explicitly named by 746361. MG1363 (416870) is a separate parent-background result, not a substitute. The current parent is Lactococcus cremoris subsp. cremoris; source wording is retained. No genome or experimental derivative TaxID is assigned.",
+    "reference_taxon_id": "NCBITaxon:746361",
+    "scope": "NAMED_BACKGROUND_ONLY_NOT_EXPERIMENTAL_DERIVATIVE_OR_DONOR",
+    "source_label": "Lactococcus lactis NZ9000"
+  },
+  "bibliographic_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocins/search-2f8463eaa2c08db1-response.bin",
+        "sha256": "e96ce8c30acb2d52c193f3452f730bc19c003a480c445e2038fb48359bfc11c5"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "hit_count": 64,
+      "query": "SRC:MED AND ((TITLE_ABS:nisI OR TITLE_ABS:nisFEG) AND (TITLE_ABS:immunity OR TITLE_ABS:resistance))",
+      "retained": 64,
+      "retrieved_at": "2026-10-09T18:23:40.349868+00:00",
+      "sha256": "e96ce8c30acb2d52c193f3452f730bc19c003a480c445e2038fb48359bfc11c5",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=SRC%3AMED+AND+%28%28TITLE_ABS%3AnisI+OR+TITLE_ABS%3AnisFEG%29+AND+%28TITLE_ABS%3Aimmunity+OR+TITLE_ABS%3Aresistance%29%29&format=json&resultType=core&pageSize=100"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocins/search-56dd97ea1665e897-response.bin",
+        "sha256": "d4431ef56dfd005ef5ee03ac4dd5ce4c729b81e0fc531542e01a9ca203dcd9b2"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "hit_count": 47,
+      "query": "SRC:MED AND ((TITLE_ABS:nisI OR TITLE_ABS:nisFEG) AND (TITLE_ABS:immunity OR TITLE_ABS:resistance)) AND (TITLE_ABS:nisin OR TITLE_ABS:lantibiotic OR TITLE_ABS:Lactococcus)",
+      "retained": 47,
+      "retrieved_at": "2026-10-09T18:28:01.175059+00:00",
+      "sha256": "d4431ef56dfd005ef5ee03ac4dd5ce4c729b81e0fc531542e01a9ca203dcd9b2",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=SRC%3AMED+AND+%28%28TITLE_ABS%3AnisI+OR+TITLE_ABS%3AnisFEG%29+AND+%28TITLE_ABS%3Aimmunity+OR+TITLE_ABS%3Aresistance%29%29+AND+%28TITLE_ABS%3Anisin+OR+TITLE_ABS%3Alantibiotic+OR+TITLE_ABS%3ALactococcus%29&format=json&resultType=core&pageSize=100"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocins/search-df0355a18b9b215b-response.bin",
+        "sha256": "019ccb0e9100be91586f9dbc49a7047cce4efdafa79376f037b9074392cf7405"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "hit_count": 9,
+      "query": "SRC:MED AND (EXT_ID:8550476 OR EXT_ID:11229936 OR EXT_ID:8183941 OR EXT_ID:20876530 OR EXT_ID:20159968 OR EXT_ID:25014359 OR EXT_ID:14531690 OR EXT_ID:14531661 OR DOI:10.1021/ja036756q)",
+      "retained": 9,
+      "retrieved_at": "2026-10-09T18:22:16.729963+00:00",
+      "sha256": "019ccb0e9100be91586f9dbc49a7047cce4efdafa79376f037b9074392cf7405",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=SRC%3AMED+AND+%28EXT_ID%3A8550476+OR+EXT_ID%3A11229936+OR+EXT_ID%3A8183941+OR+EXT_ID%3A20876530+OR+EXT_ID%3A20159968+OR+EXT_ID%3A25014359+OR+EXT_ID%3A14531690+OR+EXT_ID%3A14531661+OR+DOI%3A10.1021%2Fja036756q%29&format=json&resultType=core&pageSize=100"
+    }
+  ],
+  "chemical_identity_checks": [
+    {
+      "aromatic_oxygen_atoms": 0,
+      "aromatic_sulfur_atoms": 0,
+      "chebi_reference": "CHEBI:203056",
+      "current_chebi_key_matches_record": true,
+      "current_chebi_smiles_parses_strictly": false,
+      "graph_input": "STORED_SMILES",
+      "identifier": "antibioticmech:aro-0a1c492c45",
+      "rdkit_version": "2026.03.5",
+      "recomputed_key_matches_record": true,
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-bacteriocins/chebi-203056-response.bin",
+          "sha256": "855d8cab44414750cfbc456958c542d064397274de26869ce97ea1b8e60f9741"
+        },
+        "retrieved_at": "2026-10-09T18:23:43.295840+00:00",
+        "sha256": "855d8cab44414750cfbc456958c542d064397274de26869ce97ea1b8e60f9741",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/chebi/CHEBI:203056"
+      },
+      "ring_sizes": [
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        63
+      ],
+      "specified_atom_stereo": 0,
+      "standard_inchi_key": "TVZWTTNULXZYTK-UHFFFAOYSA-N",
+      "stored_smiles_parses_strictly": true
+    },
+    {
+      "aromatic_oxygen_atoms": 0,
+      "aromatic_sulfur_atoms": 0,
+      "chebi_reference": "CHEBI:64624",
+      "current_chebi_key_matches_record": true,
+      "current_chebi_smiles_parses_strictly": false,
+      "graph_input": "STORED_STANDARD_INCHI",
+      "identifier": "CHEBI:64624",
+      "rdkit_version": "2026.03.5",
+      "recomputed_key_matches_record": true,
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-bacteriocins/chebi-64624-response.bin",
+          "sha256": "d0ded420e7a714ac7df0f7af28516f177b9d2e7847fa943608fc6be89d8d5b4e"
+        },
+        "retrieved_at": "2026-10-09T18:24:18.182694+00:00",
+        "sha256": "d0ded420e7a714ac7df0f7af28516f177b9d2e7847fa943608fc6be89d8d5b4e",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/chebi/CHEBI:64624"
+      },
+      "ring_sizes": [
+        5
+      ],
+      "specified_atom_stereo": 19,
+      "standard_inchi_key": "DPWKTZRJGMZNFS-IGRUFWJISA-N",
+      "stored_smiles_parses_strictly": false
+    },
+    {
+      "chebi_reference": "CHEBI:71629",
+      "current_chebi_key_matches_record": true,
+      "identifier": "CHEBI:71629",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-bacteriocins/chebi-71629-response.bin",
+          "sha256": "c7c01d7faea75fe50e894bc670dd78e10b6f3692892ff274fc0ccad7cb31aab8"
+        },
+        "retrieved_at": "2026-10-09T18:30:50.346323+00:00",
+        "sha256": "c7c01d7faea75fe50e894bc670dd78e10b6f3692892ff274fc0ccad7cb31aab8",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/chebi/CHEBI:71629"
+      },
+      "standard_inchi_key": "NVNLLIYOARQCIX-IPGQQNLLSA-N"
+    }
+  ],
+  "current_census": {
+    "path": "research/2026-10-09-platen-resistance-grounding.tsv",
+    "sha256": "06db72d176386403e94f2c1580d6a48ae1336a2f2d548e55c2a97b5c0ff71cbc"
+  },
+  "date": "2026-10-09",
+  "discovery_scope": {
+    "biologically_refined_query_hits": 47,
+    "expanded_corpus_traversals": "All 611 selected queries were already complete; this supplemental review does not replace that ledger.",
+    "initial_nisin_cap": "100 retained of 400; not complete candidate coverage",
+    "inputs": {
+      "current_progress": {
+        "path": "research/2026-10-09-platen-resistance-progress.json",
+        "sha256": "bdcc316af2cba7273a2c08a8c9f39fbe325fd287aff77c00612b59633004f472"
+      },
+      "initial_searches": {
+        "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+        "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+      }
+    },
+    "noisy_nisi_query_hits": 64,
+    "refinement_note": "The unrefined query includes nickel-silicide false positives. Refined hits still require paper-by-paper screening; 47 is not a count of verified findings."
+  },
+  "limitations": [
+    "Ten UniProt references are not ten experimentally grounded resistance alleles. None is assigned as an experimental protein.",
+    "NisI P42708 cites NIZO R5 and 6F3, not a verified NZ9700 experimental allele crosswalk.",
+    "The six microcin C candidates retain separate archive and donor contexts; no representative is chosen.",
+    "Species/subspecies reference TaxIDs are not strain, isolate or genome assignments.",
+    "No NCBI request, outreach, source adoption, new genome pipeline, reuse-terms reassessment or GitHub mutation occurred.",
+    "No new sequences, exact variant specifications, constructs, protocols, primers, coordinates or numerical AST are exported.",
+    "Biological curation remains authorized but is held on these five records until the stated evidence gaps are resolved.",
+    "Full authoritative QC was not rerun for this research-only checkpoint; the platen verification remains the last biological QC result."
+  ],
+  "preservation": {
+    "allowed_existing_edit": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "biological_record_changes": 0,
+    "curation_events_added": 0,
+    "ignored_files_included": true,
+    "protected_files": 6755,
+    "protected_snapshot": {
+      "path": "reports/resistance-grounding-2026-10-09-bacteriocins/protected-before.json",
+      "sha256": "70cf48569f7a1212acce88627b2523367a4f600ec0c9f6db89558cb259cc74c8"
+    },
+    "record_hashes_verified": 2939
+  },
+  "primary_papers": {
+    "11229936": {
+      "doi": "10.1128/aem.67.3.1380-1383.2001",
+      "epmc_open_access_flag": "N",
+      "figures_visually_inspected": false,
+      "pmcid": "PMC92739",
+      "qualitative_findings": [
+        "The abstract's reported susceptibility result concerns gallidermin; the broad title alone does not establish epidermin resistance."
+      ],
+      "reference": "PMID:11229936",
+      "review_medium": "PRIMARY_ABSTRACT",
+      "supplement_inspected": false,
+      "title": "Dual role of GdmH in producer immunity and secretion of the Staphylococcal lantibiotics gallidermin and epidermin.",
+      "whole_paper_review_complete": false
+    },
+    "14531661": {
+      "doi": "10.1021/ja036677e",
+      "epmc_open_access_flag": "N",
+      "figures_visually_inspected": false,
+      "full_text_access": "Publisher lists purchase access; no full text obtained.",
+      "pmcid": null,
+      "publisher_url": "https://pubs.acs.org/doi/10.1021/ja036677e",
+      "qualitative_findings": [
+        "The primary abstract describes a sidechain-to-backbone lasso rather than the stored head-to-tail backbone graph."
+      ],
+      "reference": "PMID:14531661",
+      "review_medium": "PRIMARY_ABSTRACT_AND_PUBLISHER_ABSTRACT",
+      "supplement_inspected": false,
+      "title": "Structure of antibacterial peptide microcin J25: a 21-residue lariat protoknot.",
+      "whole_paper_review_complete": false
+    },
+    "14531690": {
+      "doi": "10.1021/ja0367703",
+      "epmc_open_access_flag": "N",
+      "figures_visually_inspected": false,
+      "full_text_access": "Publisher lists purchase access; no full text obtained.",
+      "pmcid": null,
+      "publisher_url": "https://pubs.acs.org/doi/10.1021/ja0367703",
+      "qualitative_findings": [
+        "The primary abstract describes a sidechain-to-backbone lasso rather than the stored head-to-tail backbone graph."
+      ],
+      "reference": "PMID:14531690",
+      "review_medium": "PRIMARY_ABSTRACT_AND_PUBLISHER_ABSTRACT",
+      "supplement_inspected": false,
+      "title": "Microcin J25 has a threaded sidechain-to-backbone ring structure and not a head-to-tail cyclized backbone.",
+      "whole_paper_review_complete": false
+    },
+    "14531691": {
+      "doi": "10.1021/ja036756q",
+      "epmc_open_access_flag": "N",
+      "figures_visually_inspected": false,
+      "full_text_access": "Publisher lists purchase access; no full text obtained.",
+      "pmcid": null,
+      "publisher_url": "https://pubs.acs.org/doi/10.1021/ja036756q",
+      "qualitative_findings": [
+        "The primary abstract describes a sidechain-to-backbone lasso rather than the stored head-to-tail backbone graph."
+      ],
+      "reference": "PMID:14531691",
+      "review_medium": "PRIMARY_ABSTRACT_AND_PUBLISHER_ABSTRACT",
+      "supplement_inspected": false,
+      "title": "Structure of microcin J25, a peptide inhibitor of bacterial RNA polymerase, is a lassoed tail.",
+      "whole_paper_review_complete": false
+    },
+    "20159968": {
+      "doi": "10.1074/jbc.m109.080192",
+      "epmc_open_access_flag": "N",
+      "figures_visually_inspected": false,
+      "pmcid": "PMC2857085",
+      "qualitative_findings": [
+        "The abstract assigns the MccE reaction to processed microcin C, not an interchangeable intact-substrate biochemical measurement."
+      ],
+      "reference": "PMID:20159968",
+      "review_medium": "PRIMARY_ABSTRACT",
+      "supplement_inspected": false,
+      "title": "MccE provides resistance to protein synthesis inhibitor microcin C by acetylating the processed form of the antibiotic.",
+      "whole_paper_review_complete": false
+    },
+    "20876530": {
+      "doi": "10.1074/jbc.m110.179135",
+      "epmc_open_access_flag": "N",
+      "figures_visually_inspected": false,
+      "pmcid": "PMC2992228",
+      "qualitative_findings": [
+        "The abstract distinguishes MccF activity on intact and processed microcin C; full Results and exact compound mapping remain pending."
+      ],
+      "reference": "PMID:20876530",
+      "review_medium": "PRIMARY_ABSTRACT",
+      "supplement_inspected": false,
+      "title": "The mechanism of microcin C resistance provided by the MccF peptidase.",
+      "whole_paper_review_complete": false
+    },
+    "25014359": {
+      "doi": "10.1371/journal.pone.0102246",
+      "donor_label": "Lactococcus lactis NZ9700",
+      "endpoint_kind": "growth IC50, not MIC or clinical susceptibility category",
+      "epmc_open_access_flag": "Y",
+      "exact_congener_to_record_match_verified": false,
+      "experimental_background_label": "Lactococcus lactis NZ9000",
+      "figures_visually_inspected": false,
+      "locations": [
+        "Purification of nisin",
+        "Activity of NisI in L. lactis",
+        "Pore formation by nisin",
+        "Discussion"
+      ],
+      "pmcid": "PMC4094520",
+      "qualitative_findings": [
+        "The NisI comparison supports reduced susceptibility and inhibition of pore formation in the tested laboratory background.",
+        "Growth inhibition and survival are distinct endpoints. Direct Lipid II shielding remains a proposed explanation, not a demonstrated binding mechanism."
+      ],
+      "reference": "PMID:25014359",
+      "relevant_results_text_inspected": true,
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-bacteriocins/primary-25014359-response.bin",
+          "sha256": "8fffd4f5167a532f62be9f460613c49b465cc525e73cfbdc9882a1e4b46b0742"
+        },
+        "retrieved_at": "2026-10-09T18:24:14.865380+00:00",
+        "sha256": "8fffd4f5167a532f62be9f460613c49b465cc525e73cfbdc9882a1e4b46b0742",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4094520/fullTextXML"
+      },
+      "reuse": "CC BY; qualitative paraphrase only",
+      "review_medium": "LICENSED_EBI_PRIMARY_XML_RELEVANT_RESULTS_AND_IDENTITY_TEXT",
+      "supplement_inspected": false,
+      "tested_material_label": "commercial nisin",
+      "title": "Lantibiotic immunity: inhibition of nisin mediated pore formation by NisI.",
+      "whole_paper_review_complete": false
+    },
+    "25176038": {
+      "doi": "10.1002/mbo3.205",
+      "donor_label": "Lactococcus lactis NZ9700",
+      "endpoint_kind": "growth IC50, not MIC or clinical susceptibility category",
+      "epmc_open_access_flag": "Y",
+      "exact_congener_to_record_match_verified": false,
+      "experimental_background_label": "Lactococcus lactis NZ9000",
+      "figures_visually_inspected": false,
+      "locations": [
+        "Purification of nisin",
+        "Activity of NisFEG against nisin",
+        "Pore formation of nisin in the membrane",
+        "Table 2",
+        "Table 3"
+      ],
+      "pmcid": "PMC4234265",
+      "qualitative_findings": [
+        "The NisFEG comparison supports conditional immunity in the tested laboratory background.",
+        "The intact commercial material and separately assessed peptide analogues are distinct substrates; none is silently assigned the record's exact structure."
+      ],
+      "reference": "PMID:25176038",
+      "relevant_results_text_inspected": true,
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-bacteriocins/primary-25176038-response.bin",
+          "sha256": "19d2675c7fc9357a7d6cd8ca17330f6d5c936cd64200dd38a6466c9fe823a709"
+        },
+        "retrieved_at": "2026-10-09T18:27:44.635766+00:00",
+        "sha256": "19d2675c7fc9357a7d6cd8ca17330f6d5c936cd64200dd38a6466c9fe823a709",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4234265/fullTextXML"
+      },
+      "reuse": "CC BY; qualitative paraphrase only",
+      "review_medium": "LICENSED_EBI_PRIMARY_XML_RELEVANT_RESULTS_AND_IDENTITY_TEXT",
+      "supplement_inspected": false,
+      "tested_material_label": "commercial nisin",
+      "title": "The C-terminus of nisin is important for the ABC transporter NisFEG to confer immunity in Lactococcus lactis.",
+      "whole_paper_review_complete": false
+    },
+    "8183941": {
+      "doi": "10.1073/pnas.91.10.4519",
+      "epmc_open_access_flag": "N",
+      "figures_visually_inspected": false,
+      "pmcid": "PMC43817",
+      "qualitative_findings": [
+        "The primary abstract describes posttranslational heterocycles absent from the stored unmodified peptide graph."
+      ],
+      "reference": "PMID:8183941",
+      "review_medium": "PRIMARY_ABSTRACT",
+      "supplement_inspected": false,
+      "title": "Posttranslational modifications in microcin B17 define an additional class of DNA gyrase inhibitor.",
+      "whole_paper_review_complete": false
+    },
+    "8550476": {
+      "doi": "10.1128/jb.178.2.531-536.1996",
+      "epmc_open_access_flag": "N",
+      "figures_visually_inspected": false,
+      "pmcid": "PMC177688",
+      "qualitative_findings": [
+        "The abstract distinguishes the S. epidermidis donor from S. carnosus as a tested host. EpiFEG components are not independent single-protein sufficiency claims."
+      ],
+      "reference": "PMID:8550476",
+      "review_medium": "PRIMARY_ABSTRACT",
+      "supplement_inspected": false,
+      "title": "Analysis of the Staphylococcus epidermidis genes epiF, -E, and -G involved in epidermin immunity.",
+      "whole_paper_review_complete": false
+    }
+  },
+  "prior_checkpoint": {
+    "path": "research/2026-10-09-platen-verification.json",
+    "sha256": "cb9b845c6bb6b6a2de8b1c4746d9a5402fa2cba137e935c8fd93d732fa9b7d55"
+  },
+  "proteins": {
+    "B0EYN8": {
+      "accession": "UniProtKB:B0EYN8",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "EF536825",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ABW37145.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "ABW37145.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "H22"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "ABW37145.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "MccC7-H22"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "17936903"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.plasmid.2007.08.002"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 79,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "mccE"
+      ],
+      "organism": {
+        "scientificName": "Escherichia coli",
+        "taxonId": 562
+      },
+      "query": "(gene_exact:mccE OR gene_exact:mccF) AND organism_id:562",
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM"
+    },
+    "P42708": {
+      "accession": "UniProtKB:P42708",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "L16226",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAA25193.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "X76884",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CAA54209.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "type": "STRAIN",
+              "value": "NIZO R5"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "7689965"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/j.1432-1033.1993.tb18143.x"
+            }
+          ]
+        },
+        {
+          "context": [
+            {
+              "type": "STRAIN",
+              "value": "6F3"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8161176"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/aem.60.3.814-825.1994"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 73,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "nisI"
+      ],
+      "organism": {
+        "scientificName": "Lactococcus lactis subsp. lactis",
+        "taxonId": 1360
+      },
+      "query": "reviewed:true AND (gene:nisI OR gene:nisF OR gene:nisE OR gene:nisG)",
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM"
+    },
+    "Q2KKH5": {
+      "accession": "UniProtKB:Q2KKH5",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "AY913945",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAY68498.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAY68498.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "H22"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAY68498.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "pMccC7"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "16553738"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/j.1365-2672.2006.02834.x"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 73,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "mccE"
+      ],
+      "organism": {
+        "scientificName": "Escherichia coli",
+        "taxonId": 562
+      },
+      "query": "(gene_exact:mccE OR gene_exact:mccF) AND organism_id:562",
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM"
+    },
+    "Q2KKH9": {
+      "accession": "UniProtKB:Q2KKH9",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "AY913945",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAY68499.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "EF536825",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ABW37146.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAY68499.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "H22"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAY68499.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "pMccC7"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "16553738"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/j.1365-2672.2006.02834.x"
+            }
+          ]
+        },
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "ABW37146.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "H22"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "ABW37146.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "MccC7-H22"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "17936903"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.plasmid.2007.08.002"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 69,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "mccF"
+      ],
+      "organism": {
+        "scientificName": "Escherichia coli",
+        "taxonId": 562
+      },
+      "query": "(gene_exact:mccE OR gene_exact:mccF) AND organism_id:562",
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM"
+    },
+    "Q47510": {
+      "accession": "UniProtKB:Q47510",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "X57583",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CAA40813.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "CAA40813.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "pMccC7"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8522520"
+            }
+          ]
+        },
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "CAA40813.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "pMccC7"
+            }
+          ],
+          "identifiers": []
+        },
+        {
+          "context": [],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "21507941"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m111.226282"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 122,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "mccE"
+      ],
+      "organism": {
+        "scientificName": "Escherichia coli",
+        "taxonId": 562
+      },
+      "query": "(gene_exact:mccE OR gene_exact:mccF) AND organism_id:562",
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM"
+    },
+    "Q47511": {
+      "accession": "UniProtKB:Q47511",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "X57583",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CAA40814.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8522520"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.177.24.7131-7140.1995"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 91,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "mccF"
+      ],
+      "organism": {
+        "scientificName": "Escherichia coli",
+        "taxonId": 562
+      },
+      "query": "(gene_exact:mccE OR gene_exact:mccF) AND organism_id:562",
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM"
+    },
+    "Q54002": {
+      "accession": "UniProtKB:Q54002",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "U77778",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAB61163.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAB61163.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "Tue3298"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAB61163.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "pTue32"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8550476"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 112,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "epiF"
+      ],
+      "organism": {
+        "scientificName": "Staphylococcus epidermidis",
+        "taxonId": 1282
+      },
+      "query": "(lit_pubmed:8550476 OR lit_pubmed:20876530 OR lit_pubmed:20159968 OR lit_pubmed:25176038 OR lit_pubmed:25014359)",
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM"
+    },
+    "Q54003": {
+      "accession": "UniProtKB:Q54003",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "U77778",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAB61162.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAB61162.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "Tue3298"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAB61162.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "pTue32"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8550476"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 51,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "epiE"
+      ],
+      "organism": {
+        "scientificName": "Staphylococcus epidermidis",
+        "taxonId": 1282
+      },
+      "query": "(lit_pubmed:8550476 OR lit_pubmed:20876530 OR lit_pubmed:20159968 OR lit_pubmed:25176038 OR lit_pubmed:25014359)",
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM"
+    },
+    "Q54004": {
+      "accession": "UniProtKB:Q54004",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "U77778",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAB61164.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAB61164.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "Tue3298"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAB61164.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "pTue32"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8550476"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 38,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "epiG"
+      ],
+      "organism": {
+        "scientificName": "Staphylococcus epidermidis",
+        "taxonId": 1282
+      },
+      "query": "(lit_pubmed:8550476 OR lit_pubmed:20876530 OR lit_pubmed:20159968 OR lit_pubmed:25176038 OR lit_pubmed:25014359)",
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM"
+    },
+    "Q83Y55": {
+      "accession": "UniProtKB:Q83Y55",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "AJ487788",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CAD32231.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "CAD32231.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "pMccC51"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "12936987"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/AAC.47.9.2868-2874.2003"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 86,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "mccE"
+      ],
+      "organism": {
+        "scientificName": "Escherichia coli",
+        "taxonId": 562
+      },
+      "query": "(gene_exact:mccE OR gene_exact:mccF) AND organism_id:562",
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM"
+    }
+  },
+  "records": [
+    {
+      "decision": "HOLD_PRIMARY_RESULTS",
+      "identifier": "CHEBI:71659",
+      "label": "epidermin",
+      "note": "EpiFEG donor-reference links are verified, but primary Results and exact tested identities remain pending. The GdmH abstract reports gallidermin, not proof of an epidermin phenotype.",
+      "path": "data/antibiotics/antibacterial/epidermin.yaml",
+      "primary_references": [
+        "PMID:8550476",
+        "PMID:11229936"
+      ],
+      "record_action": "PRESERVE_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "8b20237219539ae5141380fea6c78c2d38c37aea0b99316e8af0d05361d33f10",
+      "standard_inchi_key": "CXTXHTVXPMOOSW-JUEJINBGSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "decision": "HOLD_STRUCTURE_GRAPH_CONFLICT",
+      "identifier": "antibioticmech:aro-0a1c492c45",
+      "label": "microcin J25",
+      "note": "The stored head-to-tail backbone graph differs from the sidechain-to-backbone lasso described in primary structural abstracts. The current ChEBI cross-reference repeats the stored key and does not resolve the conflict.",
+      "path": "data/antibiotics/antibacterial/microcin-j25.yaml",
+      "preserved_source_assertions": [
+        "ARO:3003952"
+      ],
+      "primary_references": [
+        "PMID:14531690",
+        "PMID:14531691",
+        "PMID:14531661"
+      ],
+      "record_action": "PRESERVE_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "d9a95a10437c7e73e9dd882093ac7efd68c53bde4965b5030398483ccdac79a2",
+      "standard_inchi_key": "TVZWTTNULXZYTK-UHFFFAOYSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "decision": "HOLD_TESTED_CONGENER_AND_EXPERIMENTAL_ACCESSIONS",
+      "identifier": "CHEBI:71629",
+      "label": "nisin",
+      "note": "Commercial material is named nisin; an exact congener-to-record crosswalk remains unresolved. Nisin Z and other congeners are not silently equated.",
+      "path": "data/antibiotics/antibacterial/nisin.yaml",
+      "primary_references": [
+        "PMID:25014359",
+        "PMID:25176038"
+      ],
+      "record_action": "PRESERVE_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "55df49f4c876ca49e1c98000221a9ccbea65b2a1b552e83fd3148f13be3c125d",
+      "standard_inchi_key": "NVNLLIYOARQCIX-IPGQQNLLSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "decision": "HOLD_STRUCTURE_GRAPH_CONFLICT",
+      "identifier": "CHEBI:64624",
+      "label": "microcin B17",
+      "note": "The stored unmodified peptide graph lacks the maturation heterocycles described in the primary abstract. Resolve source-owned identity before adding mature-drug claims.",
+      "path": "data/antibiotics/unspecified/microcin-b17.yaml",
+      "primary_references": [
+        "PMID:8183941"
+      ],
+      "record_action": "PRESERVE_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "5ab959497aba3592d7f8deccd2873c74cccbc1c9b1ad863956d76327076ac39b",
+      "standard_inchi_key": "DPWKTZRJGMZNFS-IGRUFWJISA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "decision": "HOLD_PRIMARY_RESULTS_AND_COMPOUND_FORM",
+      "identifier": "CHEBI:82754",
+      "label": "microcin c",
+      "note": "Keep intact aminopropylated microcin C, processed intracellular material and analogues separate. Gene-symbol reference candidates do not identify the tested allele.",
+      "path": "data/antibiotics/unspecified/microcin-c.yaml",
+      "primary_references": [
+        "PMID:20876530",
+        "PMID:20159968"
+      ],
+      "record_action": "PRESERVE_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "3b6ccce461fb0ba619bdb8d4c9e95b9b46d5f50b68650cd2554abbae89664057",
+      "standard_inchi_key": "PQZVLCSYKIYYRQ-CRNXWWIHSA-N",
+      "whole_record_review": "OPEN"
+    }
+  ],
+  "reference_taxonomy": {
+    "1282": {
+      "active": true,
+      "parent": {
+        "scientificName": "Staphylococcus",
+        "taxonId": 1279
+      },
+      "rank": "species",
+      "scientificName": "Staphylococcus epidermidis",
+      "taxonId": 1282
+    },
+    "1360": {
+      "active": true,
+      "parent": {
+        "scientificName": "Lactococcus lactis",
+        "taxonId": 1358
+      },
+      "rank": "subspecies",
+      "scientificName": "Lactococcus lactis subsp. lactis",
+      "taxonId": 1360
+    },
+    "562": {
+      "active": true,
+      "parent": {
+        "scientificName": "Escherichia",
+        "taxonId": 561
+      },
+      "rank": "species",
+      "scientificName": "Escherichia coli",
+      "taxonId": 562
+    }
+  },
+  "scope": {
+    "corpus_records": 2939,
+    "full_corpus_primary_review": "OPEN",
+    "record_memberships": 5,
+    "whole_records_completed_by_this_review": 0
+  },
+  "taxonomy_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocins/taxonomy-1282-response.bin",
+        "sha256": "c5a6170238882b83e964b90fd84fe73f73cc1bdd12007cf758f5b6fc27271e0b"
+      },
+      "retrieved_at": "2026-10-09T18:29:40.393338+00:00",
+      "sha256": "c5a6170238882b83e964b90fd84fe73f73cc1bdd12007cf758f5b6fc27271e0b",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/1282.json"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocins/taxonomy-1360-response.bin",
+        "sha256": "edafe8d908b3a375c72406b88628a37ac18fc02814e9990932cd818bb5a6414a"
+      },
+      "retrieved_at": "2026-10-09T18:29:43.540537+00:00",
+      "sha256": "edafe8d908b3a375c72406b88628a37ac18fc02814e9990932cd818bb5a6414a",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/1360.json"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocins/taxonomy-562-response.bin",
+        "sha256": "20aa358053d2fae1e2cd74636ed5aca1efbc372e5b8bcfdb10d3fa80be6789a1"
+      },
+      "retrieved_at": "2026-10-09T18:30:45.555183+00:00",
+      "sha256": "20aa358053d2fae1e2cd74636ed5aca1efbc372e5b8bcfdb10d3fa80be6789a1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/562.json"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocins/taxsearch-9b235ba72a96c491-response.bin",
+        "sha256": "398661418d9cebaf7770ac11fc11c9b6f328ab733b611c4001bc29aa0a86648c"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "NZ9000",
+      "result_count": 2,
+      "retrieved_at": "2026-10-09T18:29:36.199178+00:00",
+      "sha256": "398661418d9cebaf7770ac11fc11c9b6f328ab733b611c4001bc29aa0a86648c",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=NZ9000&format=json&size=500"
+    }
+  ],
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocins/request-8624d3b143873df9ba6ca60df91c7df97d8bac7c0f236105c2d32b370e9c255b.json",
+        "sha256": "d9bb8cc07387115fbe78e66aacbb77b5e69caf22b44e46cc26f3e469393d8af5"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "reviewed:true AND (gene:nisI OR gene:nisF OR gene:nisE OR gene:nisG)",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T18:28:04.544109+00:00",
+      "sha256": "13956052cbba0d0797eead612bc6b67b2e227c45c2ecd7c8bc89710bfc96e338",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue+AND+%28gene%3AnisI+OR+gene%3AnisF+OR+gene%3AnisE+OR+gene%3AnisG%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocins/request-9c73e6c4ed2f29be4ec346cf72c24c663b37fab036a68b5597cbc750f177cd7e.json",
+        "sha256": "b152fed37b1747e02b5ac85b74b9b54120ea3b27a4f8200c793a72e273a6c15d"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "(gene_exact:mccE OR gene_exact:mccF) AND organism_id:562",
+      "release": "2026_03",
+      "result_count": 6,
+      "retrieved_at": "2026-10-09T18:29:46.875834+00:00",
+      "sha256": "eaedbfe0ba9ab54a4f5129637fe3ba3a91cbc8e1a85a682ef6fe8049a2104b83",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmccE+OR+gene_exact%3AmccF%29+AND+organism_id%3A562&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocins/request-cfdb4c74c91f8966dabf56b1e3468ce26da91bb2385c11f657b7e45809607cf9.json",
+        "sha256": "efdb04e10a3ccf79df3463e8ce6740d7b04812a1c9abeeb0523d17cd9fa84601"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "(lit_pubmed:8550476 OR lit_pubmed:20876530 OR lit_pubmed:20159968 OR lit_pubmed:25176038 OR lit_pubmed:25014359)",
+      "release": "2026_03",
+      "result_count": 3,
+      "retrieved_at": "2026-10-09T18:28:59.164511+00:00",
+      "sha256": "c14ef8a162db011e533f863dc244d115f634df84675acd4024fc540854f4b43c",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28lit_pubmed%3A8550476+OR+lit_pubmed%3A20876530+OR+lit_pubmed%3A20159968+OR+lit_pubmed%3A25176038+OR+lit_pubmed%3A25014359%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  ]
+}

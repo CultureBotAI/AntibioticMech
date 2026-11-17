@@ -66,6 +66,19 @@ activity_roles:
 structural_class: carbapenem
 structural_class_id: ARO:0000020
 activity_spectrum:
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; CLIRES2020; solid media
+  measurement_count: 1
+  isolate_count: 1
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:31fa8f98b081fbcd
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:31fa8f98b081fbcd; drug_code=MPM; row_count=1;
+      isolate_count=1; source=CLIRES2020; method_1=solid media; phenotype=S; quality=MEDIUM.'
+  activity: SUSCEPTIBLE
 - taxon_id: NCBITaxon:470
   taxon_label: Acinetobacter baumannii
   mic_value: 8.0
@@ -74,6 +87,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2024 M100 S34.
   strain: 0297
+  biosample_accession: SAMN04901687
   evidence:
   - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=297&PanelID=1
     snippet: Meropenem  | >8  | R
@@ -87,6 +101,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1305'
+  biosample_accession: SAMN46941623
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10596&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -101,6 +116,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1149'
+  biosample_accession: SAMN34111336
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10440&PanelID=1247
     snippet: Meropenem  | 8  | R
@@ -114,6 +130,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1151'
+  biosample_accession: SAMN34111338
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10442&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -128,6 +145,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1152'
+  biosample_accession: SAMN34111339
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10443&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -142,6 +160,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1153'
+  biosample_accession: SAMN34111340
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10444&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -156,6 +175,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1155'
+  biosample_accession: SAMN34111341
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10446&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -170,6 +190,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1156'
+  biosample_accession: SAMN34111342
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10447&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -184,6 +205,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1157'
+  biosample_accession: SAMN34111343
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10448&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -198,6 +220,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1158'
+  biosample_accession: SAMN34111344
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10449&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -212,6 +235,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1159'
+  biosample_accession: SAMN34111345
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10450&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -226,6 +250,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1160'
+  biosample_accession: SAMN34111346
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10451&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -240,6 +265,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1161'
+  biosample_accession: SAMN34111347
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10452&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -254,6 +280,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1162'
+  biosample_accession: SAMN34111348
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10453&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -268,6 +295,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1163'
+  biosample_accession: SAMN34111349
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10454&PanelID=1247
     snippet: Meropenem  | >8  | R
@@ -282,6 +310,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1106'
+  biosample_accession: SAMN19970475
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10397&PanelID=10
     snippet: Meropenem  | >8  | R
@@ -297,6 +326,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1107'
+  biosample_accession: SAMN31096620
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10398&PanelID=10
     snippet: Meropenem  | 8  | R
@@ -311,6 +341,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1268'
+  biosample_accession: SAMN33435241
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10559&PanelID=10
     snippet: Meropenem  | >8  | R
@@ -326,6 +357,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1269'
+  biosample_accession: SAMN33435242
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10560&PanelID=10
     snippet: Meropenem  | >8  | R
@@ -341,6 +373,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1270'
+  biosample_accession: SAMN33435243
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10561&PanelID=10
     snippet: Meropenem  | >8  | R
@@ -356,6 +389,7 @@ activity_spectrum:
   assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1328'
+  biosample_accession: SAMN50502207
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10619&PanelID=10
     snippet: Meropenem  | >8  | R
@@ -364,6 +398,116 @@ activity_spectrum:
       >8 micrograms/mL, and interpretation R. The table footer states INT values are
       derived from CLSI 2025 M100 S35.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 8.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution meropenem MIC; modal MIC reported; CDC/FDA AR Isolate
+    Bank reports an R interpretation without a versioned breakpoint footnote on this
+    isolate page.
+  strain: '0033'
+  biosample_accession: SAMN04014874
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=33&PanelID=1227
+    snippet: Meropenem  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0033, Study ID CarbaNP-02,
+      BioSample SAMN04014874, source Unknown, Acinetobacter baumannii, MLST ST85(Pasteur)
+      and ST1089(Oxford), meropenem MIC >8 micrograms/mL, and interpretation R.
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 8.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
+    CLSI 2024 M100 S34 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
+  strain: 0078
+  biosample_accession: SAMN04014919
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=78&PanelID=1227
+    snippet: Meropenem  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0078, Study ID CarbaNP-47,
+      BioSample SAMN04014919, source Pus, Acinetobacter baumannii, MLST ST229(Pasteur)
+      and ST203(Oxford), meropenem MIC >8 mg/L (originally >8 micrograms/mL), and
+      interpretation R.
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 8.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution meropenem MIC; modal MIC reported; interpreted using
+    CLSI 2020 M100 S30 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
+  strain: 0083
+  biosample_accession: SAMN04014924
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=83&PanelID=1227
+    snippet: Meropenem  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0083, Study ID CarbaNP-52,
+      BioSample SAMN04014924, source Unknown, Acinetobacter baumannii, MLST ST1(Pasteur)
+      and ST231/1604(Oxford), meropenem MIC >8 mg/L (originally >8 micrograms/mL),
+      and interpretation R.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 8.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: CDC/FDA AR Isolate Bank meropenem MIC; interpreted using CLSI 2026 M100 Ed36
+    per the Panel 1394 footnote.
+  strain: '1332'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10623&PanelID=1394
+    snippet: Meropenem  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1332, Study ID IMP-10,
+      BioSample accession unavailable, collection year 2019, location USA, source
+      Urine, MLST ST357(Pasteur), Pseudomonas aeruginosa, meropenem MIC >8 mg/L (originally
+      >8 micrograms/mL), and interpretation R.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 8.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: CDC/FDA AR Isolate Bank meropenem MIC; interpreted using CLSI 2026 M100 Ed36
+    per the Panel 1394 footnote.
+  strain: '1333'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10624&PanelID=1394
+    snippet: Meropenem  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1333, Study ID IMP-11,
+      BioSample accession unavailable, collection year 2017, location USA, source
+      Urine, MLST ST2731(Pasteur), Pseudomonas aeruginosa, meropenem MIC >8 mg/L (originally
+      >8 micrograms/mL), and interpretation R.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 8.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: CDC/FDA AR Isolate Bank meropenem MIC; interpreted using CLSI 2026 M100 S36
+    per the Panel 1394 footnote.
+  strain: '1334'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10625&PanelID=1394
+    snippet: Meropenem  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1334, Study ID IMP-12,
+      BioSample accession unavailable, collection year 2022, location USA, source
+      P-trap water, MLST ST235(Pasteur), Pseudomonas aeruginosa, meropenem MIC >8
+      mg/L (originally >8 micrograms/mL), and interpretation R.
+activity_membership_collections:
+- format: antibioticmech-activity-memberships-v1
+  path: membership-9e0f3db07aca7b7e669bb0cb87d46010fa0503837f4dffee94ea82c1d1447548.json.gz
+  sha256: 9e0f3db07aca7b7e669bb0cb87d46010fa0503837f4dffee94ea82c1d1447548
+  byte_size: 572
+  uncompressed_byte_size: 868
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_reference: https://zenodo.org/records/15680920
+  source_retrieved_on: '2026-10-05'
+  source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+  activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+  subject_count: 1
+  observation_count: 1
+  membership_count: 1
+  measurement_count: 1
+  unlinked_subject_count: 0
 chemical_structure:
   smiles: '[H][C@]12[C@@H](C)C(S[C@@H]3CN[C@H](C(=O)N(C)C)C3)=C(C(=O)O)N1C(=O)[C@]2([H])[C@@H](C)O'
   standard_inchi: InChI=1S/C17H25N3O5S/c1-7-12-11(8(2)21)16(23)20(12)13(17(24)25)14(7)26-9-5-10(18-6-9)15(22)19(3)4/h7-12,18,21H,5-6H2,1-4H3,(H,24,25)/t7-,8-,9+,10+,11-,12-/m1/s1
@@ -640,3 +784,59 @@ curation_history:
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 meropenem-resistant
     Pseudomonas aeruginosa MIC observation for AR-1328.
   llm_assisted: true
+- timestamp: '2026-09-18T08:45:53Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added CDC/FDA AR Isolate Bank Panel 1227 isolate 0033 Acinetobacter baumannii
+    meropenem MIC >8 mg/L with interpretation R; preserved source Unknown, BioSample
+    SAMN04014874, Study ID CarbaNP-02, and MLST ST85(Pasteur)/ST1089(Oxford) in evidence
+    notes.
+  llm_assisted: true
+- timestamp: '2026-09-19T01:32:17Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1227 meropenem-resistant
+    Acinetobacter baumannii MIC observation for AR-0078; preserved source Pus, BioSample
+    SAMN04014919, Study ID CarbaNP-47, and MLST ST229(Pasteur)/ST203(Oxford) in evidence
+    notes.
+  llm_assisted: true
+- timestamp: '2026-09-19T14:50:27Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1227 meropenem-resistant
+    Acinetobacter baumannii MIC observation for AR-0083; preserved source Unknown,
+    BioSample SAMN04014924, Study ID CarbaNP-52, and MLST ST1(Pasteur)/ST231/1604(Oxford)
+    in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-20T13:10:23Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1394 meropenem-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1332; preserved source Urine, Study
+    ID IMP-10, unavailable BioSample accession, and MLST ST357(Pasteur) in evidence
+    notes.
+  llm_assisted: true
+- timestamp: '2026-09-20T19:52:29Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added two stable-URL CDC/FDA AR Isolate Bank Panel 1394 meropenem-resistant
+    Pseudomonas aeruginosa MIC observations for AR-1333 and AR-1334; preserved sources
+    Urine and P-trap water, Study IDs IMP-11 and IMP-12, unavailable BioSample accessions,
+    and MLST ST2731(Pasteur)/ST235(Pasteur) in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:42Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 24 activity_spectrum observation(s)
+    where evidence notes already named exactly one accession.
+  llm_assisted: true
+- timestamp: '2026-09-26T12:07:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
+    date 2026-08-30, unchanged.'
+- timestamp: '2026-10-05T07:26:11Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
+    retrieval date 2026-08-30, unchanged.'

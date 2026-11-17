@@ -1,0 +1,205 @@
+{
+  "all_biological_records_and_previous_dossiers_unchanged": true,
+  "authoritative_qc": {
+    "limitation": "Pinned RDKit 2026.3.5 lacks a compatible Intel macOS distribution. Earlier Linux QC does not validate this change.",
+    "run_for_this_change": false
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-erm-name-context/protected-before.json",
+    "sha256": "fbc36f8cc0cf6e271e29e8e63b071a6e99476ced2e316d64bb8664cf6157c774"
+  },
+  "baseline_files_checked": 7884,
+  "biological_records_hash_checked": 2939,
+  "checks": {
+    "diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "offline_replay": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/audit_erm_name_context.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\n  \"complete_selected_records_read\": 32,\n  \"source_terms\": 47,\n  \"source_claims\": 562,\n  \"selected_index_reference_entries\": 44,\n  \"additional_preserved_candidates\": 5,\n  \"native_reference_entries\": 49,\n  \"native_reference_taxa\": 40,\n  \"terms_without_selected_index_reference\": 4,\n  \"terms_without_any_candidate_in_these_inputs\": 2,\n  \"native_name_relation_counts\": {\n    \"CASEFOLDED_NATIVE_SYMBOL_MATCH_NOT_ALLELE_IDENTITY\": 15,\n    \"CASEFOLDED_NATIVE_SYNONYM_MATCH_NOT_ALLELE_IDENTITY\": 1,\n    \"DIFFERENT_NATIVE_NAME_REQUIRES_CONTEXT_NOT_AUTOMATIC_ERROR\": 20,\n    \"GENE_FIELD_ABSENT_NOT_GENE_ABSENCE\": 2,\n    \"NO_NATIVE_SYMBOL_LOCUS_FIELDS_ONLY\": 9,\n    \"PUNCTUATION_ONLY_SIMILARITY_NOT_ALIAS_PROOF\": 2\n  },\n  \"new_primary_text_contexts_reviewed\": 1,\n  \"claims_with_selected_primary_context\": 24,\n  \"new_reference_accessions\": 0,\n  \"new_uniprot_requests\": 0,\n  \"new_ncbi_requests\": 0,\n  \"corpus_records_hash_checked\": 2939\n}\n"
+    },
+    "provenance": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_provenance.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "provenance OK: 14 inventories, 23 upstream files, retrieved 2026-08-30\n"
+    },
+    "ruff": {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "scripts/audit_erm_name_context.py",
+        "tests/test_erm_name_context.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    "ruff_format": {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "scripts/audit_erm_name_context.py",
+        "tests/test_erm_name_context.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "2 files already formatted\n"
+    },
+    "source_queue": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_source_queue.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "source queue OK: 37 sources \u2014 10 adopted, 12 blocked, 11 candidate, 4 evaluating\nnext up: chebi-citations (P3, evidence), lotus (P3, producer_organisms), antismash-db (P4, producer_organisms)\n"
+    }
+  },
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "c71655f92ac8e8f695afbddf168f23de3aa37a6c1f1e6d7147e31393cd9578bd"
+    },
+    {
+      "path": "research/2026-10-15-erm-name-context-assessment.json",
+      "sha256": "feeedd9c1bd51898f9cc16c92ab8b51b8b1286a6f2fa601ec77f37f29c0dd3d5"
+    },
+    {
+      "path": "research/2026-10-15-erm-name-context-plan.json",
+      "sha256": "b3a4241ff6e9d5416b2615d5c6de1f219db6364e56d390a4fb84f08a328ef187"
+    },
+    {
+      "path": "research/2026-10-15-erm-name-context.json",
+      "sha256": "4efa5bdb49991f42259d137550ea137da04a6c5e07e4973f061aac32517ca12e"
+    },
+    {
+      "path": "scripts/audit_erm_name_context.py",
+      "sha256": "7ae3ffc7e0ce98acd469ac6bf726e52fb580a996d6b8255512f835234f2444a3"
+    },
+    {
+      "path": "tests/test_erm_name_context.py",
+      "sha256": "fc4dc23dc5761d5f517588b453afe80a2c06b670af4990dd3814d9c23e16e51c"
+    }
+  ],
+  "ignored_files_included_in_membership_check": true,
+  "limits": {
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "native_name_match_proves_allele": false,
+    "ncbi_requests": 0,
+    "new_primary_results_reviews": 1,
+    "new_review_is_text_only_not_whole_paper_signoff": true,
+    "numeric_ast_exports": 0,
+    "operational_exports": false,
+    "outreach": 0,
+    "reuse_terms_review_resumed": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "manual_primary_reading_is_not_independently_reproduced_by_tests": true,
+  "new_files_before_receipt": [
+    "research/2026-10-15-erm-name-context-assessment.json",
+    "research/2026-10-15-erm-name-context-plan.json",
+    "research/2026-10-15-erm-name-context.json",
+    "scripts/audit_erm_name_context.py",
+    "tests/test_erm_name_context.py"
+  ],
+  "previous_report_preserved_except_appended_section": true,
+  "prior_file_changes": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "c71655f92ac8e8f695afbddf168f23de3aa37a6c1f1e6d7147e31393cd9578bd",
+      "before_sha256": "ba90e2e36d4500c9a7d2ec5490c51b271480e37905f2cc5d1f18547a9d444f86"
+    }
+  },
+  "publication": {
+    "commits": 0,
+    "issue_mutations": 0,
+    "pull_requests": 0,
+    "pushes": 0
+  },
+  "scope": "ALL_ERM_NATIVE_NAMES_NOT_EXPERIMENTAL_ALLELES_OR_PHENOTYPES",
+  "summary": {
+    "additional_preserved_candidates": 5,
+    "claims_with_selected_primary_context": 24,
+    "complete_selected_records_read": 32,
+    "corpus_records_hash_checked": 2939,
+    "native_name_relation_counts": {
+      "CASEFOLDED_NATIVE_SYMBOL_MATCH_NOT_ALLELE_IDENTITY": 15,
+      "CASEFOLDED_NATIVE_SYNONYM_MATCH_NOT_ALLELE_IDENTITY": 1,
+      "DIFFERENT_NATIVE_NAME_REQUIRES_CONTEXT_NOT_AUTOMATIC_ERROR": 20,
+      "GENE_FIELD_ABSENT_NOT_GENE_ABSENCE": 2,
+      "NO_NATIVE_SYMBOL_LOCUS_FIELDS_ONLY": 9,
+      "PUNCTUATION_ONLY_SIMILARITY_NOT_ALIAS_PROOF": 2
+    },
+    "native_reference_entries": 49,
+    "native_reference_taxa": 40,
+    "new_ncbi_requests": 0,
+    "new_primary_text_contexts_reviewed": 1,
+    "new_reference_accessions": 0,
+    "new_uniprot_requests": 0,
+    "selected_index_reference_entries": 44,
+    "source_claims": 562,
+    "source_terms": 47,
+    "terms_without_any_candidate_in_these_inputs": 2,
+    "terms_without_selected_index_reference": 4
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-erm-name-context/tests.xml",
+      "sha256": "96e4e6a5792bfcf0e13ef166035e806dec7ceda91b2e1b0427014bd872defa12"
+    },
+    "modules": [
+      "test_card_complex_members",
+      "test_card_protein_name_screen",
+      "test_card_reference_lineages",
+      "test_erm55_primary_curation",
+      "test_erm_name_context",
+      "test_erm_reference_followup",
+      "test_mex_component_xrefs"
+    ],
+    "native_replay_network_and_python_file_writes_blocked": true,
+    "new_audit_tests_passed": 51,
+    "passed": 225,
+    "skipped": 2,
+    "skips": [
+      {
+        "message": "known qualification deltas lack historical fixtures; public artifact checks still run",
+        "name": "test_offline_native_replay"
+      },
+      {
+        "message": "historical corpus changed; immutable public snapshot tested separately",
+        "name": "test_native_replay_without_network_or_file_writes"
+      }
+    ],
+    "tests": 227
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "access_limitations": {
+    "alternative_required": "Authorized full-text copies or a separately permitted independent primary source.",
+    "download_retried_after_rejection": false,
+    "local_europepmc_fetch": "REJECTED_BY_AUTO_REVIEW_BEFORE_EXECUTION_AS_DENIED_FETCH_RETRY",
+    "local_europepmc_response_status": null,
+    "native_primary_assets_cached_this_checkpoint": 0,
+    "publisher_and_europepmc_web_full_text_access": "UNRESOLVED_TOOL_ACCESS_ERRORS_OR_ABSTRACT_REDIRECT"
+  },
+  "adversarial_self_review": [
+    "RNA locus identity is not missing protein identity; no UniProtKB protein query or accession assignment was performed.",
+    "Complete taxonomy name-search pages do not prove experimental subject identity or exhaustive biological coverage.",
+    "Qualified historical names, current ranks, phage hits and reference strains remain distinct.",
+    "Publisher indexed abstracts and discovery metadata do not replace native result/figure review.",
+    "An access-tool error or pre-execution rejection is not a verified HTTP status.",
+    "The 1998 suppressor is not promoted to a new resistance-enhancing allele.",
+    "This is same-agent review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-rrna-context.json",
+      "sha256": "0397b2b68ea92924d57f270b2e8cb946416cfb8252faaa83fe8726984145eb36"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "5573d6595d47dd25fa1e0f6842e2903ac8de4cd2273fbeeedc745b1c45ecf4c9"
+    },
+    {
+      "path": "tests/test_rrna_taxonomy_context.py",
+      "sha256": "404dc2a4440eed3b9e0401fa0aa5306bba582eaed9b4461df22ec1e3c210fd5e"
+    }
+  ],
+  "checks": [
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_rrna_taxonomy_context.py",
+        "tests/test_translation_gene_curation.py",
+        "tests/test_docs.py::test_numeric_claims_in_prose_match_the_corpus",
+        "tests/test_docs.py::test_no_unregistered_numeric_claim_about_the_corpus",
+        "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-rrna/focused-tests.xml"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:14:31.381057+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-rrna/focused.log",
+        "sha256": "26f08bee8eeb0232a2a38918582424575d89b17512a2f518855f902b9f5b5245"
+      },
+      "name": "focused",
+      "started": "2026-10-13T11:13:18.884577+00:00"
+    },
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:14:31.532152+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-rrna/lint.log",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      },
+      "name": "lint",
+      "started": "2026-10-13T11:14:31.382227+00:00"
+    },
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "scripts/check_docs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:15:11.793629+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-rrna/documentation.log",
+        "sha256": "4e35248929325fef11134949b3f16dc729df9c28d017e999898555d14bcb0afd"
+      },
+      "name": "documentation",
+      "started": "2026-10-13T11:14:31.533239+00:00"
+    },
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "scripts/check_provenance.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:15:15.359669+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-rrna/provenance.log",
+        "sha256": "68c76ba32a2734dee9a016ec9d2fe6838468bcaf7abf9b221dfa6e696bf98e33"
+      },
+      "name": "provenance",
+      "started": "2026-10-13T11:15:11.794830+00:00"
+    },
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "scripts/check_source_queue.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:15:15.651980+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-rrna/source-queue.log",
+        "sha256": "3b2102be916d52253b62ecc2af38f5c018c5ea536815eddbe2ffcb4106c3fa64"
+      },
+      "name": "source-queue",
+      "started": "2026-10-13T11:15:15.360786+00:00"
+    },
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "scripts/summarize_resistance_progress.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:15:53.906001+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-rrna/progress.log",
+        "sha256": "212366ae2bb2d32cb9b76da20b0c969fb1387fdf758eacd353eedf5f4d4231d5"
+      },
+      "name": "progress",
+      "started": "2026-10-13T11:15:15.653065+00:00"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:15:54.220526+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-rrna/diff.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "name": "diff",
+      "started": "2026-10-13T11:15:53.907061+00:00"
+    }
+  ],
+  "coverage_counts_unchanged": {
+    "assertions": 4873,
+    "curator_claims": 118,
+    "curator_records": 49,
+    "records": 2939,
+    "records_with_assertions": 316,
+    "without_assertions_or_rules": 2610
+  },
+  "date": "2026-10-13",
+  "environment": {
+    "fresh_ci_or_pinned_environment_pass_claimed": false,
+    "project_rdkit_pin": "2026.3.5",
+    "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:58:33) [Clang 19.1.7 ]",
+    "versions": {
+      "pytest": "9.1.1",
+      "rdkit": "2025.3.6"
+    }
+  },
+  "focused_tests": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-rrna/focused-tests.xml",
+      "sha256": "577f4df59b78d022aa5bab9875a7a9d4c949ae70b0eead37f868963e5731afe1"
+    },
+    "negative_promotion_cases_passed": 12,
+    "passed": 37,
+    "skipped": 0
+  },
+  "full_qc": {
+    "historical_checkpoint_only": {
+      "path": "research/2026-10-13-translation-verification.json",
+      "sha256": "79a52563f8d05032088c33fb6317a1b53e0829e16d26d34dfb3e1ae3824f2e01"
+    },
+    "reason": "No biological records, source owners, generated pages, embeddings or production code changed.",
+    "rerun_for_research_additions": false
+  },
+  "initial_local_problems_resolved": [
+    "Dossier generation encountered a preprint candidate without a PMID; selection now uses the optional field and retains only the four source-identified MED records. No dossier had been written when this failed.",
+    "Two new test lines exceeded the lint limit; both were wrapped without changing assertions."
+  ],
+  "limits": {
+    "biological_record_changes": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_experimental_identifiers": 0,
+    "new_resistance_claims": 0,
+    "records_in_scope": 2939,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "source_adoptions": 0,
+    "uniprot_protein_queries": 0,
+    "whole_corpus_status": "OPEN",
+    "whole_record_reviews_completed": 0
+  },
+  "offline_replay": {
+    "dossier_rebuilt_from_pinned_inputs": true,
+    "native_primary_assets_verified": 0,
+    "network_requests": 0,
+    "request_caches": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-rrna/request-d7631624d6839c296fc7a9926b455bc2a5a84a239710f3eb2770fe02db98048a.json",
+        "sha256": "52562845377d5e32b7b8998fa9301299d1a78d23e07dc8a706c8e2ab28b5d675"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-rrna/request-705ae35d48f6a95f23fa74c179f722141bd20daffd4c3e6f5409df3cbae5389e.json",
+        "sha256": "3d6882c7aadcb973569aa8f9fa98b544e419f0f8bced3a54ffd36038db6b4ec9"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-rrna/request-72255c297d9ab5a75e823dc962a7163a762452001356374b7a365d642ac53570.json",
+        "sha256": "253974bb7c62d732902cdd703f3d19e424f93b0f4803a44c579fb2313b18b2f3"
+      }
+    ],
+    "taxonomy_hits": 17,
+    "taxonomy_requests_replayed": 3,
+    "unique_taxon_ids": 16
+  },
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-rrna/baseline.json",
+      "sha256": "2e49c8558ec8a096303d9dbb1f6412aeba32212cf2bfff241d97ef579546589d"
+    },
+    "historical_research_files_changed_except_main_report": 0,
+    "historical_research_files_checked": 409,
+    "ignored_files_included": true,
+    "pages_embeddings_and_source_queue_byte_identical": true,
+    "protected_files_changed": 0,
+    "protected_files_checked": 3385,
+    "records_changed": 0,
+    "records_checked": 2939
+  },
+  "scope": "RNA_LEAD_AND_TAXON_NAME_REVIEW_NOT_RESISTANCE_CURATION"
+}

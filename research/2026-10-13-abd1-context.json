@@ -1,0 +1,402 @@
+{
+  "archive": {
+    "distinct_accession_version_keys": 172,
+    "distinct_dated_intervals": 176,
+    "documentation": "https://www.uniprot.org/help/uniparc",
+    "entry_request": {
+      "body_sha256": "65126e22ff2360188d7b1a781ea28499756468301dfa9e49776fcaf134933b7e",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/request-ef13128d0c14b6b439300f97efaf8ece1e565958568013ed97cf7a3ff43d6042.json",
+        "sha256": "a914d1d3889a720af62ef08ad5c7168c3fc707148c30aeaaae40ac6be553d16d"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T07:11:12.950458+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniparc/search?query=upi%3AUPI000005318F&format=json&size=10&fields=upi%2Caccession%2Corganism_id%2Corganism%2Cfirst_seen%2Clast_seen"
+    },
+    "experimental_allele_equivalence_supported": false,
+    "genome_or_subject_join_supported": false,
+    "historical_intervals_collapsed": false,
+    "identifier": "UPI000005318F",
+    "interpretation": "Same archived reference sequence, not identical strains or experimental subjects.",
+    "page_counts": [
+      100,
+      76
+    ],
+    "pages": [
+      {
+        "body_sha256": "17b148c856d21559aa796dc080bf47807a4e0bdd3320820f6f6f4ef03d9760ac",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-abd1/request-33776f127ef1344baa5ddd284f2511b2bd284b9c4a6c207287eaeec858df9996.json",
+          "sha256": "92995d98b4da575bd953d1a6fd16e9efebecb278438f47b9d29b20146f14b15a"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T07:12:47.187773+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniparc/UPI000005318F/databases?format=json&size=100"
+      },
+      {
+        "body_sha256": "230d5f23101c243156ec31add63f935504913f5826debb503ec5b92c878b4b36",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-abd1/request-d9d50bff7e702ebfa55798afdcf1540900845bd11e548ee9b22d65e75a7ff611.json",
+          "sha256": "1de6e5f5a79b31a8caf59d39979a5b34416286af186c7f6b92288e4fb92adcd4"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T07:13:54.623173+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniparc/UPI000005318F/databases?format=json&cursor=qxffxjtoedlg&size=100"
+      }
+    ],
+    "pagination_complete": true,
+    "reference_sequence_equivalence_supported": true,
+    "selected_cross_references": [
+      {
+        "active": false,
+        "created": "2007-09-11",
+        "database": "UniProtKB/TrEMBL",
+        "geneName": "ABD1",
+        "id": "A6ZLH5",
+        "lastUpdated": "2026-01-28",
+        "organism": {
+          "commonName": "Baker's yeast",
+          "scientificName": "Saccharomyces cerevisiae (strain YJM789)",
+          "taxonId": 307796
+        },
+        "proteinName": "mRNA cap guanine-N(7) methyltransferase",
+        "version": 1,
+        "versionI": 1
+      },
+      {
+        "active": true,
+        "created": "1993-10-01",
+        "database": "UniProtKB/Swiss-Prot",
+        "geneName": "ABD1",
+        "id": "P32783",
+        "lastUpdated": "2026-09-02",
+        "organism": {
+          "commonName": "Baker's yeast",
+          "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+          "taxonId": 559292
+        },
+        "proteinName": "mRNA cap guanine-N(7) methyltransferase",
+        "version": 1,
+        "versionI": 1
+      }
+    ],
+    "sequence_downloaded": false,
+    "strain_equivalence_supported": false,
+    "total_cross_references": 176
+  },
+  "date": "2026-10-13",
+  "disposition": {
+    "planned_new_associations": 1,
+    "prior_associations_preserved": 4,
+    "whole_corpus_status": "OPEN",
+    "whole_record_reviews_completed": 0
+  },
+  "limits": {
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "numerical_ast_exported": false,
+    "raw_source_assets_redistributed": false,
+    "reuse_terms_review_resumed": false,
+    "sequences_variant_specifications_constructs_or_protocols_exported": false,
+    "source_adoptions": 0
+  },
+  "predecessor": {
+    "path": "research/2026-10-13-sinefungin-context.json",
+    "sha256": "59ae412d7cd8f127069ef7af4ce4a6ea0e29f9497fb34c11b717fb2c5e927b59"
+  },
+  "primary": {
+    "attribution": "Nilson et al. (2025), Nucleic Acids Research 53:gkaf538",
+    "doi": "10.1093/nar/gkaf538",
+    "figures": [
+      {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-abd1/m_gkaf538fig2.jpeg",
+          "sha256": "5c5ea39c770b20168e0a6d669ee2f92019d7222ff84d1eeee6f7b0bb77bdac71"
+        },
+        "bytes": 66353,
+        "content_type": "image/jpeg",
+        "location": null,
+        "redirects_followed": false,
+        "retrieved_at": "2026-10-13T07:09:12.040509+00:00",
+        "status": 200,
+        "url": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/nar/53/14/10.1093_nar_gkaf538/1/m_gkaf538fig2.jpeg",
+        "url_query_omitted": true
+      },
+      {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-abd1/m_gkaf538fig3.jpeg",
+          "sha256": "240c3b53d4706763369ead42e6100f268b38501441958e53d744736d8a4c4316"
+        },
+        "bytes": 24062,
+        "content_type": "image/jpeg",
+        "location": null,
+        "redirects_followed": false,
+        "retrieved_at": "2026-10-13T07:09:07.656887+00:00",
+        "status": 200,
+        "url": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/nar/53/14/10.1093_nar_gkaf538/1/m_gkaf538fig3.jpeg",
+        "url_query_omitted": true
+      },
+      {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-abd1/m_gkaf538fig4.jpeg",
+          "sha256": "5c9475b65c7f199223cfb81f5b61268c52406ff64b66c979e2219d1748f29570"
+        },
+        "bytes": 34251,
+        "content_type": "image/jpeg",
+        "location": null,
+        "redirects_followed": false,
+        "retrieved_at": "2026-10-13T07:07:56.891042+00:00",
+        "status": 200,
+        "url": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/nar/53/14/10.1093_nar_gkaf538/1/m_gkaf538fig4.jpeg",
+        "url_query_omitted": true
+      },
+      {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-abd1/m_gkaf538fig7.jpeg",
+          "sha256": "3f321493f0ebdd413eae98c06403d6fb51c76c4182af95a3791676b76f9ba9be"
+        },
+        "bytes": 183360,
+        "content_type": "image/jpeg",
+        "location": null,
+        "redirects_followed": false,
+        "retrieved_at": "2026-10-13T07:12:50.512219+00:00",
+        "status": 200,
+        "url": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/nar/53/14/10.1093_nar_gkaf538/1/m_gkaf538fig7.jpeg",
+        "url_query_omitted": true
+      }
+    ],
+    "html": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/primary.html",
+        "sha256": "32cab2253902155dc7488a7ae61f9cde389ee626c3a7d6cedfd65a6b3fdb3e5c"
+      },
+      "bytes": 288763,
+      "content_type": "text/html",
+      "location": null,
+      "redirects_followed": false,
+      "retrieved_at": "2026-10-13T07:07:14.545212+00:00",
+      "status": 200,
+      "url": "https://oup.silverchair-cdn.com/article-minimal/8208108",
+      "url_query_omitted": false
+    },
+    "limits": "K. lactis biochemical inhibition is not a resistant-organism phenotype. Modeled orthologs remain untested predictions; growth observations and enzyme IC50 are not standardized MICs.",
+    "native_figures_inspected": [
+      2,
+      3,
+      4,
+      7
+    ],
+    "reference": "PMID:40682821",
+    "review_scope": "SELECTED_RESULTS_DISCUSSION_AND_NATIVE_FIGURES",
+    "supplement_review_complete": false,
+    "supported": "Laboratory yeast growth comparisons and biochemical inhibition support a qualified ABD1 target-alteration resistance association.",
+    "url": "https://academic.oup.com/nar/article/53/14/gkaf538/8208108",
+    "whole_paper_review_complete": false
+  },
+  "record_before": {
+    "identifier": "CHEBI:45453",
+    "path": "data/antibiotics/antifungal/sinefungin.yaml",
+    "sha256": "3264f6081cdfc48b9ae4e345cc89a940bb543bcc7f53e882bb26c9d44aa2807c",
+    "standard_inchi_key": "LMXOHSDXUQEUSF-YECHIGJVSA-N"
+  },
+  "scope": "SELECTED_PRIMARY_ASSOCIATION_AND_REFERENCE_ARCHIVE_REVIEW",
+  "subject_scope": {
+    "experimental_protein_assigned": false,
+    "genome_assigned": false,
+    "reference_strains_are_tested_subjects": false,
+    "strain_assigned": false,
+    "strain_taxon_assigned": false,
+    "taxon_id": "NCBITaxon:4932",
+    "taxon_label": "Saccharomyces cerevisiae"
+  },
+  "taxonomy": {
+    "new": [
+      {
+        "parent_taxon_id": "NCBITaxon:4932",
+        "rank": "strain",
+        "request": {
+          "body_sha256": "22efbebe92801e660e727cbc51e1d4815797df119a0e635a59e591f2cf35f4fb",
+          "cache": {
+            "path": "reports/resistance-grounding-2026-10-13-abd1/request-277fb1194afa9df0be520605758ab069cfd74bf00abac7a7f06565de60bf8c25.json",
+            "sha256": "0216bfd9209f2ca08b789a7175d5828b348221da0331edd81c512f2e035fb59f"
+          },
+          "release": "2026_03",
+          "retrieved_at": "2026-10-13T07:13:33.992127+00:00",
+          "status": 200,
+          "url": "https://rest.uniprot.org/taxonomy/307796?format=json"
+        },
+        "scientific_name": "Saccharomyces cerevisiae (strain YJM789)",
+        "scope": "HISTORICAL_REFERENCE_STRAIN_ONLY",
+        "taxon_id": "NCBITaxon:307796"
+      },
+      {
+        "parent_taxon_id": "NCBITaxon:28985",
+        "rank": "strain",
+        "request": {
+          "body_sha256": "8378b06b7e1b6c428c4cb2d96d55d2cabb58289541e68b6190cfa44077202460",
+          "cache": {
+            "path": "reports/resistance-grounding-2026-10-13-abd1/request-44fb444ab9a93ede2ae366607bec064ae0b0ad6e0a08bd6b3a909cc0cb3bf250.json",
+            "sha256": "5338174ed97d69f5b20fbd36cbd2927ad2c26af17fe6d2731654662257cca19f"
+          },
+          "release": "2026_03",
+          "retrieved_at": "2026-10-13T07:11:17.146301+00:00",
+          "status": 200,
+          "url": "https://rest.uniprot.org/taxonomy/284590?format=json"
+        },
+        "scientific_name": "Kluyveromyces lactis (strain ATCC 8585 / CBS 2359 / DSM 70799 / NBRC 1267 / NRRL Y-1140 / WM37)",
+        "scope": "BIOCHEMICAL_PROTEIN_REFERENCE_ONLY",
+        "taxon_id": "NCBITaxon:284590"
+      },
+      {
+        "parent_taxon_id": "NCBITaxon:4910",
+        "rank": "species",
+        "request": {
+          "body_sha256": "8280a4fe092a9f37d7725bb2ad861ee185df83ecf6d137c2ed3fbc6478c9b93e",
+          "cache": {
+            "path": "reports/resistance-grounding-2026-10-13-abd1/request-f2a62aef33c0f4309d190828042aefc8aa69ba6e49d1a2c67a2c68c426610024.json",
+            "sha256": "6cad35678d7c3e22086ee5d85e06b32fb402af91b6b4dfc10e2134c8384ab8c3"
+          },
+          "release": "2026_03",
+          "retrieved_at": "2026-10-13T07:12:09.443934+00:00",
+          "status": 200,
+          "url": "https://rest.uniprot.org/taxonomy/28985?format=json"
+        },
+        "scientific_name": "Kluyveromyces lactis",
+        "scope": "BIOCHEMICAL_DONOR_SPECIES_NOT_RESISTANT_ORGANISM",
+        "taxon_id": "NCBITaxon:28985"
+      }
+    ],
+    "reused": [
+      {
+        "parent_taxon_id": "NCBITaxon:4930",
+        "rank": "species",
+        "request": {
+          "cache_path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+          "cache_sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98",
+          "release": "2026_03",
+          "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+          "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+          "status": 200,
+          "url": "https://rest.uniprot.org/taxonomy/4932"
+        },
+        "scientific_name": "Saccharomyces cerevisiae",
+        "scope": "EXPERIMENTAL_SPECIES",
+        "taxon_id": "NCBITaxon:4932"
+      },
+      {
+        "parent_taxon_id": "NCBITaxon:4932",
+        "rank": "strain",
+        "request": {
+          "cache_path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+          "cache_sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba",
+          "release": "2026_03",
+          "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+          "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+          "status": 200,
+          "url": "https://rest.uniprot.org/taxonomy/559292"
+        },
+        "scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "scope": "REFERENCE_PROTEIN_TAXON_ONLY",
+        "taxon_id": "NCBITaxon:559292"
+      }
+    ]
+  },
+  "uniprot": {
+    "A6ZLH5": {
+      "reference": {
+        "accession": "UniProtKB:A6ZLH5",
+        "archive": "UPI000005318F",
+        "entry_status": "DELETED",
+        "reason": "Not part of a reference proteome",
+        "replacement_accession_reported": false
+      },
+      "request": {
+        "body_sha256": "798674e7671125cc94e35119d2f0c95bbc1923a05c79e29a9f40d8d5330c1fb9",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-abd1/request-62aaa82601ba16031656b7ca6560ccc57264570f73ff1c9d5990cc6803ce77e1.json",
+          "sha256": "4cf30d6e2a85bd9413687d6ea33aedbc491ab9e70a818ff56da79cf9205bf55a"
+        },
+        "pagination_complete": true,
+        "query": "accession:A6ZLH5",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T07:07:27.393601+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AA6ZLH5&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    },
+    "P32783": {
+      "experimental_protein_assigned": false,
+      "reference": {
+        "accession": "UniProtKB:P32783",
+        "entry_version": 191,
+        "gene": "ABD1",
+        "ordered_locus_names": [
+          "YBR236C"
+        ],
+        "protein_label": "mRNA cap guanine-N(7) methyltransferase",
+        "reviewed": true,
+        "sequence_version": 1,
+        "sgd_ids": [
+          "S000000440"
+        ],
+        "taxon_id": "NCBITaxon:559292"
+      },
+      "request": {
+        "body_sha256": "32eceae077afb019b4724b5f25c6067f6d93183084f2f4ef3b561196e536e93b",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-antifungal/request-cd553b20064beef6759409c6fa6222c6b7fdf810973096d24cde862b71e1cf42.json",
+          "sha256": "6ec5c6b6ff62b0063c696bb161e59637177f10ffaba507da21a9acf94185c1c6"
+        },
+        "pagination_complete": true,
+        "query": "gene_exact:ABD1 AND organism_id:559292 AND reviewed:true",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T06:12:29.518887+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AABD1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE"
+    },
+    "Q6CKI0": {
+      "reference": {
+        "accession": "UniProtKB:Q6CKI0",
+        "entry_status": "REVIEWED",
+        "entry_version": 114,
+        "gene": "ABD1",
+        "ordered_locus_names": [
+          "KLLA0F10527g"
+        ],
+        "organismal_resistance_demonstrated": false,
+        "protein_label": "mRNA cap guanine-N(7) methyltransferase",
+        "sequence_version": 1,
+        "taxon_id": "NCBITaxon:284590",
+        "taxon_label": "Kluyveromyces lactis (strain ATCC 8585 / CBS 2359 / DSM 70799 / NBRC 1267 / NRRL Y-1140 / WM37)"
+      },
+      "request": {
+        "body_sha256": "1142b88145c335d36f8c86c42e4043c8ff19a792177c929abadb3ff1a68ecbcd",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-abd1/request-26094842f8ad9f68597e07766f52a9cd7f8f2a01e024a3dfb7e2258bac92a89f.json",
+          "sha256": "2342d28a387ad6c70ac4ed16c15f3f9db31c927c158308bc34433b154a977816"
+        },
+        "pagination_complete": true,
+        "query": "accession:Q6CKI0",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T07:07:53.634899+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AQ6CKI0&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    }
+  },
+  "uniprot_attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "source": "UniProt Consortium"
+  }
+}

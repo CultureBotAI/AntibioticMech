@@ -82,3 +82,30 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-13T09:59:58Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added a qualified laboratory yeast RPL3 association from inspected primary
+    results. UniProt remains reference-only; no experimental allele, protein, genome
+    or numeric AST assigned. Preserved existing owners and left whole-record review
+    open.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: Laboratory RPL3-associated anisomycin resistance
+  gene_id: RPL3
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative anisomycin resistance
+  assay: Comparative growth susceptibility
+  note: Context-dependent association in JD1090 derivatives; responses differ among
+    tested contexts. This is not a species-wide phenotype. Experimental allele, protein
+    and genome unresolved; no standardized MIC or clinical category inferred.
+  evidence:
+  - reference: https://doi.org/10.1093/nar/gkn642
+    notes: Results, Table 1 and native Figure 2D. Qualitative anisomycin result only;
+      source concentration-unit discrepancy is not resolved or imported.
+  - reference: https://www.uniprot.org/uniprotkb/P14126/entry
+    notes: Reference-only UniProtKB:P14126, entry version 233, sequence version 4,
+      release 2026_03; RPL3 in S288c (NCBITaxon:559292). Not an exact experimental
+      derivative or resistance allele.

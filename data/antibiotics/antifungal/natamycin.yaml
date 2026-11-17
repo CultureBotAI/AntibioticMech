@@ -218,3 +218,65 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph natamycin_ergosterol_complex_fungal_growth_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:18165687).
+  llm_assisted: true
+causal_graphs:
+- graph_id: natamycin_ergosterol_complex_fungal_growth_inhibition
+  title: Natamycin binds fungal membrane ergosterol to block fungal growth without
+    membrane permeabilization
+  description: Natamycin specifically binds ergosterol in fungal membranes without
+    forming membrane pores or permeabilizing the lipid bilayer, resulting in a sterol-dependent
+    block of fungal growth.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: natamycin
+    label: natamycin
+    node_type: COMPOUND
+    grounding: CHEBI:7488
+  - node_id: membrane_ergosterol
+    label: ergosterol in the fungal plasma membrane
+    node_type: CHEMICAL
+    grounding: CHEBI:16933
+  - node_id: natamycin_ergosterol_membrane_complex
+    label: non-permeabilizing natamycin-ergosterol membrane complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: High-affinity ergosterol-natamycin complex measured by isothermal
+      titration calorimetry without bilayer permeabilization.
+  - node_id: ergosterol_dependent_fungal_growth
+    label: ergosterol-dependent fungal cell growth
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Ergosterol-dependent yeast plasma-membrane function and cell
+      growth.
+  edges:
+  - subject: natamycin
+    predicate: binds
+    object: natamycin_ergosterol_membrane_complex
+    description: Natamycin specifically binds ergosterol in model and fungal membranes.
+    evidence:
+    - reference: PMID:18165687
+      notes: Direct binding and isothermal titration calorimetry assays established
+        specific natamycin-ergosterol complex formation in membranes.
+  - subject: membrane_ergosterol
+    predicate: participates in
+    object: natamycin_ergosterol_membrane_complex
+    description: Membrane ergosterol provides the specific sterol recognition motif
+      bound by natamycin.
+    evidence:
+    - reference: PMID:18165687
+      notes: Yeast sterol-biosynthesis mutants and model-membrane calorimetry showed
+        that ergosterol ring double bonds govern natamycin binding.
+  - subject: natamycin_ergosterol_membrane_complex
+    predicate: inhibits
+    object: ergosterol_dependent_fungal_growth
+    description: Formation of the natamycin-ergosterol complex blocks fungal growth
+      without permeabilizing the plasma membrane.
+    evidence:
+    - reference: PMID:18165687
+      notes: Growth and permeability assays demonstrated sterol-dependent growth arrest
+        by natamycin in the absence of membrane permeabilization.

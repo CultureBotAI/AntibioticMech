@@ -1,0 +1,128 @@
+{
+  "baseline_commit": "b0950a9c3256aacee226834e0e8a88d1022c9948",
+  "biological_records_changed": 0,
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-15-sco1-primary/canary-review.json",
+    "sha256": "672d46c8380660e1e9e8bbce1f6ece65c335abbb3daecb3eddac58f200b16f0b"
+  },
+  "captured_at": "2026-10-15T09:26:21.308883+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "complete_cached_citation_queries_replayed": 650,
+  "complete_collection_aware_records_read": 11,
+  "corpus_records_hash_checked": 2939,
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "12f883d54e4f4f3cf6cb7a1ca81a6921a922c7c28cad9399162a7988b4dc49eb"
+    },
+    {
+      "path": "research/2026-10-15-card-bla-alias-screen.json",
+      "sha256": "a0703a3ae41ba6804d92342ddd8bb30afaa514317fb10de17855a5ce3c696edf"
+    },
+    {
+      "path": "scripts/audit_card_bla_alias_screen.py",
+      "sha256": "84331484da3f038e1b73ebd00f18c60676ee7f9fea9bf61916f8035385f5dfab"
+    },
+    {
+      "path": "tests/test_card_bla_alias_screen.py",
+      "sha256": "339f01ab111e204e2ff33ef0bff13b3f1b6905536a584228d13f53b99bef80df"
+    }
+  ],
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_sco1_primary_20261015.py",
+      "sha256": "5cae804330ad0f8fefb71de6f8f511da43efe1d13fb3b6d70375b8b4e294712d"
+    },
+    {
+      "path": "/private/tmp/screen_bla_aliases_20261015.py",
+      "sha256": "a7143807514f3217ad27f136865a9739351bb7ce2c919ba099797f2108a29b3f"
+    },
+    {
+      "path": "/private/tmp/finalize_bla_alias_screen_20261015.py",
+      "sha256": "5f6a67b8f70a8e1e133a31306a2f896d5deb2538594df706c5a75c7c5d43c6cd"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "membership_index_updated": false,
+  "native_offline_replay": "PASS",
+  "ncbi_requests": 0,
+  "network_and_file_writes_blocked_during_replay": true,
+  "network_requests": 1,
+  "new_access_holds": 1,
+  "new_primary_texts": 0,
+  "new_reference_or_experimental_assignments": 0,
+  "new_unverified_discovery_leads": 2,
+  "new_verified_resistance_results": 0,
+  "outreach": 0,
+  "prior_research_checkpoints_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-sco1-primary/protected-before.json",
+    "sha256": "ed2b2e480f0facb1c39fe9836883466fcf47b97ec4defcd4c7f0deb79d1c6602"
+  },
+  "protected_files_checked": 7747,
+  "repository_ruff_check": "PASS",
+  "request_plan": {
+    "path": "reports/resistance-grounding-2026-10-15-sco1-primary/request-plan.json",
+    "sha256": "e07a50f844505075f102f78fba479b65e84e5596280f2fe9d8860c523100a9b0"
+  },
+  "reuse_terms_review_resumed": false,
+  "review_findings_addressed": [
+    "The advertised SCO-1 primary route returned a 403 challenge; it is not primary scientific text.",
+    "No redirect, retry, challenge workaround or alternate article route was used.",
+    "The access hold does not assert biological absence or permanent unavailability.",
+    "The screen covers the current 726 candidate-free index terms and 650 complete cached source-citation queries.",
+    "The exact bla-prefix match is only a discovery rule; it does not establish a gene alias or experimental allele.",
+    "Ordered locus names, substrings, punctuation changes and duplicate prefixes are not silently accepted.",
+    "Two SCO-1 pairs were already reviewed and are not counted as new discoveries.",
+    "CTX-M-55/Q0GA57 and NDM-5/G3K399 remain unreviewed leads requiring native citation and taxonomy review.",
+    "The three candidate terms retain 13 source claims in 11 current complete records; all corpus hashes agree.",
+    "Only two named cache locations and one alias pattern were screened; no global absence is inferred."
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "CACHED_BLA_PREFIX_DISCOVERY_NOT_VERIFIED_REFERENCE_OR_EXPERIMENTAL_ASSIGNMENT",
+  "source_adoptions": 0,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "candidate_records_read": 11,
+    "candidate_source_claims": 13,
+    "candidate_term_protein_pairs": 4,
+    "candidate_terms": 3,
+    "corpus_records_hash_checked": 2939,
+    "new_discovery_pairs": 2,
+    "previously_reviewed_reference_pairs": 2,
+    "query_statuses": {
+      "COMPLETE_QUERY_NOT_PRIMARY_REVIEW": 650
+    },
+    "source_pmids": 650,
+    "terms_screened": 726
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 192,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-sco1-primary/tests.xml",
+      "sha256": "7c9962693f9d00977ee7f7dce9e517129e0052459341a9e8d95d780b43e8a24c"
+    },
+    "skipped": 0,
+    "test_classes": [
+      "tests.test_card_bla_alias_screen",
+      "tests.test_card_literature_expansion",
+      "tests.test_card_reference_lineages",
+      "tests.test_cipa_evidence",
+      "tests.test_sco1_evidence",
+      "tests.test_valinomycin_abcb1"
+    ]
+  },
+  "verification_limit": "A source-access disposition and one cached discovery pattern, not new verified alleles or whole-corpus signoff. Pinned RDKit lacks an Intel macOS wheel; historical Linux CI is not current signoff.",
+  "whole_record_primary_signoffs": 0
+}

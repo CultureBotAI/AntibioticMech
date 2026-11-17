@@ -96,3 +96,68 @@ curation_history:
     bacterial 50S exit-tunnel target and corrected the mechanism from the historical
     DNA-damage proposal to translation inhibition.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph tetracenomycin_x_50s_exit_tunnel_translation_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:32601485).
+  llm_assisted: true
+causal_graphs:
+- graph_id: tetracenomycin_x_50s_exit_tunnel_translation_inhibition
+  title: Tetracenomycin X binds the bacterial 50S polypeptide exit tunnel to inhibit
+    translation elongation
+  description: Tetracenomycin X stacks on the noncanonical 23S rRNA U1782-U2586 base
+    pair in the polypeptide exit tunnel of the bacterial 50S ribosomal subunit and
+    arrests translation after synthesis of short oligopeptides.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: tetracenomycin_x
+    label: tetracenomycin X
+    node_type: COMPOUND
+    grounding: CHEBI:32209
+  - node_id: bacterial_50s_polypeptide_exit_tunnel
+    label: polypeptide exit tunnel of the bacterial 50S ribosomal subunit
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 23S rRNA U1782-U2586 locus inside the bacterial 50S ribosomal
+      polypeptide exit tunnel.
+  - node_id: tetracenomycin_x_bound_exit_tunnel
+    label: tetracenomycin X-occupied 50S polypeptide exit tunnel
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Cryo-EM-resolved aromatic stacking complex at the 23S rRNA U1782-U2586
+      noncanonical base pair.
+  - node_id: nascent_polypeptide_elongation
+    label: bacterial nascent-polypeptide elongation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Ribosomal synthesis of nascent polypeptides beyond short oligopeptides.
+  edges:
+  - subject: tetracenomycin_x
+    predicate: binds
+    object: tetracenomycin_x_bound_exit_tunnel
+    description: Tetracenomycin X binds in the polypeptide exit tunnel of the bacterial
+      50S ribosomal subunit at the U1782-U2586 base pair.
+    evidence:
+    - reference: PMID:32601485
+      notes: Structural and biochemical analyses localized tetracenomycin X to the
+        23S rRNA U1782-U2586 base pair in the 50S polypeptide exit tunnel.
+  - subject: bacterial_50s_polypeptide_exit_tunnel
+    predicate: participates in
+    object: tetracenomycin_x_bound_exit_tunnel
+    description: The 23S rRNA U1782-U2586 noncanonical base pair in the 50S exit tunnel
+      forms the tetracenomycin X binding site.
+    evidence:
+    - reference: PMID:32601485
+      notes: Resistance mutations and structural mapping confirmed the 23S rRNA exit-tunnel
+        binding locus.
+  - subject: tetracenomycin_x_bound_exit_tunnel
+    predicate: inhibits
+    object: nascent_polypeptide_elongation
+    description: Exit-tunnel obstruction by tetracenomycin X arrests bacterial translation
+      after short oligopeptides are synthesized.
+    evidence:
+    - reference: PMID:32601485
+      notes: In-vitro and in-vivo translation assays established that tetracenomycin
+        X blocks protein synthesis by obstructing the 50S exit tunnel rather than
+        damaging DNA.

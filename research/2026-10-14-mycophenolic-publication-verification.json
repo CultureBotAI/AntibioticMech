@@ -1,0 +1,155 @@
+{
+  "baseline_commit": "f262f7e401f9be6615745e4f418735f773b25f47",
+  "browser_checks": [
+    {
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440
+      },
+      "page": "mycophenolic-acid",
+      "screenshot": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/mycophenolic-acid-1440.png",
+      "width": 1440
+    },
+    {
+      "canvas": {
+        "height": 622,
+        "width": 902,
+        "x": 240,
+        "y": 362.65625
+      },
+      "errors": [],
+      "external": [],
+      "filter_redraw_verified": true,
+      "fingerprint": "5e574ef494051dc9",
+      "nontransparent_pixels": 35388,
+      "page": "map",
+      "restored_nontransparent_pixels": 36553,
+      "screenshot": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/map-1440.png",
+      "width": 1440
+    },
+    {
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390
+      },
+      "page": "mycophenolic-acid",
+      "screenshot": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/mycophenolic-acid-390.png",
+      "width": 390
+    },
+    {
+      "canvas": {
+        "height": 241.71875,
+        "width": 349.96875,
+        "x": 20,
+        "y": 628.578125
+      },
+      "errors": [],
+      "external": [],
+      "filter_redraw_verified": true,
+      "fingerprint": "5e574ef494051dc9",
+      "nontransparent_pixels": 35388,
+      "page": "map",
+      "restored_nontransparent_pixels": 36553,
+      "screenshot": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/map-390.png",
+      "width": 390
+    }
+  ],
+  "byte_identical_other_records": 2938,
+  "captured_at": "2026-10-14T04:40:57.631488+00:00",
+  "changed_records": [
+    "data/antibiotics/antiviral/mycophenolic-acid.yaml"
+  ],
+  "counts": {
+    "curator_claims": 131,
+    "curator_records": 53,
+    "records": 2939,
+    "records_without_resistance_or_genotype_rules": 2606,
+    "resistance_assertions": 4886,
+    "resistance_bearing_records": 320
+  },
+  "curation_events_added": 1,
+  "current_progress_ledger_hashes_match_all_records": true,
+  "embedding_reuse": {
+    "baseline_sha256": "32a5cab967e880c1e958d3c8aad57348c654112e42e1a1c2af571641561df90c",
+    "byte_identical_reused_rows": 2938,
+    "changed_documents": [
+      "CHEBI:168396"
+    ],
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows": 16,
+    "dimension": 1024,
+    "fingerprint": "5e574ef494051dc9",
+    "finite": true,
+    "normalized": true,
+    "vector_rows": 2939
+  },
+  "existing_record_fields_preserved": true,
+  "files": [
+    {
+      "path": "scripts/audit_mycophenolic_context.py",
+      "sha256": "a323c8fdb07e07047d16b2c2472c0f9c074e9b49346f10483bd42664d0ad2e82"
+    },
+    {
+      "path": "scripts/audit_mycophenolic_subjects.py",
+      "sha256": "e2ed2f402dc0501e41d801d0a4fa70630c71d18ea92940198d35614ae94325db"
+    },
+    {
+      "path": "tests/test_mycophenolic_context.py",
+      "sha256": "e990130241efceb8a5409b77284ad9cbcb2002b18d0a160f27d1734d696f7ec6"
+    },
+    {
+      "path": "tests/test_mycophenolic_subjects.py",
+      "sha256": "8e7509cac9690cf885d6995e434384642c5da490a9f08e8847a1ee0dfcdf0837"
+    },
+    {
+      "path": "research/2026-10-14-mycophenolic-context.json",
+      "sha256": "5b413ea2ef058d23ace551165a802796de9a7bcb40e8abb82f1bea49b9cf7871"
+    },
+    {
+      "path": "research/2026-10-14-mycophenolic-subjects.json",
+      "sha256": "8efa2c17bf8b9c3f0337770bafda1c0e4c1060b45ba9d812c1083a3099d42be9"
+    },
+    {
+      "path": "research/2026-10-14-mycophenolic-curation.json",
+      "sha256": "be5d408db18e10d91cd40297f12b62ee3444e693c828e6969e743548d9b2e0fd"
+    },
+    {
+      "path": "research/2026-10-14-mycophenolic-resistance-grounding.tsv",
+      "sha256": "c2b9c15d375c86aa72cb01c3648d4288e8ec0504ab9d4617c1967a0b1a4daf48"
+    },
+    {
+      "path": "research/2026-10-14-mycophenolic-resistance-progress.json",
+      "sha256": "28df8b127af97db4bef8e60cee0ae5c83eedc19f60d3f648452d5ec7baf44506"
+    },
+    {
+      "path": "research/2026-10-14-mycophenolic-resistance-progress.tsv",
+      "sha256": "458632ba814d0326781665170d423e212bd4a255f4fb804ddd45480910febbf7"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 104
+  },
+  "full_authoritative_qc": {
+    "final_result": "Recorded separately on the pull request after completion.",
+    "status": "RUNNING_AT_CAPTURE"
+  },
+  "goal_complete": false,
+  "independent_scientific_signoff": false,
+  "independent_vector_byte_comparison": true,
+  "initial_browser_check_error": "The private harness initially compared renderer-enriched map data directly to the projection. Corrected to validate projection equality and all navigation links separately; no site change was needed.",
+  "issue_1040": "DEFERRED",
+  "local_qc_limitation": "RDKit 2025.3.6 differs from pin 2026.3.5; pinned-environment verification is delegated to CI. No chemical-map regeneration.",
+  "native_offline_replays": "BOTH_EXACT_WITH_HTTP_AND_SOCKET_CONNECTIONS_DISABLED",
+  "ncbi_requests_this_publication_pass": 0,
+  "review_issue": "https://github.com/CultureBotAI/AntibioticMech/issues/1101",
+  "review_regressions_failed_before_fix": 15,
+  "scope": "CURATION_PUBLICATION_CHECKPOINT_NOT_WHOLE_CORPUS_SCIENTIFIC_SIGNOFF",
+  "source_owned_inputs_and_chemical_map_unchanged": true,
+  "test_receipt": {
+    "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/review-tests.xml",
+    "sha256": "7edd78ad45044c341e664080b09319dffd5de34e33c59aef7820c22669e9f899"
+  }
+}

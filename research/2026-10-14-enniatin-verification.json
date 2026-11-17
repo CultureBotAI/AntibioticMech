@@ -1,0 +1,185 @@
+{
+  "automatic_redirects": 0,
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "biological_record_hash_drift": 0,
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-enniatin/cohort.json",
+    "sha256": "6543d4acf85a24b3ede417c5cc64c9db6b131345a70f1c9aed7aca9f318f9a2c"
+  },
+  "commands_passed": [
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "check",
+      "."
+    ],
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "scripts/audit_enniatin_context.py",
+      "tests/test_enniatin_context.py"
+    ],
+    [
+      "git",
+      "diff",
+      "--check"
+    ]
+  ],
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-reference-citation-resistance-grounding.tsv",
+    "sha256": "5e37b4d2ee3a7bafab7d173896dcb084b0444e2f06c02f49542eda866109524a"
+  },
+  "date": "2026-10-14",
+  "development_corrections_before_verification": [
+    "Primary replay stopped on a case-sensitive anchor before creating any public dossier; corrected to native wording.",
+    "Spelled-out minimum inhibitory concentration anchor used instead of an absent abbreviation.",
+    "Long code literals split to pass Ruff without changing output values."
+  ],
+  "embedding_files_unchanged": true,
+  "embedding_refresh_required": false,
+  "experimental_strain_taxon_protein_and_genome_assignments": 0,
+  "figures_visually_reviewed": false,
+  "files": [
+    {
+      "path": "scripts/audit_enniatin_context.py",
+      "sha256": "474c1cfb75b11cc0fcf2caaf44278f034ed654df5d50d7e6e8a58a5007d7b0c6"
+    },
+    {
+      "path": "tests/test_enniatin_context.py",
+      "sha256": "96a84cd6fdea8e95c760fd85e427651c9091ff3421362d46b84a5bbbad41b2fd"
+    },
+    {
+      "path": "research/2026-10-14-enniatin-context.json",
+      "sha256": "ae28b0e52ce920ff25d1440aa65949b01796f51550ac4dc4ccc1d46f336cd28a"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "c217b59690ac5f5550f392454590294e1243b93ce2877755339bf85f3593d54c"
+    },
+    {
+      "path": "/private/tmp/verify_enniatin_20261014.py",
+      "sha256": "3606fd3f9bb3b36f0efd08c5a6b7d48cc1bc2dfb7d606bf7a10dcb1313a5fe19"
+    }
+  ],
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_rerun": false,
+  "full_qc_scope_note": "Research-only checks do not renew the earlier full-QC receipt.",
+  "github_mutations": 0,
+  "grounded_reference": {
+    "bibliography_PMIDs": [
+      "PMID:17823352",
+      "PMID:20237561",
+      "PMID:26198851"
+    ],
+    "crosswalk_basis": "NATIVE_VEUPATHDB_CROSS_REFERENCE",
+    "entry_version": 82,
+    "exact_resistance_allele": false,
+    "experimental_genome_assignment": null,
+    "explicit_source_locus_crosswalk": "FungiDB:FGRAMPH1_01G10921",
+    "extra_zero_source_label_equivalence_established": false,
+    "native_ORF_name": "FGRAMPH1_01T10921",
+    "native_crossref_gene_label_inferred_by_G_to_T_replacement": false,
+    "native_submission_name": "Chromosome 2, complete genome",
+    "protein_accession": "UniProtKB:I1RWY3",
+    "reference_EMBL_nucleotide_accession": "HG970333",
+    "reference_EMBL_protein_accession": "CEF77263.1",
+    "reference_accessions_assigned_to_experimental_subject": false,
+    "reference_species_taxon_id": "NCBITaxon:5518",
+    "reference_taxon_id": "NCBITaxon:229533",
+    "reference_taxon_name": "Gibberella zeae (strain ATCC MYA-4620 / CBS 123657 / FGSC 9075 / NRRL 31084 / PH-1)",
+    "reference_taxon_rank": "strain",
+    "release": "2026_03",
+    "reviewed": false,
+    "selected_primary_pmid_in_bibliography": false,
+    "sequence_version": 1,
+    "source_FGSG_alias_basis": "PRIMARY_RESULTS_3_2_PARAGRAPH_2"
+  },
+  "http_attempts": 5,
+  "http_status_counts": {
+    "200": 5
+  },
+  "initial_candidates_without_primary_text_review_this_pass": 75,
+  "issue_1040": "DEFERRED",
+  "main_report_changes_are_exactly_the_new_section": true,
+  "native_result_field_configuration_reused": 1,
+  "native_taxonomy_responses_reused": 3,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_assertions": 0,
+  "numeric_AST_or_variant_sequence_construct_or_protocol_exports": false,
+  "offline_plan_helper_smoke_test": {
+    "functions": [
+      "reference_plan",
+      "alternative_locus_plan",
+      "crossreference_plan",
+      "candidate_plan"
+    ],
+    "helper": {
+      "path": "/private/tmp/research_enniatin_20261014.py",
+      "sha256": "9595178df9727f531bb64898e690803b4eeee79ebbc5bd7b13035f64ddeb514a"
+    },
+    "original_cache_writes": 0,
+    "requests_blocked": true,
+    "status": "PASS"
+  },
+  "offline_replay": "PASS",
+  "primary_text_and_caption_reviews": 1,
+  "prior_source_holds_preserved": true,
+  "prior_uncommitted_work_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-enniatin/protected-before.json",
+    "sha256": "0525483c76168d50132824028d4dce689b2a257066ad8f7ca569a251150aabf6"
+  },
+  "protected_files_checked": 7604,
+  "query_interpretation": {
+    "accession_crossreference_query_result_count": 1,
+    "broader_literal_label_query_result_count": 1,
+    "broader_search_hit_alone_establishes_crosswalk": false,
+    "complete_exact_gene_queries": 2,
+    "empty_gene_queries_establish_gene_or_protein_absence": false,
+    "empty_selected_EnsemblFungi_field_establishes_all_crossref_absence": false,
+    "exact_gene_query_result_counts": [
+      0,
+      0
+    ],
+    "provider_spelling_suggestions_followed": false
+  },
+  "reference_mappings_grounded": 1,
+  "retained_candidate_identities": 76,
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "scope": "PRIMARY_CONTEXT_AND_REFERENCE_CROSSWALK_NOT_ALLELE_CURATION",
+  "source_adoptions": 0,
+  "source_plans_or_receipts_rewritten": false,
+  "structured_research_exports_source_inputs_and_generated_pages_preserved": true,
+  "supplements_reviewed": false,
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 73,
+      "path": "reports/resistance-grounding-2026-10-14-enniatin/focused-tests.xml",
+      "sha256": "f5b7351a4ea795baa645115b4b57634f04fe9093cf0849217a9f583b6e015453",
+      "skipped": 0,
+      "tests": 73
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 843,
+      "path": "reports/resistance-grounding-2026-10-14-enniatin/expanded-tests.xml",
+      "sha256": "67ae6ea97c7c72cffd9f42263a649e12c3f51374cce67df42067b11979138a4f",
+      "skipped": 0,
+      "tests": 843
+    }
+  ],
+  "whole_record_primary_signoffs": 0
+}

@@ -1,0 +1,124 @@
+identifier: antibioticmech:curator-cad9f0650f
+label: ECF transporter inhibitor 18
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A bis(5-chloro-6-isopropoxypyridin-3-yl)benzyloxy salicylic acid ECF transporter
+  inhibitor with antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.1021/acs.jmedchem.5c02721
+synonyms:
+- synonym_text: compound 18
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(O)C1=CC(OCC2=CC(C3=CC(Cl)=C(OC(C)C)N=C3)=CC(C4=CC(Cl)=C(OC(C)C)N=C4)=C2)=CC=C1O
+  standard_inchi: InChI=1S/C30H28Cl2N2O6/c1-16(2)39-28-25(31)10-21(13-33-28)19-7-18(15-38-23-5-6-27(35)24(12-23)30(36)37)8-20(9-19)22-11-26(32)29(34-14-22)40-17(3)4/h5-14,16-17,35H,15H2,1-4H3,(H,36,37)
+  standard_inchi_key: BIORWQMWXNMPAG-UHFFFAOYSA-N
+  molecular_formula: C30H28Cl2N2O6
+  structure_source: https://pubs.acs.org/doi/suppl/10.1021/acs.jmedchem.5c02721/suppl_file/jm5c02721_si_002.csv
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 583.47
+  monoisotopic_mass: 582.13244198
+xrefs:
+- pubchem.compound:176360086
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acs.jmedchem.5c02721#18
+  source_label: ECF transporter inhibitor 18
+  minted_identifier: antibioticmech:curator-cad9f0650f
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acs.jmedchem.5c02721
+    snippet: Exapicheidou et al. reported that compound 18 inhibited Enterococcus
+      faecalis, Enterococcus faecium, and Streptococcus pneumoniae strains with MIC
+      values of 1 to 9 ug/mL, inhibited Lactobacillus casei vitamin uptake with an
+      IC50 of 4 uM, and improved larval survival in a Galleria mellonella Streptococcus
+      pneumoniae infection model.
+    notes: Supplementary Data CSV row 18 reports the SMILES for compound 18, matching
+      PubChem CID 176360086; the SMILES was normalized with RDKit to derive the standard
+      InChI and InChIKey.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-09T10:08:05Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Curated SYNTHETIC biosynthesis_origin, OTHER (MICROBIAL_TARGET) mode_of_action,
+    and primary-literature molecular_targets entry for bacterial energy-coupling factor
+    (ECF) vitamin transporter complex (EcfA1 / EcfA2 / EcfT; GO:1990196, PROTEIN_COMPLEX,
+    DIRECT_BINDING_TARGET) backed by Exapicheidou et al. 2026 (DOI:10.1021/acs.jmedchem.5c02721).
+  llm_assisted: true
+- timestamp: '2026-11-09T10:08:54Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed Enterococcus faecalis V583 Swiss-Prot UniProtKB protein_examples
+    (UniProtKB:Q839D5, ecfA1; UniProtKB:Q839D4, ecfA2) to the primary-literature bacterial
+    energy-coupling factor (ECF) vitamin transporter complex target on ECF transporter
+    inhibitor 18 (DOI:10.1021/acs.jmedchem.5c02721).
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC
+mode_of_action: OTHER
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic salicylic acid derivative (compound 18)
+  that inhibits Gram-positive bacterial energy-coupling factor (ECF) transmembrane
+  vitamin transporters (IC50 = 4 uM in Lactobacillus casei vitamin uptake assays),
+  blocking essential micronutrient translocation and producing bactericidal activity
+  against Enterococcus faecalis, Enterococcus faecium, and Streptococcus pneumoniae
+  (MIC 1-9 ug/mL; Exapicheidou et al. 2026, DOI:10.1021/acs.jmedchem.5c02721).'
+molecular_targets:
+- target_id: GO:1990196
+  target_label: bacterial energy-coupling factor (ECF) vitamin transporter complex
+    (EcfA1 / EcfA2 / EcfT)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Inhibition of bacterial energy-coupling factor (ECF) vitamin
+    uptake (IC50 = 4 uM in Lactobacillus casei vitamin transport assays), rapid time-kill
+    bactericidal activity against Enterococcus faecium, whole-cell MICs of 1 to 9
+    ug/mL against Enterococcus faecalis, Enterococcus faecium, and Streptococcus pneumoniae,
+    and in vivo efficacy in Galleria mellonella and Danio rerio S. pneumoniae infection
+    models (Exapicheidou et al. 2026, DOI:10.1021/acs.jmedchem.5c02721).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2026-06
+  source_retrieved_on: '2026-11-09'
+  evidence:
+  - reference: DOI:10.1021/acs.jmedchem.5c02721
+    snippet: Exapicheidou et al. reported that compound 18 inhibited Enterococcus
+      faecalis, Enterococcus faecium, and Streptococcus pneumoniae strains with MIC
+      values of 1 to 9 ug/mL, inhibited Lactobacillus casei vitamin uptake with an
+      IC50 of 4 uM, and improved larval survival in a Galleria mellonella Streptococcus
+      pneumoniae infection model.
+    notes: Exapicheidou et al. 2026 (J Med Chem 69:14069-14084; DOI:10.1021/acs.jmedchem.5c02721)
+      optimized compound 18 as a potent inhibitor of Gram-positive bacterial energy-coupling
+      factor (ECF) transporters with in vitro and in vivo antibacterial efficacy against
+      Enterococcus and Streptococcus species.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q839D5
+    protein_label: Energy-coupling factor transporter ATP-binding protein EcfA1
+    gene_symbol: ecfA1
+    taxon_id: NCBITaxon:226185
+    taxon_label: Enterococcus faecalis (strain ATCC 700802 / V583)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-09'
+    role: Enterococcus faecalis V583 energy-coupling factor (ECF) transporter ATP-binding
+      subunit EcfA1 (EC 7.6.2.15) of the conserved Firmicutes ECF vitamin-uptake module
+      inhibited by compound 18 (IC50 = 4 uM; MIC 1-9 ug/mL; DOI:10.1021/acs.jmedchem.5c02721).
+  - uniprot_id: UniProtKB:Q839D4
+    protein_label: Energy-coupling factor transporter ATP-binding protein EcfA2
+    gene_symbol: ecfA2
+    taxon_id: NCBITaxon:226185
+    taxon_label: Enterococcus faecalis (strain ATCC 700802 / V583)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-09'
+    role: Enterococcus faecalis V583 energy-coupling factor (ECF) transporter ATP-binding
+      subunit EcfA2 (EC 7.6.2.15) of the conserved Firmicutes ECF vitamin-uptake module
+      inhibited by compound 18 (IC50 = 4 uM; MIC 1-9 ug/mL; DOI:10.1021/acs.jmedchem.5c02721).

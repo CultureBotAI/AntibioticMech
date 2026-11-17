@@ -7,7 +7,7 @@
 <meta name="description" content="blasticidin S (CHEBI:15353): A blasticidin that is an antibiotic obtained from Streptomyces griseochromogene.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antifungal.html">ANTIFUNGAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>blasticidin S</h1>
 <p class="meta">
   <code class="curie">CHEBI:15353</code>
@@ -33,16 +44,19 @@
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_22905">CHEBI:22905</a>      <code class="curie">CHEBI:22905</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_86478">CHEBI:86478</a>      <code class="curie">CHEBI:86478</code></li>
+  <li>blasticidin  <a href="http://purl.obolibrary.org/obo/CHEBI_22905"><code class="curie">CHEBI:22905</code></a></li>
+  <li>antibiotic antifungal agent  <a href="http://purl.obolibrary.org/obo/CHEBI_86478"><code class="curie">CHEBI:86478</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C17H26N8O5</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>422.446 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>422.20262 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">CXNPLSGKWMLZPZ-ZNIXKSQXSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">[H][C@]1(n2ccc(N)nc2=O)C=C[C@H](NC(=O)C[C@@H](N)CCN(C)C(=N)N)[C@@]([H])(C(=O)O)O1</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C17H26N8O5/c1-24(16(20)21)6-4-9(18)8-12(26)22-10-2-3-13(30-14(10)15(27)28)25-7-5-11(19)23-17(25)29/h2-3,5,7,9-10,13-14H,4,6,8,18H2,1H3,(H3,20,21)(H,22,26)(H,27,28)(H2,19,23,29)/t9-,10-,13+,14-/m0/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -76,15 +90,16 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_24127">CHEBI:24127</a>    <code class="curie">CHEBI:24127</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_25605">CHEBI:25605</a>    <code class="curie">CHEBI:25605</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_35718">CHEBI:35718</a>    <code class="curie">CHEBI:35718</code></li>
+  <li>fungicide  <a href="http://purl.obolibrary.org/obo/CHEBI_24127"><code class="curie">CHEBI:24127</code></a></li>
+  <li>nucleoside antibiotic  <a href="http://purl.obolibrary.org/obo/CHEBI_25605"><code class="curie">CHEBI:25605</code></a></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antifungal agent  <a href="http://purl.obolibrary.org/obo/CHEBI_35718"><code class="curie">CHEBI:35718</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -97,13 +112,15 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>70S ribosome P-site tRNA complex <span class="pill plain">RIBOSOMAL_SUBUNIT</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta">A 3.4-A compound-ribosome crystal structure, biochemical assays, and single-molecule FRET showed stabilization of a deformed P-site tRNA conformation. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2013-07 (retrieved 2026-09-02).</p>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:23824292</span> <span class="meta">(Primary compound-ribosome structure and translation-mechanism study.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23824292">PMID:23824292</a></span> <span class="meta">(Primary compound-ribosome structure and translation-mechanism study.)</span></li>
 </ul>
 
 
@@ -112,7 +129,122 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: PMID:23824292 determined a 3.4-A structure of blasticidin S bound to a 70S-tRNA ribosome complex and used biochemical and single-molecule FRET assays to show stabilization of a deformed P-site tRNA, strongly inhibiting release-factor hydrolysis and more weakly inhibiting peptide-bond formation. The HOST_SHARED_TARGET scope is retained because the paper reports inhibition in bacteria and eukaryotes.</span></dd></dl>
 
 
+<h2 id="activity">Activity spectrum</h2>
+<p class="meta">Measured or curated activity against specific taxa. A number
+without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">2 observations &middot; <a href="blasticidin-s/activity-1.html">Browse all observations</a> &middot; <a href="blasticidin-s/record-7a1a4fbe0c8091b109316e0749d17ea268e7bbd2804cae4ead39ed26789e534a.json.gz" download>Complete record (JSON.gz)</a></p>
+<div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
+<table>
+  <caption>Activity observations</caption>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
+    <td>—</td>
+    <td class="num">60.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized no-drug culture density</td>
+    <td class="meta">CAG67774</td>
+    <td class="meta">
+—    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="2" data-identifier="CHEBI:15353" data-key="CXNPLSGKWMLZPZ-ZNIXKSQXSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="blasticidin-s/activity-1-472ccb5dda2aeea40c2ddf67cb9d74277c8b61f972648d70d1825cc1f498bc56.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-2">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
+    <td>—</td>
+    <td class="num">60.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized no-drug culture density</td>
+    <td class="meta">CAG67775</td>
+    <td class="meta">
+—    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="2" data-identifier="CHEBI:15353" data-key="CXNPLSGKWMLZPZ-ZNIXKSQXSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="blasticidin-s/activity-1-472ccb5dda2aeea40c2ddf67cb9d74277c8b61f972648d70d1825cc1f498bc56.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  </tbody>
+</table>
 
+</div>
+
+
+<h2>Resistance mechanisms</h2>
+<p class="meta">4 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
+<details class="details-group" open>
+  <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">2</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
+<table>
+    <caption>ANTIBIOTIC_INACTIVATION</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>bsr-associated blasticidin S inactivation in a laboratory E. coli host<br><span class="meta">Heterologous laboratory host; the enzyme donor is Bacillus cereus K55-S1, not a native E. coli gene assignment. Deamination is distinct from chemical isomerization. This is not a species-wide phenotype. Exact experimental allele, protein and genome unresolved; no standardized MIC or clinical category inferred. The claim concerns the blasticidin S moiety, not equivalence of salt forms.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a><br><span class="meta">strain TK121</span> <span class="meta">bsr</span></td>
+      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.7164/antibiotics.40.1791">DOI:10.7164/antibiotics.40.1791</a></span> <span class="meta">(Pages 1791-1793 and Figures 1-2: native K55-S1 context and biochemical inactivation; not a host-specific E. coli susceptibility measurement.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1271/bbb1961.55.3155">DOI:10.1271/bbb1961.55.3155</a></span> <span class="meta">(Pages 3155-3157 and Figure 2: bsr donor/host provenance and qualitative gene-function evidence. Laboratory host and native donor remain distinct.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/P33967/entry">https://www.uniprot.org/uniprotkb/P33967/entry</a></span> <span class="meta">(Reference-only UniProtKB:P33967, entry version 95, sequence version 1, release 2026_03; bsr in Bacillus cereus, with K55-S1 in the cited source context. Not an exact experimental allele or host protein accession.)</span></li>
+</ul>
+<span class="meta">Qualitative resistance and biochemical deaminase evidence</span></td>
+    </tr>
+    <tr>
+      <td>bsr-associated blasticidin S inactivation in the source-reported bacterial isolate<br><span class="meta">Native source isolate identified phenotypically in the historical study, not re-identified genomically. Deamination is distinct from chemical isomerization. This is not a species-wide phenotype. Exact experimental allele, protein and genome unresolved; no standardized MIC or clinical category inferred. The claim concerns the blasticidin S moiety, not equivalence of salt forms.</span></td>
+      <td>—</td>
+      <td><em>Bacillus cereus</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1396"><code class="curie">NCBITaxon:1396</code></a><br><span class="meta">strain K55-S1</span> <span class="meta">bsr</span></td>
+      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.7164/antibiotics.40.1791">DOI:10.7164/antibiotics.40.1791</a></span> <span class="meta">(Pages 1791-1793 and Figures 1-2: native K55-S1 context and biochemical inactivation; not a host-specific E. coli susceptibility measurement.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1271/bbb1961.55.3155">DOI:10.1271/bbb1961.55.3155</a></span> <span class="meta">(Pages 3155-3157 and Figure 2: bsr donor/host provenance and qualitative gene-function evidence. Laboratory host and native donor remain distinct.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/P33967/entry">https://www.uniprot.org/uniprotkb/P33967/entry</a></span> <span class="meta">(Reference-only UniProtKB:P33967, entry version 95, sequence version 1, release 2026_03; bsr in Bacillus cereus, with K55-S1 in the cited source context. Not an exact experimental allele or host protein accession.)</span></li>
+</ul>
+<span class="meta">Qualitative resistance and biochemical deaminase evidence</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
+<details class="details-group">
+  <summary>REDUCED_PERMEABILITY <span class="pill plain">2</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: REDUCED_PERMEABILITY" tabindex="0">
+<table>
+    <caption>REDUCED_PERMEABILITY</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>oppA loss associated with blasticidin S resistance in laboratory E. coli<br><span class="meta">MG1655-derived laboratory subject. Reduced uptake is an operon-level interpretation, not direct transport measured in this derivative. UniProtKB:P23843 is reference-only, not an experimental protein accession. No clinical category or derivative genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a><br><span class="meta">strain CAG67774</span></td>
+      <td class="meta">oppA</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/27355376">PMID:27355376</a></span> <span class="meta">(Table 2, Table S2 and Figure 4B.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1371/journal.pgen.1006902">DOI:10.1371/journal.pgen.1006902</a></span> <span class="meta">(Correction inspected; corrected Figure 3 used. Table 2 and Table S2 are unchanged by the notice.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/P23843/entry">https://www.uniprot.org/uniprotkb/P23843/entry</a></span> <span class="meta">(Reference-only UniProtKB:P23843 (oppA); UniProtKB reviewed (Swiss-Prot), entry version 171, sequence version 2, release 2026_03; retrieved 2026-10-12. Reference organism NCBITaxon:83333, not an experimental subject assignment. Not an exact tested allele, altered protein, strain or genome identifier, and not independent phenotype or mechanism evidence. A component reference does not assign the effect of a combined genotype to that component. UniProt Consortium, CC BY 4.0.)</span></li>
+</ul>
+<span class="meta">Liquid-broth dilution MIC assay</span></td>
+    </tr>
+    <tr>
+      <td>oppB loss associated with blasticidin S resistance in laboratory E. coli<br><span class="meta">MG1655-derived laboratory subject. Reduced uptake is an operon-level interpretation, not direct transport measured in this derivative. UniProtKB:P0AFH2 is reference-only, not an experimental protein accession. No clinical category or derivative genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a><br><span class="meta">strain CAG67775</span></td>
+      <td class="meta">oppB</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/27355376">PMID:27355376</a></span> <span class="meta">(Table 2, Table S2 and Figure 4B.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1371/journal.pgen.1006902">DOI:10.1371/journal.pgen.1006902</a></span> <span class="meta">(Correction inspected; corrected Figure 3 used. Table 2 and Table S2 are unchanged by the notice.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/P0AFH2/entry">https://www.uniprot.org/uniprotkb/P0AFH2/entry</a></span> <span class="meta">(Reference-only UniProtKB:P0AFH2 (oppB); UniProtKB reviewed (Swiss-Prot), entry version 126, sequence version 1, release 2026_03; retrieved 2026-10-12. Reference organism NCBITaxon:83333, not an experimental subject assignment. Not an exact tested allele, altered protein, strain or genome identifier, and not independent phenotype or mechanism evidence. A component reference does not assign the effect of a combined genotype to that component. UniProt Consortium, CC BY 4.0.)</span></li>
+</ul>
+<span class="meta">Liquid-broth dilution MIC assay</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
 
 <h2>Producer organisms</h2>
 <p class="meta">Organisms that biosynthesize this compound. Cluster link evidence
@@ -123,30 +255,103 @@ several compounds, the evidence is marked inherited, meaning it covers this
 compound together with the cluster's other products rather than singling it out.
 Those products need not be related to each other: a cluster can list an
 intermediate, a precursor and a finished antibiotic side by side.</p>
+<div class="table-scroll" role="region" aria-label="Producer organisms" tabindex="0">
 <table>
   <caption>Producer organisms</caption>
   <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Cluster link evidence</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Evidence</th></tr></thead>
   <tr>
-    <td><em>Streptomyces griseochromogenes</em> <code class="curie">NCBITaxon:68214</code></td>
+    <td><em>Streptomyces griseochromogenes</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=68214">NCBITaxon:68214</a></td>
     <td>—</td>
     <td class="meta">—</td>
     <td class="meta">PRIMARY_LITERATURE</td>
     <td class="meta">—</td>
     <td class="meta">The blasticidin S biosynthesis cluster was cloned from this species and heterologously expressed in Streptomyces lividans.</td>
     <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">PMID:12964155</span> <span class="meta">(Primary biosynthetic-cluster and producer study.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/12964155">PMID:12964155</a></span> <span class="meta">(Primary biosynthetic-cluster and producer study.)</span></li>
 </ul>
 </td>
   </tr>
 </table>
 
+</div>
+
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Blasticidin S bends P-site tRNA on the 70S ribosome to inhibit translation termination <span class="pill">MECHANISTIC</span></h3>
+<p>Blasticidin S binds the 50S P-site loop of the 70S ribosome-tRNA complex, stabilizes a deformed P-site tRNA conformation toward the A site, and strongly inhibits release-factor-mediated peptidyl-tRNA hydrolysis during translation termination.</p><div class="table-scroll" role="region" aria-label="Nodes: blasticidin_s_70s_p_site_trna_termination_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — blasticidin_s_70s_p_site_trna_termination_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">blasticidin_s</code></td>
+    <td>blasticidin S</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antifungal/blasticidin-s.html"><code class="curie">CHEBI:15353</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosome_70s_p_site_trna_complex</code></td>
+    <td>70S ribosome P-site tRNA complex</td>
+    <td class="meta">CELL_STRUCTURE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">deformed_p_site_trna_conformation</code></td>
+    <td>blasticidin S-stabilized deformed P-site tRNA CCA conformation</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">release_factor_peptidyl_trna_hydrolysis</code></td>
+    <td>release-factor-mediated translation termination and peptide-bond formation</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: blasticidin_s_70s_p_site_trna_termination_inhibition" tabindex="0">
+<table>
+  <caption>Edges — blasticidin_s_70s_p_site_trna_termination_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">blasticidin_s</code></td>
+    <td>binds</td>
+    <td><code class="curie">deformed_p_site_trna_conformation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23824292">PMID:23824292</a></span> <span class="meta">(A 3.4-angstrom crystal structure and single-molecule FRET assays showed blasticidin S stabilizing a distorted P-site tRNA conformation on the 70S ribosome.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosome_70s_p_site_trna_complex</code></td>
+    <td>participates in</td>
+    <td><code class="curie">deformed_p_site_trna_conformation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23824292">PMID:23824292</a></span> <span class="meta">(The 70S-tRNA-blasticidin S crystal structure resolved drug base-pairing with G2252 and bending of the P-site tRNA 3&#39; CCA end.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">deformed_p_site_trna_conformation</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">release_factor_peptidyl_trna_hydrolysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23824292">PMID:23824292</a></span> <span class="meta">(Biochemical release-factor and dipeptide-formation assays demonstrated potent inhibition of translation termination and weaker inhibition of elongation.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
 <h2>Record-level evidence</h2>
 <ul class="plain evidence">
-  <li><span class="meta">PMID:12964155</span> <span class="meta">(Primary biosynthetic-cluster and producer study.)</span></li>
-  <li><span class="meta">PMID:23824292</span> <span class="meta">(Primary ribosome structure and translation-mechanism study.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/12964155">PMID:12964155</a></span> <span class="meta">(Primary biosynthetic-cluster and producer study.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23824292">PMID:23824292</a></span> <span class="meta">(Primary ribosome structure and translation-mechanism study.)</span></li>
 </ul>
 
 
@@ -177,32 +382,62 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-12 · codex · LLM-assisted</span>
+    <p>Added two primary-supported Opp subunit deletion resistance claims and two MIC observations for named laboratory derivatives. Normalized ug/mL to mg/L; kept UniProt and MG1655 genome as reference context. Preserved previous curation; no clinical category or experimental genome assigned.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-13 · codex · LLM-assisted</span>
+    <p>Added two qualified bsr-associated blasticidin S inactivation claims, separating a source-reported native isolate from a laboratory host. UniProt is reference-only; no exact allele, protein, genome or numeric AST assigned. Preserved existing uptake claims and activities; whole-record review remains open.</p>
+  </li>
+  <li>
+    <span class="pill">GROUNDED_RESISTANCE_REFERENCE_CITATIONS</span>
+    <span class="meta">2026-10-14 · codex · LLM-assisted</span>
+    <p>Added qualified UniProt evidence citations for reference proteins already verified in the research dossier. Preserved all biological assertions, experimental identity fields, activities and existing evidence. Reference citations are not tested alleles, altered proteins or independent resistance evidence; no strain TaxID, genome, variant or quantitative endpoint added. Whole-record review remains open.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph blasticidin_s_70s_p_site_trna_termination_inhibition (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:23824292).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antifungal/blasticidin-s.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antifungal/blasticidin-s.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=blasticidin%20S">MediaIngredientMech (blasticidin S)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=blasticidin%20S">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=blasticidin%20S">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=blasticidin%20S">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=blasticidin%20S">TraitMech</a>
+&middot; <a href="https://culturebotai.github.io/TaxonMech/browse.html?q=Streptomyces%20griseochromogenes">TaxonMech (Streptomyces griseochromogenes)</a></p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

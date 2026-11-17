@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-15",
+  "scope": "PRIMARY_REPORTED_IDENTIFIERS_NOT_EXPERIMENTAL_UNIPROT_ASSIGNMENT",
+  "papers": {
+    "ebr5": {
+      "aro_id": "ARO:3007437",
+      "label": "EBR-5",
+      "pmid": "36719228",
+      "doi": "10.1128/spectrum.00039-23",
+      "url": "https://journals.asm.org/doi/10.1128/spectrum.00039-23",
+      "source_organism": "Empedobacter stercoris",
+      "source_strain": "SCVM0123",
+      "chromosome_accession": "CP104209",
+      "gene_accession": null,
+      "protein_accession": "UWX67704",
+      "locus": "NZD85_03605",
+      "identifier_location": "Observation, paragraph beginning The WGS; Figure 1 caption; Data availability",
+      "review": "The paper connects the named allele, locus and protein identifier to SCVM0123. Native-isolate measurements and heterologous-host comparisons are separate evidence. The accession is unversioned as reported; a UniProt entry or exact experimental construct is not yet assigned.",
+      "inspected": ["selected main-text identity and results paragraphs", "Table 1 headings", "Figure 1 caption", "Data availability"],
+      "not_inspected": ["figure pixels", "supplements"],
+      "query": "gene_exact:NZD85_03605",
+      "query_match_kind": "LOCUS"
+    },
+    "prc1": {
+      "aro_id": "ARO:3007085",
+      "label": "PRC-1",
+      "pmid": "34975778",
+      "doi": "10.3389/fmicb.2021.732932",
+      "url": "https://www.frontiersin.org/articles/10.3389/fmicb.2021.732932/full",
+      "source_organism": "Pseudomonas wenzhouensis",
+      "source_strain": "A20",
+      "chromosome_accession": "CP072610",
+      "gene_accession": "MW854031",
+      "protein_accession": null,
+      "locus": null,
+      "identifier_location": "Nucleotide Sequence Accession Numbers",
+      "review": "The chromosome and named gene have distinct deposited identifiers. The paper distinguishes native-isolate susceptibility from the gene's heterologous-host effect and from biochemical activity; these cannot be substituted for one another. Homologous AmpC proteins are not PRC-1 identities.",
+      "inspected": ["accession-number section", "selected Results and Discussion paragraphs"],
+      "not_inspected": ["figure pixels", "table images", "supplements"],
+      "query": "xref:embl-MW854031",
+      "query_match_kind": "NUCLEOTIDE_XREF",
+      "access_note": "Initial current-route navigation returned internal tool errors without an HTTP status. The legacy publisher route subsequently exposed the cited sections; no access-denial response was bypassed."
+    },
+    "psz1": {
+      "aro_id": "ARO:3007648",
+      "label": "PSZ-1",
+      "pmid": "37529328",
+      "doi": "10.3389/fmicb.2023.1222703",
+      "url": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1222703/full",
+      "source_organism": "Pantoea endophytica",
+      "source_strain": "X85",
+      "chromosome_accession": "CP121108",
+      "plasmid_accession": "CP121109",
+      "gene_accession": "OQ725878",
+      "protein_accession": null,
+      "locus": null,
+      "identifier_location": "Accession numbers; Identification and genome characterization; Figure 1 caption",
+      "review": "The paper reports chromosome, plasmid and gene identifiers separately. Its species assignment is source-reported, not a substitute for the native taxonomy of a matched database entry. Heterologous susceptibility effects and biochemical findings are distinct; the paper discusses discordance between them.",
+      "inspected": ["accession-number section", "selected identity and Results and discussion paragraphs", "Table 2 headings", "Figure 1 caption"],
+      "not_inspected": ["figure pixels", "supplements"],
+      "query": "xref:embl-OQ725878",
+      "query_match_kind": "NUCLEOTIDE_XREF"
+    }
+  },
+  "constraints": {
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "sequences_variants_protocols_or_numeric_ast_exported": false,
+    "biological_record_writes": false,
+    "source_adoption": false,
+    "whole_record_primary_signoff": false
+  }
+}

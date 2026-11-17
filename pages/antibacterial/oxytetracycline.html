@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>oxytetracycline</h1>
 <p class="meta">
   <code class="curie">CHEBI:27701</code>
@@ -37,16 +48,19 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000050">tetracycline antibiotic</a><code class="curie">ARO:3000050</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_26895">CHEBI:26895</a>      <code class="curie">CHEBI:26895</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000050">ARO:3000050</a>      <code class="curie">ARO:3000050</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_26895"><code class="curie">CHEBI:26895</code></a></li>
+  <li>tetracycline antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_3000050"><code class="curie">ARO:3000050</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C22H24N2O9</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>460.439 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>460.14818 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">IWVCMVBTMGNXQD-PXOLEDIWSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">[H][C@@]12[C@@H](O)[C@@]3([H])C(=C(O)[C@]1(O)C(=O)C(C(N)=O)=C(O)[C@H]2N(C)C)C(=O)c1c(O)cccc1[C@@]3(C)O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C22H24N2O9/c1-21(32)7-5-4-6-8(25)9(7)15(26)10-12(21)17(28)13-14(24(2)3)16(27)11(20(23)31)19(30)22(13,33)18(10)29/h4-6,12-14,17,25,27-29,32-33H,1-3H3,(H2,23,31)/t12-,13-,14+,17+,21-,22+/m1/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -57,7 +71,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000668">ARO:3000668</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3000668">oxytetracycline</a><code class="curie">ARO:3000668</code></li>
   <li>beilstein:2686362</li>
   <li><a href="https://sitem.herts.ac.uk/aeru/bpdb/Reports/503.htm">bpdb:503</a></li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=79-57-2">cas:79-57-2</a></li>
@@ -92,13 +106,14 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_36047">CHEBI:36047</a>    <code class="curie">CHEBI:36047</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
+  <li>antibacterial drug  <a href="http://purl.obolibrary.org/obo/CHEBI_36047"><code class="curie">CHEBI:36047</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -118,13 +133,15 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>antibiotic sensitive 16S rRNA <span class="pill plain">NUCLEIC_ACID</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000755">ARO:3000755</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. 16S rRNA is asserted as the target. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000755</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000755">ARO:3000755</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
@@ -135,12 +152,12 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">29 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">29 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">14</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_INACTIVATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -149,7 +166,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004613</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004613">ARO:3004613</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -159,7 +176,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004581</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004581">ARO:3004581</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -169,7 +186,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004582</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004582">ARO:3004582</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -179,7 +196,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004584</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004584">ARO:3004584</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -189,7 +206,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004586</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004586">ARO:3004586</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -199,7 +216,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004587</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004587">ARO:3004587</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -209,7 +226,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004589</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004589">ARO:3004589</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -219,7 +236,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004590</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004590">ARO:3004590</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -229,7 +246,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004591</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004591">ARO:3004591</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -239,7 +256,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004603</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004603">ARO:3004603</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -249,7 +266,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000205</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000205">ARO:3000205</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -259,7 +276,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005166</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005166">ARO:3005166</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -269,7 +286,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005057</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005057">ARO:3005057</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -279,15 +296,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3005056</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005056">ARO:3005056</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_TARGET_PROTECTION <span class="pill plain">11</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_PROTECTION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_PROTECTION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -296,7 +316,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3002891</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3002891">ARO:3002891</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -306,7 +326,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000196</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000196">ARO:3000196</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -316,7 +336,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000197</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000197">ARO:3000197</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -326,7 +346,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000556</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000556">ARO:3000556</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -336,7 +356,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000186</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000186">ARO:3000186</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -346,7 +366,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000190</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000190">ARO:3000190</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -356,7 +376,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000191</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000191">ARO:3000191</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -366,7 +386,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000192</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000192">ARO:3000192</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -376,7 +396,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000193</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000193">ARO:3000193</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -386,7 +406,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000194</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000194">ARO:3000194</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -396,15 +416,18 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3000195</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000195">ARO:3000195</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 <details class="details-group">
   <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">4</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_EFFLUX</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -413,7 +436,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004639</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004639">ARO:3004639</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -423,7 +446,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003969</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003969">ARO:3003969</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -433,7 +456,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003745</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003745">ARO:3003745</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -443,11 +466,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004441</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004441">ARO:3004441</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -488,26 +513,36 @@ type — expand a group to see its determinants.</p>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/oxytetracycline.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/oxytetracycline.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=oxytetracycline">MediaIngredientMech (oxytetracycline)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=oxytetracycline">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=oxytetracycline">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=oxytetracycline">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=oxytetracycline">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

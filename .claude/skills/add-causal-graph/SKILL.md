@@ -86,8 +86,10 @@ Build the graph around source-backed steps:
 
 - Start with a `COMPOUND` node grounded to the record identifier when possible.
 - Model a protein target as a family, function or complex. A UniProt accession
-  is an organism-specific example; keep it under `MolecularTarget` or in
-  `xrefs`, not as the primary `grounding`.
+  is an organism-specific example; attach it via `protein_examples`
+  (`ProteinExample`) on the `GENE_OR_PROTEIN` `CausalNode` and/or
+  `MolecularTarget` (see `add-uniprot-protein-examples`), not as the primary
+  `grounding`.
 - Use `RNA`, `CHEMICAL`, `CELL_STRUCTURE`, `MOLECULAR_FUNCTION`,
   `BIOLOGICAL_PROCESS`, `TRANSPORT_PROCESS`, `STATE`, `QUALITY` and
   `PHENOTYPE` nodes for the downstream biology the source actually measured.

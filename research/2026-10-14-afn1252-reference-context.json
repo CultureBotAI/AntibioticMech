@@ -1,0 +1,403 @@
+{
+  "attribution": [
+    "UniProt Consortium, UniProtKB and UniProt Taxonomy (CC BY 4.0)",
+    "EMBL-EBI Europe PMC citation metadata and indexed abstracts, reference use only"
+  ],
+  "census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-afn1252/cohort.json",
+    "sha256": "9e711ff16957bfbc83d4d27550368154a5480fb9ed908f1574a3f4b79def627b"
+  },
+  "curation": {
+    "decision": "NO_BIOLOGICAL_WRITE_PRIMARY_RESULTS_AND_EXPERIMENTAL_IDENTITIES_UNRESOLVED",
+    "exact_resistance_allele_assignment": false,
+    "whole_record_primary_review": "OPEN"
+  },
+  "date": "2026-10-14",
+  "discovery": {
+    "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+    "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+  },
+  "identifier": "antibioticmech:curator-8edc5e6516",
+  "limitations": [
+    "Both primary papers are publisher-access-held; abstracts and locator pages are not primary Results review.",
+    "The two reference strains are not selected as tested resistant subjects; reviewed UniProt status is annotation status.",
+    "Citation-query zero hits do not establish protein absence. Gene/species candidates do not establish exact alleles.",
+    "Neither a clinical isolate's resistance to another drug nor an annotation for another inhibitor proves AFN-1252 resistance.",
+    "Exact experimental chemical form, variant/subject joins, figures and supplements remain unresolved.",
+    "No sequence, operational variant details, constructs, protocols or numerical susceptibility values are exported."
+  ],
+  "limits": {
+    "biological_record_changes": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "native_http_attempts": 8,
+    "native_http_status_counts": {
+      "200": 5,
+      "302": 1,
+      "403": 2
+    },
+    "ncbi_requests": 0,
+    "new_taxonomy_requests": 0,
+    "outreach": 0,
+    "primary_results_reviews": 0,
+    "reuse_terms_review_resumed": false,
+    "reused_taxonomy_responses": 3,
+    "source_adoptions": 0,
+    "whole_record_signoffs": 0
+  },
+  "papers": {
+    "22948878": {
+      "abstract_sha256": "2f5349e7e921ae9be1294ae527d2b0b3111a943db13a324b3afbf0c2e044ddb1",
+      "doi": "DOI:10.1128/aac.01411-12",
+      "evidence_scope": "INDEXED_ABSTRACT_ONLY_NOT_PRIMARY_RESULTS_REVIEW",
+      "exact_tested_chemical_structure_or_form_verified": false,
+      "experimental_allele_strain_or_genome_assignment": null,
+      "primary_access_status": "PUBLISHER_HTTP_403_HOLD_NO_ALTERNATE_ROUTE_REQUESTED",
+      "primary_results_figures_supplements_reviewed": false,
+      "raw_abstract_variants_numeric_AST_or_protocols_exported": false,
+      "reference": "PMID:22948878",
+      "reported_context": "MODE_OF_ACTION_AND_ACTIVITY_ACROSS_CLINICAL_BACKGROUNDS",
+      "source_gene_label": "fabI",
+      "source_species_name": "Staphylococcus aureus",
+      "title": "Mode of action, in vitro activity, and in vivo efficacy of AFN-1252, a selective antistaphylococcal FabI inhibitor."
+    },
+    "24189061": {
+      "abstract_sha256": "46c2e46cce19be0caba2b4800e47d305c55ec9fbe9d403d94f1605464d9b6bc6",
+      "doi": "DOI:10.1074/jbc.m113.512905",
+      "evidence_scope": "INDEXED_ABSTRACT_ONLY_NOT_PRIMARY_RESULTS_REVIEW",
+      "exact_tested_chemical_structure_or_form_verified": false,
+      "experimental_allele_strain_or_genome_assignment": null,
+      "primary_access_status": "PUBLISHER_HTTP_403_HOLD_NO_ALTERNATE_ROUTE_REQUESTED",
+      "primary_results_figures_supplements_reviewed": false,
+      "raw_abstract_variants_numeric_AST_or_protocols_exported": false,
+      "reference": "PMID:24189061",
+      "reported_context": "TARGET_ALTERATION_AND_BACKGROUND_DEPENDENT_RESPONSES",
+      "source_gene_label": "fabI",
+      "source_species_name": "Staphylococcus aureus",
+      "title": "Resistance to AFN-1252 arises from missense mutations in Staphylococcus aureus enoyl-acyl carrier protein reductase (FabI)."
+    }
+  },
+  "publisher_chain_2013": {
+    "doi_resolution": "HTTP_302_INSPECTED_NO_AUTOMATIC_REDIRECT",
+    "journal_response": "HTTP_403_ACCESS_HOLD",
+    "primary_full_text_obtained": false,
+    "publisher_locator": "HTTP_200_LOCATOR_NOT_PRIMARY_ARTICLE"
+  },
+  "record": {
+    "path": "data/antibiotics/antibacterial/afn-1252.yaml",
+    "sha256": "a8a0801f12c3b7cb4de8e649746e22b42563182db24e939461c5885f75943efb"
+  },
+  "reference_proteins": {
+    "Q2FZQ3": {
+      "compound_specific_resistance_verified": false,
+      "database_review_status_is_primary_results_review": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 116,
+      "evidence_basis": "GENE_AND_SPECIES_NAME_REFERENCE_QUERY",
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": false,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "fabI"
+      ],
+      "ordered_locus_names": [
+        "SAOUHSC_00947"
+      ],
+      "other_drug_annotation_transferred": false,
+      "protein_accession": "UniProtKB:Q2FZQ3",
+      "protein_name": "Enoyl-[acyl-carrier-protein] reductase [NADPH] FabI",
+      "reference_gene": "fabI",
+      "reference_organism_name": "Staphylococcus aureus (strain NCTC 8325 / PS 47)",
+      "reference_species_taxon_id": "NCBITaxon:1280",
+      "reference_taxon_id": "NCBITaxon:93061",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Staphylococcus aureus (strain NCTC 8325 / PS 47)",
+      "selected_paper_bibliography_matches": [],
+      "sequence_version": 1,
+      "species_lineage_verified": true
+    },
+    "Q6GI75": {
+      "compound_specific_resistance_verified": false,
+      "database_review_status_is_primary_results_review": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 134,
+      "evidence_basis": "GENE_AND_SPECIES_NAME_REFERENCE_QUERY",
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": false,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "fabI"
+      ],
+      "ordered_locus_names": [
+        "SAR0978"
+      ],
+      "other_drug_annotation_transferred": false,
+      "protein_accession": "UniProtKB:Q6GI75",
+      "protein_name": "Enoyl-[acyl-carrier-protein] reductase [NADPH] FabI",
+      "reference_gene": "fabI",
+      "reference_organism_name": "Staphylococcus aureus (strain MRSA252)",
+      "reference_species_taxon_id": "NCBITaxon:1280",
+      "reference_taxon_id": "NCBITaxon:282458",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Staphylococcus aureus (strain MRSA252)",
+      "selected_paper_bibliography_matches": [],
+      "sequence_version": 1,
+      "species_lineage_verified": true
+    }
+  },
+  "reference_queries": {
+    "reference-2012": {
+      "accessions": [],
+      "complete": true,
+      "count": 0,
+      "experimental_identity_assignment": false,
+      "query": "lit_pubmed:22948878",
+      "release": "2026_03",
+      "zero_hits_are_protein_absence": false
+    },
+    "reference-2013": {
+      "accessions": [],
+      "complete": true,
+      "count": 0,
+      "experimental_identity_assignment": false,
+      "query": "lit_pubmed:24189061",
+      "release": "2026_03",
+      "zero_hits_are_protein_absence": false
+    },
+    "reference-names": {
+      "accessions": [
+        "UniProtKB:Q2FZQ3",
+        "UniProtKB:Q6GI75"
+      ],
+      "complete": true,
+      "count": 2,
+      "experimental_identity_assignment": false,
+      "query": "gene_exact:fabI AND taxonomy_id:1280 AND reviewed:true",
+      "release": "2026_03",
+      "zero_hits_are_protein_absence": false
+    }
+  },
+  "reference_species": {
+    "experimental_subject_assignment": false,
+    "label": "Staphylococcus aureus",
+    "rank": "species",
+    "taxon_id": "NCBITaxon:1280"
+  },
+  "scope": "ACCESS_HELD_PRIMARY_LEADS_AND_REFERENCE_GENES_NOT_ALLELE_CURATION",
+  "sources": {
+    "article-2012": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/article-2012-attempt.json",
+        "sha256": "519403d0c19df1a09e1c132fa5867079e347095ab67c1dbb6aa3df3ecbcc7998"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/article-2012-response.bin",
+        "sha256": "0b55ae963290c30e1dfa8a4f8a0dd0293ac57a8a064d514a188cfeca54aae8bd"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/second-primary-plan.json",
+        "sha256": "6711927dc99cad8b8263a4394b33c86017284b2eedb1660cad486d4c988d69a7"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/article-2012-receipt.json",
+        "sha256": "7edccc239f5d9fd235945edce46249a87160a5d5f650d5ed04ecc012d1168609"
+      },
+      "retrieved_at": "2026-10-14T23:48:51.312418+00:00",
+      "status": 403,
+      "url": "https://journals.asm.org/doi/10.1128/AAC.01411-12"
+    },
+    "doi-2013": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/doi-2013-attempt.json",
+        "sha256": "c06f5efd01d5cbf2cb8e6f57c5cf57bb4cb6ce0b454108232a4d7e509b1d607b"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/doi-2013-response.bin",
+        "sha256": "90dbebb4d5428de36089ca1ac2a41b1d50ad4fee93a4fa9f6866698e8043977a"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/request-plan.json",
+        "sha256": "de47dd6dc04ae971253484730b6873294cf3aadca0a5caa041dc40d3d91d4fe9"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/doi-2013-receipt.json",
+        "sha256": "da426a3625a05efd62bc4939aa6659a6ae37003dbdd1fb41d93f4e68a7488589"
+      },
+      "retrieved_at": "2026-10-14T23:45:54.144186+00:00",
+      "status": 302,
+      "url": "https://doi.org/10.1074/jbc.M113.512905"
+    },
+    "journal-2013": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/journal-2013-attempt.json",
+        "sha256": "e1f002a2e575f2811d52e6c003489071e5c93de87dfa5f019c00edc9d69ffa8b"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/journal-2013-response.bin",
+        "sha256": "7156abb086dc627041e93276f95441ab6cca316001a9034e304e554885f72eff"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/journal-plan.json",
+        "sha256": "30795ff78a022dcc957bc96740a7ce264cd51904b3d573ed6cfb8abf4f89e99d"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/journal-2013-receipt.json",
+        "sha256": "1a3a8aac1f4fb963591dc2b0b938bff229622a6e1a6026abf1ea9f80f91fa8bf"
+      },
+      "retrieved_at": "2026-10-14T23:47:53.986881+00:00",
+      "status": 403,
+      "url": "https://jbc.org/retrieve/pii/S0021925820553234"
+    },
+    "metadata-papers": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/metadata-papers-attempt.json",
+        "sha256": "04514d47f6ee53c57c97db657a26feaaa247ed6b6e828644969c7311c7fd26f1"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/metadata-papers-response.bin",
+        "sha256": "f31161a864b87741468220ce789b66915988614b83ff15048aee5ff42b508abe"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/metadata-plan.json",
+        "sha256": "582dbb3aeddf5aa309d6f059731c1c2c7a945c332d5c7c01011a18345d3ef838"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/metadata-papers-receipt.json",
+        "sha256": "40185644cc52828af9d1513ae532b384092ab00f8f480b22a4c9baee1597cbed"
+      },
+      "retrieved_at": "2026-10-14T23:49:38.988619+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A24189061+OR+EXT_ID%3A22948878%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=2"
+    },
+    "publisher-2013": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/publisher-2013-attempt.json",
+        "sha256": "75523ce2ee461071f0e452ee243d61a91957f787c0b3fcb0b07e6923ef26dbe1"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/publisher-2013-response.bin",
+        "sha256": "919f117ad1122aeabe5a16a0c38de7345c8559a32b9090a300dd35cc547e96a8"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/publisher-plan.json",
+        "sha256": "9674159688e068af52d39fefa6d1c8a02faf844d68a2b3e4cbb4852ba91ed39a"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/publisher-2013-receipt.json",
+        "sha256": "47377d38adbd403f0950be7f7d32793a4e952eb3f246735d2dc3bb636d6040ad"
+      },
+      "retrieved_at": "2026-10-14T23:47:04.482257+00:00",
+      "status": 200,
+      "url": "https://linkinghub.elsevier.com/retrieve/pii/S0021925820553234"
+    },
+    "reference-2012": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/reference-2012-attempt.json",
+        "sha256": "bb225a14221ba0a4d7f1bd6e52a9b302bae52287899176298c1d74f18ce8e28a"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/reference-2012-response.bin",
+        "sha256": "eaec604a130809599ebba45fb0c45ca956d0b9ec99e696d9b4177be9e8de120a"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/reference-followup-plan.json",
+        "sha256": "0ebc9e5f203e7786148afb445f9ac92bf42abc86e1540093738dcf347b31bdb2"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/reference-2012-receipt.json",
+        "sha256": "8a8e0b4921ae44dbc50701e2e782110fcadab558576d6148e04ed874dc611d4d"
+      },
+      "retrieved_at": "2026-10-14T23:47:12.666800+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A22948878&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "reference-2013": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/reference-2013-attempt.json",
+        "sha256": "6a3375447de7170e555f180c1eb8a1cb465016b39f28a0226f7d229bd76b91e8"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/reference-2013-response.bin",
+        "sha256": "f3476a099d882688e695b965e3fb7526e4e7d64803bbeb73358ce815ea8f6b9d"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/reference-plan.json",
+        "sha256": "2bf4e73bbf924656b3bef0b888358607045051f67cb12501f164069ee617147b"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/reference-2013-receipt.json",
+        "sha256": "9655f8d48b129dcd956fcd8d1ee09ceb183e96e9634ac758ebe0577e6aab3691"
+      },
+      "retrieved_at": "2026-10-14T23:46:10.856404+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A24189061&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "reference-names": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/reference-names-attempt.json",
+        "sha256": "fbfdf054ec1ee5e7c7c69316e3271f86b21fb2600991a86b53b726c168f87ffd"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/reference-names-response.bin",
+        "sha256": "77388a9cbf4b6adebc3f0430d486e1a242daac194e30f915037e3c085be98168"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/named-reference-plan.json",
+        "sha256": "5425b71dc89a107f92d00ae6447ffe35a1bd00878c32f5698582a82b5b1dbcad"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-afn1252/reference-names-receipt.json",
+        "sha256": "fcd4e502426b79ff3365689ee3a12421a449c76c79db2dd6e69a1bf8d22ff347"
+      },
+      "retrieved_at": "2026-10-14T23:48:45.029586+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AfabI+AND+taxonomy_id%3A1280+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "taxonomy-1280": {
+      "body": null,
+      "body_sha256": "faf940b385a99d02c1929991a8dd5cd3ba875441b30daf7d6b6504e8daef8cee",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-6b6dc1aedebe915f5253b6121f26cf47def70642fbc6e6582930b31c43b5c0ae.json",
+        "sha256": "22a736d90148316ffa903792eae95b75f73960386ba10dddff004d40e8226c10"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T03:04:45.017499+00:00",
+      "url": "https://rest.uniprot.org/taxonomy/1280"
+    },
+    "taxonomy-282458": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/reference-tax-282458-response.bin",
+        "sha256": "9ab7994d2beb32399288ad1b16276228bd7ccf1588a8adde1aeb908c0cc9358a"
+      },
+      "body_sha256": "9ab7994d2beb32399288ad1b16276228bd7ccf1588a8adde1aeb908c0cc9358a",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/reference-tax-282458-receipt.json",
+        "sha256": "a770a0a9d6cad13bca8ccb55c2bbea58400eb3d48852f85ec6bf9a6dfb3565e5"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-10T04:04:59.947520+00:00",
+      "url": "https://rest.uniprot.org/taxonomy/282458"
+    },
+    "taxonomy-93061": {
+      "body": null,
+      "body_sha256": "9a0c30ec2d281383ba20a39bd401a267cdffef47b836f63ca280b5d150339a53",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-ac7bffd022bf2d518afe2298cf220826a913d819b6119fd5d0956b4b7828f7b3.json",
+        "sha256": "653b8cfd2313df6242222439dadeac588043c282a070a7cfdf2b2b03f72461f1"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T03:06:52.466406+00:00",
+      "url": "https://rest.uniprot.org/taxonomy/93061"
+    }
+  },
+  "standard_inchi_key": "QXTWSUQCXCWEHF-JXMROGBWSA-N",
+  "taxonomy_reuse": {
+    "path": "reports/resistance-grounding-2026-10-14-afn1252/taxonomy-reuse.json",
+    "sha256": "f1041a523201cbcb9e1d29b376ff0553d308263540ae670c098ae357fb2b9b35"
+  }
+}

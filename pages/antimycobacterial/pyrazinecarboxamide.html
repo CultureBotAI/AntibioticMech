@@ -7,7 +7,7 @@
 <meta name="description" content="pyrazinecarboxamide (CHEBI:45285): A monocarboxylic acid amide resulting from the formal condensation of the carboxy group of pyrazinoic acid (pyrazine-2-carboxylic acid) with ammonia. A prodrug for pyrazinoic acid, pyrazinecarboxamide is used as part of multidrug regimens for the treatment of tuberculosis.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antimycobacterial.html">ANTIMYCOBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>pyrazinecarboxamide</h1>
 <p class="meta">
   <code class="curie">CHEBI:45285</code>
@@ -37,18 +48,21 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3007155">pyrazine antibiotic</a><code class="curie">ARO:3007155</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_29347">CHEBI:29347</a>      <code class="curie">CHEBI:29347</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_38314">CHEBI:38314</a>      <code class="curie">CHEBI:38314</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_83628">CHEBI:83628</a>      <code class="curie">CHEBI:83628</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3007155">ARO:3007155</a>      <code class="curie">ARO:3007155</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_29347"><code class="curie">CHEBI:29347</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_38314"><code class="curie">CHEBI:38314</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_83628"><code class="curie">CHEBI:83628</code></a></li>
+  <li>pyrazine antibiotic  <a href="http://purl.obolibrary.org/obo/ARO_3007155"><code class="curie">ARO:3007155</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C5H5N3O</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>123.115 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>123.04326 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">IPEHBUMCGVEMRF-UHFFFAOYSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">NC(=O)c1cnccn1</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C5H5N3O/c6-5(9)4-3-7-1-2-8-4/h1-3H,(H2,6,9)</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -59,7 +73,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3003413">ARO:3003413</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3003413">pyrazinamide</a><code class="curie">ARO:3003413</code></li>
   <li>beilstein:112306</li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=98-96-4">cas:98-96-4</a></li>
   <li>gmelin:279021</li>
@@ -93,12 +107,13 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33231">CHEBI:33231</a>    <code class="curie">CHEBI:33231</code></li>
+  <li>antitubercular agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33231"><code class="curie">CHEBI:33231</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -118,20 +133,891 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
 <dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
+<h2 id="activity">Activity spectrum</h2>
+<p class="meta">Measured or curated activity against specific taxa. A number
+without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">57 observations &middot; <a href="pyrazinecarboxamide/activity-1.html">Browse all observations</a> &middot; <a href="pyrazinecarboxamide/record-06d292fb9681da806aac71398b4586c3eda27a9a945d349e93d0dd22dbd6b762.json.gz" download>Complete record (JSON.gz)</a></p>
+<div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
+<table>
+  <caption>Activity observations</caption>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">INTERMEDIATE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A473ae03c6a95eb02">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-2">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A6e8f1193639c5e3d">168 source isolates</a><br>168 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-3">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A7dfd655a1a4ca6a0">410 source isolates</a><br>410 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="2" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-4">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A5a87a1fd6dfba203">88 source isolates</a><br>88 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="3" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-5">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ab0539131e5a2c819">320 source isolates</a><br>320 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="4" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-6">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">INTERMEDIATE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A4f7e1c8a36a07d87">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="5" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-7">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Abe63acf3a799315e">357 source isolates</a><br>357 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="6" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-8">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Afb6ae8fb0df78f96">466 source isolates</a><br>466 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="7" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-9">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">INTERMEDIATE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A8b8c2f9b3d74d74b">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="8" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-10">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A4a0c5e76579e0ef9">44 source isolates</a><br>44 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="9" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-11">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A6335d82aed14cb3a">60 source isolates</a><br>60 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="10" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-12">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A36c9177b34a18f2f">3 source isolates</a><br>3 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="11" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-13">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ab26d8580d252699e">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="12" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-14">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">INTERMEDIATE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aa9b88f9e381629e7">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="13" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-15">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ac37a95ed16c6ad2d">196 source isolates</a><br>196 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="14" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-16">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A06008574cc594099">476 source isolates</a><br>476 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="15" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-17">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; KMMYKROBE2025; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A395fb45a2a1d569b">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="16" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-18">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; KMMYKROBE2025; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A33b743063780e363">8 source isolates</a><br>8 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="17" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-19">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; KMVALIDATION2025; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A75bf67e39e296c78">1470 source isolates</a><br>1470 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="18" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-20">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; KMVALIDATION2025; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Af44749e179adf391">4379 source isolates</a><br>4379 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="19" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-21">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; LID2015; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A9e2e57965f30c60a">187 source isolates</a><br>187 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="20" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-22">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; LID2015; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Af10bb9822ad82a0b">2697 source isolates</a><br>2697 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="21" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-23">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; LID2015; solid media; marks biphasic method; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A76578b99540acf02">52 source isolates</a><br>52 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="22" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-24">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; LID2015; solid media; marks biphasic method; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A57a4e832b4824e93">454 source isolates</a><br>454 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="23" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-25">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; liquid media; MGIT; MGIT960; critical concentration 100.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aee9d093d619c083c">692 source isolates</a><br>692 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="24" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-26">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; liquid media; MGIT; MGIT960; critical concentration 100.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae94f6ae9d20a38ce">5303 source isolates</a><br>5303 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="25" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-27">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A6751cf7d3d384247">20 source isolates</a><br>20 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="26" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-28">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A038a52b4fe0c2f82">152 source isolates</a><br>152 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="27" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-29">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; solid media; LJ; proportion method; critical concentration 100.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A91b6f8873520d8b8">145 source isolates</a><br>145 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="28" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-30">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; solid media; LJ; proportion method; critical concentration 100.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A8e6e9cad5013bf3a">258 source isolates</a><br>258 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="29" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-31">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; solid media; marks biphasic method</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aea68459b5435cc34">282 source isolates</a><br>282 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="30" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-32">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; NEJM2018; solid media; marks biphasic method</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A248eb475420cd315">942 source isolates</a><br>942 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="31" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-33">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; PHE2019; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A57d3372a57395ba3">152 source isolates</a><br>152 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="32" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-34">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; PHE2019; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A3ccdfd335efe675e">1405 source isolates</a><br>1405 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="33" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-35">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; PHE2019; solid media; marks biphasic method; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ab71b2d1271820f60">115 source isolates</a><br>115 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="34" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-36">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; PHE2019; solid media; marks biphasic method; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Abffa99add84e7b20">2540 source isolates</a><br>2540 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="35" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-37">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; BACTEC460; critical concentration 100.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A4a20e56ebf8a98c2">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="36" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-38">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; BACTEC460; critical concentration 100.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A7ccfd39d57d874d3">68 source isolates</a><br>68 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="37" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-39">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration 100.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A2a1413499da99515">221 source isolates</a><br>221 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="38" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-40">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration 100.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A6fa4cfc884263f5b">2606 source isolates</a><br>2606 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="39" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-41">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration 100.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A4793212e3df193a6">19 source isolates</a><br>19 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="40" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-42">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ab2e2e0fef06e4ca8">146 source isolates</a><br>146 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="41" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-43">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A8ca8ef569db77b20">356 source isolates</a><br>356 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="42" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-44">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A4830643c77aa9126">254 source isolates</a><br>254 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="43" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-45">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ae26189d4b3cddce0">676 source isolates</a><br>676 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="44" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-46">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aa630f3406aef12ef">733 source isolates</a><br>733 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="45" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-47">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; liquid media; MGIT; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A7b167d2950c4fcfd">71 source isolates</a><br>71 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="46" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-48">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Af07860cecc5ad356">10 source isolates</a><br>10 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="47" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-49">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A327b9e0b4694f500">479 source isolates</a><br>479 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="48" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-50">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ade724738d1a7e469">71 source isolates</a><br>71 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="49" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-51">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; LJ; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ab81257feaa975ecd">51 source isolates</a><br>51 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="50" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-52">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; LJ; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A1cecc0faaab8e4ff">70 source isolates</a><br>70 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="51" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-53">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td>—</td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; SEQTREAT2020; solid media; LJ; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Afdd393176ae3cdbb">57 source isolates</a><br>57 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="52" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-54">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; WHO2019; liquid media; MGIT; MGIT960; critical concentration 100.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A210adb158687041b">70 source isolates</a><br>70 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="53" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-55">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; WHO2019; liquid media; MGIT; MGIT960; critical concentration 100.0 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aae23517ef01e0316">104 source isolates</a><br>104 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="54" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-56">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; WHO2019; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A9887f7a75d563bbd">317 source isolates</a><br>317 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="55" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-57">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; WHO2019; liquid media; MGIT; MGIT960; critical concentration WHO mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="pyrazinecarboxamide/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ad7664fe5e84de61b">618 source isolates</a><br>618 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="56" data-offset="0" data-total="57" data-identifier="CHEBI:45285" data-key="IPEHBUMCGVEMRF-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="pyrazinecarboxamide/activity-1-e7a7b46eb51e5014932cce7d65b2e2ed6d64ea3355aec7dc5d517c5e9353c5fe.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  </tbody>
+</table>
+
+</div>
+
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">12 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">12 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">12</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -140,7 +1026,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004981</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004981">ARO:3004981</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -150,7 +1036,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007186</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007186">ARO:3007186</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -160,7 +1046,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004984</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004984">ARO:3004984</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -170,7 +1056,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004987</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004987">ARO:3004987</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -180,7 +1066,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004993</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004993">ARO:3004993</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -190,7 +1076,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004957</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004957">ARO:3004957</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -200,7 +1086,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004977</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004977">ARO:3004977</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -210,7 +1096,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004978</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004978">ARO:3004978</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -220,7 +1106,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3003394</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003394">ARO:3003394</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -230,7 +1116,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004975</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004975">ARO:3004975</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -240,7 +1126,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004976</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004976">ARO:3004976</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -250,11 +1136,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3004721</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3004721">ARO:3004721</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -294,32 +1182,52 @@ type — expand a group to see its determinants.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-26 · seed_from_sources</span>
+    <p>Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-10-05 · seed_from_sources</span>
+    <p>Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antimycobacterial/pyrazinecarboxamide.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antimycobacterial/pyrazinecarboxamide.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=pyrazinecarboxamide">MediaIngredientMech (pyrazinecarboxamide)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=pyrazinecarboxamide">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=pyrazinecarboxamide">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=pyrazinecarboxamide">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=pyrazinecarboxamide">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

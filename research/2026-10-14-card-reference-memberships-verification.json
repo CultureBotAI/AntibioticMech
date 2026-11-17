@@ -1,0 +1,196 @@
+{
+  "baseline_commit": "ce909b1d8034970defb6c421db3de54b1fcccf00",
+  "branch": "research/card-reference-memberships",
+  "code": [
+    {
+      "path": "scripts/audit_card_reference_memberships.py",
+      "sha256": "a247908f66360b08d8a1e8bd400b71ce30f5ecf95b81fe92d29057e4186be81d"
+    },
+    {
+      "path": "tests/test_card_reference_memberships.py",
+      "sha256": "7e03d3d4c50c25f57bfc038ea1ec648a0e92e7bbcbb9f9b29918d8bdfc3c3cb9"
+    }
+  ],
+  "date": "2026-10-14",
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-14-antiviral-taxa-resistance-grounding.tsv",
+      "sha256": "b15465f26802dae7fc099e52d3dc4898cd6397fd2bc37f4055443d2e40fe2935"
+    },
+    "direct": {
+      "path": "research/2026-10-14-card-reference-lineages.json",
+      "sha256": "55126bbdd99d5baf328a23dfd849d8db1365bab5fd24100e345f01c1fcb79d01"
+    },
+    "direct_candidates": {
+      "path": "research/2026-10-07-card-reference-grounding.json",
+      "sha256": "bf01b0fef65240d2d1daf8298398ae171194420c0093a7aad2c9ba318b9b5961"
+    },
+    "direct_contexts": {
+      "path": "research/2026-10-09-card-citation-context.json",
+      "sha256": "2bf1c102685080c1a130af31be4cf9a8c9d81c64bf7b2774bf9fd0afa19bd07e"
+    },
+    "ledger": {
+      "path": "research/2026-10-07-card-reference-ledger.tsv",
+      "sha256": "5b0e0fb215fd4113e3ceb5507d008b792c63c9e4eaf28cec1be2148919491356"
+    },
+    "literature": {
+      "path": "research/2026-10-13-card-study-context.json",
+      "sha256": "f2b79c4a82a3661bc2884266e01a679ded36f712e920d218ba4ad2dfb0ad84c3"
+    },
+    "named_taxa": {
+      "path": "research/2026-10-09-card-named-taxa.json",
+      "sha256": "9aec094dbd14d5e6b913477e1bee57acec8c5b5fd672c16dde5a513a282e2b91"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    },
+    "species_successor": {
+      "path": "research/2026-10-14-card-species-nodes.json",
+      "sha256": "cec4cf0881452bd79928ad159074efcb3e230ec4652243affdb63278d04ef3c7"
+    },
+    "term_scope": {
+      "path": "research/2026-10-09-card-term-scope.json",
+      "sha256": "4de3f3c046e5f6822d0ed738906baf20089c712edaf493e32fff5551af040acd"
+    }
+  },
+  "limits": {
+    "biological_record_changes": 0,
+    "experimental_allele_or_genome_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "network_requests": 0,
+    "new_scientific_findings_curated": 0,
+    "publication": "LOCAL_UNCOMMITTED_RESEARCH_CHECKPOINT",
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "outputs": [
+    {
+      "path": "research/2026-10-14-card-reference-memberships.json",
+      "sha256": "dd3bf943d428437daaae399f36d583eac9a51aee087cc5ac3a30a0d41bf43761"
+    },
+    {
+      "path": "research/2026-10-14-card-reference-memberships.tsv",
+      "sha256": "7a545e7d76ec1d01f86fd794dae6d63a7a8f779d81d8d5891e3373e2b2722d8e"
+    }
+  ],
+  "plan": {
+    "path": "research/2026-10-14-card-reference-memberships-plan.json",
+    "sha256": "237da6f3ad3982b7acfc0c0cdb5c1cf3580067b53deb01d4875b955d0b1bbe82"
+  },
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-card-reference-memberships/protected-before.json",
+      "sha256": "fefa917815270bd4453ca78c72ddfe051375099d548a430b6e96243c73dedf7a"
+    },
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "embedding_files_unchanged": 6,
+    "new_or_changed_files_in_data_src_curation_pages": 0,
+    "page_files_unchanged": 3353,
+    "protected_files": 7531,
+    "record_yaml_hashes_unchanged": 2939,
+    "source_inventory_and_queue_pins_unchanged": true,
+    "unchanged_protected_files": 7530
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "adde508a5f6509724b539b83783ba33ee3bf242a91eb050f2a326e0117ad7e53"
+  },
+  "review": {
+    "resolved": [
+      "Earlier candidate schema omits a redundant identity flag; required experimental flags remain false.",
+      "Shared accession identity cannot transfer a direct CARD cross-reference to a citation-only term.",
+      "Frozen public replay reads neither mutable live records nor optional native caches.",
+      "Strict CLI replay checks all live record hashes, source memberships and claim multiplicities.",
+      "Source provenance, release, lineage and citation drift fail before loading the live corpus."
+    ],
+    "reviewer_scope": "SAME_AGENT_ADVERSARIAL_PASS_NOT_INDEPENDENT_SCIENTIFIC_SIGNOFF",
+    "scientific_limitations": [
+      "These are two dated reference cohorts, not all scientific groundings or primary reviews.",
+      "A protein shared across cohorts does not transfer its CARD cross-reference to another term.",
+      "No candidate in these cohorts is not protein absence, resistance absence or an unsearched gene.",
+      "RNA ancestry, the protein-definition conflict, clusters and complexes need separate review.",
+      "Manual follow-ups, named-organism references, curated claims, PHI-base and HIVDB remain separate.",
+      "Species evidence describes database references, not resistant subjects or whole species.",
+      "No gene/allele values, sequences, protocols, new AST or strain annotations are exported here."
+    ]
+  },
+  "scope": "OFFLINE_TWO_COHORT_REFERENCE_MEMBERSHIP_RECONCILIATION_NOT_PRIMARY_SIGNOFF",
+  "summary": {
+    "accessions_shared_between_cohorts": 9,
+    "card_assertions": 4538,
+    "card_terms": 2002,
+    "claim_statuses": {
+      "CITATION_AND_LITERAL_GENE_CANDIDATE_ONLY": 131,
+      "EXPLICIT_CARD_XREF_REFERENCE_ONLY": 2549,
+      "NO_CANDIDATE_IN_THE_TWO_SELECTED_COHORTS": 1858
+    },
+    "corpus_records": 2939,
+    "other_source_claims_not_reassessed": 348,
+    "records_with_selected_references": 173,
+    "records_without_card_assertions": 2666,
+    "reference_links": 1056,
+    "score_rules_not_reassessed": 467,
+    "selected_reference_proteins": 1046,
+    "selected_reference_terms": 1027,
+    "term_statuses": {
+      "CITATION_AND_LITERAL_GENE_CANDIDATE_ONLY": 49,
+      "EXPLICIT_CARD_XREF_REFERENCE_ONLY": 978,
+      "NO_CANDIDATE_IN_THE_TWO_SELECTED_COHORTS": 975
+    },
+    "whole_record_primary_signoffs": 0
+  },
+  "verification": {
+    "focused_tests_passed": 422,
+    "focused_tests_skipped": 0,
+    "full_qc": "NOT_RERUN_RESEARCH_ONLY_INDEX_NO_BIOLOGICAL_OR_RUNTIME_MODEL_CHANGE",
+    "git_diff_check_exit_code": 0,
+    "lint_log": {
+      "path": "reports/resistance-grounding-2026-10-14-card-reference-memberships/lint.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "live_check": {
+      "command": "PYTHONPATH=src:scripts .venv/bin/python scripts/audit_card_reference_memberships.py --check",
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-14-card-reference-memberships/live-check.log",
+        "sha256": "4510f3488e3dff0cfcd00284e58bc0da2a6d551f72d6298c231d421a70b9c50e"
+      },
+      "network_disabled": true
+    },
+    "run_result": {
+      "path": "reports/resistance-grounding-2026-10-14-card-reference-memberships/check-results.json",
+      "sha256": "3f18d301fd824cc61c92ca346d1d0b09f293a3464265cd3ea022901f1b8fcae0"
+    },
+    "test_files": [
+      "tests/test_card_reference_memberships.py",
+      "tests/test_card_reference_lineages.py",
+      "tests/test_card_species_nodes.py",
+      "tests/test_card_study_context.py",
+      "tests/test_card_literature_proteins.py",
+      "tests/test_card_literature_expansion.py",
+      "tests/test_card_named_taxa.py",
+      "tests/test_card_term_scope.py",
+      "tests/test_card_citation_context_export.py",
+      "tests/test_curator_resistance_fields.py",
+      "tests/test_resistance_checkpoint_records.py",
+      "tests/test_resistance_progress.py"
+    ],
+    "tests_log": {
+      "path": "reports/resistance-grounding-2026-10-14-card-reference-memberships/focused-tests.log",
+      "sha256": "af3ee4ec19bd18746add631f0d7310ec3b34539f7d47b18e7a4f01647ff18420"
+    }
+  },
+  "verified_at": "2026-10-14T13:04:35.756080+00:00"
+}

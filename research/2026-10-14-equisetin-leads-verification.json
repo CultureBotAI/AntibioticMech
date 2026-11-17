@@ -1,0 +1,165 @@
+{
+  "abstract_species_taxon_id": "NCBITaxon:1351",
+  "automatic_redirects": 0,
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "biological_record_hash_drift": 0,
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/cohort.json",
+    "sha256": "f48c273bbc242761e0753150bf94e3088b363640295a483f1424f5b8fa235f91"
+  },
+  "commands_passed": [
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "check",
+      "."
+    ],
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "scripts/audit_equisetin_leads.py",
+      "tests/test_equisetin_leads.py"
+    ],
+    [
+      "git",
+      "diff",
+      "--check"
+    ]
+  ],
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-reference-citation-resistance-grounding.tsv",
+    "sha256": "5e37b4d2ee3a7bafab7d173896dcb084b0444e2f06c02f49542eda866109524a"
+  },
+  "date": "2026-10-14",
+  "discovery_status": {
+    "AGR_MED_same_title_records_merged_or_counted_as_replication": false,
+    "additional_primary_bibliography_leads": 1,
+    "initial_candidate_dispositions": {
+      "AGR:IND608566932": "INDEXED_HOST_METABOLISM_ABSTRACT_CROSSWALK_UNRESOLVED",
+      "MED:10934347": "UNASSESSED",
+      "MED:17707105": "UNASSESSED",
+      "MED:23715404": "ACCESS_HOLD_PRIMARY_RESULTS_UNREVIEWED",
+      "MED:26431450": "INDEXED_ANALOGUE_LIBRARY_ABSTRACT_PRIMARY_RESULTS_ACCESS_HELD",
+      "MED:34869220": "PRIOR_SCOPED_PRIMARY_TEXT_REVIEW",
+      "MED:38327434": "HOST_CONTEXT_NOT_ANTIMICROBIAL_RESISTANCE",
+      "MED:41317882": "INDEXED_ACTIVITY_ABSTRACT_PRIMARY_RESULTS_ACCESS_HELD"
+    },
+    "initial_candidate_identities": 8,
+    "initial_candidate_primary_access_holds": 3,
+    "initial_candidates_primary_results_unreviewed_including_held_and_abstract_only": 6,
+    "initial_candidates_without_followup_disposition": 2,
+    "new_primary_results_reviews": 0
+  },
+  "embedding_files_unchanged": true,
+  "embedding_refresh_required": false,
+  "experimental_strain_taxon_protein_and_genome_assignments": 0,
+  "figures_visually_reviewed": false,
+  "files": [
+    {
+      "path": "scripts/audit_equisetin_leads.py",
+      "sha256": "30fd83ec782ed9c6dbb776f9efa01b3c24e2877afadfaaa72ae5cc5bbeaa65de"
+    },
+    {
+      "path": "tests/test_equisetin_leads.py",
+      "sha256": "98634a9cdb25957f5311f3f32f8d6a11e18b667ad284c4167d9f2bee50dabd73"
+    },
+    {
+      "path": "research/2026-10-14-equisetin-leads-context.json",
+      "sha256": "4b8a75861a367d649d3b5f271e56156fa90c17498f5c53d60896e407a29a8f1f"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "c10e3580115dc0522f886fa54ac99babdce837a6db15408eaaf4f76873c3e17a"
+    },
+    {
+      "path": "/private/tmp/verify_equisetin_leads_20261014.py",
+      "sha256": "013f1dc39f0e9e1349534d93a5d24b5ebf057896e5b0d1df44f7066a5b48a840"
+    }
+  ],
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_rerun": false,
+  "full_qc_scope_note": "Research-only checks do not renew the earlier full-QC receipt.",
+  "github_mutations": 0,
+  "http_attempts": 9,
+  "http_status_counts": {
+    "200": 4,
+    "301": 1,
+    "302": 2,
+    "403": 2
+  },
+  "indexed_abstracts_reviewed": 3,
+  "issue_1040": "DEFERRED",
+  "locator_HTTP_200_is_primary_text": false,
+  "main_report_changes_are_exactly_the_new_section": true,
+  "manually_inspected_redirect_hops": 4,
+  "native_taxonomy_responses_reused": 1,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_primary_holds": {
+    "MED:26431450": "ACCESS_HOLD_HTTP_403",
+    "MED:41317882": "ACCESS_HOLD_HTTP_403"
+  },
+  "new_primary_results_reviews": 0,
+  "new_resistance_assertions": 0,
+  "new_uniprot_queries": 0,
+  "numeric_AST_or_variant_sequence_construct_or_protocol_exports": false,
+  "offline_plan_helper_smoke_test": {
+    "functions": [
+      "metadata_followup_plan",
+      "remaining_metadata_plan",
+      "html_plan"
+    ],
+    "helper": {
+      "path": "/private/tmp/research_equisetin_leads_20261014.py",
+      "sha256": "b9340f0ec1a09fdb60a67d0dfc7e12b2ff0872df6194b33c70e4cc47a207909c"
+    },
+    "original_cache_writes": 0,
+    "requests_blocked": true,
+    "status": "PASS"
+  },
+  "offline_replay": "PASS",
+  "planning_helper_block_placement_fixed_before_execution": true,
+  "prior_source_holds_preserved": true,
+  "prior_uncommitted_work_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/protected-before.json",
+    "sha256": "28acadc75831be4d98cc2ab89ae22356c2ba8758947df2d9f03809a74c1e06b1"
+  },
+  "protected_files_checked": 7596,
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "scope": "INDEXED_ABSTRACT_TRIAGE_NOT_PRIMARY_RESULTS_OR_RESISTANCE_CURATION",
+  "source_adoptions": 0,
+  "source_plans_or_receipts_rewritten": false,
+  "structured_research_exports_source_inputs_and_generated_pages_preserved": true,
+  "supplements_reviewed": false,
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 96,
+      "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/focused-tests.xml",
+      "sha256": "f6a50cde8c3a9f93d7ae9d33c5698b1d1eb34c08fa9bf4a29cb461c8b8c7f0bd",
+      "skipped": 0,
+      "tests": 96
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 667,
+      "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/expanded-tests.xml",
+      "sha256": "a530d1d545e3bb8712ea2b7f8ea460cea11cc1b9c7ca422ecc67c43e9225d2f4",
+      "skipped": 0,
+      "tests": 667
+    }
+  ],
+  "whole_record_primary_signoffs": 0
+}

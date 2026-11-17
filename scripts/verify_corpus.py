@@ -11,11 +11,14 @@ on disk.
     python scripts/verify_corpus.py --summary  # counts only
 
 Exit status is 1 on any drift. The seeded fields are the ones compared; curated
-fields a seeder never writes (causal_graphs, activity_spectrum, producer_organisms,
-clinical_status, discussions, datasets, curator evidence, and curation_history
-beyond the seed event) are deliberately NOT compared, so curation is possible
-without the check going permanently red. Those fields are covered by validation
-and by tests/test_corpus_integrity.py instead.
+fields a seeder never writes in full (causal_graphs, curator-owned
+activity_spectrum rows, curator-owned producer_organisms, curator-owned
+genotype_resistance_score_rules, clinical_status, discussions, datasets, curator
+evidence, and curation_history beyond the seed event) are deliberately NOT
+compared, so curation is possible without the check going permanently red. The
+source-owned slices of mixed fields are compared separately below.
+Curator-owned items are covered by validation and by tests/test_corpus_integrity.py
+instead.
 
 `mode_of_action` is NOT one of them. The seeder writes it from ChEBI's mechanism
 roles, and it IS compared — together with its notes — for as long as the notes
@@ -41,24 +44,34 @@ from seed_from_sources import (  # noqa: E402
     assign_slugs,
     attach_aro_mechanism,
     attach_bindingdb_targets,
+    attach_cryptic_activity,
+    attach_cryptic_memberships,
     attach_fda_clinical_status,
+    attach_hivdb_score_rules,
     attach_mibig_producers,
+    attach_ncbi_ast_activity,
     attach_phibase_resistance,
     bindingdb_sourced_target_view,
     build_concepts,
     card_sourced_view,
+    cryptic_membership_view,
+    cryptic_sourced_activity_view,
     curator_owns_mode_of_action,
     fda_sourced_clinical_view,
     flag_structure_collisions,
+    hivdb_sourced_score_rule_view,
     load_decisions,
     merge,
     mibig_sourced_producer_view,
+    ncbi_ast_sourced_activity_view,
     phibase_sourced_resistance_view,
     read_lockfile,
     record_path,
     seeded_mode_of_action,
     seeded_structural_view,
 )
+
+from antibioticmech.activity_collections import load_record  # noqa: E402
 
 # The seeded field list is imported from the seeder so there is one definition
 # of what it owns. `molecular_targets` and `resistance_mechanisms` are compared
@@ -70,7 +83,7 @@ from seed_from_sources import (  # noqa: E402
 CARD_FIELDS = ["molecular_targets", "resistance_mechanisms"]
 
 
-def rebuild() -> dict[str, dict]:
+def rebuild(*, ncbi_ast_inventory: Path | None = None) -> dict[str, dict]:
     conf = yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
     manifest = yaml.safe_load((RAW_DIR / "MANIFEST.yaml").read_text(encoding="utf-8"))
     concepts, chebi_rows = build_concepts(conf)
@@ -79,6 +92,10 @@ def rebuild() -> dict[str, dict]:
     attach_aro_mechanism(records, manifest.get("retrieved_on", ""))
     attach_phibase_resistance(records)
     attach_bindingdb_targets(records)
+    attach_cryptic_activity(records)
+    attach_cryptic_memberships(records)
+    attach_ncbi_ast_activity(records, inventory=ncbi_ast_inventory)
+    attach_hivdb_score_rules(records)
     attach_mibig_producers(
         records,
         str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
@@ -111,7 +128,7 @@ def main() -> int:
     for path, identifier in sorted(wanted.items(), key=lambda kv: str(kv[0])):
         if path not in on_disk:
             continue
-        actual = yaml.safe_load(path.read_text(encoding="utf-8"))
+        actual = load_record(path)
         want = expected[identifier]
         for field in SEEDED_FIELDS:
             if want.get(field) != actual.get(field):
@@ -123,6 +140,14 @@ def main() -> int:
             drifted.append((path, "resistance_mechanisms"))
         if bindingdb_sourced_target_view(want) != bindingdb_sourced_target_view(actual):
             drifted.append((path, "molecular_targets"))
+        if cryptic_sourced_activity_view(want) != cryptic_sourced_activity_view(actual):
+            drifted.append((path, "activity_spectrum"))
+        if cryptic_membership_view(want) != cryptic_membership_view(actual):
+            drifted.append((path, "activity_membership_collections"))
+        if ncbi_ast_sourced_activity_view(want) != ncbi_ast_sourced_activity_view(actual):
+            drifted.append((path, "activity_spectrum"))
+        if hivdb_sourced_score_rule_view(want) != hivdb_sourced_score_rule_view(actual):
+            drifted.append((path, "genotype_resistance_score_rules"))
         if mibig_sourced_producer_view(want) != mibig_sourced_producer_view(actual):
             drifted.append((path, "producer_organisms"))
         if fda_sourced_clinical_view(want) != fda_sourced_clinical_view(actual):

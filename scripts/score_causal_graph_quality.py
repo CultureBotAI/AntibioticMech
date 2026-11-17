@@ -5,12 +5,15 @@ from __future__ import annotations
 
 import argparse
 import csv
+import sys
 from pathlib import Path
 from typing import Any
 
-import yaml
-
 REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
+from antibioticmech.activity_collections import load_record  # noqa: E402
+
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 
 PRIMARY_REFERENCE_PREFIXES = ("DOI:", "PMID:")
@@ -48,7 +51,7 @@ TSV_FIELDS = [
 def load_records(corpus_dir: Path = CORPUS_DIR) -> list[tuple[Path, dict[str, Any]]]:
     """Load record YAMLs as ``(path, document)`` pairs."""
     return [
-        (path, yaml.safe_load(path.read_text(encoding="utf-8")))
+        (path, load_record(path))
         for path in sorted(corpus_dir.rglob("*.yaml"))
     ]
 

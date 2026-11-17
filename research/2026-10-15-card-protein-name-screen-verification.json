@@ -1,0 +1,134 @@
+{
+  "all_aliases_or_sources_searched": false,
+  "all_prior_biological_records_unchanged": true,
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-card-protein-name-screen/baseline.json",
+    "sha256": "918b78105feb574990fed882696b7b785a12e631c63131bcf112e87829e9d15f"
+  },
+  "biological_records_changed": 0,
+  "biological_writes": false,
+  "broad_index_updated": false,
+  "cache_free_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 38,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-card-protein-name-screen/cache-free-tests.xml",
+      "sha256": "008e5a8fcca3385fe3d08f45355ff17266e39b164de724fc721daa9e19565eb4"
+    },
+    "skip_details": [],
+    "skipped": 0,
+    "test_classes": [
+      "tests.test_card_protein_name_screen"
+    ]
+  },
+  "checks": {
+    "git_diff_check": true,
+    "ruff": true,
+    "ruff_format_new_python_files": true
+  },
+  "curated_ast_observations": 0,
+  "date": "2026-10-15",
+  "earlier_report_bytes_unchanged": true,
+  "experimental_assignments": false,
+  "files": [
+    {
+      "path": "research/2026-10-15-card-protein-name-screen-plan.json",
+      "sha256": "eca6ca45feb4fc78547a9647d3f31a2952e96837ab485569f7ac1a80140a5720"
+    },
+    {
+      "path": "research/2026-10-15-card-protein-name-screen.json",
+      "sha256": "9ea833b1d24f8c48189a374f13a549ccff6458185d77f782a86961aea15a8a51"
+    },
+    {
+      "path": "scripts/audit_card_protein_name_screen.py",
+      "sha256": "69a3d8e7e71b0afc945988ac4e1ba1bb6db035dc80b430cf58bd8dad5365f009"
+    },
+    {
+      "path": "tests/test_card_protein_name_screen.py",
+      "sha256": "d991845a55f76892497c49923299f5d749dba7ced7622116f2f696ad330f3b10"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "c1b9dbd3d5043dbae6b7838dc6cead8bac12b3aa457bf6ac2817b9b3d073ba2a"
+    }
+  ],
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_rerun": false,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "native_replay": {
+    "path": "reports/resistance-grounding-2026-10-15-card-protein-name-screen/native-replay.json",
+    "sha256": "efbf7e1a2b9d118c2a08c1bee5f02f31548523ce7317e574df7194d5ad321805"
+  },
+  "ncbi_requests": 0,
+  "network_requests": 0,
+  "new_primary_results_reviews": 0,
+  "outreach": 0,
+  "previous_research_checkpoints_unchanged": true,
+  "primary_access_holds_retried": 0,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-card-protein-name-screen/protected-before.json",
+    "sha256": "e2967d7dc6cdeeb181ec300d48d4f2220dce6a41065c4cfcf1d9fc943f1aa047"
+  },
+  "protected_files_checked": 7782,
+  "reuse_terms_review_resumed": false,
+  "review_points": [
+    "Scope filter now checks CARD ownership before ARO identity; curator claim sharing VanM term is excluded.",
+    "Protein full and short names are literal discovery leads, not aliases normalized into equivalence.",
+    "Whole-complex and multi-allele reference matches remain withheld; six remaining leads are pending.",
+    "Missing gene fields stay missing; strain parent and species ancestor remain distinct.",
+    "Native malformed DOI is retained as an anomaly without repair; primary results were not reviewed.",
+    "No-citation, DOI-only, empty-query and nonmatching-hit states are separate, not biological absence.",
+    "All 643 native query chains replay with consistent cross-query identities; public pins work without caches."
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+  "scope": "UNLINKED_CARD_LITERAL_PROTEIN_NAME_DISCOVERY_NOT_EXPERIMENTAL_GROUNDING",
+  "source_adoptions": 0,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "status": "VERIFIED_REFERENCE_DISCOVERY_CHECKPOINT",
+  "summary": {
+    "citation_query_entry_appearances": 6920,
+    "complete_cached_citation_queries": 643,
+    "complete_records_read": 203,
+    "corpus_records_hash_checked": 2939,
+    "distinct_citation_entries": 6881,
+    "matched_proteins": 8,
+    "matched_terms": 10,
+    "reference_taxa": 6,
+    "source_claims": 1277,
+    "source_terms": 720,
+    "term_statuses": {
+      "COMPLETE_PMID_QUERIES_EMPTY_NOT_BIOLOGICAL_ABSENCE": 360,
+      "NAME_CITATION_TAXON_REFERENCE_CANDIDATE_PRIMARY_REVIEW_PENDING": 6,
+      "NON_PMID_CITATIONS_NOT_QUERIED": 1,
+      "NO_DEFINITION_CITATIONS_NOT_QUERIED": 186,
+      "NO_LITERAL_PROTEIN_NAME_MATCH": 163,
+      "WITHHELD_COMPLEX_LABEL_MATCHES_ONLY_A_SUBUNIT_NAME": 1,
+      "WITHHELD_MULTIPLE_ALLELE_NAMES_SHARE_ONE_REFERENCE_ENTRY": 3
+    }
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 315,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-card-protein-name-screen/tests.xml",
+      "sha256": "ffcbc9dec24736cf10565fabf8da664dcfa4e7a7d37ca66180082a25fe5b1516"
+    },
+    "skip_details": [],
+    "skipped": 0,
+    "test_classes": [
+      "tests.test_aph_ant_aad_mph_gaps",
+      "tests.test_card_aph_memberships",
+      "tests.test_card_literature_expansion",
+      "tests.test_card_literature_proteins",
+      "tests.test_card_protein_name_screen",
+      "tests.test_card_reference_lineages",
+      "tests.test_curator_resistance_fields",
+      "tests.test_research_checkpoint_integrity"
+    ]
+  },
+  "verification_limit": "Reference discovery only, not whole-record primary signoff. Full QC not rerun: RDKit is absent from this virtualenv and the lockfile lacks an Intel macOS wheel for pinned 2026.3.5. Historical CI does not verify these local changes.",
+  "whole_record_primary_signoffs": 0
+}

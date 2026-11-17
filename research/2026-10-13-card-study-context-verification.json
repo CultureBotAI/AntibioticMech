@@ -1,0 +1,172 @@
+{
+  "adversarial_self_review": [
+    "Reference roles and strain annotations remain bound to exact citation numbers.",
+    "A candidate must occur in every cited query used to support its match, not merely another cached query.",
+    "Multiple and slash-separated strain labels are not merged, split or made into tested-strain assignments.",
+    "Species lineage is reference context; original taxonomy ranks remain intact.",
+    "Susceptibility-related titles are review flags, not verified experimental phenotypes.",
+    "Function and sequencing annotations are not primary experimental signoff.",
+    "The independent 1997 Bmr request returned 403; no alternate route was used.",
+    "Previously completed per-paper reviews are not reset by this metadata-only audit.",
+    "Public regression tests do not freeze current mutable biological records.",
+    "Same-agent review is not independent scientific review or whole-record completion."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-card-study-context.json",
+      "sha256": "f2b79c4a82a3661bc2884266e01a679ded36f712e920d218ba4ad2dfb0ad84c3"
+    },
+    {
+      "path": "scripts/audit_card_study_context.py",
+      "sha256": "2b904edc47a1e741dfcd8f442b9ad339367fb74e777b34cf3e61ef306e8e7d45"
+    },
+    {
+      "path": "tests/test_card_study_context.py",
+      "sha256": "70961be51e43fc83e0a55784f58913e1504cb3941352aac02c19ad16304a9359"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "cd4c14f25f3f39bc2a2bba35a7b4aa19848cd73b03a7d9dbf7d95a64a384dcb8"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-bmr-context/protected-before.json",
+    "sha256": "b5c6f429b155619c86d5b1460d53b2ae9a42b8dc191cb4c016784c938ab24521"
+  },
+  "baseline_files_checked": 7157,
+  "checks": [
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "scripts/check_docs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "README statistics are current.\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "corpus_records_checked": 2939,
+  "curation_events_added": 0,
+  "date": "2026-10-13",
+  "experimental_allele_or_genome_assignments": 0,
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-bmr-context/focused-tests.xml",
+      "sha256": "451e9b279a751fe6b4108b40c884335cac76610a87e1d82f7cd5cea5f94dff17"
+    },
+    "passed": 251,
+    "skipped": 0,
+    "tests": 251
+  },
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "initial_test_failure_resolution": [
+    "Renamed a loop variable that shadowed the Path.open guard's captured function.",
+    "Corrected a test's PMID to the citation identifier observed in the pinned source annotation."
+  ],
+  "initial_tests": {
+    "errors": 0,
+    "failures": 2,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-bmr-context/initial-tests.xml",
+      "sha256": "8855087899ad2789e4df5e6461f1cc209dfb7b079dc37de30df2344e722a1bc6"
+    },
+    "skipped": 0,
+    "tests": 24
+  },
+  "issue_1040": "DEFERRED",
+  "metadata_replay_is_not_independent_scientific_validation": true,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-card-study-context.json",
+    "scripts/audit_card_study_context.py",
+    "tests/test_card_study_context.py"
+  ],
+  "new_full_authoritative_qc_claimed": false,
+  "new_protein_or_taxonomy_requests": 0,
+  "new_test_rerun": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-bmr-context/rerun-tests.xml",
+      "sha256": "39cd55c74c32caa167b706a8fdcdf341199f53b17b2abd7b46892786e6798dbf"
+    },
+    "skipped": 0,
+    "tests": 25
+  },
+  "offline_replay_with_http_and_sockets_disabled": true,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "previous_biological_curation_qc": {
+    "path": "research/2026-10-13-fpr1-primary-verification.json",
+    "sha256": "c4e85bf37f9c9860c0f125121422bbf7caeffe6e92585b6597f803d97517bc8b"
+  },
+  "previous_goal_turn": "PROGRESS",
+  "primary_asset_requests": 1,
+  "primary_full_texts_reviewed": 0,
+  "prior_uncommitted_work_preserved": true,
+  "raw_sources_schema_curation_pages_embeddings_and_prior_snapshots_unchanged": true,
+  "records_byte_identical": 2939,
+  "records_changed": 0,
+  "removed_files": [],
+  "resistance_assertions": 4879,
+  "reuse_terms_review_resumed": false,
+  "scope": "CITATION_SCOPED_DATABASE_CONTEXT_NOT_EXPERIMENTAL_IDENTITY_OR_PRIMARY_REVIEW",
+  "source_adoptions": 0,
+  "status": "RESEARCH_CONTEXT_VERIFIED_PRIMARY_REVIEW_OPEN",
+  "summary": {
+    "biological_records_changed": 0,
+    "citation_contexts": 246,
+    "corpus_records_checked": 2939,
+    "experimental_subject_or_allele_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "matched_contexts_with_multiple_strain_annotations": 3,
+    "matched_contexts_with_strain_annotations": 58,
+    "matched_contexts_with_susceptibility_title": 1,
+    "matched_study_context_links": 81,
+    "new_protein_or_taxonomy_requests": 0,
+    "reference_candidate_links": 76,
+    "reference_proteins": 76,
+    "reference_taxonomy_ranks": {
+      "no rank": 7,
+      "serotype": 1,
+      "species": 54,
+      "strain": 9,
+      "subspecies": 5
+    },
+    "references_without_species_rank_in_lineage": 0,
+    "replayed_query_chains": 73,
+    "selected_records": 63,
+    "selected_terms": 49,
+    "whole_record_reviews_completed": 0
+  },
+  "whole_record_reviews_completed": 0
+}

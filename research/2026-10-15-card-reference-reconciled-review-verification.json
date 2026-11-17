@@ -1,0 +1,84 @@
+{
+  "checks": {
+    "clean_checkout_changed_modules": {
+      "errors": 0,
+      "failures": 0,
+      "junit_sha256": "0d0c3d92f49f727caa9afa846f8bbc04dd168bd6e229f7646a349eb9dce4dd06",
+      "passed": 1905,
+      "skipped": 160
+    },
+    "clean_checkout_public": {
+      "errors": 0,
+      "failures": 0,
+      "junit_sha256": "1c2ac6fd557ed8769fe12db40a6b090bbae3b6083db748403b8dc36e0a15f1ce",
+      "passed": 85,
+      "skipped": 109
+    },
+    "native_focused": {
+      "errors": 0,
+      "failures": 0,
+      "junit_sha256": "35c596d14325f8e6a1ceb5f56746803fdbe996712750a28c625314440f310f74",
+      "passed": 194,
+      "skipped": 0
+    }
+  },
+  "files": [
+    {
+      "path": "research/2026-10-15-card-reference-reconciled.json",
+      "sha256": "d0a4b181ff5f2c42900f49e30498089f38aeb9499a4dd02f1b0f95f03beeab4b"
+    },
+    {
+      "path": "research/2026-10-15-card-reference-reconciled.tsv",
+      "sha256": "a2ae435d1e9e0c8b49070074153a1de5b2237f1d098cd4ef322104fd81ce9f7e"
+    },
+    {
+      "path": "research/2026-10-15-card-reference-reconciled-verification.json",
+      "sha256": "4536ea1cbfdc78a564da25191d4a733a0be6244a9ea6d1fc7a9b6551013a7cd9"
+    },
+    {
+      "path": "scripts/audit_card_reference_reconciled.py",
+      "sha256": "083aec89e87793fe5aae70445fe73cf2d7a05cfdccbc09dddf21b707571be22f"
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "495f1180d14b2867777daa4b36935d0d0b5a0ea4729446cc603d5d8cd1c144b2"
+    },
+    {
+      "path": "tests/test_card_reference_reconciled.py",
+      "sha256": "14c4d18937c31c51da79f5bfdf8bf116ea8a8e2ecb735a9d9925e60a0a98b07c"
+    },
+    {
+      "path": "tests/test_msh_hmg_reference.py",
+      "sha256": "16e1e53f44f8a841d0243af3feffd7f0a03fd0b81ddb8a7e8d70fea21408e87d"
+    },
+    {
+      "path": "tests/test_bla_recent_identifiers.py",
+      "sha256": "1391c4cf69591e2ba0273ec5437acf366ca2ad9df43e49980c2190f6c05f6170"
+    },
+    {
+      "path": "tests/test_rifampin_inactivation_context.py",
+      "sha256": "ac7f5b20e8db59b76061aa15105c00963c11c13bf80dd941ca3649b4163c3fa4"
+    },
+    {
+      "path": "tests/test_m35_porin_context.py",
+      "sha256": "7bbd4ae7a6e649354ebeaf821c44cc71f49b0cb2480d3756085b2c274d79937e"
+    }
+  ],
+  "full_authoritative_qc_at_receipt_time": "PENDING_SEPARATE_PR_CI",
+  "issue_1040": "DEFERRED",
+  "issues": {
+    "1148": "Document roots use the empty JSON Pointer; all pointers resolve.",
+    "1149": "Public contracts are independent of ignored caches; native replay skips are explicit.",
+    "1150": "Native gene/locus/taxon bindings and explicit unassigned experimental fields are required.",
+    "1152": "Reconstruct only the approved coverage sentence before verifying the historical report hash."
+  },
+  "ncbi_requests": 0,
+  "network_requests": 0,
+  "offline_write_disabled_replay": true,
+  "pull_request": 1151,
+  "reconciled_json_and_tsv_unchanged_by_review_fixes": true,
+  "review_method": "Separate self-review, adversarial mutation tests, and isolated cache-free checkout",
+  "scope": "PR_REVIEW_FIXES_NOT_NEW_BIOLOGICAL_FINDINGS",
+  "unchanged_data_curation_site_files": 6353,
+  "whole_record_primary_review": "OPEN"
+}

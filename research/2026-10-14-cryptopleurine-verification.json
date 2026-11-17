@@ -1,0 +1,111 @@
+{
+  "automatic_redirects": 0,
+  "baseline_commit": "8861902da2991f045b2894621b1760a41d7eb061",
+  "biological_records_changed": 0,
+  "captured_at": "2026-10-14T23:23:21.280868+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/cohort.json",
+    "sha256": "2f72741be73f830f3527bd2a892af437e4fba2aa454cba518d8c2325e157548d"
+  },
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "distinct_reference_proteins": 2,
+  "domain_restricted_web_searches": 1,
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 1017,
+    "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/expanded-tests.xml",
+    "sha256": "193174c5a5b5351be18c8ce17cc9f3387e8f28424d66244c1d36e94a9f47af80",
+    "skipped": 0,
+    "tests": 1017
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "c34449a9d8beb59789bd0ee875ad77be099f1b1c56e15bd3e6209854a05c4fec"
+    },
+    {
+      "path": "research/2026-10-14-cryptopleurine-reference-context.json",
+      "sha256": "439d19bf4d140ea8d6bfc6c6e7af844280ae636dcacc323d155887e45e3c8d8b"
+    },
+    {
+      "path": "scripts/audit_cryptopleurine_references.py",
+      "sha256": "2832be2d23901eec582ee9971ab0096e75c31f61e69135924ca4298775c9b358"
+    },
+    {
+      "path": "tests/test_cryptopleurine_references.py",
+      "sha256": "49a5cbac07430292a87c63daed05b55cd1ab5fe8a05976e09d7d99411bbac3a7"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 82,
+    "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/focused-tests.xml",
+    "sha256": "db2b80fc8a8b8faa263b9c2ccf1f8b95ccd6797da0aff15525d2b5fb756c104c",
+    "skipped": 0,
+    "tests": 82
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "generated_pages_source_owned_inputs_and_embeddings_unchanged": true,
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_cryptopleurine_20261014.py",
+      "sha256": "87a115553583f7a15a5c2df49ab3cf11f2b223c7d09653c284bb2414d2e615df"
+    },
+    {
+      "path": "/private/tmp/verify_cryptopleurine_20261014.py",
+      "sha256": "f9e815909052a942b545a705cc6a4abedee11544a6c49e27010f7ab4b3b6c5cd"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "native_http_status_counts": {
+    "200": 3,
+    "500": 1
+  },
+  "native_scientific_http_attempts": 4,
+  "native_taxonomy_responses_reused": 1,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_assertions_or_experimental_identifiers": 0,
+  "numeric_AST_variants_sequences_constructs_or_protocols_exported": false,
+  "offline_native_replay": "PASS",
+  "offline_planner_smoke": {
+    "functions": [
+      "reference_plan",
+      "metadata_plan",
+      "reference_followup_plan"
+    ],
+    "network_blocked": true,
+    "status": "PASS"
+  },
+  "primary_1987_status": "UNREQUESTED",
+  "primary_1993_status": "TECHNICAL_HTTP_500_HOLD",
+  "primary_results_reviews": 0,
+  "prior_ciclopirox_contexts_and_verification_receipts_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/protected-before.json",
+    "sha256": "b220b2340321f395e366c6a85300e068423e2b411295611ebe5123b3b6b96cda"
+  },
+  "protected_files_checked": 7628,
+  "repository_ruff_check": "PASS",
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "scope": "HISTORICAL_PARALOG_REFERENCE_CROSSWALK_NOT_ALLELE_CURATION",
+  "source_adoptions": 0,
+  "verification_limit": "Focused and related research tests only; biological records and generated artifacts are byte-identical. Earlier full-QC receipts remain historical.",
+  "whole_record_primary_signoffs": 0
+}

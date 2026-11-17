@@ -1,0 +1,98 @@
+{
+  "canary": "pdb-metadata",
+  "constraints": {
+    "biological_record_writes": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "redirects_followed": 0,
+    "retries": 0
+  },
+  "date": "2026-10-15",
+  "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_embl,xref_refseq,lit_pubmed_id,sequence_version,version",
+  "inputs": {
+    "assessment": {
+      "path": "research/2026-10-15-sal-reference-context-assessment.json",
+      "sha256": "897460eba7fc01dc7f6cd23376003d44cf48b6b2a490488c4533fc16fd7d3f2e"
+    },
+    "citation_body": {
+      "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-35137182-response.bin",
+      "sha256": "93fd0d85a097298ade6f6528be379c0d5fb4b58a07bc0573e8231d08b7330f24"
+    },
+    "citation_receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-35137182-receipt.json",
+      "sha256": "5531c1bf2edef112e2b6ce9d41a4a0ed516ea255481e336d7c15190068218043"
+    },
+    "current_index": {
+      "path": "research/2026-10-15-card-current-references.json",
+      "sha256": "f98aaf50c76aaab8917fd470d4622e8ec2ababfbcdf970ce2b89439e614d71e7"
+    },
+    "definition_citations": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "protein_name_screen": {
+      "path": "research/2026-10-15-card-protein-name-screen.json",
+      "sha256": "9ea833b1d24f8c48189a374f13a549ccff6458185d77f782a86961aea15a8a51"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "max_bytes": 2000000,
+  "preflight": {
+    "globs": [
+      "*receipt.json",
+      "*attempt.json",
+      "*plan.json"
+    ],
+    "ignored_files_included": true,
+    "matching_paths": [],
+    "patterns": [
+      "MBW0764195",
+      "H3V22_03170",
+      "WP_082039181",
+      "WP_096809342",
+      "7P48"
+    ],
+    "prior_citation_query_reused": "lit_pubmed:35137182",
+    "roots": [
+      "research",
+      "reports"
+    ],
+    "scope": "ONLY_LISTED_GLOBS_NOT_ALL_EVIDENCE",
+    "taxonomy_name_inventory_matches": []
+  },
+  "release": "2026_03",
+  "requests": {
+    "pdb-metadata": {
+      "query": "{entries(entry_ids:[\"7P48\"]) {\n  rcsb_id\n  struct {title}\n  rcsb_accession_info {major_revision minor_revision revision_date}\n  rcsb_primary_citation {pdbx_database_id_PubMed pdbx_database_id_DOI year}\n  polymer_entities {\n    rcsb_id\n    rcsb_polymer_entity {pdbx_description}\n    entity_poly {rcsb_mutation_count}\n    rcsb_polymer_entity_container_identifiers {\n      reference_sequence_identifiers {database_name database_accession}\n    }\n    rcsb_entity_source_organism {ncbi_taxonomy_id scientific_name}\n    entity_src_gen {\n      pdbx_gene_src_gene gene_src_strain pdbx_gene_src_ncbi_taxonomy_id pdbx_gene_src_scientific_name\n      pdbx_host_org_ncbi_taxonomy_id pdbx_host_org_scientific_name\n    }\n  }\n}}",
+      "url": "https://data.rcsb.org/graphql?query=%7Bentries%28entry_ids%3A%5B%227P48%22%5D%29+%7B%0A++rcsb_id%0A++struct+%7Btitle%7D%0A++rcsb_accession_info+%7Bmajor_revision+minor_revision+revision_date%7D%0A++rcsb_primary_citation+%7Bpdbx_database_id_PubMed+pdbx_database_id_DOI+year%7D%0A++polymer_entities+%7B%0A++++rcsb_id%0A++++rcsb_polymer_entity+%7Bpdbx_description%7D%0A++++entity_poly+%7Brcsb_mutation_count%7D%0A++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++reference_sequence_identifiers+%7Bdatabase_name+database_accession%7D%0A++++%7D%0A++++rcsb_entity_source_organism+%7Bncbi_taxonomy_id+scientific_name%7D%0A++++entity_src_gen+%7B%0A++++++pdbx_gene_src_gene+gene_src_strain+pdbx_gene_src_ncbi_taxonomy_id+pdbx_gene_src_scientific_name%0A++++++pdbx_host_org_ncbi_taxonomy_id+pdbx_host_org_scientific_name%0A++++%7D%0A++%7D%0A%7D%7D"
+    },
+    "salb": {
+      "query": "gene_exact:H3V22_03170",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AH3V22_03170&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "salc": {
+      "query": "MBW0764195",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=MBW0764195&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "sald": {
+      "query": "xref:refseq-WP_082039181.1",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Arefseq-WP_082039181.1&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "sale": {
+      "query": "xref:refseq-WP_096809342.1",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Arefseq-WP_096809342.1&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "taxonomy": {
+      "query": "(\"Staphylococcus lentus\" OR \"Staphylococcus fleurettii\" OR \"Staphylococcus gallinarum\" OR \"Staphylococcus nepalensis\") AND rank:species",
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%28%22Staphylococcus+lentus%22+OR+%22Staphylococcus+fleurettii%22+OR+%22Staphylococcus+gallinarum%22+OR+%22Staphylococcus+nepalensis%22%29+AND+rank%3Aspecies&format=json&size=500"
+    }
+  },
+  "uniprot_canary": "salb"
+}

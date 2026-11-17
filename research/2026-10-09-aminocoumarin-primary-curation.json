@@ -1,0 +1,130 @@
+{
+  "chemical_structures_changed": 0,
+  "claims_added": 2,
+  "date": "2026-10-09",
+  "exact_experimental_alleles_assigned": 0,
+  "experimental_genomes_assigned": 0,
+  "github_mutations": 0,
+  "history_events_added": 2,
+  "ncbi_endpoint_requests": 0,
+  "numerical_ast_added": 0,
+  "primary_context": {
+    "path": "research/2026-10-09-aminocoumarin-primary-context.json",
+    "sha256": "b9e0c6b79af5317e42223a01b869f25ec3498d5379cbbef5563efb9769d43656"
+  },
+  "records": [
+    {
+      "added_claim": {
+        "assay": "Qualitative source-reported laboratory-host growth comparison",
+        "evidence": [
+          {
+            "notes": "Relevant publisher-indexed Results text was inspected before the later article request returned 403; native Figure 1A was visually inspected separately. Native Table 2 and complete paper review remain open.",
+            "reference": "PMID:12604514"
+          }
+        ],
+        "gene_families": [
+          "parYR"
+        ],
+        "label": "ParYR-associated reduced susceptibility to novobiocin",
+        "mechanism_type": "UNKNOWN",
+        "note": "The comparison concerns laboratory derivatives of the TK24 background, not native-donor susceptibility or species-wide resistance. NCBITaxon:457428 denotes the TK24 background, not the experimental derivative. The reported donor is Streptomyces rishiriensis DSM 40489. UniProtKB:Q83WB8 is reference-only (entry version 120, sequence version 2); the archive succession does not establish the exact experimental allele. The 2003 study leaves ParY enzymatic function unresolved. No induced point mutant, clinical category, numerical AST, derivative TaxID or experimental genome is assigned. Compound scope follows the source's named structure in Figure 1A, not independent re-identification of the tested preparation.",
+        "phenotype_label": "reduced novobiocin susceptibility in a laboratory host",
+        "taxon_id": "NCBITaxon:1916",
+        "taxon_label": "Streptomyces lividans"
+      },
+      "all_other_fields_preserved": true,
+      "before_record_sha256": "9ae7d270c772405bad59e0f394e797bc2d0c9550bd1e9dbd71f29e882e2081d3",
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/novobiocin-canary.yaml",
+        "sha256": "0493eb6364990e579ac5acaadb12281981ce6831f643b8797e56f2371d0cd568"
+      },
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added one qualitative primary-backed ParYR-associated host susceptibility finding; preserved donor/host/reference distinctions and all existing source slices. No exact allele, numerical AST or genome assigned. Whole-record review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-10T02:21:00Z"
+      },
+      "curation_status": "REVIEWED",
+      "existing_claims_preserved": 14,
+      "fresh_seed": {
+        "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/novobiocin-fresh-seed.json",
+        "sha256": "d46deb10ea9239ea1c4dce6bcec7dc848099d127098459a6724dce466cc18463"
+      },
+      "identifier": "CHEBI:28368",
+      "label": "novobiocin",
+      "original": {
+        "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/novobiocin-original.yaml",
+        "sha256": "9ae7d270c772405bad59e0f394e797bc2d0c9550bd1e9dbd71f29e882e2081d3"
+      },
+      "preserved_fields_sha256": "5cf165def5c87596317c6147e697e820f4cb9dd63a634474ce8c7449336e75cf",
+      "preserved_history_sha256": "cc21fc856c8fe9f183ee3c409c7f9af623772c54d0dd8018e05e1efa62942868",
+      "preserved_resistance_claims_sha256": "5017a09a456d185220e8fac5091d77483b623c9074e3e1041e3ee28addd338ff",
+      "record": {
+        "path": "data/antibiotics/antibacterial/novobiocin.yaml",
+        "sha256": "0493eb6364990e579ac5acaadb12281981ce6831f643b8797e56f2371d0cd568"
+      },
+      "standard_inchi_key": "YJQPYGGHQPGBLI-KGSXXDOSSA-N",
+      "whole_record_review_complete": false
+    },
+    {
+      "added_claim": {
+        "assay": "Qualitative source-reported laboratory-host growth comparison",
+        "evidence": [
+          {
+            "notes": "Relevant publisher-indexed Results text was inspected before the later article request returned 403; native Figure 1A was visually inspected separately. Native Table 2 and complete paper review remain open.",
+            "reference": "PMID:12604514"
+          }
+        ],
+        "gene_families": [
+          "parYR"
+        ],
+        "label": "ParYR-associated reduced susceptibility to coumermycin A1",
+        "mechanism_type": "UNKNOWN",
+        "note": "The comparison concerns laboratory derivatives of the TK24 background, not native-donor susceptibility or species-wide resistance. NCBITaxon:457428 denotes the TK24 background, not the experimental derivative. The reported donor is Streptomyces rishiriensis DSM 40489. UniProtKB:Q83WB8 is reference-only (entry version 120, sequence version 2); the archive succession does not establish the exact experimental allele. The 2003 study leaves ParY enzymatic function unresolved. No induced point mutant, clinical category, numerical AST, derivative TaxID or experimental genome is assigned. Compound scope follows the source's named structure in Figure 1A, not independent re-identification of the tested preparation.",
+        "phenotype_label": "reduced coumermycin A1 susceptibility in a laboratory host",
+        "taxon_id": "NCBITaxon:1916",
+        "taxon_label": "Streptomyces lividans"
+      },
+      "all_other_fields_preserved": true,
+      "before_record_sha256": "2e77f06884f8afb05a79df534bd16df1fbd741a91f482091b4d4d5862cde0fbd",
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/coumermycin-a1-canary.yaml",
+        "sha256": "c17d4ae89ba13e9ec5d3cae6f36eefa234685dc4d4249c1b5f2e91412fb81f79"
+      },
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added one qualitative primary-backed ParYR-associated host susceptibility finding; preserved donor/host/reference distinctions and all existing source slices. No exact allele, numerical AST or genome assigned. Whole-record review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-10T02:21:00Z"
+      },
+      "curation_status": "SEEDED",
+      "existing_claims_preserved": 5,
+      "fresh_seed": {
+        "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/coumermycin-a1-fresh-seed.json",
+        "sha256": "e371e14a4b1beefe6bdb3dced949e0017e43648ec48e69c43ad68e7c5813b2a4"
+      },
+      "identifier": "CHEBI:3907",
+      "label": "coumermycin A1",
+      "original": {
+        "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/coumermycin-a1-original.yaml",
+        "sha256": "2e77f06884f8afb05a79df534bd16df1fbd741a91f482091b4d4d5862cde0fbd"
+      },
+      "preserved_fields_sha256": "61e5dad7546d10b5099bb60a3c90a2f759cd760ca8dd73415cf4eeba0195ecac",
+      "preserved_history_sha256": "3727c412425528575df64fd13857d080d8305d5fa7db01ab7ff57bdf75e561e9",
+      "preserved_resistance_claims_sha256": "8e468124de141c6866e22d02f504c29cad0e1460a70f68f7498bae90eb990530",
+      "record": {
+        "path": "data/antibiotics/antibacterial/coumermycin-a1.yaml",
+        "sha256": "c17d4ae89ba13e9ec5d3cae6f36eefa234685dc4d4249c1b5f2e91412fb81f79"
+      },
+      "standard_inchi_key": "WTIJXIZOODAMJT-DHFGXMAYSA-N",
+      "whole_record_review_complete": false
+    }
+  ],
+  "records_changed": 2,
+  "source_adoptions": 0,
+  "source_owned_slices_preserved": true,
+  "status": "CURATED_QUALITATIVE_PRIMARY_ASSOCIATIONS",
+  "whole_corpus_primary_review": "OPEN"
+}

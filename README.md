@@ -59,22 +59,22 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | PROPOSED | REVIEWED | With target or resistance evidence |
 |---|---:|---:|---:|---:|---:|
-| ANTIBACTERIAL *(incl. subclasses)* | 1121 | 1059 | 30 | 32 | 285 |
-| &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 75 | 0 | 3 | 15 |
-| ANTIFUNGAL | 594 | 581 | 0 | 13 | 65 |
-| ANTIPROTOZOAL | 248 | 246 | 0 | 2 | 5 |
-| ANTIVIRAL | 473 | 448 | 0 | 25 | 32 |
-| BIOCIDE | 31 | 31 | 0 | 0 | 2 |
-| ANTIMICROBIAL_UNSPECIFIED | 472 | 464 | 0 | 8 | 10 |
-| **TOTAL** | **2939** | **2829** | **30** | **80** | **399** |
+| ANTIBACTERIAL *(incl. subclasses)* | 1274 | 1027 | 139 | 108 | 366 |
+| &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 72 | 0 | 6 | 16 |
+| ANTIFUNGAL | 617 | 581 | 10 | 26 | 95 |
+| ANTIPROTOZOAL | 258 | 245 | 8 | 5 | 7 |
+| ANTIVIRAL | 473 | 446 | 0 | 27 | 34 |
+| BIOCIDE | 31 | 31 | 0 | 0 | 3 |
+| ANTIMICROBIAL_UNSPECIFIED | 472 | 464 | 0 | 8 | 13 |
+| **TOTAL** | **3125** | **2794** | **157** | **174** | **518** |
 
 A row marked *(subclass of X)* is already counted in X's own row — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
 
-Identity: **2669** records (91%) are grounded in a ChEBI term; **270** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
+Identity: **2782** records (89%) are grounded in a ChEBI term; **343** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
 
 Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2341** come from ChEBI alone and **287** from CARD alone.
 
-Mechanism layer: **282** records carry a molecular target and **295** carry resistance determinants or associations seeded from CARD and PHI-base; **454** carry a mode of action; **16** carry a curated causal graph. That last number is the work.
+Mechanism layer: **378** records carry a molecular target and **321** carry source-imported or curated resistance determinants or associations; **566** carry a mode of action; **97** carry a curated causal graph. That last number is the work.
 
 <!-- END GENERATED CORPUS STATS -->
 
@@ -103,7 +103,7 @@ so seeding, validation, rendering and the whole test suite run offline.
 
 The generated site includes a
 **[Chemical structure map](https://culturebotai.github.io/AntibioticMech/pages/chemical-map.html)**
-covering all 2,939 records. Its coordinates and nearest neighbors use only the
+covering all 3,125 records. Its coordinates and nearest neighbors use only the
 exact stored chemical structure:
 
 ```text
@@ -208,20 +208,19 @@ queue validation, and recovery when a queued change fails.
 
 ## Licence
 
-Two licences, because the repository holds two different things.
+Project-authored data, records, annotations, mappings, data exports and narrative
+documentation are licensed under [CC BY 4.0](LICENSE-DATA). Project-authored
+code, scripts, tests, schemas and website templates are licensed under
+[BSD-3-Clause](LICENSE-CODE). See [LICENSE](LICENSE) for scope and attribution.
 
-**Code, schema, tests, configuration, documentation and curation decisions:
-[CC0 1.0](LICENSE).** This repository's own work, dedicated to the public domain.
+Third-party material retains its own licenses and notices. Preserve upstream
+attribution and source-specific terms when redistributing a record or subset.
+Previously released material remains available under its original license.
 
-**Record content — `data/antibiotics/**` and `data/raw/**`:
-[CC BY 4.0](LICENSE-DATA), attribution in [ATTRIBUTION.md](ATTRIBUTION.md).**
-It is derived from ChEBI (CC BY 4.0) and CARD's ARO (CC BY 4.0), and CC BY
-content cannot be re-dedicated to the public domain: §3(b) permits an adapter's
-licence only if it does not prevent recipients complying with the original, and
-stripping attribution does exactly that. So the corpus is redistributable —
-freely, commercially, modified — provided the attribution rides along.
-
-Attribution is per-record and machine-readable: every record's `source_concepts`
-block names the upstream concepts it came from, so a consumer taking a subset can
-derive precisely which sources that subset depends on.
+Attribution is per-record and machine-readable: `source_concepts` name the
+upstream concepts that ground each record's chemical identity, and source-owned
+claims mark their own `producer_organisms`, `molecular_targets`,
+`resistance_mechanisms`, `activity_spectrum`, or
+`clinical_status_assertions` item with a `source`. A consumer taking a subset
+can derive precisely which sources that subset depends on.
 `data/raw/MANIFEST.yaml` records what was retrieved and when.

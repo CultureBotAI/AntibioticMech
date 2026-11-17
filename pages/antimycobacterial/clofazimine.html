@@ -7,7 +7,7 @@
 <meta name="description" content="clofazimine (CHEBI:3749): 3-Isopropylimino-3,5-dihydro-phenazine in which the hydrogen at position 5 is substituted substituted by a 4-chlorophenyl group, and that at position 2 is substituted by a (4-chlorophenyl)amino group. A dark red crystalline solid, clofazimine is an antimycobacterial and is one of the main drugs used for the treatment of multi-bacillary leprosy. However, it can cause red/brown discolouration of the skin, so other treatments are often preferred in light-skinned patients.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antimycobacterial.html">ANTIMYCOBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>clofazimine</h1>
 <p class="meta">
   <code class="curie">CHEBI:3749</code>
@@ -37,17 +48,20 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000003">antibiotic without defined classification</a><code class="curie">ARO:3000003</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_39201">CHEBI:39201</a>      <code class="curie">CHEBI:39201</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_83403">CHEBI:83403</a>      <code class="curie">CHEBI:83403</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000003">ARO:3000003</a>      <code class="curie">ARO:3000003</code></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_39201"><code class="curie">CHEBI:39201</code></a></li>
+  <li><span class="meta">Label unavailable</span>  <a href="http://purl.obolibrary.org/obo/CHEBI_83403"><code class="curie">CHEBI:83403</code></a></li>
+  <li>antibiotic without defined classification  <a href="http://purl.obolibrary.org/obo/ARO_3000003"><code class="curie">ARO:3000003</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C27H22Cl2N4</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>473.407 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>472.12215 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">WDQPAMHFFCXSNU-UHFFFAOYSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">CC(C)N=c1cc2n(-c3ccc(Cl)cc3)c3ccccc3nc-2cc1Nc1ccc(Cl)cc1</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C27H22Cl2N4/c1-17(2)30-24-16-27-25(15-23(24)31-20-11-7-18(28)8-12-20)32-22-5-3-4-6-26(22)33(27)21-13-9-19(29)10-14-21/h3-17,31H,1-2H3</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -58,7 +72,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3004012">ARO:3004012</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3004012">clofazimine</a><code class="curie">ARO:3004012</code></li>
   <li>beilstein:8168151</li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=2030-63-9">cas:2030-63-9</a></li>
   <li><a href="https://www.kegg.jp/entry/C06915">kegg.compound:C06915</a></li>
@@ -87,12 +101,13 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_35816">CHEBI:35816</a>    <code class="curie">CHEBI:35816</code></li>
+  <li>leprostatic drug  <a href="http://purl.obolibrary.org/obo/CHEBI_35816"><code class="curie">CHEBI:35816</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -112,32 +127,348 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>fluoroquinolone sensitive gyrA <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000733">ARO:3000733</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO explicitly describes ligand binding to gyrase subunit A. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000733</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3004012 (clofazimine); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000733">ARO:3000733</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3004012 (clofazimine); database assertion, not a primary citation.)</span></li>
 </ul>
 
 <h3>fluoroquinolone sensitive gyrB <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3003261">ARO:3003261</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. GyrB is asserted as the fluoroquinolone-sensitive subunit. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3003261</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3004012 (clofazimine); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003261">ARO:3003261</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3004012 (clofazimine); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
 
 
+<h2 id="activity">Activity spectrum</h2>
+<p class="meta">Measured or curated activity against specific taxa. A number
+without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">242 observations &middot; <a href="clofazimine/activity-1.html">Browse all observations</a> &middot; <a href="clofazimine/record-908d399634f4805fe450ca1d6e5637bdea0c5783f1e3351a72c05df4cc6bfb22.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">Observations 1&ndash;20 of 242</p><div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
+<table>
+  <caption>Activity observations</caption>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A065cd4b9ebaf0ea1">18 source isolates</a><br>18 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-2">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Abec01bba6cd7cbb7">4366 source isolates</a><br>4366 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-3">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Affeb1a0ace31ca22">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="2" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-4">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A9e93e4f09511f37a">2 source isolates</a><br>2 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="3" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-5">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">INTERMEDIATE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A98882c5ea5c30c02">1 source isolates</a><br>1 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="4" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-6">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A3ee19400b13fa46a">32 source isolates</a><br>32 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="5" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-7">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2020; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A1b4cf0654a86bd15">63 source isolates</a><br>63 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="6" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-8">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A1e84747a762f50b3">8 source isolates</a><br>8 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="7" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-9">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; liquid media; MGIT; MGIT960</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A8c4f4b4e7b96aa72">858 source isolates</a><br>858 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="8" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-10">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; not specified</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A883f0b07858fca15">1 source isolates</a><br>1 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="9" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-11">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A2cd31fdd1c4ec0b1">7 source isolates</a><br>7 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="10" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-12">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">—</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CLIRES2023; solid media</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A5510bec23a526d78">4 source isolates</a><br>4 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="11" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-13">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.12 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 0.25 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Ab462fa1a80b54094">1151 source isolates</a><br>1151 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="12" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-14">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.12 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 0.25 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A10f41c3c6b2f7281">217 source isolates</a><br>217 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="13" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-15">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.12 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 0.25 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A61f22c9321e0dfe8">257 source isolates</a><br>257 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="14" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-16">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.25 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 0.25 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3Aefae192fcccf86c9">410 source isolates</a><br>410 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="15" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-17">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.25 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 0.25 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A251e1dafd397b4a0">160 source isolates</a><br>160 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="16" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-18">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill">SUSCEPTIBLE</span></td>
+    <td class="num">0.25 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 0.25 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A60bd6740bce250c4">101 source isolates</a><br>101 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="17" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-19">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">0.5 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 0.25 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A3e400806f8fbd8b0">113 source isolates</a><br>113 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="18" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-20">
+    <td><em>Mycobacterium tuberculosis complex</em></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">0.5 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical concentration 0.25 mg/L</td>
+    <td class="meta">—</td>
+    <td class="meta">
+<a href="clofazimine/memberships.html?source=CRYPTIC&amp;version=3.4.0&amp;group=dst_measurements%3A76f4f268da70151c">54 source isolates</a><br>54 measurements<br>    </td>
+    <td><details class="activity-evidence" data-row="19" data-offset="0" data-total="242" data-identifier="CHEBI:3749" data-key="WDQPAMHFFCXSNU-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="clofazimine/activity-1-6c5f509b930e7428901dffed52e23e42f2a60443b69b4184292fcce5b723aeba.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  </tbody>
+</table>
+
+</div>
+
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">3 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">3 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">3</span></summary>
-  <table>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
@@ -146,7 +477,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007852</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004012 (clofazimine); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007852">ARO:3007852</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004012 (clofazimine); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -156,7 +487,7 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3007692</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004012 (clofazimine); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3007692">ARO:3007692</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004012 (clofazimine); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -166,11 +497,13 @@ type — expand a group to see its determinants.</p>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">ARO:3009335</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004012 (clofazimine); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3009335">ARO:3009335</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004012 (clofazimine); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
     </tr>
   </table>
+
+</div>
 </details>
 
 
@@ -205,32 +538,52 @@ type — expand a group to see its determinants.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-26 · seed_from_sources</span>
+    <p>Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-10-05 · seed_from_sources</span>
+    <p>Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antimycobacterial/clofazimine.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antimycobacterial/clofazimine.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=clofazimine">MediaIngredientMech (clofazimine)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=clofazimine">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=clofazimine">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=clofazimine">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=clofazimine">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

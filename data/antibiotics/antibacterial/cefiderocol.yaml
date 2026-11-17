@@ -57,6 +57,7 @@ activity_spectrum:
     Bank reports an R interpretation without a versioned breakpoint footnote on this
     isolate page.
   strain: '0033'
+  biosample_accession: SAMN04014874
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=33&PanelID=1227
     snippet: Cefiderocol  | 16  | R
@@ -70,6 +71,7 @@ activity_spectrum:
   assay: Broth microdilution cefiderocol MIC; modal MIC reported; interpreted using
     CLSI 2024 M100 S34 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: 0078
+  biosample_accession: SAMN04014919
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=78&PanelID=1227
     snippet: Cefiderocol  | 16  | R
@@ -83,6 +85,7 @@ activity_spectrum:
   assay: Broth microdilution cefiderocol MIC; modal MIC reported; interpreted using
     CLSI 2020 M100 S30 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: 0083
+  biosample_accession: SAMN04014924
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=83&PanelID=1227
     snippet: Cefiderocol  | >32  | R
@@ -97,6 +100,7 @@ activity_spectrum:
   assay: Broth microdilution cefiderocol MIC; modal MIC reported; interpreted using
     CLSI 2024 M100 S34 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: 0088
+  biosample_accession: SAMN04014929
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=88&PanelID=1227
     snippet: Cefiderocol  | >32  | R
@@ -111,6 +115,7 @@ activity_spectrum:
   assay: Broth microdilution cefiderocol MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: 0118
+  biosample_accession: SAMN04014959
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=118&PanelID=1227
     snippet: Cefiderocol  | >32  | R
@@ -125,6 +130,7 @@ activity_spectrum:
   assay: Broth microdilution cefiderocol MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: '0143'
+  biosample_accession: SAMN04014984
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=143&PanelID=1227
     snippet: Cefiderocol  | 16  | R
@@ -138,6 +144,7 @@ activity_spectrum:
   assay: Broth microdilution cefiderocol MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: '0150'
+  biosample_accession: SAMN04014991
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=150&PanelID=1227
     snippet: Cefiderocol  | >32  | R
@@ -152,6 +159,7 @@ activity_spectrum:
   assay: Broth microdilution cefiderocol MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: '0151'
+  biosample_accession: SAMN04014992
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=151&PanelID=1227
     snippet: Cefiderocol  | >64  | R
@@ -166,6 +174,7 @@ activity_spectrum:
   assay: Broth microdilution cefiderocol MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: '0162'
+  biosample_accession: SAMN04015003
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=162&PanelID=1227
     snippet: Cefiderocol  | >32  | R
@@ -180,6 +189,7 @@ activity_spectrum:
   assay: Broth microdilution cefiderocol MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: '0246'
+  biosample_accession: SAMN04901636
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=246&PanelID=1227
     snippet: Cefiderocol  | 16  | R
@@ -248,4 +258,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added 10 stable-URL CDC/FDA AR Isolate Bank Panel 1227 cefiderocol-resistant
     MIC observations.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:36Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 10 activity_spectrum observation(s)
+    where evidence notes already named exactly one accession.
   llm_assisted: true

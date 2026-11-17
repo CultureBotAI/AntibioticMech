@@ -1,0 +1,119 @@
+{
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-thevissen-2007/cohort.json",
+    "sha256": "6521e57865c586083f523a40276c0acf6339390ff791c2f9dd2011b9f639bd84"
+  },
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "dossier": {
+    "path": "research/2026-10-14-thevissen-2007-access.json",
+    "sha256": "fe3e04af6f910b40308577ffe1f7609652ab0218ee2c1990cb750309df38bac5"
+  },
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-14-thevissen-2007/focused-tests.xml",
+      "sha256": "d9a878198f4123865de0184839e3b581b3b73eb3e7827510a7d6275e9606a507"
+    },
+    "passed": 131,
+    "skipped": 0,
+    "tests": 131
+  },
+  "implementation": [
+    {
+      "path": "scripts/audit_thevissen_2007_access.py",
+      "sha256": "d8830401dfc84645124a3b4501410c0cb296bf729b9bb2cb3c596d90f5b4285c"
+    },
+    {
+      "path": "tests/test_thevissen_2007_access.py",
+      "sha256": "2acc77ba0a1b765a6564873c0db6b23642ae754643e21fb9bec4f3f05d08ed9f"
+    }
+  ],
+  "limits": {
+    "biological_record_changes": 0,
+    "experimental_alleles_or_subjects_assigned": 0,
+    "full_authoritative_qc_rerun": false,
+    "full_corpus_goal_status": "OPEN",
+    "full_corpus_records_in_scope": 2939,
+    "full_qc_reason": "Access research only; biological, production and generated files unchanged.",
+    "github_mutations": 0,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_network_requests": 3,
+    "rendering_or_embedding_refresh": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "offline_native_replay": "PASS",
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-thevissen-2007/protected-before.json",
+      "sha256": "605cb846f7fcc03f2cf899d3135fad92d9bab0fa88b978f4b0692010943297f0"
+    },
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "pages_embeddings_source_inputs_and_prior_checkpoints_unchanged": true,
+    "protected_files_checked": 7287,
+    "record_files_unchanged": 2939,
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "d1e0e7a8038dc76fd37e659039d119c49a8b58aad7c534a0b1c52fc3b5c0e651"
+  },
+  "research_helper": {
+    "path": "reports/resistance-grounding-2026-10-14-thevissen-2007/research_context.py",
+    "sha256": "8e43a3aad805474fedcabc356ffc6bba45983179a0009af8316aefb86e4fd1c1"
+  },
+  "same_agent_adversarial_review": [
+    "The HTTP 200 Linking Hub response is routine routing, not primary article text.",
+    "The subsequent journal HTTP 403 challenge remains an access hold; no alternate route was used.",
+    "Dated discovery flags and deposited license metadata neither establish access nor adopt a source.",
+    "The prior source-label conflict and historical deletion identity remain unresolved.",
+    "Miconazole's tested form and experimental subjects are unverified, with no new biological claim.",
+    "Response bytes, plans, attempts, exact URLs and receipt statuses are checked by offline replay."
+  ],
+  "scope": "BIBLIOGRAPHY_AND_ACCESS_HOLD_NOT_PRIMARY_RESULTS_REVIEW",
+  "status": "PASS",
+  "summary": {
+    "biological_record_changes": 0,
+    "corpus_record_hashes_checked": 2939,
+    "experimental_allele_assignments": 0,
+    "new_access_holds": 1,
+    "new_network_requests": 3,
+    "new_reference_proteins": 0,
+    "primary_results_reviewed": 0,
+    "target_records_loaded": 2,
+    "whole_record_reviews_completed": 0
+  },
+  "verifier": {
+    "path": "reports/resistance-grounding-2026-10-14-thevissen-2007/verify_checkpoint.py",
+    "sha256": "8f0348d572b5ccb2b1c96bf9d94d4037de430214da4f03eefacfde9faa291fae"
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "adversarial_self_review": [
+    {
+      "disposition": "Added a qualified open discussion, not a source correction; exact FungAMR row mapping remains unverified.",
+      "finding": "The independently identified URA6 experiment uses a different species from the CARD label."
+    },
+    {
+      "disposition": "Retained reference-only versioned identity and unverified native alias scope; no allele or genome assignment.",
+      "finding": "The H99 reference candidate is not a demonstrated H99 resistance phenotype."
+    },
+    {
+      "disposition": "Registered one exact identity/path/hash fixture; wrong identities, hashes and missing fixtures fail. Current progress still checks all live records.",
+      "finding": "Historical audits must not read a mutable live flucytosine checkpoint."
+    },
+    {
+      "disposition": "Full QC exposed the stale assumption. The historical transition now loads its recorded after-hash through the pinned fixture; live serialization and biological tests remain active. The new discussion transition also reproduces exact recorded after-bytes.",
+      "finding": "The legacy FUR1 serialization test removed the last two history events from the live record to reconstruct October 8."
+    },
+    {
+      "disposition": "Fixed imports and line wrapping without changing emitted historical dossiers; all five replay byte-identically.",
+      "finding": "Recent research-only scripts and tests had formatting defects before authoritative lint."
+    },
+    {
+      "disposition": "Prompt and qualified rationale are visible; full evidence remains in YAML and the research dossier. Template unchanged.",
+      "finding": "The existing discussion template omits evidence details and notes."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "data/antibiotics/antifungal/flucytosine.yaml",
+      "sha256": "ee344f13f6ae69b0ea7f39af994d505cc03b5f1bd3a5a41524ed947cbf97ae92"
+    },
+    {
+      "path": "pages/antifungal/flucytosine.html",
+      "sha256": "9a2481ee09f8e92123656a79968fcab2270f838110496c657eb3d4bed9e2ffd5"
+    },
+    {
+      "path": "pages/index.html",
+      "sha256": "d9f7dfac49200ef9d197fa68e4573f1fbda067845780e31dfbba75c4e4802383"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "06ddea7e466a0a2ad5b7c2ff90c2199aad94229333f5e8e4341b7dce5d5a2211"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-context.json",
+      "sha256": "45b2649539a0cb36c7ba44810db37cd8b6cc2845adc32e59738dc3fe02c713d6"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-curation.json",
+      "sha256": "cab6f7de6537c450e31a834187203bfab816f74eac61f5526e32363abd3c21e4"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-resistance-grounding.tsv",
+      "sha256": "a7d1c4ce9e473e43d040d8e23099ee119a6e0e2cd05f5b03f403ac80ceafa841"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-resistance-progress.json",
+      "sha256": "f0c28fdd28209adb07e8a3dd2fb5914b93e742e265e0be3fcc1ec71cabc1ed46"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-resistance-progress.tsv",
+      "sha256": "be3da009b8d3aec22042fe3e59d9df026821841900dbe167cec3787f9d821210"
+    },
+    {
+      "path": "scripts/audit_caspofungin_context.py",
+      "sha256": "ddf43458596656622a94f2c1057a010c6fbfb7c4f52ae1bf7981d40f7e32a13b"
+    },
+    {
+      "path": "scripts/audit_fungal_locus_gaps.py",
+      "sha256": "3a796f493bcdfd1892b72c92222ec32582537d6f201bc24adbc9086e016f5271"
+    },
+    {
+      "path": "scripts/audit_fungamr_cohort.py",
+      "sha256": "1fcd9ab4804abd39cd8174aa1341ceff5abdaf50971837f9d46adbf11bc54709"
+    },
+    {
+      "path": "scripts/audit_fungamr_references.py",
+      "sha256": "8c2b01127485334e5935cd3646b0ff291e117642beb406d93525c6768625411f"
+    },
+    {
+      "path": "scripts/audit_yeast_atp_context.py",
+      "sha256": "ebe6faa16c2aa85880dbad3ef342267366afda442f69bc43fdfbeba07b51333e"
+    },
+    {
+      "path": "scripts/resistance_checkpoint_records.py",
+      "sha256": "a224bb32a0246c55bcef80e7e36d9d9a275f586f8d261fbcfaab69d3712c56b0"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "d7930e8b8b6223c78524994608e3964ea8b69ebc5f501853469ef2103fb8a2c6"
+    },
+    {
+      "path": "tests/fixtures/flucytosine-before-2026-10-13.yaml",
+      "sha256": "4ffd0f50d00448664a2aec8b152d62231ec7c6fabc5e91a67fc42c27a3ed7ada"
+    },
+    {
+      "path": "tests/test_caspofungin_context.py",
+      "sha256": "73a5b3e8b9b17413ef635775394796a80aad455960af733e4f818139964f83e9"
+    },
+    {
+      "path": "tests/test_curated_resistance_grounding.py",
+      "sha256": "738b9103df0898f1caab915d919d87453c725c741fb32edc22068a7906b8a989"
+    },
+    {
+      "path": "tests/test_flucytosine_scope_discussion.py",
+      "sha256": "1970f9d74b2362e7cac5ab839931feca19d12ebfc9fb78132670ab0f39a0cb45"
+    },
+    {
+      "path": "tests/test_fungal_locus_gaps.py",
+      "sha256": "adb7f497665be61a10075e3fe2ef50f8c6b9f33540536c2abaa5682055a1d71b"
+    },
+    {
+      "path": "tests/test_fungamr_cohort.py",
+      "sha256": "f903a33de8479bcad8f344e7775ca5ade86f18466e4fad24ab8a7ee89ac3f242"
+    },
+    {
+      "path": "tests/test_fungamr_references.py",
+      "sha256": "46e67009e33eebf7c803c0b91c977890aec6d2bb3ac333bcbf7a93917cc85c56"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/protected-before.json",
+    "sha256": "3fc876876f83db432fec2632f8beb2e2254f180924ab50fab2c482b6df00ef15"
+  },
+  "baseline_files_checked": 7195,
+  "browser": {
+    "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/browser-check.json",
+    "sha256": "1d7ec85eb5be18458c41bc6c68ad9c028432dc5724bedb3774536a846e7be0e0"
+  },
+  "browser_screenshots_visually_reviewed": true,
+  "canary_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/pre-apply-fixed-tests.xml",
+      "sha256": "367182838d14a22ec94c714de784fb81933e855c3639766d0eea9caac02e48b7"
+    },
+    "passed": 305,
+    "skip_reasons": [],
+    "skipped": 0,
+    "tests": 305
+  },
+  "changed_baseline_files": [
+    "data/antibiotics/antifungal/flucytosine.yaml",
+    "pages/antifungal/flucytosine.html",
+    "pages/index.html",
+    "research/2026-10-07-resistance-gene-grounding.md",
+    "scripts/audit_caspofungin_context.py",
+    "scripts/audit_fungal_locus_gaps.py",
+    "scripts/audit_fungamr_cohort.py",
+    "scripts/audit_fungamr_references.py",
+    "scripts/audit_yeast_atp_context.py",
+    "scripts/summarize_resistance_progress.py",
+    "tests/test_caspofungin_context.py",
+    "tests/test_curated_resistance_grounding.py",
+    "tests/test_fungal_locus_gaps.py",
+    "tests/test_fungamr_cohort.py",
+    "tests/test_fungamr_references.py"
+  ],
+  "classification": "PROGRESS",
+  "constraints": {
+    "failed_source_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "numeric_ast_exported": false,
+    "sequences_variants_protocols_exported": false,
+    "source_adoptions": 0
+  },
+  "discussions_added": 1,
+  "embedding_document_and_all_embedding_artifacts_unchanged": true,
+  "exact_transition_test_failure_addressed": "Sorted JSON had lost the original discussion/evidence key ordering. The replay now reconstructs that explicit order and verifies the exact recorded after-hash; the live record was not rewritten.",
+  "existing_record_fields_and_claims_preserved": true,
+  "fingerprint": "ef7a4815aa417119",
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/legacy-fix-final-focused-tests.xml",
+      "sha256": "88021168fe676581be80be35cfa5fe49a0d576060d1f95b64c35ef4396afb7dc"
+    },
+    "passed": 350,
+    "skip_reasons": [],
+    "skipped": 0,
+    "tests": 350
+  },
+  "fresh_encoding_performed_or_needed": false,
+  "full_corpus_goal_status": "OPEN",
+  "full_qc": {
+    "chemical_map_distribution_versions_match_pins": false,
+    "chemical_map_pins": {
+      "numpy": "2.2.6",
+      "rdkit": "2026.3.5",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "umap-learn": "0.5.12"
+    },
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "dependency_deviation": "RDKit 2025.3.6 instead of pin 2026.3.5. UMAP runtime unavailable because numba is absent. No map or chemistry regeneration.",
+    "dependency_differences": {
+      "rdkit": {
+        "actual": "2025.3.6",
+        "required": "2026.3.5"
+      }
+    },
+    "elapsed_seconds": 1835.441,
+    "exit_code": 0,
+    "gates_passed": 12,
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/full-qc-final.log",
+      "sha256": "3e9b45998c7d65575de65c642d454b129733360e98f8f17b577f0ba1a3137e47"
+    },
+    "pytest_addopts": "--junitxml=reports/resistance-grounding-2026-10-13-flucytosine-scope/full-tests-final.xml -ra -x",
+    "python": "3.13.12",
+    "pythonpath": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/src:/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/scripts:/private/tmp/antibioticmech-qc-science-20261013-abd1:/private/tmp/antibioticmech-identity-20261012/lib/python3.13/site-packages:/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/lib/python3.13/site-packages",
+    "rdkit_smoke_check_passed": true,
+    "started_at": "2026-10-14T00:55:17.066912+00:00",
+    "tests": {
+      "errors": 0,
+      "failures": 0,
+      "junit": {
+        "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/full-tests-final.xml",
+        "sha256": "a34295c6a8021b64f046b6ca95b2fa3c140873751cb73c98ee084f3e4454f3d8"
+      },
+      "passed": 4021,
+      "skip_reasons": [
+        "got empty parameter set for (path)",
+        "historical checkpoint no longer matches the live corpus; public invariants still run"
+      ],
+      "skipped": 4,
+      "tests": 4025
+    },
+    "versions": {
+      "PyYAML": "6.0.3",
+      "numpy": "2.2.6",
+      "pytest": "9.1.1",
+      "rdkit": "2025.3.6",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "umap-learn": "0.5.12"
+    }
+  },
+  "git_head": "a919685f72e8e07624ffbf8ee32211913c5da1bd",
+  "historical_contexts_replayed_byte_identically": [
+    {
+      "path": "research/2026-10-13-yeast-atp-context.json",
+      "sha256": "263ddf59bc2a41d75195630720257e16c5098226ed7e2c7d6556e3fbedab07ce"
+    },
+    {
+      "path": "research/2026-10-13-fungamr-cohort-context.json",
+      "sha256": "2ecd41ec60a2a6196a915fa373004e1a041c4eeb2a00b64b8cfae8488cf99047"
+    },
+    {
+      "path": "research/2026-10-13-fungamr-reference-followup.json",
+      "sha256": "8523aa65b57204632b51903a0e4d783e9ada0a1e63b7156bd43291ba76f078df"
+    },
+    {
+      "path": "research/2026-10-13-caspofungin-context.json",
+      "sha256": "cdeacadabba2424a97991960033ac4ca10b49bbf594e7b85b593210666c758c3"
+    },
+    {
+      "path": "research/2026-10-13-fungal-locus-gaps.json",
+      "sha256": "c960ec29f600eafa9cfb22d5c60b530f07660cccd41c2dcec656b143da7b8d0f"
+    }
+  ],
+  "historical_receipts_unchanged": true,
+  "history_events_added": 1,
+  "http_and_sockets_disabled": true,
+  "ignored_files_included": true,
+  "independent_scientific_review": false,
+  "initial_exact_transition_test_run": {
+    "errors": 0,
+    "failures": 1,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/legacy-fix-focused-tests.xml",
+      "sha256": "44c2bbe8e012b74af0e69b188e64ca6ce248a26b685dbc2ebb6a57af07bfa77d"
+    },
+    "passed": 349,
+    "skip_reasons": [],
+    "skipped": 0,
+    "tests": 350
+  },
+  "initial_test_failure_addressed": "The test incorrectly used an already-curated document as fresh seed. It now uses the eight source-owned claims; the real fresh-seed canary passed independently.",
+  "initial_test_run": {
+    "errors": 0,
+    "failures": 1,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/pre-apply-tests.xml",
+      "sha256": "1ee1b9a0f3089aa6850c86e27f77f37322b52a3e5e9b1c4f9d823ed51b851c07"
+    },
+    "passed": 304,
+    "skip_reasons": [],
+    "skipped": 0,
+    "tests": 305
+  },
+  "interrupted_initial_full_qc": {
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/full-qc.log",
+      "sha256": "0e7472afeaf86fa39495b21b8b9b0a9b783b0f039c91580a4eff973ddb3beb51"
+    },
+    "reason": "Stopped after one historical-test failure to inspect and fix it; this was not a passing full run.",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/full-qc-exit.json",
+      "sha256": "d7a0a123a72c30e1c5d0ab6cfca658a5febb1a2dc24a902193f4bdc8145e7c1d"
+    },
+    "tests": {
+      "errors": 0,
+      "failures": 1,
+      "junit": {
+        "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/full-tests.xml",
+        "sha256": "bc1d9f75e7ce27b9b928d36499a0dfc6f12b6f54ea81eb6200b8558985161cdb"
+      },
+      "passed": 1245,
+      "skip_reasons": [
+        "historical checkpoint no longer matches the live corpus; public invariants still run"
+      ],
+      "skipped": 1,
+      "tests": 1247
+    }
+  },
+  "new_files_before_receipt": [
+    "research/2026-10-13-flucytosine-scope-context.json",
+    "research/2026-10-13-flucytosine-scope-curation.json",
+    "research/2026-10-13-flucytosine-scope-resistance-grounding.tsv",
+    "research/2026-10-13-flucytosine-scope-resistance-progress.json",
+    "research/2026-10-13-flucytosine-scope-resistance-progress.tsv",
+    "scripts/resistance_checkpoint_records.py",
+    "tests/fixtures/flucytosine-before-2026-10-13.yaml",
+    "tests/test_flucytosine_scope_discussion.py"
+  ],
+  "new_network_requests": 0,
+  "new_primary_pdf_figures_supplements_reviewed": false,
+  "new_resistance_assertions": 0,
+  "offline_proof": {
+    "path": "reports/resistance-grounding-2026-10-13-flucytosine-scope/offline-replay-final.json",
+    "sha256": "752aa4edaac2a8c24e5405a3ea863eba8868c16beda254a65b331ee52781f7c4"
+  },
+  "preexisting_uncommitted_work_preserved_except_intended_audit_formatting_and_report_updates": true,
+  "prior_artifact_pins_superseded": [
+    "scripts/audit_fungal_locus_gaps.py",
+    "tests/test_fungal_locus_gaps.py",
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "prior_artifact_pins_unchanged": 1,
+  "prior_verification": {
+    "path": "research/2026-10-13-fungal-locus-gaps-verification.json",
+    "sha256": "2006b8cb90e64c44874311d1fa169785498fd80d78ca58bccdf3f9d6c32007b8"
+  },
+  "records_byte_identical": 2938,
+  "records_changed": 1,
+  "records_checked": 2939,
+  "removed_files": [],
+  "resistance_assertions": 4879,
+  "status": "ALL_AUTHORITATIVE_GATES_PASSED_WITH_DISCLOSED_DEPENDENCY_DEVIATION",
+  "verification_is_not_whole_record_signoff": true,
+  "verified_at": "2026-10-14T01:26:26.695329+00:00",
+  "whole_record_reviews_completed": 0
+}

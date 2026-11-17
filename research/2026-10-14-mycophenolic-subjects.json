@@ -1,0 +1,253 @@
+{
+  "constraints": {
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "source_adoption": false
+  },
+  "curation": {
+    "clinical_category_inferred": false,
+    "exact_variant_exported": false,
+    "experimental_gene_id": null,
+    "experimental_genome": null,
+    "experimental_protein_accession": null,
+    "mechanism_type": "UNKNOWN",
+    "numeric_ast_exported": false,
+    "species_taxon_id": "NCBITaxon:4932",
+    "strain_taxon_id": null,
+    "supported_gene_associations": [
+      "RPB1"
+    ],
+    "whole_record_review_complete": false
+  },
+  "evidence_scope": {
+    "biochemical_limit": "Growth and purified-enzyme comparisons are not assumed to use identical backgrounds.",
+    "discordant_context": "Other RPB1 comparisons are sensitive or have generic growth defects.",
+    "expression_limit": "Figure 5A is not a uniquely IMD2-specific readout.",
+    "mechanistic_limit": "IMD transcription context does not establish Rpb1 as the direct drug target.",
+    "reference_limit": "S288c reference protein and taxonomy are not experimental allele or strain IDs.",
+    "resistance_basis": "Source-labeled resistant comparisons in Figure 2D with plate-growth controls in Figure 2A.",
+    "subject_scope": "CKY283-derived laboratory comparisons; no exact descendant identifier assigned."
+  },
+  "inputs": {
+    "assessment": {
+      "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/reviewed-supplements.json",
+      "sha256": "5a4f7e9dce39f46e7815e3ac4239b21b47a09bb28dc9f3c13dcf7357405438ee"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/cohort.json",
+      "sha256": "4ee26886af45f659c14fdb5941ff1e74c3e00957b9c717c229dec8f0e5e01cc8"
+    },
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/native-plan.json",
+      "sha256": "0a1b4f5dbf303dd36cb9559ce8ed2aa066f34a89314dcd4b762a62640f728ebd"
+    },
+    "prior": {
+      "path": "research/2026-10-14-mycophenolic-context.json",
+      "sha256": "5b413ea2ef058d23ace551165a802796de9a7bcb40e8abb82f1bea49b9cf7871"
+    }
+  },
+  "primary_doi": "10.1371/journal.pgen.1002627",
+  "record_before": {
+    "complete_collection_aware_record_loaded": true,
+    "identifier": "CHEBI:168396",
+    "label": "mycophenolic acid",
+    "path": "data/antibiotics/antiviral/mycophenolic-acid.yaml",
+    "sha256": "36014dc9ddbd32288e27e051c676ad82bcb6ba8bfb24c793800fcc673fdabe4c",
+    "standard_inchi_key": "HPNSFSBZBAHARI-RUDMXATFSA-N"
+  },
+  "reference": {
+    "canonical_gene": "RPO21",
+    "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+    "entry_version": 255,
+    "exact_resistance_allele": false,
+    "experimental_subject_assignment": false,
+    "gene_names": [
+      "RPB1",
+      "RPB220",
+      "RPO21",
+      "SUA8"
+    ],
+    "ordered_locus_names": [
+      "YDL140C"
+    ],
+    "protein_accession": "UniProtKB:P04050",
+    "protein_name": "DNA-directed RNA polymerase II subunit RPB1",
+    "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+    "reference_taxon_id": "NCBITaxon:559292",
+    "reference_taxon_rank": "strain",
+    "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+    "release": "2026_03",
+    "resistance_asserted_from_reference": false,
+    "role": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_GENOME",
+    "sequence_version": 2,
+    "sgd_id": "SGD:S000002299",
+    "source_gene": "RPB1",
+    "source_request": "rpb1-reference",
+    "source_species_taxon_id": "NCBITaxon:4932",
+    "species_lineage_verified": true
+  },
+  "scope": "QUALIFIED_RPB1_LABORATORY_ASSOCIATION_NOT_EXACT_ALLELE_OR_CLINICAL_RESISTANCE",
+  "source_documents": {
+    "table-s1": {
+      "document": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/table-s1-storage-attempt.json",
+          "sha256": "49b17e8bfe1fa49f5a05200989f5054ca463ea838b364e174689121ffdf71b3d"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/table-s1-storage-response.bin",
+          "sha256": "54ead5eb4a00a4c0c6c006f3657d041c9cd7d9be472d57b13963b57c7bdc26c7"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/table-s1-storage-receipt.json",
+          "sha256": "148bb4ca6d798f7455bfb213528591c1509c39623b31a1ac9aa5ffd5fc9c41c7"
+        },
+        "retrieved_at": "2026-10-14T04:11:27.303831+00:00",
+        "status": 200,
+        "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1002627/1/pgen.1002627.s009.docx"
+      },
+      "publisher": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/table-s1-attempt.json",
+          "sha256": "5eb78cba28634f15ae95413922ffa72e5aa299d3a419a1ed85cad8950ae769c5"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/table-s1-response.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/table-s1-receipt.json",
+          "sha256": "434f9d452653150f9441ad9ab78fb8b2c32f368454c25f082a9fdf16a18f6f80"
+        },
+        "retrieved_at": "2026-10-14T04:11:16.467449+00:00",
+        "status": 302,
+        "url": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1002627.s009"
+      },
+      "rendered_pages_reviewed": 4
+    },
+    "table-s2": {
+      "document": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/table-s2-storage-attempt.json",
+          "sha256": "a37dbcb2ac183e0cdd0e3ffcf570b961b13643a69a0e60b98b7e4bd38128441c"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/table-s2-storage-response.bin",
+          "sha256": "4a9ab5b8b692d0d0d141dfc047e6725dfc7be110b408e09838c9f77a6125e8da"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/table-s2-storage-receipt.json",
+          "sha256": "4c8968ea37167e8b9f644e36f1302b7cd8565d2d9ec1ab55ac6c28101258e730"
+        },
+        "retrieved_at": "2026-10-14T04:13:49.467064+00:00",
+        "status": 200,
+        "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1002627/1/pgen.1002627.s010.docx"
+      },
+      "publisher": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/table-s2-attempt.json",
+          "sha256": "c6486e5c868da666b4c24dd62d83094a2976c354f8a4a00fea600bd699677ddc"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/table-s2-response.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/table-s2-receipt.json",
+          "sha256": "9e54009357b026d8174aebb509f2c948739cd8596d61fd1080e6ab0b155d1fad"
+        },
+        "retrieved_at": "2026-10-14T04:13:25.921018+00:00",
+        "status": 302,
+        "url": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1002627.s010"
+      },
+      "rendered_pages_reviewed": 1
+    },
+    "text-s1": {
+      "document": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/text-s1-storage-attempt.json",
+          "sha256": "dbfa16d7c582390fa64400f5a9c6565b5136f355ad7dc31832885bc6ee335360"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/text-s1-storage-response.bin",
+          "sha256": "ee70f6f3d201c032b9ed2ffa34fd9adf22c018c9885ce596dc419d26c0a3b6e8"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/text-s1-storage-receipt.json",
+          "sha256": "a99a1154882d8bd60a44217fcce84ceb7191c5af4bdeb982f1160d806a795afd"
+        },
+        "retrieved_at": "2026-10-14T04:13:52.162682+00:00",
+        "status": 200,
+        "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1002627/1/pgen.1002627.s011.docx"
+      },
+      "publisher": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/text-s1-attempt.json",
+          "sha256": "90e686baf34f0b81b48763e5f6f341b5689a506d1c11e4068e868547d49a986a"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/text-s1-response.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/text-s1-receipt.json",
+          "sha256": "5ed0b258bfeabf11ccf76c8a53d460802652801473968089194ae8945a399614"
+        },
+        "retrieved_at": "2026-10-14T04:13:28.686146+00:00",
+        "status": 302,
+        "url": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1002627.s011"
+      },
+      "rendered_pages_reviewed": 5
+    }
+  },
+  "supplement_context": {
+    "table-s1": {
+      "columns": 5,
+      "native_docx_sha256": "54ead5eb4a00a4c0c6c006f3657d041c9cd7d9be472d57b13963b57c7bdc26c7",
+      "rows_including_header": 116,
+      "scope": "Comparison metadata and viability, not a table of drug-resistant isolates.",
+      "table_count": 1,
+      "viability_interpreted_as_resistance": false
+    },
+    "table-s2": {
+      "columns": 3,
+      "labels_are_variant_specific_subject_identifiers": false,
+      "native_docx_sha256": "4a9ab5b8b692d0d0d141dfc047e6725dfc7be110b408e09838c9f77a6125e8da",
+      "rows_including_header": 4,
+      "source_background_labels": [
+        "CKY274",
+        "CKY283",
+        "CKY944"
+      ],
+      "table_count": 1
+    },
+    "text-s1": {
+      "experimental_genome": null,
+      "experimental_strain_taxon_id": null,
+      "genetic_comparison_background": "CKY283",
+      "locations": {
+        "background_comparison": {
+          "body_paragraph": 33,
+          "text_sha256": "4986d947443c3247b4f164365e9f7d34a915d3e2e4fc7066e89c1d8fa8b09b27"
+        },
+        "yeast_background": {
+          "body_paragraph": 6,
+          "text_sha256": "c3d9a5132fc47cdbd0f274cfc1612ae67b3b55a2a08dd962c22411ad7be70cb8"
+        }
+      },
+      "native_docx_sha256": "ee70f6f3d201c032b9ed2ffa34fd9adf22c018c9885ce596dc419d26c0a3b6e8",
+      "parental_scope": "S288C-derived laboratory strains",
+      "table_count": 0
+    }
+  },
+  "taxonomy": {
+    "body": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+    },
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+      "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+    }
+  }
+}

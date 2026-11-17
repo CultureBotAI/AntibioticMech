@@ -1,0 +1,238 @@
+schema_version: 1.0.0
+review_id: 20261026T003500Z-negamycin-record-review
+kind: record
+repository: culturebotai/AntibioticMech
+title: Single-record review of negamycin (CHEBI:198310)
+started_at: '2026-10-26T00:20:00Z'
+finished_at: '2026-10-26T00:35:00Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  independence: self_review
+  independence_basis: Cycle 3 Stage 4 workflow record-review pass executed by the
+    repository curation agent prior to independent adversarial PR review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_CURATION
+scientific_review: true
+summary: 'Whole-record review of PROPOSED/EXACT record CHEBI:198310 (negamycin, data/antibiotics/antibacterial/negamycin.yaml)
+  verified exact single-molecule chemical structure (C9H20N4O4, InChIKey IKHFJPZQZVMLRH-RNFRBKRXSA-N,
+  PubChem CID 11118411), antibacterial filing, CURATOR discovery evidence (Olivier
+  et al. 2014 DOI:10.1073/pnas.1414401111 / PMID:25368144; Polikanov et al. 2014 DOI:10.1016/j.molcel.2014.09.021
+  / PMID:25306922), biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (PROTEIN_SYNTHESIS_INHIBITION,
+  MICROBIAL_TARGET), PRIMARY_LITERATURE molecular_targets entry for bacterial 30S
+  ribosomal subunit head domain (16S rRNA helix 34) in Escherichia coli (NCBITaxon:562),
+  and the documented RIBOSOMAL_SUBUNIT hold in curation/uniprot_protein_examples.yaml.
+  One open coherence finding requires Cycle 3 Stage 5 grouped remediation: despite
+  having grounding_status: EXACT, complete chemical_structure, curated mode_of_action,
+  and PRIMARY_LITERATURE molecular_targets, curation_status remains PROPOSED.'
+source:
+  git_revision: 2cc3ea13020683af56460711fbff425aa2dad456
+  state: working_tree
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    role: context
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+  - path: curation/curator_antibiotics.tsv
+    role: context
+    sha256: 5a7a6d3c2994644de73400a599908ed5f3a9aa93a952fe678a1887f248cbe9c7
+  - path: curation/uniprot_protein_examples.yaml
+    role: context
+    sha256: ecd97d3f4e04e882fd4c2f525391da54ab7170db29131886469f191c41331a56
+  - path: data/antibiotics/antibacterial/negamycin.yaml
+    role: target
+    sha256: ab9af309a6f502be235d422757eff1befe1d8bdc00d792e5e4bc2e4230b45c14
+  - path: docs/CURATION.md
+    role: context
+    sha256: 3a060b8518ea0bdace3ca7efe6e7749c4216a7f486192994f9be82d55c301f29
+  - path: docs/record-reviews.md
+    role: context
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+  - path: scripts/curation_worklist.py
+    role: context
+    sha256: 692fdcc39a0c8135c89b483a19ab0a428bfac3d851ff67a6a1ceac80225a2430
+  - path: scripts/seed_from_sources.py
+    role: context
+    sha256: 53cf79eb1417ff7758a94f2d18ac1ce47b0f8c91c8961023363cf37698d4a056
+  - path: scripts/validate_strict.py
+    role: context
+    sha256: d70e6739c881260927dfc99abea16e56be0f34f353f9f95353a43da76e8e7217
+  - path: scripts/verify_corpus.py
+    role: context
+    sha256: 7d881f9b4e17b02d7f3ec3eb48404ad0a41a0cefa915edc9a442f755b834df78
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    role: context
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+scope:
+  description: Complete single-record review of data/antibiotics/antibacterial/negamycin.yaml
+    (CHEBI:198310) across chemical identity, grounding, filing, source_concepts, biosynthesis_origin,
+    mode_of_action, molecular_targets, held_targets accounting, and curation_status
+    gate eligibility.
+  selection: Selected CHEBI:198310 (negamycin) as the representative record from the
+    2 PROPOSED/EXACT records added in Cycle 3 Stage 1 and enriched with PRIMARY_LITERATURE
+    molecular_targets in Cycle 3 Stage 2 that now satisfy all criteria for promotion
+    to REVIEWED.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:198310
+targets:
+- target_id: CHEBI:198310
+  path: data/antibiotics/antibacterial/negamycin.yaml
+  label: negamycin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/negamycin.yaml
+    role: Curator-maintained slots (curation_status, mode_of_action, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Seeded CURATOR source_concepts, definition, and PubChem structure provenance
+checks:
+- check_id: strict-schema-negamycin
+  name: Closed-schema and ontology-grounding validation
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py --quiet --workers 4 --out /tmp/instance_validation_failures.tsv
+  exit_code: 0
+  summary: CHEBI:198310 passes closed LinkML schema validation and OAK ontology label
+    correspondence (CHEBI:198310, CHEBI:33282, NCBITaxon:562) with 0 errors.
+  target_ids:
+  - CHEBI:198310
+  evidence_ids:
+  - negamycin-record
+  - strict-validation-suite
+- check_id: verify-corpus-negamycin
+  name: Corpus integrity and CURATOR provenance verification
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/verify_corpus.py --summary
+  exit_code: 0
+  summary: CHEBI:198310 passes verify_corpus.py with 0 errors; seeded fields match
+    curation/curator_antibiotics.tsv.
+  target_ids:
+  - CHEBI:198310
+  evidence_ids:
+  - negamycin-record
+  - strict-validation-suite
+evidence:
+- evidence_id: negamycin-record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/negamycin.yaml
+  locator: lines 1-98
+  accessed_at: '2026-10-26T00:35:00Z'
+  support: supports
+  snapshot_sha256: ab9af309a6f502be235d422757eff1befe1d8bdc00d792e5e4bc2e4230b45c14
+  summary: 'CHEBI:198310 carries exact C9H20N4O4 structure (InChIKey IKHFJPZQZVMLRH-RNFRBKRXSA-N,
+    PubChem CID 11118411), biosynthesis_origin: NATURAL_PRODUCT, mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET), and PRIMARY_LITERATURE molecular_targets[0] for bacterial
+    30S ribosomal subunit head domain (16S rRNA helix 34) in Escherichia coli (NCBITaxon:562),
+    while retaining curation_status: PROPOSED.'
+- evidence_id: olivier-2014-negamycin
+  kind: primary_source
+  reference: DOI:10.1073/pnas.1414401111
+  locator: Olivier et al. 2014 Proc Natl Acad Sci U S A 111(46):16274-16279; PMID:25368144;
+    PDB:4W2I
+  accessed_at: '2026-10-26T00:35:00Z'
+  support: supports
+  summary: Reports X-ray crystal structure (PDB:4W2I) and single-molecule fluorescence
+    characterization of negamycin bound to helix 34 of the Escherichia coli 30S ribosomal
+    subunit head domain, inhibiting translocation and inducing miscoding.
+- evidence_id: strict-validation-suite
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: validate_strict.py and verify_corpus.py
+  accessed_at: '2026-10-26T00:35:00Z'
+  support: supports
+  snapshot_sha256: d70e6739c881260927dfc99abea16e56be0f34f353f9f95353a43da76e8e7217
+  summary: Confirms zero schema or ontology-label errors on negamycin.yaml and verifies
+    that CHEBI:198310 meets all REVIEWED gate requirements.
+assessments:
+- assessment_id: negamycin-identity-moa-and-target-grounding
+  area: evidence
+  topic: Exact ChEBI structure, mode_of_action, 30S ribosomal subunit target, and
+    held_targets accounting
+  outcome: supported
+  summary: Exact ChEBI:198310 identity, C9H20N4O4 chemical_structure, NATURAL_PRODUCT
+    biosynthesis_origin, PROTEIN_SYNTHESIS_INHIBITION mode_of_action, PRIMARY_LITERATURE
+    30S ribosomal subunit (16S rRNA helix 34) target in NCBITaxon:562, and RIBOSOMAL_SUBUNIT
+    hold in curation/uniprot_protein_examples.yaml are accurately grounded in DOI:10.1073/pnas.1414401111
+    (PMID:25368144) and DOI:10.1016/j.molcel.2014.09.021 (PMID:25306922).
+  target_ids:
+  - CHEBI:198310
+  evidence_ids:
+  - negamycin-record
+  - olivier-2014-negamycin
+- assessment_id: negamycin-curation-status-gate-alignment
+  area: completeness
+  topic: Eligibility of CHEBI:198310 for promotion from PROPOSED to REVIEWED
+  outcome: concern
+  summary: 'negamycin.yaml satisfies every REVIEWED gate requirement (grounding_status:
+    EXACT, complete chemical_structure, curated mode_of_action, and PRIMARY_LITERATURE
+    molecular_targets), but still carries curation_status: PROPOSED.'
+  target_ids:
+  - CHEBI:198310
+  evidence_ids:
+  - negamycin-record
+  - olivier-2014-negamycin
+  - strict-validation-suite
+findings:
+- finding_id: negamycin-awaiting-reviewed-promotion
+  issue_key: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  category: completeness
+  severity: major
+  status: open
+  certainty: confirmed
+  title: 'Negamycin (CHEBI:198310) has complete EXACT structure and primary-literature
+    mechanism/target curation but remains curation_status: PROPOSED'
+  description: 'In data/antibiotics/antibacterial/negamycin.yaml (CHEBI:198310), Cycle
+    3 Stage 1 seeded the exact ChEBI compound and Cycle 3 Stage 2 curated biosynthesis_origin:
+    NATURAL_PRODUCT, mode_of_action: PROTEIN_SYNTHESIS_INHIBITION (MICROBIAL_TARGET),
+    CURATOR mode_of_action_notes, and a PRIMARY_LITERATURE molecular_targets entry
+    for bacterial 30S ribosomal subunit head domain (16S rRNA helix 34) backed by
+    DOI:10.1073/pnas.1414401111 (PMID:25368144) and DOI:10.1016/j.molcel.2014.09.021
+    (PMID:25306922), yet curation_status remains PROPOSED.'
+  target_ids:
+  - CHEBI:198310
+  field_paths:
+  - curation_status
+  - curation_history
+  evidence_ids:
+  - negamycin-record
+  - olivier-2014-negamycin
+  - strict-validation-suite
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/negamycin.yaml
+    role: Curator-owned curation_status slot on EXACT record
+actions:
+- action_id: promote-negamycin-to-reviewed
+  description: 'Promote CHEBI:198310 (negamycin) from curation_status: PROPOSED to
+    REVIEWED via record_curation_event and write_validated_antibiotic during Cycle
+    3 Stage 5 grouped remediation.'
+  finding_ids:
+  - negamycin-awaiting-reviewed-promotion
+  target_ids:
+  - CHEBI:198310
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/negamycin.yaml
+    role: Curator-owned curation_status slot
+  acceptance_checks:
+  - 'CHEBI:198310 carries curation_status: REVIEWED and survives seed_from_sources.py
+    --apply --only CHEBI:198310.'
+  - scripts/validate_strict.py and scripts/verify_corpus.py pass with 0 errors.
+limitations:
+- Stage 4 is a read-only review stage; no scientific YAML records were modified in
+  this commit sequence.
+notes:
+- Negamycin is also included in the companion Cycle 3 Stage 4 full-inventory cohort
+  review (3,012 records) under the 2-record open finding proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion.
+tags:
+- record-review
+- negamycin
+- antibacterial
+- cycle-03
+- stage-04

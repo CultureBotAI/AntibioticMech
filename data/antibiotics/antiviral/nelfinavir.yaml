@@ -55,6 +55,893 @@ source_concepts:
   role_terms:
   - CHEBI:35660
   source_version: '2026-08-30'
+genotype_resistance_score_rules:
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:2f41ff05cbd1562c
+  score_term_index: 1
+  score_term: 10F => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 1: 10F => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:6c9703191d1bfda2
+  score_term_index: 2
+  score_term: 20T => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 2: 20T => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:5ba7c5ec62890fe7
+  score_term_index: 3
+  score_term: 23I => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 3: 23I => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:ba5e9550556ba32d
+  score_term_index: 4
+  score_term: MAX(24F => 10, 24I => 10, 24M => 10)
+  score_assignments: 3
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 4: MAX(24F => 10, 24I => 10, 24M => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:a1760b9b89b13905
+  score_term_index: 5
+  score_term: 30N => 60
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 5: 30N => 60'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:d7c391478a20c012
+  score_term_index: 6
+  score_term: 32I => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 6: 32I => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:745117b3ef86c2f1
+  score_term_index: 7
+  score_term: 33F => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 7: 33F => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:1587a39706ce26a5
+  score_term_index: 8
+  score_term: 43T => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 8: 43T => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:1bd7129756e57c4b
+  score_term_index: 9
+  score_term: MAX(46I => 30, 46L => 20, 46V => 20)
+  score_assignments: 3
+  negative_score_assignments: 0
+  min_score: 20.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 9: MAX(46I => 30, 46L => 20, 46V => 20)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:b630b873d9445761
+  score_term_index: 10
+  score_term: MAX(47A => 30, 47V => 20)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 20.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 10: MAX(47A => 30, 47V => 20)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:29a181771b0d664d
+  score_term_index: 11
+  score_term: MAX(48A => 30, 48L => 30, 48M => 30, 48Q => 30, 48S => 30, 48T => 30,
+    48V => 30)
+  score_assignments: 7
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 11: MAX(48A => 30, 48L => 30, 48M => 30, 48Q => 30, 48S
+      => 30, 48T => 30, 48V => 30)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:9664f6d6d554d011
+  score_term_index: 12
+  score_term: 50V => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 12: 50V => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:994ff09dbe849fef
+  score_term_index: 13
+  score_term: 53L => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 13: 53L => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:8175c6866bfbcf3e
+  score_term_index: 14
+  score_term: MAX(54A => 20, 54L => 20, 54M => 20, 54S => 20, 54T => 20, 54V => 20)
+  score_assignments: 6
+  negative_score_assignments: 0
+  min_score: 20.0
+  max_score: 20.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 14: MAX(54A => 20, 54L => 20, 54M => 20, 54S => 20, 54T
+      => 20, 54V => 20)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:8eb89d3547519b29
+  score_term_index: 15
+  score_term: 58E => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 15: 58E => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:5e2b576755aa4b88
+  score_term_index: 16
+  score_term: MAX(73A => 15, 73C => 15, 73D => 10, 73S => 15, 73T => 15, 73V => 10)
+  score_assignments: 6
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 16: MAX(73A => 15, 73C => 15, 73D => 10, 73S => 15, 73T
+      => 15, 73V => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:05af54218cb536dc
+  score_term_index: 17
+  score_term: 74P => 20
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 20.0
+  max_score: 20.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 17: 74P => 20'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:b30d494def534888
+  score_term_index: 18
+  score_term: 76V => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 18: 76V => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:a69006ed33271066
+  score_term_index: 19
+  score_term: MAX(82A => 30, 82C => 30, 82F => 30, 82L => 10, 82M => 30, 82S => 30,
+    82T => 30)
+  score_assignments: 7
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 19: MAX(82A => 30, 82C => 30, 82F => 30, 82L => 10, 82M
+      => 30, 82S => 30, 82T => 30)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:167e15c2b5a1201b
+  score_term_index: 20
+  score_term: 83D => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 20: 83D => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:81bb3b4e33d8dac6
+  score_term_index: 21
+  score_term: MAX(84A => 60, 84C => 60, 84V => 60)
+  score_assignments: 3
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 21: MAX(84A => 60, 84C => 60, 84V => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:e1b17617ca9c366e
+  score_term_index: 22
+  score_term: MAX(88D => 60, 88G => 30, 88S => 60, 88T => 30)
+  score_assignments: 4
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 22: MAX(88D => 60, 88G => 30, 88S => 60, 88T => 30)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:c2ad8cff12400791
+  score_term_index: 23
+  score_term: 89V => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 23: 89V => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:26e6a9663d1217ea
+  score_term_index: 24
+  score_term: 90M => 60
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 24: 90M => 60'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:0cd947d97c7c5c90
+  score_term_index: 25
+  score_term: 32I AND 47AV => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 25: 32I AND 47AV => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:0c6d8ff05ff359aa
+  score_term_index: 26
+  score_term: 32I AND 54LM => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 26: 32I AND 54LM => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:150b809304bf7e28
+  score_term_index: 27
+  score_term: 46IL AND 84V AND 90M => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 27: 46IL AND 84V AND 90M => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:044d47fcfd81a349
+  score_term_index: 28
+  score_term: 46ILV AND 82ACFLMST => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 28: 46ILV AND 82ACFLMST => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:9c223e92837e53d6
+  score_term_index: 29
+  score_term: 46ILV AND 90M => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 29: 46ILV AND 90M => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:8e5f3e4550233db7
+  score_term_index: 30
+  score_term: 47AV AND 54LM => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 30: 47AV AND 54LM => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:a0e354aae436c87b
+  score_term_index: 31
+  score_term: 53L AND 90M => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 31: 53L AND 90M => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:ca153ea0b4ac60d6
+  score_term_index: 32
+  score_term: 54ALMSTV AND 82ACFLMST => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 32: 54ALMSTV AND 82ACFLMST => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:bcd1e04c8a171c91
+  score_term_index: 33
+  score_term: 54ALMSTV AND 90M => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 33: 54ALMSTV AND 90M => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:06665c7945eef576
+  score_term_index: 34
+  score_term: 73ACSTV AND 90M => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 34: 73ACSTV AND 90M => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:cf9a944d2bb509b4
+  score_term_index: 35
+  score_term: 82ACFLMST AND 90M => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 35: 82ACFLMST AND 90M => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:e3312b2508d51c48
+  score_term_index: 36
+  score_term: 11IL AND 32I => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 36: 11IL AND 32I => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:f913f7189eee0ff5
+  score_term_index: 37
+  score_term: 11IL AND 54LM => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 37: 11IL AND 54LM => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:81a64a591581e4de
+  score_term_index: 38
+  score_term: 32I AND 76V => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 38: 32I AND 76V => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:da1e00f5a7818e18
+  score_term_index: 39
+  score_term: 32I AND 84V => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 39: 32I AND 84V => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:67443e854f525840
+  score_term_index: 40
+  score_term: 32I AND 89V => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 40: 32I AND 89V => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:dd522aa99d7d80d1
+  score_term_index: 41
+  score_term: 47AV AND 84V => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 41: 47AV AND 84V => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:d5422d51dfe21547
+  score_term_index: 42
+  score_term: 54LM AND 84V => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 42: 54LM AND 84V => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:4587eddb331c1420
+  score_term_index: 43
+  score_term: 54LM AND 89V => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 43: 54LM AND 89V => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: PR
+  drug_class: PI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: NFV
+  source_rule_id: hivdb_hivfacts:28f678f5187d104e
+  score_term_index: 44
+  score_term: 46ILV AND 76V => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 NFV score term 44: 46ILV AND 76V => 10'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -72,3 +959,8 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-28T17:24:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: genotype_resistance_score_rules (HIVDB_HIVFACTS be1c11a5145fea9073fdb71801919d4a34265336).
+    Upstream retrieval date 2026-08-30, unchanged.'

@@ -1,0 +1,222 @@
+{
+  "adversarial_self_review": [
+    "The complete reviewed bsr query contains a racemase symbol collision; it is explicitly excluded.",
+    "Donor, heterologous host and fungal comparator labels do not identify the same protein or subject.",
+    "Species-level TaxIDs are not strain IDs; reference proteins are not exact experimental alleles.",
+    "The 1998 primary paper is not the same publication as the bacterial UniProt reference's 1991 citation.",
+    "Cached full HTML and selected Results inspection do not mean native figures or supplements were reviewed.",
+    "A compound's inactivation product or related salt is not automatically its parent record's assay material.",
+    "Fixed-concentration growth, enzyme activity and mammalian-cell experiments are not standardized microbial MICs.",
+    "No existing efflux or uptake claims were replaced or supplemented by these held mappings.",
+    "This is same-agent review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-detox-reference-context.json",
+      "sha256": "4284a61a802b9f4516c1dbfa062ea5da7ae0fedea855d0f5f0fa1ed556a9e1ce"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "657837e57475ea500f2c3d8ff459c30734cd11ee47d562dd1204663a613c3c89"
+    },
+    {
+      "path": "tests/test_detox_reference_context.py",
+      "sha256": "d86e662cea2be54508a696f341e9f20bf45e2f6ebe86955679991cfdd32b7f69"
+    }
+  ],
+  "checks": [
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_detox_reference_context.py",
+        "tests/test_rrna_taxonomy_context.py",
+        "tests/test_translation_gene_curation.py",
+        "tests/test_docs.py::test_numeric_claims_in_prose_match_the_corpus",
+        "tests/test_docs.py::test_no_unregistered_numeric_claim_about_the_corpus",
+        "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-detox/focused-tests.xml"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:36:40.949281+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-detox/focused.log",
+        "sha256": "9e0fc7b323a37c23ad9373132f4bfcb2f326cf9ff082472e21956f00986b83b6"
+      },
+      "name": "focused",
+      "started": "2026-10-13T11:35:14.249155+00:00"
+    },
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:36:41.113592+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-detox/lint.log",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      },
+      "name": "lint",
+      "started": "2026-10-13T11:36:40.950987+00:00"
+    },
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "scripts/check_docs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:37:28.828939+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-detox/documentation.log",
+        "sha256": "4e35248929325fef11134949b3f16dc729df9c28d017e999898555d14bcb0afd"
+      },
+      "name": "documentation",
+      "started": "2026-10-13T11:36:41.114706+00:00"
+    },
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "scripts/check_provenance.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:37:32.664187+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-detox/provenance.log",
+        "sha256": "68c76ba32a2734dee9a016ec9d2fe6838468bcaf7abf9b221dfa6e696bf98e33"
+      },
+      "name": "provenance",
+      "started": "2026-10-13T11:37:28.830256+00:00"
+    },
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "scripts/check_source_queue.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:37:33.079528+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-detox/source-queue.log",
+        "sha256": "3b2102be916d52253b62ecc2af38f5c018c5ea536815eddbe2ffcb4106c3fa64"
+      },
+      "name": "source-queue",
+      "started": "2026-10-13T11:37:32.665483+00:00"
+    },
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "scripts/summarize_resistance_progress.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:38:23.186778+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-detox/progress.log",
+        "sha256": "212366ae2bb2d32cb9b76da20b0c969fb1387fdf758eacd353eedf5f4d4231d5"
+      },
+      "name": "progress",
+      "started": "2026-10-13T11:37:33.080775+00:00"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T11:38:23.369089+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-detox/diff.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "name": "diff",
+      "started": "2026-10-13T11:38:23.188297+00:00"
+    }
+  ],
+  "coverage_counts_unchanged": {
+    "assertions": 4873,
+    "curator_claims": 118,
+    "curator_records": 49,
+    "records": 2939,
+    "records_with_assertions": 316,
+    "without_assertions_or_rules": 2610
+  },
+  "date": "2026-10-13",
+  "environment": {
+    "fresh_ci_or_pinned_environment_pass_claimed": false,
+    "project_rdkit_pin": "2026.3.5",
+    "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:58:33) [Clang 19.1.7 ]",
+    "versions": {
+      "pytest": "9.1.1",
+      "rdkit": "2025.3.6"
+    }
+  },
+  "focused_tests": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-detox/focused-tests.xml",
+      "sha256": "fb19fb9c7ec94bc76736bd6c10e457a307c049af832b5326288bf053aba5f7b0"
+    },
+    "new_negative_promotion_cases_passed": 12,
+    "passed": 51,
+    "skipped": 0
+  },
+  "full_qc": {
+    "historical_checkpoint_only": {
+      "path": "research/2026-10-13-translation-verification.json",
+      "sha256": "79a52563f8d05032088c33fb6317a1b53e0829e16d26d34dfb3e1ae3824f2e01"
+    },
+    "reason": "Only research artifacts and regression tests changed; biological records, production code, source owners, pages and embeddings are unchanged.",
+    "rerun_for_research_additions": false
+  },
+  "initial_local_problems_resolved": [
+    "The taxonomy helper initially enumerated only accession-named result files. It was extended to include the completed bsr lookup before requesting its verified bacterial taxon.",
+    "BeautifulSoup was unavailable; primary HTML inspection used the existing standard-library parser.",
+    "One new test assertion exceeded the lint limit and was wrapped without changing behavior."
+  ],
+  "limits": {
+    "biological_record_changes": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_experimental_identifiers": 0,
+    "new_resistance_claims": 0,
+    "records_in_scope": 2939,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "source_adoptions": 0,
+    "whole_corpus_status": "OPEN",
+    "whole_record_reviews_completed": 0
+  },
+  "offline_replay": {
+    "dossier_rebuilt_from_pinned_inputs": true,
+    "excluded_symbol_collisions": 1,
+    "network_requests": 0,
+    "primary_assets_verified": 2,
+    "protein_hits": 4,
+    "protein_requests_replayed": 3,
+    "relevant_references": 3,
+    "rendered_pages_verified": 6,
+    "taxonomy_requests_replayed": 3
+  },
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-detox/baseline.json",
+      "sha256": "01d0911d4f040375a0fd072866ae06cb6e9dfe99fa3177f6d69a453456de856b"
+    },
+    "historical_research_files_changed_except_main_report": 0,
+    "historical_research_files_checked": 411,
+    "ignored_files_included": true,
+    "pages_embeddings_and_source_queue_byte_identical": true,
+    "primary_source_caches_confirmed_gitignored": true,
+    "protected_files_changed": 0,
+    "protected_files_checked": 3385,
+    "records_changed": 0,
+    "records_checked": 2939
+  },
+  "scope": "DETOX_REFERENCE_GROUNDING_NOT_RESISTANCE_CURATION"
+}

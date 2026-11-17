@@ -1,0 +1,169 @@
+{
+  "baseline_commit": "b0950a9c3256aacee226834e0e8a88d1022c9948",
+  "biological_records_changed": 0,
+  "cache_independent_full_source_cohort_test": "PASS",
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-14-card-outer-membrane/offline-projection-canary-review.json",
+    "sha256": "a76df9735451cebe7a75595466d7e048fe6509ebcb01e7575f810d6aab8cf212"
+  },
+  "captured_at": "2026-10-15T06:20:19.613434+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-card-outer-membrane/cohort.json",
+    "sha256": "19ab849317740fadc00f86216d361e06796f1146b4f72b370565a46dd17b1e56"
+  },
+  "complete_collection_aware_records_read": 46,
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 420,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-outer-membrane/expanded-tests.xml",
+      "sha256": "ff5b05294d1e964b6052f34ce077c13f36f22733280d36342044c838849af20a"
+    },
+    "skipped": 0,
+    "tests": 420
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "f1a3f3e61524cbe163e9913dc3f72056f7ebb0a8f85e53df79a1553ecc36e692"
+    },
+    {
+      "path": "research/2026-10-14-card-outer-membrane-references.json",
+      "sha256": "0e5874e357622f86110888fa0e8f2650787e61426c9c38e717827bbd7b940011"
+    },
+    {
+      "path": "scripts/audit_card_outer_membrane_references.py",
+      "sha256": "98a728a91cc3cc7bb7ee20cbd9c1e673dfc4f5a1970859c4a4832d98c9b2e453"
+    },
+    {
+      "path": "tests/test_card_outer_membrane_references.py",
+      "sha256": "0baa9174897f0102d17869f7073fb6e8352fa5b39852f4459963a7a6ba269ae4"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 69,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-outer-membrane/focused-tests.xml",
+      "sha256": "b0a90d7e8e89e57794c94b7da7f54ee2b5a18a905649082869b9ff8bf9bbd59f"
+    },
+    "skipped": 0,
+    "tests": 69
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_outer_membrane_20261014.py",
+      "sha256": "ffb6eae864f926c634a00cb92c68ebd51753b727aa08ba1e6193c4158ed10ead"
+    },
+    {
+      "path": "/private/tmp/publish_outer_membrane_20261014.py",
+      "sha256": "40bc58f1736e0721e9749e21a80cd2260a6a9215f8c8b04317d38e06f2a197fa"
+    },
+    {
+      "path": "/private/tmp/verify_outer_membrane_20261014.py",
+      "sha256": "f7cf509481d9a52b8fda12bec145a0ca8d8a0a984ef289d2572594c7c3eb1bbe"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "ncbi_requests": 0,
+  "network_and_file_writes_blocked_during_replay": true,
+  "network_requests": 22,
+  "new_experimental_allele_subject_or_genome_assignments": 0,
+  "new_taxonomy_requests": 0,
+  "new_verified_resistance_results": 0,
+  "no_new_data_source_owned_or_rendered_files": true,
+  "offline_native_current_corpus_replay": "PASS",
+  "outreach": 0,
+  "previous_uncommitted_work_preserved": true,
+  "primary_requests": 0,
+  "prior_research_checkpoints_and_receipts_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-card-outer-membrane/protected-before.json",
+    "sha256": "7d7a4a6ef26d6758cc0df2070b7c901defae91221060c348062d5c132fa692bb"
+  },
+  "protected_files_checked": 7707,
+  "repository_ruff_check": "PASS",
+  "reuse_terms_review_resumed": false,
+  "review_checks": [
+    "29 complete label-screen terms; not an exhaustive ontology-defined porin family",
+    "Complex/regulatory and organism-unspecified terms never forced into a single species/protein",
+    "All 145 por hits partitioned: 70 native PIB candidates, nine IA, one hybrid, 65 unspecified",
+    "27 precursor and 47 fragment flags preserved; unflagged truncated names do not imply completeness",
+    "Native aliases and mixed protein names retained; no chosen representative among multiple references",
+    "232 bibliography memberships retain identifier-free thesis and malformed DOI metadata",
+    "Prior CARD reference links preserved with explicit originating-index pointer context",
+    "All 22 requests are complete protein metadata queries, with no new taxonomy requests or retries"
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "CARD_OUTER_MEMBRANE_LABEL_SCREEN_REFERENCE_CONTEXT_NOT_EXPERIMENTAL_RESISTANCE",
+  "source_adoptions": 0,
+  "source_claim_content_hashes_and_positions_checked": 117,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "source_terms_checked": 29,
+  "summary": {
+    "bibliography_types": {
+      "journal article": 186,
+      "submission": 45,
+      "thesis": 1
+    },
+    "biological_records_changed": 0,
+    "complete_records_read": 46,
+    "corpus_records_hash_checked": 2939,
+    "entity_scopes": {
+      "COMPLEX_OR_REGULATORY_CONTEXT_NOT_SINGLE_PROTEIN": 13,
+      "ORGANISM_NAMED_SINGLE_PROTEIN_LABEL": 14,
+      "ORGANISM_UNSPECIFIED_NO_SPECIES_QUERY": 2
+    },
+    "experimental_assignments": 0,
+    "gene_taxon_contexts": 14,
+    "named_single_terms": 14,
+    "native_bibliography_memberships": 232,
+    "native_identifier_issue_memberships": 1,
+    "native_protein_flags": {
+      "Fragment": 47,
+      "None": 50,
+      "Precursor": 27
+    },
+    "query_hits_not_assigned_to_source_subtype": 75,
+    "reference_proteins": 124,
+    "reference_taxa": 27,
+    "resolved_source_names": 8,
+    "source_claims": 117,
+    "source_names": 8,
+    "source_terms": 29,
+    "subtype_dispositions": {
+      "NATIVE_HYBRID_NOT_PURE_PIB": 1,
+      "NATIVE_IA_NOT_SOURCE_PIB": 9,
+      "NO_EXPLICIT_NATIVE_PIB_SUBTYPE_NOT_ABSENCE": 65
+    },
+    "term_protein_links": 124,
+    "term_statuses": {
+      "COMPLEX_OR_REGULATORY_CONTEXT_NOT_SINGLE_PROTEIN": 13,
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 6,
+      "NO_EXACT_GENE_RESULTS_NOT_ABSENCE": 2,
+      "ORGANISM_UNSPECIFIED_NO_SPECIES_QUERY": 2,
+      "REVIEWED_REFERENCE": 4,
+      "UNREVIEWED_CANDIDATE": 2
+    },
+    "whole_record_primary_signoffs": 0
+  },
+  "verification_limit": "Reference identity and complete label-screen accounting, not primary resistance or allele signoff. Pinned RDKit has no Intel macOS wheel; earlier Linux CI is historical.",
+  "whole_record_primary_signoffs": 0
+}

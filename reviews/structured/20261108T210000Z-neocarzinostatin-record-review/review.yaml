@@ -1,0 +1,247 @@
+schema_version: 1.0.0
+review_id: 20261108T210000Z-neocarzinostatin-record-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Single-record review of neocarzinostatin (CHEBI:29655)
+started_at: '2026-11-08T20:52:00Z'
+finished_at: '2026-11-08T21:00:00Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  independence: self_review
+  independence_basis: Cycle 7 Stage 4 workflow record-review pass executed by the
+    repository curation agent prior to independent adversarial PR review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_CURATION
+scientific_review: true
+summary: 'Whole-record review of PROPOSED/EXACT record CHEBI:29655 (neocarzinostatin,
+  data/antibiotics/antibacterial/neocarzinostatin.yaml) verified exact single-molecule
+  chemical structure (C35H33NO12, InChIKey QZGIWPZCWHMVQL-UIYAJPBUSA-N, PubChem CID
+  447545), antibacterial filing (CHEBI:33282), CURATOR discovery and biosynthetic
+  evidence (Liu et al. 2005 DOI:10.1016/j.chembiol.2004.12.013 / PMID:15797213; Ohtsuki
+  & Ishida 1975 DOI:10.7164/antibiotics.28.229 / PMID:123897), MIBiG 4.0.1 BGC0000112
+  producer provenance in Streptomyces carzinostaticus subsp. neocarzinostaticus (NCBITaxon:167636),
+  biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+  MICROBIAL_TARGET), and the PRIMARY_LITERATURE molecular_targets entry for bacterial
+  duplex DNA (CHEBI:16991, NUCLEIC_ACID, DIRECT_BINDING_TARGET) explicitly accounted
+  in curation/uniprot_protein_examples.yaml (held_targets). One open coherence finding
+  requires Cycle 7 Stage 5 grouped remediation: despite having grounding_status: EXACT,
+  complete chemical_structure, curated mode_of_action, and PRIMARY_LITERATURE molecular_targets
+  with complete UniProtKB accounting, curation_status remains PROPOSED.'
+source:
+  git_revision: 9d3d0205b298bbb5ef04218fb8245ccb4e471ca7
+  state: working_tree
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    role: context
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+  - path: curation/curator_antibiotics.tsv
+    role: context
+    sha256: 569005782ded1bda3f26f085bcbee60cf6cb2d2c5c494c1900274b5a054f40da
+  - path: curation/uniprot_protein_examples.yaml
+    role: context
+    sha256: cc8444f79d0a7e0b954865c9f23eb0f306953934743562bd0417ba96ef5f0034
+  - path: data/antibiotics/antibacterial/neocarzinostatin.yaml
+    role: target
+    sha256: e4b3d017148553be2f53cc02b8883754b767dd5dea72c210c4c85e99cc220a77
+  - path: docs/CURATION.md
+    role: context
+    sha256: 7989eeffe5375de51ab871b3d5a2740d7828f35fdd5c7df23efb972bd6f9bece
+  - path: docs/record-reviews.md
+    role: context
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+  - path: scripts/curation_worklist.py
+    role: context
+    sha256: 692fdcc39a0c8135c89b483a19ab0a428bfac3d851ff67a6a1ceac80225a2430
+  - path: scripts/seed_from_sources.py
+    role: context
+    sha256: 53cf79eb1417ff7758a94f2d18ac1ce47b0f8c91c8961023363cf37698d4a056
+  - path: scripts/validate_strict.py
+    role: context
+    sha256: d70e6739c881260927dfc99abea16e56be0f34f353f9f95353a43da76e8e7217
+  - path: scripts/verify_corpus.py
+    role: context
+    sha256: 7d881f9b4e17b02d7f3ec3eb48404ad0a41a0cefa915edc9a442f755b834df78
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    role: context
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+scope:
+  description: Complete single-record review of data/antibiotics/antibacterial/neocarzinostatin.yaml
+    (CHEBI:29655) across chemical identity, grounding, filing, source_concepts, producer_organisms,
+    biosynthesis_origin, mode_of_action, molecular_targets, UniProtKB protein_examples/held_targets
+    accounting, and curation_status gate eligibility.
+  selection: Selected CHEBI:29655 (neocarzinostatin) as a representative PROPOSED/EXACT
+    record in the 3,105-record Cycle 7 Stage 4 inventory that was seeded in Cycle
+    7 Stage 1, enriched with mode_of_action and PRIMARY_LITERATURE molecular_targets
+    in Cycle 7 Stages 2-3, and is immediately eligible for promotion to REVIEWED.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:29655
+targets:
+- target_id: CHEBI:29655
+  path: data/antibiotics/antibacterial/neocarzinostatin.yaml
+  label: neocarzinostatin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/neocarzinostatin.yaml
+    role: Curator-maintained slots (curation_status, mode_of_action, molecular_targets)
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Seeded CURATOR source_concepts, definition, and MIBiG/PubChem structure
+      provenance
+checks:
+- check_id: strict-schema-neocarzinostatin
+  name: Closed-schema and ontology-grounding validation
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py --quiet --workers 4 --out .temp/antibioticmech-record-validation.tsv
+  exit_code: 0
+  summary: CHEBI:29655 passes closed LinkML schema validation and OAK ontology label
+    correspondence (CHEBI:29655, CHEBI:33282, CHEBI:16991, NCBITaxon:167636, NCBITaxon:2)
+    with 0 errors.
+  target_ids:
+  - CHEBI:29655
+  evidence_ids:
+  - neocarzinostatin-record
+  - strict-validation-suite
+- check_id: verify-corpus-neocarzinostatin
+  name: Corpus integrity and CURATOR provenance verification
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/verify_corpus.py --summary
+  exit_code: 0
+  summary: CHEBI:29655 passes verify_corpus.py with 0 errors; seeded fields match
+    curation/curator_antibiotics.tsv and MIBiG 4.0.1 BGC0000112.
+  target_ids:
+  - CHEBI:29655
+  evidence_ids:
+  - neocarzinostatin-record
+  - strict-validation-suite
+evidence:
+- evidence_id: neocarzinostatin-record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/neocarzinostatin.yaml
+  locator: lines 1-132
+  accessed_at: '2026-11-08T21:00:00Z'
+  support: supports
+  snapshot_sha256: e4b3d017148553be2f53cc02b8883754b767dd5dea72c210c4c85e99cc220a77
+  summary: 'CHEBI:29655 carries exact C35H33NO12 structure (InChIKey QZGIWPZCWHMVQL-UIYAJPBUSA-N,
+    PubChem CID 447545), biosynthesis_origin: NATURAL_PRODUCT, mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET), and PRIMARY_LITERATURE molecular_targets[0] for bacterial
+    duplex DNA (CHEBI:16991, NUCLEIC_ACID, DIRECT_BINDING_TARGET) accounted in curation/uniprot_protein_examples.yaml
+    (held_targets), while retaining curation_status: PROPOSED.'
+- evidence_id: liu-2005-ohtsuki-1975-neocarzinostatin
+  kind: primary_source
+  reference: DOI:10.1016/j.chembiol.2004.12.013
+  locator: Liu et al. 2005 Chem Biol 12:293-302 (PMID:15797213); Ohtsuki & Ishida
+    1975 J Antibiot 28:229-236 (DOI:10.7164/antibiotics.28.229; PMID:123897)
+  accessed_at: '2026-11-08T21:00:00Z'
+  support: supports
+  summary: Establishes the nine-membered enediyne chromophore of neocarzinostatin
+    from Streptomyces carzinostaticus as a thiol-activated diradical DNA-cleaving
+    antibiotic that induces single- and double-strand breaks in bacterial duplex DNA
+    and inhibits DNA synthesis in Sarcina lutea and Staphylococcus aureus.
+- evidence_id: strict-validation-suite
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: validate_strict.py and verify_corpus.py
+  accessed_at: '2026-11-08T21:00:00Z'
+  support: supports
+  snapshot_sha256: d70e6739c881260927dfc99abea16e56be0f34f353f9f95353a43da76e8e7217
+  summary: Confirms zero schema or ontology-label errors on neocarzinostatin.yaml
+    and verifies that CHEBI:29655 meets all REVIEWED gate requirements.
+assessments:
+- assessment_id: neocarzinostatin-identity-moa-and-target-grounding
+  area: evidence
+  topic: Exact ChEBI structure, mode_of_action, bacterial duplex DNA target, and UniProtKB
+    held_targets accounting
+  outcome: supported
+  summary: Exact CHEBI:29655 identity, C35H33NO12 chemical_structure, NATURAL_PRODUCT
+    biosynthesis_origin, NUCLEIC_ACID_SYNTHESIS_INHIBITION mode_of_action (MICROBIAL_TARGET),
+    and PRIMARY_LITERATURE bacterial duplex DNA (CHEBI:16991, NUCLEIC_ACID) target
+    with explicit non-protein held_targets accounting in curation/uniprot_protein_examples.yaml
+    are accurately grounded in DOI:10.1016/j.chembiol.2004.12.013 (PMID:15797213)
+    and DOI:10.7164/antibiotics.28.229 (PMID:123897).
+  target_ids:
+  - CHEBI:29655
+  evidence_ids:
+  - neocarzinostatin-record
+  - liu-2005-ohtsuki-1975-neocarzinostatin
+- assessment_id: neocarzinostatin-curation-status-gate-alignment
+  area: completeness
+  topic: Eligibility of CHEBI:29655 for promotion from PROPOSED to REVIEWED
+  outcome: concern
+  summary: 'neocarzinostatin.yaml satisfies every REVIEWED gate requirement (grounding_status:
+    EXACT, complete chemical_structure, curated mode_of_action, and PRIMARY_LITERATURE
+    molecular_targets with complete UniProtKB held_targets accounting), but still
+    carries curation_status: PROPOSED.'
+  target_ids:
+  - CHEBI:29655
+  evidence_ids:
+  - neocarzinostatin-record
+  - liu-2005-ohtsuki-1975-neocarzinostatin
+  - strict-validation-suite
+findings:
+- finding_id: neocarzinostatin-awaiting-reviewed-promotion
+  issue_key: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  category: completeness
+  severity: major
+  status: open
+  certainty: confirmed
+  title: 'Neocarzinostatin (CHEBI:29655) has complete EXACT structure and primary-literature
+    mechanism/target curation but remains curation_status: PROPOSED'
+  description: 'In data/antibiotics/antibacterial/neocarzinostatin.yaml (CHEBI:29655),
+    Cycle 7 Stage 1 seeded the exact ChEBI compound, Cycle 7 Stage 2 curated biosynthesis_origin:
+    NATURAL_PRODUCT and mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION (MICROBIAL_TARGET)
+    with CURATOR mode_of_action_notes, and Cycle 7 Stage 3 curated a PRIMARY_LITERATURE
+    molecular_targets entry for bacterial duplex DNA (CHEBI:16991, NUCLEIC_ACID, DIRECT_BINDING_TARGET)
+    with explicit non-protein held_targets accounting in curation/uniprot_protein_examples.yaml
+    backed by DOI:10.1016/j.chembiol.2004.12.013 (PMID:15797213) and DOI:10.7164/antibiotics.28.229
+    (PMID:123897), yet curation_status remains PROPOSED.'
+  target_ids:
+  - CHEBI:29655
+  field_paths:
+  - curation_status
+  - curation_history
+  evidence_ids:
+  - neocarzinostatin-record
+  - liu-2005-ohtsuki-1975-neocarzinostatin
+  - strict-validation-suite
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/neocarzinostatin.yaml
+    role: Curator-owned curation_status slot on EXACT record
+actions:
+- action_id: promote-neocarzinostatin-to-reviewed
+  description: 'Promote CHEBI:29655 (neocarzinostatin) from curation_status: PROPOSED
+    to REVIEWED via record_curation_event and write_validated_antibiotic during Cycle
+    7 Stage 5 grouped remediation.'
+  finding_ids:
+  - neocarzinostatin-awaiting-reviewed-promotion
+  target_ids:
+  - CHEBI:29655
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/neocarzinostatin.yaml
+    role: Curator-owned curation_status slot
+  acceptance_checks:
+  - 'CHEBI:29655 carries curation_status: REVIEWED and survives seed_from_sources.py
+    --apply --only CHEBI:29655.'
+  - scripts/validate_strict.py and scripts/verify_corpus.py pass with 0 errors.
+limitations:
+- Stage 4 is a read-only review stage; no scientific YAML records were modified in
+  this commit sequence.
+notes:
+- Neocarzinostatin is also included in the companion Cycle 7 Stage 4 full-inventory
+  cohort review (3,105 records) under the open finding proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  alongside CHEBI:67576 (streptothricin E) and CHEBI:42265 (epoxomicin).
+tags:
+- record-review
+- neocarzinostatin
+- antibacterial
+- cycle-07

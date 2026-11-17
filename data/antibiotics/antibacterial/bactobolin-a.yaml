@@ -1,0 +1,245 @@
+identifier: CHEBI:138579
+label: bactobolin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: A Burkholderia thailandensis dichloromethyl bicyclic lactone-alanine hybrid
+  antibiotic that binds the bacterial ribosome at the P-site tRNA/23S rRNA/ribosomal
+  protein uL2 interface and inhibits translation termination.
+definition_source: DOI:10.1128/mBio.00499-12
+synonyms:
+- synonym_text: bactobolin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: NSC-325014
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@H](N)C(=O)N[C@@H]1[C@H]2C(=C(O)C[C@@H](O)[C@@H]2O)C(=O)O[C@]1(C)C(Cl)Cl
+  standard_inchi: InChI=1S/C14H20Cl2N2O6/c1-4(17)11(22)18-10-8-7(5(19)3-6(20)9(8)21)12(23)24-14(10,2)13(15)16/h4,6,8-10,13,19-21H,3,17H2,1-2H3,(H,18,22)/t4-,6+,8-,9-,10+,14-/m0/s1
+  standard_inchi_key: RBCHRRIVFAIGFI-RGBMRXMBSA-N
+  molecular_formula: C14H20Cl2N2O6
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/54676871
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 383.228
+  monoisotopic_mass: 382.0698
+xrefs:
+- pubchem.compound:54676871
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/mBio.00499-12#bactobolin-a
+  source_label: bactobolin A
+  minted_identifier: antibioticmech:curator-64cabf0b1a
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/mBio.00499-12
+    snippet: Chandler et al. identified quorum-sensing-controlled bactobolin A as
+      the broad-spectrum antibiotic secreted by Burkholderia thailandensis, reported
+      an MIC of 0.31 ug/mL against Bacillus subtilis 168, and demonstrated that resistance
+      mutations map to the conserved uL2 (RplB) ribosomal protein (E236A or E236Q,
+      increasing the B. subtilis MIC to 4.2 to 5.0 ug/mL).
+    notes: Reported by Chandler et al. 2012 (mBio 3:e00499-12; PMID:23249812) and
+      Amunts et al. 2015 (J Mol Biol 427:753-755; DOI:10.1016/j.jmb.2014.12.018) as
+      a Burkholderia thailandensis polyketide-peptide hybrid antibiotic that binds
+      a unique site on the 50S ribosomal subunit coordinated by ribosomal protein
+      uL2 and 23S rRNA together with P-site tRNA. PubChem CID 54676871 and ChEBI CHEBI:138579
+      supply the standard InChI, InChIKey, formula, and isomeric SMILES for bactobolin
+      A.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=PROTEIN_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
+  llm_assisted: true
+- timestamp: '2026-10-25T21:55:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for 50S ribosomal subunit protein
+    uL2 (RplB) backed by DOI:10.1128/mBio.00499-12.
+  llm_assisted: true
+- timestamp: '2026-10-25T22:03:25Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P42919 (Bacillus subtilis 168 rplB, BSU01130)
+    and UniProtKB:P60405 (Thermus thermophilus HB8 rplB, TTHA1676) protein examples
+    to the PRIMARY_LITERATURE molecular target (DOI:10.1128/mBio.00499-12).
+  llm_assisted: true
+- timestamp: '2026-10-26T07:10:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted curation_status from PROPOSED to REVIEWED after verifying exact
+    ChEBI:138579 identity, definition, antimicrobial_class, mode_of_action, and primary-literature
+    molecular_targets with reviewed UniProtKB:P42919 and UniProtKB:P60405 protein_examples
+    (issue #1284).'
+  llm_assisted: true
+- timestamp: '2026-10-31T16:20:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph bactobolin_a_ul2_50s_translation_termination_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P42919,
+    UniProtKB:P60405) and primary literature (DOI:10.1128/mBio.00499-12, DOI:10.1016/j.jmb.2014.12.018).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: Dichlorinated polyketide-peptide natural product that binds
+  a distinct site on the bacterial 50S/30S ribosomal interface coordinating 16S rRNA
+  helix 18, 23S rRNA, P-site tRNA, and ribosomal protein uL2 (DOI:10.1128/mBio.00499-12;
+  PMID:23249812; DOI:10.1016/j.jmb.2014.12.018; PMID:25562208).
+molecular_targets:
+- target_label: 50S ribosomal subunit protein uL2 (RplB)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:224308
+  taxon_label: Bacillus subtilis (strain 168)
+  experimental_context: Selection and ectopic expression of spontaneous bactobolin
+    A-resistant Bacillus subtilis 168 mutants mapping to rplB (50S ribosomal protein
+    uL2 Glu236Ala and Glu236Gln) and 70S ribosome crystal structure (PDB:4WT8) showing
+    direct contact with uL2 Glu236 (DOI:10.1128/mBio.00499-12; PMID:23249812; DOI:10.1016/j.jmb.2014.12.018).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-12
+  source_retrieved_on: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1128/mBio.00499-12
+    snippet: Chandler et al. identified quorum-sensing-controlled bactobolin A as
+      the broad-spectrum antibiotic secreted by Burkholderia thailandensis, reported
+      an MIC of 0.31 ug/mL against Bacillus subtilis 168, and demonstrated that resistance
+      mutations map to the conserved uL2 (RplB) ribosomal protein (E236A or E236Q,
+      increasing the B. subtilis MIC to 4.2 to 5.0 ug/mL).
+    notes: Chandler et al. 2012 (mBio 3:e00499-12; PMID:23249812) showed that substitutions
+      at Glu236 of Bacillus subtilis 168 50S ribosomal protein uL2 (RplB, UniProtKB:P42919)
+      confer specific resistance to bactobolin A without cross-resistance to chloramphenicol,
+      clindamycin, linezolid, or erythromycin; Amunts et al. 2015 (J Mol Biol 427:753-755;
+      PMID:25562208; DOI:10.1016/j.jmb.2014.12.018; PDB:4WT8) resolved bactobolin
+      A bound to the Thermus thermophilus HB8 70S ribosome in direct contact with
+      uL2 (UniProtKB:P60405) and P-site tRNA CCA.
+  protein_examples:
+  - uniprot_id: UniProtKB:P42919
+    protein_label: Large ribosomal subunit protein uL2
+    gene_symbol: rplB
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis (strain 168)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Bacillus subtilis strain 168 50S ribosomal subunit protein uL2 (rplB, BSU01130)
+      in which spontaneous and ectopically expressed Glu236Ala and Glu236Gln substitutions
+      confer specific resistance to bactobolin A (MIC shift from 0.31 to 4.2-5.0 ug/mL;
+      DOI:10.1128/mBio.00499-12; PMID:23249812).
+  - uniprot_id: UniProtKB:P60405
+    protein_label: Large ribosomal subunit protein uL2
+    gene_symbol: rplB
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Thermus thermophilus strain HB8 50S ribosomal subunit protein uL2 (rplB,
+      TTHA1676) that directly coordinates bactobolin A via its conserved Glu236 loop
+      at the P-site tRNA/23S rRNA interface in the 70S ribosome cocrystal structure
+      (PDB:4WT8; DOI:10.1016/j.jmb.2014.12.018; PMID:25562208).
+causal_graphs:
+- graph_id: bactobolin_a_ul2_50s_translation_termination_inhibition
+  title: Bactobolin A binds 50S ribosomal subunit protein uL2 (RplB) at the P-site
+    tRNA interface to inhibit bacterial translation
+  description: Bactobolin A binds a conserved pocket on the bacterial 50S ribosomal
+    subunit formed by ribosomal protein uL2 (RplB, centered on Glu236), 23S rRNA,
+    and the CCA end of P-site tRNA, displacing the P-site tRNA 3'-CCA away from the
+    peptidyl transferase center and impairing peptidyl transfer and translation termination.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: bactobolin_a
+    label: bactobolin A
+    node_type: COMPOUND
+    grounding: CHEBI:138579
+  - node_id: ribosomal_protein_ul2
+    label: 50S ribosomal subunit protein uL2 (RplB)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial 50S large ribosomal subunit protein uL2 (RplB); kept
+      label-only with Bacillus subtilis 168 (UniProtKB:P42919) and Thermus thermophilus
+      HB8 (UniProtKB:P60405) protein_examples.
+    gene_symbols:
+    - rplB
+    protein_examples:
+    - uniprot_id: UniProtKB:P42919
+      protein_label: Large ribosomal subunit protein uL2
+      gene_symbol: rplB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Bacillus subtilis strain 168 50S ribosomal subunit protein uL2 (rplB,
+        BSU01130) in which spontaneous and ectopically expressed Glu236Ala and Glu236Gln
+        substitutions confer specific resistance to bactobolin A (MIC shift from 0.31
+        to 4.2-5.0 ug/mL; DOI:10.1128/mBio.00499-12; PMID:23249812).
+    - uniprot_id: UniProtKB:P60405
+      protein_label: Large ribosomal subunit protein uL2
+      gene_symbol: rplB
+      taxon_id: NCBITaxon:300852
+      taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Thermus thermophilus strain HB8 50S ribosomal subunit protein uL2 (rplB,
+        TTHA1676) that directly coordinates bactobolin A via its conserved Glu236
+        loop at the P-site tRNA/23S rRNA interface in the 70S ribosome cocrystal structure
+        (PDB:4WT8; DOI:10.1016/j.jmb.2014.12.018; PMID:25562208).
+  - node_id: bactobolin_bound_ul2_p_site_trna_state
+    label: bactobolin A-bound uL2/P-site tRNA 50S complex with displaced P-site CCA
+      end
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 70S ribosome crystal state (PDB:4WT8) showing bactobolin A coordinated
+      by uL2 Glu236 and 23S rRNA with the 3'-CCA end of P-site tRNA shifted away from
+      the peptidyl transferase center.
+  - node_id: bacterial_peptidyl_transfer_and_termination
+    label: bacterial ribosomal peptidyl transfer and translation termination
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: P-site tRNA-dependent peptidyl transfer and release-factor-mediated
+      translation termination inhibited upon bactobolin A binding.
+  edges:
+  - subject: bactobolin_a
+    predicate: binds
+    object: bactobolin_bound_ul2_p_site_trna_state
+    description: Bactobolin A binds the 50S ribosomal subunit at the interface of
+      ribosomal protein uL2, 23S rRNA, and P-site tRNA.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2014.12.018
+      notes: The 3.0-angstrom Thermus thermophilus 70S-tRNA-bactobolin A crystal structure
+        (PDB:4WT8; PMID:25562208) resolved bactobolin A bound in a unique 50S pocket
+        contacting uL2 Glu236 and P-site tRNA.
+    - reference: DOI:10.1128/mBio.00499-12
+      notes: Spontaneous and engineered Bacillus subtilis rplB (uL2) Glu236Ala and
+        Glu236Gln mutations conferred specific resistance to bactobolin A (PMID:23249812).
+  - subject: ribosomal_protein_ul2
+    predicate: participates in
+    object: bactobolin_bound_ul2_p_site_trna_state
+    description: The conserved Glu236 region of 50S ribosomal protein uL2 directly
+      coordinates bactobolin A at the P-site tRNA interface.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2014.12.018
+      notes: Crystallographic contacts in PDB:4WT8 showed direct coordination between
+        the uL2 Glu236 loop and bactobolin A.
+    - reference: DOI:10.1128/mBio.00499-12
+      notes: Substitution of uL2 Glu236 in Bacillus subtilis 168 abolished susceptibility
+        to bactobolin A without cross-resistance to PTC-targeting antibiotics.
+  - subject: bactobolin_bound_ul2_p_site_trna_state
+    predicate: inhibits
+    object: bacterial_peptidyl_transfer_and_termination
+    description: Bactobolin A-induced displacement of the P-site tRNA 3'-CCA end from
+      the peptidyl transferase center inhibits peptidyl transfer and translation termination.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2014.12.018
+      notes: Structural analysis of PDB:4WT8 demonstrated that bactobolin A induces
+        a conformational shift of P-site tRNA CCA76 away from the peptidyl transferase
+        center, blocking peptide bond formation and termination hydrolysis.

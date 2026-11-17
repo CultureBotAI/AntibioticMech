@@ -1,0 +1,172 @@
+{
+  "base_commit": "ce909b1d8034970defb6c421db3de54b1fcccf00",
+  "biological_records_source_inputs_and_pages_changed": false,
+  "broader_suite": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 291,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-reference-publication/focused-tests.xml",
+      "sha256": "a5987fa184d3c25a8427b50aab6f5c5dae52937f8c86972f0c30694ba74b354f"
+    },
+    "skip_details": [
+      {
+        "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+        "test": "tests.test_card_structure_links.test_cached_export_reproduces_when_research_cache_is_available"
+      }
+    ],
+    "skipped": 1,
+    "tests": 292
+  },
+  "captured_at": "2026-10-14T14:04:59.822310+00:00",
+  "changed_implementations": [
+    {
+      "path": "scripts/audit_brefeldin_yeast.py",
+      "sha256": "f0496c37c8675c4a592d42446cb50b06baad8917d6708fed6a433a56cbf4d0db"
+    },
+    {
+      "path": "tests/test_brefeldin_yeast.py",
+      "sha256": "b7b919cdebb9af2f258542ca049f79f739d7444ba0374398e1ef651168163821"
+    },
+    {
+      "path": "tests/test_card_reference_memberships.py",
+      "sha256": "46d11ea269513fd69e2b029224b59b93f4773e8c4103dad3eeb560e729c30e8f"
+    }
+  ],
+  "checkpoint_commit": "39c9f0144155652402ebc0f61f4e925f3a4236dd",
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-14-reference-publication/lint.log",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      }
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-14-reference-publication/diff.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/audit_card_reference_memberships.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-14-reference-publication/live-card-replay.log",
+        "sha256": "4510f3488e3dff0cfcd00284e58bc0da2a6d551f72d6298c231d421a70b9c50e"
+      }
+    }
+  ],
+  "current_census": {
+    "path": "research/2026-10-14-antiviral-taxa-resistance-grounding.tsv",
+    "sha256": "b15465f26802dae7fc099e52d3dc4898cd6397fd2bc37f4055443d2e40fe2935"
+  },
+  "formaldehyde_investigation": "INCOMPLETE_LOCAL_CACHE_PRESERVED_NOT_INCLUDED",
+  "four_checkpoint_suites": {
+    "passed": 197,
+    "skipped": 0
+  },
+  "full_corpus_goal_status": "OPEN",
+  "full_qc": "PR_HEAD_AND_MERGE_QUEUE_CI_VERDICTS_TO_BE_RECORDED_ON_PR_BEFORE_MERGE",
+  "issue_1040": "DEFERRED",
+  "live_record_hashes_checked": 2939,
+  "local_runtime_limitation": "RDKit 2025.03.6 differs from project pin 2026.03.5; final CI uses lock.",
+  "ncbi_requests": 0,
+  "new_regression_cases": 17,
+  "pre_fix_reproduction": {
+    "defects_reproduced": 2,
+    "files_mutated": false,
+    "helper": {
+      "path": "reports/resistance-grounding-2026-10-14-reference-publication/pre_fix_reproduction.py",
+      "sha256": "e5f76699c1e4e3ce58fc9f168ccda519deafdc2f8f9f64274e43b8e1d2e21ceb"
+    }
+  },
+  "pull_request": "https://github.com/CultureBotAI/AntibioticMech/pull/1111",
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "8e6cd6c945f6afd8ed0e127772fc7ed0f4c231dd1b8cda73129f2a73c9a92559"
+  },
+  "reuse_terms_review_resumed": false,
+  "review_fixes": [
+    {
+      "finding": "Bfr1 replay accepted a relabeled compound identifier.",
+      "fix": "Bind cohort identifier and structure key to the frozen record before source access.",
+      "issue": 1112
+    },
+    {
+      "finding": "Cache-independent CARD test accepted corrupt TSV paths and counts.",
+      "fix": "Verify frozen output pins and reconstruct every row field and full summary from public evidence.",
+      "issue": 1113
+    }
+  ],
+  "review_independence": "SAME_AGENT_SEPARATE_ADVERSARIAL_PASS",
+  "scientific_network_requests_during_publication": 0,
+  "scope": "PUBLICATION_VALIDATION_NOT_NEW_SCIENTIFIC_OR_WHOLE_RECORD_SIGNOFF",
+  "source_adoptions": 0,
+  "source_queue": {
+    "path": "curation/source_queue.tsv",
+    "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+  },
+  "unchanged_dated_dossiers_and_receipts": [
+    {
+      "path": "research/2026-10-14-aureobasidin-structure-context.json",
+      "sha256": "5c7f889fccbdcb9b9083dc24cb2c44c6db820c38bf38e140650caffcdd4baf74"
+    },
+    {
+      "path": "research/2026-10-14-aureobasidin-structure-verification.json",
+      "sha256": "8750ea6d468e5b62b23e077b00de27e29c48815de540ad6e7e484b1a63b9ff21"
+    },
+    {
+      "path": "research/2026-10-14-brefeldin-yeast-context.json",
+      "sha256": "b3fb2c947a1e9f1763cb7e555e18bf755a3e042765d70f2ddb0d06b3252c9100"
+    },
+    {
+      "path": "research/2026-10-14-brefeldin-yeast-verification.json",
+      "sha256": "5f142d29bbbb54a54269ba6e450b1cc12c4caac14cb6a3d029f1433e9a9723f9"
+    },
+    {
+      "path": "research/2026-10-14-card-reference-memberships-plan.json",
+      "sha256": "237da6f3ad3982b7acfc0c0cdb5c1cf3580067b53deb01d4875b955d0b1bbe82"
+    },
+    {
+      "path": "research/2026-10-14-card-reference-memberships-verification.json",
+      "sha256": "cde9ac2e189ae73fad69b618fe64bbaf8cbe81ef3964950ae39ab1bf14baba62"
+    },
+    {
+      "path": "research/2026-10-14-card-reference-memberships.json",
+      "sha256": "dd3bf943d428437daaae399f36d583eac9a51aee087cc5ac3a30a0d41bf43761"
+    },
+    {
+      "path": "research/2026-10-14-card-reference-memberships.tsv",
+      "sha256": "7a545e7d76ec1d01f86fd794dae6d63a7a8f779d81d8d5891e3373e2b2722d8e"
+    },
+    {
+      "path": "research/2026-10-14-valinomycin-abcb1-context.json",
+      "sha256": "eff9677ff3ece52444f3da76468ebecf4c765111a867881d39766b618e7dbea2"
+    },
+    {
+      "path": "research/2026-10-14-valinomycin-abcb1-verification.json",
+      "sha256": "b7984544970bb3f6c872d815fbf9bd23e8224cb5eb906b204d70bbcfdb8af16a"
+    }
+  ],
+  "verification_helper": {
+    "path": "reports/resistance-grounding-2026-10-14-reference-publication/verify_publication.py",
+    "sha256": "c1d7b7631c3ce218e87a35ac0cd902012f43cd48d060ac8d7a093fcaa54751e0"
+  },
+  "whole_record_primary_signoffs": 0
+}

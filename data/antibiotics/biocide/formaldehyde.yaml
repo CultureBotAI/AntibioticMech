@@ -88,3 +88,66 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-14T15:03:41Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added primary-backed, context-limited EfgA and EfgB formaldehyde resistance
+    claims. Preserved the opposing endogenous-stress result and negative EfgB comparison.
+    Grounded species identity through UniProt taxonomy while keeping P0DX96 and its
+    PA1 lineage reference-only. No exact experimental allele, protein, strain TaxID,
+    genome, numeric AST, sequence, construct or protocol was assigned. Whole-record
+    review remains open.
+  llm_assisted: true
+resistance_mechanisms:
+- taxon_id: NCBITaxon:408
+  taxon_label: Methylorubrum extorquens
+  phenotype_label: Source-reported relative formaldehyde resistance in laboratory
+    growth assays
+  assay: Comparative laboratory growth assays
+  mechanism_type: OTHER
+  label: Context-dependent EfgA-associated formaldehyde resistance
+  gene_families:
+  - EfgA
+  gene_id: Mext_4158
+  note: 'Native PA1-derived laboratory comparisons link loss of EfgA function to growth
+    with externally supplied formaldehyde. This is not universal protection: EfgA
+    was beneficial under endogenous formaldehyde stress. The study baseline CM2730
+    is already a laboratory derivative, not unmodified PA1. Reference-only UniProtKB:P0DX96
+    does not identify the tested alleles. Growth and translation responses are not
+    MIC or clinical resistance categories; phenotypic heterogeneity remains distinct
+    from this genotype association.'
+  evidence:
+  - reference: PMID:34038406
+    notes: DOI:10.1371/journal.pbio.3001208. Native functional comparisons in Results
+      and Figure 3; endogenous-stress and tolerance limits in Figures 9-10; Figure
+      13 and Discussion. Qualitative gene-level scope; no exact allele or genome assignment.
+  - reference: UniProtKB:P0DX96
+    notes: 'Reference identity only: efgA / Mext_4158; reviewed UniProtKB 2026_03,
+      entry 8, sequence 1. PA1 NCBITaxon:419610 is reference context, not a tested-derivative
+      TaxID. Species NCBITaxon:408 independently checked through UniProt taxonomy.'
+- taxon_id: NCBITaxon:408
+  taxon_label: Methylorubrum extorquens
+  phenotype_label: Source-reported relative formaldehyde resistance in laboratory
+    growth assays
+  assay: Comparative laboratory growth assays
+  mechanism_type: UNKNOWN
+  label: Conditional EfgB-associated formaldehyde resistance
+  gene_families:
+  - EfgB
+  gene_id: Mext_0606
+  note: The primary study supports a conditional EfgB contribution in EfgA-altered
+    PA1-derived laboratory backgrounds; EfgB changes alone did not confer growth in
+    the sole-formaldehyde-carbon comparison. The adenylate/guanylate cyclase annotation
+    is putative, not demonstrated biochemical activity. Two dated UniProt queries
+    returned no reference candidate; this is not evidence that the gene or protein
+    is absent. No MIC, clinical category, exact allele, protein accession or experimental
+    genome is assigned.
+  evidence:
+  - reference: PMID:34038406
+    notes: DOI:10.1371/journal.pbio.3001208. Results, EfgB plays a secondary role
+      in formaldehyde resistance; negative comparison in Figure 3 and conditional
+      comparison in Figure 5. Supplement-only claims are not curated.
+  - reference: NCBITaxon:408
+    notes: Species identity checked through UniProt taxonomy on 2026-10-14, release
+      2026_03. The PA1 reference lineage does not resolve the tested laboratory derivatives
+      as a single strain or genome.

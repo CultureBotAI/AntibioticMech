@@ -1,0 +1,161 @@
+{
+  "chemical_identity": {
+    "identifier": "CHEBI:3732",
+    "key_matches_smiles_and_inchi": true,
+    "label": "clarithromycin",
+    "rdkit_version": "2026.03.5",
+    "record_before": {
+      "path": "data/antibiotics/antibacterial/clarithromycin.yaml",
+      "sha256": "b61171d9337ec2346af8541586e3f54b71574d016adc1b922dfcd999b54e4783"
+    },
+    "source_fields_changed": false,
+    "standard_inchi_key": "AGOYDEPGAOXOCK-KCBOHYOISA-N",
+    "tested_preparation_independently_reidentified": false,
+    "tetrahedral_centers": 18,
+    "unassigned_centers": 0
+  },
+  "chemical_join_scope": "NAMED_COMPOUND_JOIN_NOT_INDEPENDENT_TESTED_PREPARATION_IDENTIFICATION",
+  "corrected_table_review": {
+    "all_positive_for_one_subtype_specific_assay": false,
+    "intermediate_isolates_promoted": false,
+    "scope": "GENE_FAMILY_COOCCURRENCE_ONLY_NO_EXACT_ALLELE_OR_TRANSFER_CLAIM",
+    "source_resistant_isolate_labels": [
+      "18:60630",
+      "18:62378",
+      "19:64973",
+      "20:67831",
+      "MC6 22:74950",
+      "20:69984",
+      "21:70135",
+      "21:70968",
+      "21:71627",
+      "21:73373"
+    ],
+    "susceptible_comparator": "20:68529"
+  },
+  "correction": {
+    "access_limit": "Europe PMC PDF returned HTTP 403; stopped without retry or bypass. Publisher PDF link had earlier returned a tool internal error without an HTTP status.",
+    "changes": "Table 2 genotype columns were misaligned; the erratum supplies the replacement. Table 3 also has a heading and footnote correction.",
+    "doi": "10.1128/jcm.00415-24",
+    "full_article_or_table_redistributed": false,
+    "inspection": "PUBLISHER_CORRECTED_TABLE_2_TEXT_BEFORE_LATER_PDF_DENIAL",
+    "native_pdf_visually_inspected": false,
+    "reference": "PMID:38572983",
+    "relation_verified_in_both_directions": true,
+    "url": "https://journals.asm.org/doi/10.1128/jcm.00415-24"
+  },
+  "date": "2026-10-09",
+  "exact_alleles_assigned": 0,
+  "experimental_genomes_assigned": 0,
+  "github_mutations": 0,
+  "limits": [
+    "No species-wide phenotype inferred.",
+    "Genotype and phenotype co-occurrence does not prove causality.",
+    "No exact UniProt or allele mapping established by the recorded queries.",
+    "The corrected table was inspected as publisher text; no native PDF visual review is claimed."
+  ],
+  "ncbi_endpoint_requests": 0,
+  "new_reference_proteins_assigned": 0,
+  "numerical_ast_added": 0,
+  "outreach": 0,
+  "primary_study": {
+    "assay_identity": "Named clarithromycin in commercial broth microdilution panels",
+    "clinical_association_not_functional_causation": true,
+    "doi": "10.1128/jcm.00428-23",
+    "inspection": "SELECTED_PUBLISHER_METHODS_AND_RESULTS_TEXT",
+    "reference": "PMID:37347171",
+    "relevant_results_text_inspected": true,
+    "url": "https://journals.asm.org/doi/10.1128/jcm.00428-23",
+    "whole_paper_review_complete": false
+  },
+  "prior_checkpoint": {
+    "path": "research/2026-10-09-erm-followup-verification.json",
+    "sha256": "3f4816452b626c14ee9b0511bccffbc811bc022d021efed895b34b7c0f1c9e3a"
+  },
+  "prior_reference_dossier": {
+    "path": "research/2026-10-09-erm-reference-followup.json",
+    "sha256": "3cb107b7c4699e98c642a4d40f74dfa162cc12ea6336c5c09c4e9f01a88c054c"
+  },
+  "requests": {
+    "bibliography": {
+      "bytes": 16772,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-erm55-primary/bibliography-response.bin",
+        "sha256": "98cb7f6d26bca978294a3109b3c5bb2badf7ddead5e31f811040e392f69e93f1"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-erm55-primary/bibliography-receipt.json",
+        "sha256": "7c6bcedc3807730cf49bc1434d40d622da1ec0a3df8728ef4b67945f2d92adb9"
+      },
+      "retrieved_at": "2026-10-10T03:20:20.626156+00:00",
+      "sha256": "98cb7f6d26bca978294a3109b3c5bb2badf7ddead5e31f811040e392f69e93f1",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2Fjcm.00428-23%22+OR+DOI%3A%2210.1128%2Fjcm.00415-24%22&format=json&resultType=core&pageSize=10"
+    },
+    "erratum-pdf": {
+      "bytes": 5597,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-erm55-primary/erratum-pdf-response.bin",
+        "sha256": "e92e9abc55c3e0382c3a83ad32c7fb474afe15ccd8c28c4ee234d1400d2d6197"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-erm55-primary/erratum-pdf-receipt.json",
+        "sha256": "0bb0e8965652d845a2151bf8b51f83b5b01c6ae19ed05da5916b526e174462ac"
+      },
+      "retrieved_at": "2026-10-10T03:20:42.528122+00:00",
+      "sha256": "e92e9abc55c3e0382c3a83ad32c7fb474afe15ccd8c28c4ee234d1400d2d6197",
+      "status": 403,
+      "url": "https://europepmc.org/articles/PMC11077984?pdf=render"
+    }
+  },
+  "scope": {
+    "clinical_isolate_associations": 10,
+    "corpus_records": 2939,
+    "curated_records": 1,
+    "whole_corpus_primary_review": "OPEN",
+    "whole_records_completed": 0
+  },
+  "source_adoptions": 0,
+  "taxonomy": {
+    "active": true,
+    "parent": {
+      "scientificName": "Mycobacteroides",
+      "taxonId": 670516
+    },
+    "rank": "species",
+    "scientificName": "Mycobacteroides chelonae",
+    "synonyms": [
+      "Mycobacterium chelonae"
+    ],
+    "taxonId": 1774
+  },
+  "taxonomy_request_reused": {
+    "bytes": 2146,
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-09-erm-followup/tax-1774-response.bin",
+      "sha256": "b6e5855f06addc356f38f062311ec8f51c49cea12fbbd1378d45da76adb00ad2"
+    },
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-09-erm-followup/tax-1774-receipt.json",
+      "sha256": "25d43d8e8c85a93ed01e96861b4a8a3d34cf8e08a01806d5c784b327cf113d7b"
+    },
+    "retrieved_at": "2026-10-10T03:12:31.764934+00:00",
+    "sha256": "b6e5855f06addc356f38f062311ec8f51c49cea12fbbd1378d45da76adb00ad2",
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/1774"
+  },
+  "uniprot_query_context": {
+    "erm55": {
+      "accessions": [],
+      "no_hit_is_absence": false,
+      "query": "(gene_exact:erm55 OR gene_exact:\"erm(55)\")",
+      "result_count": 0
+    },
+    "erm55archive": {
+      "accessions": [],
+      "no_hit_is_absence": false,
+      "query": "(xref:embl-OQ656455 OR xref:embl-OQ656456 OR xref:embl-OQ656457)",
+      "result_count": 0
+    }
+  }
+}

@@ -17,9 +17,20 @@
     <a href="../browse.html">Browse</a>
     <a href="../map.html">Map</a>
     <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main>
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/antibacterial.html">ANTIBACTERIAL</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>actinomycin D</h1>
 <p class="meta">
   <code class="curie">CHEBI:27666</code>
@@ -37,16 +48,19 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3009657">nonribosomal peptide antibiotics</a><code class="curie">ARO:3009657</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_15369">CHEBI:15369</a>      <code class="curie">CHEBI:15369</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3009657">ARO:3009657</a>      <code class="curie">ARO:3009657</code></li>
+  <li>actinomycin  <a href="http://purl.obolibrary.org/obo/CHEBI_15369"><code class="curie">CHEBI:15369</code></a></li>
+  <li>nonribosomal peptide antibiotics  <a href="http://purl.obolibrary.org/obo/ARO_3009657"><code class="curie">ARO:3009657</code></a></li>
 </ul>
 
 <h2>Chemical structure</h2>
+<div class="table-scroll" role="region" aria-label="Computed structure properties" tabindex="0">
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
 <tr><th scope="row">Molecular formula</th><td>C62H86N12O16</td></tr><tr><th scope="row">Charge</th><td>0</td></tr><tr><th scope="row">Average mass</th><td>1255.438 Da</td></tr><tr><th scope="row">Monoisotopic mass</th><td>1254.62847 Da</td></tr><tr><th scope="row">Source</th><td>ChEBI</td></tr><tr><th scope="row">InChIKey</th><td class="struct-value">RJURFGZVJUQBHK-IIXSONLDSA-N</td></tr>  </tbody>
 </table>
+
+</div>
 <p class="meta">SMILES</p><pre class="struct-block">[H][C@@]12CCCN1C(=O)[C@@H](C(C)C)NC(=O)[C@@H](NC(=O)c1c3nc4c(C(=O)N[C@@H]5C(=O)N[C@H](C(C)C)C(=O)N6CCC[C@@]6([H])C(=O)N(C)CC(=O)N(C)[C@@H](C(C)C)C(=O)O[C@@H]5C)ccc(C)c4oc-3c(C)c(=O)c1N)[C@@H](C)OC(=O)[C@H](C(C)C)N(C)C(=O)CN(C)C2=O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C62H86N12O16/c1-27(2)42-59(84)73-23-17-19-36(73)57(82)69(13)25-38(75)71(15)48(29(5)6)61(86)88-33(11)44(55(80)65-42)67-53(78)35-22-21-31(9)51-46(35)64-47-40(41(63)50(77)32(10)52(47)90-51)54(79)68-45-34(12)89-62(87)49(30(7)8)72(16)39(76)26-70(14)58(83)37-20-18-24-74(37)60(85)43(28(3)4)66-56(45)81/h21-22,27-30,33-34,36-37,42-45,48-49H,17-20,23-26,63H2,1-16H3,(H,65,80)(H,66,81)(H,67,78)(H,68,79)/t33-,34-,36+,37+,42-,43-,44+,45+,48+,49+/m1/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
@@ -57,7 +71,7 @@ signed off on this record yet.</p></div>
 accession that lands on two different structures in this corpus is withheld from
 both rather than shown here, since it names at most one of them.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ARO_3000696">ARO:3000696</a></li>
+  <li><a href="http://purl.obolibrary.org/obo/ARO_3000696">dactinomycin</a><code class="curie">ARO:3000696</code></li>
   <li>beilstein:4173766</li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=50-76-0">cas:50-76-0</a></li>
   <li><a href="https://www.kegg.jp/entry/C06770">kegg.compound:C06770</a></li>
@@ -87,12 +101,13 @@ article covers a topic; neither identifies a structure.</p>
 <p class="meta">Every antimicrobial role a source asserts for this compound — the
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33281">CHEBI:33281</a>    <code class="curie">CHEBI:33281</code></li>
+  <li>antimicrobial agent  <a href="http://purl.obolibrary.org/obo/CHEBI_33281"><code class="curie">CHEBI:33281</code></a></li>
 </ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+<div class="table-scroll" role="region" aria-label="Source concepts" tabindex="0">
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
@@ -112,13 +127,15 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+</div>
+
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 <h3>transcription complex DNA <span class="pill plain">NUCLEIC_ACID</span> <span class="pill">ATTACKED_COMPONENT</span></h3>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000741">ARO:3000741</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO describes exposed DNA bases in the transcription complex. Evidence status: DATABASE_ASSERTION_ONLY. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
-  <li><span class="meta">ARO:3000741</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000696 (dactinomycin); database assertion, not a primary citation.)</span></li>
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000741">ARO:3000741</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000696 (dactinomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
 
@@ -177,26 +194,36 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/actinomycin-d.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/data/antibiotics/antibacterial/actinomycin-d.yaml">View the record (YAML)</a>.
 </p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q=actinomycin%20D">MediaIngredientMech (actinomycin D)</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q=actinomycin%20D">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=actinomycin%20D">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q=actinomycin%20D">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q=actinomycin%20D">TraitMech</a>
+</p>
+</main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>04a931dcbfed</code>, 3125 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Identity, structure and cross-references come from ChEBI and CARD's own data;
     the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
     <code>causal_graphs</code> — is curated incrementally. Treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a fully
-    reviewed claim. <a href="../index.html">Current review counts</a>.
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
   </p>
   <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
   <p class="fam">
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
     <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
   </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>
 </div>
 </body>

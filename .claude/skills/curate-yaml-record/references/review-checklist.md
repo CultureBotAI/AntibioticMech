@@ -63,13 +63,12 @@ For any record mutation, load YAML and finish with both repository helpers:
 ```python
 from pathlib import Path
 
-import yaml
-
+from antibioticmech.activity_collections import load_record
 from antibioticmech.curate.curation_event import record_curation_event
 from antibioticmech.validation.write_validated import write_validated_antibiotic
 
 path = Path("data/antibiotics/<class>/<slug>.yaml")
-doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+doc = load_record(path)
 assert doc["identifier"] == "<expected CURIE>"
 
 # Apply only the source-checked curator-owned changes here.

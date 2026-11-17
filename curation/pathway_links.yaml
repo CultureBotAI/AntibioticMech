@@ -1,0 +1,81 @@
+records:
+- identifier: CHEBI:28915
+  label: fosfomycin
+  links:
+  - identifier: WikiPathways:WP5060
+    relation: TARGETS_PATHWAY_COMPONENT
+    basis: PMID:8994972 establishes the E. coli MurA–fosfomycin complex. The linked
+      E. coli pathway contains MurA (UniProtKB:P0A749); this links the target to its
+      pathway, not the drug to every step.
+  target_reference: PMID:8994972
+  protein_example:
+    uniprot_id: UniProtKB:P0A749
+    protein_label: UDP-N-acetylglucosamine 1-carboxyvinyltransferase
+    gene_symbol: murA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: MurA cocrystallized with fosfomycin; UniProtKB:P0A749 maps PMID:8994972
+      to PDB:1UAE. The parent target retains the primary binding evidence.
+- identifier: CHEBI:40009
+  label: D-cycloserine
+  links:
+  - identifier: WikiPathways:WP5060
+    relation: TARGETS_PATHWAY_COMPONENT
+    basis: PMID:4555420 reports inhibition of E. coli alanine racemase by D-cycloserine.
+      The linked E. coli pathway contains alanine racemase. The experiment used E.
+      coli W; this is an enzyme/process correspondence, not strain identity.
+- identifier: CHEBI:84192
+  label: teixobactin
+  links:
+  - identifier: WikiPathways:WP5060
+    relation: RELATED_PATHWAY_ACTIVITY
+    basis: PMID:25561178 supports binding to lipid II/lipid III precursors. The linked
+      E. coli peptidoglycan pathway provides lipid-II process context. This does not
+      assert teixobactin activity against E. coli, a protein target, or equivalence
+      of lipid-III and peptidoglycan routes.
+- identifier: antibioticmech:aro-736d7660a3
+  label: bacitracin
+  links:
+  - identifier: WikiPathways:WP5060
+    relation: RELATED_PATHWAY_ACTIVITY
+    basis: ARO:3000719 and ARO:3003251 on this record assert the isoprenyl/undecaprenyl
+      pyrophosphate carrier target. The linked E. coli pathway provides peptidoglycan
+      context; source-level process correspondence only, with no organism-specific
+      drug efficacy claim.
+- identifier: CHEBI:46081
+  label: fluconazole
+  links:
+  - identifier: gomodel:YeastPathways_PWY-6074-1
+    relation: RELATED_PATHWAY_ACTIVITY
+    basis: PMID:10991846 studies Candida ERG responses to fluconazole and identifies
+      Erg11/lanosterol demethylase as its target. The linked S. cerevisiae zymosterol
+      pathway contains Erg11. Cross-organism enzyme/pathway context, not identity
+      of the Candida and S288C experiments.
+- identifier: CHEBI:9448
+  label: terbinafine
+  links:
+  - identifier: gomodel:YeastPathways_PWY-5670-1
+    relation: RELATED_PATHWAY_ACTIVITY
+    basis: PMID:10991846 identifies the squalene-epoxidase step targeted by terbinafine
+      in the Candida sterol pathway. The linked epoxysqualene pathway represents the
+      corresponding S. cerevisiae activity; no same-strain or drug-sensitivity assertion.
+- identifier: CHEBI:3405
+  label: carboxin
+  links:
+  - identifier: WikiPathways:WP296
+    relation: RELATED_PATHWAY_ACTIVITY
+    basis: PMID:4336692 reports inhibition between succinate and coenzyme Q in mitochondria
+      from Ustilago maydis and S. cerevisiae. The linked yeast TCA record contains
+      succinate dehydrogenase. The evidence supports this activity connection, not
+      inhibition of every TCA reaction or exact strain equivalence.
+- identifier: CHEBI:45924
+  label: trimethoprim
+  links:
+  - identifier: gomodel:YeastPathways_PWY3O-697
+    relation: RELATED_PATHWAY_ACTIVITY
+    basis: PMID:14623005 on this record supports dihydrofolate-reductase inhibition
+      in named target organisms. The linked S. cerevisiae folate-interconversion pathway
+      includes the corresponding activity. This is cross-organism biochemical context,
+      not evidence of trimethoprim efficacy in S. cerevisiae.

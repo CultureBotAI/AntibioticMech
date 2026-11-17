@@ -1,0 +1,1089 @@
+{
+  "attribution": {
+    "license": "CC BY 4.0",
+    "source": "UniProt Consortium, UniProtKB and UniProt Taxonomy"
+  },
+  "comparative_reference": {
+    "algorithm_reference_assignment": false,
+    "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+    "entry_version": 268,
+    "experimental_allele_assignment": null,
+    "experimental_genome_assignment": null,
+    "gene_name": "gag-pol",
+    "named_products": {
+      "IN": "Integrase",
+      "PR": "Protease",
+      "RT": "Reverse transcriptase/ribonuclease H"
+    },
+    "protein_accession": "UniProtKB:P04585",
+    "protein_name": "Gag-Pol polyprotein",
+    "reference_organism_name": "Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)",
+    "reference_taxon_id": "NCBITaxon:11706",
+    "reference_taxon_rank": "no rank",
+    "region_coordinates_inferred": false,
+    "resistance_phenotype_asserted": false,
+    "role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+    "sequence_version": 4,
+    "source_context_taxon_id": "NCBITaxon:11676",
+    "source_context_taxon_rank": "no rank",
+    "species_name": "Lentivirus humimdef1",
+    "species_taxon_id": "NCBITaxon:3418650"
+  },
+  "constraints": {
+    "failed_source_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "javascript_executed": false,
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_sequence_downloads": 0,
+    "numeric_ast_exported": false,
+    "sequences_variants_protocols_exported": false,
+    "source_adoptions": 0
+  },
+  "current_documentation": {
+    "convention": "SUBTYPE_B_CONSENSUS",
+    "document_distinguishes_hxb2_from_consensus": true,
+    "every_region_proven_sequence_different": false,
+    "exact_consensus_uniprot_accession": null,
+    "interpretation": "Current source documentation uses a subtype-B consensus, not a particular isolate. Its HXB2 example rejects automatic identity; it does not establish differences in every region.",
+    "locations": {
+      "isolate_distinction": {
+        "normalized_text_sha256": "1acfc84bd56539bc93bb083f8d43d108e2e463cf40186f75ff72073d18f1da9f",
+        "xpath": "/html/body/div[1]/div/table/tbody/tr/td/table/tr/td/p[11]"
+      },
+      "isolate_question": {
+        "normalized_text_sha256": "6d1f1affedf45082591e616f93cc229416bcd68aa9d880527c0cb5fc8ca9c03a",
+        "xpath": "/html/body/div[1]/div/table/tbody/tr/td/table/tr/td/p[10]"
+      },
+      "reference_convention": {
+        "normalized_text_sha256": "4c4fc2face575e3c537a563bea02730b28f03005802ca8507b678abdb301c9e7",
+        "xpath": "/html/body/div[1]/div/table/tbody/tr/td/table/tr/td/p[7]"
+      }
+    },
+    "pinned_algorithm_sequence_equivalence_verified": false
+  },
+  "date": "2026-10-13",
+  "inputs": {
+    "cached_parent_taxonomy": {
+      "path": "reports/resistance-grounding-2026-10-07/request-128583b56de08be785ae3389aabf58525f47fbc0d5ad8080c44790fc3a80a14e.json",
+      "sha256": "3a40a61592fd7b228318866e93fc8c710e7862c990d06799d73060f96517bb1d"
+    },
+    "canary": {
+      "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/native-canary.json",
+      "sha256": "a7f8add8aec3c2d58d385833be6b1c5c00ba8d3b7668bb6bb2c9707f9a0106e8"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/cohort.json",
+      "sha256": "e7022aebc4f70bce177398d2cfddc0e8574a6111b42246df0fbddf056a082267"
+    },
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/native-plan.json",
+      "sha256": "d183b02d71d6efde37de9a366d6aa1a0e6eebdd076dfec1cd52b3a942f3a691b"
+    },
+    "prior_context": {
+      "path": "research/2026-10-07-hivdb-reference-grounding.json",
+      "sha256": "b2ea18881e93d2e2555b333ccaf80a8cb05c8cfa385f5b32f7a2de7097bdf7f4"
+    }
+  },
+  "limitations": [
+    "Current FAQ documentation is not a version-pinned proof of the adopted algorithm's reference bytes.",
+    "HXB2 and consensus are not interchangeable by default; no region-by-region sequence comparison was performed.",
+    "PR, RT and IN are source region labels; named UniProt products do not supply exact algorithm coordinates.",
+    "A comparative reference is neither a tested allele nor a patient, isolate, genome or clinical-resistance assignment.",
+    "Interpretation scores remain source rules, not measured phenotype or causal proof.",
+    "The score-rule schema has no reference-accession slot; these findings remain in research, not biological records.",
+    "No primary patient-study results or variant-specific evidence were reviewed in this checkpoint."
+  ],
+  "records": [
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:421707",
+      "label": "abacavir",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/abacavir.yaml",
+      "region_rule_counts": {
+        "RT": 31
+      },
+      "sha256": "1ba78bb4a4d321c69acc936b766f69ceaca465adf57fb3c35c20256f5048a56d",
+      "source_rule_ids": [
+        "hivdb_hivfacts:34eaeb0bd1931e40",
+        "hivdb_hivfacts:850b2a0b8b4845bb",
+        "hivdb_hivfacts:1f3365c522838e76",
+        "hivdb_hivfacts:a363026f95513940",
+        "hivdb_hivfacts:dd8cf9531202085f",
+        "hivdb_hivfacts:c23a8fe5dfa6d106",
+        "hivdb_hivfacts:fbfdce803e997d45",
+        "hivdb_hivfacts:a33bdc81adff3f42",
+        "hivdb_hivfacts:bde341b50d508b9a",
+        "hivdb_hivfacts:cc2c14480f8e7231",
+        "hivdb_hivfacts:9c17c46b1a598d73",
+        "hivdb_hivfacts:3aeb7ddcaf5fb227",
+        "hivdb_hivfacts:19bcd3d5201cee0c",
+        "hivdb_hivfacts:e9f765116f52932a",
+        "hivdb_hivfacts:54b4fc853361afe1",
+        "hivdb_hivfacts:7b75fe379fc7fee3",
+        "hivdb_hivfacts:4e8a3c9760c67e2e",
+        "hivdb_hivfacts:100f3d96659cd586",
+        "hivdb_hivfacts:ba194a9cc485f785",
+        "hivdb_hivfacts:4fe9bb6738b9232f",
+        "hivdb_hivfacts:c422c82b34cd01e8",
+        "hivdb_hivfacts:49f65c7b14bd83f1",
+        "hivdb_hivfacts:176740c0cdc37663",
+        "hivdb_hivfacts:fd82ea650d1bfa9d",
+        "hivdb_hivfacts:40480d020781d3cd",
+        "hivdb_hivfacts:edbb60398dd6959f",
+        "hivdb_hivfacts:f9540caa3453f7d9",
+        "hivdb_hivfacts:4eb0864b03733e55",
+        "hivdb_hivfacts:c7ed0067a1e647bc",
+        "hivdb_hivfacts:5f30b45d9ac88da6",
+        "hivdb_hivfacts:b5b479cdc773a98f"
+      ],
+      "standard_inchi_key": "MCGSCOLBFJQGHM-SCZZXKLOSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:172943",
+      "label": "bictegravir",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/bictegravir.yaml",
+      "region_rule_counts": {
+        "IN": 44
+      },
+      "sha256": "ac88ec7d91f9fe520740a84623e1024bfce36c338d16da4c63398a5f2079466e",
+      "source_rule_ids": [
+        "hivdb_hivfacts:b638fbfe23c9b267",
+        "hivdb_hivfacts:941bf0e8fe4c9d24",
+        "hivdb_hivfacts:f3e93653855ad74b",
+        "hivdb_hivfacts:6378144e8ed39b8c",
+        "hivdb_hivfacts:bd509c75abf63bd8",
+        "hivdb_hivfacts:c620082574d4d695",
+        "hivdb_hivfacts:c4682789c4c73f4e",
+        "hivdb_hivfacts:beb925c830a599f7",
+        "hivdb_hivfacts:e5d2b01f4193c391",
+        "hivdb_hivfacts:f84046b34270bf95",
+        "hivdb_hivfacts:051e5db40b60d748",
+        "hivdb_hivfacts:b9ee764efc7298b1",
+        "hivdb_hivfacts:feaa70de6720d940",
+        "hivdb_hivfacts:f879eee47707f53a",
+        "hivdb_hivfacts:9c570e1da8f793e6",
+        "hivdb_hivfacts:01acaaa06f0123f5",
+        "hivdb_hivfacts:1cb7b855eaba1032",
+        "hivdb_hivfacts:b6e6f4a026c08f53",
+        "hivdb_hivfacts:b04ae16204d9f50c",
+        "hivdb_hivfacts:996bbdf9565ee9b8",
+        "hivdb_hivfacts:3fd21ece89fefa81",
+        "hivdb_hivfacts:66730cf8f26c6ad0",
+        "hivdb_hivfacts:d3f6695a710ec022",
+        "hivdb_hivfacts:383e9350ea7e9953",
+        "hivdb_hivfacts:797db2cc63372e2d",
+        "hivdb_hivfacts:334472dc9ceb46a3",
+        "hivdb_hivfacts:1574e922238b8205",
+        "hivdb_hivfacts:f23a52b5b46d6196",
+        "hivdb_hivfacts:1a93267744b08010",
+        "hivdb_hivfacts:6cda4623de465629",
+        "hivdb_hivfacts:b02206a633a2dbe6",
+        "hivdb_hivfacts:26d86a796476d955",
+        "hivdb_hivfacts:222a892ffcb8dbf9",
+        "hivdb_hivfacts:defb1248048639b4",
+        "hivdb_hivfacts:b3d5d61b3e83c732",
+        "hivdb_hivfacts:44bc443c6c73dda5",
+        "hivdb_hivfacts:c950d39eab9ba525",
+        "hivdb_hivfacts:774de852af545930",
+        "hivdb_hivfacts:47a946e35cc9889b",
+        "hivdb_hivfacts:1c3d7df4d7fa3dc8",
+        "hivdb_hivfacts:617a2444ddc3726c",
+        "hivdb_hivfacts:a6119b41fc68fe89",
+        "hivdb_hivfacts:ddeca76619974660",
+        "hivdb_hivfacts:1f6ccbab3abeeb77"
+      ],
+      "standard_inchi_key": "SOLUWJRYJLAZCX-LYOVBCGYSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:172944",
+      "label": "cabotegravir",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/cabotegravir.yaml",
+      "region_rule_counts": {
+        "IN": 39
+      },
+      "sha256": "9044ba7d298ab01260bad8b601185ae361b52f0017e113f065249129b9d007ea",
+      "source_rule_ids": [
+        "hivdb_hivfacts:7122f285e71b105f",
+        "hivdb_hivfacts:f498e3a35a42fa2e",
+        "hivdb_hivfacts:842b387b912407e5",
+        "hivdb_hivfacts:a3cecbcb1cadd67f",
+        "hivdb_hivfacts:e947203542d8335f",
+        "hivdb_hivfacts:ae9c31531f90afda",
+        "hivdb_hivfacts:a60bf17484e7810a",
+        "hivdb_hivfacts:5db00ff7d0282a0f",
+        "hivdb_hivfacts:efc3ad026b0482e8",
+        "hivdb_hivfacts:61e9533cb6095455",
+        "hivdb_hivfacts:74cc76764b8e0536",
+        "hivdb_hivfacts:e61800fa08c3e8ad",
+        "hivdb_hivfacts:d9223ae9079b7d12",
+        "hivdb_hivfacts:c2526f07f85be524",
+        "hivdb_hivfacts:b59f1e49f332ffe4",
+        "hivdb_hivfacts:f15bc4034f6fe78e",
+        "hivdb_hivfacts:e2549bebf2253947",
+        "hivdb_hivfacts:9c04361e4a21d470",
+        "hivdb_hivfacts:8af73b0b21625a6c",
+        "hivdb_hivfacts:ab766dc685db2307",
+        "hivdb_hivfacts:5c1d970ab617aade",
+        "hivdb_hivfacts:bd3d7d9a900fc1f7",
+        "hivdb_hivfacts:f4fee07cd23b65d0",
+        "hivdb_hivfacts:49a7f82c5b773b3e",
+        "hivdb_hivfacts:7c5cf5157e0c7990",
+        "hivdb_hivfacts:517156a54ac0ba15",
+        "hivdb_hivfacts:7123783e62667dd7",
+        "hivdb_hivfacts:4e5c45a383450b15",
+        "hivdb_hivfacts:7b5a576ba89862c7",
+        "hivdb_hivfacts:5883c7915cc98bb8",
+        "hivdb_hivfacts:6eb7330cfbf31ff5",
+        "hivdb_hivfacts:8a59c0f7129dbed9",
+        "hivdb_hivfacts:6fc2fe6ae87de33f",
+        "hivdb_hivfacts:7365ce86899ca480",
+        "hivdb_hivfacts:abb9b548e6819424",
+        "hivdb_hivfacts:271fb63f2b52a1c1",
+        "hivdb_hivfacts:0b14f994fe3fc2ec",
+        "hivdb_hivfacts:269cb5f224e91f45",
+        "hivdb_hivfacts:de48d63d665730bc"
+      ],
+      "standard_inchi_key": "WCWSTNLSLKSJPK-LKFCYVNXSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:490877",
+      "label": "didanosine",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/didanosine.yaml",
+      "region_rule_counts": {
+        "RT": 26
+      },
+      "sha256": "5ae6bda5a6c0971ffd23b20697241a807361e92a56b8ab50ffb4cb5f32f3ce38",
+      "source_rule_ids": [
+        "hivdb_hivfacts:e8b453ac46c9ccbc",
+        "hivdb_hivfacts:4fae8ca44a521dda",
+        "hivdb_hivfacts:9b3eb24a079b7e0d",
+        "hivdb_hivfacts:d0cdff332ac5a201",
+        "hivdb_hivfacts:f64d1f2b8ec1725c",
+        "hivdb_hivfacts:4ca5fa2570ad6a53",
+        "hivdb_hivfacts:29fa1fd2465d85fb",
+        "hivdb_hivfacts:fdd31b82cd052d8f",
+        "hivdb_hivfacts:1af334c1f31c830c",
+        "hivdb_hivfacts:858b2ac565ede7ac",
+        "hivdb_hivfacts:c816ae2e4dc372c0",
+        "hivdb_hivfacts:0bce0b19eb1ec325",
+        "hivdb_hivfacts:2c33bd59726804b7",
+        "hivdb_hivfacts:d33bc38cf50f9da5",
+        "hivdb_hivfacts:502be1e46625a276",
+        "hivdb_hivfacts:921023ef3ab5c8c1",
+        "hivdb_hivfacts:b8d39566b5dfe60a",
+        "hivdb_hivfacts:249245838e8ba57d",
+        "hivdb_hivfacts:e85d4a0b5c43d2e4",
+        "hivdb_hivfacts:f9221fb07adc0034",
+        "hivdb_hivfacts:79522e626d36b4d1",
+        "hivdb_hivfacts:d58b90138e05fcd9",
+        "hivdb_hivfacts:f06eb52658c9e465",
+        "hivdb_hivfacts:f8b7d5e34ab7185e",
+        "hivdb_hivfacts:2f45002f1b6cfe84",
+        "hivdb_hivfacts:bd1c972ec1feb44b"
+      ],
+      "standard_inchi_key": "BXZVVICBKDXVGW-NKWVEPMBSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:76010",
+      "label": "dolutegravir",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/dolutegravir.yaml",
+      "region_rule_counts": {
+        "IN": 40
+      },
+      "sha256": "95c9b587032a25eeda8ddc9d0b5bcc2e3e565e8b5e8e743260bcd6ab1ea11d5e",
+      "source_rule_ids": [
+        "hivdb_hivfacts:0d2a7d480173695e",
+        "hivdb_hivfacts:d686b572a693ad1c",
+        "hivdb_hivfacts:05cbbfa654a3208e",
+        "hivdb_hivfacts:ec2fbfe856478e3a",
+        "hivdb_hivfacts:af79e02fae4d474c",
+        "hivdb_hivfacts:0f20ce612de5e39c",
+        "hivdb_hivfacts:be4e3fb9c0839110",
+        "hivdb_hivfacts:b02a3f1a64ce248e",
+        "hivdb_hivfacts:17cb7c087edc9ab9",
+        "hivdb_hivfacts:b7a0acd4159292b0",
+        "hivdb_hivfacts:d1675a386750e7f0",
+        "hivdb_hivfacts:65b3ba4cafa1d128",
+        "hivdb_hivfacts:274d7bf4232ab892",
+        "hivdb_hivfacts:2a2b8fa43d8eb9bc",
+        "hivdb_hivfacts:0a74e37759b373a5",
+        "hivdb_hivfacts:05cbfdb2a5b32b9d",
+        "hivdb_hivfacts:a5a66a97c41445e9",
+        "hivdb_hivfacts:7d938c0ff18a562a",
+        "hivdb_hivfacts:82c7fa0f53afb4f1",
+        "hivdb_hivfacts:50e8ffd6b48e0a9b",
+        "hivdb_hivfacts:ec00a8133a723b74",
+        "hivdb_hivfacts:46cb82a3145d7d7b",
+        "hivdb_hivfacts:a58203c2c81c922b",
+        "hivdb_hivfacts:a00e95f40b8adbdf",
+        "hivdb_hivfacts:c73b065cbe89edb0",
+        "hivdb_hivfacts:7bc5fe1b20f74c5e",
+        "hivdb_hivfacts:d984d4b22989cb90",
+        "hivdb_hivfacts:2ee1733de465f7bd",
+        "hivdb_hivfacts:adc300e0498f69ec",
+        "hivdb_hivfacts:76f7163c4b617d9a",
+        "hivdb_hivfacts:89bdc461c75ec143",
+        "hivdb_hivfacts:55e71612f7cab96e",
+        "hivdb_hivfacts:b27a4eb3156add23",
+        "hivdb_hivfacts:98e905b28a0c589d",
+        "hivdb_hivfacts:178f64a2c1448ddd",
+        "hivdb_hivfacts:f6e8ff9c6b367f5f",
+        "hivdb_hivfacts:5a48a77d8a8949ce",
+        "hivdb_hivfacts:2eb5bb3016ef8f0d",
+        "hivdb_hivfacts:744830b5314b2b04",
+        "hivdb_hivfacts:8e12356ad26896d6"
+      ],
+      "standard_inchi_key": "RHWKPHLQXYSBKR-BMIGLBTASA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:119486",
+      "label": "efavirenz",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/efavirenz.yaml",
+      "region_rule_counts": {
+        "RT": 23
+      },
+      "sha256": "3922346640e0299042aa1ea64b94d68279bba1e0a986c8592c9b9c75cb3f7f7d",
+      "source_rule_ids": [
+        "hivdb_hivfacts:b54667373f33facf",
+        "hivdb_hivfacts:2940fbef435296d4",
+        "hivdb_hivfacts:6f389831f78969e0",
+        "hivdb_hivfacts:21cce92299e1cac0",
+        "hivdb_hivfacts:a3515b08e67e4264",
+        "hivdb_hivfacts:f481326956a0bc48",
+        "hivdb_hivfacts:29b076146001d57b",
+        "hivdb_hivfacts:8a177c735ba44b2d",
+        "hivdb_hivfacts:d4890e4c2783d745",
+        "hivdb_hivfacts:5e47b04b99ecfb9f",
+        "hivdb_hivfacts:1422d327d469a3b8",
+        "hivdb_hivfacts:d01ec21fddd800b2",
+        "hivdb_hivfacts:8a22be068446ac38",
+        "hivdb_hivfacts:0827a6bd15d7961c",
+        "hivdb_hivfacts:935065a8fe18dd3a",
+        "hivdb_hivfacts:1e9f4b7bd408d555",
+        "hivdb_hivfacts:5d8221c6fd0bfd17",
+        "hivdb_hivfacts:cf400a278ede59c3",
+        "hivdb_hivfacts:3d4288ec2151adfe",
+        "hivdb_hivfacts:e4afa63803bc113e",
+        "hivdb_hivfacts:a39b027dc069db4d",
+        "hivdb_hivfacts:3afee8b0c0525a2b",
+        "hivdb_hivfacts:b18edf4a34c28691"
+      ],
+      "standard_inchi_key": "XPOQHMRABVBWPR-ZDUSSCGKSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:72289",
+      "label": "elvitegravir",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/elvitegravir.yaml",
+      "region_rule_counts": {
+        "IN": 34
+      },
+      "sha256": "fc001ad119a1c8b276478f5cc398783558050e7c93afdde1b3632eeca9962288",
+      "source_rule_ids": [
+        "hivdb_hivfacts:e465f4aa0ac2e7f9",
+        "hivdb_hivfacts:8643d625e4872dcf",
+        "hivdb_hivfacts:dd6c94dcb0b5997c",
+        "hivdb_hivfacts:d77775ff7accfbc9",
+        "hivdb_hivfacts:4fea458689a5d2c5",
+        "hivdb_hivfacts:d5fbf77b2bb83304",
+        "hivdb_hivfacts:15bebc99fcbcd391",
+        "hivdb_hivfacts:55423503ed3f2973",
+        "hivdb_hivfacts:c530a84be2bb863e",
+        "hivdb_hivfacts:81cb460723aa113c",
+        "hivdb_hivfacts:ccc58d11c4b5760a",
+        "hivdb_hivfacts:c1b85e6d42e61b13",
+        "hivdb_hivfacts:d0cfa0fde45f100b",
+        "hivdb_hivfacts:6b4b4810a0353c16",
+        "hivdb_hivfacts:d258c2efc463c066",
+        "hivdb_hivfacts:d27539c18206d081",
+        "hivdb_hivfacts:73fd7195ba9dffe0",
+        "hivdb_hivfacts:c229be28a9a4ebf1",
+        "hivdb_hivfacts:c60dd8b6d45c234b",
+        "hivdb_hivfacts:325d9b2e5c89f78d",
+        "hivdb_hivfacts:990ff2e0766486e4",
+        "hivdb_hivfacts:af80c8fa067587dc",
+        "hivdb_hivfacts:7423428e9e021ba9",
+        "hivdb_hivfacts:07db93facd0cb6c5",
+        "hivdb_hivfacts:6cb14a07f4173f62",
+        "hivdb_hivfacts:7d94ba921bff3dbb",
+        "hivdb_hivfacts:d62a94dabc4e2d6a",
+        "hivdb_hivfacts:1486bcf07827fa6a",
+        "hivdb_hivfacts:94bf76fd2a4dbd22",
+        "hivdb_hivfacts:f98cf7a9d3b10a76",
+        "hivdb_hivfacts:b775e1c1feeda25f",
+        "hivdb_hivfacts:7e63a9973ee85da6",
+        "hivdb_hivfacts:3ef978d1846b3f72",
+        "hivdb_hivfacts:125a3aae32c6fe5f"
+      ],
+      "standard_inchi_key": "JUZYLCPPVHEVSV-LJQANCHMSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:31536",
+      "label": "emtricitabine",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/emtricitabine.yaml",
+      "region_rule_counts": {
+        "RT": 14
+      },
+      "sha256": "f1b805ca475442639637ed8f6cbe22089a86e9b6cd232b6c95f42ed23c19cf53",
+      "source_rule_ids": [
+        "hivdb_hivfacts:d14d0325b1fd484e",
+        "hivdb_hivfacts:69f77f584e59f9a1",
+        "hivdb_hivfacts:23519f7b11f1579f",
+        "hivdb_hivfacts:1c609d061f69a8f8",
+        "hivdb_hivfacts:123dd8ab09183334",
+        "hivdb_hivfacts:11deb4455f54281b",
+        "hivdb_hivfacts:0bcb8c50cbe4c575",
+        "hivdb_hivfacts:06cf40e193454256",
+        "hivdb_hivfacts:f5c10d1052f9a76f",
+        "hivdb_hivfacts:85b0bc58a43061db",
+        "hivdb_hivfacts:c9a03db57c59be02",
+        "hivdb_hivfacts:08f115fafaf99ebc",
+        "hivdb_hivfacts:e8ee42fbcd3da907",
+        "hivdb_hivfacts:e64b89b4762a613a"
+      ],
+      "standard_inchi_key": "XQSPYNMVSIKCOC-NTSWFWBYSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:63589",
+      "label": "etravirine",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/etravirine.yaml",
+      "region_rule_counts": {
+        "RT": 21
+      },
+      "sha256": "da53924869a0d5d12c555455a9d1dc1672002feaa3429ebe222d47af1e3c42d7",
+      "source_rule_ids": [
+        "hivdb_hivfacts:7c4b6474c6fcbde1",
+        "hivdb_hivfacts:98e15d11ead2f5e8",
+        "hivdb_hivfacts:9af1238c46dff62e",
+        "hivdb_hivfacts:6725db667becaf62",
+        "hivdb_hivfacts:ffe3a28c0be96a88",
+        "hivdb_hivfacts:6701d24411c25813",
+        "hivdb_hivfacts:685858f0f957fae1",
+        "hivdb_hivfacts:e636fe606da12ffb",
+        "hivdb_hivfacts:f1f717a1cd0f6697",
+        "hivdb_hivfacts:4c06c33eec5e3c70",
+        "hivdb_hivfacts:43449a992034aa53",
+        "hivdb_hivfacts:af8b9a021aed40aa",
+        "hivdb_hivfacts:1421ecd53a365e2c",
+        "hivdb_hivfacts:38637b4423086ddf",
+        "hivdb_hivfacts:3f4d2385e4162b96",
+        "hivdb_hivfacts:359c422a4b53a2c1",
+        "hivdb_hivfacts:c40176047a905066",
+        "hivdb_hivfacts:127c41a57a3ed870",
+        "hivdb_hivfacts:c2391c93cf118d40",
+        "hivdb_hivfacts:d0fc22e0a3d6af63",
+        "hivdb_hivfacts:f04ca478bc44cd53"
+      ],
+      "standard_inchi_key": "PYGWGZALEOIKDF-UHFFFAOYSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:63577",
+      "label": "lamivudine",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/lamivudine.yaml",
+      "region_rule_counts": {
+        "RT": 14
+      },
+      "sha256": "831bfc4d2282f64b9906cbecd854f5606704adc77735a252185b63e2e73f6a1a",
+      "source_rule_ids": [
+        "hivdb_hivfacts:eb76478bae06081f",
+        "hivdb_hivfacts:a4766bd0231d5732",
+        "hivdb_hivfacts:63e9a0a1a37333ce",
+        "hivdb_hivfacts:8b622485f7618b68",
+        "hivdb_hivfacts:a32d5fd7bab323b4",
+        "hivdb_hivfacts:7b2c996947f0517e",
+        "hivdb_hivfacts:356db2b0f9b1085a",
+        "hivdb_hivfacts:7932003a60088366",
+        "hivdb_hivfacts:558bda3d16d188f2",
+        "hivdb_hivfacts:21ff991feb43a1cd",
+        "hivdb_hivfacts:9bdb58cad22287dd",
+        "hivdb_hivfacts:bad1cb6bd0bb6de0",
+        "hivdb_hivfacts:321edef2d4bc25ab",
+        "hivdb_hivfacts:178f242c0fed5eef"
+      ],
+      "standard_inchi_key": "JTEGQNOMFQHVDC-NKWVEPMBSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:7496",
+      "label": "nelfinavir",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/nelfinavir.yaml",
+      "region_rule_counts": {
+        "PR": 44
+      },
+      "sha256": "212dad58ce7c6448509b72827db513c375739da1c4b48bc416c8f063c447f1f8",
+      "source_rule_ids": [
+        "hivdb_hivfacts:2f41ff05cbd1562c",
+        "hivdb_hivfacts:6c9703191d1bfda2",
+        "hivdb_hivfacts:5ba7c5ec62890fe7",
+        "hivdb_hivfacts:ba5e9550556ba32d",
+        "hivdb_hivfacts:a1760b9b89b13905",
+        "hivdb_hivfacts:d7c391478a20c012",
+        "hivdb_hivfacts:745117b3ef86c2f1",
+        "hivdb_hivfacts:1587a39706ce26a5",
+        "hivdb_hivfacts:1bd7129756e57c4b",
+        "hivdb_hivfacts:b630b873d9445761",
+        "hivdb_hivfacts:29a181771b0d664d",
+        "hivdb_hivfacts:9664f6d6d554d011",
+        "hivdb_hivfacts:994ff09dbe849fef",
+        "hivdb_hivfacts:8175c6866bfbcf3e",
+        "hivdb_hivfacts:8eb89d3547519b29",
+        "hivdb_hivfacts:5e2b576755aa4b88",
+        "hivdb_hivfacts:05af54218cb536dc",
+        "hivdb_hivfacts:b30d494def534888",
+        "hivdb_hivfacts:a69006ed33271066",
+        "hivdb_hivfacts:167e15c2b5a1201b",
+        "hivdb_hivfacts:81bb3b4e33d8dac6",
+        "hivdb_hivfacts:e1b17617ca9c366e",
+        "hivdb_hivfacts:c2ad8cff12400791",
+        "hivdb_hivfacts:26e6a9663d1217ea",
+        "hivdb_hivfacts:0cd947d97c7c5c90",
+        "hivdb_hivfacts:0c6d8ff05ff359aa",
+        "hivdb_hivfacts:150b809304bf7e28",
+        "hivdb_hivfacts:044d47fcfd81a349",
+        "hivdb_hivfacts:9c223e92837e53d6",
+        "hivdb_hivfacts:8e5f3e4550233db7",
+        "hivdb_hivfacts:a0e354aae436c87b",
+        "hivdb_hivfacts:ca153ea0b4ac60d6",
+        "hivdb_hivfacts:bcd1e04c8a171c91",
+        "hivdb_hivfacts:06665c7945eef576",
+        "hivdb_hivfacts:cf9a944d2bb509b4",
+        "hivdb_hivfacts:e3312b2508d51c48",
+        "hivdb_hivfacts:f913f7189eee0ff5",
+        "hivdb_hivfacts:81a64a591581e4de",
+        "hivdb_hivfacts:da1e00f5a7818e18",
+        "hivdb_hivfacts:67443e854f525840",
+        "hivdb_hivfacts:dd522aa99d7d80d1",
+        "hivdb_hivfacts:d5422d51dfe21547",
+        "hivdb_hivfacts:4587eddb331c1420",
+        "hivdb_hivfacts:28f678f5187d104e"
+      ],
+      "standard_inchi_key": "QAGYKUNXZHXKMR-HKWSIXNMSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:63613",
+      "label": "nevirapine",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/nevirapine.yaml",
+      "region_rule_counts": {
+        "RT": 22
+      },
+      "sha256": "d95d87f0d78d95dcbe89974dee37506357ff483fbaa4aa679b298e3b3b760b4a",
+      "source_rule_ids": [
+        "hivdb_hivfacts:03ac90a396895f72",
+        "hivdb_hivfacts:2418e27676580885",
+        "hivdb_hivfacts:3bf3da7ab908d83d",
+        "hivdb_hivfacts:b30cafcd1c833391",
+        "hivdb_hivfacts:69d3a70eab284414",
+        "hivdb_hivfacts:43ae2400d1777aae",
+        "hivdb_hivfacts:3625658a635ec5b4",
+        "hivdb_hivfacts:ffeecaebab805e45",
+        "hivdb_hivfacts:d85e0be4ad08cdea",
+        "hivdb_hivfacts:da95390b5ea03ad6",
+        "hivdb_hivfacts:2e802efd98eff8a2",
+        "hivdb_hivfacts:644e74f2526ed262",
+        "hivdb_hivfacts:01dae33a452e8224",
+        "hivdb_hivfacts:1ab69d9045caaed7",
+        "hivdb_hivfacts:9a1c769aecc7c363",
+        "hivdb_hivfacts:b4ebbd3a66065649",
+        "hivdb_hivfacts:abc63c5a8ed845f2",
+        "hivdb_hivfacts:8a2a057b617bea21",
+        "hivdb_hivfacts:e0374110753ca68c",
+        "hivdb_hivfacts:b7a7a32ec0eb2cd6",
+        "hivdb_hivfacts:fa8c9eb6e756e3f0",
+        "hivdb_hivfacts:633af4da9094c30e"
+      ],
+      "standard_inchi_key": "NQDJXKOVJZTUJA-UHFFFAOYSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:82960",
+      "label": "raltegravir",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/raltegravir.yaml",
+      "region_rule_counts": {
+        "IN": 35
+      },
+      "sha256": "3ce790333486ab41006febeb577ad2da813e3c86bc2a0cde10d1dea2ef99c7a7",
+      "source_rule_ids": [
+        "hivdb_hivfacts:fde072ae97f3d663",
+        "hivdb_hivfacts:1bab4d9ed3a1235e",
+        "hivdb_hivfacts:dd9e2d04c68efc17",
+        "hivdb_hivfacts:cb55d029e0c6382a",
+        "hivdb_hivfacts:32fdcbbbb19e8b99",
+        "hivdb_hivfacts:8f590b529f3241ff",
+        "hivdb_hivfacts:fc77a63576357720",
+        "hivdb_hivfacts:41cf04d9b913a51b",
+        "hivdb_hivfacts:a4117f9ff9b3d5cd",
+        "hivdb_hivfacts:363d714115527b9e",
+        "hivdb_hivfacts:e7240988ac3be813",
+        "hivdb_hivfacts:fc809be437027740",
+        "hivdb_hivfacts:9a6648e45836b6d3",
+        "hivdb_hivfacts:5b21e500b0023317",
+        "hivdb_hivfacts:e248f4342dc6a753",
+        "hivdb_hivfacts:0aafe4d5ecffe366",
+        "hivdb_hivfacts:2cd26ddf1fc91e42",
+        "hivdb_hivfacts:c1919179ef1b7281",
+        "hivdb_hivfacts:65a583cc10bedadb",
+        "hivdb_hivfacts:5ad1b34fd60113c9",
+        "hivdb_hivfacts:2d0293eddb96f84d",
+        "hivdb_hivfacts:9ba3d6934dee7f5f",
+        "hivdb_hivfacts:f19258d92adfc847",
+        "hivdb_hivfacts:35777141a845235a",
+        "hivdb_hivfacts:409b60023885c8f9",
+        "hivdb_hivfacts:8b6db7871a5444da",
+        "hivdb_hivfacts:9586f608943d78b5",
+        "hivdb_hivfacts:5e6d707b3a44c98c",
+        "hivdb_hivfacts:82527780398ae600",
+        "hivdb_hivfacts:d850cb6858772288",
+        "hivdb_hivfacts:ae4999cf9b84f753",
+        "hivdb_hivfacts:9f61b866ab00293d",
+        "hivdb_hivfacts:1b1e599f2bd55f84",
+        "hivdb_hivfacts:d23f8c75893a990d",
+        "hivdb_hivfacts:595da149e072b666"
+      ],
+      "standard_inchi_key": "CZFFBEXEKNGXKS-UHFFFAOYSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:68606",
+      "label": "rilpivirine",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/rilpivirine.yaml",
+      "region_rule_counts": {
+        "RT": 28
+      },
+      "sha256": "0fe52b034ebd51186eaf00675e2a2b76c60f537caa8adcf48e1f798751a1d04d",
+      "source_rule_ids": [
+        "hivdb_hivfacts:2672e95a09aa7163",
+        "hivdb_hivfacts:f540a40110b2095c",
+        "hivdb_hivfacts:0adcbb53062663c6",
+        "hivdb_hivfacts:c5d3ff940bc66e16",
+        "hivdb_hivfacts:038e515a3fe03013",
+        "hivdb_hivfacts:8bcf166343012336",
+        "hivdb_hivfacts:73104a7f68cf2cc7",
+        "hivdb_hivfacts:afefd5e09dbfc1d7",
+        "hivdb_hivfacts:4ba6d7e6e8e5de96",
+        "hivdb_hivfacts:bff68257a81836f3",
+        "hivdb_hivfacts:2f2fb37847a7e7a5",
+        "hivdb_hivfacts:5f6ebcec8b937875",
+        "hivdb_hivfacts:a6e47ba71a18c77f",
+        "hivdb_hivfacts:8724867d0c30a82c",
+        "hivdb_hivfacts:79e962e365fb0a02",
+        "hivdb_hivfacts:75d0a3e7402acb2b",
+        "hivdb_hivfacts:eee34a001a07e170",
+        "hivdb_hivfacts:501472f295a8f986",
+        "hivdb_hivfacts:511121a52c5791c4",
+        "hivdb_hivfacts:8fc55154cb754cf9",
+        "hivdb_hivfacts:de435e35ac32d097",
+        "hivdb_hivfacts:273af9cb9328ad65",
+        "hivdb_hivfacts:b9bf0d0e89ad7e54",
+        "hivdb_hivfacts:64748eacfbc97b8e",
+        "hivdb_hivfacts:0c4dda654a6363d3",
+        "hivdb_hivfacts:087984ae4362fc3b",
+        "hivdb_hivfacts:61dafd8a1e65a1ed",
+        "hivdb_hivfacts:1a4a344e6146ec74"
+      ],
+      "standard_inchi_key": "YIBOMRUWOWDFLG-ONEGZZNKSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:63581",
+      "label": "stavudine",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/stavudine.yaml",
+      "region_rule_counts": {
+        "RT": 27
+      },
+      "sha256": "506ce9bd5d2061866b94a3526f86a076c8968197fad4f106582a1bb89791ca49",
+      "source_rule_ids": [
+        "hivdb_hivfacts:f9027e68d7321531",
+        "hivdb_hivfacts:5111a24ffffeee0e",
+        "hivdb_hivfacts:1725bfde9fc08483",
+        "hivdb_hivfacts:5d70b244a16dc566",
+        "hivdb_hivfacts:501af48a744f0986",
+        "hivdb_hivfacts:54991ec53b0d61e8",
+        "hivdb_hivfacts:82dba0f970f65445",
+        "hivdb_hivfacts:4a0f5f874a668ed3",
+        "hivdb_hivfacts:229daec46a18a046",
+        "hivdb_hivfacts:855c7715a3365261",
+        "hivdb_hivfacts:d36694994312d66d",
+        "hivdb_hivfacts:bfdbd6732cc6202d",
+        "hivdb_hivfacts:76c86970027f08c3",
+        "hivdb_hivfacts:95c4bf4a158f4539",
+        "hivdb_hivfacts:cb8f35a780c3765f",
+        "hivdb_hivfacts:147940b3efab0c6c",
+        "hivdb_hivfacts:3eb4b07960e126df",
+        "hivdb_hivfacts:088854dd9c4d5bc7",
+        "hivdb_hivfacts:a24b86d186d52a15",
+        "hivdb_hivfacts:3d8f59dccfc64d86",
+        "hivdb_hivfacts:90ac9c982e04df97",
+        "hivdb_hivfacts:ce8fc8ba06b97fe2",
+        "hivdb_hivfacts:9dddf9cf387d3a5c",
+        "hivdb_hivfacts:e86e00bfb39129d2",
+        "hivdb_hivfacts:b9c04b96bd7f8fa3",
+        "hivdb_hivfacts:9fc63122ca6221c2",
+        "hivdb_hivfacts:e736abd3ab68ace7"
+      ],
+      "standard_inchi_key": "XNKLLVCARDGLGL-JGVFFNPUSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    },
+    {
+      "comparative_reference": "UniProtKB:P04585",
+      "comparative_reference_role": "COMPARATIVE_ISOLATE_REFERENCE_NOT_HIVDB_CONSENSUS_OR_PATIENT_ALLELE",
+      "current_documented_convention": "SUBTYPE_B_CONSENSUS",
+      "exact_algorithm_accession": null,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "identifier": "CHEBI:10110",
+      "label": "zidovudine",
+      "new_taxon_assignment": null,
+      "path": "data/antibiotics/antiviral/zidovudine.yaml",
+      "region_rule_counts": {
+        "RT": 25
+      },
+      "sha256": "da408fd9999bc2ae90fd89dc4dde30a9c1552b1d42fafeb6e270dbd94276d8c6",
+      "source_rule_ids": [
+        "hivdb_hivfacts:bf4147187c4b55d3",
+        "hivdb_hivfacts:0051f0000a95c24d",
+        "hivdb_hivfacts:345133d5311d4746",
+        "hivdb_hivfacts:146b814408eb4bb6",
+        "hivdb_hivfacts:34969f565a1ba8ca",
+        "hivdb_hivfacts:cf388e9b0a369d74",
+        "hivdb_hivfacts:3d1d18041d2c6722",
+        "hivdb_hivfacts:0f54c2a24f984442",
+        "hivdb_hivfacts:ebe2840dada19290",
+        "hivdb_hivfacts:94bdc84d7962a174",
+        "hivdb_hivfacts:baaaa59984c5cf6d",
+        "hivdb_hivfacts:ba7ab67c3db68b43",
+        "hivdb_hivfacts:86c7ccfc1f648868",
+        "hivdb_hivfacts:8cf39d4336e0cfcf",
+        "hivdb_hivfacts:4f5f6d0cfa70dc44",
+        "hivdb_hivfacts:bc49f617cd1a3bba",
+        "hivdb_hivfacts:33f83bf8bbe27bd8",
+        "hivdb_hivfacts:ab9acfba08e32ffa",
+        "hivdb_hivfacts:eedea1b1d960c69c",
+        "hivdb_hivfacts:d0bfb9ca0fe2fa5a",
+        "hivdb_hivfacts:303c058d6d4fab1e",
+        "hivdb_hivfacts:472a7622f26adb50",
+        "hivdb_hivfacts:d8ea84677ee7bf20",
+        "hivdb_hivfacts:6a56a20494bda10f",
+        "hivdb_hivfacts:aec59755ae5936b0"
+      ],
+      "standard_inchi_key": "HBOMLICNUCNMMY-XLPZGREQSA-N",
+      "status": "REFERENCE_CONTEXT_REVIEWED_PRIMARY_RESISTANCE_REVIEW_OPEN"
+    }
+  ],
+  "retrieval_date_utc": "2026-10-14",
+  "scope": "REFERENCE_CONTEXT_NOT_ALGORITHM_EQUIVALENCE_OR_PATIENT_ALLELES",
+  "source_reference_regions": {
+    "IN": {
+      "abstract_gene": "IN",
+      "reference_length": 288,
+      "reference_sha256": "7e21070f5af2fb43ae49901f8543f31d63a1ceb10d8732aeefe9bf869d17477e",
+      "source_name": "HIV1IN",
+      "source_strain_label": "HIV1"
+    },
+    "PR": {
+      "abstract_gene": "PR",
+      "reference_length": 99,
+      "reference_sha256": "31ce1af5962e7c22b56c8a8c4866ad529f2115ee34119667c19bd0621d225976",
+      "source_name": "HIV1PR",
+      "source_strain_label": "HIV1"
+    },
+    "RT": {
+      "abstract_gene": "RT",
+      "reference_length": 560,
+      "reference_sha256": "61f0029fd7a98ea2da1be9f282d8c5f9af42b8c99a6a3c7defe47d3fb5e22765",
+      "source_name": "HIV1RT",
+      "source_strain_label": "HIV1"
+    }
+  },
+  "source_reference_requests_reused": [
+    {
+      "retrieved_at": "2026-10-08T03:53:19.635183+00:00",
+      "sha256": "8718edabea9aec27ae831fbad9148b5a3748ca43f546b61f9dfdd2bf36757fbe",
+      "status": 200,
+      "url": "https://api.github.com/repos/hivdb/hivfacts/git/trees/be1c11a5145fea9073fdb71801919d4a34265336?recursive=1"
+    },
+    {
+      "git_blob_sha1": "8b28295edd783ea33f61cfb0d8b914361b8e3526",
+      "retrieved_at": "2026-10-08T03:53:56.531458+00:00",
+      "sha256": "19d19e418ce08e95bd84a7fa9335c192bcb9cd54968bf40f7fa700691542ee35",
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/hivdb/hivfacts/be1c11a5145fea9073fdb71801919d4a34265336/data/genes_hiv1.json"
+    },
+    {
+      "git_blob_sha1": "cdb330982611e90e2c22e9d41acee18a52e1cfe6",
+      "retrieved_at": "2026-10-08T03:53:56.713738+00:00",
+      "sha256": "fdaaf94adb362dc3dc220a4cdc6a0f3f4fcf576c3ca5900f5d4b994db530c849",
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/hivdb/hivfacts/be1c11a5145fea9073fdb71801919d4a34265336/data/strains_hiv1.json"
+    }
+  ],
+  "sources": {
+    "faq": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-attempt.json",
+        "sha256": "ed9772632885c203e1c1c1df52d7d06b17cfe2d6da6fc0ec8646d02f0bccbc28"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-response.bin",
+        "sha256": "2f71a5142a3cb01acd69e1aab1342635ba8d84a513557c85cc64d7fe8743138e"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-receipt.json",
+        "sha256": "39d24ab06caeeb5142149e4bf28d7645fec317d196eddb7796e224ae5677e099"
+      },
+      "retrieved_at": "2026-10-14T01:42:20.396988+00:00",
+      "status": 200,
+      "url": "https://hivdb.stanford.edu/pages/FAQ/FAQ_answers.html"
+    },
+    "faq-content": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-content-attempt.json",
+        "sha256": "1984b142be1054dd0e0b9fad5f9647d9ab14f4bd0cb9b1967bd20fad3a4eb494"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-content-response.bin",
+        "sha256": "279a7643f52db8d86de0ddb84b098d6117230fc515e72d799e082c841912bea2"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-content-plan.json",
+        "sha256": "e75b9adb1e4049f5f8c1f2eb22a55ccbddd2f0c9493f5de8e1a3437a3388bba0"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-content-receipt.json",
+        "sha256": "d7c3734e9ed4f10e024a27e1817164c9da21280fc6ad36c4f570cd192fcfcb38"
+      },
+      "retrieved_at": "2026-10-14T01:44:47.501192+00:00",
+      "status": 200,
+      "url": "https://hivdb.stanford.edu/_wrapper/pages/FAQ/FAQ_answers.html"
+    },
+    "faq-legacy": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-legacy-attempt.json",
+        "sha256": "a67055b818fa347ad11b11f294f3ae9a6768dbdf385abaa781034b04e8730ead"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-legacy-response.bin",
+        "sha256": "c36d6b0fd8581d805e9fb60c022c7118c4ddfead3282d728336524ea3fd98909"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/legacy-asset-plan.json",
+        "sha256": "461fefd2575c47688fa8f72b6243e611694b5f757f07c8b8e949abcfd6223e0e"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-legacy-receipt.json",
+        "sha256": "e1d9b030543999ade7f58ba7f0036c97608a3be02a53da9021340055f07740e2"
+      },
+      "retrieved_at": "2026-10-14T01:44:19.075467+00:00",
+      "status": 200,
+      "url": "https://hivdb.stanford.edu/static/js/7182.5d4332b5.chunk.js"
+    },
+    "faq-router": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-router-attempt.json",
+        "sha256": "d321647f8de2bc5c6349d29297cf878e697f63a09f41f94af77bf67460e89755"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-router-response.bin",
+        "sha256": "e9f0e42e9616b6eede181ccec19987fd39aa63dab06ea53cc712d3e9d959f011"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/router-asset-plan.json",
+        "sha256": "c62c539dd8c0fd89300a40e83808cbc5fbe7ce5b7a97d9562d3b78aafefdf932"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-router-receipt.json",
+        "sha256": "93451c074055c6bfde47a7a84cace7df5bb511d6ee66ea8c43d8e1e923c38769"
+      },
+      "retrieved_at": "2026-10-14T01:43:39.909878+00:00",
+      "status": 200,
+      "url": "https://hivdb.stanford.edu/static/js/2961.4ba4a275.chunk.js"
+    },
+    "faq-script": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-script-attempt.json",
+        "sha256": "47d350db48a5d7e87523f06764d8a161765d50fa246dd65ce25a416ec6b69622"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-script-response.bin",
+        "sha256": "fd315ed3504d1254a43489222a1b23260c9f5bc2869c1beba32eca1a14d93587"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/documentation-assets-plan.json",
+        "sha256": "cb0cfb7980d88c0688fb1905b6fb51a914ead69a1777429f77b8c7855d81ccc5"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/faq-script-receipt.json",
+        "sha256": "813a0b25daa6a2ca51b960d5732e7d9954502bbb361059d765a75a2b74c2da7d"
+      },
+      "retrieved_at": "2026-10-14T01:42:57.281362+00:00",
+      "status": 200,
+      "url": "https://hivdb.stanford.edu/static/js/main.3960262d.js"
+    },
+    "protein": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/protein-attempt.json",
+        "sha256": "bda6db9cd8a17b023ce27d8e56743b40f44243a2789a1cd2910599eaff13ef79"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/protein-response.bin",
+        "sha256": "e6b939cd145781e866b7817812d6b24f4c47da9f1c7da8f243bbfb311d4edf35"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/protein-receipt.json",
+        "sha256": "27295793c5d5c8ec3a732d084bb4d7d159229609362bdafd7aa331fb5120e8f9"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-14T01:45:06.243785+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP04585&format=json&size=2&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion"
+    },
+    "taxonomy": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/taxonomy-attempt.json",
+        "sha256": "8af1bf8a90dde5c9121d1538406959c21df5bd6086b41cb733f63f73cf0c9161"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/taxonomy-response.bin",
+        "sha256": "a8cb35e1c7a3944d6ad7398f3b5a7285ec43bb6d697fce89737aff0bd48ef17f"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/taxonomy-receipt.json",
+        "sha256": "aa015a7d21ca113cb232f93c2a8cc52d22778f4dbf60dcd7df0322d391533a76"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-14T01:45:17.916244+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/11706"
+    }
+  },
+  "summary": {
+    "biological_records_changed": 0,
+    "cohort_records": 16,
+    "corpus_records_hash_verified": 2939,
+    "exact_algorithm_accessions_assigned": 0,
+    "native_http_requests": 7,
+    "new_reference_entries_verified": 1,
+    "new_resistance_assertions": 0,
+    "region_rule_counts": {
+      "IN": 192,
+      "PR": 44,
+      "RT": 231
+    },
+    "source_rules": 467,
+    "whole_record_reviews_completed": 0
+  }
+}

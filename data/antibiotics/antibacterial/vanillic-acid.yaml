@@ -1,0 +1,52 @@
+identifier: CHEBI:30816
+label: Vanillic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 4-hydroxy-3-methoxybenzoic acid with bactericidal and antibiofilm activity
+  against wound-associated bacterial pathogens.
+definition_source: DOI:10.1128/spectrum.01336-26
+synonyms:
+- synonym_text: 4-hydroxy-3-methoxybenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COC1=C(C=CC(=C1)C(=O)O)O
+  standard_inchi: InChI=1S/C8H8O4/c1-12-7-4-5(8(10)11)2-3-6(7)9/h2-4,9H,1H3,(H,10,11)
+  standard_inchi_key: WKOLLVMJNQIZCI-UHFFFAOYSA-N
+  molecular_formula: C8H8O4
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/8468
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 168.15
+  monoisotopic_mass: 168.04225874
+xrefs:
+- pubchem.compound:8468
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/spectrum.01336-26#vanillic-acid
+  source_label: Vanillic acid
+  minted_identifier: antibioticmech:curator-e5d31903a4
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/spectrum.01336-26
+    snippet: Barzdina et al. reported that vanillic acid inhibited Staphylococcus
+      aureus ATCC 6538 at a MIC of 1.25 mg/mL and the remaining 9 tested wound-associated
+      bacterial strains at 2.5 mg/mL (Table 1), with MBC values of 2.5 to 5.0 mg/mL
+      (Table 2).
+    notes: PubChem CID 8468 and ChEBI CHEBI:30816 supply the standard InChI, InChIKey,
+      formula, and SMILES for vanillic acid.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:04Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

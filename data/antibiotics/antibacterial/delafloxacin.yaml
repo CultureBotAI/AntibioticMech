@@ -40,6 +40,7 @@ activity_spectrum:
   assay: Broth microdilution delafloxacin MIC; modal MIC reported; interpreted using
     FDA breakpoints in a CLSI 2025 M100 S35 table.
   strain: '1269'
+  biosample_accession: SAMN33435242
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10560&PanelID=10
     snippet: Delafloxacin [1] | >4 | R; [1] Based on FDA break points
@@ -66,4 +67,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 delafloxacin-resistant
     Pseudomonas aeruginosa activity observation for AR-1269.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:39Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 1 activity_spectrum observation(s) where
+    evidence notes already named exactly one accession.
   llm_assisted: true

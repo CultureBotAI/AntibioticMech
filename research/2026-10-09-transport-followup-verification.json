@@ -1,0 +1,203 @@
+{
+  "adversarial_self_review": {
+    "checks": [
+      "Explicit primary locus differs from a gene-name reference candidate; neither assigns an experimental allele",
+      "H99/SC5314 reference strains and taxon ranks remain distinct from every laboratory derivative",
+      "Active compound, control, fluorescent derivative and crystallized imine are not pooled",
+      "Formula discrepancy and SLP5/SLP15 strain conflict are preserved rather than harmonized",
+      "MIC80 endpoint and original molar units retained without mixture-to-mass conversion or invented values",
+      "C/D findings do not propagate to related congeners; reused data are not independent replicates",
+      "Reference genome, study BioProject, transcriptomic accession and proteomic accession retain different scopes",
+      "Failed access is not claimed as visual inspection; publisher-free article is not misclassified as OA API eligible",
+      "Zero UniProt hits and empty correction metadata are bounded negatives, not biological or bibliographic absence",
+      "All biological records, source-owned inputs, history, pages, embeddings and prior dossiers retain their bytes"
+    ],
+    "corrections_made": [
+      "Tested tunicamycin lot composition is unknown; a generic mixture definition is not a lot-specific chemical analysis",
+      "SG511 methicillin-susceptible context is not an unqualified susceptibility category across drugs",
+      "Three test line-length lint errors fixed before final verification"
+    ],
+    "independent_review": false,
+    "remaining_limits": "Exact chemical and experimental-allele joins, unresolved strain labels, missing cervimycin visual review and all whole-record primary reviews remain open."
+  },
+  "artifacts": [
+    {
+      "path": "research/2026-10-09-transport-followup-context.json",
+      "sha256": "98ca3da8b16a940759af2195f0f745213a3609597526b18702f880fd86e0eb75"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "b4b38c5cc1e0cb445a8a5dd3f0d7f4ad768d966fdc5ebb5d6f3fcb912adf2712"
+    },
+    {
+      "path": "tests/test_transport_followup_context.py",
+      "sha256": "e5a2a765d773b028faaa86474929ed035a9baadec8ce99f686c7ea5cbdade822"
+    }
+  ],
+  "changed_protected_files": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "b4b38c5cc1e0cb445a8a5dd3f0d7f4ad768d966fdc5ebb5d6f3fcb912adf2712",
+      "before_sha256": "7f03fdfc80404dab5c392b695f611d9216ec2bc1141812a5165d36645ef4c9ae"
+    }
+  },
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/pytest",
+        "-q",
+        "tests/test_transport_followup_context.py",
+        "tests/test_transport_primary_context.py",
+        "tests/test_structure_primary_context.py",
+        "tests/test_oleandomycin_curation.py",
+        "tests/test_resistance_progress.py",
+        "--junitxml=reports/resistance-grounding-2026-10-09-transport-followup/final-focused-tests.xml"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/final-focused-tests.log",
+        "sha256": "39cf887c8255b2762cfd41385d3e19655ec152b05a949aee2bb9bfb5b07371db"
+      }
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "scripts",
+        "tests",
+        "src"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/final-lint.log",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      }
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_docs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/final-docs.log",
+        "sha256": "4e35248929325fef11134949b3f16dc729df9c28d017e999898555d14bcb0afd"
+      }
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/final-whitespace.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "corpus_research_complete": false,
+  "curation_events_added": 0,
+  "current_census": {
+    "path": "research/2026-10-09-oleandomycin-resistance-grounding.tsv",
+    "sha256": "e2ac349a1a893263fd2bfd26ad4602bc7f2b319ee202391944d4407efc5004fe"
+  },
+  "date": "2026-10-09",
+  "embeddings_and_map_unchanged": true,
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/final-focused-tests.xml",
+      "sha256": "a59feebe88b5d44a724894acd0e6e7eede6304371243c9285052d6deb65665dc"
+    },
+    "passed": 96,
+    "seconds": 60.554,
+    "skipped": 0
+  },
+  "full_qc_note": "Research dossier, report and tests only; previous full biological QC is historical, not a new full-suite run.",
+  "full_qc_rerun": false,
+  "generated_pages_unchanged": true,
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "last_biological_qc": {
+    "path": "research/2026-10-09-oleandomycin-verification.json",
+    "sha256": "515bc6c651d220a3649d12912e5aaa0534ed5a5adc0351a7669322420a73e647"
+  },
+  "live_browser_verification": false,
+  "metadata_cache_and_export_agreement_checked": true,
+  "native_source_caches_verified": [
+    {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/cervimycin2022-supplement-response.bin",
+      "sha256": "02bd470aff1bc1aaac54ed6875d2652aa157bcf4ae1980c3e23da52ae809fc70"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/metadata-response.bin",
+      "sha256": "80d82123523c3ec21c6efe34ff366d0b0c770a86eab291a53b91e99ed4786166"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/primary-36173303-response.bin",
+      "sha256": "571563deb53e4ecdf391db262053dd2c022534737f7d43a45cd131a90b397d35"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/primary-36364991-response.bin",
+      "sha256": "0722655b9747317dd885c942842c756e2de8e57cec212bc1b73679be4d54dbaf"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/primary-38722162-response.bin",
+      "sha256": "11d631592adff08922e27b8f95da1f03af5fd500e7941b381162f942ca8030a9"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/rta2-figure-2-response.bin",
+      "sha256": "ecab73259309c769e618e3f4ed1836d873837b11efe40fc51515661f8c5dc60b"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/rta2-publisher-response.bin",
+      "sha256": "0f94df5d58247f430f48f2dfc6d5928f849da277817599477769d1f6b4e3e280"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/supplements-36364991-response.bin",
+      "sha256": "e4f4508945a63c223d8cbee7b83744ab2135222ebf9e1bb6ec0b9067ae12581a"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-235443-response.bin",
+      "sha256": "76c0b459c2da93b9d45665468e88057feeb6c50b2fe9f5a53a44a3cfb77e0197"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-237561-response.bin",
+      "sha256": "d71eb389651e17d41497dac2345b9c1b834076af092f60aecd281d0b9c9bba24"
+    }
+  ],
+  "ncbi_endpoint_requests": 0,
+  "prior_checkpoints_unchanged": true,
+  "protected_baseline_files": 6736,
+  "protected_files_unchanged": 6735,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-transport-followup/protected-before.json",
+    "sha256": "f57bf1c699dd44df8731617a953c7a89a2e1bdce622dc5a7c5016364a5cb535c"
+  },
+  "public_artifacts_nonignored": true,
+  "record_hashes_verified": 2939,
+  "records_changed": 0,
+  "root_documents": [
+    {
+      "path": "README.md",
+      "sha256": "04d9fc1dad950669cc76efb5d362a07f993e20dce7870d07940e7a71576e726c"
+    },
+    {
+      "path": "NEXT_TASKS.md",
+      "sha256": "de77e4952bc300d6227071441e136ed6b3e66de6150431d88e89e870112ae2df"
+    }
+  ],
+  "scope": {
+    "corpus_records": 2939,
+    "full_corpus_primary_review": "OPEN",
+    "primary_papers": 4,
+    "record_memberships": 19,
+    "reference_proteins": 2,
+    "whole_records_completed": 0
+  },
+  "source_inputs_unchanged": true,
+  "status": "RESEARCH_ONLY_FOCUSED_CHECKS_PASSED"
+}

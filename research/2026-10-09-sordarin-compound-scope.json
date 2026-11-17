@@ -1,0 +1,337 @@
+{
+  "access_limitations": [
+    {
+      "http_status": 403,
+      "source": "Botet publisher PDF"
+    },
+    {
+      "http_status": 404,
+      "source": "Botet university-hosted PDF redirect target"
+    },
+    {
+      "http_status": 500,
+      "source": "Botet EMBL-EBI fullTextXML"
+    }
+  ],
+  "curated": false,
+  "date": "2026-10-09",
+  "limitations": [
+    "Paper titles and general sordarin wording do not establish the assayed chemical structure.",
+    "UniProt synonyms resolve reference gene names, not experimental alleles or samples.",
+    "S288c TaxID and proteins are reference context only; BY4741 subjects get no strain TaxID.",
+    "No sequence, variant specification, construct, primer, protocol, or quantitative phenotype exported.",
+    "No NCBI endpoint request, source adoption, source-terms review, or GitHub mutation."
+  ],
+  "name_search": {
+    "explicit_sordarin_sodium_or_potassium_name_match": false,
+    "ignored_files_included": true,
+    "roots": [
+      "data/antibiotics",
+      "curation"
+    ],
+    "scope": "Explicit names only; not proof of absence of every possible structural alias."
+  },
+  "preservation": {
+    "ignored_files_included": true,
+    "manifest": {
+      "path": "reports/resistance-grounding-2026-10-07/sordarin-20261009/protected-before.json",
+      "sha256": "442edea83c2840055f8a39c8ac455c66d3985a219778ddc5771a7c2ac9b9a9ca"
+    },
+    "protected_files": 6322,
+    "records_unchanged": 2939
+  },
+  "records": [
+    {
+      "identifier": "CHEBI:52549",
+      "label": "sordarin",
+      "path": "data/antibiotics/antifungal/sordarin.yaml",
+      "sha256": "f93e6e2ad964a36c83da7ebcefe1344f04252b7999a6fa4f92d763d3a59f85b7",
+      "standard_inchi_key": "OGGVRVMISBQNMQ-YPBSLCSMSA-N",
+      "unchanged": true
+    },
+    {
+      "identifier": "CHEBI:77908",
+      "label": "GM 193663",
+      "path": "data/antibiotics/antifungal/gm-193663.yaml",
+      "sha256": "3ccfd7c55a15cd6efb696d243941bd62672cfe02586b5da90c4fd112ba0720ee",
+      "standard_inchi_key": "YIJXUKFDZCRZIC-MYOGCEHNSA-N",
+      "unchanged": true
+    },
+    {
+      "identifier": "CHEBI:140259",
+      "label": "sordaricin",
+      "path": "data/antibiotics/antifungal/sordaricin.yaml",
+      "sha256": "d0ea727666c04b1198f8d9cb5bbbb0986af6a2ee4d668939044338bd265f041c",
+      "standard_inchi_key": "QIMCUSGGYZHVEF-VULLPXFTSA-N",
+      "unchanged": true
+    }
+  ],
+  "reference_proteins": [
+    {
+      "accession": "UniProtKB:P40487",
+      "entry_version": 181,
+      "experimental_assignment": false,
+      "paper_gene": "DPH1",
+      "reference_locus": "YIL103W",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "path": "reports/resistance-grounding-2026-10-07/sordarin-20261009/request-45c24ee83eefa6a09d3276791a8c9e893b6c53a3a67dfc4a0bfc1d0c1d10fff4.json",
+        "sha256": "8b3360032a0825cfcb6bdddd254d8aa1afea3731f2501f506502878fd5795c0b"
+      },
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000001365",
+      "uniprot_gene_synonyms": [],
+      "uniprot_primary_gene": "DPH1"
+    },
+    {
+      "accession": "UniProtKB:P32461",
+      "entry_version": 182,
+      "experimental_assignment": false,
+      "paper_gene": "DPH2",
+      "reference_locus": "YKL191W",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "path": "reports/resistance-grounding-2026-10-07/sordarin-20261009/request-45c24ee83eefa6a09d3276791a8c9e893b6c53a3a67dfc4a0bfc1d0c1d10fff4.json",
+        "sha256": "8b3360032a0825cfcb6bdddd254d8aa1afea3731f2501f506502878fd5795c0b"
+      },
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000001674",
+      "uniprot_gene_synonyms": [],
+      "uniprot_primary_gene": "DPH2"
+    },
+    {
+      "accession": "UniProtKB:Q3E840",
+      "entry_version": 147,
+      "experimental_assignment": false,
+      "paper_gene": "DPH3",
+      "reference_locus": "YBL071W-A",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "path": "reports/resistance-grounding-2026-10-07/sordarin-20261009/request-45c24ee83eefa6a09d3276791a8c9e893b6c53a3a67dfc4a0bfc1d0c1d10fff4.json",
+        "sha256": "8b3360032a0825cfcb6bdddd254d8aa1afea3731f2501f506502878fd5795c0b"
+      },
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000007587",
+      "uniprot_gene_synonyms": [
+        "DPH3"
+      ],
+      "uniprot_primary_gene": "KTI11"
+    },
+    {
+      "accession": "UniProtKB:P47138",
+      "entry_version": 179,
+      "experimental_assignment": false,
+      "paper_gene": "DPH4",
+      "reference_locus": "YJR097W",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "path": "reports/resistance-grounding-2026-10-07/sordarin-20261009/request-45c24ee83eefa6a09d3276791a8c9e893b6c53a3a67dfc4a0bfc1d0c1d10fff4.json",
+        "sha256": "8b3360032a0825cfcb6bdddd254d8aa1afea3731f2501f506502878fd5795c0b"
+      },
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000003858",
+      "uniprot_gene_synonyms": [
+        "DPH4"
+      ],
+      "uniprot_primary_gene": "JJJ3"
+    },
+    {
+      "accession": "UniProtKB:P32469",
+      "entry_version": 193,
+      "experimental_assignment": false,
+      "paper_gene": "DPH5",
+      "reference_locus": "YLR172C",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "path": "reports/resistance-grounding-2026-10-07/sordarin-20261009/request-45c24ee83eefa6a09d3276791a8c9e893b6c53a3a67dfc4a0bfc1d0c1d10fff4.json",
+        "sha256": "8b3360032a0825cfcb6bdddd254d8aa1afea3731f2501f506502878fd5795c0b"
+      },
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000004162",
+      "uniprot_gene_synonyms": [],
+      "uniprot_primary_gene": "DPH5"
+    },
+    {
+      "accession": "UniProtKB:Q12429",
+      "entry_version": 172,
+      "experimental_assignment": false,
+      "paper_gene": "DPH6",
+      "reference_locus": "YLR143W",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "path": "reports/resistance-grounding-2026-10-07/sordarin-20261009/request-05f3d678d1fd28fa0d27c908383c7b60ff80406f6d6410d23bd1b0721e6da485.json",
+        "sha256": "dafc2b99c1adde6135984cd89f681fdf4928102885142c9efc06c74b56a72855"
+      },
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000004133",
+      "uniprot_gene_synonyms": [],
+      "uniprot_primary_gene": "DPH6"
+    },
+    {
+      "accession": "UniProtKB:P38332",
+      "entry_version": 173,
+      "experimental_assignment": false,
+      "paper_gene": "DPH7",
+      "reference_locus": "YBR246W",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "path": "reports/resistance-grounding-2026-10-07/sordarin-20261009/request-05f3d678d1fd28fa0d27c908383c7b60ff80406f6d6410d23bd1b0721e6da485.json",
+        "sha256": "dafc2b99c1adde6135984cd89f681fdf4928102885142c9efc06c74b56a72855"
+      },
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000000450",
+      "uniprot_gene_synonyms": [
+        "DPH7",
+        "ERE1"
+      ],
+      "uniprot_primary_gene": "RRT2"
+    }
+  ],
+  "status": "DRUG_FORM_SCOPE_REVIEWED_REFERENCE_GROUNDED",
+  "studies": [
+    {
+      "assay_compound_name": "GM193663",
+      "assay_record_identifier": "CHEBI:77908",
+      "authors": "Botet et al.",
+      "compound_scope": "GM193663_GROWTH_SCREEN_AND_DPH_FOLLOWUP",
+      "curation_decision": "HOLD_FOR_PRIMARY_FIGURE_AND_SUPPLEMENT_REVIEW",
+      "doi": "10.1128/AAC.01603-07",
+      "experimental_identifiers_assigned": false,
+      "figures_visually_inspected": false,
+      "genes_reviewed": [
+        "DPH1",
+        "DPH2",
+        "DPH3",
+        "DPH4",
+        "DPH5"
+      ],
+      "limitation": "Do not transfer the growth-screen result to neutral sordarin or extend the GM193663 assignment to separately described radioligand binding assays.",
+      "locations": [
+        "Methods: high-throughput growth screens",
+        "Results: diphthamide synthesis"
+      ],
+      "native_primary_file_cached": false,
+      "organism": "Saccharomyces cerevisiae",
+      "primary_text_inspected": true,
+      "qualitative_finding": "The authors report DPH-associated growth resistance to GM193663.",
+      "reference": "PMID:18285480",
+      "reported_background": "BY4741-derived experimental subjects",
+      "species_taxon_id": "NCBITaxon:4932",
+      "url": "https://journals.asm.org/doi/10.1128/aac.01603-07",
+      "year": 2008
+    },
+    {
+      "assay_compound_name": "sordarin sodium salt",
+      "assay_record_identifier": null,
+      "authors": "Uthman et al.",
+      "compound_scope": "SODIUM_SALT_NOT_NEUTRAL_SORDARIN_OR_GM193663",
+      "curation_decision": "HOLD_FOR_EXACT_DRUG_FORM_AND_PRIMARY_SUBJECT_REVIEW",
+      "doi": "10.1371/journal.pgen.1003334",
+      "experimental_identifiers_assigned": false,
+      "figures_visually_inspected": false,
+      "genes_reviewed": [
+        "DPH1",
+        "DPH2",
+        "DPH3",
+        "DPH4",
+        "DPH5",
+        "DPH6",
+        "DPH7"
+      ],
+      "limitation": "The toxin experiments, mass-spectrometric measurements and eEF2 comparisons are not exported as DPH-subject antibiotic susceptibility observations.",
+      "locations": [
+        "Methods: Strains, Media, Growth Conditions, and Growth Assays",
+        "Results: DPH6 and DPH7",
+        "Figure 3A caption"
+      ],
+      "native_primary_file_cached": true,
+      "organism": "Saccharomyces cerevisiae",
+      "primary_file": {
+        "path": "reports/resistance-grounding-2026-10-07/sordarin-20261009/uthman-2013.xml",
+        "sha256": "1279770ba99b9ded308fc99de5de0bf5dabba5121b7ce68b0a939c2c3484310d"
+      },
+      "primary_text_inspected": true,
+      "qualitative_finding": "The authors report DPH-associated growth resistance in the sodium-salt assay.",
+      "reported_background": "BY4741-derived DPH subjects; separate eEF2 comparison background",
+      "species_taxon_id": "NCBITaxon:4932",
+      "url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1003334",
+      "year": 2013
+    }
+  ],
+  "taxonomy": [
+    {
+      "parent_taxon_id": "NCBITaxon:4930",
+      "rank": "species",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "cache_sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+        "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/4932"
+      },
+      "scientific_name": "Saccharomyces cerevisiae",
+      "scope": "EXPERIMENTAL_SPECIES",
+      "taxon_id": "NCBITaxon:4932"
+    },
+    {
+      "parent_taxon_id": "NCBITaxon:4932",
+      "rank": "strain",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "cache_sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+        "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/559292"
+      },
+      "scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "scope": "REFERENCE_PROTEIN_TAXON_ONLY",
+      "taxon_id": "NCBITaxon:559292"
+    }
+  ],
+  "taxonomy_cache_parent": {
+    "path": "research/2026-10-09-cordycepin-reference-lead.json",
+    "sha256": "9dbb2c85db09d3c1afe49ecbee56fb00c7e2fecb2946507d1326c845e4e3553c"
+  },
+  "uniprot": {
+    "attribution": "UniProt Consortium, CC BY 4.0",
+    "release": "2026_03",
+    "requests": [
+      {
+        "body_sha256": "eef99e0c532e7e6374c6b7a5b5858c746c0a91351b87488a51c5892813da1f38",
+        "path": "reports/resistance-grounding-2026-10-07/sordarin-20261009/request-05f3d678d1fd28fa0d27c908383c7b60ff80406f6d6410d23bd1b0721e6da485.json",
+        "retrieved_at": "2026-10-09T07:26:59.350672+00:00",
+        "sha256": "dafc2b99c1adde6135984cd89f681fdf4928102885142c9efc06c74b56a72855",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ADPH6+OR+gene_exact%3ADPH7%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=20&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Csequence_version%2Cversion"
+      },
+      {
+        "body_sha256": "fa13bcd4d1a628e03fb2e3ad4fa7ea9e9932e083977cdab7356f572ab80d4328",
+        "path": "reports/resistance-grounding-2026-10-07/sordarin-20261009/request-45c24ee83eefa6a09d3276791a8c9e893b6c53a3a67dfc4a0bfc1d0c1d10fff4.json",
+        "retrieved_at": "2026-10-09T07:28:03.245063+00:00",
+        "sha256": "8b3360032a0825cfcb6bdddd254d8aa1afea3731f2501f506502878fd5795c0b",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ADPH1+OR+gene_exact%3ADPH2+OR+gene_exact%3ADPH3+OR+gene_exact%3ADPH4+OR+gene_exact%3ADPH5%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=20&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Csequence_version%2Cversion"
+      }
+    ],
+    "sequence_data_exported": false
+  },
+  "whole_record_primary_review_complete": false
+}

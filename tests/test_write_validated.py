@@ -67,17 +67,109 @@ def test_a_record_without_a_structure_is_rejected(tmp_path):
     assert validate_antibiotic(no_key)
 
 
-def test_an_mic_without_units_or_assay_is_rejected(tmp_path):
+def test_activity_measurements_without_units_or_assay_are_rejected(tmp_path):
     """A number without a method is not an observation — a schema rule now, not
     only a corpus test, so it holds for the first curated record too."""
-    bare = dict(MINIMAL) | {"activity_spectrum": [
+    bare_mic = dict(MINIMAL) | {"activity_spectrum": [
         {"taxon_label": "Escherichia coli", "mic_value": 2.0,
          "evidence": [{"reference": "PMID:1"}]}]}
-    assert validate_antibiotic(bare)
-    complete = dict(MINIMAL) | {"activity_spectrum": [
+    complete_mic = dict(MINIMAL) | {"activity_spectrum": [
         {"taxon_label": "Escherichia coli", "mic_value": 2.0, "mic_units": "mg/L",
          "assay": "CLSI broth microdilution", "evidence": [{"reference": "PMID:1"}]}]}
-    assert not validate_antibiotic(complete)
+    bare_disk = dict(MINIMAL) | {"activity_spectrum": [
+        {"taxon_label": "Escherichia coli", "disk_diffusion_value": 18.0,
+         "evidence": [{"reference": "PMID:1"}]}]}
+    complete_disk = dict(MINIMAL) | {"activity_spectrum": [
+        {
+            "taxon_label": "Escherichia coli",
+            "disk_diffusion_value": 18.0,
+            "disk_diffusion_units": "mm",
+            "assay": "Kirby-Bauer disk diffusion",
+            "evidence": [{"reference": "PMID:1"}],
+        }]}
+
+    assert validate_antibiotic(bare_mic)
+    assert not validate_antibiotic(complete_mic)
+    assert validate_antibiotic(bare_disk)
+    assert not validate_antibiotic(complete_disk)
+
+
+def test_activity_observation_accepts_sample_and_genome_accessions(tmp_path):
+    doc = dict(MINIMAL) | {"activity_spectrum": [
+        {
+            "taxon_label": "Escherichia coli",
+            "activity": "RESISTANT",
+            "mic_value": 2.0,
+            "mic_units": "mg/L",
+            "disk_diffusion_value": 18.0,
+            "disk_diffusion_units": "mm",
+            "disk_diffusion_qualifier": ">=",
+            "assay": "broth microdilution",
+            "measurement_count": 7,
+            "isolate_count": 7,
+            "site_count": 2,
+            "strain": "AR-0001",
+            "biosample_accession": "SAMN11953777",
+            "bioproject_accession": "PRJNA123456",
+            "pathogen_detection_target_accession": "PDT000001234.1",
+            "assembly_accession": "GCF_000005845.2",
+            "sra_accessions": ["SRR123456", "SRX123456"],
+            "isolation_type": "clinical",
+            "isolation_location": "USA",
+            "collection_date": "2020",
+            "source_create_date": "2020-01-31",
+            "host_label": "Homo sapiens",
+            "isolation_source": "blood",
+            "source": "NCBI_AST",
+            "source_version": "2026-09-26",
+            "source_retrieved_on": "2026-09-26",
+            "source_observation_id": "SAMN11953777|cefepime",
+            "evidence": [{"reference": "PMID:1"}],
+        }
+    ]}
+    assert not validate_antibiotic(doc)
+
+    doc["activity_spectrum"][0]["biosample_accession"] = "SAMEA123456"
+    assert not validate_antibiotic(doc)
+
+
+@pytest.mark.parametrize(
+    "count_field",
+    ["isolate_count", "measurement_count", "site_count"],
+)
+def test_activity_observation_rejects_nonpositive_group_counts(count_field):
+    doc = dict(MINIMAL) | {"activity_spectrum": [
+        {
+            "taxon_label": "Escherichia coli",
+            "activity": "RESISTANT",
+            "assay": "broth microdilution",
+            "evidence": [{"reference": "PMID:1"}],
+            count_field: 1,
+        },
+    ]}
+    assert not validate_antibiotic(doc)
+
+    doc["activity_spectrum"][0][count_field] = 0
+    messages = [err.message for err in validate_antibiotic(doc)]
+
+    assert any(count_field in message for message in messages)
+
+
+def test_activity_observation_rejects_malformed_sample_accessions(tmp_path):
+    doc = dict(MINIMAL) | {"activity_spectrum": [
+        {
+            "taxon_label": "Escherichia coli",
+            "assay": "broth microdilution",
+            "biosample_accession": "BioSample:SAMN11953777",
+            "pathogen_detection_target_accession": "GCF_003123125.1",
+            "assembly_accession": "SAMN11953777",
+            "evidence": [{"reference": "PMID:1"}],
+        }
+    ]}
+    messages = [err.message for err in validate_antibiotic(doc)]
+    assert any("biosample_accession" in message for message in messages)
+    assert any("pathogen_detection_target_accession" in message for message in messages)
+    assert any("assembly_accession" in message for message in messages)
 
 
 def test_an_unknown_field_is_rejected_and_nothing_is_written(tmp_path):
