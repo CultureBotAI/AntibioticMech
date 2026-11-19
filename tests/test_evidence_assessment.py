@@ -219,7 +219,7 @@ def test_causal_edge_spec_preserves_and_validates_optional_assessments():
         == '<ul class="plain evidence">\n'
         "  \n"
         f'  <li><span class="meta"><a href="{expected_href}">PMID:12345678</a></span>'
-        " — &#34;Verbatim passage.&#34;</li>\n"
+        ' — "Verbatim passage."</li>\n'
         "  \n"
         "</ul>"
     )
