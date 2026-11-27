@@ -1,0 +1,795 @@
+schema_version: 1.0.0
+review_id: 20261021T095030Z-avilamycin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Avilamycin: generic mixture and individual-congener scope require adjudication'
+started_at: '2026-10-21T09:22:59Z'
+finished_at: '2026-10-21T09:50:30Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Whole native record,prior raw-source capture,current chemical/product
+    authorities,independent stereo comparison and cited primary/deposited-model scope
+    checks.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'One confirmed major exact-entity scope finding: generic avilamycin includes
+  congener mixtures,while the record stores a partly specified A-connectivity structure
+  distinct from the existing A record. The cited mechanism model also has a different
+  deposited ligand composition. Internal chemistry and focused validators pass; no
+  automatic merge,congener assignment or rejection of observed ribosome binding is
+  made.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/avilamycin.yaml
+    sha256: 59b401b17929c6a27a33d78bd9f6a14ff98019247e3229883fa18e75b7022a76
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: data/antibiotics/unspecified/avilamycin-a.yaml
+    sha256: f24d3b5ea24e99f972bc10b2b49066eb3a053ca40a5206a893a00f63f0d72eef
+    role: context
+targets:
+- target_id: antibioticmech:aro-e3f7a82f17
+  path: data/antibiotics/antibacterial/avilamycin.yaml
+  label: avilamycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Inherited definition,class and source identity
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Fallback structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Fallback structure mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exact identity adjudication
+scope:
+  description: Whole-record scientific review of the minted avilamycin record.
+  selection: Queue128 in isolated batch013.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  exclusions:
+  - target: Separate avilamycin A record,other congeners and veterinary products as
+      individual targets
+    reason: Read only as identity/context boundaries; this draft reviews exactly the
+      minted generic source record.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual command passed.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/avilamycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual command passed.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/avilamycin.yaml --out /private/tmp/am-review-session/128-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Internal chemical consistency and source mint
+  status: passed
+  required: true
+  summary: Encodings,masses,charge and actual ARO mint agree; incomplete stereochemistry
+    and exact preparation scope remain scientifically unresolved.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  evidence_ids:
+  - chemistry
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/avilamycin.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T09:28:01Z'
+  support: supports
+  summary: Read MINTED/SEEDED ARO-derived avilamycin identity, experimental/Gram-positive-and-negative
+    definition, orthosomycin parent/class, PubChem structure and retrieval date, two
+    xrefs, source mint and three seed-history events. No populated activity, role,
+    mode, target, resistance, producer, clinical, dataset or graph blocks.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv
+  locator: ARO row397; PubChem row137; extractor/enricher/seeder
+  accessed_at: '2026-10-21T09:28:01Z'
+  support: supports
+  summary: Native definition and single PMID27330110 come from ARO3007168; fallback
+    chemical fields reproduce CID71674. Source ownership was captured before assessment.
+    Relevant ChEBI avilamycin A context was separately hashed, not treated as a second
+    target review.
+- evidence_id: aro
+  kind: authority
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Current ARO3007168 and parent3007166 stanzas
+  accessed_at: '2026-10-21T09:23:33Z'
+  support: supports
+  summary: Current ARO retains native definition, PubChem71674 xref and orthosomycin
+    parent. Parent is broader. ARO classification does not independently resolve mixture-to-congener
+    scope or source assay preparation.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/71674
+  locator: Live PUG exact structure
+  accessed_at: '2026-10-21T09:23:33Z'
+  support: supports
+  summary: CID71674 exactly matches native C61H88Cl2O32, charge0, mass1404.2/exact1402.463576
+    and key XIRGHRXBGGPPKY-OTPQUNEMSA-N. It leaves two potential stereocentres unassigned
+    in the Standard InChI. Exact database reproduction is not proof that all preparations
+    called avilamycin have this one composition.
+  snapshot_sha256: b6b6b63843c5c3cb76a2ef65105e2a48236a8a683e3a9e796b726b223b8197cc
+- evidence_id: names
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/71674
+  locator: Current CID synonyms
+  accessed_at: '2026-10-21T09:23:33Z'
+  support: context_only
+  summary: Generic avilamycin record includes CAS11051-71-1 and veterinary product
+    names. These aliases are contextual, not evidence that a congener mixture and
+    one molecular structure are exact chemical equivalents.
+  snapshot_sha256: 7f34ec3f291635669b692e9a5b3bc084112bc5d464a30c4cca787522907a64ca
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit checks
+  locator: Native SMILES/InChI and actual ARO source mint
+  accessed_at: '2026-10-21T09:23:29Z'
+  support: supports
+  summary: Both encodings parse to one neutral fragment, C61H88Cl2O32 and exact native
+    key; average1404.249 is compatible with rounded stored1404.2 and exact1402.463576016.
+    Twenty-nine stereocentres are assigned and two are unassigned. Actual ARO mint
+    reproduces; initial helper ChEBI-only assumption was corrected in scratch.
+  snapshot_sha256: 739ca7757f3846eae5a73d0fc0d584814199f343386a6e67c344c23c94f862a4
+- evidence_id: A-authority
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:85646
+  locator: Current avilamycin A entry
+  accessed_at: '2026-10-21T09:23:55Z'
+  support: supports
+  summary: Separately named avilamycin A has full key XIRGHRXBGGPPKY-FCNCREMHSA-N
+    and CAS69787-79-7. It has one additional assigned centre relative to native generic
+    CID71674; neither matching name nor connectivity alone establishes exact equivalence.
+  snapshot_sha256: ccc991f5ac2058e809d9c8eb9011aedf40d7a1e1409216ef92f5b4a5965472aa
+- evidence_id: A-pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/20054845
+  locator: Independent avilamycin A structure
+  accessed_at: '2026-10-21T09:23:33Z'
+  support: supports
+  summary: CID20054845 matches ChEBI avilamycin A key/formula and differs from native
+    CID71674 at the same stereochemical assignment.
+  snapshot_sha256: 062edb59512f56e2ea7b4586b2180684df0cff87bb40f97810c6b320f92c7586
+- evidence_id: sibling
+  kind: record_content
+  reference: data/antibiotics/unspecified/avilamycin-a.yaml
+  locator: Complete context record read
+  accessed_at: '2026-10-21T09:28:01Z'
+  support: supports
+  summary: The existing ChEBI-grounded A record has key XIRGHRXBGGPPKY-FCNCREMHSA-N.
+    It is not a duplicate by the current full-key rule. Any future exact-form resolution
+    must consider this existing record rather than creating or merging by name.
+- evidence_id: form-comparison
+  kind: validation
+  reference: Independent Standard InChI comparison
+  locator: Native versus existing avilamycin A context
+  accessed_at: '2026-10-21T09:26:24Z'
+  support: supports
+  summary: The two Standard InChIs are otherwise identical; native t-layer56? becomes56+
+    in A. Both retain59?. This establishes a specific stereochemical granularity difference,
+    not an automatically proven distinct natural stereoisomer or a racemate.
+  snapshot_sha256: 1b7426ccb8499b04693d5998f295cea64fa866083bf1db4063fcac0065e000cb
+- evidence_id: mixture
+  kind: authority
+  reference: https://animaldrugsatfda.fda.gov/adafda/app/search/public/document/downloadEA/65
+  locator: FDA-hosted sponsor environmental assessment, product description pp6–7;
+    formula/congener table visually inspected
+  accessed_at: '2026-10-21T09:24:20Z'
+  support: supports
+  summary: 'Kavault avilamycin is explicitly a fermentation mixture: A>60%, B<18%
+    and14 minor factors. The document distinguishes generic CAS11051-71-1 from A CAS69787-79-7
+    and expressly assigns C61H88Cl2O32/MW1404.2 to A. Its congener table includes
+    acyl and other substitutions; the mixture cannot be represented by a single A
+    formula. This supports the product boundary, not exact composition of every research
+    reagent.'
+  snapshot_sha256: 62b9660e699660d718a3eaf5c324e99c49e62d2de3c28e1f3ce5161d81e56e82
+- evidence_id: veterinary
+  kind: authority
+  reference: https://www.fda.gov/animal-veterinary/development-approval-process/drugs-veterinary-feed-directive-vfd-marketing-status
+  locator: Current FDA VFD list
+  accessed_at: '2026-10-21T09:24:18Z'
+  support: context_only
+  summary: Avilamycin is listed among approved feed-use drugs requiring a Veterinary
+    Feed Directive since approval. This disproves a blanket interpretation of avilamycin
+    as solely experimental at product level, but does not confer product approval
+    on purified A or the stored incompletely specified molecular structure.
+  snapshot_sha256: 717564f9e438d6084d790c611899e41b58116e09e8de196f5ea1c8ba109ec32e
+- evidence_id: primary
+  kind: primary_source
+  reference: https://doi.org/10.1073/pnas.1604790113
+  locator: PMID27330110/PMC4941455; Introduction, Results, main/SI Methods and acknowledgments
+  accessed_at: '2026-10-21T09:24:53Z'
+  support: partial
+  summary: Primary study reports avilamycin binding on the E.coli 50S subunit within70S
+    ribosomes, contacting23S rRNA H89/H91 and L16, with smFRET support for blocked
+    late aminoacyl-tRNA accommodation. It states longstanding veterinary feed use.
+    Avilamycin was supplied by Birte Vester; inspected methods do not specify a quantified
+    congener composition. Atomic models were built from known chemical structures.
+    These are real mechanism observations whose assignment to the exact native form
+    remains unresolved.
+  snapshot_sha256: 148096b0aabbcf3de62b399077f4f9c023614adad283b74284ccbb1b94b666e9
+- evidence_id: pdb-entry
+  kind: database
+  reference: https://www.ebi.ac.uk/pdbe/api/pdb/entry/ligand_monomers/5kcr
+  locator: Primary deposited AVI-SRC model5KCR
+  accessed_at: '2026-10-21T09:25:37Z'
+  support: context_only
+  summary: Avilamycin-position ligand is chemical component6UQ. Its name contains
+    a1-hydroxyethyl substituent and formula weight1406.254, unlike the native acetyl
+    structure.
+  snapshot_sha256: 957bbb6e0ab5997427372622b77d8ee1af4b104de520976805e2535930c81836
+- evidence_id: pdb-ligand
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/chemcomp/6UQ
+  locator: Current PDB chemical-component dictionary
+  accessed_at: '2026-10-21T09:26:01Z'
+  support: context_only
+  summary: 6UQ is C61H90Cl2O32, key AEIFATUAVHHRBC-JOYRSTEWSA-N, with a hydroxyethyl
+    substituent instead of the native acetyl group. This deposited-model identity
+    is not exact-equivalent to native C61H88Cl2O32. The review does not infer whether
+    this reflects reagent composition or model/annotation error, and does not assign6UQ
+    a congener name.
+  snapshot_sha256: f77d4df25c2919f0c46cf0a40d917825eec1baa865bee4107e6f502e687d3ceb
+- evidence_id: borrelia
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.43.7.1773
+  locator: PMID10390242/PMC89363; full Methods and Results, source reference8
+  accessed_at: '2026-10-21T09:26:01Z'
+  support: context_only
+  summary: The Gram-negative example cited in the2016 introduction measures evernimicin
+    SCH27899 in17 Borrelia isolates, with comparison antibiotics meropenem,cefepime,quinupristin-dalfopristin
+    and linezolid. It does not test avilamycin. It therefore cannot independently
+    establish avilamycin-specific Gram-negative spectrum. This does not prove avilamycin
+    is inactive against every Gram-negative organism.
+  snapshot_sha256: 720b52f2f95aa03cc0e543ceb705ca97e1ef7170cbc61a769d442ba1d9623bf3
+- evidence_id: analytical
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.ijantimicag.2004.06.009
+  locator: PMID15519487; indexed abstract
+  accessed_at: '2026-10-21T09:25:37Z'
+  support: context_only
+  summary: Analytical study measures avilamycin A and B separately in pig faeces by
+    HPLC, reinforcing preparation/component distinctions. It is not a microbial mechanism
+    or activity assay.
+  snapshot_sha256: 7c90c5b543022a1bc6af6bf8405d90ca615dbca87339af86e03c0e8cc995f7bd
+- evidence_id: gates
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual batch013 focused commands
+  accessed_at: '2026-10-21T09:28:01Z'
+  support: supports
+  summary: Both exit0; strict checked one file with zero errors. Chemistry/mint are
+    internally consistent; source scope and assay applicability are scientific questions
+    beyond these gates.
+  snapshot_sha256: bdf9d7136396e0996bf162d26864d066ba8d10ab15e266cd9103d4464c74a95a
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech and free public sources
+  locator: Ignored-inclusive label/ID/slug and exact-congener follow-up
+  accessed_at: '2026-10-21T09:23:00Z'
+  support: context_only
+  summary: Search included ignored files outside.git/.venv and found the separate
+    avilamycin A record plus raw owners. No exact-form curation decision resolving
+    this generic source was located in the bounded search.
+  search_scope: prepare.py128 rg --no-ignore --hidden identifier,label,slug; exact
+    ARO/CID and congener searches in raw inventories, native records and curation
+    decisions; current PubChem/ChEBI/ARO,FDA and cited primary source with deposited
+    ligand comparison.
+  snapshot_sha256: 9854877a3158b756d92c306f2499012900c159fa0af5ea1f9804c5c6b363a74e
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Mixture, generic structure and A-congener scope
+  outcome: concern
+  summary: Generic avilamycin usage includes mixtures, while stored molecular formula
+    is that of A and its stereo is less specific than the existing A record. The native
+    entity needs explicit source-scope adjudication before exact preparation evidence
+    can be transferred.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  evidence_ids:
+  - native
+  - pubchem
+  - A-authority
+  - A-pubchem
+  - sibling
+  - form-comparison
+  - mixture
+- assessment_id: consistency
+  area: identity
+  topic: Internal structure and mint
+  outcome: supported
+  summary: PubChem fallback is faithfully reproduced and internally chemically consistent;
+    unspecified centres and mixture applicability are separate concerns.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  evidence_ids:
+  - owners
+  - pubchem
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: MINTED identity and orthosomycin parent
+  outcome: supported
+  summary: MINTED follows absence of an exact adopted ChEBI cross-reference. Parent/class
+    is appropriate and broader. The distinct full key prevents an automatic A merge;
+    do not promote grounding by name.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  evidence_ids:
+  - aro
+  - owners
+  - form-comparison
+- assessment_id: mechanism
+  area: evidence
+  topic: Ribosome mechanism follow-up
+  outcome: unknown
+  summary: The cited study provides strong binding/accommodation evidence for its
+    reagent/model, but its deposited6UQ structure differs from native. No direct target
+    claim should be imported until exact-form mapping is resolved. Optional blank
+    mechanism fields are not a separate finding.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  evidence_ids:
+  - primary
+  - pdb-entry
+  - pdb-ligand
+- assessment_id: spectrum
+  area: evidence
+  topic: Definition activity scope
+  outcome: concern
+  summary: Broad antibacterial/orthosomycin context is supported. The cited Gram-negative
+    Borrelia experiment is evernimicin-specific; no compound-specific broad-spectrum
+    statement was established for this native exact form.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  evidence_ids:
+  - primary
+  - borrelia
+  - mixture
+- assessment_id: clinical
+  area: evidence
+  topic: Experimental versus veterinary product context
+  outcome: concern
+  summary: The source paper and FDA document veterinary use of generic avilamycin
+    preparations. Definition should distinguish that from experimental use of a purified
+    congener and should not transfer product approval to the stored molecule.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  evidence_ids:
+  - native
+  - primary
+  - veterinary
+  - mixture
+- assessment_id: provenance
+  area: provenance
+  topic: Raw-source reproduction and history
+  outcome: supported
+  summary: Both source xrefs and the cited primary resolve; PubChem retrieval metadata
+    and three seed-history events reproduce. Accurate provenance does not itself resolve
+    source identity scope.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  evidence_ids:
+  - owners
+  - aro
+  - pubchem
+  - native
+- assessment_id: completeness
+  area: completeness
+  topic: Evidence additions after identity resolution
+  outcome: unknown
+  summary: Primary23S/L16 binding,translation and resistance literature provide future
+    leads. Identity and preparation boundaries should be settled before curated target,activity
+    or resistance annotations.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  evidence_ids:
+  - primary
+  - pdb-ligand
+  - analytical
+- assessment_id: other
+  area: scope
+  topic: Producer,resistance,dataset and graph fields
+  outcome: not_applicable
+  summary: No populated claims in these fields. Product fermentation context does
+    not by itself create an exact native producer annotation.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  evidence_ids:
+  - native
+  - mixture
+- assessment_id: adapter
+  area: scope
+  topic: Structured adapter applicability
+  outcome: not_applicable
+  summary: Native record names no gene,protein,regulator,pathway,stress response or
+    expression dataset requiring a query. Discovered structural targets are research
+    follow-up; no transcriptomic module claim is asserted.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  evidence_ids:
+  - native
+  - primary
+- assessment_id: schema
+  area: schema
+  topic: Focused validators
+  outcome: supported
+  summary: Both actual focused validators pass; chemical scope remains unresolved.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  evidence_ids:
+  - gates
+findings:
+- finding_id: F1
+  issue_key: avilamycin-generic-mixture-congener-scope-unresolved
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Resolve generic avilamycin scope before treating its source as one exact
+    compound
+  description: The record combines a generic avilamycin source/definition with CID71674,
+    a partially specified A-connectivity structure. Authoritative product documentation
+    defines avilamycin as a congener mixture and explicitly assigns the stored formula/mass
+    to component A. The corpus already contains the more stereospecific A record.
+    Moreover, the cited mechanism model uses chemically different6UQ and does not
+    quantify the reagent congener composition. Retain these differences and adjudicate
+    which exact entity the source should represent; name,formula or connectivity agreement
+    cannot justify a merge or evidence transfer.
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  field_paths:
+  - identifier
+  - label
+  - definition
+  - definition_source
+  - chemical_structure
+  - xrefs
+  - source_concepts
+  - grounding_status
+  evidence_ids:
+  - native
+  - owners
+  - pubchem
+  - A-authority
+  - A-pubchem
+  - sibling
+  - form-comparison
+  - mixture
+  - primary
+  - pdb-entry
+  - pdb-ligand
+  rule_id: docs/HARMONIZATION.md:The unit of the corpus is a structure; native-review-checklist:Identity
+    and Equivalence
+  native_severity: major exact-entity scope unresolved
+  normalization_reason: Internal structure and provenance are coherent, so this is
+    not invalid YAML or a fabricated chemical structure. The substantive issue is
+    unresolved generic-mixture versus congener interpretation and associated evidence
+    applicability, not a proven opposite stereoisomer or automatic duplicate.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Generic source concept and definition
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Generic structure mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Fallback exact structure resolution
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exact source/congener or exclusion adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible source identity and evidence attachment
+actions:
+- action_id: A1
+  description: Adjudicate ARO3007168 and CID71674 through maintained source/grounding
+    inputs. Determine whether the source can be assigned to one specific congener
+    or intentionally denotes the avilamycin mixture. If exact A is justified, compare
+    and resolve against existing CHEBI85646 through explicit full-structure mapping;
+    if it remains a mixture, use the supported exclusion/worklist route rather than
+    inventing an individual mixture structure. Do not merge by name/connectivity or
+    silently choose stereochemistry.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-e3f7a82f17
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Generic source concept and definition
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Generic structure mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Fallback exact structure resolution
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exact source/congener or exclusion adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible source identity and evidence attachment
+  acceptance_checks:
+  - Document the source entity,congener composition and exact structural identifiers;
+    preserve generic mixture and individual-congener provenance separately.
+  - Resolve native InChI56? versus A56+ explicitly, without assuming an unspecified
+    centre means a racemate or inventing a complete assignment for59?.
+  - Before importing PMID27330110 target evidence, adjudicate native C61H88Cl2O32
+    versus deposited6UQ C61H90Cl2O32 and any reagent/model discrepancy; preserve actual
+    ribosome evidence without claiming it is false.
+  - Rewrite definition with exact-form activity and veterinary/experimental scope.
+    Do not use the evernimicin-only Borrelia paper as avilamycin evidence or transfer
+    mixture-product approval to a pure congener.
+  - Run the maintained extraction/enrichment/seeding workflow as applicable, then
+    focused validators,exact identity/duplicate checks,reference/history and corpus
+    gates; retain native SEEDED until all scientific sign-off criteria pass.
+limitations:
+- The exact composition/purity of the avilamycin reagent supplied for the2016 cryo-EM/smFRET
+  study was not established in inspected main/SI text. The deposited6UQ/native mismatch
+  may involve reagent or model annotation and was not resolved by raw-map re-refinement.
+- Neither native CID71674 nor current ChEBI/PubChem A entries specify every potential
+  stereocentre. This review establishes their explicit one-centre granularity difference
+  but does not independently assign the remaining centre or identify a new stereoisomer.
+- FDA-hosted sponsor composition data describe Kavault preparation,not every material
+  called avilamycin. Current VFD listing confirms product-use context without establishing
+  exact molecular-congener approval or current marketing availability.
+- The Borrelia source is specific to evernimicin. Lack of an avilamycin experiment
+  there is not evidence of universal Gram-negative inactivity. No exhaustive avilamycin
+  spectrum or resistance audit was attempted for an unresolved exact entity.
+- Free primary retrieval initially encountered browser-check,XML500,403 and429 responses;
+  the alternate public PMC HTML supplied complete main/SI text. No failed endpoint
+  was interpreted as absent literature.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All24 captured input hashes rechecked unchanged. Native fields,status/history and
+  sibling records were not edited.
+- Initial chemistry helper assumed a ChEBI mint; actual ARO mint was recomputed correctly
+  in scratch. This helper issue is not a native finding.
+- The separate avilamycin A record is context,not an automatically adjudicated duplicate.
+  No optional blank field is scored as a defect.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pubchem.ncbi.nlm.nih.gov/compound/71674
+- https://www.ebi.ac.uk/chebi/CHEBI:85646
+- https://doi.org/10.1073/pnas.1604790113
+- https://www.rcsb.org/ligand/6UQ
+tags:
+- avilamycin
+- orthosomycin
+- mixture-boundary
+- stereochemistry
+- source-scope

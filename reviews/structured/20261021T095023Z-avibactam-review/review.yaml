@@ -1,0 +1,634 @@
+schema_version: 1.0.0
+review_id: 20261021T095023Z-avibactam-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of avibactam
+started_at: '2026-10-21T09:23:20Z'
+finished_at: '2026-10-21T09:50:23Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Identity and OXA binding supported; mechanism note needs a narrower
+  exclusion
+scientific_review: true
+summary: 'Exact neutral avibactam chemistry and the curated OXA-24/OXA-48 direct-binding
+  target are supported. The mechanism note should explicitly scope its contrast to
+  partner protection: primary experiments also demonstrate PBP engagement and limited
+  intrinsic antibacterial activity. All ten adopted publication records and abstracts
+  were checked; primary OXA full text remains unavailable.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/avibactam.yaml
+    sha256: 164a039a46cad879bd7fd0d7c75aaafe6cd3dcb3abd8aea066511bc7c114e90c
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: Whole REVIEWED record, five-event history, ChEBI seed ownership and
+    curator-owned mechanism/target evidence, all ten adopted PMID abstracts, direct
+    PBP experiments and OXA deposited structures.
+  selection: Path-ordered queue index 127 prepared and hashed before judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:85984
+targets:
+- target_id: CHEBI:85984
+  path: data/antibiotics/antibacterial/avibactam.yaml
+  label: avibactam
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/avibactam.yaml
+    role: Curator-owned mode_of_action_notes, molecular_targets, evidence and history
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/avibactam.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit 0; zero ERROR rows.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/avibactam.yaml --out /private/tmp/am-review-session/127-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Native and PubChem exact identity
+  status: passed
+  required: false
+  summary: Exit 0; native encodings, both stereocenters, formula, charge, masses and
+    mint agree.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/127-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: sources
+  name: Current ChEBI assertion comparison
+  status: passed
+  required: false
+  summary: Exit 0; parents, roles, synonyms, structure and xref strings reproduce.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/127-source-check.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - sources
+- check_id: drugcentral
+  name: DrugCentral exact neutral graph
+  status: passed
+  required: false
+  summary: Exit 0; current DrugCentral 4946 SMILES generates the native key.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/127-drugcentral-check.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - drugcentral
+- check_id: adapter
+  name: Native catalog before web research
+  status: passed
+  required: false
+  summary: Exit 0; A. baumannii covered.
+  target_ids:
+  - CHEBI:85984
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-oxa
+  name: Native OXA search before web research
+  status: passed
+  required: false
+  summary: Exit 0; ten text-matching genes, zero iModulons; no component summary applies.
+  target_ids:
+  - CHEBI:85984
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism a_baumannii --dataset precise139 --query
+    OXA
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:85984
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/avibactam.yaml
+  locator: Whole native YAML including curated mode/target and five history events
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: supports
+  summary: Neutral exact ChEBI structure is distinct from the sodium salt explicitly
+    named in the clinical-use definition. Curator-added OXA target and evidence cite
+    PMID25406838; the 2014-12 source version matches its online publication, despite
+    the 2015 issue. Later reseeding retained curator assertions.
+- evidence_id: sources
+  kind: database
+  reference: CHEBI:85984
+  locator: 127-ols.json;127-parents.json;127-source-check.json
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: supports
+  summary: Current ChEBI reproduces amide, hydroxylamine O-sulfonic acid, azabicycloalkane
+    and urea parents; antimicrobial-agent/antibacterial-drug roles; synonyms; xrefs
+    and exact neutral structure.
+  snapshot_sha256: 8de662dd175574a7bbbaf43e08c936995dd74c70cfcb2de4f7dd6d8893ff0c6a
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit;PubChem CID:9835049
+  locator: 127-chemistry.py;127-chemistry.json;127-pubchem.json
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: supports
+  summary: Both native encodings and current PubChem resolve NDCUAPJVLWFHHB-UHNVWZDZSA-N,
+    neutral C7H11N3O6S, one molecular component and two assigned carbon centers. Masses
+    and ChEBI mint agree.
+  snapshot_sha256: 8232e412331cf9fa18d7f393522c5d5217b29e42dadf216991b019907364d441
+- evidence_id: drugcentral
+  kind: database
+  reference: drugcentral:4946
+  locator: 127-drugcentral.html;127-drugcentral-smiles.txt;127-drugcentral-chemistry.json
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: supports
+  summary: Current named entry, CAS and exported SMILES corroborate the exact neutral
+    native identity. The additional nitrogen stereotag in its SMILES does not change
+    the standardized InChIKey.
+  snapshot_sha256: 8c341cca97cfa2cb1c962b6028d63f53704ded337ea4b4147cea4a95bd16bf43
+- evidence_id: oxa
+  kind: primary_source
+  reference: PMID:25406838
+  locator: DOI:10.1021/cb500703p; full abstract and PDB4WM9/4WMC deposited records/coordinates
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: partial
+  summary: The original abstract explicitly reports OXA-24 and OXA-48 complexes and
+    selective, slowly reversible inhibition. Deposited 2.4- and 2.3-Angstrom structures
+    share that primary citation and contain covalent serine-oxygen to NXL-ligand-carbon
+    links. This supports the existing direct-binding claim. It does not imply equal
+    potency against every OXA enzyme, and full kinetic Methods were not retrieved.
+  snapshot_sha256: c3f7bb084bc3f312034fd3aac742f635c298f67f9e367272183a1cf327175aaf
+- evidence_id: pbp
+  kind: primary_source
+  reference: PMID:26574008
+  locator: DOI:10.1128/AAC.02102-15;127-primary2016-pbp.xml; Methods, Results and
+    Table 1
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: partial
+  summary: AstraZeneca avibactam was tested against bacterial membranes using Bocillin-FL
+    competition. E. coli K-12 PBP2 competition IC50 was 0.92 micrograms/ml, separate
+    from its broth MIC of 8 micrograms/ml. P. aeruginosa showed PBP engagement despite
+    MIC greater than 128 micrograms/ml. These are direct experimental PBP interactions,
+    not a dissociation constant or evidence of clinical monotherapy. Reagent counterion
+    was not stated.
+  snapshot_sha256: e1461c9306cbaf5969e997342c8d800f6bc68399dade6b9f0deb7b0abd24fb26
+- evidence_id: direct
+  kind: primary_source
+  reference: PMID:40503840
+  locator: DOI:10.1128/spectrum.03241-24;127-primary2025-direct.xml; antimicrobial/MIC/time-kill
+    Methods and selected Results
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: partial
+  summary: The peer-reviewed 2025 study used MedChemExpress avibactam without a catalog/CAS
+    in Methods. Direct-activity testing of Enterobacterales showed growth inhibition,
+    rounding compatible with PBP2 action and substantial regrowth during prolonged
+    exposure. The work supports a second in-vitro route without establishing routine
+    standalone clinical efficacy; its growth phenotype does not by itself replace
+    the earlier binding experiment.
+  snapshot_sha256: 2548bc91c5926fd8d10a11903a5d4ed8b6f60266cb6713eafbf32a181328777c
+- evidence_id: checkerboard
+  kind: primary_source
+  reference: PMID:25487794
+  locator: 127-core.json complete abstract; DOI:10.1128/AAC.04146-14
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: partial
+  summary: This adopted checkerboard paper itself reports avibactam-alone Enterobacteriaceae
+    activity as well as ceftazidime restoration. The whole MIC distribution and original
+    Methods were not inspected, so only the qualitative distinction is used.
+- evidence_id: leads
+  kind: database
+  reference: Ten adopted ChEBI PMID leads
+  locator: 127-core.json;127-lead-dispositions.json
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: context_only
+  summary: All ten complete abstracts were read. PMID25361682 is a secondary review;25645843
+    is murine pharmacokinetics;25444674,25534728,25583732 and25737290 are partner/strain-specific
+    combination studies;25666153 and25691639 examine engineered KPC/SHV variants.
+    The OXA and checkerboard leads are separately scoped. No combination MIC is relabeled
+    inhibitor-only activity.
+  snapshot_sha256: 32eb5743183fff905587b41da9c9d39de5b217a5d8f65fe296b0b893eb1fe05d
+- evidence_id: resistance
+  kind: primary_source
+  reference: PMID:25666153;PMID:25691639;PMID:25444674
+  locator: 127-core.json complete abstracts
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: context_only
+  summary: KPC/SHV variant studies combine controlled genetic, kinetic and partner-specific
+    susceptibility evidence; modeling is a proposed explanation. Japanese OXA-producing
+    Acinetobacter isolates did not show restored partner activity. Neither resistance
+    nor species-wide susceptibility follows merely from a cocrystal.
+- evidence_id: adapter
+  kind: database
+  reference: Native iModulonDB OXA search
+  locator: 127-imodulondb-datasets.txt;127-imodulondb-oxa.txt
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: context_only
+  summary: The A. baumannii search has ten text matches including OXA-23/OXA-69 and
+    unrelated substring hits, not the exact OXA-24 target. Zero iModulons were returned.
+    It is not binding evidence; no component summary applies.
+  snapshot_sha256: 2abb708e54b77498c7be431d9b3603506569b00c930a423bca2ed6dce9879ef5
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema and strict checks
+  locator: 127-strict.tsv
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: supports
+  summary: Both native focused validators pass. Optional absent activity/causal/resistance
+    objects are not schema defects.
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local ownership search
+  locator: 127-local-hits.txt;127-inspect.json
+  accessed_at: '2026-10-21T09:27:04Z'
+  support: context_only
+  summary: All 13 captured input hashes unchanged; curator-owned path added to target
+    owners before assessment.
+  search_scope: prepare.py 127 used rg --no-ignore --hidden excluding .git/.venv;
+    exact-record and targeted primary literature review. No exhaustive claim about
+    all resistance variants or combination trials.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral identity
+  outcome: supported
+  summary: ChEBI, PubChem and DrugCentral agree on the native neutral 2S,5R graph.
+  target_ids:
+  - CHEBI:85984
+  evidence_ids:
+  - chemistry
+  - sources
+  - drugcentral
+- assessment_id: grounding
+  area: grounding
+  topic: Ontology parent and role claims
+  outcome: supported
+  summary: Structural parent classes and broad antimicrobial roles agree.
+  target_ids:
+  - CHEBI:85984
+  evidence_ids:
+  - sources
+- assessment_id: target
+  area: evidence
+  topic: OXA direct binding
+  outcome: supported
+  summary: Primary abstract and deposited covalent complexes support the target object;
+    potency/selectivity remain enzyme-specific.
+  target_ids:
+  - CHEBI:85984
+  evidence_ids:
+  - oxa
+  - resistance
+- assessment_id: mechanism
+  area: evidence
+  topic: Breadth of mechanism wording
+  outcome: concern
+  summary: The protection-of-partner mechanism is correct, but its contrast should
+    not imply absence of a direct PBP route.
+  target_ids:
+  - CHEBI:85984
+  evidence_ids:
+  - record
+  - pbp
+  - direct
+  - checkerboard
+- assessment_id: provenance
+  area: provenance
+  topic: Curation and adopted citations
+  outcome: supported
+  summary: All ten adopted abstracts dispositioned; curator claims/history remain
+    distinct from seed ownership.
+  target_ids:
+  - CHEBI:85984
+  evidence_ids:
+  - record
+  - leads
+- assessment_id: completeness
+  area: completeness
+  topic: Additional target and resistance evidence
+  outcome: unknown
+  summary: Additional primary claims are available but need explicit organism, enzyme
+    and formulation scope before curation.
+  target_ids:
+  - CHEBI:85984
+  evidence_ids:
+  - pbp
+  - resistance
+- assessment_id: validation
+  area: schema
+  topic: Focused native gates
+  outcome: supported
+  summary: Schema and strict validators pass.
+  target_ids:
+  - CHEBI:85984
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-85984-avibactam-direct-pbp-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the mechanism contrast so it does not exclude direct PBP activity
+  description: The current note correctly explains protection of the partner beta-lactam
+    but ends with a broad contrast against direct bacterial cell-wall inhibition.
+    Direct PBP engagement and intrinsic activity have been experimentally reported.
+    Scope the contrast to the described beta-lactamase-mediated potentiation, and
+    acknowledge the separate limited in-vitro activity; retain the valid OXA target
+    and OTHER classification for this resistance-enzyme mechanism.
+  target_ids:
+  - CHEBI:85984
+  field_paths:
+  - mode_of_action_notes
+  - molecular_targets
+  - evidence
+  - discussions
+  evidence_ids:
+  - record
+  - oxa
+  - pbp
+  - direct
+  - checkerboard
+  rule_id: 'review-checklist: qualify mechanism breadth to observed evidence'
+  native_severity: minor bounded mechanism-wording correction
+  normalization_reason: The established primary partner-protection mechanism and chemical
+    identity remain valid. The finding concerns an overbroad implication, not a claim
+    that clinically useful monotherapy is established.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/avibactam.yaml
+    role: Curator-owned mode_of_action_notes, molecular_targets, evidence and history
+actions:
+- action_id: A1
+  description: Narrow the curated mechanism note and document the separately supported
+    direct route.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:85984
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/avibactam.yaml
+    role: Curator-owned mode_of_action_notes, molecular_targets, evidence and history
+  acceptance_checks:
+  - Keep the OXA-24/OXA-48 covalent target claim, explicit selectivity and slowly
+    reversible context; do not generalize efficacy across class D enzymes or Acinetobacter
+    strains.
+  - 'Replace the broad contrast with wording such as: Avibactam protects partner beta-lactams
+    through inhibition of susceptible serine beta-lactamases. It also shows PBP binding
+    and limited intrinsic antibacterial activity in selected in-vitro systems; these
+    observations do not establish routine monotherapy efficacy.'
+  - If adding a PBP target, use the exact species/protein and competition-assay context
+    from PMID26574008; keep competition IC50 separate from MIC or equilibrium affinity.
+  - Keep reagent-counterion uncertainty explicit and distinguish the neutral record,
+    sodium salt, dissolved active moiety and combination product. Do not assign salt-specific
+    assay mass values without verifying the preparation.
+  - Preserve curated ownership and history, document all evidence limits and complete
+    required native gates before renewed status sign-off.
+limitations:
+- All ten adopted PMID records and complete abstracts were inspected; only selected
+  additional full-paper sections were reviewed, not all ten full manuscripts.
+- 'The OXA article full text could not be retrieved: ACS PDF/HTML requests returned403;
+  the Siena repository has metadata/abstract but no attached file. Its abstract and
+  both deposited structure records/coordinates were inspected; kinetic details and
+  reagent salt are not independently verified.'
+- The adopted checkerboard full-text XML request returned HTTP500; its complete abstract
+  supports the qualitative standalone-activity distinction.
+- The PBP study Methods/Results/Table1 were read from original XML and indexed main
+  text. Its assay is membrane competition, not direct measurement of a dissociation
+  constant.
+- The 2025 direct-activity paper was read selectively for antimicrobial/MIC/time-kill
+  Methods and relevant Results; the earlier PMC11463622 preprint is not used as the
+  final publication. No complete whole-genome variant reanalysis was performed.
+- Primary reagent passages name avibactam without a counterion/catalog; the exact
+  neutral database identity is supported, but solid-form equivalence and salt-specific
+  assay doses are not assumed.
+- CAS/Reaxys proprietary registries were not queried independently.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 13 captured input hashes unchanged; no native record edits.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:85984
+- https://doi.org/10.1021/cb500703p
+- https://www.rcsb.org/structure/4WM9
+- https://www.rcsb.org/structure/4WMC
+- https://doi.org/10.1128/AAC.02102-15
+- https://doi.org/10.1128/spectrum.03241-24
+tags:
+- record-review
+- avibactam
+- beta-lactamase
+- pbp-scope
