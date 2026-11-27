@@ -1,0 +1,819 @@
+schema_version: 1.0.0
+review_id: 20261021T102422Z-bleomycin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Bleomycin: family/mixture mapped to a partially specified A2 structure'
+started_at: '2026-10-21T09:53:36Z'
+finished_at: '2026-10-21T10:24:22Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Whole native/owner review, independent chemistry/mint checks,
+    current ARO/ChEBI/PubChem/ChEMBL, structured BLMT lookup and primary congener/mixture
+    evidence.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'One blocker: the declared bleomycin family/mixture is mapped to an A2-type
+  graph with ten unspecified sugar stereocentres, while another xref supplies fully
+  specified A2. Internal molecular/schema checks pass but do not establish equivalence.
+  Broad activity, database-only nucleic-acid targets and BLMT sequestration evidence
+  should be preserved at their original scopes.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/bleomycin.yaml
+    sha256: 10ef3fa62ac97558b5fedb630d47cd461b6b132e409e9c26dd05683bcc9b205f
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_mibig_producers.py
+    sha256: a078cdf4c9b2d09999800ab7ae03f93d3972f29b7d2f460ebbbe7d7ec6b31c53
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-1504589de3
+  path: data/antibiotics/antibacterial/bleomycin.yaml
+  label: bleomycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem molecular enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Structure enrichment owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target roles
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+scope:
+  description: Whole-record review of generic minted bleomycin.
+  selection: Queue160 isolated batch016; initial capture preserved and actual owners
+    expanded.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-1504589de3
+  exclusions:
+  - target: Individual congeners, metal complexes and commercial preparations as independent
+      targets
+    reason: Identity and evidence comparators only.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual focused command passed.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/bleomycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual focused command passed.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/bleomycin.yaml --out /private/tmp/am-review-session/160-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Internal molecular encodings and actual mint
+  status: passed
+  required: true
+  summary: Encoding/property consistency passes; broad-to-single structure equivalence
+    fails independently.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  evidence_ids:
+  - chemistry
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/bleomycin.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T10:09:22Z'
+  support: supports
+  summary: Read MINTED/SEEDED generic family/mixture definition and PMID15700963,
+    all names, parent/role/class, every chemical property and four xrefs, ARO provenance,
+    BLMT resistance, DNA/RNA database-only entries and four seed events. No producer/clinical/pathway/graph
+    blocks.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv
+  locator: ARO row39; PubChem row11; target rows39/40; resistance row1348; actual
+    enrichment/seeder and review owners
+  accessed_at: '2026-10-21T10:09:22Z'
+  support: supports
+  summary: Family definition and mappings originate in ARO0000053; one partially specified
+    A2-type graph is imported by PubChem fallback enrichment. Actual owners were added
+    to the preserved initial capture before assessment.
+- evidence_id: aro
+  kind: authority
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Terms0000053,3000081,3000707,3000738,3000740,3005036,3004256 and3001206
+  accessed_at: '2026-10-21T09:40:22Z'
+  support: supports
+  summary: ARO expressly defines a family/mixture and classes it as antibiotic mixture
+    as well as glycopeptide. It links PubChem5360373, ChEBI22907 and ChEMBL403664.
+    BLMT resolves to the Tn5 ble protein with PMID9923599; the family hierarchy includes
+    sequestration within inactivation.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:22907
+  locator: Current definition and classification
+  accessed_at: '2026-10-21T10:07:37Z'
+  support: supports
+  summary: ChEBI22907 is a family of structurally related compounds, with A2/B2 as
+    principal chemotherapeutic components. It does not make the generic concept one
+    exact A2 molecule.
+  snapshot_sha256: 4de0be6b3f40c946af717ec85db1a2870dd4e1afe25273f993269ae4c8d02ff4
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/5360373
+  locator: Current PUG chemical fields
+  accessed_at: '2026-10-21T10:07:35Z'
+  support: supports
+  summary: CID5360373 reproduces native C55H84N17O21S3+, charge+1 and key OYVAGSVQBOHSSS-WXFSZRTFSA-O.
+    It is one A2-connectivity sulfonium graph with ten unspecified sugar stereocentres,
+    not the varying terminal amines/compositions of the whole family.
+  snapshot_sha256: ea92d0f3b25a2bba7c784d67ecf8c1c3f427a31075bc48c0b7f86e834a252cd2
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL403664.json
+  locator: Current full structure
+  accessed_at: '2026-10-21T10:07:35Z'
+  support: supports
+  summary: ChEMBL403664 has fully specified A2 key OYVAGSVQBOHSSS-UAPAGMARSA-O. It
+    differs from the native sugar-unspecified graph and cannot make that graph or
+    the entire family an exact A2 equivalent.
+  snapshot_sha256: 3a8c308b6478f19d7f12f74a514cc4db126da30772695aa74ff72e11e4e40459
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit full encodings and actual ARO mint
+  locator: Native structure and source identifier
+  accessed_at: '2026-10-21T10:07:48Z'
+  support: supports
+  summary: Both encodings agree internally on key, formula, charge+1, one fragment,
+    nine defined plus ten unspecified tetrahedral centres. Mass rounding and ionic
+    electron-mass conventions explain displayed differences. Actual ARO mint reproduces.
+    Internal consistency does not validate family-to-single-structure equivalence.
+  snapshot_sha256: fa5ec8d9437d7ca9a37791a2ee612a5758b05a142bd4dc3c9d9fd07842a726ce
+- evidence_id: definition-reference
+  kind: database
+  reference: https://europepmc.org/article/MED/15700963
+  locator: PMID15700963 DOI10.1021/cr030117g metadata
+  accessed_at: '2026-10-21T09:58:54Z'
+  support: context_only
+  summary: Adopted definition source is the 2005 antitumor-antibiotics review. Metadata
+    was inspected; it is not primary experimental evidence and no full-review claim
+    is made.
+  snapshot_sha256: fe8b1f63cfe23795848a5c10dea8e2c72e6eabace993631fd6748fe8de29632f
+- evidence_id: dna-cellular
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.22.446
+  locator: PMID4982665; full three-page paper, reagent paragraph, Figure3 caption
+    and Results
+  accessed_at: '2026-10-21T10:02:42Z'
+  support: context_only
+  summary: Copper-free A2 was used. Growing E.coli15T- exposed to10 or100 micrograms/mL
+    for30min at37C showed DNA strand scission; EDTA during extraction controlled additional
+    ex-vivo degradation. This directly supports bacterial DNA damage without treating
+    it as an MIC or extending it to all strains. Evidence remains at its original
+    A2/substrate scope and is not proof of every family member or the native partially
+    specified molecular graph.
+  snapshot_sha256: f76a9568907cbc1a08c8a3763d82569b0fec46bd96c0627905abd70d9a62cd81
+- evidence_id: dna-biochemical
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.23.473
+  locator: PMID4991640; full paper Materials/Methods, Results and Tables1/2
+  accessed_at: '2026-10-21T10:02:42Z'
+  support: context_only
+  summary: Copper-free A2 and tritiated A2 bound isolated E.coli DNA. Cell-free strand
+    scission was observed with1mM2-mercaptoethanol and depended on conditions; ribosomal/transfer
+    RNA cleavage was not observed in that experiment. Binding and strand cleavage
+    are separate measured endpoints, not universal RNA negativity. Evidence remains
+    at its original A2/substrate scope and is not proof of every family member or
+    the native partially specified molecular graph.
+  snapshot_sha256: f434ac17791636fa062c39cce91408c7d3a2873ebe27bf5b0f0d3d469b0e87b2
+- evidence_id: rna
+  kind: primary_source
+  reference: https://doi.org/10.1021/bi00037a046
+  locator: PMID7547941; inspected indexed abstract
+  accessed_at: '2026-10-21T10:02:41Z'
+  support: context_only
+  summary: A2 promoted sequence-selective hydrolysis of yeast tRNA(Phe) without added
+    metal ions. This supports a distinct cell-free RNA endpoint, not a bacterial cellular
+    RNA mechanism. Full text was not accessed; quantitative extraction is deferred.
+    Evidence remains at its original A2/substrate scope and is not proof of every
+    family member or the native partially specified molecular graph.
+  snapshot_sha256: 726464bf833edac7c619471e25f644a72dc548666f7f9f9521216e380495f221
+- evidence_id: mixture-primary
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.21.592
+  locator: 1968 individual-congener paper; introduction, Materials/Methods and antibacterial/results
+    context
+  accessed_at: '2026-10-21T10:05:49Z'
+  support: supports
+  summary: The study separates individual congeners and copper forms from a clinical
+    mixture, documents variable component proportions and compares biological activity.
+    This directly establishes the mixture/component distinction; it cannot be encoded
+    by one A2-type formula. Antitumor data are historical experiments, not a current
+    recommendation.
+  snapshot_sha256: 69b4e87ad6eaa4676d8c51d359f269c0d8036a73812ef74c01d56611deefe146
+- evidence_id: b2-primary
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.26.521
+  locator: 1973 Materials/Methods and DNA-scission Results
+  accessed_at: '2026-10-21T10:05:26Z'
+  support: context_only
+  summary: Copper-free B2 lot32 directly cleaved isolated SV40 DNA. This is another
+    defined congener with a guanidino terminal amine, reinforcing that family activity
+    cannot establish the native A2-type graph as a whole-family structure.
+  snapshot_sha256: 869c566e6f69684dabb969c707d769575eaf91687cb0c4454a519695dea0b00e
+- evidence_id: blmt
+  kind: primary_source
+  reference: https://doi.org/10.1016/S0014-5793(98)01613-5
+  locator: PMID9923599 indexed primary abstract
+  accessed_at: '2026-10-21T10:07:35Z'
+  support: partial
+  summary: The Tn5 ble product BLMT bound bleomycin and quenched antibacterial/DNA-cleaving
+    activity; spin trapping distinguished drug trapping from hydroxyl-radical trapping.
+    An E.coli Pro7Leu mutant lost bleomycin resistance while retaining survival benefit.
+    This supports sequestration, not covalent modification; full Methods and exact
+    drug preparation were not accessible.
+  snapshot_sha256: 1400703dc6d643eb3885c24514c543f374568abd8d95f93d9a9d36bc55314d41
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb
+  locator: Actual e_coli/precise1k BLMT query; recent dataset list reused
+  accessed_at: '2026-10-21T10:07:32Z'
+  support: context_only
+  summary: Structured exact-name search preceded web follow-up and returned zero gene/module
+    hits. The selected reference E.coli dataset need not contain a mobile Tn5 determinant;
+    this is not negative resistance evidence.
+  snapshot_sha256: 8b004f75e3b8d5573677cca65bab2ade23ebffc2ebb1528faf3cb3541d1708cb
+- evidence_id: gates
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual focused batch016 commands and chemical check
+  accessed_at: '2026-10-21T10:07:48Z'
+  support: supports
+  summary: Both focused commands exited0, strict one record zero errors. Molecular
+    encodings and actual ARO mint pass internally, despite the independent identity
+    failure.
+  snapshot_sha256: d0730ab9757533f617c43b19c97d5aab230d49545031b4f8c4d010a9a103565d
+- evidence_id: search
+  kind: search
+  reference: Repository and public source/primary searches
+  locator: Ignored-inclusive identifier/label/key search and BLMT follow-up
+  accessed_at: '2026-10-21T10:07:48Z'
+  support: context_only
+  summary: Ignored files were included outside.git/.venv; actual ARO/PubChem rows,
+    claim owners and source hierarchy were read. Primary congener/mixture work and
+    BLMT citation were followed; free full BLMT retrieval failed.
+  search_scope: Preserved prepare.py160 search plus rg --no-ignore --hidden of maintained
+    owners; current ARO/ChEBI/PubChem/ChEMBL; structured BLMT query; primary1968/1969/1970/1973
+    and1999 citation,1995 A2 RNA abstract.
+  snapshot_sha256: e2be3514815dc2e770b946d64e6f0656a7039f5f66f3e0ad5d1f1a94bc43dc2e
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Mixture mapped to one partial A2 graph
+  outcome: concern
+  summary: Explicit family/mixture concept cannot be represented by one A2-connectivity
+    formula with unspecified sugar stereochemistry. ChEMBL fully specified A2 is a
+    separate narrower identity.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  evidence_ids:
+  - native
+  - aro
+  - chebi
+  - pubchem
+  - chembl
+  - chemistry
+  - mixture-primary
+- assessment_id: definition
+  area: evidence
+  topic: Family composition and broad activity
+  outcome: supported
+  summary: Family/mixture and historical antibacterial/antitumor context are supported.
+    They describe the broad source concept, not the native single molecular graph.
+    The adopted2005 source remains an inspected metadata lead.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  evidence_ids:
+  - native
+  - aro
+  - chebi
+  - mixture-primary
+  - definition-reference
+- assessment_id: class
+  area: grounding
+  topic: Glycopeptide and antimicrobial classification
+  outcome: supported
+  summary: Broad classification is biologically coherent for source mixture. It does
+    not waive the exact-structure corpus unit.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  evidence_ids:
+  - aro
+  - chebi
+  - mixture-primary
+- assessment_id: xref
+  area: grounding
+  topic: Incompatible scope across source mappings
+  outcome: concern
+  summary: ARO/ChEBI are family context, PubChem is sugar-unspecified A2 connectivity
+    and ChEMBL is fully specified A2. Resolvable identifiers do not establish equivalence.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  evidence_ids:
+  - aro
+  - chebi
+  - pubchem
+  - chembl
+- assessment_id: targets
+  area: evidence
+  topic: DNA and RNA database assertions
+  outcome: supported
+  summary: Native nonprotein types/attacked-component roles and explicit database-only
+    notes correctly preserve source level. Component-specific DNA/RNA experiments
+    support bounded family context without upgrading all members or the unspecified
+    graph.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  evidence_ids:
+  - native
+  - aro
+  - dna-cellular
+  - dna-biochemical
+  - rna
+  - b2-primary
+- assessment_id: resistance
+  area: evidence
+  topic: BLMT sequestration
+  outcome: supported
+  summary: Primary abstract supports drug sequestration and resistance-function distinction.
+    The broad inactivation enum is compatible with ARO hierarchy; no chemical-destruction
+    interpretation is imposed. Exact drug preparation remains unverified.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  evidence_ids:
+  - aro
+  - blmt
+  - adapter
+- assessment_id: activity
+  area: evidence
+  topic: Mixture versus component observations
+  outcome: unknown
+  summary: The source family includes active compounds, but no single assay identity
+    for the native unspecified graph is established. Do not use mixture activity as
+    a structure-level identity proof or add unqualified congener MICs.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  evidence_ids:
+  - mixture-primary
+  - blmt
+  - chemistry
+- assessment_id: history
+  area: provenance
+  topic: Seeded source history and mint
+  outcome: supported
+  summary: Four native seed events, ARO source date and PubChem enrichment retrieval
+    are coherent. Mint reproduces; no curator claims or history events were changed.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+- assessment_id: completeness
+  area: completeness
+  topic: Eligibility adjudication before enrichment
+  outcome: concern
+  summary: Resolve the broad-source entry versus exact-compound corpus before primary
+    enrichment. Preserve genuine mixture/BLMT evidence in a suitable source/worklist
+    representation instead of silently transferring it.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  evidence_ids:
+  - native
+  - owners
+  - aro
+  - mixture-primary
+  - blmt
+- assessment_id: other
+  area: scope
+  topic: Clinical, producer, pathway and graph blocks
+  outcome: not_applicable
+  summary: No populated optional blocks. Definition antitumor use is historical context,
+    not a dose or treatment recommendation; no optional-field findings.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  evidence_ids:
+  - native
+  - mixture-primary
+- assessment_id: schema
+  area: schema
+  topic: Focused checks versus identity
+  outcome: supported
+  summary: Schema/strict/internal chemistry pass but do not detect source-scope identity
+    failure.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  evidence_ids:
+  - gates
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: bleomycin-family-mixture-mapped-to-partial-a2-structure
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: Resolve the bleomycin family/mixture mapped to one partially specified A2
+    structure
+  description: Native definition and ARO/ChEBI denote a family used as variable mixtures.
+    PubChem5360373 supplies one A2-connectivity sulfonium graph with ten unspecified
+    sugar centres; ChEMBL403664 instead supplies fully specified A2. One A2-like formula
+    cannot represent B2 and other terminal-amine congeners. Filling the missing sugar
+    stereochemistry or replacing the key with A2 would not repair the broad concept
+    and would risk duplicating the separate A2 record.
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  field_paths:
+  - identifier
+  - label
+  - definition
+  - chemical_structure
+  - xrefs
+  - source_concepts
+  - grounding_status
+  evidence_ids:
+  - native
+  - owners
+  - aro
+  - chebi
+  - pubchem
+  - chembl
+  - chemistry
+  - mixture-primary
+  rule_id: docs/HARMONIZATION.md:The unit of the corpus is a structure; native-review-checklist:Identity
+    and Equivalence
+  native_severity: blocker family/mixture identity represented as one compound
+  normalization_reason: The principal molecular graph cannot denote the declared broad
+    entity, even though encodings are internally consistent. This is a wrong unit/identity
+    rather than an optional evidence gap.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem molecular enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Structure enrichment owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target roles
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+actions:
+- action_id: A1
+  description: Adjudicate the broad ARO/ChEBI family through maintained grounding/exclusion
+    and source enrichment ownership, preserving useful source-level activity and resistance
+    context.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-1504589de3
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem molecular enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Structure enrichment owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target roles
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+  acceptance_checks:
+  - A variable family/mixture is not retained as one exact molecular formula or graph.
+  - Retain or create exact congener/salt records only with independently verified
+    complete identity; existing A2 and B2 records must not be duplicated.
+  - Do not substitute ChEMBL403664/A2 stereochemistry for generic bleomycin without
+    resolving the concept scope.
+  - Preserve BLMT sequestration evidence at the preparation scope verified from full
+    primary text; do not turn it into chemical degradation or transfer it to all congeners.
+  - Keep component-specific DNA/RNA and historical mixture clinical context separately
+    attributed.
+  - Run maintained source regeneration, identity/duplicate, target/resistance, schema,
+    term, reference and history gates; retain native status pending authorized curation.
+limitations:
+- The adopted2005 review was verified at metadata scope. The1999 BLMT primary abstract
+  was inspected; free full-text routes were unavailable, so exact reagent preparation
+  and quantitative binding/antibacterial conditions remain unresolved.
+- Component-specific DNA/RNA experiments do not establish all bleomycins as equivalent;
+  A2 yeast RNA abstract and B2 cell-free DNA evidence remain at original scopes.
+- The structured BLMT lookup found no matching gene/module in the selected reference
+  dataset; mobile-element absence there is not biological negative evidence.
+- No single exact structure can be reconstructed for a variable family/mixture from
+  its generic name or one representative congener.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All29 captured hashes rechecked unchanged; no native edits.
+- Initial generic chemistry helper assumed a CHEBI mint. Actual ARO mint and chemical
+  properties pass; average-mass precision and ionic exact-mass convention are not
+  findings.
+- No alias-only or optional-empty-field findings. Any future disposition must preserve
+  genuine mixture-level scientific evidence.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:22907
+- https://pubchem.ncbi.nlm.nih.gov/compound/5360373
+- https://doi.org/10.7164/antibiotics.21.592
+- https://doi.org/10.1016/S0014-5793(98)01613-5
+tags:
+- bleomycin
+- mixture-scope
+- partial-stereochemistry
+- BLMT

@@ -1,0 +1,715 @@
+# Bikaverin: corroborated structure and antibacterial assays with fraction and taxon boundaries
+
+- Review: 20261021T102359Z-bikaverin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:53:34Z
+- Finished UTC: 2026-10-21T10:23:59Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Bikaverin identity, structural description and antibacterial inclusion are supported. Both adopted publication abstracts were inspected; an independent original study supplies a purified-compound Ralstonia assay. Fractions, co-metabolite interactions, fungal biosynthesis and antimicrobial molecular targets require distinct evidence. No corrective native finding was established; one informational enrichment item remains. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position157; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:3096 | data/antibiotics/antibacterial/bikaverin.yaml | generated | bikaverin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:3096 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:3096 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:3096 | Actual focused execution exited 0. |
+| Structured protein-context applicability | not_applicable | False | CHEBI:3096 | The native record asserts no protein, gene, regulator, pathway or transcriptomic response. Literature-only biosynthesis and mechanism leads remain optional context; no expression-module evidence is used. |
+| Authoritative full QC | failed | True | CHEBI:3096 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:3096 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:3096 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:3096 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:3096 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:3096 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:3096 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:3096 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:3096 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Maintained source and native history
+
+provenance: supported. Targets: CHEBI:3096.
+
+The adopted identity/roles and generated provenance agree; all 13 captured input hashes remain unchanged. Native status remains SEEDED.
+
+### Focused validation
+
+schema: supported. Targets: CHEBI:3096.
+
+Focused schema, strict and independent chemistry checks passed. Scientific evidence scope is assessed separately.
+
+### Chemical structure, synonym and description
+
+identity: supported. Targets: CHEBI:3096.
+
+The encoded full structure and source aliases agree across independent chemical authorities; the source grammar does not create a scientific identity defect.
+
+### Chemical parents and antimicrobial classification
+
+grounding: supported. Targets: CHEBI:3096.
+
+All five chemical parents fit and current roles are consistent with primary antibacterial and antifungal/antioomycete reports. Activity is conditional on organism, material and assay.
+
+### Adopted primary citations and populated native scope
+
+evidence: supported. Targets: CHEBI:3096.
+
+Both adopted records resolve and their abstracts were read. Native contains no transferred MIC, producer strain, protein target or clinical claim. Its broad antibacterial inclusion has independent purified-compound support.
+
+### Optional activity/producer enrichment
+
+completeness: unknown. Targets: CHEBI:3096.
+
+Useful quantitative and producer context is available, but fraction endpoints, additive combinations and biosynthetic genes must remain distinct from pure-compound activity and targets.
+
+## Findings
+
+### F1: Preserve exact material and assay scope in optional primary enrichment
+
+informational / open / confirmed; issue key: bikaverin-primary-pure-compound-and-fraction-scope.
+
+Primary Ralstonia MIC and fungal-production evidence can support optional enrichment. The separate fraction screen cannot supply bikaverin IC50 values borrowed from aurofusarin.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Optionally curate the demonstrated primary observations with their material, organism and assay qualifiers.
+
+- Preserve GMI1000, Adipogen material, Boucher medium, 28 C,48 h, DMSO controls and no-growth endpoint for the60 micrograms/mL observation.
+- Keep FIC0.708 additive interaction separate from single-agent potency and from conditioned-medium effects.
+- Retrieve HKF15 full Methods/table before importing its strains or values; retain the F. oxysporum fraction result as a fraction observation rather than purified-bikaverin evidence.
+- Keep fungal biosynthetic genes and ralsolamycin-induced production distinct from bacterial molecular targets or resistance mechanisms.
+- Use validated writer/history and required gates for future annotations; retain native SEEDED status until actual sign-off criteria pass.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/bikaverin.yaml; Entire native YAML, source concept and three seed/reseed events | supports | The exact ChEBI record is SEEDED, with a single neutral chemical structure, source-owned names, chemical parents, activity roles and chemical xrefs. No native quantitative assay, molecular target, resistance, producer, clinical, transcriptomic or causal-graph claim is populated. |
+| source | data/raw/chebi_antimicrobials.tsv; data/raw/chebi_role_names.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; 157-raw.json; captured source, role, configuration and generation inputs | supports | The adopted row reproduces the native chemical data, classifications and aliases. The source mint independently reproduces. Exact identifier searches in the captured curator inventory and decisions file, including ignored files, returned no matching override; this is a bounded search of those files, not an absence claim about all external evidence. |
+| chemistry | Independent RDKit native chemistry and focused repository gates; 157-chemistry.json; 157-focused-results.json | supports | SMILES and Standard InChI reproduce the same stored full key, formula, neutral one-component graph and masses at stated precision. Neither structure contains a potential tetrahedral stereocentre. The minted source identifier and focused schema/strict validators pass. |
+| search | CultureBotAI/AntibioticMech and free chemical/primary-literature sources; 157-local-hits.txt; 157-discovery.json | context_only | Initial target/source hashes preceded judgment. The local identifier/name/slug search included hidden and ignored files outside .git and .venv. Current official chemical sources and a capped EuropePMC discovery search were inspected, followed by selected relevant primary papers. Generated and historical copies are discovery context only. |
+| identity | CHEBI:3096; PubChem CID:5281730; KEGG:C10306; KNApSAcK:C00002798; Complete current ChEBI page, PUG molecular export, independently parsed KEGG MOL and KNApSAcK fields | supports | All agree on C20H14O8 and ZOQMSOSJEWBMHP-UHFFFAOYSA-N. The trione, two hydroxy, two methoxy and methyl substituents agree with the source-owned structural definition/systematic name. Lycopersin is the corroborated ChEBI alias. CAS33390-21-5 is consistent across authorities. Reaxys358013 is verified as a ChEBI crosswalk, not directly in its proprietary registry. |
+| grounding | https://www.ebi.ac.uk/chebi/CHEBI:3096; Current five direct parents, roles and source metabolite annotation | supports | Polyphenol, aromatic ether, cyclic ether, heterotetracyclic compound and cyclic ketone classifications remain current and consistent with the graph. The antibacterial and antifungal roles are current. ChEBI additionally annotates fungal metabolite and HKF15 provenance; their absence from native optional fields is not a defect. |
+| adopted-antibacterial | PMID:24183988; DOI:10.1016/j.jbiosc.2013.09.017; 157-adopted.json; complete indexed abstract | partial | Fusarium sp. HKF15 produced an active principle isolated through activity-guided HPLC and identified as bikaverin by HRMS and proton NMR. The abstract reports activity against pathogenic and multidrug-resistant bacteria. It supports exact-compound antibacterial inclusion, but full Methods, strain table and concentrations were not retrieved; no quantitative values are adopted from later citations. |
+| adopted-production | PMID:24291181; DOI:10.1016/j.ijfoodmicro.2013.10.024; 157-adopted.json; complete indexed abstract | partial | The study measures effects of yeast-extract brands on fungal secondary metabolites, including bikaverin in F. fujikuroi. This is production-context evidence, not an antibacterial target or susceptibility experiment; the abstract does not establish all exact strain/culture details. |
+| purified-assay | PMID:29789359; DOI:10.1128/mBio.00820-18; 157-competition2018.xml; antibacterial Results; strain, medium, extraction and antibacterial Methods; Figure4 visually inspected | supports | Purified Adipogen bikaverin was tested against R. solanacearum GMI1000 in Boucher minimal medium for48 h at28 C, with matched DMSO controls and visible/OD600 no-growth scoring. Bikaverin-alone MIC was60 micrograms/mL (157 micromolar); beauvericin-alone MIC was240 micrograms/mL. The checkerboard interaction FIC0.708 is additive by the stated rule, not synergy. Conditioned-medium experiments compare chemically complex fungal supernatants and are separate from the purified compound. |
+| biosynthesis-boundary | DOI:10.1128/mBio.00820-18; First Results subsection and strain/medium/extraction Methods | partial | F. fujikuroi IMI58289 culture and product-localization experiments support fungal production context. The bik1 deletion and ralsolamycin response concern synthesis and interspecies regulation; they are not bacterial drug-target inhibition or native resistance genes. Detailed invasion, transcriptome and supplementary experiments were not independently audited and are not used as causal-target proof. |
+| fraction-boundary | PMID:27916854; DOI:10.3390/toxins8120355; 157-screen2016.xml; complete Results/Discussion and Materials/Methods | partial | The bikaverin-associated result uses an HPLC fraction from F. oxysporum IBT8890 against L. acidophilus, whereas purified commercial aurofusarin is used for the wider Lactobacillus/Bifidobacterium dose-response panel. The8 and64 micromolar IC50 values belong to aurofusarin, not bikaverin. Fractions and pure-compound quantitative endpoints must remain separate. |
+| antioomycete | PMID:17927749; DOI:10.1111/j.1365-2672.2007.03581.x; Complete indexed abstract within157-discovery.json | partial | Cultured F. oxysporum EF119 yielded spectrally identified bikaverin and fusaric acid. The abstract reports oomycete/true-fungal inhibition, while bikaverin was virtually inactive against the tested plant-pathogenic bacteria. These bounded organisms/conditions do not negate the independent Ralstonia or HKF15 antibacterial evidence. Phytophthora is an oomycete; crop disease-control assays are not human clinical efficacy. |
+
+## Limits And Additional Notes
+
+- The literature review is bounded to the stated original sources and access levels. No optional empty field is automatically a defect, and this review does not certify clinical use or promote native status.
+- The two adopted2013 sources and the2007 antioomycete paper remain abstract-only. The2016 screen Methods/Results and selected2018 primary sections were read; the latter Figure4 was visually verified. Full supplemental spectra, invasion analyses and checkerboard TableS3 were not independently audited.
+- The1971 structure paper DOI10.1039/j39710002792 was discovered bibliographically but not read. Independent current full-structure exports support identity; no historical structural claim is attributed to uninspected text.
+- No direct antimicrobial molecular target was established. Broader organism scope must not be inferred from one Ralstonia strain or from mixed fungal supernatants.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 13 captured inputs rechecked unchanged. No native record or source table was edited.
+- Initial public requests failed sandbox DNS; the permitted public-network retry succeeded. Failed requests were not treated as evidence absence.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T102359Z-bikaverin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Bikaverin: corroborated structure and antibacterial assays with fraction and
+  taxon boundaries'
+started_at: '2026-10-21T09:53:34Z'
+finished_at: '2026-10-21T10:23:59Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Bikaverin identity, structural description and antibacterial inclusion are
+  supported. Both adopted publication abstracts were inspected; an independent original
+  study supplies a purified-compound Ralstonia assay. Fractions, co-metabolite interactions,
+  fungal biosynthesis and antimicrobial molecular targets require distinct evidence.
+  No corrective native finding was established; one informational enrichment item
+  remains. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/bikaverin.yaml
+    sha256: 996dd1d9219e4d01e904f721392f1cc21748ac2107eba8ddc76034a7ed4e25bb
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:3096
+  path: data/antibiotics/antibacterial/bikaverin.yaml
+  label: bikaverin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position157; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:3096
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:3096
+  command: .venv/bin/python /private/tmp/am-review-session/focus014-root.py 157
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:3096
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/bikaverin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:3096
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/bikaverin.yaml --out /private/tmp/am-review-session/157-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-applicability
+  name: Structured protein-context applicability
+  status: not_applicable
+  required: false
+  summary: The native record asserts no protein, gene, regulator, pathway or transcriptomic
+    response. Literature-only biosynthesis and mechanism leads remain optional context;
+    no expression-module evidence is used.
+  target_ids:
+  - CHEBI:3096
+  evidence_ids:
+  - native
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:3096
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:3096
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:3096
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:3096
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:3096
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:3096
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:3096
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:3096
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:3096
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/bikaverin.yaml
+  locator: Entire native YAML, source concept and three seed/reseed events
+  accessed_at: '2026-10-21T09:58:10Z'
+  support: supports
+  summary: The exact ChEBI record is SEEDED, with a single neutral chemical structure,
+    source-owned names, chemical parents, activity roles and chemical xrefs. No native
+    quantitative assay, molecular target, resistance, producer, clinical, transcriptomic
+    or causal-graph claim is populated.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/chebi_role_names.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: 157-raw.json; captured source, role, configuration and generation inputs
+  accessed_at: '2026-10-21T09:58:10Z'
+  support: supports
+  summary: The adopted row reproduces the native chemical data, classifications and
+    aliases. The source mint independently reproduces. Exact identifier searches in
+    the captured curator inventory and decisions file, including ignored files, returned
+    no matching override; this is a bounded search of those files, not an absence
+    claim about all external evidence.
+  snapshot_sha256: 1a55f53c7f7140ad2a3aefc9b64154e8722150e3e2ee9165a3d82d095b14ff03
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit native chemistry and focused repository gates
+  locator: 157-chemistry.json; 157-focused-results.json
+  accessed_at: '2026-10-21T09:58:10Z'
+  support: supports
+  summary: SMILES and Standard InChI reproduce the same stored full key, formula,
+    neutral one-component graph and masses at stated precision. Neither structure
+    contains a potential tetrahedral stereocentre. The minted source identifier and
+    focused schema/strict validators pass.
+  snapshot_sha256: b2ab1f9769b170ad29955b8a2e06ffb27f80abfb972af2f64902acade75fa1e7
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech and free chemical/primary-literature sources
+  locator: 157-local-hits.txt; 157-discovery.json
+  accessed_at: '2026-10-21T09:58:10Z'
+  support: context_only
+  summary: Initial target/source hashes preceded judgment. The local identifier/name/slug
+    search included hidden and ignored files outside .git and .venv. Current official
+    chemical sources and a capped EuropePMC discovery search were inspected, followed
+    by selected relevant primary papers. Generated and historical copies are discovery
+    context only.
+  search_scope: Isolated batch016; rg --no-ignore --hidden excluding .git and .venv.
+    Exact target and maintained owners; EuropePMC first 100 results with citation
+    ordering, not an exhaustive literature survey.
+  snapshot_sha256: 0ec347bb95dee046e8a9ab5be171e7e7d03c1e398eca46eb679c41994377dd4d
+- evidence_id: identity
+  kind: database
+  reference: CHEBI:3096; PubChem CID:5281730; KEGG:C10306; KNApSAcK:C00002798
+  locator: Complete current ChEBI page, PUG molecular export, independently parsed
+    KEGG MOL and KNApSAcK fields
+  accessed_at: '2026-10-21T09:58:10Z'
+  support: supports
+  summary: All agree on C20H14O8 and ZOQMSOSJEWBMHP-UHFFFAOYSA-N. The trione, two
+    hydroxy, two methoxy and methyl substituents agree with the source-owned structural
+    definition/systematic name. Lycopersin is the corroborated ChEBI alias. CAS33390-21-5
+    is consistent across authorities. Reaxys358013 is verified as a ChEBI crosswalk,
+    not directly in its proprietary registry.
+  snapshot_sha256: 54b975c11b34930b6974d8bc4f42846ccc504501c3e8eded966f4aefd3234b73
+- evidence_id: grounding
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:3096
+  locator: Current five direct parents, roles and source metabolite annotation
+  accessed_at: '2026-10-21T09:58:10Z'
+  support: supports
+  summary: Polyphenol, aromatic ether, cyclic ether, heterotetracyclic compound and
+    cyclic ketone classifications remain current and consistent with the graph. The
+    antibacterial and antifungal roles are current. ChEBI additionally annotates fungal
+    metabolite and HKF15 provenance; their absence from native optional fields is
+    not a defect.
+  snapshot_sha256: 4c0a08c7da388507be547a1ebc8db154d81ed88ad9d09b5dfdae4873812a100d
+- evidence_id: adopted-antibacterial
+  kind: primary_source
+  reference: PMID:24183988; DOI:10.1016/j.jbiosc.2013.09.017
+  locator: 157-adopted.json; complete indexed abstract
+  accessed_at: '2026-10-21T09:58:10Z'
+  support: partial
+  summary: Fusarium sp. HKF15 produced an active principle isolated through activity-guided
+    HPLC and identified as bikaverin by HRMS and proton NMR. The abstract reports
+    activity against pathogenic and multidrug-resistant bacteria. It supports exact-compound
+    antibacterial inclusion, but full Methods, strain table and concentrations were
+    not retrieved; no quantitative values are adopted from later citations.
+  snapshot_sha256: 5c8339df32b0d46c8b4be7b6a4b9c650d584de986f4ecc8fe834e6603180e73e
+- evidence_id: adopted-production
+  kind: primary_source
+  reference: PMID:24291181; DOI:10.1016/j.ijfoodmicro.2013.10.024
+  locator: 157-adopted.json; complete indexed abstract
+  accessed_at: '2026-10-21T09:58:10Z'
+  support: partial
+  summary: The study measures effects of yeast-extract brands on fungal secondary
+    metabolites, including bikaverin in F. fujikuroi. This is production-context evidence,
+    not an antibacterial target or susceptibility experiment; the abstract does not
+    establish all exact strain/culture details.
+  snapshot_sha256: 5c8339df32b0d46c8b4be7b6a4b9c650d584de986f4ecc8fe834e6603180e73e
+- evidence_id: purified-assay
+  kind: primary_source
+  reference: PMID:29789359; DOI:10.1128/mBio.00820-18
+  locator: 157-competition2018.xml; antibacterial Results; strain, medium, extraction
+    and antibacterial Methods; Figure4 visually inspected
+  accessed_at: '2026-10-21T09:58:10Z'
+  support: supports
+  summary: Purified Adipogen bikaverin was tested against R. solanacearum GMI1000
+    in Boucher minimal medium for48 h at28 C, with matched DMSO controls and visible/OD600
+    no-growth scoring. Bikaverin-alone MIC was60 micrograms/mL (157 micromolar); beauvericin-alone
+    MIC was240 micrograms/mL. The checkerboard interaction FIC0.708 is additive by
+    the stated rule, not synergy. Conditioned-medium experiments compare chemically
+    complex fungal supernatants and are separate from the purified compound.
+  snapshot_sha256: d335572649083cf8a57c521eedaa079203564f00321a42de0ab58660f1bcf71e
+- evidence_id: biosynthesis-boundary
+  kind: primary_source
+  reference: DOI:10.1128/mBio.00820-18
+  locator: First Results subsection and strain/medium/extraction Methods
+  accessed_at: '2026-10-21T09:58:10Z'
+  support: partial
+  summary: F. fujikuroi IMI58289 culture and product-localization experiments support
+    fungal production context. The bik1 deletion and ralsolamycin response concern
+    synthesis and interspecies regulation; they are not bacterial drug-target inhibition
+    or native resistance genes. Detailed invasion, transcriptome and supplementary
+    experiments were not independently audited and are not used as causal-target proof.
+  snapshot_sha256: d335572649083cf8a57c521eedaa079203564f00321a42de0ab58660f1bcf71e
+- evidence_id: fraction-boundary
+  kind: primary_source
+  reference: PMID:27916854; DOI:10.3390/toxins8120355
+  locator: 157-screen2016.xml; complete Results/Discussion and Materials/Methods
+  accessed_at: '2026-10-21T09:58:10Z'
+  support: partial
+  summary: The bikaverin-associated result uses an HPLC fraction from F. oxysporum
+    IBT8890 against L. acidophilus, whereas purified commercial aurofusarin is used
+    for the wider Lactobacillus/Bifidobacterium dose-response panel. The8 and64 micromolar
+    IC50 values belong to aurofusarin, not bikaverin. Fractions and pure-compound
+    quantitative endpoints must remain separate.
+  snapshot_sha256: c3478823d8effd7686351ed3b21ff6e813d868dc73a4b45497c1077cf902e754
+- evidence_id: antioomycete
+  kind: primary_source
+  reference: PMID:17927749; DOI:10.1111/j.1365-2672.2007.03581.x
+  locator: Complete indexed abstract within157-discovery.json
+  accessed_at: '2026-10-21T09:58:10Z'
+  support: partial
+  summary: Cultured F. oxysporum EF119 yielded spectrally identified bikaverin and
+    fusaric acid. The abstract reports oomycete/true-fungal inhibition, while bikaverin
+    was virtually inactive against the tested plant-pathogenic bacteria. These bounded
+    organisms/conditions do not negate the independent Ralstonia or HKF15 antibacterial
+    evidence. Phytophthora is an oomycete; crop disease-control assays are not human
+    clinical efficacy.
+  snapshot_sha256: 868fe1cd751169793f97acf9c8dadd55652a35ca53df6efba9730722885a3025
+assessments:
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained source and native history
+  outcome: supported
+  summary: The adopted identity/roles and generated provenance agree; all 13 captured
+    input hashes remain unchanged. Native status remains SEEDED.
+  target_ids:
+  - CHEBI:3096
+  evidence_ids:
+  - native
+  - source
+  - chemistry
+- assessment_id: schema
+  area: schema
+  topic: Focused validation
+  outcome: supported
+  summary: Focused schema, strict and independent chemistry checks passed. Scientific
+    evidence scope is assessed separately.
+  target_ids:
+  - CHEBI:3096
+  evidence_ids:
+  - chemistry
+- assessment_id: identity
+  area: identity
+  topic: Chemical structure, synonym and description
+  outcome: supported
+  summary: The encoded full structure and source aliases agree across independent
+    chemical authorities; the source grammar does not create a scientific identity
+    defect.
+  target_ids:
+  - CHEBI:3096
+  evidence_ids:
+  - identity
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical parents and antimicrobial classification
+  outcome: supported
+  summary: All five chemical parents fit and current roles are consistent with primary
+    antibacterial and antifungal/antioomycete reports. Activity is conditional on
+    organism, material and assay.
+  target_ids:
+  - CHEBI:3096
+  evidence_ids:
+  - grounding
+  - purified-assay
+  - antioomycete
+  - adopted-antibacterial
+- assessment_id: claims
+  area: evidence
+  topic: Adopted primary citations and populated native scope
+  outcome: supported
+  summary: Both adopted records resolve and their abstracts were read. Native contains
+    no transferred MIC, producer strain, protein target or clinical claim. Its broad
+    antibacterial inclusion has independent purified-compound support.
+  target_ids:
+  - CHEBI:3096
+  evidence_ids:
+  - native
+  - adopted-antibacterial
+  - adopted-production
+  - purified-assay
+- assessment_id: completeness
+  area: completeness
+  topic: Optional activity/producer enrichment
+  outcome: unknown
+  summary: Useful quantitative and producer context is available, but fraction endpoints,
+    additive combinations and biosynthetic genes must remain distinct from pure-compound
+    activity and targets.
+  target_ids:
+  - CHEBI:3096
+  evidence_ids:
+  - purified-assay
+  - biosynthesis-boundary
+  - fraction-boundary
+findings:
+- finding_id: F1
+  issue_key: bikaverin-primary-pure-compound-and-fraction-scope
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Preserve exact material and assay scope in optional primary enrichment
+  description: Primary Ralstonia MIC and fungal-production evidence can support optional
+    enrichment. The separate fraction screen cannot supply bikaverin IC50 values borrowed
+    from aurofusarin.
+  target_ids:
+  - CHEBI:3096
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - discussions
+  evidence_ids:
+  - purified-assay
+  - biosynthesis-boundary
+  - fraction-boundary
+  - adopted-antibacterial
+  rule_id: 'native-review-checklist: Evidence Fidelity and completeness'
+  native_severity: informational optional enrichment
+  normalization_reason: The native record has no contradictory populated assay claim.
+    This is a useful primary-evidence follow-up, not a missing-required-field defect.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/bikaverin.yaml
+    role: Future curator-owned primary evidence and optional assay annotations via
+      validated writer/history workflow
+actions:
+- action_id: A1
+  description: Optionally curate the demonstrated primary observations with their
+    material, organism and assay qualifiers.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:3096
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/bikaverin.yaml
+    role: Future curator-owned primary evidence and optional assay annotations via
+      validated writer/history workflow
+  acceptance_checks:
+  - Preserve GMI1000, Adipogen material, Boucher medium, 28 C,48 h, DMSO controls
+    and no-growth endpoint for the60 micrograms/mL observation.
+  - Keep FIC0.708 additive interaction separate from single-agent potency and from
+    conditioned-medium effects.
+  - Retrieve HKF15 full Methods/table before importing its strains or values; retain
+    the F. oxysporum fraction result as a fraction observation rather than purified-bikaverin
+    evidence.
+  - Keep fungal biosynthetic genes and ralsolamycin-induced production distinct from
+    bacterial molecular targets or resistance mechanisms.
+  - Use validated writer/history and required gates for future annotations; retain
+    native SEEDED status until actual sign-off criteria pass.
+limitations:
+- The literature review is bounded to the stated original sources and access levels.
+  No optional empty field is automatically a defect, and this review does not certify
+  clinical use or promote native status.
+- The two adopted2013 sources and the2007 antioomycete paper remain abstract-only.
+  The2016 screen Methods/Results and selected2018 primary sections were read; the
+  latter Figure4 was visually verified. Full supplemental spectra, invasion analyses
+  and checkerboard TableS3 were not independently audited.
+- The1971 structure paper DOI10.1039/j39710002792 was discovered bibliographically
+  but not read. Independent current full-structure exports support identity; no historical
+  structural claim is attributed to uninspected text.
+- No direct antimicrobial molecular target was established. Broader organism scope
+  must not be inferred from one Ralstonia strain or from mixed fungal supernatants.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 13 captured inputs rechecked unchanged. No native record or source table was
+  edited.
+- Initial public requests failed sandbox DNS; the permitted public-network retry succeeded.
+  Failed requests were not treated as evidence absence.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:3096
+- https://doi.org/10.1016/j.jbiosc.2013.09.017
+- https://doi.org/10.1128/mBio.00820-18
+- https://doi.org/10.3390/toxins8120355
+```
