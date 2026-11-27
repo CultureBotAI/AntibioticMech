@@ -1,0 +1,760 @@
+schema_version: 1.0.0
+review_id: 20261021T064838Z-1-dodecylguanidine-acetate
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: '1-dodecylguanidine acetate: exact salt, source support and scoped mechanism
+  readiness'
+started_at: '2026-10-21T06:39:55Z'
+finished_at: '2026-10-21T06:48:38Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not create or curate this seeded record. Current
+    source texts were inspected independently; historical prose supplied leads only.
+    Agent review is not independent human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The exact acetate salt, retained activity roles and generated provenance
+  are sound. Two minor, evidence-specific readiness gaps concern mechanism and activity
+  curation. Mechanism follow-up must preserve a source disagreement and organism dependence.
+  Native SEEDED status remains appropriate.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/antibiotics/antibacterial/1-dodecylguanidine-acetate.yaml
+    sha256: ee34c895ea04fa9e16ac979e2a6770e87f9d32df7f314f21d52304130b8505fc
+    role: target
+  - path: data/antibiotics/antibacterial/1-dodecylguanidine.yaml
+    sha256: fbfb04047c3c297b6c7c6b32d2a2ffd02dc4e26fb2f854daf398f41ccbe279d3
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: reports/yaml_record_review/20260925T110608Z-1-dodecylguanidine-acetate.md
+    sha256: 7105981e370b6a0a66f1de8eed0ea75c277807427d894f97c16746a3d840ac9c
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:74889
+  path: data/antibiotics/antibacterial/1-dodecylguanidine-acetate.yaml
+  label: 1-dodecylguanidine acetate
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: One resolved generated AntibioticRecord, including all current assertions
+    and bounded literature-informed completeness checks.
+  selection: Fourth uncovered path from the coordinator path-ordered corpus queue;
+    exactly this target is assessed. Free-base and other chemical forms are context
+    only.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:74889
+  exclusions:
+  - target: CHEBI:74880 and other salts/derivatives
+    reason: Separate chemical identities; no findings or scientific verdict assigned
+      to them.
+checks:
+- check_id: schema
+  name: Single-record LinkML schema
+  status: passed
+  required: true
+  summary: No issues found.
+  target_ids:
+  - CHEBI:74889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/1-dodecylguanidine-acetate.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - focused-validation
+- check_id: strict
+  name: Single-record closed-schema validation
+  status: passed
+  required: true
+  summary: 1 file scanned; 0 ERROR rows.
+  target_ids:
+  - CHEBI:74889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/1-dodecylguanidine-acetate.yaml --out /private/tmp/am-review-session/004-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - focused-validation
+- check_id: identity-terms
+  name: Live identity, ontology relations and public registry checks
+  status: passed
+  required: true
+  summary: Official ChEBI, KEGG and PPDB inspected; exact salt and public structural
+    references agree.
+  target_ids:
+  - CHEBI:74889
+  evidence_ids:
+  - chebi
+  - kegg
+  - ppdb
+- check_id: xref-access
+  name: Independent access to remaining imported xrefs
+  status: unavailable
+  required: false
+  summary: Reaxys not independently inspected; Alan Wood and Espacenet/Google patent
+    URLs did not return readable source text. Their current presence in official ChEBI
+    was verified. No unsupported wrong-xref finding inferred.
+  target_ids:
+  - CHEBI:74889
+  evidence_ids:
+  - chebi
+- check_id: imodulondb
+  name: Structured expression-module adapter applicability
+  status: not_applicable
+  required: false
+  summary: The current record names no gene, protein, regulator, pathway or expression
+    dataset. Literature contextual genes are not assertions on this record; no iModulon
+    absence claim made.
+  target_ids:
+  - CHEBI:74889
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at test collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This is not a scientific
+    failure of this record.'
+  target_ids:
+  - CHEBI:74889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:74889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:74889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:74889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:74889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:74889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:74889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references. No invented per-record validator.
+  target_ids:
+  - CHEBI:74889
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/1-dodecylguanidine-acetate.yaml
+  locator: Entire YAML; chemical_structure, source_concepts and curation_history
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: Entire target read. A ChEBI-only SEEDED record for acetate salt CHEBI:74889,
+    with source version2026-08-30 and four seeder events. No mode, target, activity,
+    resistance, producer, clinical-status, graph, dataset or discussion assertions
+    are present. No activity-collection references need expansion.
+- evidence_id: raw-owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Row chebi_id=CHEBI:74889; data/raw/MANIFEST.yaml; scripts/extract_source_inventory.py:extract_chebi;
+    scripts/seed_from_sources.py:structure_from_chebi/build_record/merge_with_existing
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: Seed identity, structure, roles, parents, synonyms and xrefs match the
+    maintained row. The extractor stores ten PubMed leads without seeding claim evidence.
+    Manifest records the2026-08-30 retrieval. Seeder ownership preserves curator additions
+    and places patents in document_xrefs.
+- evidence_id: local-search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: Whole clone search and focused curation/reviews search
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: context_only
+  summary: Ignored-inclusive search found the target, adopted row, path lock, generated
+    views, discovery ledgers and historical ad hoc report. No exact-ID/key/minted-ID
+    match occurred in curation or reviews after excluding the queue; the entire target
+    independently confirms unpopulated mechanism/activity slots. These are bounded
+    local observations, not evidence that literature is absent.
+  search_scope: rg --no-ignore --hidden -l -F -e CHEBI:74889 -e '1-dodecylguanidine
+    acetate' -e 1-dodecylguanidine-acetate --glob '!.git/**' --glob '!.venv/**' .;
+    plus rg --no-ignore --hidden -n -F -e CHEBI:74889 -e antibioticmech:chebi-ebebb7bbfb
+    -e YIKWKLYQRFRGPM-UHFFFAOYSA-N curation reviews --glob '!*record_review_queue.tsv'.
+    Ignored and hidden content included; .git and .venv excluded. An intermediate
+    command naming nonexistent data/activities and data/activity_collections failed
+    and is not used to establish absence.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:74889
+  locator: Definition, structure, outgoing relations, names, manual xrefs and registry
+    numbers
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: Live ChEBI agrees on the exact acetate identity, net charge0, component
+    formula, SMILES, Standard InChI/InChIKey and masses. It resolves both parent CURIEs
+    and the role identifiers and lists all five registry xrefs plus both patents.
+    The neutral-component drawing is the identity authority representation of the
+    salt; it does not collapse this entry to the free base.
+- evidence_id: kegg
+  kind: database
+  reference: https://www.kegg.jp/entry/C18723
+  locator: Name, formula, mass, Other DBs and KCF structure
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: Live C18723 resolves to Dodine/dodecylguanidine acetate, formula C13H29N3.C2H4O2,
+    exact mass287.2573, molecular weight287.44, CAS2439-10-3 and ChEBI74889. The structure
+    includes both components.
+- evidence_id: ppdb
+  kind: database
+  reference: https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/263.htm
+  locator: General information and chemical structure, lines84–131
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: Report263 resolves to Dodine with the matching Standard InChI/InChIKey
+    and CAS2439-10-3; collapsed formula C15H33N3O2 equals the record component formula.
+    Its membrane-disruption description is database context, not claim-level experimental
+    proof.
+- evidence_id: salt-boundary
+  kind: record_content
+  reference: data/antibiotics/antibacterial/1-dodecylguanidine.yaml
+  locator: Identity and chemical_structure; data/raw/chebi_antimicrobials.tsv adjacent
+    CHEBI:74880 row
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: The adjacent free base has distinct identifier CHEBI:74880, CAS112-65-2,
+    formula C13H29N3 and key HILAYQUKKYWPJW-UHFFFAOYSA-N. It is context only, not
+    a second reviewed target. This review does not transfer its evidence to the acetate.
+- evidence_id: rubric
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: What a REVIEWED record means; correcting/vetoing mode; evidence rules;
+    conf/sources.yaml role_to_class; native review-checklist
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: Native sign-off requires checked identity, structure, roles and mechanism.
+    Classification provenance can come from ChEBI without record-level citations.
+    Optional slots are not uniformly mandatory. Antibacterial priority2 outranks antifungal
+    priority3 while all activity roles remain represented. Mechanism curation owns
+    its scope/notes and must use the native writer and curation event.
+- evidence_id: membrane-1991
+  kind: primary_source
+  reference: PMID:1902648
+  locator: https://pubmed.ncbi.nlm.nih.gov/1902648/ — title, DOI and abstract
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: The exact monoacetate was tested in Pseudomonas syringae ATCC12271. The
+    abstract reports death and leakage of potassium, UV-absorbing substances and ribose-containing
+    material, interpreting extensive cytoplasmic-membrane damage. DOI10.1128/AAC.35.2.341
+    verified. Full-text PMC attempts returned browser challenges; no assay-table extraction
+    performed.
+- evidence_id: membrane-1992
+  kind: primary_source
+  reference: PMID:1381663
+  locator: https://pubmed.ncbi.nlm.nih.gov/1381663/ — abstract; DOI10.1139/m92-019
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: Exact monoacetate treatment of P. syringae at50 µM produced RNA release
+    and lysis, with concentration-dependent cytoplasmic coagulation and membrane changes.
+    The abstract attributes antibacterial action mainly to surfactant micelles. The
+    observed cell effects and that interpretation must remain separate; the latter
+    relies on a CMC claim challenged by later work.
+- evidence_id: membrane-1993
+  kind: primary_source
+  reference: PMID:8229668
+  locator: https://pubmed.ncbi.nlm.nih.gov/8229668/ — abstract; DOI10.1002/jobm.3620330402
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: Exact monoacetate produced concentration-dependent potassium/phosphate
+    leakage and respiratory changes in P. syringae. The authors infer greater micellar
+    damage using an earlier aggregation threshold above25 µM. The abstract supports
+    measured leakage, not direct binding to a named respiratory protein; its micelle
+    premise is disputed by the later conductivity study.
+- evidence_id: cmc-disagreement
+  kind: primary_source
+  reference: PMID:17617418
+  locator: https://pubmed.ncbi.nlm.nih.gov/17617418/ — abstract; DOI10.1016/j.jcis.2007.06.038
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: refutes
+  summary: 'This experimental comment contests the earlier20–30 µM CMC: conductivity
+    showed no micelle formation up to several hundred µM at25°C, a Krafft temperature
+    near52°C and a9.5mM CMC at54°C. It challenges the micelle explanation without
+    refuting measured bacterial leakage. Conditions differ and require full-paper
+    comparison before reconciliation.'
+- evidence_id: fungal-1977
+  kind: primary_source
+  reference: PMID:200325
+  locator: https://pubmed.ncbi.nlm.nih.gov/200325/ — abstract
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: The exact acetate was tested on Fusarium sulphureum isolate1 macroconidia.
+    The abstract reports concentration-dependent permeability/transport changes and
+    lysis, supporting a bounded fungal-membrane claim. It does not establish a universal
+    fungal target or a discrete binding protein.
+- evidence_id: fungal-2020
+  kind: primary_source
+  reference: DOI:10.1016/j.fgb.2020.103414
+  locator: https://www.researchgate.net/publication/341724715_The_fungicide_dodine_primarily_inhibits_mitochondrial_respiration_in_Ustilago_maydis_but_also_affects_plasma_membrane_integrity_and_endocytosis_which_is_not_found_in_Zymoseptoria_tritici
+    — author journal preproof Results/Discussion pp4–10 and Methods pp11–16; PubMed32474016
+    DOI confirmed
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: Primary source text inspected beyond the abstract. Methods name Sigma dodine,
+    methanol controls and U. maydis/ Z. tritici strains. U. maydis mitochondrial depolarization
+    occurred at lower concentrations than endocytosis inhibition; corresponding plasma-membrane
+    effects differed between the fungi. Fimbrin mislocalization is not evidence of
+    direct binding. This supports organism-specific mechanistic curation; the preproof
+    version and absent supplementary tables limit extraction.
+- evidence_id: fungal-activity
+  kind: primary_source
+  reference: PMID:23175430
+  locator: https://pubmed.ncbi.nlm.nih.gov/23175430/ — abstract; DOI10.1002/ps.3434
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: The study reports dodine efficacy against cherry leaf spot and Blumeriella
+    jaapii isolate MICs spanning0.05–400 µg active ingredient/mL, with orchard isolates
+    less sensitive than baseline isolates. Abstract-level ranges do not identify individual
+    observations or supply complete assay conditions and do not establish a genetic
+    resistance mechanism.
+- evidence_id: combination-activity
+  kind: primary_source
+  reference: PMID:7356304
+  locator: https://pubmed.ncbi.nlm.nih.gov/7356304/ — English abstract
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: Exact acetate increased activity of several antibiotic combinations but
+    not the streptomycin combination. These combination responses are not dodine-alone
+    MICs; enhanced penetration is an interpretation, not a protein binding result.
+- evidence_id: other-citations
+  kind: database
+  reference: PubMed:13761521,21391507,4077947,7464578,9397185
+  locator: https://pubmed.ncbi.nlm.nih.gov/13761521/; https://pubmed.ncbi.nlm.nih.gov/21391507/;
+    https://pubmed.ncbi.nlm.nih.gov/4077947/; https://pubmed.ncbi.nlm.nih.gov/7464578/;
+    https://pubmed.ncbi.nlm.nih.gov/9397185/ — metadata/available abstracts
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: context_only
+  summary: Remaining adopted leads resolve to dodine toxicology, residue analysis,
+    or antimicrobial-property metadata. The13761521,4077947 and7464578 records have
+    no abstract; their titles are not used to infer assay results. All ten adopted
+    PMID leads resolve, but they do not collectively support every antimicrobial claim.
+- evidence_id: historical
+  kind: prior_review
+  reference: reports/yaml_record_review/20260925T110608Z-1-dodecylguanidine-acetate.md
+  locator: Read-only discovery context
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: context_only
+  summary: Historical unstructured report supplied literature leads. It is neither
+    validated coverage nor reused scientific proof. This review independently inspected
+    the current target and source texts, and explicitly records the CMC disagreement.
+- evidence_id: focused-validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Commands and results executed in isolated clone; strict TSV /private/tmp/am-review-session/004-validation.tsv
+  accessed_at: '2026-10-21T06:43:19Z'
+  support: supports
+  summary: 'Both focused commands exited0: LinkML reported no issues; strict validation
+    scanned1 file with0 error rows. This proves representation gates, not scientific
+    support.'
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact acetate salt and free-base boundary
+  outcome: supported
+  summary: The source authority, adopted structure and independent registries agree.
+    The separate free-base record must remain distinct. Neutral disconnected components/net-zero
+    charge reproduce the adopted salt representation, not an identity error.
+  target_ids:
+  - CHEBI:74889
+  evidence_ids:
+  - record
+  - raw-owner
+  - chebi
+  - kegg
+  - ppdb
+  - salt-boundary
+- assessment_id: classification
+  area: grounding
+  topic: Parents, retained roles and filing class
+  outcome: supported
+  summary: Both parent CURIEs are broader ontology classes. ANTIBACTERIAL follows
+    repository priority while retaining antifungal agent and agrochemical roles. Primary
+    bacterial and fungal studies support the broad source classification without implying
+    a species-wide spectrum.
+  target_ids:
+  - CHEBI:74889
+  evidence_ids:
+  - chebi
+  - rubric
+  - membrane-1991
+  - fungal-1977
+- assessment_id: equivalence
+  area: scope
+  topic: Chemical versus document references
+  outcome: supported
+  summary: CAS, KEGG and PPDB denote the salt. Patents are correctly kept as document_xrefs
+    rather than exact chemical identity. Reaxys and remaining external destinations
+    retain a stated verification limitation.
+  target_ids:
+  - CHEBI:74889
+  evidence_ids:
+  - record
+  - chebi
+  - kegg
+  - ppdb
+- assessment_id: mechanism
+  area: completeness
+  topic: Compound-specific mechanism readiness
+  outcome: concern
+  summary: 'An actionable mechanism review remains: bacterial membrane observations,
+    competing aggregation interpretations and organism-dependent fungal effects require
+    scoped curation. No incorrect mechanism is currently asserted.'
+  target_ids:
+  - CHEBI:74889
+  evidence_ids:
+  - record
+  - membrane-1991
+  - membrane-1992
+  - membrane-1993
+  - cmc-disagreement
+  - fungal-2020
+  dimensions:
+  - name: evidence_scope
+    value: Pseudomonas syringae; Fusarium sulphureum isolate1; Ustilago maydis; Zymoseptoria
+      tritici
+    definition: Organisms represented by inspected experiments; not a complete susceptibility
+      spectrum
+    evidence_ids:
+    - membrane-1991
+    - fungal-1977
+    - fungal-2020
+- assessment_id: activity
+  area: completeness
+  topic: Activity and resistant-isolate curation readiness
+  outcome: concern
+  summary: Specific source experiments provide a bounded opportunity for activity
+    extraction. The reported population range and antibiotic-combination effects cannot
+    be copied as one strain-independent MIC, genetic resistance route or universal
+    cidality.
+  target_ids:
+  - CHEBI:74889
+  evidence_ids:
+  - record
+  - fungal-activity
+  - combination-activity
+- assessment_id: other-claims
+  area: evidence
+  topic: Unpopulated optional targets, graphs, producers, clinical status and datasets
+  outcome: not_applicable
+  summary: The record asserts none of these objects, so there is no unsupported object-level
+    evidence to repair. No blanket completeness flaw is assigned to optional empty
+    fields. New target or causal-edge assertions would need their own primary evidence.
+  target_ids:
+  - CHEBI:74889
+  evidence_ids:
+  - record
+  - rubric
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained input ownership and history
+  outcome: supported
+  summary: Record fields match the adopted ChEBI row and seeder path. SEEDED status
+    and seeder-only history are appropriate; this review is not curation or scientific-status
+    promotion. Historical prose is discovery context only.
+  target_ids:
+  - CHEBI:74889
+  evidence_ids:
+  - record
+  - raw-owner
+  - historical
+- assessment_id: schema
+  area: schema
+  topic: Focused validation
+  outcome: supported
+  summary: Both documented single-record validation recipes passed. Shared corpus
+    results and the full-QC platform failure are recorded separately.
+  target_ids:
+  - CHEBI:74889
+  evidence_ids:
+  - focused-validation
+findings:
+- finding_id: F1
+  issue_key: chebi-74889-scoped-mechanism-curation
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Known mechanisms remain uncurated and require organism and controversy context
+  description: The absence of a mode/curator decision is a bounded readiness gap because
+    exact-compound primary papers are available. Future curation must preserve the
+    disagreement over the micellar explanation and the differing fungal responses.
+    No scientific error is inferred merely from an optional blank; the present record
+    correctly remains SEEDED.
+  target_ids:
+  - CHEBI:74889
+  field_paths:
+  - mode_of_action
+  - mode_of_action_notes
+  - mode_of_action_target_scope
+  evidence_ids:
+  - record
+  - rubric
+  - membrane-1991
+  - membrane-1993
+  - cmc-disagreement
+  - fungal-2020
+  rule_id: native-review-checklist:Mode of action; docs/CURATION.md:REVIEWED criterion4
+  native_severity: minor completeness/readiness gap
+  normalization_reason: Specific available primary evidence makes follow-up actionable;
+    no wrong identity, unsupported asserted mechanism, required seeded field violation
+    or status inflation warrants major/blocker severity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/1-dodecylguanidine-acetate.yaml
+    role: Curator-owned mechanism, evidence and activity additions preserved by seeding;
+      native validated writer and curation event required
+- finding_id: F2
+  issue_key: chebi-74889-activity-extraction
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Exact-salt activity studies provide an uncurated assay-specific follow-up
+  description: The current activity list is empty despite identified exact-salt experiments.
+    Full methods and isolate rows are still needed before extracting quantitative
+    observations. This is a limited enrichment opportunity, not invalidity of the
+    ChEBI seed or evidence for a species-wide resistance claim.
+  target_ids:
+  - CHEBI:74889
+  field_paths:
+  - activity_spectrum
+  evidence_ids:
+  - record
+  - fungal-activity
+  - combination-activity
+  - rubric
+  rule_id: native-review-checklist:Activity
+  native_severity: minor completeness/readiness gap
+  normalization_reason: Only identified evidence-backed enrichment is proposed; optional
+    fields are not made universally mandatory.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/1-dodecylguanidine-acetate.yaml
+    role: Curator-owned mechanism, evidence and activity additions preserved by seeding;
+      native validated writer and curation event required
+actions:
+- action_id: A1
+  description: Inspect accessible complete bacterial papers and reconcile the CMC
+    measurements under their actual assay conditions; curate an explicitly scoped
+    mechanism or rationale for retaining a blank. Preserve distinct fungal effects
+    and avoid asserting direct binding from leakage, respiration or fimbrin-localization
+    measurements.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:74889
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/1-dodecylguanidine-acetate.yaml
+    role: Curator-owned mechanism, evidence and activity additions preserved by seeding;
+      native validated writer and curation event required
+  acceptance_checks:
+  - Every proposed mode/edge identifies exact salt, organism, condition and primary
+    citation; observed effects remain separate from disputed micellar interpretation.
+  - Curator-owned notes and target-scope rationale follow docs/CURATION.md; each new
+    molecular-target or causal-edge object has its own evidence.
+  - Use record_curation_event and write_validated_antibiotic; run just validate-strict
+    on the record, just verify-corpus --summary and just qc.
+  generator: Native curated-field writer; scripts/seed_from_sources.py merge preserves
+    curator ownership
+- action_id: A2
+  description: Obtain full methods and isolate-level data for the identified activity
+    studies, then add only reconstructable observations with units, assay, active-ingredient
+    basis and organism/isolate context. Keep combination responses distinct from monotherapy
+    and phenotype shifts distinct from genetic mechanisms.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:74889
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/1-dodecylguanidine-acetate.yaml
+    role: Curator-owned mechanism, evidence and activity additions preserved by seeding;
+      native validated writer and curation event required
+  acceptance_checks:
+  - Each observation has its own source citation and a verifiable assay/value/unit/qualifier
+    mapping; no abstract population range becomes a single isolate observation.
+  - Exact acetate identity and combination context are retained.
+  - Use native validated writer and accurate curation event; focused strict, reproducibility
+    and QC gates pass.
+limitations:
+- Older primary papers were inspected at abstract level. The2020 author preproof Results/Discussion
+  and Methods were inspected, but supplements and final PMC text were not accessible;
+  no quantitative activity rows were curated.
+- Direct independent Reaxys, Alan Wood pesticide-page and patent-document verification
+  was unavailable. Current official ChEBI links were checked; this limitation does
+  not prove incorrect references.
+- Bounded searches and inspected sources do not prove absence of other activity, targets,
+  resistance, producer or dataset evidence. No paid research was used.
+- Authoritative just qc failed during collection because the pinned SciPy 1.15.3 native
+  library has an invalid Mach-O section on this platform; identical pinned version
+  also failed under Python 3.10. No dependency versions were changed. Full closed-schema,
+  reproduction and corpus-integrity gates passed independently; these do not replace
+  full QC.
+notes:
+- Access timestamps are actual clock captures after source inspection; they do not
+  claim per-request start times.
+- All original provenance hashes and the Git base were verified unchanged when additional
+  local context was captured through inspect.
+- The historical ad hoc review is not a structured previous occurrence; no finding
+  closure or structured review lineage is claimed.
+- Bundle completion is partial because full repository QC is not available on this
+  runtime; the selected record was read and assessed in full. A saved review does
+  not promote scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:74889
+- https://www.kegg.jp/entry/C18723
+- https://pubmed.ncbi.nlm.nih.gov/17617418/
+- https://pubmed.ncbi.nlm.nih.gov/32474016/
+tags:
+- antibacterial
+- acetate-salt
+- seeded
+- mechanism-review

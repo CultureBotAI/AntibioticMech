@@ -1,0 +1,762 @@
+# Review of CHEBI:66636 (14-norpseurotin A)
+
+- Review: 20261021T065333Z-14-norpseurotin-a-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T06:46:37Z
+- Finished UTC: 2026-10-21T06:53:33Z
+- Reviewer: Codex agent review002 (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Exact identity, stereochemistry, class and retained roles agree with official ChEBI, and both documented per-record validators pass. The source-linked primary publications support fungal isolation and antibacterial, antileishmanial and cancer-cell assay activities. They do not establish a molecular antimicrobial mechanism or clinical benefit. A bounded optional enrichment opportunity remains. Scientific content is supported within stated limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+All fields of one generated record, maintained ChEBI row/configuration and generator ownership, official identifiers, both source-linked primary abstracts, and the full free 2012 primary paper.
+
+Selection: Ninth path-ordered unreviewed target assigned by the parent task; original inspect and start captures preserved.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:66636 | data/antibiotics/antibacterial/14-norpseurotin-a.yaml | generated | 14-norpseurotin A |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented per-record LinkML validation | passed | True | CHEBI:66636 | Exit 0; No issues found. |
+| Documented per-record closed-schema validation | passed | True | CHEBI:66636 | Exit 0; one file scanned; zero ERROR rows. |
+| Independent RDKit structure and internal identifier consistency | passed | False | CHEBI:66636 | SMILES and InChI reproduce the recorded key, formula, charge and masses; five assigned stereocenters and one fragment; minted ID reproduced. |
+| Structured expression-module adapter applicability | not_applicable | False | CHEBI:66636 | No named gene, protein, regulator, pathway, stress response or expression dataset is asserted. iModulonDB is not applicable and this does not supply negative evidence. |
+| Authoritative full QC | failed | True | CHEBI:66636 | Exited 2 at test collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This is not a scientific failure of this record. |
+| Generated corpus reproduction | passed | True | CHEBI:66636 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:66636 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Full closed-schema validation | passed | True | CHEBI:66636 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:66636 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:66636 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:66636 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:66636 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. No invented per-record validator. |
+
+## Scientific And Domain Assessments
+
+### Exact structure, names and stereochemistry
+
+identity: supported. Targets: CHEBI:66636.
+
+Official identity and independent chemistry agree. The exact molecule is compound 4 in 2008 and compound 2 in 2012; neither pseurotin A nor another analogue was substituted.
+
+### Parents and registry references
+
+grounding: supported. Targets: CHEBI:66636.
+
+All five parent identifiers label broader chemical classes matching the molecular features. Registry numbers agree with ChEBI, with independent registry access limited.
+
+### Antibacterial filing and retained antileishmanial activity
+
+evidence: supported. Targets: CHEBI:66636.
+
+Both activities are supported by the primary sources. Filing priority correctly preserves ANTIBACTERIAL while retaining the additional role. No clinical-efficacy conclusion follows.
+
+### Definition and experimental scope
+
+evidence: supported. Targets: CHEBI:66636.
+
+The 14-nor relationship and fungal isolation agree with official identity and primary text. Anticancer wording is supported as in-vitro cancer-cell cytotoxicity, with no approved-treatment assertion.
+
+### Molecular mode and target
+
+completeness: unknown. Targets: CHEBI:66636.
+
+No exact antimicrobial molecular mechanism is established or represented here. The 2012 authors propose mechanism work; their background statements about related pseurotins must not populate this record. Native REVIEWED criteria remain unmet.
+
+### Activity measurements, resistance, producer, graph and datasets
+
+representation: not_applicable. Targets: CHEBI:66636.
+
+Optional structured objects are absent without violating schema. Primary assay evidence creates an enrichment opportunity; strains/methods need inspection before encoding bacterial MICs, and no resistance determinant is inferred.
+
+### Source ownership and history
+
+ownership: supported. Targets: CHEBI:66636.
+
+SEEDED and the three seed/reseed events accurately preserve generated provenance. Fungal isolation is not converted into an unreviewed biosynthetic gene claim.
+
+### Per-record gates and chemistry consistency
+
+schema: supported. Targets: CHEBI:66636.
+
+Both documented validators and chemical-identity assertions pass; none of these checks substitutes for molecular-mechanism review.
+
+## Findings
+
+### F1: Supported primary activities remain an optional enrichment opportunity
+
+informational / open / confirmed; issue key: chebi-66636-primary-activity-evidence-enrichment.
+
+The definition is supported, but the record contains no claim-level evidence or activity observations. Separately authorized curation can preserve the primary experimental context and explicitly leave molecular mechanism unresolved. This is an optional-field opportunity, not a schema error or contradiction.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+In a separately authorized curation pass, add narrow primary evidence and suitable assay observations through the native validated writer. Inspect the 2008 full methods before encoding bacterial MIC context; preserve the 2012 parasite/cancer-cell experimental scope. Keep mechanism unresolved unless an exact-compound primary target experiment is inspected.
+
+- Primary citations resolve to the exact compound numbers and organism/assay scope; no result for a different pseurotin is transferred.
+- Any bacterial MIC observation retains units, organism/strain and methods from inspected source text; no resistance category is inferred from these values.
+- Any parasite IC50 unit is confirmed from the full table/methods before encoding; cancer-cell cytotoxicity is not represented as clinical efficacy.
+- The native writer appends a curation event and passes just validate, just validate-strict, just verify-corpus --summary and just qc; SEEDED is retained until all native REVIEWED gates are met.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/14-norpseurotin-a.yaml; Entire generated AntibioticRecord | supports | Read exact identity, definition, systematic synonym, five parents, two roles, structure, two cross-references, source concept and three history events. No mechanism, target, activity observation, resistance, structured producer, clinical, graph or dataset assertion is present. |
+| inventory | data/raw/chebi_antimicrobials.tsv; Complete CHEBI:66636 row and header | supports | The in-scope 3-star ChEBI row carries the same definition, structure, parents, synonyms, xrefs and roles. PMID:18505285 and PMID:22474943 are source literature leads; mechanism_role_ids is empty. No maintained override matched the inclusive search. |
+| ownership | scripts/seed_from_sources.py; mint, structure_from_chebi, build_concepts and build_record; scripts/extract_source_inventory.py; conf/sources.yaml; data/raw/MANIFEST.yaml; docs/CURATION.md | supports | Source roles are filtered to the supported antimicrobial scope and antibacterial filing has priority over antiprotozoal activity. Identity/definition remain maintained source fields; added primary evidence, assays and mechanism notes require the native validated record writer. Source version matches retrieval metadata. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:66636; Full official entry accessed through antibacterial-role incoming link | supports | Identity, stereospecific structure, systematic synonym, five broader parents and both retained activity roles match. ChemSpider 23329509 and Reaxys 18842462 are listed. The entry supports the 14-nor relationship and fungal-isolation context; additional metabolite/antineoplastic roles fall outside the selected antimicrobial role inventory. |
+| parent-alkaloid | https://www.ebi.ac.uk/chebi/CHEBI:22315; Definition | supports | The parent denotes alkaloid and includes biogenetically related neutral nitrogen compounds; it is a broader class, not an exact identity substitute. |
+| parent-azaspiro | https://www.ebi.ac.uk/chebi/CHEBI:35624; Definition and incoming CHEBI:66636 relation | supports | The parent is azaspiro compound, with a nitrogen heterocyclic spiro component; official child relation agrees. |
+| parent-oxaspiro | https://www.ebi.ac.uk/chebi/CHEBI:37948; Definition and incoming CHEBI:66636 relation | supports | The parent is oxaspiro compound, with an oxygen heterocyclic spiro component; official child relation agrees. |
+| parent-alcohol | https://www.ebi.ac.uk/chebi/CHEBI:35681; Definition | supports | The parent denotes secondary alcohol; the structure has the requisite hydroxy-substituted saturated carbons. |
+| parent-lactam | https://www.ebi.ac.uk/chebi/CHEBI:66636; Outgoing relation to CHEBI:24995 | supports | The official exact-compound entry labels CHEBI:24995 lactam and asserts the broader relation. Its standalone page requests failed; the cyclic amide is also visible in the molecular encoding. |
+| role-antibacterial | https://www.ebi.ac.uk/chebi/CHEBI:33282; Definition and incoming CHEBI:66636 relation | supports | Identifier resolves to antibacterial agent and explicitly lists the compound. |
+| role-antileishmanial | https://www.ebi.ac.uk/chebi/CHEBI:70868; Definition and incoming CHEBI:66636 relation | supports | Identifier resolves to antileishmanial agent and explicitly lists the compound. This ontology role does not establish clinical use. |
+| primary2008 | PMID:18505285; PubMed abstract and metadata; DOI:10.1021/np700737g | supports | Names the exact molecule as compound 4 isolated from marine-derived Aspergillus sydowi PFW1-13. Compound 4 MICs are 3.74, 14.97 and 7.49 micromolar against Escherichia coli, Bacillus subtilis and Micrococcus lysoleikticus, respectively (last name retained as printed). The full bacterial assay methods were not accessible. |
+| primary2012 | DOI:10.1177/1934578X1200700207; https://journals.sagepub.com/doi/pdf/10.1177/1934578X1200700207; pp.165-168, compound identification, Tables 2-3 and bioassays; matching PubMed:22474943 abstract | supports | Full primary text identifies compound 2 as 14-norpseurotin A from Aspergillus sp. F1544. It reports Leishmania donovani growth inhibition and MCF-7 cytotoxicity, with 17.6 micromolar MCF-7 IC50. Leishmania assays used axenic amastigotes and PicoGreen. The discussion treats mechanism as future work; related pseurotin activities are background, not an exact-compound target claim. |
+| chemistry | RDKit and hashlib local calculation; /private/tmp/am-review-session/009-chemistry.py; 009-structure.json | supports | Both encodings yield FCGCMRDADMTJIM-LFDIKFNASA-N; C21H23NO8; charge 0; average mass 417.414; exact mass 417.142366696; one fragment and five assigned stereocenters. Minted ID antibioticmech:chebi-58998cbca9 agrees. |
+| validation | just validate; just validate-strict; /private/tmp/am-review-session/009-validate.log; 009-strict.log; 009-strict.tsv | supports | Both documented checks exited 0; strict validator scanned one file with no error rows. |
+| search | Inclusive repository search and bounded free source retrieval; /private/tmp/am-review-session/009-inclusive-search.txt; 009-owner-search.txt; web search on review date | context_only | No matching decision/curator override was found. Historical research and generated pages were treated only as leads. Exact-compound mechanism searches did not supply an inspected primary antimicrobial target experiment; this does not prove that no such evidence exists. |
+
+## Limits And Additional Notes
+
+- 2008 full text was inaccessible; its abstract verifies exact-compound MICs and isolation but does not supply full strain/method detail. No structured MIC curation was performed.
+- 2012 publisher PDF text was inspected in full. Table 2 lists parasite values without an explicit unit in its text header; no numeric parasite IC50 is normalized here. Table 3 explicitly labels the MCF-7 values in micromolar.
+- Direct ChemSpider access returned403 and Reaxys was not independently accessed; xrefs are corroborated by official ChEBI. Standalone lactam page failed; its identifier/label/relation is verified on the exact compound page.
+- Bounded mechanism searches do not establish an exhaustive absence of literature.
+- Authoritative just qc failed during collection because the pinned SciPy 1.15.3 native library has an invalid Mach-O section on this platform; identical pinned version also failed under Python 3.10. No dependency versions were changed. Full closed-schema, reproduction and corpus-integrity gates passed independently; these do not replace full QC.
+- Original parent-captured 009-inspect.json and 009-start.txt were preserved. No source record, maintained input, generated product or curation history was modified.
+- Bundle completion is partial because full repository QC is not available on this runtime; the selected record was read and assessed in full. A saved review does not promote scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T065333Z-14-norpseurotin-a-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of CHEBI:66636 (14-norpseurotin A)
+started_at: '2026-10-21T06:46:37Z'
+finished_at: '2026-10-21T06:53:33Z'
+reviewer:
+  identity: Codex agent review002
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring this generated
+    record. Parent captured the target and provenance before assessment; this agent
+    preserved that capture and independently inspected the record and sources.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: SEEDED identity and activity supported; mechanism unresolved and claim-level
+  enrichment remains optional follow-up
+scientific_review: true
+summary: Exact identity, stereochemistry, class and retained roles agree with official
+  ChEBI, and both documented per-record validators pass. The source-linked primary
+  publications support fungal isolation and antibacterial, antileishmanial and cancer-cell
+  assay activities. They do not establish a molecular antimicrobial mechanism or clinical
+  benefit. A bounded optional enrichment opportunity remains. Scientific content is
+  supported within stated limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/14-norpseurotin-a.yaml
+    sha256: 2d7f62ee2c0a4192f8d3b9e8bb277611727a44fcc6b918a205b53790384b60ae
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: All fields of one generated record, maintained ChEBI row/configuration
+    and generator ownership, official identifiers, both source-linked primary abstracts,
+    and the full free 2012 primary paper.
+  selection: Ninth path-ordered unreviewed target assigned by the parent task; original
+    inspect and start captures preserved.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:66636
+targets:
+- target_id: CHEBI:66636
+  path: data/antibiotics/antibacterial/14-norpseurotin-a.yaml
+  label: 14-norpseurotin A
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: schema
+  name: Documented per-record LinkML validation
+  status: passed
+  required: true
+  summary: Exit 0; No issues found.
+  target_ids:
+  - CHEBI:66636
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/14-norpseurotin-a.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented per-record closed-schema validation
+  status: passed
+  required: true
+  summary: Exit 0; one file scanned; zero ERROR rows.
+  target_ids:
+  - CHEBI:66636
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/14-norpseurotin-a.yaml --out /private/tmp/am-review-session/009-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Independent RDKit structure and internal identifier consistency
+  status: passed
+  required: false
+  summary: SMILES and InChI reproduce the recorded key, formula, charge and masses;
+    five assigned stereocenters and one fragment; minted ID reproduced.
+  target_ids:
+  - CHEBI:66636
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/009-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: imodulondb
+  name: Structured expression-module adapter applicability
+  status: not_applicable
+  required: false
+  summary: No named gene, protein, regulator, pathway, stress response or expression
+    dataset is asserted. iModulonDB is not applicable and this does not supply negative
+    evidence.
+  target_ids:
+  - CHEBI:66636
+  evidence_ids:
+  - record
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at test collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This is not a scientific
+    failure of this record.'
+  target_ids:
+  - CHEBI:66636
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:66636
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:66636
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:66636
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:66636
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:66636
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:66636
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references. No invented per-record validator.
+  target_ids:
+  - CHEBI:66636
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/14-norpseurotin-a.yaml
+  locator: Entire generated AntibioticRecord
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: Read exact identity, definition, systematic synonym, five parents, two
+    roles, structure, two cross-references, source concept and three history events.
+    No mechanism, target, activity observation, resistance, structured producer, clinical,
+    graph or dataset assertion is present.
+- evidence_id: inventory
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Complete CHEBI:66636 row and header
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: The in-scope 3-star ChEBI row carries the same definition, structure, parents,
+    synonyms, xrefs and roles. PMID:18505285 and PMID:22474943 are source literature
+    leads; mechanism_role_ids is empty. No maintained override matched the inclusive
+    search.
+- evidence_id: ownership
+  kind: record_content
+  reference: scripts/seed_from_sources.py
+  locator: mint, structure_from_chebi, build_concepts and build_record; scripts/extract_source_inventory.py;
+    conf/sources.yaml; data/raw/MANIFEST.yaml; docs/CURATION.md
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: Source roles are filtered to the supported antimicrobial scope and antibacterial
+    filing has priority over antiprotozoal activity. Identity/definition remain maintained
+    source fields; added primary evidence, assays and mechanism notes require the
+    native validated record writer. Source version matches retrieval metadata.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:66636
+  locator: Full official entry accessed through antibacterial-role incoming link
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: Identity, stereospecific structure, systematic synonym, five broader parents
+    and both retained activity roles match. ChemSpider 23329509 and Reaxys 18842462
+    are listed. The entry supports the 14-nor relationship and fungal-isolation context;
+    additional metabolite/antineoplastic roles fall outside the selected antimicrobial
+    role inventory.
+- evidence_id: parent-alkaloid
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:22315
+  locator: Definition
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: The parent denotes alkaloid and includes biogenetically related neutral
+    nitrogen compounds; it is a broader class, not an exact identity substitute.
+- evidence_id: parent-azaspiro
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:35624
+  locator: Definition and incoming CHEBI:66636 relation
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: The parent is azaspiro compound, with a nitrogen heterocyclic spiro component;
+    official child relation agrees.
+- evidence_id: parent-oxaspiro
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:37948
+  locator: Definition and incoming CHEBI:66636 relation
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: The parent is oxaspiro compound, with an oxygen heterocyclic spiro component;
+    official child relation agrees.
+- evidence_id: parent-alcohol
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:35681
+  locator: Definition
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: The parent denotes secondary alcohol; the structure has the requisite hydroxy-substituted
+    saturated carbons.
+- evidence_id: parent-lactam
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:66636
+  locator: Outgoing relation to CHEBI:24995
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: The official exact-compound entry labels CHEBI:24995 lactam and asserts
+    the broader relation. Its standalone page requests failed; the cyclic amide is
+    also visible in the molecular encoding.
+- evidence_id: role-antibacterial
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:33282
+  locator: Definition and incoming CHEBI:66636 relation
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: Identifier resolves to antibacterial agent and explicitly lists the compound.
+- evidence_id: role-antileishmanial
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:70868
+  locator: Definition and incoming CHEBI:66636 relation
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: Identifier resolves to antileishmanial agent and explicitly lists the compound.
+    This ontology role does not establish clinical use.
+- evidence_id: primary2008
+  kind: primary_source
+  reference: PMID:18505285
+  locator: PubMed abstract and metadata; DOI:10.1021/np700737g
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: Names the exact molecule as compound 4 isolated from marine-derived Aspergillus
+    sydowi PFW1-13. Compound 4 MICs are 3.74, 14.97 and 7.49 micromolar against Escherichia
+    coli, Bacillus subtilis and Micrococcus lysoleikticus, respectively (last name
+    retained as printed). The full bacterial assay methods were not accessible.
+- evidence_id: primary2012
+  kind: primary_source
+  reference: DOI:10.1177/1934578X1200700207
+  locator: https://journals.sagepub.com/doi/pdf/10.1177/1934578X1200700207; pp.165-168,
+    compound identification, Tables 2-3 and bioassays; matching PubMed:22474943 abstract
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: Full primary text identifies compound 2 as 14-norpseurotin A from Aspergillus
+    sp. F1544. It reports Leishmania donovani growth inhibition and MCF-7 cytotoxicity,
+    with 17.6 micromolar MCF-7 IC50. Leishmania assays used axenic amastigotes and
+    PicoGreen. The discussion treats mechanism as future work; related pseurotin activities
+    are background, not an exact-compound target claim.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit and hashlib local calculation
+  locator: /private/tmp/am-review-session/009-chemistry.py; 009-structure.json
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: Both encodings yield FCGCMRDADMTJIM-LFDIKFNASA-N; C21H23NO8; charge 0;
+    average mass 417.414; exact mass 417.142366696; one fragment and five assigned
+    stereocenters. Minted ID antibioticmech:chebi-58998cbca9 agrees.
+  snapshot_sha256: 6a44ff6ee2fe43436123015c802423413572f81c38412612b1f3f415d7f94b70
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: /private/tmp/am-review-session/009-validate.log; 009-strict.log; 009-strict.tsv
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: supports
+  summary: Both documented checks exited 0; strict validator scanned one file with
+    no error rows.
+- evidence_id: search
+  kind: search
+  reference: Inclusive repository search and bounded free source retrieval
+  locator: /private/tmp/am-review-session/009-inclusive-search.txt; 009-owner-search.txt;
+    web search on review date
+  accessed_at: '2026-10-21T06:51:26Z'
+  support: context_only
+  summary: No matching decision/curator override was found. Historical research and
+    generated pages were treated only as leads. Exact-compound mechanism searches
+    did not supply an inspected primary antimicrobial target experiment; this does
+    not prove that no such evidence exists.
+  search_scope: 'rg --no-ignore --hidden -n searched CHEBI:66636, 14-norpseurotin
+    and the slug across working files including ignored/hidden files, excluding only
+    .git and .venv. Maintained tables were also searched for antibioticmech:chebi-58998cbca9.
+    Web queries: exact compound plus mechanism; full 2008 title plus full text. PubMed
+    abstracts and the free 2012 publisher PDF text were inspected. ACS full-page retrieval
+    and ChemSpider returned403; downloaded PDF attempt returned403, while the web
+    PDF text succeeded.'
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact structure, names and stereochemistry
+  outcome: supported
+  summary: Official identity and independent chemistry agree. The exact molecule is
+    compound 4 in 2008 and compound 2 in 2012; neither pseurotin A nor another analogue
+    was substituted.
+  target_ids:
+  - CHEBI:66636
+  evidence_ids:
+  - record
+  - inventory
+  - chebi
+  - chemistry
+  - primary2008
+  - primary2012
+- assessment_id: grounding
+  area: grounding
+  topic: Parents and registry references
+  outcome: supported
+  summary: All five parent identifiers label broader chemical classes matching the
+    molecular features. Registry numbers agree with ChEBI, with independent registry
+    access limited.
+  target_ids:
+  - CHEBI:66636
+  evidence_ids:
+  - chebi
+  - parent-alkaloid
+  - parent-azaspiro
+  - parent-oxaspiro
+  - parent-alcohol
+  - parent-lactam
+- assessment_id: classification
+  area: evidence
+  topic: Antibacterial filing and retained antileishmanial activity
+  outcome: supported
+  summary: Both activities are supported by the primary sources. Filing priority correctly
+    preserves ANTIBACTERIAL while retaining the additional role. No clinical-efficacy
+    conclusion follows.
+  target_ids:
+  - CHEBI:66636
+  evidence_ids:
+  - inventory
+  - ownership
+  - role-antibacterial
+  - role-antileishmanial
+  - primary2008
+  - primary2012
+- assessment_id: definition
+  area: evidence
+  topic: Definition and experimental scope
+  outcome: supported
+  summary: The 14-nor relationship and fungal isolation agree with official identity
+    and primary text. Anticancer wording is supported as in-vitro cancer-cell cytotoxicity,
+    with no approved-treatment assertion.
+  target_ids:
+  - CHEBI:66636
+  evidence_ids:
+  - chebi
+  - primary2008
+  - primary2012
+- assessment_id: mechanism
+  area: completeness
+  topic: Molecular mode and target
+  outcome: unknown
+  summary: No exact antimicrobial molecular mechanism is established or represented
+    here. The 2012 authors propose mechanism work; their background statements about
+    related pseurotins must not populate this record. Native REVIEWED criteria remain
+    unmet.
+  target_ids:
+  - CHEBI:66636
+  evidence_ids:
+  - record
+  - primary2012
+  - search
+- assessment_id: optional
+  area: representation
+  topic: Activity measurements, resistance, producer, graph and datasets
+  outcome: not_applicable
+  summary: Optional structured objects are absent without violating schema. Primary
+    assay evidence creates an enrichment opportunity; strains/methods need inspection
+    before encoding bacterial MICs, and no resistance determinant is inferred.
+  target_ids:
+  - CHEBI:66636
+  evidence_ids:
+  - record
+  - primary2008
+  - primary2012
+- assessment_id: provenance
+  area: ownership
+  topic: Source ownership and history
+  outcome: supported
+  summary: SEEDED and the three seed/reseed events accurately preserve generated provenance.
+    Fungal isolation is not converted into an unreviewed biosynthetic gene claim.
+  target_ids:
+  - CHEBI:66636
+  evidence_ids:
+  - record
+  - inventory
+  - ownership
+- assessment_id: validation-assessment
+  area: schema
+  topic: Per-record gates and chemistry consistency
+  outcome: supported
+  summary: Both documented validators and chemical-identity assertions pass; none
+    of these checks substitutes for molecular-mechanism review.
+  target_ids:
+  - CHEBI:66636
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-66636-primary-activity-evidence-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Supported primary activities remain an optional enrichment opportunity
+  description: The definition is supported, but the record contains no claim-level
+    evidence or activity observations. Separately authorized curation can preserve
+    the primary experimental context and explicitly leave molecular mechanism unresolved.
+    This is an optional-field opportunity, not a schema error or contradiction.
+  target_ids:
+  - CHEBI:66636
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - mode_of_action
+  evidence_ids:
+  - record
+  - primary2008
+  - primary2012
+  rule_id: 'review-checklist: Evidence standard, Activity spectrum, Mode of action;
+    native REVIEWED gate'
+  native_severity: informational evidence enrichment
+  normalization_reason: Existing seeded assertions are supported. Optional structured
+    observations can improve traceability, and a mechanism gap prevents status promotion
+    but is not itself a major defect.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/14-norpseurotin-a.yaml
+    role: Curator-owned evidence, activity observations and mechanism notes through
+      write_validated_antibiotic with a curation event; seeded identity remains source-owned
+actions:
+- action_id: A1
+  description: In a separately authorized curation pass, add narrow primary evidence
+    and suitable assay observations through the native validated writer. Inspect the
+    2008 full methods before encoding bacterial MIC context; preserve the 2012 parasite/cancer-cell
+    experimental scope. Keep mechanism unresolved unless an exact-compound primary
+    target experiment is inspected.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:66636
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/14-norpseurotin-a.yaml
+    role: Curator-owned evidence, activity observations and mechanism notes through
+      write_validated_antibiotic with a curation event; seeded identity remains source-owned
+  acceptance_checks:
+  - Primary citations resolve to the exact compound numbers and organism/assay scope;
+    no result for a different pseurotin is transferred.
+  - Any bacterial MIC observation retains units, organism/strain and methods from
+    inspected source text; no resistance category is inferred from these values.
+  - Any parasite IC50 unit is confirmed from the full table/methods before encoding;
+    cancer-cell cytotoxicity is not represented as clinical efficacy.
+  - The native writer appends a curation event and passes just validate, just validate-strict,
+    just verify-corpus --summary and just qc; SEEDED is retained until all native
+    REVIEWED gates are met.
+limitations:
+- 2008 full text was inaccessible; its abstract verifies exact-compound MICs and isolation
+  but does not supply full strain/method detail. No structured MIC curation was performed.
+- 2012 publisher PDF text was inspected in full. Table 2 lists parasite values without
+  an explicit unit in its text header; no numeric parasite IC50 is normalized here.
+  Table 3 explicitly labels the MCF-7 values in micromolar.
+- Direct ChemSpider access returned403 and Reaxys was not independently accessed;
+  xrefs are corroborated by official ChEBI. Standalone lactam page failed; its identifier/label/relation
+  is verified on the exact compound page.
+- Bounded mechanism searches do not establish an exhaustive absence of literature.
+- Authoritative just qc failed during collection because the pinned SciPy 1.15.3 native
+  library has an invalid Mach-O section on this platform; identical pinned version
+  also failed under Python 3.10. No dependency versions were changed. Full closed-schema,
+  reproduction and corpus-integrity gates passed independently; these do not replace
+  full QC.
+notes:
+- Original parent-captured 009-inspect.json and 009-start.txt were preserved. No source
+  record, maintained input, generated product or curation history was modified.
+- Bundle completion is partial because full repository QC is not available on this
+  runtime; the selected record was read and assessed in full. A saved review does
+  not promote scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:66636
+- https://pubmed.ncbi.nlm.nih.gov/18505285/
+- https://pubmed.ncbi.nlm.nih.gov/22474943/
+- https://journals.sagepub.com/doi/pdf/10.1177/1934578X1200700207
+tags:
+- record-review
+- pseurotin
+- primary-activity-support
+```

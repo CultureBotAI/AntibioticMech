@@ -1,0 +1,758 @@
+# Review of CHEBI:69532 (soranjidiol)
+
+- Review: 20261021T064423Z-soranjidiol-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T06:38:39Z
+- Finished UTC: 2026-10-21T06:44:23Z
+- Reviewer: Codex agent review002 (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The exact neutral soranjidiol structure, ChEBI grounding, broader parent and antibacterial filing are supported. Independent structure calculation agrees. A primary abstract supports S. aureus activity and a tentative reactive-oxygen mechanism, but the record contains no mechanism or quantitative activity assertion. These optional enrichments are not schema defects, and this review does not promote native SEEDED status. Scientific content is supported within stated limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+All fields of the one selected generated AntibioticRecord, its maintained ChEBI row and generation policy, plus bounded official-source and primary-abstract checks.
+
+Selection: Second path-ordered target selected by the parent task from records without validated structured reviews.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:69532 | data/antibiotics/antibacterial/1-6-dihydroxy-2-methyl-9-10-anthraquinone.yaml | generated | 1,6-dihydroxy-2-methyl-9,10-anthraquinone |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented per-record LinkML validation | passed | True | CHEBI:69532 | Exit 0; No issues found. |
+| Documented per-record closed-schema validation | passed | True | CHEBI:69532 | Exit 0; one file scanned, zero ERROR rows. |
+| Independent RDKit identity consistency check | passed | False | CHEBI:69532 | SMILES and Standard InChI both yield the recorded key; formula, charge and exact mass assertions pass; one fragment and no stereocenters. |
+| Structured expression-module adapter applicability | not_applicable | False | CHEBI:69532 | The record names no gene, protein, regulator, pathway or expression dataset. iModulonDB is not applicable and was not used as negative evidence. |
+| Primary full-paper access | unavailable | False | CHEBI:69532 | The free PubMed abstract for PMID:20965744 was inspected, but the publisher full-paper URL returned HTTP 403. No numeric MIC, strain or molecular target was inferred from snippets. |
+| Authoritative full QC | failed | True | CHEBI:69532 | Exited2 at test collection: pinned SciPy1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This is not a scientific failure of this record. |
+| Generated corpus reproduction | passed | True | CHEBI:69532 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:69532 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Full closed-schema validation | passed | True | CHEBI:69532 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:69532 | Exited1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:69532 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:69532 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:69532 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. No invented per-record validator. |
+
+## Scientific And Domain Assessments
+
+### Exact compound, synonyms and chemical form
+
+identity: supported. Targets: CHEBI:69532.
+
+Neutral single-structure soranjidiol is the requested ChEBI entity; both synonyms and all structure fields agree with the official entry and independent calculation. No salt, stereoisomer or mixture substitution was found.
+
+### Parent class and registry equivalence
+
+grounding: supported. Targets: CHEBI:69532.
+
+The parent is explicitly broader. CAS and Reaxys numbers match the authoritative ChEBI cross-references; their proprietary underlying registries were not independently inspected.
+
+### Antimicrobial filing and retained roles
+
+scope: supported. Targets: CHEBI:69532.
+
+ANTIBACTERIAL follows the only retained antimicrobial role and repository priority. Plant-metabolite role in ChEBI is outside activity_roles antimicrobial scope. Primary abstract provides compound-named bacterial activity support.
+
+### Mode, molecular target and target scope
+
+completeness: unknown. Targets: CHEBI:69532.
+
+The absence of seeded mechanism agrees with the empty inventory mechanism roles. A tentative ROS explanation is available in a compound-specific primary abstract, but does not establish a molecular target or warrant an unqualified mechanism assertion. Native REVIEWED sign-off remains incomplete.
+
+### Activity observations, MIC and resistance
+
+quantity: supported. Targets: CHEBI:69532.
+
+There are no quantitative observations or resistance claims to mis-scope. The inspected abstract supports antibacterial activity but not a numeric MIC or strain-specific entry; missing optional observations are an enrichment opportunity.
+
+### Isolation context and biosynthetic producer
+
+provenance: supported. Targets: CHEBI:69532.
+
+Definition preserves ChEBI root-isolation context. No biosynthesis claim has been promoted from isolation alone; no producer entry is asserted. The plant-isolation primary abstract confirms the study context but not this exact known compound.
+
+### Clinical status, causal graphs, datasets and discussions
+
+completeness: not_applicable. Targets: CHEBI:69532.
+
+These optional representations are unasserted. The review found no unsupported graph, clinical approval, dataset or discussion claim requiring correction, and does not assume every optional field must be populated.
+
+### Generated provenance, status and curation history
+
+ownership: supported. Targets: CHEBI:69532.
+
+SEEDED and the three seed/reseed events accurately preserve the source-owned state. Maintained row, manifest date and generation code are identified; no record or history mutation was made.
+
+### Schema and independent chemical consistency
+
+schema: supported. Targets: CHEBI:69532.
+
+The per-record documented schema gates and independent structure assertions pass. These deterministic checks do not alone establish biological mechanism.
+
+## Findings
+
+### F1: Compound-specific primary ROS mechanism evidence remains to be assessed for curation
+
+informational / open / confirmed; issue key: chebi-69532-mechanism-primary-followup.
+
+PMID:20965744 names soranjidiol and reports bacterial activity with a tentative ROS explanation. The record has no mechanism, activity observation or curator note. This is an optional enrichment and native sign-off follow-up, not a defect in the valid SEEDED representation. Full methods/results must be read before selecting a mechanism enum, target scope or quantitative observation.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Obtain the free full primary paper and assess soranjidiol-specific light/dark results, ROS controls and assay conditions. If warranted, add narrowly supported curator-owned mechanism notes and activity through the validated curation writer; keep molecular targets empty unless direct evidence exists.
+
+- Inspect PMID:20965744 full text and distinguish tentative ROS interpretation from demonstrated molecular targeting.
+- Any MIC must retain exact organism/strain, method, light condition, value and units from the experiment.
+- Any separately authorized mutation uses write_validated_antibiotic and records an accurate curation event; then run just validate-strict on the record, just verify-corpus --summary and just qc.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/1-6-dihydroxy-2-methyl-9-10-anthraquinone.yaml; Entire generated YAML record | supports | Exact CHEBI:69532 record read in full, including two synonyms, parent, role, chemical structure, two registry cross-references, source concept and three seed/reseed history events. It asserts no mechanism, target, MIC, resistance, producer, clinical status, dataset or graph. |
+| inventory | data/raw/chebi_antimicrobials.tsv; CHEBI:69532 row; header and all columns | supports | The 3-star in-scope row supplies the structure, synonyms, parent, antibacterial role and registry identifiers. Seven PMID discovery leads are retained in the inventory; mechanism_role_ids is empty. |
+| ownership | scripts/seed_from_sources.py; mint; structure_from_chebi; build_concepts; build_record, with conf/sources.yaml and scripts/extract_source_inventory.py | supports | Inspected source ownership and transformation: ChEBI imports reviewed role edges, source class priority maps CHEBI:33282 to ANTIBACTERIAL, and record structure/classification are generated. Source version agrees with MANIFEST retrieved_on 2026-08-30; internal minted concept uses SHA-256(source&#124;source_id) first ten hex digits. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:69532; Identity, properties, names, registry numbers and outgoing ontology relations | supports | The live official entry agrees with neutral soranjidiol, C15H10O4, InChIKey BSKQISPKMLYNTK-UHFFFAOYSA-N, both names, CAS 518-73-0 and Reaxys 2382285. It states the antibacterial role and Rubia yunnanensis root isolation context. |
+| parent | https://www.ebi.ac.uk/chebi/CHEBI:37484; Class name and incoming relation CHEBI:69532 | supports | CHEBI:37484 is dihydroxyanthraquinone and explicitly has CHEBI:69532 as a member; it is a broader class, appropriately represented in parent_compounds. |
+| role | https://www.ebi.ac.uk/chebi/CHEBI:33282; Antibacterial agent definition and incoming CHEBI:69532 relation | supports | The role denotes bacterial killing or growth inhibition and explicitly includes this compound, supporting the filing independently of anthraquinone structure. |
+| chemistry | RDKit local calculation; /private/tmp/am-review-session/002-structure.json | supports | SMILES and InChI independently produced BSKQISPKMLYNTK-UHFFFAOYSA-N; formula C15H10O4; charge 0; average mass 254.241; exact mass 254.0579088; one fragment and no chiral centers. |
+| validation | just validate; just validate-strict; /private/tmp/am-review-session/002-validate.log; 002-strict.log; 002-strict.tsv | supports | Both documented per-record validators exited 0; strict validation scanned one file with no errors. |
+| primary-antibacterial | PMID:20965744; https://pubmed.ncbi.nlm.nih.gov/20965744/; title, DOI and abstract | supports | Comini et al. name soranjidiol among Heterophyllaea pustulata compounds active against S. aureus. They suggest ROS involvement, compare light conditions, use broth macrodilution and plate counts, and describe indirect ROS assays. Abstract does not supply compound-specific MIC or strain. DOI confirmed as 10.1016/j.jphotobiol.2010.09.009. |
+| primary-isolation | PMID:21973054; https://pubmed.ncbi.nlm.nih.gov/21973054/; title, DOI and abstract | partial | Fan et al. report isolation of multiple compounds from R. yunnanensis roots and screening for biological activity; DOI is 10.1021/np2002918. The abstract does not identify soranjidiol among the known compounds. The exact compound-to-root link is therefore supported here at ChEBI database level, not independently reconstructed from this abstract. |
+| inclusive-search | Repository-local identifier, InChIKey, label and slug search; /private/tmp/am-review-session/002-inclusive-search.txt | context_only | Search found the exact generated record, maintained inventory, PATHS entry, readiness row and historical research/generated projections. No compound-specific decision or curator inventory row was found in the fully read matching maintained inputs. Absence statements concern the inspected record and these bounded inputs only. |
+| access-limits | Free web search and official publication endpoints; 2026-10-21 queries and access attempts | context_only | Queries soranjidiol antibacterial mechanism, Soranjidiol MIC, and the exact primary title located the inspected PubMed primary abstract. Publisher full text returned 403; other inventory PMID pages encountered CAPTCHA or inaccessible Europe PMC pages. These failures are not evidence that literature is absent. |
+
+## Limits And Additional Notes
+
+- Primary activity review is abstract-level. Publisher access returned 403; exact strain, illumination parameters, MIC values and mechanistic controls were not available and are not claimed.
+- Five other inventory literature leads were not fully reassessed after access failures; the bounded search is not an exhaustive literature audit.
+- CAS and Reaxys equivalence is corroborated through ChEBI; the underlying registry records were not independently accessed.
+- Native REVIEWED status is not granted by this bundle; source-owned record and curation history remain unchanged.
+- Authoritative just qc failed during collection because the pinned SciPy1.15.3 native library has an invalid Mach-O section on this platform; identical pinned version also failed under Python3.10. No dependency versions were changed. Full closed-schema, reproduction and corpus-integrity gates passed independently; these do not replace full QC.
+- No semantic digest is claimed: the captured raw file SHA-256 hashes attest the reviewed input bytes.
+- iModulonDB not applicable because this record contains no named expression-module entity.
+- Bundle completion is partial because full repository QC is not available on this runtime; the selected record was read and assessed in full. A saved review does not promote scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T064423Z-soranjidiol-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of CHEBI:69532 (soranjidiol)
+started_at: '2026-10-21T06:38:39Z'
+finished_at: '2026-10-21T06:44:23Z'
+reviewer:
+  identity: Codex agent review002
+  kind: agent
+  independence: independent
+  independence_basis: Read-only assessment by an agent that did not author or curate
+    this generated record; the inspected clone is separate from the user checkout.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: SEEDED identity and filing supported; native mechanism sign-off incomplete
+scientific_review: true
+summary: The exact neutral soranjidiol structure, ChEBI grounding, broader parent
+  and antibacterial filing are supported. Independent structure calculation agrees.
+  A primary abstract supports S. aureus activity and a tentative reactive-oxygen mechanism,
+  but the record contains no mechanism or quantitative activity assertion. These optional
+  enrichments are not schema defects, and this review does not promote native SEEDED
+  status. Scientific content is supported within stated limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/antibiotics/antibacterial/1-6-dihydroxy-2-methyl-9-10-anthraquinone.yaml
+    sha256: 8b4caf9e039f0c71c2456070ea5e13759c8eb3c1c005a762793035d82b14231b
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: All fields of the one selected generated AntibioticRecord, its maintained
+    ChEBI row and generation policy, plus bounded official-source and primary-abstract
+    checks.
+  selection: Second path-ordered target selected by the parent task from records without
+    validated structured reviews.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:69532
+targets:
+- target_id: CHEBI:69532
+  path: data/antibiotics/antibacterial/1-6-dihydroxy-2-methyl-9-10-anthraquinone.yaml
+  label: 1,6-dihydroxy-2-methyl-9,10-anthraquinone
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained ChEBI inventory; exact CHEBI:69532 row
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Role classification and source policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record seeding
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Identity and exclusion decisions
+checks:
+- check_id: schema
+  name: Documented per-record LinkML validation
+  status: passed
+  required: true
+  summary: Exit 0; No issues found.
+  target_ids:
+  - CHEBI:69532
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/1-6-dihydroxy-2-methyl-9-10-anthraquinone.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented per-record closed-schema validation
+  status: passed
+  required: true
+  summary: Exit 0; one file scanned, zero ERROR rows.
+  target_ids:
+  - CHEBI:69532
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/1-6-dihydroxy-2-methyl-9-10-anthraquinone.yaml
+    --out /private/tmp/am-review-session/002-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Independent RDKit identity consistency check
+  status: passed
+  required: false
+  summary: SMILES and Standard InChI both yield the recorded key; formula, charge
+    and exact mass assertions pass; one fragment and no stereocenters.
+  target_ids:
+  - CHEBI:69532
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    - (RDKit Chem.MolFromSmiles, Chem.MolFromInchi, MolToInchiKey, CalcMolFormula,
+    GetFormalCharge, ExactMolWt; assertions against record)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: imodulondb
+  name: Structured expression-module adapter applicability
+  status: not_applicable
+  required: false
+  summary: The record names no gene, protein, regulator, pathway or expression dataset.
+    iModulonDB is not applicable and was not used as negative evidence.
+  target_ids:
+  - CHEBI:69532
+  evidence_ids:
+  - record
+- check_id: primary-fulltext
+  name: Primary full-paper access
+  status: unavailable
+  required: false
+  summary: The free PubMed abstract for PMID:20965744 was inspected, but the publisher
+    full-paper URL returned HTTP 403. No numeric MIC, strain or molecular target was
+    inferred from snippets.
+  target_ids:
+  - CHEBI:69532
+  evidence_ids:
+  - primary-antibacterial
+  - access-limits
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited2 at test collection: pinned SciPy1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This is not a scientific
+    failure of this record.'
+  target_ids:
+  - CHEBI:69532
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:69532
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:69532
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:69532
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:69532
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:69532
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:69532
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references. No invented per-record validator.
+  target_ids:
+  - CHEBI:69532
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/1-6-dihydroxy-2-methyl-9-10-anthraquinone.yaml
+  locator: Entire generated YAML record
+  accessed_at: '2026-10-21T06:40:56Z'
+  support: supports
+  summary: Exact CHEBI:69532 record read in full, including two synonyms, parent,
+    role, chemical structure, two registry cross-references, source concept and three
+    seed/reseed history events. It asserts no mechanism, target, MIC, resistance,
+    producer, clinical status, dataset or graph.
+- evidence_id: inventory
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: CHEBI:69532 row; header and all columns
+  accessed_at: '2026-10-21T06:40:56Z'
+  support: supports
+  summary: The 3-star in-scope row supplies the structure, synonyms, parent, antibacterial
+    role and registry identifiers. Seven PMID discovery leads are retained in the
+    inventory; mechanism_role_ids is empty.
+- evidence_id: ownership
+  kind: record_content
+  reference: scripts/seed_from_sources.py
+  locator: mint; structure_from_chebi; build_concepts; build_record, with conf/sources.yaml
+    and scripts/extract_source_inventory.py
+  accessed_at: '2026-10-21T06:40:56Z'
+  support: supports
+  summary: 'Inspected source ownership and transformation: ChEBI imports reviewed
+    role edges, source class priority maps CHEBI:33282 to ANTIBACTERIAL, and record
+    structure/classification are generated. Source version agrees with MANIFEST retrieved_on
+    2026-08-30; internal minted concept uses SHA-256(source|source_id) first ten hex
+    digits.'
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:69532
+  locator: Identity, properties, names, registry numbers and outgoing ontology relations
+  accessed_at: '2026-10-21T06:40:56Z'
+  support: supports
+  summary: The live official entry agrees with neutral soranjidiol, C15H10O4, InChIKey
+    BSKQISPKMLYNTK-UHFFFAOYSA-N, both names, CAS 518-73-0 and Reaxys 2382285. It states
+    the antibacterial role and Rubia yunnanensis root isolation context.
+- evidence_id: parent
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:37484
+  locator: Class name and incoming relation CHEBI:69532
+  accessed_at: '2026-10-21T06:40:56Z'
+  support: supports
+  summary: CHEBI:37484 is dihydroxyanthraquinone and explicitly has CHEBI:69532 as
+    a member; it is a broader class, appropriately represented in parent_compounds.
+- evidence_id: role
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:33282
+  locator: Antibacterial agent definition and incoming CHEBI:69532 relation
+  accessed_at: '2026-10-21T06:40:56Z'
+  support: supports
+  summary: The role denotes bacterial killing or growth inhibition and explicitly
+    includes this compound, supporting the filing independently of anthraquinone structure.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit local calculation
+  locator: /private/tmp/am-review-session/002-structure.json
+  accessed_at: '2026-10-21T06:40:56Z'
+  support: supports
+  summary: SMILES and InChI independently produced BSKQISPKMLYNTK-UHFFFAOYSA-N; formula
+    C15H10O4; charge 0; average mass 254.241; exact mass 254.0579088; one fragment
+    and no chiral centers.
+  snapshot_sha256: c3a361418108e442431cd8571fff2b39f2613648cc2456e12cccc4ea8bf26ffe
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: /private/tmp/am-review-session/002-validate.log; 002-strict.log; 002-strict.tsv
+  accessed_at: '2026-10-21T06:40:56Z'
+  support: supports
+  summary: Both documented per-record validators exited 0; strict validation scanned
+    one file with no errors.
+- evidence_id: primary-antibacterial
+  kind: primary_source
+  reference: PMID:20965744
+  locator: https://pubmed.ncbi.nlm.nih.gov/20965744/; title, DOI and abstract
+  accessed_at: '2026-10-21T06:40:56Z'
+  support: supports
+  summary: Comini et al. name soranjidiol among Heterophyllaea pustulata compounds
+    active against S. aureus. They suggest ROS involvement, compare light conditions,
+    use broth macrodilution and plate counts, and describe indirect ROS assays. Abstract
+    does not supply compound-specific MIC or strain. DOI confirmed as 10.1016/j.jphotobiol.2010.09.009.
+- evidence_id: primary-isolation
+  kind: primary_source
+  reference: PMID:21973054
+  locator: https://pubmed.ncbi.nlm.nih.gov/21973054/; title, DOI and abstract
+  accessed_at: '2026-10-21T06:40:56Z'
+  support: partial
+  summary: Fan et al. report isolation of multiple compounds from R. yunnanensis roots
+    and screening for biological activity; DOI is 10.1021/np2002918. The abstract
+    does not identify soranjidiol among the known compounds. The exact compound-to-root
+    link is therefore supported here at ChEBI database level, not independently reconstructed
+    from this abstract.
+- evidence_id: inclusive-search
+  kind: search
+  reference: Repository-local identifier, InChIKey, label and slug search
+  locator: /private/tmp/am-review-session/002-inclusive-search.txt
+  accessed_at: '2026-10-21T06:40:56Z'
+  support: context_only
+  summary: Search found the exact generated record, maintained inventory, PATHS entry,
+    readiness row and historical research/generated projections. No compound-specific
+    decision or curator inventory row was found in the fully read matching maintained
+    inputs. Absence statements concern the inspected record and these bounded inputs
+    only.
+  search_scope: rg --no-ignore --hidden -n -e 'CHEBI:69532' -e 'BSKQISPKMLYNTK' -e
+    '1-6-dihydroxy-2-methyl-9-10-anthraquinone' -e 'Soranjidiol' . -g '!.git/**' -g
+    '!.venv/**'; repository working files, including ignored and hidden files, excluding
+    Git internals and virtual environment. Also read curation decision/curator rows
+    using the minted ID and case-insensitive name.
+- evidence_id: access-limits
+  kind: search
+  reference: Free web search and official publication endpoints
+  locator: 2026-10-21 queries and access attempts
+  accessed_at: '2026-10-21T06:40:56Z'
+  support: context_only
+  summary: Queries soranjidiol antibacterial mechanism, Soranjidiol MIC, and the exact
+    primary title located the inspected PubMed primary abstract. Publisher full text
+    returned 403; other inventory PMID pages encountered CAPTCHA or inaccessible Europe
+    PMC pages. These failures are not evidence that literature is absent.
+  search_scope: Free web search; official ChEBI pages; PubMed 20965744 and 21973054
+    inspected. PMID leads 13678245,15629252,18513778,21214480,21665453 were attempted
+    but not fully reassessed; no paid provider or subscription access.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact compound, synonyms and chemical form
+  outcome: supported
+  summary: Neutral single-structure soranjidiol is the requested ChEBI entity; both
+    synonyms and all structure fields agree with the official entry and independent
+    calculation. No salt, stereoisomer or mixture substitution was found.
+  target_ids:
+  - CHEBI:69532
+  evidence_ids:
+  - record
+  - chebi
+  - chemistry
+- assessment_id: equivalence
+  area: grounding
+  topic: Parent class and registry equivalence
+  outcome: supported
+  summary: The parent is explicitly broader. CAS and Reaxys numbers match the authoritative
+    ChEBI cross-references; their proprietary underlying registries were not independently
+    inspected.
+  target_ids:
+  - CHEBI:69532
+  evidence_ids:
+  - chebi
+  - parent
+- assessment_id: classification
+  area: scope
+  topic: Antimicrobial filing and retained roles
+  outcome: supported
+  summary: ANTIBACTERIAL follows the only retained antimicrobial role and repository
+    priority. Plant-metabolite role in ChEBI is outside activity_roles antimicrobial
+    scope. Primary abstract provides compound-named bacterial activity support.
+  target_ids:
+  - CHEBI:69532
+  evidence_ids:
+  - chebi
+  - role
+  - ownership
+  - primary-antibacterial
+- assessment_id: mechanism
+  area: completeness
+  topic: Mode, molecular target and target scope
+  outcome: unknown
+  summary: The absence of seeded mechanism agrees with the empty inventory mechanism
+    roles. A tentative ROS explanation is available in a compound-specific primary
+    abstract, but does not establish a molecular target or warrant an unqualified
+    mechanism assertion. Native REVIEWED sign-off remains incomplete.
+  target_ids:
+  - CHEBI:69532
+  evidence_ids:
+  - record
+  - inventory
+  - primary-antibacterial
+- assessment_id: activity
+  area: quantity
+  topic: Activity observations, MIC and resistance
+  outcome: supported
+  summary: There are no quantitative observations or resistance claims to mis-scope.
+    The inspected abstract supports antibacterial activity but not a numeric MIC or
+    strain-specific entry; missing optional observations are an enrichment opportunity.
+  target_ids:
+  - CHEBI:69532
+  evidence_ids:
+  - record
+  - primary-antibacterial
+- assessment_id: producer
+  area: provenance
+  topic: Isolation context and biosynthetic producer
+  outcome: supported
+  summary: Definition preserves ChEBI root-isolation context. No biosynthesis claim
+    has been promoted from isolation alone; no producer entry is asserted. The plant-isolation
+    primary abstract confirms the study context but not this exact known compound.
+  target_ids:
+  - CHEBI:69532
+  evidence_ids:
+  - record
+  - chebi
+  - primary-isolation
+- assessment_id: optional
+  area: completeness
+  topic: Clinical status, causal graphs, datasets and discussions
+  outcome: not_applicable
+  summary: These optional representations are unasserted. The review found no unsupported
+    graph, clinical approval, dataset or discussion claim requiring correction, and
+    does not assume every optional field must be populated.
+  target_ids:
+  - CHEBI:69532
+  evidence_ids:
+  - record
+- assessment_id: audit
+  area: ownership
+  topic: Generated provenance, status and curation history
+  outcome: supported
+  summary: SEEDED and the three seed/reseed events accurately preserve the source-owned
+    state. Maintained row, manifest date and generation code are identified; no record
+    or history mutation was made.
+  target_ids:
+  - CHEBI:69532
+  evidence_ids:
+  - record
+  - inventory
+  - ownership
+- assessment_id: schema-assessment
+  area: schema
+  topic: Schema and independent chemical consistency
+  outcome: supported
+  summary: The per-record documented schema gates and independent structure assertions
+    pass. These deterministic checks do not alone establish biological mechanism.
+  target_ids:
+  - CHEBI:69532
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-69532-mechanism-primary-followup
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Compound-specific primary ROS mechanism evidence remains to be assessed for
+    curation
+  description: PMID:20965744 names soranjidiol and reports bacterial activity with
+    a tentative ROS explanation. The record has no mechanism, activity observation
+    or curator note. This is an optional enrichment and native sign-off follow-up,
+    not a defect in the valid SEEDED representation. Full methods/results must be
+    read before selecting a mechanism enum, target scope or quantitative observation.
+  target_ids:
+  - CHEBI:69532
+  field_paths:
+  - mode_of_action
+  - mode_of_action_notes
+  - activity_spectrum
+  evidence_ids:
+  - record
+  - primary-antibacterial
+  rule_id: 'review-checklist: Mode of action; REVIEWED gate 4'
+  native_severity: informational curation opportunity
+  normalization_reason: A concrete primary-source lead exists, but the omitted fields
+    are optional for SEEDED records and no wrong claim is asserted.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/1-6-dihydroxy-2-methyl-9-10-anthraquinone.yaml
+    role: Future curator-owned mechanism/evidence/activity additions through validated
+      writer and curation event
+actions:
+- action_id: A1
+  description: Obtain the free full primary paper and assess soranjidiol-specific
+    light/dark results, ROS controls and assay conditions. If warranted, add narrowly
+    supported curator-owned mechanism notes and activity through the validated curation
+    writer; keep molecular targets empty unless direct evidence exists.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:69532
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/1-6-dihydroxy-2-methyl-9-10-anthraquinone.yaml
+    role: Future curator-owned mechanism/evidence/activity additions through validated
+      writer and curation event
+  acceptance_checks:
+  - Inspect PMID:20965744 full text and distinguish tentative ROS interpretation from
+    demonstrated molecular targeting.
+  - Any MIC must retain exact organism/strain, method, light condition, value and
+    units from the experiment.
+  - Any separately authorized mutation uses write_validated_antibiotic and records
+    an accurate curation event; then run just validate-strict on the record, just
+    verify-corpus --summary and just qc.
+  generator: scripts/seed_from_sources.py preserves curator-owned annotations during
+    reseeding
+limitations:
+- Primary activity review is abstract-level. Publisher access returned 403; exact
+  strain, illumination parameters, MIC values and mechanistic controls were not available
+  and are not claimed.
+- Five other inventory literature leads were not fully reassessed after access failures;
+  the bounded search is not an exhaustive literature audit.
+- CAS and Reaxys equivalence is corroborated through ChEBI; the underlying registry
+  records were not independently accessed.
+- Native REVIEWED status is not granted by this bundle; source-owned record and curation
+  history remain unchanged.
+- Authoritative just qc failed during collection because the pinned SciPy1.15.3 native
+  library has an invalid Mach-O section on this platform; identical pinned version
+  also failed under Python3.10. No dependency versions were changed. Full closed-schema,
+  reproduction and corpus-integrity gates passed independently; these do not replace
+  full QC.
+notes:
+- 'No semantic digest is claimed: the captured raw file SHA-256 hashes attest the
+  reviewed input bytes.'
+- iModulonDB not applicable because this record contains no named expression-module
+  entity.
+- Bundle completion is partial because full repository QC is not available on this
+  runtime; the selected record was read and assessed in full. A saved review does
+  not promote scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:69532
+- https://pubmed.ncbi.nlm.nih.gov/20965744/
+- https://pubmed.ncbi.nlm.nih.gov/21973054/
+tags:
+- record-review
+- anthraquinone
+- seeded
+- abstract-limited
+```
