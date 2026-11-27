@@ -1,0 +1,829 @@
+# Cholesteryl arachidonate: supported exact structure and formulation-dependent antibacterial activity; qualify broad lipid aliases
+
+- Review: 20261021T130554Z-cholesteryl-arachidonate
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T12:48:44Z
+- Finished UTC: 2026-10-21T13:05:54Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native all-Z arachidonate ester of cholesterol is internally coherent and agrees with independently parsed official LIPID MAPS and CAS-resolved PubChem structures. The original antibacterial study supports growth inhibition by commercial cholesteryl arachidonate formulated in liposomes, with explicit vehicle effects and assay boundaries. One minor finding concerns composition-only lipid shorthand being typed as exact synonyms despite identifying a broader structural class. No mandatory mechanism or activity-field omission is inferred, and no bactericidal, protein-target, oxidative mechanism or producer claim is transferred from related material.
+
+## Scope And Provenance
+
+Whole exact native record: definition, eight typed synonyms, one broader parent, one activity role, complete structure, four chemical xrefs, sole ChEBI source concept and all three history events; all five adopted literature leads.
+
+Selection: Queue 296. Initial thirteen input hashes preserved; actual ownership is ChEBI extraction and seeding, with no additional source owner required.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:82751 | data/antibiotics/antibacterial/cholesteryl-arachidonate.yaml | generated | cholesteryl arachidonate |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:82751 | No schema issues found. |
+| strict | passed | True | CHEBI:82751 | One record; zero strict errors. |
+| chemistry | passed | False | CHEBI:82751 | Native SMILES and InChI, formula, zero charge, eight stereocentres, masses and source-ID mint agree. |
+| external-chemistry | passed | False | CHEBI:82751 | LIPID MAPS and CAS-resolved PubChem SMILES/InChI independently reproduce the native full key, including four Z side-chain double bonds. |
+| Authoritative full QC | failed | True | CHEBI:82751 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:82751 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:82751 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:82751 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:82751 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:82751 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:82751 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:82751 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:82751 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact cholesteryl arachidonate graph and chemical xrefs
+
+identity: supported. Targets: CHEBI:82751.
+
+Native encodings agree with official exact structures. The parent class and abbreviation ambiguity do not make the native definite graph a mixture. Independent HMDB and Reaxys inspection remains limited.
+
+### Composition-only aliases versus exact chemical identity
+
+nomenclature: concern. Targets: CHEBI:82751.
+
+Two source-attested aliases omit the double-bond positions and geometry distinguishing this exact child from the broader parent class. Their current EXACT_SYNONYM typing overstates specificity.
+
+### Antibacterial filing and original material scope
+
+scope: supported. Targets: CHEBI:82751.
+
+The native role and filing are supported by original exact-commercial-compound growth-inhibition experiments. Carrier effects, fluorescence endpoint, source strain-reporting limits and the distinct CL killing result constrain any future quantitative enrichment.
+
+### Claim-level mechanism, origin and related-paper boundaries
+
+evidence: supported. Targets: CHEBI:82751.
+
+The sparse native record does not assert a speculative protein target or oxidative mechanism. All five adopted literature leads have been checked at stated depth; oxidation chemistry, host lipid metabolism, crude mixtures and related esters are not transferred as exact antimicrobial causal evidence.
+
+### Optional primary activity enrichment
+
+completeness: unknown. Targets: CHEBI:82751.
+
+Activity observations could be added from the inspected original with explicit formulation and endpoint context, but their current absence is not a required-field defect. No missing causal graph can be supplied from the paper’s speculative discussion alone.
+
+## Findings
+
+### F1: Qualify composition-only cholesteryl ester aliases as broader names
+
+minor / open / confirmed; issue key: cholesteryl-arachidonate-composition-only-exact-synonyms.
+
+synonyms[1] 20:4 Cholesteryl ester and synonyms[3] CE(20:4) are typed EXACT_SYNONYM although they encode acyl carbon count and unsaturation count without double-bond positions or geometry. Official ChEBI uses CE(20:4) for the broader parent CHEBI:132006, which includes both the native arachidonate and a different positional isomer. LIPID MAPS likewise separates composition-level shorthand from full structural specification. Preserve these source-attested aliases using a broader synonym type or equivalent explicit specificity qualification. The native exact graph and the fully specified CE(20:4(5Z,8Z,11Z,14Z)) alias require no change.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Preserve source aliases while correcting their structural specificity through the maintained source/seed path.
+
+- Emit BROAD_SYNONYM or an explicitly documented equivalent for CE(20:4) and 20:4 Cholesteryl ester; retain source attribution and the exact fully specified aliases.
+- Keep CHEBI:132006 as the broader parent and preserve the native full structure/key. Do not convert the record into a mixture or replace it with another 20:4 positional isomer.
+- Reseed reproducibly and rerun focused schema/strict and applicable source-reproduction gates.
+
+### A2
+
+If primary activity enrichment is desired, curate the exact formulation and endpoint without importing speculative mechanism.
+
+- Use PMID 18768875 with commercial Sigma cholesteryl arachidonate in liposomes and its matched vehicle control. Distinguish 16-hour fluorescence growth inhibition from the three-hour CFU assay.
+- Do not label 4 micrograms/mL a conventional complete-suppression MIC or import cholesteryl linoleate killing/MBC claims. Preserve P. aeruginosa isolate description and unresolved S. epidermidis strain/reporting limitations.
+- Keep HNP-2 synergy and depletion/reconstitution results scoped to crude lipid mixtures. Do not assert a bacterial protein target, ROS mechanism or definitive epithelial biosynthesis from the Discussion.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/cholesteryl-arachidonate.yaml; Entire YAML. | supports | SEEDED/EXACT/ANTIBACTERIAL. Neutral C47H76O2 with native key IMXSFYNMSOULQS-BEDFLICRSA-N; eight assigned stereocentres and four Z double bonds in the arachidonate chain. No numeric activity, molecular target, resistance determinant, clinical status, biosynthetic producer or causal graph is asserted. The UNIPROT NAME source category is a chemical synonym, not a protein accession or biological target. |
+| owners | data/raw/chebi_antimicrobials.tsv; conf/sources.yaml; data/raw/MANIFEST.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Complete ChEBI row 2161, source configuration and manifest; ChEBI extractor and synonym/identity/assembly logic. | supports | ChEBI owns all native scientific content. The complete row matches the generated definition, parent, role, structure, eight aliases and four xrefs. Generic ChEBI SYNONYM values become EXACT_SYNONYM; UNIPROT NAME becomes RELATED_SYNONYM. Source citation PMIDs are review leads, not automatically claim-level native evidence. No matching ARO, PubChem enrichment, FDA or MIBiG source row was found in the inspected inventories. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:82751; Full official entry: definition, structure, names, xrefs and outgoing ontology relations. | supports | Current ChEBI agrees with the native exact structure and formal ester definition and directly asserts the antibacterial role. The retained systematic names specify the same 5Z,8Z,11Z,14Z arachidonate chain and cholesterol stereochemistry. Formal condensation describes chemical composition; it is not a native experimental biosynthesis claim. Additional current database metabolite annotations are not silently imported as source-version facts. |
+| xref-identity | https://www.lipidmaps.org/rest/compound/lm_id/LMST01020014/all/json; https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/604-34-2/property/InChI,InChIKey,MolecularFormula,SMILES/JSON; Complete official JSON entries and independent structure parsing. | supports | LIPID MAPS LMST01020014 independently encodes the native full InChIKey, formula, charge and stereochemistry. Public CAS 604-34-2 lookup resolves to PubChem CID 6479222 with the same exact graph; PubChem is a cross-check, not a native xref. CAS was checked through public database attribution, without paid registry access. LIPID MAPS also identifies the historical HMDB06726 alias, while ChEBI lists padded HMDB0006726. |
+| parent-role | https://www.ebi.ac.uk/chebi/CHEBI:132006; https://www.ebi.ac.uk/chebi/CHEBI:33282; Official class definition, incoming child relationships and antibacterial role definition. | supports | CHEBI:132006 is cholesteryl icosatetraenoate, a cholesterol ester whose acyl group has twenty carbons and four double bonds. It is a valid broader parent, not an exact xref. The class includes both the selected arachidonate and CHEBI:88755, CE(20:4(8Z,11Z,14Z,17Z)). CHEBI:33282 denotes an antibacterial agent and is supported by the original exact-compound experiment. |
+| alias-specificity | https://www.ebi.ac.uk/chebi/CHEBI:132006; https://www.lipidmaps.org/lipid_nomenclature/rules/hierarchy; https://www.lipidmaps.org/rest/compound/lm_id/LMST01020014/all/json; Parent synonym CE(20:4), distinct positional-isomer children, official hierarchy of lipid structural information and exact-entry abbreviation. | supports | CE(20:4) is used as an alias/abbreviation on the exact entry but also explicitly denotes the broader parent class. LIPID MAPS distinguishes species sum composition from defined double-bond positions and complete stereochemistry. Thus CE(20:4) and 20:4 Cholesteryl ester do not independently specify the native 5Z,8Z,11Z,14Z arrangement. Preserve the useful source aliases while qualifying their broader specificity; do not infer a mixture or change the native graph. |
+| restricted-xrefs | https://www.hmdb.ca/metabolites/HMDB0006726; https://www.hmdb.ca/metabolites/HMDB0006726.xml; https://www.hmdb.ca/metabolites/HMDB06726; reaxys:2343317; Three official HMDB page/XML/legacy attempts, current ChEBI xref attribution and LIPID MAPS historical HMDB link. | unknown | All direct HMDB routes returned 403 and the web attempt did not expose an inspectable entry. The HMDB identifier is cross-attested, but its independent exact graph remains unverified. Reaxys 2343317 is attested by ChEBI but was not inspected through paid access. These access limits do not establish an identity error. |
+| primary-antibacterial | PMID:18768875; DOI:10.4049/jimmunol.181.6.4177; https://pmc.ncbi.nlm.nih.gov/articles/PMC2597438/; Complete author-manuscript main text, Methods, Results, Discussion, Table I and all figure captions; Figures 1 and 7 also inspected visually. | supports | Commercial cholesteryl arachidonate from Sigma was incorporated into liposomes alongside phosphatidylcholines, phosphatidylglycerols and cholesterol, with matched vehicle liposomes. A P. aeruginosa cystic-fibrosis isolate from the Welsh laboratory was tested in cation-adjusted Mueller-Hinton broth for 16 h with Syto 9 fluorescence readout. Dose-dependent inhibition was observed from 4 micrograms/mL, and the screen selected formulations giving at least 80% inhibition at 64 micrograms/mL. This establishes antibacterial activity in that formulation; 4 micrograms/mL is not a demonstrated complete-growth-suppression MIC. The main text does not give a catalog number or lot-specific structural/purity certificate. |
+| primary-assay-boundaries | PMID:18768875; DOI:10.4049/jimmunol.181.6.4177, Figure 7b–d and antibacterial-assay Methods; Original Figure 7 visually inspected against its full caption and surrounding Results. | supports | The three-hour low-nutrient CFU assay shows cholesteryl arachidonate slowing growth; the significant reduction below inoculum to 20% belongs to cholesteryl linoleate. Vehicle liposomes themselves inhibit growth to some extent. Figure 7d includes CA-associated inhibition for S. epidermidis and a marked comparison for S. aureus, whereas the prose emphasizes S. epidermidis and Methods omit a strain identifier for S. epidermidis. These source reporting differences must remain explicit if activity observations are curated. No strain, exact MIC, MBC or broad bactericidal spectrum is fabricated. |
+| primary-occurrence-mechanism | PMID:18768875; DOI:10.4049/jimmunol.181.6.4177, Figure 1, Table I, nasal-fluid depletion/reconstitution experiments and Discussion; Full original main text; Figure 1 visually inspected. | context_only | The paper identifies cholesteryl arachidonate in human nasal fluid using chromatography and tandem mass spectrometry compared with authentic standards, and reports a similar lipid profile in bronchial epithelial secretions. Crude lipid extraction, depletion/reconstitution and HNP-2 synergy experiments concern mixtures, not isolated CA alone. Local epithelial origin is suggested, while transudation is explicitly not excluded. Membrane perturbation, intracellular targets and oxidation toxicity are hypotheses in the Discussion, not measured causal mechanisms for CA. No direct protein target, bacterial ROS mechanism or dedicated producer pathway follows. |
+| adopted-oxidation | PMID:12083928; DOI:10.1021/ja0201092; PMID:12605870; DOI:10.1016/S0003-2697(02)00621-8; Complete original indexed abstracts and resolved publication metadata; all remaining four adopted PMIDs accounted for. | context_only | The 2002 study identifies bicyclic endoperoxide products during cholesteryl arachidonate autoxidation. The 2003 study examines ferrous oxidation-xylenol orange assay reactivity in oxidized lipid mixtures, including cyclic peroxide behavior after triphenylphosphine reduction. Neither supplies a measured antibacterial ROS mechanism for the native unoxidized ester. |
+| adopted-interface | PMID:7213606; DOI:10.1021/bi00507a009; Complete original indexed abstracts and resolved publication metadata; all remaining four adopted PMIDs accounted for. | context_only | The original study concerns cholesteryl ester interfacial phase behavior, monolayers/double layers and mixed lipid systems. Its physical lipid observations are not a demonstrated bacterial target or antimicrobial mechanism. |
+| adopted-esterification | PMID:9020103; DOI:10.1074/jbc.272.7.3980; Complete original indexed abstracts and resolved publication metadata; all remaining four adopted PMIDs accounted for. | context_only | The original study expresses human acyl-CoA:cholesterol acyltransferase in yeast and compares substrate specificity and cholesteryl ester production. It does not establish ACAT as an antimicrobial target of cholesteryl arachidonate. Human enzyme expression and host-cell lipid metabolism are not native bacterial mechanism assertions. |
+| inclusive-search | 296-inclusive-hits.txt; Exact native identifier, label, key and minted identifier across the stated local scope; hidden and ignored files included. | context_only | Matches are the native record, ChEBI inventory, PATHS, readiness queue and generated embedding maps. No exact curator decision or other maintained local evidence overlay was found in this scope. The readiness queue flags absent optional mechanism data but does not establish a scientific defect. No native protein, regulator, pathway, response or dataset assertion triggers structured biological-context lookup. |
+| validation | 296-schema.log; 296-strict.log; 296-chemistry.json; 296-xref-chemistry.json; Actual focused validation and independent chemistry outputs. | supports | Schema, strict validation and both native/external chemistry diagnostics pass. Native formula, charge, masses, full key and minted identifier agree. All thirteen captured source input hashes remain unchanged. |
+
+## Limits And Additional Notes
+
+- Independent HMDB exact-structure verification was unavailable: current page, XML and historical alias routes returned 403. Reaxys was not inspected through paid access; these identifiers remain cross-attested by current ChEBI, with the HMDB legacy alias also present in LIPID MAPS.
+- The complete primary antibacterial source was read as the freely available author manuscript in PMC, including all main sections and Table I; Figures 1 and 7 were visually inspected. The nominal publisher PDF URL returned 1,396 bytes of challenge HTML, not a PDF, and Europe PMC full-text XML returned 500.
+- Four other adopted papers were inspected at complete-original-abstract depth only. They concern oxidation chemistry, lipid physical behavior or host enzyme substrate specificity and do not supply a missing exact antibacterial mechanism.
+- Original antibacterial material was a commercial lipid formulated with other lipids. The paper provides no catalog number or lot-specific purity/structural certificate, reports vehicle activity and has species/strain reporting differences around Figure 7d. Quantitative curation must retain these conditions and uncertainty.
+- No measured molecular target, bacterial ROS causal chain or definitive producer biosynthesis was established by the inspected antibacterial paper. Their absence from this SEEDED record is not independently a defect; scientific completion remains partial.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T130554Z-cholesteryl-arachidonate
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cholesteryl arachidonate: supported exact structure and formulation-dependent
+  antibacterial activity; qualify broad lipid aliases'
+started_at: '2026-10-21T12:48:44Z'
+finished_at: '2026-10-21T13:05:54Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the seed. Preserved all initial hashes, identified
+    actual source ownership before assessment, read the complete native YAML and maintained
+    source row/configuration/extraction/seeding logic, checked official chemical entries
+    and every adopted original abstract, and read the full original antibacterial
+    article with visual inspection of Figures 1 and 7.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native all-Z arachidonate ester of cholesterol is internally coherent
+  and agrees with independently parsed official LIPID MAPS and CAS-resolved PubChem
+  structures. The original antibacterial study supports growth inhibition by commercial
+  cholesteryl arachidonate formulated in liposomes, with explicit vehicle effects
+  and assay boundaries. One minor finding concerns composition-only lipid shorthand
+  being typed as exact synonyms despite identifying a broader structural class. No
+  mandatory mechanism or activity-field omission is inferred, and no bactericidal,
+  protein-target, oxidative mechanism or producer claim is transferred from related
+  material.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cholesteryl-arachidonate.yaml
+    sha256: 791b161e3dd8a6130aa5ebcbfcc547e4e539a7f7444d4808678215dd10ca83c3
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:82751
+  path: data/antibiotics/antibacterial/cholesteryl-arachidonate.yaml
+  label: cholesteryl arachidonate
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: 'Whole exact native record: definition, eight typed synonyms, one broader
+    parent, one activity role, complete structure, four chemical xrefs, sole ChEBI
+    source concept and all three history events; all five adopted literature leads.'
+  selection: Queue 296. Initial thirteen input hashes preserved; actual ownership
+    is ChEBI extraction and seeding, with no additional source owner required.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:82751
+  exclusions:
+  - target: Cholesteryl linoleate, other cholesteryl 20:4 positional/geometric isomers,
+      free arachidonic acid, oxidized derivatives and crude nasal lipid mixtures
+    reason: Their activities, chemistry and mechanisms are not automatically exact
+      evidence for cholesteryl arachidonate. Carrier liposomes remain part of the
+      original experimental material context.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: No schema issues found.
+  target_ids:
+  - CHEBI:82751
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cholesteryl-arachidonate.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: One record; zero strict errors.
+  target_ids:
+  - CHEBI:82751
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cholesteryl-arachidonate.yaml --out /private/tmp/am-review-session/296-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Native SMILES and InChI, formula, zero charge, eight stereocentres, masses
+    and source-ID mint agree.
+  target_ids:
+  - CHEBI:82751
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 296
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: external-chemistry
+  name: external-chemistry
+  status: passed
+  required: false
+  summary: LIPID MAPS and CAS-resolved PubChem SMILES/InChI independently reproduce
+    the native full key, including four Z side-chain double bonds.
+  target_ids:
+  - CHEBI:82751
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/296-xref-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:82751
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:82751
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:82751
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:82751
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:82751
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:82751
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:82751
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:82751
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:82751
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cholesteryl-arachidonate.yaml
+  locator: Entire YAML.
+  accessed_at: '2026-10-21T13:03:41Z'
+  support: supports
+  summary: SEEDED/EXACT/ANTIBACTERIAL. Neutral C47H76O2 with native key IMXSFYNMSOULQS-BEDFLICRSA-N;
+    eight assigned stereocentres and four Z double bonds in the arachidonate chain.
+    No numeric activity, molecular target, resistance determinant, clinical status,
+    biosynthetic producer or causal graph is asserted. The UNIPROT NAME source category
+    is a chemical synonym, not a protein accession or biological target.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; conf/sources.yaml; data/raw/MANIFEST.yaml;
+    scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  locator: Complete ChEBI row 2161, source configuration and manifest; ChEBI extractor
+    and synonym/identity/assembly logic.
+  accessed_at: '2026-10-21T13:03:41Z'
+  support: supports
+  summary: ChEBI owns all native scientific content. The complete row matches the
+    generated definition, parent, role, structure, eight aliases and four xrefs. Generic
+    ChEBI SYNONYM values become EXACT_SYNONYM; UNIPROT NAME becomes RELATED_SYNONYM.
+    Source citation PMIDs are review leads, not automatically claim-level native evidence.
+    No matching ARO, PubChem enrichment, FDA or MIBiG source row was found in the
+    inspected inventories.
+  snapshot_sha256: 10463d4fadafb6b4412bc7ef42fe7af011dd53cd12207db6e9777bafc3e4360b
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:82751
+  locator: 'Full official entry: definition, structure, names, xrefs and outgoing
+    ontology relations.'
+  accessed_at: '2026-10-21T12:59:20Z'
+  support: supports
+  summary: Current ChEBI agrees with the native exact structure and formal ester definition
+    and directly asserts the antibacterial role. The retained systematic names specify
+    the same 5Z,8Z,11Z,14Z arachidonate chain and cholesterol stereochemistry. Formal
+    condensation describes chemical composition; it is not a native experimental biosynthesis
+    claim. Additional current database metabolite annotations are not silently imported
+    as source-version facts.
+  snapshot_sha256: 20872be1d3c22182eb895e23be97ce11ec327679a8c5a16f55c48214de0bf58c
+- evidence_id: xref-identity
+  kind: database
+  reference: https://www.lipidmaps.org/rest/compound/lm_id/LMST01020014/all/json;
+    https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/604-34-2/property/InChI,InChIKey,MolecularFormula,SMILES/JSON
+  locator: Complete official JSON entries and independent structure parsing.
+  accessed_at: '2026-10-21T13:03:41Z'
+  support: supports
+  summary: LIPID MAPS LMST01020014 independently encodes the native full InChIKey,
+    formula, charge and stereochemistry. Public CAS 604-34-2 lookup resolves to PubChem
+    CID 6479222 with the same exact graph; PubChem is a cross-check, not a native
+    xref. CAS was checked through public database attribution, without paid registry
+    access. LIPID MAPS also identifies the historical HMDB06726 alias, while ChEBI
+    lists padded HMDB0006726.
+  snapshot_sha256: fa5043d1eeaf368324a5a5ec14734f0d9a02ab8d2bc2123fc812e22165d647aa
+- evidence_id: parent-role
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:132006; https://www.ebi.ac.uk/chebi/CHEBI:33282
+  locator: Official class definition, incoming child relationships and antibacterial
+    role definition.
+  accessed_at: '2026-10-21T12:59:20Z'
+  support: supports
+  summary: CHEBI:132006 is cholesteryl icosatetraenoate, a cholesterol ester whose
+    acyl group has twenty carbons and four double bonds. It is a valid broader parent,
+    not an exact xref. The class includes both the selected arachidonate and CHEBI:88755,
+    CE(20:4(8Z,11Z,14Z,17Z)). CHEBI:33282 denotes an antibacterial agent and is supported
+    by the original exact-compound experiment.
+  snapshot_sha256: 650a820f7bb4d9b27908cab720174a84d9c83e5918cf82181819781aad289f3f
+- evidence_id: alias-specificity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:132006; https://www.lipidmaps.org/lipid_nomenclature/rules/hierarchy;
+    https://www.lipidmaps.org/rest/compound/lm_id/LMST01020014/all/json
+  locator: Parent synonym CE(20:4), distinct positional-isomer children, official
+    hierarchy of lipid structural information and exact-entry abbreviation.
+  accessed_at: '2026-10-21T12:59:40Z'
+  support: supports
+  summary: CE(20:4) is used as an alias/abbreviation on the exact entry but also explicitly
+    denotes the broader parent class. LIPID MAPS distinguishes species sum composition
+    from defined double-bond positions and complete stereochemistry. Thus CE(20:4)
+    and 20:4 Cholesteryl ester do not independently specify the native 5Z,8Z,11Z,14Z
+    arrangement. Preserve the useful source aliases while qualifying their broader
+    specificity; do not infer a mixture or change the native graph.
+  snapshot_sha256: 538286e925a6cd6cc3c375abc71ace9f191f401d5040c929507204762c6fa665
+- evidence_id: restricted-xrefs
+  kind: database
+  reference: https://www.hmdb.ca/metabolites/HMDB0006726; https://www.hmdb.ca/metabolites/HMDB0006726.xml;
+    https://www.hmdb.ca/metabolites/HMDB06726; reaxys:2343317
+  locator: Three official HMDB page/XML/legacy attempts, current ChEBI xref attribution
+    and LIPID MAPS historical HMDB link.
+  accessed_at: '2026-10-21T13:03:41Z'
+  support: unknown
+  summary: All direct HMDB routes returned 403 and the web attempt did not expose
+    an inspectable entry. The HMDB identifier is cross-attested, but its independent
+    exact graph remains unverified. Reaxys 2343317 is attested by ChEBI but was not
+    inspected through paid access. These access limits do not establish an identity
+    error.
+  snapshot_sha256: 8c428c92a3c3b660f83f82a474171c6bc0154cef69e90d260d3f9eb48b7698eb
+- evidence_id: primary-antibacterial
+  kind: primary_source
+  reference: PMID:18768875; DOI:10.4049/jimmunol.181.6.4177; https://pmc.ncbi.nlm.nih.gov/articles/PMC2597438/
+  locator: Complete author-manuscript main text, Methods, Results, Discussion, Table
+    I and all figure captions; Figures 1 and 7 also inspected visually.
+  accessed_at: '2026-10-21T12:59:40Z'
+  support: supports
+  summary: Commercial cholesteryl arachidonate from Sigma was incorporated into liposomes
+    alongside phosphatidylcholines, phosphatidylglycerols and cholesterol, with matched
+    vehicle liposomes. A P. aeruginosa cystic-fibrosis isolate from the Welsh laboratory
+    was tested in cation-adjusted Mueller-Hinton broth for 16 h with Syto 9 fluorescence
+    readout. Dose-dependent inhibition was observed from 4 micrograms/mL, and the
+    screen selected formulations giving at least 80% inhibition at 64 micrograms/mL.
+    This establishes antibacterial activity in that formulation; 4 micrograms/mL is
+    not a demonstrated complete-growth-suppression MIC. The main text does not give
+    a catalog number or lot-specific structural/purity certificate.
+  snapshot_sha256: 1501c23c52f034068d780fdfaa51868577be738dcd63505a01e1c909e1f81247
+- evidence_id: primary-assay-boundaries
+  kind: primary_source
+  reference: PMID:18768875; DOI:10.4049/jimmunol.181.6.4177, Figure 7b–d and antibacterial-assay
+    Methods
+  locator: Original Figure 7 visually inspected against its full caption and surrounding
+    Results.
+  accessed_at: '2026-10-21T13:01:34Z'
+  support: supports
+  summary: The three-hour low-nutrient CFU assay shows cholesteryl arachidonate slowing
+    growth; the significant reduction below inoculum to 20% belongs to cholesteryl
+    linoleate. Vehicle liposomes themselves inhibit growth to some extent. Figure
+    7d includes CA-associated inhibition for S. epidermidis and a marked comparison
+    for S. aureus, whereas the prose emphasizes S. epidermidis and Methods omit a
+    strain identifier for S. epidermidis. These source reporting differences must
+    remain explicit if activity observations are curated. No strain, exact MIC, MBC
+    or broad bactericidal spectrum is fabricated.
+  snapshot_sha256: a97089deb7078b2a0c7129d2a7add8e95c31e5d99a4cdd2bbfe52d2ff39716f8
+- evidence_id: primary-occurrence-mechanism
+  kind: primary_source
+  reference: PMID:18768875; DOI:10.4049/jimmunol.181.6.4177, Figure 1, Table I, nasal-fluid
+    depletion/reconstitution experiments and Discussion
+  locator: Full original main text; Figure 1 visually inspected.
+  accessed_at: '2026-10-21T13:01:34Z'
+  support: context_only
+  summary: The paper identifies cholesteryl arachidonate in human nasal fluid using
+    chromatography and tandem mass spectrometry compared with authentic standards,
+    and reports a similar lipid profile in bronchial epithelial secretions. Crude
+    lipid extraction, depletion/reconstitution and HNP-2 synergy experiments concern
+    mixtures, not isolated CA alone. Local epithelial origin is suggested, while transudation
+    is explicitly not excluded. Membrane perturbation, intracellular targets and oxidation
+    toxicity are hypotheses in the Discussion, not measured causal mechanisms for
+    CA. No direct protein target, bacterial ROS mechanism or dedicated producer pathway
+    follows.
+  snapshot_sha256: 1486422b3a514f073e62861202279644f97f1884c9d9099a8f2145b6f83ef582
+- evidence_id: adopted-oxidation
+  kind: primary_source
+  reference: PMID:12083928; DOI:10.1021/ja0201092; PMID:12605870; DOI:10.1016/S0003-2697(02)00621-8
+  locator: Complete original indexed abstracts and resolved publication metadata;
+    all remaining four adopted PMIDs accounted for.
+  accessed_at: '2026-10-21T12:59:21Z'
+  support: context_only
+  summary: The 2002 study identifies bicyclic endoperoxide products during cholesteryl
+    arachidonate autoxidation. The 2003 study examines ferrous oxidation-xylenol orange
+    assay reactivity in oxidized lipid mixtures, including cyclic peroxide behavior
+    after triphenylphosphine reduction. Neither supplies a measured antibacterial
+    ROS mechanism for the native unoxidized ester.
+  snapshot_sha256: 37d37195986f46be599515c05d3a9d736eb8ae3d47f85ad558efe99a0ad4e6b1
+- evidence_id: adopted-interface
+  kind: primary_source
+  reference: PMID:7213606; DOI:10.1021/bi00507a009
+  locator: Complete original indexed abstracts and resolved publication metadata;
+    all remaining four adopted PMIDs accounted for.
+  accessed_at: '2026-10-21T12:59:21Z'
+  support: context_only
+  summary: The original study concerns cholesteryl ester interfacial phase behavior,
+    monolayers/double layers and mixed lipid systems. Its physical lipid observations
+    are not a demonstrated bacterial target or antimicrobial mechanism.
+  snapshot_sha256: 37d37195986f46be599515c05d3a9d736eb8ae3d47f85ad558efe99a0ad4e6b1
+- evidence_id: adopted-esterification
+  kind: primary_source
+  reference: PMID:9020103; DOI:10.1074/jbc.272.7.3980
+  locator: Complete original indexed abstracts and resolved publication metadata;
+    all remaining four adopted PMIDs accounted for.
+  accessed_at: '2026-10-21T12:59:21Z'
+  support: context_only
+  summary: The original study expresses human acyl-CoA:cholesterol acyltransferase
+    in yeast and compares substrate specificity and cholesteryl ester production.
+    It does not establish ACAT as an antimicrobial target of cholesteryl arachidonate.
+    Human enzyme expression and host-cell lipid metabolism are not native bacterial
+    mechanism assertions.
+  snapshot_sha256: 37d37195986f46be599515c05d3a9d736eb8ae3d47f85ad558efe99a0ad4e6b1
+- evidence_id: inclusive-search
+  kind: search
+  reference: 296-inclusive-hits.txt
+  locator: Exact native identifier, label, key and minted identifier across the stated
+    local scope; hidden and ignored files included.
+  accessed_at: '2026-10-21T13:03:41Z'
+  support: context_only
+  summary: Matches are the native record, ChEBI inventory, PATHS, readiness queue
+    and generated embedding maps. No exact curator decision or other maintained local
+    evidence overlay was found in this scope. The readiness queue flags absent optional
+    mechanism data but does not establish a scientific defect. No native protein,
+    regulator, pathway, response or dataset assertion triggers structured biological-context
+    lookup.
+  snapshot_sha256: eaa498ea5aba040f79cce038fb0bf27bdbbe8f603416084a746a00e15c6f8e64
+  search_scope: rg --no-ignore --hidden -n -F for CHEBI:82751, cholesteryl arachidonate,
+    IMXSFYNMSOULQS-BEDFLICRSA-N and antibioticmech:chebi-2ca4594be9 across data, curation,
+    conf, scripts, src, docs, .claude, reviews and reports; bounded public exact-identity,
+    nomenclature and adopted-publication retrieval on 2026-10-21.
+- evidence_id: validation
+  kind: validation
+  reference: 296-schema.log; 296-strict.log; 296-chemistry.json; 296-xref-chemistry.json
+  locator: Actual focused validation and independent chemistry outputs.
+  accessed_at: '2026-10-21T13:03:41Z'
+  support: supports
+  summary: Schema, strict validation and both native/external chemistry diagnostics
+    pass. Native formula, charge, masses, full key and minted identifier agree. All
+    thirteen captured source input hashes remain unchanged.
+  snapshot_sha256: 2117fb61256d47724d1e8d40bafbc6e0bf809ba0d836d7e92bda7fd2a3bb6afc
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact cholesteryl arachidonate graph and chemical xrefs
+  outcome: supported
+  summary: Native encodings agree with official exact structures. The parent class
+    and abbreviation ambiguity do not make the native definite graph a mixture. Independent
+    HMDB and Reaxys inspection remains limited.
+  target_ids:
+  - CHEBI:82751
+  evidence_ids:
+  - native
+  - chebi
+  - xref-identity
+  - restricted-xrefs
+  - validation
+- assessment_id: alias-scope
+  area: nomenclature
+  topic: Composition-only aliases versus exact chemical identity
+  outcome: concern
+  summary: Two source-attested aliases omit the double-bond positions and geometry
+    distinguishing this exact child from the broader parent class. Their current EXACT_SYNONYM
+    typing overstates specificity.
+  target_ids:
+  - CHEBI:82751
+  evidence_ids:
+  - owners
+  - parent-role
+  - alias-specificity
+- assessment_id: activity
+  area: scope
+  topic: Antibacterial filing and original material scope
+  outcome: supported
+  summary: The native role and filing are supported by original exact-commercial-compound
+    growth-inhibition experiments. Carrier effects, fluorescence endpoint, source
+    strain-reporting limits and the distinct CL killing result constrain any future
+    quantitative enrichment.
+  target_ids:
+  - CHEBI:82751
+  evidence_ids:
+  - primary-antibacterial
+  - primary-assay-boundaries
+  - parent-role
+- assessment_id: mechanism-evidence
+  area: evidence
+  topic: Claim-level mechanism, origin and related-paper boundaries
+  outcome: supported
+  summary: The sparse native record does not assert a speculative protein target or
+    oxidative mechanism. All five adopted literature leads have been checked at stated
+    depth; oxidation chemistry, host lipid metabolism, crude mixtures and related
+    esters are not transferred as exact antimicrobial causal evidence.
+  target_ids:
+  - CHEBI:82751
+  evidence_ids:
+  - primary-occurrence-mechanism
+  - adopted-oxidation
+  - adopted-interface
+  - adopted-esterification
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary activity enrichment
+  outcome: unknown
+  summary: Activity observations could be added from the inspected original with explicit
+    formulation and endpoint context, but their current absence is not a required-field
+    defect. No missing causal graph can be supplied from the paper’s speculative discussion
+    alone.
+  target_ids:
+  - CHEBI:82751
+  evidence_ids:
+  - native
+  - owners
+  - primary-antibacterial
+  - primary-assay-boundaries
+  - inclusive-search
+findings:
+- finding_id: F1
+  issue_key: cholesteryl-arachidonate-composition-only-exact-synonyms
+  category: identity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify composition-only cholesteryl ester aliases as broader names
+  description: synonyms[1] 20:4 Cholesteryl ester and synonyms[3] CE(20:4) are typed
+    EXACT_SYNONYM although they encode acyl carbon count and unsaturation count without
+    double-bond positions or geometry. Official ChEBI uses CE(20:4) for the broader
+    parent CHEBI:132006, which includes both the native arachidonate and a different
+    positional isomer. LIPID MAPS likewise separates composition-level shorthand from
+    full structural specification. Preserve these source-attested aliases using a
+    broader synonym type or equivalent explicit specificity qualification. The native
+    exact graph and the fully specified CE(20:4(5Z,8Z,11Z,14Z)) alias require no change.
+  target_ids:
+  - CHEBI:82751
+  field_paths:
+  - synonyms[1].synonym_type
+  - synonyms[3].synonym_type
+  evidence_ids:
+  - owners
+  - parent-role
+  - alias-specificity
+  rule_id: 'native-review-checklist: Identity and Equivalence'
+  native_severity: minor
+  normalization_reason: Bounded synonym-specificity defect that can conflate positional/geometric
+    isomers during name matching. It does not invalidate the record structure, antibacterial
+    role or recognized source names.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source aliases and provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Preserve or normalize source synonym specificity
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible typed synonym emission
+actions:
+- action_id: A1
+  description: Preserve source aliases while correcting their structural specificity
+    through the maintained source/seed path.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:82751
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source aliases and provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Preserve or normalize source synonym specificity
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible typed synonym emission
+  acceptance_checks:
+  - Emit BROAD_SYNONYM or an explicitly documented equivalent for CE(20:4) and 20:4
+    Cholesteryl ester; retain source attribution and the exact fully specified aliases.
+  - Keep CHEBI:132006 as the broader parent and preserve the native full structure/key.
+    Do not convert the record into a mixture or replace it with another 20:4 positional
+    isomer.
+  - Reseed reproducibly and rerun focused schema/strict and applicable source-reproduction
+    gates.
+- action_id: A2
+  description: If primary activity enrichment is desired, curate the exact formulation
+    and endpoint without importing speculative mechanism.
+  finding_ids: []
+  target_ids:
+  - CHEBI:82751
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cholesteryl-arachidonate.yaml
+    role: Curator-owned primary activity/evidence additions
+  acceptance_checks:
+  - Use PMID 18768875 with commercial Sigma cholesteryl arachidonate in liposomes
+    and its matched vehicle control. Distinguish 16-hour fluorescence growth inhibition
+    from the three-hour CFU assay.
+  - Do not label 4 micrograms/mL a conventional complete-suppression MIC or import
+    cholesteryl linoleate killing/MBC claims. Preserve P. aeruginosa isolate description
+    and unresolved S. epidermidis strain/reporting limitations.
+  - Keep HNP-2 synergy and depletion/reconstitution results scoped to crude lipid
+    mixtures. Do not assert a bacterial protein target, ROS mechanism or definitive
+    epithelial biosynthesis from the Discussion.
+limitations:
+- 'Independent HMDB exact-structure verification was unavailable: current page, XML
+  and historical alias routes returned 403. Reaxys was not inspected through paid
+  access; these identifiers remain cross-attested by current ChEBI, with the HMDB
+  legacy alias also present in LIPID MAPS.'
+- The complete primary antibacterial source was read as the freely available author
+  manuscript in PMC, including all main sections and Table I; Figures 1 and 7 were
+  visually inspected. The nominal publisher PDF URL returned 1,396 bytes of challenge
+  HTML, not a PDF, and Europe PMC full-text XML returned 500.
+- Four other adopted papers were inspected at complete-original-abstract depth only.
+  They concern oxidation chemistry, lipid physical behavior or host enzyme substrate
+  specificity and do not supply a missing exact antibacterial mechanism.
+- Original antibacterial material was a commercial lipid formulated with other lipids.
+  The paper provides no catalog number or lot-specific purity/structural certificate,
+  reports vehicle activity and has species/strain reporting differences around Figure
+  7d. Quantitative curation must retain these conditions and uncertainty.
+- No measured molecular target, bacterial ROS causal chain or definitive producer
+  biosynthesis was established by the inspected antibacterial paper. Their absence
+  from this SEEDED record is not independently a defect; scientific completion remains
+  partial.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

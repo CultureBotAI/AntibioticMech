@@ -1,0 +1,876 @@
+# Review of (−)-chuangxinmycin
+
+- Review: 20261021T131009Z-chuangxinmycin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T12:48:48Z
+- Finished UTC: 2026-10-21T13:10:09Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native SMILES omits the indole hydrogen and fails molecular sanitization. Replacing its aromatic n with [nH] exactly reproduces the native InChI, formula and stereochemical key and agrees with the official ChEBI molfile and PubChem exact-key graph. Original stereoselective synthesis supports the negative enantiomer and explains the alternative numbering. Primary TrpRS studies provide useful species- and assay-specific enrichment, but no unsupported target assertion is currently present. One confirmed major correction is required through the maintained source-generation lane.
+
+## Scope And Provenance
+
+Entire SEEDED, EXACT record: definition, six synonyms, three chemical parents, two roles, all structure fields, CAS/Reaxys links, source concept and three history events; all nine adopted MED citation leads.
+
+Selection: Queue 298; preserved initial inputs plus actual ChEBI role owner comprise thirteen unchanged hashes.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:79391 | data/antibiotics/antibacterial/chuangxinmycin.yaml | generated | (−)-chuangxinmycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema validation | passed | True | CHEBI:79391 | Exit 0; structural string validation does not prove molecular validity. |
+| Documented strict validation | passed | True | CHEBI:79391 | Exit 0; no ERROR rows. |
+| Actual native molecular consistency check | failed | False | CHEBI:79391 | Exit 1; RDKit cannot kekulize the native aromatic nitrogen encoding and the mol-is-not-None assertion fails. The native record remains unchanged. |
+| Initial supplemental comparison script | failed | False | CHEBI:79391 | Exit 1 in the initial script version: a mass-field lookup used molecular_mass rather than actual average_mass. This scratch-script error was corrected; the separate native parsing failure remains. |
+| Corrected supplemental repair comparison | passed | False | CHEBI:79391 | Exit 0; asserts native parse failure and verifies the proposed repair against native InChI, official ChEBI molfile and exact-key PubChem graph. This diagnostic pass does not mean the native structure passed. |
+| Preserved source and citation reconciliation | passed | False | CHEBI:79391 | Exit 0; thirteen hashes, nine MED leads, source fields, parents/roles/xrefs and three history events reconciled. Two non-MED identifier collisions excluded. |
+| Structured adapter applicability | not_applicable | False | CHEBI:79391 | The native record names no protein, gene, pathway, regulator, locus or transcriptomic dataset. TrpRS studies are newly inspected enrichment evidence, with no new native target or expression-module assertion made. |
+| Authoritative full QC | failed | True | CHEBI:79391 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:79391 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:79391 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:79391 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:79391 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:79391 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:79391 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:79391 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:79391 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral negative enantiomer
+
+identity: supported. Targets: CHEBI:79391.
+
+Valid native InChI, official molfile and exact-key PubChem graph agree. Original stereoselective synthesis explains alternative numbering; no opposite enantiomer or mixture is substituted.
+
+### Native SMILES validity
+
+consistency: concern. Targets: CHEBI:79391.
+
+Missing indole [nH] makes a core native encoding invalid despite agreeing valid InChI and mass fields.
+
+### Chemical parents and antibacterial activity
+
+grounding: supported. Targets: CHEBI:79391.
+
+Three parents match the valid topology and current authority; original natural-product activity supports antibacterial classification.
+
+### Legacy registry accessions
+
+identity: unknown. Targets: CHEBI:79391.
+
+CAS and Reaxys are source-concordant, but proprietary or independent registry record bodies were not audited. No contrary exact identity was demonstrated.
+
+### TrpRS evidence and enrichment boundaries
+
+evidence: supported. Targets: CHEBI:79391.
+
+Primary biochemical and structural evidence supports species-scoped TrpRS inhibition. Native mechanism is unasserted; optional enrichment must distinguish enzyme assays, binding, simulations, analogue MICs and host context.
+
+### Maintained ownership, citation scope and history
+
+provenance: supported. Targets: CHEBI:79391.
+
+All nine adopted MED leads have explicit dispositions, including unavailable full texts; source fields and thirteen hashes remain unchanged.
+
+### Primary mechanism and producer enrichment
+
+completeness: supported. Targets: CHEBI:79391.
+
+Primary activity, TrpRS and biosynthetic evidence would improve the SEEDED record. Missing optional evidence/target objects are not treated as demonstrated false claims.
+
+### Focused validation versus chemical consistency
+
+schema: supported. Targets: CHEBI:79391.
+
+Schema and strict checks pass; the separate chemistry failure remains material and blocks native scientific sign-off.
+
+## Findings
+
+### F1: Source-derived SMILES omits indole [nH] and cannot be parsed
+
+major / open / confirmed; issue key: chebi-79391-invalid-smiles-missing-indole-hydrogen.
+
+Native and current ChEBI JSON encode aromatic n without the hydrogen required by this neutral indole, causing kekulization failure. Native InChI and official ChEBI molfile encode the valid NH structure. A one-atom notation repair restores exact formula, key and both stereocenters without altering identity. Passing schema/strict checks do not resolve the chemical inconsistency.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Implement a maintained, validated correction for CHEBI:79391 and regenerate from the corrected input. Verified candidate SMILES: C[C@H]1c2c[nH]c3cccc(c23)S[C@H]1C(=O)O. Current upstream JSON still has the defect, so do not rely on an unchanged refresh or patch only generated YAML.
+
+- Require sanitized parse, mutual chirality-aware agreement with the official molfile and native InChI, DKHFLDXCKWDVMF-UPONEAKYSA-N, C12H11NO2S, charge 0 and preserved carboxy-bearing R/methyl-bearing S centers.
+- Make the correction reproducible through the maintained ChEBI extraction/input policy; document provenance and regression coverage for this invalid aromatic-n case. Preserve the already agreeing native InChI/key/formula.
+- Rerun meaningful native chemical consistency, just validate, just validate-strict, just verify-corpus --summary and just qc after authorized curation. Preserve history and leave REVIEWED unset until all required native gates pass.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/chuangxinmycin.yaml; Entire YAML, source concept and three history events | supports | The record denotes the neutral negative enantiomer with two configured centers and has no target, mechanism enum, MIC, clinical status, producer, resistance edge or causal graph. SEEDED status does not claim completed scientific curation. |
+| chemistry | Native CHEBI:79391; current official ChEBI molfile; PubChem:3037261; 298-chemistry.py/.json/.log;298-chebi.mol;298-pubchem-key.json | refutes | The native C[C@H]1c2cnc3cccc(c23)S[C@H]1C(=O)O cannot be sanitized. Minimal repair C[C@H]1c2c[nH]c3cccc(c23)S[C@H]1C(=O)O reproduces DKHFLDXCKWDVMF-UPONEAKYSA-N, C12H11NO2S, charge zero, average mass 233.292 and monoisotopic mass 233.051049592. Repair, native InChI, official ChEBI molfile and exact-key PubChem lookup have identical canonical stereochemical SMILES and mutual chirality-aware graph matches; explicit atom mappings are saved. Methyl-bearing and carboxy-bearing centers remain S and R. PubChem is independent discovery verification, not a native xref being added. |
+| authority | CHEBI:79391; 298-chebi.json: names, definition, chemical data, outgoing relations and accessions; official molfile route /backend/api/public/molfile/79391 | supports | Current ChEBI repeats the same invalid SMILES while its official molfile and InChI are valid. Its three native is-a parents are monocarboxylic acid, indole alkaloid and thiinoindole; both native antimicrobial roles remain present. Extra metabolite/TrpRS-inhibitor roles are outside the adopted activity-role slice. Current names include both 2R,3S and 4S,5R numbering forms. CAS63339-68-4 and Reaxys7796054 remain source-supplied; independent CAS registry/Reaxys record bodies were not accessed. |
+| stereosynthesis | DOI:10.1016/S0957-4166(97)00253-X; Original publisher abstract and graphical abstract;298-1997-graphical.gif and298-browser-inspection.json | supports | The original 1997 synthesis reports the negative 4S,5R and positive 4R,5S enantiomers separately. The graphic explicitly draws NH and labels the methyl-bearing atom 4 and carboxy-bearing atom 5 in its numbering. They correspond to native positions 3 and 2, respectively; this supports the native 2R,3S definition without inferring a stereo conflict from different locants. The full experimental article and earliest absolute-configuration study were not obtained. |
+| discovery | PMID:327539; Complete original 1977 abstract in298-adopted-core.json, source MED only | supports | The first report describes crystalline natural chuangxinmycin from Actinoplanes tsinanensis with formula C12H11NO2S and spectral/rotation characterization. It reports antibacterial activity against Gram-positive and Gram-negative organisms and mouse E.coli/Shigella infection efficacy. The full methods, exact original stereochemical experiment and preliminary clinical design were not obtained. This supports antibacterial classification, not regulatory approval or transferable quantitative MICs. |
+| target-2002 | PMID:12372526; DOI:10.1016/S0960-894X(02)00604-2; Original2002 pp 3171–3174 text reproduced publicly on LookChem; original main Results and assay notes 7–9,12,18–20;298-browser-inspection.json | supports | Purified recombinant S.aureus TrpRS aminoacylation inhibition and a pyrophosphate-exchange experiment support competitive inhibition against tryptophan, with reported Ki 20 nM. Aminoacylation and scintillation-proximity IC50 formats differ. The antibacterial MICs in this brief report are specifically for lactone 20, not natural chuangxinmycin; several other derivatives were tested as documented cis/trans mixtures. Authors describe TrpRS inhibition as likely contributing to antibacterial action. Full stereopurity of the natural reference batch is not independently reconstructed. |
+| target-2022 | PMID:35031320; DOI:10.1016/j.jbc.2022.101580; 298-2022.xml: original Results, Tables1–3, crystallization and ITC Methods, acknowledgments | supports | Direct G.stearothermophilus TrpRS/CXM crystallography at 2.06 Å and ITC/mutagenesis establish binding to this enzyme. Wild-type affinity is reported around 3.1 µM; this is a Kd rather than an antibacterial MIC or the S.aureus Ki. Subunits adopt different conformations. Molecular dynamics and computed residue contributions remain model-based. CXM was supplied by a named investigator; independent batch stereopurity was not documented here. The manuscript reports deposit 7CMS, whose separate coordinate file was not audited. |
+| target-2025 | PMID:40406164; DOI:10.1039/D5CB00060B; 298-2025.xml: original complex structures, analogue comparison, selectivity discussion and material/enzyme/ATP-assay Methods | supports | The study directly determines E.coli and S.aureus TrpRS complexes using biosynthetic CXM purified by HPLC and checked by HRMS/NMR. ATP-bound E.coli structures show that CXM need not exclude ATP; conformational behavior differs from the earlier G.stearothermophilus complex. Activity is measured by ATP consumption using hydroxylamine instead of tRNA, so it is not a direct tRNA-charging measurement or whole-cell MIC. Human selectivity modeling and simulated interactions are distinguished from experimental bacterial binding. Demethyl and additional-methyl analogues remain separate compounds. |
+| host-context | PMID:22500807; DOI:10.1016/j.cell.2012.02.050; 298-2012.html: main Results/Methods;298-2012-fig2.jpg, especially panelA versusB/C | context_only | Figure 2A lists Chuangximycin among tRNA-synthetase toxins as background context. The displayed toxin-exposure experiments use other named compounds; host RNAi, avoidance and immune surveillance are not exact chuangxinmycin binding or antimicrobial assays. This adopted citation cannot alone establish a bacterial target or a chuangxinmycin host phenotype. |
+| leads | Nine adopted MED citations and five selected additional original studies; 298-lead-dispositions.json;298-adopted-core.json;298-search-core.json | supports | All nine adopted MED records have explicit dispositions. Original 1987 and 2001 papers are synthetic/dehydro/derivative context;1989 methyltransferase concerns biosynthesis. Three older Chinese records have no available abstract/body and remain unresolved. The 2018 biosynthesis study supports culture/pathway context but its putative self-resistance gene is not experimentally proven resistance in that report. Additional 2019 stereoisomer and 2025 M.tuberculosis studies were inspected only at complete-abstract depth, with no numeric MIC or new exact synonym adopted. Identifier327539 collisions from ETH and CBA were excluded. |
+| owners | data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Exact adopted row 2037; extractor ChEBI structure-field copy; structure_from_chebi;298-source-audit.json | supports | The invalid SMILES is copied directly from adopted ChEBI structure data by the extractor and seeder. Current upstream JSON remains defective, so an unchanged refresh is insufficient. A validated upstream correction or explicit maintained extraction normalization must reproduce the valid NH graph before reseeding. All thirteen preserved hashes and three history events remain unchanged. No existing correction mechanism is assumed. |
+| search | Exact compound discovery and local provenance search; Ignored-inclusive rg search of curation,conf,scripts,data/raw for CHEBI:79391,chuangxinmycin,chuanghsinmycin andDKHFLDXCKWDVMF; EuropePMC SRC:MED AND chuangxinmycin; exact synthesis title searches | context_only | Ignored files were included. The exact MED query returned 60 metadata hits; selected original sources were inspected at the depths explicitly recorded. This is not a full-text audit of every publication. The source queue is a research lead, not claim evidence. |
+| validation | Documented native validators and supplemental diagnostics; 298-focused-results.json,298-focused-run.log,298-schema.log,298-strict.log,298-strict.tsv and298-chemistry.json | supports | Native schema and strict validation pass, but the actual native molecule check fails. The corrected scratch repair diagnostic passes by confirming the failure and exact alternative graph. The initial scratch comparison script also failed from an incorrect mass-field key before correction. Full-corpus gates are separate. |
+
+## Limits And Additional Notes
+
+- The earliest original absolute-configuration experiment and complete1977 report were not obtained. The original 1997 publisher abstract and graphic were inspected, supporting the negative 4S,5R enantiomer and its numbering correspondence to native 2R,3S; full experimental stereopurity/rotation details remain unavailable.
+- Three older adopted MED records have metadata but no inspected original abstract/body. The1989 biosynthetic enzyme paper was abstract-only. Their missing details are not replaced with later summaries.
+- The 2002 original article was read from a public reproduction; direct HTML download returned 503. Its graphic layers do not contain the textual page content. Natural-reference batch stereopurity was not independently reconstructed.
+- The 2022 supplied-compound batch was not independently characterized here. The 2025 paper states HPLC purification and HRMS/NMR verification of biosynthetic CXM; its assay measures ATP consumption with hydroxylamine, not direct tRNA charging.
+- The2019 and 2025 M.tuberculosis additional sources were complete-abstract only. No MIC, resistance fold change, exact new synonym or whole-cell causal graph is imported from those abstracts.
+- CAS registry and proprietary Reaxys bodies were not independently inspected. PubChem exact-key lookup is independent structure corroboration, not verification of a native PubChem cross-reference.
+- Initial public PMC requests returned browser-challenge HTML despite HTTP 200; EuropePMC original XML succeeded. The original 2012 PMC HTML and Figure 2 were usable. Failed retrievals are preserved in fetch manifests.
+- The actual native molecular check failed and remains unresolved. A scratch diagnostic initially failed on a wrong mass-field name, then passed after correction; neither event is represented as a native chemistry pass.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native record or maintained source was edited; thirteen input hashes were rechecked.
+- Only MED records were adopted from the initial PMID query. ETH/CBA identifier collisions were excluded, rather than interpreted as additional citations.
+- Exact native synonym numbering, defined core stereochemistry, analogue activity and biosynthetic enzymes retain their respective scopes.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T131009Z-chuangxinmycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of (−)-chuangxinmycin
+started_at: '2026-10-21T12:48:48Z'
+finished_at: '2026-10-21T13:10:09Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Entire native record audited against preserved ChEBI inputs,
+    official molecular encodings and inspected original synthesis and target studies.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Major invalid SMILES; exact stereochemical identity otherwise supported;
+  native REVIEWED gate blocked
+scientific_review: true
+summary: The native SMILES omits the indole hydrogen and fails molecular sanitization.
+  Replacing its aromatic n with [nH] exactly reproduces the native InChI, formula
+  and stereochemical key and agrees with the official ChEBI molfile and PubChem exact-key
+  graph. Original stereoselective synthesis supports the negative enantiomer and explains
+  the alternative numbering. Primary TrpRS studies provide useful species- and assay-specific
+  enrichment, but no unsupported target assertion is currently present. One confirmed
+  major correction is required through the maintained source-generation lane.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/chuangxinmycin.yaml
+    sha256: 518d2af245f40120e7567c57a30ca639d30ba71b1a01d23213c8608267f0d6d7
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: 'Entire SEEDED, EXACT record: definition, six synonyms, three chemical
+    parents, two roles, all structure fields, CAS/Reaxys links, source concept and
+    three history events; all nine adopted MED citation leads.'
+  selection: Queue 298; preserved initial inputs plus actual ChEBI role owner comprise
+    thirteen unchanged hashes.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:79391
+targets:
+- target_id: CHEBI:79391
+  path: data/antibiotics/antibacterial/chuangxinmycin.yaml
+  label: (−)-chuangxinmycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: ChEBI activity role names
+checks:
+- check_id: schema
+  name: Documented schema validation
+  status: passed
+  required: true
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/chuangxinmycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; structural string validation does not prove molecular validity.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict validation
+  status: passed
+  required: true
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/chuangxinmycin.yaml --out /private/tmp/am-review-session/298-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; no ERROR rows.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - validation
+- check_id: native-chemistry
+  name: Actual native molecular consistency check
+  status: failed
+  required: false
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    298
+  exit_code: 1
+  expected_exit_code: 0
+  summary: Exit 1; RDKit cannot kekulize the native aromatic nitrogen encoding and
+    the mol-is-not-None assertion fails. The native record remains unchanged.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: repair-diagnostic-initial
+  name: Initial supplemental comparison script
+  status: failed
+  required: false
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/298-chemistry.py
+  exit_code: 1
+  expected_exit_code: 0
+  summary: 'Exit 1 in the initial script version: a mass-field lookup used molecular_mass
+    rather than actual average_mass. This scratch-script error was corrected; the
+    separate native parsing failure remains.'
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - chemistry
+- check_id: repair-diagnostic
+  name: Corrected supplemental repair comparison
+  status: passed
+  required: false
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/298-chemistry.py
+    > /private/tmp/am-review-session/298-chemistry.log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; asserts native parse failure and verifies the proposed repair against
+    native InChI, official ChEBI molfile and exact-key PubChem graph. This diagnostic
+    pass does not mean the native structure passed.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - chemistry
+- check_id: source-reconciliation
+  name: Preserved source and citation reconciliation
+  status: passed
+  required: false
+  command: .venv/bin/python /private/tmp/am-review-session/298-ledger.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; thirteen hashes, nine MED leads, source fields, parents/roles/xrefs
+    and three history events reconciled. Two non-MED identifier collisions excluded.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - owners
+  - leads
+- check_id: structured-adapter
+  name: Structured adapter applicability
+  status: not_applicable
+  required: false
+  summary: The native record names no protein, gene, pathway, regulator, locus or
+    transcriptomic dataset. TrpRS studies are newly inspected enrichment evidence,
+    with no new native target or expression-module assertion made.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - record
+  - target-2002
+  - target-2022
+  - target-2025
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:79391
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:79391
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:79391
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:79391
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:79391
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:79391
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:79391
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:79391
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:79391
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/chuangxinmycin.yaml
+  locator: Entire YAML, source concept and three history events
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: supports
+  summary: The record denotes the neutral negative enantiomer with two configured
+    centers and has no target, mechanism enum, MIC, clinical status, producer, resistance
+    edge or causal graph. SEEDED status does not claim completed scientific curation.
+- evidence_id: chemistry
+  kind: validation
+  reference: Native CHEBI:79391; current official ChEBI molfile; PubChem:3037261
+  locator: 298-chemistry.py/.json/.log;298-chebi.mol;298-pubchem-key.json
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: refutes
+  summary: The native C[C@H]1c2cnc3cccc(c23)S[C@H]1C(=O)O cannot be sanitized. Minimal
+    repair C[C@H]1c2c[nH]c3cccc(c23)S[C@H]1C(=O)O reproduces DKHFLDXCKWDVMF-UPONEAKYSA-N,
+    C12H11NO2S, charge zero, average mass 233.292 and monoisotopic mass 233.051049592.
+    Repair, native InChI, official ChEBI molfile and exact-key PubChem lookup have
+    identical canonical stereochemical SMILES and mutual chirality-aware graph matches;
+    explicit atom mappings are saved. Methyl-bearing and carboxy-bearing centers remain
+    S and R. PubChem is independent discovery verification, not a native xref being
+    added.
+  snapshot_sha256: 562f5f24e380925363bb8a5359f1670d6e0c3965b284c03ce9d236ad8659ecc1
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:79391
+  locator: '298-chebi.json: names, definition, chemical data, outgoing relations and
+    accessions; official molfile route /backend/api/public/molfile/79391'
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: supports
+  summary: Current ChEBI repeats the same invalid SMILES while its official molfile
+    and InChI are valid. Its three native is-a parents are monocarboxylic acid, indole
+    alkaloid and thiinoindole; both native antimicrobial roles remain present. Extra
+    metabolite/TrpRS-inhibitor roles are outside the adopted activity-role slice.
+    Current names include both 2R,3S and 4S,5R numbering forms. CAS63339-68-4 and
+    Reaxys7796054 remain source-supplied; independent CAS registry/Reaxys record bodies
+    were not accessed.
+  snapshot_sha256: b01b1c690ae43cf7e55736d7bfc0f3836e68e49a30b32515d3452ca3011f35dd
+- evidence_id: stereosynthesis
+  kind: primary_source
+  reference: DOI:10.1016/S0957-4166(97)00253-X
+  locator: Original publisher abstract and graphical abstract;298-1997-graphical.gif
+    and298-browser-inspection.json
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: supports
+  summary: The original 1997 synthesis reports the negative 4S,5R and positive 4R,5S
+    enantiomers separately. The graphic explicitly draws NH and labels the methyl-bearing
+    atom 4 and carboxy-bearing atom 5 in its numbering. They correspond to native
+    positions 3 and 2, respectively; this supports the native 2R,3S definition without
+    inferring a stereo conflict from different locants. The full experimental article
+    and earliest absolute-configuration study were not obtained.
+  snapshot_sha256: da225a47e1c0e206670d4a0d3bf361e17585b7c5f9d3e56d3a8b644676cfc55c
+- evidence_id: discovery
+  kind: primary_source
+  reference: PMID:327539
+  locator: Complete original 1977 abstract in298-adopted-core.json, source MED only
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: supports
+  summary: The first report describes crystalline natural chuangxinmycin from Actinoplanes
+    tsinanensis with formula C12H11NO2S and spectral/rotation characterization. It
+    reports antibacterial activity against Gram-positive and Gram-negative organisms
+    and mouse E.coli/Shigella infection efficacy. The full methods, exact original
+    stereochemical experiment and preliminary clinical design were not obtained. This
+    supports antibacterial classification, not regulatory approval or transferable
+    quantitative MICs.
+  snapshot_sha256: 2344e295d256529b97c5c8719dfd3d17e488eebe57289bd10df18e8fb31b144a
+- evidence_id: target-2002
+  kind: primary_source
+  reference: PMID:12372526; DOI:10.1016/S0960-894X(02)00604-2
+  locator: Original2002 pp 3171–3174 text reproduced publicly on LookChem; original
+    main Results and assay notes 7–9,12,18–20;298-browser-inspection.json
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: supports
+  summary: Purified recombinant S.aureus TrpRS aminoacylation inhibition and a pyrophosphate-exchange
+    experiment support competitive inhibition against tryptophan, with reported Ki
+    20 nM. Aminoacylation and scintillation-proximity IC50 formats differ. The antibacterial
+    MICs in this brief report are specifically for lactone 20, not natural chuangxinmycin;
+    several other derivatives were tested as documented cis/trans mixtures. Authors
+    describe TrpRS inhibition as likely contributing to antibacterial action. Full
+    stereopurity of the natural reference batch is not independently reconstructed.
+  snapshot_sha256: a4666768400dcadb9aaf20eaa58b69958a39f3ee2b657e3873551eebdc4807a1
+- evidence_id: target-2022
+  kind: primary_source
+  reference: PMID:35031320; DOI:10.1016/j.jbc.2022.101580
+  locator: '298-2022.xml: original Results, Tables1–3, crystallization and ITC Methods,
+    acknowledgments'
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: supports
+  summary: Direct G.stearothermophilus TrpRS/CXM crystallography at 2.06 Å and ITC/mutagenesis
+    establish binding to this enzyme. Wild-type affinity is reported around 3.1 µM;
+    this is a Kd rather than an antibacterial MIC or the S.aureus Ki. Subunits adopt
+    different conformations. Molecular dynamics and computed residue contributions
+    remain model-based. CXM was supplied by a named investigator; independent batch
+    stereopurity was not documented here. The manuscript reports deposit 7CMS, whose
+    separate coordinate file was not audited.
+  snapshot_sha256: a3ad912c0a32aa199015697adcd920b58fa9947fad9e44b799521924abe1150e
+- evidence_id: target-2025
+  kind: primary_source
+  reference: PMID:40406164; DOI:10.1039/D5CB00060B
+  locator: '298-2025.xml: original complex structures, analogue comparison, selectivity
+    discussion and material/enzyme/ATP-assay Methods'
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: supports
+  summary: The study directly determines E.coli and S.aureus TrpRS complexes using
+    biosynthetic CXM purified by HPLC and checked by HRMS/NMR. ATP-bound E.coli structures
+    show that CXM need not exclude ATP; conformational behavior differs from the earlier
+    G.stearothermophilus complex. Activity is measured by ATP consumption using hydroxylamine
+    instead of tRNA, so it is not a direct tRNA-charging measurement or whole-cell
+    MIC. Human selectivity modeling and simulated interactions are distinguished from
+    experimental bacterial binding. Demethyl and additional-methyl analogues remain
+    separate compounds.
+  snapshot_sha256: d0657f73503bceda61a839d9ad6a8c46644c4f55cebd9477519a4eb3e41ad297
+- evidence_id: host-context
+  kind: primary_source
+  reference: PMID:22500807; DOI:10.1016/j.cell.2012.02.050
+  locator: '298-2012.html: main Results/Methods;298-2012-fig2.jpg, especially panelA
+    versusB/C'
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: context_only
+  summary: Figure 2A lists Chuangximycin among tRNA-synthetase toxins as background
+    context. The displayed toxin-exposure experiments use other named compounds; host
+    RNAi, avoidance and immune surveillance are not exact chuangxinmycin binding or
+    antimicrobial assays. This adopted citation cannot alone establish a bacterial
+    target or a chuangxinmycin host phenotype.
+  snapshot_sha256: e7628559f76c1c670460f5f0cc6e39d66e286328ccaf8cf3409dc10db4db506a
+- evidence_id: leads
+  kind: database
+  reference: Nine adopted MED citations and five selected additional original studies
+  locator: 298-lead-dispositions.json;298-adopted-core.json;298-search-core.json
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: supports
+  summary: All nine adopted MED records have explicit dispositions. Original 1987
+    and 2001 papers are synthetic/dehydro/derivative context;1989 methyltransferase
+    concerns biosynthesis. Three older Chinese records have no available abstract/body
+    and remain unresolved. The 2018 biosynthesis study supports culture/pathway context
+    but its putative self-resistance gene is not experimentally proven resistance
+    in that report. Additional 2019 stereoisomer and 2025 M.tuberculosis studies were
+    inspected only at complete-abstract depth, with no numeric MIC or new exact synonym
+    adopted. Identifier327539 collisions from ETH and CBA were excluded.
+  snapshot_sha256: 9d9dc342865c2012d61cd96b9d008d957651dd7418a4eccc26bf16e31f1eabbc
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: Exact adopted row 2037; extractor ChEBI structure-field copy; structure_from_chebi;298-source-audit.json
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: supports
+  summary: The invalid SMILES is copied directly from adopted ChEBI structure data
+    by the extractor and seeder. Current upstream JSON remains defective, so an unchanged
+    refresh is insufficient. A validated upstream correction or explicit maintained
+    extraction normalization must reproduce the valid NH graph before reseeding. All
+    thirteen preserved hashes and three history events remain unchanged. No existing
+    correction mechanism is assumed.
+  snapshot_sha256: 349e5382bb660625c820453d71f2cbc8334e37bec7e5a2b110f013bab3e83422
+- evidence_id: search
+  kind: search
+  reference: Exact compound discovery and local provenance search
+  locator: Ignored-inclusive rg search of curation,conf,scripts,data/raw for CHEBI:79391,chuangxinmycin,chuanghsinmycin
+    andDKHFLDXCKWDVMF; EuropePMC SRC:MED AND chuangxinmycin; exact synthesis title
+    searches
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: context_only
+  summary: Ignored files were included. The exact MED query returned 60 metadata hits;
+    selected original sources were inspected at the depths explicitly recorded. This
+    is not a full-text audit of every publication. The source queue is a research
+    lead, not claim evidence.
+  snapshot_sha256: 21bbe6fe9867ca1fd820ea2737f66b2068a1b82772fea2a5b7a9bdab81a31b1c
+  search_scope: Ignored-inclusive rg search of curation,conf,scripts,data/raw for
+    CHEBI:79391,chuangxinmycin,chuanghsinmycin andDKHFLDXCKWDVMF; EuropePMC SRC:MED
+    AND chuangxinmycin; exact synthesis title searches
+- evidence_id: validation
+  kind: validation
+  reference: Documented native validators and supplemental diagnostics
+  locator: 298-focused-results.json,298-focused-run.log,298-schema.log,298-strict.log,298-strict.tsv
+    and298-chemistry.json
+  accessed_at: '2026-10-21T13:05:21Z'
+  support: supports
+  summary: Native schema and strict validation pass, but the actual native molecule
+    check fails. The corrected scratch repair diagnostic passes by confirming the
+    failure and exact alternative graph. The initial scratch comparison script also
+    failed from an incorrect mass-field key before correction. Full-corpus gates are
+    separate.
+  snapshot_sha256: 277e5e0b04283749e5d1819b4195c285dffdf2099d410e7967315b60b6780582
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral negative enantiomer
+  outcome: supported
+  summary: Valid native InChI, official molfile and exact-key PubChem graph agree.
+    Original stereoselective synthesis explains alternative numbering; no opposite
+    enantiomer or mixture is substituted.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - chemistry
+  - authority
+  - stereosynthesis
+- assessment_id: structure
+  area: consistency
+  topic: Native SMILES validity
+  outcome: concern
+  summary: Missing indole [nH] makes a core native encoding invalid despite agreeing
+    valid InChI and mass fields.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - chemistry
+  - validation
+  - owners
+- assessment_id: classification
+  area: grounding
+  topic: Chemical parents and antibacterial activity
+  outcome: supported
+  summary: Three parents match the valid topology and current authority; original
+    natural-product activity supports antibacterial classification.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - authority
+  - discovery
+- assessment_id: external
+  area: identity
+  topic: Legacy registry accessions
+  outcome: unknown
+  summary: CAS and Reaxys are source-concordant, but proprietary or independent registry
+    record bodies were not audited. No contrary exact identity was demonstrated.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - authority
+- assessment_id: mechanism
+  area: evidence
+  topic: TrpRS evidence and enrichment boundaries
+  outcome: supported
+  summary: Primary biochemical and structural evidence supports species-scoped TrpRS
+    inhibition. Native mechanism is unasserted; optional enrichment must distinguish
+    enzyme assays, binding, simulations, analogue MICs and host context.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - target-2002
+  - target-2022
+  - target-2025
+  - host-context
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained ownership, citation scope and history
+  outcome: supported
+  summary: All nine adopted MED leads have explicit dispositions, including unavailable
+    full texts; source fields and thirteen hashes remain unchanged.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - owners
+  - leads
+- assessment_id: completeness
+  area: completeness
+  topic: Primary mechanism and producer enrichment
+  outcome: supported
+  summary: Primary activity, TrpRS and biosynthetic evidence would improve the SEEDED
+    record. Missing optional evidence/target objects are not treated as demonstrated
+    false claims.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - record
+  - target-2002
+  - target-2025
+  - leads
+- assessment_id: schema
+  area: schema
+  topic: Focused validation versus chemical consistency
+  outcome: supported
+  summary: Schema and strict checks pass; the separate chemistry failure remains material
+    and blocks native scientific sign-off.
+  target_ids:
+  - CHEBI:79391
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-79391-invalid-smiles-missing-indole-hydrogen
+  category: consistency
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Source-derived SMILES omits indole [nH] and cannot be parsed
+  description: Native and current ChEBI JSON encode aromatic n without the hydrogen
+    required by this neutral indole, causing kekulization failure. Native InChI and
+    official ChEBI molfile encode the valid NH structure. A one-atom notation repair
+    restores exact formula, key and both stereocenters without altering identity.
+    Passing schema/strict checks do not resolve the chemical inconsistency.
+  target_ids:
+  - CHEBI:79391
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - chemistry
+  - authority
+  - owners
+  - validation
+  rule_id: 'review-checklist: Structure and REVIEWED gate criteria1-2'
+  native_severity: Major molecular-encoding inconsistency; native REVIEWED gate blocker
+  normalization_reason: A core chemical encoding is invalid and inconsistent with
+    the supported exact molecule. Other identity encodings agree, so the evidence
+    supports a major encoding correction rather than replacement of the record identity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted CHEBI:79391 structure row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI extraction and structure normalization policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated structure reproduction
+actions:
+- action_id: A1
+  description: 'Implement a maintained, validated correction for CHEBI:79391 and regenerate
+    from the corrected input. Verified candidate SMILES: C[C@H]1c2c[nH]c3cccc(c23)S[C@H]1C(=O)O.
+    Current upstream JSON still has the defect, so do not rely on an unchanged refresh
+    or patch only generated YAML.'
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:79391
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted CHEBI:79391 structure row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI extraction and structure normalization policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated structure reproduction
+  acceptance_checks:
+  - Require sanitized parse, mutual chirality-aware agreement with the official molfile
+    and native InChI, DKHFLDXCKWDVMF-UPONEAKYSA-N, C12H11NO2S, charge 0 and preserved
+    carboxy-bearing R/methyl-bearing S centers.
+  - Make the correction reproducible through the maintained ChEBI extraction/input
+    policy; document provenance and regression coverage for this invalid aromatic-n
+    case. Preserve the already agreeing native InChI/key/formula.
+  - Rerun meaningful native chemical consistency, just validate, just validate-strict,
+    just verify-corpus --summary and just qc after authorized curation. Preserve history
+    and leave REVIEWED unset until all required native gates pass.
+limitations:
+- The earliest original absolute-configuration experiment and complete1977 report
+  were not obtained. The original 1997 publisher abstract and graphic were inspected,
+  supporting the negative 4S,5R enantiomer and its numbering correspondence to native
+  2R,3S; full experimental stereopurity/rotation details remain unavailable.
+- Three older adopted MED records have metadata but no inspected original abstract/body.
+  The1989 biosynthetic enzyme paper was abstract-only. Their missing details are not
+  replaced with later summaries.
+- The 2002 original article was read from a public reproduction; direct HTML download
+  returned 503. Its graphic layers do not contain the textual page content. Natural-reference
+  batch stereopurity was not independently reconstructed.
+- The 2022 supplied-compound batch was not independently characterized here. The 2025
+  paper states HPLC purification and HRMS/NMR verification of biosynthetic CXM; its
+  assay measures ATP consumption with hydroxylamine, not direct tRNA charging.
+- The2019 and 2025 M.tuberculosis additional sources were complete-abstract only.
+  No MIC, resistance fold change, exact new synonym or whole-cell causal graph is
+  imported from those abstracts.
+- CAS registry and proprietary Reaxys bodies were not independently inspected. PubChem
+  exact-key lookup is independent structure corroboration, not verification of a native
+  PubChem cross-reference.
+- Initial public PMC requests returned browser-challenge HTML despite HTTP 200; EuropePMC
+  original XML succeeded. The original 2012 PMC HTML and Figure 2 were usable. Failed
+  retrievals are preserved in fetch manifests.
+- The actual native molecular check failed and remains unresolved. A scratch diagnostic
+  initially failed on a wrong mass-field name, then passed after correction; neither
+  event is represented as a native chemistry pass.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record or maintained source was edited; thirteen input hashes were rechecked.
+- Only MED records were adopted from the initial PMID query. ETH/CBA identifier collisions
+  were excluded, rather than interpreted as additional citations.
+- Exact native synonym numbering, defined core stereochemistry, analogue activity
+  and biosynthetic enzymes retain their respective scopes.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links: []
+tags:
+- record-review
+- chuangxinmycin
+- invalid-smiles
+- stereochemistry
+- assay-scope
+```

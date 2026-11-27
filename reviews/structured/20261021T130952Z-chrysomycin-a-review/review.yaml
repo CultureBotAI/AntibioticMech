@@ -1,0 +1,575 @@
+schema_version: 1.0.0
+review_id: 20261021T130952Z-chrysomycin-a-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Chrysomycin A: correct structure with unsupported aminocoumarin/GyrB classification'
+started_at: '2026-10-21T12:48:46Z'
+finished_at: '2026-10-21T13:09:52Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The exact neutral graph agrees with current ChEBI and PubChem. Original evidence
+  supports antibacterial and antipersister activity, but the imported aminocoumarin
+  classification and class-derived GyrB explanation are not supported for this molecule.
+  The single cited primary paper investigates a different, species-specific multitarget
+  mechanism. One major source-derived classification/evidence defect requires reproducible
+  correction.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/chrysomycin-a.yaml
+    sha256: f2ff2b1896a69e7152f96d2638dd799641c07d0554207189b976c7e52ae053f8
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-e0bba9e7d3
+  path: data/antibiotics/antibacterial/chrysomycin-a.yaml
+  label: chrysomycin A
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: ChEBI activity role names
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, class and cross references
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Structure enrichment owner
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position297; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    297
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/chrysomycin-a.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/chrysomycin-a.yaml --out /private/tmp/am-review-session/297-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/chrysomycin-a.yaml
+  locator: Entire 52-line native record
+  accessed_at: '2026-10-21T13:08:46Z'
+  support: supports
+  summary: The ARO-minted SEEDED/MINTED record contains one exact abbreviation, one
+    class parent, class label/id, a PubChem structure, three xrefs, one source concept
+    and seed history. No MIC, structured protein target, resistance item, producer,
+    clinical assertion or causal graph is populated.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv;data/raw/pubchem_structures.tsv;scripts/extract_source_inventory.py;scripts/enrich_pubchem_structures.py;scripts/seed_from_sources.py
+  locator: Exact ARO row519 and PubChem row223; build_concepts and definition/class
+    emission
+  accessed_at: '2026-10-21T13:08:46Z'
+  support: supports
+  summary: ARO supplies the definition, sole adopted PMID37540745, alias, class and
+    xrefs. PubChem supplies the exact structure. The seeder copies the ARO class and
+    uses its first citation as definition_source. No adopted ChEBI identity row supplies
+    this record; MINTED therefore remains coherent despite an external ChEBI xref.
+    Sixteen preserved input hashes remain unchanged.
+  snapshot_sha256: 309e53d20e08876dc5eb6b67de242d019fe9217dea365fb523628591021001ca
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:191084;PubChem:73468
+  locator: 297-chemistry.json;030-root-xref-chemistry.json;current official source
+    structures
+  accessed_at: '2026-10-21T13:08:46Z'
+  support: supports
+  summary: Native SMILES and InChI give OMDANBMKOUVKAG-WZNMFJNZSA-N, C28H28O9, charge
+    zero and one component with five specified sugar stereocenters. Current ChEBI
+    SMILES/InChI and PubChem encode the same graph. The formula has no nitrogen. PubChem
+    rounded average mass is compatible with independent calculation; no structural
+    replacement follows.
+  snapshot_sha256: 41beeaa684cb1707db817380a64f45b24fec5c5660f7f56136eaf1ae7c776626
+- evidence_id: authorities
+  kind: database
+  reference: ARO:3007679;ARO:3000103;CHEBI:191084
+  locator: 297-card-read.txt;030-term-ARO-3000103.json;297-chebi.json
+  accessed_at: '2026-10-21T13:08:46Z'
+  support: supports
+  summary: Current CARD repeats the imported aminocoumarin class and GyrB wording.
+    The class term specifically describes GyrB-mediated inhibition of ATP-dependent
+    supercoiling. ChEBI is a two-star glycoside entry with matching default graph;
+    its submitted name list contains opposite stereochemical naming variants, so those
+    names are not independently authoritative corrections to the matching structure.
+  snapshot_sha256: 452ac345b1df23d1e79b8914a6dd712491be4c2f740d4e5cf9e62ae572eac58b
+- evidence_id: primary
+  kind: primary_source
+  reference: PMID:37540745;DOI:10.1126/sciadv.adg5995
+  locator: 'Original PMC10403215 XML: Introduction, Results, Discussion, Methods and
+    all main figure captions; Figure1 visually inspected'
+  accessed_at: '2026-10-21T13:08:46Z'
+  support: supports
+  summary: The paper classifies ChryA as a gilvocarcin C-arylglycoside and tests fermentation-purified
+    material (at least96%). S.aureus MIC, persister CFU, biofilm and murine intradermal
+    infection experiments support activity. GlmU/DapD enzyme inhibition, binding and
+    genetic experiments support a multitarget interpretation. It supplies no GyrB
+    experiment. Mouse dosing was into wounds; this is not clinical efficacy. Crystal-violet
+    biomass and viable counts are distinct endpoints.
+  snapshot_sha256: 4680e0d6c23726eed08acd570ff6ddb081577e3a95a4dd1f9ac60911e7d0cf17
+- evidence_id: primary-boundaries
+  kind: primary_source
+  reference: PMID:37540745
+  locator: Original assay Methods and mechanistic Discussion
+  accessed_at: '2026-10-21T13:08:46Z'
+  support: context_only
+  summary: Purified-enzyme inhibition, MST affinity, genetic rescue and whole-cell
+    killing are separate observations. The authors reserve confirmation for additional
+    putative targets and discuss ROS/DNA damage cautiously. Biofilm exposure reporting
+    differs between Results and Methods; exact quantitative adoption needs reconciliation.
+    Supplementary captions and TablesS1-S4 were read; Figure1 pixels were inspected.
+    Other figure pixels and raw assay data were not audited.
+  snapshot_sha256: 4680e0d6c23726eed08acd570ff6ddb081577e3a95a4dd1f9ac60911e7d0cf17
+- evidence_id: mtb
+  kind: primary_source
+  reference: PMID:35136191;DOI:10.1038/s41429-022-00503-z
+  locator: Complete original abstract and publisher Highlights; subscription boundary
+  accessed_at: '2026-10-21T13:08:46Z'
+  support: context_only
+  summary: The M.tuberculosis study reports DNA interaction, topoisomerase-I inhibition
+    and weaker whole-gyrase inhibition. Its abstract does not demonstrate GyrB-specific
+    binding. The full article was not obtained, and its organism-specific claims cannot
+    automatically supply the S.aureus mechanism.
+  snapshot_sha256: 08c690c02fc380fd55059b3c6c7d9fcfee1666572860a46a178433ce42a6be32
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB staph_aureus/staph_precise108 and m_tuberculosis/modulome
+  locator: 297-adapter-catalog.json;297-adapter-gyrB.txt;297-adapter-targets.json;297-adapter-gyrB.json;297-adapter-topA.json
+  accessed_at: '2026-10-21T13:08:46Z'
+  support: context_only
+  summary: Structured catalog/gene queries preceded the relevant open research. S.aureus
+    gyrB and glmU resolve with zero matching components; dapD has no gene hit. M.tuberculosis
+    Rv0005/gyrB and Rv3646c/topA resolve with zero components. These are database-context
+    results, not evidence of compound binding, killing or absence of a biological
+    pathway.
+  snapshot_sha256: fdc29e467435da197970196244f02deb0190c4c8f99972cba6f8e4d5ea3361d9
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema, strict and independent chemistry checks
+  locator: 297-focused-results.json;297-chemistry.json
+  accessed_at: '2026-10-21T13:08:46Z'
+  support: supports
+  summary: The actual focused checks pass. Every preserved source-input hash was recomputed
+    unchanged. These results do not replace the separate shared corpus gates.
+  snapshot_sha256: 2f40b7f1e0b69753287d36d3f33768b2bece4f581643a0c222f2fad97caf645d
+- evidence_id: search
+  kind: search
+  reference: Exact local and public source discovery
+  locator: 297-local-hits.txt and public retrieval manifests
+  accessed_at: '2026-10-21T13:08:46Z'
+  support: context_only
+  summary: Local discovery included hidden and ignored files. Public research followed
+    exact source identifiers and compound-specific primary studies; it is a bounded
+    review, not an exhaustive reading of every publication.
+  search_scope: Ignored-inclusive local search and public exact-name, identifier,
+    activity and source-publication searches on 2026-10-21.
+  snapshot_sha256: b4e876004e694f7cc51faa0af15f7035f09a848d2c5422cec270328be14ea003
+- evidence_id: supplement
+  kind: primary_source
+  reference: PMID:37540745;DOI:10.1126/sciadv.adg5995
+  locator: '297-sciadv.adg5995_sm.pdf: complete extracted captions/tables;297-sciadv.adg5995-f1.jpg'
+  accessed_at: '2026-10-21T13:08:46Z'
+  support: context_only
+  summary: EuropePMC public supplementary-files archive supplied the original PDF
+    and figures after the publisher PDF route failed. Figure1 shows the nitrogen-free
+    glycoside and strain-specific MIC/time-kill panels. Supplementary text separates
+    microbial groups, mutant genotypes and plasmids; reported mutant-label inconsistencies
+    need reconciliation before exact variant curation. No uninspected image intensities
+    or broad killing claims are inferred.
+  snapshot_sha256: 6b95030840b0afd9e34b722c2332484feff57dcb793d7ed462c56c060b08d19c
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact native graph and abbreviation
+  outcome: supported
+  summary: Independent official graphs and molecular calculations agree. ChryA is
+    the abbreviation used by the original study.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  evidence_ids:
+  - chemistry
+  - primary
+- assessment_id: class
+  area: grounding
+  topic: Imported aminocoumarin parent and mechanism
+  outcome: concern
+  summary: The exact nitrogen-free benzonaphthopyranone glycoside is incorrectly assigned
+    the aminocoumarin class; a class-derived GyrB explanation is not supported by
+    the cited study.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  evidence_ids:
+  - chemistry
+  - authorities
+  - primary
+  - mtb
+- assessment_id: activity
+  area: evidence
+  topic: Definition activity claims
+  outcome: supported
+  summary: The cited primary experiments support antibacterial activity within their
+    material, organism and assay scope; no human efficacy claim is established.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  evidence_ids:
+  - primary
+  - primary-boundaries
+- assessment_id: provenance
+  area: provenance
+  topic: Generated class and definition attribution
+  outcome: concern
+  summary: Source reproduction is coherent, but it reproduces an upstream scientific
+    error and attributes the entire definition to a paper that does not support its
+    GyrB clause.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  evidence_ids:
+  - owners
+  - authorities
+  - primary
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary mechanism enrichment
+  outcome: supported
+  summary: Missing optional mechanism fields are not an additional defect. Any enrichment
+    must preserve species, assay and strength of evidence.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  evidence_ids:
+  - native
+  - primary-boundaries
+  - mtb
+  - adapter
+- assessment_id: validation
+  area: schema
+  topic: Focused deterministic validity
+  outcome: supported
+  summary: Documented focused validators pass; scientific limitations and shared failed
+    corpus gates remain separate.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chrysomycin-a-aminocoumarin-gyrb-scope
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Correct the aminocoumarin classification and unsupported GyrB explanation
+  description: The record assigns ARO:3000103 and the aminocoumarin class while its
+    verified structure is a nitrogen-free benzonaphthopyranone glycoside. The definition
+    adds a class-based GyrB explanation and attributes the whole text to PMID37540745,
+    which investigates other targets. Broader naphthocoumarin terminology does not
+    establish aminocoumarin membership or GyrB binding. Preserve the supported activity
+    description and exact graph while correcting the class and mechanistic attribution
+    through their maintained source owners.
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  field_paths:
+  - parent_compounds[0]
+  - structural_class
+  - structural_class_id
+  - definition
+  - definition_source
+  evidence_ids:
+  - owners
+  - chemistry
+  - authorities
+  - primary
+  - mtb
+  rule_id: 'review-checklist: Structural classification and claim-level evidence scope'
+  native_severity: major
+  normalization_reason: A central structural class and associated mechanistic explanation
+    are unsupported; this is more than an optional enrichment gap.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition and structural classification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source extraction and correction policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition, source attribution and class emission
+actions:
+- action_id: A1
+  description: Correct the maintained ARO extraction/input representation and regenerate
+    the exact record.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-e0bba9e7d3
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition and structural classification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source extraction and correction policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition, source attribution and class emission
+  acceptance_checks:
+  - Use an evidence-backed benzonaphthopyranone/gilvocarcin-family description; do
+    not invent an unsupported replacement ontology identifier.
+  - Remove or explicitly qualify the unsubstantiated GyrB clause and preserve claim-level
+    source attribution. Keep M.tuberculosis whole-gyrase results distinct from S.aureus
+    targets.
+  - Preserve the current exact structure/key and source provenance. Reseed and run
+    focused validators, corpus reproduction and required QC before any status promotion.
+limitations:
+- The sole adopted citation was read in its original complete XML main text, main
+  figure captions and complete supplementary text/tables. Main Figure1 was visually
+  inspected. Other figure pixels and raw data were not audited; no de novo stereochemical
+  reconstruction from spectra is claimed. Publisher supplement retrieval failed, but
+  the public EuropePMC archive succeeded.
+- The 2022 M.tuberculosis source remains original-abstract/Highlights depth because
+  its full article is subscription content. This limits mechanistic exclusions; no
+  claim is made that chrysomycin can never affect gyrase.
+- Current two-star ChEBI submitted names include conflicting stereochemical variants
+  despite a default graph matching native and PubChem. No such extra name is imported.
+- The PMC HTML endpoint returned a browser challenge; the independently retrieved
+  Europe PMC XML was the main-text source. Retrieval limits are retained in manifests.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Native records, source inventories, status and history were not modified. Initial
+  captures were preserved and actual owners appended before judgment.
+- All optional notes, links and tags were checked for this exact target.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1126/sciadv.adg5995
+- https://card.mcmaster.ca/aro/3007679
+tags:
+- chrysomycin-a
+- structural-class
+- claim-scope
