@@ -1,0 +1,919 @@
+schema_version: 1.0.0
+review_id: 20261021T160803Z-faropenem-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Faropenem: partial stereochemistry linked as an exact fully specified structure
+  and misclassified as cephalosporin'
+started_at: '2026-10-21T15:38:19Z'
+finished_at: '2026-10-21T16:08:03Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The native graph agrees with current CHEBI:51788 and retains two unspecified
+  stereocentres. Its PubChem and ChEMBL chemical xrefs instead name a fully specified
+  four-centre structure already represented separately in the corpus. The assigned
+  cephalosporin structural class also conflicts with the penem graph, definition and
+  primary literature. The VIM-63 assertion remains explicitly database-level: the
+  inspected original tests other beta-lactams, while direct faropenem hydrolysis evidence
+  concerns VIM-2, not VIM-63.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/faropenem.yaml
+    sha256: 5bb9ca72fbb40b588c090329822ea8c56846e061ab9db9bcf32a1448d3c7e62d
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/antibiotics/unspecified/6α-r-1-hydroxyethyl-2-r-tetrahydrofuran-2-yl-pen-2-em-3-carboxylic-aci.yaml
+    sha256: 4fd6f3b1f0935e4cbb495ebf9c40aafdc09c42246f141524aa5082ca024fb33b
+    role: context
+  - path: data/antibiotics/unspecified/6α-r-1-hydroxyethyl-2-r-tetrahydrofuran-2-yl-pen-2-em-3-carboxylate.yaml
+    sha256: bba5ebfea26554654c1c88591e30ba4ae2ed8ac2b9de581c17b43b372a3dac32
+    role: context
+targets:
+- target_id: CHEBI:51788
+  path: data/antibiotics/antibacterial/faropenem.yaml
+  label: faropenem
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, classification and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual imported resistance assertion
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 425; one exact ChEBI-anchored record. Original thirteen
+    input hashes preserved within 24 expanded inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:51788
+checks:
+- check_id: adapter-catalog
+  name: Structured source query before protein web follow-up
+  status: passed
+  required: false
+  target_ids:
+  - CHEBI:51788
+  evidence_ids:
+  - adapter
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual command succeeded; no matching VIM gene or component was found in
+    the queried dataset.
+- check_id: adapter-vim
+  name: Structured source query before protein web follow-up
+  status: passed
+  required: false
+  target_ids:
+  - CHEBI:51788
+  evidence_ids:
+  - adapter
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism p_aeruginosa --dataset precise364 --query
+    VIM
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual command succeeded; no matching VIM gene or component was found in
+    the queried dataset.
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:51788
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/423425-focused.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:51788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/faropenem.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:51788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/faropenem.yaml --out /private/tmp/am-review-session/425-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:51788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:51788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:51788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:51788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:51788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:51788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:51788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:51788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:51788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/faropenem.yaml
+  locator: Entire native YAML, including both source concepts and all three history
+    events
+  accessed_at: '2026-10-21T16:06:59Z'
+  support: supports
+  summary: 'The complete SEEDED/EXACT CHEBI:51788 record was read: definition, systematic
+    names, parents, role, classification, structure, all three xrefs and sole qualified
+    VIM-63 database assertion. No clinical brand, salt, prodrug, FDA product or numerical
+    activity entry is present.'
+- evidence_id: owners
+  kind: record_content
+  reference: 423425-raw-rows.json
+  locator: Exact ChEBI and ARO source rows plus imported resistance edge
+  accessed_at: '2026-10-21T16:06:59Z'
+  support: supports
+  summary: ChEBI owns the partially specified structure and systematic names. The
+    ARO row owns the penem definition, cephalosporin class assignment and imported
+    chemical links; its immediate parent is a mixed other-cephalosporins-and-penems
+    group. Source fidelity does not prove chemical-class equivalence.
+  snapshot_sha256: 17546d8870410b46645ee7a3caced63be3383d6062cd2167b9a1007fabc163d9
+- evidence_id: search
+  kind: search
+  reference: 423425-all-local-paths.txt
+  locator: Hidden- and gitignore-inclusive identifier/name search
+  accessed_at: '2026-10-21T16:06:59Z'
+  support: context_only
+  summary: The search covered data, curation, conf, scripts, src, reports and reviews.
+    It identified separately retained CHEBI:51257 fully specified neutral faropenem
+    and CHEBI:51795 conjugate base comparison records. No exact curator override or
+    native activity collection was identified.
+  search_scope: rg --no-ignore --hidden -il 'evernimicin|faropenem|ARO:3007167|ARO:3003707|CHEBI:51788|aro-985189abb0'
+    data curation conf scripts src reports reviews
+  snapshot_sha256: fa3428d9be5b95909e513cc172724911f65611bd1507ceb736c919bbfffecc37
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/51788/
+  locator: Current CHEBI:51788 structure, names, parents, children and antimicrobial
+    role
+  accessed_at: '2026-10-21T15:54:17.661504Z'
+  support: supports
+  summary: Current ChEBI matches the native partial graph and key HGGAKXAHAYOLDJ-YZJVMBJSSA-N.
+    Hydroxyethyl and beta-lactam C6 stereochemistry remain unspecified, while the
+    ring-bridgehead and tetrahydrofuran centres are assigned. Penems and oxolanes
+    are explicit parents; antimicrobial agent is the retained role.
+  snapshot_sha256: 1c27218ff4095fef9914d094a3d33a6f175725ccfe88c622ea9287373b376d50
+- evidence_id: fully-specified-chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/51257/
+  locator: Current CHEBI:51257 structure and is-a relation to CHEBI:51788
+  accessed_at: '2026-10-21T15:55:50.305647Z'
+  support: supports
+  summary: The fully specified (5R,6S)-6-[(1R)-1-hydroxyethyl] structure has HGGAKXAHAYOLDJ-FHZUQPTBSA-N
+    and is explicitly a child of CHEBI:51788. Its faropenem/fropenem names do not
+    collapse the parent and child graphs. A separate native record for this identifier
+    already exists.
+  snapshot_sha256: ffd569959bc10f2f8ee7e962e7b75b0c6d51187c5894a275bcf77d139344f700
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/65894/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: Current PubChem CID 65894 exact property export
+  accessed_at: '2026-10-21T15:54:17.666559Z'
+  support: refutes
+  summary: The referenced PubChem compound has all four centres specified, with key
+    HGGAKXAHAYOLDJ-FHZUQPTBSA-N. Formula and charge match the native graph, but its
+    two extra stereochemical assignments preclude unqualified same-structure equivalence.
+  snapshot_sha256: 47cf6640dc78c261983e00ad552b1e69252b192e476b4f0a93b848585f293d22
+- evidence_id: chembl
+  kind: authority
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL556262.json
+  locator: Current CHEMBL556262 molecular structure
+  accessed_at: '2026-10-21T15:54:17.673212Z'
+  support: refutes
+  summary: The linked ChEMBL molecule agrees with the fully specified PubChem/ChEBI:51257
+    structure, not the partial CHEBI:51788 graph. This is a same-constitution, different-specificity
+    comparison rather than an opposite assignment at the two already defined centres.
+  snapshot_sha256: fb4bb859ccd44a956975bdebb730cf9fc26498f66b3cbadc57a92864c88e9377
+- evidence_id: chemistry
+  kind: record_content
+  reference: 425-chemistry.json; 423425-xref-chemistry.json
+  locator: Independent RDKit 2026.03.5 parsing with batch 019 interpreter against
+    batch 043 cwd
+  accessed_at: '2026-10-21T16:06:59Z'
+  support: supports
+  summary: Native SMILES and InChI agree with C12H15NO5S, neutral charge and masses.
+    InChI atoms 5 and 7 are unassigned natively but R and S respectively in PubChem;
+    atoms 6 and 11 are R in both. These map to hydroxyethyl C1 and penem C6 versus
+    tetrahydrofuran C2 and penem C5. Partial notation does not prove a physical mixture
+    or racemate.
+  snapshot_sha256: 8736261f0951fbe6cdf3a95ae9d2256b91453aa63ac9cc7d9d018794bd497b28
+- evidence_id: existing-child
+  kind: record_content
+  reference: data/antibiotics/unspecified/6α-r-1-hydroxyethyl-2-r-tetrahydrofuran-2-yl-pen-2-em-3-carboxylic-aci.yaml
+  locator: Comparison record identifier and stored structural key only
+  accessed_at: '2026-10-21T16:06:59Z'
+  support: context_only
+  summary: After appending its preserved input hash, the comparison record was read
+    for identifier CHEBI:51257 and key HGGAKXAHAYOLDJ-FHZUQPTBSA-N. It is an existing
+    exact child, not an invitation to overwrite or merge the target without identity
+    adjudication. This is not a second whole-record review.
+- evidence_id: aro
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3003707
+  locator: Current ARO:3003707 definition and identity
+  accessed_at: '2026-10-21T15:54:16.963416Z'
+  support: partial
+  summary: The ARO label resolves to faropenem and its adopted definition calls the
+    drug a penem. It does not make the target partial stereochemical graph identical
+    to the fully specified clinical material.
+  snapshot_sha256: 00f67ac26e2934974cf71d2459cd9828a26bf0910cf2c23f4f2c9c7f80ff20e0
+- evidence_id: aro-parent
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3009109
+  locator: Current ARO:3009109 mixed grouping
+  accessed_at: '2026-10-21T15:54:16.968817Z'
+  support: partial
+  summary: The immediate group is other cephalosporins and penems. Membership in this
+    combined drug grouping cannot establish the narrow structural classification cephalosporin.
+    The frozen row nevertheless propagates ARO:0000032 into the native structural
+    class.
+  snapshot_sha256: 35d3a165d4a6251dbc27ee4b322fbca25ac3b448064261e81d102e0b3517beaa
+- evidence_id: adopted-primary
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12615878%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: PMID12615878 / DOI10.1093/jac/dkg120, complete original abstract
+  accessed_at: '2026-10-21T15:54:18.374857Z'
+  support: supports
+  summary: The sole adopted PMID is an original study of 106 anaerobic/fastidious
+    periodontal isolates and explicitly identifies faropenem as an oral penem. It
+    reports MIC/MBC and time-kill/postantibiotic observations. The abstract does not
+    resolve the isolated preparation, salt or full stereochemical material specification,
+    so no quantitative observation is transferred to the partial native graph.
+  snapshot_sha256: 965c5e9cdc28f226e61b21a47a596e9b1e66f0d459e61fc93c7404555cc31c87
+- evidence_id: adopted-access
+  kind: search
+  reference: https://academic.oup.com/jac/article-pdf/51/3/647/994246/dkg120.pdf
+  locator: Attempted original OUP article PDF
+  accessed_at: '2026-10-21T15:55:50.225564Z'
+  support: context_only
+  summary: The requested URL returned HTTP 403 HTML, not a PDF. The follow-up landing-page
+    request also returned 403. The original abstract, not uninspected full methods,
+    supports the retained disposition.
+  snapshot_sha256: b949945f1420f78c577e6ba852f7b57db8646b612087a33a3490b5d1379bbd69
+  search_scope: Exact adopted DOI and original publisher PDF/landing routes; no paid
+    retrieval.
+- evidence_id: vim-authority
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3005511
+  locator: ARO:3005511 VIM-63
+  accessed_at: '2026-10-21T15:54:16.973811Z'
+  support: partial
+  summary: The resistance determinant identifier resolves. Its beta-lactamase identity
+    is coherent with ANTIBIOTIC_INACTIVATION; the native evidence explicitly states
+    that its faropenem relationship is a database assertion.
+  snapshot_sha256: e4ee628434a1f89f6deaee512f8a6728df84f5afbedfde329de3ea1fe7727c92
+- evidence_id: vim-original
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9295573/?pdf=render
+  locator: PMID35758752 / DOI10.1128/jb.00088-22; original Methods, Table 1 and resistance/genetic
+    results
+  accessed_at: '2026-10-21T15:54:18.431119Z'
+  support: partial
+  summary: 'The original characterizes VIM-63 in C. freundii and P. aeruginosa, cloned
+    TOP10 backgrounds and purified enzyme assays. Its susceptibility panel is ampicillin,
+    cefotaxime, ceftazidime, cefepime, aztreonam, piperacillin-tazobactam, ertapenem,
+    imipenem and meropenem: faropenem is not in the inspected panel. Gradient-strip/disk
+    tests and purified kinetics are distinct endpoints; clinical co-resistance backgrounds
+    cannot identify an isolated faropenem effect. This bounded absence neither validates
+    the exact faropenem edge nor proves it false.'
+  snapshot_sha256: 45a339d556ee7bf40fcdb0a817370511c5920f1b9b4fb1b5ec3d186b1551a928
+- evidence_id: vim-query
+  kind: search
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=faropenem%20AND%20%22VIM-63%22&format=json&resultType=core&pageSize=100
+  locator: Exact faropenem AND VIM-63 Europe PMC query
+  accessed_at: '2026-10-21T15:55:50.522431Z'
+  support: context_only
+  summary: The bounded exact-term query returned zero records. This is an unresolved
+    primary-evidence lead, not a claim that no VIM-63/faropenem evidence exists anywhere.
+  snapshot_sha256: c2e16f3b7a25687e0054f697e0823bca796f343394e4584ff0e99664a7d32a88
+  search_scope: Europe PMC exact query faropenem AND "VIM-63", with original VIM-63
+    paper separately inspected.
+- evidence_id: hydrolysis2021
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC7614720/?pdf=render
+  locator: PMID33618159 / DOI10.1016/j.ejmech.2021.113257; Introduction, Results 2.1/Table
+    1, selected structural/NMR results
+  accessed_at: '2026-10-21T15:55:50.228887Z'
+  support: partial
+  summary: This original directly tests faropenem hydrolysis by KPC-2, VIM-2 and L1
+    with additional solution studies on other beta-lactamases. Table 1 measures turnover
+    at 306 nm using 10 nM enzyme; VIM-2 is a substrate-hydrolyzing enzyme in these
+    experiments. It is not VIM-63, and enzyme kinetics are not MICs. Structural intermediates
+    and solution products differ, so a bound hydrolysis product is not automatically
+    an inhibitory endpoint. The paper explicitly distinguishes penems from carbapenems
+    and cephalosporins.
+  snapshot_sha256: 99f35ee5826e4b25a3b40837c290df1e4da72a23efa2f037ac9f3de3085743b2
+- evidence_id: hydrolysis2021-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/983e/7614720/eecf1c089b36/EMS177428-f003.jpg
+  locator: Actual original Figure 3 viewed; intact faropenem and candidate hydrolysis
+    products
+  accessed_at: '2026-10-21T15:59:16.623459Z'
+  support: partial
+  summary: The intact substrate drawing depicts a stereodefined penem with a five-membered
+    sulfur ring fused to the beta-lactam. It supports chemical-class interpretation
+    and shows why partially specified native stereochemistry needs explicit material
+    mapping. Product stereoisomers formed during hydrolysis are not separate starting
+    reagents.
+  snapshot_sha256: 9d7f1238d2aa14479cebc138afea7e2764d885bc8493b82b14949591bec75052
+- evidence_id: pbp2009
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2681536/?pdf=render
+  locator: PMID19237649 / DOI10.1128/AAC.01566-08; original abstract, strain/method
+    paragraphs, Table 1 and binding-result discussion
+  accessed_at: '2026-10-21T15:55:50.293211Z'
+  support: partial
+  summary: Twelve clonally unrelated S. pneumoniae isolates were tested by CLSI macrodilution
+    and whole-cell Bocillin FL competition. PBP IC50 means inhibition of 50% fluorescent-probe
+    binding; it is not an MIC. The paper reports strong faropenem binding except PBP2X
+    and MICs no higher than 1 µg/mL in this panel. The inspected methods do not establish
+    an exact isolated salt/purity basis or justify transfer to every unspecified stereochemical
+    possibility in CHEBI:51788. This is a bounded optional-target lead.
+  snapshot_sha256: 9b58fb380587c657020ca36e299349af4cdc299f8ef6a3f3dfb8ee314927fdc6
+- evidence_id: supplement-access
+  kind: search
+  reference: 423425-fetch3.json; 423425-fetch4.json
+  locator: 2021 supplementary DOCX public access attempts
+  accessed_at: '2026-10-21T16:06:59Z'
+  support: context_only
+  summary: The PMC supplement route returned a download-challenge HTML page despite
+    HTTP 200, Europe PMC direct attachment returned 403, and the supplementaryFiles
+    endpoint returned XML stating the article was not available through that open-access
+    service. No DOCX methods or reagent certificate was obtained or inspected. Salt/purity/potency
+    basis therefore remains unresolved.
+  search_scope: Exact linked supplementary DOCX via PMC and Europe PMC, plus Europe
+    PMC supplementaryFiles endpoint; no paywall circumvention or paid research.
+  snapshot_sha256: b27ccfb86bfebfab2a1398c707782a418e2a09f4a6b85187e7bd37f0c0756627
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB
+  locator: 423425-adapter-results.json and pre-web catalog/VIM query
+  accessed_at: '2026-10-21T16:06:59Z'
+  support: context_only
+  summary: The catalog and p_aeruginosa/precise364 VIM search succeeded before protein
+    web follow-up. The query returned no gene or component. This does not refute VIM-63
+    resistance or substitute for an exact enzyme/substrate experiment.
+  snapshot_sha256: 31734dc364216aa27efa03d6fb4824dfabe84451dfea14c48ebb791c37774af0
+- evidence_id: gates
+  kind: record_content
+  reference: 425-focused-results.json
+  locator: Actual schema, strict and independent chemistry executions
+  accessed_at: '2026-10-21T16:06:59Z'
+  support: supports
+  summary: All focused checks pass. They do not resolve external stereo specificity,
+    mixed ontology grouping or exact primary enzyme/substrate coverage.
+  snapshot_sha256: 38b263620c27f1d26438301be5fc68b03f23f49cc3cea791f52a76d69a766760
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: ChEBI-anchored partial neutral graph
+  outcome: supported
+  summary: Native graph, two systematic names, formula, neutral charge and masses
+    are mutually coherent and match current CHEBI:51788. Two centres remain unspecified.
+    The named clinical antibiotic literature does not establish activity of every
+    structure compatible with that graph.
+  target_ids:
+  - CHEBI:51788
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - adopted-primary
+- assessment_id: grounding
+  area: grounding
+  topic: Exact chemical xrefs versus fully specified child
+  outcome: concern
+  summary: PubChem CID 65894 and CHEMBL556262 correspond to fully specified CHEBI:51257
+    rather than the target partial graph. Native EXACT status relative to its own
+    ChEBI identifier is not itself disproved; the incompatible same-structure cross-links
+    and intended source join require adjudication.
+  target_ids:
+  - CHEBI:51788
+  evidence_ids:
+  - native
+  - chebi
+  - fully-specified-chebi
+  - pubchem
+  - chembl
+  - chemistry
+  - existing-child
+- assessment_id: classification
+  area: scope
+  topic: Penem versus cephalosporin structural class
+  outcome: concern
+  summary: The graph has the penem fused five-membered sulfur ring, current ChEBI
+    has the penem parent, and the adopted original calls faropenem a penem. A mixed
+    ARO group does not justify structural_class cephalosporin or the equivalent parent
+    assertion.
+  target_ids:
+  - CHEBI:51788
+  evidence_ids:
+  - native
+  - chebi
+  - aro
+  - aro-parent
+  - adopted-primary
+  - hydrolysis2021
+  - hydrolysis2021-figure
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and exact assay material
+  outcome: unknown
+  summary: Original studies support antibacterial activity of named faropenem preparations,
+    including periodontal isolates and pneumococci. Exact salt/purity and the partial-versus-full
+    stereochemical relationship remain insufficiently resolved for quantitative transfer
+    into this record. No new negative eligibility claim follows from that gap.
+  target_ids:
+  - CHEBI:51788
+  evidence_ids:
+  - native
+  - adopted-primary
+  - pbp2009
+  - chemistry
+  - supplement-access
+- assessment_id: resistance
+  area: evidence
+  topic: VIM-63 exact faropenem relationship
+  outcome: unknown
+  summary: The native claim is properly labeled a database assertion. The inspected
+    VIM-63 original has no faropenem arm; the direct faropenem hydrolysis paper studies
+    VIM-2 and other distinct enzymes. The exact VIM-63/faropenem evidence remains
+    unresolved rather than confirmed or refuted.
+  target_ids:
+  - CHEBI:51788
+  evidence_ids:
+  - native
+  - owners
+  - vim-authority
+  - vim-original
+  - vim-query
+  - hydrolysis2021
+  - adapter
+- assessment_id: completeness
+  area: completeness
+  topic: Optional molecular-target and activity_spectrum enrichment
+  outcome: unknown
+  summary: Original PBP competition, bacterial MIC and beta-lactamase hydrolysis studies
+    are available but have different endpoints and material/allele scopes. Their absence
+    from optional native target, mode, causal or activity fields is not a schema defect.
+    Any later enrichment must retain exact preparations and strain/protein assignments.
+  target_ids:
+  - CHEBI:51788
+  evidence_ids:
+  - native
+  - search
+  - adopted-primary
+  - pbp2009
+  - hydrolysis2021
+- assessment_id: other-domains
+  area: scope
+  topic: Producer, product and collection assertions
+  outcome: not_applicable
+  summary: No natural producer, FDA product, clinical brand, activity collection or
+    curated causal graph is asserted in this record. No synthetic or host endpoint
+    is miscast as a producer or antibacterial target.
+  target_ids:
+  - CHEBI:51788
+  evidence_ids:
+  - native
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained owners and three seed events
+  outcome: supported
+  summary: The exact ChEBI/ARO rows and resistance edge were inspected, original thirteen
+    hashes retained, and all three seeded/reseeded events read. The source hierarchy
+    explains the class problem but does not excuse it.
+  target_ids:
+  - CHEBI:51788
+  evidence_ids:
+  - native
+  - owners
+  - gates
+- assessment_id: validation
+  area: schema
+  topic: Focused checks and scientific limits
+  outcome: supported
+  summary: Schema, strict validation, independent native chemistry and source-mint
+    checks pass. Those checks do not validate exact external stereo equivalence or
+    primary evidence scope.
+  target_ids:
+  - CHEBI:51788
+  evidence_ids:
+  - gates
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: faropenem-partial-stereo-exact-xrefs-to-defined-child
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Chemical xrefs collapse partial and fully specified faropenem structures
+  description: The target/current CHEBI:51788 leaves the hydroxyethyl C1 and penem
+    C6 stereocentres unspecified. PubChem CID 65894 and CHEMBL556262 specify R and
+    S respectively and match the separately retained CHEBI:51257 child. These accessions
+    cannot be unqualified same-structure xrefs for the partial graph. Adjudicate the
+    intended exact target/source join while preserving the separate child; do not
+    infer a racemate or blindly replace the native graph.
+  target_ids:
+  - CHEBI:51788
+  field_paths:
+  - xrefs[1]
+  - xrefs[2]
+  evidence_ids:
+  - native
+  - chebi
+  - fully-specified-chebi
+  - pubchem
+  - chembl
+  - chemistry
+  - existing-child
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, classification and citation leads
+  rule_id: review-checklist:Identity/Grounding
+  native_severity: major
+  normalization_reason: The schema defines xrefs as the same structure; two unspecified
+    centres versus two explicit configurations materially change identity specificity.
+- finding_id: F2
+  issue_key: faropenem-penem-misclassified-as-cephalosporin
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: A penem is assigned the cephalosporin structural class
+  description: The native definition, ChEBI penem parent, five-membered sulfur-ring
+    graph and original publications identify a penem. The ARO mixed grouping of other
+    cephalosporins and penems has been narrowed to cephalosporin in structural_class,
+    structural_class_id and parent_compounds[2]. Correct the generated chemical classification
+    without discarding the valid penem and oxolane parents.
+  target_ids:
+  - CHEBI:51788
+  field_paths:
+  - structural_class
+  - structural_class_id
+  - parent_compounds[2]
+  evidence_ids:
+  - native
+  - owners
+  - chebi
+  - aro-parent
+  - adopted-primary
+  - hydrolysis2021
+  - hydrolysis2021-figure
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, classification and citation leads
+  rule_id: review-checklist:Classification/Roles
+  native_severity: major
+  normalization_reason: An ontology grouping has become an incorrect narrow chemical-class
+    assertion despite a coherent native penem structure.
+actions:
+- action_id: A1
+  description: Resolve the partial-versus-full stereochemical identity links through
+    maintained source ownership.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:51788
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, classification and citation leads
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Preserve original CHEBI:51788 and CHEBI:51257 distinctions and review the existing
+    child before any reassignment, exclusion or merge.
+  - Remove incompatible same-structure xrefs or use a supported broader relationship;
+    independently verify any replacement graph and accession.
+  - Do not infer a physical mixture from unspecified stereochemistry or transfer stereodefined
+    reagent assays without mapping.
+  - Regenerate and run exact graph/xref, schema/strict, provenance and corpus checks.
+- action_id: A2
+  description: Correct the ARO-derived narrow structural class and parent assertion
+    to an evidence-backed penem classification.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:51788
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, classification and citation leads
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Do not treat the mixed other-cephalosporins-and-penems group as proof of a cephalosporin
+    scaffold.
+  - Retain the valid ChEBI penem and oxolane parents and use only verified identifiers
+    for any replacement class.
+  - Inspect the responsible extractor/seeder traversal, regenerate reproducibly and
+    run class consistency, schema/strict and corpus checks.
+- action_id: A3
+  description: Locate or retain an explicit limitation for primary VIM-63/faropenem
+    evidence before promoting the database edge to an experimental claim.
+  finding_ids: []
+  target_ids:
+  - CHEBI:51788
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual imported resistance assertion
+  acceptance_checks:
+  - Keep VIM-2 hydrolysis separate from VIM-63; do not use the 2022 other-drug panel
+    as direct faropenem evidence.
+  - Require the exact enzyme allele, substrate preparation, assay conditions and endpoint
+    for any primary promotion.
+  - Retain the current database assertion type unless source adjudication supports
+    a narrower correction; absence from one panel is not disproof.
+limitations:
+- The sole adopted PMID was inspected at complete original abstract depth. Both attempted
+  OUP full-text routes returned HTTP 403; isolated preparation, salt and detailed
+  methods remain unresolved.
+- The VIM-63 paper was read for original Methods, Table 1 and relevant results. It
+  tests nine named other drugs, not faropenem. The bounded exact-term search is not
+  exhaustive proof of absence.
+- The 2021 faropenem study was inspected for the original reaction scheme, Table 1
+  and selected crystallographic/NMR results. Its supplementary methods could not be
+  retrieved as a valid DOCX; no uninspected reagent specification or kinetic condition
+  is invented.
+- The 2009 pneumococcal paper was read for its original abstract, strain/method paragraphs,
+  Table 1 and binding discussion. Every Table 3 numeric cell, allele sequence and
+  underlying binding image was not independently reanalyzed. No quantitative observation
+  is imported.
+- Related CHEBI:51257 and CHEBI:51795 files were consulted only for identifier/structural-key
+  comparison after capturing hashes. They have not received whole-record reviews in
+  this task.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Native files, maintained sources and immutable reviews were not edited. All original
+  hashes were retained and expanded inputs rechecked. Exact chemical xrefs are distinguished
+  from drug-level associations; this record has no drug_xrefs. Optional links/tags/notes
+  were checked against faropenem.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:51788
+- https://doi.org/10.1093/jac/dkg120
+- https://doi.org/10.1016/j.ejmech.2021.113257
+tags:
+- faropenem
+- penem
+- stereochemical-specificity
+- vim-63
