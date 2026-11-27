@@ -1,0 +1,1076 @@
+# Bleomycinic acid: complete stereochemical omission and preparation-scoped evidence
+
+- Review: 20261021T102726Z-bleomycinic-acid
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:59:24Z
+- Finished UTC: 2026-10-21T10:27:26Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One major finding: all19 natural-core stereocentres are unspecified in both chemical encodings. Connectivity, gross properties and actual mint are consistent. Primary work distinguishes the acid and its copper complex from terminal-amine congeners and reports weak measurable activity; no inactivity conclusion is drawn. Exact RNA, BRP(MBL), producer and mixture-use details remain bounded follow-ups. Focused gates pass.
+
+## Scope And Provenance
+
+Whole-record review of minted bleomycinic acid.
+
+Selection: Queue161 in isolated batch017; root initial capture preserved, actual owners and comparator separately captured.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-3cfb065f35 | data/antibiotics/antibacterial/bleomycinic-acid.yaml | generated | bleomycinic acid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema | passed | True | antibioticmech:aro-3cfb065f35 | Actual focused command passed. |
+| Focused strict | passed | True | antibioticmech:aro-3cfb065f35 | Actual focused command passed. |
+| Internal molecular encodings and actual mint | passed | True | antibioticmech:aro-3cfb065f35 | Encodings agree internally; all19 centres remain unspecified and need scientific adjudication. |
+| Authoritative full QC | failed | True | antibioticmech:aro-3cfb065f35 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-3cfb065f35 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-3cfb065f35 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-3cfb065f35 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-3cfb065f35 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-3cfb065f35 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-3cfb065f35 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-3cfb065f35 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-3cfb065f35 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Natural-derived acid versus all-unspecified structure
+
+identity: concern. Targets: antibioticmech:aro-3cfb065f35.
+
+Connectivity and gross properties correspond to the terminal acid, but all19 tetrahedral configurations are omitted despite a defined chiral parent/core. The scratch hydrolysis comparison locates this omission without approving a replacement.
+
+### Preparation, producer and mixture clauses
+
+evidence: unknown. Targets: antibioticmech:aro-3cfb065f35.
+
+Primary text identifies the acid as a shared structural core/prepared hydrolysis product, distinct from the terminal-amine congeners. It does not establish the entire native natural-production/mixture-use/bacterial-nucleic-acid sentence for the exact acid. Full adopted review was unavailable; no definitive production or clinical-use contradiction is claimed.
+
+### Glycopeptide and antibacterial eligibility
+
+grounding: supported. Targets: antibioticmech:aro-3cfb065f35.
+
+The acid-derived preparations retain a glycopeptide core and measurable antibacterial assay activity. Weak relative potency does not refute antibacterial classification. Material identity must be preserved in later quantitative curation.
+
+### Current ARO/PubChem identity
+
+grounding: concern. Targets: antibioticmech:aro-3cfb065f35.
+
+Both xrefs resolve, but PubChem reproduces complete stereochemical omission. No alternative exact external identifier has been independently established as the authorized replacement.
+
+### Condition-dependent acid DNA cleavage
+
+evidence: supported. Targets: antibioticmech:aro-3cfb065f35.
+
+The1975 named-acid experiment supports a low relative cell-free DNA-scission endpoint. It does not establish bacterial cellular damage or the1988 secondary percentage; native remains a database assertion pending precise primary curation.
+
+### RNA attacked component
+
+evidence: unknown. Targets: antibioticmech:aro-3cfb065f35.
+
+ARO relationship resolves. No direct exact-acid RNA-cleavage experiment was verified; tRNA competition and A2 yeast tRNA studies cannot fill this gap.
+
+### BRP(MBL) assertion
+
+evidence: unknown. Targets: antibioticmech:aro-3cfb065f35.
+
+Commercial bleomycin resistance and separate-BRP binding do not directly verify this terminal acid as BRP(MBL) substrate. Broad inactivation enum is source-compatible; no forced mechanistic correction.
+
+### Copper complex, relative activity and negative wording
+
+evidence: supported. Targets: antibioticmech:aro-3cfb065f35.
+
+159units/mg and5% relative DNA activity are condition-specific, not MIC or a universal inactive label.1973 acid is explicitly copper-chelated;1975 acid metal content is not fully stated. Preserve source wording and quantitative limits.
+
+### Generated source and four seed events
+
+provenance: supported. Targets: antibioticmech:aro-3cfb065f35.
+
+ARO/PubChem ownership, source dates, mint and four events are coherent; no curator annotation was changed.
+
+### Restore exact identity before enrichment
+
+completeness: concern. Targets: antibioticmech:aro-3cfb065f35.
+
+Adjudicate full core stereochemistry through maintained enrichment/grounding owners first. Definition, RNA and exact resistance preparation are bounded evidence follow-ups; optional blanks are not findings.
+
+### Producer, clinical, pathway and graph blocks
+
+scope: not_applicable. Targets: antibioticmech:aro-3cfb065f35.
+
+No populated optional blocks; producer wording is assessed only in the definition. No clinical recommendation or expression response is inferred.
+
+### Focused and chemical consistency
+
+schema: supported. Targets: antibioticmech:aro-3cfb065f35.
+
+All actual focused gates and internal consistency pass; they do not establish stereochemical specificity.
+
+## Findings
+
+### F1: Recover the omitted stereochemistry of the natural-product-derived acid
+
+major / open / confirmed; issue key: bleomycinic-acid-natural-core-stereochemistry-unspecified.
+
+Both PubChem-derived encodings omit every one of19 tetrahedral stereocentres. Primary preparation identifies the acid by terminal-amide hydrolysis of defined bleomycin B2, not an arbitrary stereoisomer collection. Modern parent structure and revised common-core chemistry support a specific chiral framework. Internal agreement on MRNLLBXPSWMYCK-UHFFFAOYSA-N is therefore insufficient for exact natural-acid representation. A scratch conserved-core hydrolysis yields the same connectivity with configurations, but requires independent full assignment before use.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Adjudicate the complete stereochemical identity through maintained PubChem enrichment and grounding ownership, then regenerate the representation.
+
+- Independently assign all conserved core configurations against modern primary structure and exact acid preparation; do not copy obsolete1972 beta-lactam chemistry.
+- Treat MRNLLBXPSWMYCK-VGKAPWMUSA-N as a scratch comparison candidate only, not a preapproved external identity or replacement.
+- Verify complete connectivity, nineteen configurations, formula, charge and molecular encodings together; keep copper/salt forms separate.
+- Document whether PubChem2410 must be replaced, qualified or narrowly overridden rather than silently treated as stereospecific.
+- Run source regeneration, identity/duplicate, schema, term, reference and history gates; retain native status until authorized curation.
+
+### A2
+
+Bound later definition and mechanism enrichment to exact acid preparations and inspected primary experiments.
+
+- Verify exact natural-production and mixture-use clauses instead of transferring generic-family wording.
+- Keep1973 copper-acid159units/mg separate from a free-acid MIC; preserve1975 nonzero Table2 values alongside its inactive discussion wording.
+- Do not transfer A2/B2 RNA or commercial-mixture BRP(MBL) evidence to exact acid without direct support.
+- Read1988 full primary text before adopting any35% cleavage comparison.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/bleomycinic-acid.yaml; Entire YAML | supports | Read MINTED/SEEDED acid definition and PMID15700963, glycopeptide parent/class, all structure fields, both xrefs, source concept, BRP(MBL) resistance, DNA/RNA database-only target entries and four seed events. |
+| owners | data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; ARO row186; PubChem row48; target rows203/204; resistance row3742; actual generators and claim-review inputs | supports | Definition/class and imported claims inherit ARO; all-stereo-unspecified molecular enrichment inherits PubChem2410. Actual owners were added to preserved initial inspection before record assessment; a separate same-base B2 comparator capture is retained for the scratch transformation. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/2410; Current PUG identity | supports | CID2410 reproduces native neutral C50H72N16O22S2 and MRNLLBXPSWMYCK-UHFFFAOYSA-N. All nineteen tetrahedral centres remain unspecified. Source agreement reproduces the omission rather than proving stereochemical completeness. |
+| chemistry | Independent RDKit encoding and actual ARO mint; Native chemical_structure and source_concepts | supports | Both native encodings parse and agree on connectivity, formula, neutral charge, one fragment and masses at source precision. All19 tetrahedral centres are unspecified; actual ARO mint is reproducible. Internal consistency does not establish the configuration of the natural-product-derived acid. |
+| comparison | Scratch terminal-amide hydrolysis comparison; Complete B2 comparator plus1973 chemical transformation | partial | Replacing only terminal C(=O)NCCCCN=C(N)N of the supported B2 comparator with C(=O)O preserves19 core configurations and gives MRNLLBXPSWMYCK-VGKAPWMUSA-N, the same connectivity block as native. This is an explicit inference/comparison, not an approved replacement or independent full stereochemical assignment. |
+| aro | https://purl.obolibrary.org/obo/aro.obo; Terms3000690,3000081,3000738,3000740,3001205 and3001206 | supports | Current ARO resolves the exact name and PubChem2410 mapping, glycopeptide class and inherited DNA/RNA/BRP(MBL) assertions. Inactivation includes sequestration, so the native enum does not require chemical destruction. Source definition uses generic bleomycin producer/mixture wording. |
+| definition-reference | https://europepmc.org/article/MED/15700963; PMID15700963 DOI10.1021/cr030117g metadata | context_only | Adopted definition source is the 2005 antitumor-antibiotics review. Metadata was inspected; it is not primary experimental evidence and no full-review claim is made. |
+| brp | https://doi.org/10.1128/AAC.05583-11; PMID22290943/PMC3318356; Materials/Methods and Results, Table2 | partial | Clinical bleMBL gene constructs increased commercial BleomycineBellon MIC in E.coliTOP10 from8 to greater than256 micrograms/mL when strongly expressed. Broth microdilution used MH, about10^4CFU per100microlitre well,37C16h. The preparation was not isolated bleomycinic acid. This paper tests resistance function; its family-sequestration interpretation is not a direct bleomycinic-acid-BRP(MBL) binding assay. |
+| brp-other | https://doi.org/10.1128/AEM.00873-08; PMID18791008/PMC2576686; full main paper, Figure2 caption and corresponding experiments | context_only | Purified metagenomic4H7/7A10 and Shble proteins retarded with generic bleomycin and protected linear pUC19 in an FeSO4/DTT assay. These are different proteins from BRP(MBL), and cannot supply direct binding evidence for it or exact bleomycinic acid. |
+| adapter | kg-microbe-sources imodulondb; datasets; e_coli/precise1k and a_baumannii/precise139 queries for ble | context_only | Structured lookup preceded open-ended primary research. Substring gene hits did not identify clinical bleMBL. ABUW0068 glyoxalase/bleomycin-resistance/dioxygenase annotation is not equated with BRP(MBL); no matching producer-strain dataset. No module or drug-response inference. The recent structured lookup was reused for the identical BRP(MBL) terms before acid-specific web follow-up; it does not establish acid susceptibility. |
+| acid-preparation | https://doi.org/10.7164/antibiotics.26.117; PMID4131159; full1973 three-page paper | supports | Fusarium enzyme hydrolyzed copper-chelated B2 to copper-chelated bleomycinic acid plus agmatine; isolated acid had optical rotation and retained the common bleomycin core. Re-coupling with agmatine regenerated B2-like material. The acid copper complex had159 units/mg against Mycobacterium607 relative to the A2 standard. This identifies a chemically distinct acid and weak activity, not universal inactivity or a free-acid MIC. |
+| acid-assay | https://doi.org/10.7164/antibiotics.28.537; Full1975 paper, Materials/Methods, visually inspected Table2p539 and discussionp541 | supports | Named bleomycinic acid from Nippon Kayaku gave5% relative SV40 DNA-scission activity versus copper-free B2 control and159 antimicrobial units/mg against Mycobacterium607. Cell-free assay used50mMTris-HCl,pH9 at0C for30min. Discussion calls acid inactive despite nonzero Table2 values; preserve that scope/tension. Acid metal content and bioassay details are not fully specified; relative activity is not MIC, and tRNA competition is not direct RNA cleavage. |
+| revised-structure | https://doi.org/10.7164/antibiotics.31.801; 1978 four-page structural revision; full text and visually inspected Figure4p802 | supports | The original1972 beta-lactam proposal was revised to the open-chain aminoamide arrangement through NMR, degradation and P-3A structural evidence. Earlier drawings cannot be copied uncritically. The preserved natural core and stereochemical sugar/peptide framework distinguish the actual derivative from an all-unspecified molecular representation. This paper alone is not used to claim every modern CIP assignment. |
+| core-context | https://doi.org/10.1073/pnas.0708143105; PMID18362349/PMC2278181; main Results/Methods and figure captions | context_only | Modern Co(III)-B2 primary structural work verifies a defined peptide/disaccharide framework in the parent comparator. It contextualizes conserved core stereochemistry with the1973 terminal hydrolysis, but neither metal-complex binding nor a B2 DNA result is transferred to the free acid. |
+| dna-lead | https://doi.org/10.1021/tx00001a004; PMID2485129 metadata; discovery from2009 reference37 | context_only | Primary1988 Shipley/Hecht DNA-congener paper resolves, but metadata has no abstract and publisher retrieval returned403. A secondary35% cleavage statement was not adopted. The2009 citing article misprints its year1998; primary metadata establishes1988. |
+| search | Repository and free public literature; Ignored-inclusive identifier/label/key and exact acid searches | context_only | Ignored files were included outside.git/.venv. Source/native owners and primary preparation/assay/revised-structure papers were inspected. Broader bleomycin, copper complexes, human hydrolase and TlmK results were kept separate from this exact free-acid record. |
+| gates | just validate; just validate-strict; Actual focused batch017 commands | supports | Both focused validators exit0; strict one record zero errors. Internal molecular consistency and actual ARO mint pass, while stereochemical completeness is a separate scientific concern. |
+
+## Limits And Additional Notes
+
+- The adopted2005 review and1988 DNA-congener paper were verified at metadata scope; the latter had no indexed abstract and publisher access failed. Secondary numerical summaries were not adopted.
+- 1973 isolated acid was copper-chelated;1975 acid metal content and antibacterial assay details were incompletely specified. Relative units and percentages are not MICs or clinical breakpoints.
+- Exact acid RNA cleavage and BRP(MBL) binding/resistance were not established by the inspected primary set. The shared recent structured lookup provides no exact drug-response evidence.
+- The scratch B2-to-acid transformation is an explicitly inferred comparison, not an independent full stereochemical reassignment. The correct external identifier and all final configurations require curation adjudication.
+- The1975 paper retains an obsolete structural model and calls acid inactive despite nonzero table activity; its measured assay observations are separated from historical mechanistic interpretation.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 30 captured hashes rechecked unchanged; no native/source/status/history edits.
+- Initial helper assumed a CHEBI mint; actual ARO mint passes. PubChem mass precision is retained and is not a native defect.
+- No alias-only or optional-empty-field findings. Unspecified stereochemistry is not proof of a stereoisomer mixture.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T102726Z-bleomycinic-acid
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Bleomycinic acid: complete stereochemical omission and preparation-scoped
+  evidence'
+started_at: '2026-10-21T09:59:24Z'
+finished_at: '2026-10-21T10:27:26Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Whole native/owner review, independent encoding/mint and scratch
+    hydrolysis comparison, current source identity, primary preparation/activity and
+    revised structural evidence with visual table/figure inspection.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'One major finding: all19 natural-core stereocentres are unspecified in both
+  chemical encodings. Connectivity, gross properties and actual mint are consistent.
+  Primary work distinguishes the acid and its copper complex from terminal-amine congeners
+  and reports weak measurable activity; no inactivity conclusion is drawn. Exact RNA,
+  BRP(MBL), producer and mixture-use details remain bounded follow-ups. Focused gates
+  pass.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/bleomycinic-acid.yaml
+    sha256: b77a918c22c47384e2ae5a8ff753b53a24cbde2dbab89a3801ba8008dd3e2908
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_mibig_producers.py
+    sha256: a078cdf4c9b2d09999800ab7ae03f93d3972f29b7d2f460ebbbe7d7ec6b31c53
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/antibiotics/antibacterial/bleomycin-b2.yaml
+    sha256: 185323f2c34804324d93369a2ec9b7eb2f9ce6d803c34ae1344d46650798eda1
+    role: context
+targets:
+- target_id: antibioticmech:aro-3cfb065f35
+  path: data/antibiotics/antibacterial/bleomycinic-acid.yaml
+  label: bleomycinic acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem molecular enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Structure enrichment owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target roles
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+scope:
+  description: Whole-record review of minted bleomycinic acid.
+  selection: Queue161 in isolated batch017; root initial capture preserved, actual
+    owners and comparator separately captured.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-3cfb065f35
+  exclusions:
+  - target: Parent congeners, metal complexes and generic mixture as separate targets
+    reason: Chemical and evidence comparators only.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual focused command passed.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/bleomycinic-acid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual focused command passed.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/bleomycinic-acid.yaml --out /private/tmp/am-review-session/161-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Internal molecular encodings and actual mint
+  status: passed
+  required: true
+  summary: Encodings agree internally; all19 centres remain unspecified and need scientific
+    adjudication.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - chemistry
+  - comparison
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/bleomycinic-acid.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T10:13:01Z'
+  support: supports
+  summary: Read MINTED/SEEDED acid definition and PMID15700963, glycopeptide parent/class,
+    all structure fields, both xrefs, source concept, BRP(MBL) resistance, DNA/RNA
+    database-only target entries and four seed events.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv
+  locator: ARO row186; PubChem row48; target rows203/204; resistance row3742; actual
+    generators and claim-review inputs
+  accessed_at: '2026-10-21T10:13:01Z'
+  support: supports
+  summary: Definition/class and imported claims inherit ARO; all-stereo-unspecified
+    molecular enrichment inherits PubChem2410. Actual owners were added to preserved
+    initial inspection before record assessment; a separate same-base B2 comparator
+    capture is retained for the scratch transformation.
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/2410
+  locator: Current PUG identity
+  accessed_at: '2026-10-21T10:10:17Z'
+  support: supports
+  summary: CID2410 reproduces native neutral C50H72N16O22S2 and MRNLLBXPSWMYCK-UHFFFAOYSA-N.
+    All nineteen tetrahedral centres remain unspecified. Source agreement reproduces
+    the omission rather than proving stereochemical completeness.
+  snapshot_sha256: 52fc47810bb0afa0c868bcb664d4f08876cc2eb1d8cb7a5f218fafa8518d0137
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit encoding and actual ARO mint
+  locator: Native chemical_structure and source_concepts
+  accessed_at: '2026-10-21T10:10:45Z'
+  support: supports
+  summary: Both native encodings parse and agree on connectivity, formula, neutral
+    charge, one fragment and masses at source precision. All19 tetrahedral centres
+    are unspecified; actual ARO mint is reproducible. Internal consistency does not
+    establish the configuration of the natural-product-derived acid.
+  snapshot_sha256: 37e5523b65606f1275fe038fdeea7f699197fc6164fb6b30ee7cb24c04687ac4
+- evidence_id: comparison
+  kind: validation
+  reference: Scratch terminal-amide hydrolysis comparison
+  locator: Complete B2 comparator plus1973 chemical transformation
+  accessed_at: '2026-10-21T10:11:17Z'
+  support: partial
+  summary: Replacing only terminal C(=O)NCCCCN=C(N)N of the supported B2 comparator
+    with C(=O)O preserves19 core configurations and gives MRNLLBXPSWMYCK-VGKAPWMUSA-N,
+    the same connectivity block as native. This is an explicit inference/comparison,
+    not an approved replacement or independent full stereochemical assignment.
+  snapshot_sha256: 2157c8c8b7e42bc78c1c26d1815b53c5cac0fc73c6b27e66250a50dcbb001f42
+- evidence_id: aro
+  kind: authority
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Terms3000690,3000081,3000738,3000740,3001205 and3001206
+  accessed_at: '2026-10-21T09:40:22Z'
+  support: supports
+  summary: Current ARO resolves the exact name and PubChem2410 mapping, glycopeptide
+    class and inherited DNA/RNA/BRP(MBL) assertions. Inactivation includes sequestration,
+    so the native enum does not require chemical destruction. Source definition uses
+    generic bleomycin producer/mixture wording.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: definition-reference
+  kind: database
+  reference: https://europepmc.org/article/MED/15700963
+  locator: PMID15700963 DOI10.1021/cr030117g metadata
+  accessed_at: '2026-10-21T09:58:54Z'
+  support: context_only
+  summary: Adopted definition source is the 2005 antitumor-antibiotics review. Metadata
+    was inspected; it is not primary experimental evidence and no full-review claim
+    is made.
+  snapshot_sha256: fe8b1f63cfe23795848a5c10dea8e2c72e6eabace993631fd6748fe8de29632f
+- evidence_id: brp
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.05583-11
+  locator: PMID22290943/PMC3318356; Materials/Methods and Results, Table2
+  accessed_at: '2026-10-21T09:59:28Z'
+  support: partial
+  summary: Clinical bleMBL gene constructs increased commercial BleomycineBellon MIC
+    in E.coliTOP10 from8 to greater than256 micrograms/mL when strongly expressed.
+    Broth microdilution used MH, about10^4CFU per100microlitre well,37C16h. The preparation
+    was not isolated bleomycinic acid. This paper tests resistance function; its family-sequestration
+    interpretation is not a direct bleomycinic-acid-BRP(MBL) binding assay.
+  snapshot_sha256: eb7a0f1326d0a90069f10abe1b53151c69d9825cbaccbabc2ad286c2e5d24bb5
+- evidence_id: brp-other
+  kind: primary_source
+  reference: https://doi.org/10.1128/AEM.00873-08
+  locator: PMID18791008/PMC2576686; full main paper, Figure2 caption and corresponding
+    experiments
+  accessed_at: '2026-10-21T09:59:28Z'
+  support: context_only
+  summary: Purified metagenomic4H7/7A10 and Shble proteins retarded with generic bleomycin
+    and protected linear pUC19 in an FeSO4/DTT assay. These are different proteins
+    from BRP(MBL), and cannot supply direct binding evidence for it or exact bleomycinic
+    acid.
+  snapshot_sha256: dcf687d6554445142cd52a2aeb8296155f490ec7dde9d6c38ef8abf8e45e85ed
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb
+  locator: datasets; e_coli/precise1k and a_baumannii/precise139 queries for ble
+  accessed_at: '2026-10-21T09:59:12Z'
+  support: context_only
+  summary: Structured lookup preceded open-ended primary research. Substring gene
+    hits did not identify clinical bleMBL. ABUW0068 glyoxalase/bleomycin-resistance/dioxygenase
+    annotation is not equated with BRP(MBL); no matching producer-strain dataset.
+    No module or drug-response inference. The recent structured lookup was reused
+    for the identical BRP(MBL) terms before acid-specific web follow-up; it does not
+    establish acid susceptibility.
+  snapshot_sha256: 8f9a4359984bbe4b26b63705913bac35352906652b8732dabd9d6b515b1eb54f
+- evidence_id: acid-preparation
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.26.117
+  locator: PMID4131159; full1973 three-page paper
+  accessed_at: '2026-10-21T10:05:25Z'
+  support: supports
+  summary: Fusarium enzyme hydrolyzed copper-chelated B2 to copper-chelated bleomycinic
+    acid plus agmatine; isolated acid had optical rotation and retained the common
+    bleomycin core. Re-coupling with agmatine regenerated B2-like material. The acid
+    copper complex had159 units/mg against Mycobacterium607 relative to the A2 standard.
+    This identifies a chemically distinct acid and weak activity, not universal inactivity
+    or a free-acid MIC.
+  snapshot_sha256: a330ebe8f5295d3a7d4c094e85616c0147543e775636559cc766fab746d61b1c
+- evidence_id: acid-assay
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.28.537
+  locator: Full1975 paper, Materials/Methods, visually inspected Table2p539 and discussionp541
+  accessed_at: '2026-10-21T10:10:45Z'
+  support: supports
+  summary: Named bleomycinic acid from Nippon Kayaku gave5% relative SV40 DNA-scission
+    activity versus copper-free B2 control and159 antimicrobial units/mg against Mycobacterium607.
+    Cell-free assay used50mMTris-HCl,pH9 at0C for30min. Discussion calls acid inactive
+    despite nonzero Table2 values; preserve that scope/tension. Acid metal content
+    and bioassay details are not fully specified; relative activity is not MIC, and
+    tRNA competition is not direct RNA cleavage.
+  snapshot_sha256: 522d76a1dd72dc9875bf67ac2d41a689c422bf0515a3c1fece4f530ea83431e9
+- evidence_id: revised-structure
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.31.801
+  locator: 1978 four-page structural revision; full text and visually inspected Figure4p802
+  accessed_at: '2026-10-21T10:10:44Z'
+  support: supports
+  summary: The original1972 beta-lactam proposal was revised to the open-chain aminoamide
+    arrangement through NMR, degradation and P-3A structural evidence. Earlier drawings
+    cannot be copied uncritically. The preserved natural core and stereochemical sugar/peptide
+    framework distinguish the actual derivative from an all-unspecified molecular
+    representation. This paper alone is not used to claim every modern CIP assignment.
+  snapshot_sha256: 734f3e8801d0587e166e935a91091e1974df3136a4b8bc6db51f3ac2c505b843
+- evidence_id: core-context
+  kind: primary_source
+  reference: https://doi.org/10.1073/pnas.0708143105
+  locator: PMID18362349/PMC2278181; main Results/Methods and figure captions
+  accessed_at: '2026-10-21T10:05:25Z'
+  support: context_only
+  summary: Modern Co(III)-B2 primary structural work verifies a defined peptide/disaccharide
+    framework in the parent comparator. It contextualizes conserved core stereochemistry
+    with the1973 terminal hydrolysis, but neither metal-complex binding nor a B2 DNA
+    result is transferred to the free acid.
+  snapshot_sha256: a26b11ce01b2f5f4c84d1cc28b49c6de1e98faabfd8e644d2e473db4be98c277
+- evidence_id: dna-lead
+  kind: database
+  reference: https://doi.org/10.1021/tx00001a004
+  locator: PMID2485129 metadata; discovery from2009 reference37
+  accessed_at: '2026-10-21T10:11:26Z'
+  support: context_only
+  summary: Primary1988 Shipley/Hecht DNA-congener paper resolves, but metadata has
+    no abstract and publisher retrieval returned403. A secondary35% cleavage statement
+    was not adopted. The2009 citing article misprints its year1998; primary metadata
+    establishes1988.
+  snapshot_sha256: 909b27fc780a9a36ac9aede1fe31be5622faf1ae5038603d6e42b8af12bae877
+- evidence_id: search
+  kind: search
+  reference: Repository and free public literature
+  locator: Ignored-inclusive identifier/label/key and exact acid searches
+  accessed_at: '2026-10-21T10:10:03Z'
+  support: context_only
+  summary: Ignored files were included outside.git/.venv. Source/native owners and
+    primary preparation/assay/revised-structure papers were inspected. Broader bleomycin,
+    copper complexes, human hydrolase and TlmK results were kept separate from this
+    exact free-acid record.
+  search_scope: Preserved prepare.py161 capture plus rg --no-ignore --hidden maintained-owner
+    search; current ARO/PubChem; recent identical BRP structured query; EPMC exact-acid
+    search; primary1973 preparation,1975 assay,1978 revision;1988 citation metadata.
+  snapshot_sha256: 3e84808fc874626f27b9516f07a743e6cb8010cf2846ddc79452ec9706c65329
+- evidence_id: gates
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual focused batch017 commands
+  accessed_at: '2026-10-21T10:10:45Z'
+  support: supports
+  summary: Both focused validators exit0; strict one record zero errors. Internal
+    molecular consistency and actual ARO mint pass, while stereochemical completeness
+    is a separate scientific concern.
+  snapshot_sha256: a2b758b25138dda2f8da740c6003e8929994c5b55e264ea61268d5b01f830f5e
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Natural-derived acid versus all-unspecified structure
+  outcome: concern
+  summary: Connectivity and gross properties correspond to the terminal acid, but
+    all19 tetrahedral configurations are omitted despite a defined chiral parent/core.
+    The scratch hydrolysis comparison locates this omission without approving a replacement.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - pubchem
+  - chemistry
+  - comparison
+  - acid-preparation
+  - revised-structure
+  - core-context
+- assessment_id: definition
+  area: evidence
+  topic: Preparation, producer and mixture clauses
+  outcome: unknown
+  summary: Primary text identifies the acid as a shared structural core/prepared hydrolysis
+    product, distinct from the terminal-amine congeners. It does not establish the
+    entire native natural-production/mixture-use/bacterial-nucleic-acid sentence for
+    the exact acid. Full adopted review was unavailable; no definitive production
+    or clinical-use contradiction is claimed.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - native
+  - aro
+  - definition-reference
+  - acid-preparation
+  - acid-assay
+- assessment_id: class
+  area: grounding
+  topic: Glycopeptide and antibacterial eligibility
+  outcome: supported
+  summary: The acid-derived preparations retain a glycopeptide core and measurable
+    antibacterial assay activity. Weak relative potency does not refute antibacterial
+    classification. Material identity must be preserved in later quantitative curation.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - aro
+  - acid-preparation
+  - acid-assay
+- assessment_id: xref
+  area: grounding
+  topic: Current ARO/PubChem identity
+  outcome: concern
+  summary: Both xrefs resolve, but PubChem reproduces complete stereochemical omission.
+    No alternative exact external identifier has been independently established as
+    the authorized replacement.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - aro
+  - pubchem
+  - chemistry
+- assessment_id: dna
+  area: evidence
+  topic: Condition-dependent acid DNA cleavage
+  outcome: supported
+  summary: The1975 named-acid experiment supports a low relative cell-free DNA-scission
+    endpoint. It does not establish bacterial cellular damage or the1988 secondary
+    percentage; native remains a database assertion pending precise primary curation.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - aro
+  - acid-assay
+  - dna-lead
+- assessment_id: rna
+  area: evidence
+  topic: RNA attacked component
+  outcome: unknown
+  summary: ARO relationship resolves. No direct exact-acid RNA-cleavage experiment
+    was verified; tRNA competition and A2 yeast tRNA studies cannot fill this gap.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - native
+  - aro
+  - acid-assay
+- assessment_id: resistance
+  area: evidence
+  topic: BRP(MBL) assertion
+  outcome: unknown
+  summary: Commercial bleomycin resistance and separate-BRP binding do not directly
+    verify this terminal acid as BRP(MBL) substrate. Broad inactivation enum is source-compatible;
+    no forced mechanistic correction.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - aro
+  - brp
+  - brp-other
+  - adapter
+- assessment_id: activity
+  area: evidence
+  topic: Copper complex, relative activity and negative wording
+  outcome: supported
+  summary: 159units/mg and5% relative DNA activity are condition-specific, not MIC
+    or a universal inactive label.1973 acid is explicitly copper-chelated;1975 acid
+    metal content is not fully stated. Preserve source wording and quantitative limits.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - acid-preparation
+  - acid-assay
+- assessment_id: history
+  area: provenance
+  topic: Generated source and four seed events
+  outcome: supported
+  summary: ARO/PubChem ownership, source dates, mint and four events are coherent;
+    no curator annotation was changed.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+- assessment_id: completeness
+  area: completeness
+  topic: Restore exact identity before enrichment
+  outcome: concern
+  summary: Adjudicate full core stereochemistry through maintained enrichment/grounding
+    owners first. Definition, RNA and exact resistance preparation are bounded evidence
+    follow-ups; optional blanks are not findings.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - chemistry
+  - comparison
+  - acid-preparation
+  - acid-assay
+  - brp
+- assessment_id: other
+  area: scope
+  topic: Producer, clinical, pathway and graph blocks
+  outcome: not_applicable
+  summary: No populated optional blocks; producer wording is assessed only in the
+    definition. No clinical recommendation or expression response is inferred.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - native
+- assessment_id: schema
+  area: schema
+  topic: Focused and chemical consistency
+  outcome: supported
+  summary: All actual focused gates and internal consistency pass; they do not establish
+    stereochemical specificity.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  evidence_ids:
+  - gates
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: bleomycinic-acid-natural-core-stereochemistry-unspecified
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Recover the omitted stereochemistry of the natural-product-derived acid
+  description: Both PubChem-derived encodings omit every one of19 tetrahedral stereocentres.
+    Primary preparation identifies the acid by terminal-amide hydrolysis of defined
+    bleomycin B2, not an arbitrary stereoisomer collection. Modern parent structure
+    and revised common-core chemistry support a specific chiral framework. Internal
+    agreement on MRNLLBXPSWMYCK-UHFFFAOYSA-N is therefore insufficient for exact natural-acid
+    representation. A scratch conserved-core hydrolysis yields the same connectivity
+    with configurations, but requires independent full assignment before use.
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  field_paths:
+  - chemical_structure.smiles
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  - xrefs[1]
+  evidence_ids:
+  - native
+  - owners
+  - pubchem
+  - chemistry
+  - comparison
+  - acid-preparation
+  - revised-structure
+  - core-context
+  rule_id: native-review-checklist:Identity and Equivalence; docs/HARMONIZATION.md:stereochemistry
+    and exact structures
+  native_severity: major omitted natural-product stereochemistry
+  normalization_reason: The terminal-acid connectivity is plausible and source-consistent,
+    but the essential stereochemical specification is lost. This is not evidence that
+    the substance is racemic or a mixture and does not alone justify deleting antibacterial
+    classification.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem molecular enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Structure enrichment owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target roles
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+actions:
+- action_id: A1
+  description: Adjudicate the complete stereochemical identity through maintained
+    PubChem enrichment and grounding ownership, then regenerate the representation.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem molecular enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Structure enrichment owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target roles
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+  acceptance_checks:
+  - Independently assign all conserved core configurations against modern primary
+    structure and exact acid preparation; do not copy obsolete1972 beta-lactam chemistry.
+  - Treat MRNLLBXPSWMYCK-VGKAPWMUSA-N as a scratch comparison candidate only, not
+    a preapproved external identity or replacement.
+  - Verify complete connectivity, nineteen configurations, formula, charge and molecular
+    encodings together; keep copper/salt forms separate.
+  - Document whether PubChem2410 must be replaced, qualified or narrowly overridden
+    rather than silently treated as stereospecific.
+  - Run source regeneration, identity/duplicate, schema, term, reference and history
+    gates; retain native status until authorized curation.
+- action_id: A2
+  description: Bound later definition and mechanism enrichment to exact acid preparations
+    and inspected primary experiments.
+  finding_ids: []
+  target_ids:
+  - antibioticmech:aro-3cfb065f35
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem molecular enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Structure enrichment owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target roles
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+  acceptance_checks:
+  - Verify exact natural-production and mixture-use clauses instead of transferring
+    generic-family wording.
+  - Keep1973 copper-acid159units/mg separate from a free-acid MIC; preserve1975 nonzero
+    Table2 values alongside its inactive discussion wording.
+  - Do not transfer A2/B2 RNA or commercial-mixture BRP(MBL) evidence to exact acid
+    without direct support.
+  - Read1988 full primary text before adopting any35% cleavage comparison.
+limitations:
+- The adopted2005 review and1988 DNA-congener paper were verified at metadata scope;
+  the latter had no indexed abstract and publisher access failed. Secondary numerical
+  summaries were not adopted.
+- 1973 isolated acid was copper-chelated;1975 acid metal content and antibacterial
+  assay details were incompletely specified. Relative units and percentages are not
+  MICs or clinical breakpoints.
+- Exact acid RNA cleavage and BRP(MBL) binding/resistance were not established by
+  the inspected primary set. The shared recent structured lookup provides no exact
+  drug-response evidence.
+- The scratch B2-to-acid transformation is an explicitly inferred comparison, not
+  an independent full stereochemical reassignment. The correct external identifier
+  and all final configurations require curation adjudication.
+- The1975 paper retains an obsolete structural model and calls acid inactive despite
+  nonzero table activity; its measured assay observations are separated from historical
+  mechanistic interpretation.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 30 captured hashes rechecked unchanged; no native/source/status/history edits.
+- Initial helper assumed a CHEBI mint; actual ARO mint passes. PubChem mass precision
+  is retained and is not a native defect.
+- No alias-only or optional-empty-field findings. Unspecified stereochemistry is not
+  proof of a stereoisomer mixture.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pubchem.ncbi.nlm.nih.gov/compound/2410
+- https://doi.org/10.7164/antibiotics.26.117
+- https://doi.org/10.7164/antibiotics.28.537
+- https://doi.org/10.7164/antibiotics.31.801
+tags:
+- bleomycinic-acid
+- stereochemistry
+- preparation-scope
+- relative-activity
+```
