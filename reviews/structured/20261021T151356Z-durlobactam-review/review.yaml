@@ -1,0 +1,670 @@
+schema_version: 1.0.0
+review_id: 20261021T151356Z-durlobactam-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of durlobactam
+started_at: '2026-10-21T14:52:11Z'
+finished_at: '2026-10-21T15:13:56Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Entire native read and exact owner/source reconciliation; independent
+    official neutral-parent graph mappings; complete available adopted/current abstracts
+    and both conference reports; original biochemical/crystallographic and selected
+    combination/resistance methods and results; regulatory material boundary.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Exact neutral parent supported; inhibitor mechanism and combination-study
+  scope retained
+scientific_review: true
+summary: Eight independent chemical encodings support the neutral durlobactam parent
+  and its two configured carbon centers. The structural definition, class parents,
+  code names and identifier placement agree with inspected authorities. Original enzyme
+  and crystallographic evidence supports the active moiety, while clinical and combination
+  susceptibility studies remain explicitly distinguished from parent monotherapy.
+  All ten adopted citation leads and five additional current ChEBI leads were disposed.
+  No confirmed native correction was established. Scientific assessment retains the
+  stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/durlobactam.yaml
+    sha256: dcd5ef398e58414b555a074edb1f3290718ac41591932e5ce542b8ead7e4840f
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: 'Whole SEEDED, EXACT parent record: structural definition, five typed
+    names, four class parents, antibacterial role, complete structure, exact CAS,
+    two drug-context links, Wikipedia document, source concept and four histories.
+    All ten adopted citation leads plus five additional current ChEBI leads checked
+    at stated levels.'
+  selection: Queue 383 in isolated batch 039. Initial thirteen hashes preserved; actual
+    ChEBI maintained owners were already captured and verified before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:229539
+targets:
+- target_id: CHEBI:229539
+  path: data/antibiotics/antibacterial/durlobactam.yaml
+  label: durlobactam
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: schema
+  name: Native schema
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/durlobactam.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Native strict terms
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/durlobactam.yaml --out /private/tmp/am-review-session/383-strict.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; no ERROR rows.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - validation
+- check_id: native-chemistry
+  name: Native molecular consistency
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    383
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native graph, key, formula, charge and masses pass.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: direct-authorities
+  name: Initial direct graph comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/382-chemistry-direct-initial.py
+    383 > /private/tmp/am-review-session/383-chemistry-direct-recheck.log 2>&1
+  status: failed
+  required: false
+  exit_code: 1
+  expected_exit_code: 0
+  summary: Executed exit 1 at native-inchi because the InChI reader generates an imidic-acid
+    tautomer. The identical Standard InChIKey is preserved; this failed supplemental
+    check remains recorded.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - chemistry
+- check_id: authority-chemistry
+  name: Explicit parent and stereo comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/382-chemistry-authorities.py
+    383 > /private/tmp/am-review-session/383-chemistry-authorities.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Eight encodings retain one neutral C8H11N3O6S component and both configured
+    carbon centers. Explicit common protonation/tautomer comparison preserves original
+    chiral parity and produces reciprocal mappings.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - chemistry
+- check_id: adapter
+  name: Shared structured mechanism follow-up
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/382-adapter.py
+    > /private/tmp/am-review-session/382-adapter.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: This actual shared query ran after both original captures and before mechanism
+    web follow-up. Searches resolve representative mrdA/OXA genes with no component
+    hits requiring summary.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - adapter
+- check_id: source-ledger
+  name: Whole source and citation ledger
+  command: .venv/bin/python /private/tmp/am-review-session/382-ledger.py 383 > /private/tmp/am-review-session/383-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Thirteen hashes unchanged; identity fields, all identifiers/names, ten
+    adopted and five additional current citation dispositions, and four ordered histories
+    checked.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - owners
+  - leads
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:229539
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:229539
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:229539
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:229539
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:229539
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:229539
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:229539
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:229539
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:229539
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/durlobactam.yaml
+  locator: Whole native YAML
+  accessed_at: '2026-10-21T15:12:35Z'
+  support: supports
+  summary: The native record contains the neutral parent, structural definition and
+    role, with no quantitative MIC, protein-target, resistance, producer, clinical-status
+    or causal-graph objects. It does not itself claim that a particular treatment
+    combination or resistant isolate establishes parent monotherapy efficacy.
+- evidence_id: chemistry
+  kind: authority
+  reference: CHEBI:229539; UNII:PSA33KO9WA; PubChem CID89851852; KEGG D11591
+  locator: 383-chebi.json/.mol; 383-gsrs.json; 383-pubchem.json; 383-kegg.txt/.mol;
+    383-authority-chemistry.json
+  accessed_at: '2026-10-21T15:12:35Z'
+  support: supports
+  summary: Eight encodings agree on one neutral C8H11N3O6S component, matching mass
+    and BISPBXFUKNXOQY-RITPCOANSA-N. Both configured carbon centers map with chirality
+    preserved. InChI reconstruction produces an imidic-acid tautomer; explicit normalization
+    with stereo removal disabled and atom-neighbor parity checks restores reciprocal
+    graph matching. No sodium or water component is stripped to manufacture agreement.
+    GSRS additionally labels the constrained bridgehead nitrogen; the Standard InChI
+    represents the two carbon descriptors.
+  snapshot_sha256: 2be4970d18eebd60b122b7c321f9961e0d6c4f83a217790515f30dd601206da9
+- evidence_id: terms
+  kind: authority
+  reference: CHEBI:140324, CHEBI:29347, CHEBI:38025, CHEBI:38295; CHEBI:36047
+  locator: 382-term-140324/29347/38025/38295.json; shared371-role.json; 383-chebi.json;
+    383-kegg.txt
+  accessed_at: '2026-10-21T15:06:27.541023Z'
+  support: supports
+  summary: The graph contains a primary monocarboxamide, the N-O-sulfonic-acid linkage
+    and the nitrogen bicyclic skeleton; the four current parents resolve with those
+    labels. The structural definition and systematic synonym preserve the methyl,
+    unsaturation, carbamoyl, oxo and sulfooxy connectivity. CAS1467829-71-5 and ETX2514
+    variants refer to the parent in the inspected authority context, distinct from
+    the sodium-qualified sibling.
+  snapshot_sha256: 0f87c2a65e502a05ff1a3c9b5dff27c8f7f1c5446262516c3a317bc4f19af053
+- evidence_id: label
+  kind: authority
+  reference: DailyMed XACDURO SPL c0167aec-a89d-4e96-afe5-2ccf3e89fe72
+  locator: 382-label.xml sections1,11,12.4,14; shared exact-salt identity inspection
+  accessed_at: '2026-10-21T15:07:06.406833Z'
+  support: context_only
+  summary: The marketed ingredient is durlobactam sodium and its doses are expressed
+    in parent equivalents. Approval applies to the co-packaged sulbactam product for
+    adult HABP/VABP caused by susceptible ABC isolates; the trial included background
+    imipenem/cilastatin. Durlobactam protects sulbactam from certain serine beta-lactamases
+    and alone lacks activity against ABC isolates. This supports drug-role context
+    without asserting that the isolated neutral solid itself is the administered product
+    or universally lacks intrinsic activity.
+  snapshot_sha256: 01d6b21826563aac5d80c7ef8ea24cb1b659c97cca0cf6621dc9aa6f02fd2561
+- evidence_id: primary
+  kind: primary_source
+  reference: PMID:30862744; DOI:10.1128/mBio.00159-19
+  locator: 382-PMC6414696.xml original reagents, susceptibility/kinetic/mass/crystallographic
+    methods and corresponding results
+  accessed_at: '2026-10-21T15:07:58.973201Z'
+  support: supports
+  summary: Entasis ETX2514 powder, without an explicit salt statement, inhibits purified
+    ADC-7 and OXA-58 and forms measured covalent adducts. OXA-24/40 crystallography
+    locates the ring-opened inhibitor at catalytic S81. Thus direct beta-lactamase
+    inhibition concerns the parent drug moiety. Isolate experiments combine sulbactam
+    with fixed 4 mg/L ETX2514; their values cannot be restated as standalone durlobactam
+    MICs. Binding of the acylated product does not mean the unreacted neutral structure
+    remains chemically unchanged in the active site.
+  snapshot_sha256: b918cf17d6b771433bbbb9caebdf4ce5e29c855a5814c815855927544f4bc255
+- evidence_id: reversibility
+  kind: primary_source
+  reference: PMID:28835096; DOI:10.1021/acsinfecdis.7b00113
+  locator: 383-core-28835096.json complete original abstract
+  accessed_at: '2026-10-21T15:07:41.375158Z'
+  support: supports
+  summary: The original study compares ten class A/C/D serine beta-lactamases. ETX2514
+    recyclizes and dissociates intact from five named enzymes but not the tested KPC-2/OXA
+    enzymes; KPC-2 slowly degrades the inhibitor. The evidence supports enzyme-specific
+    covalent inhibition, not a universal reversible-adduct claim. The full experimental
+    body was not inspected.
+  snapshot_sha256: d14b3279c54f1ef1d49b75f2bdd254ba1f00847e3627bcd14a9b267ba93618f6
+- evidence_id: design
+  kind: primary_source
+  reference: PMID:28665414; DOI:10.1038/nmicrobiol.2017.104
+  locator: 383-core-28665414.json complete original abstract
+  accessed_at: '2026-10-21T15:07:43.334089Z'
+  support: context_only
+  summary: Original discovery work reports serine beta-lactamase and PBP inhibition,
+    intrinsic activity against Enterobacteriaceae, and sulbactam-combination efficacy.
+    Exact solid form and the complete experimental tables were not established from
+    the accessible abstract. It prevents overgeneralizing the official ABC-specific
+    monotherapy limitation to all organisms.
+  snapshot_sha256: 6013d3a8bb0d669658ebd06d749e99e5238909201dc5c604f34fb77e0540665c
+- evidence_id: combination
+  kind: primary_source
+  reference: PMID:37839896; DOI:10.1093/jac/dkad244
+  locator: 383-PMC10689914.xml main material, MIC/time-kill methods and results; related
+    conference PMC10678025
+  accessed_at: '2026-10-21T15:07:58.973642Z'
+  support: context_only
+  summary: The original study specifies Entasis durlobactam lot 134693 but no exact
+    solid form. It tests fifteen isolates using sulbactam-durlobactam, cefepime and
+    their combination; MICs use fixed 4 mg/L durlobactam, whereas time-kills use clinically
+    simulated average concentrations. Synergy varies by isolate and regrowth occurs
+    in the Pseudomonas experiments. It does not directly isolate durlobactam monotherapy
+    or demonstrate clinical benefit. The related conference report is a limited abstract
+    and is not a second independent experiment.
+  snapshot_sha256: 3fb487f5481d350ad24760897488cec04db83bd99c3342764209232a33aff04e
+- evidence_id: resistance
+  kind: primary_source
+  reference: PMID:37843305; DOI:10.1128/aac.00665-23
+  locator: 383-PMC10648852.xml selected full isogenic-panel, susceptibility, PBP3,
+    efflux and sulbactam-protection methods/results
+  accessed_at: '2026-10-21T15:07:58.973545Z'
+  support: context_only
+  summary: The study concerns sulbactam-durlobactam combination susceptibility, metallo-beta-lactamases
+    and sulbactam-target PBP3 variation. A515V alone is insufficient in the tested
+    systems; effects of other variants depend on enzyme context. AdeIJK disruption
+    and strain efflux evidence suggest a contribution to durlobactam disposition,
+    but not every genotype is individually causal. Native durlobactam has no such
+    resistance entries, and none are manufactured from association alone.
+  snapshot_sha256: 561fdc4ecef02cfbc763ff51607699f2e7d0e674a3242a684746c2497ea23de7
+- evidence_id: conference
+  kind: primary_source
+  reference: PMC:PMC5631255
+  locator: 383-PMC5631255.xml complete conference report
+  accessed_at: '2026-10-21T15:07:06.407590Z'
+  support: context_only
+  summary: The 2017 report describes 72 A. baumannii isolates with sulbactam plus
+    fixed 4 mg/L ETX2514 and purified ADC-7/OXA-58 experiments. It is a conference
+    abstract rather than a full experimental article; exact material form and full
+    assay detail are limited. The later full mBio study is used separately at its
+    stated scope.
+  snapshot_sha256: 08a31f11a01e28cdd06cc4ca68317eb15778f2296e6075cc9dea01c61129adc6
+- evidence_id: leads
+  kind: primary_source
+  reference: Ten adopted leads plus five additional current ChEBI leads
+  locator: 383-source-audit.json per-reference dispositions; 383-core-*.json files;
+    both conference XMLs
+  accessed_at: '2026-10-21T15:12:35Z'
+  support: context_only
+  summary: 'All eight adopted PMIDs and two adopted PMC conference reports were inspected
+    at bibliographic/complete-available-abstract level or more. PMID37452667 has no
+    abstract; PMID37603677 is LactMed, 37523122 and PMID:37817550 are reviews, and
+    PMID:37740370 studies physical IV compatibility. Five additional current leads
+    were checked: PMID:38065814 has no abstract,38092671 animal combination PK/PD,38095417
+    combination test/QC development,38136764 and PMID:38258766 reviews. These associations
+    are not universal exact-parent activity or clinical evidence.'
+  snapshot_sha256: 771773de6e171810a11451807cd1b47d6a0716dd97d8246b0f7d11c1999b70ec
+- evidence_id: links
+  kind: authority
+  reference: KEGG D11591; Wikipedia Durlobactam
+  locator: 383-kegg.txt/.mol; 383-wikipedia.html/.txt
+  accessed_at: '2026-10-21T15:06:27.782144Z'
+  support: supports
+  summary: KEGG resolves to the neutral-parent drug identifier and matches its graph.
+    Wikipedia resolves as the intended document and explicitly distinguishes co-packaged
+    therapy, while listing parent/salt identifiers together; that document is not
+    treated as an exact-structure authority for every listed identifier.
+  snapshot_sha256: fc9bfaba27227c1568036c54832020ce5b27821ae7db2b948dafbb08ac6e24a5
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB a_baumannii/precise139 and e_coli/modulome
+  locator: 382-adapter-results.json reused after both original captures and before
+    mechanism follow-up
+  accessed_at: '2026-10-21T15:12:35Z'
+  support: context_only
+  summary: Representative mrdA/PBP2 keys ABUW_2876 and b0635 and A. baumannii OXA
+    entries were found. No iModulon component hit required summarization. The native
+    record specifies no gene; this structured context is neither direct target proof
+    nor proof of a strain phenotype.
+  snapshot_sha256: 81fe83c206f8259ad4dc6c5795c14d6d0d6b0177bd02da9debe51aa801c116ad
+- evidence_id: owners
+  kind: database
+  reference: Maintained ChEBI identity and projection
+  locator: 383-inspect.json; 383-owner-review.json; 383-chebi-row.json; 383-source-audit.json
+  accessed_at: '2026-10-21T15:12:35Z'
+  support: supports
+  summary: All thirteen original hashes include the actual owners and remain unchanged.
+    Source definition, names, parents/role, structure, exact CAS and drug/document
+    identifier placement reproduce the adopted row. Ten adopted and five additional
+    current citations are separately disposed and four histories are ordered.
+  snapshot_sha256: 771773de6e171810a11451807cd1b47d6a0716dd97d8246b0f7d11c1999b70ec
+- evidence_id: validation
+  kind: validation
+  reference: Executed native and supplementary checks
+  locator: 383-focused-results.json; 383-strict.tsv; 383-chemistry-direct-recheck.log;
+    383-chemistry-authorities.log; 383-ledger.log
+  accessed_at: '2026-10-21T15:12:35Z'
+  support: supports
+  summary: Native chemistry/schema/strict pass. The initial direct comparison actually
+    failed on an InChI-read tautomer; the explicit parity-preserving comparison and
+    source ledger then pass.
+  snapshot_sha256: 0a5de745b47b75e8dd227648ec0c7b03dfe360c9ff1ecf589243a110603671ca
+- evidence_id: access
+  kind: search
+  reference: Exact parent and primary-source follow-up
+  locator: 383-local-hits.txt includes ignored files; 382-fetch.json through 382-fetch4.json
+  accessed_at: '2026-10-21T15:12:35Z'
+  support: context_only
+  summary: DrugBank DB16704 returned 403. Two batch Europe PMC searches returned 503;
+    individual identifier queries succeeded and retained the initial failures. The
+    Nature main/supplement attempts returned an interstitial or unusable response,
+    so only its complete abstract is claimed as inspected. Open mBio/JAC/AAC full
+    XMLs were available.
+  snapshot_sha256: 8632b318498f775aef413f639392ffc95cfc5ee73d3222cf2c538ab758f4f320
+  search_scope: 383-local-hits.txt includes ignored files; 382-fetch.json through
+    382-fetch4.json
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral parent and stereochemistry
+  outcome: supported
+  summary: Eight exact formula units agree after explicit parity-preserving tautomer
+    handling; sodium salt remains distinct.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - chemistry
+  - label
+- assessment_id: terms
+  area: nomenclature
+  topic: Definition, synonyms and structural parents
+  outcome: supported
+  summary: Current authority graphs and labels support the structural definition,
+    five names and four parents.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - terms
+  - chemistry
+- assessment_id: role
+  area: evidence
+  topic: Antibacterial ingredient and inhibitor mechanism
+  outcome: supported
+  summary: Original serine-beta-lactamase experiments support the active moiety; intrinsic
+    and combination activity retain organism/material scope.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - primary
+  - reversibility
+  - design
+  - label
+- assessment_id: scope
+  area: scope
+  topic: Combination assays and resistance studies
+  outcome: supported
+  summary: Combination endpoints, sulbactam PBP3 mechanisms and contextual efflux
+    observations are kept separate from standalone parent claims.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - combination
+  - resistance
+  - conference
+- assessment_id: unavailable
+  area: identity
+  topic: Unresolved DrugBank and limited full-text access
+  outcome: unknown
+  summary: DrugBank contents and several full papers remain unverified; no negative
+    identity finding follows from those access limits.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - access
+  - leads
+- assessment_id: completeness
+  area: completeness
+  topic: Optional future mechanism enrichment
+  outcome: supported
+  summary: No missing mandatory representation was established for this SEEDED record.
+    Original evidence could support a later scoped curation without status promotion
+    here.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - record
+  - primary
+  - reversibility
+- assessment_id: provenance
+  area: provenance
+  topic: Owners, every adopted lead and history
+  outcome: supported
+  summary: Thirteen inputs unchanged; all fifteen current/adopted lead dispositions
+    and four histories checked.
+  target_ids:
+  - CHEBI:229539
+  evidence_ids:
+  - owners
+  - leads
+  - validation
+findings: []
+actions: []
+limitations:
+- Neither the current combination-product label nor combination susceptibility studies
+  prove durlobactam parent monotherapy efficacy. The marketed ingredient is the sodium
+  salt, with strengths in parent equivalents.
+- The inspected original mBio and JAC methods identify supplied powder/lot but not
+  the exact solid form. Their moiety-level mechanism and mixture-level assays are
+  retained at those scopes.
+- The reversible-inhibition paper was inspected at complete-abstract level. Its enzyme-dependent
+  outcomes cannot be replaced by a blanket statement that every covalent complex is
+  reversible.
+- Every adopted citation was resolved, including both conference abstracts. Some full
+  papers were not inspected, two PMID entries have no abstract, and reviews/LactMed/compatibility
+  studies were not promoted to original antibacterial evidence.
+- DrugBank was blocked and the original Nature discovery main text/supplement was
+  not successfully inspected. Batch Europe PMC failures were resolved by individual
+  queries, not silently omitted.
+- The direct InChI-roundtrip graph assertion failed on tautomeric representation.
+  The final comparison retains exact original composition and configured-center parity,
+  so no wrong-structure finding is inferred from that failure.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- This review does not create a new target, resistance or clinical-status entry. Protein
+  mechanisms in combination papers are attributed to the appropriate component.
+- The neutral molecule and sodium salt were separately audited from preserved target
+  hashes. Shared retrievals and adapter execution are explicitly identified; no salt
+  or assay result is silently transferred.
+- Standalone chemistry used the batch 019 interpreter against batch 039; native schema/strict
+  and source-ledger checks used batch 039.
+- Initial XML extraction using an unavailable optional BeautifulSoup dependency failed;
+  standard-library XML parsing then supplied the inspected text.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:229539
+- https://www.kegg.jp/entry/D11591
+- https://doi.org/10.1128/mBio.00159-19
+- https://doi.org/10.1021/acsinfecdis.7b00113
+- https://doi.org/10.1093/jac/dkad244
+- https://doi.org/10.1128/aac.00665-23
+tags:
+- record-review
+- durlobactam
+- parent-identity
+- combination-scope
