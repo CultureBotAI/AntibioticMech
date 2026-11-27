@@ -1,0 +1,1029 @@
+# Arylomycin: family-level source text attached to the exact synthetic C16 structure
+
+- Review: 20261021T092104Z-arylomycin
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:14:02Z
+- Finished UTC: 2026-10-21T09:21:04Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The record has valid chemistry for synthetic arylomycin C16, but its label and definition describe a variable family. The adopted original paper distinguishes C16, A2, B-C16 and an amino analogue and provides C16-specific antibacterial results. Its phrase tripeptide macrocycle was changed to the chemically incorrect macrolide in the source definition. Signal peptidase I remains an honestly labelled database target, with primary follow-up available. Findings are one major identity-scope mismatch, one minor chemical-wording error and one informational enrichment.
+
+## Scope And Provenance
+
+Whole record, exact chemical identity versus family scope, both native xrefs, class and target terms, adopted definition citation and target-associated citations; bounded original activity and mechanism research.
+
+Selection: Queue 111 at data/antibiotics/antibacterial/arylomycin.yaml, minted ARO-derived identity.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-0cf530b2c3 | data/antibiotics/antibacterial/arylomycin.yaml | generated | arylomycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | antibioticmech:aro-0cf530b2c3 | Focused LinkML validation exited 0. |
+| strict | passed | True | antibioticmech:aro-0cf530b2c3 | Focused strict validation exited 0 without ERROR rows. |
+| chemistry | passed | False | antibioticmech:aro-0cf530b2c3 | SMILES/InChI, formula, charge, source mint and masses agree at the reported precision. |
+| imodulondb | passed | False | antibioticmech:aro-0cf530b2c3 | Read-only adapter query returned the expected reference-strain signal peptidase I gene and no iModulon hits. |
+| Authoritative full QC | failed | True | antibioticmech:aro-0cf530b2c3 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-0cf530b2c3 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-0cf530b2c3 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-0cf530b2c3 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-0cf530b2c3 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-0cf530b2c3 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-0cf530b2c3 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-0cf530b2c3 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-0cf530b2c3 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact structure and stable identifiers
+
+identity: supported. Targets: antibioticmech:aro-0cf530b2c3.
+
+The structure and official compound identifiers identify neutral synthetic arylomycin C16. MINTED provenance is deterministic and honest.
+
+### Family definition versus exact member
+
+identity: concern. Targets: antibioticmech:aro-0cf530b2c3.
+
+ARO family text and the native generic label are broader than the attached C16 structure. The adopted primary paper explicitly distinguishes the chemical members.
+
+### Macrocycle terminology
+
+evidence: concern. Targets: antibioticmech:aro-0cf530b2c3.
+
+The source changed the primary paper's macrocycle to macrolide. The cyclic peptide structure has no cyclic ester to support that chemical description.
+
+### Signal peptidase I target
+
+evidence: supported. Targets: antibioticmech:aro-0cf530b2c3.
+
+The direct source edge is reproduced accurately and primary evidence is explicitly pending. Exact C16 antibacterial and mutant-response results support a strong follow-up, but no uninspected direct-binding assay is treated as verified.
+
+### Antibacterial classification and optional spectrum
+
+evidence: supported. Targets: antibioticmech:aro-0cf530b2c3.
+
+The exact C16 compound is antibacterial in original strain-specific experiments. Mutant and congener results must remain separate; optional absent activity observations are not defects.
+
+### Producer, clinical, resistance and dataset boundaries
+
+completeness: unknown. Targets: antibioticmech:aro-0cf530b2c3.
+
+No native unsupported claims in these fields. Natural-family isolation does not prove a producer of synthetic C16, and target-gene context is not a transcriptomics dataset. Primary resistance mutations could be added only with their exact strain and allele.
+
+### Reproducible correction and curator additions
+
+ownership: supported. Targets: antibioticmech:aro-0cf530b2c3.
+
+Family/member resolution belongs to source extraction, fallback and grounding/adoption owners; later primary biological annotations belong to the actual native record.
+
+### Focused validation and history
+
+schema: supported. Targets: antibioticmech:aro-0cf530b2c3.
+
+Focused checks pass; four seed/reseed events are consistent with SEEDED. No scientific-status promotion is proposed.
+
+## Findings
+
+### F1: Resolve the family-level label and definition attached to arylomycin C16
+
+major / open / confirmed; issue key: arylomycin-family-source-attached-to-exact-c16.
+
+The native generic arylomycin label and variable-family definition denote a broader set than PubChem 54586211, which is the synthetic A-series C16 compound. The exact structure is recoverable and antibacterial, but the current scope can transfer natural-product, congener or spectrum claims incorrectly.
+
+### F2: Use tripeptide macrocycle rather than macrolide
+
+minor / open / confirmed; issue key: arylomycin-tripeptide-macrolide-wording.
+
+The adopted original paper describes a tripeptide macrocycle. The source and native definition instead say macrolide, despite the peptide/biaryl ring lacking a cyclic ester. Correct this wording while resolving the exact member.
+
+### F3: Add C16-specific primary activity and target evidence after identity resolution
+
+informational / open / confirmed; issue key: arylomycin-c16-qualified-primary-evidence-enrichment.
+
+Original results support antibacterial activity and provide target/resistance follow-up for C16. Curate the exact column and strains, preserving the difference between sensitized mutants, wild types and B-series congeners. Current database-only target status is honest.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Resolve the source family/member mapping and correct the chemical definition reproducibly.
+
+- Confirm the retained structure is exact arylomycin C16, matching PubChem 54586211 and CHEMBL1784531 at HGWCKYGOWQEYSJ-JBWZRHCTSA-N and the original Figure 1.
+- Choose an explicit maintained decision: retain C16 with an exact label/definition and qualified family-source relation, or exclude the family concept and separately adopt the exact C16 compound through the curator inventory. Review identifier/history consequences before changing them.
+- Describe the C-terminal tripeptide macrocycle correctly. Do not call the compound a cyclic ester macrolide or imply that synthetic C16 itself was isolated from a natural producer.
+- Update the maintained ARO/structure extraction or decision/adoption input and regenerate through the normal seeder. Do not repair only the generated YAML.
+- Verify source reproducibility, exact identifiers and required focused/shared gates.
+
+### A2
+
+Optionally curate exact C16 activity, target and resistance evidence after resolving identity.
+
+- Use PMID 21545107 Table 1 C16 values with exact strains and media. PAS8001, PAS0260 and PAS2008 are sensitized SPase mutants, not the wild-type strains. Do not transfer B-C16 activity against S. agalactiae to C16.
+- Retain the MIC endpoint, at least three experiments, inoculum dilution and medium dependence. Resolve the isolated mg/mL narrative inconsistency before adopting that line.
+- Inspect the full PMID 21095572 methods for C16-specific binding/target evidence before upgrading PRIMARY_EVIDENCE_NEEDED; do not substitute A2 or glycosylated lipoglycopeptide crystal/kinetic results.
+- If adding resistance, retain the exact SPase mutation, organism and genetic background. Do not infer a universal species phenotype from one Pro residue or a dataset gene annotation.
+- Keep source scaffold classification distinct from biosynthetic production of the synthetic derivative. Add no producer, human indication, clinical approval or omics dataset without exact evidence.
+- Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/arylomycin.yaml for any separately authorized primary curation; run focused and shared gates without automatic REVIEWED promotion.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/arylomycin.yaml; Entire native YAML and four seed/reseed events. | supports | SEEDED, MINTED ARO-derived record; no synonyms or activity roles. One structural class, one exact PubChem structure, two xrefs and one protein target labelled CARD_ARO and PRIMARY_EVIDENCE_NEEDED. No native quantified activity, resistance, producer, clinical, causal graph or dataset annotation. The missing optional fields are not validation defects. |
+| source | data/raw/aro_antibiotics.tsv; 111-raw.json: ARO line 182, PubChem structure line 47 and target edge line 200; source configuration, complete PubChem enrichment script and relevant seeder branches. | supports | The extractor takes a family-level ARO definition and PubChem CID 54586211. The enrichment script supplies that CID structure without resolving the family/member distinction; the seeder uses this fallback because no ChEBI structure is linked. ARO class selection yields nonribosomal peptide antibiotics. No exact-record resistance edges were found in the adopted table. All 21 maintained input hashes remain unchanged. |
+| aro | https://purl.obolibrary.org/obo/aro.obo; Same-session 094-aro.obo and complete selected terms in 111-aro-terms.txt. | supports | Official OBO bytes match the MANIFEST hash. ARO:3000685 describes arylomycins as varying family members and links PubChem 54586211. Its direct parent ARO:3000035 is a lipopeptide class under ARO:3009657. Target ARO:3000717 is signal peptidase I and explicitly targets ARO:3000685. The native target preserves database provenance, unknown organism/assay and primary-evidence-needed status. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/54586211/property/InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge,SMILES/JSON; 111-pubchem.json and 111-synonyms.json, both official responses. | supports | The official CID matches native neutral C46H68N6O11 and full key HGWCKYGOWQEYSJ-JBWZRHCTSA-N. Its preferred returned synonym is Arylomycin C16, with CHEMBL1784531 as another cross-reference. It does not represent every arylomycin chain length or aromatic substitution. |
+| chembl | https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1784531.json; 111-chembl.json; canonical SMILES independently parsed. | supports | The official entry names ARYLOMYCIN C16. Its independent canonical SMILES and reported InChI produce the same full key as the native structure, corroborating the specific synthetic-compound identity. This is corroboration, not a new native xref added by the review. |
+| chemistry | Independent RDKit calculations; 111-chemistry.json and 111-chemistry.log. | supports | Native SMILES and InChI are mutually consistent: one neutral fragment, five specified tetrahedral stereocentres, C46H68N6O11 and the native full key. Average mass agrees with the one-decimal PubChem value 881.1; exact mass agrees with 880.49460701. The ARO mint reproduces correctly. The peptide macrocycle contains amides and a biaryl linkage, not a cyclic ester. No independent atropisomer assignment is claimed. |
+| primary2011 | DOI:10.1021/np200163g; PMID 21545107, PMC3150569; complete main text through Experimental Section, Table 1 and Figure 1; 111-2011.html/txt and 111-Figure1.jpg. | supports | The adopted original paper distinguishes the A-series synthetic arylomycin C16 from natural A2, nitrated B-C16 and an amino derivative. Figure 1 was visually inspected and separates these substitutions and the linear C16 tail. The paper calls the C-terminal ring a tripeptide macrocycle. C16 has its own Table 1 column: S. epidermidis RP62A MIC 0.25 micrograms/mL, S. aureus P29S PAS8001 4, E. coli P84L PAS0260 2 and P. aeruginosa P84L PAS2008 4. Those sensitized mutant results are not wild-type pathogen susceptibility. S. agalactiae COH-1 is greater than 128 for C16 but 8 for B-C16. |
+| primary2011-methods | DOI:10.1021/np200163g; Determination of Antimicrobial Activity and Results; complete main-text read, supported by official BioC XML. | supports | MIC is the lowest concentration preventing visible growth, determined in at least three independent broth-microdilution experiments. The listed staphylococci, E. coli and P. aeruginosa use cation-adjusted Mueller-Hinton II broth; streptococci and L. lactis have different media. A 5-microlitre inoculum at 1e7 CFU/mL is added to 100 microlitres of assay medium, rather than a final inoculum of 1e7. B. brevis sensitivity changes with poor-growth nutrient broth plus salt, so medium dependence must be retained. One narrative wild-type limit is printed as greater than 128 mg/mL, while the surrounding quantitative context uses micrograms/mL; do not adopt that inconsistent line without resolving it. |
+| target-citations | PubMed citations attached to ARO:3000717; 111-epmc.json; complete available original abstracts and bibliographic metadata. | partial | PMID 21189343, DOI 10.1128/AAC.01459-10, explicitly tests synthetic arylomycin C16 against clinical coagulase-negative staphylococci and associates susceptibility with signal-peptidase sequence, while noting exceptions. Full text was not retrieved. PMID 15173160, DOI 10.1074/jbc.M405884200, concerns different glycosylated lipoprotein inhibitors; its numerical enzyme and MIC results do not establish those values for nonglycosylated C16. PMID 7023361, DOI 10.1146/annurev.bi.50.070181.001533, is the broad review Transfer of proteins across membranes, with no available abstract in the inspected MED record. |
+| mechanism-leads | DOI:10.1016/j.chembiol.2010.09.009; PMID 21095572, PMC3003444; complete abstract in 111-target-epmc.json, plus exact citation in the adopted paper. | partial | The primary abstract reports SPase mutation-dependent arylomycin resistance in S. epidermidis and analogous resistance determinants in S. aureus, E. coli and P. aeruginosa. The adopted paper identifies C16 and A2 as the relevant A-series compounds. Full target-binding methods were not retrieved; the abstract does not by itself supply a C16-specific binding constant or crystal structure. |
+| mechanism-context | DOI:10.1128/AAC.00785-12; PMID 22802255, PMC3457390; complete abstract in 111-mechanism-epmc.json. | context_only | The original study uses genetically sensitized E. coli and S. aureus to investigate secretion stress and effects of SPase inhibition. Its abstract supports a bounded mechanism lead, not universal wild-type killing or an omics dataset. A search-returned PMID 20797614 was inspected and rejected as an unrelated chemical-interaction profiling paper; it is not used as arylomycin evidence. |
+| adapter | Structured iModulonDB adapter; Shared 055 dataset inventory and 111-imodulondb-lepb.txt, run before open-ended web research. | context_only | e_coli/precise_mg1655/b2568 resolves to lepB, signal peptidase I. No iModulon hits were returned, so no component summary was warranted. This reference-strain gene annotation is context only and cannot prove C16 binding, mutant susceptibility or a secretory phenotype. |
+| search | CultureBotAI/AntibioticMech; 111-local-hits.txt and 111-maintained-search.txt. | context_only | Ignored- and hidden-inclusive searches locate the native record, source inventories and identity-review queue. No exact C16 curator addition was found among the searched maintained owners. This is a bounded repository finding, not an assertion that no further literature or compound record exists outside the search. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Whole-record identity, equivalence, chemical definition, primary target, activity and producer rules; native profile, CLAUDE and review contract. | supports | An exact chemical corpus cannot silently collapse a variable family into one synthetic member. Scaffold classification does not establish that the synthetic derivative was itself produced by an NRPS or isolated from a natural producer. Optional primary annotations remain separate from source-owned identity correction. |
+| validation | Documented focused validation and input audit; 111-focused-results.json, schema/strict logs, chemistry and input comparisons. | supports | Schema and strict checks pass, as do native chemical consistency and source mint calculations. All 21 captured maintained inputs are unchanged. No native record edits, paid access or contact occurred during the scientific review. |
+
+## Limits And Additional Notes
+
+- The adopted PMID 21545107 main text, experimental section, Table 1 and Figure 1 were inspected, including visual inspection of the structure figure. Supplementary NMR spectra, raw MIC replicates and absolute atropisomer configuration were not independently reanalyzed.
+- Europe PMC full-text routes for the 2011 papers returned 500. The adopted paper was recovered through official PMC HTML and BioC. The clinical-CoNS paper remains abstract-only; its BioC response is an error document, not full text.
+- PMID 21095572 and PMID 22802255 are original-abstract-level mechanism leads. A BioC request for the 2010 paper returned HTTP 429, after which no further local NCBI full-text request was made. Direct-binding constants and detailed causal steps remain unverified in this review.
+- ARO target reference PMID 15173160 concerns chemically different glycosylated compounds; PMID 7023361 is a broad review without an available abstract. No congener numerical results are transferred.
+- The source represents the nonribosomal-peptide scaffold family, while the exact attached molecule is synthetic C16. This review does not establish its natural producer, biosynthetic gene cluster, human clinical use or an exhaustive set of resistance mechanisms.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T092104Z-arylomycin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Arylomycin: family-level source text attached to the exact synthetic C16 structure'
+started_at: '2026-10-21T09:14:02Z'
+finished_at: '2026-10-21T09:21:04Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the record. Initial and supplemental maintained-input
+    captures preceded scientific judgment. Entire native record, relevant source rows,
+    transforms, official structures and adopted original paper were inspected.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The record has valid chemistry for synthetic arylomycin C16, but its label
+  and definition describe a variable family. The adopted original paper distinguishes
+  C16, A2, B-C16 and an amino analogue and provides C16-specific antibacterial results.
+  Its phrase tripeptide macrocycle was changed to the chemically incorrect macrolide
+  in the source definition. Signal peptidase I remains an honestly labelled database
+  target, with primary follow-up available. Findings are one major identity-scope
+  mismatch, one minor chemical-wording error and one informational enrichment.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/arylomycin.yaml
+    sha256: 20d1ed9434c496bbf6f1413bb1c60c1f16396f75deea360254d6bfa0c23116de
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+targets:
+- target_id: antibioticmech:aro-0cf530b2c3
+  path: data/antibiotics/antibacterial/arylomycin.yaml
+  label: arylomycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted family label, definition and PubChem link
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact C16 structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO inventory extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure fallback
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity and fields
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion decision
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Separate exact compound adoption if the family source must be excluded
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted target edge
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relation classification
+scope:
+  description: Whole record, exact chemical identity versus family scope, both native
+    xrefs, class and target terms, adopted definition citation and target-associated
+    citations; bounded original activity and mechanism research.
+  selection: Queue 111 at data/antibiotics/antibacterial/arylomycin.yaml, minted ARO-derived
+    identity.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  exclusions:
+  - target: Natural A2, B-series compounds, amino and glycosylated derivatives, and
+      optimized G0775 as equivalents of C16
+    reason: These are chemically distinct compounds. Their producers, antibacterial
+      spectrum and detailed target mechanisms cannot be transferred automatically.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Focused LinkML validation exited 0.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/arylomycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Focused strict validation exited 0 without ERROR rows.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/arylomycin.yaml --out /private/tmp/am-review-session/111-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: SMILES/InChI, formula, charge, source mint and masses agree at the reported
+    precision.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  evidence_ids:
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 111
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: imodulondb
+  name: imodulondb
+  status: passed
+  required: false
+  summary: Read-only adapter query returned the expected reference-strain signal peptidase
+    I gene and no iModulon hits.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism e_coli --dataset
+    precise_mg1655 --query lepB
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/arylomycin.yaml
+  locator: Entire native YAML and four seed/reseed events.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: supports
+  summary: SEEDED, MINTED ARO-derived record; no synonyms or activity roles. One structural
+    class, one exact PubChem structure, two xrefs and one protein target labelled
+    CARD_ARO and PRIMARY_EVIDENCE_NEEDED. No native quantified activity, resistance,
+    producer, clinical, causal graph or dataset annotation. The missing optional fields
+    are not validation defects.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv
+  locator: '111-raw.json: ARO line 182, PubChem structure line 47 and target edge
+    line 200; source configuration, complete PubChem enrichment script and relevant
+    seeder branches.'
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: supports
+  summary: The extractor takes a family-level ARO definition and PubChem CID 54586211.
+    The enrichment script supplies that CID structure without resolving the family/member
+    distinction; the seeder uses this fallback because no ChEBI structure is linked.
+    ARO class selection yields nonribosomal peptide antibiotics. No exact-record resistance
+    edges were found in the adopted table. All 21 maintained input hashes remain unchanged.
+  snapshot_sha256: 61dccd63663ece435b501458bd37ceb8590287ef298c5f96662ec68688e550a6
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Same-session 094-aro.obo and complete selected terms in 111-aro-terms.txt.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: supports
+  summary: Official OBO bytes match the MANIFEST hash. ARO:3000685 describes arylomycins
+    as varying family members and links PubChem 54586211. Its direct parent ARO:3000035
+    is a lipopeptide class under ARO:3009657. Target ARO:3000717 is signal peptidase
+    I and explicitly targets ARO:3000685. The native target preserves database provenance,
+    unknown organism/assay and primary-evidence-needed status.
+  snapshot_sha256: de80134efad9e4823603195122f2f7924f68d0fc15b5bdf8546f95ffcf9de7ba
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/54586211/property/InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge,SMILES/JSON
+  locator: 111-pubchem.json and 111-synonyms.json, both official responses.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: supports
+  summary: The official CID matches native neutral C46H68N6O11 and full key HGWCKYGOWQEYSJ-JBWZRHCTSA-N.
+    Its preferred returned synonym is Arylomycin C16, with CHEMBL1784531 as another
+    cross-reference. It does not represent every arylomycin chain length or aromatic
+    substitution.
+  snapshot_sha256: 56bee718f01785497de432703c7ed01bcaa30e89dfb6ae58fefe50d4a18d92bf
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1784531.json
+  locator: 111-chembl.json; canonical SMILES independently parsed.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: supports
+  summary: The official entry names ARYLOMYCIN C16. Its independent canonical SMILES
+    and reported InChI produce the same full key as the native structure, corroborating
+    the specific synthetic-compound identity. This is corroboration, not a new native
+    xref added by the review.
+  snapshot_sha256: ee238ed33a4c825d5f7efbcf9e41f281852663079c17921e976abf4b5cfd8d4c
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculations
+  locator: 111-chemistry.json and 111-chemistry.log.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: supports
+  summary: 'Native SMILES and InChI are mutually consistent: one neutral fragment,
+    five specified tetrahedral stereocentres, C46H68N6O11 and the native full key.
+    Average mass agrees with the one-decimal PubChem value 881.1; exact mass agrees
+    with 880.49460701. The ARO mint reproduces correctly. The peptide macrocycle contains
+    amides and a biaryl linkage, not a cyclic ester. No independent atropisomer assignment
+    is claimed.'
+  snapshot_sha256: 8c6a0e2f28b66474cd3d8bab6022b5257fe22a1508f3e7da3daff5d1e30e0aaa
+- evidence_id: primary2011
+  kind: primary_source
+  reference: DOI:10.1021/np200163g
+  locator: PMID 21545107, PMC3150569; complete main text through Experimental Section,
+    Table 1 and Figure 1; 111-2011.html/txt and 111-Figure1.jpg.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: supports
+  summary: 'The adopted original paper distinguishes the A-series synthetic arylomycin
+    C16 from natural A2, nitrated B-C16 and an amino derivative. Figure 1 was visually
+    inspected and separates these substitutions and the linear C16 tail. The paper
+    calls the C-terminal ring a tripeptide macrocycle. C16 has its own Table 1 column:
+    S. epidermidis RP62A MIC 0.25 micrograms/mL, S. aureus P29S PAS8001 4, E. coli
+    P84L PAS0260 2 and P. aeruginosa P84L PAS2008 4. Those sensitized mutant results
+    are not wild-type pathogen susceptibility. S. agalactiae COH-1 is greater than
+    128 for C16 but 8 for B-C16.'
+  snapshot_sha256: 5d79f4ba7de74c869cb07c18fba3c30e1875dafa601a28611528581dca4a9891
+- evidence_id: primary2011-methods
+  kind: primary_source
+  reference: DOI:10.1021/np200163g
+  locator: Determination of Antimicrobial Activity and Results; complete main-text
+    read, supported by official BioC XML.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: supports
+  summary: MIC is the lowest concentration preventing visible growth, determined in
+    at least three independent broth-microdilution experiments. The listed staphylococci,
+    E. coli and P. aeruginosa use cation-adjusted Mueller-Hinton II broth; streptococci
+    and L. lactis have different media. A 5-microlitre inoculum at 1e7 CFU/mL is added
+    to 100 microlitres of assay medium, rather than a final inoculum of 1e7. B. brevis
+    sensitivity changes with poor-growth nutrient broth plus salt, so medium dependence
+    must be retained. One narrative wild-type limit is printed as greater than 128
+    mg/mL, while the surrounding quantitative context uses micrograms/mL; do not adopt
+    that inconsistent line without resolving it.
+  snapshot_sha256: 819f91d865a60bb6b03f2cd80d012d9ebefeb21bf2b53760d6fbee9727af33cf
+- evidence_id: target-citations
+  kind: primary_source
+  reference: PubMed citations attached to ARO:3000717
+  locator: 111-epmc.json; complete available original abstracts and bibliographic
+    metadata.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: partial
+  summary: PMID 21189343, DOI 10.1128/AAC.01459-10, explicitly tests synthetic arylomycin
+    C16 against clinical coagulase-negative staphylococci and associates susceptibility
+    with signal-peptidase sequence, while noting exceptions. Full text was not retrieved.
+    PMID 15173160, DOI 10.1074/jbc.M405884200, concerns different glycosylated lipoprotein
+    inhibitors; its numerical enzyme and MIC results do not establish those values
+    for nonglycosylated C16. PMID 7023361, DOI 10.1146/annurev.bi.50.070181.001533,
+    is the broad review Transfer of proteins across membranes, with no available abstract
+    in the inspected MED record.
+  snapshot_sha256: 3512ef7a8d2374159a3ba4ab34b79798d1255a11612bd49e43a64fb7cb027f2c
+- evidence_id: mechanism-leads
+  kind: primary_source
+  reference: DOI:10.1016/j.chembiol.2010.09.009
+  locator: PMID 21095572, PMC3003444; complete abstract in 111-target-epmc.json, plus
+    exact citation in the adopted paper.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: partial
+  summary: The primary abstract reports SPase mutation-dependent arylomycin resistance
+    in S. epidermidis and analogous resistance determinants in S. aureus, E. coli
+    and P. aeruginosa. The adopted paper identifies C16 and A2 as the relevant A-series
+    compounds. Full target-binding methods were not retrieved; the abstract does not
+    by itself supply a C16-specific binding constant or crystal structure.
+  snapshot_sha256: c0a25a34ae5c541e72d4ad35989fa440c645b8672659af0c22c263a34c88bacc
+- evidence_id: mechanism-context
+  kind: primary_source
+  reference: DOI:10.1128/AAC.00785-12
+  locator: PMID 22802255, PMC3457390; complete abstract in 111-mechanism-epmc.json.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: context_only
+  summary: The original study uses genetically sensitized E. coli and S. aureus to
+    investigate secretion stress and effects of SPase inhibition. Its abstract supports
+    a bounded mechanism lead, not universal wild-type killing or an omics dataset.
+    A search-returned PMID 20797614 was inspected and rejected as an unrelated chemical-interaction
+    profiling paper; it is not used as arylomycin evidence.
+  snapshot_sha256: 6e0bec49e3cfe188505b6c5c97f2dafd5014ba0f1dcde4a412a927c0d0cb01ca
+- evidence_id: adapter
+  kind: database
+  reference: Structured iModulonDB adapter
+  locator: Shared 055 dataset inventory and 111-imodulondb-lepb.txt, run before open-ended
+    web research.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: context_only
+  summary: e_coli/precise_mg1655/b2568 resolves to lepB, signal peptidase I. No iModulon
+    hits were returned, so no component summary was warranted. This reference-strain
+    gene annotation is context only and cannot prove C16 binding, mutant susceptibility
+    or a secretory phenotype.
+  snapshot_sha256: 1a52ab2e35010c020b0a79d90a49129b9c56214548d02d6da5a673c4ea5c11e8
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 111-local-hits.txt and 111-maintained-search.txt.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: context_only
+  summary: Ignored- and hidden-inclusive searches locate the native record, source
+    inventories and identity-review queue. No exact C16 curator addition was found
+    among the searched maintained owners. This is a bounded repository finding, not
+    an assertion that no further literature or compound record exists outside the
+    search.
+  search_scope: rg --no-ignore --hidden for arylomycin, Arylomycins, the minted ID,
+    HGWCKYGOWQEYSJ and ARO:3000685 across batch012, then curation/conf/scripts/data/raw/src/reports/reviews;
+    initial whole-worktree scan excludes .git and .venv. Bounded official PubChem/ChEMBL/OBO
+    and exact original-paper searches; free access only.
+  snapshot_sha256: c505447cd8dac9f76047032dc4d9aac668eed111070320696579ef2830fa46a0
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Whole-record identity, equivalence, chemical definition, primary target,
+    activity and producer rules; native profile, CLAUDE and review contract.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: supports
+  summary: An exact chemical corpus cannot silently collapse a variable family into
+    one synthetic member. Scaffold classification does not establish that the synthetic
+    derivative was itself produced by an NRPS or isolated from a natural producer.
+    Optional primary annotations remain separate from source-owned identity correction.
+- evidence_id: validation
+  kind: validation
+  reference: Documented focused validation and input audit
+  locator: 111-focused-results.json, schema/strict logs, chemistry and input comparisons.
+  accessed_at: '2026-10-21T09:18:49Z'
+  support: supports
+  summary: Schema and strict checks pass, as do native chemical consistency and source
+    mint calculations. All 21 captured maintained inputs are unchanged. No native
+    record edits, paid access or contact occurred during the scientific review.
+  snapshot_sha256: 4fc56cbfbad1198b36b27b8fa021e139e1c5f9680a14cfcbedcc4cf30374381c
+assessments:
+- assessment_id: chemistry
+  area: identity
+  topic: Exact structure and stable identifiers
+  outcome: supported
+  summary: The structure and official compound identifiers identify neutral synthetic
+    arylomycin C16. MINTED provenance is deterministic and honest.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  evidence_ids:
+  - pubchem
+  - chembl
+  - chemistry
+  - aro
+- assessment_id: scope
+  area: identity
+  topic: Family definition versus exact member
+  outcome: concern
+  summary: ARO family text and the native generic label are broader than the attached
+    C16 structure. The adopted primary paper explicitly distinguishes the chemical
+    members.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  evidence_ids:
+  - source
+  - pubchem
+  - primary2011
+- assessment_id: definition
+  area: evidence
+  topic: Macrocycle terminology
+  outcome: concern
+  summary: The source changed the primary paper's macrocycle to macrolide. The cyclic
+    peptide structure has no cyclic ester to support that chemical description.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  evidence_ids:
+  - primary2011
+  - chemistry
+  - source
+- assessment_id: target
+  area: evidence
+  topic: Signal peptidase I target
+  outcome: supported
+  summary: The direct source edge is reproduced accurately and primary evidence is
+    explicitly pending. Exact C16 antibacterial and mutant-response results support
+    a strong follow-up, but no uninspected direct-binding assay is treated as verified.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  evidence_ids:
+  - aro
+  - primary2011
+  - target-citations
+  - mechanism-leads
+  - adapter
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial classification and optional spectrum
+  outcome: supported
+  summary: The exact C16 compound is antibacterial in original strain-specific experiments.
+    Mutant and congener results must remain separate; optional absent activity observations
+    are not defects.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  evidence_ids:
+  - primary2011
+  - primary2011-methods
+  - target-citations
+- assessment_id: other
+  area: completeness
+  topic: Producer, clinical, resistance and dataset boundaries
+  outcome: unknown
+  summary: No native unsupported claims in these fields. Natural-family isolation
+    does not prove a producer of synthetic C16, and target-gene context is not a transcriptomics
+    dataset. Primary resistance mutations could be added only with their exact strain
+    and allele.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  evidence_ids:
+  - record
+  - primary2011
+  - mechanism-context
+  - adapter
+- assessment_id: ownership
+  area: ownership
+  topic: Reproducible correction and curator additions
+  outcome: supported
+  summary: Family/member resolution belongs to source extraction, fallback and grounding/adoption
+    owners; later primary biological annotations belong to the actual native record.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  evidence_ids:
+  - source
+  - rubric
+- assessment_id: gates
+  area: schema
+  topic: Focused validation and history
+  outcome: supported
+  summary: Focused checks pass; four seed/reseed events are consistent with SEEDED.
+    No scientific-status promotion is proposed.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  evidence_ids:
+  - validation
+  - record
+findings:
+- finding_id: F1
+  issue_key: arylomycin-family-source-attached-to-exact-c16
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Resolve the family-level label and definition attached to arylomycin C16
+  description: The native generic arylomycin label and variable-family definition
+    denote a broader set than PubChem 54586211, which is the synthetic A-series C16
+    compound. The exact structure is recoverable and antibacterial, but the current
+    scope can transfer natural-product, congener or spectrum claims incorrectly.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  field_paths:
+  - label
+  - definition
+  - source_concepts
+  - chemical_structure
+  - xrefs
+  evidence_ids:
+  - source
+  - pubchem
+  - chembl
+  - primary2011
+  - rubric
+  rule_id: 'native-review-checklist: Exact identity and equivalence'
+  native_severity: major
+  normalization_reason: Major scope inflation; the structure itself is valid and supported,
+    so automatic exclusion or a wrong-structure blocker is not warranted.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted family label, definition and PubChem link
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact C16 structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO inventory extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure fallback
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity and fields
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion decision
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Separate exact compound adoption if the family source must be excluded
+- finding_id: F2
+  issue_key: arylomycin-tripeptide-macrolide-wording
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Use tripeptide macrocycle rather than macrolide
+  description: The adopted original paper describes a tripeptide macrocycle. The source
+    and native definition instead say macrolide, despite the peptide/biaryl ring lacking
+    a cyclic ester. Correct this wording while resolving the exact member.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  field_paths:
+  - definition
+  evidence_ids:
+  - source
+  - primary2011
+  - chemistry
+  rule_id: 'native-review-checklist: Chemical definition'
+  native_severity: minor
+  normalization_reason: A non-blocking chemical wording error that does not invalidate
+    the parsed structure.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted family label, definition and PubChem link
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact C16 structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO inventory extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure fallback
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity and fields
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion decision
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Separate exact compound adoption if the family source must be excluded
+- finding_id: F3
+  issue_key: arylomycin-c16-qualified-primary-evidence-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Add C16-specific primary activity and target evidence after identity resolution
+  description: Original results support antibacterial activity and provide target/resistance
+    follow-up for C16. Curate the exact column and strains, preserving the difference
+    between sensitized mutants, wild types and B-series congeners. Current database-only
+    target status is honest.
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  field_paths:
+  - molecular_targets
+  - activity_spectrum
+  - resistance_mechanisms
+  - evidence
+  - discussions
+  evidence_ids:
+  - primary2011
+  - primary2011-methods
+  - target-citations
+  - mechanism-leads
+  - rubric
+  rule_id: 'native-review-checklist: Claim-level evidence and optional completeness'
+  native_severity: informational
+  normalization_reason: Optional enrichment is useful but not a required-field defect.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/arylomycin.yaml
+    role: Curator-owned exact primary evidence and biological annotations through
+      the validated writer and history helper
+actions:
+- action_id: A1
+  description: Resolve the source family/member mapping and correct the chemical definition
+    reproducibly.
+  finding_ids:
+  - F1
+  - F2
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted family label, definition and PubChem link
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact C16 structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO inventory extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure fallback
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity and fields
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion decision
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Separate exact compound adoption if the family source must be excluded
+  acceptance_checks:
+  - Confirm the retained structure is exact arylomycin C16, matching PubChem 54586211
+    and CHEMBL1784531 at HGWCKYGOWQEYSJ-JBWZRHCTSA-N and the original Figure 1.
+  - 'Choose an explicit maintained decision: retain C16 with an exact label/definition
+    and qualified family-source relation, or exclude the family concept and separately
+    adopt the exact C16 compound through the curator inventory. Review identifier/history
+    consequences before changing them.'
+  - Describe the C-terminal tripeptide macrocycle correctly. Do not call the compound
+    a cyclic ester macrolide or imply that synthetic C16 itself was isolated from
+    a natural producer.
+  - Update the maintained ARO/structure extraction or decision/adoption input and
+    regenerate through the normal seeder. Do not repair only the generated YAML.
+  - Verify source reproducibility, exact identifiers and required focused/shared gates.
+- action_id: A2
+  description: Optionally curate exact C16 activity, target and resistance evidence
+    after resolving identity.
+  finding_ids:
+  - F3
+  target_ids:
+  - antibioticmech:aro-0cf530b2c3
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/arylomycin.yaml
+    role: Curator-owned exact primary evidence and biological annotations through
+      the validated writer and history helper
+  acceptance_checks:
+  - Use PMID 21545107 Table 1 C16 values with exact strains and media. PAS8001, PAS0260
+    and PAS2008 are sensitized SPase mutants, not the wild-type strains. Do not transfer
+    B-C16 activity against S. agalactiae to C16.
+  - Retain the MIC endpoint, at least three experiments, inoculum dilution and medium
+    dependence. Resolve the isolated mg/mL narrative inconsistency before adopting
+    that line.
+  - Inspect the full PMID 21095572 methods for C16-specific binding/target evidence
+    before upgrading PRIMARY_EVIDENCE_NEEDED; do not substitute A2 or glycosylated
+    lipoglycopeptide crystal/kinetic results.
+  - If adding resistance, retain the exact SPase mutation, organism and genetic background.
+    Do not infer a universal species phenotype from one Pro residue or a dataset gene
+    annotation.
+  - Keep source scaffold classification distinct from biosynthetic production of the
+    synthetic derivative. Add no producer, human indication, clinical approval or
+    omics dataset without exact evidence.
+  - Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/arylomycin.yaml
+    for any separately authorized primary curation; run focused and shared gates without
+    automatic REVIEWED promotion.
+limitations:
+- The adopted PMID 21545107 main text, experimental section, Table 1 and Figure 1
+  were inspected, including visual inspection of the structure figure. Supplementary
+  NMR spectra, raw MIC replicates and absolute atropisomer configuration were not
+  independently reanalyzed.
+- Europe PMC full-text routes for the 2011 papers returned 500. The adopted paper
+  was recovered through official PMC HTML and BioC. The clinical-CoNS paper remains
+  abstract-only; its BioC response is an error document, not full text.
+- PMID 21095572 and PMID 22802255 are original-abstract-level mechanism leads. A BioC
+  request for the 2010 paper returned HTTP 429, after which no further local NCBI
+  full-text request was made. Direct-binding constants and detailed causal steps remain
+  unverified in this review.
+- ARO target reference PMID 15173160 concerns chemically different glycosylated compounds;
+  PMID 7023361 is a broad review without an available abstract. No congener numerical
+  results are transferred.
+- The source represents the nonribosomal-peptide scaffold family, while the exact
+  attached molecule is synthetic C16. This review does not establish its natural producer,
+  biosynthetic gene cluster, human clinical use or an exhaustive set of resistance
+  mechanisms.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

@@ -1,0 +1,1123 @@
+# Asukamycin: exact identity supported; activity-strength wording needs qualification
+
+- Review: 20261021T093216Z-asukamycin
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:18:19Z
+- Finished UTC: 2026-10-21T09:32:16Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One minor definition finding: unqualified strong antifungal/antineoplastic wording should reflect weak fungal activity and moderate experimental tumor-cell effects in inspected primary reports. Exact A1 identity,chemistry,qualitative roles,producer wording and focused validators pass. Human target studies and nonexact MIBiG metadata remain explicitly bounded.
+
+## Scope And Provenance
+
+Whole-record scientific review of exact asukamycin/A1.
+
+Selection: Queue118 in isolated batch012.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:73481 | data/antibiotics/antibacterial/asukamycin.yaml | generated | asukamycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema | passed | True | CHEBI:73481 | Actual command passed. |
+| Focused strict | passed | True | CHEBI:73481 | Actual command passed. |
+| Exact structure and source mint | passed | True | CHEBI:73481 | Native encodings,formula,charge,masses,stereochemistry and mint reproduce. |
+| Authoritative full QC | failed | True | CHEBI:73481 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:73481 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:73481 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:73481 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:73481 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:73481 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:73481 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:73481 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:73481 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact asukamycin A1
+
+identity: supported. Targets: CHEBI:73481.
+
+Native exact structure matches independent current authorities; A2–A7,B-series and other manumycins are distinct. KNApSAcK structure fields match despite its legacy displayed key.
+
+### Parents and chemical classes
+
+grounding: supported. Targets: CHEBI:73481.
+
+All six parent IDs are broader and chemically appropriate; exact ChEBI grounding and minted source ID reproduce.
+
+### Antibacterial filing and retained antifungal role
+
+evidence: supported. Targets: CHEBI:73481.
+
+Original exact-compound assays support both antibacterial and limited antifungal activity; antibacterial filing preserves other roles. No role deletion is proposed.
+
+### Definition activity-strength wording
+
+evidence: concern. Targets: CHEBI:73481.
+
+Inherited unqualified strong activity wording overstates the primary descriptions: weak fungal activity and moderate in-vitro antitumor activity. Later production abstract repeats strong as background without a new potency assay.
+
+### S.nodosus subsp.asukaensis source
+
+evidence: supported. Targets: CHEBI:73481.
+
+Original isolation and biosynthetic studies support natural producer wording. MIBiG exact-identity rejection explains absent optional producer block; its legacy reference is not usable as asukamycin evidence.
+
+### Antibacterial mode and molecular target
+
+completeness: unknown. Targets: CHEBI:73481.
+
+No compound-specific antibacterial target was established in the bounded inspected evidence. Human UBR7/p53,p38/caspase and cytokine effects must not fill a microbial mode or target. No optional-field defect is inferred.
+
+### Source ownership,references and history
+
+provenance: supported. Targets: CHEBI:73481.
+
+ChEBI fields and four seed events reproduce. All adopted citation identifiers resolve, with scope distinguished; patent is correctly document-only. Commercial Beilstein/Reaxys entries were not independently inspected.
+
+### Quantitative activity follow-up
+
+completeness: unknown. Targets: CHEBI:73481.
+
+Original Table4 provides strain/assay values suitable for later careful activity_spectrum curation; historical empirical-formula uncertainty and later exact A1 structure must be documented. Missing optional activity block is not a finding.
+
+### Resistance,clinical,dataset and graph fields
+
+scope: not_applicable. Targets: CHEBI:73481.
+
+None is populated. Tumor-cell response and poultry patent claims do not establish clinical approval, microbial resistance determinants or native transcriptomic claims.
+
+### Structured expression-source applicability
+
+scope: not_applicable. Targets: CHEBI:73481.
+
+The native record names no gene,protein,pathway,regulator,stress response or expression dataset requiring an adapter query. Discovered human target and producer biosynthesis context was kept outside native microbial mechanism claims.
+
+### Focused checks
+
+schema: supported. Targets: CHEBI:73481.
+
+Both actual validators and independent chemical consistency checks pass.
+
+## Findings
+
+### F1: Qualify the definition’s unbounded activity-strength description
+
+minor / open / confirmed; issue key: asukamycin-unqualified-strong-activity-wording.
+
+Native definition repeats strong antibacterial,antifungal and antineoplastic activity. Original asukamycin Table4 and text describe weak antifungal activity against T.mentagrophytes at25µg/mL with most other fungi&gt;100µg/mL; the2009 antitumor paper calls its in-vitro activity moderate. A later production study repeats strong activity as background. Retain the genuine qualitative roles while replacing the unqualified potency adjective with source- and assay-bounded wording.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Through maintained source-definition handling, remove or qualify strong as a blanket descriptor. Preserve antibacterial and antifungal roles and describe experimental antitumor activity without implying clinical benefit. Retain the source discrepancy explicitly rather than silently discarding either original assays or later background wording.
+
+- Definition no longer implies uniformly strong fungal or antineoplastic activity across organisms or assays.
+- Original fungal evidence remains T.mentagrophytes25µg/mL in glucose-potato agar27°C72h; other listed fungal outcomes and missing strain designations remain bounded.
+- Any tumor-cell potency addition retains human cell,24h MTT and&gt;85% preparation-purity context; human mechanisms are not assigned as antibacterial targets.
+- Regenerate reproducibly and rerun focused schema/strict,source/provenance and corpus gates; no record-only definition patch or scientific status promotion.
+
+### A2
+
+Optionally curate claim-level activity and producer evidence from original and biosynthetic primary sources. Resolve MIBiG structural/reference conflicts before using that row for an exact producer attachment; do not bypass stereo_complete=false by name matching.
+
+- Keep A1 distinct from A2–A7,B-series,H/I and other manumycins.
+- Use a primary asukamycin producer reference such as PMID993129 or20522559; PMID25489112 does not support this producer assertion.
+- Retain exact strain,assay,units and qualifiers for any activity_spectrum rows; optional gaps are not automatically native defects.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/asukamycin.yaml; Entire YAML | supports | Exact CHEBI73481 asukamycin/A1, SEEDED, antibacterial filing; definition includes producer and strong antibacterial/antifungal/antineoplastic wording. Read four synonyms,six parents,three roles,all chemistry and five chemical xrefs,patent document xref,source mint and four seed-history events. No populated activity_spectrum,mode,target,resistance,producer,clinical,dataset or causal-graph block. |
+| owners | data/raw/chebi_antimicrobials.tsv; data/raw/mibig_producers.tsv; ChEBI row1883; MIBiG row99; extractor/seeder | supports | Identity/definition/roles and nine source citation leads reproduce ChEBI inventory. MIBiG BGC0000187 version5 has incomplete/different stereochemistry; attach_mibig_producers intentionally skips stereo_complete=false rows before full-key matching. Its optional native absence is not an omission defect. All21 relevant inputs captured before assessment. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:73481; Current exact entry | supports | Current ChEBI matches native formula C31H34N2O7, neutral charge, full key SSHVAUUEPNULMP-JHWDTTIQSA-N and structure. Broad strength wording is inherited unchanged from ChEBI. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/6441014; Independent full-key lookup | supports | CID6441014 reproduces exact native stereochemical InChI/key,formula,mass and charge. |
+| chemistry | Independent RDKit calculation; Native SMILES,InChI and ChEBI source mint | supports | Both encodings yield a single neutral fragment,three assigned stereocentres and expected alkene stereochemistry,exact native key,C31H34N2O7,average546.620/exact546.236601428. Source mint reproduces. |
+| kegg | https://rest.kegg.jp/get/C12099; Current compound entry | supports | C12099 resolves as asukamycin with native formula,mass,CAS61116-33-4 and ChEBI/KNApSAcK mappings. |
+| knapsack | https://www.knapsackfamily.com/knapsack_core/information.php?word=C00018105; Exact structure fields and producer | supports | Name,CAS,formula,full Standard InChI and SMILES match native; the page displays a different legacy InChIKey,SSHVAUUEPNULMP-KHFOFPSPNA-N. Both supplied structural encodings independently compute the native modern key. This external display inconsistency is preserved without treating the matching compound xref as a native stereochemical mismatch. |
+| knapsack-check | Independent RDKit recalculation; KNApSAcK supplied Standard InChI and SMILES | supports | Both exact supplied structures compute SSHVAUUEPNULMP-JHWDTTIQSA-N despite the different displayed key. |
+| term140325 | https://www.ebi.ac.uk/chebi/CHEBI:140325; Current ontology term | supports | secondary carboxamide resolves and supplies the appropriate broader structural class or qualitative role. |
+| term26188 | https://www.ebi.ac.uk/chebi/CHEBI:26188; Current ontology term | supports | polyketide resolves and supplies the appropriate broader structural class or qualitative role. |
+| term26878 | https://www.ebi.ac.uk/chebi/CHEBI:26878; Current ontology term | supports | tertiary alcohol resolves and supplies the appropriate broader structural class or qualitative role. |
+| term27171 | https://www.ebi.ac.uk/chebi/CHEBI:27171; Current ontology term | supports | organic heterobicyclic compound resolves and supplies the appropriate broader structural class or qualitative role. |
+| term32955 | https://www.ebi.ac.uk/chebi/CHEBI:32955; Current ontology term | supports | epoxide resolves and supplies the appropriate broader structural class or qualitative role. |
+| term51751 | https://www.ebi.ac.uk/chebi/CHEBI:51751; Current ontology term | supports | enamide resolves and supplies the appropriate broader structural class or qualitative role. |
+| term33281 | https://www.ebi.ac.uk/chebi/CHEBI:33281; Current ontology term | supports | antimicrobial agent resolves and supplies the appropriate broader structural class or qualitative role. |
+| term33282 | https://www.ebi.ac.uk/chebi/CHEBI:33282; Current ontology term | supports | antibacterial agent resolves and supplies the appropriate broader structural class or qualitative role. |
+| term35718 | https://www.ebi.ac.uk/chebi/CHEBI:35718; Current ontology term | supports | antifungal agent resolves and supplies the appropriate broader structural class or qualitative role. |
+| original | https://doi.org/10.7164/antibiotics.29.876; PMID993129; full1976 PDF, isolationpp878–879 and Biological Activities/Table4p880; table visually checked | partial | Purified/recrystallized asukamycin from S.nodosus subsp.asukaensis AM-1042 inhibited tested Gram-positive organisms at0.78–12.5µg/mL. Agar dilution used nutrient agar37°C18h for bacteria and glucose-potato agar27°C72h for fungi. Authors call the T.mentagrophytes25µg/mL effect weak; most listed fungi have MIC&gt;100µg/mL. This supports the qualitative antifungal role but not unqualified strong antifungal activity. The initially proposed empirical formula was superseded by later characterization; it is not substituted for current structure. |
+| patent | https://patents.google.com/patent/US4226879A/en; Document xref; characterization,Table1,isolation examples and claims | context_only | Patent describes AM-1042/asukamycin and updated formula C31H34N2O7 with FD-MS546,plus purified crystals. Its agar-dilution table and prose likewise describe weak T.mentagrophytes activity25µg/mL and little fungal activity below100µg/mL. Poultry coccidiosis/composition claims remain document context, not present clinical approval or proof of a bacterial target. |
+| structure | https://doi.org/10.24496/tennenyuki.22.0_409; 1979 structure-conference abstract | context_only | Describes chemical degradation,NMR stereochemical studies and exciton-chirality determination of the tertiary-carbinol configuration. Supports history of structural elucidation; the original raw spectra and absolute assignments were not independently reprocessed. |
+| biosynthesis | https://doi.org/10.1074/jbc.M110.128850; PMID20522559/PMC2915727; Introduction,Fig1,Methods and heterologous-expression Results/Fig4 | supports | Separates native A1 cyclohexyl/triene epoxyquinol structure from A2–A7 alkyl congeners and B reduced-epoxide forms. Cloned36-gene region permits S.lividans K4-114 production of A1–A7,identified by high-resolution LC-MS. S.nodosus subsp.asukaensis remains the natural producer. Biosynthetic enzymes and proposed self-immunity/export functions are not established antimicrobial target mechanisms. |
+| adopted15038738 | https://pubmed.ncbi.nlm.nih.gov/15038738/; Adopted source citation; indexed abstract inspected | context_only | Labelled-precursor feeding and synthetic protoasukamycin conversion in S.nodosus ATCC29757 support assembly and terminal epoxyquinol modification; precursor is not exact native compound. |
+| adopted16816183 | https://pubmed.ncbi.nlm.nih.gov/16816183/; Adopted source citation; indexed abstract inspected | context_only | Knock-out and enzyme experiments distinguish ALA routes; hemA-asuA loss abolishes production. This is biosynthesis, not an antibiotic molecular target. |
+| adopted21854515 | https://pubmed.ncbi.nlm.nih.gov/21854515/; Adopted source citation; indexed abstract inspected | context_only | CHC-pathway mutant and precursor feeding generate H/I and minor congeners. Those structures and activities cannot be transferred to A1. |
+| adopted22555913 | https://pubmed.ncbi.nlm.nih.gov/22555913/; Adopted source citation; indexed abstract inspected | context_only | Regulator inactivation/overexpression changes asukamycin production. Abstract repeats strong activity wording as background but supplies no new antifungal susceptibility measurement. |
+| biosynthesis-review | https://doi.org/10.1021/np50048a001; PMID3553432; adopted citation abstract | context_only | Broad1987 biosynthesis discussion covers asukamycin and other antibiotics; useful context, not independent exact antimicrobial potency or binding evidence. |
+| antitumor | https://doi.org/10.3892/ijmm_00000283; PMID19787206; full2009 PDFpp711–715,preparation/MTT Methods and Discussion | supports | S.nodosus ATCC29757-derived material was characterized by NMR/UV/HRMS and had&gt;85% purity. Five human leukemia/astrocytoma cell lines were tested by24h MTT; authors report IC50 approximately1–5µM and describe antitumor activity as moderate. Caspase3/8 activation and p38-inhibitor rescue concern human cells,not a bacterial target. Introduction also explicitly describes previously observed antifungal activity as weak. |
+| host-immunology | https://doi.org/10.1097/01.WOX.0000411852.45417.3d; Adopted PMC3513075; full conference abstract XML | context_only | Asukamycin0.3µg/mL in TNF-stimulated human THP-1 cells reduced IL-1β/IL-18 release. The reported84-gene transcription study and HMOX1 induction are specifically manumycin experiments; they must not automatically be transferred to asukamycin. Not antibacterial mechanism evidence. |
+| host-target | https://doi.org/10.1038/s41589-020-0557-2; PMID32572277/PMC7572527; Results,UBR7 knockdown/rescue,Figs1–4,Discussion and Materials | context_only | Cayman asukamycin&gt;95% purity was studied in human breast-cancer systems. Chemoproteomics and recombinant protein competition implicate UBR7 C374; genetic rescue and p53 interaction/transcription assays support a host molecular-glue mechanism. These are host anticancer findings and do not identify an antibacterial target or justify a generic microbial mode enum. |
+| mibig | https://mibig.secondarymetabolites.org/repository/BGC0000187.5/annotations.json; Version5 compound and taxonomy metadata | context_only | Active record is quality questionable and completeness complete; producer is S.nodosus subsp.asukaensis NCBITaxon222892. Its structure leaves epoxide stereochemistry unassigned and differs in double-bond configuration, despite a PubChem6441014 cross-link. Native seeder correctly refuses this nonexact structure. Do not bypass the exact-identity gate based on name. |
+| mibig-reference | https://pubmed.ncbi.nlm.nih.gov/25489112/; First legacy MIBiG reference in adopted raw row; indexed abstract | context_only | Reference concerns Pseudomonas medium-chain1-alkene biosynthesis, not asukamycin. It cannot supply claim-level producer support. No native producer assertion was imported from this row, and independent original/biosynthetic asukamycin sources support native producer wording. |
+| gates | just validate; just validate-strict; Actual batch012 focused checks | supports | Both commands exited0; strict checked one file with zero errors. Chemistry and exact source mint pass. |
+| search | CultureBotAI/AntibioticMech and free primary sources; Ignored-inclusive exact label/ID/slug search and bounded public follow-up | context_only | Local search included ignored native/raw/curation/generated/research context excluding.git/.venv. No native populated target or resistance claims were found in the complete record. Public follow-up distinguished A1 from congeners and human antitumor effects from antibacterial mechanisms. |
+
+## Limits And Additional Notes
+
+- Beilstein3639742 and Reaxys6674537 were not independently accessed. Current ChEBI/PubChem and KNApSAcK full structure encodings agree; KNApSAcK displayed legacy key remains externally inconsistent.
+- The1976 discovery paper used an early proposed empirical formula,whereas the later patent and current authorities give C31H34N2O7. Original spectra were not reprocessed; activity is retained as historically reported purified asukamycin rather than an independently re-characterized modern reference standard.
+- Several adopted biosynthetic citations were inspected at indexed-abstract level. Full original isolation PDF,2009 antitumor PDF,2010 biosynthesis sections,2012 conference abstract and relevant2020 host-target sections were inspected. Raw omics data and all supplementary figures were not reanalysed.
+- No exact antibacterial molecular target was established in the bounded free search. Human UBR7/p53 and inflammatory/caspase effects are not evidence of a microbial target.
+- Alternative public publisher copies were used after PMC browser verification and Europe PMC XML errors prevented retrieval. Early guessed publisher PDF paths failed; the exact linked DOI download succeeded. Retrieval failures are not treated as literature absence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All21 captured input hashes rechecked unchanged. Native fields,status and history were not edited.
+- The retained antifungal role is supported by actual albeit weak activity; no deletion is proposed. Absent optional activity,target,producer or graph blocks are not scored as findings.
+- MIBiG incomplete/different stereo and unrelated first legacy reference are contextual source limitations. No affected MIBiG assertion is present in the native record,so they are not additional native findings.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T093216Z-asukamycin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Asukamycin: exact identity supported; activity-strength wording needs qualification'
+started_at: '2026-10-21T09:18:19Z'
+finished_at: '2026-10-21T09:32:16Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Whole native record,prior maintained-owner capture,independent
+    structure calculation,live authorities and primary isolation/activity/production
+    text.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'One minor definition finding: unqualified strong antifungal/antineoplastic
+  wording should reflect weak fungal activity and moderate experimental tumor-cell
+  effects in inspected primary reports. Exact A1 identity,chemistry,qualitative roles,producer
+  wording and focused validators pass. Human target studies and nonexact MIBiG metadata
+  remain explicitly bounded.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/asukamycin.yaml
+    sha256: 9b1fec6c876b2691fa3c2dca915d2ffbc35bce3c50ee570dbe074ce2b0c300a1
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+targets:
+- target_id: CHEBI:73481
+  path: data/antibiotics/antibacterial/asukamycin.yaml
+  label: asukamycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Whole-record scientific review of exact asukamycin/A1.
+  selection: Queue118 in isolated batch012.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:73481
+  exclusions:
+  - target: Asukamycin A2–A7,B-series,H/I,protoasukamycin and other manumycins
+    reason: Distinct congeners,precursors or transformations; no unqualified evidence
+      transfer.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual command passed.
+  target_ids:
+  - CHEBI:73481
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/asukamycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual command passed.
+  target_ids:
+  - CHEBI:73481
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/asukamycin.yaml --out /private/tmp/am-review-session/118-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Exact structure and source mint
+  status: passed
+  required: true
+  summary: Native encodings,formula,charge,masses,stereochemistry and mint reproduce.
+  target_ids:
+  - CHEBI:73481
+  evidence_ids:
+  - chemistry
+  - pubchem
+  - knapsack-check
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:73481
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:73481
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:73481
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:73481
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:73481
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:73481
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:73481
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:73481
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:73481
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/asukamycin.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T09:22:47Z'
+  support: supports
+  summary: Exact CHEBI73481 asukamycin/A1, SEEDED, antibacterial filing; definition
+    includes producer and strong antibacterial/antifungal/antineoplastic wording.
+    Read four synonyms,six parents,three roles,all chemistry and five chemical xrefs,patent
+    document xref,source mint and four seed-history events. No populated activity_spectrum,mode,target,resistance,producer,clinical,dataset
+    or causal-graph block.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/mibig_producers.tsv
+  locator: ChEBI row1883; MIBiG row99; extractor/seeder
+  accessed_at: '2026-10-21T09:22:47Z'
+  support: supports
+  summary: Identity/definition/roles and nine source citation leads reproduce ChEBI
+    inventory. MIBiG BGC0000187 version5 has incomplete/different stereochemistry;
+    attach_mibig_producers intentionally skips stereo_complete=false rows before full-key
+    matching. Its optional native absence is not an omission defect. All21 relevant
+    inputs captured before assessment.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:73481
+  locator: Current exact entry
+  accessed_at: '2026-10-21T09:18:53Z'
+  support: supports
+  summary: Current ChEBI matches native formula C31H34N2O7, neutral charge, full key
+    SSHVAUUEPNULMP-JHWDTTIQSA-N and structure. Broad strength wording is inherited
+    unchanged from ChEBI.
+  snapshot_sha256: 08dda1cc3738c5265c47ca43ee1d7c8ba47ecb3851d2fba05993f6d7b8579aa5
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/6441014
+  locator: Independent full-key lookup
+  accessed_at: '2026-10-21T09:18:51Z'
+  support: supports
+  summary: CID6441014 reproduces exact native stereochemical InChI/key,formula,mass
+    and charge.
+  snapshot_sha256: b63cef07d17b7e535056715361b40bfbdba433a261270374c18fa83d907fd311
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculation
+  locator: Native SMILES,InChI and ChEBI source mint
+  accessed_at: '2026-10-21T09:18:34Z'
+  support: supports
+  summary: Both encodings yield a single neutral fragment,three assigned stereocentres
+    and expected alkene stereochemistry,exact native key,C31H34N2O7,average546.620/exact546.236601428.
+    Source mint reproduces.
+  snapshot_sha256: 2faae4847c74e231588f87f43b723abe0b5aaa5c950fd99c2988ece69aa9cf3b
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/C12099
+  locator: Current compound entry
+  accessed_at: '2026-10-21T09:18:52Z'
+  support: supports
+  summary: C12099 resolves as asukamycin with native formula,mass,CAS61116-33-4 and
+    ChEBI/KNApSAcK mappings.
+  snapshot_sha256: 3c4c2b29374c5567403b0384582f6096746e686e28168638b24c384bc6261ee6
+- evidence_id: knapsack
+  kind: database
+  reference: https://www.knapsackfamily.com/knapsack_core/information.php?word=C00018105
+  locator: Exact structure fields and producer
+  accessed_at: '2026-10-21T09:18:53Z'
+  support: supports
+  summary: Name,CAS,formula,full Standard InChI and SMILES match native; the page
+    displays a different legacy InChIKey,SSHVAUUEPNULMP-KHFOFPSPNA-N. Both supplied
+    structural encodings independently compute the native modern key. This external
+    display inconsistency is preserved without treating the matching compound xref
+    as a native stereochemical mismatch.
+  snapshot_sha256: d2362bf372e49799e7f4e68f389056adef19975840609ce4edb8a428b08a7c09
+- evidence_id: knapsack-check
+  kind: validation
+  reference: Independent RDKit recalculation
+  locator: KNApSAcK supplied Standard InChI and SMILES
+  accessed_at: '2026-10-21T09:21:15Z'
+  support: supports
+  summary: Both exact supplied structures compute SSHVAUUEPNULMP-JHWDTTIQSA-N despite
+    the different displayed key.
+  snapshot_sha256: 1361b1b498617d2a300bebfe484e5fe16346c7b3cfce261ef40657d5a6cef814
+- evidence_id: term140325
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:140325
+  locator: Current ontology term
+  accessed_at: '2026-10-21T09:18:53Z'
+  support: supports
+  summary: secondary carboxamide resolves and supplies the appropriate broader structural
+    class or qualitative role.
+  snapshot_sha256: 382504d4b1ed1ea87d6a01ac730ce62bca7103160ac4a0388d8dd54840e445c3
+- evidence_id: term26188
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:26188
+  locator: Current ontology term
+  accessed_at: '2026-10-21T09:18:55Z'
+  support: supports
+  summary: polyketide resolves and supplies the appropriate broader structural class
+    or qualitative role.
+  snapshot_sha256: dfb26ac41b98d978cb8fd1d5cab9e37018b5edf93d821b88930a347808ac82f6
+- evidence_id: term26878
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:26878
+  locator: Current ontology term
+  accessed_at: '2026-10-21T09:18:54Z'
+  support: supports
+  summary: tertiary alcohol resolves and supplies the appropriate broader structural
+    class or qualitative role.
+  snapshot_sha256: b0dc2f34a1f9ca16d71ac7b04f859d814730f6f6e6ed46da7cb41bcb09baf31f
+- evidence_id: term27171
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:27171
+  locator: Current ontology term
+  accessed_at: '2026-10-21T09:18:53Z'
+  support: supports
+  summary: organic heterobicyclic compound resolves and supplies the appropriate broader
+    structural class or qualitative role.
+  snapshot_sha256: 614d6b9ccae8f5c0d526579df55df1fbd669d4b39fe9e281caf41ee0d887c2ed
+- evidence_id: term32955
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:32955
+  locator: Current ontology term
+  accessed_at: '2026-10-21T09:18:54Z'
+  support: supports
+  summary: epoxide resolves and supplies the appropriate broader structural class
+    or qualitative role.
+  snapshot_sha256: ae3e77cf42c8d686f200133befb1fd7f492a3ac195b22fbce52bceb10a68fc74
+- evidence_id: term51751
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:51751
+  locator: Current ontology term
+  accessed_at: '2026-10-21T09:18:54Z'
+  support: supports
+  summary: enamide resolves and supplies the appropriate broader structural class
+    or qualitative role.
+  snapshot_sha256: 40589b564e728205c72e1833d2d4ea6da016ce32b099c327da87fb22e659adea
+- evidence_id: term33281
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:33281
+  locator: Current ontology term
+  accessed_at: '2026-10-21T09:19:02Z'
+  support: supports
+  summary: antimicrobial agent resolves and supplies the appropriate broader structural
+    class or qualitative role.
+  snapshot_sha256: 5caf3b4adf3488216f3061e9967aaa67eb27f290a33543635e4bb7351ad0b719
+- evidence_id: term33282
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:33282
+  locator: Current ontology term
+  accessed_at: '2026-10-21T09:19:00Z'
+  support: supports
+  summary: antibacterial agent resolves and supplies the appropriate broader structural
+    class or qualitative role.
+  snapshot_sha256: b01c6b5fdd1b347f419247657124ebfe9a2770af7974844696755ce975a1ba21
+- evidence_id: term35718
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:35718
+  locator: Current ontology term
+  accessed_at: '2026-10-21T09:18:59Z'
+  support: supports
+  summary: antifungal agent resolves and supplies the appropriate broader structural
+    class or qualitative role.
+  snapshot_sha256: 00609b86a5cd623402e94a4b58b7f6e74e4887706201b36cfa2a24b58569c282
+- evidence_id: original
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.29.876
+  locator: PMID993129; full1976 PDF, isolationpp878–879 and Biological Activities/Table4p880;
+    table visually checked
+  accessed_at: '2026-10-21T09:19:29Z'
+  support: partial
+  summary: Purified/recrystallized asukamycin from S.nodosus subsp.asukaensis AM-1042
+    inhibited tested Gram-positive organisms at0.78–12.5µg/mL. Agar dilution used
+    nutrient agar37°C18h for bacteria and glucose-potato agar27°C72h for fungi. Authors
+    call the T.mentagrophytes25µg/mL effect weak; most listed fungi have MIC>100µg/mL.
+    This supports the qualitative antifungal role but not unqualified strong antifungal
+    activity. The initially proposed empirical formula was superseded by later characterization;
+    it is not substituted for current structure.
+  snapshot_sha256: cfcafd0c80a4d0689d13e35e94673e3ccc5196f584a7b0397c4017afffa199e6
+- evidence_id: patent
+  kind: primary_source
+  reference: https://patents.google.com/patent/US4226879A/en
+  locator: Document xref; characterization,Table1,isolation examples and claims
+  accessed_at: '2026-10-21T09:18:52Z'
+  support: context_only
+  summary: Patent describes AM-1042/asukamycin and updated formula C31H34N2O7 with
+    FD-MS546,plus purified crystals. Its agar-dilution table and prose likewise describe
+    weak T.mentagrophytes activity25µg/mL and little fungal activity below100µg/mL.
+    Poultry coccidiosis/composition claims remain document context, not present clinical
+    approval or proof of a bacterial target.
+  snapshot_sha256: 5e9de8b10d2eef555c774c4ad17a5ea4e4803d3663cc59252a8a9e19ef9a18a7
+- evidence_id: structure
+  kind: primary_source
+  reference: https://doi.org/10.24496/tennenyuki.22.0_409
+  locator: 1979 structure-conference abstract
+  accessed_at: '2026-10-21T09:19:49Z'
+  support: context_only
+  summary: Describes chemical degradation,NMR stereochemical studies and exciton-chirality
+    determination of the tertiary-carbinol configuration. Supports history of structural
+    elucidation; the original raw spectra and absolute assignments were not independently
+    reprocessed.
+  snapshot_sha256: 46d74d2d017f7a541dcd823860ac58ea47c02195831a0baf0b4ee92765fb76b5
+- evidence_id: biosynthesis
+  kind: primary_source
+  reference: https://doi.org/10.1074/jbc.M110.128850
+  locator: PMID20522559/PMC2915727; Introduction,Fig1,Methods and heterologous-expression
+    Results/Fig4
+  accessed_at: '2026-10-21T09:20:12Z'
+  support: supports
+  summary: Separates native A1 cyclohexyl/triene epoxyquinol structure from A2–A7
+    alkyl congeners and B reduced-epoxide forms. Cloned36-gene region permits S.lividans
+    K4-114 production of A1–A7,identified by high-resolution LC-MS. S.nodosus subsp.asukaensis
+    remains the natural producer. Biosynthetic enzymes and proposed self-immunity/export
+    functions are not established antimicrobial target mechanisms.
+  snapshot_sha256: d37c1de80f8095ee6ed41583afc3885d99455631247576201d37ab021ecbdc40
+- evidence_id: adopted15038738
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/15038738/
+  locator: Adopted source citation; indexed abstract inspected
+  accessed_at: '2026-10-21T09:18:55Z'
+  support: context_only
+  summary: Labelled-precursor feeding and synthetic protoasukamycin conversion in
+    S.nodosus ATCC29757 support assembly and terminal epoxyquinol modification; precursor
+    is not exact native compound.
+  snapshot_sha256: 5943a89d0526a12f0e80fe549eed9a896bc308e8df3c815e8a9f2599230428e5
+- evidence_id: adopted16816183
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/16816183/
+  locator: Adopted source citation; indexed abstract inspected
+  accessed_at: '2026-10-21T09:18:58Z'
+  support: context_only
+  summary: Knock-out and enzyme experiments distinguish ALA routes; hemA-asuA loss
+    abolishes production. This is biosynthesis, not an antibiotic molecular target.
+  snapshot_sha256: 080db27390cece55256cbecb2214b169ca1e9ff7fbc897e1b159633a56d0b401
+- evidence_id: adopted21854515
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/21854515/
+  locator: Adopted source citation; indexed abstract inspected
+  accessed_at: '2026-10-21T09:18:56Z'
+  support: context_only
+  summary: CHC-pathway mutant and precursor feeding generate H/I and minor congeners.
+    Those structures and activities cannot be transferred to A1.
+  snapshot_sha256: eea4d862a62e90fe30a13867e3283814288e96889ebd27a192d9cb3cf66dad58
+- evidence_id: adopted22555913
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/22555913/
+  locator: Adopted source citation; indexed abstract inspected
+  accessed_at: '2026-10-21T09:18:59Z'
+  support: context_only
+  summary: Regulator inactivation/overexpression changes asukamycin production. Abstract
+    repeats strong activity wording as background but supplies no new antifungal susceptibility
+    measurement.
+  snapshot_sha256: edd3ceac7ff319335a39092997c504ef54f3dcbf55d1ea033ed43be779abc9ef
+- evidence_id: biosynthesis-review
+  kind: database
+  reference: https://doi.org/10.1021/np50048a001
+  locator: PMID3553432; adopted citation abstract
+  accessed_at: '2026-10-21T09:18:56Z'
+  support: context_only
+  summary: Broad1987 biosynthesis discussion covers asukamycin and other antibiotics;
+    useful context, not independent exact antimicrobial potency or binding evidence.
+  snapshot_sha256: 073b72c80c22250f5d9e32e2afd6463cb04a4ca3005171298ce5e2348dd3bdcc
+- evidence_id: antitumor
+  kind: primary_source
+  reference: https://doi.org/10.3892/ijmm_00000283
+  locator: PMID19787206; full2009 PDFpp711–715,preparation/MTT Methods and Discussion
+  accessed_at: '2026-10-21T09:20:42Z'
+  support: supports
+  summary: S.nodosus ATCC29757-derived material was characterized by NMR/UV/HRMS and
+    had>85% purity. Five human leukemia/astrocytoma cell lines were tested by24h MTT;
+    authors report IC50 approximately1–5µM and describe antitumor activity as moderate.
+    Caspase3/8 activation and p38-inhibitor rescue concern human cells,not a bacterial
+    target. Introduction also explicitly describes previously observed antifungal
+    activity as weak.
+  snapshot_sha256: acda7f54f42fe480cefacb262c9bf2f49db551f566c9fc7b734bf23e611c8e8c
+- evidence_id: host-immunology
+  kind: primary_source
+  reference: https://doi.org/10.1097/01.WOX.0000411852.45417.3d
+  locator: Adopted PMC3513075; full conference abstract XML
+  accessed_at: '2026-10-21T09:19:24Z'
+  support: context_only
+  summary: Asukamycin0.3µg/mL in TNF-stimulated human THP-1 cells reduced IL-1β/IL-18
+    release. The reported84-gene transcription study and HMOX1 induction are specifically
+    manumycin experiments; they must not automatically be transferred to asukamycin.
+    Not antibacterial mechanism evidence.
+  snapshot_sha256: 9176a719795f8a5cd3c8740ea6cea03d7d2dece0674cae61eab3e3f8058ed665
+- evidence_id: host-target
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41589-020-0557-2
+  locator: PMID32572277/PMC7572527; Results,UBR7 knockdown/rescue,Figs1–4,Discussion
+    and Materials
+  accessed_at: '2026-10-21T09:20:52Z'
+  support: context_only
+  summary: Cayman asukamycin>95% purity was studied in human breast-cancer systems.
+    Chemoproteomics and recombinant protein competition implicate UBR7 C374; genetic
+    rescue and p53 interaction/transcription assays support a host molecular-glue
+    mechanism. These are host anticancer findings and do not identify an antibacterial
+    target or justify a generic microbial mode enum.
+  snapshot_sha256: 24a524893a5c68dbd3094caa452be8358eb21e8d07457af2f420ca576491c05c
+- evidence_id: mibig
+  kind: database
+  reference: https://mibig.secondarymetabolites.org/repository/BGC0000187.5/annotations.json
+  locator: Version5 compound and taxonomy metadata
+  accessed_at: '2026-10-21T09:19:24Z'
+  support: context_only
+  summary: Active record is quality questionable and completeness complete; producer
+    is S.nodosus subsp.asukaensis NCBITaxon222892. Its structure leaves epoxide stereochemistry
+    unassigned and differs in double-bond configuration, despite a PubChem6441014
+    cross-link. Native seeder correctly refuses this nonexact structure. Do not bypass
+    the exact-identity gate based on name.
+  snapshot_sha256: 84ff9b0aa859941b25eb9da33dbad601fd1377a0c9d2efd0673035ead8d54b39
+- evidence_id: mibig-reference
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25489112/
+  locator: First legacy MIBiG reference in adopted raw row; indexed abstract
+  accessed_at: '2026-10-21T09:20:52Z'
+  support: context_only
+  summary: Reference concerns Pseudomonas medium-chain1-alkene biosynthesis, not asukamycin.
+    It cannot supply claim-level producer support. No native producer assertion was
+    imported from this row, and independent original/biosynthetic asukamycin sources
+    support native producer wording.
+  snapshot_sha256: 048cdcb801183cc5391417171da1833245ed4401dfcc65a8870a29ce8d7bad02
+- evidence_id: gates
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual batch012 focused checks
+  accessed_at: '2026-10-21T09:22:47Z'
+  support: supports
+  summary: Both commands exited0; strict checked one file with zero errors. Chemistry
+    and exact source mint pass.
+  snapshot_sha256: 1c4949c305c5d15b276f9c596dec35bcaedfde1b88b0bf7167b1965a1da0db4e
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech and free primary sources
+  locator: Ignored-inclusive exact label/ID/slug search and bounded public follow-up
+  accessed_at: '2026-10-21T09:18:20Z'
+  support: context_only
+  summary: Local search included ignored native/raw/curation/generated/research context
+    excluding.git/.venv. No native populated target or resistance claims were found
+    in the complete record. Public follow-up distinguished A1 from congeners and human
+    antitumor effects from antibacterial mechanisms.
+  search_scope: prepare.py118 rg --no-ignore --hidden identifier/label/slug; ChEBI/MIBiG/decisions/curator
+    owners; live ChEBI,PubChem,KEGG,KNApSAcK; adopted PMIDs/PMC and patent; targeted
+    asukamycin antifungal/antibacterial-mechanism searches2026-10-21.
+  snapshot_sha256: f17dfa663aeb964c4e84df72dde9fc1fd7223c4d567ebc008b335c934e21dfc1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact asukamycin A1
+  outcome: supported
+  summary: Native exact structure matches independent current authorities; A2–A7,B-series
+    and other manumycins are distinct. KNApSAcK structure fields match despite its
+    legacy displayed key.
+  target_ids:
+  - CHEBI:73481
+  evidence_ids:
+  - chebi
+  - pubchem
+  - chemistry
+  - knapsack
+  - knapsack-check
+  - biosynthesis
+- assessment_id: grounding
+  area: grounding
+  topic: Parents and chemical classes
+  outcome: supported
+  summary: All six parent IDs are broader and chemically appropriate; exact ChEBI
+    grounding and minted source ID reproduce.
+  target_ids:
+  - CHEBI:73481
+  evidence_ids:
+  - term140325
+  - term26188
+  - term26878
+  - term27171
+  - term32955
+  - term51751
+  - chemistry
+- assessment_id: roles
+  area: evidence
+  topic: Antibacterial filing and retained antifungal role
+  outcome: supported
+  summary: Original exact-compound assays support both antibacterial and limited antifungal
+    activity; antibacterial filing preserves other roles. No role deletion is proposed.
+  target_ids:
+  - CHEBI:73481
+  evidence_ids:
+  - original
+  - term33281
+  - term33282
+  - term35718
+- assessment_id: strength
+  area: evidence
+  topic: Definition activity-strength wording
+  outcome: concern
+  summary: 'Inherited unqualified strong activity wording overstates the primary descriptions:
+    weak fungal activity and moderate in-vitro antitumor activity. Later production
+    abstract repeats strong as background without a new potency assay.'
+  target_ids:
+  - CHEBI:73481
+  evidence_ids:
+  - native
+  - chebi
+  - original
+  - antitumor
+  - adopted22555913
+- assessment_id: producer
+  area: evidence
+  topic: S.nodosus subsp.asukaensis source
+  outcome: supported
+  summary: Original isolation and biosynthetic studies support natural producer wording.
+    MIBiG exact-identity rejection explains absent optional producer block; its legacy
+    reference is not usable as asukamycin evidence.
+  target_ids:
+  - CHEBI:73481
+  evidence_ids:
+  - original
+  - biosynthesis
+  - adopted16816183
+  - mibig
+  - mibig-reference
+  - owners
+- assessment_id: mechanism
+  area: completeness
+  topic: Antibacterial mode and molecular target
+  outcome: unknown
+  summary: No compound-specific antibacterial target was established in the bounded
+    inspected evidence. Human UBR7/p53,p38/caspase and cytokine effects must not fill
+    a microbial mode or target. No optional-field defect is inferred.
+  target_ids:
+  - CHEBI:73481
+  evidence_ids:
+  - original
+  - antitumor
+  - host-immunology
+  - host-target
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership,references and history
+  outcome: supported
+  summary: ChEBI fields and four seed events reproduce. All adopted citation identifiers
+    resolve, with scope distinguished; patent is correctly document-only. Commercial
+    Beilstein/Reaxys entries were not independently inspected.
+  target_ids:
+  - CHEBI:73481
+  evidence_ids:
+  - owners
+  - chebi
+  - kegg
+  - patent
+  - native
+- assessment_id: completeness
+  area: completeness
+  topic: Quantitative activity follow-up
+  outcome: unknown
+  summary: Original Table4 provides strain/assay values suitable for later careful
+    activity_spectrum curation; historical empirical-formula uncertainty and later
+    exact A1 structure must be documented. Missing optional activity block is not
+    a finding.
+  target_ids:
+  - CHEBI:73481
+  evidence_ids:
+  - original
+  - biosynthesis
+  - structure
+  - patent
+- assessment_id: other
+  area: scope
+  topic: Resistance,clinical,dataset and graph fields
+  outcome: not_applicable
+  summary: None is populated. Tumor-cell response and poultry patent claims do not
+    establish clinical approval, microbial resistance determinants or native transcriptomic
+    claims.
+  target_ids:
+  - CHEBI:73481
+  evidence_ids:
+  - native
+  - host-target
+  - patent
+- assessment_id: adapter
+  area: scope
+  topic: Structured expression-source applicability
+  outcome: not_applicable
+  summary: The native record names no gene,protein,pathway,regulator,stress response
+    or expression dataset requiring an adapter query. Discovered human target and
+    producer biosynthesis context was kept outside native microbial mechanism claims.
+  target_ids:
+  - CHEBI:73481
+  evidence_ids:
+  - native
+  - host-target
+  - biosynthesis
+- assessment_id: schema
+  area: schema
+  topic: Focused checks
+  outcome: supported
+  summary: Both actual validators and independent chemical consistency checks pass.
+  target_ids:
+  - CHEBI:73481
+  evidence_ids:
+  - gates
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: asukamycin-unqualified-strong-activity-wording
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the definition’s unbounded activity-strength description
+  description: Native definition repeats strong antibacterial,antifungal and antineoplastic
+    activity. Original asukamycin Table4 and text describe weak antifungal activity
+    against T.mentagrophytes at25µg/mL with most other fungi>100µg/mL; the2009 antitumor
+    paper calls its in-vitro activity moderate. A later production study repeats strong
+    activity as background. Retain the genuine qualitative roles while replacing the
+    unqualified potency adjective with source- and assay-bounded wording.
+  target_ids:
+  - CHEBI:73481
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - chebi
+  - original
+  - antitumor
+  - adopted22555913
+  rule_id: native-review-checklist:Evidence standard and Activity
+  native_severity: minor weak/unqualified wording
+  normalization_reason: Compound identity and qualitative activities are supported.
+    The defect is an unbounded potency adjective,not a wrong role or a demonstrated
+    absence of antifungal/antitumor activity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited definition wording
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition ownership
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained source/grounding adjudication where applicable
+actions:
+- action_id: A1
+  description: Through maintained source-definition handling, remove or qualify strong
+    as a blanket descriptor. Preserve antibacterial and antifungal roles and describe
+    experimental antitumor activity without implying clinical benefit. Retain the
+    source discrepancy explicitly rather than silently discarding either original
+    assays or later background wording.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:73481
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited definition wording
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition ownership
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained source/grounding adjudication where applicable
+  acceptance_checks:
+  - Definition no longer implies uniformly strong fungal or antineoplastic activity
+    across organisms or assays.
+  - Original fungal evidence remains T.mentagrophytes25µg/mL in glucose-potato agar27°C72h;
+    other listed fungal outcomes and missing strain designations remain bounded.
+  - Any tumor-cell potency addition retains human cell,24h MTT and>85% preparation-purity
+    context; human mechanisms are not assigned as antibacterial targets.
+  - Regenerate reproducibly and rerun focused schema/strict,source/provenance and
+    corpus gates; no record-only definition patch or scientific status promotion.
+- action_id: A2
+  description: Optionally curate claim-level activity and producer evidence from original
+    and biosynthetic primary sources. Resolve MIBiG structural/reference conflicts
+    before using that row for an exact producer attachment; do not bypass stereo_complete=false
+    by name matching.
+  finding_ids: []
+  target_ids:
+  - CHEBI:73481
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/asukamycin.yaml
+    role: Curator-authored evidence and activity/producer annotations
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/mibig_producers.tsv
+    role: Exact-structure producer-source handling
+  acceptance_checks:
+  - Keep A1 distinct from A2–A7,B-series,H/I and other manumycins.
+  - Use a primary asukamycin producer reference such as PMID993129 or20522559; PMID25489112
+    does not support this producer assertion.
+  - Retain exact strain,assay,units and qualifiers for any activity_spectrum rows;
+    optional gaps are not automatically native defects.
+limitations:
+- Beilstein3639742 and Reaxys6674537 were not independently accessed. Current ChEBI/PubChem
+  and KNApSAcK full structure encodings agree; KNApSAcK displayed legacy key remains
+  externally inconsistent.
+- The1976 discovery paper used an early proposed empirical formula,whereas the later
+  patent and current authorities give C31H34N2O7. Original spectra were not reprocessed;
+  activity is retained as historically reported purified asukamycin rather than an
+  independently re-characterized modern reference standard.
+- Several adopted biosynthetic citations were inspected at indexed-abstract level.
+  Full original isolation PDF,2009 antitumor PDF,2010 biosynthesis sections,2012 conference
+  abstract and relevant2020 host-target sections were inspected. Raw omics data and
+  all supplementary figures were not reanalysed.
+- No exact antibacterial molecular target was established in the bounded free search.
+  Human UBR7/p53 and inflammatory/caspase effects are not evidence of a microbial
+  target.
+- Alternative public publisher copies were used after PMC browser verification and
+  Europe PMC XML errors prevented retrieval. Early guessed publisher PDF paths failed;
+  the exact linked DOI download succeeded. Retrieval failures are not treated as literature
+  absence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All21 captured input hashes rechecked unchanged. Native fields,status and history
+  were not edited.
+- The retained antifungal role is supported by actual albeit weak activity; no deletion
+  is proposed. Absent optional activity,target,producer or graph blocks are not scored
+  as findings.
+- MIBiG incomplete/different stereo and unrelated first legacy reference are contextual
+  source limitations. No affected MIBiG assertion is present in the native record,so
+  they are not additional native findings.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:73481
+- https://doi.org/10.7164/antibiotics.29.876
+- https://doi.org/10.3892/ijmm_00000283
+- https://doi.org/10.1074/jbc.M110.128850
+tags:
+- asukamycin
+- manumycin-family
+- activity-scope
+- producer
+- host-target-boundary
+```
