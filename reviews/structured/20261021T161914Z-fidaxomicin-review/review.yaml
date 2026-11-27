@@ -1,0 +1,1111 @@
+schema_version: 1.0.0
+review_id: 20261021T161914Z-fidaxomicin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Fidaxomicin: unresolved C18 stereochemistry and an incorrect RNA polymerase
+  protein accession'
+started_at: '2026-10-21T15:56:43Z'
+finished_at: '2026-10-21T16:19:14Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The reviewed record retains a ChEBI graph with unspecified C18 stereochemistry,
+  while its exact chemical links and original crystallographic evidence specify C18S.
+  Its curated RpoB example points to elongation factor G. The primary RNA-polymerase
+  mechanism remains supported, with strain, sensitizer-residue and assay boundaries
+  preserved.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/fidaxomicin.yaml
+    sha256: 3dfcc74c1bec19c49c60c7068102030aac63ed8c479adc10a125c508e2e0287d
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: curation/uniprot_protein_examples.yaml
+    sha256: 536ab4cc7ba9be95c80242bcc25321d67a5bdbfecbc50f3be5a449000abfe5f5
+    role: context
+  - path: scripts/curate_uniprot_protein_examples.py
+    sha256: 3399882f3f23e95f717eb94081666022545e1ed999e99b5425d1a3c95bf9e54e
+    role: context
+targets:
+- target_id: CHEBI:68590
+  path: data/antibiotics/antibacterial/fidaxomicin.yaml
+  label: fidaxomicin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual adopted ARO definition/classification and citation owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual imported RNA polymerase target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Curated reviewed UniProt protein examples
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/curate_uniprot_protein_examples.py
+    role: Validated protein-example curator
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/fidaxomicin.yaml
+    role: Native curated primary target, mode and evidence annotations; validated
+      writer required for future correction
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 439; original thirteen input hashes preserved within twenty-four
+    expanded inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:68590
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:68590
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/439440-focused.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:68590
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/fidaxomicin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:68590
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/fidaxomicin.yaml --out /private/tmp/am-review-session/439-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:68590
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:68590
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:68590
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:68590
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:68590
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:68590
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:68590
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:68590
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:68590
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/fidaxomicin.yaml
+  locator: Entire native YAML, all seven history events, both targets and both protein
+    examples
+  accessed_at: '2026-10-21T16:17:33Z'
+  support: supports
+  summary: The native record is REVIEWED and EXACT. Its neutral graph has thirteen
+    assigned and one unspecified stereocentre. The curated primary mechanism is separate
+    from the explicitly database-level ARO target; Q18CF4 is labeled RpoB and Q18CF3
+    RpoC. Dificid is correctly typed as a brand.
+- evidence_id: owners
+  kind: record_content
+  reference: 439440-raw-rows.json; 439-inputs-expanded.json
+  locator: Full exact ChEBI row 1710, ARO row 250, target-edge row 229 and protein-example
+    overlay lines 576–610
+  accessed_at: '2026-10-21T16:17:33Z'
+  support: supports
+  summary: Original hashes were verified before assessment; actual ARO, protein-example
+    overlay/writer and native curator ownership were appended before detailed judgment.
+    ChEBI supplies the partial structure and exact chemical xrefs; the curated overlay
+    repeats the incorrect Q18CF4 label. No exact decisions or curator-antibiotics
+    override was identified in the searched inputs.
+  snapshot_sha256: 0c8a997220cc1b1e189f51da0c4b8967db647150ccdc471508cf01e4059fc2f3
+- evidence_id: local-search
+  kind: search
+  reference: 439440-all-local-paths.txt
+  locator: Ignored-inclusive local identity and reference search
+  accessed_at: '2026-10-21T16:17:33Z'
+  support: context_only
+  summary: The search included ignored and hidden files under data, curation, conf,
+    scripts, src, reports and reviews. Relevant generated and maintained owners were
+    read; historical reports were discovery context only. Optional native resistance,
+    activity_spectrum and causal collections are absent.
+  search_scope: rg --no-ignore --hidden -il 'fidaxomicin|finafloxacin|CHEBI:68590|CHEBI:85176|ARO:3001319|ARO:3004732'
+    data curation conf scripts src reports reviews
+  snapshot_sha256: a2e8eb9abebe0d6bbda23f95cbac75009ba2e2bf6dafe4fdd700c39dbf965a9d
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/68590/
+  locator: Current CHEBI:68590 structure, names, parents and roles
+  accessed_at: '2026-10-21T16:09:14.489905Z'
+  support: supports
+  summary: Current ChEBI reproduces the native partial graph, formula C52H74Cl2O18,
+    charge zero and key ZVGNESXIJDCBKN-KFGPIHIUSA-N. Its InChI /t34? remains unspecified.
+    The broad macrolide, glycoside and antimicrobial classifications agree with the
+    graph.
+  snapshot_sha256: 3a2262d1eba50b6f550d779bc2b79e5563369d56ca9f3a7cb1b5dff8e2e4cde5
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/10034073/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: PubChem CID10034073 exact structure
+  accessed_at: '2026-10-21T16:09:14.492785Z'
+  support: refutes
+  summary: The linked molecule has all fourteen stereocentres assigned and key ZVGNESXIJDCBKN-UUEYKCAUSA-N.
+    Compared with the native InChI, atom34 is explicitly assigned rather than unknown.
+  snapshot_sha256: b5aa64c0fdc18795c272e7279dd35ee0e3bc6cdd080d978ab97846f7627f50de
+- evidence_id: chembl
+  kind: authority
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1255800.json
+  locator: CHEMBL1255800 exact molecular structure
+  accessed_at: '2026-10-21T16:09:14.494676Z'
+  support: refutes
+  summary: ChEMBL agrees with the fully specified PubChem structure, not the partial
+    native graph. Formula equality does not establish exact stereochemical equivalence.
+  snapshot_sha256: 0e754452fc3f4b9251a80a26626046da2713215255a69a12448b9565d41ca91c
+- evidence_id: chemistry
+  kind: record_content
+  reference: 439-chemistry.json; 439440-xref-chemistry.json; 439440-additional-chemistry.json
+  locator: RDKit2026.03.5 through batch019 interpreter against batch044 cwd
+  accessed_at: '2026-10-21T16:17:33Z'
+  support: supports
+  summary: 'Native SMILES, InChI, formula, charge, masses and source mints pass independent
+    checks. InChI atom 34, RDKit index 33, is connected to the macrolactone oxygen,
+    a ring methylene and the hydroxyethyl carbon: this maps to numbered C18 in the
+    original figures. It is unknown natively and S in PubChem, ChEMBL and CCD FI8.
+    The already assigned hydroxyethyl C19 remains R. Unspecified notation does not
+    establish a racemate or physical mixture.'
+  snapshot_sha256: ae32c45ab1d207778baf7fde012d0daee4e4c442f11582d25896558ee2629b4c
+- evidence_id: structure2017
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5372987/?pdf=render
+  locator: PMID28208717 / DOI10.3390/antibiotics6010007; complete main Results, crystallographic
+    Methods and Conclusions
+  accessed_at: '2026-10-21T16:11:21.476327Z'
+  support: supports
+  summary: Single-crystal diffraction independently establishes lipiarmycin A3 and
+    tiacumicin B as the same molecule with 8S,11S,12R,18S,19R and nine defined sugar
+    centres. A3 material came from Actinoplanes deccanensis ATCC21983 and tiacumicin
+    B from Dactylosporangium aurantiacum subsp. hamdenensis NRRL18085. Different crystal
+    solvates and C19 rotamer disorder do not alter molecular absolute configuration.
+    Flack parameters support the reported absolute hand. The historical unqualified
+    lipiarmycin name originally covered A3/A4; exact-material transfer requires the
+    A3 qualifier.
+  snapshot_sha256: 74688023071e9b18986112f467c985ec8d78b108f8512344d16cf4094fdc10d7
+- evidence_id: structure-fig1
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e4a9/5372987/794a764d5aa6/antibiotics-06-00007-g001.jpg
+  locator: Actual Figure 1 viewed
+  accessed_at: '2026-10-21T16:14:48.154176Z'
+  support: supports
+  summary: Numbered structures distinguish A3/A4 and B3/B4 and locate the C18/C19
+    region. The A3 ethyl/isobutyryl substitutions match fidaxomicin.
+  snapshot_sha256: 972f7aabeb7f79932898062cd9deb823a01a5f95fc64596fa4192754bf20e64d
+- evidence_id: structure-fig4
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e4a9/5372987/3f51d77f8d44/antibiotics-06-00007-g004.jpg
+  locator: Actual Figure 4 viewed
+  accessed_at: '2026-10-21T16:14:48.154487Z'
+  support: supports
+  summary: The A3 crystal drawing labels C18 adjoining O1, C17 and C19; the inset
+    shows alternative side-chain conformations, not alternate absolute stereoisomers.
+  snapshot_sha256: 1762639d3ed6f9d2f48f82f9d8fd869c96e570c405f15ea5b2a80f22b278b4da
+- evidence_id: structure-fig5
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e4a9/5372987/9d14604baa18/antibiotics-06-00007-g005.jpg
+  locator: Actual Figure 5 viewed
+  accessed_at: '2026-10-21T16:14:48.156278Z'
+  support: supports
+  summary: Two independent tiacumicin B molecules retain the same numbered stereochemical
+    framework. Fractional lattice water/methanol are not components to add to the
+    native molecular formula.
+  snapshot_sha256: 9f8651e178493b8e413a0a5aab1a1e7d9e38c081e2c18902a5eaf3211cdcae24
+- evidence_id: mechanism2022
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9635844/?pdf=render
+  locator: PMID35388215 / DOI10.1038/s41586-022-04545-z; full main Results and relevant
+    reagent, expression, transcription and genetic Methods
+  accessed_at: '2026-10-21T16:10:20.096229Z'
+  support: supports
+  summary: The original directly resolves fidaxomicin at the C. difficile RNAP clamp
+    hinge and measures transcription inhibition. RNAP genes are from strain 630, including
+    CD630_00660 rpoB and CD630_00670 rpoC, heterologously expressed with a beta/beta-prime
+    fusion. The expression host does not change target taxon. C. difficile K84E is
+    less sensitive in purified transcription assays; E. coli Q94K sensitization and
+    B. subtilis R84E genetic tests use different organisms. E. coli whole-cell sensitization
+    requires the outer-membrane sensitizer SPR741. The residue contributes to selectivity
+    but is not a universal single cause of susceptibility. Methods use named fidaxomicin
+    stocks; the ligand model is stereodefined, not every structure compatible with
+    native /t34?.
+  snapshot_sha256: 2d8fe190e180911763d4db72568e7ef8dea1091266e9348c980cbaeecd0b48a3
+- evidence_id: mechanism-fig1
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8d35/9635844/80ee9b617b75/nihms-1842019-f0001.jpg
+  locator: Actual Figure 1b,c viewed
+  accessed_at: '2026-10-21T16:14:48.157711Z'
+  support: supports
+  summary: The numbered chemical drawing specifies the C18 region, and cryo-EM density
+    places fidaxomicin in the bacterial RNAP complex. The cartoon of microbiome effects
+    is explanatory context, not a quantitative community experiment.
+  snapshot_sha256: e7931e8c137188a572947a93b58f4f1e0c4b896324917c8e2bb444de4978c419
+- evidence_id: mechanism-fig4
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8d35/9635844/319d917f1825/nihms-1842019-f0004.jpg
+  locator: Actual Figure 4a–e viewed with captions and Methods
+  accessed_at: '2026-10-21T16:14:48.160867Z'
+  support: supports
+  summary: Purified C. difficile transcription IC50 values are approximately 0.20
+    µM for wild type and 2.1 µM for K84E; these are not MICs. The E. coli and B. subtilis
+    panels are separate species-specific perturbations, with whole-cell conditions
+    described in Methods. The native wording important determinant remains appropriately
+    bounded.
+  snapshot_sha256: 54379117b28ddb7866eee1f69a0f8afc410cd2abad769739aca427fde6f1d51f
+- evidence_id: ligand
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/chemcomp/FI8
+  locator: CCD FI8 molecular descriptors
+  accessed_at: '2026-10-21T16:11:21.476595Z'
+  support: supports
+  summary: The ligand used in PDB 7L7B has the fully specified UUEYKCAUSA key and
+    all fourteen assigned centres, agreeing with PubChem/ChEMBL and the independent
+    2017 chemical evidence. CCD alone is not treated as the original stereochemical
+    proof.
+  snapshot_sha256: 5e481a86d0bf1e18001e3b408c87f1ab6cf545c9953b96d9cf79c41667addc94
+- evidence_id: wrong-protein
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q18CF4.json
+  locator: Current reviewed UniProtKB Q18CF4
+  accessed_at: '2026-10-21T16:09:16.232693Z'
+  support: refutes
+  summary: Q18CF4 is elongation factor G, gene fusA, locus CD630_00700, 688 residues,
+    strain 630 taxon 272563. It is not rpoB or the beta subunit of RNAP.
+  snapshot_sha256: 8c0f2ae44170d62756fe2ec22b82b58a3791a9d919d2ab6f61cae08610c35548
+- evidence_id: correct-beta
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ArpoB%29%20AND%20%28organism_id%3A272563%29&format=json
+  locator: Reviewed rpoB search restricted to organism 272563
+  accessed_at: '2026-10-21T16:11:21.478161Z'
+  support: supports
+  summary: The reviewed strain 630 RpoB is Q18CF1, locus CD630_00660, 1238 residues.
+    Its gene and locus agree with the original 2022 Methods.
+  snapshot_sha256: b7dde08361d3b100eb31dadd481c16c9a0fc2adf7eb5f1423dd2d9ced5447e40
+- evidence_id: correct-beta-prime
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q18CF3.json
+  locator: Current reviewed UniProtKB Q18CF3
+  accessed_at: '2026-10-21T16:09:16.300937Z'
+  support: supports
+  summary: Q18CF3 is RpoC, locus CD630_00670, 1161 residues, strain 630. The native
+    beta-prime example remains coherent.
+  snapshot_sha256: 7882b91c826e4d4f7b5093d26686791b34120ce8ac6ff6f69d0f5fd8af541b94
+- evidence_id: pdb-mapping
+  kind: authority
+  reference: https://www.ebi.ac.uk/pdbe/api/mappings/uniprot/7l7b
+  locator: PDBe/SIFTS UniProt mappings for 7L7B
+  accessed_at: '2026-10-21T16:11:21.480904Z'
+  support: supports
+  summary: Chain C maps to Q18CF1 with identity 1.0 and near-complete coverage; chain
+    D maps to Q18CF3 with identity 1.0 and complete coverage. This corroborates the
+    paper-derived strain 630 examples. Generic PDB molecule taxonomy differs in display
+    granularity, so the paper gene provenance and exact sequence mapping establish
+    the example scope.
+  snapshot_sha256: 24dc11c9a30f380f97b11387da8cac86c3a51100dc7428aea2e49da8c60a67fa
+- evidence_id: aro
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3001319
+  locator: Current ARO3001319 drug definition and identity
+  accessed_at: '2026-10-21T16:09:15.597368Z'
+  support: supports
+  summary: The entry resolves to fidaxomicin; its macrocyclic antibacterial classification
+    is consistent with the native graph and published drug. The source name does not
+    repair the missing native stereochemical assignment.
+  snapshot_sha256: 27091a61de181e4c979bb3239946a871b59107e9c405cb9da1e5fa70c1a1afa7
+- evidence_id: aro-target
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3003439
+  locator: Current ARO3003439 RNAP switch-region target
+  accessed_at: '2026-10-21T16:09:15.719932Z'
+  support: supports
+  summary: The ARO target resolves to the bacterial RNAP switch region. The imported
+    assertion remains explicitly PRIMARY_EVIDENCE_NEEDED with no invented strain or
+    primary assay; the separate curated 2022 target carries the experimental evidence.
+  snapshot_sha256: 9ac156d8d82d95fc22adc9b163ab89b6cf4bb622a681ffdf9e06aca4859f4549
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/D09394
+  locator: KEGG drug D09394
+  accessed_at: '2026-10-21T16:09:14.497022Z'
+  support: partial
+  summary: The drug-level accession resolves to fidaxomicin. Under schema drug_xrefs
+    semantics this is an association, not a promise of identical stereochemical encoding;
+    it is not included in the exact-xref finding.
+  snapshot_sha256: 47fe2a33304a2c7a8831fb876a135e1744337bf2f068deddcb3a510b64483626
+- evidence_id: patent-us
+  kind: primary_source
+  reference: https://patents.google.com/patent/US20080269145A1/en
+  locator: Native US2008269145 normalized to US20080269145A1; Example 1, Example 2,
+    Example 3 and definitions
+  accessed_at: '2026-10-21T16:10:20.514904Z'
+  support: supports
+  summary: The document is relevant, not an unrelated patent. Example 1 explicitly
+    names18(S)-(1(R)-hydroxyethyl) R-tiacumicin B from crystallographic characterization.
+    Example 2 distinguishes the C19 epimer and other congeners; Example 3 reports
+    activity of preparations described as predominantly R-tiacumicin B. OPT-80 is
+    also defined as a preparation with related components, so patent preparation assays
+    are not transferred as pure-molecule observations. Leading-zero normalization
+    resolves the native document number.
+  snapshot_sha256: f5876c4bcd75a0c37f3f9ed111e611f87b7d966571abaa8574b2bdcf9094cd9a
+- evidence_id: patent-wo
+  kind: primary_source
+  reference: https://patents.google.com/patent/WO2006085838/en
+  locator: WO2006085838A2; definitions, Example 1 and analytical-comparator section
+  accessed_at: '2026-10-21T16:09:15.499449Z'
+  support: supports
+  summary: The related patent concerns R-tiacumicin B, its C19 epimer and compositions.
+    It supports document relevance, producer context and the defined 18S/19R active
+    material. Broad composition claims and historical OPT-80 purity ranges do not
+    establish exact equivalence of every preparation to one molecule.
+  snapshot_sha256: 1e71610dbfa8b27c9fa1ed7f0becc84785214e97cbc6e77c5decf833e903822f
+- evidence_id: activity-taiwan
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3393409/?pdf=render
+  locator: PMID22508299; original Methods, Table 1 and abstract comparison
+  accessed_at: '2026-10-21T16:10:20.098226Z'
+  support: partial
+  summary: The original tests 403 nonduplicate Taiwanese C. difficile isolates using
+    manufacturer-supplied fidaxomicin and CLSI agar dilution; the fidaxomicin range
+    is at most 0.015 to 0.5 µg/mL. No fidaxomicin clinical breakpoint was established.
+    Abstract MIC90 is 0.5 whereas Table 1 gives 0.25 µg/mL; this source-internal discrepancy
+    is retained and no numeric observation is imported. Fluoroquinolone gyrase mutations
+    elsewhere in the paper do not constitute fidaxomicin resistance mechanisms.
+  snapshot_sha256: cfe078e4573848c480c1b7b441d7ae5f252e05de5de2802971e2bca76798b49a
+- evidence_id: activity-comparator
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3346664/?pdf=render
+  locator: PMID22290948; original Materials/Methods and fidaxomicin Results
+  accessed_at: '2026-10-21T16:10:20.098584Z'
+  support: supports
+  summary: This original comparator study identifies fidaxomicin explicitly as lipiarmycin
+    A3 reference powder produced by Catellatospora sp. Bp3323-81 fermentation. Anaerobic
+    agar dilution and aerobic broth microdilution are distinct assay contexts. Activity
+    varies substantially by species, supporting bounded narrow-spectrum interpretation
+    rather than universal Gram-positive susceptibility. This is an additional producer
+    preparation, not a contradiction of the native Dactylosporangium source.
+  snapshot_sha256: 3d17bdf9d073cd1a00a1ca97b9bc188fbd8cd6d28aafd25ab51932ecbc587f14
+- evidence_id: lead-35388215
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/35388215/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Original mechanism paper; full relevant sections and actual Figures 1/4
+    inspected separately.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-24064437
+  kind: database
+  reference: https://pubmed.ncbi.nlm.nih.gov/24064437/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Treatment review; original abstract only, secondary contextual support.
+    Its erroneous Gram-negative description of C. difficile is not propagated.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-22752863
+  kind: database
+  reference: https://pubmed.ncbi.nlm.nih.gov/22752863/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Antimicrobial-activity synthesis across eight studies; original abstract
+    read. Aggregated 1323-isolate results are not treated as a new single assay or
+    direct target experiment.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-22523271
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/22523271/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Original phase III strain-subgroup clinical analysis; complete abstract
+    read. Cure/recurrence in BI versus non-BI strains is a clinical endpoint, not
+    a molecular-binding assay.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-22508299
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/22508299/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Original 403-isolate susceptibility study; full relevant Methods/Table
+    1 inspected separately, including abstract/table discrepancy.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-22321770
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/22321770/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Original randomized phase III clinical trial; complete abstract read. Clinical
+    noninferiority supports treatment context, not exact isolated-reagent stereochemical
+    equivalence.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-22318930
+  kind: database
+  reference: https://pubmed.ncbi.nlm.nih.gov/22318930/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Pharmacotherapy review; original abstract read, secondary context only.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-22384450
+  kind: database
+  reference: https://pubmed.ncbi.nlm.nih.gov/22384450/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Drug-development/treatment review; original abstract read, secondary context
+    only.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-22290948
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/22290948/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Original LFF571 comparator study; fidaxomicin material, assay Methods and
+    relevant Results read separately.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-22260856
+  kind: database
+  reference: https://pubmed.ncbi.nlm.nih.gov/22260856/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Older-adult management review; original abstract read, not current treatment
+    guidance or direct target evidence.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-22284993
+  kind: database
+  reference: https://pubmed.ncbi.nlm.nih.gov/22284993/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Drug review; complete original abstract read, secondary context only.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-22156854
+  kind: database
+  reference: https://pubmed.ncbi.nlm.nih.gov/22156854/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Macrocyclic-antibiotic review; original abstract read, not a new target
+    experiment.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-21862392
+  kind: database
+  reference: https://pubmed.ncbi.nlm.nih.gov/21862392/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: RNAP switch-region review; original abstract read, not a substitute for
+    the exact2022 C. difficile experiment.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-21288078
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/21288078/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Original 629-patient randomized trial; complete abstract read. Cure and
+    recurrence support clinical context only.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: lead-20509714
+  kind: database
+  reference: https://pubmed.ncbi.nlm.nih.gov/20509714/
+  locator: Complete original abstract in 439-core.json; deeper reading where explicitly
+    specified
+  accessed_at: '2026-10-21T16:09:14.489649Z'
+  support: context_only
+  summary: Drug-development profile; original abstract and alias metadata read. Historical
+    development codes do not prove chemical purity of all named preparations.
+  snapshot_sha256: 0a8d0ef26d610730e6412b8c7a786cad958e7b198eac3e18c954122c4e52e908
+- evidence_id: reaxys-access
+  kind: search
+  reference: https://www.reaxys.com/#/search/quick?context=R&query=RX.RN%3D12687773
+  locator: Exact Reaxys 12687773 access attempt
+  accessed_at: '2026-10-21T16:09:16.907456Z'
+  support: unknown
+  summary: The public request returned 403. Exact registry graph equivalence was not
+    independently established; other chemical authorities do not substitute for the
+    unresolved Reaxys record.
+  snapshot_sha256: 04a1f692167adc293a504e971663e95bbf74b0d9da307a16a80188304b16e4d6
+  search_scope: Exact native Reaxys accession, public route only.
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB
+  locator: Pre-web structured dataset catalog in439440-adapter-results.json
+  accessed_at: '2026-10-21T16:17:33Z'
+  support: context_only
+  summary: The structured catalog succeeded before protein research. No C. difficile
+    dataset was available, so no unrelated organism was substituted to adjudicate
+    the strain 630 RNAP claim.
+  snapshot_sha256: 215a6327c9299c7dc2314fd136a687e5cb3d4af53bbfab11e9f388f307286495
+- evidence_id: gates
+  kind: record_content
+  reference: 439-focused-results.json
+  locator: Actual focused executions
+  accessed_at: '2026-10-21T16:17:33Z'
+  support: supports
+  summary: Chemistry, schema and strict checks all exit 0. They cannot detect the
+    external protein misidentification or establish full stereochemical identity.
+  snapshot_sha256: 09c5290f430eef4717776f0a5d0340c71f192b0f55183a8035054242b986cb2d
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact natural molecule versus partial native graph
+  outcome: concern
+  summary: The native and current ChEBI structures are internally coherent but omit
+    C18S established by original crystallography and the exact patent Example 1. This
+    is missing specificity, not a demonstrated opposite epimer or racemate.
+  target_ids:
+  - CHEBI:68590
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - structure2017
+  - structure-fig4
+  - structure-fig5
+  - patent-us
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical xrefs and drug-level association
+  outcome: concern
+  summary: PubChem 10034073 and CHEMBL1255800 specify the missing centre and therefore
+    are not identical to the partial native graph. KEGG D09394 is correctly assessed
+    under broader drug-level semantics. Reaxys remains unresolved.
+  target_ids:
+  - CHEBI:68590
+  evidence_ids:
+  - pubchem
+  - chembl
+  - chemistry
+  - kegg
+  - reaxys-access
+- assessment_id: mechanism
+  area: evidence
+  topic: Direct RNAP inhibition and selectivity
+  outcome: supported
+  summary: The original C. difficile complex and transcription experiments support
+    the native direct target and mode. The sensitizing residue is one determinant;
+    whole-cell species and permeability differences remain explicit. HOST_SHARED_TARGET
+    describes the broad shared transcription machinery rather than equal host susceptibility.
+  target_ids:
+  - CHEBI:68590
+  evidence_ids:
+  - native
+  - mechanism2022
+  - mechanism-fig1
+  - mechanism-fig4
+  - aro-target
+- assessment_id: protein-examples
+  area: grounding
+  topic: Strain630 RNAP examples
+  outcome: concern
+  summary: Q18CF4 is FusA/elongation factor G and is a confirmed incorrect RpoB example.
+    Q18CF1 is supported by reviewed UniProt, original locus provenance and PDB sequence
+    mapping. Q18CF3 remains a supported RpoC example.
+  target_ids:
+  - CHEBI:68590
+  evidence_ids:
+  - wrong-protein
+  - correct-beta
+  - correct-beta-prime
+  - pdb-mapping
+  - mechanism2022
+  - owners
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and narrow-spectrum wording
+  outcome: supported
+  summary: Original susceptibility studies and randomized clinical abstracts support
+    the named antibacterial drug and C. difficile treatment context. Exact preparation,
+    method and endpoint boundaries prevent quantitative transfer into the partial
+    graph. No broad inactivity inference follows for unspecified configurations.
+  target_ids:
+  - CHEBI:68590
+  evidence_ids:
+  - activity-taiwan
+  - activity-comparator
+  - lead-22321770
+  - lead-21288078
+  - mechanism2022
+- assessment_id: classification
+  area: scope
+  topic: Class, roles, names and producer
+  outcome: supported
+  summary: Macrocyclic antibiotic/macrolide classification and antimicrobial roles
+    are coherent. Tiacumicin B and lipiarmycin A3 coidentity is experimentally supported,
+    and Dactylosporangium production is documented. Unqualified lipiarmycin and OPT-80
+    have historical preparation meanings that should be preserved when mapping assays.
+    Dificid is already a brand-type synonym.
+  target_ids:
+  - CHEBI:68590
+  evidence_ids:
+  - native
+  - chebi
+  - aro
+  - structure2017
+  - patent-us
+  - patent-wo
+- assessment_id: completeness
+  area: completeness
+  topic: Optional collections and evidence placement
+  outcome: unknown
+  summary: The record has no resistance, activity_spectrum, causal graph or producer
+    collection. Original assay and producer leads could support later enrichment,
+    but optional absence is not a schema error. The ARO assertion and curated primary
+    target remain correctly separated.
+  target_ids:
+  - CHEBI:68590
+  evidence_ids:
+  - native
+  - local-search
+  - activity-taiwan
+  - activity-comparator
+  - aro-target
+- assessment_id: provenance
+  area: provenance
+  topic: Reviewed history and maintained owners
+  outcome: concern
+  summary: All seven history events and source rows were read. The existing REVIEWED
+    claim cannot stand as current scientific sign-off while the stereochemical discrepancy
+    and incorrect protein accession remain. Correct the maintained owners and reassess
+    review status rather than rewriting historical events.
+  target_ids:
+  - CHEBI:68590
+  evidence_ids:
+  - native
+  - owners
+  - gates
+  - wrong-protein
+  - chemistry
+- assessment_id: validation
+  area: schema
+  topic: Focused native validation
+  outcome: supported
+  summary: All focused gates pass on the untouched target. Scientific findings arise
+    from primary/authority comparisons beyond those validators.
+  target_ids:
+  - CHEBI:68590
+  evidence_ids:
+  - gates
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: fidaxomicin-missing-c18-stereochemistry-exact-xrefs
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The reviewed fidaxomicin graph omits experimentally established C18 stereochemistry
+  description: Native/current ChEBI InChI atom 34 is unspecified and maps to macrolactone
+    C18. Original 2017 single-crystal work and native patent Example 1 establish 18S;
+    the linked PubChem and ChEMBL molecules and bound ligand FI8 all assign it. The
+    other thirteen native centres agree. Resolve the intended exact chemical identity
+    and source ownership, then make graph, structural key and exact xrefs consistent.
+    Do not call the native graph a racemate, a confirmed opposite epimer or a proven
+    physical mixture.
+  target_ids:
+  - CHEBI:68590
+  field_paths:
+  - chemical_structure.smiles
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  - xrefs[3]
+  - xrefs[4]
+  - curation_status
+  evidence_ids:
+  - native
+  - chebi
+  - pubchem
+  - chembl
+  - chemistry
+  - structure2017
+  - structure-fig4
+  - structure-fig5
+  - patent-us
+  - ligand
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/fidaxomicin.yaml
+    role: Native curated primary target, mode and evidence annotations; validated
+      writer required for future correction
+  rule_id: review-checklist:Identity/Grounding
+  native_severity: major
+  normalization_reason: Missing stereochemical specificity and inconsistent exact
+    chemical links materially impair an already reviewed exact record; no opposite
+    identity or absence of antibacterial eligibility is established.
+- finding_id: F2
+  issue_key: fidaxomicin-rpob-example-q18cf4-is-fusa
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The RpoB protein example identifies elongation factor G
+  description: Q18CF4 is reviewed FusA/elongation factor G, not RNA polymerase beta.
+    Original strain 630 rpoB locus CD630_00660, reviewed Q18CF1 and PDB 7L7B chain-C
+    mapping identify the correct example. Repair the overlay and native example through
+    the validated writer while retaining the taxon-agnostic complex target and supported
+    Q18CF3 RpoC example.
+  target_ids:
+  - CHEBI:68590
+  field_paths:
+  - molecular_targets[1].protein_examples[0]
+  - curation_status
+  evidence_ids:
+  - native
+  - owners
+  - wrong-protein
+  - correct-beta
+  - correct-beta-prime
+  - pdb-mapping
+  - mechanism2022
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Curated reviewed UniProt protein examples
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/curate_uniprot_protein_examples.py
+    role: Validated protein-example curator
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/fidaxomicin.yaml
+    role: Native curated primary target, mode and evidence annotations; validated
+      writer required for future correction
+  rule_id: review-checklist:Mechanism/Targets
+  native_severity: major
+  normalization_reason: A protein accession for a different essential molecular machine
+    is asserted as an experimental target-complex example despite passing schema checks.
+actions:
+- action_id: A1
+  description: Adjudicate the fully specified natural fidaxomicin identity and correct
+    its maintained structural and exact-link representation.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:68590
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/fidaxomicin.yaml
+    role: Native curated primary target, mode and evidence annotations; validated
+      writer required for future correction
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Map native InChI atom 34 to original numbered C18 and independently verify 18S
+    without changing the already supported C19R centre.
+  - Resolve upstream ChEBI partial representation and intended exact-record identity
+    before replacing graph or grounding; preserve source provenance.
+  - Require consistent SMILES, InChI, key and exact chemical xrefs; preserve drug_xrefs
+    as broader associations.
+  - Run regenerated schema/strict, chemistry, exact-link and corpus checks, then reassess
+    REVIEWED status without erasing historical events.
+- action_id: A2
+  description: Replace the incorrect RpoB accession with the verified strain 630 RNA
+    polymerase beta example through its maintained curator.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:68590
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Curated reviewed UniProt protein examples
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/curate_uniprot_protein_examples.py
+    role: Validated protein-example curator
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/fidaxomicin.yaml
+    role: Native curated primary target, mode and evidence annotations; validated
+      writer required for future correction
+  generator: scripts/curate_uniprot_protein_examples.py
+  acceptance_checks:
+  - Verify Q18CF1 reviewed status, rpoB/CD630_00660, taxon 272563 and PDB 7L7B chain-C
+    sequence mapping at correction time.
+  - Remove Q18CF4/FusA from the RpoB example; retain Q18CF3/RpoC and the bacterial
+    RNAP complex-level target.
+  - Keep heterologous expression host distinct from target origin, and do not turn
+    transcription IC50 into MIC.
+  - Run protein-example audit and required native/corpus gates; append an accurate
+    curation event and reassess sign-off.
+limitations:
+- All fifteen adopted PMID leads were read at complete original abstract depth. Selected
+  2022 mechanism, 2017 structure and 2012 assay papers were read more deeply as individually
+  documented; other reviews and clinical papers were not represented as full-text
+  experimental audits.
+- The 2017 original main paper, crystallographic methods and actual Figures 1/4/5
+  were inspected, but raw diffraction intensities were not re-refined. The 2022 main
+  Results, relevant Methods and actual Figures 1/4 were inspected; raw cryo-EM data
+  were not reprocessed.
+- Both native patents were resolved and relevant exact-structure, preparation and
+  activity sections inspected. Every broad formulation claim and numerical table cell
+  was not independently audited. Historical OPT-80/lipiarmycin aliases do not imply
+  every named preparation was one pure molecule.
+- Reaxys 12687773 returned 403. The CAS number is consistent with public identity
+  sources, but an authoritative CAS registry graph was not independently obtained.
+  Wikipedia was resolved only as a document link, not as primary scientific support.
+- The Taiwan 2012 source has differing abstract and Table 1 MIC90 values. No numerical
+  susceptibility assertion or clinical breakpoint is imported from that conflict.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Native records, maintained sources and immutable reviews were not edited. Original
+  thirteen hashes and all expanded inputs were rechecked. Optional links, tags and
+  notes were checked specifically for fidaxomicin.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.3390/antibiotics6010007
+- https://doi.org/10.1038/s41586-022-04545-z
+- https://www.uniprot.org/uniprotkb/Q18CF1/entry
+tags:
+- fidaxomicin
+- rna-polymerase
+- stereochemistry
+- protein-grounding

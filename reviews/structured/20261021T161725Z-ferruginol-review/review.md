@@ -1,0 +1,844 @@
+# Ferruginol: exact structure and antibacterial role supported; mixed-origin parent conflicts with biosynthesis
+
+- Review: 20261021T161725Z-ferruginol-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T15:56:42Z
+- Finished UTC: 2026-10-21T16:17:25Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The entire seeded ferruginol record has consistent native and accessible authority structures and primary antibacterial support. One imported parent is not supported: CHEBI:64419 meroterpenoid denotes mixed polyketide/terpenoid origin, whereas the experimentally reconstructed ferruginol pathway retains a diterpenoid carbon skeleton. This is a bounded ontology-parent correction, not a wrong-compound identity or a reason to remove antibacterial filing. MetaCyc and proprietary Reaxys verification remain limited.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 438; one complete exact native record. All thirteen original input hashes were verified before judgment and retained unchanged; the actual source is the captured ChEBI inventory.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:78274 | data/antibiotics/antibacterial/ferruginol.yaml | generated | ferruginol |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema verification | passed | True | CHEBI:78274 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:78274 | Actual focused execution exited 0. |
+| Focused chemistry verification | passed | False | CHEBI:78274 | Actual focused execution exited 0. |
+| Independent native and current-authority graph comparison | passed | False | CHEBI:78274 | All seven parsed native/authority encodings reproduce the complete native key and two assigned stereocentres; the KNApSAcK displayed key inconsistency is recorded separately from its agreeing structure encodings. |
+| Authoritative full QC | failed | True | CHEBI:78274 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:78274 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:78274 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:78274 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:78274 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:78274 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:78274 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:78274 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:78274 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact ferruginol form and accessible equivalents
+
+identity: supported. Targets: CHEBI:78274.
+
+Native constitution, assigned stereochemistry, formula, charge, masses, systematic aliases and accessible exact chemical authorities agree. Primary characterization supports the constitutional assignment; absolute configuration was not independently redetermined from raw experimental spectra. The KNApSAcK key-display inconsistency is separated from its agreeing graphs.
+
+### Strictly broader ontology parents
+
+identity: concern. Targets: CHEBI:78274.
+
+Phenols, abietane diterpenoid and carbotricyclic compound fit the native structure. The fourth parent, meroterpenoid, asserts mixed polyketide/terpenoid origin contrary to the experimentally established diterpenoid carbon skeleton. Source provenance is correct, but this one ontology grounding requires correction.
+
+### Antibacterial role and filing
+
+evidence: supported. Targets: CHEBI:78274.
+
+Purified-compound primary activity supports the antibacterial role and filing. Plant extract, host-cell, antiplasmodial and biosynthetic studies are not conflated with exact bacterial susceptibility or target binding.
+
+### Unasserted mode, target and biological enrichment
+
+completeness: supported. Targets: CHEBI:78274.
+
+No antibacterial mode, gene, locus, pathway, stress-response or expression dataset is named in the native record, so no native iModulonDB query is applicable. The functional efflux lead could motivate optional curation but does not compel a direct-binding assertion. Biosynthesis genes in the external literature remain production context. Missing optional targets, activity objects, producers and graphs are not independent defects.
+
+### MetaCyc and Reaxys exact-structure depth
+
+identity: unknown. Targets: CHEBI:78274.
+
+The identifiers agree with the current source list, but underlying MetaCyc and Reaxys structures were not accessible in the attempted public routes. The review therefore does not fully certify those two equivalences.
+
+### Source ownership, every adopted lead and history
+
+provenance: supported. Targets: CHEBI:78274.
+
+Every native field and all eight adopted abstracts were assessed. The exact maintained row and transformation explain the emitted data, all initial hashes remain unchanged, and the scientific review does not promote SEEDED status.
+
+## Findings
+
+### F1: Remove or reconcile the mixed-origin meroterpenoid parent
+
+major / open / confirmed; issue key: ferruginol-meroterpenoid-parent-mixed-origin.
+
+parent_compounds[3] asserts CHEBI:64419 meroterpenoid, whose official definition and functional-parent relations require polyketide and terpenoid precursors. Ferruginol retains the C20 diterpenoid skeleton in isotope-feeding and reconstructed biosynthesis experiments. Its phenol is formed through oxidation/aromatization of that skeleton; being phenolic does not establish a polyketide-derived component. The current ChEBI source repeats the same edge, so this is an imported scientific-grounding problem rather than a transcription mismatch. The exact native chemical structure and antibacterial role remain supported.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Reconcile the exact ferruginol-to-meroterpenoid source edge through maintained harmonization and regenerate the record.
+
+- Retain the inspected official CHEBI:64419 definition/relations and original ferruginol biosynthesis evidence. Resolve the exact CHEBI:78274 is-a edge upstream or add a narrowly scoped maintained parent-exclusion decision; do not relabel a phenol as mixed-origin solely because it has an aromatic ring.
+- Preserve CHEBI:33853, CHEBI:36762, CHEBI:38032, the complete exact structure, source provenance and antibacterial role. Do not change sibling records or replace parent classes wholesale without separate review.
+- Regenerate through the maintained extractor/seeder and validated writer/event path. Run focused schema/strict checks, verify the corrected parent output and unchanged chemical key, and run corpus reproduction and applicable repository gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/ferruginol.yaml; Complete native YAML: all identity, synonym, parent, role, structure, cross-reference, source-concept and history fields. | supports | CHEBI:78274 denotes neutral ferruginol with two assigned stereocentres, formula C20H30O and key QXNWVJOHUAQHLM-AZUAARDMSA-N. Three systematic names, four broader parents, one antibacterial role, five exact xrefs and one Wikipedia document association are asserted. There is no mode, target scope, molecular target, activity measurement, resistance object, producer, clinical status, dataset, discussion or causal graph. Four source-seeding events and SEEDED status make no scientific review claim. |
+| owners | data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; conf/sources.yaml; Complete source row 2003; ChEBI extraction lines 180–337, applicable seeding identity/xref/parent handling and role-to-class configuration. | supports | The inventory reproduces the complete native record, including the disputed meroterpenoid parent, and supplies eight citation leads. The extractor imports allowed is-a relations and the seeder emits deduplicated parents; the antibacterial role maps to ANTIBACTERIAL. Non-antimicrobial ChEBI roles are intentionally outside this activity-role inventory, so their omission is not a defect. There is no additional exact ARO, PubChem-enrichment, target/resistance, FDA or MIBiG row in the inspected owner scans. The source concept mint and history are reproducible. |
+| authorities | CHEBI:78274; CAS:514-62-5; KEGG:C09092; KNApSAcK:C00003426; PubChem:442027; Complete current ChEBI response, KEGG entry and molfile, CAS-resolved PubChem properties, KNApSAcK identity fields; independent structure parsing. | supports | Native SMILES/InChI, current ChEBI molfile, KEGG molfile, CAS-resolved PubChem SMILES, and KNApSAcK SMILES/InChI all reproduce QXNWVJOHUAQHLM-AZUAARDMSA-N, two assigned S centres under their atom indexing, neutral charge and C20H30O. Formula, average/monoisotopic masses and systematic names agree. The native graph is not changed based on an unassigned drawing or a connectivity-only key. KNApSAcK displays QXNWVJOHUAQHLM-HOFUVJEBNA-N, inconsistent with the Standard InChI it supplies; both independently parsed KNApSAcK structure encodings nevertheless match the native exact structure. This external display inconsistency does not establish a wrong native xref. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/78274/; CHEBI:33853; CHEBI:36762; CHEBI:38032; CHEBI:33282; Entire exact ChEBI entry and official names/definitions for each retained role and non-disputed parent. | supports | The accessible current entry repeats the native names, graph, CAS and xrefs. Phenols, abietane diterpenoid and carbotricyclic compound are valid broader classes for the represented structure, and antibacterial agent is the correct role name. The definition correctly locates the phenolic substituent at C12 of an abietane skeleton. Its plural wording for one position is stylistic and does not change identity. |
+| meroterpenoid | CHEBI:64419; https://www.ebi.ac.uk/chebi/backend/api/public/compound/64419/; Complete official term definition and outgoing relations, inspected alongside the exact ferruginol is-a edge. | context_only | The parent is defined as an organooxygen natural-product class made from polyketide and terpenoid precursors. Its outgoing relations additionally name both polyketide and terpenoid as functional parents. The native source and current ChEBI explicitly attach ferruginol to this mixed-origin class; source agreement establishes provenance but does not validate the biology. |
+| biosynthesis2013 | PMID:23812755; DOI:10.1073/pnas.1218061110; https://pmc.ncbi.nlm.nih.gov/articles/PMC3718111/; Complete original main text, Results, Discussion and Methods; Figure 1 visually inspected. Supporting-information download was HTML rather than PDF and was not read. | refutes | The adopted study traces ferruginol to the C20 diterpene miltiradiene: fully carbon-13-labelled precursor is incorporated into ferruginol, and microsomal assays convert miltiradiene into a product matched to authentic ferruginol. The reconstructed yeast pathway uses GGPP production, two diterpene cyclases, a plant P450 and its reductase. The phenolic ring arises by oxidation/aromatization of the diterpenoid skeleton, not addition of a polyketide-derived ring. This positive pathway evidence conflicts with the imported mixed-origin parent. The paper also supplies genuine biosynthesis evidence distinct from mere isolation or tissue occurrence. The P450 is a biosynthetic enzyme, not an antimicrobial target of ferruginol. |
+| biosynthesis2015 | PMID:26020634; DOI:10.1371/journal.pone.0124106; https://pmc.ncbi.nlm.nih.gov/articles/PMC4447455/; Introduction, pertinent enzyme-characterization Results, Discussion and relevant experimental descriptions read; not every supplementary experiment or raw spectrum was audited. | refutes | The later original study functionally reconstructs ferruginol formation with diterpene synthases and CYP enzymes from Salvia fruticosa and rosemary. It distinguishes abietatriene as the P450 substrate following miltiradiene aromatization, so the earlier proposed detailed oxidation cascade is not treated as settled. Both studies retain a terpene-derived C20 skeleton rather than a mixed polyketide/terpene origin. Heterologous yeast and Nicotiana expression, plant accumulation and transcript correlations have distinct evidentiary scopes. None proves an antibacterial binding target. |
+| activity2018 | PMID:29522496; DOI:10.3390/molecules23030623; https://pmc.ncbi.nlm.nih.gov/articles/PMC6017395/; Entire original main text, full Table 1 and assay/characterization sections read; Figure 5 visually inspected. | supports | Ferruginol is isolated compound 4 from Salvia prattii roots, reported as 99.7% pure by HPLC and identified with MS and proton/carbon NMR comparison. Figure 5 and the C12 phenolic assignments agree with the native constitution. Table 1 reports MICs of 10 µg/mL for S. aureus ATCC25923 and 15 µg/mL for P. aeruginosa ATCC27853 and a hospital A. baumannii isolate whose strain identifier is not supplied. Methods use Mueller-Hinton broth, DMSO controls and 30 °C for 18 hours. These support antibacterial filing, not clinical breakpoints or species-wide susceptibility. The paper contains transcription issues in the ferruginol proton assignments, including H10 at an aromatic shift and a one-proton methyl-20 entry; absolute stereochemistry was not newly established by this study. Exact dilution-series reconstruction and raw spectra were not independently reanalysed. |
+| activity-older | PMID:18780250; DOI:10.1080/14786410802267510; PMID:17109904; DOI:10.1016/j.phytochem.2006.10.001; Complete indexed abstracts of the original 2008 isolation/activity study and 2006 resistance-modulation study. | supports | The 2008 study isolates ferruginol from Cryptomeria bark and reports bacterial growth inhibition. The 2006 paper reports ferruginol potentiation of oxacillin in EMRSA-15 and reduced ethidium-bromide efflux in a NorA-containing S. aureus strain. These are bounded whole-cell functional observations, not direct NorA binding or proof of one sole antibacterial mechanism. Full methods and original numerical tables were not obtained, so no precise target assertion or broad resistance classification is proposed. |
+| adopted-context | PMID:24690774; PMID:24710900; PMID:24651372; PMID:24417091; All four complete indexed abstracts; additional Introduction, Methods and selected initial Results of PMC3997644. | context_only | PMID24690774 tests Callitris extracts and describes ferruginol among their constituents; extract activity is not assigned quantitatively to purified ferruginol. PMID24710900 reports antiplasmodial plant-extract studies and refers to previously identified ferruginol; mouse extract efficacy is not exact-compound antibacterial efficacy. PMID24651372 maps ferruginol accumulation in Cryptomeria heartwood, supporting occurrence/distribution rather than a purified antibacterial assay. PMID24417091 describes engineered yeast conversion of miltiradiene, which is production/biotransformation context rather than microbial drug response. |
+| adopted-host | PMID:16202980; DOI:10.1016/j.bbrc.2005.09.110; PMID:18237473; DOI:10.1211/jpp.60.2.0014; PMID:18294971; DOI:10.1016/j.biochi.2008.01.011; Complete indexed abstracts of the remaining three adopted originals. | context_only | PMID18237473 studies gastroprotection in mice/rats and PMID18294971 studies human prostate cancer cells; neither establishes an antibacterial target. PMID16202980 studies human dendritic/T-cell effects and its abstract explicitly calls the material 19-hydroxyferruginol while shortening it to ferruginol. That identity ambiguity and its sesquiterpene terminology prevent automatic transfer to this exact C20H30O record. These are source leads, not native claim-level evidence objects; the extractor intentionally does not seed its bibliography as blanket support. |
+| access | metacyc.compound:CPD-16534; reaxys:5275000; wikipedia.en:Ferruginol; Current ChEBI imported identifiers; attempted public MetaCyc compound and XML routes; Wikipedia document scope. | context_only | Both MetaCyc routes returned the account/subscription page rather than an inspectable exact compound structure. Reaxys was checked only as the current imported ChEBI registry association. Neither inaccessible structure is declared verified. Wikipedia is correctly placed as a document link and is not used as primary biological evidence. No account creation, paid access or bypass was attempted. |
+| search | 438-inclusive-hits.txt; 438-parent-owner-search.txt; 438-literature.json; 438-fetch-results.json through 438-fetch3-results.json; Hidden- and ignored-inclusive local search; bounded exact-name primary literature and authority follow-up. | context_only | Searches covered native/owner/code/configuration/documentation/review surfaces and the exact identifier, name, key, CAS and mint. The hits identify the native record, actual row and review-readiness entry, plus the distinct sugiol record. No exact curator override or prior retained review was found in that bounded surface. An additional ignored-inclusive parent-override search covered conf, scripts, src, docs and curation; the inspected seeder currently emits source parents directly. The public follow-up inspected all eight adopted abstracts and exact primary antibacterial/biosynthetic studies, without treating search snippets as evidence. |
+| checks | 438-focused-results.json; 438-chemistry.json; 438-authority-chemistry.json; Actual documented per-record schema/strict gates and independent chemistry; unchanged-input recheck. | supports | Schema, strict and standalone chemistry all exit 0. All accessible exact-authority graphs agree. These checks validate representation and provenance but do not detect the unsupported mixed-biosynthetic-origin parent or certify natural-product identity independently of the cited sources. |
+
+## Limits And Additional Notes
+
+- MetaCyc compound/XML endpoints returned account-required pages; its underlying graph was not inspected. Reaxys was checked only through current ChEBI provenance. No paid or authenticated source was used.
+- All eight adopted complete abstracts were read. The 2013 biosynthesis and 2018 antibacterial main articles were read completely; the 2015 biosynthesis paper was read in the specified relevant sections. The 2014 heartwood paper was read at abstract, Introduction, Methods and selected Results depth, not as a complete image-analysis audit.
+- The 2013 supplementary-PDF route returned a download-preparation HTML page rather than PDF, so no supplementary content is claimed. Original raw spectra, optical-rotation experiments and absolute-configuration assignment were not independently reconstructed.
+- The 2018 activity study contains apparent NMR transcription inconsistencies, and its exact dilution series was not reconstructed from raw data. Its reported purified-compound activity supports the qualitative native role; the review does not certify clinical breakpoints or generalize the three strains.
+- The 2006 and 2008 activity studies were read at complete-abstract depth. Efflux modulation is not direct NorA binding, and host-cell response proteins or plant biosynthetic enzymes are not bacterial drug targets.
+- KNApSAcK displays an InChIKey different from the key independently reproduced by its own Standard InChI and SMILES. This source inconsistency is retained while recognizing that both accessible graphs match the native exact structure.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- The correction concerns one imported ontology parent. It does not require removal of ferruginol, inversion of its stereochemistry or reclassification of its supported antibacterial activity.
+- Optional future biological curation should preserve purified-compound versus extract effects, natural biosynthesis versus engineered conversion, and functional efflux observations versus direct binding.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T161725Z-ferruginol-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Ferruginol: exact structure and antibacterial role supported; mixed-origin
+  parent conflicts with biosynthesis'
+started_at: '2026-10-21T15:56:42Z'
+finished_at: '2026-10-21T16:17:25Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The entire seeded ferruginol record has consistent native and accessible
+  authority structures and primary antibacterial support. One imported parent is not
+  supported: CHEBI:64419 meroterpenoid denotes mixed polyketide/terpenoid origin,
+  whereas the experimentally reconstructed ferruginol pathway retains a diterpenoid
+  carbon skeleton. This is a bounded ontology-parent correction, not a wrong-compound
+  identity or a reason to remove antibacterial filing. MetaCyc and proprietary Reaxys
+  verification remain limited.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ferruginol.yaml
+    sha256: dbccd6d24dc044aacc1dc13c1d55dca67f93049ff7961436351211faf71b3dc0
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:78274
+  path: data/antibiotics/antibacterial/ferruginol.yaml
+  label: ferruginol
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 438; one complete exact native record. All thirteen original
+    input hashes were verified before judgment and retained unchanged; the actual
+    source is the captured ChEBI inventory.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:78274
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ferruginol.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ferruginol.yaml --out /private/tmp/am-review-session/438-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 438
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: Independent native and current-authority graph comparison
+  status: passed
+  required: false
+  summary: All seven parsed native/authority encodings reproduce the complete native
+    key and two assigned stereocentres; the KNApSAcK displayed key inconsistency is
+    recorded separately from its agreeing structure encodings.
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/438-authority-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:78274
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ferruginol.yaml
+  locator: 'Complete native YAML: all identity, synonym, parent, role, structure,
+    cross-reference, source-concept and history fields.'
+  accessed_at: '2026-10-21T16:12:39Z'
+  support: supports
+  summary: CHEBI:78274 denotes neutral ferruginol with two assigned stereocentres,
+    formula C20H30O and key QXNWVJOHUAQHLM-AZUAARDMSA-N. Three systematic names, four
+    broader parents, one antibacterial role, five exact xrefs and one Wikipedia document
+    association are asserted. There is no mode, target scope, molecular target, activity
+    measurement, resistance object, producer, clinical status, dataset, discussion
+    or causal graph. Four source-seeding events and SEEDED status make no scientific
+    review claim.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py; conf/sources.yaml
+  locator: Complete source row 2003; ChEBI extraction lines 180–337, applicable seeding
+    identity/xref/parent handling and role-to-class configuration.
+  accessed_at: '2026-10-21T16:12:39Z'
+  support: supports
+  summary: The inventory reproduces the complete native record, including the disputed
+    meroterpenoid parent, and supplies eight citation leads. The extractor imports
+    allowed is-a relations and the seeder emits deduplicated parents; the antibacterial
+    role maps to ANTIBACTERIAL. Non-antimicrobial ChEBI roles are intentionally outside
+    this activity-role inventory, so their omission is not a defect. There is no additional
+    exact ARO, PubChem-enrichment, target/resistance, FDA or MIBiG row in the inspected
+    owner scans. The source concept mint and history are reproducible.
+  snapshot_sha256: 9ae06932beba40b279aff09eb3b694341023de5d4857b86b4772aa567076ae1e
+- evidence_id: authorities
+  kind: authority
+  reference: CHEBI:78274; CAS:514-62-5; KEGG:C09092; KNApSAcK:C00003426; PubChem:442027
+  locator: Complete current ChEBI response, KEGG entry and molfile, CAS-resolved PubChem
+    properties, KNApSAcK identity fields; independent structure parsing.
+  accessed_at: '2026-10-21T16:12:39Z'
+  support: supports
+  summary: Native SMILES/InChI, current ChEBI molfile, KEGG molfile, CAS-resolved
+    PubChem SMILES, and KNApSAcK SMILES/InChI all reproduce QXNWVJOHUAQHLM-AZUAARDMSA-N,
+    two assigned S centres under their atom indexing, neutral charge and C20H30O.
+    Formula, average/monoisotopic masses and systematic names agree. The native graph
+    is not changed based on an unassigned drawing or a connectivity-only key. KNApSAcK
+    displays QXNWVJOHUAQHLM-HOFUVJEBNA-N, inconsistent with the Standard InChI it
+    supplies; both independently parsed KNApSAcK structure encodings nevertheless
+    match the native exact structure. This external display inconsistency does not
+    establish a wrong native xref.
+  snapshot_sha256: a60b8112315bb31b1100f4c0cd5267a9ec410a06383da025d3c66a6d53df60f2
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/78274/; CHEBI:33853;
+    CHEBI:36762; CHEBI:38032; CHEBI:33282
+  locator: Entire exact ChEBI entry and official names/definitions for each retained
+    role and non-disputed parent.
+  accessed_at: '2026-10-21T16:08:32Z'
+  support: supports
+  summary: The accessible current entry repeats the native names, graph, CAS and xrefs.
+    Phenols, abietane diterpenoid and carbotricyclic compound are valid broader classes
+    for the represented structure, and antibacterial agent is the correct role name.
+    The definition correctly locates the phenolic substituent at C12 of an abietane
+    skeleton. Its plural wording for one position is stylistic and does not change
+    identity.
+  snapshot_sha256: 787c987a08286b3f176b168d8520ab70a7716f9b0502adaa842442a34874b830
+- evidence_id: meroterpenoid
+  kind: authority
+  reference: CHEBI:64419; https://www.ebi.ac.uk/chebi/backend/api/public/compound/64419/
+  locator: Complete official term definition and outgoing relations, inspected alongside
+    the exact ferruginol is-a edge.
+  accessed_at: '2026-10-21T16:08:34Z'
+  support: context_only
+  summary: The parent is defined as an organooxygen natural-product class made from
+    polyketide and terpenoid precursors. Its outgoing relations additionally name
+    both polyketide and terpenoid as functional parents. The native source and current
+    ChEBI explicitly attach ferruginol to this mixed-origin class; source agreement
+    establishes provenance but does not validate the biology.
+  snapshot_sha256: 26a2e424478ee1d3db24aa8f3d15a67cbe2bd1acad731a9fca26b1ef09017c27
+- evidence_id: biosynthesis2013
+  kind: primary_source
+  reference: PMID:23812755; DOI:10.1073/pnas.1218061110; https://pmc.ncbi.nlm.nih.gov/articles/PMC3718111/
+  locator: Complete original main text, Results, Discussion and Methods; Figure 1
+    visually inspected. Supporting-information download was HTML rather than PDF and
+    was not read.
+  accessed_at: '2026-10-21T16:09:23Z'
+  support: refutes
+  summary: 'The adopted study traces ferruginol to the C20 diterpene miltiradiene:
+    fully carbon-13-labelled precursor is incorporated into ferruginol, and microsomal
+    assays convert miltiradiene into a product matched to authentic ferruginol. The
+    reconstructed yeast pathway uses GGPP production, two diterpene cyclases, a plant
+    P450 and its reductase. The phenolic ring arises by oxidation/aromatization of
+    the diterpenoid skeleton, not addition of a polyketide-derived ring. This positive
+    pathway evidence conflicts with the imported mixed-origin parent. The paper also
+    supplies genuine biosynthesis evidence distinct from mere isolation or tissue
+    occurrence. The P450 is a biosynthetic enzyme, not an antimicrobial target of
+    ferruginol.'
+  snapshot_sha256: 58e7e2271423c2100e58ace2b2df193be8dde81994cf3cd62b9cd4f6d7b203e6
+- evidence_id: biosynthesis2015
+  kind: primary_source
+  reference: PMID:26020634; DOI:10.1371/journal.pone.0124106; https://pmc.ncbi.nlm.nih.gov/articles/PMC4447455/
+  locator: Introduction, pertinent enzyme-characterization Results, Discussion and
+    relevant experimental descriptions read; not every supplementary experiment or
+    raw spectrum was audited.
+  accessed_at: '2026-10-21T16:10:06Z'
+  support: refutes
+  summary: The later original study functionally reconstructs ferruginol formation
+    with diterpene synthases and CYP enzymes from Salvia fruticosa and rosemary. It
+    distinguishes abietatriene as the P450 substrate following miltiradiene aromatization,
+    so the earlier proposed detailed oxidation cascade is not treated as settled.
+    Both studies retain a terpene-derived C20 skeleton rather than a mixed polyketide/terpene
+    origin. Heterologous yeast and Nicotiana expression, plant accumulation and transcript
+    correlations have distinct evidentiary scopes. None proves an antibacterial binding
+    target.
+  snapshot_sha256: 81c0a789046d5203689f8d5ffea37fe8ba097dbcf533a6dd26c224b6206e4073
+- evidence_id: activity2018
+  kind: primary_source
+  reference: PMID:29522496; DOI:10.3390/molecules23030623; https://pmc.ncbi.nlm.nih.gov/articles/PMC6017395/
+  locator: Entire original main text, full Table 1 and assay/characterization sections
+    read; Figure 5 visually inspected.
+  accessed_at: '2026-10-21T16:09:23Z'
+  support: supports
+  summary: Ferruginol is isolated compound 4 from Salvia prattii roots, reported as
+    99.7% pure by HPLC and identified with MS and proton/carbon NMR comparison. Figure
+    5 and the C12 phenolic assignments agree with the native constitution. Table 1
+    reports MICs of 10 µg/mL for S. aureus ATCC25923 and 15 µg/mL for P. aeruginosa
+    ATCC27853 and a hospital A. baumannii isolate whose strain identifier is not supplied.
+    Methods use Mueller-Hinton broth, DMSO controls and 30 °C for 18 hours. These
+    support antibacterial filing, not clinical breakpoints or species-wide susceptibility.
+    The paper contains transcription issues in the ferruginol proton assignments,
+    including H10 at an aromatic shift and a one-proton methyl-20 entry; absolute
+    stereochemistry was not newly established by this study. Exact dilution-series
+    reconstruction and raw spectra were not independently reanalysed.
+  snapshot_sha256: 12f94bb3fbb49e6d8204b8affe052849a52fe1f9f708d1c71b71c9f585f890b1
+- evidence_id: activity-older
+  kind: primary_source
+  reference: PMID:18780250; DOI:10.1080/14786410802267510; PMID:17109904; DOI:10.1016/j.phytochem.2006.10.001
+  locator: Complete indexed abstracts of the original 2008 isolation/activity study
+    and 2006 resistance-modulation study.
+  accessed_at: '2026-10-21T16:10:06Z'
+  support: supports
+  summary: The 2008 study isolates ferruginol from Cryptomeria bark and reports bacterial
+    growth inhibition. The 2006 paper reports ferruginol potentiation of oxacillin
+    in EMRSA-15 and reduced ethidium-bromide efflux in a NorA-containing S. aureus
+    strain. These are bounded whole-cell functional observations, not direct NorA
+    binding or proof of one sole antibacterial mechanism. Full methods and original
+    numerical tables were not obtained, so no precise target assertion or broad resistance
+    classification is proposed.
+  snapshot_sha256: 59ea27ae0e640a4b77923de5fa7663c37358a904d1fd7cf23ae4352b055c851c
+- evidence_id: adopted-context
+  kind: primary_source
+  reference: PMID:24690774; PMID:24710900; PMID:24651372; PMID:24417091
+  locator: All four complete indexed abstracts; additional Introduction, Methods and
+    selected initial Results of PMC3997644.
+  accessed_at: '2026-10-21T16:08:33Z'
+  support: context_only
+  summary: PMID24690774 tests Callitris extracts and describes ferruginol among their
+    constituents; extract activity is not assigned quantitatively to purified ferruginol.
+    PMID24710900 reports antiplasmodial plant-extract studies and refers to previously
+    identified ferruginol; mouse extract efficacy is not exact-compound antibacterial
+    efficacy. PMID24651372 maps ferruginol accumulation in Cryptomeria heartwood,
+    supporting occurrence/distribution rather than a purified antibacterial assay.
+    PMID24417091 describes engineered yeast conversion of miltiradiene, which is production/biotransformation
+    context rather than microbial drug response.
+  snapshot_sha256: 1370e9b96937b04a9f44284e17e51b66d658c86090a3d91139bf307de744dfcb
+- evidence_id: adopted-host
+  kind: primary_source
+  reference: PMID:16202980; DOI:10.1016/j.bbrc.2005.09.110; PMID:18237473; DOI:10.1211/jpp.60.2.0014;
+    PMID:18294971; DOI:10.1016/j.biochi.2008.01.011
+  locator: Complete indexed abstracts of the remaining three adopted originals.
+  accessed_at: '2026-10-21T16:08:33Z'
+  support: context_only
+  summary: PMID18237473 studies gastroprotection in mice/rats and PMID18294971 studies
+    human prostate cancer cells; neither establishes an antibacterial target. PMID16202980
+    studies human dendritic/T-cell effects and its abstract explicitly calls the material
+    19-hydroxyferruginol while shortening it to ferruginol. That identity ambiguity
+    and its sesquiterpene terminology prevent automatic transfer to this exact C20H30O
+    record. These are source leads, not native claim-level evidence objects; the extractor
+    intentionally does not seed its bibliography as blanket support.
+  snapshot_sha256: 1370e9b96937b04a9f44284e17e51b66d658c86090a3d91139bf307de744dfcb
+- evidence_id: access
+  kind: authority
+  reference: metacyc.compound:CPD-16534; reaxys:5275000; wikipedia.en:Ferruginol
+  locator: Current ChEBI imported identifiers; attempted public MetaCyc compound and
+    XML routes; Wikipedia document scope.
+  accessed_at: '2026-10-21T16:08:33Z'
+  support: context_only
+  summary: Both MetaCyc routes returned the account/subscription page rather than
+    an inspectable exact compound structure. Reaxys was checked only as the current
+    imported ChEBI registry association. Neither inaccessible structure is declared
+    verified. Wikipedia is correctly placed as a document link and is not used as
+    primary biological evidence. No account creation, paid access or bypass was attempted.
+  snapshot_sha256: f14da65987911a85a9690dd922111c9327284a84f735ba2e46f2d1f25e899497
+- evidence_id: search
+  kind: search
+  reference: 438-inclusive-hits.txt; 438-parent-owner-search.txt; 438-literature.json;
+    438-fetch-results.json through 438-fetch3-results.json
+  locator: Hidden- and ignored-inclusive local search; bounded exact-name primary
+    literature and authority follow-up.
+  accessed_at: '2026-10-21T16:12:39Z'
+  support: context_only
+  summary: Searches covered native/owner/code/configuration/documentation/review surfaces
+    and the exact identifier, name, key, CAS and mint. The hits identify the native
+    record, actual row and review-readiness entry, plus the distinct sugiol record.
+    No exact curator override or prior retained review was found in that bounded surface.
+    An additional ignored-inclusive parent-override search covered conf, scripts,
+    src, docs and curation; the inspected seeder currently emits source parents directly.
+    The public follow-up inspected all eight adopted abstracts and exact primary antibacterial/biosynthetic
+    studies, without treating search snippets as evidence.
+  search_scope: 2026-10-21; rg --no-ignore --hidden across data, curation, conf, scripts,
+    src, docs, .claude, reviews and reports for CHEBI:78274, ferruginol, QXNWVJOHUAQHLM,
+    514-62-5 and chebi-d6780b7a91. Bounded Europe PMC exact-name activity/configuration
+    search, all adopted PMIDs, official identity routes, and exact meroterpenoid/biosynthesis
+    follow-up.
+  snapshot_sha256: d05c123b2e3720a4f5356580a38b56246847bf10979fe05a7061661277ebfb70
+- evidence_id: checks
+  kind: validation
+  reference: 438-focused-results.json; 438-chemistry.json; 438-authority-chemistry.json
+  locator: Actual documented per-record schema/strict gates and independent chemistry;
+    unchanged-input recheck.
+  accessed_at: '2026-10-21T16:12:39Z'
+  support: supports
+  summary: Schema, strict and standalone chemistry all exit 0. All accessible exact-authority
+    graphs agree. These checks validate representation and provenance but do not detect
+    the unsupported mixed-biosynthetic-origin parent or certify natural-product identity
+    independently of the cited sources.
+  snapshot_sha256: cd2fcce5f5e1d22be9cbd5719c9ccff6db2031303aaf30187697e20afe824292
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact ferruginol form and accessible equivalents
+  outcome: supported
+  summary: Native constitution, assigned stereochemistry, formula, charge, masses,
+    systematic aliases and accessible exact chemical authorities agree. Primary characterization
+    supports the constitutional assignment; absolute configuration was not independently
+    redetermined from raw experimental spectra. The KNApSAcK key-display inconsistency
+    is separated from its agreeing graphs.
+  target_ids:
+  - CHEBI:78274
+  evidence_ids:
+  - native
+  - authorities
+  - chebi
+  - activity2018
+  - checks
+- assessment_id: parents
+  area: identity
+  topic: Strictly broader ontology parents
+  outcome: concern
+  summary: Phenols, abietane diterpenoid and carbotricyclic compound fit the native
+    structure. The fourth parent, meroterpenoid, asserts mixed polyketide/terpenoid
+    origin contrary to the experimentally established diterpenoid carbon skeleton.
+    Source provenance is correct, but this one ontology grounding requires correction.
+  target_ids:
+  - CHEBI:78274
+  evidence_ids:
+  - meroterpenoid
+  - biosynthesis2013
+  - biosynthesis2015
+  - owners
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and filing
+  outcome: supported
+  summary: Purified-compound primary activity supports the antibacterial role and
+    filing. Plant extract, host-cell, antiplasmodial and biosynthetic studies are
+    not conflated with exact bacterial susceptibility or target binding.
+  target_ids:
+  - CHEBI:78274
+  evidence_ids:
+  - activity2018
+  - activity-older
+  - adopted-context
+  - adopted-host
+- assessment_id: mechanism
+  area: completeness
+  topic: Unasserted mode, target and biological enrichment
+  outcome: supported
+  summary: No antibacterial mode, gene, locus, pathway, stress-response or expression
+    dataset is named in the native record, so no native iModulonDB query is applicable.
+    The functional efflux lead could motivate optional curation but does not compel
+    a direct-binding assertion. Biosynthesis genes in the external literature remain
+    production context. Missing optional targets, activity objects, producers and
+    graphs are not independent defects.
+  target_ids:
+  - CHEBI:78274
+  evidence_ids:
+  - native
+  - activity-older
+  - biosynthesis2013
+  - biosynthesis2015
+- assessment_id: unavailable-xrefs
+  area: identity
+  topic: MetaCyc and Reaxys exact-structure depth
+  outcome: unknown
+  summary: The identifiers agree with the current source list, but underlying MetaCyc
+    and Reaxys structures were not accessible in the attempted public routes. The
+    review therefore does not fully certify those two equivalences.
+  target_ids:
+  - CHEBI:78274
+  evidence_ids:
+  - access
+  - chebi
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership, every adopted lead and history
+  outcome: supported
+  summary: Every native field and all eight adopted abstracts were assessed. The exact
+    maintained row and transformation explain the emitted data, all initial hashes
+    remain unchanged, and the scientific review does not promote SEEDED status.
+  target_ids:
+  - CHEBI:78274
+  evidence_ids:
+  - owners
+  - native
+  - adopted-context
+  - adopted-host
+  - biosynthesis2013
+  - search
+  - checks
+findings:
+- finding_id: F1
+  issue_key: ferruginol-meroterpenoid-parent-mixed-origin
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Remove or reconcile the mixed-origin meroterpenoid parent
+  description: parent_compounds[3] asserts CHEBI:64419 meroterpenoid, whose official
+    definition and functional-parent relations require polyketide and terpenoid precursors.
+    Ferruginol retains the C20 diterpenoid skeleton in isotope-feeding and reconstructed
+    biosynthesis experiments. Its phenol is formed through oxidation/aromatization
+    of that skeleton; being phenolic does not establish a polyketide-derived component.
+    The current ChEBI source repeats the same edge, so this is an imported scientific-grounding
+    problem rather than a transcription mismatch. The exact native chemical structure
+    and antibacterial role remain supported.
+  target_ids:
+  - CHEBI:78274
+  field_paths:
+  - parent_compounds[3]
+  evidence_ids:
+  - native
+  - owners
+  - meroterpenoid
+  - biosynthesis2013
+  - biosynthesis2015
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Imported exact ChEBI parent inventory
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI is-a relation extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-specific harmonization policy if an upstream correction
+      cannot be adopted immediately
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible parent emission
+  rule_id: 'CLAUDE.md semantic invariants: parent_compounds means strictly broader;
+    native equivalence/classification checklist; review skill wrong ontology grounding'
+  native_severity: major
+  normalization_reason: A retained ontology parent makes an unsupported substantive
+    biosynthetic-class assertion. This is neither a missing optional field nor a wrong-compound
+    identity; the correction is confined to that parent edge.
+actions:
+- action_id: A1
+  description: Reconcile the exact ferruginol-to-meroterpenoid source edge through
+    maintained harmonization and regenerate the record.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:78274
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Imported exact ChEBI parent inventory
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI is-a relation extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-specific harmonization policy if an upstream correction
+      cannot be adopted immediately
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible parent emission
+  acceptance_checks:
+  - Retain the inspected official CHEBI:64419 definition/relations and original ferruginol
+    biosynthesis evidence. Resolve the exact CHEBI:78274 is-a edge upstream or add
+    a narrowly scoped maintained parent-exclusion decision; do not relabel a phenol
+    as mixed-origin solely because it has an aromatic ring.
+  - Preserve CHEBI:33853, CHEBI:36762, CHEBI:38032, the complete exact structure,
+    source provenance and antibacterial role. Do not change sibling records or replace
+    parent classes wholesale without separate review.
+  - Regenerate through the maintained extractor/seeder and validated writer/event
+    path. Run focused schema/strict checks, verify the corrected parent output and
+    unchanged chemical key, and run corpus reproduction and applicable repository
+    gates.
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+limitations:
+- MetaCyc compound/XML endpoints returned account-required pages; its underlying graph
+  was not inspected. Reaxys was checked only through current ChEBI provenance. No
+  paid or authenticated source was used.
+- All eight adopted complete abstracts were read. The 2013 biosynthesis and 2018 antibacterial
+  main articles were read completely; the 2015 biosynthesis paper was read in the
+  specified relevant sections. The 2014 heartwood paper was read at abstract, Introduction,
+  Methods and selected Results depth, not as a complete image-analysis audit.
+- The 2013 supplementary-PDF route returned a download-preparation HTML page rather
+  than PDF, so no supplementary content is claimed. Original raw spectra, optical-rotation
+  experiments and absolute-configuration assignment were not independently reconstructed.
+- The 2018 activity study contains apparent NMR transcription inconsistencies, and
+  its exact dilution series was not reconstructed from raw data. Its reported purified-compound
+  activity supports the qualitative native role; the review does not certify clinical
+  breakpoints or generalize the three strains.
+- The 2006 and 2008 activity studies were read at complete-abstract depth. Efflux
+  modulation is not direct NorA binding, and host-cell response proteins or plant
+  biosynthetic enzymes are not bacterial drug targets.
+- KNApSAcK displays an InChIKey different from the key independently reproduced by
+  its own Standard InChI and SMILES. This source inconsistency is retained while recognizing
+  that both accessible graphs match the native exact structure.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- The correction concerns one imported ontology parent. It does not require removal
+  of ferruginol, inversion of its stereochemistry or reclassification of its supported
+  antibacterial activity.
+- Optional future biological curation should preserve purified-compound versus extract
+  effects, natural biosynthesis versus engineered conversion, and functional efflux
+  observations versus direct binding.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
