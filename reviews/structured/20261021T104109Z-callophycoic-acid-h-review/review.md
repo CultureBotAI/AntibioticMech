@@ -1,0 +1,766 @@
+# Review of callophycoic acid H
+
+- Review: 20261021T104109Z-callophycoic-acid-h-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T10:21:07Z
+- Finished UTC: 2026-10-21T10:41:09Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Callophycoic acid H has coherent current database identity and its own original bacterial MICs support antibacterial filing. The source establishes a dibrominated aromatic/decalin structure by comparison with G but does not establish absolute handedness. Native fully specified stereochemistry therefore needs source qualification. Original antimalarial and cancer endpoints are censored bounds, not positive potency or universal inactivity.
+
+## Scope And Provenance
+
+Entire SEEDED record and three history events; ChEBI identity, roles, parents and source owners; sole adopted PMID original main text with exact compound 8 structure, Table 3 row and methods; 2012/2024 context assessed without transferring other-congener experiments.
+
+Selection: Queue index186; original13 input hashes preserved; one exact target.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:65564 | data/antibiotics/antibacterial/callophycoic-acid-h.yaml | generated | callophycoic acid H |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema check | passed | True | CHEBI:65564 | Exit0. |
+| Documented strict check | passed | True | CHEBI:65564 | Exit0; zero ERROR rows. |
+| Supplemental exact graph and source checks | passed | False | CHEBI:65564 | Exit0; three current database representations agree with native fully configured graph. |
+| Structured-source applicability | not_applicable | False | CHEBI:65564 | No named microbial gene, protein, regulator, pathway or transcriptomics claim occurs in this record. Isolation, phenotypic activity and chemical stereochemistry do not trigger a gene-module query. |
+| Authoritative full QC | failed | True | CHEBI:65564 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:65564 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:65564 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:65564 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:65564 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:65564 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:65564 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:65564 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:65564 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact graph versus source stereochemistry
+
+identity: concern. Targets: CHEBI:65564.
+
+Database graph is coherent but its unqualified absolute hand is not established by the adopted primary paper.
+
+### Chemical parents and antibacterial filing
+
+grounding: supported. Targets: CHEBI:65564.
+
+Chemical parents fit and exact compound 8 bacterial endpoints support the filing.
+
+### Antimalarial and anticancer wording
+
+evidence: unknown. Targets: CHEBI:65564.
+
+Current ChEBI carries the roles/wording; original endpoints are above test limits and do not independently demonstrate the claimed positive activities. No universal negative is inferred.
+
+### Mode and target enrichment
+
+completeness: unknown. Targets: CHEBI:65564.
+
+No primary exact-compound molecular mechanism was established in the inspected sources; absence of optional target fields is not itself a defect.
+
+### Algal isolation scope
+
+evidence: unknown. Targets: CHEBI:65564.
+
+Original morphology supports C. serratus isolation wording, but2012 attributes the earlier metabolite group to C. densus. Exact voucher reconciliation remains unresolved; biosynthetic pathways remain hypothetical.
+
+### Single adopted primary and maintained ownership
+
+provenance: supported. Targets: CHEBI:65564.
+
+Sole adopted PMID and three history events checked; records remain unchanged.
+
+### Focused validation
+
+schema: supported. Targets: CHEBI:65564.
+
+Schema, strict and supplemental identity assertions pass.
+
+### Optional exact-compound antifungal enrichment
+
+completeness: supported. Targets: CHEBI:65564.
+
+Later pure-compound Lindra assays support bounded antifungal enrichment. Missing optional observations do not invalidate the antibacterial filing.
+
+## Findings
+
+### F1: Preserve the original unassigned absolute configuration
+
+major / open / confirmed; issue key: chebi-65564-unqualified-absolute-stereochemistry.
+
+The original paper establishes H as the aromatic-brominated congener of G and shares relative decalin NOE geometry, while explicitly leaving G absolute hand unassigned and providing no independent H determination. The native fully configured graph and exact stereochemical synonym choose one hand without uncertainty discussion. Later conserved-core reasoning is not a direct H experiment. This is a support/qualification finding, not proof the native enantiomer is wrong.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Adjudicate absolute-hand provenance and retain explicit uncertainty through maintained curation.
+
+- Locate a H-specific primary absolute-configuration determination or document explicitly that native hand remains the current ChEBI assignment with original relative-only support. Do not cite A crystal or2024 C-Xray statement as direct H evidence.
+- Add a source-linked unresolved identity discussion through the validated curator workflow; keep SEEDED until exact identity can meet native sign-off. If structure/synonym must change, implement reproducibly in maintained source/transform/decision inputs and preserve known relative configuration; do not simply erase all stereo or invert centers without evidence.
+- Keep original bacterial MICs and censored antimalarial/cancer bounds tied to compound 8; any quantitative adoption must resolve the stated strain identifiers and referenced bacterial protocol.
+- Regenerate only under curation authorization and run focused schema/strict, source provenance, reference/history and full corpus gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/callophycoic-acid-h.yaml; Entire YAML and three history events | supports | SEEDED/EXACT ChEBI record contains structure, definition, exact stereochemical synonym, parents and antibacterial/antimalarial roles. No target, mechanism, resistance, quantitative activity or curated producer object is asserted. |
+| chemistry | CHEBI:65564;ChemSpider:27023093;PubChem:23584316; 186-chemistry.py;186-chemistry.json;186-ols.json;186-chebi.html;186-chemspider.html;186-pubchem-key.json | supports | SMILES/InChI/key, neutral C27H36Br2O3, masses and all five configured centers are coherent. Current external representations reproduce JGBUIUFDBKKZNT-WBNSUDINSA-N and exact dibrominated identity. Four chemical parents fit. Agreement does not independently prove absolute handedness. |
+| original-stereo | PMID:17715978; DOI:10.1021/jo071210y;179-PMC3374858.html;compound8 discussion and combined structural panel179-xray.jpg | partial | H differs from G by an aromatic bromine; exact NMR/MS establish its trisubstituted benzoic acid moiety and shared decalin connectivity. Original relative-NOE discussion for7–9 supports shared relative decalin geometry; the text explicitly leaves G absolute hand unassigned and supplies no independent H absolute assignment. The crystal is A, not H. |
+| original-activity | PMID:17715978; Original Table3 row8 and Pharmacological Assays;179-PMC3374858.html | partial | H bacterial MIC is 27.4 micromolar in both the paper-labelled S. aureus and E. faecium assays. Antitubercular MIC&gt;50,11-cancer-line mean IC50&gt;25 and P. falciparum3D7 IC50&gt;100 micromolar are censored limits; antifungal was not tested. These do not demonstrate positive antimalarial/cancer potency or universal inactivity. No neighboring row is imported. |
+| isolation | PMID:17715978; Original Biological Material,Isolation and compound8 characterization | supports | H was purified from the originally morphologically identified Fijian C. serratus material:2.4mg, positive optical rotation and mass consistent with the dibrominated formula. A voucher was deposited. Proposed cyclization/biosynthetic pathways remain hypotheses. |
+| later-stereo | PMID:38935812; DOI:10.1021/acs.joc.4c00905;185-2024.html;Results/Discussion and decalin-core paragraph | context_only | The 2024 empirical optical-superposition analysis assigns remote C16 in callophycols A/B and assumes conserved arylmethyl-decalin handedness. It is not an independent H absolute determination. Its claim of C crystallography conflicts with original 2007 A crystallography; do not use it as direct H evidence. |
+| later-context | PMID:22920243; DOI:10.1021/jo301246x;185-2012.html;introductory taxonomic context and source boundaries | context_only | The 2012 paper attributes earlier callophycoic acids/callophycols to C. densus, contrasting with2007 morphology-based C. serratus naming. It reports G/A comparators, not new H activity or absolute configuration; those data are not imported. Exact-voucher taxonomic reconciliation remains unresolved. |
+| owners | data/raw/chebi_antimicrobials.tsv;scripts/extract_source_inventory.py;scripts/seed_from_sources.py; CHEBI65564 adopted row;source mints and output fields | supports | Native identity, definition, roles and xrefs reproduce the adopted ChEBI row; 17715978 is the sole PMID lead. Ignored-inclusive exact-record search found source/queue rows and no maintained uncertainty adjudication. |
+| search | Bounded callophycoic acid H follow-up; Exact-name searches for absolute stereochemistry,mechanism and2017 context | context_only | Original and later chemical papers were located. A2017 paper is a lead about distinct iodinated/bromophycoic compounds, not evidence for an H protein target. Local retrieval returned a challenge page; it supplied no inspected scientific evidence. |
+| validation | Native focused gates; 186-strict.tsv | supports | Schema and strict pass. Supplemental graph assertions pass while distinguishing database consistency from experimental identity confidence. |
+| ecological | PMID:19366672; DOI:10.1073/pnas.0812020106;183-PMC2678663.html;Results,Figure1caption and Methods | supports | Pure callophycoic acids C, G, H inhibited Lindra thalassiae below 300 micromolar. Only C/G were significantly inhibitory near natural100–200 micromolar tissue concentrations. Methods name L. thalassiae ATCC56663 and distinguish pure-compound assays from mixed fractions. All algal samples remained morphology-identified C. serratus with two18S/chemical clades. These results support bounded antifungal enrichment, not direct targets or transfer of bromophycolide surface imaging to this compound. |
+
+## Limits And Additional Notes
+
+- The original main text, compound 8 structural panel, NMR discussion, Table 3 and methods were inspected. Raw spectra/supporting information were not independently reanalyzed. Absolute-hand certainty is unresolved; no opposite-enantiomer claim is made.
+- The 2024 callophycol C16 analysis and conserved-core assumption do not directly assign H absolute configuration. Its C-Xray attribution conflicts with the original A crystal.
+- Original H antimalarial&gt;100 and mean cancer&gt;25 micromolar are censored endpoints. They do not demonstrate the positive wording independently, but also do not prove universal inactivity or justify automatic role deletion.
+- The original bacterial assays name ATCC10537/12952 and cite an earlier method; full strain mapping and bacterial protocol remain unresolved for quantitative adoption. The≥90% MIC definition is specific to the antitubercular paragraph.
+- The 2012 C. densus attribution conflicts with original C. serratus morphology; exact voucher reconciliation remains unresolved. Its G/A assay comparators are not H experiments.
+- The 2017 public retrieval returned a reCAPTCHA page despite HTTP200 and was not used as scientific evidence. The later 2024 and 2012 full main texts were available as shared public snapshots.
+- Reaxys was not accessed. Current ChEBI, ChemSpider and PubChem agree but are not independent experimental confirmation of the source-uncertain absolute hand.
+- No exhaustive target/ecological/activity survey was undertaken. No native protein/gene assertion triggers a structured adapter. Focused checks do not establish full-corpus success or promote SEEDED status.
+- The 2009 Lindra result was inspected in main Results, Figure 1caption and Methods; no exact IC50 was digitized and supporting assay protocol was not re-extracted. Surface imaging concerns bromophycolides, not this callophycoic acid. The paper retains C. serratus for both chemotypes and does not resolve later C. densus voucher reassignment.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 13 repository input hashes remain unchanged; no native or saved-bundle edits.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T104109Z-callophycoic-acid-h-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of callophycoic acid H
+started_at: '2026-10-21T10:21:07Z'
+finished_at: '2026-10-21T10:41:09Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Exact database graph reproducible; original absolute-configuration
+  uncertainty needs explicit adjudication
+scientific_review: true
+summary: Callophycoic acid H has coherent current database identity and its own original
+  bacterial MICs support antibacterial filing. The source establishes a dibrominated
+  aromatic/decalin structure by comparison with G but does not establish absolute
+  handedness. Native fully specified stereochemistry therefore needs source qualification.
+  Original antimalarial and cancer endpoints are censored bounds, not positive potency
+  or universal inactivity.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/callophycoic-acid-h.yaml
+    sha256: 314b445408c2c8ecc6f00816206be9852622025aa39b7ee3115fe4b0fc075dd0
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: Entire SEEDED record and three history events; ChEBI identity, roles,
+    parents and source owners; sole adopted PMID original main text with exact compound
+    8 structure, Table 3 row and methods; 2012/2024 context assessed without transferring
+    other-congener experiments.
+  selection: Queue index186; original13 input hashes preserved; one exact target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:65564
+targets:
+- target_id: CHEBI:65564
+  path: data/antibiotics/antibacterial/callophycoic-acid-h.yaml
+  label: callophycoic acid H
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit0.
+  target_ids:
+  - CHEBI:65564
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/callophycoic-acid-h.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit0; zero ERROR rows.
+  target_ids:
+  - CHEBI:65564
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/callophycoic-acid-h.yaml --out /private/tmp/am-review-session/186-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Supplemental exact graph and source checks
+  status: passed
+  required: false
+  summary: Exit0; three current database representations agree with native fully configured
+    graph.
+  target_ids:
+  - CHEBI:65564
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/186-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: structured-adapter
+  name: Structured-source applicability
+  status: not_applicable
+  required: false
+  summary: No named microbial gene, protein, regulator, pathway or transcriptomics
+    claim occurs in this record. Isolation, phenotypic activity and chemical stereochemistry
+    do not trigger a gene-module query.
+  target_ids:
+  - CHEBI:65564
+  evidence_ids:
+  - record
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:65564
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:65564
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:65564
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:65564
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:65564
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:65564
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:65564
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:65564
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:65564
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/callophycoic-acid-h.yaml
+  locator: Entire YAML and three history events
+  accessed_at: '2026-10-21T10:30:28Z'
+  support: supports
+  summary: SEEDED/EXACT ChEBI record contains structure, definition, exact stereochemical
+    synonym, parents and antibacterial/antimalarial roles. No target, mechanism, resistance,
+    quantitative activity or curated producer object is asserted.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:65564;ChemSpider:27023093;PubChem:23584316
+  locator: 186-chemistry.py;186-chemistry.json;186-ols.json;186-chebi.html;186-chemspider.html;186-pubchem-key.json
+  accessed_at: '2026-10-21T10:30:28Z'
+  support: supports
+  summary: SMILES/InChI/key, neutral C27H36Br2O3, masses and all five configured centers
+    are coherent. Current external representations reproduce JGBUIUFDBKKZNT-WBNSUDINSA-N
+    and exact dibrominated identity. Four chemical parents fit. Agreement does not
+    independently prove absolute handedness.
+  snapshot_sha256: 0f9fe7e58cf6ad46f60f72841f8ab4b0421338ed81fcbf6b4c8a1d9600a15efb
+- evidence_id: original-stereo
+  kind: primary_source
+  reference: PMID:17715978
+  locator: DOI:10.1021/jo071210y;179-PMC3374858.html;compound8 discussion and combined
+    structural panel179-xray.jpg
+  accessed_at: '2026-10-21T10:30:28Z'
+  support: partial
+  summary: H differs from G by an aromatic bromine; exact NMR/MS establish its trisubstituted
+    benzoic acid moiety and shared decalin connectivity. Original relative-NOE discussion
+    for7–9 supports shared relative decalin geometry; the text explicitly leaves G
+    absolute hand unassigned and supplies no independent H absolute assignment. The
+    crystal is A, not H.
+  snapshot_sha256: bcf3f54e5acf5cb0bb6c5d42bf9e5b9d99fee62da8b6fe2768f0859545f956fd
+- evidence_id: original-activity
+  kind: primary_source
+  reference: PMID:17715978
+  locator: Original Table3 row8 and Pharmacological Assays;179-PMC3374858.html
+  accessed_at: '2026-10-21T10:30:28Z'
+  support: partial
+  summary: H bacterial MIC is 27.4 micromolar in both the paper-labelled S. aureus
+    and E. faecium assays. Antitubercular MIC>50,11-cancer-line mean IC50>25 and P.
+    falciparum3D7 IC50>100 micromolar are censored limits; antifungal was not tested.
+    These do not demonstrate positive antimalarial/cancer potency or universal inactivity.
+    No neighboring row is imported.
+  snapshot_sha256: bcf3f54e5acf5cb0bb6c5d42bf9e5b9d99fee62da8b6fe2768f0859545f956fd
+- evidence_id: isolation
+  kind: primary_source
+  reference: PMID:17715978
+  locator: Original Biological Material,Isolation and compound8 characterization
+  accessed_at: '2026-10-21T10:30:28Z'
+  support: supports
+  summary: H was purified from the originally morphologically identified Fijian C.
+    serratus material:2.4mg, positive optical rotation and mass consistent with the
+    dibrominated formula. A voucher was deposited. Proposed cyclization/biosynthetic
+    pathways remain hypotheses.
+  snapshot_sha256: bcf3f54e5acf5cb0bb6c5d42bf9e5b9d99fee62da8b6fe2768f0859545f956fd
+- evidence_id: later-stereo
+  kind: primary_source
+  reference: PMID:38935812
+  locator: DOI:10.1021/acs.joc.4c00905;185-2024.html;Results/Discussion and decalin-core
+    paragraph
+  accessed_at: '2026-10-21T10:30:28Z'
+  support: context_only
+  summary: The 2024 empirical optical-superposition analysis assigns remote C16 in
+    callophycols A/B and assumes conserved arylmethyl-decalin handedness. It is not
+    an independent H absolute determination. Its claim of C crystallography conflicts
+    with original 2007 A crystallography; do not use it as direct H evidence.
+  snapshot_sha256: 12391487ae0b44b854081d7466bdaec989e7f7a7c570b874a72d869978bf7fa5
+- evidence_id: later-context
+  kind: primary_source
+  reference: PMID:22920243
+  locator: DOI:10.1021/jo301246x;185-2012.html;introductory taxonomic context and
+    source boundaries
+  accessed_at: '2026-10-21T10:30:28Z'
+  support: context_only
+  summary: The 2012 paper attributes earlier callophycoic acids/callophycols to C.
+    densus, contrasting with2007 morphology-based C. serratus naming. It reports G/A
+    comparators, not new H activity or absolute configuration; those data are not
+    imported. Exact-voucher taxonomic reconciliation remains unresolved.
+  snapshot_sha256: c8ea74b2bbc981d5c1416b43200921cecbcd1f63f471b5dfe3beae1901cae82b
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv;scripts/extract_source_inventory.py;scripts/seed_from_sources.py
+  locator: CHEBI65564 adopted row;source mints and output fields
+  accessed_at: '2026-10-21T10:30:28Z'
+  support: supports
+  summary: Native identity, definition, roles and xrefs reproduce the adopted ChEBI
+    row; 17715978 is the sole PMID lead. Ignored-inclusive exact-record search found
+    source/queue rows and no maintained uncertainty adjudication.
+  search_scope: rg --no-ignore --hidden exact65564,label andslug over curation,conf,data/raw/chebi_antimicrobials.tsv.
+- evidence_id: search
+  kind: search
+  reference: Bounded callophycoic acid H follow-up
+  locator: Exact-name searches for absolute stereochemistry,mechanism and2017 context
+  accessed_at: '2026-10-21T10:30:28Z'
+  support: context_only
+  summary: Original and later chemical papers were located. A2017 paper is a lead
+    about distinct iodinated/bromophycoic compounds, not evidence for an H protein
+    target. Local retrieval returned a challenge page; it supplied no inspected scientific
+    evidence.
+  search_scope: Exact quoted H queries; primary PMC/ACS follow-up; not exhaustive.
+- evidence_id: validation
+  kind: validation
+  reference: Native focused gates
+  locator: 186-strict.tsv
+  accessed_at: '2026-10-21T10:30:28Z'
+  support: supports
+  summary: Schema and strict pass. Supplemental graph assertions pass while distinguishing
+    database consistency from experimental identity confidence.
+- evidence_id: ecological
+  kind: primary_source
+  reference: PMID:19366672
+  locator: DOI:10.1073/pnas.0812020106;183-PMC2678663.html;Results,Figure1caption
+    and Methods
+  accessed_at: '2026-10-21T10:30:28Z'
+  support: supports
+  summary: Pure callophycoic acids C, G, H inhibited Lindra thalassiae below 300 micromolar.
+    Only C/G were significantly inhibitory near natural100–200 micromolar tissue concentrations.
+    Methods name L. thalassiae ATCC56663 and distinguish pure-compound assays from
+    mixed fractions. All algal samples remained morphology-identified C. serratus
+    with two18S/chemical clades. These results support bounded antifungal enrichment,
+    not direct targets or transfer of bromophycolide surface imaging to this compound.
+  snapshot_sha256: a5ebe2957910dffee14703083186dee433a28ce6eb60a4e845ff9a692c0a00d3
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact graph versus source stereochemistry
+  outcome: concern
+  summary: Database graph is coherent but its unqualified absolute hand is not established
+    by the adopted primary paper.
+  target_ids:
+  - CHEBI:65564
+  evidence_ids:
+  - chemistry
+  - original-stereo
+  - later-stereo
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical parents and antibacterial filing
+  outcome: supported
+  summary: Chemical parents fit and exact compound 8 bacterial endpoints support the
+    filing.
+  target_ids:
+  - CHEBI:65564
+  evidence_ids:
+  - chemistry
+  - original-activity
+- assessment_id: other-activity
+  area: evidence
+  topic: Antimalarial and anticancer wording
+  outcome: unknown
+  summary: Current ChEBI carries the roles/wording; original endpoints are above test
+    limits and do not independently demonstrate the claimed positive activities. No
+    universal negative is inferred.
+  target_ids:
+  - CHEBI:65564
+  evidence_ids:
+  - original-activity
+  - owners
+- assessment_id: mechanism
+  area: completeness
+  topic: Mode and target enrichment
+  outcome: unknown
+  summary: No primary exact-compound molecular mechanism was established in the inspected
+    sources; absence of optional target fields is not itself a defect.
+  target_ids:
+  - CHEBI:65564
+  evidence_ids:
+  - record
+  - search
+- assessment_id: producer
+  area: evidence
+  topic: Algal isolation scope
+  outcome: unknown
+  summary: Original morphology supports C. serratus isolation wording, but2012 attributes
+    the earlier metabolite group to C. densus. Exact voucher reconciliation remains
+    unresolved; biosynthetic pathways remain hypothetical.
+  target_ids:
+  - CHEBI:65564
+  evidence_ids:
+  - isolation
+  - later-context
+- assessment_id: provenance
+  area: provenance
+  topic: Single adopted primary and maintained ownership
+  outcome: supported
+  summary: Sole adopted PMID and three history events checked; records remain unchanged.
+  target_ids:
+  - CHEBI:65564
+  evidence_ids:
+  - record
+  - owners
+  - original-stereo
+- assessment_id: schema
+  area: schema
+  topic: Focused validation
+  outcome: supported
+  summary: Schema, strict and supplemental identity assertions pass.
+  target_ids:
+  - CHEBI:65564
+  evidence_ids:
+  - validation
+  - chemistry
+- assessment_id: antifungal
+  area: completeness
+  topic: Optional exact-compound antifungal enrichment
+  outcome: supported
+  summary: Later pure-compound Lindra assays support bounded antifungal enrichment.
+    Missing optional observations do not invalidate the antibacterial filing.
+  target_ids:
+  - CHEBI:65564
+  evidence_ids:
+  - ecological
+findings:
+- finding_id: F1
+  issue_key: chebi-65564-unqualified-absolute-stereochemistry
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Preserve the original unassigned absolute configuration
+  description: The original paper establishes H as the aromatic-brominated congener
+    of G and shares relative decalin NOE geometry, while explicitly leaving G absolute
+    hand unassigned and providing no independent H determination. The native fully
+    configured graph and exact stereochemical synonym choose one hand without uncertainty
+    discussion. Later conserved-core reasoning is not a direct H experiment. This
+    is a support/qualification finding, not proof the native enantiomer is wrong.
+  target_ids:
+  - CHEBI:65564
+  field_paths:
+  - chemical_structure
+  - synonyms
+  - grounding_status
+  - discussions
+  evidence_ids:
+  - chemistry
+  - original-stereo
+  - later-stereo
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source-owned exact structure and synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible source reconciliation if adopted identity changes
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding/exclusion adjudication if source uncertainty cannot be represented
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regeneration preserving curated uncertainty discussion
+  rule_id: 'review-checklist: exact stereo identity; preserve source conflicts; REVIEWED
+    identity gate'
+  native_severity: major unsupported absolute stereochemical certainty
+  normalization_reason: The connectivity and relative configuration are supported,
+    so no wrong-enantiomer blocker is claimed; the missing qualification materially
+    affects exact-identity confidence.
+actions:
+- action_id: A1
+  description: Adjudicate absolute-hand provenance and retain explicit uncertainty
+    through maintained curation.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:65564
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source-owned exact structure and synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible source reconciliation if adopted identity changes
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding/exclusion adjudication if source uncertainty cannot be represented
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regeneration preserving curated uncertainty discussion
+  acceptance_checks:
+  - Locate a H-specific primary absolute-configuration determination or document explicitly
+    that native hand remains the current ChEBI assignment with original relative-only
+    support. Do not cite A crystal or2024 C-Xray statement as direct H evidence.
+  - Add a source-linked unresolved identity discussion through the validated curator
+    workflow; keep SEEDED until exact identity can meet native sign-off. If structure/synonym
+    must change, implement reproducibly in maintained source/transform/decision inputs
+    and preserve known relative configuration; do not simply erase all stereo or invert
+    centers without evidence.
+  - Keep original bacterial MICs and censored antimalarial/cancer bounds tied to compound
+    8; any quantitative adoption must resolve the stated strain identifiers and referenced
+    bacterial protocol.
+  - Regenerate only under curation authorization and run focused schema/strict, source
+    provenance, reference/history and full corpus gates.
+limitations:
+- The original main text, compound 8 structural panel, NMR discussion, Table 3 and
+  methods were inspected. Raw spectra/supporting information were not independently
+  reanalyzed. Absolute-hand certainty is unresolved; no opposite-enantiomer claim
+  is made.
+- The 2024 callophycol C16 analysis and conserved-core assumption do not directly
+  assign H absolute configuration. Its C-Xray attribution conflicts with the original
+  A crystal.
+- Original H antimalarial>100 and mean cancer>25 micromolar are censored endpoints.
+  They do not demonstrate the positive wording independently, but also do not prove
+  universal inactivity or justify automatic role deletion.
+- The original bacterial assays name ATCC10537/12952 and cite an earlier method; full
+  strain mapping and bacterial protocol remain unresolved for quantitative adoption.
+  The≥90% MIC definition is specific to the antitubercular paragraph.
+- The 2012 C. densus attribution conflicts with original C. serratus morphology; exact
+  voucher reconciliation remains unresolved. Its G/A assay comparators are not H experiments.
+- The 2017 public retrieval returned a reCAPTCHA page despite HTTP200 and was not
+  used as scientific evidence. The later 2024 and 2012 full main texts were available
+  as shared public snapshots.
+- Reaxys was not accessed. Current ChEBI, ChemSpider and PubChem agree but are not
+  independent experimental confirmation of the source-uncertain absolute hand.
+- No exhaustive target/ecological/activity survey was undertaken. No native protein/gene
+  assertion triggers a structured adapter. Focused checks do not establish full-corpus
+  success or promote SEEDED status.
+- The 2009 Lindra result was inspected in main Results, Figure 1caption and Methods;
+  no exact IC50 was digitized and supporting assay protocol was not re-extracted.
+  Surface imaging concerns bromophycolides, not this callophycoic acid. The paper
+  retains C. serratus for both chemotypes and does not resolve later C. densus voucher
+  reassignment.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 13 repository input hashes remain unchanged; no native or saved-bundle edits.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1021/jo071210y
+- https://doi.org/10.1021/acs.joc.4c00905
+- https://www.ebi.ac.uk/chebi/CHEBI:65564
+tags:
+- record-review
+- callophycoic-acid-h
+- stereochemistry
+```

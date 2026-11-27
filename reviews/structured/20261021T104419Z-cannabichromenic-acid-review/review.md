@@ -1,0 +1,807 @@
+# Cannabichromenic acid: optical-form scope and racemic antibacterial evidence
+
+- Review: 20261021T104419Z-cannabichromenic-acid-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T10:21:14Z
+- Finished UTC: 2026-10-21T10:44:19Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The neutral CBCA graph and chemical classification are coherent, and original primary research supports antibacterial activity of explicitly racemic synthetic material. The exact (+) synonym needs optical-form qualification against the unspecified native centre. Primary MIC, time-kill and Bacillus imaging observations can be added with material and assay boundaries; they do not establish a direct target or clinical efficacy.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position190; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:167557 | data/antibiotics/antibacterial/cannabichromenic-acid.yaml | generated | cannabichromenic acid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:167557 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:167557 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:167557 | Actual focused execution exited 0. |
+| Structured protein-context applicability | not_applicable | False | CHEBI:167557 | Native fields contain chemical classifications and identity only, with no named protein, gene, regulator, pathway or transcriptomic claim. Literature-only biosynthetic enzymes and microscopy phenotypes are kept outside native target assertions. |
+| Authoritative full QC | failed | True | CHEBI:167557 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:167557 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:167557 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:167557 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:167557 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:167557 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:167557 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:167557 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:167557 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Unspecified native centre versus optical synonym
+
+identity: concern. Targets: CHEBI:167557.
+
+The molecular graph is coherent; the exact (+) alias is more specific than its unassigned centre and needs historical optical-form qualification. Neither a racemate nor a particular absolute hand is inferred from the graph.
+
+### Four chemical parents and exact structure mappings
+
+grounding: supported. Targets: CHEBI:167557.
+
+All parent classes fit and PubChem/KNApSAcK encodings agree; CAS/ChemSpider independent resolution remains limited.
+
+### Racemic antibacterial observations
+
+evidence: supported. Targets: CHEBI:167557.
+
+Original synthetic racemic material supports antibacterial classification and bounded MIC observations. This does not demonstrate separate enantiomer potency.
+
+### Conditional killing and cellular damage
+
+evidence: unknown. Targets: CHEBI:167557.
+
+Time-kill and Bacillus morphology support phenotypes without a direct target; regrowth and growth-arrest conditions remain explicit.
+
+### Nine adopted leads and two patents
+
+provenance: supported. Targets: CHEBI:167557.
+
+All nine PMID leads were resolved and disposed at inspected scope: eight complete abstracts, plus the no-abstract1968 original read in full. The2020 original main text was additionally inspected. Both patent identifiers resolve with the correct publication suffix.
+
+### Optional primary enrichment
+
+completeness: supported. Targets: CHEBI:167557.
+
+Primary assay and biosynthetic observations are available with exact material and host distinctions. Optional empty domains are not defects.
+
+### Focused deterministic checks
+
+schema: supported. Targets: CHEBI:167557.
+
+Schema, strict and both chemical encodings pass; these gates do not adjudicate optical synonym scope.
+
+## Findings
+
+### F1: Qualify the optical synonym against unspecified stereochemistry
+
+minor / open / confirmed; issue key: cbca-optical-synonym-scope.
+
+Native labels (+)-cannabichromenic acid an exact synonym of a graph with unspecified C2. Current ChEBI marks it related; the original positive rotation identifies historical material without resolving absolute configuration. The2020 antibacterial preparation is explicitly racemic. Preserve this material distinction instead of allowing the exact optical alias to imply enantiomer-specific identity or activity.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Preserve optical synonym specificity through maintained extraction and projection.
+
+- Retain historical (+) naming with its source/material qualification using the supported synonym or discussion representation; do not treat it as proof of R/S configuration or enantiopurity.
+- Preserve the unspecified native molecular graph unless independent exact-configuration evidence justifies a different entity. Do not replace unspecified stereo with racemate semantics.
+- Trace upstream related-synonym scope through maintained inventory/extractor/seeder before any correction; regenerate and run identity/schema/provenance checks under separate curation authorization.
+
+### A2
+
+Optionally add original assay and biosynthetic evidence with exact intervention scope.
+
+- Keep (±)-CBCA synthetic preparation and &gt;95%HPLC purity attached to the2020 MICs; retain LB, overnight37C, resazurin endpoint, triplicate design and reported strain identities. Do not infer separate enantiomer potencies.
+- Keep low/high-density time-kill conditions and24h regrowth; retain CCCP pretreatment and distinguish B.subtilis168 imaging from MRSA. Describe phenotype-level evidence without a fabricated DNA/protein target.
+- Separate purified plant-enzyme biosynthesis, heterologous supplied-substrate assays, hemp-mixture exposure and host pharmacology; none establishes human antibacterial efficacy or general safety.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/cannabichromenic-acid.yaml; Entire native record and thirteen initial captured inputs | supports | The SEEDED/EXACT ChEBI record has neutral unspecified-C2 CBCA, five exact synonyms including (+)-cannabichromenic acid, four chemical parents, antibacterial role, three registry xrefs, two patent document links and four seed events. No quantitative activity, molecular target, resistance, producer or clinical object is populated. |
+| owners | data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Exact CHEBI:167557 row; role names, configured source and ignored-inclusive local search | supports | The adopted row supplies five synonyms, four parents, nine PMID leads and two patent links. The optical synonym is carried as generic SYNONYM and becomes EXACT_SYNONYM in native output. Initial hashes, mint and seed provenance agree. Ignored-inclusive search outside Git internals/virtual environments found maintained owners and projections without an additional exact curator correction. |
+| chemistry | Independent RDKit parsing of native SMILES and InChI; 190-chemistry.json; focused schema and strict outputs | supports | Both encodings give HRHJHXJQMNWQTF-UHFFFAOYSA-N, neutral C22H30O4, one component, matching masses and one unassigned C2 tetrahedral centre. Unassigned stereochemistry does not establish a racemate. The structural definition and non-optical synonyms fit the graph; the terminal dimethyl alkene is not an additional E/Z centre. |
+| authority | https://www.ebi.ac.uk/chebi/CHEBI:167557; Current OLS term and all four parents | supports | Current ChEBI reproduces the unspecified native graph, molecular quantities and hydroxy-monocarboxylic-acid, chromenol, phytocannabinoid and olefinic parents. It identifies (+)-cannabichromenic acid as a related synonym from ChemIDplus rather than an exact IUPAC synonym. Supplementary PubChem CID3084339 has the same standard graph. |
+| knapsack | https://www.knapsackfamily.com/knapsack_core/information.php?word=C00053033; Complete KNApSAcK page and independent legacy-InChI normalization | supports | The page supplies CBCA formula, CAS20408-52-0 and legacy nonstandard InChI/key. Independent parsing and standard regeneration give the native standard InChI/key exactly. The older UHFFFAOYNA-N key suffix is not a different chemical form. Its plant-occurrence reference is database context, not independent proof of biosynthetic production. |
+| registries | CAS:20408-52-0; ChemSpider:2341420; ChEBI/KNApSAcK registry linkage; direct official destination requests | unknown | CAS is corroborated as a source cross-reference but the returned Common Chemistry page did not expose a readable compound result. ChemSpider returned403. Their independently resolved structure mappings remain limited; no positive mismatch is established. |
+| isolation | PMID:5706836; DOI:10.1248/cpb.16.1157; 190-isolation.pdf; original article rendered and visually read on both pages, excluding the following unrelated article | supports | The 1968 original isolated CBCA from hemp acidic fraction, used methyl-ester spectra and decarboxylation to CBC, and favored the acid position by intramolecular hydrogen bonding. It reports positive optical rotation, [alpha]D18 +4.8 degrees at c0.69 in chloroform. It does not establish an R/S assignment or enantiopurity. This supports historical (+) material while distinguishing it from the unspecified graph and later racemic assay material. |
+| activity | PMID:32824356; DOI:10.3390/antibiotics9080523; 190-antibacterial.xml; complete main text and Methods; Table1 CBCA row | supports | Methods explicitly use synthetic (±)-CBCA, &gt;95% HPLC purity. Triplicate resazurin MICs after overnight LB incubation at37C are MRSA3.9, MSSA7.8 and vancomycin-resistant E.faecalis7.8micromolar. MRSA is an unnamed mecA-positive clinical blood isolate; MSSA34397 is mecA-negative. These are assay observations, not breakpoint or clinical-efficacy claims. Separate four-day host assays give A549 MTC250 and HepG2 MTC125micromolar, not general safety proof. |
+| kinetics | PMID:32824356; DOI:10.3390/antibiotics9080523; Original time-kill Results/Methods and visually inspected Figure1; CCCP experiment Results | supports | CBCA40micromolar rapidly reduces CFU at low and high starting densities, but active cultures regrow by24h. The authors report unchanged susceptibility on retesting as data not shown; this does not prove a universal resistance barrier. CCCP10micromolar pretreatment models growth arrest and changes the duration of killing. These conditional results should not become unrestricted stationary-phase or clinical claims. |
+| morphology | PMID:32824356; DOI:10.3390/antibiotics9080523; Microscopy Methods, Results and visually inspected Figures4/5; captions checked | partial | Phase-contrast and DAPI/AM466 imaging were performed in B.subtilis168, not MRSA. Following30min exposure, shortened cells, membrane-associated changes and lysis support a cellular-damage phenotype. DAPI redistribution does not demonstrate direct DNA binding; morphology does not identify a protein target. The paper itself calls for further mechanism work. |
+| biosynthesis | PMID:9862135; DOI:10.1016/S0031-9422(98)00278-7; Complete original indexed abstract in190-adopted.json | partial | Purified C.sativa CBCA synthase converts CBGA and cannabinerolic acid into CBCA, with the authors favoring CBGA as physiological substrate. The abstract reports no requirement for molecular oxygen or hydrogen peroxide under its assay. This is a biosynthetic enzyme study, not an antibacterial target experiment; full enzymology was not inspected. |
+| heterologous | PMID:30053500; PMID:29619743; Complete original indexed abstracts | partial | The 2018 enzyme papers report CBCA among products of recombinant THCAS/CBDAS after supplied-CBGA conversion in K.phaffii expression systems, and THCAS expressed in N.benthamiana. Enzyme-expression/product assays do not automatically establish natural occurrence or a complete biosynthetic pathway in those hosts. The proteins are biosynthetic catalysts, not native bacterial targets. |
+| host-papers | PMID:33395525; PMID:31686510; PMID:32728233; Complete original indexed abstracts | context_only | The 2021 mouse study reports CBCA-series pharmacokinetics and CBCA anticonvulsant response in a Dravet model. The 2019 acid-pharmacokinetics paper includes CBCA but tests anticonvulsant efficacy of CBDA. The cattle study detects CBCA after industrial-hemp mixture dosing targeted to CBDA exposure. These distinct interventions cannot supply antibacterial efficacy, human safety or exact-CBCA clinical use. |
+| review | PMID:32608035; DOI:10.1111/bph.15185; Complete indexed abstract of systematic review | context_only | This review concerns minor phytocannabinoids and neuroprotective models. It is contextual secondary literature, not original CBCA antibacterial evidence, and its CBG/THCA receptor observations are not transferred to CBCA. |
+| patents | patent:GB2459125; patent:WO2009125198; GB2459125A and WO2009125198A2; titles, opening invention description and CBCA/CBC(A) passages in retrieved documents | context_only | Both document links resolve to a related plant-cultivar/breeding patent family discussing elevated CBC and/or CBCA and plant extracts. They are relevant document links but not the synthetic-racemate preparation references cited in the2020 antibacterial paper. The WO A1 route was404; A2 resolves. Only the relevant description passages were read, not every claim or example. |
+
+## Limits And Additional Notes
+
+- The1968 source article was visually read in full and the2020 main text/Table1/Methods were read, with Figures1/4/5 inspected. Other adopted original studies were assessed at complete abstract scope; no full biosynthetic-enzyme, mouse or cattle methods audit was undertaken.
+- CAS compound detail was not exposed in its returned page and ChemSpider was blocked. KNApSAcK legacy InChI standardization supports its molecular mapping.
+- The plant patents were checked at relevant description-passage scope only. Synthetic patent procedures, all supplementary raw datasets, experimental repeatability and exact enantiomer activities were not independently audited.
+- Clinical MRSA/VRE identifiers are incomplete in the paper; its data-not-shown regrowth retest and in-vitro host viability do not establish a clinical resistance barrier or safety.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All thirteen original input hashes remain unchanged. Native records, histories, inventories and curation status were not edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T104419Z-cannabichromenic-acid-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cannabichromenic acid: optical-form scope and racemic antibacterial evidence'
+started_at: '2026-10-21T10:21:14Z'
+finished_at: '2026-10-21T10:44:19Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The neutral CBCA graph and chemical classification are coherent, and original
+  primary research supports antibacterial activity of explicitly racemic synthetic
+  material. The exact (+) synonym needs optical-form qualification against the unspecified
+  native centre. Primary MIC, time-kill and Bacillus imaging observations can be added
+  with material and assay boundaries; they do not establish a direct target or clinical
+  efficacy.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cannabichromenic-acid.yaml
+    sha256: 62d104135edc11feb61bbc9692355667e1b0acfc74e2a8f0b9715911ff468721
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:167557
+  path: data/antibiotics/antibacterial/cannabichromenic-acid.yaml
+  label: cannabichromenic acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position190; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:167557
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:167557
+  command: .venv/bin/python /private/tmp/am-review-session/focus014-root.py 190
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:167557
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cannabichromenic-acid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:167557
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cannabichromenic-acid.yaml --out /private/tmp/am-review-session/190-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-applicability
+  name: Structured protein-context applicability
+  status: not_applicable
+  required: false
+  summary: Native fields contain chemical classifications and identity only, with
+    no named protein, gene, regulator, pathway or transcriptomic claim. Literature-only
+    biosynthetic enzymes and microscopy phenotypes are kept outside native target
+    assertions.
+  target_ids:
+  - CHEBI:167557
+  evidence_ids:
+  - native
+  - biosynthesis
+  - heterologous
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:167557
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:167557
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:167557
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:167557
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:167557
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:167557
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:167557
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:167557
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:167557
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cannabichromenic-acid.yaml
+  locator: Entire native record and thirteen initial captured inputs
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: supports
+  summary: The SEEDED/EXACT ChEBI record has neutral unspecified-C2 CBCA, five exact
+    synonyms including (+)-cannabichromenic acid, four chemical parents, antibacterial
+    role, three registry xrefs, two patent document links and four seed events. No
+    quantitative activity, molecular target, resistance, producer or clinical object
+    is populated.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: Exact CHEBI:167557 row; role names, configured source and ignored-inclusive
+    local search
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: supports
+  summary: The adopted row supplies five synonyms, four parents, nine PMID leads and
+    two patent links. The optical synonym is carried as generic SYNONYM and becomes
+    EXACT_SYNONYM in native output. Initial hashes, mint and seed provenance agree.
+    Ignored-inclusive search outside Git internals/virtual environments found maintained
+    owners and projections without an additional exact curator correction.
+  snapshot_sha256: 324a666f47548cb8c06ea8506b0adb361c0d622b6bb7645a143a86b393f4d902
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit parsing of native SMILES and InChI
+  locator: 190-chemistry.json; focused schema and strict outputs
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: supports
+  summary: Both encodings give HRHJHXJQMNWQTF-UHFFFAOYSA-N, neutral C22H30O4, one
+    component, matching masses and one unassigned C2 tetrahedral centre. Unassigned
+    stereochemistry does not establish a racemate. The structural definition and non-optical
+    synonyms fit the graph; the terminal dimethyl alkene is not an additional E/Z
+    centre.
+  snapshot_sha256: 02f363d03597ab4d959eac9a89dbacee4f27815c5dbf6d3be4bc008c6c1f1483
+- evidence_id: authority
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:167557
+  locator: Current OLS term and all four parents
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: supports
+  summary: Current ChEBI reproduces the unspecified native graph, molecular quantities
+    and hydroxy-monocarboxylic-acid, chromenol, phytocannabinoid and olefinic parents.
+    It identifies (+)-cannabichromenic acid as a related synonym from ChemIDplus rather
+    than an exact IUPAC synonym. Supplementary PubChem CID3084339 has the same standard
+    graph.
+  snapshot_sha256: 7b25c1f19aef8f3c4e24ca227027e387bde55ccea105b1e3a9db8d4d5f584eb8
+- evidence_id: knapsack
+  kind: database
+  reference: https://www.knapsackfamily.com/knapsack_core/information.php?word=C00053033
+  locator: Complete KNApSAcK page and independent legacy-InChI normalization
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: supports
+  summary: The page supplies CBCA formula, CAS20408-52-0 and legacy nonstandard InChI/key.
+    Independent parsing and standard regeneration give the native standard InChI/key
+    exactly. The older UHFFFAOYNA-N key suffix is not a different chemical form. Its
+    plant-occurrence reference is database context, not independent proof of biosynthetic
+    production.
+  snapshot_sha256: c151c401ec5de9517f4d8ba9a16ebeb69945d3974f3fe23e9397351dfecbff74
+- evidence_id: registries
+  kind: database
+  reference: CAS:20408-52-0; ChemSpider:2341420
+  locator: ChEBI/KNApSAcK registry linkage; direct official destination requests
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: unknown
+  summary: CAS is corroborated as a source cross-reference but the returned Common
+    Chemistry page did not expose a readable compound result. ChemSpider returned403.
+    Their independently resolved structure mappings remain limited; no positive mismatch
+    is established.
+- evidence_id: isolation
+  kind: primary_source
+  reference: PMID:5706836; DOI:10.1248/cpb.16.1157
+  locator: 190-isolation.pdf; original article rendered and visually read on both
+    pages, excluding the following unrelated article
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: supports
+  summary: The 1968 original isolated CBCA from hemp acidic fraction, used methyl-ester
+    spectra and decarboxylation to CBC, and favored the acid position by intramolecular
+    hydrogen bonding. It reports positive optical rotation, [alpha]D18 +4.8 degrees
+    at c0.69 in chloroform. It does not establish an R/S assignment or enantiopurity.
+    This supports historical (+) material while distinguishing it from the unspecified
+    graph and later racemic assay material.
+  snapshot_sha256: 066cc93a504d9c6ab22a85fa226cc8bfd6430949ea74e05b9f354c6653e1c0ce
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:32824356; DOI:10.3390/antibiotics9080523
+  locator: 190-antibacterial.xml; complete main text and Methods; Table1 CBCA row
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: supports
+  summary: Methods explicitly use synthetic (±)-CBCA, >95% HPLC purity. Triplicate
+    resazurin MICs after overnight LB incubation at37C are MRSA3.9, MSSA7.8 and vancomycin-resistant
+    E.faecalis7.8micromolar. MRSA is an unnamed mecA-positive clinical blood isolate;
+    MSSA34397 is mecA-negative. These are assay observations, not breakpoint or clinical-efficacy
+    claims. Separate four-day host assays give A549 MTC250 and HepG2 MTC125micromolar,
+    not general safety proof.
+  snapshot_sha256: 733fb9646ac016f4861dbdfdafb84faba8ac6576dfd20223918e6625dfaa87c7
+- evidence_id: kinetics
+  kind: primary_source
+  reference: PMID:32824356; DOI:10.3390/antibiotics9080523
+  locator: Original time-kill Results/Methods and visually inspected Figure1; CCCP
+    experiment Results
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: supports
+  summary: CBCA40micromolar rapidly reduces CFU at low and high starting densities,
+    but active cultures regrow by24h. The authors report unchanged susceptibility
+    on retesting as data not shown; this does not prove a universal resistance barrier.
+    CCCP10micromolar pretreatment models growth arrest and changes the duration of
+    killing. These conditional results should not become unrestricted stationary-phase
+    or clinical claims.
+  snapshot_sha256: 37770a03ccba1f6261418e87f3b185da38b523e21a30d8e8ea6bd1f0781e2aaf
+- evidence_id: morphology
+  kind: primary_source
+  reference: PMID:32824356; DOI:10.3390/antibiotics9080523
+  locator: Microscopy Methods, Results and visually inspected Figures4/5; captions
+    checked
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: partial
+  summary: Phase-contrast and DAPI/AM466 imaging were performed in B.subtilis168,
+    not MRSA. Following30min exposure, shortened cells, membrane-associated changes
+    and lysis support a cellular-damage phenotype. DAPI redistribution does not demonstrate
+    direct DNA binding; morphology does not identify a protein target. The paper itself
+    calls for further mechanism work.
+  snapshot_sha256: ca019c5a029d3bdaf73a7cf34042ceed178b16e3c8bb1aa4c1a8ce3cd0fe4f92
+- evidence_id: biosynthesis
+  kind: primary_source
+  reference: PMID:9862135; DOI:10.1016/S0031-9422(98)00278-7
+  locator: Complete original indexed abstract in190-adopted.json
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: partial
+  summary: Purified C.sativa CBCA synthase converts CBGA and cannabinerolic acid into
+    CBCA, with the authors favoring CBGA as physiological substrate. The abstract
+    reports no requirement for molecular oxygen or hydrogen peroxide under its assay.
+    This is a biosynthetic enzyme study, not an antibacterial target experiment; full
+    enzymology was not inspected.
+  snapshot_sha256: b7d7c099361cc995a295d370bc0a2136a05d163c88ffc61b9fab7b82bc72a375
+- evidence_id: heterologous
+  kind: primary_source
+  reference: PMID:30053500; PMID:29619743
+  locator: Complete original indexed abstracts
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: partial
+  summary: The 2018 enzyme papers report CBCA among products of recombinant THCAS/CBDAS
+    after supplied-CBGA conversion in K.phaffii expression systems, and THCAS expressed
+    in N.benthamiana. Enzyme-expression/product assays do not automatically establish
+    natural occurrence or a complete biosynthetic pathway in those hosts. The proteins
+    are biosynthetic catalysts, not native bacterial targets.
+  snapshot_sha256: b7d7c099361cc995a295d370bc0a2136a05d163c88ffc61b9fab7b82bc72a375
+- evidence_id: host-papers
+  kind: primary_source
+  reference: PMID:33395525; PMID:31686510; PMID:32728233
+  locator: Complete original indexed abstracts
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: context_only
+  summary: The 2021 mouse study reports CBCA-series pharmacokinetics and CBCA anticonvulsant
+    response in a Dravet model. The 2019 acid-pharmacokinetics paper includes CBCA
+    but tests anticonvulsant efficacy of CBDA. The cattle study detects CBCA after
+    industrial-hemp mixture dosing targeted to CBDA exposure. These distinct interventions
+    cannot supply antibacterial efficacy, human safety or exact-CBCA clinical use.
+  snapshot_sha256: b7d7c099361cc995a295d370bc0a2136a05d163c88ffc61b9fab7b82bc72a375
+- evidence_id: review
+  kind: database
+  reference: PMID:32608035; DOI:10.1111/bph.15185
+  locator: Complete indexed abstract of systematic review
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: context_only
+  summary: This review concerns minor phytocannabinoids and neuroprotective models.
+    It is contextual secondary literature, not original CBCA antibacterial evidence,
+    and its CBG/THCA receptor observations are not transferred to CBCA.
+  snapshot_sha256: b7d7c099361cc995a295d370bc0a2136a05d163c88ffc61b9fab7b82bc72a375
+- evidence_id: patents
+  kind: primary_source
+  reference: patent:GB2459125; patent:WO2009125198
+  locator: GB2459125A and WO2009125198A2; titles, opening invention description and
+    CBCA/CBC(A) passages in retrieved documents
+  accessed_at: '2026-10-21T10:44:01Z'
+  support: context_only
+  summary: Both document links resolve to a related plant-cultivar/breeding patent
+    family discussing elevated CBC and/or CBCA and plant extracts. They are relevant
+    document links but not the synthetic-racemate preparation references cited in
+    the2020 antibacterial paper. The WO A1 route was404; A2 resolves. Only the relevant
+    description passages were read, not every claim or example.
+  snapshot_sha256: c3566c7d534dbf2760853b1a19d793786819c72473b9a0b555a188c1543bdca2
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Unspecified native centre versus optical synonym
+  outcome: concern
+  summary: The molecular graph is coherent; the exact (+) alias is more specific than
+    its unassigned centre and needs historical optical-form qualification. Neither
+    a racemate nor a particular absolute hand is inferred from the graph.
+  target_ids:
+  - CHEBI:167557
+  evidence_ids:
+  - native
+  - chemistry
+  - authority
+  - isolation
+- assessment_id: grounding
+  area: grounding
+  topic: Four chemical parents and exact structure mappings
+  outcome: supported
+  summary: All parent classes fit and PubChem/KNApSAcK encodings agree; CAS/ChemSpider
+    independent resolution remains limited.
+  target_ids:
+  - CHEBI:167557
+  evidence_ids:
+  - chemistry
+  - authority
+  - knapsack
+  - registries
+- assessment_id: activity
+  area: evidence
+  topic: Racemic antibacterial observations
+  outcome: supported
+  summary: Original synthetic racemic material supports antibacterial classification
+    and bounded MIC observations. This does not demonstrate separate enantiomer potency.
+  target_ids:
+  - CHEBI:167557
+  evidence_ids:
+  - activity
+  - isolation
+- assessment_id: mechanism
+  area: evidence
+  topic: Conditional killing and cellular damage
+  outcome: unknown
+  summary: Time-kill and Bacillus morphology support phenotypes without a direct target;
+    regrowth and growth-arrest conditions remain explicit.
+  target_ids:
+  - CHEBI:167557
+  evidence_ids:
+  - kinetics
+  - morphology
+- assessment_id: provenance
+  area: provenance
+  topic: Nine adopted leads and two patents
+  outcome: supported
+  summary: 'All nine PMID leads were resolved and disposed at inspected scope: eight
+    complete abstracts, plus the no-abstract1968 original read in full. The2020 original
+    main text was additionally inspected. Both patent identifiers resolve with the
+    correct publication suffix.'
+  target_ids:
+  - CHEBI:167557
+  evidence_ids:
+  - owners
+  - activity
+  - isolation
+  - biosynthesis
+  - heterologous
+  - host-papers
+  - review
+  - patents
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary enrichment
+  outcome: supported
+  summary: Primary assay and biosynthetic observations are available with exact material
+    and host distinctions. Optional empty domains are not defects.
+  target_ids:
+  - CHEBI:167557
+  evidence_ids:
+  - activity
+  - kinetics
+  - morphology
+  - biosynthesis
+- assessment_id: schema
+  area: schema
+  topic: Focused deterministic checks
+  outcome: supported
+  summary: Schema, strict and both chemical encodings pass; these gates do not adjudicate
+    optical synonym scope.
+  target_ids:
+  - CHEBI:167557
+  evidence_ids:
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: cbca-optical-synonym-scope
+  category: identity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the optical synonym against unspecified stereochemistry
+  description: Native labels (+)-cannabichromenic acid an exact synonym of a graph
+    with unspecified C2. Current ChEBI marks it related; the original positive rotation
+    identifies historical material without resolving absolute configuration. The2020
+    antibacterial preparation is explicitly racemic. Preserve this material distinction
+    instead of allowing the exact optical alias to imply enantiomer-specific identity
+    or activity.
+  target_ids:
+  - CHEBI:167557
+  field_paths:
+  - synonyms
+  - chemical_structure
+  evidence_ids:
+  - native
+  - authority
+  - isolation
+  - activity
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted synonym provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Preserve upstream synonym specificity
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible synonym projection
+  rule_id: 'review-checklist: identity and exact chemical form agree'
+  native_severity: minor synonym-specificity discrepancy
+  normalization_reason: Connectivity and stored molecular encodings remain correct;
+    this concerns optical-material scope, not a wrong enantiomer or a request to invent
+    stereochemistry.
+actions:
+- action_id: A1
+  description: Preserve optical synonym specificity through maintained extraction
+    and projection.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:167557
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted synonym provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Preserve upstream synonym specificity
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible synonym projection
+  acceptance_checks:
+  - Retain historical (+) naming with its source/material qualification using the
+    supported synonym or discussion representation; do not treat it as proof of R/S
+    configuration or enantiopurity.
+  - Preserve the unspecified native molecular graph unless independent exact-configuration
+    evidence justifies a different entity. Do not replace unspecified stereo with
+    racemate semantics.
+  - Trace upstream related-synonym scope through maintained inventory/extractor/seeder
+    before any correction; regenerate and run identity/schema/provenance checks under
+    separate curation authorization.
+- action_id: A2
+  description: Optionally add original assay and biosynthetic evidence with exact
+    intervention scope.
+  finding_ids: []
+  target_ids:
+  - CHEBI:167557
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cannabichromenic-acid.yaml
+    role: Future curator-owned claim evidence via validated writer/history
+  acceptance_checks:
+  - Keep (±)-CBCA synthetic preparation and >95%HPLC purity attached to the2020 MICs;
+    retain LB, overnight37C, resazurin endpoint, triplicate design and reported strain
+    identities. Do not infer separate enantiomer potencies.
+  - Keep low/high-density time-kill conditions and24h regrowth; retain CCCP pretreatment
+    and distinguish B.subtilis168 imaging from MRSA. Describe phenotype-level evidence
+    without a fabricated DNA/protein target.
+  - Separate purified plant-enzyme biosynthesis, heterologous supplied-substrate assays,
+    hemp-mixture exposure and host pharmacology; none establishes human antibacterial
+    efficacy or general safety.
+limitations:
+- The1968 source article was visually read in full and the2020 main text/Table1/Methods
+  were read, with Figures1/4/5 inspected. Other adopted original studies were assessed
+  at complete abstract scope; no full biosynthetic-enzyme, mouse or cattle methods
+  audit was undertaken.
+- CAS compound detail was not exposed in its returned page and ChemSpider was blocked.
+  KNApSAcK legacy InChI standardization supports its molecular mapping.
+- The plant patents were checked at relevant description-passage scope only. Synthetic
+  patent procedures, all supplementary raw datasets, experimental repeatability and
+  exact enantiomer activities were not independently audited.
+- Clinical MRSA/VRE identifiers are incomplete in the paper; its data-not-shown regrowth
+  retest and in-vitro host viability do not establish a clinical resistance barrier
+  or safety.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All thirteen original input hashes remain unchanged. Native records, histories,
+  inventories and curation status were not edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
