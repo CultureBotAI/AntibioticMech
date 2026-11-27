@@ -1,0 +1,922 @@
+# Review of ceftaroline
+
+- Review: 20261021T120241Z-ceftaroline-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T11:49:01Z
+- Finished UTC: 2026-10-21T12:02:41Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native zwitterionic ceftaroline structure is internally consistent and matches ChEMBL4594371 and exact-key PubChem CID9938701. However, ARO contributes the distinct N-phosphono prodrug name ceftaroline fosamil as an exact synonym and PubChem CID9852982, which resolves to a protonated fosamil structure. One major finding covers these linked identity assertions. Antibacterial activity and PBP binding are supported; imported mecA and PBP3 resistance assertions require careful variant and assay interpretation. All 29 adopted compound, parent, target and determinant PMID records were resolved. No native record was changed.
+
+## Scope And Provenance
+
+Entire exact SEEDED ceftaroline record, seven synonyms, five exact xrefs, six parents, two roles, two imported resistance mechanisms, one imported PBP target, four source-seeding history events, all 29 adopted compound/ARO parent/target/determinant PMID leads, and selected original mechanism studies.
+
+Selection: Queue 253; original 13 input captures preserved and four actual ARO inventory/target-semantics owners appended before detailed judgment, giving 17 captured inputs.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:70729 | data/antibiotics/antibacterial/ceftaroline.yaml | generated | ceftaroline |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema check | passed | True | CHEBI:70729 | Exit 0. |
+| Documented strict check | passed | True | CHEBI:70729 | Exit 0; zero ERROR rows. |
+| Supplemental native and xref chemistry diagnostic | passed | False | CHEBI:70729 | Exit 0; explicitly detects the wrong PubChem xref and current OLS stereo omission. This diagnostic success is not an assertion that all external graphs agree. |
+| Structured dataset discovery | passed | False | CHEBI:70729 | Exit 0. |
+| Structured mecA search before protein research | passed | False | CHEBI:70729 | Exit 0; two gene hits with different products and no components. |
+| Structured E. coli PBP3 search before protein research | passed | False | CHEBI:70729 | Exit 0; one ftsI gene and no components. |
+| Authoritative full QC | failed | True | CHEBI:70729 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:70729 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:70729 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:70729 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:70729 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:70729 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:70729 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:70729 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:70729 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Native active ceftaroline graph
+
+identity: supported. Targets: CHEBI:70729.
+
+The net-neutral zwitterion, core stereochemistry, oxime configuration and masses agree with independent exact chemistry.
+
+### Exact synonym and PubChem mapping
+
+grounding: concern. Targets: CHEBI:70729.
+
+Both the exact fosamil name and CID9852982 assert a distinct N-phosphono prodrug as the active compound.
+
+### Structural parents and activity roles
+
+grounding: supported. Targets: CHEBI:70729.
+
+Parent classes fit the graph and primary active-compound testing supports antibacterial activity.
+
+### Database PBP target and primary binding
+
+evidence: supported. Targets: CHEBI:70729.
+
+The source family item is honest database evidence; original PBP2a structures independently support direct binding at narrower protein/construct scope.
+
+### mecA and PBP3 variant scope
+
+evidence: unknown. Targets: CHEBI:70729.
+
+Database edges resolve. Primary sources support variant-dependent resistance, with substantial allele, combination and assay qualifications; they do not establish universal mecA or PBP3 resistance.
+
+### All source leads, owners and history
+
+provenance: supported. Targets: CHEBI:70729.
+
+All 29 source PMID records are dispositioned and actual source owners captured; no native FDA or MIC assertion requires a separate inventory capture.
+
+### Primary enrichment and clinical boundaries
+
+completeness: supported. Targets: CHEBI:70729.
+
+Optional primary claims could be added with proper variant and form scope. No status promotion or mandatory primary mechanism field is inferred for this SEEDED record.
+
+### Current OLS oxime stereochemistry
+
+consistency: unknown. Targets: CHEBI:70729.
+
+OLS SMILES omits stereo while its InChI/key and native structure agree; preserve native Z and report the external discrepancy.
+
+### Focused native validity
+
+schema: supported. Targets: CHEBI:70729.
+
+Focused schema and strict checks pass.
+
+## Findings
+
+### F1: Fosamil prodrug is asserted as exact ceftaroline identity
+
+major / open / confirmed; issue key: CHEBI-70729-fosamil-exact-identity-contamination.
+
+The final exact synonym ceftaroline fosamil and xref pubchem.compound:9852982 both originate in ARO3000651 and denote a distinct N-phosphono prodrug. CID9852982 additionally denotes its protonated +1 form. Native ceftaroline has no phosphorus atom and its graph, formula and key are otherwise consistent. Exact-key PubChem CID9938701 matches that native structure. Drug activation does not make these forms exact synonyms or chemical equivalents.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Add only ceftaroline fosamil to conf/sources.yaml synonym_exclusions for ARO:3000651. Correct the ARO source PubChem mapping to structurally verified CID9938701 and re-adopt, or implement a new compound-specific evidence-backed xref correction in scripts/extract_source_inventory.py before regenerating data/raw/aro_antibiotics.tsv. Reseed the record, retaining active ceftaroline chemistry and supported source claims. Do not change the separately represented fosamil records or treat CID9852982 as an exact match.
+
+- The generated exact synonym list excludes only the erroneous fosamil name; T-91825/PPI0903M and supported aliases remain.
+- pubchem.compound:9852982 is absent from exact xrefs; any replacement CID must reproduce native full key RGFBRLNVZCCMSV-BIRGHMBHSA-N, formula C22H20N8O5S4 and charge 0. CID9938701 does so in the inspected snapshot.
+- Run the documented single-record schema/strict validators and full just verify-corpus --summary, just review-queue --limit 0 and just qc after authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/ceftaroline.yaml; Entire YAML, seven synonyms, five xrefs and four history events | supports | The record denotes ceftaroline with a net-neutral zwitterion and correctly calls fosamil its prodrug in the definition. ARO nevertheless contributes fosamil as an EXACT_SYNONYM and PubChem9852982 as an exact chemical xref. Both resistance items and the PBP target explicitly cite database assertions. No native FDA product, MIC, primary mechanism or producer item is present. |
+| chemistry | CHEBI:70729; CHEBI:70718; ChEMBL:CHEMBL4594371; PubChem:9852982; PubChem:9938701; 253-chemistry.py/.json; 253-pubchem.json; 253-pubchem-exact.json; current ChEBI and ChEMBL snapshots | supports | Native SMILES/InChI, current ChEBI InChI, ChEMBL4594371 and candidate CID9938701 agree on RGFBRLNVZCCMSV-BIRGHMBHSA-N, C22H20N8O5S4, net charge 0, two R centers, average mass 604.721 and exact mass 604.04394974. Native CID9852982 instead has one phosphorus atom, formula C22H22N8O8PS4+, charge +1 and key ZCCUWMICIWSJIX-NQJJCJBVSA-O. Fosamil CHEBI70718 is the separate net-neutral N-phosphono graph, key ZCCUWMICIWSJIX-NQJJCJBVSA-N. Current OLS ceftaroline SMILES drops oxime stereo and yields RGFBRLNVZCCMSV-AUUYWEPGSA-N while its InChI/key retain native Z; this external representation defect is not copied into the native record. |
+| prodrug | PMID:18827379; DOI:10.1248/cpb.56.1406; 253-original-prodrug.pdf, original p.1406 Introduction/Materials and Figure 1; p.1407 methods; rendered 253-original-prodrug-p1406.png | supports | The original stabilization paper separately identifies active T-91825 and its N-phosphono prodrug TAK-599. Figure 1 shows the added phosphono group and the acetic-acid solvate used in the formulation study. This is a chemical transformation, not an alternate exact name for ceftaroline. Only the structure, material and stability-method portions were used; formulation stability is not direct antibacterial or target evidence. |
+| grounding | CHEBI:23066; CHEBI:35285; CHEBI:36816; CHEBI:38099; CHEBI:38418; CHEBI:33281; CHEBI:36047; ARO:0000032; Current parent snapshots 253-parent-*.json and reused 244-parent-23066.json; adopted role vocabulary; 253-aro-stanzas.txt | supports | The cephalosporin, iminium betaine, oxime O-ether, thiadiazole and 1,3-thiazole parents fit the native graph. The activity vocabulary resolves to antimicrobial agent and antibacterial drug. CAS189345-04-8 is corroborated by current ChEBI; Reaxys9532372 is retained by ChEBI but its registry content was not independently accessed. |
+| adapter | iModulonDB:s_aureus/staph_precise108/USA300HOU_RS00160; iModulonDB:e_coli/precise1k/b0084; 253-imodulondb-datasets.txt, 253-imodulondb-mecA.txt and 253-imodulondb-ftsI.txt | context_only | The mecA query returns both an unrelated adaptor MecA (USA300HOU_RS04950) and pbpC/PBP2a-family transpeptidase MecA (USA300HOU_RS00160); only the latter is relevant protein context. The E. coli hit is ftsI/b0084. Neither search returns an iModulon, so no component summary applies. These catalog hits establish no resistance phenotype or drug binding. |
+| activity | PMID:16048970; DOI:10.1128/AAC.49.8.3501-3512.2005; 253-original-activity.html/.txt: Introduction, reagent and broth-microdilution methods, organism-specific results and Table 1 | supports | The original paper distinguishes IV PPI-0903/TAK-599 from active PPI-0903M released by phosphono-group hydrolysis. The tested reagent-grade PPI-0903M was manufactured by Takeda. It reports reference broth microdilution on 1,478 clinical isolates, preserving organism and resistant-phenotype subsets. This supports antibacterial activity of the active compound, not universal MRSA susceptibility or a direct PBP binding experiment. Its abstract loosely calls PPI-0903M N-phosphono-type; the inspected body explicitly separates the forms. |
+| binding | PMID:24085846; DOI:10.1073/pnas.1300118110; 253-allostery.html/.txt: Results, Table 1, Figures 1-4, Discussion and main Materials and Methods | supports | Crystallography of soluble PBP2a lacking its membrane anchor shows ceftaroline acylation at Ser403 and a second intact molecule at the remote allosteric site in soaking/cocrystallization complexes. Engineered mutant kinetics support allosteric communication; modeled peptidoglycan extensions remain computational interpretation. These experiments support direct PBP2a binding and inhibition, not a universal mechanism shared by all PBPs. The main text acknowledges gifted fosamil; supporting-information preparation details were not inspected. No reagent-specific numerical native target item is proposed. |
+| mecA-scope | PMID:22398650; DOI:10.1093/jac/dks069; PMID:24955778; DOI:10.1021/ja5030657; Complete PMID22398650 abstract in 253-core.json; verified PMC4210145 full-text web reading, Table 1 and mutant methods/results | partial | The clinical study associates increased ceftaroline MICs with PBP2a substitutions. The later original functional study introduces N146K/E150K and N146K/E150K/H351N into ATCC700699 mecA and examines purified variants. Clinical variants impair acylation/allosteric response; N146K alone does not reproduce that impairment. Thus mecA/PBP2a can participate in ceftaroline resistance through specific variants, while wild-type PBP2a is also a ceftaroline target. The native family database assertion is not evidence that every mecA-bearing isolate is ceftaroline resistant. |
+| pbp3-scope | PMID:28559260; DOI:10.1128/AAC.00389-17; PMID:25634992; DOI:10.1093/jac/dku568; PMID:41718487; DOI:10.1128/aac.00887-25; 253-pbp3-2017.html/.txt methods, Tables 1-2 and EC-1 discussion; complete 2015 abstract; 253-pbp3-2026.xml body | partial | The 2017 study tests ceftaroline alone and with 4 micrograms/mL avibactam by broth microdilution. EC-1 carries KPC/TEM enzymes and PBP3 TIPY/A417V alterations; the authors describe the insertion contribution as likely and cite the earlier isogenic YRIK experiment. Combination MICs and modeling are not isolated proof of the TIPY effect on ceftaroline monotherapy. The 2015 complete abstract reports an isogenic PBP3 experiment affecting several cephalosporins but its full paper was not accessible here; the exact ceftaroline result is reported secondarily in the 2017 discussion. The 2026 case concerns NDM/CMY, PBP3 YRIN and multi-drug treatment, not an inspected ceftaroline-specific experiment. The native ARO PBP3 family edge is preserved as a database assertion with primary-scope limits. |
+| leads | All 29 adopted compound/ARO parent/target/determinant PMID records; 253-core.json, 253-abstracts.txt and 253-lead-dispositions.json | partial | Ten ChEBI compound leads, three ARO compound leads, four parent/target leads, nine mecA leads and three PBP3 leads were resolved. Twenty-seven complete abstracts and two review metadata records without abstracts were inspected. The ledger distinguishes formulation and clinical prodrug evidence, strain/panel activity, mutant mechanisms, generic PBP/mecA background and combination-treatment studies. No source title alone is used as an experimental result. |
+| clinical | Official TEFLARO label; effective_time:20241120; 253-label.json description, indications and microbiology sections | supports | The official label identifies an IV fosamil monoacetate monohydrate formulation and ceftaroline as active antibacterial moiety. Skin-infection indications include susceptible MRSA; pneumonia indications list methicillin-susceptible S. aureus only. This supports the native adult skin-infection context without treating the active structure as an independently approved formulation. The unused ARO source definition incorrectly says oral administration; the native selected ChEBI definition does not reproduce that route claim. |
+| owners | data/raw/aro_antibiotics.tsv; conf/sources.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; 253-aro_antibiotics.json; 253-aro-stanzas.txt; 253-local-hits.txt; 253-override-search.txt; extractor lines 410-445 and seeder lines 1533-1538 | supports | The bad synonym and PubChem mapping originate in ARO3000651. The extractor copies source xrefs; the seeder publishes normalized PubChem xrefs as exact structure claims. Existing conf/sources.yaml synonym_exclusions is source-concept-scoped and can remove only the erroneous fosamil name. No existing xref_exclusions/xref_overrides facility was found in the ignored-inclusive bounded search. Correct the source xref and re-adopt, or implement a new narrowly keyed evidence-backed xref correction in the maintained extraction path. The native structure need not change. |
+| validation | Focused schema, strict and supplemental chemistry; 253-strict.tsv and 253-chemistry.json | supports | Schema and strict checks exit 0 with zero ERROR rows. The chemistry diagnostic exits 0 while explicitly reporting the wrong PubChem mapping and current OLS stereo omission. These do not replace shared corpus, term, reference and history gates. |
+
+## Limits And Additional Notes
+
+- Current OLS SMILES loses the oxime stereo although its InChI/key retain it. The native Z structure should remain intact. This external discrepancy is separately recorded from the confirmed phosphono-prodrug identity error.
+- Reaxys9532372 was confirmed as an adopted/current ChEBI link without independent registry inspection; CAS189345-04-8 likewise has authority corroboration but no direct registry audit.
+- The imported mecA family item is not a universal ceftaroline-resistance rule. Original mutant work distinguishes N146K alone from clinical double/triple variants and does not justify labeling all mecA-bearing isolates resistant. Exact strain/allele primary enrichment should preserve these limits.
+- The 2017 PBP3 study includes mixed beta-lactamase backgrounds, combination MICs and a proposed TIPY mechanism. Its account of the 2015 isogenic ceftaroline result is secondary; the 2015 primary was inspected only at complete-abstract depth after the publisher returned HTTP403. The 2026 NDM case does not supply inspected ceftaroline-specific evidence.
+- The original 2013 allostery main text was read at results/discussion/main-methods depth, but its supplementary reagent preparation and full construct methods were not inspected. Crystallographic complexes and biochemical mutants support a bounded PBP2a mechanism; computational peptidoglycan models are not direct observation.
+- All 29 adopted PMID records resolved, with 27 complete abstracts and two metadata-only reviews. Newly added current ChEBI citation links beyond the adopted ten compound leads were not exhaustively reviewed. Clinical and formulation studies retain prodrug and patient/assay scope.
+- Several XML endpoints returned HTTP500 and PMC HTML fallbacks were used. The correct PMC4210145 local download returned a challenge page; its verified web full text was read instead. A mistaken extra MED lookup (25461061) and a mistaken PMC4112220 discovery fetch were unrelated and excluded from evidence.
+- Focused schema/strict checks and the supplemental diagnostic do not substitute for shared corpus gates. Chemistry used the existing 019 interpreter against the 026 checkout. No native record or status was changed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 17 captured input hashes remain unchanged: 13 original plus four actual ARO owners. No native record, saved bundle or Git state was modified.
+- Fetch timestamps and hashes are retained in 253-fetch-results.json through 253-fetch4-results.json; external ARO cache provenance is in 253-aro-cache-hash.json. Only actual inspected sources support claims; failed or unrelated fetches supply none.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T120241Z-ceftaroline-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of ceftaroline
+started_at: '2026-10-21T11:49:01Z'
+finished_at: '2026-10-21T12:02:41Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: 'Needs curation: confirmed active compound/prodrug contamination in
+  exact synonym and PubChem mapping'
+scientific_review: true
+summary: The native zwitterionic ceftaroline structure is internally consistent and
+  matches ChEMBL4594371 and exact-key PubChem CID9938701. However, ARO contributes
+  the distinct N-phosphono prodrug name ceftaroline fosamil as an exact synonym and
+  PubChem CID9852982, which resolves to a protonated fosamil structure. One major
+  finding covers these linked identity assertions. Antibacterial activity and PBP
+  binding are supported; imported mecA and PBP3 resistance assertions require careful
+  variant and assay interpretation. All 29 adopted compound, parent, target and determinant
+  PMID records were resolved. No native record was changed.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ceftaroline.yaml
+    sha256: fdf89f4a5873e81ccf63ea08cd072ed8864fb94cb40acdd98f024fc56d4442c0
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+scope:
+  description: Entire exact SEEDED ceftaroline record, seven synonyms, five exact
+    xrefs, six parents, two roles, two imported resistance mechanisms, one imported
+    PBP target, four source-seeding history events, all 29 adopted compound/ARO parent/target/determinant
+    PMID leads, and selected original mechanism studies.
+  selection: Queue 253; original 13 input captures preserved and four actual ARO inventory/target-semantics
+    owners appended before detailed judgment, giving 17 captured inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:70729
+targets:
+- target_id: CHEBI:70729
+  path: data/antibiotics/antibacterial/ceftaroline.yaml
+  label: ceftaroline
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual ARO source or target semantic owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual ARO source or target semantic owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual ARO source or target semantic owner
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Actual ARO source or target semantic owner
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:70729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ceftaroline.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit 0; zero ERROR rows.
+  target_ids:
+  - CHEBI:70729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ceftaroline.yaml --out /private/tmp/am-review-session/253-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Supplemental native and xref chemistry diagnostic
+  status: passed
+  required: false
+  summary: Exit 0; explicitly detects the wrong PubChem xref and current OLS stereo
+    omission. This diagnostic success is not an assertion that all external graphs
+    agree.
+  target_ids:
+  - CHEBI:70729
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/253-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: adapter-datasets
+  name: Structured dataset discovery
+  status: passed
+  required: false
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:70729
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/253-imodulondb-datasets.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-mecA
+  name: Structured mecA search before protein research
+  status: passed
+  required: false
+  summary: Exit 0; two gene hits with different products and no components.
+  target_ids:
+  - CHEBI:70729
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism s_aureus --dataset staph_precise108
+    --query mecA > /private/tmp/am-review-session/253-imodulondb-mecA.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-ftsI
+  name: Structured E. coli PBP3 search before protein research
+  status: passed
+  required: false
+  summary: Exit 0; one ftsI gene and no components.
+  target_ids:
+  - CHEBI:70729
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query ftsI
+    > /private/tmp/am-review-session/253-imodulondb-ftsI.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:70729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:70729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:70729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:70729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:70729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:70729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:70729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:70729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:70729
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ceftaroline.yaml
+  locator: Entire YAML, seven synonyms, five xrefs and four history events
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: supports
+  summary: The record denotes ceftaroline with a net-neutral zwitterion and correctly
+    calls fosamil its prodrug in the definition. ARO nevertheless contributes fosamil
+    as an EXACT_SYNONYM and PubChem9852982 as an exact chemical xref. Both resistance
+    items and the PBP target explicitly cite database assertions. No native FDA product,
+    MIC, primary mechanism or producer item is present.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:70729; CHEBI:70718; ChEMBL:CHEMBL4594371; PubChem:9852982; PubChem:9938701
+  locator: 253-chemistry.py/.json; 253-pubchem.json; 253-pubchem-exact.json; current
+    ChEBI and ChEMBL snapshots
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: supports
+  summary: Native SMILES/InChI, current ChEBI InChI, ChEMBL4594371 and candidate CID9938701
+    agree on RGFBRLNVZCCMSV-BIRGHMBHSA-N, C22H20N8O5S4, net charge 0, two R centers,
+    average mass 604.721 and exact mass 604.04394974. Native CID9852982 instead has
+    one phosphorus atom, formula C22H22N8O8PS4+, charge +1 and key ZCCUWMICIWSJIX-NQJJCJBVSA-O.
+    Fosamil CHEBI70718 is the separate net-neutral N-phosphono graph, key ZCCUWMICIWSJIX-NQJJCJBVSA-N.
+    Current OLS ceftaroline SMILES drops oxime stereo and yields RGFBRLNVZCCMSV-AUUYWEPGSA-N
+    while its InChI/key retain native Z; this external representation defect is not
+    copied into the native record.
+  snapshot_sha256: 251fa5697f7afd9fc574b0f9786cd4e4c66b91219802963bf1232a6c2cc876de
+- evidence_id: prodrug
+  kind: primary_source
+  reference: PMID:18827379; DOI:10.1248/cpb.56.1406
+  locator: 253-original-prodrug.pdf, original p.1406 Introduction/Materials and Figure
+    1; p.1407 methods; rendered 253-original-prodrug-p1406.png
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: supports
+  summary: The original stabilization paper separately identifies active T-91825 and
+    its N-phosphono prodrug TAK-599. Figure 1 shows the added phosphono group and
+    the acetic-acid solvate used in the formulation study. This is a chemical transformation,
+    not an alternate exact name for ceftaroline. Only the structure, material and
+    stability-method portions were used; formulation stability is not direct antibacterial
+    or target evidence.
+  snapshot_sha256: 86161fe46fc4f7ebdcb1fcd7f48fec9e25599121ca76aa9da738a3bbd7690b3f
+- evidence_id: grounding
+  kind: authority
+  reference: CHEBI:23066; CHEBI:35285; CHEBI:36816; CHEBI:38099; CHEBI:38418; CHEBI:33281;
+    CHEBI:36047; ARO:0000032
+  locator: Current parent snapshots 253-parent-*.json and reused 244-parent-23066.json;
+    adopted role vocabulary; 253-aro-stanzas.txt
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: supports
+  summary: The cephalosporin, iminium betaine, oxime O-ether, thiadiazole and 1,3-thiazole
+    parents fit the native graph. The activity vocabulary resolves to antimicrobial
+    agent and antibacterial drug. CAS189345-04-8 is corroborated by current ChEBI;
+    Reaxys9532372 is retained by ChEBI but its registry content was not independently
+    accessed.
+  snapshot_sha256: 6468cd73dd0e489836eb1ad09d0ada03f19f5a76d37d5c8b42a724f5309d5e49
+- evidence_id: adapter
+  kind: search
+  reference: iModulonDB:s_aureus/staph_precise108/USA300HOU_RS00160; iModulonDB:e_coli/precise1k/b0084
+  locator: 253-imodulondb-datasets.txt, 253-imodulondb-mecA.txt and 253-imodulondb-ftsI.txt
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: context_only
+  summary: The mecA query returns both an unrelated adaptor MecA (USA300HOU_RS04950)
+    and pbpC/PBP2a-family transpeptidase MecA (USA300HOU_RS00160); only the latter
+    is relevant protein context. The E. coli hit is ftsI/b0084. Neither search returns
+    an iModulon, so no component summary applies. These catalog hits establish no
+    resistance phenotype or drug binding.
+  snapshot_sha256: 5c5ca7bdec62d8816ec58110bb5bc5aabdf6cae0d0c45ada4073d368890534e7
+  search_scope: Dataset discovery followed by mecA in s_aureus/staph_precise108 and
+    ftsI in e_coli/precise1k, before protein literature follow-up.
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:16048970; DOI:10.1128/AAC.49.8.3501-3512.2005
+  locator: '253-original-activity.html/.txt: Introduction, reagent and broth-microdilution
+    methods, organism-specific results and Table 1'
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: supports
+  summary: The original paper distinguishes IV PPI-0903/TAK-599 from active PPI-0903M
+    released by phosphono-group hydrolysis. The tested reagent-grade PPI-0903M was
+    manufactured by Takeda. It reports reference broth microdilution on 1,478 clinical
+    isolates, preserving organism and resistant-phenotype subsets. This supports antibacterial
+    activity of the active compound, not universal MRSA susceptibility or a direct
+    PBP binding experiment. Its abstract loosely calls PPI-0903M N-phosphono-type;
+    the inspected body explicitly separates the forms.
+  snapshot_sha256: 873f876f399b3a4aedd6dd54aee94f11566f3a6db0a2cd6ed89d4f9e04a87371
+- evidence_id: binding
+  kind: primary_source
+  reference: PMID:24085846; DOI:10.1073/pnas.1300118110
+  locator: '253-allostery.html/.txt: Results, Table 1, Figures 1-4, Discussion and
+    main Materials and Methods'
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: supports
+  summary: Crystallography of soluble PBP2a lacking its membrane anchor shows ceftaroline
+    acylation at Ser403 and a second intact molecule at the remote allosteric site
+    in soaking/cocrystallization complexes. Engineered mutant kinetics support allosteric
+    communication; modeled peptidoglycan extensions remain computational interpretation.
+    These experiments support direct PBP2a binding and inhibition, not a universal
+    mechanism shared by all PBPs. The main text acknowledges gifted fosamil; supporting-information
+    preparation details were not inspected. No reagent-specific numerical native target
+    item is proposed.
+  snapshot_sha256: f1d15e06eea4ebd384035276d0a2fe2e772c282ad839e9d5bdda00c397a45a34
+- evidence_id: mecA-scope
+  kind: primary_source
+  reference: PMID:22398650; DOI:10.1093/jac/dks069; PMID:24955778; DOI:10.1021/ja5030657
+  locator: Complete PMID22398650 abstract in 253-core.json; verified PMC4210145 full-text
+    web reading, Table 1 and mutant methods/results
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: partial
+  summary: The clinical study associates increased ceftaroline MICs with PBP2a substitutions.
+    The later original functional study introduces N146K/E150K and N146K/E150K/H351N
+    into ATCC700699 mecA and examines purified variants. Clinical variants impair
+    acylation/allosteric response; N146K alone does not reproduce that impairment.
+    Thus mecA/PBP2a can participate in ceftaroline resistance through specific variants,
+    while wild-type PBP2a is also a ceftaroline target. The native family database
+    assertion is not evidence that every mecA-bearing isolate is ceftaroline resistant.
+  snapshot_sha256: 5e9bd94ec936daba6233a1c16c3799c89a364e5c7a952bc7cc8b0e880e9c5362
+- evidence_id: pbp3-scope
+  kind: primary_source
+  reference: PMID:28559260; DOI:10.1128/AAC.00389-17; PMID:25634992; DOI:10.1093/jac/dku568;
+    PMID:41718487; DOI:10.1128/aac.00887-25
+  locator: 253-pbp3-2017.html/.txt methods, Tables 1-2 and EC-1 discussion; complete
+    2015 abstract; 253-pbp3-2026.xml body
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: partial
+  summary: The 2017 study tests ceftaroline alone and with 4 micrograms/mL avibactam
+    by broth microdilution. EC-1 carries KPC/TEM enzymes and PBP3 TIPY/A417V alterations;
+    the authors describe the insertion contribution as likely and cite the earlier
+    isogenic YRIK experiment. Combination MICs and modeling are not isolated proof
+    of the TIPY effect on ceftaroline monotherapy. The 2015 complete abstract reports
+    an isogenic PBP3 experiment affecting several cephalosporins but its full paper
+    was not accessible here; the exact ceftaroline result is reported secondarily
+    in the 2017 discussion. The 2026 case concerns NDM/CMY, PBP3 YRIN and multi-drug
+    treatment, not an inspected ceftaroline-specific experiment. The native ARO PBP3
+    family edge is preserved as a database assertion with primary-scope limits.
+  snapshot_sha256: d997cd87d203674b5eb2bb7c0ecfc0aacf283354110b8988c7b28b1cd2d3a3f2
+- evidence_id: leads
+  kind: primary_source
+  reference: All 29 adopted compound/ARO parent/target/determinant PMID records
+  locator: 253-core.json, 253-abstracts.txt and 253-lead-dispositions.json
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: partial
+  summary: Ten ChEBI compound leads, three ARO compound leads, four parent/target
+    leads, nine mecA leads and three PBP3 leads were resolved. Twenty-seven complete
+    abstracts and two review metadata records without abstracts were inspected. The
+    ledger distinguishes formulation and clinical prodrug evidence, strain/panel activity,
+    mutant mechanisms, generic PBP/mecA background and combination-treatment studies.
+    No source title alone is used as an experimental result.
+  snapshot_sha256: 5e9bd94ec936daba6233a1c16c3799c89a364e5c7a952bc7cc8b0e880e9c5362
+- evidence_id: clinical
+  kind: authority
+  reference: Official TEFLARO label; effective_time:20241120
+  locator: 253-label.json description, indications and microbiology sections
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: supports
+  summary: The official label identifies an IV fosamil monoacetate monohydrate formulation
+    and ceftaroline as active antibacterial moiety. Skin-infection indications include
+    susceptible MRSA; pneumonia indications list methicillin-susceptible S. aureus
+    only. This supports the native adult skin-infection context without treating the
+    active structure as an independently approved formulation. The unused ARO source
+    definition incorrectly says oral administration; the native selected ChEBI definition
+    does not reproduce that route claim.
+  snapshot_sha256: 7c54f6ea67c0a5e373473876bad89a4e6699e5816a23eb285f67f6839138bf55
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; conf/sources.yaml; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: 253-aro_antibiotics.json; 253-aro-stanzas.txt; 253-local-hits.txt; 253-override-search.txt;
+    extractor lines 410-445 and seeder lines 1533-1538
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: supports
+  summary: The bad synonym and PubChem mapping originate in ARO3000651. The extractor
+    copies source xrefs; the seeder publishes normalized PubChem xrefs as exact structure
+    claims. Existing conf/sources.yaml synonym_exclusions is source-concept-scoped
+    and can remove only the erroneous fosamil name. No existing xref_exclusions/xref_overrides
+    facility was found in the ignored-inclusive bounded search. Correct the source
+    xref and re-adopt, or implement a new narrowly keyed evidence-backed xref correction
+    in the maintained extraction path. The native structure need not change.
+  snapshot_sha256: f6c895d27179be0cba68845bee1e0f522e2d31f44407284bd5d4701e6af72361
+  search_scope: rg --no-ignore --hidden over curation, conf, data/raw, scripts and
+    docs for ceftaroline, CHEBI:70729, ARO:3000651 and RGFBRLNVZCCMSV; additional
+    ignored-inclusive search of conf/scripts/docs for synonym_exclusions, xref_exclusions
+    and xref_overrides.
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema, strict and supplemental chemistry
+  locator: 253-strict.tsv and 253-chemistry.json
+  accessed_at: '2026-10-21T11:53:51Z'
+  support: supports
+  summary: Schema and strict checks exit 0 with zero ERROR rows. The chemistry diagnostic
+    exits 0 while explicitly reporting the wrong PubChem mapping and current OLS stereo
+    omission. These do not replace shared corpus, term, reference and history gates.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Native active ceftaroline graph
+  outcome: supported
+  summary: The net-neutral zwitterion, core stereochemistry, oxime configuration and
+    masses agree with independent exact chemistry.
+  target_ids:
+  - CHEBI:70729
+  evidence_ids:
+  - chemistry
+- assessment_id: equivalence
+  area: grounding
+  topic: Exact synonym and PubChem mapping
+  outcome: concern
+  summary: Both the exact fosamil name and CID9852982 assert a distinct N-phosphono
+    prodrug as the active compound.
+  target_ids:
+  - CHEBI:70729
+  evidence_ids:
+  - chemistry
+  - prodrug
+  - owners
+- assessment_id: classification
+  area: grounding
+  topic: Structural parents and activity roles
+  outcome: supported
+  summary: Parent classes fit the graph and primary active-compound testing supports
+    antibacterial activity.
+  target_ids:
+  - CHEBI:70729
+  evidence_ids:
+  - grounding
+  - activity
+- assessment_id: target
+  area: evidence
+  topic: Database PBP target and primary binding
+  outcome: supported
+  summary: The source family item is honest database evidence; original PBP2a structures
+    independently support direct binding at narrower protein/construct scope.
+  target_ids:
+  - CHEBI:70729
+  evidence_ids:
+  - binding
+  - adapter
+  - record
+- assessment_id: resistance
+  area: evidence
+  topic: mecA and PBP3 variant scope
+  outcome: unknown
+  summary: Database edges resolve. Primary sources support variant-dependent resistance,
+    with substantial allele, combination and assay qualifications; they do not establish
+    universal mecA or PBP3 resistance.
+  target_ids:
+  - CHEBI:70729
+  evidence_ids:
+  - mecA-scope
+  - pbp3-scope
+  - leads
+- assessment_id: provenance
+  area: provenance
+  topic: All source leads, owners and history
+  outcome: supported
+  summary: All 29 source PMID records are dispositioned and actual source owners captured;
+    no native FDA or MIC assertion requires a separate inventory capture.
+  target_ids:
+  - CHEBI:70729
+  evidence_ids:
+  - owners
+  - leads
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Primary enrichment and clinical boundaries
+  outcome: supported
+  summary: Optional primary claims could be added with proper variant and form scope.
+    No status promotion or mandatory primary mechanism field is inferred for this
+    SEEDED record.
+  target_ids:
+  - CHEBI:70729
+  evidence_ids:
+  - binding
+  - clinical
+  - record
+- assessment_id: source-representation
+  area: consistency
+  topic: Current OLS oxime stereochemistry
+  outcome: unknown
+  summary: OLS SMILES omits stereo while its InChI/key and native structure agree;
+    preserve native Z and report the external discrepancy.
+  target_ids:
+  - CHEBI:70729
+  evidence_ids:
+  - chemistry
+- assessment_id: schema
+  area: schema
+  topic: Focused native validity
+  outcome: supported
+  summary: Focused schema and strict checks pass.
+  target_ids:
+  - CHEBI:70729
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: CHEBI-70729-fosamil-exact-identity-contamination
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Fosamil prodrug is asserted as exact ceftaroline identity
+  description: The final exact synonym ceftaroline fosamil and xref pubchem.compound:9852982
+    both originate in ARO3000651 and denote a distinct N-phosphono prodrug. CID9852982
+    additionally denotes its protonated +1 form. Native ceftaroline has no phosphorus
+    atom and its graph, formula and key are otherwise consistent. Exact-key PubChem
+    CID9938701 matches that native structure. Drug activation does not make these
+    forms exact synonyms or chemical equivalents.
+  target_ids:
+  - CHEBI:70729
+  field_paths:
+  - synonyms[6]
+  - xrefs[4]
+  evidence_ids:
+  - chemistry
+  - prodrug
+  - owners
+  rule_id: '.claude/skills/curate-yaml-record/references/review-checklist.md: Identity
+    and Equivalence'
+  native_severity: 'Major: wrong exact synonym and chemical grounding'
+  normalization_reason: Two substantive equivalence assertions name a different compound,
+    while the resolved native target graph itself remains correct.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO3000651 synonym and xref row
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Existing source-scoped synonym_exclusions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source xref extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated exact synonym and xref merge
+actions:
+- action_id: A1
+  description: Add only ceftaroline fosamil to conf/sources.yaml synonym_exclusions
+    for ARO:3000651. Correct the ARO source PubChem mapping to structurally verified
+    CID9938701 and re-adopt, or implement a new compound-specific evidence-backed
+    xref correction in scripts/extract_source_inventory.py before regenerating data/raw/aro_antibiotics.tsv.
+    Reseed the record, retaining active ceftaroline chemistry and supported source
+    claims. Do not change the separately represented fosamil records or treat CID9852982
+    as an exact match.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:70729
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO3000651 synonym and xref row
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Existing source-scoped synonym_exclusions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source xref extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated exact synonym and xref merge
+  ownership_note: The synonym override already exists. A local xref correction would
+    require new maintained extraction behavior; no existing xref override key was
+    verified. Upstream correction followed by re-adoption is an alternative.
+  generator: just extract-inventory --offline; just seed; just seed-canary CHEBI:70729
+  acceptance_checks:
+  - The generated exact synonym list excludes only the erroneous fosamil name; T-91825/PPI0903M
+    and supported aliases remain.
+  - pubchem.compound:9852982 is absent from exact xrefs; any replacement CID must
+    reproduce native full key RGFBRLNVZCCMSV-BIRGHMBHSA-N, formula C22H20N8O5S4 and
+    charge 0. CID9938701 does so in the inspected snapshot.
+  - Run the documented single-record schema/strict validators and full just verify-corpus
+    --summary, just review-queue --limit 0 and just qc after authorized curation.
+limitations:
+- Current OLS SMILES loses the oxime stereo although its InChI/key retain it. The
+  native Z structure should remain intact. This external discrepancy is separately
+  recorded from the confirmed phosphono-prodrug identity error.
+- Reaxys9532372 was confirmed as an adopted/current ChEBI link without independent
+  registry inspection; CAS189345-04-8 likewise has authority corroboration but no
+  direct registry audit.
+- The imported mecA family item is not a universal ceftaroline-resistance rule. Original
+  mutant work distinguishes N146K alone from clinical double/triple variants and does
+  not justify labeling all mecA-bearing isolates resistant. Exact strain/allele primary
+  enrichment should preserve these limits.
+- The 2017 PBP3 study includes mixed beta-lactamase backgrounds, combination MICs
+  and a proposed TIPY mechanism. Its account of the 2015 isogenic ceftaroline result
+  is secondary; the 2015 primary was inspected only at complete-abstract depth after
+  the publisher returned HTTP403. The 2026 NDM case does not supply inspected ceftaroline-specific
+  evidence.
+- The original 2013 allostery main text was read at results/discussion/main-methods
+  depth, but its supplementary reagent preparation and full construct methods were
+  not inspected. Crystallographic complexes and biochemical mutants support a bounded
+  PBP2a mechanism; computational peptidoglycan models are not direct observation.
+- All 29 adopted PMID records resolved, with 27 complete abstracts and two metadata-only
+  reviews. Newly added current ChEBI citation links beyond the adopted ten compound
+  leads were not exhaustively reviewed. Clinical and formulation studies retain prodrug
+  and patient/assay scope.
+- Several XML endpoints returned HTTP500 and PMC HTML fallbacks were used. The correct
+  PMC4210145 local download returned a challenge page; its verified web full text
+  was read instead. A mistaken extra MED lookup (25461061) and a mistaken PMC4112220
+  discovery fetch were unrelated and excluded from evidence.
+- Focused schema/strict checks and the supplemental diagnostic do not substitute for
+  shared corpus gates. Chemistry used the existing 019 interpreter against the 026
+  checkout. No native record or status was changed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- 'All 17 captured input hashes remain unchanged: 13 original plus four actual ARO
+  owners. No native record, saved bundle or Git state was modified.'
+- Fetch timestamps and hashes are retained in 253-fetch-results.json through 253-fetch4-results.json;
+  external ARO cache provenance is in 253-aro-cache-hash.json. Only actual inspected
+  sources support claims; failed or unrelated fetches supply none.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1248/cpb.56.1406
+- https://doi.org/10.1128/AAC.49.8.3501-3512.2005
+- https://doi.org/10.1073/pnas.1300118110
+- https://doi.org/10.1021/ja5030657
+- https://doi.org/10.1128/AAC.00389-17
+- https://pubchem.ncbi.nlm.nih.gov/compound/9938701
+tags:
+- record-review
+- ceftaroline
+- wrong-xref
+- prodrug
+- pbp
+```

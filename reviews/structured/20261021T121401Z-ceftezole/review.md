@@ -1,0 +1,844 @@
+# Ceftezole: coherent active-acid identity and antibacterial context; repair definition bracket
+
+- Review: 20261021T121401Z-ceftezole
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T11:49:07Z
+- Finished UTC: 2026-10-21T12:14:01Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The record coherently represents neutral 6R,7R ceftezole, with matching official chemical cross-references and an appropriate cephalosporin/thiadiazole classification. Original antibacterial studies explicitly use the sodium salt and support active-moiety antibacterial context with strain and assay dependence. The seed does not claim quantitative MICs, direct PBP experiments, producers or host targets. One minor definition-formatting defect remains: an unmatched opening bracket in the second side-group name. Host-enzyme and mouse-response findings from an adopted paper are not antimicrobial mechanisms.
+
+## Scope And Provenance
+
+Entire CHEBI:135716 YAML: definition, eight synonyms, three parents, activity role, class, structure, five chemical links, two document links, two source concepts and four history events. All five unique adopted PMIDs were resolved and their complete abstracts read.
+
+Selection: Queue 256; original thirteen input hashes retained and actual ARO identity input appended before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:135716 | data/antibiotics/antibacterial/ceftezole.yaml | generated | ceftezole |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:135716 | Actual focused command exited 0. |
+| strict | passed | True | CHEBI:135716 | Actual focused command exited 0. |
+| chemistry | passed | False | CHEBI:135716 | Actual focused command exited 0. Batch019 RDKit parsed the batch026 record and reproduced both source mints. |
+| Authoritative full QC | failed | True | CHEBI:135716 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:135716 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:135716 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:135716 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:135716 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:135716 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:135716 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:135716 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:135716 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral ceftezole
+
+identity: supported. Targets: CHEBI:135716.
+
+Graph, stereochemistry, chemical descriptors, aliases and inspected official chemical cross-references agree. Demethylcefazolin describes the missing thiadiazole methyl group relative to cefazolin, consistent with the original structural comparison. Parent terms are broader classes.
+
+### Unmatched bracket
+
+identity: concern. Targets: CHEBI:135716.
+
+The second side-group name has an unclosed square bracket inherited from ChEBI. Its intended connectivity is otherwise unambiguous and agrees with the chemical graph and exact synonyms.
+
+### Antibacterial class and sodium-material evidence
+
+scope: supported. Targets: CHEBI:135716.
+
+Direct primary experiments support ceftezole active-moiety antibacterial activity. Both inspected 1976 studies explicitly use sodium material; any quantitative observation requires that qualification, its named strain, medium, inoculum and endpoint. No native MIC is currently misassigned.
+
+### Microbial phenotype versus direct target and host endpoints
+
+evidence: supported. Targets: CHEBI:135716.
+
+The native seed does not assert a primary PBP interaction. Inspected antimicrobial experiments establish susceptibility, killing, morphology and hydrolysis under specified conditions; host protein binding and yeast/mouse effects remain separate. Optional mechanism enrichment must use exact direct primary support rather than the generic ARO definition.
+
+### All five adopted PMID dispositions
+
+evidence: supported. Targets: CHEBI:135716.
+
+Three antibacterial studies, one yeast-enzyme/mouse study and one review were individually inspected at least at full abstract level. Identifier collisions from non-MED sources were excluded. No source is treated as general proof for the entire record.
+
+### Optional fields and unsupported transfers
+
+completeness: unknown. Targets: CHEBI:135716.
+
+Missing quantitative activity, resistance, producer, clinical-status, graph and dataset objects are not required-field failures. Available data could inform qualified enrichment, but sodium MICs, host transcripts and unsupported biosynthesis remarks cannot be copied as unqualified neutral-compound claims.
+
+### Maintained correction and source fidelity
+
+ownership: supported. Targets: CHEBI:135716.
+
+The bracket defect belongs to the ChEBI source/extractor/seeder path. All fourteen original/appended inputs remain unchanged. The generated record should not be directly patched or promoted to REVIEWED from this review.
+
+### Focused gate results
+
+schema: supported. Targets: CHEBI:135716.
+
+Focused schema, strict and chemistry all pass. Formatting and experimental material scope require scientific review beyond those gates.
+
+## Findings
+
+### F1: Repair the unmatched bracket in the definition side-group name
+
+minor / open / confirmed; issue key: ceftezole-definition-unmatched-sidegroup-bracket.
+
+The definition opens a square bracket before 2-(1H-tetrazol-1-yl)acetamido but does not close it. The intended 7-position side group is clear from the exact synonyms, molecular graph and original chemical structures. Close the bracket or remove the stray opener through the maintained source path; no identity, formula or stereochemical change is warranted.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the definition delimiter through the maintained source path.
+
+- Balance or remove the stray square bracket around the tetrazolylacetamido side-group name while preserving the intended 3- and 7-position substituents and generation classification.
+- Reproduce the correction through the ChEBI inventory/extractor/seeder or an authorized maintained correction; confirm no change to graph, neutral formula, full key, two R centres, source mints or intended cross-references.
+- Run focused schema/strict and applicable source/provenance/reproducibility checks after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/ceftezole.yaml; Entire YAML including all identity fields and history events. | supports | The SEEDED/EXACT record specifies neutral C13H12N8O4S3, two R centres, masses 440.492/440.01436 and full key DZMVCVMFETWNIU-LDYMZIIASA-N. It has no native target, mechanism, resistance, producer, quantitative activity, clinical-status, graph or dataset objects. Its definition contains an opening square bracket before the second side-group name without a closing bracket. |
+| source | data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; conf/sources.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; ChEBI row 2560, ARO row 573; source extraction, mapping and seeding logic. | supports | ChEBI supplies identity, definition, seven aliases, two broader chemical parents, role and registry/document links. ARO adds cephtezole, cephalosporin class and PubChem/ChEMBL links. The five unique adopted PMIDs include three antibacterial studies, one enzyme/host study and one allergy review. The missing definition bracket is already present in the maintained ChEBI row. ARO definition language about PBPs was not imported as a native target assertion. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:135716; Current complete visible chemical entry: definition, structure, names, relations and xrefs. | supports | The current entry matches the native neutral graph, formula, masses and full key. CHEBI:23066 cephalosporin and CHEBI:38099 thiadiazoles are genuinely broader classes; antimicrobial CHEBI:33281 is a supported role ancestor. The source keeps the same definition bracket defect. INN spellings, demethylcefazolin aliases, CAS 26973-24-0 and Reaxys 4046849 are explicitly attested. |
+| chemical-xrefs | https://pubchem.ncbi.nlm.nih.gov/compound/65755; https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1697829.json; Complete official chemical responses and four independent SMILES/InChI parses. | supports | PubChem 65755 and ChEMBL 1697829 representations reproduce the native full key, neutral formula and both R centres. PubChem systematic nomenclature agrees with the two side groups. The sodium salt, with a different formula and counterion, is not substituted for these exact links. |
+| card | https://card.mcmaster.ca/ontology/47944; Current identity, definition, structure, parent/class and publication sections. | supports | ARO:3009114 is ceftezole/cephtezole, a first-generation cephalosporin under ARO:0000032. Its SMILES and CAS/ChEBI/ChEMBL/PubChem identifiers agree with the native record. Its broad PBP description is a database statement, not a direct-binding experiment established by its two linked antimicrobial/PK papers. No such unqualified target claim appears in the native YAML. |
+| documents | https://patents.google.com/patent/CN101544659A/en; Published document identifier/title and selected original Description/technical-scope passages. | supports | The cited patent resolves to preparation of ceftezole and its intermediates. Its described chemistry covers ceftezole and pharmaceutical salts/esters through a 7-amino cephem intermediate and tetrazole acetylation. It is a relevant document link, not proof that every intermediate or salt is the exact native acid. The machine-translated prose is not used to replace chemical nomenclature or establish biosynthesis. |
+| registry-document | https://www.ebi.ac.uk/chebi/CHEBI:135716; https://en.wikipedia.org/wiki/Ceftezole; Public registry attestation and resolved encyclopedia document. | partial | CAS 26973-24-0 is consistently attested by official chemical sources. Reaxys 4046849 was checked as a public ChEBI cross-reference; paid registry contents were not accessed. The encyclopedia link resolves to ceftezole. Its broad mechanism language is not primary experimental proof. |
+| noto-primary | PMID:994325; https://doi.org/10.7164/antibiotics.29.1058; Original introduction and Materials/Methods on 1058–1061, activity results, Table 1 and selected killing/resistance results, Discussion on 1070. Figure 1, Table 1 and Figures 4–5 personally viewed. | supports | Materials and Figure 1 explicitly identify ceftezole sodium, C13H11N8O4S3Na. Agar dilution uses heart-infusion agar, a loopful of approximately 10^6–10^7 cells/mL, 37°C for 18 h, with specified fastidious-organism media. Table 1 shows strain-dependent antibacterial activity; for example S. aureus 209P JC-1 is 0.10 µg/mL and E. coli NIHJ JC-2 is 1.56 µg/mL under those conditions. The separate broth time-kill figures use MICs 0.2 and 6.25 µg/mL, respectively, and show concentration/time-dependent loss of viable cells with regrowth at some exposures. Those broth versus agar values are not interchangeable. Morphology and serial passage are phenotypic observations, not isolated PBP binding. |
+| nishida-primary | PMID:825020; https://doi.org/10.1128/AAC.10.1.1; https://pmc.ncbi.nlm.nih.gov/articles/PMC429680/; Original scanned pages 1–3, 5–7, 12–13 personally read, including Figure 1, Methods, Table 1, time-kill Figure 2 and hydrolysis Table 4. Other pages were downloaded but not fully read. | supports | Figure 1 identifies sodium ceftezole. Agar dilution uses heart-infusion agar and 20 h at 37°C; Table 1 explicitly uses 10^8 microbial units/mL and reports E. coli NIHJ JC-2 at 6.25 µg/mL, illustrating assay/inoculum context. Time-kill experiments use 10^6 cells/mL and viable counts. Table 4 uses partially purified enzymes, 50 µg/mL substrate at 37°C and initial UV hydrolysis rates relative to cefazolin 100; ceftezole is hydrolyzed by the tested enzymes, with source-dependent ratios. Serum protein binding is host pharmacokinetic binding, not bacterial PBP targeting. |
+| dense-primary | PMID:783103; https://doi.org/10.7164/antibiotics.29.579; Complete original indexed abstract; two standard J-STAGE PDF requests returned HTTP 500 and the article web route was inaccessible. | partial | Continuous turbidity and a dynamic bacterial-cystitis model compare ceftezol/demethylcefazolin with cefazolin in dense E. coli populations. The abstract reports lower ceftezol activity and differences in morphology and beta-lactamase destruction. It corroborates antibacterial context but does not establish an exact isolated PBP, universal stability, material counterion or numeric MIC without the full Methods. |
+| host-primary | PMID:17671744; https://doi.org/10.3892/ijmm.20.3.379; Entire five-page original extracted text read; Figure 1 and Methods on 380 visually inspected. | context_only | The paper depicts the ceftezole acid and tests commercial yeast alpha-glucosidase using p-nitrophenyl substrate plus streptozotocin-treated mice. Its biochemical inhibition is not an antifungal growth result or an antibacterial target assay. GSK-3, PPAR-gamma and UCP-3 are mouse response transcripts measured by RT-PCR, not direct bacterial targets or a microbial transcriptomics dataset. Methods/Figure 3 specify 30 mg/kg/day for 14 days whereas abstract/discussion say 10 mg/kg; no host dose is curated here. The discussion names possible producer organisms without demonstrating isolation or biosynthesis of ceftezole in this study; those remarks do not justify a native producer assertion. |
+| allergy-review | PMID:29017833; https://doi.org/10.1016/j.jaip.2017.08.027; Complete indexed abstract. | context_only | The adopted source is an allergy/cross-reactivity review. It is not primary proof of antibacterial activity, a target, natural production or current regulatory status. |
+| structured-applicability | data/antibiotics/antibacterial/ceftezole.yaml; Native definition and unpopulated protein/pathway/response/dataset fields. | context_only | The record contains no native gene, protein, pathway, regulator, response or transcriptomic assertion requiring a structured adapter. Source ARO PBP prose and the host paper were assessed only within their actual evidence scope; no microbial expression module or new pathway claim is inferred. The yeast-enzyme/mouse experiment is not a matching bacterial iModulon experiment. |
+| search | 256-inclusive-file-hits.txt;256-epmc.json;256-epmc-MED.json; Inclusive local search and exact PMID/source disambiguation. | context_only | Hidden and ignored files were included across the declared areas; no exact corrective overlay or decision was found. The unqualified Europe PMC EXT_ID query also returned unrelated thesis identifiers 825020 and 783103. They were explicitly excluded by source=MED before scientific use; all five genuine MED records were read. The original raw response was retained. |
+| validation | 256-focused-results.json;256-chemistry.json;256-external-chemistry.json; Actual focused commands and chemical parses. | supports | Schema, strict and native chemistry commands exit 0. Both native representations and source mints agree. Four external official representations independently match the exact full key, formula, net charge and two R stereocentres. |
+
+## Limits And Additional Notes
+
+- All native fields and exact maintained source rows were read. Original thirteen input hashes were preserved and the actual ARO identity input appended before judgment; all fourteen remain unchanged.
+- The Noto 1976 paper was read selectively for introduction, complete core activity methods, relevant antibacterial/time-kill/morphology/resistance results and discussion. Figure 1, Table 1 and Figures 4–5 were visually inspected. Its full animal efficacy tables and every population row were not exhaustively transcribed or reviewed.
+- The Nishida 1976 paper was read from original scans on pages 1–3, 5–7, 12–13. All 13 pages were downloaded, but the remaining PK pages and full population table were not fully read. The ordinary PMC route succeeded after the page-query route returned a challenge. Both original papers explicitly use sodium material.
+- The dense-population paper was read at complete abstract level; two J-STAGE PDF attempts returned HTTP 500 and the web article route was inaccessible. No exact material salt, quantitative MIC or direct target is inferred from that abstract.
+- The full 2007 yeast-enzyme/mouse paper text was read, including Methods, results and discussion; its structure/Methods page was also viewed. It does not establish a bacterial target, antifungal growth effect, microbial transcriptomic dataset or ceftezole biosynthetic producer. Its inconsistent host dose is kept outside native claims.
+- All five adopted MED abstracts were read. An initial broad EXT_ID lookup returned two unrelated thesis records with coincident identifiers; source-qualified filtering excluded them and the original capture was retained. The allergy paper remains review-level context.
+- CAS and Reaxys were checked through official public source attestations; paid registries were not accessed. Patent inspection was bounded to identity and relevant synthetic scope; translated names were not used to override verified chemical structures. No native protein/pathway assertion required a structured adapter.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T121401Z-ceftezole
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Ceftezole: coherent active-acid identity and antibacterial context; repair
+  definition bracket'
+started_at: '2026-10-21T11:49:07Z'
+finished_at: '2026-10-21T12:14:01Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the seed. Preserved initial provenance, read
+    the entire native record and actual source rows, independently parsed official
+    chemical representations, and inspected original primary-paper methods, figures
+    and results.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The record coherently represents neutral 6R,7R ceftezole, with matching
+  official chemical cross-references and an appropriate cephalosporin/thiadiazole
+  classification. Original antibacterial studies explicitly use the sodium salt and
+  support active-moiety antibacterial context with strain and assay dependence. The
+  seed does not claim quantitative MICs, direct PBP experiments, producers or host
+  targets. One minor definition-formatting defect remains: an unmatched opening bracket
+  in the second side-group name. Host-enzyme and mouse-response findings from an adopted
+  paper are not antimicrobial mechanisms.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ceftezole.yaml
+    sha256: 74c7a7a88267111e0df08e02b80ac2f544023321d4b737ff6fc4c3336593435d
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+targets:
+- target_id: CHEBI:135716
+  path: data/antibiotics/antibacterial/ceftezole.yaml
+  label: ceftezole
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity and bibliography
+scope:
+  description: 'Entire CHEBI:135716 YAML: definition, eight synonyms, three parents,
+    activity role, class, structure, five chemical links, two document links, two
+    source concepts and four history events. All five unique adopted PMIDs were resolved
+    and their complete abstracts read.'
+  selection: Queue 256; original thirteen input hashes retained and actual ARO identity
+    input appended before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:135716
+  exclusions:
+  - target: Ceftezole sodium, cefazolin and host antidiabetic endpoints
+    reason: The native structure is neutral ceftezole. Salt experiments, a methylated
+      analogue, yeast biochemical inhibition and mouse responses retain their distinct
+      material/assay scopes.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:135716
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ceftezole.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:135716
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ceftezole.yaml --out /private/tmp/am-review-session/256-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Actual focused command exited 0. Batch019 RDKit parsed the batch026 record
+    and reproduced both source mints.
+  target_ids:
+  - CHEBI:135716
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 256
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:135716
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:135716
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:135716
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:135716
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:135716
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:135716
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:135716
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:135716
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:135716
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ceftezole.yaml
+  locator: Entire YAML including all identity fields and history events.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: supports
+  summary: The SEEDED/EXACT record specifies neutral C13H12N8O4S3, two R centres,
+    masses 440.492/440.01436 and full key DZMVCVMFETWNIU-LDYMZIIASA-N. It has no native
+    target, mechanism, resistance, producer, quantitative activity, clinical-status,
+    graph or dataset objects. Its definition contains an opening square bracket before
+    the second side-group name without a closing bracket.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; conf/sources.yaml;
+    scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  locator: ChEBI row 2560, ARO row 573; source extraction, mapping and seeding logic.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: supports
+  summary: ChEBI supplies identity, definition, seven aliases, two broader chemical
+    parents, role and registry/document links. ARO adds cephtezole, cephalosporin
+    class and PubChem/ChEMBL links. The five unique adopted PMIDs include three antibacterial
+    studies, one enzyme/host study and one allergy review. The missing definition
+    bracket is already present in the maintained ChEBI row. ARO definition language
+    about PBPs was not imported as a native target assertion.
+  snapshot_sha256: 416601ed67f18f7ca27bd145d6ad5ad907239d07faf58e84771b59d8c7792a15
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:135716
+  locator: 'Current complete visible chemical entry: definition, structure, names,
+    relations and xrefs.'
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: supports
+  summary: The current entry matches the native neutral graph, formula, masses and
+    full key. CHEBI:23066 cephalosporin and CHEBI:38099 thiadiazoles are genuinely
+    broader classes; antimicrobial CHEBI:33281 is a supported role ancestor. The source
+    keeps the same definition bracket defect. INN spellings, demethylcefazolin aliases,
+    CAS 26973-24-0 and Reaxys 4046849 are explicitly attested.
+  snapshot_sha256: 3a6026b8a3d56a4597dfe8065c78e6a1e26948c0a757129738fea108e953da85
+- evidence_id: chemical-xrefs
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/65755; https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1697829.json
+  locator: Complete official chemical responses and four independent SMILES/InChI
+    parses.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: supports
+  summary: PubChem 65755 and ChEMBL 1697829 representations reproduce the native full
+    key, neutral formula and both R centres. PubChem systematic nomenclature agrees
+    with the two side groups. The sodium salt, with a different formula and counterion,
+    is not substituted for these exact links.
+  snapshot_sha256: d4ebacc78a06c4d8abaf6f498730448288fb152684d3b46105e3c865a18c76d9
+- evidence_id: card
+  kind: database
+  reference: https://card.mcmaster.ca/ontology/47944
+  locator: Current identity, definition, structure, parent/class and publication sections.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: supports
+  summary: ARO:3009114 is ceftezole/cephtezole, a first-generation cephalosporin under
+    ARO:0000032. Its SMILES and CAS/ChEBI/ChEMBL/PubChem identifiers agree with the
+    native record. Its broad PBP description is a database statement, not a direct-binding
+    experiment established by its two linked antimicrobial/PK papers. No such unqualified
+    target claim appears in the native YAML.
+  snapshot_sha256: 0d6e2176498eed29fdf4cae0dde273dd646f3204af7241c447a48a43913bc085
+- evidence_id: documents
+  kind: primary_source
+  reference: https://patents.google.com/patent/CN101544659A/en
+  locator: Published document identifier/title and selected original Description/technical-scope
+    passages.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: supports
+  summary: The cited patent resolves to preparation of ceftezole and its intermediates.
+    Its described chemistry covers ceftezole and pharmaceutical salts/esters through
+    a 7-amino cephem intermediate and tetrazole acetylation. It is a relevant document
+    link, not proof that every intermediate or salt is the exact native acid. The
+    machine-translated prose is not used to replace chemical nomenclature or establish
+    biosynthesis.
+  snapshot_sha256: 8c6b9baac2c44a7ba505ea0cc3512f4b950ffc8c160cc25fabfeb44632372a86
+- evidence_id: registry-document
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:135716; https://en.wikipedia.org/wiki/Ceftezole
+  locator: Public registry attestation and resolved encyclopedia document.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: partial
+  summary: CAS 26973-24-0 is consistently attested by official chemical sources. Reaxys
+    4046849 was checked as a public ChEBI cross-reference; paid registry contents
+    were not accessed. The encyclopedia link resolves to ceftezole. Its broad mechanism
+    language is not primary experimental proof.
+  snapshot_sha256: 48993e786f157046cf6d6336b3f52f657832bb9b86733c58cfa487f11b9ac366
+- evidence_id: noto-primary
+  kind: primary_source
+  reference: PMID:994325; https://doi.org/10.7164/antibiotics.29.1058
+  locator: Original introduction and Materials/Methods on 1058–1061, activity results,
+    Table 1 and selected killing/resistance results, Discussion on 1070. Figure 1,
+    Table 1 and Figures 4–5 personally viewed.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: supports
+  summary: Materials and Figure 1 explicitly identify ceftezole sodium, C13H11N8O4S3Na.
+    Agar dilution uses heart-infusion agar, a loopful of approximately 10^6–10^7 cells/mL,
+    37°C for 18 h, with specified fastidious-organism media. Table 1 shows strain-dependent
+    antibacterial activity; for example S. aureus 209P JC-1 is 0.10 µg/mL and E. coli
+    NIHJ JC-2 is 1.56 µg/mL under those conditions. The separate broth time-kill figures
+    use MICs 0.2 and 6.25 µg/mL, respectively, and show concentration/time-dependent
+    loss of viable cells with regrowth at some exposures. Those broth versus agar
+    values are not interchangeable. Morphology and serial passage are phenotypic observations,
+    not isolated PBP binding.
+  snapshot_sha256: 8ad04d775e856ce65b8bb3bd1455c1c4095d35e01a151bbc56fecf997200b2f8
+- evidence_id: nishida-primary
+  kind: primary_source
+  reference: PMID:825020; https://doi.org/10.1128/AAC.10.1.1; https://pmc.ncbi.nlm.nih.gov/articles/PMC429680/
+  locator: Original scanned pages 1–3, 5–7, 12–13 personally read, including Figure
+    1, Methods, Table 1, time-kill Figure 2 and hydrolysis Table 4. Other pages were
+    downloaded but not fully read.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: supports
+  summary: Figure 1 identifies sodium ceftezole. Agar dilution uses heart-infusion
+    agar and 20 h at 37°C; Table 1 explicitly uses 10^8 microbial units/mL and reports
+    E. coli NIHJ JC-2 at 6.25 µg/mL, illustrating assay/inoculum context. Time-kill
+    experiments use 10^6 cells/mL and viable counts. Table 4 uses partially purified
+    enzymes, 50 µg/mL substrate at 37°C and initial UV hydrolysis rates relative to
+    cefazolin 100; ceftezole is hydrolyzed by the tested enzymes, with source-dependent
+    ratios. Serum protein binding is host pharmacokinetic binding, not bacterial PBP
+    targeting.
+  snapshot_sha256: be4626010790a51ad53a5a548c53bcba745e7b5e5e44f79f7e81636b0ebf7acc
+- evidence_id: dense-primary
+  kind: primary_source
+  reference: PMID:783103; https://doi.org/10.7164/antibiotics.29.579
+  locator: Complete original indexed abstract; two standard J-STAGE PDF requests returned
+    HTTP 500 and the article web route was inaccessible.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: partial
+  summary: Continuous turbidity and a dynamic bacterial-cystitis model compare ceftezol/demethylcefazolin
+    with cefazolin in dense E. coli populations. The abstract reports lower ceftezol
+    activity and differences in morphology and beta-lactamase destruction. It corroborates
+    antibacterial context but does not establish an exact isolated PBP, universal
+    stability, material counterion or numeric MIC without the full Methods.
+  snapshot_sha256: d8bae27a73ae701114b7fe9403d0b1e7aa1d00417fe4e4bf2b00390082584bb1
+- evidence_id: host-primary
+  kind: primary_source
+  reference: PMID:17671744; https://doi.org/10.3892/ijmm.20.3.379
+  locator: Entire five-page original extracted text read; Figure 1 and Methods on
+    380 visually inspected.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: context_only
+  summary: The paper depicts the ceftezole acid and tests commercial yeast alpha-glucosidase
+    using p-nitrophenyl substrate plus streptozotocin-treated mice. Its biochemical
+    inhibition is not an antifungal growth result or an antibacterial target assay.
+    GSK-3, PPAR-gamma and UCP-3 are mouse response transcripts measured by RT-PCR,
+    not direct bacterial targets or a microbial transcriptomics dataset. Methods/Figure
+    3 specify 30 mg/kg/day for 14 days whereas abstract/discussion say 10 mg/kg; no
+    host dose is curated here. The discussion names possible producer organisms without
+    demonstrating isolation or biosynthesis of ceftezole in this study; those remarks
+    do not justify a native producer assertion.
+  snapshot_sha256: c66cf51bf267912cf2f42d11c41375d9a68d8d9b0dff7c3cc0c74d8c3237572f
+- evidence_id: allergy-review
+  kind: database
+  reference: PMID:29017833; https://doi.org/10.1016/j.jaip.2017.08.027
+  locator: Complete indexed abstract.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: context_only
+  summary: The adopted source is an allergy/cross-reactivity review. It is not primary
+    proof of antibacterial activity, a target, natural production or current regulatory
+    status.
+  snapshot_sha256: d8bae27a73ae701114b7fe9403d0b1e7aa1d00417fe4e4bf2b00390082584bb1
+- evidence_id: structured-applicability
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ceftezole.yaml
+  locator: Native definition and unpopulated protein/pathway/response/dataset fields.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: context_only
+  summary: The record contains no native gene, protein, pathway, regulator, response
+    or transcriptomic assertion requiring a structured adapter. Source ARO PBP prose
+    and the host paper were assessed only within their actual evidence scope; no microbial
+    expression module or new pathway claim is inferred. The yeast-enzyme/mouse experiment
+    is not a matching bacterial iModulon experiment.
+- evidence_id: search
+  kind: search
+  reference: 256-inclusive-file-hits.txt;256-epmc.json;256-epmc-MED.json
+  locator: Inclusive local search and exact PMID/source disambiguation.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: context_only
+  summary: Hidden and ignored files were included across the declared areas; no exact
+    corrective overlay or decision was found. The unqualified Europe PMC EXT_ID query
+    also returned unrelated thesis identifiers 825020 and 783103. They were explicitly
+    excluded by source=MED before scientific use; all five genuine MED records were
+    read. The original raw response was retained.
+  snapshot_sha256: 64fbb8537f86d8add395b1763c6d14980dc097cc04fc7dabcb67d553f94988a5
+  search_scope: rg --no-ignore --hidden over data, curation, conf, scripts, src, docs,
+    .claude, reviews and reports for ceftezole, CHEBI:135716, ARO:3009114, full key
+    and source mint; bounded public exact-name/PMID/DOI searches.
+- evidence_id: validation
+  kind: validation
+  reference: 256-focused-results.json;256-chemistry.json;256-external-chemistry.json
+  locator: Actual focused commands and chemical parses.
+  accessed_at: '2026-10-21T12:00:31Z'
+  support: supports
+  summary: Schema, strict and native chemistry commands exit 0. Both native representations
+    and source mints agree. Four external official representations independently match
+    the exact full key, formula, net charge and two R stereocentres.
+  snapshot_sha256: 02a961bfd8b850b4d760684ceea98571c755921edabe8450cc484c0e61d26b92
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral ceftezole
+  outcome: supported
+  summary: Graph, stereochemistry, chemical descriptors, aliases and inspected official
+    chemical cross-references agree. Demethylcefazolin describes the missing thiadiazole
+    methyl group relative to cefazolin, consistent with the original structural comparison.
+    Parent terms are broader classes.
+  target_ids:
+  - CHEBI:135716
+  evidence_ids:
+  - chebi
+  - chemical-xrefs
+  - card
+  - noto-primary
+  - validation
+- assessment_id: definition
+  area: identity
+  topic: Unmatched bracket
+  outcome: concern
+  summary: The second side-group name has an unclosed square bracket inherited from
+    ChEBI. Its intended connectivity is otherwise unambiguous and agrees with the
+    chemical graph and exact synonyms.
+  target_ids:
+  - CHEBI:135716
+  evidence_ids:
+  - record
+  - source
+  - chebi
+  - chemical-xrefs
+- assessment_id: activity
+  area: scope
+  topic: Antibacterial class and sodium-material evidence
+  outcome: supported
+  summary: Direct primary experiments support ceftezole active-moiety antibacterial
+    activity. Both inspected 1976 studies explicitly use sodium material; any quantitative
+    observation requires that qualification, its named strain, medium, inoculum and
+    endpoint. No native MIC is currently misassigned.
+  target_ids:
+  - CHEBI:135716
+  evidence_ids:
+  - noto-primary
+  - nishida-primary
+  - dense-primary
+- assessment_id: mechanism
+  area: evidence
+  topic: Microbial phenotype versus direct target and host endpoints
+  outcome: supported
+  summary: The native seed does not assert a primary PBP interaction. Inspected antimicrobial
+    experiments establish susceptibility, killing, morphology and hydrolysis under
+    specified conditions; host protein binding and yeast/mouse effects remain separate.
+    Optional mechanism enrichment must use exact direct primary support rather than
+    the generic ARO definition.
+  target_ids:
+  - CHEBI:135716
+  evidence_ids:
+  - card
+  - noto-primary
+  - nishida-primary
+  - host-primary
+  - structured-applicability
+- assessment_id: citations
+  area: evidence
+  topic: All five adopted PMID dispositions
+  outcome: supported
+  summary: Three antibacterial studies, one yeast-enzyme/mouse study and one review
+    were individually inspected at least at full abstract level. Identifier collisions
+    from non-MED sources were excluded. No source is treated as general proof for
+    the entire record.
+  target_ids:
+  - CHEBI:135716
+  evidence_ids:
+  - noto-primary
+  - nishida-primary
+  - dense-primary
+  - host-primary
+  - allergy-review
+  - search
+- assessment_id: completeness
+  area: completeness
+  topic: Optional fields and unsupported transfers
+  outcome: unknown
+  summary: Missing quantitative activity, resistance, producer, clinical-status, graph
+    and dataset objects are not required-field failures. Available data could inform
+    qualified enrichment, but sodium MICs, host transcripts and unsupported biosynthesis
+    remarks cannot be copied as unqualified neutral-compound claims.
+  target_ids:
+  - CHEBI:135716
+  evidence_ids:
+  - record
+  - noto-primary
+  - nishida-primary
+  - host-primary
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained correction and source fidelity
+  outcome: supported
+  summary: The bracket defect belongs to the ChEBI source/extractor/seeder path. All
+    fourteen original/appended inputs remain unchanged. The generated record should
+    not be directly patched or promoted to REVIEWED from this review.
+  target_ids:
+  - CHEBI:135716
+  evidence_ids:
+  - source
+  - search
+  - validation
+- assessment_id: checks
+  area: schema
+  topic: Focused gate results
+  outcome: supported
+  summary: Focused schema, strict and chemistry all pass. Formatting and experimental
+    material scope require scientific review beyond those gates.
+  target_ids:
+  - CHEBI:135716
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: ceftezole-definition-unmatched-sidegroup-bracket
+  category: identity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Repair the unmatched bracket in the definition side-group name
+  description: The definition opens a square bracket before 2-(1H-tetrazol-1-yl)acetamido
+    but does not close it. The intended 7-position side group is clear from the exact
+    synonyms, molecular graph and original chemical structures. Close the bracket
+    or remove the stray opener through the maintained source path; no identity, formula
+    or stereochemical change is warranted.
+  target_ids:
+  - CHEBI:135716
+  field_paths:
+  - definition
+  evidence_ids:
+  - record
+  - source
+  - chebi
+  - chemical-xrefs
+  - noto-primary
+  rule_id: 'native-review-checklist: precise definition and chemical nomenclature'
+  native_severity: minor
+  normalization_reason: A nonblocking formatting defect inherited from the source.
+    The intended chemical structure remains clear and consistently verified.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible definition extraction/correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition owner
+actions:
+- action_id: A1
+  description: Correct the definition delimiter through the maintained source path.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:135716
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible definition extraction/correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition owner
+  acceptance_checks:
+  - Balance or remove the stray square bracket around the tetrazolylacetamido side-group
+    name while preserving the intended 3- and 7-position substituents and generation
+    classification.
+  - Reproduce the correction through the ChEBI inventory/extractor/seeder or an authorized
+    maintained correction; confirm no change to graph, neutral formula, full key,
+    two R centres, source mints or intended cross-references.
+  - Run focused schema/strict and applicable source/provenance/reproducibility checks
+    after separately authorized curation.
+limitations:
+- All native fields and exact maintained source rows were read. Original thirteen
+  input hashes were preserved and the actual ARO identity input appended before judgment;
+  all fourteen remain unchanged.
+- The Noto 1976 paper was read selectively for introduction, complete core activity
+  methods, relevant antibacterial/time-kill/morphology/resistance results and discussion.
+  Figure 1, Table 1 and Figures 4–5 were visually inspected. Its full animal efficacy
+  tables and every population row were not exhaustively transcribed or reviewed.
+- The Nishida 1976 paper was read from original scans on pages 1–3, 5–7, 12–13. All
+  13 pages were downloaded, but the remaining PK pages and full population table were
+  not fully read. The ordinary PMC route succeeded after the page-query route returned
+  a challenge. Both original papers explicitly use sodium material.
+- The dense-population paper was read at complete abstract level; two J-STAGE PDF
+  attempts returned HTTP 500 and the web article route was inaccessible. No exact
+  material salt, quantitative MIC or direct target is inferred from that abstract.
+- The full 2007 yeast-enzyme/mouse paper text was read, including Methods, results
+  and discussion; its structure/Methods page was also viewed. It does not establish
+  a bacterial target, antifungal growth effect, microbial transcriptomic dataset or
+  ceftezole biosynthetic producer. Its inconsistent host dose is kept outside native
+  claims.
+- All five adopted MED abstracts were read. An initial broad EXT_ID lookup returned
+  two unrelated thesis records with coincident identifiers; source-qualified filtering
+  excluded them and the original capture was retained. The allergy paper remains review-level
+  context.
+- CAS and Reaxys were checked through official public source attestations; paid registries
+  were not accessed. Patent inspection was bounded to identity and relevant synthetic
+  scope; translated names were not used to override verified chemical structures.
+  No native protein/pathway assertion required a structured adapter.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

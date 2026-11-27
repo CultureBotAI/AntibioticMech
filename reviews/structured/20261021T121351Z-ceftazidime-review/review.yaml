@@ -1,0 +1,1038 @@
+schema_version: 1.0.0
+review_id: 20261021T121351Z-ceftazidime-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of ceftazidime
+started_at: '2026-10-21T11:49:03Z'
+finished_at: '2026-10-21T12:13:51Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; initial target and input hashes preserved, with actual maintained owners
+    appended when traced.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: 'Needs curation: qualify two CARD resistance assertions whose current
+  cited originals report conflicting functional results'
+scientific_review: true
+summary: 'The exact ceftazidime graph and inspected chemical references agree, and
+  all 34 native CDC MIC observations match their source rows. One major finding concerns
+  the unqualified TEM-59 and TEM-89 ceftazidime-resistance assertions: current CARD
+  retains them, but its cited originals report susceptible tested strains and the
+  later comparison shows negligible ceftazidime hydrolysis. The recommended maintained
+  qualification preserves CARD attribution and experimental scope. All 180 adopted
+  PMID records were resolved, including 173 complete abstracts and seven metadata-only
+  records; selected original studies were examined in depth. No native record was
+  changed. A separate minor finding concerns unmatched definition delimiters inherited
+  from ChEBI; it does not affect the verified molecular graph.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ceftazidime.yaml
+    sha256: 51c8151de51d168a17f89ac72d4a11ac67ca40f881071d1061476444f1332ac1
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+scope:
+  description: 'Entire 2,605-line exact SEEDED ceftazidime record: 13 synonyms, three
+    parents, two roles, six exact chemical xrefs, two drug links, three document links,
+    34 MIC observations, 258 imported resistance assertions, one imported PBP target,
+    28 history events and all 180 adopted compound/parent/target/determinant PMID
+    leads.'
+  selection: Queue 254; preserved 13 original captured inputs, appended four actual
+    ARO owners and then two CARD qualification owners discovered by direct seeder
+    tracing, giving 19 verified input hashes.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:3508
+targets:
+- target_id: CHEBI:3508
+  path: data/antibiotics/antibacterial/ceftazidime.yaml
+  label: ceftazidime
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual ARO source or target semantic owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual ARO source or target semantic owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual ARO source or target semantic owner
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Actual ARO source or target semantic owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Maintained CARD evidence qualification owner, discovered by direct seeder
+      tracing
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Maintained CARD evidence qualification owner, discovered by direct seeder
+      tracing
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit 0; no issues found.
+  target_ids:
+  - CHEBI:3508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ceftazidime.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit 0; zero ERROR rows.
+  target_ids:
+  - CHEBI:3508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ceftazidime.yaml --out /private/tmp/am-review-session/254-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Supplemental native and xref chemistry diagnostic
+  status: passed
+  required: false
+  summary: Exit 0; native and exact xrefs agree. Current OLS SMILES stereo omission
+    remains explicit.
+  target_ids:
+  - CHEBI:3508
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/254-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: adapter-datasets-initial
+  name: Initial structured dataset discovery in restricted network
+  status: failed
+  required: false
+  summary: Initial command failed with DNS resolution; the authorized network retry
+    below succeeded. This was an executed failure, not an unavailable command.
+  target_ids:
+  - CHEBI:3508
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/254-imodulondb-datasets.txt
+  exit_code: 2
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-datasets
+  name: Structured dataset discovery network retry
+  status: passed
+  required: false
+  summary: Exit 0 on authorized network retry.
+  target_ids:
+  - CHEBI:3508
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/254-imodulondb-datasets.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-ftsI
+  name: Structured ftsI search before protein web follow-up
+  status: passed
+  required: false
+  summary: Exit 0; one gene hit and zero iModulons.
+  target_ids:
+  - CHEBI:3508
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query ftsI
+    > /private/tmp/am-review-session/254-imodulondb-ftsI.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-acrR
+  name: Structured acrR search before protein web follow-up
+  status: passed
+  required: false
+  summary: Exit 0; one gene hit and zero iModulons.
+  target_ids:
+  - CHEBI:3508
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query acrR
+    > /private/tmp/am-review-session/254-imodulondb-acrR.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-mexB
+  name: Structured mexB search before protein web follow-up
+  status: passed
+  required: false
+  summary: Exit 0; one gene hit and zero iModulons.
+  target_ids:
+  - CHEBI:3508
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism p_aeruginosa --dataset precise364 --query
+    mexB > /private/tmp/am-review-session/254-imodulondb-mexB.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-oprM
+  name: Structured oprM search before protein web follow-up
+  status: passed
+  required: false
+  summary: Exit 0; one gene hit and zero iModulons.
+  target_ids:
+  - CHEBI:3508
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism p_aeruginosa --dataset precise364 --query
+    oprM > /private/tmp/am-review-session/254-imodulondb-oprM.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: source-reconciliation
+  name: Supplemental native/source row and preserved-hash reconciliation
+  status: passed
+  required: false
+  summary: Exit 0; 19 input hashes unchanged, 258 source edges and 34 MIC values/qualifiers/BioSample
+    mappings reconciled. This supplemental script is not a native term/reference/history
+    validator.
+  target_ids:
+  - CHEBI:3508
+  command: .venv/bin/python /private/tmp/am-review-session/254-ledger.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - owners
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:3508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:3508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:3508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:3508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:3508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:3508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:3508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:3508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:3508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ceftazidime.yaml
+  locator: Entire YAML, including all 28 history events
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: supports
+  summary: Native status remains SEEDED/EXACT. The record denotes net-neutral zwitterionic
+    ceftazidime with 6R,7R core and Z oxime. Each resistance item explicitly identifies
+    a CARD database assertion; the PBP item correctly retains PRIMARY_EVIDENCE_NEEDED.
+    Activity rows are independent curated observations, not evidence that every listed
+    resistance determinant occurs in those isolates. No native clinical-product, producer
+    or causal-graph item is present.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:3508; PubChem:5481173; ChEMBL:CHEMBL44354; KEGG:C06889; KEGG:D07654
+  locator: 254-chemistry.py/.json and corresponding authority JSON/molfile snapshots
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: supports
+  summary: Native SMILES and InChI, current ChEBI InChI, PubChem, ChEMBL and both
+    KEGG structures reproduce ORFOPKXBNMVMKC-DWVKKRMSSA-N, C22H22N6O7S2, charge 0,
+    two R centers and the Z oxime. Calculated mass is 546.587 and exact mass 546.099139,
+    consistent with native precision. Current OLS SMILES alone omits oxime stereo
+    and gives ORFOPKXBNMVMKC-RDTXWAMCSA-N; its InChI/key and native representation
+    retain the correct configuration. InChI tautomer normalization is not a distinct-compound
+    finding.
+  snapshot_sha256: d0b9cfdc79da55ca0db576176f1d1aca97fd2649451433e411932cf6b3d0f0e2
+- evidence_id: grounding
+  kind: authority
+  reference: CHEBI:23066; CHEBI:36816; CHEBI:33281; CHEBI:36047; ARO:0000032; CAS:72558-82-8
+  locator: 254-chebi-*.json, 254-ols.json and 254-aro-stanzas.txt
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: supports
+  summary: Cephalosporin and oxime O-ether parents fit the graph; antimicrobial agent
+    and antibacterial drug roles resolve and are supported by exact-compound activity.
+    CAS72558-82-8 and Reaxys5475149 are corroborated as authority links. Reaxys registry
+    content was not independently accessed. The full set of 261 adopted native ARO
+    identifiers resolves in the preserved OBO cache.
+  snapshot_sha256: 286ba854e01ae0bfd40f622ba3d8d38a1f18474e0a5864da492fad6b31371d2d
+- evidence_id: mic
+  kind: primary_source
+  reference: All 34 native CDC/FDA AR Isolate Bank isolate-detail URLs
+  locator: 254-cdc-*.html/.txt; 254-cdc-comparison.json; 254-source-audit.json
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: supports
+  summary: Every exact Ceftazidime row, numeric MIC, inequality sign and resistant
+    interpretation agrees with the native observation; micrograms/mL and mg/L are
+    equivalent. All 31 supplied BioSample accessions agree with the cited CDC pages;
+    the three IMP-panel records correctly omit unavailable accessions. Broth-microdilution/modal
+    wording and the source-specific CLSI editions are retained where reported. Isolates
+    1332–1334 omit an unreported assay method. These selected resistant isolates do
+    not establish species-wide resistance or a determinant-specific mechanism.
+  snapshot_sha256: 48a455663f49a038a6f2638e10f00c79660e05a4f12ad2c815f500d8f0884bfc
+- evidence_id: taxa
+  kind: authority
+  reference: NCBITaxon:287; NCBITaxon:354276; NCBITaxon:470; NCBITaxon:562; NCBITaxon:573;
+    NCBITaxon:90371
+  locator: 254-ncbitaxon-*.json and native activity rows
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: supports
+  summary: All six taxon identifiers resolve to the stated names, including Enterobacter
+    cloacae complex at complex rank and the Salmonella Typhimurium serovar. The source
+    isolates and 31 BioSample links remain distinct from taxon-level identity. BioSample
+    accessions were verified against CDC source pages, not by independent NCBI sequence-record
+    inspection.
+  snapshot_sha256: d9abfbab0001acd766a0b0cbf891026fae98f5afd2e198842078ce2aca068d20
+- evidence_id: adapter
+  kind: search
+  reference: iModulonDB:e_coli/precise1k/b0084; iModulonDB:e_coli/precise1k/b0464;
+    iModulonDB:p_aeruginosa/precise364/PA0426; iModulonDB:p_aeruginosa/precise364/PA0427
+  locator: 254-imodulondb-datasets.txt and four 254-imodulondb-*.txt searches
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: context_only
+  summary: Dataset discovery preceded protein web research. ftsI, acrR, mexB and oprM
+    each returned one gene and zero components; no summarize call applied. The E.
+    coli acrR catalog hit is not experimental evidence for the native E. coli AcrR
+    claim. The E. coli catalog hit does not replace the original AcrR experiment,
+    and no covered Klebsiella or Burkholderia dataset was assumed. Catalog membership
+    proves neither ceftazidime binding nor resistance.
+  snapshot_sha256: e11ac9a1aaa77de1249f64718913ddabd60cc6a93375452fd9989485516b45b4
+  search_scope: Dataset discovery followed by ftsI/acrR in e_coli/precise1k and mexB/oprM
+    in p_aeruginosa/precise364, before protein literature follow-up.
+- evidence_id: pbp
+  kind: primary_source
+  reference: PMID:20974151; DOI:10.1016/j.jmb.2010.10.024
+  locator: '254-pbp.xml; 254-pbp-selected.txt: Results, acyl-complex discussion, thermal-shift
+    and crystallization methods, supplementary structure caption'
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: supports
+  summary: The original study examines soluble recombinant P. aeruginosa PBP3 lacking
+    the N-terminal membrane anchor. Thermal stabilization accompanies ceftazidime
+    exposure; crystallography after a 10 mM, 30-minute soak shows an opened beta-lactam
+    acyl linkage to Ser294 at 2.6 angstrom resolution. The paper deposits that complex
+    as 3OCN. This supports direct PBP3 interaction at exact construct scope, without
+    equating every PBP with that protein or making the proposed Burkholderia structural
+    extrapolation a direct experiment. The native family target may be enriched but
+    is not falsely labeled primary evidence.
+  snapshot_sha256: 75026b59acb4240144eb8e071588cf57fa73146d6b9d45ca705a999948a91f98
+- evidence_id: card-conflict
+  kind: authority
+  reference: ARO:3000928; ARO:3000956; https://card.mcmaster.ca/ontology/37308; https://card.mcmaster.ca/ontology/37336
+  locator: '254-card59.html/.txt and 254-card89.html/.txt: definitions, parent relations
+    and determinant-specific publication lists'
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: supports
+  summary: Both current CARD pages retain a ceftazidime resistance relation. The TEM-59
+    page lists only PMID:10390218; the TEM-89 page lists only PMID:11709345. No additional
+    determinant-specific primary study is exposed in those inspected publication lists.
+    This confirms that native source attribution is faithful while the experimental
+    conflict still needs explicit qualification.
+  snapshot_sha256: 1d6ed4e0dcb929e3c09f470537881e7f81cd32700498a301af4fafbb6461973a
+- evidence_id: tem59
+  kind: primary_source
+  reference: PMID:10390218; DOI:10.1128/AAC.43.7.1657
+  locator: '254-tem59-alt.html/.txt: complete main text, susceptibility methods/results
+    and Tables 1–4'
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: partial
+  summary: The original TEM-59/IRT-17 study reports ceftazidime susceptibility by
+    disk diffusion for clinical K. oxytoca Kox 443 and its E. coli transconjugant
+    Tc 443. Its Table 1 MICs and Table 2 kinetic substrates do not include ceftazidime;
+    they must not be cited as ceftazidime numeric measurements. The paper characterizes
+    inhibitor resistance rather than establishing ceftazidime resistance. Host, plasmid
+    copy number and expression can influence phenotype; its result does not prove
+    universal inactivity.
+  snapshot_sha256: 9e268dbe9dbba09b39112b455fe8e879abbc8562e2e48e7442e121c84f1f9608
+- evidence_id: tem89
+  kind: primary_source
+  reference: PMID:11709345; DOI:10.1128/AAC.45.12.3591-3594.2001
+  locator: '254-tem89.html/.txt: complete main text; Tables 1–2 with separately inspected
+    HTML rows; purification and microacidimetry methods'
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: refutes
+  summary: For ceftazidime alone, Table 1 reports MIC 0.25 micrograms/mL for E. coli
+    Tc 631 (TEM-89), Tc 443 (TEM-59) and the C600 control; the clinical TEM-89 strain
+    is 0.12. Table 2 reports kcat <1 per second and kcat/Km <0.01 per micromolar per
+    second for both enzymes under the stated purified-enzyme assay conditions, versus
+    detectable TEM-3 activity. These observations contradict interpreting the two
+    positive CARD assertions as demonstrated ceftazidime resistance in these tested
+    contexts. They do not prove zero catalytic activity in every expression background
+    or condition.
+  snapshot_sha256: a1650f33defe947a99749670d52bb242d550b1d24afbcc14d692c5f7f48f380b
+- evidence_id: context-dependent-enzymes
+  kind: primary_source
+  reference: PMID:12461028; DOI:10.1093/jac/dkf240; PMID:33416461; DOI:10.1099/mgen.0.000500
+  locator: Complete 2002 abstract in 254-core-*.json; 254-newsubstrates.xml Results,
+    ARP methods and relevant table text
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: partial
+  summary: The older purified-enzyme abstract reports measurable ceftazidime activity
+    for CTX-M-15 but not CTX-M-3. The later original expression study experimentally
+    supports ceftazidime resistance from CTX-M-3, CTX-M-27 and CMY-2 in E. coli BW25113
+    under its MIC criteria; it also fails to validate some predictions for CTX-M-15
+    in that system. This context dependence prevents blanket removal of CTX-M-3 or
+    all inhibitor-resistant TEM entries. TEM-59 and TEM-89 are not among the 11 enzymes
+    tested in the later study.
+  snapshot_sha256: 20de54b193f86d76e5985b4aadbe8442d7ded8a30d6a15f0050c7e1d76f8dd18
+- evidence_id: efflux
+  kind: primary_source
+  reference: PMID:24823362; DOI:10.1371/journal.pone.0096288
+  locator: '254-kpngh.xml: antimicrobial susceptibility methods, ceftazidime Results,
+    Table 3 and Discussion'
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: supports
+  summary: K. pneumoniae NTUH-K2044 wild type, kpnGH-inactivated mutant and complemented
+    mutant have ceftazidime E-test MICs 0.256, 0.064 and 0.256 micrograms/mL, respectively.
+    This supports a contribution to susceptibility in that background. It does not
+    make the wild type clinically resistant or establish a direct ceftazidime flux
+    assay; the fluorimetric transport experiment used ethidium bromide.
+  snapshot_sha256: c8be97c1deb8b6af795b1c008330c198fb8f454391b46c708cf9ca9a164cd2be
+- evidence_id: permeability
+  kind: primary_source
+  reference: PMID:24788109; DOI:10.1371/journal.pone.0095918; PMID:34551677; DOI:10.1080/22221751.2021.1984182
+  locator: 254-omp38.html Results/Tables 1–3/Discussion; 254-lamb.html main methods/results/Tables
+    1–6/Discussion
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: partial
+  summary: 'The Omp38 study reports a small ceftazidime MIC shift from 0.5 to 1 in
+    heterologous Omp38-expressing E. coli, while its native B. pseudomallei isolate
+    is susceptible at 2 using borrowed Pseudomonas criteria. Channel permeation and
+    MIC findings require their separate endpoints. The KPC-positive Klebsiella LamB/PBP3
+    study measures ceftazidime alone as well as ceftazidime-avibactam: some wild-type
+    complementation comparisons yield twofold ceftazidime changes. Thus a combination-focused
+    title does not invalidate the native edges, but mixed KPC backgrounds and small
+    contextual shifts do not prove universal mutant sufficiency.'
+  snapshot_sha256: d8bf1048849dabc7d005e4a8512dce7d4a65404e004b63eb0c05102ae31167a1
+- evidence_id: other-source-scope
+  kind: primary_source
+  reference: PMID:16189130; PMID:27645385; PMID:28559260; PMID:25634992; PMID:41718487
+  locator: 254-core-*.json complete abstracts; reused 253-pbp3-2017.html methods/tables/discussion
+    and253-pbp3-2026.xml body
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: partial
+  summary: PMID:16189130 studies clinical and veterinary E. coli isolates, matching
+    the native E. coli AcrR determinant rather than Klebsiella. AcrR evidence in the
+    inspected original abstract emphasizes fluoroquinolone complementation; exact
+    ceftazidime support was not verified from the unavailable body. The OmpK35/36
+    abstract supports porin-dependent context without a complete exact-drug table
+    audit. E. coli PBP3 work includes engineered insertion evidence, clinical TIPY/A417V
+    with other resistance genes, and later NDM/CMY/PBP3 combination-treatment cases.
+    These database edges remain source assertions; the review does not convert abstracts
+    or mixed-background correlations into unqualified primary mechanisms.
+- evidence_id: leads
+  kind: primary_source
+  reference: All 180 adopted compound/parent/target/determinant PMID records
+  locator: 254-core-0.json through 254-core-3.json; all 12 split 254-abstracts files;
+    254-lead-dispositions.json
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: partial
+  summary: All 180 MED records resolve. The 173 available complete abstracts and seven
+    records lacking abstracts were inspected; the per-PMID ledger identifies the adopted
+    ARO/ChEBI context and disposition. Ten ChEBI compound leads concern isolate panels,
+    P99 mutagenesis, clinical or mouse-combination studies, melioidosis review and
+    antigenic hapten research. The adopted early ceftazidime original PMID:6805421
+    supports activity in its tested panel at abstract depth. Enzyme sequence reports,
+    inhibitor resistance, combination treatment and surveillance do not automatically
+    prove exact ceftazidime inactivation. No title-only experiment or uninspected
+    full text is asserted.
+  snapshot_sha256: 824e80f4d5e54f3a5458fcdb3ec6264525df66fc0b606382699c7ad60060ec22
+- evidence_id: clinical-documents
+  kind: authority
+  reference: KEGG:D07654; DrugBank:DB00438; patent:US4258041; patent:DE2921316; wikipedia.en:Ceftazidime;
+    official TAZICEF label
+  locator: 254-keggdrug.txt/.mol; 254-label-tazicef.json; 254-patent-us.html/.txt;
+    254-patent-de.html/.txt; 254-wiki.html/.txt
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: partial
+  summary: KEGG D07654 reproduces the native graph. The official TAZICEF label identifies
+    ceftazidime pentahydrate plus sodium carbonate, expressed as anhydrous ceftazidime
+    activity; a trade name is drug context, not proof that the formulated solid has
+    the native formula. Both patent documents resolve and their identity passages
+    describe the ceftazidime side chain and core within broader claims; German OCR
+    is imperfect, so it is not a sole stereochemistry authority. The Wikipedia identity
+    panel corroborates the links but supplies no primary mechanism evidence. Direct
+    DrugBank access returned 403; its ID is corroborated by ChEBI and Wikipedia without
+    independent DrugBank content inspection.
+  snapshot_sha256: 8a27771bc5cd30fb20e682453f8566a3da73a25301371e91e085f7615108391d
+- evidence_id: owners
+  kind: record_content
+  reference: curation/card_evidence_reviews.json; scripts/card_evidence_reviews.py;
+    data/raw/aro_resistance_edges.tsv; scripts/seed_from_sources.py
+  locator: 254-source-audit.json; source loader/apply_review; docs/CURATION.md CARD
+    evidence qualifications; seeder1753-1783 and preserved activity merge
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: supports
+  summary: All 258 native resistance entries match the adopted exact source rows.
+    Existing CARD qualifications can add a note while retaining the original determinant,
+    mechanism and ARO evidence. The loader pins the inventory hash, row digest, target
+    identifier and InChIKey and rejects drift; neither disputed row currently has
+    a qualification. The two exact row digests are recorded in 254-source-audit.json.
+    Curator-owned activity observations are retained during seeding. The original
+    13 hashes, four ARO owner hashes and two subsequently traced qualification-owner
+    hashes all remain unchanged.
+  snapshot_sha256: 40c6cc90a91915788a1fd9ec52c934f16c0bdc5c4af289f2489639aa20332778
+  search_scope: Ignored-inclusive rg --no-ignore --hidden over curation/conf/data/raw/scripts/docs
+    for CHEBI:3508, ceftazidime and ORFOPKXBNMVMKC; additional ignored-inclusive qualification
+    searches and direct seeder tracing. Initial exclusion-key search alone was insufficient;
+    the existing card_evidence_reviews lane was then found and fully read.
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema/strict checks and supplemental diagnostics
+  locator: 254-strict.tsv; 254-chemistry.json; 254-source-audit.json
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: supports
+  summary: Schema and strict commands exited 0, with zero strict ERROR rows. Chemistry
+    used the existing 019 RDKit2026.03.5 interpreter against the026 checkout. Supplemental
+    reconciliation exited 0; it does not substitute for documented full-corpus term,
+    reference, history or QC checks.
+- evidence_id: definition-delimiters
+  kind: record_content
+  reference: CHEBI:3508; data/raw/chebi_antimicrobials.tsv
+  locator: Exact CHEBI:3508 definition in 254-chebi_antimicrobials.json and native
+    definition
+  accessed_at: '2026-10-21T12:06:35Z'
+  support: supports
+  summary: The adopted ChEBI definition and native definition both open an outer {[
+    immediately before (2Z), but close only the inner oxy/imino brackets. The outer
+    pair remains unmatched before acetamido groups. This is a prose/nomenclature defect;
+    native SMILES, InChI, stereochemistry and formula are independently coherent.
+  snapshot_sha256: 9ffa9e0dafd14af98b50b5f3728ce3d7699d6093b04eec4ea545886a55ebc17b
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact ceftazidime chemistry
+  outcome: supported
+  summary: Native stereo, charge, formula, mass and inspected exact chemical xrefs
+    agree. Formulated pentahydrate remains drug context.
+  target_ids:
+  - CHEBI:3508
+  evidence_ids:
+  - chemistry
+  - clinical-documents
+- assessment_id: grounding
+  area: grounding
+  topic: Parents, roles and identifier placement
+  outcome: supported
+  summary: Structural parents and activity roles fit; document and drug links remain
+    distinct from exact structure xrefs.
+  target_ids:
+  - CHEBI:3508
+  evidence_ids:
+  - grounding
+  - clinical-documents
+- assessment_id: activity
+  area: evidence
+  topic: All 34 native MIC observations
+  outcome: supported
+  summary: Exact source rows, inequality qualifiers, taxon labels, unit equivalence
+    and available accessions agree; selected isolate scope is preserved.
+  target_ids:
+  - CHEBI:3508
+  evidence_ids:
+  - mic
+  - taxa
+- assessment_id: target
+  area: evidence
+  topic: PBP target and primary mechanism
+  outcome: supported
+  summary: The database family target is honestly labeled. Independent original PBP3
+    acyl structures support a narrower direct interaction; missing optional enrichment
+    is not a defect.
+  target_ids:
+  - CHEBI:3508
+  evidence_ids:
+  - pbp
+  - adapter
+  - record
+- assessment_id: tem-conflict
+  area: evidence
+  topic: TEM-59 and TEM-89 source reconciliation
+  outcome: concern
+  summary: Current database assertions require explicit functional-context qualification
+    against the originals that CARD itself cites.
+  target_ids:
+  - CHEBI:3508
+  evidence_ids:
+  - card-conflict
+  - tem59
+  - tem89
+  - owners
+- assessment_id: other-resistance
+  area: evidence
+  topic: Remaining imported resistance assertions
+  outcome: unknown
+  summary: All source identifiers and rows resolve; 180 adopted leads were dispositioned.
+    Full primary experimental validation of every imported route was not achieved,
+    and context-dependent studies preclude blanket removal.
+  target_ids:
+  - CHEBI:3508
+  evidence_ids:
+  - leads
+  - context-dependent-enzymes
+  - efflux
+  - permeability
+  - other-source-scope
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained ownership and 28-event history
+  outcome: supported
+  summary: The generated source attribution and curator-owned activity history are
+    identifiable; all 19 captured input hashes are preserved.
+  target_ids:
+  - CHEBI:3508
+  evidence_ids:
+  - record
+  - owners
+  - leads
+- assessment_id: current-representation
+  area: consistency
+  topic: Current ChEBI SMILES oxime omission
+  outcome: unknown
+  summary: Current OLS SMILES loses stereo but its InChI/key, independent structures
+    and native graph agree; preserve the native representation.
+  target_ids:
+  - CHEBI:3508
+  evidence_ids:
+  - chemistry
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary enrichment
+  outcome: supported
+  summary: No unsupported scientific-status promotion or required producer/graph field
+    is inferred. Primary PBP and resistance detail could be added only with taxon,
+    allele, construct and assay scope.
+  target_ids:
+  - CHEBI:3508
+  evidence_ids:
+  - record
+  - pbp
+  - permeability
+- assessment_id: schema
+  area: schema
+  topic: Focused native validity
+  outcome: supported
+  summary: Documented single-record schema and strict checks pass; shared corpus gates
+    remain distinct.
+  target_ids:
+  - CHEBI:3508
+  evidence_ids:
+  - validation
+- assessment_id: definition-syntax
+  area: consistency
+  topic: ChEBI definition delimiter syntax
+  outcome: concern
+  summary: The imported definition has an unmatched outer bracket pair and needs a
+    bounded wording correction through its source/extraction owner.
+  target_ids:
+  - CHEBI:3508
+  evidence_ids:
+  - definition-delimiters
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: CHEBI-3508-tem59-tem89-cited-functional-conflict
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Two ceftazidime resistance assertions omit conflict with their cited functional
+    studies
+  description: Resistance entries 45 (TEM-59, ARO:3000928) and 68 (TEM-89, ARO:3000956)
+    faithfully repeat CARD but lack a qualification for contrary results in the current
+    cited originals. TEM-59 original disk testing reports susceptible clinical and
+    transconjugant strains. The later TEM-89 comparison reports ceftazidime-alone
+    MIC 0.25 micrograms/mL for both TEM-bearing E. coli transconjugants and the control,
+    together with purified-enzyme kcat <1 per second and efficiency <0.01 per micromolar
+    per second for both enzymes. Current CARD exposes no additional determinant-specific
+    primary citation on either page. This is a confirmed source conflict requiring
+    scoped annotation, not a claim of universal inactivity, zero hydrolysis or database
+    misattribution.
+  target_ids:
+  - CHEBI:3508
+  field_paths:
+  - resistance_mechanisms[45]
+  - resistance_mechanisms[68]
+  evidence_ids:
+  - card-conflict
+  - tem59
+  - tem89
+  - owners
+  rule_id: '.claude/skills/curate-yaml-record/references/review-checklist.md: Evidence
+    and resistance-mechanism scope; docs/CURATION.md: CARD evidence-scope qualifications'
+  native_severity: 'Major: material functional-evidence conflict is not represented
+    on two resistance assertions'
+  normalization_reason: The molecule is correctly identified and the source attribution
+    is faithful, but consumers otherwise receive positive route assertions without
+    the experimentally important qualification. The existing maintained note lane
+    supports a bounded correction.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Maintained row-pinned qualification owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Fail-closed qualification loader and note application
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Preserved adopted CARD source rows
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generates qualified native resistance entries
+- finding_id: F2
+  issue_key: CHEBI-3508-definition-unmatched-delimiters
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The imported ceftazidime definition contains unmatched delimiters
+  description: The definition opens {[ before the (2Z) acetamido substituent and leaves
+    that outer pair unclosed. The same malformed fragment occurs in the adopted ChEBI
+    definition. This impairs nomenclature readability without demonstrating any error
+    in the independently verified native structure.
+  target_ids:
+  - CHEBI:3508
+  field_paths:
+  - definition
+  evidence_ids:
+  - definition-delimiters
+  - chemistry
+  - owners
+  rule_id: '.claude/skills/curate-yaml-record/references/review-checklist.md: Identity
+    and consistency'
+  native_severity: 'Minor: malformed source definition text, with correct molecular
+    representation'
+  normalization_reason: The unmatched delimiters are a bounded textual defect and
+    do not justify a stereochemistry, formula or molecular-identity change.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI definition source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Extracts the ChEBI definition into the maintained inventory
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproduces the definition in the generated native record
+actions:
+- action_id: A1
+  description: Add a narrowly scoped review to curation/card_evidence_reviews.json
+    for only the ceftazidime TEM-59 and TEM-89 source rows. Pin inventory 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df,
+    row 042a9d9ff53180d3d29f8826ece5dd735160c59bc9a892117e6e1d2d763b1b60 and row b2077813d737f8f6fe3e8030fc1126544577f641f5fd7ed290af751738ff1006,
+    CHEBI:3508 and ORFOPKXBNMVMKC-DWVKKRMSSA-N. Cite the exact inspected susceptibility
+    and kinetic locations in PMID:10390218 and PMID:11709345. Explain that these tested
+    contexts fail to establish the imported positive ceftazidime-resistance interpretation,
+    while preserving CARD evidence and acknowledging possible expression/context dependence.
+    Use the existing loader to generate note; do not remove source rows, replace ARO
+    evidence with those papers as positive proof, or infer universal inactivity. CTX-M-3
+    and other TEM variants require their own evidence and are outside this bounded
+    correction.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:3508
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Maintained row-pinned qualification owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Fail-closed qualification loader and note application
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Preserved adopted CARD source rows
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generates qualified native resistance entries
+  ownership_note: The existing CARD review lane supports qualification only, not suppression
+    or experimental grounding. No new override schema or generated-file patch is needed.
+  generator: just seed; just seed-canary CHEBI:3508
+  acceptance_checks:
+  - The two generated entries retain their original mechanism_type, aro_id, label
+    and ARO evidence; each gains the intended evidence-scope note with provenance.
+  - No unrelated ceftazidime resistance entry or any other compound is qualified by
+    these two row pins; all 34 curated MIC observations remain unchanged.
+  - Use the native single-record schema/strict checks and full just verify-corpus
+    --summary, just review-queue --limit 0 and just qc, plus the documented seed canary
+    and reproduction workflow, after separately authorized curation.
+- action_id: A2
+  description: Correct the malformed acetamido-substituent wording through the ChEBI
+    source/extraction lane, preferably by adopting a corrected upstream definition.
+    Use a balanced, chemically equivalent substituent description and reproduce it
+    through the inventory and seeder. Preserve the verified ceftazidime molecular
+    representation; do not patch only the generated YAML.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:3508
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI definition source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Extracts the ChEBI definition into the maintained inventory
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproduces the definition in the generated native record
+  ownership_note: The defect is inherited from the adopted ChEBI definition. The inventory,
+    extraction and seeding files identify the actual maintained source lane; this
+    recommendation does not assert an existing per-definition override facility.
+  generator: just extract-inventory; just seed; just seed-canary CHEBI:3508
+  acceptance_checks:
+  - The generated definition has balanced delimiters and preserves the same acetamido
+    substituent meaning.
+  - Native SMILES, InChI, InChIKey, configured stereochemistry, formula and all unrelated
+    claims remain unchanged.
+  - Run the documented schema, strict, seed-canary and full-corpus gates after separately
+    authorized curation.
+limitations:
+- All 180 adopted PMID records were resolved, but only 173 supplied abstracts; seven
+  were metadata-only. Most of the 258 imported assertions were assessed through adopted
+  source structure and complete abstracts rather than full original experimental tables.
+  This is not complete primary confirmation of all resistance edges. Newly added current
+  ChEBI citations beyond the adopted ten compound leads were not exhaustively reviewed.
+- TEM-59/TEM-89 conclusions are restricted to the named clinical isolates, E. coli
+  transconjugants, expression backgrounds and purified-enzyme conditions. Equality
+  to a control MIC and below-threshold kinetic values are not proof of universal absence.
+  Original HTML table text and cell alignment were inspected; no independent visual
+  PDF audit was performed.
+- CTX-M-3 has positive later expression evidence despite an earlier purified-enzyme
+  negative result. Other inhibitor-resistant TEM abstracts can require contextual
+  reconciliation, but they were not all converted into findings or excluded by analogy.
+- Full original AcrR and OmpK35 bodies were not successfully retrieved; their exact
+  ceftazidime experiments remain unverified. PBP3 clinical and combination-treatment
+  studies do not establish the independent effect of every allele. Omp38 and LamB
+  studies retain their small-effect, heterologous or mixed-background qualifications.
+- The 31 BioSample accessions were verified against the cited CDC pages, not independently
+  inspected at NCBI. Source breakpoint versions and resistant categories were checked
+  as reported; this review did not reclassify the isolates under a different current
+  clinical standard.
+- Current OLS ceftazidime SMILES omits oxime stereo while its InChI/key and the native
+  graph agree. Reaxys was authority-link corroboration only. DrugBank returned 403;
+  the Fortaz label search returned 404, while the TAZICEF official label was available.
+  Neither access failure establishes that a drug or document does not exist.
+- Several PMC HTML attempts returned challenge pages and several EuropePMC full-text
+  XML requests returned 500. Successful alternate originals were used where noted;
+  challenge/error responses are not evidence. Two local parser attempts failed because
+  bs4 was absent, after which a standard-library parser succeeded without dependency
+  changes.
+- Focused schema/strict and supplemental chemistry/source diagnostics do not replace
+  shared full-corpus QC, term, reference or history gates. The existing 019 chemistry
+  interpreter was used against 026; no native record, saved review bundle or Git state
+  was modified.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- 'All 19 captured input hashes were reverified unchanged: original 13 plus four ARO
+  inventory/semantic owners and two CARD qualification owners. Initial captures were
+  not refreshed.'
+- Fetch timestamps, URLs, errors and SHA-256 values are retained in 254-fetch-results.json
+  through 254-fetch5-results.json; the external adopted ARO cache hash is in 254-aro-cache-hash.json.
+  The 180-lead ledger and 258-edge/34-MIC reconciliation are separate scratch artifacts.
+- Commands are literal executable invocations from /private/tmp/antibioticmech-record-reviews-026.
+  The initial adapter discovery failed with DNS exit 2, then succeeded under authorized
+  network access before protein web research. No iModulon component hit required a
+  summarize call.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://card.mcmaster.ca/ontology/37308
+- https://card.mcmaster.ca/ontology/37336
+- https://doi.org/10.1128/AAC.43.7.1657
+- https://doi.org/10.1128/AAC.45.12.3591-3594.2001
+- https://doi.org/10.1099/mgen.0.000500
+- https://doi.org/10.1016/j.jmb.2010.10.024
+- https://pubchem.ncbi.nlm.nih.gov/compound/5481173
+tags:
+- record-review
+- ceftazidime
+- card-evidence-scope
+- tem-59
+- tem-89
+- mic
