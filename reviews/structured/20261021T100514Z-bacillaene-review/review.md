@@ -1,0 +1,810 @@
+# Review of bacillaene
+
+- Review: 20261021T100514Z-bacillaene-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:35:09Z
+- Finished UTC: 2026-10-21T10:05:14Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Native bacillaene chemistry agrees with ChEBI InChI and PubChem at the represented stereochemical level. The definition incorrectly names unmodified B. subtilis 168 as the isolation producer; original work distinguishes producing strains and a restored-sfp derivative. Primary translation evidence is available but remains process-level and fraction-scoped. All seven adopted publication leads were checked, including two with no indexed abstract.
+
+## Scope And Provenance
+
+Entire SEEDED record and three-event history; all seven ChEBI publication leads; current chemistry and ontology assertions; original isolation/structure papers, producer genetics and later fraction-based mechanism evidence.
+
+Selection: Path-ordered queue index 137 prepared and hashed before judgment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:71623 | data/antibiotics/antibacterial/bacillaene.yaml | generated | bacillaene |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema check | passed | True | CHEBI:71623 | Exit 0. |
+| Documented strict check | passed | True | CHEBI:71623 | Exit 0; zero ERROR rows. |
+| Native, PubChem and near-match boundary | passed | False | CHEBI:71623 | Exit 0; native/PubChem graph, formula, masses and mint agree. Three carbon centers are unspecified. The MIBiG row has a different H50 graph. |
+| Supplemental current-OLS literal check | failed | False | CHEBI:71623 | Exit 1 at SMILES equality: current OLS strips direction markers although its InChI/key match. The failure is preserved. |
+| Bounded ChEBI assertion comparison | passed | False | CHEBI:71623 | Exit 0 after allowing absent optional document_xrefs in the supplemental harness; parents, roles, synonyms, xref strings and InChI agree, with SMILES discrepancy reported. |
+| Native iModulonDB catalog before web | passed | False | CHEBI:71623 | Initial sandbox attempt exited 2 on DNS; permitted network retry exited 0 and returned the B. subtilis catalog. |
+| Native pks gene-context search | passed | False | CHEBI:71623 | Exit 0; ten biosynthesis/regulatory gene matches and zero iModulons. This followed identification of the biosynthetic gene lead. |
+| Authoritative full QC | failed | True | CHEBI:71623 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:71623 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:71623 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:71623 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:71623 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:71623 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:71623 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:71623 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:71623 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Represented chemical entity
+
+identity: supported. Targets: CHEBI:71623.
+
+Connectivity and encoded geometry agree with databases and the major reported isomer; carbon absolute stereochemistry remains unspecified.
+
+### Ontology classes and roles
+
+grounding: supported. Targets: CHEBI:71623.
+
+Chemical classes and broad antibacterial roles are supported.
+
+### Definition strain attribution
+
+evidence: concern. Targets: CHEBI:71623.
+
+The definition conflates unmodified 168 with documented producer strains or restored-sfp derivatives.
+
+### Available translation evidence
+
+evidence: supported. Targets: CHEBI:71623.
+
+Primary work supports a process-level translation effect. No existing native target claim requires retraction.
+
+### Generation and publication scope
+
+provenance: supported. Targets: CHEBI:71623.
+
+Seed ownership and all adopted lead dispositions were checked; unavailable articles are not counted as fully read.
+
+### Bounded mechanism and producer enrichment
+
+completeness: unknown. Targets: CHEBI:71623.
+
+Additions require exact strain and fraction/isomer qualifiers; MIBiG name-only import would violate the exact-identity boundary.
+
+### Focused gates
+
+schema: supported. Targets: CHEBI:71623.
+
+Native schema/strict checks pass; the supplemental OLS SMILES assertion failed explicitly.
+
+## Findings
+
+### F1: Correct the definition’s unqualified strain 168 producer attribution
+
+minor / open / confirmed; issue key: chebi-71623-bacillaene-producer-strain-scope.
+
+The definition says bacillaene was obtained from Bacillus subtilis 168. Original isolation/structure work identifies ATCC 55422 and 3610-derived material; the genetic source separates ordinary 168 from a producing derivative. Replace the strain-specific claim with supported producer wording and preserve derivative/genotype distinctions when giving examples.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Make the producer wording accurate and reproducible through the source-owned definition path.
+
+- Use a definition such as: An unstable polyene antibiotic produced by Bacillus subtilis strains, with antibacterial activity. Add experimentally supported strain examples separately with primary citations and exact genotype context.
+- Correct the upstream/source-owned text or implement a narrow, documented override. Current definition selection chooses ChEBI before ARO/curator concepts, so simply adding a curator row does not override this wording. Verify reseeding retains the correction.
+- Do not attach the local MIBiG row by name: its H50 graph and incomplete stereo fail the exact compound boundary. Any curated producer object must cite the actual chemical-production experiment.
+- If optionally adding mechanism evidence, use translation inhibition with coupled-assay/fraction limits; do not assert a specific ribosomal protein or initiation binding step. Preserve the difference between cytological-response threshold, MIC and molecular affinity.
+- Preserve the current supported graph, explicitly note unresolved carbon stereochemistry, retain history and complete required native gates before status sign-off.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/bacillaene.yaml; Whole native YAML and three curation-history events | supports | ChEBI-seeded exact concept contains no structured mechanism, producer, MIC or direct-target claim. Its definition nevertheless specifies strain 168 as source. History records initial generation and two reseeds without REVIEWED sign-off. |
+| chemistry | CHEBI:71623;PubChem CID:25144999; 137-chemistry.py;137-chemistry.json;137-pubchem.json | supports | Native SMILES/InChI and PubChem agree on KDQMRYTZELJKOB-MAHROAIDSA-N, C34H48N2O6, neutral one-component graph, masses and minted identifier. Nine alkene geometries are specified, while three potential carbon stereocenters remain unassigned. Agreement is not proof of complete absolute stereochemistry. |
+| sources | CHEBI:71623; 137-ols.json;137-parents.json;137-source-assessment.json | partial | Current nonobsolete ChEBI parents are polyene antibiotic, polyketide, monocarboxylic acid amide, secondary alcohol and enamine. Roles, systematic synonym, Reaxys string and InChI/key reproduce. OLS SMILES loses backslash direction markers, so its literal comparison failed; native geometry is retained. |
+| structure | PMID:17234808; DOI:10.1073/pnas.0610503104;137-primary2007.pdf; main text and Figure1 p1507 | partial | NMR, mass spectrometry and pksX-deletion comparisons identify the hexaene/triene diamide scaffold and distinguish bacillaene from its H2-richer congener. The paper revises the 1995 empirical formula. Figure 1 was inspected visually: the represented major geometric isomer is consistent, without assigned carbon stereocenters. Isolation involved 3610-derived and ATCC 55422 material, containing multiple geometric isomers; fraction activity is not a purified single-isomer MIC. |
+| isolation | PMID:7592068; DOI:10.7164/antibiotics.48.997;137-primary1995.pdf; isolation and biological assay sections | partial | Original fermentation used ATCC 55422. Agar diffusion supports antibacterial activity; dilution assays differ markedly between wild-type and hyperpermeable E. coli. A coupled E. coli transcription/translation system shows reduced labeled-methionine incorporation, unlike rabbit reticulocyte controls. This supports a protein-synthesis process effect, not a particular binding protein. The discussion calls initiation a suggestion from unpublished work; the historical formula was superseded. |
+| strain | PMID:16707694; DOI:10.1128/JB.00052-06;137-strain-core.json; indexed original introduction and Figure6 caption at https://pmc.ncbi.nlm.nih.gov/articles/PMC1482889/ | refutes | The original study distinguishes ordinary 168, which carries an sfp defect, from the producing OKB105 derivative. Its Figure 6 compares JH642(sfp0) with OKB105(sfp+). The abstract typography instead labels OKB105 sfp0, so the figure/body context is necessary; neither permits unqualified attribution to unmodified 168. |
+| cytology | PMID:26648120; DOI:10.1038/ja.2015.116; indexed original Results, partial-purification section and figure captions at https://pmc.ncbi.nlm.nih.gov/articles/PMC5367885/ | partial | B. subtilis 3610 extracts were separated genetically and chromatographically. Fraction 7 was primarily bacillaene; cytological profiles support translational arrest, while other metabolites account for membrane permeabilization. The reported 2 and 20 micromolar comparison is explicitly minimal cytological concentration in Results, despite MIC wording in the abstract. These fractions and the lptD-permeable test strain do not establish an exact protein target, general MIC or single-isomer potency. |
+| mibig | data/raw/mibig_producers.tsv;BGC0001089.5; 137-mibig-rows.json;137-mibig-page.html;scripts/seed_from_sources.py attach_mibig_producers | context_only | The named bacillaene row actually exports C34H50N2O6/key VGZNPOHVJNZAOU-OISZERLPSA-N and incomplete stereo. The seeder first rejects incomplete stereo and additionally requires full-key identity. Absence of a generated producer here is consistent with those safeguards; FZB42 metadata cannot be transferred by name alone. |
+| leads | Seven adopted ChEBI PMID leads; 137-core.json;137-lead-dispositions.json | context_only | Five available complete abstracts were read. PMID17886826 and 20087918 have no indexed abstract; publisher metadata was checked and the 2010 graphical abstract read. PksS/PksJ/PksC papers concern biosynthesis, not antibiotic targets. The bacillaene B discovery concerns a distinct glycosylated congener. |
+| adapter | Native iModulonDB pks search; 137-imodulondb-datasets.txt;137-imodulondb-pks.txt | context_only | The gene matches include synthase-associated functions and a regulator. Zero iModulons were returned, so no component summary applies. Gene presence or expression does not prove chemical production or antibacterial binding. |
+| validation | Focused native schema and strict checks; 137-strict.tsv | supports | Both documented focused validators passed; no native structure or history edit was made. |
+| search | Ignored-inclusive local ownership search; 137-local-hits.txt;137-inspect.json | context_only | All 14 captured repository inputs unchanged. The MIBiG inventory was hashed before its row was judged. |
+
+## Limits And Additional Notes
+
+- Three potential carbon stereocenters are unspecified in native and compared database structures. The 2007 major-isomer figure also lacks those assignments; no complete later absolute-stereochemistry or total-synthesis review was performed.
+- All seven adopted publication records were checked, but only five have indexed abstracts. Two Wiley communications lack indexed abstracts; publisher bibliographic/graphical-abstract material was checked and full text/SI requests returned 403. Guessed older SI paths returned 404.
+- The 1995 and 2007 papers were read for isolation, structure, activity and relevant Methods; their materials include incompletely resolved isomers/congeners. No quantitative activity is transferred to the exact native stereochemical representation without that limitation.
+- The 2006 strain paper was checked through its complete abstract and indexed original introduction/figure-caption passages, not a complete manuscript/SI read. A public archived PDF attempt failed 404 and direct PMC returned a browser challenge.
+- The 2016 cytology paper was checked through the complete abstract and indexed original relevant Results/figure passages; original XML returned 500 and downloaded PMC HTML was a browser challenge. Full Methods/SI were not independently retrieved.
+- Current OLS SMILES lacks direction markers; the executed literal check failed 1. A separate bounded check passed while preserving this discrepancy and native InChI/PubChem agreement.
+- Initial native catalog lookup failed DNS in the sandbox and succeeded after permitted network retry; subsequent pks lookup returned gene context only.
+- Current MIBiG page was retrieved, but guessed JSON endpoints returned 404. The maintained adopted row was inspected and its chemical mismatch verified directly. Reaxys was not independently queried.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 14 captured input hashes unchanged; no native record edits.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T100514Z-bacillaene-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of bacillaene
+started_at: '2026-10-21T09:35:09Z'
+finished_at: '2026-10-21T10:05:14Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Represented bacillaene structure supported; definition needs producer-strain
+  correction
+scientific_review: true
+summary: Native bacillaene chemistry agrees with ChEBI InChI and PubChem at the represented
+  stereochemical level. The definition incorrectly names unmodified B. subtilis 168
+  as the isolation producer; original work distinguishes producing strains and a restored-sfp
+  derivative. Primary translation evidence is available but remains process-level
+  and fraction-scoped. All seven adopted publication leads were checked, including
+  two with no indexed abstract.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/bacillaene.yaml
+    sha256: cd15382f7f9c69f950c8ac7c486db4cca83f822a525000f76fd3c77fa0302b47
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+scope:
+  description: Entire SEEDED record and three-event history; all seven ChEBI publication
+    leads; current chemistry and ontology assertions; original isolation/structure
+    papers, producer genetics and later fraction-based mechanism evidence.
+  selection: Path-ordered queue index 137 prepared and hashed before judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:71623
+targets:
+- target_id: CHEBI:71623
+  path: data/antibiotics/antibacterial/bacillaene.yaml
+  label: bacillaene
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/bacillaene.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit 0; zero ERROR rows.
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/bacillaene.yaml --out /private/tmp/am-review-session/137-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Native, PubChem and near-match boundary
+  status: passed
+  required: false
+  summary: Exit 0; native/PubChem graph, formula, masses and mint agree. Three carbon
+    centers are unspecified. The MIBiG row has a different H50 graph.
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/137-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+  - mibig
+- check_id: source-literal
+  name: Supplemental current-OLS literal check
+  status: failed
+  required: false
+  summary: 'Exit 1 at SMILES equality: current OLS strips direction markers although
+    its InChI/key match. The failure is preserved.'
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/137-source-check.py
+  exit_code: 1
+  expected_exit_code: 0
+  evidence_ids:
+  - sources
+- check_id: source-bounded
+  name: Bounded ChEBI assertion comparison
+  status: passed
+  required: false
+  summary: Exit 0 after allowing absent optional document_xrefs in the supplemental
+    harness; parents, roles, synonyms, xref strings and InChI agree, with SMILES discrepancy
+    reported.
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/137-source-assessment.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - sources
+- check_id: adapter
+  name: Native iModulonDB catalog before web
+  status: passed
+  required: false
+  summary: Initial sandbox attempt exited 2 on DNS; permitted network retry exited
+    0 and returned the B. subtilis catalog.
+  target_ids:
+  - CHEBI:71623
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-pks
+  name: Native pks gene-context search
+  status: passed
+  required: false
+  summary: Exit 0; ten biosynthesis/regulatory gene matches and zero iModulons. This
+    followed identification of the biosynthetic gene lead.
+  target_ids:
+  - CHEBI:71623
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism b_subtilis --dataset modulome --query
+    pks
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:71623
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/bacillaene.yaml
+  locator: Whole native YAML and three curation-history events
+  accessed_at: '2026-10-21T09:40:07Z'
+  support: supports
+  summary: ChEBI-seeded exact concept contains no structured mechanism, producer,
+    MIC or direct-target claim. Its definition nevertheless specifies strain 168 as
+    source. History records initial generation and two reseeds without REVIEWED sign-off.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:71623;PubChem CID:25144999
+  locator: 137-chemistry.py;137-chemistry.json;137-pubchem.json
+  accessed_at: '2026-10-21T09:40:07Z'
+  support: supports
+  summary: Native SMILES/InChI and PubChem agree on KDQMRYTZELJKOB-MAHROAIDSA-N, C34H48N2O6,
+    neutral one-component graph, masses and minted identifier. Nine alkene geometries
+    are specified, while three potential carbon stereocenters remain unassigned. Agreement
+    is not proof of complete absolute stereochemistry.
+  snapshot_sha256: ba04987abb079de9b7b2bd32ff3df6d069af5c55fc805348b0010c96cc75d678
+- evidence_id: sources
+  kind: database
+  reference: CHEBI:71623
+  locator: 137-ols.json;137-parents.json;137-source-assessment.json
+  accessed_at: '2026-10-21T09:40:07Z'
+  support: partial
+  summary: Current nonobsolete ChEBI parents are polyene antibiotic, polyketide, monocarboxylic
+    acid amide, secondary alcohol and enamine. Roles, systematic synonym, Reaxys string
+    and InChI/key reproduce. OLS SMILES loses backslash direction markers, so its
+    literal comparison failed; native geometry is retained.
+  snapshot_sha256: 9cc623bb397fec41932288405a62c0ecd9394ce9c4bd3b707f9e38f9bf41b484
+- evidence_id: structure
+  kind: primary_source
+  reference: PMID:17234808
+  locator: DOI:10.1073/pnas.0610503104;137-primary2007.pdf; main text and Figure1
+    p1507
+  accessed_at: '2026-10-21T09:40:07Z'
+  support: partial
+  summary: 'NMR, mass spectrometry and pksX-deletion comparisons identify the hexaene/triene
+    diamide scaffold and distinguish bacillaene from its H2-richer congener. The paper
+    revises the 1995 empirical formula. Figure 1 was inspected visually: the represented
+    major geometric isomer is consistent, without assigned carbon stereocenters. Isolation
+    involved 3610-derived and ATCC 55422 material, containing multiple geometric isomers;
+    fraction activity is not a purified single-isomer MIC.'
+  snapshot_sha256: 3c3cb85b4fcfba68091de2525b964f30d4e3cbf225aad055e21d48f84f8e0ba1
+- evidence_id: isolation
+  kind: primary_source
+  reference: PMID:7592068
+  locator: DOI:10.7164/antibiotics.48.997;137-primary1995.pdf; isolation and biological
+    assay sections
+  accessed_at: '2026-10-21T09:40:07Z'
+  support: partial
+  summary: Original fermentation used ATCC 55422. Agar diffusion supports antibacterial
+    activity; dilution assays differ markedly between wild-type and hyperpermeable
+    E. coli. A coupled E. coli transcription/translation system shows reduced labeled-methionine
+    incorporation, unlike rabbit reticulocyte controls. This supports a protein-synthesis
+    process effect, not a particular binding protein. The discussion calls initiation
+    a suggestion from unpublished work; the historical formula was superseded.
+  snapshot_sha256: 6a0adc15d943de957e0547a441eeec6fd55f63eb4564bb8fda7f50dd33a6dbde
+- evidence_id: strain
+  kind: primary_source
+  reference: PMID:16707694
+  locator: DOI:10.1128/JB.00052-06;137-strain-core.json; indexed original introduction
+    and Figure6 caption at https://pmc.ncbi.nlm.nih.gov/articles/PMC1482889/
+  accessed_at: '2026-10-21T09:40:07Z'
+  support: refutes
+  summary: The original study distinguishes ordinary 168, which carries an sfp defect,
+    from the producing OKB105 derivative. Its Figure 6 compares JH642(sfp0) with OKB105(sfp+).
+    The abstract typography instead labels OKB105 sfp0, so the figure/body context
+    is necessary; neither permits unqualified attribution to unmodified 168.
+  snapshot_sha256: 4ac4bd837c6fb5fca760e551a51ff927d7adba52bcf4ce6978b334e4c5a669c0
+- evidence_id: cytology
+  kind: primary_source
+  reference: PMID:26648120
+  locator: DOI:10.1038/ja.2015.116; indexed original Results, partial-purification
+    section and figure captions at https://pmc.ncbi.nlm.nih.gov/articles/PMC5367885/
+  accessed_at: '2026-10-21T09:40:07Z'
+  support: partial
+  summary: B. subtilis 3610 extracts were separated genetically and chromatographically.
+    Fraction 7 was primarily bacillaene; cytological profiles support translational
+    arrest, while other metabolites account for membrane permeabilization. The reported
+    2 and 20 micromolar comparison is explicitly minimal cytological concentration
+    in Results, despite MIC wording in the abstract. These fractions and the lptD-permeable
+    test strain do not establish an exact protein target, general MIC or single-isomer
+    potency.
+- evidence_id: mibig
+  kind: record_content
+  reference: data/raw/mibig_producers.tsv;BGC0001089.5
+  locator: 137-mibig-rows.json;137-mibig-page.html;scripts/seed_from_sources.py attach_mibig_producers
+  accessed_at: '2026-10-21T09:40:07Z'
+  support: context_only
+  summary: The named bacillaene row actually exports C34H50N2O6/key VGZNPOHVJNZAOU-OISZERLPSA-N
+    and incomplete stereo. The seeder first rejects incomplete stereo and additionally
+    requires full-key identity. Absence of a generated producer here is consistent
+    with those safeguards; FZB42 metadata cannot be transferred by name alone.
+  snapshot_sha256: 7bde72de434181ff21aaaabe70ce3b966529d1faf765123c90fa7f4fbd261721
+- evidence_id: leads
+  kind: database
+  reference: Seven adopted ChEBI PMID leads
+  locator: 137-core.json;137-lead-dispositions.json
+  accessed_at: '2026-10-21T09:40:07Z'
+  support: context_only
+  summary: Five available complete abstracts were read. PMID17886826 and 20087918
+    have no indexed abstract; publisher metadata was checked and the 2010 graphical
+    abstract read. PksS/PksJ/PksC papers concern biosynthesis, not antibiotic targets.
+    The bacillaene B discovery concerns a distinct glycosylated congener.
+  snapshot_sha256: 42197e1485e7ef836cacc8e13a2185b60d5094fcb6e7dc9ffa7b96ed33f57da4
+- evidence_id: adapter
+  kind: database
+  reference: Native iModulonDB pks search
+  locator: 137-imodulondb-datasets.txt;137-imodulondb-pks.txt
+  accessed_at: '2026-10-21T09:40:07Z'
+  support: context_only
+  summary: The gene matches include synthase-associated functions and a regulator.
+    Zero iModulons were returned, so no component summary applies. Gene presence or
+    expression does not prove chemical production or antibacterial binding.
+  snapshot_sha256: 16406759a93d3a0335787d8dda397550c7ab49682115289aa36d2aece37fb2c9
+- evidence_id: validation
+  kind: validation
+  reference: Focused native schema and strict checks
+  locator: 137-strict.tsv
+  accessed_at: '2026-10-21T09:40:07Z'
+  support: supports
+  summary: Both documented focused validators passed; no native structure or history
+    edit was made.
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local ownership search
+  locator: 137-local-hits.txt;137-inspect.json
+  accessed_at: '2026-10-21T09:40:07Z'
+  support: context_only
+  summary: All 14 captured repository inputs unchanged. The MIBiG inventory was hashed
+    before its row was judged.
+  search_scope: prepare.py 137 used rg --no-ignore --hidden excluding .git/.venv.
+    Review covers the exact native compound, all adopted leads and bounded primary
+    strain/structure/mechanism follow-up, not every bacillaene congener or biofilm
+    report.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Represented chemical entity
+  outcome: supported
+  summary: Connectivity and encoded geometry agree with databases and the major reported
+    isomer; carbon absolute stereochemistry remains unspecified.
+  target_ids:
+  - CHEBI:71623
+  evidence_ids:
+  - chemistry
+  - structure
+- assessment_id: grounding
+  area: grounding
+  topic: Ontology classes and roles
+  outcome: supported
+  summary: Chemical classes and broad antibacterial roles are supported.
+  target_ids:
+  - CHEBI:71623
+  evidence_ids:
+  - sources
+  - isolation
+- assessment_id: producer
+  area: evidence
+  topic: Definition strain attribution
+  outcome: concern
+  summary: The definition conflates unmodified 168 with documented producer strains
+    or restored-sfp derivatives.
+  target_ids:
+  - CHEBI:71623
+  evidence_ids:
+  - record
+  - structure
+  - strain
+- assessment_id: mechanism
+  area: evidence
+  topic: Available translation evidence
+  outcome: supported
+  summary: Primary work supports a process-level translation effect. No existing native
+    target claim requires retraction.
+  target_ids:
+  - CHEBI:71623
+  evidence_ids:
+  - isolation
+  - cytology
+- assessment_id: provenance
+  area: provenance
+  topic: Generation and publication scope
+  outcome: supported
+  summary: Seed ownership and all adopted lead dispositions were checked; unavailable
+    articles are not counted as fully read.
+  target_ids:
+  - CHEBI:71623
+  evidence_ids:
+  - record
+  - leads
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded mechanism and producer enrichment
+  outcome: unknown
+  summary: Additions require exact strain and fraction/isomer qualifiers; MIBiG name-only
+    import would violate the exact-identity boundary.
+  target_ids:
+  - CHEBI:71623
+  evidence_ids:
+  - mibig
+  - structure
+  - cytology
+- assessment_id: validation
+  area: schema
+  topic: Focused gates
+  outcome: supported
+  summary: Native schema/strict checks pass; the supplemental OLS SMILES assertion
+    failed explicitly.
+  target_ids:
+  - CHEBI:71623
+  evidence_ids:
+  - validation
+  - sources
+findings:
+- finding_id: F1
+  issue_key: chebi-71623-bacillaene-producer-strain-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the definition’s unqualified strain 168 producer attribution
+  description: The definition says bacillaene was obtained from Bacillus subtilis
+    168. Original isolation/structure work identifies ATCC 55422 and 3610-derived
+    material; the genetic source separates ordinary 168 from a producing derivative.
+    Replace the strain-specific claim with supported producer wording and preserve
+    derivative/genotype distinctions when giving examples.
+  target_ids:
+  - CHEBI:71623
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - record
+  - structure
+  - isolation
+  - strain
+  rule_id: 'review-checklist: preserve producer strain and genotype scope'
+  native_severity: minor bounded definition correction
+  normalization_reason: The chemical entity and antibacterial classification remain
+    supported. The incorrect detail concerns the source strain in prose, not a corrupted
+    chemical graph or structured molecular-target claim.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and any maintained source correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition selection gives ChEBI precedence
+actions:
+- action_id: A1
+  description: Make the producer wording accurate and reproducible through the source-owned
+    definition path.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:71623
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and any maintained source correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition selection gives ChEBI precedence
+  acceptance_checks:
+  - 'Use a definition such as: An unstable polyene antibiotic produced by Bacillus
+    subtilis strains, with antibacterial activity. Add experimentally supported strain
+    examples separately with primary citations and exact genotype context.'
+  - Correct the upstream/source-owned text or implement a narrow, documented override.
+    Current definition selection chooses ChEBI before ARO/curator concepts, so simply
+    adding a curator row does not override this wording. Verify reseeding retains
+    the correction.
+  - 'Do not attach the local MIBiG row by name: its H50 graph and incomplete stereo
+    fail the exact compound boundary. Any curated producer object must cite the actual
+    chemical-production experiment.'
+  - If optionally adding mechanism evidence, use translation inhibition with coupled-assay/fraction
+    limits; do not assert a specific ribosomal protein or initiation binding step.
+    Preserve the difference between cytological-response threshold, MIC and molecular
+    affinity.
+  - Preserve the current supported graph, explicitly note unresolved carbon stereochemistry,
+    retain history and complete required native gates before status sign-off.
+limitations:
+- Three potential carbon stereocenters are unspecified in native and compared database
+  structures. The 2007 major-isomer figure also lacks those assignments; no complete
+  later absolute-stereochemistry or total-synthesis review was performed.
+- All seven adopted publication records were checked, but only five have indexed abstracts.
+  Two Wiley communications lack indexed abstracts; publisher bibliographic/graphical-abstract
+  material was checked and full text/SI requests returned 403. Guessed older SI paths
+  returned 404.
+- The 1995 and 2007 papers were read for isolation, structure, activity and relevant
+  Methods; their materials include incompletely resolved isomers/congeners. No quantitative
+  activity is transferred to the exact native stereochemical representation without
+  that limitation.
+- The 2006 strain paper was checked through its complete abstract and indexed original
+  introduction/figure-caption passages, not a complete manuscript/SI read. A public
+  archived PDF attempt failed 404 and direct PMC returned a browser challenge.
+- The 2016 cytology paper was checked through the complete abstract and indexed original
+  relevant Results/figure passages; original XML returned 500 and downloaded PMC HTML
+  was a browser challenge. Full Methods/SI were not independently retrieved.
+- Current OLS SMILES lacks direction markers; the executed literal check failed 1.
+  A separate bounded check passed while preserving this discrepancy and native InChI/PubChem
+  agreement.
+- Initial native catalog lookup failed DNS in the sandbox and succeeded after permitted
+  network retry; subsequent pks lookup returned gene context only.
+- Current MIBiG page was retrieved, but guessed JSON endpoints returned 404. The maintained
+  adopted row was inspected and its chemical mismatch verified directly. Reaxys was
+  not independently queried.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 14 captured input hashes unchanged; no native record edits.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:71623
+- https://doi.org/10.1073/pnas.0610503104
+- https://doi.org/10.7164/antibiotics.48.997
+- https://doi.org/10.1128/JB.00052-06
+- https://doi.org/10.1038/ja.2015.116
+tags:
+- record-review
+- bacillaene
+- producer-strain
+- translation-scope
+```

@@ -1,0 +1,1219 @@
+# Azithromycin: correct the imported binding site and qualify resistance evidence
+
+- Review: 20261021T095859Z-azithromycin
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:48:21Z
+- Finished UTC: 2026-10-21T09:58:59Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The exact neutral azithromycin structure is concordant across independent public chemical sources. CDC activity and the curated Epi0082 co-occurrence claim are supported; the six CRyPTIC source measurements and membership identities agree. Primary structural evidence contradicts the imported direct P-site assertion. One ARO resistance label also conflates 23S rRNA macrolide resistance with fluoroquinolone-associated loci. Other imported resistance entries remain explicitly database-level and are not all independently primary-validated. One major, one minor and one informational finding.
+
+## Scope And Provenance
+
+Whole merged ChEBI/ARO azithromycin record: structure, all names and xrefs, classes/roles, one target, all 55 resistance objects, both activity observations, six-member artifact, source concepts and ten history events.
+
+Selection: Queue 134, CHEBI:2955 at its exact locked path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:2955 | data/antibiotics/antibacterial/azithromycin.yaml | generated | azithromycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:2955 | Actual focused command exited 0. Deterministic success does not validate a binding-site name or every imported resistance claim. |
+| strict | passed | True | CHEBI:2955 | Actual focused command exited 0. Deterministic success does not validate a binding-site name or every imported resistance claim. |
+| chemistry | passed | False | CHEBI:2955 | Actual focused command exited 0. Deterministic success does not validate a binding-site name or every imported resistance claim. |
+| Authoritative full QC | failed | True | CHEBI:2955 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:2955 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:2955 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:2955 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:2955 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:2955 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:2955 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:2955 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:2955 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact parent, stereo, names and crosswalks
+
+identity: supported. Targets: CHEBI:2955.
+
+Independent chemistry supports the exact neutral parent. Imported brand/INN typing is appropriate; uninspected proprietary and partially accessible crosswalks remain explicitly limited.
+
+### Macrolide class and antibacterial roles
+
+grounding: supported. Targets: CHEBI:2955.
+
+ChEBI/ARO class mapping, direct activity and official clinical labeling support the filing and roles. Product hydrates and extra current database roles are not silently added.
+
+### Direct P-site assertion
+
+grounding: concern. Targets: CHEBI:2955.
+
+Primary structural evidence supports the exit tunnel near the PTC, not the imported P-site. PRIMARY_EVIDENCE_NEEDED correctly marks provenance but does not repair the wrong site label.
+
+### All imported resistance terms and curated Epi0082 context
+
+scope: concern. Targets: CHEBI:2955.
+
+All 54 source assertions reconcile to official ARO, but primary validation is selective. ARO:3004616 has an overbroad fluoroquinolone label. Native Epi0082 co-occurrence and current taxonomy/accessions are supported without assigning expression-host causation to that isolate.
+
+### CDC MIC and CRyPTIC phenotype/membership
+
+quantity: supported. Targets: CHEBI:2955.
+
+CDC MIC units, standard and isolate match. Six original CRyPTIC critical-concentration rows, adopted group and native member IDs agree; null sequence contexts are retained.
+
+### Every directly adopted publication and authority
+
+evidence: supported. Targets: CHEBI:2955.
+
+The four adopted PubMed references were individually disposed: synthesis computation, two secondary reviews and the native-isolate primary study. Authority/ontology references were checked with source-level versus primary support separated.
+
+### Optional primary mechanism, AST and expression-host annotations
+
+completeness: supported. Targets: CHEBI:2955.
+
+A source-backed target correction is needed. Optional Epi0082 numerical AST and separate expression-host annotations are available; a natural producer, transcriptomic exposure dataset or causal graph is not inferred from semisynthesis or erythromycin RT-PCR.
+
+### Generated sources versus actual native curator additions
+
+ownership: supported. Targets: CHEBI:2955.
+
+Target/label fixes belong to maintained ARO extraction and seeding policy. Epi0082/CDC enrichment belongs to the actual azithromycin record through validated writers and history helper.
+
+### Focused validation and immutable inputs
+
+schema: supported. Targets: CHEBI:2955.
+
+Focused schema, strict and chemistry pass. All 24 supplemental inputs and original captured hashes remain unchanged.
+
+## Findings
+
+### F1: Replace the imported direct P-site assertion with supported ribosomal site grounding
+
+major / open / confirmed; issue key: azithromycin-wrong-p-site-direct-target.
+
+The record explicitly asserts direct binding to ARO:3000757, the 50S P-site. Inspected exact azithromycin structural evidence instead locates binding in the exit tunnel near the peptidyl-transferase center. Retaining a database qualifier does not make the narrower site correct.
+
+### F2: Narrow the Mycoplasma 23S resistance label to its supported drug-class scope
+
+minor / open / confirmed; issue key: azithromycin-23s-resistance-label-fluoroquinolone-overreach.
+
+resistance_mechanisms[45] repeats an ARO label claiming that 23S rRNA mutations confer both fluoroquinolone and macrolide resistance. Its cited primary study distinguishes 23S macrolide mutations from parC/gyrA fluoroquinolone-associated mutations. The azithromycin association is supported; the extra class wording is misleading.
+
+### F3: Add exact primary detail while preserving isolate and experiment boundaries
+
+informational / open / confirmed; issue key: azithromycin-qualified-primary-evidence-enrichment.
+
+The inspected primary study can support numerical Epi0082 AST and separate engineered-host gene-function evidence. Other database resistance objects still require exact drug/host/mechanism validation before primary promotion. These are optional additions; the present co-occurrence note is scientifically appropriate.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct source-derived target-site handling and add narrowly scoped primary support.
+
+- Suppress or qualify the azithromycin-specific P-site edge through a maintained source rule; do not globally reinterpret ARO:3000757 for unrelated drugs. Use a supported 50S/23S target grounding with exit-tunnel site context if no exact ontology site exists.
+- Attach PMID 20876130 and exact PDB ZIT/4V7Y context at the target claim. Preserve Thermus protein/rRNA origin and structural preparation scope; do not transfer derivative MICs or the older disputed two-molecule model.
+- Regenerate through the normal source workflow and confirm the exact diff. Run focused schema/strict and shared term, reference, history and source checks; add a curation event only for separately authorized native changes.
+
+### A2
+
+Correct or qualify the imported Mycoplasma label without deleting supported azithromycin resistance.
+
+- Use a maintained, source-traceable label qualification that confines 23S rRNA mutations to the supported macrolide association. Preserve ARO provenance and avoid silently changing the underlying ontology term meaning.
+- Keep parC/gyrA fluoroquinolone-associated observations separate. Inspect original full methods before adding quantitative mutation prevalence or clinical response claims.
+- Regenerate and check that the azithromycin resistance edge remains correctly typed and source qualifiers survive reseeding.
+
+### A3
+
+Curate optional primary AST and gene-function detail with exact context.
+
+- If adding Epi0082 MIC, preserve its native strain, Mueller-Hinton broth microdilution and exact Table 1 value; keep comparator KM45013 and RN4220 constructs separate. Do not assign individual-gene causation to native Epi0082 without its own experiment.
+- Represent engineered-host functional resistance separately from directly demonstrated physical efflux or ribosomal protection. Regulatory-region dependence matters for msr(G). Erythromycin RT-PCR is not an azithromycin transcriptomics dataset.
+- Keep source-reported genome components and their common BioSample/project as context, without inventing an assembly accession or new allele call. Preserve six CRyPTIC source IDs and null sequence contexts; critical concentration is not MIC.
+- Before primary promotion, inspect exact resistance experiments for each imported term, including drug tested and host. Do not infer azithromycin validation merely from a clarithromycin study or an erythromycin uptake assay.
+- Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/azithromycin.yaml for separately authorized curation. Run focused/shared checks and retain SEEDED until all native review requirements are met.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/azithromycin.yaml; Entire YAML, including 55 resistance entries, two observations, membership reference and ten history events. | supports | SEEDED and EXACT; one neutral stereospecified structure. Fourteen names retain BRAND_NAME, INN or EXACT_SYNONYM types. Target evidence is explicitly PRIMARY_EVIDENCE_NEEDED. Fifty-four resistance assertions retain CARD_ARO provenance; the final Epi0082 entry is deliberately UNKNOWN and limited to co-occurrence. Optional modes, producer objects, causal graphs, clinical indication objects and datasets are absent; absence alone is not an error. |
+| source | data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv; data/raw/aro_resistance_edges.tsv; data/raw/cryptic_activity.tsv; 134-exact-raw.json; conf/sources.yaml; conf/aro_target_roles.tsv; curation/cryptic_drug_map.tsv; extraction and seeding branches; activity_memberships module. | supports | Exact rows reproduce the merged identity, names, classes, ARO target and 54 resistance edges. The target policy maps ARO:3000757 to direct binding and explicitly repeats P-site. CRyPTIC AZM is mapped to the neutral parent; the seeder preserves critical-concentration phenotype rather than inventing a MIC. CDC and Epi0082 additions are curator-owned in the actual native record. All original capture hashes and 24 supplementary captured maintained inputs remain unchanged. |
+| chemistry | ChEBI CHEBI:2955; PubChem CID 447043; ChEMBL CHEMBL529; KEGG C06838; PDB ZIT; 134-chemistry.json; independent downloaded representations and 134-crosswalk-chemistry.json. | supports | Native SMILES and InChI independently parse as one neutral C38H72N2O12 structure with full key MQTOSJVFKKJCRP-BICOPXKESA-N. Formula, mass precision and both deterministic source mints agree. Parsed current PubChem, ChEMBL, KEGG molfile and PDB component representations give the identical full key. This is the neutral parent, not its dihydrate or dication. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:2955; 134-chebi.html/txt, identity, ontology, names and xrefs. | supports | Current official ChEBI agrees with the exact structure, macrolide parent CHEBI:25105, antimicrobial CHEBI:33281 and antibacterial-drug CHEBI:36047 roles. It attests the imported INNs, systematic names, brands and external identifiers. Brand links do not assert every product has the anhydrous preparation. Current additional roles are not automatically copied or treated as established clinical uses. The dihydrate is separately represented as CHEBI:34546. |
+| aro | https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo; Official ontology downloaded as 125-aro-current.obo; 134-aro-terms.json and 134-aro-comparison.json. | partial | All 57 relevant official terms resolve: azithromycin ARO:3000158, macrolide class ARO:0000000, P-site ARO:3000757 and 54 resistance terms. Every imported resistance label and azithromycin edge matches; mechanism categories agree with the mapped ancestor. Database agreement establishes provenance, not universal primary validity. Term definitions were inspected; detailed underlying primary experiments were checked selectively, so resistance scope remains partial. |
+| xrefs | KEGG D07486; DrugCentral 276; HMDB0014352; ChEBI manual xrefs; 134-kegg-drug.txt, 134-drugcentral.html/txt and official HMDB indexed identity text. | partial | KEGG independently identifies the neutral parent and 50S/protein-synthesis context. DrugCentral 276 resolves to azithromycin, CAS 83905-01-5 and matching DrugBank/PubChem/PDB links, but pools hydrate/protonation-related references; the native drug_xref type is appropriate. HMDB indexed official text confirms name, CAS and formula, while direct page access returned 403 and its full stereo representation was not independently checked. LINCS LSM-5821, both Reaxys IDs and DrugBank DB00207 remain source-attested crosswalks without independent record-level inspection. Wikipedia is retained only as a document link, not scientific evidence. |
+| patents | https://patents.google.com/patent/US4517359A/en; https://patents.google.com/patent/BE892357A/en; 134-US4517359.txt, abstract, description and Example 1; BE892357 family metadata. | partial | The US patent describes N-methyl aza-erythromycin, its semisynthetic preparation and derivatives, with parent Example 1 mass 748. The Belgian patent resolves to the related erythromycin-derivative family. These are relevant document references. Other derivative examples, translated Belgian full text and patent assay tables were not fully audited, and no numerical activity is transferred from them. |
+| adopted-synthesis | PMID:15143799; DOI:10.1023/B:JCAM.0000022560.75389.C5; 134-epmc.json, complete original abstract. | partial | The theoretical study addresses selective methylation in azithromycin synthesis, including a protected derivative in vacuum and DMF. It supports chemical synthesis context, not an antibacterial MIC or ribosomal binding experiment. Full computational methods were not inspected. |
+| adopted-reviews | PMID:18253999; DOI:10.1002/14651858.CD001954.pub3; PMID:1662624; DOI:10.1007/BF01975833; 134-epmc.json, complete abstracts and publication types. | context_only | The 2008 Cochrane clinical meta-analysis and 1991 spectrum review are secondary sources. They support general clinical/activity context but are not individual primary assays. Numerical MIC90 or clinical superiority claims should not be lifted without underlying trials and assay scope. Neither adopted review supplies exact P-site structural evidence. |
+| label | https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/050730s046lbl.pdf; 134-label2026.pdf/text, indication highlights, description and section 12.4. | supports | The official July 2026 Zithromax label supports antibacterial clinical use and binding to 23S rRNA of the 50S subunit. It describes dihydrate formulation amounts expressed as azithromycin equivalents. This supports the generic definition and brand relationship without converting the encoded neutral parent into a hydrate or importing every indication/dose. |
+| structure2010 | PMID:20876130; DOI:10.1073/pnas.1008685107; https://pmc.ncbi.nlm.nih.gov/articles/PMC2951403/; Inspected primary full-text web Results, Discussion and Methods, especially Azithromycin and Fig. 2 caption; official PDB 4V7Y metadata. | refutes | The Thermus thermophilus HB8 70S study locates azithromycin in the exit tunnel near the peptidyl-transferase center, with one molecule per ribosome and contacts involving the tunnel wall. This contradicts direct P-site grounding. The authors identify problems in the older Deinococcus model and do not support generalizing its two bound molecules. Crystals were soaked with 500 micromolar antibiotic; this is a structural preparation, not MIC. PDB 4V7Y links the original split entries and exact ZIT ligand. Coordinates/density were not re-refined. |
+| structure2003 | PMID:12623020; DOI:10.1016/S0969-2126(03)00022-4; Publisher original abstract and author-hosted primary PDF retrieved as 134-primary2003.pdf. | partial | The original abstract also places azithromycin in the protein exit tunnel of Deinococcus radiodurans. Its proposed two-molecule binding model conflicts with the later inspected 2010 study; it is not treated as the definitive stoichiometry. Only the abstract was inspected for this older study. |
+| cdc | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail?IsolateID=10572&amp;PanelID=10; 134-CDC.html/txt, entire identity, MIC table, interpretation, method and history sections. | supports | Official CDC identifies N. gonorrhoeae AR Bank 1281, NEW-38, BioSample SAMN35332251 and azithromycin MIC 2 micrograms/mL with R under CLSI 2026 M100 Ed36. Native 2 mg/L is equivalent. The page states broth microdilution/modal MIC and normal dilution variability. Its propagation medium is not automatically the AST medium; penA remarks concern cephalosporins, not an azithromycin mechanism. Independent BioSample page retrieval failed, but the source explicitly associates this accession with the isolate. |
+| cryptic | DOI:10.5281/zenodo.15680920; Official 3.4.0 metadata, DRUG_CODES.csv.gz and entire AZM subset of DST_MEASUREMENTS.parquet; 134-cryptic-original-rows.json. | supports | The official source contains exactly six AZM rows, with AZM independently mapped to AZITHROMYCIN. All six have SEQTREAT2020, solid media, Middlebrook 7H10, METHOD_CC 3.0, null METHOD_MIC, phenotype R and quality MEDIUM. Their exact six isolate IDs match the compact source and native membership. These are critical-concentration observations, not six MIC values or evidence that all M. tuberculosis strains resist the drug. A PyArrow read attempt lacked that optional dependency; the locked DuckDB reader succeeded without environment changes. |
+| membership | src/antibioticmech/activity_memberships.py; native membership-171e7ef1bfdd98f039beb6874dcb02ba53cc7bc953035f097e82db1b0e3c50ff.json.gz; 134-membership.json, 134-membership-validation.txt, exact raw membership and isolate rows. | supports | The maintained validator passed compressed hash, byte counts, full chemical identity, source metadata, observation semantic digest and all counts. Each of six subjects contributes one measurement. All sequencing contexts are explicitly null, matching the adopted isolate registry. The original WGS_SAMPLES snapshot and its absence-of-join assertion were not independently reprocessed; no genome identity is inferred from these source isolate strings. |
+| epi-primary | PMID:33118027; DOI:10.1093/jac/dkaa405; 134-primary2021.pdf/text, complete main text and visually checked Table 1 on page 50. | supports | Broth microdilution in Mueller-Hinton broth reports Epi0082 azithromycin MIC 16 mg/L versus 0.5 for KM45013. The native co-occurrence claim is correctly bounded. Separate S. aureus RN4220 expression experiments show increased azithromycin MIC for mef(F), msr(G) with the appropriate upstream regulatory region, and the joint construct. This is functional evidence in a different host; physical efflux and ribosomal protection are inferred from family features rather than measured directly here. RT-PCR uses erythromycin induction, not an azithromycin transcriptome. |
+| epi-archives | ENA CP046363.1–CP046367.1; BioSample SAMN13342681; BioProject PRJNA590936; NCBITaxon:1855823; 134-CP046363-embl.txt through 134-CP046367-embl.txt, record headers and cross-references; official BioSample page; 134-taxonomy1855823.json. | supports | All five official sequence headers identify Epi0082 and the same BioSample/project. CP046363.1 is the chromosome; the other four are pMiCAN82a–d, with CP046364.1 the 39302-base plasmid. Version suffix 1 is confirmed by SV 1. Current Macrococcoides canis retains Macrococcus canis as an alternate name; this is not the distinct comparator strain. XML routes failed, while the official EMBL sequence format succeeded. Full sequence/allele annotation was not reanalyzed. |
+| resistance-scope | PMID:23658265; DOI:10.1128/JCM.00495-13; PMID:22532861; PMID:18990060; 134-resistance-epmc.json, complete original abstracts. | refutes | The 2013 study explicitly separates macrolide-associated 23S rRNA mutations from potentially fluoroquinolone-associated parC/gyrA mutations. Thus the imported ARO:3004616 label overstates the 23S mechanism, although the azithromycin association itself is supported. The 2012 and 2008 abstracts support azithromycin failure-associated 23S mutations with their own patient and assay scopes. Full papers were unavailable through attempted free PMC routes; no universal treatment effect or resistance prevalence is curated. |
+| other-resistance | PMID:8192472; PMID:9420045; 134-resistance-epmc.json, complete original abstracts. | partial | The 1994 M. intracellulare study concerns clarithromycin, so it does not alone prove the imported azithromycin-specific edge. The 1997 mreA study shows azithromycin resistance in an E. coli expression clone, while its uptake experiment used radiolabeled erythromycin and described a putative efflux determinant. These examples demonstrate why database-derived resistance roles require exact drug/host/mechanism follow-up before primary promotion. No new native error is asserted from these abstracts alone. |
+| adapter | iModulonDB structured source adapter; 055-imodulondb-datasets-retry.txt inventory; 134-adapter-results.json and four 134-imodulondb outputs. | context_only | Before open-ended web research, e_coli/precise_mg1655 query 50S ribosomal returned ten gene-product matches and no modules; m_tuberculosis/modulome erm(37) returned Rv1988 and no module. P. aeruginosa MexAB text gave no match; the bounded follow-up mexB returned precise364/PA0426 and no module. These are gene-context matches, not drug binding or resistance experiments. The inventory lacks exact Macrococcoides and gonococcal systems; no absence claim follows. |
+| adapter-command | Structured runner commands; Actual commands, all exit 0. | context_only | env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1 uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw kg-microbe-sources imodulondb --timeout 15 search --organism e_coli --dataset precise_mg1655 --query "50S ribosomal"; corresponding m_tuberculosis/modulome query "erm(37)" and p_aeruginosa/precise364 queries MexAB and mexB were also run. No module hit required summarize. |
+| search | CultureBotAI/AntibioticMech; 134-local-hits.txt and 134-maintained-search.txt; exact name/IDs and bounded primary-title searches. | context_only | Hidden- and ignored-inclusive maintained-tree searches located generated context, source ownership and historical review leads. Historical reports were not evidence. Additional hidden-inclusive data-tree searches found compact CRyPTIC inputs but no original parquet there; the original public table was then retrieved directly. No claim of exhaustive literature coverage or universal absence of producers/datasets is made. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION.md; docs/HARMONIZATION.md; Exact identity, target-site grounding, strain/assay scope and primary evidence rules. | supports | A correct 50S target class does not make the P-site a correct binding site. Database labels must not transfer one mechanism to another drug class. Source isolate IDs, native strains, engineered hosts, chemical forms and numerical endpoints must remain distinct. |
+| validation | Focused schema, strict and chemistry outputs; 134-focused-results.json, 134-schema.log, 134-strict.log/tsv and 134-chemistry.json. | supports | All three focused checks exited 0. Original and supplemental source hashes were rechecked unchanged. The source representation errors identified here are not chemical parse failures. |
+
+## Limits And Additional Notes
+
+- Whole-record coverage denotes inspection of every field, not an exhaustive primary literature audit of all 54 imported resistance mechanisms. Those terms were individually reconciled to official ARO, with primary studies checked selectively.
+- The 2010 exact structural paper was inspected through free primary full-text web content. Europe PMC XML and BioC download routes failed; the BioC HTTP 200 response was an error page and was not treated as paper content. PDB metadata and ligand descriptors were downloaded; coordinates and electron density were not re-refined.
+- The 2021 Epi0082 main paper and Table 1 image were inspected. Supplementary cloning sequences and raw genome reads were not reanalyzed. Taxonomy and all five sequence headers were independently checked; full sequences and alleles were not revalidated.
+- The four directly adopted PubMed references were checked. The synthesis paper and two secondary reviews remain abstract-level. Additional Mycoplasma, M. intracellulare and mreA studies were inspected at original abstracts, with full-text access failures retained.
+- Current public ChEBI, PubChem, ChEMBL, KEGG and PDB structures agree. HMDB direct retrieval failed despite indexed identity corroboration. DrugBank, LINCS and Reaxys crosswalks remain source-attested rather than independently fully resolved; no paid access was used. Patent inspection was limited to relevant parent chemistry and family metadata.
+- Original CRyPTIC DST_MEASUREMENTS and drug codes were directly inspected and exact six IDs checked against native membership. The original WGS_SAMPLES snapshot was not downloaded/reprocessed, so sequencing-context nulls were checked against the adopted compact registry only.
+- The CDC table independently associates BioSample SAMN35332251 with isolate 1281; separate BioSample retrieval failed. The CDC-stated CLSI edition was checked on its public page, without accessing licensed CLSI text.
+- No natural producer, comprehensive exposure dataset survey, every clinical indication or universal susceptibility is inferred. The neutral parent is kept distinct from formulations, protonated forms and other macrolides.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T095859Z-azithromycin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Azithromycin: correct the imported binding site and qualify resistance evidence'
+started_at: '2026-10-21T09:48:21Z'
+finished_at: '2026-10-21T09:58:59Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author this record. Captured the exact target before
+    judgment, preserving the original generic capture and adding a native inspect
+    with ARO, CRyPTIC and membership inputs before scientific assessment. Read the
+    whole record, source rows, maintained transformations and bounded primary evidence.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The exact neutral azithromycin structure is concordant across independent
+  public chemical sources. CDC activity and the curated Epi0082 co-occurrence claim
+  are supported; the six CRyPTIC source measurements and membership identities agree.
+  Primary structural evidence contradicts the imported direct P-site assertion. One
+  ARO resistance label also conflates 23S rRNA macrolide resistance with fluoroquinolone-associated
+  loci. Other imported resistance entries remain explicitly database-level and are
+  not all independently primary-validated. One major, one minor and one informational
+  finding.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/cryptic_drug_map.tsv
+    sha256: 69643f9b5e6dfc91761a4541317de63c5dca565131f6a07a3193878d7f863a54
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/azithromycin.yaml
+    sha256: 3b6f8f139da665be8e33d6db6500c3fd019d12510b99fe586b28567bc2450d51
+    role: target
+  - path: data/antibiotics/antibacterial/membership-171e7ef1bfdd98f039beb6874dcb02ba53cc7bc953035f097e82db1b0e3c50ff.json.gz
+    sha256: 171e7ef1bfdd98f039beb6874dcb02ba53cc7bc953035f097e82db1b0e3c50ff
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/cryptic_activity.tsv
+    sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+    role: context
+  - path: data/raw/cryptic_isolates.tsv.gz
+    sha256: 7d51bf3032e295a56e2543f52f12e59d6a8589ad6f2208e2314a154e6e8cf2c5
+    role: context
+  - path: data/raw/cryptic_memberships.tsv.gz
+    sha256: f121fc3ac48a44a89931366d908877d833bd846d9690257583c5dbbdb8bd2601
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/cryptic_membership_inventory.py
+    sha256: b0d8ae24cac64dfb2813bfa5a5ef590e3330e3c5ace82e25f3528b025147d6cc
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/activity_memberships.py
+    sha256: 22849043b741d7a48a708dfade09524a11ac46afa7efb08d350ec7422ec2e146
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:2955
+  path: data/antibiotics/antibacterial/azithromycin.yaml
+  label: azithromycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: ChEBI identity, names and roles
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO class and name context
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: ARO target-site assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relation policy
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: ARO resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/cryptic_activity.tsv
+    role: Grouped CRyPTIC phenotype
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/cryptic_memberships.tsv.gz
+    role: CRyPTIC membership links
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/azithromycin.yaml
+    role: Curator-owned CDC and Epi0082 evidence additions
+scope:
+  description: 'Whole merged ChEBI/ARO azithromycin record: structure, all names and
+    xrefs, classes/roles, one target, all 55 resistance objects, both activity observations,
+    six-member artifact, source concepts and ten history events.'
+  selection: Queue 134, CHEBI:2955 at its exact locked path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:2955
+  exclusions:
+  - target: Azithromycin hydrates, protonated forms, other macrolides and engineered
+      expression hosts as exact equivalents
+    reason: Chemical forms and experimental systems remain distinct; the record encodes
+      the neutral parent.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0. Deterministic success does not validate
+    a binding-site name or every imported resistance claim.
+  target_ids:
+  - CHEBI:2955
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/azithromycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0. Deterministic success does not validate
+    a binding-site name or every imported resistance claim.
+  target_ids:
+  - CHEBI:2955
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/azithromycin.yaml --out /private/tmp/am-review-session/134-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Actual focused command exited 0. Deterministic success does not validate
+    a binding-site name or every imported resistance claim.
+  target_ids:
+  - CHEBI:2955
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 134
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:2955
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:2955
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:2955
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:2955
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:2955
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:2955
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:2955
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:2955
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:2955
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/azithromycin.yaml
+  locator: Entire YAML, including 55 resistance entries, two observations, membership
+    reference and ten history events.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: supports
+  summary: SEEDED and EXACT; one neutral stereospecified structure. Fourteen names
+    retain BRAND_NAME, INN or EXACT_SYNONYM types. Target evidence is explicitly PRIMARY_EVIDENCE_NEEDED.
+    Fifty-four resistance assertions retain CARD_ARO provenance; the final Epi0082
+    entry is deliberately UNKNOWN and limited to co-occurrence. Optional modes, producer
+    objects, causal graphs, clinical indication objects and datasets are absent; absence
+    alone is not an error.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv;
+    data/raw/aro_resistance_edges.tsv; data/raw/cryptic_activity.tsv
+  locator: 134-exact-raw.json; conf/sources.yaml; conf/aro_target_roles.tsv; curation/cryptic_drug_map.tsv;
+    extraction and seeding branches; activity_memberships module.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: supports
+  summary: Exact rows reproduce the merged identity, names, classes, ARO target and
+    54 resistance edges. The target policy maps ARO:3000757 to direct binding and
+    explicitly repeats P-site. CRyPTIC AZM is mapped to the neutral parent; the seeder
+    preserves critical-concentration phenotype rather than inventing a MIC. CDC and
+    Epi0082 additions are curator-owned in the actual native record. All original
+    capture hashes and 24 supplementary captured maintained inputs remain unchanged.
+  snapshot_sha256: 11fa45463bbc787f9d5c49577b91cdf35d5bc560d7fffa44df4ec504e50daf1e
+- evidence_id: chemistry
+  kind: validation
+  reference: ChEBI CHEBI:2955; PubChem CID 447043; ChEMBL CHEMBL529; KEGG C06838;
+    PDB ZIT
+  locator: 134-chemistry.json; independent downloaded representations and 134-crosswalk-chemistry.json.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: supports
+  summary: Native SMILES and InChI independently parse as one neutral C38H72N2O12
+    structure with full key MQTOSJVFKKJCRP-BICOPXKESA-N. Formula, mass precision and
+    both deterministic source mints agree. Parsed current PubChem, ChEMBL, KEGG molfile
+    and PDB component representations give the identical full key. This is the neutral
+    parent, not its dihydrate or dication.
+  snapshot_sha256: 929c3bf3e80f0470276d8017cd21786a242a8e75390e963969ae67bd990cffa9
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:2955
+  locator: 134-chebi.html/txt, identity, ontology, names and xrefs.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: supports
+  summary: Current official ChEBI agrees with the exact structure, macrolide parent
+    CHEBI:25105, antimicrobial CHEBI:33281 and antibacterial-drug CHEBI:36047 roles.
+    It attests the imported INNs, systematic names, brands and external identifiers.
+    Brand links do not assert every product has the anhydrous preparation. Current
+    additional roles are not automatically copied or treated as established clinical
+    uses. The dihydrate is separately represented as CHEBI:34546.
+  snapshot_sha256: ab85981db4f7c4f28f75308e19c408510406f0c6a4c097d1e4632d1b1ace5542
+- evidence_id: aro
+  kind: database
+  reference: https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo
+  locator: Official ontology downloaded as 125-aro-current.obo; 134-aro-terms.json
+    and 134-aro-comparison.json.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: partial
+  summary: 'All 57 relevant official terms resolve: azithromycin ARO:3000158, macrolide
+    class ARO:0000000, P-site ARO:3000757 and 54 resistance terms. Every imported
+    resistance label and azithromycin edge matches; mechanism categories agree with
+    the mapped ancestor. Database agreement establishes provenance, not universal
+    primary validity. Term definitions were inspected; detailed underlying primary
+    experiments were checked selectively, so resistance scope remains partial.'
+  snapshot_sha256: 5099a8cce18e1cbbbceaf35ae4b9215ed005b614bf1b7c740c36a0bdb1d28cf4
+- evidence_id: xrefs
+  kind: database
+  reference: KEGG D07486; DrugCentral 276; HMDB0014352; ChEBI manual xrefs
+  locator: 134-kegg-drug.txt, 134-drugcentral.html/txt and official HMDB indexed identity
+    text.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: partial
+  summary: KEGG independently identifies the neutral parent and 50S/protein-synthesis
+    context. DrugCentral 276 resolves to azithromycin, CAS 83905-01-5 and matching
+    DrugBank/PubChem/PDB links, but pools hydrate/protonation-related references;
+    the native drug_xref type is appropriate. HMDB indexed official text confirms
+    name, CAS and formula, while direct page access returned 403 and its full stereo
+    representation was not independently checked. LINCS LSM-5821, both Reaxys IDs
+    and DrugBank DB00207 remain source-attested crosswalks without independent record-level
+    inspection. Wikipedia is retained only as a document link, not scientific evidence.
+  snapshot_sha256: d1bd17ff1f280d1408d9763d99764743af73f3db01b0806d6c7f99e8fc4bbcf7
+- evidence_id: patents
+  kind: primary_source
+  reference: https://patents.google.com/patent/US4517359A/en; https://patents.google.com/patent/BE892357A/en
+  locator: 134-US4517359.txt, abstract, description and Example 1; BE892357 family
+    metadata.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: partial
+  summary: The US patent describes N-methyl aza-erythromycin, its semisynthetic preparation
+    and derivatives, with parent Example 1 mass 748. The Belgian patent resolves to
+    the related erythromycin-derivative family. These are relevant document references.
+    Other derivative examples, translated Belgian full text and patent assay tables
+    were not fully audited, and no numerical activity is transferred from them.
+  snapshot_sha256: 797873de08674715ce544cba1c45f3259d6a5628029f5f5e8a6ba332429834e3
+- evidence_id: adopted-synthesis
+  kind: primary_source
+  reference: PMID:15143799; DOI:10.1023/B:JCAM.0000022560.75389.C5
+  locator: 134-epmc.json, complete original abstract.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: partial
+  summary: The theoretical study addresses selective methylation in azithromycin synthesis,
+    including a protected derivative in vacuum and DMF. It supports chemical synthesis
+    context, not an antibacterial MIC or ribosomal binding experiment. Full computational
+    methods were not inspected.
+  snapshot_sha256: d40648e5bfd424103b5f8eec48c52d329b66e3b42a35ae5d14912af61b983abd
+- evidence_id: adopted-reviews
+  kind: database
+  reference: PMID:18253999; DOI:10.1002/14651858.CD001954.pub3; PMID:1662624; DOI:10.1007/BF01975833
+  locator: 134-epmc.json, complete abstracts and publication types.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: context_only
+  summary: The 2008 Cochrane clinical meta-analysis and 1991 spectrum review are secondary
+    sources. They support general clinical/activity context but are not individual
+    primary assays. Numerical MIC90 or clinical superiority claims should not be lifted
+    without underlying trials and assay scope. Neither adopted review supplies exact
+    P-site structural evidence.
+  snapshot_sha256: d40648e5bfd424103b5f8eec48c52d329b66e3b42a35ae5d14912af61b983abd
+- evidence_id: label
+  kind: authority
+  reference: https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/050730s046lbl.pdf
+  locator: 134-label2026.pdf/text, indication highlights, description and section
+    12.4.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: supports
+  summary: The official July 2026 Zithromax label supports antibacterial clinical
+    use and binding to 23S rRNA of the 50S subunit. It describes dihydrate formulation
+    amounts expressed as azithromycin equivalents. This supports the generic definition
+    and brand relationship without converting the encoded neutral parent into a hydrate
+    or importing every indication/dose.
+  snapshot_sha256: e8f85a169a0379de2a9ed4e88a93fe7704ed9bdc2ec300c3a4013b09e224e641
+- evidence_id: structure2010
+  kind: primary_source
+  reference: PMID:20876130; DOI:10.1073/pnas.1008685107; https://pmc.ncbi.nlm.nih.gov/articles/PMC2951403/
+  locator: Inspected primary full-text web Results, Discussion and Methods, especially
+    Azithromycin and Fig. 2 caption; official PDB 4V7Y metadata.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: refutes
+  summary: The Thermus thermophilus HB8 70S study locates azithromycin in the exit
+    tunnel near the peptidyl-transferase center, with one molecule per ribosome and
+    contacts involving the tunnel wall. This contradicts direct P-site grounding.
+    The authors identify problems in the older Deinococcus model and do not support
+    generalizing its two bound molecules. Crystals were soaked with 500 micromolar
+    antibiotic; this is a structural preparation, not MIC. PDB 4V7Y links the original
+    split entries and exact ZIT ligand. Coordinates/density were not re-refined.
+  snapshot_sha256: 7498c5416e92d87e7eda2be0d183cc4ab35a0d03311149d1b687c36f17f905c8
+- evidence_id: structure2003
+  kind: primary_source
+  reference: PMID:12623020; DOI:10.1016/S0969-2126(03)00022-4
+  locator: Publisher original abstract and author-hosted primary PDF retrieved as
+    134-primary2003.pdf.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: partial
+  summary: The original abstract also places azithromycin in the protein exit tunnel
+    of Deinococcus radiodurans. Its proposed two-molecule binding model conflicts
+    with the later inspected 2010 study; it is not treated as the definitive stoichiometry.
+    Only the abstract was inspected for this older study.
+  snapshot_sha256: c8747aa5d113be00cc2c74717dad95ffa7ff04d87daf8a0c6d27cc875933c3ce
+- evidence_id: cdc
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail?IsolateID=10572&PanelID=10
+  locator: 134-CDC.html/txt, entire identity, MIC table, interpretation, method and
+    history sections.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: supports
+  summary: Official CDC identifies N. gonorrhoeae AR Bank 1281, NEW-38, BioSample
+    SAMN35332251 and azithromycin MIC 2 micrograms/mL with R under CLSI 2026 M100
+    Ed36. Native 2 mg/L is equivalent. The page states broth microdilution/modal MIC
+    and normal dilution variability. Its propagation medium is not automatically the
+    AST medium; penA remarks concern cephalosporins, not an azithromycin mechanism.
+    Independent BioSample page retrieval failed, but the source explicitly associates
+    this accession with the isolate.
+  snapshot_sha256: 1106384890b9bf45b6d8e99f12cf02509760d14becfb74d222dc149e6e28ba23
+- evidence_id: cryptic
+  kind: database
+  reference: DOI:10.5281/zenodo.15680920
+  locator: Official 3.4.0 metadata, DRUG_CODES.csv.gz and entire AZM subset of DST_MEASUREMENTS.parquet;
+    134-cryptic-original-rows.json.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: supports
+  summary: The official source contains exactly six AZM rows, with AZM independently
+    mapped to AZITHROMYCIN. All six have SEQTREAT2020, solid media, Middlebrook 7H10,
+    METHOD_CC 3.0, null METHOD_MIC, phenotype R and quality MEDIUM. Their exact six
+    isolate IDs match the compact source and native membership. These are critical-concentration
+    observations, not six MIC values or evidence that all M. tuberculosis strains
+    resist the drug. A PyArrow read attempt lacked that optional dependency; the locked
+    DuckDB reader succeeded without environment changes.
+  snapshot_sha256: 94099fcd452cb7bf2664aefd48a7f873ad558aa837b4e52bc7a75e42aafb5e88
+- evidence_id: membership
+  kind: validation
+  reference: src/antibioticmech/activity_memberships.py; native membership-171e7ef1bfdd98f039beb6874dcb02ba53cc7bc953035f097e82db1b0e3c50ff.json.gz
+  locator: 134-membership.json, 134-membership-validation.txt, exact raw membership
+    and isolate rows.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: supports
+  summary: The maintained validator passed compressed hash, byte counts, full chemical
+    identity, source metadata, observation semantic digest and all counts. Each of
+    six subjects contributes one measurement. All sequencing contexts are explicitly
+    null, matching the adopted isolate registry. The original WGS_SAMPLES snapshot
+    and its absence-of-join assertion were not independently reprocessed; no genome
+    identity is inferred from these source isolate strings.
+  snapshot_sha256: 0061ae5cbbdc217eb1beda05fe4c41cb044fa254dfcd3be11a882f7406a50e49
+- evidence_id: epi-primary
+  kind: primary_source
+  reference: PMID:33118027; DOI:10.1093/jac/dkaa405
+  locator: 134-primary2021.pdf/text, complete main text and visually checked Table
+    1 on page 50.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: supports
+  summary: Broth microdilution in Mueller-Hinton broth reports Epi0082 azithromycin
+    MIC 16 mg/L versus 0.5 for KM45013. The native co-occurrence claim is correctly
+    bounded. Separate S. aureus RN4220 expression experiments show increased azithromycin
+    MIC for mef(F), msr(G) with the appropriate upstream regulatory region, and the
+    joint construct. This is functional evidence in a different host; physical efflux
+    and ribosomal protection are inferred from family features rather than measured
+    directly here. RT-PCR uses erythromycin induction, not an azithromycin transcriptome.
+  snapshot_sha256: fa59ed2b81d38c7f1ea301f9b7e2c07b63879d8a5a47211e9f8ebd32fc9a18e3
+- evidence_id: epi-archives
+  kind: database
+  reference: ENA CP046363.1–CP046367.1; BioSample SAMN13342681; BioProject PRJNA590936;
+    NCBITaxon:1855823
+  locator: 134-CP046363-embl.txt through 134-CP046367-embl.txt, record headers and
+    cross-references; official BioSample page; 134-taxonomy1855823.json.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: supports
+  summary: All five official sequence headers identify Epi0082 and the same BioSample/project.
+    CP046363.1 is the chromosome; the other four are pMiCAN82a–d, with CP046364.1
+    the 39302-base plasmid. Version suffix 1 is confirmed by SV 1. Current Macrococcoides
+    canis retains Macrococcus canis as an alternate name; this is not the distinct
+    comparator strain. XML routes failed, while the official EMBL sequence format
+    succeeded. Full sequence/allele annotation was not reanalyzed.
+  snapshot_sha256: de7620cd30dd1f551b8d90054d6ca26d38919895118302e6612e4a798644f151
+- evidence_id: resistance-scope
+  kind: primary_source
+  reference: PMID:23658265; DOI:10.1128/JCM.00495-13; PMID:22532861; PMID:18990060
+  locator: 134-resistance-epmc.json, complete original abstracts.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: refutes
+  summary: The 2013 study explicitly separates macrolide-associated 23S rRNA mutations
+    from potentially fluoroquinolone-associated parC/gyrA mutations. Thus the imported
+    ARO:3004616 label overstates the 23S mechanism, although the azithromycin association
+    itself is supported. The 2012 and 2008 abstracts support azithromycin failure-associated
+    23S mutations with their own patient and assay scopes. Full papers were unavailable
+    through attempted free PMC routes; no universal treatment effect or resistance
+    prevalence is curated.
+  snapshot_sha256: 1b78560ecb27a52c938cac7a164fb1c71b61f3f512ed239edcffeb88e103d34d
+- evidence_id: other-resistance
+  kind: primary_source
+  reference: PMID:8192472; PMID:9420045
+  locator: 134-resistance-epmc.json, complete original abstracts.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: partial
+  summary: The 1994 M. intracellulare study concerns clarithromycin, so it does not
+    alone prove the imported azithromycin-specific edge. The 1997 mreA study shows
+    azithromycin resistance in an E. coli expression clone, while its uptake experiment
+    used radiolabeled erythromycin and described a putative efflux determinant. These
+    examples demonstrate why database-derived resistance roles require exact drug/host/mechanism
+    follow-up before primary promotion. No new native error is asserted from these
+    abstracts alone.
+  snapshot_sha256: 1b78560ecb27a52c938cac7a164fb1c71b61f3f512ed239edcffeb88e103d34d
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB structured source adapter
+  locator: 055-imodulondb-datasets-retry.txt inventory; 134-adapter-results.json and
+    four 134-imodulondb outputs.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: context_only
+  summary: Before open-ended web research, e_coli/precise_mg1655 query 50S ribosomal
+    returned ten gene-product matches and no modules; m_tuberculosis/modulome erm(37)
+    returned Rv1988 and no module. P. aeruginosa MexAB text gave no match; the bounded
+    follow-up mexB returned precise364/PA0426 and no module. These are gene-context
+    matches, not drug binding or resistance experiments. The inventory lacks exact
+    Macrococcoides and gonococcal systems; no absence claim follows.
+  snapshot_sha256: bc319901579d81f3bb13714ec86d82c6d3a74d8125ffbc224eeac969d6452d73
+- evidence_id: adapter-command
+  kind: validation
+  reference: Structured runner commands
+  locator: Actual commands, all exit 0.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: context_only
+  summary: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism e_coli --dataset
+    precise_mg1655 --query "50S ribosomal"; corresponding m_tuberculosis/modulome
+    query "erm(37)" and p_aeruginosa/precise364 queries MexAB and mexB were also run.
+    No module hit required summarize.
+  snapshot_sha256: 01ff62841d0000e94fa762cc2e93573f14f607fd907f5332ba87f6b38b272012
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 134-local-hits.txt and 134-maintained-search.txt; exact name/IDs and bounded
+    primary-title searches.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: context_only
+  summary: Hidden- and ignored-inclusive maintained-tree searches located generated
+    context, source ownership and historical review leads. Historical reports were
+    not evidence. Additional hidden-inclusive data-tree searches found compact CRyPTIC
+    inputs but no original parquet there; the original public table was then retrieved
+    directly. No claim of exhaustive literature coverage or universal absence of producers/datasets
+    is made.
+  snapshot_sha256: 3ce1737b1b106fe4b29136bb89715080d1866c49c7e74e91634ef32e5a56b0a1
+  search_scope: rg --no-ignore --hidden for CHEBI:2955, ARO:3000158, azithromycin
+    and slug across worktree014 maintained/data/research paths, excluding .git and
+    .venv. Exact source rows separately selected. Additional hidden-inclusive original
+    and isolated data-tree parquet search, bounded official identifier/PMID/DOI and
+    primary-title web searches; no exhaustive literature claim.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION.md;
+    docs/HARMONIZATION.md
+  locator: Exact identity, target-site grounding, strain/assay scope and primary evidence
+    rules.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: supports
+  summary: A correct 50S target class does not make the P-site a correct binding site.
+    Database labels must not transfer one mechanism to another drug class. Source
+    isolate IDs, native strains, engineered hosts, chemical forms and numerical endpoints
+    must remain distinct.
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema, strict and chemistry outputs
+  locator: 134-focused-results.json, 134-schema.log, 134-strict.log/tsv and 134-chemistry.json.
+  accessed_at: '2026-10-21T09:58:07Z'
+  support: supports
+  summary: All three focused checks exited 0. Original and supplemental source hashes
+    were rechecked unchanged. The source representation errors identified here are
+    not chemical parse failures.
+  snapshot_sha256: 00525c59d3c09b8b29a73820d4dbd800bdba21a7bcbf13de32240f6f1aa9ae69
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact parent, stereo, names and crosswalks
+  outcome: supported
+  summary: Independent chemistry supports the exact neutral parent. Imported brand/INN
+    typing is appropriate; uninspected proprietary and partially accessible crosswalks
+    remain explicitly limited.
+  target_ids:
+  - CHEBI:2955
+  evidence_ids:
+  - record
+  - chemistry
+  - chebi
+  - xrefs
+  - patents
+- assessment_id: classification
+  area: grounding
+  topic: Macrolide class and antibacterial roles
+  outcome: supported
+  summary: ChEBI/ARO class mapping, direct activity and official clinical labeling
+    support the filing and roles. Product hydrates and extra current database roles
+    are not silently added.
+  target_ids:
+  - CHEBI:2955
+  evidence_ids:
+  - chebi
+  - aro
+  - label
+  - cdc
+  - epi-primary
+- assessment_id: target
+  area: grounding
+  topic: Direct P-site assertion
+  outcome: concern
+  summary: Primary structural evidence supports the exit tunnel near the PTC, not
+    the imported P-site. PRIMARY_EVIDENCE_NEEDED correctly marks provenance but does
+    not repair the wrong site label.
+  target_ids:
+  - CHEBI:2955
+  evidence_ids:
+  - record
+  - source
+  - structure2010
+  - structure2003
+  - rubric
+- assessment_id: resistance
+  area: scope
+  topic: All imported resistance terms and curated Epi0082 context
+  outcome: concern
+  summary: All 54 source assertions reconcile to official ARO, but primary validation
+    is selective. ARO:3004616 has an overbroad fluoroquinolone label. Native Epi0082
+    co-occurrence and current taxonomy/accessions are supported without assigning
+    expression-host causation to that isolate.
+  target_ids:
+  - CHEBI:2955
+  evidence_ids:
+  - aro
+  - resistance-scope
+  - other-resistance
+  - epi-primary
+  - epi-archives
+- assessment_id: activity
+  area: quantity
+  topic: CDC MIC and CRyPTIC phenotype/membership
+  outcome: supported
+  summary: CDC MIC units, standard and isolate match. Six original CRyPTIC critical-concentration
+    rows, adopted group and native member IDs agree; null sequence contexts are retained.
+  target_ids:
+  - CHEBI:2955
+  evidence_ids:
+  - cdc
+  - cryptic
+  - membership
+- assessment_id: citations
+  area: evidence
+  topic: Every directly adopted publication and authority
+  outcome: supported
+  summary: 'The four adopted PubMed references were individually disposed: synthesis
+    computation, two secondary reviews and the native-isolate primary study. Authority/ontology
+    references were checked with source-level versus primary support separated.'
+  target_ids:
+  - CHEBI:2955
+  evidence_ids:
+  - adopted-synthesis
+  - adopted-reviews
+  - epi-primary
+  - cdc
+  - aro
+  - chebi
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary mechanism, AST and expression-host annotations
+  outcome: supported
+  summary: A source-backed target correction is needed. Optional Epi0082 numerical
+    AST and separate expression-host annotations are available; a natural producer,
+    transcriptomic exposure dataset or causal graph is not inferred from semisynthesis
+    or erythromycin RT-PCR.
+  target_ids:
+  - CHEBI:2955
+  evidence_ids:
+  - epi-primary
+  - structure2010
+  - adapter
+  - rubric
+- assessment_id: ownership
+  area: ownership
+  topic: Generated sources versus actual native curator additions
+  outcome: supported
+  summary: Target/label fixes belong to maintained ARO extraction and seeding policy.
+    Epi0082/CDC enrichment belongs to the actual azithromycin record through validated
+    writers and history helper.
+  target_ids:
+  - CHEBI:2955
+  evidence_ids:
+  - source
+  - rubric
+- assessment_id: gates
+  area: schema
+  topic: Focused validation and immutable inputs
+  outcome: supported
+  summary: Focused schema, strict and chemistry pass. All 24 supplemental inputs and
+    original captured hashes remain unchanged.
+  target_ids:
+  - CHEBI:2955
+  evidence_ids:
+  - validation
+  - membership
+findings:
+- finding_id: F1
+  issue_key: azithromycin-wrong-p-site-direct-target
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Replace the imported direct P-site assertion with supported ribosomal site
+    grounding
+  description: The record explicitly asserts direct binding to ARO:3000757, the 50S
+    P-site. Inspected exact azithromycin structural evidence instead locates binding
+    in the exit tunnel near the peptidyl-transferase center. Retaining a database
+    qualifier does not make the narrower site correct.
+  target_ids:
+  - CHEBI:2955
+  field_paths:
+  - molecular_targets[0].target_id
+  - molecular_targets[0].target_label
+  - molecular_targets[0].experimental_context
+  evidence_ids:
+  - source
+  - aro
+  - structure2010
+  - structure2003
+  - rubric
+  rule_id: 'native-review-checklist: Correct target identity and direct binding scope'
+  native_severity: major wrong target-site grounding
+  normalization_reason: The compound and broad 50S mechanism are correct, but a precise
+    machine-readable binding site is wrong. This is not a blocker for compound identity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted ARO target-site provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relation and experimental-context policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Record-specific source target construction
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/azithromycin.yaml
+    role: Curator-owned primary target, AST and resistance annotations through validated
+      writer and curation history
+- finding_id: F2
+  issue_key: azithromycin-23s-resistance-label-fluoroquinolone-overreach
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Narrow the Mycoplasma 23S resistance label to its supported drug-class scope
+  description: resistance_mechanisms[45] repeats an ARO label claiming that 23S rRNA
+    mutations confer both fluoroquinolone and macrolide resistance. Its cited primary
+    study distinguishes 23S macrolide mutations from parC/gyrA fluoroquinolone-associated
+    mutations. The azithromycin association is supported; the extra class wording
+    is misleading.
+  target_ids:
+  - CHEBI:2955
+  field_paths:
+  - resistance_mechanisms[45].label
+  evidence_ids:
+  - aro
+  - resistance-scope
+  - rubric
+  rule_id: 'native-review-checklist: Preserve gene, antibiotic and mechanism scope'
+  native_severity: minor overbroad imported label
+  normalization_reason: The native azithromycin resistance association need not be
+    removed. The error is the extra drug-class claim inside a source-derived label,
+    requiring qualified display/curation rather than a different compound or resistance
+    category.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted resistance label provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO term extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source resistance representation
+- finding_id: F3
+  issue_key: azithromycin-qualified-primary-evidence-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Add exact primary detail while preserving isolate and experiment boundaries
+  description: The inspected primary study can support numerical Epi0082 AST and separate
+    engineered-host gene-function evidence. Other database resistance objects still
+    require exact drug/host/mechanism validation before primary promotion. These are
+    optional additions; the present co-occurrence note is scientifically appropriate.
+  target_ids:
+  - CHEBI:2955
+  field_paths:
+  - activity_spectrum
+  - resistance_mechanisms
+  - molecular_targets
+  - mode_of_action
+  - evidence
+  - discussions
+  evidence_ids:
+  - epi-primary
+  - epi-archives
+  - other-resistance
+  - structure2010
+  - rubric
+  rule_id: 'native-review-checklist: Claim-level primary evidence and optional completeness'
+  native_severity: informational optional enrichment
+  normalization_reason: Available extra detail does not make the cautious existing
+    Epi0082 claim wrong or require automatic REVIEWED promotion.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/azithromycin.yaml
+    role: Curator-owned primary target, AST and resistance annotations through validated
+      writer and curation history
+actions:
+- action_id: A1
+  description: Correct source-derived target-site handling and add narrowly scoped
+    primary support.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:2955
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted ARO target-site provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relation and experimental-context policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Record-specific source target construction
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/azithromycin.yaml
+    role: Curator-owned primary target, AST and resistance annotations through validated
+      writer and curation history
+  acceptance_checks:
+  - Suppress or qualify the azithromycin-specific P-site edge through a maintained
+    source rule; do not globally reinterpret ARO:3000757 for unrelated drugs. Use
+    a supported 50S/23S target grounding with exit-tunnel site context if no exact
+    ontology site exists.
+  - Attach PMID 20876130 and exact PDB ZIT/4V7Y context at the target claim. Preserve
+    Thermus protein/rRNA origin and structural preparation scope; do not transfer
+    derivative MICs or the older disputed two-molecule model.
+  - Regenerate through the normal source workflow and confirm the exact diff. Run
+    focused schema/strict and shared term, reference, history and source checks; add
+    a curation event only for separately authorized native changes.
+- action_id: A2
+  description: Correct or qualify the imported Mycoplasma label without deleting supported
+    azithromycin resistance.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:2955
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted resistance label provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO term extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source resistance representation
+  acceptance_checks:
+  - Use a maintained, source-traceable label qualification that confines 23S rRNA
+    mutations to the supported macrolide association. Preserve ARO provenance and
+    avoid silently changing the underlying ontology term meaning.
+  - Keep parC/gyrA fluoroquinolone-associated observations separate. Inspect original
+    full methods before adding quantitative mutation prevalence or clinical response
+    claims.
+  - Regenerate and check that the azithromycin resistance edge remains correctly typed
+    and source qualifiers survive reseeding.
+- action_id: A3
+  description: Curate optional primary AST and gene-function detail with exact context.
+  finding_ids:
+  - F3
+  target_ids:
+  - CHEBI:2955
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/azithromycin.yaml
+    role: Curator-owned primary target, AST and resistance annotations through validated
+      writer and curation history
+  acceptance_checks:
+  - If adding Epi0082 MIC, preserve its native strain, Mueller-Hinton broth microdilution
+    and exact Table 1 value; keep comparator KM45013 and RN4220 constructs separate.
+    Do not assign individual-gene causation to native Epi0082 without its own experiment.
+  - Represent engineered-host functional resistance separately from directly demonstrated
+    physical efflux or ribosomal protection. Regulatory-region dependence matters
+    for msr(G). Erythromycin RT-PCR is not an azithromycin transcriptomics dataset.
+  - Keep source-reported genome components and their common BioSample/project as context,
+    without inventing an assembly accession or new allele call. Preserve six CRyPTIC
+    source IDs and null sequence contexts; critical concentration is not MIC.
+  - Before primary promotion, inspect exact resistance experiments for each imported
+    term, including drug tested and host. Do not infer azithromycin validation merely
+    from a clarithromycin study or an erythromycin uptake assay.
+  - Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/azithromycin.yaml
+    for separately authorized curation. Run focused/shared checks and retain SEEDED
+    until all native review requirements are met.
+limitations:
+- Whole-record coverage denotes inspection of every field, not an exhaustive primary
+  literature audit of all 54 imported resistance mechanisms. Those terms were individually
+  reconciled to official ARO, with primary studies checked selectively.
+- The 2010 exact structural paper was inspected through free primary full-text web
+  content. Europe PMC XML and BioC download routes failed; the BioC HTTP 200 response
+  was an error page and was not treated as paper content. PDB metadata and ligand
+  descriptors were downloaded; coordinates and electron density were not re-refined.
+- The 2021 Epi0082 main paper and Table 1 image were inspected. Supplementary cloning
+  sequences and raw genome reads were not reanalyzed. Taxonomy and all five sequence
+  headers were independently checked; full sequences and alleles were not revalidated.
+- The four directly adopted PubMed references were checked. The synthesis paper and
+  two secondary reviews remain abstract-level. Additional Mycoplasma, M. intracellulare
+  and mreA studies were inspected at original abstracts, with full-text access failures
+  retained.
+- Current public ChEBI, PubChem, ChEMBL, KEGG and PDB structures agree. HMDB direct
+  retrieval failed despite indexed identity corroboration. DrugBank, LINCS and Reaxys
+  crosswalks remain source-attested rather than independently fully resolved; no paid
+  access was used. Patent inspection was limited to relevant parent chemistry and
+  family metadata.
+- Original CRyPTIC DST_MEASUREMENTS and drug codes were directly inspected and exact
+  six IDs checked against native membership. The original WGS_SAMPLES snapshot was
+  not downloaded/reprocessed, so sequencing-context nulls were checked against the
+  adopted compact registry only.
+- The CDC table independently associates BioSample SAMN35332251 with isolate 1281;
+  separate BioSample retrieval failed. The CDC-stated CLSI edition was checked on
+  its public page, without accessing licensed CLSI text.
+- No natural producer, comprehensive exposure dataset survey, every clinical indication
+  or universal susceptibility is inferred. The neutral parent is kept distinct from
+  formulations, protonated forms and other macrolides.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
