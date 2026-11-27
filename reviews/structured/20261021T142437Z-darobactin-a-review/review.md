@@ -1,0 +1,840 @@
+# Review of darobactin A
+
+- Review: 20261021T142437Z-darobactin-a-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T14:02:26Z
+- Finished UTC: 2026-10-21T14:24:37Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native record denotes exact darobactin A, the bicyclic heptapeptide supported by official PubChem and the original isolation and total-synthesis papers. Molecular encodings, formula, charge and nine tetrahedral centers agree after accounting for InChI amide tautomers. Antibacterial classification, Photorhabdus origin and preclinical animal activity are supported. One minor imported wording defect leaves the definition ending in an incomplete clause. Direct BamA/BAM evidence offers optional enrichment; absent optional targets are not treated as an unsupported native claim.
+
+## Scope And Provenance
+
+Entire SEEDED, MINTED record: definition and its sole adopted PMID, RiPP parent/class, exact molecular representation, both cross-references, ARO source concept and three history events. No native synonyms, molecular target, MIC, producer object, clinical assertion or causal graph is present.
+
+Selection: Queue343 in isolated batch035. Thirteen original hashes preserved and three actual ARO/PubChem owner hashes appended before detailed assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-93dd2d4732 | data/antibiotics/antibacterial/darobactin-a.yaml | generated | darobactin A |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema validation | passed | True | antibioticmech:aro-93dd2d4732 | Exit 0. |
+| Documented strict validation | passed | True | antibioticmech:aro-93dd2d4732 | Exit 0; no ERROR rows. |
+| Native molecular consistency | passed | False | antibioticmech:aro-93dd2d4732 | Native SMILES and InChI produce the recorded key, formula, neutral charge and masses; deterministic minted identity agrees. |
+| Initial direct bond-order comparison | failed | False | antibioticmech:aro-93dd2d4732 | Initial direct mapping fails at InChI reconstruction because peptide amides are reconstructed as imidic-acid tautomers; this is a resolved comparison limitation, not a native structure failure. |
+| Tautomer-aware exact authority comparison | passed | False | antibioticmech:aro-93dd2d4732 | Explicit amide normalization restores reciprocal chirality-aware mappings among native and official PubChem encodings, preserving all nine centers. |
+| Preserved inputs and adopted-source ledger | passed | False | antibioticmech:aro-93dd2d4732 | All sixteen hashes, source fields, both xrefs, sole adopted PMID and three ordered history events reconcile. |
+| Supplemental structured BamA lookup | passed | False | antibioticmech:aro-93dd2d4732 | Datasets and e_coli/precise1k bamA search each exit 0; exact gene b0177, no iModulon hit. |
+| Authoritative full QC | failed | True | antibioticmech:aro-93dd2d4732 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-93dd2d4732 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-93dd2d4732 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-93dd2d4732 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-93dd2d4732 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-93dd2d4732 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-93dd2d4732 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-93dd2d4732 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-93dd2d4732 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact bicyclic darobactin A
+
+identity: supported. Targets: antibioticmech:aro-93dd2d4732.
+
+Native identity, specific CID, sequence, crosslinks and nine configured tetrahedral centers agree with official and primary sources.
+
+### Mint, exact xrefs and broader class
+
+grounding: supported. Targets: antibioticmech:aro-93dd2d4732.
+
+ARO mint and exact CID are coherent; RiPP parent is broader, and native MINTED/SEEDED labels do not claim ChEBI or scientific sign-off.
+
+### Imported complete-sentence wording
+
+representation: concern. Targets: antibioticmech:aro-93dd2d4732.
+
+Definition reproduces a truncated source sentence ending with a dangling verb; scientific substance of the preceding claims is supported.
+
+### Antibacterial filing and producer/preclinical scope
+
+evidence: supported. Targets: antibioticmech:aro-93dd2d4732.
+
+Exact purified A has antibacterial and animal-model evidence, and verified Photorhabdus production; this does not assert uniform susceptibility, universal safety or clinical use.
+
+### Optional direct BamA/BAM enrichment
+
+completeness: supported. Targets: antibioticmech:aro-93dd2d4732.
+
+Independent original experiments support a future claim-level target and outer-membrane-assembly mechanism. Existing empty optional fields are not a false native assertion.
+
+### Atropisomeric conformation and material boundary
+
+representation: unknown. Targets: antibioticmech:aro-93dd2d4732.
+
+Tetrahedral identity is verified; atropisomeric ring conformation is documented by synthesis figures but is not independently encoded or validated by standard graph equality. Purification in formic-acid-containing solvents does not itself establish a separate stoichiometric salt.
+
+### All adopted leads and history
+
+provenance: supported. Targets: antibioticmech:aro-93dd2d4732.
+
+The sole adopted PMID and its primary identity and biological references are scoped explicitly; sixteen inputs and three events reconcile.
+
+## Findings
+
+### F1: The imported definition ends with an incomplete clause
+
+minor / open / confirmed; issue key: aro-3007478-truncated-definition-dangling-functions.
+
+Native and current CARD definitions end with “and functions.” The adopted synthesis introduction continues the sentence to describe a mechanism of action. The retained prefix is scientifically supported, but its unfinished grammatical clause should be removed or completed through a maintained source correction.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+During separately authorized curation, correct the ARO:3007478 definition in a reproducible maintained source/input correction, either removing the dangling final clause or completing it with a precisely cited mechanism. Regenerate through the seeder; do not patch only the YAML.
+
+- The definition ends in a complete sentence and remains restricted to exact darobactin A and its supported preclinical scope.
+- Re-extraction/reseeding preserves the correction; exact CID, molecular encodings and native status remain justified.
+- Run documented record and required corpus gates after any future curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/darobactin-a.yaml; Entire native YAML | supports | The exact PubChem-derived molecular record is minted from ARO:3007478. Its imported definition ends with an incomplete clause. Its protein/mechanism, quantitative activity and clinical slots are empty; no source findings are treated as already native assertions. |
+| authority | PubChem CID155899183; ARO:3007478; 343-pubchem.json; 343-pubchem-name.json; 343-aro-current.html | supports | Exact CID155899183 matches native HRMCRRLPTVSYHJ-KUDSBEMESA-N and C47H55N11O12. Name search also returns a stereo-unspecified CID168664970, which is not substituted for the native configured compound. Current CARD reproduces the native definition, source PMID and exact CID, and links RiPP parent ARO:3009656. Parent-page retrieval timed out, but its exact label and hierarchy are explicit on the current child page and frozen source. |
+| chemistry | Independent native and current PubChem graph comparison; 343-chemistry.json; 343-authority-chemistry.json; initial and normalized mapping logs | supports | Neutral formula and masses agree. Seven backbone alpha centers are S, with the additional Trp3 beta R and Lys5 beta S centers matching the original assignment. Direct InChI mapping initially fails because of reconstructed imidic-acid tautomers; explicit bond-order/H normalization restores reciprocal chirality-aware mapping without changing atom order or configured centers. Atropisomeric macrocycle conformation is not independently certified by this tetrahedral graph comparison. |
+| adopted | PMID:35926121; DOI:10.1021/jacs.2c05892; 343-synthesis.html and .txt, complete main text; Figure1 visually inspected in 343-synthesis-fig1.jpg; 343-lead-dispositions.json | supports | The sole adopted primary paper reports atroposelective total synthesis of exact darobactin A. Its two macrocycle linkages and stereochemical design agree with the native scaffold. Biological claims in its opening paragraph cite the original isolation and later structure study; they are contextual citations, not new animal experiments in this synthesis paper. Its source sentence continues past the words retained in the truncated native definition. |
+| original-identity | PMID:31747680; DOI:10.1038/s41586-019-1791-1; 343-original.xml Identification of darobactin and Structure elucidation; Figure1 visually inspected in 343-original-fig1.jpg | supports | The original defines darobactin A as WNWSKSF with Trp1 indole C7–O–Trp3 beta and Trp3 indole C6–Lys5 beta crosslinks. It assigns the two new beta centers R and S using NMR/modeling; ribosomal origin supports the L backbone. Isolation from P. khanii HGB1456 and DSM3369, BGC deletion and heterologous production support the native Photorhabdus origin and RiPP class. Predicted analogues and gene-cluster occurrences are kept distinct from demonstrated exact-A production. |
+| original-activity | PMID:31747680; DOI:10.1038/s41586-019-1791-1; 343-original.xml Table1, Identifying the target, Animal efficacy, MIC and Animal studies methods | supports | The purified original material supports antibacterial classification and strain-bounded mouse efficacy. Table1 reports aerobic broth MICs including E. coli ATCC25922 2 and MG1655 4 micrograms/mL; aerobic testing used cation-adjusted Mueller-Hinton broth, approximately 5e5 CFU/mL, overnight 37°C and visible no-growth endpoints. Anaerobic gut organisms used separate supplemented BHI conditions. Mouse septicemia and neutropenic-thigh results are preclinical, not approval or human efficacy. No new MIC row is adopted by this review. |
+| original-target | PMID:31747680; DOI:10.1038/s41586-019-1791-1; 343-original.xml Figures2–3 and Identifying the target; BAM folding, ITC and NMR methods | supports | Direct evidence includes inhibition of BAM-dependent OmpT folding in E. coli lipid nanodiscs, ITC with purified BAM, and NMR titration of the E. coli BamA beta barrel. OmpT and linear-peptide controls distinguish substrate activity from BAM inhibition; resistance mutations independently map to bamA. ITC affinity is for the tested BAM preparation, not an unqualified cross-species isolated-protein constant. NMR supports a closed-gate-like conformation; generic transcriptomic stress is not treated as direct binding. |
+| later-target | PMID:33854236; DOI:10.1038/s41586-021-03455-w; 343-primary-core.json complete original abstract | context_only | Later abstract reports cryo-EM, crystallography, native MS and experiments supporting beta-strand mimicry at BamA. Publisher full-text requests returned a challenge/redirect, so detailed atomic claims are not represented as independently read full-text evidence. Original2019 direct experiments already support the bounded enrichment opportunity. |
+| adapter | iModulonDB e_coli/precise1k/b0177; 343-adapter-results.json actual datasets and bamA search | context_only | The native record has no gene/protein/pathway assertion triggering an initial adapter requirement. A supplemental query before detailed primary mechanism assessment returns bamA/b0177, two carbamate substring matches and zero iModulons. Only the exact gene is relevant, and catalog membership establishes neither darobactin response nor direct target binding. |
+| owners | Maintained ARO and PubChem inventories/extractors; 343-inspect.json; 343-owner-append.json; 343-raw-rows.json; 343-source-audit.json | supports | Sixteen hashes remain unchanged, including thirteen original captures. Actual ARO definition/class and PubChem structure owners replace generic ChEBI owner labels; initial hashes are preserved. Source fields, xrefs and three ordered history events reconcile. The dangling definition is upstream in current/frozen CARD, so its fix belongs in a maintained source-aware extraction/input correction followed by reseeding. |
+| validation | Actual focused native validation; 343-focused-results.json; 343-focused-run.log; 343-strict.tsv | supports | Documented schema/strict and native molecular consistency pass. Supplemental direct mapping failure and its explicit normalized resolution are both retained. Native status remains SEEDED. |
+| search | Ignored-inclusive local and public exact-compound searches; 343-local-hits.txt; exact darobactin A/PMID/ARO searches on2026-10-21 and 343-fetch manifests | context_only | Initial local capture searched ignored files. Current sources and exact original papers were inspected; name-only stereo-unspecified PubChem material and engineered darobactins were not substituted. The attempted synthesis SI filename contains an HTML challenge rather than a PDF; original spectra were not reprocessed. |
+
+## Limits And Additional Notes
+
+- This review does not independently encode atropisomeric indole orientation or reprocess NMR spectra. Nine tetrahedral centers and exact crosslink connectivity agree; no mixture or wrong-isomer conclusion follows from that representation boundary.
+- The complete adopted synthesis main text and original isolation main results were read, with relevant structure, MIC, producer, BAM/ITC/NMR and animal methods. The synthesis supplement URL returned an HTML challenge; raw spectral comparison was not performed.
+- The 2021 atomic mechanism paper was read at abstract level only because attempted full access returned a challenge/redirect. Mechanistic assessment relies on independently inspected 2019 direct experiments.
+- Direct CARD parent-page retrieval failed, while the current exact-child page and frozen source explicitly provide its RiPP parent identifier and label.
+- The original isolated material was purified using formic-acid-containing solvents, but no separately quantified counterion stoichiometry was adopted. Reported assay values are source observations, not adjusted neutral-mass potency estimates.
+- Supplemental direct graph comparison failed on InChI amide tautomers and passed after explicit normalization; native consistency itself passed. Shared corpus gates are distinct, and this draft does not promote native scientific status.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Optional future enrichment can curate microbial BamA as a family/function target, with the E. coli construct as experimental context and claim-level primary evidence; the ITC value is for BAM, and computational catalog membership is not binding proof.
+- Optional producer, MIC and dataset enrichment should preserve exact A, strain, preparation and assay scope. Genome-predicted analogues and biosynthetic enzymes are not antibacterial targets.
+- All native records, maintained inputs and histories remain unchanged. Chemistry used batch019 RDKit against batch035; native schema/strict used batch035.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T142437Z-darobactin-a-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of darobactin A
+started_at: '2026-10-21T14:02:26Z'
+finished_at: '2026-10-21T14:24:37Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Independent whole-record comparison with maintained ARO/PubChem
+    inputs, current official compound data, complete adopted synthesis main text and
+    original isolation results, relevant methods and structure figures.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Supported exact identity and activity; minor truncated definition;
+  optional mechanism enrichment
+scientific_review: true
+summary: The native record denotes exact darobactin A, the bicyclic heptapeptide supported
+  by official PubChem and the original isolation and total-synthesis papers. Molecular
+  encodings, formula, charge and nine tetrahedral centers agree after accounting for
+  InChI amide tautomers. Antibacterial classification, Photorhabdus origin and preclinical
+  animal activity are supported. One minor imported wording defect leaves the definition
+  ending in an incomplete clause. Direct BamA/BAM evidence offers optional enrichment;
+  absent optional targets are not treated as an unsupported native claim.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/darobactin-a.yaml
+    sha256: da34bbd3dd4ea4806f15fca6f14763a11646037fb68a55d61a6bccd63fc82df4
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+scope:
+  description: 'Entire SEEDED, MINTED record: definition and its sole adopted PMID,
+    RiPP parent/class, exact molecular representation, both cross-references, ARO
+    source concept and three history events. No native synonyms, molecular target,
+    MIC, producer object, clinical assertion or causal graph is present.'
+  selection: Queue343 in isolated batch035. Thirteen original hashes preserved and
+    three actual ARO/PubChem owner hashes appended before detailed assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-93dd2d4732
+targets:
+- target_id: antibioticmech:aro-93dd2d4732
+  path: data/antibiotics/antibacterial/darobactin-a.yaml
+  label: darobactin A
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted CARD/ARO identity, definition, class and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: CARD/ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact PubChem structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: schema
+  name: Documented schema validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/darobactin-a.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/darobactin-a.yaml --out /private/tmp/am-review-session/343-strict.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; no ERROR rows.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - validation
+- check_id: native-chemistry
+  name: Native molecular consistency
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    343
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native SMILES and InChI produce the recorded key, formula, neutral charge
+    and masses; deterministic minted identity agrees.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: direct-mapping
+  name: Initial direct bond-order comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/343-chemistry-authorities.py
+    > /private/tmp/am-review-session/343-chemistry-authorities.log 2>&1
+  status: failed
+  required: false
+  exit_code: 1
+  expected_exit_code: 0
+  summary: Initial direct mapping fails at InChI reconstruction because peptide amides
+    are reconstructed as imidic-acid tautomers; this is a resolved comparison limitation,
+    not a native structure failure.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - chemistry
+- check_id: normalized-mapping
+  name: Tautomer-aware exact authority comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/343-chemistry-normalized.py
+    > /private/tmp/am-review-session/343-chemistry-normalized.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Explicit amide normalization restores reciprocal chirality-aware mappings
+    among native and official PubChem encodings, preserving all nine centers.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - chemistry
+- check_id: ledger
+  name: Preserved inputs and adopted-source ledger
+  command: .venv/bin/python /private/tmp/am-review-session/343-ledger.py > /private/tmp/am-review-session/343-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All sixteen hashes, source fields, both xrefs, sole adopted PMID and three
+    ordered history events reconcile.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - owners
+  - adopted
+- check_id: adapter
+  name: Supplemental structured BamA lookup
+  command: .venv/bin/python /private/tmp/am-review-session/343-adapter.py
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Datasets and e_coli/precise1k bamA search each exit 0; exact gene b0177,
+    no iModulon hit.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/darobactin-a.yaml
+  locator: Entire native YAML
+  accessed_at: '2026-10-21T14:07:26Z'
+  support: supports
+  summary: The exact PubChem-derived molecular record is minted from ARO:3007478.
+    Its imported definition ends with an incomplete clause. Its protein/mechanism,
+    quantitative activity and clinical slots are empty; no source findings are treated
+    as already native assertions.
+- evidence_id: authority
+  kind: authority
+  reference: PubChem CID155899183; ARO:3007478
+  locator: 343-pubchem.json; 343-pubchem-name.json; 343-aro-current.html
+  accessed_at: '2026-10-21T14:03:25.021257Z'
+  support: supports
+  summary: Exact CID155899183 matches native HRMCRRLPTVSYHJ-KUDSBEMESA-N and C47H55N11O12.
+    Name search also returns a stereo-unspecified CID168664970, which is not substituted
+    for the native configured compound. Current CARD reproduces the native definition,
+    source PMID and exact CID, and links RiPP parent ARO:3009656. Parent-page retrieval
+    timed out, but its exact label and hierarchy are explicit on the current child
+    page and frozen source.
+  snapshot_sha256: 86d379454cdc4691ef6e4c8650a4c1e898bf0d0d17664640b6cb55c815d2ca54
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent native and current PubChem graph comparison
+  locator: 343-chemistry.json; 343-authority-chemistry.json; initial and normalized
+    mapping logs
+  accessed_at: '2026-10-21T14:07:26Z'
+  support: supports
+  summary: Neutral formula and masses agree. Seven backbone alpha centers are S, with
+    the additional Trp3 beta R and Lys5 beta S centers matching the original assignment.
+    Direct InChI mapping initially fails because of reconstructed imidic-acid tautomers;
+    explicit bond-order/H normalization restores reciprocal chirality-aware mapping
+    without changing atom order or configured centers. Atropisomeric macrocycle conformation
+    is not independently certified by this tetrahedral graph comparison.
+  snapshot_sha256: 7ec169891fd5e0c5f5cc0cda1784a8001866cff1887874301d621e7f072320ff
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:35926121; DOI:10.1021/jacs.2c05892
+  locator: 343-synthesis.html and .txt, complete main text; Figure1 visually inspected
+    in 343-synthesis-fig1.jpg; 343-lead-dispositions.json
+  accessed_at: '2026-10-21T14:04:01.978579Z'
+  support: supports
+  summary: The sole adopted primary paper reports atroposelective total synthesis
+    of exact darobactin A. Its two macrocycle linkages and stereochemical design agree
+    with the native scaffold. Biological claims in its opening paragraph cite the
+    original isolation and later structure study; they are contextual citations, not
+    new animal experiments in this synthesis paper. Its source sentence continues
+    past the words retained in the truncated native definition.
+  snapshot_sha256: 901299882d82428ec541d46c2c0652ed62a02f1d64dbc7e2431ca308dc57ee78
+- evidence_id: original-identity
+  kind: primary_source
+  reference: PMID:31747680; DOI:10.1038/s41586-019-1791-1
+  locator: 343-original.xml Identification of darobactin and Structure elucidation;
+    Figure1 visually inspected in 343-original-fig1.jpg
+  accessed_at: '2026-10-21T14:04:01.979132Z'
+  support: supports
+  summary: The original defines darobactin A as WNWSKSF with Trp1 indole C7–O–Trp3
+    beta and Trp3 indole C6–Lys5 beta crosslinks. It assigns the two new beta centers
+    R and S using NMR/modeling; ribosomal origin supports the L backbone. Isolation
+    from P. khanii HGB1456 and DSM3369, BGC deletion and heterologous production support
+    the native Photorhabdus origin and RiPP class. Predicted analogues and gene-cluster
+    occurrences are kept distinct from demonstrated exact-A production.
+  snapshot_sha256: 23604a8d0524d1961300bf8f72d1568f0b2bd7c5dcebe47ef7c7fed791cf29bb
+- evidence_id: original-activity
+  kind: primary_source
+  reference: PMID:31747680; DOI:10.1038/s41586-019-1791-1
+  locator: 343-original.xml Table1, Identifying the target, Animal efficacy, MIC and
+    Animal studies methods
+  accessed_at: '2026-10-21T14:04:01.979132Z'
+  support: supports
+  summary: The purified original material supports antibacterial classification and
+    strain-bounded mouse efficacy. Table1 reports aerobic broth MICs including E.
+    coli ATCC25922 2 and MG1655 4 micrograms/mL; aerobic testing used cation-adjusted
+    Mueller-Hinton broth, approximately 5e5 CFU/mL, overnight 37°C and visible no-growth
+    endpoints. Anaerobic gut organisms used separate supplemented BHI conditions.
+    Mouse septicemia and neutropenic-thigh results are preclinical, not approval or
+    human efficacy. No new MIC row is adopted by this review.
+  snapshot_sha256: 23604a8d0524d1961300bf8f72d1568f0b2bd7c5dcebe47ef7c7fed791cf29bb
+- evidence_id: original-target
+  kind: primary_source
+  reference: PMID:31747680; DOI:10.1038/s41586-019-1791-1
+  locator: 343-original.xml Figures2–3 and Identifying the target; BAM folding, ITC
+    and NMR methods
+  accessed_at: '2026-10-21T14:04:01.979132Z'
+  support: supports
+  summary: Direct evidence includes inhibition of BAM-dependent OmpT folding in E.
+    coli lipid nanodiscs, ITC with purified BAM, and NMR titration of the E. coli
+    BamA beta barrel. OmpT and linear-peptide controls distinguish substrate activity
+    from BAM inhibition; resistance mutations independently map to bamA. ITC affinity
+    is for the tested BAM preparation, not an unqualified cross-species isolated-protein
+    constant. NMR supports a closed-gate-like conformation; generic transcriptomic
+    stress is not treated as direct binding.
+  snapshot_sha256: 23604a8d0524d1961300bf8f72d1568f0b2bd7c5dcebe47ef7c7fed791cf29bb
+- evidence_id: later-target
+  kind: primary_source
+  reference: PMID:33854236; DOI:10.1038/s41586-021-03455-w
+  locator: 343-primary-core.json complete original abstract
+  accessed_at: '2026-10-21T14:03:43.443130Z'
+  support: context_only
+  summary: Later abstract reports cryo-EM, crystallography, native MS and experiments
+    supporting beta-strand mimicry at BamA. Publisher full-text requests returned
+    a challenge/redirect, so detailed atomic claims are not represented as independently
+    read full-text evidence. Original2019 direct experiments already support the bounded
+    enrichment opportunity.
+  snapshot_sha256: 6c93edbeef0260fc140db9189724a02becb3ac687b4c015dbd876554eefaf29c
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/precise1k/b0177
+  locator: 343-adapter-results.json actual datasets and bamA search
+  accessed_at: '2026-10-21T14:07:26Z'
+  support: context_only
+  summary: The native record has no gene/protein/pathway assertion triggering an initial
+    adapter requirement. A supplemental query before detailed primary mechanism assessment
+    returns bamA/b0177, two carbamate substring matches and zero iModulons. Only the
+    exact gene is relevant, and catalog membership establishes neither darobactin
+    response nor direct target binding.
+  snapshot_sha256: 14e30f26d778a5027e45039fe2012bda35239f9d41eca74bbde2732d7115e8fb
+- evidence_id: owners
+  kind: database
+  reference: Maintained ARO and PubChem inventories/extractors
+  locator: 343-inspect.json; 343-owner-append.json; 343-raw-rows.json; 343-source-audit.json
+  accessed_at: '2026-10-21T14:07:26Z'
+  support: supports
+  summary: Sixteen hashes remain unchanged, including thirteen original captures.
+    Actual ARO definition/class and PubChem structure owners replace generic ChEBI
+    owner labels; initial hashes are preserved. Source fields, xrefs and three ordered
+    history events reconcile. The dangling definition is upstream in current/frozen
+    CARD, so its fix belongs in a maintained source-aware extraction/input correction
+    followed by reseeding.
+  snapshot_sha256: ad5d008be50b547a4e8a4254502a199c0fb4d3c954a41a4c77d8fb1db21321b3
+- evidence_id: validation
+  kind: validation
+  reference: Actual focused native validation
+  locator: 343-focused-results.json; 343-focused-run.log; 343-strict.tsv
+  accessed_at: '2026-10-21T14:07:26Z'
+  support: supports
+  summary: Documented schema/strict and native molecular consistency pass. Supplemental
+    direct mapping failure and its explicit normalized resolution are both retained.
+    Native status remains SEEDED.
+  snapshot_sha256: 0eed8a0632ab94120c7e57d0b3bf62591fa58e13b90dac260cdf5aefd6c62e75
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local and public exact-compound searches
+  locator: 343-local-hits.txt; exact darobactin A/PMID/ARO searches on2026-10-21 and
+    343-fetch manifests
+  accessed_at: '2026-10-21T14:07:26Z'
+  support: context_only
+  summary: Initial local capture searched ignored files. Current sources and exact
+    original papers were inspected; name-only stereo-unspecified PubChem material
+    and engineered darobactins were not substituted. The attempted synthesis SI filename
+    contains an HTML challenge rather than a PDF; original spectra were not reprocessed.
+  snapshot_sha256: 7c157ca9fef9b8508c49e64256cbfd43955c1f339cd3b1e2fcc2f1a0352e90b1
+  search_scope: 343-local-hits.txt; exact darobactin A/PMID/ARO searches on2026-10-21
+    and 343-fetch manifests
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact bicyclic darobactin A
+  outcome: supported
+  summary: Native identity, specific CID, sequence, crosslinks and nine configured
+    tetrahedral centers agree with official and primary sources.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - authority
+  - chemistry
+  - original-identity
+  - adopted
+- assessment_id: grounding
+  area: grounding
+  topic: Mint, exact xrefs and broader class
+  outcome: supported
+  summary: ARO mint and exact CID are coherent; RiPP parent is broader, and native
+    MINTED/SEEDED labels do not claim ChEBI or scientific sign-off.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - authority
+  - owners
+  - validation
+- assessment_id: definition
+  area: representation
+  topic: Imported complete-sentence wording
+  outcome: concern
+  summary: Definition reproduces a truncated source sentence ending with a dangling
+    verb; scientific substance of the preceding claims is supported.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - record
+  - authority
+  - adopted
+  - original-activity
+- assessment_id: class
+  area: evidence
+  topic: Antibacterial filing and producer/preclinical scope
+  outcome: supported
+  summary: Exact purified A has antibacterial and animal-model evidence, and verified
+    Photorhabdus production; this does not assert uniform susceptibility, universal
+    safety or clinical use.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - original-identity
+  - original-activity
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional direct BamA/BAM enrichment
+  outcome: supported
+  summary: Independent original experiments support a future claim-level target and
+    outer-membrane-assembly mechanism. Existing empty optional fields are not a false
+    native assertion.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - record
+  - original-target
+  - later-target
+  - adapter
+- assessment_id: stereo-limit
+  area: representation
+  topic: Atropisomeric conformation and material boundary
+  outcome: unknown
+  summary: Tetrahedral identity is verified; atropisomeric ring conformation is documented
+    by synthesis figures but is not independently encoded or validated by standard
+    graph equality. Purification in formic-acid-containing solvents does not itself
+    establish a separate stoichiometric salt.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - chemistry
+  - adopted
+  - original-identity
+- assessment_id: audit
+  area: provenance
+  topic: All adopted leads and history
+  outcome: supported
+  summary: The sole adopted PMID and its primary identity and biological references
+    are scoped explicitly; sixteen inputs and three events reconcile.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  evidence_ids:
+  - adopted
+  - owners
+  - validation
+findings:
+- finding_id: F1
+  issue_key: aro-3007478-truncated-definition-dangling-functions
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The imported definition ends with an incomplete clause
+  description: Native and current CARD definitions end with “and functions.” The adopted
+    synthesis introduction continues the sentence to describe a mechanism of action.
+    The retained prefix is scientifically supported, but its unfinished grammatical
+    clause should be removed or completed through a maintained source correction.
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  field_paths:
+  - definition
+  evidence_ids:
+  - record
+  - authority
+  - adopted
+  rule_id: 'review-checklist: Identity and source-supported definition'
+  native_severity: Minor wording defect
+  normalization_reason: The dangling wording is non-blocking and does not change exact
+    identity or invalidate the supported activity claims.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Maintained imported definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible CARD/ARO source extraction correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition owner
+actions:
+- action_id: A1
+  description: During separately authorized curation, correct the ARO:3007478 definition
+    in a reproducible maintained source/input correction, either removing the dangling
+    final clause or completing it with a precisely cited mechanism. Regenerate through
+    the seeder; do not patch only the YAML.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-93dd2d4732
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Maintained imported definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible CARD/ARO source extraction correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition owner
+  acceptance_checks:
+  - The definition ends in a complete sentence and remains restricted to exact darobactin
+    A and its supported preclinical scope.
+  - Re-extraction/reseeding preserves the correction; exact CID, molecular encodings
+    and native status remain justified.
+  - Run documented record and required corpus gates after any future curation.
+limitations:
+- This review does not independently encode atropisomeric indole orientation or reprocess
+  NMR spectra. Nine tetrahedral centers and exact crosslink connectivity agree; no
+  mixture or wrong-isomer conclusion follows from that representation boundary.
+- The complete adopted synthesis main text and original isolation main results were
+  read, with relevant structure, MIC, producer, BAM/ITC/NMR and animal methods. The
+  synthesis supplement URL returned an HTML challenge; raw spectral comparison was
+  not performed.
+- The 2021 atomic mechanism paper was read at abstract level only because attempted
+  full access returned a challenge/redirect. Mechanistic assessment relies on independently
+  inspected 2019 direct experiments.
+- Direct CARD parent-page retrieval failed, while the current exact-child page and
+  frozen source explicitly provide its RiPP parent identifier and label.
+- The original isolated material was purified using formic-acid-containing solvents,
+  but no separately quantified counterion stoichiometry was adopted. Reported assay
+  values are source observations, not adjusted neutral-mass potency estimates.
+- Supplemental direct graph comparison failed on InChI amide tautomers and passed
+  after explicit normalization; native consistency itself passed. Shared corpus gates
+  are distinct, and this draft does not promote native scientific status.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Optional future enrichment can curate microbial BamA as a family/function target,
+  with the E. coli construct as experimental context and claim-level primary evidence;
+  the ITC value is for BAM, and computational catalog membership is not binding proof.
+- Optional producer, MIC and dataset enrichment should preserve exact A, strain, preparation
+  and assay scope. Genome-predicted analogues and biosynthetic enzymes are not antibacterial
+  targets.
+- All native records, maintained inputs and histories remain unchanged. Chemistry
+  used batch019 RDKit against batch035; native schema/strict used batch035.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://card.mcmaster.ca/ontology/46245
+- https://pubchem.ncbi.nlm.nih.gov/compound/155899183
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC7188312/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC9829381/
+tags:
+- record-review
+- darobactin-a
+- definition-wording
+- BamA
+```

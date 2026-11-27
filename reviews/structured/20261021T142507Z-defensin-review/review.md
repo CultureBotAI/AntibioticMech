@@ -1,0 +1,777 @@
+# Defensin: a peptide family was joined to a corticotropin fragment
+
+- Review: 20261021T142507Z-defensin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T14:02:32Z
+- Finished UTC: 2026-10-21T14:25:07Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+One confirmed identity blocker: the native defensin family concept is joined to a sulfur-free32-residue human ACTH(7–38) graph. The graph is internally consistent, but it cannot identify the cysteine-rich defensin family or carry its imported membrane/resistance claims. Schema and strict checks do not establish this chemical identity.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position349; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-eb42322815 | data/antibiotics/antibacterial/defensin.yaml | generated | defensin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | antibioticmech:aro-eb42322815 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | antibioticmech:aro-eb42322815 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | antibioticmech:aro-eb42322815 | Actual focused execution exited 0. |
+| Independent human ACTH fragment graph reconstruction | passed | False | antibioticmech:aro-eb42322815 | Actual RDKit construction from reviewed UniProt coordinates matched the full native Standard InChIKey; command assertion exited0. |
+| Authoritative full QC | failed | True | antibioticmech:aro-eb42322815 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-eb42322815 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-eb42322815 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-eb42322815 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-eb42322815 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-eb42322815 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-eb42322815 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-eb42322815 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-eb42322815 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Family versus exact peptide graph
+
+identity: concern. Targets: antibioticmech:aro-eb42322815.
+
+The native graph is exactly human ACTH(7–38), whereas ARO3000693 and CHEBI82761 denote the defensin family. Correct numeric chemistry does not repair the fundamental source-concept mismatch.
+
+### Internal chemical consistency
+
+representation: supported. Targets: antibioticmech:aro-eb42322815.
+
+SMILES and InChI reproduce the same29-centre peptide graph, formula, charge and stored monoisotopic mass. Native average mass3659.1 is source precision; current PubChem ExactMass is not substituted for the separately defined monoisotopic mass.
+
+### Antimicrobial class, parent and exact xrefs
+
+scope: concern. Targets: antibioticmech:aro-eb42322815.
+
+Peptide-antibiotic classification and broad defensin membership are source assertions for a family. They do not prove this ACTH fragment has antimicrobial activity. CHEBI82761 cannot be an exact structure xref; the PubChem graph resolves but is chemically the wrong identity for the label.
+
+### Membrane target and nine resistance mechanisms
+
+evidence: concern. Targets: antibioticmech:aro-eb42322815.
+
+The target uses the appropriate MEMBRANE/ATTACKED_COMPONENT type and explicit DATABASE_ASSERTION_ONLY qualification. All nine resistance rows cite their exact ARO determinants. Their family-to-compound transfer remains unsupported because the record identity is wrong; no primary mechanism or strain-specific MIC has been established for this peptide.
+
+### Imported sources and history
+
+provenance: supported. Targets: antibioticmech:aro-eb42322815.
+
+The four history events, source hash mint and imported data reproduce the adopted source rows. The one adopted literature lead was resolved at abstract depth. Reproducibility of the erroneous join is distinct from scientific validity.
+
+### Bounded follow-up after identity resolution
+
+completeness: unknown. Targets: antibioticmech:aro-eb42322815.
+
+Resolve the family-level admission before optional ACTH-specific research or adding activity/clinical/producer claims. Do not substitute a representative defensin, or reinterpret this existing family record as an ACTH antimicrobial without separate evidence.
+
+## Findings
+
+### F1: The defensin family is assigned the exact structure of human ACTH(7–38)
+
+blocker / open / confirmed; issue key: defensin-family-joined-to-acth-7-38.
+
+ARO3000693/CHEBI82761 denote a family of cysteine-rich host-defence peptides. The native sulfur-free32-residue graph exactly matches independently reconstructed human corticotropin residues7–38. A mixed PubChem synonym list does not justify this join. Consequently, the exact family xref and transfer of family-level membrane/resistance claims to that structure fail the one-structure identity rule.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Exclude the broad defensin source concept from individual-structure emission and repair the reproducible family-to-PubChem join.
+
+- Record an evidence-backed EXCLUDE decision for antibioticmech:aro-eb42322815; retain the defensin family as ontology context rather than one molecular record.
+- Inspect/correct the adopted ARO/PubChem mapping and enrichment handling so future refreshes cannot readmit this ACTH graph under the family name.
+- Canary and regenerate through the maintained seeder, preserving path/history rules and reviewing pruning only on a complete authorized run.
+- Verify that no family-level target/resistance assertion is attributed to ACTH(7–38); any exact defensin addition requires independently supported sequence/disulfides and antimicrobial evidence.
+- Run schema/strict, structure consistency, provenance, corpus reproduction and the required native QC suite.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/defensin.yaml; entire native YAML, xrefs, all nine resistance entries, target and four history events | supports | The record is MINTED/SEEDED and explicitly retains database-only target and resistance evidence. It nevertheless denotes an individual structure while its name and definition identify the broad defensin family. |
+| owners | data/raw/aro_antibiotics.tsv;data/raw/pubchem_structures.tsv;data/raw/chebi_antimicrobials.tsv; ARO row189, PubChem row50, ChEBI row2164; target row209 and resistance rows3745–3753 | supports | The adopted ARO concept points to both structureless CHEBI82761 and CID56841867. The enrichment code accepts that CID because the ChEBI concept has no structure. The seeder attaches family-level ARO claims to the fetched peptide; EXCLUDE decisions are applied before emission. Owner/overlay searches included hidden and ignored files. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/82761/; complete current ChEBI family entry and incoming member relations | supports | CHEBI82761 explicitly denotes cysteine-rich18–45-residue host-defence peptides with six to eight cysteines. It has no default structure or formula and has separate alpha/beta-defensin members. This is a family, not an exact match to the native sulfur-free molecule. |
+| aro | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000693; ARO3000693, peptide-antibiotic parent3000053 and membrane target3000710 responses | supports | Current ARO retains the broad defensin definition and the same two xrefs. The peptide-antibiotic parent and membrane component terms resolve, but they do not identify this particular32-residue sequence. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/56841867/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,ExactMass/JSON; current CID graph plus separately fetched synonym list | supports | The CID graph matches native ZKALIGRYJXFMNS-XBDDSDALSA-N. Its synonyms mix Defensin/Corticostatin with ACTH(7–38), corticotropin-inhibiting peptide and the explicit sequence FRWGKPVGKKRRPVKVYPNGAEDESAEAFPLE. Name co-occurrence does not make these chemical identities equivalent. |
+| pubchem-names | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/56841867/synonyms/JSON; complete current synonym response | supports | The deposited exact sequence and ACTH(7–38) names support investigation of the misjoin, while the additional defensin/corticostatin names are conflicting source annotations, not reliable family membership. |
+| uniprot | https://rest.uniprot.org/uniprotkb/P01189.json; reviewed human POMC sequence and corticotropin peptide feature138–176 | supports | The official human sequence contains corticotropin SYSMEHFRWGKPVGKKRRPVKVYPNGAEDESAEAFPLEF. Its residues7–38 yield the32-residue native peptide sequence. The source identifies the parent hormone sequence, not an antibacterial assay for this fragment. |
+| independent-identity | RDKit 2026.03.5 / InChI 1.07.3; 349-ACTH-independent-comparison.json; Chem.MolFromSequence from UniProt coordinates | supports | Independent construction of human corticotropin residues7–38 exactly regenerates ZKALIGRYJXFMNS-XBDDSDALSA-N, C167H257N47O46, net charge0 and calculated monoisotopic mass3656.921583744. The32-residue sequence has no cysteine or sulfur. This confirms the graph assignment independently of PubChem aliases. |
+| gsrs-conflict | https://api.fda.gov/other/substance.json?search=unii%3AH48TH4J2A2&amp;limit=1; GSRS H48TH4J2A2 version5 name and protein subunit sequence | context_only | GSRS names ACTH(7–38 HUMAN), but its deposited sequence ends PLQ rather than native/UniProt PLE. This additional registry conflict is explicitly retained: the GSRS sequence is not used as an exact graph match or silently substituted into the record. |
+| definition-paper | https://doi.org/10.1038/nri1180; PMID12949495; complete indexed abstract of Ganz2003 review | supports | The cited article discusses diverse defensin-family members in innate immunity. It supports the family-level definition but cannot identify one compound or assign the native ACTH fragment a defensin membrane/resistance mechanism. Full review text was not accessible in this pass. |
+| resistance | ARO:3003324;3003769;3003770;3003772;3003773;3003774;3005044;3005051;3005052; all nine current OLS term descriptions and corresponding adopted resistance rows | supports | The six mprF terms describe phosphatidylglycerol modification and cationic-peptide resistance; OmpA, LpsB and LpsA describe outer-envelope functions. Adopted rows assert resistance to the broad ARO defensin concept. All nine entries preserve this database provenance, but no inspected evidence connects them to this exact ACTH fragment. |
+| adapter | https://imodulondb.org/api/datasets; catalog followed by S.aureus/staph_precise108 and B.subtilis/modulome mprF; A.baumannii/precise139 ompA/lps | supports | The first two queries resolve USA300HOU_RS06925 and BSU_08425 mprF annotations, with zero components. The ompA adapter failed2 because a regulator field was null; the lps query returned clpS and an LPS glycosyltransferase annotation, not exact LpsA/LpsB proof. These computational annotations do not identify the antibiotic or establish resistance. |
+
+## Limits And Additional Notes
+
+- The Ganz2003 review was read at complete indexed-abstract depth; its full text was not retrieved. The family identity is independently explicit in current ChEBI and ARO.
+- No exhaustive antimicrobial-activity search for the ACTH fragment was performed. This review does not claim that the fragment is universally inactive; it establishes that it is not the named defensin family.
+- GSRS H48TH4J2A2 has a terminal-Q sequence inconsistent with both native and the reviewed human UniProt peptide. That response is preserved as conflicting context and was not counted as an exact match.
+- Current OLS responses resolve every native ARO term; frozen source rows establish the imported edge provenance. No fresh primary resistance assay for all nine determinants was claimed.
+- The Acinetobacter ompA structured-adapter query failed on a null regulator field; no missing-module or negative-resistance conclusion was inferred.
+- Current PubChem ExactMass differs from the light-isotope monoisotopic mass for this large peptide. The native MonoisotopicMass agrees with the independent formula calculation; the different property was not treated as a native mass error.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native record, inventory, exclusion decision, source code or configuration was changed. The observed identity blocker is saved as review evidence only.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T142507Z-defensin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Defensin: a peptide family was joined to a corticotropin fragment'
+started_at: '2026-10-21T14:02:32Z'
+finished_at: '2026-10-21T14:25:07Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: 'One confirmed identity blocker: the native defensin family concept is joined
+  to a sulfur-free32-residue human ACTH(7–38) graph. The graph is internally consistent,
+  but it cannot identify the cysteine-rich defensin family or carry its imported membrane/resistance
+  claims. Schema and strict checks do not establish this chemical identity.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/defensin.yaml
+    sha256: a769fd3725efdb38352c315dcd5381968a50c6e881203c013476000d0189d9c3
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+targets:
+- target_id: antibioticmech:aro-eb42322815
+  path: data/antibiotics/antibacterial/defensin.yaml
+  label: defensin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted family concept and erroneous PubChem join
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Fetched exact peptide graph
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: ARO-to-PubChem structure enrichment
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position349; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-eb42322815
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    349
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/defensin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/defensin.yaml --out /private/tmp/am-review-session/349-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: independent-peptide-identity
+  name: Independent human ACTH fragment graph reconstruction
+  status: passed
+  required: false
+  summary: Actual RDKit construction from reviewed UniProt coordinates matched the
+    full native Standard InChIKey; command assertion exited0.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: RDKit Chem.MolFromSequence(P01189.sequence[137:176][6:38]); assert Chem.MolToInchiKey(m)
+    == "ZKALIGRYJXFMNS-XBDDSDALSA-N"
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - independent-identity
+  - uniprot
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/defensin.yaml
+  locator: entire native YAML, xrefs, all nine resistance entries, target and four
+    history events
+  accessed_at: '2026-10-21T14:10:24Z'
+  support: supports
+  summary: The record is MINTED/SEEDED and explicitly retains database-only target
+    and resistance evidence. It nevertheless denotes an individual structure while
+    its name and definition identify the broad defensin family.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv;data/raw/pubchem_structures.tsv;data/raw/chebi_antimicrobials.tsv
+  locator: ARO row189, PubChem row50, ChEBI row2164; target row209 and resistance
+    rows3745–3753
+  accessed_at: '2026-10-21T14:10:24Z'
+  support: supports
+  summary: The adopted ARO concept points to both structureless CHEBI82761 and CID56841867.
+    The enrichment code accepts that CID because the ChEBI concept has no structure.
+    The seeder attaches family-level ARO claims to the fetched peptide; EXCLUDE decisions
+    are applied before emission. Owner/overlay searches included hidden and ignored
+    files.
+  snapshot_sha256: d1b460c346df0da000965edadfcd4486d7c09fc2e7292f790230972c187dcff4
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/82761/
+  locator: complete current ChEBI family entry and incoming member relations
+  accessed_at: '2026-10-21T14:10:24Z'
+  support: supports
+  summary: CHEBI82761 explicitly denotes cysteine-rich18–45-residue host-defence peptides
+    with six to eight cysteines. It has no default structure or formula and has separate
+    alpha/beta-defensin members. This is a family, not an exact match to the native
+    sulfur-free molecule.
+  snapshot_sha256: a098f9cbd1f458e46be60331134ec7c88de69c8dca8ba03fe3f99e436bd70292
+- evidence_id: aro
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000693
+  locator: ARO3000693, peptide-antibiotic parent3000053 and membrane target3000710
+    responses
+  accessed_at: '2026-10-21T14:10:24Z'
+  support: supports
+  summary: Current ARO retains the broad defensin definition and the same two xrefs.
+    The peptide-antibiotic parent and membrane component terms resolve, but they do
+    not identify this particular32-residue sequence.
+  snapshot_sha256: 04debf7572412e21c1b0841516286344a04ff66c71292f8bcddedebf1d41f0a8
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/56841867/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,ExactMass/JSON
+  locator: current CID graph plus separately fetched synonym list
+  accessed_at: '2026-10-21T14:10:24Z'
+  support: supports
+  summary: The CID graph matches native ZKALIGRYJXFMNS-XBDDSDALSA-N. Its synonyms
+    mix Defensin/Corticostatin with ACTH(7–38), corticotropin-inhibiting peptide and
+    the explicit sequence FRWGKPVGKKRRPVKVYPNGAEDESAEAFPLE. Name co-occurrence does
+    not make these chemical identities equivalent.
+  snapshot_sha256: c767c019f704224455741067b4b5fe3b2873d42f6a164bef7c187d299452c783
+- evidence_id: pubchem-names
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/56841867/synonyms/JSON
+  locator: complete current synonym response
+  accessed_at: '2026-10-21T14:10:24Z'
+  support: supports
+  summary: The deposited exact sequence and ACTH(7–38) names support investigation
+    of the misjoin, while the additional defensin/corticostatin names are conflicting
+    source annotations, not reliable family membership.
+  snapshot_sha256: 0cc464ecacdaedcfe2eaa1e4c32024451bd769d45edd805a870b5aaf0b8574d5
+- evidence_id: uniprot
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/P01189.json
+  locator: reviewed human POMC sequence and corticotropin peptide feature138–176
+  accessed_at: '2026-10-21T14:10:24Z'
+  support: supports
+  summary: The official human sequence contains corticotropin SYSMEHFRWGKPVGKKRRPVKVYPNGAEDESAEAFPLEF.
+    Its residues7–38 yield the32-residue native peptide sequence. The source identifies
+    the parent hormone sequence, not an antibacterial assay for this fragment.
+  snapshot_sha256: 3ccfd0bcb9ea7d30cb48c5b489daba325e0a0a29ac3d03a1a22dac9a2ee8fc30
+- evidence_id: independent-identity
+  kind: validation
+  reference: RDKit 2026.03.5 / InChI 1.07.3
+  locator: 349-ACTH-independent-comparison.json; Chem.MolFromSequence from UniProt
+    coordinates
+  accessed_at: '2026-10-21T14:10:24Z'
+  support: supports
+  summary: Independent construction of human corticotropin residues7–38 exactly regenerates
+    ZKALIGRYJXFMNS-XBDDSDALSA-N, C167H257N47O46, net charge0 and calculated monoisotopic
+    mass3656.921583744. The32-residue sequence has no cysteine or sulfur. This confirms
+    the graph assignment independently of PubChem aliases.
+  snapshot_sha256: 5d774ab9143d2d46867961bebe3ce4a37d701d32ec2a88686307b7995096ee05
+- evidence_id: gsrs-conflict
+  kind: authority
+  reference: https://api.fda.gov/other/substance.json?search=unii%3AH48TH4J2A2&limit=1
+  locator: GSRS H48TH4J2A2 version5 name and protein subunit sequence
+  accessed_at: '2026-10-21T14:10:24Z'
+  support: context_only
+  summary: 'GSRS names ACTH(7–38 HUMAN), but its deposited sequence ends PLQ rather
+    than native/UniProt PLE. This additional registry conflict is explicitly retained:
+    the GSRS sequence is not used as an exact graph match or silently substituted
+    into the record.'
+  snapshot_sha256: 824268362ae6b1bf3dac00c7aa38835a1eab6ee247ec562b093d6f9f0aca27a5
+- evidence_id: definition-paper
+  kind: primary_source
+  reference: https://doi.org/10.1038/nri1180
+  locator: PMID12949495; complete indexed abstract of Ganz2003 review
+  accessed_at: '2026-10-21T14:10:24Z'
+  support: supports
+  summary: The cited article discusses diverse defensin-family members in innate immunity.
+    It supports the family-level definition but cannot identify one compound or assign
+    the native ACTH fragment a defensin membrane/resistance mechanism. Full review
+    text was not accessible in this pass.
+  snapshot_sha256: 2040ee31ad7134e79c85832e499136552abfa051d6c2b7f4f97fbf88eed1ea0c
+- evidence_id: resistance
+  kind: authority
+  reference: ARO:3003324;3003769;3003770;3003772;3003773;3003774;3005044;3005051;3005052
+  locator: all nine current OLS term descriptions and corresponding adopted resistance
+    rows
+  accessed_at: '2026-10-21T14:10:24Z'
+  support: supports
+  summary: The six mprF terms describe phosphatidylglycerol modification and cationic-peptide
+    resistance; OmpA, LpsB and LpsA describe outer-envelope functions. Adopted rows
+    assert resistance to the broad ARO defensin concept. All nine entries preserve
+    this database provenance, but no inspected evidence connects them to this exact
+    ACTH fragment.
+  snapshot_sha256: d1b460c346df0da000965edadfcd4486d7c09fc2e7292f790230972c187dcff4
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: catalog followed by S.aureus/staph_precise108 and B.subtilis/modulome mprF;
+    A.baumannii/precise139 ompA/lps
+  accessed_at: '2026-10-21T14:10:24Z'
+  support: supports
+  summary: The first two queries resolve USA300HOU_RS06925 and BSU_08425 mprF annotations,
+    with zero components. The ompA adapter failed2 because a regulator field was null;
+    the lps query returned clpS and an LPS glycosyltransferase annotation, not exact
+    LpsA/LpsB proof. These computational annotations do not identify the antibiotic
+    or establish resistance.
+  snapshot_sha256: d34839c384ceb298c96c07ffdcdbdf9bce1707eb3fc71ef5ae062caccf127544
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Family versus exact peptide graph
+  outcome: concern
+  summary: The native graph is exactly human ACTH(7–38), whereas ARO3000693 and CHEBI82761
+    denote the defensin family. Correct numeric chemistry does not repair the fundamental
+    source-concept mismatch.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  evidence_ids:
+  - native
+  - chebi
+  - aro
+  - pubchem
+  - uniprot
+  - independent-identity
+- assessment_id: chemistry
+  area: representation
+  topic: Internal chemical consistency
+  outcome: supported
+  summary: SMILES and InChI reproduce the same29-centre peptide graph, formula, charge
+    and stored monoisotopic mass. Native average mass3659.1 is source precision; current
+    PubChem ExactMass is not substituted for the separately defined monoisotopic mass.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  evidence_ids:
+  - native
+  - independent-identity
+  - pubchem
+- assessment_id: classification
+  area: scope
+  topic: Antimicrobial class, parent and exact xrefs
+  outcome: concern
+  summary: Peptide-antibiotic classification and broad defensin membership are source
+    assertions for a family. They do not prove this ACTH fragment has antimicrobial
+    activity. CHEBI82761 cannot be an exact structure xref; the PubChem graph resolves
+    but is chemically the wrong identity for the label.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  evidence_ids:
+  - chebi
+  - aro
+  - definition-paper
+  - pubchem
+- assessment_id: claims
+  area: evidence
+  topic: Membrane target and nine resistance mechanisms
+  outcome: concern
+  summary: The target uses the appropriate MEMBRANE/ATTACKED_COMPONENT type and explicit
+    DATABASE_ASSERTION_ONLY qualification. All nine resistance rows cite their exact
+    ARO determinants. Their family-to-compound transfer remains unsupported because
+    the record identity is wrong; no primary mechanism or strain-specific MIC has
+    been established for this peptide.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  evidence_ids:
+  - native
+  - owners
+  - resistance
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Imported sources and history
+  outcome: supported
+  summary: The four history events, source hash mint and imported data reproduce the
+    adopted source rows. The one adopted literature lead was resolved at abstract
+    depth. Reproducibility of the erroneous join is distinct from scientific validity.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  evidence_ids:
+  - owners
+  - native
+  - definition-paper
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded follow-up after identity resolution
+  outcome: unknown
+  summary: Resolve the family-level admission before optional ACTH-specific research
+    or adding activity/clinical/producer claims. Do not substitute a representative
+    defensin, or reinterpret this existing family record as an ACTH antimicrobial
+    without separate evidence.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  evidence_ids:
+  - native
+  - independent-identity
+  - chebi
+findings:
+- finding_id: F1
+  issue_key: defensin-family-joined-to-acth-7-38
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: The defensin family is assigned the exact structure of human ACTH(7–38)
+  description: ARO3000693/CHEBI82761 denote a family of cysteine-rich host-defence
+    peptides. The native sulfur-free32-residue graph exactly matches independently
+    reconstructed human corticotropin residues7–38. A mixed PubChem synonym list does
+    not justify this join. Consequently, the exact family xref and transfer of family-level
+    membrane/resistance claims to that structure fail the one-structure identity rule.
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  field_paths:
+  - label
+  - definition
+  - chemical_structure
+  - xrefs
+  - source_concepts
+  - molecular_targets
+  - resistance_mechanisms
+  evidence_ids:
+  - native
+  - chebi
+  - aro
+  - pubchem
+  - pubchem-names
+  - uniprot
+  - independent-identity
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted family concept and erroneous PubChem join
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Fetched exact peptide graph
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: ARO-to-PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Source-concept exclusion owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity, claims and exclusion handling
+  rule_id: native-review-checklist:Identity and Equivalence
+  native_severity: blocker
+  normalization_reason: The record denotes the wrong chemical thing, not merely an
+    uncertain mechanism or optional missing field.
+actions:
+- action_id: A1
+  description: Exclude the broad defensin source concept from individual-structure
+    emission and repair the reproducible family-to-PubChem join.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-eb42322815
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted family concept and erroneous PubChem join
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Fetched exact peptide graph
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: ARO-to-PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Source-concept exclusion owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity, claims and exclusion handling
+  acceptance_checks:
+  - Record an evidence-backed EXCLUDE decision for antibioticmech:aro-eb42322815;
+    retain the defensin family as ontology context rather than one molecular record.
+  - Inspect/correct the adopted ARO/PubChem mapping and enrichment handling so future
+    refreshes cannot readmit this ACTH graph under the family name.
+  - Canary and regenerate through the maintained seeder, preserving path/history rules
+    and reviewing pruning only on a complete authorized run.
+  - Verify that no family-level target/resistance assertion is attributed to ACTH(7–38);
+    any exact defensin addition requires independently supported sequence/disulfides
+    and antimicrobial evidence.
+  - Run schema/strict, structure consistency, provenance, corpus reproduction and
+    the required native QC suite.
+limitations:
+- The Ganz2003 review was read at complete indexed-abstract depth; its full text was
+  not retrieved. The family identity is independently explicit in current ChEBI and
+  ARO.
+- No exhaustive antimicrobial-activity search for the ACTH fragment was performed.
+  This review does not claim that the fragment is universally inactive; it establishes
+  that it is not the named defensin family.
+- GSRS H48TH4J2A2 has a terminal-Q sequence inconsistent with both native and the
+  reviewed human UniProt peptide. That response is preserved as conflicting context
+  and was not counted as an exact match.
+- Current OLS responses resolve every native ARO term; frozen source rows establish
+  the imported edge provenance. No fresh primary resistance assay for all nine determinants
+  was claimed.
+- The Acinetobacter ompA structured-adapter query failed on a null regulator field;
+  no missing-module or negative-resistance conclusion was inferred.
+- Current PubChem ExactMass differs from the light-isotope monoisotopic mass for this
+  large peptide. The native MonoisotopicMass agrees with the independent formula calculation;
+  the different property was not treated as a native mass error.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record, inventory, exclusion decision, source code or configuration was
+  changed. The observed identity blocker is saved as review evidence only.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
