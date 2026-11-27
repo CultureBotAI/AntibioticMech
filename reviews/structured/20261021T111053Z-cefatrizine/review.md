@@ -1,0 +1,993 @@
+# Cefatrizine: repair invalid source SMILES; retain antibacterial versus human eEF2K evidence boundaries
+
+- Review: 20261021T111053Z-cefatrizine
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T10:55:27Z
+- Finished UTC: 2026-10-21T11:10:53Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Cefatrizine identity is recoverable from a coherent InChI, official MOL and exact cross-references, but the source-imported SMILES cannot be parsed because its aromatic triazole lacks an explicit hydrogen-bearing nitrogen. Schema and strict gates pass while independent chemistry fails. The defect is confirmed against ChEBI’s own valid MOL. Antibacterial activity is supported; the separate human eEF2K claim is supported at abstract level, with full experimental details unavailable. One major representation finding and one informational evidence-enrichment finding remain.
+
+## Scope And Provenance
+
+Whole CHEBI:131730 record: chemical and human eEF2K definition, ten synonyms, seven parents, two roles, structural class, chemical descriptors, five chemical xrefs, two drug xrefs, four document xrefs, two source concepts and four history entries; all ten adopted citation leads.
+
+Selection: Queue 212; initial capture retained; actual ARO owners recorded before scientific assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:131730 | data/antibiotics/antibacterial/cefatrizine.yaml | generated | cefatrizine |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:131730 | Actual focused command exited 0. |
+| strict | passed | True | CHEBI:131730 | Actual focused command exited 0. |
+| chemistry | failed | False | CHEBI:131730 | Actual focused command exited 1. RDKit rejects the native aromatic triazole SMILES; native InChI remains valid. Batch019 interpreter was used against batch022 inputs. |
+| Authoritative full QC | failed | True | CHEBI:131730 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:131730 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:131730 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:131730 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:131730 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:131730 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:131730 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:131730 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:131730 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Malformed aromatic triazole SMILES
+
+representation: concern. Targets: CHEBI:131730.
+
+The imported string is invalid. Official ChEBI MOL independently establishes a narrow hydrogen-annotation repair preserving the exact intended identity.
+
+### Neutral cefatrizine, synonyms, parents and xrefs
+
+identity: supported. Targets: CHEBI:131730.
+
+The exact neutral identity, source aliases, chemical parents and inspected chemical/drug xrefs agree. Fixed-H tautomer differences in external databases must be distinguished from shared Standard InChI identity.
+
+### Antibacterial filing and tested spectrum
+
+evidence: supported. Targets: CHEBI:131730.
+
+Four original studies support cefatrizine antibacterial activity with substantial assay, strain and population limitations. These do not establish universal susceptibility or the absence of resistance.
+
+### eEF2K and human cancer context
+
+scope: supported. Targets: CHEBI:131730.
+
+The adopted primary abstract supports the definition as a reported host-cell finding. Full mechanistic detail remains unresolved; no bacterial kinase target or complete ER-stress causal graph is justified.
+
+### Natural production, synthesis and PK
+
+scope: supported. Targets: CHEBI:131730.
+
+Semisynthetic provenance is consistent with original laboratory preparation. The recombinant synthesis paper does not establish a natural producer, and PK studies do not establish current regulatory status.
+
+### Maintained source correction versus optional native additions
+
+ownership: supported. Targets: CHEBI:131730.
+
+Correct the imported structure at its maintained source/extractor boundary and regenerate; do not hide a source error by patching only YAML. Future primary activity evidence belongs to the exact native record.
+
+### Primary mechanism and activity enrichment
+
+completeness: unknown. Targets: CHEBI:131730.
+
+Optional qualified activity entries could be curated after structure repair. No direct PBP experiment was independently established, and eEF2K should remain separate from antibacterial mechanism.
+
+### Deterministic validation
+
+schema: concern. Targets: CHEBI:131730.
+
+Documented schema/strict gates pass despite a confirmed chemical parser failure. Independent chemistry is therefore material to this verdict.
+
+## Findings
+
+### F1: Repair the invalid ChEBI-derived triazole SMILES through its maintained source
+
+major / open / confirmed; issue key: cefatrizine-invalid-triazole-smiles.
+
+The native and raw-source SMILES encode c3cnnn3 with no hydrogen-bearing aromatic nitrogen and fail RDKit kekulization. The native InChI remains valid, and the official ChEBI MOL yields a coherent c3c[nH]nn3 representation with the same exact identity. This is a source representation defect that schema and strict validation miss, not proof that the record denotes a different antibiotic.
+
+### F2: Add qualified activity evidence without transferring host kinase or synthesis roles
+
+informational / open / confirmed; issue key: cefatrizine-qualified-antibacterial-host-evidence-enrichment.
+
+The seeded record has concrete primary antibacterial evidence available for optional enrichment. Human eEF2K experiments, synthesis hydrolase activity and PK observations are different contexts. Their presence in the source bibliography does not make them antibacterial target, producer or resistance evidence.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Reconcile the malformed imported SMILES with the official ChEBI MOL and regenerate reproducibly.
+
+- Independently inspect ChEBI:131730 MOL and the exact raw row. The scratch candidate replacing c3cnnn3 with c3c[nH]nn3 matches the official MOL and ChEMBL/CARD; retain it as an evidence-backed candidate rather than an unreviewed blanket substitution.
+- Implement the correction in a maintained source/extraction decision that survives reseeding, retaining the original upstream value and provenance as appropriate. Do not silently rewrite a frozen raw snapshot or only patch the generated YAML.
+- Preserve the native Standard InChI, full key, formula, charge and three stereocentres unless new exact evidence requires otherwise. Shared Standard InChI across alternative triazole tautomers is not sufficient to claim identical fixed-H graphs.
+- Regenerate through the documented pipeline and verify the exact object-level diff. Require native SMILES and InChI to parse and agree, then run per-record schema/strict and applicable shared checks. Keep SEEDED status until all scientific sign-off criteria are met.
+
+### A2
+
+Curate narrowly supported antibacterial observations and retain separate host and synthetic contexts.
+
+- After F1 is resolved, select an exact original-paper observation with its strain or explicitly defined isolate population, medium, inoculum, incubation, units and MIC/MBC endpoint. Keep medians, geometric means, cumulative distributions and individual measurements distinct.
+- Preserve mouse ED50, human PK, plasma binding and beta-lactamase hydrolysis as separate experimental outcomes. Do not convert them to direct PBP binding or current clinical approval.
+- Obtain and inspect the full 2016 eEF2K paper before adding biochemical potency, binding specificity or a downstream ER-stress causal chain. Its available abstract concerns human breast-cancer cells and does not establish an antibacterial kinase target.
+- Do not add Xanthomonas or recombinant E. coli as natural cefatrizine producers from the enzymatic synthesis abstract, or its hydrolase as the drug target.
+- Use write_validated_antibiotic and record_curation_event for separately authorized native additions, attach evidence at the narrow claim and run applicable gates before any status promotion.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/cefatrizine.yaml; Entire YAML and all four history events. | supports | SEEDED/EXACT cefatrizine has an explicitly eukaryotic eEF2K statement in its definition, but no structured molecular target, mode of action, quantitative activity, resistance mechanism, producer or graph. No human kinase is represented as a bacterial target. Optional absence alone is not a schema defect. |
+| source | data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; conf/sources.yaml; ChEBI row 2480; ARO row 570; extraction lines 250–340, structure_from_chebi and build_concepts. | supports | The exact ChEBI row supplies the native definition, names, roles and malformed SMILES; the extractor copies source structure strings and the seeder imports them without a chemical repair. ARO:3009111 is joined through CHEBI:131730, adding its exact concept/xrefs and cephalosporin class. Its broad PBP prose is not a native direct-target assertion. Neither maintained ARO target nor resistance inventory contains an edge for this exact drug. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:131730; Current complete chemical entry, names, ontology, xrefs and displayed representations. | supports | The current entry agrees with the definition, all native synonyms, six ChEBI chemical parents, antibacterial drug role and inherited antimicrobial role. CHEBI:22475 is amino acid amide, 23066 cephalosporin, 33575 carboxylic acid, 33853 phenols, 35727 triazoles and 72588 semisynthetic derivative. It also lists eEF2K inhibitor CHEBI:131734 outside the retained antimicrobial role scope. CAS 51627-14-6 and Reaxys 8172545 are source-attested. Its displayed SMILES still contains the same invalid c3cnnn3 ring. |
+| invalid-smiles | 212-chemistry.json; 212-chemistry.log; chemical_structure.smiles; Independent RDKit parsing of both native structure strings. | refutes | The native SMILES fails kekulization at its aromatic triazole atoms. Independently parsing the native InChI succeeds and reproduces UOCJDOLVGGIYIQ-PBFPGSCMSA-N, C18H18N6O5S2, charge 0, one fragment, both masses and three R stereocentres. Thus the identity is recoverable, but the two structure fields are not jointly usable. |
+| mol-repair | https://www.ebi.ac.uk/chebi/backend/api/public/molfile/131730; https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1095284.json; Official ChEBI MOL and ChEMBL MOL/SMILES parsed independently; scratch candidate compared. | supports | ChEBI’s MOL parses to a valid triazole with canonical fragment c3c[nH]nn3. Changing only native c3cnnn3 to c3c[nH]nn3 produces the same canonical isomeric SMILES as that MOL and the ChEMBL structure, and preserves the full native InChI/key, formula, charge and stereochemistry. This confirms a representation defect within the ChEBI entry itself. The candidate is retained only in scratch; no native correction was made. |
+| xrefs | https://pubchem.ncbi.nlm.nih.gov/compound/6410758; https://card.mcmaster.ca/ontology/47941; https://rest.kegg.jp/get/D02406; https://drugcentral.org/drugcard/529; Official identity fields, exact PubChem properties, CARD structure, KEGG MOL and DrugCentral raw InChI/SMILES. | supports | ARO:3009111, PubChem 6410758, ChEMBL1095284, KEGG D02406 and DrugCentral 529 identify cefatrizine. Parsed official structures reproduce the native Standard InChIKey and three-centre stereochemistry. PubChem and KEGG use different valid triazole hydrogen placements from the ChEBI MOL; their shared Standard InChI normalizes these tautomers and does not prove fixed-H graph identity. The repair candidate instead matches the official ChEBI MOL itself. KEGG PubChem 7849464 is a substance identifier. |
+| drugcentral | https://drugcentral.org/drug/529/inchi; https://drugcentral.org/drug/529/smiles; Complete raw chemical strings independently parsed. | supports | Both official DrugCentral representations reproduce UOCJDOLVGGIYIQ-PBFPGSCMSA-N. Drug-centric predicted PK/kinase panels, regulatory summaries and commercial products are not new primary claims for this native record. |
+| documents | https://patents.google.com/patent/US3867380A/en; https://patents.google.com/patent/DE2316866A1/en; https://patents.google.com/patent/DE2364192A1/en; https://en.wikipedia.org/wiki/Cefatrizine; Patent titles, metadata and selected chemical-description passages; Wikipedia chemical identity fields. | partial | All three patent identifiers resolve to relevant cephalosporin synthesis documents. Actor et al. explicitly cite US3867380 as the synthesis source. The patents include broader analogues and salts, so their full claims are not treated as exact activity evidence. Wikipedia concerns cefatrizine and gives the matching standard identity; its separate KEGG D02711 link is not the native D02406 xref and was not substituted. Patent coverage was selective, not exhaustive. |
+| actor | PMID:808525; DOI:10.7164/antibiotics.28.594; Complete original PDF text pp594–601; original Figure 1 on p594 visually inspected. | supports | Actor et al. explicitly equate SK&amp;F 60771 with BL-S640 and identify the cephalosporin free-acid structure, prepared in their laboratory. Figure 1 contains the triazole N–H absent from the native SMILES. Antibacterial assays use agar dilution, usually nutrient agar, with enriched Mueller–Hinton agar for selected fastidious organisms. Table 1 reports population medians; Table 2 includes E. coli 12140 MIC 1.6 µg/mL and K. pneumoniae 4200 MIC 3.1 µg/mL. Mouse protective ED50 and PK endpoints remain distinct from MIC and human efficacy. Formulation methods sometimes use bicarbonate, so neutral drawing does not imply unchanged protonation in every assay. |
+| leitner | PMID:1137381; DOI:10.1128/AAC.7.3.298; PMC429128; All eight original scanned pages 298–305, including Figures 1–4 and Tables 1–5, visually inspected. | supports | Leitner et al. synthesize and test BL-S640; the addendum identifies cefatrizine as its approved nonproprietary name, not a marketing approval. The study comprises 612 Gram-negative and 177 Gram-positive strains. Agar MIC methods specify species-dependent inocula, media and incubation; broth MBC uses subculture and a stated colony-count criterion. Table 1 includes geometric means, while Tables 2–4 retain individual numbered strains and inocula. Cell-free beta-lactamase hydrolysis and human plasma binding are distinct assays; neither establishes direct PBP binding. |
+| yourassowsky | PMID:239917; DOI:10.7164/antibiotics.28.590; Complete original PDF text pp590–593, Methods, Tables 1–2 and Discussion. | supports | This study tests Bristol BL-S640 analytical powder against 99 clinical isolates. Agar dilution uses Mueller–Hinton agar with supplements for specified taxa, overnight incubation at 37 °C and species-dependent inoculum preparations; diffusion uses 30 µg disks. Tables give isolate-frequency distributions. Results vary by organism and do not supply a universal MIC or clinical efficacy. OCR of numerical tables was not independently audited against every original cell; no new quantitative observation is proposed from those cells. |
+| stilwell | PMID:813573; DOI:10.1128/AAC.8.6.751; PMC429458; All three original scanned pages 751–753 and Figures 1–6 visually inspected. | supports | Stilwell et al. compare cefatrizine in nutrient and Mueller–Hinton agar/broth at two inoculum sizes. Broth generally yields weaker activity, and higher inocula amplify MIC/MBC differences, especially in Enterobacter, E. coli and Enterococcus contexts. P. aeruginosa remains poorly susceptible in these experiments. The cumulative population plots do not justify one species-wide threshold or modern breakpoint classification. |
+| eef2k | PMID:26776155; DOI:10.1039/C5MB00848D; https://academic.oup.com/molecular-omics/article/12/3/729/8327403; Complete MED and publisher abstract; public full-text and supplement access attempts. | partial | Yao et al. report cefatrizine as an eEF2K inhibitor with antiproliferative activity and ER-stress effects in MCF-7 and MDA-MB-436 breast-cancer cells. Their abstract combines predicted networks, si-eEF2K iTRAQ proteomics and compound experiments. This supports the native definition at the reported human-cell level. Full experimental methods, biochemical potency, direct-binding specificity and the purchased material were not independently inspected; none is inferred from the abstract, and the host kinase is not an antibacterial target. |
+| pk-synthesis | PMID:2329468 DOI:10.1007/BF01063620; PMID:6660858 DOI:10.1128/AAC.24.6.915; PMID:23894823; Complete adopted MED abstracts and metadata. | context_only | 2329468 models oral absorption in 12 healthy volunteers; 6660858 compares intravenous/oral PK and bioavailability. These are human pharmacokinetic contexts, not microbial activity or current regulatory approval. 23894823 describes enzymatic synthesis using an alpha-amino acid ester hydrolase gene from Xanthomonas rubrillineans expressed in E. coli BL21(DE3). The enzyme is a synthetic catalyst and those organisms are not established natural cefatrizine producers or its antimicrobial target. No DOI was supplied for the Chinese-language synthesis paper. |
+| overview-leads | PMID:3915469; PMID:29017833 DOI:10.1016/j.jaip.2017.08.027; Complete adopted MED abstracts and publication metadata. | context_only | 3915469 is titled a clinical overview and has Clinical Trial/Comparative Study indexing; its short abstract reports broad clinical efficacy without enough design detail for an independently adjudicated clinical claim. 29017833 is explicitly a secondary review of beta-lactam allergy cross-reactivity. Both remain contextual leads here; neither is used as new primary molecular-target evidence. |
+| adapter | 212-imodulondb-datasets.txt; Structured source catalog before web research. | context_only | The native eEF2K/apoptosis/autophagy/ER-stress statement concerns human cells. The catalog has microbial datasets but no matching human eEF2K context, so a microbial module was not substituted. Catalog absence is not negative evidence. Command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1 uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw kg-microbe-sources imodulondb --timeout 15 datasets; exit 0. |
+| local-search | 212-local-hits.txt; 212-maintained-search.txt; 212-inclusive-file-hits.txt; Exact identifiers, name, slug and key searched with hidden and ignored files included. | context_only | Matches are the native/source records, queue, path ledger and generated maps. No exact maintained corrective curator or decision row was found. No native target, spectrum, resistance, producer or graph field was found in the complete record. |
+| validation | 212-focused-results.json; 212-chemistry.json; 212-schema.log; 212-strict.log; Actual focused schema/strict checks and independent native chemistry. | partial | Schema and strict checks exit 0. Independent chemistry exits 1 for malformed SMILES, while native InChI and both source mints reproduce correctly. A valid external or scratch candidate does not change the failed native result. |
+
+## Limits And Additional Notes
+
+- All 13 initial input hashes remain unchanged. Actual ARO owner paths were captured before scientific assessment. A subsequent explicit input capture added the three ARO inventory hashes and verified them against the preceding batch022 pre-assessment capture; the initial target and capture files were not replaced.
+- All ten adopted MED abstracts were inspected. The EuropePMC EXT_ID query also returned unrelated non-MED records with matching numbers; these were excluded by source and are not treated as PMID matches.
+- Full original Actor and Yourassowsky PDF text was read; Actor Figure 1 was visually inspected. All original Leitner and Stilwell page scans, figures and tables were visually inspected. Every OCR cell in the Yourassowsky tables and every Actor plotted point was not independently audited, so any future numerical extraction must verify selected original data.
+- The eEF2K paper and supplement returned 403 on public RSC routes, and the current OUP page exposes an abstract with a purchase notice. No paid access was used. Host inhibition is supported as reported in the abstract, but direct binding, potency, specificity and compound-material details remain unverified.
+- Human PK and recombinant synthesis papers were inspected at abstract level. The clinical overview is retained as context because its short abstract does not expose enough design detail, despite clinical-trial indexing. The allergy paper is explicitly a secondary review.
+- Three patents were inspected at metadata and selected-description level; no exhaustive patent claim audit was performed. Reaxys 8172545 remains an official-source attestation without subscription-registry inspection.
+- The native SMILES remains invalid. Successful parsing of a scratch candidate or official alternative does not convert the actual native chemistry failure into a pass.
+- The native human eEF2K context has no matching dataset in the inspected structured-source catalog. This is an applicability limit, not evidence against the biological claim.
+- This is a partial scientific review with a confirmed major representation defect. Exact compound identity is recoverable and antibacterial activity is supported; unresolved full-text details do not justify inventing direct targets or promoting native curation status.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T111053Z-cefatrizine
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cefatrizine: repair invalid source SMILES; retain antibacterial versus human
+  eEF2K evidence boundaries'
+started_at: '2026-10-21T10:55:27Z'
+finished_at: '2026-10-21T11:10:53Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the seed. Read the whole record and actual source
+    rows, preserved initial hashes, inspected official chemical representations and
+    all ten adopted MED abstracts, and read four original antibacterial studies with
+    explicit assay and host-context boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Cefatrizine identity is recoverable from a coherent InChI, official MOL and
+  exact cross-references, but the source-imported SMILES cannot be parsed because
+  its aromatic triazole lacks an explicit hydrogen-bearing nitrogen. Schema and strict
+  gates pass while independent chemistry fails. The defect is confirmed against ChEBI’s
+  own valid MOL. Antibacterial activity is supported; the separate human eEF2K claim
+  is supported at abstract level, with full experimental details unavailable. One
+  major representation finding and one informational evidence-enrichment finding remain.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefatrizine.yaml
+    sha256: 332f8140d98f53756ff426a63e19514db5c390c32c385427d8bf8607ec032073
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+targets:
+- target_id: CHEBI:131730
+  path: data/antibiotics/antibacterial/cefatrizine.yaml
+  label: cefatrizine
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO exact source concept
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Target-edge selection
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Resistance-edge selection
+scope:
+  description: 'Whole CHEBI:131730 record: chemical and human eEF2K definition, ten
+    synonyms, seven parents, two roles, structural class, chemical descriptors, five
+    chemical xrefs, two drug xrefs, four document xrefs, two source concepts and four
+    history entries; all ten adopted citation leads.'
+  selection: Queue 212; initial capture retained; actual ARO owners recorded before
+    scientific assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:131730
+  exclusions:
+  - target: Cefatrizine propylene glycolate, comparator cephalosporins, human eEF2K
+      response proteins and recombinant synthesis hosts
+    reason: Distinct formulations, compounds and experimental roles cannot substitute
+      for this exact neutral chemical or establish its antibacterial target or natural
+      producer.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:131730
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefatrizine.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:131730
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefatrizine.yaml --out /private/tmp/am-review-session/212-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: failed
+  required: false
+  summary: Actual focused command exited 1. RDKit rejects the native aromatic triazole
+    SMILES; native InChI remains valid. Batch019 interpreter was used against batch022
+    inputs.
+  target_ids:
+  - CHEBI:131730
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 212
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:131730
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:131730
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:131730
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:131730
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:131730
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:131730
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:131730
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:131730
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:131730
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefatrizine.yaml
+  locator: Entire YAML and all four history events.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: supports
+  summary: SEEDED/EXACT cefatrizine has an explicitly eukaryotic eEF2K statement in
+    its definition, but no structured molecular target, mode of action, quantitative
+    activity, resistance mechanism, producer or graph. No human kinase is represented
+    as a bacterial target. Optional absence alone is not a schema defect.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py; conf/sources.yaml
+  locator: ChEBI row 2480; ARO row 570; extraction lines 250–340, structure_from_chebi
+    and build_concepts.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: supports
+  summary: The exact ChEBI row supplies the native definition, names, roles and malformed
+    SMILES; the extractor copies source structure strings and the seeder imports them
+    without a chemical repair. ARO:3009111 is joined through CHEBI:131730, adding
+    its exact concept/xrefs and cephalosporin class. Its broad PBP prose is not a
+    native direct-target assertion. Neither maintained ARO target nor resistance inventory
+    contains an edge for this exact drug.
+  snapshot_sha256: a07c9f375cac25ff5d23c6f8305292d0f5b7a7648c3bddd8e4f344df683595f6
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:131730
+  locator: Current complete chemical entry, names, ontology, xrefs and displayed representations.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: supports
+  summary: The current entry agrees with the definition, all native synonyms, six
+    ChEBI chemical parents, antibacterial drug role and inherited antimicrobial role.
+    CHEBI:22475 is amino acid amide, 23066 cephalosporin, 33575 carboxylic acid, 33853
+    phenols, 35727 triazoles and 72588 semisynthetic derivative. It also lists eEF2K
+    inhibitor CHEBI:131734 outside the retained antimicrobial role scope. CAS 51627-14-6
+    and Reaxys 8172545 are source-attested. Its displayed SMILES still contains the
+    same invalid c3cnnn3 ring.
+  snapshot_sha256: f019e63288ca254cdb03d06168ef9f8c9326d533f2cd098fb7c4e9d65fef9795
+- evidence_id: invalid-smiles
+  kind: validation
+  reference: 212-chemistry.json; 212-chemistry.log; chemical_structure.smiles
+  locator: Independent RDKit parsing of both native structure strings.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: refutes
+  summary: The native SMILES fails kekulization at its aromatic triazole atoms. Independently
+    parsing the native InChI succeeds and reproduces UOCJDOLVGGIYIQ-PBFPGSCMSA-N,
+    C18H18N6O5S2, charge 0, one fragment, both masses and three R stereocentres. Thus
+    the identity is recoverable, but the two structure fields are not jointly usable.
+  snapshot_sha256: 875f702e077697159a6a7620545c704588663a6c8a5e85a392e7328fb93ae6d4
+- evidence_id: mol-repair
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/molfile/131730; https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1095284.json
+  locator: Official ChEBI MOL and ChEMBL MOL/SMILES parsed independently; scratch
+    candidate compared.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: supports
+  summary: ChEBI’s MOL parses to a valid triazole with canonical fragment c3c[nH]nn3.
+    Changing only native c3cnnn3 to c3c[nH]nn3 produces the same canonical isomeric
+    SMILES as that MOL and the ChEMBL structure, and preserves the full native InChI/key,
+    formula, charge and stereochemistry. This confirms a representation defect within
+    the ChEBI entry itself. The candidate is retained only in scratch; no native correction
+    was made.
+  snapshot_sha256: 4e961b35ab7e699eea0eecdce60474290478d8a6c5682b1bf44fd4c99baa1bda
+- evidence_id: xrefs
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/6410758; https://card.mcmaster.ca/ontology/47941;
+    https://rest.kegg.jp/get/D02406; https://drugcentral.org/drugcard/529
+  locator: Official identity fields, exact PubChem properties, CARD structure, KEGG
+    MOL and DrugCentral raw InChI/SMILES.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: supports
+  summary: ARO:3009111, PubChem 6410758, ChEMBL1095284, KEGG D02406 and DrugCentral
+    529 identify cefatrizine. Parsed official structures reproduce the native Standard
+    InChIKey and three-centre stereochemistry. PubChem and KEGG use different valid
+    triazole hydrogen placements from the ChEBI MOL; their shared Standard InChI normalizes
+    these tautomers and does not prove fixed-H graph identity. The repair candidate
+    instead matches the official ChEBI MOL itself. KEGG PubChem 7849464 is a substance
+    identifier.
+  snapshot_sha256: 5591b52a3b03c2e702d1dec4a17d8f2126053cabe9c16e696d7c0bd169ec5cfc
+- evidence_id: drugcentral
+  kind: database
+  reference: https://drugcentral.org/drug/529/inchi; https://drugcentral.org/drug/529/smiles
+  locator: Complete raw chemical strings independently parsed.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: supports
+  summary: Both official DrugCentral representations reproduce UOCJDOLVGGIYIQ-PBFPGSCMSA-N.
+    Drug-centric predicted PK/kinase panels, regulatory summaries and commercial products
+    are not new primary claims for this native record.
+  snapshot_sha256: 18c13e46aac4c10b297b628ab230b34d116791ec38b9c884873c38d3e790fb64
+- evidence_id: documents
+  kind: database
+  reference: https://patents.google.com/patent/US3867380A/en; https://patents.google.com/patent/DE2316866A1/en;
+    https://patents.google.com/patent/DE2364192A1/en; https://en.wikipedia.org/wiki/Cefatrizine
+  locator: Patent titles, metadata and selected chemical-description passages; Wikipedia
+    chemical identity fields.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: partial
+  summary: All three patent identifiers resolve to relevant cephalosporin synthesis
+    documents. Actor et al. explicitly cite US3867380 as the synthesis source. The
+    patents include broader analogues and salts, so their full claims are not treated
+    as exact activity evidence. Wikipedia concerns cefatrizine and gives the matching
+    standard identity; its separate KEGG D02711 link is not the native D02406 xref
+    and was not substituted. Patent coverage was selective, not exhaustive.
+  snapshot_sha256: 7426d50038bd174ee9e39065503a3564a569f1beba51964a7f442c62b228cecf
+- evidence_id: actor
+  kind: primary_source
+  reference: PMID:808525; DOI:10.7164/antibiotics.28.594
+  locator: Complete original PDF text pp594–601; original Figure 1 on p594 visually
+    inspected.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: supports
+  summary: Actor et al. explicitly equate SK&F 60771 with BL-S640 and identify the
+    cephalosporin free-acid structure, prepared in their laboratory. Figure 1 contains
+    the triazole N–H absent from the native SMILES. Antibacterial assays use agar
+    dilution, usually nutrient agar, with enriched Mueller–Hinton agar for selected
+    fastidious organisms. Table 1 reports population medians; Table 2 includes E.
+    coli 12140 MIC 1.6 µg/mL and K. pneumoniae 4200 MIC 3.1 µg/mL. Mouse protective
+    ED50 and PK endpoints remain distinct from MIC and human efficacy. Formulation
+    methods sometimes use bicarbonate, so neutral drawing does not imply unchanged
+    protonation in every assay.
+  snapshot_sha256: 527c666fb375cc3a2f99964b620890771f50029b96b46e58a2b9ca69b575e29e
+- evidence_id: leitner
+  kind: primary_source
+  reference: PMID:1137381; DOI:10.1128/AAC.7.3.298; PMC429128
+  locator: All eight original scanned pages 298–305, including Figures 1–4 and Tables
+    1–5, visually inspected.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: supports
+  summary: Leitner et al. synthesize and test BL-S640; the addendum identifies cefatrizine
+    as its approved nonproprietary name, not a marketing approval. The study comprises
+    612 Gram-negative and 177 Gram-positive strains. Agar MIC methods specify species-dependent
+    inocula, media and incubation; broth MBC uses subculture and a stated colony-count
+    criterion. Table 1 includes geometric means, while Tables 2–4 retain individual
+    numbered strains and inocula. Cell-free beta-lactamase hydrolysis and human plasma
+    binding are distinct assays; neither establishes direct PBP binding.
+  snapshot_sha256: a312ee9df4b1035163da59b252da9f657311fbe7518dbbb5782c02d41e21456c
+- evidence_id: yourassowsky
+  kind: primary_source
+  reference: PMID:239917; DOI:10.7164/antibiotics.28.590
+  locator: Complete original PDF text pp590–593, Methods, Tables 1–2 and Discussion.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: supports
+  summary: This study tests Bristol BL-S640 analytical powder against 99 clinical
+    isolates. Agar dilution uses Mueller–Hinton agar with supplements for specified
+    taxa, overnight incubation at 37 °C and species-dependent inoculum preparations;
+    diffusion uses 30 µg disks. Tables give isolate-frequency distributions. Results
+    vary by organism and do not supply a universal MIC or clinical efficacy. OCR of
+    numerical tables was not independently audited against every original cell; no
+    new quantitative observation is proposed from those cells.
+  snapshot_sha256: 2be6f8c355917f51348a4a8cbdaf99fdfd77dcd37ad94c36be4945a4ac898179
+- evidence_id: stilwell
+  kind: primary_source
+  reference: PMID:813573; DOI:10.1128/AAC.8.6.751; PMC429458
+  locator: All three original scanned pages 751–753 and Figures 1–6 visually inspected.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: supports
+  summary: Stilwell et al. compare cefatrizine in nutrient and Mueller–Hinton agar/broth
+    at two inoculum sizes. Broth generally yields weaker activity, and higher inocula
+    amplify MIC/MBC differences, especially in Enterobacter, E. coli and Enterococcus
+    contexts. P. aeruginosa remains poorly susceptible in these experiments. The cumulative
+    population plots do not justify one species-wide threshold or modern breakpoint
+    classification.
+  snapshot_sha256: f1416333f5ad8260e8a7f39c90160e98719eb8a70bebb59ebcf861b87ad55cee
+- evidence_id: eef2k
+  kind: primary_source
+  reference: PMID:26776155; DOI:10.1039/C5MB00848D; https://academic.oup.com/molecular-omics/article/12/3/729/8327403
+  locator: Complete MED and publisher abstract; public full-text and supplement access
+    attempts.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: partial
+  summary: Yao et al. report cefatrizine as an eEF2K inhibitor with antiproliferative
+    activity and ER-stress effects in MCF-7 and MDA-MB-436 breast-cancer cells. Their
+    abstract combines predicted networks, si-eEF2K iTRAQ proteomics and compound experiments.
+    This supports the native definition at the reported human-cell level. Full experimental
+    methods, biochemical potency, direct-binding specificity and the purchased material
+    were not independently inspected; none is inferred from the abstract, and the
+    host kinase is not an antibacterial target.
+  snapshot_sha256: 8a1b18e406c6036c3b345382c0d0fa563883f4e18a6ba40858271e9c5579a94b
+- evidence_id: pk-synthesis
+  kind: primary_source
+  reference: PMID:2329468 DOI:10.1007/BF01063620; PMID:6660858 DOI:10.1128/AAC.24.6.915;
+    PMID:23894823
+  locator: Complete adopted MED abstracts and metadata.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: context_only
+  summary: 2329468 models oral absorption in 12 healthy volunteers; 6660858 compares
+    intravenous/oral PK and bioavailability. These are human pharmacokinetic contexts,
+    not microbial activity or current regulatory approval. 23894823 describes enzymatic
+    synthesis using an alpha-amino acid ester hydrolase gene from Xanthomonas rubrillineans
+    expressed in E. coli BL21(DE3). The enzyme is a synthetic catalyst and those organisms
+    are not established natural cefatrizine producers or its antimicrobial target.
+    No DOI was supplied for the Chinese-language synthesis paper.
+  snapshot_sha256: 8a1b18e406c6036c3b345382c0d0fa563883f4e18a6ba40858271e9c5579a94b
+- evidence_id: overview-leads
+  kind: database
+  reference: PMID:3915469; PMID:29017833 DOI:10.1016/j.jaip.2017.08.027
+  locator: Complete adopted MED abstracts and publication metadata.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: context_only
+  summary: 3915469 is titled a clinical overview and has Clinical Trial/Comparative
+    Study indexing; its short abstract reports broad clinical efficacy without enough
+    design detail for an independently adjudicated clinical claim. 29017833 is explicitly
+    a secondary review of beta-lactam allergy cross-reactivity. Both remain contextual
+    leads here; neither is used as new primary molecular-target evidence.
+  snapshot_sha256: 8a1b18e406c6036c3b345382c0d0fa563883f4e18a6ba40858271e9c5579a94b
+- evidence_id: adapter
+  kind: database
+  reference: 212-imodulondb-datasets.txt
+  locator: Structured source catalog before web research.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: context_only
+  summary: 'The native eEF2K/apoptosis/autophagy/ER-stress statement concerns human
+    cells. The catalog has microbial datasets but no matching human eEF2K context,
+    so a microbial module was not substituted. Catalog absence is not negative evidence.
+    Command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 datasets; exit 0.'
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: local-search
+  kind: search
+  reference: 212-local-hits.txt; 212-maintained-search.txt; 212-inclusive-file-hits.txt
+  locator: Exact identifiers, name, slug and key searched with hidden and ignored
+    files included.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: context_only
+  summary: Matches are the native/source records, queue, path ledger and generated
+    maps. No exact maintained corrective curator or decision row was found. No native
+    target, spectrum, resistance, producer or graph field was found in the complete
+    record.
+  snapshot_sha256: 0ede9711d5fb08f0f6c3abf06b28943b422f01d13f69a895b6357c622b1762b5
+  search_scope: rg --no-ignore --hidden across data, curation, conf, scripts, src,
+    docs, .claude, reviews and reports for CHEBI:131730, ARO:3009111, UOCJDOLVGGIYIQ
+    and cefatrizine; .git and .venv internals excluded.
+- evidence_id: validation
+  kind: validation
+  reference: 212-focused-results.json; 212-chemistry.json; 212-schema.log; 212-strict.log
+  locator: Actual focused schema/strict checks and independent native chemistry.
+  accessed_at: '2026-10-21T11:10:18Z'
+  support: partial
+  summary: Schema and strict checks exit 0. Independent chemistry exits 1 for malformed
+    SMILES, while native InChI and both source mints reproduce correctly. A valid
+    external or scratch candidate does not change the failed native result.
+  snapshot_sha256: 1a497d422d755ae8219bf2b4ab4f8ff915614b86e141b31e460cd33846335372
+assessments:
+- assessment_id: structure
+  area: representation
+  topic: Malformed aromatic triazole SMILES
+  outcome: concern
+  summary: The imported string is invalid. Official ChEBI MOL independently establishes
+    a narrow hydrogen-annotation repair preserving the exact intended identity.
+  target_ids:
+  - CHEBI:131730
+  evidence_ids:
+  - invalid-smiles
+  - mol-repair
+  - source
+  - validation
+- assessment_id: identity
+  area: identity
+  topic: Neutral cefatrizine, synonyms, parents and xrefs
+  outcome: supported
+  summary: The exact neutral identity, source aliases, chemical parents and inspected
+    chemical/drug xrefs agree. Fixed-H tautomer differences in external databases
+    must be distinguished from shared Standard InChI identity.
+  target_ids:
+  - CHEBI:131730
+  evidence_ids:
+  - chebi
+  - xrefs
+  - drugcentral
+  - actor
+  - mol-repair
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial filing and tested spectrum
+  outcome: supported
+  summary: Four original studies support cefatrizine antibacterial activity with substantial
+    assay, strain and population limitations. These do not establish universal susceptibility
+    or the absence of resistance.
+  target_ids:
+  - CHEBI:131730
+  evidence_ids:
+  - actor
+  - leitner
+  - yourassowsky
+  - stilwell
+- assessment_id: host
+  area: scope
+  topic: eEF2K and human cancer context
+  outcome: supported
+  summary: The adopted primary abstract supports the definition as a reported host-cell
+    finding. Full mechanistic detail remains unresolved; no bacterial kinase target
+    or complete ER-stress causal graph is justified.
+  target_ids:
+  - CHEBI:131730
+  evidence_ids:
+  - eef2k
+  - adapter
+  - record
+- assessment_id: other-biology
+  area: scope
+  topic: Natural production, synthesis and PK
+  outcome: supported
+  summary: Semisynthetic provenance is consistent with original laboratory preparation.
+    The recombinant synthesis paper does not establish a natural producer, and PK
+    studies do not establish current regulatory status.
+  target_ids:
+  - CHEBI:131730
+  evidence_ids:
+  - actor
+  - leitner
+  - pk-synthesis
+  - overview-leads
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained source correction versus optional native additions
+  outcome: supported
+  summary: Correct the imported structure at its maintained source/extractor boundary
+    and regenerate; do not hide a source error by patching only YAML. Future primary
+    activity evidence belongs to the exact native record.
+  target_ids:
+  - CHEBI:131730
+  evidence_ids:
+  - source
+  - local-search
+- assessment_id: completeness
+  area: completeness
+  topic: Primary mechanism and activity enrichment
+  outcome: unknown
+  summary: Optional qualified activity entries could be curated after structure repair.
+    No direct PBP experiment was independently established, and eEF2K should remain
+    separate from antibacterial mechanism.
+  target_ids:
+  - CHEBI:131730
+  evidence_ids:
+  - record
+  - actor
+  - leitner
+  - eef2k
+- assessment_id: gates
+  area: schema
+  topic: Deterministic validation
+  outcome: concern
+  summary: Documented schema/strict gates pass despite a confirmed chemical parser
+    failure. Independent chemistry is therefore material to this verdict.
+  target_ids:
+  - CHEBI:131730
+  evidence_ids:
+  - validation
+  - invalid-smiles
+findings:
+- finding_id: F1
+  issue_key: cefatrizine-invalid-triazole-smiles
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Repair the invalid ChEBI-derived triazole SMILES through its maintained source
+  description: The native and raw-source SMILES encode c3cnnn3 with no hydrogen-bearing
+    aromatic nitrogen and fail RDKit kekulization. The native InChI remains valid,
+    and the official ChEBI MOL yields a coherent c3c[nH]nn3 representation with the
+    same exact identity. This is a source representation defect that schema and strict
+    validation miss, not proof that the record denotes a different antibiotic.
+  target_ids:
+  - CHEBI:131730
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - invalid-smiles
+  - mol-repair
+  - chebi
+  - source
+  - validation
+  rule_id: 'native-review-checklist: SMILES, InChI, key, formula and source must describe
+    the same usable exact structure'
+  native_severity: major
+  normalization_reason: One required chemical representation is unusable, but the
+    exact compound is recoverable from valid independent identity fields. Major reflects
+    the confirmed representation failure without asserting wrong-compound identity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Exact adopted structure row requiring a reproducible source correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained extraction and validation of the source representation
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerate source-owned chemical fields after correction
+- finding_id: F2
+  issue_key: cefatrizine-qualified-antibacterial-host-evidence-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Add qualified activity evidence without transferring host kinase or synthesis
+    roles
+  description: The seeded record has concrete primary antibacterial evidence available
+    for optional enrichment. Human eEF2K experiments, synthesis hydrolase activity
+    and PK observations are different contexts. Their presence in the source bibliography
+    does not make them antibacterial target, producer or resistance evidence.
+  target_ids:
+  - CHEBI:131730
+  field_paths:
+  - activity_spectrum
+  - mode_of_action
+  - molecular_targets
+  - evidence
+  - causal_graphs
+  evidence_ids:
+  - record
+  - actor
+  - leitner
+  - yourassowsky
+  - stilwell
+  - eef2k
+  - pk-synthesis
+  rule_id: 'native-review-checklist: narrow primary support and preservation of experimental
+    context'
+  native_severity: informational
+  normalization_reason: No mandatory optional-field population rule applies. This
+    is a bounded enrichment path after the confirmed structure defect is resolved.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefatrizine.yaml
+    role: Future claim-level primary activity and separately scoped host-context evidence
+actions:
+- action_id: A1
+  description: Reconcile the malformed imported SMILES with the official ChEBI MOL
+    and regenerate reproducibly.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:131730
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Exact adopted structure row requiring a reproducible source correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained extraction and validation of the source representation
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerate source-owned chemical fields after correction
+  acceptance_checks:
+  - Independently inspect ChEBI:131730 MOL and the exact raw row. The scratch candidate
+    replacing c3cnnn3 with c3c[nH]nn3 matches the official MOL and ChEMBL/CARD; retain
+    it as an evidence-backed candidate rather than an unreviewed blanket substitution.
+  - Implement the correction in a maintained source/extraction decision that survives
+    reseeding, retaining the original upstream value and provenance as appropriate.
+    Do not silently rewrite a frozen raw snapshot or only patch the generated YAML.
+  - Preserve the native Standard InChI, full key, formula, charge and three stereocentres
+    unless new exact evidence requires otherwise. Shared Standard InChI across alternative
+    triazole tautomers is not sufficient to claim identical fixed-H graphs.
+  - Regenerate through the documented pipeline and verify the exact object-level diff.
+    Require native SMILES and InChI to parse and agree, then run per-record schema/strict
+    and applicable shared checks. Keep SEEDED status until all scientific sign-off
+    criteria are met.
+- action_id: A2
+  description: Curate narrowly supported antibacterial observations and retain separate
+    host and synthetic contexts.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:131730
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefatrizine.yaml
+    role: Future claim-level primary activity and separately scoped host-context evidence
+  acceptance_checks:
+  - After F1 is resolved, select an exact original-paper observation with its strain
+    or explicitly defined isolate population, medium, inoculum, incubation, units
+    and MIC/MBC endpoint. Keep medians, geometric means, cumulative distributions
+    and individual measurements distinct.
+  - Preserve mouse ED50, human PK, plasma binding and beta-lactamase hydrolysis as
+    separate experimental outcomes. Do not convert them to direct PBP binding or current
+    clinical approval.
+  - Obtain and inspect the full 2016 eEF2K paper before adding biochemical potency,
+    binding specificity or a downstream ER-stress causal chain. Its available abstract
+    concerns human breast-cancer cells and does not establish an antibacterial kinase
+    target.
+  - Do not add Xanthomonas or recombinant E. coli as natural cefatrizine producers
+    from the enzymatic synthesis abstract, or its hydrolase as the drug target.
+  - Use write_validated_antibiotic and record_curation_event for separately authorized
+    native additions, attach evidence at the narrow claim and run applicable gates
+    before any status promotion.
+limitations:
+- All 13 initial input hashes remain unchanged. Actual ARO owner paths were captured
+  before scientific assessment. A subsequent explicit input capture added the three
+  ARO inventory hashes and verified them against the preceding batch022 pre-assessment
+  capture; the initial target and capture files were not replaced.
+- All ten adopted MED abstracts were inspected. The EuropePMC EXT_ID query also returned
+  unrelated non-MED records with matching numbers; these were excluded by source and
+  are not treated as PMID matches.
+- Full original Actor and Yourassowsky PDF text was read; Actor Figure 1 was visually
+  inspected. All original Leitner and Stilwell page scans, figures and tables were
+  visually inspected. Every OCR cell in the Yourassowsky tables and every Actor plotted
+  point was not independently audited, so any future numerical extraction must verify
+  selected original data.
+- The eEF2K paper and supplement returned 403 on public RSC routes, and the current
+  OUP page exposes an abstract with a purchase notice. No paid access was used. Host
+  inhibition is supported as reported in the abstract, but direct binding, potency,
+  specificity and compound-material details remain unverified.
+- Human PK and recombinant synthesis papers were inspected at abstract level. The
+  clinical overview is retained as context because its short abstract does not expose
+  enough design detail, despite clinical-trial indexing. The allergy paper is explicitly
+  a secondary review.
+- Three patents were inspected at metadata and selected-description level; no exhaustive
+  patent claim audit was performed. Reaxys 8172545 remains an official-source attestation
+  without subscription-registry inspection.
+- The native SMILES remains invalid. Successful parsing of a scratch candidate or
+  official alternative does not convert the actual native chemistry failure into a
+  pass.
+- The native human eEF2K context has no matching dataset in the inspected structured-source
+  catalog. This is an applicability limit, not evidence against the biological claim.
+- This is a partial scientific review with a confirmed major representation defect.
+  Exact compound identity is recoverable and antibacterial activity is supported;
+  unresolved full-text details do not justify inventing direct targets or promoting
+  native curation status.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
