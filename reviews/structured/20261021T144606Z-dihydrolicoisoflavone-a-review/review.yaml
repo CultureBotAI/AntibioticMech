@@ -1,0 +1,561 @@
+schema_version: 1.0.0
+review_id: 20261021T144606Z-dihydrolicoisoflavone-a-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Dihydrolicoisoflavone A: saturated ring misclassified as an isoflavone'
+started_at: '2026-10-21T14:27:13Z'
+finished_at: '2026-10-21T14:46:06Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The neutral chemical encodings consistently describe an isoflavanone with
+  one unspecified stereocentre, but the native definition and parent classify it as
+  an unsaturated isoflavone. All three adopted abstracts were checked; original supporting
+  information independently supports plant isolation. Antibacterial activity is reported
+  at abstract depth without an independently recovered quantitative assay.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/dihydrolicoisoflavone-a.yaml
+    sha256: b96249bd8a578e8e5fb72834efb8aee10710692d81c7034145faccf2f8fc9770
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+targets:
+- target_id: CHEBI:69091
+  path: data/antibiotics/antibacterial/dihydrolicoisoflavone-a.yaml
+  label: dihydrolicoisoflavone A
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position365; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:69091
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69091
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    365
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69091
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/dihydrolicoisoflavone-a.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69091
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/dihydrolicoisoflavone-a.yaml --out /private/tmp/am-review-session/365-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:69091
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:69091
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:69091
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:69091
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:69091
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:69091
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:69091
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:69091
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:69091
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/dihydrolicoisoflavone-a.yaml
+  locator: 'Entire YAML: definition, two synonyms, parent, role, structure, Reaxys
+    link, source and three history events'
+  accessed_at: '2026-10-21T14:41:02Z'
+  support: supports
+  summary: CHEBI:69091 encodes neutral C20H20O6 with a saturated C2–C3 bond, four
+    hydroxyl groups and one unspecified C3 stereocentre. The systematic synonym and
+    dihydrolicoisoflavone name are compatible with this graph. No quantitative activity,
+    molecular target, resistance, clinical product, producer object or causal graph
+    is populated.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: Exact source row1753; matching readiness queue1028; parent_compounds schema
+    semantics
+  accessed_at: '2026-10-21T14:41:02Z'
+  support: supports
+  summary: The frozen ChEBI row supplies the definition, parent, graph and three adopted
+    PMID leads. Parent compounds must be strictly broader classes. All thirteen original
+    input hashes were retained and the matching readiness context appended; corrections
+    belong in maintained source handling followed by regeneration.
+  snapshot_sha256: 8e3c4b0a1a4853fa6c211dbc64f83538f1095a72eca78f3ae23e0e734bfa8723
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/69091/
+  locator: Current full names, structure, relations and source references
+  accessed_at: '2026-10-21T14:41:02Z'
+  support: supports
+  summary: Current ChEBI reproduces the native graph and incorrect 7-hydroxyisoflavones
+    parent. Its functional-parent relation to licoisoflavone A supplies reduction
+    context rather than making the reduced molecule an unsaturated isoflavone. Reaxys10723724
+    is source-attested, not independently inspected in the proprietary register.
+  snapshot_sha256: 5fe4e4cebde7343d39542d3e1ba21d49c4e100e80b5b9d69e427ce62d7e2ac54
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit2026.03.5 / InChI1.07.3
+  locator: 037-root-chemistry.py;365-authority-chemistry.json
+  accessed_at: '2026-10-21T14:41:02Z'
+  support: supports
+  summary: Native SMILES/InChI, ChEBI molfile and PubChem10405960 SMILES/InChI all
+    reproduce BAEYWOSUJSUYFI-UHFFFAOYSA-N, zero charge and C20H20O6. Masses agree.
+    The isoflavanone substructure matches and the isoflavone substructure does not.
+    All encodings leave C3 unspecified; an unspecified graph is not proof that the
+    isolated material was racemic.
+  snapshot_sha256: 3f1a1e79eb85c908fe6c35eb53d7a1265efe42e476b504324757f34fd11ff0d2
+- evidence_id: classes
+  kind: authority
+  reference: CHEBI:55465; CHEBI:38741; CHEBI:72739
+  locator: Current exact parent and alternative broader class definitions
+  accessed_at: '2026-10-21T14:41:02Z'
+  support: supports
+  summary: CHEBI:55465 denotes 7-hydroxyisoflavones, requiring the isoflavone skeleton.
+    CHEBI:38741 isoflavanones explicitly covers the saturated 3-aryl benzopyran-4-one
+    skeleton, and CHEBI:72739 hydroxyisoflavanone is an isoflavanone with at least
+    one hydroxy substituent. The latter classes fit the native graph; the native parent
+    does not.
+  snapshot_sha256: 73658a26566c61ad3037ddbf2f3fffc094776acd94fd48486de3fb79d235ff24
+- evidence_id: adopted1995
+  kind: primary_source
+  reference: https://doi.org/10.1021/np50118a028
+  locator: PMID7623042 complete original indexed abstract
+  accessed_at: '2026-10-21T14:41:02Z'
+  support: supports
+  summary: The original isolation paper identifies dihydrolicoisoflavone as a new
+    isoflavanone from Swartzia polyphylla. Fractionation was guided partly by protein
+    kinase C inhibition; the abstract supplies neither antibacterial potency nor proof
+    of a microbial direct target. Publisher full-text routes returned403, so absolute
+    configuration and original spectra were not independently established.
+  snapshot_sha256: 0284a77f61a56f9a65933a4239d80ee21f7ccabc8b228e5620e25016b03980cd
+- evidence_id: adopted2002
+  kind: primary_source
+  reference: https://doi.org/10.1016/S0024-3205(02)01864-7
+  locator: PMID12127165 complete original indexed abstract
+  accessed_at: '2026-10-21T14:41:02Z'
+  support: supports
+  summary: The licorice study explicitly lists dihydrolicoisoflavone A among compounds
+    with weaker anti-Helicobacter pylori activity. Stronger compounds and resistant/susceptible
+    strain results are not indiscriminately transferred to this compound. The abstract
+    does not supply a defensible exact MIC, test material characterization or its
+    individual strain panel. Publisher full-text access failed; a successful API response
+    contained metadata only.
+  snapshot_sha256: 0284a77f61a56f9a65933a4239d80ee21f7ccabc8b228e5620e25016b03980cd
+- evidence_id: adopted2011
+  kind: primary_source
+  reference: https://doi.org/10.1021/np2004775
+  locator: PMID22074222 complete original indexed abstract
+  accessed_at: '2026-10-21T14:41:02Z'
+  support: supports
+  summary: The original Glycyrrhiza uralensis study isolates isoflavonoids and coumarins.
+    Its strongest oral-pathogen results concern licoricidin and licorisoflavan A,
+    and its oxidation products are licoriquinones A/B. Those results are not assigned
+    to dihydrolicoisoflavone merely because it appears in the source bibliography.
+  snapshot_sha256: 0284a77f61a56f9a65933a4239d80ee21f7ccabc8b228e5620e25016b03980cd
+- evidence_id: isolation2011
+  kind: primary_source
+  reference: https://doi.org/10.1021/np2004775.s001
+  locator: Official ACS Figshare article2568682/file4211785; SI Isolation paragraphs
+    and spectrum captions
+  accessed_at: '2026-10-21T14:41:02Z'
+  support: supports
+  summary: The original supplement describes fractionation of the G. uralensis extract
+    and isolation of1.2mg dihydrolicoisoflavone from fraction5 by semipreparative
+    C18 HPLC. This independently supports the native plant-origin statement. The displayed
+    spectrum captions concern compounds7–9, not this compound; no absolute C3 assignment
+    or antibacterial MIC is reconstructed from those figures.
+  snapshot_sha256: bb2e36884535f43f6ec19e1dcb47c7b4fb9c512fdbae1332eb78eb6a044f967b
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local exact identifier searches and public adopted-paper
+    follow-up
+  locator: 365-owners-search.json;037-root-fetch and subsequent fetch manifests;365-figshare-article.json
+  accessed_at: '2026-10-21T14:41:02Z'
+  support: supports
+  summary: The official supplement was recovered through its exact parent DOI and
+    verified download metadata. A search-result stereochemical lead did not reconcile
+    with the actual fetched KNApSAcK record and was rejected as evidence for a specific
+    C3 configuration. There is no native gene/protein or regulator claim requiring
+    a structured gene adapter.
+  search_scope: 2026-10-21; rg --no-ignore --hidden in maintained curation, conf,
+    scripts, data/raw and .claude plus original repository inspection; exact CHEBI:69091,
+    name and full key. Public original PMID/DOI and supplement searches. No exhaustive
+    literature-absence claim.
+  snapshot_sha256: f7274744173c5d911a5232f05afb720fd60b9d9e238bad673d85f5a1f7e338d5
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral graph and stereochemical boundary
+  outcome: supported
+  summary: All five encodings, formula and masses agree. One stereocentre is unspecified;
+    the inspected primary material does not independently establish a correction to
+    its absolute configuration.
+  target_ids:
+  - CHEBI:69091
+  evidence_ids:
+  - native
+  - chemistry
+  - adopted1995
+  - isolation2011
+- assessment_id: classification
+  area: grounding
+  topic: Unsaturated parent versus saturated structure
+  outcome: concern
+  summary: The definition and parent contradict the graph and original isoflavanone
+    classification. A supported broader isoflavanone class should replace the unsaturated
+    class through maintained source handling.
+  target_ids:
+  - CHEBI:69091
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+  - classes
+  - adopted1995
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and optional quantitative spectrum
+  outcome: supported
+  summary: The2002 original abstract explicitly reports weaker exact-compound anti-H.
+    pylori activity, supporting bounded eligibility. Numerical potency, tested isolate
+    details and mechanism remain unresolved. Other compounds’ oral-pathogen potency
+    is not transferable.
+  target_ids:
+  - CHEBI:69091
+  evidence_ids:
+  - adopted2002
+  - adopted2011
+- assessment_id: origin
+  area: evidence
+  topic: Plant isolation in the definition
+  outcome: supported
+  summary: Original2011 supporting information directly identifies isolated dihydrolicoisoflavone
+    from G. uralensis. Earlier isolation from S. polyphylla does not contradict this
+    origin. Neither is a native microbial-producer assertion.
+  target_ids:
+  - CHEBI:69091
+  evidence_ids:
+  - adopted1995
+  - isolation2011
+- assessment_id: xref
+  area: grounding
+  topic: Only asserted Reaxys identifier
+  outcome: unknown
+  summary: Current source preserves Reaxys10723724, but protected register content
+    was not independently read. No mismatch is inferred from limited access.
+  target_ids:
+  - CHEBI:69091
+  evidence_ids:
+  - chebi
+- assessment_id: optional
+  area: completeness
+  topic: Mechanism, resistance and causal enrichment
+  outcome: unknown
+  summary: No native optional mechanistic field is wrong merely because absent. Protein
+    kinase C guided fractionation does not establish a microbial target; exact activity
+    material and methods are required before assay enrichment.
+  target_ids:
+  - CHEBI:69091
+  evidence_ids:
+  - native
+  - adopted1995
+  - adopted2002
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained source and generated history
+  outcome: supported
+  summary: Fourteen captured inputs remain unchanged; three seed/reseed events are
+    coherent and all adopted citation leads have explicit dispositions.
+  target_ids:
+  - CHEBI:69091
+  evidence_ids:
+  - owners
+  - native
+  - adopted1995
+  - adopted2002
+  - adopted2011
+findings:
+- finding_id: F1
+  issue_key: dihydrolicoisoflavone-a-isoflavanone-class
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The saturated isoflavanone is assigned an unsaturated isoflavone parent
+  description: The native C2–C3 single bond and original isolation classification
+    identify an isoflavanone. The definition and CHEBI:55465 parent instead assert
+    a 7-hydroxyisoflavone. Preserve the coherent graph and correct the definition
+    and strictly broader parent through maintained source handling.
+  target_ids:
+  - CHEBI:69091
+  field_paths:
+  - definition
+  - parent_compounds[0]
+  evidence_ids:
+  - native
+  - owners
+  - chebi
+  - chemistry
+  - classes
+  - adopted1995
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: native-review-checklist:Identity; schema:parent_compounds
+  native_severity: major chemical classification error
+  normalization_reason: This is a confirmed bond-order/class mismatch affecting ontology
+    classification, while the exact stored chemical encodings remain mutually coherent.
+actions:
+- action_id: A1
+  description: Correct the maintained definition and parent to a supported isoflavanone
+    class.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:69091
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  acceptance_checks:
+  - Keep C20H20O6 and the coherent saturated ring graph; do not change bond order
+    to fit the wrong class.
+  - Use a strictly broader isoflavanone class such as CHEBI:38741 or its supported
+    hydroxy subclass CHEBI:72739.
+  - Preserve the unassigned C3 boundary unless original characterization establishes
+    an exact configuration.
+  - Keep weak anti-H. pylori abstract support distinct from other licorice compounds’
+    potency and host kinase results.
+  - Regenerate with canonical history and pass schema, strict, chemical equivalence,
+    source reproduction and required QC.
+limitations:
+- All three adopted original abstracts were read. The1995 and2002 full papers were
+  not independently recovered; the Elsevier API metadata response was not mistaken
+  for full text.
+- The2011 official supplement Isolation text, analytical-method text and spectrum
+  captions were inspected. Its spectral figures were not independently reprocessed
+  and no full main-paper oral-pathogen assay was assigned to this minor compound.
+- C3 is unspecified in native and current independent encodings. A search snippet
+  did not establish an exact natural stereoisomer; no absolute configuration or racemic
+  state is inferred.
+- Reaxys remains source-attested without licensed content access. No access failure
+  is treated as a nonexistent or erroneous identifier.
+- No native/source fields, status or history were edited; shared required checks retain
+  their actual outcomes.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

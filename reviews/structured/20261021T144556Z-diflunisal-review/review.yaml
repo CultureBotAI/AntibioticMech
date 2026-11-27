@@ -1,0 +1,790 @@
+schema_version: 1.0.0
+review_id: 20261021T144556Z-diflunisal-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of diflunisal
+started_at: '2026-10-21T14:27:11Z'
+finished_at: '2026-10-21T14:45:56Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Whole native and maintained-source audit; independent exact
+    molecular comparisons; all FDA application/product rows checked; complete main
+    cited antibacterial paper inspected with methods separated from author interpretation;
+    structured protein context before web follow-up; official named-product verification
+    and individual adopted-lead dispositions.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Major causal-mechanism overstatement in the definition and minor untyped
+  Dolobid brand; exact identity and antibacterial activity supported
+scientific_review: true
+summary: Nine structure encodings agree on exact neutral diflunisal. The cited original
+  supports E. coli K12 growth inhibition and computational MurA docking, but the native
+  definition presents the proposed MurA-to-cell-wall mechanism as established causality.
+  Dolobid is also an official product brand represented as EXACT_SYNONYM. All fifteen
+  FDA assertions across ten applications reconcile, and the four adopted source citation
+  leads have individual dispositions. A separate H. pylori beta-clamp study is retained
+  as a bounded optional enrichment lead, not evidence for E. coli MurA.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/diflunisal.yaml
+    sha256: f601fbaef95e1bc6c2b987ad15ead9396910f3789f479e6a625e364e89d1fed2
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+scope:
+  description: 'Entire SEEDED, EXACT record: definition and its citation, seven synonyms,
+    chemical parent/class, full molecular structure, four exact cross-references,
+    source concept, overall clinical status, fifteen FDA assertion rows and five curation-history
+    events. One adopted CARD PMID and three adopted context-only ChEBI citation leads
+    inspected.'
+  selection: Queue 363 in isolated batch 037. Thirteen original input hashes preserved
+    and five actual/inspected owner hashes appended before scientific assessment;
+    no native fields changed.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:39669
+targets:
+- target_id: CHEBI:39669
+  path: data/antibiotics/antibacterial/diflunisal.yaml
+  label: diflunisal
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted exact ChEBI grounding and chemical structure; out-of-role context
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: CARD/ARO and ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition, aliases and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Inspected fallback structure cache; no exact CID3059 row contributes
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Adopted FDA/GSRS clinical assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: FDA and GSRS extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem enrichment inspected; exact native structure uses ChEBI grounding
+checks:
+- check_id: schema
+  name: Documented schema validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/diflunisal.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/diflunisal.yaml --out /private/tmp/am-review-session/363-strict.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; no ERROR rows.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - validation
+- check_id: native-chemistry
+  name: Native molecular consistency
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    363
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native graph, key, formula, charge and masses agree.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: authority-chemistry
+  name: Independent chemical identity mapping
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/363-chemistry-authorities.py
+    > /private/tmp/am-review-session/363-chemistry-authorities.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Nine encodings have reciprocal chirality-aware atom mappings, identical
+    neutral formula/key, no tetrahedral centers and matching masses.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - chemistry
+- check_id: adapter
+  name: Structured MurA context before web research
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/363-adapter.py
+    > /private/tmp/am-review-session/363-adapter.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Dataset discovery and both gene searches exit 0. murA resolves b3189 in
+    e_coli/modulome; no iModulon hit requires summarization.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - adapter
+- check_id: ledger
+  name: Whole source, citation, clinical and history audit
+  command: .venv/bin/python /private/tmp/am-review-session/363-ledger.py > /private/tmp/am-review-session/363-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Eighteen unchanged hashes; seven aliases; four adopted PMID records; fifteen
+    current/frozen FDA matches across ten applications; five ordered histories.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - owners
+  - clinical
+  - leads
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:39669
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:39669
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:39669
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:39669
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:39669
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:39669
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:39669
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:39669
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:39669
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/diflunisal.yaml
+  locator: Entire native YAML; definition, synonyms[1], clinical_status_assertions[0:15]
+    and all history events
+  accessed_at: '2026-10-21T14:45:24Z'
+  support: supports
+  summary: Exact neutral diflunisal is represented with a CARD-derived definition
+    and seven ARO EXACT_SYNONYM entries. The mechanism appears in the definition rather
+    than in a qualified database target object. The record has no native molecular_targets,
+    MIC, resistance, producer or causal-graph entries. Clinical approvals have application/product
+    provenance and make no antimicrobial indication claim.
+- evidence_id: chemistry
+  kind: authority
+  reference: CHEBI:39669; PubChem CID3059; CHEMBL898; UNII:7C546U4DEN
+  locator: 363-chebi.json/.mol; 363-pubchem.json; 363-chembl.json; 363-gsrs.json;
+    363-authority-chemistry.json
+  accessed_at: '2026-10-21T14:45:24Z'
+  support: supports
+  summary: Nine native/current encodings agree by reciprocal atom mappings on neutral
+    C13H8F2O3, HUPFGZXOMWLGNK-UHFFFAOYSA-N, zero charge and no tetrahedral stereocenters.
+    The salicylic acid moiety and 2,4-difluorophenyl substituent agree with chemical
+    descriptions; formula and masses match. GSRS identity is unchanged although the
+    current version is 38 versus the frozen assertion version 35.
+  snapshot_sha256: 3e1951cd043f410d0af71c1778fb08d9c45426b6c8297bcc76e2c19ad1f80922
+- evidence_id: card
+  kind: database
+  reference: ARO:3007091 and ARO:3007159
+  locator: 363-card.html definition, aliases, exact cross-references and publications;
+    363-card-class.html definition and parent/subterm sections
+  accessed_at: '2026-10-21T14:39:35.598812Z'
+  support: supports
+  summary: Current CARD repeats the native definition and seven aliases, resolves
+    all four exact cross-references and cites only PMID35453279 for this entry. ARO:3007159
+    is the salicylic-acid-derived antibiotic class; the native chemical graph and
+    observed growth activity fit that scope. Database repetition does not add an independent
+    biochemical experiment.
+  snapshot_sha256: ab3a9c481a8269b419d1bd23813c28c49c5f944d09351c3396ffcae79aef3b68
+- evidence_id: primary-methods
+  kind: primary_source
+  reference: PMID:35453279; DOI:10.3390/antibiotics11040528; PMC9031695
+  locator: 363-primary.xml complete main paper, Figure 1 caption, Results 2.1–2.5,
+    Discussion, Methods 4.1–4.5 and Appendix A Table A1
+  accessed_at: '2026-10-21T14:39:35.598315Z'
+  support: refutes
+  summary: The authors call the candidates MurA inhibitors, but the inspected experiments
+    measure bacterial OD600 growth. Diflunisal S8 was docked into L. monocytogenes
+    EGD-e MurA, with a predicted R233 interaction; Figure 1 labels the inhibitors
+    putative. The complete methods describe docking, reagent preparation, cultures,
+    growth and MIC tests, without a MurA catalytic assay, direct-binding measurement,
+    genetic target test or cell-wall endpoint. Thus the cited work does not establish
+    the definition's causal MurA inhibition and cell-wall disruption.
+  snapshot_sha256: 547c27e35b0769968d0a7ad7d3c44d077de613eecb5d43c8e2a7d664ed2c1836
+- evidence_id: primary-activity
+  kind: primary_source
+  reference: PMID:35453279
+  locator: 363-primary.xml Results 2.4–2.5, Figures 4–5, Table 1, Methods 4.2–4.5
+    and Appendix A Table A1
+  accessed_at: '2026-10-21T14:39:35.598315Z'
+  support: supports
+  summary: Sigma diflunisal S8 in DMSO inhibited E. coli K12 growth under the reported
+    broth/24-hour OD600 conditions; Table 1 reports MIC 0.0625 mg/mL. The paper identifies
+    ATCC as the strain supplier but gives no exact K12 accession. Its L. innocua result
+    is negative only under the tested conditions. These observations support antibacterial
+    activity while preserving strain, material and assay scope, independently of the
+    proposed MurA mechanism.
+  snapshot_sha256: 547c27e35b0769968d0a7ad7d3c44d077de613eecb5d43c8e2a7d664ed2c1836
+- evidence_id: dolobid
+  kind: authority
+  reference: DailyMed Dolobid SPL725234b2-0e23-45c3-a42d-eb4e62273f9b; FDA NDA018445
+    historical label
+  locator: 363-dolobid.xml title, description, indications and product/application
+    identity; 363-fda2007.pdf p1 trademark/description and indications section
+  accessed_at: '2026-10-21T14:39:35.598905Z'
+  support: refutes
+  summary: The current SPL identifies Dolobid tablets containing diflunisal, and the
+    historical official label explicitly identifies DOLOBID as a registered trademark.
+    ChEMBL independently types Dolobid as TRADE_NAME. Therefore synonym[1] should
+    preserve the alias with BRAND_NAME rather than EXACT_SYNONYM. Current named-product
+    marketing and the old discontinued NDA are distinct application contexts.
+  snapshot_sha256: bc97e13694bf16112b6541fba3678973274eb817ac46f131a52a57f513c23052
+- evidence_id: clinical
+  kind: authority
+  reference: FDA Drugs@FDA and GSRS exact diflunisal records
+  locator: 363-fda-current.json; 363-current-clinical-audit.json; data/raw/fda_clinical_status.tsv;
+    363-gsrs.json; official label indications
+  accessed_at: '2026-10-21T14:45:24Z'
+  support: supports
+  summary: All fifteen native application/product rows across ten applications match
+    the frozen source and current API in approval date, product number, sponsor, drug
+    name, ingredient and marketing status. The frozen GSRS version is preserved, not
+    silently replaced with the later current version. Labels describe pain, osteoarthritis
+    and rheumatoid-arthritis indications; the native APPROVED status does not independently
+    assert approval to treat bacterial infection.
+  snapshot_sha256: 1b03b6308ed74393096be77e2a94c8a77ba65c0f7b16539c3ba763ae3f812d18
+- evidence_id: leads
+  kind: database
+  reference: Four adopted CARD/ChEBI PMID leads
+  locator: 363-adopted-core.json and 363-lead-dispositions.json
+  accessed_at: '2026-10-21T14:45:24Z'
+  support: context_only
+  summary: PMID35453279 was inspected as original full text. Complete abstracts for
+    23144359, 23416065 and 28166217 concern plasma/metabolite analysis, an acetyldiflunisal-HSA
+    prodrug interaction and MR1/MAIT immune biology respectively. These context-only
+    ChEBI grounding leads do not establish the native bacterial mechanism.
+  snapshot_sha256: 9426689b4ed85a3baf7fe10705f8ab693a87f7d5f94fa67b663e52f043be2bdb
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/modulome
+  locator: 363-adapter-results.json, dataset discovery and murA/murZ searches
+  accessed_at: '2026-10-21T14:45:24Z'
+  support: context_only
+  summary: The catalog-listed E. coli dataset resolves murA to b3189, UDP-N-acetylglucosamine
+    1-carboxyvinyltransferase. No murZ or iModulon hit is returned. This is gene/context
+    identification, not evidence that diflunisal binds or inhibits MurA, and catalog
+    absence is not biological absence.
+  snapshot_sha256: 29a28c61edd202c09aa2da55e4ac8641793a87df6c25980789d14ce1a2cb58f6
+- evidence_id: beta-clamp
+  kind: primary_source
+  reference: PMID:28656718; DOI:10.1002/1873-3468.12734; PDB5G48
+  locator: 363-beta-clamp-core.json complete original abstract; 363-pdb5G48.json,
+    363-pdb-protein.json and 363-pdb-ligand.json deposited identities
+  accessed_at: '2026-10-21T14:42:13.180838Z'
+  support: context_only
+  summary: The original abstract reports diflunisal competition at the H. pylori beta-clamp
+    and antibacterial activity. Deposited 5G48 is a 2.28-Angstrom X-ray complex of
+    H. pylori 26695 DNA-polymerase III beta subunit, mapped to O25242, with ligand
+    1FL having the exact diflunisal InChIKey. This is a separate organism/target context
+    and a useful optional primary-enrichment lead; it cannot validate E. coli MurA
+    or a universal cell-wall mechanism. The full publisher article could not be opened,
+    so numerical growth endpoints and detailed material/assay conditions are not adopted.
+  snapshot_sha256: 5500c4561ed9ec4e49a016319bba3dcc0e26b978f8ff1546586ef53833716ded
+- evidence_id: owners
+  kind: database
+  reference: Maintained CARD, ChEBI and FDA source projections
+  locator: 363-inspect.json; 363-owner-append.json; 363-raw-rows.json; 363-source-audit.json;
+    scripts/seed_from_sources.py source loading and generated field projection
+  accessed_at: '2026-10-21T14:45:24Z'
+  support: supports
+  summary: All eighteen captured inputs remain unchanged. CARD owns the definition,
+    untyped alias list and class; the out-of-role ChEBI row supplies exact chemical
+    grounding. The PubChem cache has no CID3059 row and was inspected only as fallback
+    context. The seeder assigns ARO aliases EXACT_SYNONYM. The classification-only
+    aro_definition_overrides does not implement a definition-text replacement.
+  snapshot_sha256: 99b453b51a01f2c038483d7c2e4dd94952870c20e59f2ec147c2deb34b6a8982
+- evidence_id: validation
+  kind: validation
+  reference: Executed focused native and independent checks
+  locator: 363-focused-results.json; 363-focused-run.log; 363-strict.tsv; 363-chemistry-authorities.log;
+    363-ledger.log
+  accessed_at: '2026-10-21T14:45:24Z'
+  support: supports
+  summary: Native chemistry, schema and strict checks, independent authority graph
+    comparison, structured-adapter queries and source/clinical ledger all exit 0.
+    These deterministic checks do not establish the unsupported causal mechanism.
+  snapshot_sha256: 88d7ee3abbdc63da946b5f7581cd068a5301c781630a562dad09beb9a8e88cbf
+- evidence_id: search
+  kind: search
+  reference: Bounded exact diflunisal mechanism and identity searches
+  locator: 363-local-hits.txt includes ignored files; 363-search-audit.json; 363-fetch
+    through 363-fetch4 manifests
+  accessed_at: '2026-10-21T14:45:24Z'
+  support: context_only
+  summary: Additional exact MurA searches did not establish another original biochemical
+    validation. The different beta-clamp study was resolved through its original abstract
+    and deposited data; publisher retrieval returned 403 and browser opening failed.
+    This is a bounded search result, not proof that no further diflunisal literature
+    exists.
+  snapshot_sha256: cd8f25053f9559b7e4938bdf4ea197552f4adc5682d09bafcae3e531c06fa093
+  search_scope: 363-local-hits.txt includes ignored files; 363-search-audit.json;
+    363-fetch through 363-fetch4 manifests
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral diflunisal and identifiers
+  outcome: supported
+  summary: Nine independent/native encodings and exact authority identifiers agree;
+    no salt, hydrate or stereochemical conflict is demonstrated.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - chemistry
+  - card
+- assessment_id: activity
+  area: evidence
+  topic: Salicylic acid class and antibacterial activity
+  outcome: supported
+  summary: The graph supports the structural class and the original E. coli growth
+    observations support antibacterial scope under tested conditions.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - card
+  - primary-activity
+- assessment_id: mechanism
+  area: evidence
+  topic: Established MurA and cell-wall causality in definition
+  outcome: concern
+  summary: The exact citation supplies docking and whole-cell growth evidence, not
+    experimental validation of the claimed causal target/pathway.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - primary-methods
+  - primary-activity
+  - card
+  - adapter
+- assessment_id: brand
+  area: representation
+  topic: Dolobid alias typing
+  outcome: concern
+  summary: Official named-product evidence supports retaining Dolobid with BRAND_NAME
+    typing.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - dolobid
+  - owners
+- assessment_id: remaining-aliases
+  area: identity
+  topic: Other six ARO aliases
+  outcome: unknown
+  summary: The remaining six aliases reproduce current CARD, but exact official product
+    or chemical-name scope was not independently established for each; no blanket
+    retyping is asserted.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - record
+  - card
+- assessment_id: clinical-status
+  area: evidence
+  topic: FDA exact ingredient, application and product scope
+  outcome: supported
+  summary: All fifteen rows reconcile; label indications and frozen/current GSRS versions
+    remain distinct.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - clinical
+  - chemistry
+- assessment_id: additional-mechanism
+  area: completeness
+  topic: Optional beta-clamp primary enrichment
+  outcome: unknown
+  summary: An original abstract and deposited complex support a separate target follow-up;
+    absence of this optional native object is not itself a defect. Full material/assay
+    details remain unresolved.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - beta-clamp
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained owners, adopted citations and history
+  outcome: supported
+  summary: Eighteen hashes and all adopted citation dispositions are explicit; five
+    histories are ordered and generated field ownership is traced.
+  target_ids:
+  - CHEBI:39669
+  evidence_ids:
+  - owners
+  - leads
+  - validation
+findings:
+- finding_id: F1
+  issue_key: diflunisal-mura-causal-definition-exceeds-cited-experiment
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The definition treats a predicted MurA mechanism as established causality
+  description: The cited 2022 study screens compounds by docking to Listeria MurA
+    and observes diflunisal-dependent E. coli growth inhibition. It does not experimentally
+    establish MurA inhibition or cell-wall disruption by diflunisal. The native definition
+    removes this distinction and states that the antibacterial activity occurs by
+    inhibiting MurA. The finding concerns evidence strength and causal attribution,
+    not a claim that MurA inhibition is impossible or that diflunisal lacks antibacterial
+    activity.
+  target_ids:
+  - CHEBI:39669
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - primary-methods
+  - primary-activity
+  - card
+  - adapter
+  - search
+  rule_id: 'review-checklist: claim-level evidence and mechanistic scope'
+  native_severity: Major unsupported mechanistic causality
+  normalization_reason: A specific target and downstream mechanism are asserted as
+    experimentally established, while the nearest primary source supplies prediction
+    plus phenotype without causal target validation.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted CARD definition and aliases
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: CARD extraction and future narrow maintained transform
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition and alias typing
+- finding_id: F2
+  issue_key: diflunisal-dolobid-brand-typed-as-exact-synonym
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Dolobid is a brand name typed as an exact chemical synonym
+  description: Official Dolobid labeling identifies a named tablet product containing
+    diflunisal, and the historical FDA label explicitly identifies its trademark.
+    The native alias is useful but should use the existing BRAND_NAME enum. This finding
+    is confined to the verified Dolobid entry; the other six aliases retain unresolved
+    individual scope.
+  target_ids:
+  - CHEBI:39669
+  field_paths:
+  - synonyms[1].synonym_type
+  evidence_ids:
+  - dolobid
+  - clinical
+  - owners
+  rule_id: 'review-checklist: exact identity and synonym scope'
+  native_severity: Minor product-name representation gap
+  normalization_reason: The molecular identity and product-to-ingredient relationship
+    are correct; only the alias category loses the product distinction.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted CARD definition and aliases
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: CARD extraction and future narrow maintained transform
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition and alias typing
+actions:
+- action_id: A1
+  description: During separately authorized curation, correct the CARD-derived definition
+    through upstream source correction or an explicitly implemented narrow maintained
+    text transform. Preserve the reported E. coli K12 growth inhibition and describe
+    MurA as a computationally proposed target in the cited study; do not state experimentally
+    established cell-wall causality without suitable exact-compound evidence. Keep
+    the source citation attached to those bounded claims. Regenerate through the seeder.
+    Do not use classification-only aro_definition_overrides as a text override, and
+    do not substitute the different H. pylori beta-clamp evidence for the E. coli
+    claim.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:39669
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted CARD definition and aliases
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: CARD extraction and future narrow maintained transform
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition and alias typing
+  acceptance_checks:
+  - The regenerated definition distinguishes observed growth inhibition from docking-derived
+    MurA hypotheses.
+  - No direct-binding, enzyme-inhibition or downstream cell-wall assertion is promoted
+    from docking or growth alone.
+  - Any stronger mechanistic assertion has an inspected exact-compound primary target
+    experiment with organism and assay scope.
+  - Run schema, strict and required corpus/history/reference gates after separately
+    authorized curation.
+- action_id: A2
+  description: Implement a narrow maintained ARO alias typing correction for ARO:3007091/Dolobid,
+    or preserve an upstream typed synonym if the source starts supplying one. Retain
+    the alias text but emit BRAND_NAME after reseeding. Inspect each other alias separately
+    before retyping; do not infer product scope from spelling alone.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:39669
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted CARD definition and aliases
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: CARD extraction and future narrow maintained transform
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition and alias typing
+  acceptance_checks:
+  - Dolobid remains discoverable with synonym_type BRAND_NAME.
+  - The correction survives source regeneration without globally converting ARO exact
+    aliases into brand names.
+  - Exact molecular identifiers, FDA application provenance and other alias decisions
+    remain separately justified.
+limitations:
+- The MurA finding is bounded to the cited study and inspected current CARD support.
+  It does not demonstrate that diflunisal can never inhibit MurA, and the additional-source
+  search is not a systematic review of every possible later experiment.
+- The original growth assay identifies Sigma diflunisal and E. coli K12 from ATCC
+  without a specific reagent catalog or strain accession. Its 24-hour broth OD endpoint
+  and tested conditions are not universal susceptibility, bactericidal or clinical
+  efficacy evidence.
+- All four adopted source PMID abstracts were inspected; the three context-only ChEBI
+  papers were not read as full bodies because their abstract scope does not support
+  the disputed bacterial mechanism.
+- The optional H. pylori beta-clamp source was verified through its full original
+  abstract and deposited crystallographic metadata/identity. Publisher full text returned
+  403 and could not be opened in the browser. Numerical MIC versus IC50 interpretation,
+  complete assay conditions and material details remain unadopted.
+- Current CARD repeats all seven aliases, but only Dolobid received independent official
+  named-product verification. The remaining aliases are not certified as exact chemical
+  synonyms or automatically classified as brands.
+- Native focused checks passed; shared corpus-gate outcomes are integrated separately.
+  Native records and maintained inputs were not edited.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- 'A successful molecular/schema gate does not settle experimental causality: docking,
+  measured growth, biochemical target inhibition and clinical approval are distinct
+  evidence levels.'
+- The frozen FDA assertions use GSRS version 35 and current GSRS is version 38 with
+  matching exact structure. This version difference alone is not an identity or provenance
+  defect.
+- Standalone chemistry used the recorded batch 019 interpreter against batch 037;
+  native schema and strict checks used batch 037. Review artifacts were prepared in
+  scratch for the coordinator to integrate and save.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:39669
+- https://card.mcmaster.ca/ontology/45655
+- https://doi.org/10.3390/antibiotics11040528
+- https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=725234b2-0e23-45c3-a42d-eb4e62273f9b
+- https://doi.org/10.1002/1873-3468.12734
+- https://www.rcsb.org/structure/5G48
+tags:
+- record-review
+- diflunisal
+- mechanism-evidence-scope
+- brand-typing
