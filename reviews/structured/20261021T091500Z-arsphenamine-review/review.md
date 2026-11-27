@@ -1,0 +1,700 @@
+# Arsphenamine: historical drug mixture represented by a superseded dimer
+
+- Review: 20261021T091500Z-arsphenamine-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T08:55:52Z
+- Finished UTC: 2026-10-21T09:15:00Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native fields consistently encode the historical As=As dimer dihydrochloride, but primary structural work establishes a mixture of cyclic organoarsenic species for Salvarsan. The exact-molecule representation and associated historical drug claims need source-level reconciliation; replacing the dimer with an arbitrary ring would not solve the mixture problem.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position109; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:9016 | data/antibiotics/antibacterial/arsphenamine.yaml | generated | arsphenamine |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:9016 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:9016 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:9016 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:9016 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:9016 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:9016 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:9016 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:9016 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:9016 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:9016 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:9016 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:9016 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Single historical dimer versus drug material
+
+identity: concern. Targets: CHEBI:9016.
+
+The native single-molecule graph cannot be treated as the experimentally established composition of Salvarsan.
+
+### Representation and source consistency
+
+identity: supported. Targets: CHEBI:9016.
+
+The native encodings,composition,masses and mints agree; several authorities propagate the same older representation.
+
+### Historical antimicrobial statements
+
+evidence: unknown. Targets: CHEBI:9016.
+
+The historical name and therapeutic context are supported at review level,but exact-component indication and mechanistic attribution are not established.
+
+### Chemical classes and drug role
+
+grounding: concern. Targets: CHEBI:9016.
+
+Current parents match the encoded dimer; biological role and diarsene classification must be re-evaluated when chemical scope is resolved.
+
+### Target,activity,producer and resistance
+
+completeness: not_applicable. Targets: CHEBI:9016.
+
+No such experimental native assertions are present; neither historical use nor oxidation establishes an exact target.
+
+### Structured expression applicability
+
+scope: not_applicable. Targets: CHEBI:9016.
+
+Native names no gene/protein/regulator/pathway/stress/transcriptomic claim requiring a structured-source query.
+
+### Maintained source reconciliation
+
+ownership: supported. Targets: CHEBI:9016.
+
+Both ChEBI and ARO owners captured; no native mutation or status promotion occurred.
+
+## Findings
+
+### F1: Do not equate the conventional dimer with the historical drug mixture
+
+major / open / confirmed; issue key: chebi-9016-arsphenamine-historical-dimer-mixture-scope.
+
+The exact record asserts the As=As dimer dihydrochloride as arsphenamine/Salvarsan. The original structural investigation contradicts this molecular representation. A source-reproduced graph and full-key agreement do not establish one exact antimicrobial structure for the historical material.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Reconcile historical drug identity with the repository exact-structure boundary through maintained source decisions.
+
+- Determine whether to exclude this source concept from the exact-compound corpus or explicitly represent the historical structure with qualified scope supported by repository policy. Do not substitute a chosen ring size and transfer all drug claims.
+- Separate historical product/mixture identity from exact constituent evidence before assigning formula,mass,parents,synonyms,roles or chemical equivalences. Preserve source provenance and the structural correction citation.
+- Do not infer a protein target or specific in-vivo active species from chemical oxidation alone. Resolve historical use versus exact-compound evidence and avoid modern approval claims.
+- Apply a documented ChEBI/ARO grounding or exclusion decision and reproducible seeding route,then validate identity,mint handling,term/reference/history and required corpus gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/arsphenamine.yaml; Entire YAML and all three seed/reseed history entries | supports | SEEDED/EXACT CHEBI9016 contains ten exact synonyms,three ChEBI parents plus an ARO organoarsenic class,one antisyphilitic role,and five chemical xrefs. The graph is a protonated As=As dimer with two chloride counterions. No quantitative activity,target,resistance,producer,clinical approval,dataset or graph assertion is present. |
+| owner | data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; 109-raw.json; maintained extractor/seeder | supports | ChEBI supplies historical dimer chemistry and synonym/equivalence claims; ARO supplies the drug definition and sole PMID18679046. Source-specific mints reproduce. No exact ARO target/resistance rows were found in the complete parsed inventories. All sixteen captured maintained hashes are unchanged. |
+| authority | https://www.ebi.ac.uk/chebi/CHEBI:9016; 109-chebi.html,109-parents.json and exact ARO3000552/3000551 terms in094-aro.obo | partial | Current ChEBI and the official ARO ontology reproduce the native historical identity. The organoarsenic,hydrochloride and diarsene parents fit the stored graph; diarsene would not fit the cyclic species established for the actual drug material. Database consistency cannot adjudicate the primary structural conflict. |
+| chemical-links | https://pubchem.ncbi.nlm.nih.gov/compound/8774; 109-pubchem.json and https://rest.kegg.jp/get/C11744 | supports | PubChem8774 shares the native normalized InChI/key and aggregate composition. The same InChI normalizes ionic/neutral hydrochloride depictions under9548903/91997747,so full-key agreement does not uniquely establish the submitted ionic depiction. KEGG also uses the historical dimer. CAS139-93-5 is cross-corroborated,not registry-direct; Gmelin269938 was not independently accessed. |
+| chemistry | Independent RDKit calculation; 109-chemistry.json; focus011-root.py109 | supports | SMILES/InChI regenerate VLAXZGHHBIJLAD-UHFFFAOYSA-N,aggregate C12H14As2Cl2N2O2,three components,zero net charge,average439.006 and exact437.886426048. Dot notation C12H14As2N2O2.2Cl has identical elemental composition. Both source mints agree. These are internal consistency checks,not experimental proof of a Salvarsan dimer. |
+| historical | PMID:18679046; DOI:10.1159/000149583; complete EuropePMC abstract in109-adopted.json | partial | The adopted2008 historical review discusses Ehrlich and arsphenamine treatment of syphilis. It is not a new exact-structure or purified-component antibacterial experiment. Its abstract does not independently substantiate every historical indication or priority claim in the ARO definition. Full-text attempts returned a PMC browser challenge and EuropePMC500. |
+| structure | PMID:15624113; DOI:10.1002/anie.200461471;109-primary2005.pdf complete main article pp941–944 and original p942 figure/table | refutes | Primary ESI-MS work on synthesized hydrochloride identifies cyclic organoarsenic mixtures, mainly trimer/pentamer, rather than the conventional As=As dimer. Ring ratios are not quantitatively established; components were not isolated. The authors observed oxidation in solution, but their slow-release pharmacological interpretation is not a direct molecular-target experiment. |
+| search | CultureBotAI/AntibioticMech; 109-local-hits.txt;109110-maintained-hits.txt; public primary discovery | context_only | Ignored-inclusive searches identify source and queue context but no target-specific correction within the maintained search scope. Exact current authorities and the adopted citation were checked; the2005 original was obtained from its authors university repository. No exhaustive literature absence is claimed. |
+
+## Limits And Additional Notes
+
+- The2005 primary article was read in full,including the original structural figure and mass table; raw mass spectra were not reanalysed. Its solution speciation does not establish a purified exact constituent antimicrobial assay.
+- The adopted historical article was read at complete-abstract scope only. Gmelin and the CAS registry were not directly inspected; source crosswalks are explicitly secondary to primary chemical adjudication.
+- No record changes,deletions,new compounds or mixture-schema changes are authorized by this review.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T091500Z-arsphenamine-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Arsphenamine: historical drug mixture represented by a superseded dimer'
+started_at: '2026-10-21T08:55:52Z'
+finished_at: '2026-10-21T09:15:00Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native fields consistently encode the historical As=As dimer dihydrochloride,
+  but primary structural work establishes a mixture of cyclic organoarsenic species
+  for Salvarsan. The exact-molecule representation and associated historical drug
+  claims need source-level reconciliation; replacing the dimer with an arbitrary ring
+  would not solve the mixture problem.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/arsphenamine.yaml
+    sha256: f8002e3542aafcf0d81d84e6291e2c6f993cd82991c6fec226c4d43b36c8354e
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+targets:
+- target_id: CHEBI:9016
+  path: data/antibiotics/antibacterial/arsphenamine.yaml
+  label: arsphenamine
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO concept and biological edge ownership
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted ARO concept and biological edge ownership
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted ARO concept and biological edge ownership
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position109; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:9016
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:9016
+  command: .venv/bin/python /private/tmp/am-review-session/focus011-root.py 109
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:9016
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/arsphenamine.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:9016
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/arsphenamine.yaml --out /private/tmp/am-review-session/109-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:9016
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:9016
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:9016
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:9016
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:9016
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:9016
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:9016
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:9016
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:9016
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/arsphenamine.yaml
+  locator: Entire YAML and all three seed/reseed history entries
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: supports
+  summary: SEEDED/EXACT CHEBI9016 contains ten exact synonyms,three ChEBI parents
+    plus an ARO organoarsenic class,one antisyphilitic role,and five chemical xrefs.
+    The graph is a protonated As=As dimer with two chloride counterions. No quantitative
+    activity,target,resistance,producer,clinical approval,dataset or graph assertion
+    is present.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv
+  locator: 109-raw.json; maintained extractor/seeder
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: supports
+  summary: ChEBI supplies historical dimer chemistry and synonym/equivalence claims;
+    ARO supplies the drug definition and sole PMID18679046. Source-specific mints
+    reproduce. No exact ARO target/resistance rows were found in the complete parsed
+    inventories. All sixteen captured maintained hashes are unchanged.
+  snapshot_sha256: 672e9add667573abbcb811f5e3df41ceddb1fa1b81db84a7c5740abeb6b41ba1
+- evidence_id: authority
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:9016
+  locator: 109-chebi.html,109-parents.json and exact ARO3000552/3000551 terms in094-aro.obo
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: partial
+  summary: Current ChEBI and the official ARO ontology reproduce the native historical
+    identity. The organoarsenic,hydrochloride and diarsene parents fit the stored
+    graph; diarsene would not fit the cyclic species established for the actual drug
+    material. Database consistency cannot adjudicate the primary structural conflict.
+  snapshot_sha256: fdd5d4e94bc6d60895254d3b5480fdcfd4c1dbefb9e06d2eaddcfdba681b8ff9
+- evidence_id: chemical-links
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/8774
+  locator: 109-pubchem.json and https://rest.kegg.jp/get/C11744
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: supports
+  summary: PubChem8774 shares the native normalized InChI/key and aggregate composition.
+    The same InChI normalizes ionic/neutral hydrochloride depictions under9548903/91997747,so
+    full-key agreement does not uniquely establish the submitted ionic depiction.
+    KEGG also uses the historical dimer. CAS139-93-5 is cross-corroborated,not registry-direct;
+    Gmelin269938 was not independently accessed.
+  snapshot_sha256: 73aa786e1c1cf568e3022c073ac2548b41024c989d0c096826a43c4c964cd5c5
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculation
+  locator: 109-chemistry.json; focus011-root.py109
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: supports
+  summary: SMILES/InChI regenerate VLAXZGHHBIJLAD-UHFFFAOYSA-N,aggregate C12H14As2Cl2N2O2,three
+    components,zero net charge,average439.006 and exact437.886426048. Dot notation
+    C12H14As2N2O2.2Cl has identical elemental composition. Both source mints agree.
+    These are internal consistency checks,not experimental proof of a Salvarsan dimer.
+  snapshot_sha256: c17c872a97618bebcfd872a090cc8606128ae2ca06ba7cbd5e2b2eb9e19dc58c
+- evidence_id: historical
+  kind: authority
+  reference: PMID:18679046
+  locator: DOI:10.1159/000149583; complete EuropePMC abstract in109-adopted.json
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: partial
+  summary: The adopted2008 historical review discusses Ehrlich and arsphenamine treatment
+    of syphilis. It is not a new exact-structure or purified-component antibacterial
+    experiment. Its abstract does not independently substantiate every historical
+    indication or priority claim in the ARO definition. Full-text attempts returned
+    a PMC browser challenge and EuropePMC500.
+  snapshot_sha256: 795196a4cb719c3e7691226b13890eef5694bd5024f1101e3f241f5f7f0bd26f
+- evidence_id: structure
+  kind: primary_source
+  reference: PMID:15624113
+  locator: DOI:10.1002/anie.200461471;109-primary2005.pdf complete main article pp941–944
+    and original p942 figure/table
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: refutes
+  summary: Primary ESI-MS work on synthesized hydrochloride identifies cyclic organoarsenic
+    mixtures, mainly trimer/pentamer, rather than the conventional As=As dimer. Ring
+    ratios are not quantitatively established; components were not isolated. The authors
+    observed oxidation in solution, but their slow-release pharmacological interpretation
+    is not a direct molecular-target experiment.
+  snapshot_sha256: 5b16e52b58b00f7c997bace21864de0bc6681dac9609afe954ae313126ce1786
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 109-local-hits.txt;109110-maintained-hits.txt; public primary discovery
+  accessed_at: '2026-10-21T09:04:28Z'
+  support: context_only
+  summary: Ignored-inclusive searches identify source and queue context but no target-specific
+    correction within the maintained search scope. Exact current authorities and the
+    adopted citation were checked; the2005 original was obtained from its authors
+    university repository. No exhaustive literature absence is claimed.
+  search_scope: rg --no-ignore --hidden in isolated batch011 excluding.git/.venv;
+    maintained curation/conf/scripts/data/raw/reviews follow-up excludes large.obo/.jsonl/.html
+    files. ChEBI,OLS,PubChem,KEGG,official ARO,EuropePMC,original Wiley metadata and
+    Waikato author-deposited paper.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Single historical dimer versus drug material
+  outcome: concern
+  summary: The native single-molecule graph cannot be treated as the experimentally
+    established composition of Salvarsan.
+  target_ids:
+  - CHEBI:9016
+  evidence_ids:
+  - native
+  - structure
+- assessment_id: internal
+  area: identity
+  topic: Representation and source consistency
+  outcome: supported
+  summary: The native encodings,composition,masses and mints agree; several authorities
+    propagate the same older representation.
+  target_ids:
+  - CHEBI:9016
+  evidence_ids:
+  - authority
+  - chemical-links
+  - chemistry
+  - owner
+- assessment_id: history
+  area: evidence
+  topic: Historical antimicrobial statements
+  outcome: unknown
+  summary: The historical name and therapeutic context are supported at review level,but
+    exact-component indication and mechanistic attribution are not established.
+  target_ids:
+  - CHEBI:9016
+  evidence_ids:
+  - historical
+  - structure
+- assessment_id: class
+  area: grounding
+  topic: Chemical classes and drug role
+  outcome: concern
+  summary: Current parents match the encoded dimer; biological role and diarsene classification
+    must be re-evaluated when chemical scope is resolved.
+  target_ids:
+  - CHEBI:9016
+  evidence_ids:
+  - authority
+  - native
+  - structure
+- assessment_id: optional
+  area: completeness
+  topic: Target,activity,producer and resistance
+  outcome: not_applicable
+  summary: No such experimental native assertions are present; neither historical
+    use nor oxidation establishes an exact target.
+  target_ids:
+  - CHEBI:9016
+  evidence_ids:
+  - native
+  - historical
+  - structure
+- assessment_id: adapter
+  area: scope
+  topic: Structured expression applicability
+  outcome: not_applicable
+  summary: Native names no gene/protein/regulator/pathway/stress/transcriptomic claim
+    requiring a structured-source query.
+  target_ids:
+  - CHEBI:9016
+  evidence_ids:
+  - native
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained source reconciliation
+  outcome: supported
+  summary: Both ChEBI and ARO owners captured; no native mutation or status promotion
+    occurred.
+  target_ids:
+  - CHEBI:9016
+  evidence_ids:
+  - owner
+  - search
+findings:
+- finding_id: F1
+  issue_key: chebi-9016-arsphenamine-historical-dimer-mixture-scope
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Do not equate the conventional dimer with the historical drug mixture
+  description: The exact record asserts the As=As dimer dihydrochloride as arsphenamine/Salvarsan.
+    The original structural investigation contradicts this molecular representation.
+    A source-reproduced graph and full-key agreement do not establish one exact antimicrobial
+    structure for the historical material.
+  target_ids:
+  - CHEBI:9016
+  field_paths:
+  - identifier
+  - label
+  - definition
+  - synonyms
+  - chemical_structure
+  - parent_compounds
+  - activity_roles
+  - xrefs
+  - source_concepts
+  evidence_ids:
+  - native
+  - owner
+  - authority
+  - chemical-links
+  - structure
+  rule_id: 'native-review-checklist: exact chemical identity and mixture boundary'
+  native_severity: major historical mixture represented as an exact molecule
+  normalization_reason: The named drug and chemistry provenance are identifiable,
+    but the asserted exact graph is not a defensible representation of its demonstrated
+    composition.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO concept and biological edge ownership
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted ARO concept and biological edge ownership
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted ARO concept and biological edge ownership
+actions:
+- action_id: A1
+  description: Reconcile historical drug identity with the repository exact-structure
+    boundary through maintained source decisions.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:9016
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO concept and biological edge ownership
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted ARO concept and biological edge ownership
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted ARO concept and biological edge ownership
+  acceptance_checks:
+  - Determine whether to exclude this source concept from the exact-compound corpus
+    or explicitly represent the historical structure with qualified scope supported
+    by repository policy. Do not substitute a chosen ring size and transfer all drug
+    claims.
+  - Separate historical product/mixture identity from exact constituent evidence before
+    assigning formula,mass,parents,synonyms,roles or chemical equivalences. Preserve
+    source provenance and the structural correction citation.
+  - Do not infer a protein target or specific in-vivo active species from chemical
+    oxidation alone. Resolve historical use versus exact-compound evidence and avoid
+    modern approval claims.
+  - Apply a documented ChEBI/ARO grounding or exclusion decision and reproducible
+    seeding route,then validate identity,mint handling,term/reference/history and
+    required corpus gates.
+limitations:
+- The2005 primary article was read in full,including the original structural figure
+  and mass table; raw mass spectra were not reanalysed. Its solution speciation does
+  not establish a purified exact constituent antimicrobial assay.
+- The adopted historical article was read at complete-abstract scope only. Gmelin
+  and the CAS registry were not directly inspected; source crosswalks are explicitly
+  secondary to primary chemical adjudication.
+- No record changes,deletions,new compounds or mixture-schema changes are authorized
+  by this review.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
