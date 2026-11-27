@@ -1,0 +1,1008 @@
+# BAL30072: exact sulfactam identity and antibacterial effects supported; OXA evidence remains qualified
+
+- Review: 20261021T100910Z-bal30072
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T10:04:45Z
+- Finished UTC: 2026-10-21T10:09:10Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The neutral stereospecified BAL30072 sulfactam agrees with PubChem, ChEMBL and the primary chemical drawing. Its antibacterial filing and E. coli morphology definition are supported. Both imported OXA resistance objects faithfully identify database assertions, but exact OXA-24/OXA-51-mediated BAL30072 inactivation was not established by the inspected experiments. Two informational follow-ups cover this bounded evidence gap and optional PBP/activity enrichment; no confirmed native identity or scientific assertion error was found. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire ARO-only record, exact chemical form, all three xrefs, source mint/class, definition and both adopted publication leads, both imported resistance claims and three history events.
+
+Selection: Queue 145, exact locked path and minted identifier.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-ae576e4688 | data/antibiotics/antibacterial/bal30072.yaml | generated | BAL30072 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | antibioticmech:aro-ae576e4688 | Actual focused command exited 0. This does not independently establish experimental claim support. |
+| strict | passed | True | antibioticmech:aro-ae576e4688 | Actual focused command exited 0. This does not independently establish experimental claim support. |
+| chemistry | passed | False | antibioticmech:aro-ae576e4688 | Actual focused command exited 0. This does not independently establish experimental claim support. |
+| Authoritative full QC | failed | True | antibioticmech:aro-ae576e4688 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-ae576e4688 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-ae576e4688 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-ae576e4688 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-ae576e4688 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-ae576e4688 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-ae576e4688 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-ae576e4688 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-ae576e4688 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact sulfactam, identifiers and mint
+
+identity: supported. Targets: antibioticmech:aro-ae576e4688.
+
+Native exact structure, masses, source mint and all chemical crosswalks agree with the inspected primary drawing and current official chemical records.
+
+### Class and antibacterial scope
+
+grounding: supported. Targets: antibioticmech:aro-ae576e4688.
+
+The broader ARO monobactam category is source-attested; the native definition more specifically identifies the sulfactam. Exact compound experiments support antibacterial inclusion.
+
+### Morphology statement and citation placement
+
+evidence: supported. Targets: antibioticmech:aro-ae576e4688.
+
+The morphology claim is directly supported by the adopted 2010 primary study. The seeder currently chooses the first ARO citation, the 2013 activity paper; direct claim-level attachment to 2010 would improve provenance without changing the supported wording.
+
+### OXA assertions versus independent biochemical support
+
+evidence: unknown. Targets: antibioticmech:aro-ae576e4688.
+
+Both exact ARO edges and source provenance are confirmed. The inspected primary studies do not establish OXA-24/OXA-51-mediated BAL30072 inactivation, and clinical OXA co-occurrence is not causal proof. No universal inactivity or deletion conclusion follows.
+
+### Qualified PBP and activity additions
+
+completeness: supported. Targets: antibioticmech:aro-ae576e4688.
+
+Exact primary PBP competition and strain/panel AST data are available for optional enrichment. Preserve IC50 versus MIC/MBC, iron-restricted media and experimental strain distinctions.
+
+### Transport, producer, clinical and dataset boundaries
+
+scope: supported. Targets: antibioticmech:aro-ae576e4688.
+
+The native record makes none of these extra claims. Synthetic preparation does not identify a natural producer, and 2010 transport hypotheses or historical development references do not establish a present clinical indication or exposure dataset.
+
+### Generated imports and qualification overlay
+
+ownership: supported. Targets: antibioticmech:aro-ae576e4688.
+
+ARO/PubChem imports remain source-owned; exact optional primary additions belong to the actual native record through the validated writer and history. The existing overlay supports reversible evidence-scope qualification.
+
+### Focused gates and input integrity
+
+schema: supported. Targets: antibioticmech:aro-ae576e4688.
+
+Focused schema, strict and chemistry checks passed and captured input bytes remain unchanged.
+
+## Findings
+
+### F1: Retain and qualify the unresolved exact OXA resistance evidence
+
+informational / open / confirmed; issue key: bal30072-oxa24-oxa51-primary-support-gap.
+
+ARO asserts both native edges, but the inspected enzyme references concern other beta-lactams and the BAL30072 isolate studies do not isolate OXA-24/OXA-51 as a hydrolytic cause. The record already labels these database assertions honestly. A scoped qualification would prevent future promotion of co-occurrence into direct mechanistic evidence.
+
+### F2: Attach exact primary PBP, morphology and activity evidence with assay qualifications
+
+informational / open / confirmed; issue key: bal30072-qualified-pbp-activity-enrichment.
+
+The adopted 2010 paper contains direct PBP competition, morphology, quantitative AST and time-kill data. These support optional claim-level enrichment, including placing the morphology evidence on its actual experimental source. Their absence is not a required-field violation.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Resolve or explicitly qualify each exact OXA edge without conflating clinical co-occurrence with causal hydrolysis.
+
+- Bind a future overlay note to both exact row digests and the unchanged parent InChIKey. Record the inspected references and their limits while preserving the original ARO evidence.
+- Seek exact purified-enzyme or controlled expression/deletion/complementation evidence before promoting OXA-24/OXA-51 to experimentally demonstrated BAL30072 inactivation. Preserve OXA-24/OXA-40 synonymy without substituting OXA-25, OXA-26 or unrelated family members.
+- Do not recommend removing either source edge or claiming universal lack of activity solely from negative searches or heterogeneous isolate MICs. If contradictory exact experiments are found, retain the context and adjudicate through maintained source/qualification owners.
+- Reseed a canary through the validated native workflow and verify provenance, byte reproduction and focused/shared checks.
+
+### A2
+
+Curate the exact 2010 primary target and activity evidence with experimental boundaries intact.
+
+- Use PMID 20308379 for E. coli PBP3/PBP1a/PBP1b Bocillin competition; preserve IC50 units and assay type and do not recast values as KD or MIC. Do not infer the membrane-source strain from the separate W3110 morphology experiment.
+- Keep W3110 morphology at specified doses/times and preserve short-filament and concentration dependence. Prefer its direct 2010 primary evidence over a mechanically selected first reference.
+- Encode quantitative activity only with organism/strain or panel, exact endpoint, units, qualifier and iron-restricted Iso-Sensitest/bipyridyl conditions. MIC90 panel summaries are not individual-isolate MICs or clinical breakpoints. Preserve time-kill MBC criteria separately.
+- Do not treat hypothesized siderophore uptake in 2010 as direct proof of a particular transport receptor; inspect later exact-compound studies before adding that chain. Distinguish the parent molecule from the reacted ligand in PDB 4OOM and from lactivicin analogues.
+- Apply separately authorized curation through write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/bal30072.yaml, preserve imported ownership, run all required gates and retain SEEDED until native sign-off conditions are met.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/bal30072.yaml; Entire YAML. | supports | SEEDED and MINTED, with a neutral exact sulfactam structure, monobactam parent/class and two explicitly database-level ANTIBIOTIC_INACTIVATION entries for OXA-24 and OXA-51. No numerical activity, target protein, producer, clinical indication, dataset or causal graph is asserted. All three history events are seed/reseed events. |
+| source | data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; data/raw/aro_resistance_edges.tsv; conf/sources.yaml; ARO line 273, PubChem line 94, resistance lines 3954–3955; extractor and seeder branches. | supports | The ARO row supplies both PMID leads, the definition and nearest marked monobactam class ARO:0000004. PubChem supplies the exact fallback structure; the record lacks an adopted ChEBI crosswalk, so its MINTED status and reproducible source hash are appropriate. The first definition reference is selected mechanically. Resistance types follow the ARO ancestor ARO:3000557, while imported notes explicitly retain database provenance. No exact ARO target edge is present in the inspected adopted table. Initial capture remains unchanged; 20 final captured maintained inputs include the resistance-qualification adapter and overlay. |
+| chemistry | PubChem CID 52942440; ChEMBL CHEMBL1256967; 145-chemistry.json and 145-crosswalks.json; independent RDKit parsing. | supports | Native SMILES and InChI yield one neutral C16H18N6O10S2 molecule with full key KLFSEZJCLYBFKQ-WXYNYTDUSA-N, an S center and the specified oxime geometry. Formula, charge, reported mass precision and ARO mint agree. Current PubChem and ChEMBL independently parse to that full key, including the N–O–sulfate linkage. |
+| aro | https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo; 145-aro-terms.txt, complete BAL30072, monobactam, OXA-24, OXA-51 and enzyme-ancestor terms. | supports | Official ARO reproduces ARO:3003821, both chemical crosswalks, the broader class, and exact OXA-24/OXA-51 drug edges. OXA-24 has OXA-40 as a synonym. The lineage supports the imported inactivation category as an ontology assertion, not a new purified-enzyme experiment. |
+| structure-primary | PMID:20308379; DOI:10.1128/AAC.01525-09; 145-2010.html/compact.txt, Materials and Methods; Figure 1 visually inspected in 145-Figure1.jpg. | supports | Basilea prepared BAL30072 synthetically. The primary drawing shows the same stereochemical sulfactam with the oxygen between ring nitrogen and sulfate, distinguishing it from an N-sulfonated monobactam analog. This supports exact identity and provides no natural biosynthetic producer claim. |
+| primary-pbp | PMID:20308379; DOI:10.1128/AAC.01525-09; Complete main text, Methods, Table 4 and PBP Results; 145-2010.html/compact.txt. | supports | E. coli membrane fragments were counterlabeled with fluorescent penicillin Bocillin. BAL30072 competition IC50 values are 0.048 micromolar for PBP3, 3.9 for PBP1a, 1.9 for PBP1b and 30 for PBP2. PBP2 inhibition was judged outside the growth-relevant range. These are competition-assay IC50 values, not free-parent KD or whole-cell MIC. The membrane-preparation strain is not explicitly identified in that methods subsection, so the W3110 morphology strain should not automatically populate every protein experiment. |
+| primary-morphology | PMID:20308379; DOI:10.1128/AAC.01525-09; Results, Discussion, Figures 4 and 5 captions; Figure 5 visually inspected. | supports | Growing E. coli W3110 showed loss of turbidity, spheroplasts and short filaments after BAL30072 exposure, contrasting with long filaments after aztreonam. The Figure 5 conditions were BAL30072 4 micrograms/mL and aztreonam 64 micrograms/mL, each three hours after addition; these are different exposures, not an equal-dose comparative potency experiment. This directly supports the native morphology sentence with strain/concentration dependence. |
+| primary-activity | PMID:20308379; DOI:10.1128/AAC.01525-09; Complete main Methods/Results and Tables 1–7. | supports | The deliberately resistant challenge panels were tested in duplicate by broth microdilution using Iso-Sensitest plus 16 mg/L 2,2-prime-bipyridyl to restrict iron. Table 1 reports MIC90 4 micrograms/mL for 40 Acinetobacter isolates and 8 for 206 P. aeruginosa isolates; these are panel summaries, not universal species breakpoints. Tables 2–3 separate strain background, enzyme abundance and efflux deletions. Time-kill MBCs require a three-log reduction over 24 hours and differ from MICs. Iron availability materially changes activity, so medium qualification is necessary. |
+| primary-resistance-boundary | PMID:20308379; DOI:10.1128/AAC.01525-09; Methods, Tables 2–4 and Discussion. | partial | The purified-enzyme panel includes TEM, SHV, KPC-2, IMP-1, VIM-1 and class C enzymes, but not exact OXA-24 or OXA-51. Clinical Acinetobacter rows name OXA-25, OXA-26 and OXA-27; those are not interchangeable with the native alleles. The paper demonstrates slow or undetectable metallo-beta-lactamase hydrolysis and substrate-dependent hydrolysis/inhibition of other enzymes, not universal beta-lactamase resistance. It reports siderophore uptake as a hypothesis still under investigation; that hypothesis must not become demonstrated transport by a named receptor. |
+| adopted-2013 | PMID:23449829; DOI:10.1093/jac/dkt050; 145-epmc.json, entire original abstract; publisher free abstract. | partial | The study tested BAL30072 alone and combinations by CLSI agar dilution against UK clinical isolates. Most A. baumannii with OXA or NDM enzymes were inhibited at 4 mg/L or less, while OXA-58-bearing isolates were resistant for reasons the authors suggest may be independent of that beta-lactamase. This supports antibacterial context but does not establish isolated OXA-24/OXA-51 hydrolysis. Combinations with BAL29880, clavulanate or meropenem must stay separate. Full paper retrieval was blocked by publisher access responses; indexed table excerpts were discovery leads only. |
+| oxa-parent-papers | PMID:10817708; DOI:10.1128/AAC.44.6.1556-1561.2000; PMID:18585868; DOI:10.1016/j.patbio.2008.05.002; PMID:15649299; DOI:10.1111/j.1469-0691.2004.01016.x; 145-epmc.json, all three complete original abstracts linked by the official determinant terms. | context_only | The OXA-24/OXA-40 papers characterize carbapenemase function or gene location in Acinetobacter/Pseudomonas; the OXA-51 paper characterizes imipenem hydrolysis. These inspected abstracts do not test BAL30072. Generic enzyme identity and carbapenem resistance therefore do not independently prove the exact BAL30072 edge. |
+| oxa-isolates | DOI:10.1093/jac/dks009; Author-deposited full main text at https://www.researchgate.net/publication/221795848_In_vitro_activity_of_the_siderophore_monosulfactam_BAL30072_against_meropenem-non-susceptible_Acinetobacter_baumannii, Methods, Results/Discussion and Table 1. | partial | A 310-isolate meropenem-nonsusceptible A. baumannii study found no correlation between OXA type and BAL30072 MIC. It included OXA-40 and overexpressed OXA-51-bearing isolates but did not isolate those enzymes as causal determinants. Broth microdilution used cation-adjusted Mueller–Hinton; persistent trailing was read at 80% inhibition. The table explicitly has no BAL30072 breakpoint. These limitations preclude translating co-occurrence into hydrolytic mechanism or a general clinical resistance classification. |
+| pbp-archive-lead | PDB:4OOM; PMID:24694215; DOI:10.1021/jm500219c; Official RCSB entry, title, organism, structural method and ligand description. | context_only | The archive identifies a 2.0-angstrom P. aeruginosa PA1R PBP3 BAL30072 complex linked to the 2014 lactivicin-analogue paper. Its modeled ring-opened ligand 2U3 has a different formula/key from free BAL30072, so it is not an exact chemical xref for the native parent. The paper and raw electron-density data were not fully assessed here; this is an additional qualified target lead. |
+| adapter | iModulonDB a_baumannii/precise139; 055-imodulondb-datasets-retry.txt and 145-adapter.txt, structured check before web literature research. | context_only | The covered Acinetobacter dataset yields OXA-69 ABUW_2300 and OXA-23 ABUW_0563 among ten substring gene hits, with no module hits. It does not identify exact native OXA-24 or OXA-51 or demonstrate BAL30072 resistance. No summarize call was applicable. An initial query used noncatalog key ab5075 and returned an empty result; that result was discarded and corrected to precise139. |
+| adapter-command | Structured source adapter; Actual corrected command exited 0. | context_only | env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1 uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw kg-microbe-sources imodulondb --timeout 15 search --organism a_baumannii --dataset precise139 --query OXA |
+| overlay | curation/card_evidence_reviews.json; scripts/card_evidence_reviews.py; Complete overlay structure and exact digest-based membership check in 145-card-review-check.json; apply_review. | supports | Neither BAL30072 resistance-row digest has an existing overlay qualification. The adapter can add an evidence-scope note while retaining source-owned fields and database evidence. This is the appropriate maintained owner for a future scoped qualification, rather than pretending an ontology edge is a new primary result. |
+| search | CultureBotAI/AntibioticMech; 145-local-hits.txt, 145-maintained-search.txt and exact row/digest checks. | context_only | Hidden- and ignored-inclusive searches found the exact source rows and no separate curator additions or target edge in the searched maintained scope. Bounded OXA/BAL30072 searches found clinical-isolate studies and original enzyme papers but no inspected direct experiment proving the exact two native hydrolysis edges. This is a bounded result, not proof that no such evidence exists. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION.md; docs/HARMONIZATION.md; Identity, database evidence, activity, resistance, ownership and review-status criteria. | supports | Optional target/AST absence is not an error. Preserve exact allele, assay, organism, chemical form, mixture and database-versus-primary boundaries; no producer or current clinical status is inferred. |
+| validation | Focused schema, strict and chemistry; 145-focused-results.json and corresponding logs; captured-input recheck. | supports | All focused commands passed. Initial and supplemental captured bytes remain unchanged. |
+
+## Limits And Additional Notes
+
+- The full native record and maintained exact rows were read. Original provenance capture was retained, ARO/PubChem ownership was corrected before scientific judgment, and the later overlay inspection added two unchanged contextual inputs; all 20 final input hashes were rechecked.
+- Both adopted BAL30072 citation leads were resolved. PMID 20308379 was inspected in complete main text, all seven tables and figure captions, with Figures 1 and 5 visually checked. PMID 23449829 was assessed from its original abstract; publisher PDF/HTML returned access errors. Indexed full-paper fragments were not treated as full-paper inspection.
+- The three official OXA determinant reference abstracts were inspected, but their complete papers were not all reviewed. The separate 2012 A. baumannii study was read in author-deposited main text and Table 1. This does not exhaust all later enzyme/allele experiments.
+- Current PubChem and ChEMBL match the native N–O–sulfate structure. The separate current CARD web display shows an N–S SMILES omitting that oxygen, unlike the primary Figure 1 and adopted PubChem structure. That external display discrepancy was not imported into the native chemical_structure and is not a reason to replace the supported native structure.
+- The official PDB 4OOM entry was inspected as an additional lead, but the complete 2014 paper, raw diffraction data and detailed protein mapping were not reviewed. No automatic reviewed UniProt example is proposed.
+- Structured iModulonDB results are contextual only; the initial noncatalog dataset query was corrected. No matching expression module or exact OXA-24/OXA-51 functional proof resulted.
+- No current clinical development status, approved indication, natural producer, genome-linked susceptibility or exhaustive exposure-dataset search was assessed. Historical development language and synthetic laboratory preparation do not establish those optional fields.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T100910Z-bal30072
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'BAL30072: exact sulfactam identity and antibacterial effects supported; OXA
+  evidence remains qualified'
+started_at: '2026-10-21T10:04:45Z'
+finished_at: '2026-10-21T10:09:10Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the record. Captured provenance before judgment,
+    corrected generic capture ownership to the actual ARO/PubChem inputs, read the
+    whole record and maintained rows, and independently inspected exact primary antibacterial
+    and mechanism evidence.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The neutral stereospecified BAL30072 sulfactam agrees with PubChem, ChEMBL
+  and the primary chemical drawing. Its antibacterial filing and E. coli morphology
+  definition are supported. Both imported OXA resistance objects faithfully identify
+  database assertions, but exact OXA-24/OXA-51-mediated BAL30072 inactivation was
+  not established by the inspected experiments. Two informational follow-ups cover
+  this bounded evidence gap and optional PBP/activity enrichment; no confirmed native
+  identity or scientific assertion error was found. Scientific assessment retains
+  the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/bal30072.yaml
+    sha256: 80118dbcea35633133e8ec4256cdadf9da3291cb31aadf03c4a78a74d6536e84
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-ae576e4688
+  path: data/antibiotics/antibacterial/bal30072.yaml
+  label: BAL30072
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted name, definition, class and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Exact neutral structure fallback
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source policies and determinant lineage mechanism map
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source transform
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding/exclusion overrides
+scope:
+  description: Entire ARO-only record, exact chemical form, all three xrefs, source
+    mint/class, definition and both adopted publication leads, both imported resistance
+    claims and three history events.
+  selection: Queue 145, exact locked path and minted identifier.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-ae576e4688
+  exclusions:
+  - target: BAL29880, BAL19764, BAL30376 mixtures, aztreonam and related siderophore
+      beta-lactams
+    reason: Separate structures and combination treatments cannot substitute for the
+      exact BAL30072 parent.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0. This does not independently establish
+    experimental claim support.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/bal30072.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0. This does not independently establish
+    experimental claim support.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/bal30072.yaml --out /private/tmp/am-review-session/145-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Actual focused command exited 0. This does not independently establish
+    experimental claim support.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 145
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/bal30072.yaml
+  locator: Entire YAML.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: supports
+  summary: SEEDED and MINTED, with a neutral exact sulfactam structure, monobactam
+    parent/class and two explicitly database-level ANTIBIOTIC_INACTIVATION entries
+    for OXA-24 and OXA-51. No numerical activity, target protein, producer, clinical
+    indication, dataset or causal graph is asserted. All three history events are
+    seed/reseed events.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; data/raw/aro_resistance_edges.tsv;
+    conf/sources.yaml
+  locator: ARO line 273, PubChem line 94, resistance lines 3954–3955; extractor and
+    seeder branches.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: supports
+  summary: The ARO row supplies both PMID leads, the definition and nearest marked
+    monobactam class ARO:0000004. PubChem supplies the exact fallback structure; the
+    record lacks an adopted ChEBI crosswalk, so its MINTED status and reproducible
+    source hash are appropriate. The first definition reference is selected mechanically.
+    Resistance types follow the ARO ancestor ARO:3000557, while imported notes explicitly
+    retain database provenance. No exact ARO target edge is present in the inspected
+    adopted table. Initial capture remains unchanged; 20 final captured maintained
+    inputs include the resistance-qualification adapter and overlay.
+- evidence_id: chemistry
+  kind: validation
+  reference: PubChem CID 52942440; ChEMBL CHEMBL1256967
+  locator: 145-chemistry.json and 145-crosswalks.json; independent RDKit parsing.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: supports
+  summary: Native SMILES and InChI yield one neutral C16H18N6O10S2 molecule with full
+    key KLFSEZJCLYBFKQ-WXYNYTDUSA-N, an S center and the specified oxime geometry.
+    Formula, charge, reported mass precision and ARO mint agree. Current PubChem and
+    ChEMBL independently parse to that full key, including the N–O–sulfate linkage.
+  snapshot_sha256: 68a60e113e6947c679e79d183937c422820520e1244aab0a81d7116b11bea663
+- evidence_id: aro
+  kind: database
+  reference: https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo
+  locator: 145-aro-terms.txt, complete BAL30072, monobactam, OXA-24, OXA-51 and enzyme-ancestor
+    terms.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: supports
+  summary: Official ARO reproduces ARO:3003821, both chemical crosswalks, the broader
+    class, and exact OXA-24/OXA-51 drug edges. OXA-24 has OXA-40 as a synonym. The
+    lineage supports the imported inactivation category as an ontology assertion,
+    not a new purified-enzyme experiment.
+  snapshot_sha256: e720499e5d11772d079b06ea9bf52e42362f5247a8c9dcf4933d87e0d5cdd6ca
+- evidence_id: structure-primary
+  kind: primary_source
+  reference: PMID:20308379; DOI:10.1128/AAC.01525-09
+  locator: 145-2010.html/compact.txt, Materials and Methods; Figure 1 visually inspected
+    in 145-Figure1.jpg.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: supports
+  summary: Basilea prepared BAL30072 synthetically. The primary drawing shows the
+    same stereochemical sulfactam with the oxygen between ring nitrogen and sulfate,
+    distinguishing it from an N-sulfonated monobactam analog. This supports exact
+    identity and provides no natural biosynthetic producer claim.
+  snapshot_sha256: 70cb9cd365a5c1ad5332393f0d0bfe50906b11e94aac8482c4cd1b65f07c6dab
+- evidence_id: primary-pbp
+  kind: primary_source
+  reference: PMID:20308379; DOI:10.1128/AAC.01525-09
+  locator: Complete main text, Methods, Table 4 and PBP Results; 145-2010.html/compact.txt.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: supports
+  summary: E. coli membrane fragments were counterlabeled with fluorescent penicillin
+    Bocillin. BAL30072 competition IC50 values are 0.048 micromolar for PBP3, 3.9
+    for PBP1a, 1.9 for PBP1b and 30 for PBP2. PBP2 inhibition was judged outside the
+    growth-relevant range. These are competition-assay IC50 values, not free-parent
+    KD or whole-cell MIC. The membrane-preparation strain is not explicitly identified
+    in that methods subsection, so the W3110 morphology strain should not automatically
+    populate every protein experiment.
+  snapshot_sha256: 3c0768f033444d60b5470e4c5b4ee542b74fbe3fabf8543324c8c38f02659214
+- evidence_id: primary-morphology
+  kind: primary_source
+  reference: PMID:20308379; DOI:10.1128/AAC.01525-09
+  locator: Results, Discussion, Figures 4 and 5 captions; Figure 5 visually inspected.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: supports
+  summary: Growing E. coli W3110 showed loss of turbidity, spheroplasts and short
+    filaments after BAL30072 exposure, contrasting with long filaments after aztreonam.
+    The Figure 5 conditions were BAL30072 4 micrograms/mL and aztreonam 64 micrograms/mL,
+    each three hours after addition; these are different exposures, not an equal-dose
+    comparative potency experiment. This directly supports the native morphology sentence
+    with strain/concentration dependence.
+  snapshot_sha256: 85f3f9ad6097442e16c65f8bb01a30898c7075814c1d8bda4519563bf2c6939e
+- evidence_id: primary-activity
+  kind: primary_source
+  reference: PMID:20308379; DOI:10.1128/AAC.01525-09
+  locator: Complete main Methods/Results and Tables 1–7.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: supports
+  summary: The deliberately resistant challenge panels were tested in duplicate by
+    broth microdilution using Iso-Sensitest plus 16 mg/L 2,2-prime-bipyridyl to restrict
+    iron. Table 1 reports MIC90 4 micrograms/mL for 40 Acinetobacter isolates and
+    8 for 206 P. aeruginosa isolates; these are panel summaries, not universal species
+    breakpoints. Tables 2–3 separate strain background, enzyme abundance and efflux
+    deletions. Time-kill MBCs require a three-log reduction over 24 hours and differ
+    from MICs. Iron availability materially changes activity, so medium qualification
+    is necessary.
+  snapshot_sha256: 3c0768f033444d60b5470e4c5b4ee542b74fbe3fabf8543324c8c38f02659214
+- evidence_id: primary-resistance-boundary
+  kind: primary_source
+  reference: PMID:20308379; DOI:10.1128/AAC.01525-09
+  locator: Methods, Tables 2–4 and Discussion.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: partial
+  summary: The purified-enzyme panel includes TEM, SHV, KPC-2, IMP-1, VIM-1 and class
+    C enzymes, but not exact OXA-24 or OXA-51. Clinical Acinetobacter rows name OXA-25,
+    OXA-26 and OXA-27; those are not interchangeable with the native alleles. The
+    paper demonstrates slow or undetectable metallo-beta-lactamase hydrolysis and
+    substrate-dependent hydrolysis/inhibition of other enzymes, not universal beta-lactamase
+    resistance. It reports siderophore uptake as a hypothesis still under investigation;
+    that hypothesis must not become demonstrated transport by a named receptor.
+  snapshot_sha256: 3c0768f033444d60b5470e4c5b4ee542b74fbe3fabf8543324c8c38f02659214
+- evidence_id: adopted-2013
+  kind: primary_source
+  reference: PMID:23449829; DOI:10.1093/jac/dkt050
+  locator: 145-epmc.json, entire original abstract; publisher free abstract.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: partial
+  summary: The study tested BAL30072 alone and combinations by CLSI agar dilution
+    against UK clinical isolates. Most A. baumannii with OXA or NDM enzymes were inhibited
+    at 4 mg/L or less, while OXA-58-bearing isolates were resistant for reasons the
+    authors suggest may be independent of that beta-lactamase. This supports antibacterial
+    context but does not establish isolated OXA-24/OXA-51 hydrolysis. Combinations
+    with BAL29880, clavulanate or meropenem must stay separate. Full paper retrieval
+    was blocked by publisher access responses; indexed table excerpts were discovery
+    leads only.
+  snapshot_sha256: bee0f7ec97ef2156100e47981ce004d43d5bb3121df52339447657e1c8fe10e0
+- evidence_id: oxa-parent-papers
+  kind: primary_source
+  reference: PMID:10817708; DOI:10.1128/AAC.44.6.1556-1561.2000; PMID:18585868; DOI:10.1016/j.patbio.2008.05.002;
+    PMID:15649299; DOI:10.1111/j.1469-0691.2004.01016.x
+  locator: 145-epmc.json, all three complete original abstracts linked by the official
+    determinant terms.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: context_only
+  summary: The OXA-24/OXA-40 papers characterize carbapenemase function or gene location
+    in Acinetobacter/Pseudomonas; the OXA-51 paper characterizes imipenem hydrolysis.
+    These inspected abstracts do not test BAL30072. Generic enzyme identity and carbapenem
+    resistance therefore do not independently prove the exact BAL30072 edge.
+  snapshot_sha256: bee0f7ec97ef2156100e47981ce004d43d5bb3121df52339447657e1c8fe10e0
+- evidence_id: oxa-isolates
+  kind: primary_source
+  reference: DOI:10.1093/jac/dks009
+  locator: Author-deposited full main text at https://www.researchgate.net/publication/221795848_In_vitro_activity_of_the_siderophore_monosulfactam_BAL30072_against_meropenem-non-susceptible_Acinetobacter_baumannii,
+    Methods, Results/Discussion and Table 1.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: partial
+  summary: A 310-isolate meropenem-nonsusceptible A. baumannii study found no correlation
+    between OXA type and BAL30072 MIC. It included OXA-40 and overexpressed OXA-51-bearing
+    isolates but did not isolate those enzymes as causal determinants. Broth microdilution
+    used cation-adjusted Mueller–Hinton; persistent trailing was read at 80% inhibition.
+    The table explicitly has no BAL30072 breakpoint. These limitations preclude translating
+    co-occurrence into hydrolytic mechanism or a general clinical resistance classification.
+- evidence_id: pbp-archive-lead
+  kind: database
+  reference: PDB:4OOM; PMID:24694215; DOI:10.1021/jm500219c
+  locator: Official RCSB entry, title, organism, structural method and ligand description.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: context_only
+  summary: The archive identifies a 2.0-angstrom P. aeruginosa PA1R PBP3 BAL30072
+    complex linked to the 2014 lactivicin-analogue paper. Its modeled ring-opened
+    ligand 2U3 has a different formula/key from free BAL30072, so it is not an exact
+    chemical xref for the native parent. The paper and raw electron-density data were
+    not fully assessed here; this is an additional qualified target lead.
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB a_baumannii/precise139
+  locator: 055-imodulondb-datasets-retry.txt and 145-adapter.txt, structured check
+    before web literature research.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: context_only
+  summary: The covered Acinetobacter dataset yields OXA-69 ABUW_2300 and OXA-23 ABUW_0563
+    among ten substring gene hits, with no module hits. It does not identify exact
+    native OXA-24 or OXA-51 or demonstrate BAL30072 resistance. No summarize call
+    was applicable. An initial query used noncatalog key ab5075 and returned an empty
+    result; that result was discarded and corrected to precise139.
+  snapshot_sha256: 2abb708e54b77498c7be431d9b3603506569b00c930a423bca2ed6dce9879ef5
+- evidence_id: adapter-command
+  kind: validation
+  reference: Structured source adapter
+  locator: Actual corrected command exited 0.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: context_only
+  summary: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism a_baumannii --dataset
+    precise139 --query OXA
+  snapshot_sha256: 2abb708e54b77498c7be431d9b3603506569b00c930a423bca2ed6dce9879ef5
+- evidence_id: overlay
+  kind: record_content
+  reference: curation/card_evidence_reviews.json; scripts/card_evidence_reviews.py
+  locator: Complete overlay structure and exact digest-based membership check in 145-card-review-check.json;
+    apply_review.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: supports
+  summary: Neither BAL30072 resistance-row digest has an existing overlay qualification.
+    The adapter can add an evidence-scope note while retaining source-owned fields
+    and database evidence. This is the appropriate maintained owner for a future scoped
+    qualification, rather than pretending an ontology edge is a new primary result.
+  snapshot_sha256: 4cb4b6bb103ac49041d375d5275229935f3e3daf4a018b92131fc80f36e764b1
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 145-local-hits.txt, 145-maintained-search.txt and exact row/digest checks.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: context_only
+  summary: Hidden- and ignored-inclusive searches found the exact source rows and
+    no separate curator additions or target edge in the searched maintained scope.
+    Bounded OXA/BAL30072 searches found clinical-isolate studies and original enzyme
+    papers but no inspected direct experiment proving the exact two native hydrolysis
+    edges. This is a bounded result, not proof that no such evidence exists.
+  snapshot_sha256: 2363bad8149a1f5bf0978900c53295992a0d79d09f1ed99dd59a95060335994f
+  search_scope: rg --no-ignore --hidden across batch015 for label, slug, ARO:3003821
+    and KLFSEZJCLYBFKQ, excluding .git/.venv; focused curation/conf/scripts/data/raw/src/reports/reviews
+    and exact resistance-row digests. Official PubMed/Europe PMC, ARO/PubChem/ChEMBL,
+    publisher and author-deposited primary searches for BAL30072 with OXA-24, OXA-40,
+    OXA-51, hydrolysis and PBP.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION.md;
+    docs/HARMONIZATION.md
+  locator: Identity, database evidence, activity, resistance, ownership and review-status
+    criteria.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: supports
+  summary: Optional target/AST absence is not an error. Preserve exact allele, assay,
+    organism, chemical form, mixture and database-versus-primary boundaries; no producer
+    or current clinical status is inferred.
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema, strict and chemistry
+  locator: 145-focused-results.json and corresponding logs; captured-input recheck.
+  accessed_at: '2026-10-21T10:08:30Z'
+  support: supports
+  summary: All focused commands passed. Initial and supplemental captured bytes remain
+    unchanged.
+  snapshot_sha256: d03ac09c424316ff543c3886edd8fb191057b5c611d81c271ec6f3b248acb82c
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact sulfactam, identifiers and mint
+  outcome: supported
+  summary: Native exact structure, masses, source mint and all chemical crosswalks
+    agree with the inspected primary drawing and current official chemical records.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  evidence_ids:
+  - chemistry
+  - structure-primary
+  - aro
+- assessment_id: class
+  area: grounding
+  topic: Class and antibacterial scope
+  outcome: supported
+  summary: The broader ARO monobactam category is source-attested; the native definition
+    more specifically identifies the sulfactam. Exact compound experiments support
+    antibacterial inclusion.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  evidence_ids:
+  - aro
+  - primary-activity
+  - adopted-2013
+- assessment_id: definition
+  area: evidence
+  topic: Morphology statement and citation placement
+  outcome: supported
+  summary: The morphology claim is directly supported by the adopted 2010 primary
+    study. The seeder currently chooses the first ARO citation, the 2013 activity
+    paper; direct claim-level attachment to 2010 would improve provenance without
+    changing the supported wording.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  evidence_ids:
+  - source
+  - primary-morphology
+  - adopted-2013
+- assessment_id: resistance
+  area: evidence
+  topic: OXA assertions versus independent biochemical support
+  outcome: unknown
+  summary: Both exact ARO edges and source provenance are confirmed. The inspected
+    primary studies do not establish OXA-24/OXA-51-mediated BAL30072 inactivation,
+    and clinical OXA co-occurrence is not causal proof. No universal inactivity or
+    deletion conclusion follows.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  evidence_ids:
+  - aro
+  - primary-resistance-boundary
+  - adopted-2013
+  - oxa-parent-papers
+  - oxa-isolates
+- assessment_id: completeness
+  area: completeness
+  topic: Qualified PBP and activity additions
+  outcome: supported
+  summary: Exact primary PBP competition and strain/panel AST data are available for
+    optional enrichment. Preserve IC50 versus MIC/MBC, iron-restricted media and experimental
+    strain distinctions.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  evidence_ids:
+  - primary-pbp
+  - primary-activity
+  - primary-morphology
+  - pbp-archive-lead
+  - rubric
+- assessment_id: scope
+  area: scope
+  topic: Transport, producer, clinical and dataset boundaries
+  outcome: supported
+  summary: The native record makes none of these extra claims. Synthetic preparation
+    does not identify a natural producer, and 2010 transport hypotheses or historical
+    development references do not establish a present clinical indication or exposure
+    dataset.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  evidence_ids:
+  - record
+  - structure-primary
+  - primary-resistance-boundary
+  - adapter
+- assessment_id: ownership
+  area: ownership
+  topic: Generated imports and qualification overlay
+  outcome: supported
+  summary: ARO/PubChem imports remain source-owned; exact optional primary additions
+    belong to the actual native record through the validated writer and history. The
+    existing overlay supports reversible evidence-scope qualification.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  evidence_ids:
+  - source
+  - overlay
+  - rubric
+- assessment_id: checks
+  area: schema
+  topic: Focused gates and input integrity
+  outcome: supported
+  summary: Focused schema, strict and chemistry checks passed and captured input bytes
+    remain unchanged.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: bal30072-oxa24-oxa51-primary-support-gap
+  category: evidence
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Retain and qualify the unresolved exact OXA resistance evidence
+  description: ARO asserts both native edges, but the inspected enzyme references
+    concern other beta-lactams and the BAL30072 isolate studies do not isolate OXA-24/OXA-51
+    as a hydrolytic cause. The record already labels these database assertions honestly.
+    A scoped qualification would prevent future promotion of co-occurrence into direct
+    mechanistic evidence.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  field_paths:
+  - resistance_mechanisms[0]
+  - resistance_mechanisms[1]
+  evidence_ids:
+  - aro
+  - primary-resistance-boundary
+  - adopted-2013
+  - oxa-parent-papers
+  - oxa-isolates
+  - overlay
+  rule_id: 'native-review-checklist: database assertions and resistance scope'
+  native_severity: informational bounded evidence gap
+  normalization_reason: No incorrect reproduction or falsely claimed primary experiment
+    was found. Missing direct support in a bounded search does not establish that
+    either enzyme is universally inactive against BAL30072.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Exact source-row evidence-scope qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Preserve CARD assertion while emitting qualified notes
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproduce qualified generated resistance objects
+- finding_id: F2
+  issue_key: bal30072-qualified-pbp-activity-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Attach exact primary PBP, morphology and activity evidence with assay qualifications
+  description: The adopted 2010 paper contains direct PBP competition, morphology,
+    quantitative AST and time-kill data. These support optional claim-level enrichment,
+    including placing the morphology evidence on its actual experimental source. Their
+    absence is not a required-field violation.
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  field_paths:
+  - definition_source
+  - mode_of_action
+  - molecular_targets
+  - activity_spectrum
+  - evidence
+  evidence_ids:
+  - primary-pbp
+  - primary-morphology
+  - primary-activity
+  - source
+  - rubric
+  rule_id: 'native-review-checklist: narrow evidence and optional completeness'
+  native_severity: informational optional primary enrichment
+  normalization_reason: The present definition and filing are supported, and optional
+    slots are not mandatory for a SEEDED record.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/bal30072.yaml
+    role: Optional curator-owned primary target, activity and morphology evidence
+      using validated writer and curation history
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source definition-reference selection and preservation of curated additions
+actions:
+- action_id: A1
+  description: Resolve or explicitly qualify each exact OXA edge without conflating
+    clinical co-occurrence with causal hydrolysis.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Exact source-row evidence-scope qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Preserve CARD assertion while emitting qualified notes
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproduce qualified generated resistance objects
+  acceptance_checks:
+  - Bind a future overlay note to both exact row digests and the unchanged parent
+    InChIKey. Record the inspected references and their limits while preserving the
+    original ARO evidence.
+  - Seek exact purified-enzyme or controlled expression/deletion/complementation evidence
+    before promoting OXA-24/OXA-51 to experimentally demonstrated BAL30072 inactivation.
+    Preserve OXA-24/OXA-40 synonymy without substituting OXA-25, OXA-26 or unrelated
+    family members.
+  - Do not recommend removing either source edge or claiming universal lack of activity
+    solely from negative searches or heterogeneous isolate MICs. If contradictory
+    exact experiments are found, retain the context and adjudicate through maintained
+    source/qualification owners.
+  - Reseed a canary through the validated native workflow and verify provenance, byte
+    reproduction and focused/shared checks.
+- action_id: A2
+  description: Curate the exact 2010 primary target and activity evidence with experimental
+    boundaries intact.
+  finding_ids:
+  - F2
+  target_ids:
+  - antibioticmech:aro-ae576e4688
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/bal30072.yaml
+    role: Optional curator-owned primary target, activity and morphology evidence
+      using validated writer and curation history
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Preserve curated evidence and improve direct definition citation selection
+      if separately authorized
+  acceptance_checks:
+  - Use PMID 20308379 for E. coli PBP3/PBP1a/PBP1b Bocillin competition; preserve
+    IC50 units and assay type and do not recast values as KD or MIC. Do not infer
+    the membrane-source strain from the separate W3110 morphology experiment.
+  - Keep W3110 morphology at specified doses/times and preserve short-filament and
+    concentration dependence. Prefer its direct 2010 primary evidence over a mechanically
+    selected first reference.
+  - Encode quantitative activity only with organism/strain or panel, exact endpoint,
+    units, qualifier and iron-restricted Iso-Sensitest/bipyridyl conditions. MIC90
+    panel summaries are not individual-isolate MICs or clinical breakpoints. Preserve
+    time-kill MBC criteria separately.
+  - Do not treat hypothesized siderophore uptake in 2010 as direct proof of a particular
+    transport receptor; inspect later exact-compound studies before adding that chain.
+    Distinguish the parent molecule from the reacted ligand in PDB 4OOM and from lactivicin
+    analogues.
+  - Apply separately authorized curation through write_validated_antibiotic and record_curation_event
+    on data/antibiotics/antibacterial/bal30072.yaml, preserve imported ownership,
+    run all required gates and retain SEEDED until native sign-off conditions are
+    met.
+limitations:
+- The full native record and maintained exact rows were read. Original provenance
+  capture was retained, ARO/PubChem ownership was corrected before scientific judgment,
+  and the later overlay inspection added two unchanged contextual inputs; all 20 final
+  input hashes were rechecked.
+- Both adopted BAL30072 citation leads were resolved. PMID 20308379 was inspected
+  in complete main text, all seven tables and figure captions, with Figures 1 and
+  5 visually checked. PMID 23449829 was assessed from its original abstract; publisher
+  PDF/HTML returned access errors. Indexed full-paper fragments were not treated as
+  full-paper inspection.
+- The three official OXA determinant reference abstracts were inspected, but their
+  complete papers were not all reviewed. The separate 2012 A. baumannii study was
+  read in author-deposited main text and Table 1. This does not exhaust all later
+  enzyme/allele experiments.
+- Current PubChem and ChEMBL match the native N–O–sulfate structure. The separate
+  current CARD web display shows an N–S SMILES omitting that oxygen, unlike the primary
+  Figure 1 and adopted PubChem structure. That external display discrepancy was not
+  imported into the native chemical_structure and is not a reason to replace the supported
+  native structure.
+- The official PDB 4OOM entry was inspected as an additional lead, but the complete
+  2014 paper, raw diffraction data and detailed protein mapping were not reviewed.
+  No automatic reviewed UniProt example is proposed.
+- Structured iModulonDB results are contextual only; the initial noncatalog dataset
+  query was corrected. No matching expression module or exact OXA-24/OXA-51 functional
+  proof resulted.
+- No current clinical development status, approved indication, natural producer, genome-linked
+  susceptibility or exhaustive exposure-dataset search was assessed. Historical development
+  language and synthetic laboratory preparation do not establish those optional fields.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
