@@ -1,0 +1,1039 @@
+schema_version: 1.0.0
+review_id: 20261021T171948Z-fusidic-acid-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Fusidic acid: structural parent, product-name typing and mutant-complex wording'
+started_at: '2026-10-21T16:59:15Z'
+finished_at: '2026-10-21T17:19:48Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The exact fusidic acid structure, antibacterial role, broad EF-G mechanism
+  and qualified database resistance assertions are supported. Three bounded corrections
+  remain: the sterol-ester parent requires C3 esterification absent from this C16
+  acetate, Fucidin is a product name typed as an exact chemical synonym, and the 2005
+  mutant structures contain GDP and magnesium despite being described as ligand-free.
+  Primary mechanism, resistance and producer evidence was assessed with explicit material
+  and access limits. Focused schema, strict and chemistry checks pass.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: curation/uniprot_protein_examples.yaml
+    sha256: 536ab4cc7ba9be95c80242bcc25321d67a5bdbfecbc50f3be5a449000abfe5f5
+    role: context
+  - path: data/antibiotics/antibacterial/fusidic-acid.yaml
+    sha256: 8173b1ee227eaf81d075fbecd6906ed0c79c8c16ed49f7de8fee3aca3f4225c3
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/curate_uniprot_protein_examples.py
+    sha256: 3399882f3f23e95f717eb94081666022545e1ed999e99b5425d1a3c95bf9e54e
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: src/antibioticmech/uniprot_examples.py
+    sha256: eb91473cccd9c24c533dc368d009de2141c5936b24d761fe8a70a4e71edbb5a0
+    role: context
+targets:
+- target_id: CHEBI:29013
+  path: data/antibiotics/antibacterial/fusidic-acid.yaml
+  label: fusidic acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Curated EF-G protein example plan and importer
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/curate_uniprot_protein_examples.py
+    role: Curated EF-G protein example plan and importer
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/fusidic-acid.yaml
+    role: Curator-owned mode, primary target and evidence additions
+  - repository: CultureBotAI/AntibioticMech
+    path: src/antibioticmech/uniprot_examples.py
+    role: Curated EF-G protein example plan and importer
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 484; one complete native record. All thirteen original
+    captured hashes were verified unchanged. Six actual ARO target/resistance and
+    UniProt curation owners were appended before their assessment, giving nineteen
+    inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:29013
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/fusidic-acid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/fusidic-acid.yaml --out /private/tmp/am-review-session/484-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 484
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: Independent forward authority structure comparison
+  status: passed
+  required: false
+  summary: Sixteen native and authority encodings reproduce the native full InChIKey.
+    The KNApSAcK SMILES omits the assigned double-bond geometry while its InChI matches;
+    its displayed key is also internally inconsistent. This source-quality limit is
+    retained.
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/484-authority-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:29013
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/fusidic-acid.yaml
+  locator: Entire native YAML, all seven synonyms, seven parents, one role, structure
+    and quantities, thirteen exact xrefs, three drug xrefs, document link, source
+    concepts, mode, eight resistance objects, both targets, protein example, evidence
+    and seven history events.
+  accessed_at: '2026-10-21T17:19:03Z'
+  support: supports
+  summary: CHEBI:29013 is REVIEWED and EXACT. It is the neutral fusidic acid graph
+    C31H48O6, not sodium fusidate or a formulated product. The CARD target and resistance
+    objects explicitly identify database evidence; the curated Thermus target is measured
+    association and expressly excludes observed drug binding. There are no numerical
+    activity observations, structured producer, clinical-status assertions, dataset
+    or causal graph. Existing history records are provenance, not a reason to presume
+    current scientific correctness.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:571; data/raw/aro_antibiotics.tsv:201;
+    data/raw/aro_target_edges.tsv:218; data/raw/aro_resistance_edges.tsv:3792; conf/sources.yaml;
+    scripts/extract_source_inventory.py; scripts/seed_from_sources.py; curation/uniprot_protein_examples.yaml;
+    scripts/curate_uniprot_protein_examples.py; src/antibioticmech/uniprot_examples.py
+  locator: Complete matching inventory rows, eight resistance rows, relevant source
+    configuration and extraction/seeder branches, exact UniProt plan item and matching/appending
+    implementation.
+  accessed_at: '2026-10-21T17:19:03Z'
+  support: supports
+  summary: ChEBI supplies the native structure, definition, chemical names and structural
+    parents. ARO supplies fucidin, the fusidane class, target and eight resistance
+    edges. The curated mode and primary target are native curator-owned; the exact
+    UniProt addition is reproduced by the maintained plan and writer. Both source
+    mints reproduce. Original captured hashes are retained and actual owner files
+    were appended before assessment. No source assertion is silently promoted from
+    database status.
+  snapshot_sha256: e08380d45ce0ce7281b936a0dfed64415661a30050abdbca347f6d5b54211f14
+- evidence_id: identity
+  kind: authority
+  reference: CHEBI:29013; cas:6990-06-3; chembl:CHEMBL374975; pubchem.compound:3000226;
+    kegg.compound:C06694; lipidmaps:LMPR0106040001; pdb-ccd:FUA
+  locator: Complete current chemical authority entries and independent SMILES, InChI
+    and molfile parsing.
+  accessed_at: '2026-10-21T17:19:03Z'
+  support: supports
+  summary: 'Native SMILES and InChI agree with current ChEBI, ChEMBL, PubChem, KEGG
+    molfile, Lipid Maps and the canonical CCD FUA descriptors: full key IECPWNUMDGFDKC-MZJAQBGESA-N,
+    neutral C31H48O6, ten assigned tetrahedral centres and assigned 17(20) double-bond
+    geometry. Average and monoisotopic masses agree within native rounding. CAS 6990-06-3
+    is corroborated by these public chemical authorities. No salt, mixture, opposite
+    stereoisomer or native constitution error is established.'
+  snapshot_sha256: 2d555582571dfca0699d4189f64d5b68ba8e054e8ae0cf16580ab648430cd14c
+- evidence_id: knapsack
+  kind: authority
+  reference: knapsack:C00023903
+  locator: Complete current KNApSAcK entry and separate forward parsing of its displayed
+    InChI and SMILES.
+  accessed_at: '2026-10-21T17:11:10Z'
+  support: partial
+  summary: The KNApSAcK InChI reproduces the native full key. Its SMILES has the same
+    constitution and ten tetrahedral assignments but omits double-bond geometry, yielding
+    IECPWNUMDGFDKC-WGFOVTNPSA-N; the page displays IECPWNUMDGFDKC-ZDCNDDMINA-N, matching
+    neither parsed representation. This is an internal authority inconsistency, not
+    proof that the native structure or the entire reference denotes a different molecule.
+    The positive matching InChI is retained with this limitation.
+  snapshot_sha256: cca2a18a887f592dd3324490b46ab1ae155af8c031020a4aff2314ed9cc3b9d6
+- evidence_id: parents
+  kind: authority
+  reference: CHEBI:19129; CHEBI:26761; CHEBI:35915; CHEBI:36835; CHEBI:47891; CHEBI:79020;
+    CHEBI:33281; ARO:3007153
+  locator: Complete current definitions of all adopted ChEBI parents and role, current
+    ARO class stanza, native systematic name and atom graph.
+  accessed_at: '2026-10-21T17:11:11Z'
+  support: partial
+  summary: The hydroxysteroid, steroid antibiotic, steroid acid, unsaturated monocarboxylic
+    acid and fusidane classes agree with the native structure. CHEBI:35915 specifically
+    defines sterol ester through esterification of the sterol 3-hydroxy group. Native
+    fusidic acid instead has a free 3alpha hydroxyl and a 16beta acetate, as its graph
+    and systematic synonym explicitly show. The current upstream ChEBI parent remains
+    the same, so this is a source-level semantic conflict rather than an ingestion
+    discrepancy.
+  snapshot_sha256: 60130f8d1592723dae27f1012409c20abf454b263f95d30d9eff23f76f6ae74a
+- evidence_id: brand
+  kind: authority
+  reference: https://www.medicines.org.uk/emc/product/5510/smpc
+  locator: Official LEO Pharma Fucidin 20 mg/g cream Summary of Product Characteristics,
+    product title and composition.
+  accessed_at: '2026-10-21T17:11:46Z'
+  support: refutes
+  summary: Fucidin is a named medicinal product containing fusidic acid. Native synonym
+    index 6 instead types fucidin as EXACT_SYNONYM. Preserve this searchable product
+    alias with BRAND_NAME semantics. This finding does not depend on assuming every
+    Fucidin formulation uses the same salt and does not automatically recategorize
+    the distinct alias Fucidin acid.
+  snapshot_sha256: c3bd526f90deed89f88500a3278ca493dc7caa327d249f312e77fe31fed0a506
+- evidence_id: other-xrefs
+  kind: authority
+  reference: hmdb:HMDB0015570; metacyc.compound:CPD0-1606; vsdb:1776; beilstein:5672885;
+    reaxys:2197692; drugbank:DB02703; drugcentral:1261; kegg.drug:D04281; wikipedia.en:Fusidic_acid
+  locator: Public DrugBank web-reader page, DrugCentral and KEGG drug entries, relevant
+    document identity, and bounded exact-source retrieval attempts.
+  accessed_at: '2026-10-21T17:11:10Z'
+  support: partial
+  summary: DrugBank displays the matching chemical identity; DrugCentral and KEGG
+    resolve the expected fusidic acid drug association. These broad drug_xrefs do
+    not require every salt or product representation to be equivalent. Wikipedia is
+    a relevant document rather than primary evidence. HMDB returned 403; MetaCyc public
+    compound and XML routes returned login HTML; the actual VSDB Bioregistry resolver
+    was unavailable through the web tool after an unsuccessful direct-source attempt.
+    Beilstein and Reaxys were not independently inspected through free original records.
+    No secondary MetaNetX hit is treated as proof of the MetaCyc graph.
+  snapshot_sha256: c9af30616e8046c281599ebf0663a69fc559faca0daf709eeb771cf6ae45bcaf
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb datasets and search adapter
+  locator: Actual structured dataset catalog and exact fusA, fusE/rplF, fusB, fusC,
+    fusD and FusF queries, before general web mechanism follow-up.
+  accessed_at: '2026-10-21T17:19:03Z'
+  support: context_only
+  summary: The catalog was inspected first. E. coli precise1k returns fusA b3340;
+    S. aureus staph_precise108 returns fusA USA300HOU_RS02875 and, on rplF follow-up,
+    L6 USA300HOU_RS12100. No iModulon hits were returned for those genes. fusE, fusB,
+    fusD and FusF searches had no hits. A fusC text hit is annotated FUSC-family protein
+    and is not independently equated with the fusidic acid protection determinant.
+    The relevant Thermus, Campylobacter, S. saprophyticus, S. cohnii and exact S.
+    lividans strain datasets were not available in the catalog. These adapter limits
+    do not establish absence, binding or regulatory causality.
+  snapshot_sha256: 49ed1c0a3cb9208340c43c0f64e03c02643d2c65386ceb373585ab8e4065d9e0
+- evidence_id: card
+  kind: database
+  reference: ARO:3000759; ARO:3000730; ARO:3000773; ARO:3003026; ARO:3003552; ARO:3003731;
+    ARO:3003733; ARO:3003735; ARO:3003737; ARO:3004663
+  locator: Complete exact current compound, class, target and eight resistance stanzas,
+    compared to maintained rows and every native object.
+  accessed_at: '2026-10-21T17:19:03Z'
+  support: supports
+  summary: Current ARO retains the EF-G target relationship and all eight fusidic
+    acid resistance relationships. CmeABC is efflux; fusH inactivation; FusB/C/D/F
+    protection; fusA and fusE alteration. Native notes accurately label these as database
+    assertions, and the generic direct-binding target retains PRIMARY_EVIDENCE_NEEDED
+    rather than claiming a particular species or assay. The primary studies assessed
+    below support distinct portions of this biology without automatically upgrading
+    every native evidence status.
+  snapshot_sha256: e6bd4e64fbd2f1538214c4e38e41b4cd53c7f3d988843422e277b79c860dc0f3
+- evidence_id: mutants2005
+  kind: primary_source
+  reference: PMID:15843024; DOI:10.1016/j.jmb.2005.02.066; PDB:2BM0; PDB:2BM1
+  locator: Complete indexed and author-repository abstract; official PDB experiment,
+    citation, polymer and nonpolymer records. Publisher full text was not obtained.
+  accessed_at: '2026-10-21T17:11:47Z'
+  support: partial
+  summary: The study compares T. thermophilus G16V hypersensitive and T84A resistant
+    EF-G mutants, altered GTP affinity and switch/interdomain conformations. It supports
+    the native measured-target-association interpretation and does not report observed
+    fusidic acid binding. PDB 2BM0 is T84A and 2BM1 G16V; both contain GDP and magnesium.
+    Thus fusidic-acid-free or GDP-bound is accurate, whereas ligand-free is literally
+    incorrect. The 2BM1 entry title calls the mutant resistant, conflicting with the
+    primary abstract; the abstract is used for the hypersensitive phenotype. No drug-binding
+    affinity is inferred from GTP-affinity measurements.
+  snapshot_sha256: edbc12502016c71328b28383ed0d3849a57f8f5f22ff5ae06b7d03c6359d4dac
+- evidence_id: gdp
+  kind: authority
+  reference: PDB:2BM0 nonpolymer entities 2 and 3; PDB:2BM1 nonpolymer entities 2
+    and 3
+  locator: All four official RCSB nonpolymer entity records, primary citation cross-check.
+  accessed_at: '2026-10-21T17:12:39Z'
+  support: refutes
+  summary: Both mutant crystal entries contain GDP and Mg2+. They contain no fusidic
+    acid. This directly establishes the bounded terminology correction without disputing
+    the native explicit exclusion of a fusidic-acid-bound complex.
+  snapshot_sha256: cd617105a5c4836543039de8a5ad6a4da1d18f21260b930d8072eda421984727
+- evidence_id: protein
+  kind: authority
+  reference: UniProtKB:P13551; UniProtKB:Q5SHN5; NCBITaxon:274; NCBITaxon:300852;
+    PDB:2BM0; PDB:2BM1
+  locator: Complete reviewed UniProt records, sequence comparison, official taxon
+    records and PDB polymer/SIFTS mapping.
+  accessed_at: '2026-10-21T17:12:39Z'
+  support: partial
+  summary: P13551 is reviewed T. thermophilus fusA/EF-G with 691 residues. The reviewed
+    HB8 entry Q5SHN5 has the identical amino-acid sequence; PDB mutant polymer mappings
+    resolve to P13551 and the primary T. thermophilus species context. The native
+    HB8 protein example explicitly describes reference-strain context, which is corroborated
+    rather than refuted by these records. Exact experimental strain provenance in
+    the unavailable 2005 Methods is not independently established here. The example
+    should not be read as a drug-bound structure or as replacing the taxon-agnostic
+    CARD target.
+  snapshot_sha256: fdf958aace414e1cb65a4abd0046d871391e097211496b2565a47001caf20d08
+- evidence_id: bound2009
+  kind: primary_source
+  reference: PMID:19833919; DOI:10.1126/science.1179709; https://pmc.ncbi.nlm.nih.gov/articles/PMC3763468/
+  locator: Original main text including crystallization summary, EF-G conformations,
+    fusidic acid section and conclusion; Figure 1 and Figure 5 inspected visually.
+    Supplementary methods/raw diffraction were not reanalysed.
+  accessed_at: '2026-10-21T17:13:24Z'
+  support: supports
+  summary: The 3.6 angstrom T. thermophilus 70S complex contains EF-G, GDP, fusidic
+    acid, mRNA and deacylated P/E tRNAs; its ribosomes are from the described HB8
+    derivative with L9 modification. Fusidic acid density lies between EF-G domains
+    and supports trapping of ribosome-bound EF-G after translocation. The authors
+    allow alternative flipped/rotated ligand orientations at this resolution, so exact
+    atomic contact geometry is not treated as uniquely proven. This supplies independent
+    direct-binding support for the broad EF-G mechanism; it does not convert the 2005
+    mutant study into a drug cocrystal.
+  snapshot_sha256: 66f38102b95748984012a0d71eba53543cc8e5f29619f08f17c615384e9e79d2
+- evidence_id: fusbc2012
+  kind: primary_source
+  reference: PMID:22308410; DOI:10.1073/pnas.1117275109; https://pmc.ncbi.nlm.nih.gov/articles/PMC3277530/
+  locator: Main Methods, FusB/C binding and structural Results, domain mapping, ribosome-complex
+    kinetics, relevant figure captions and Discussion; supplementary material not
+    read.
+  accessed_at: '2026-10-21T17:13:24Z'
+  support: supports
+  summary: Purified S. aureus FusB/C bind EF-G; the reported nanomolar affinities
+    are protein-protein binding values, not fusidic acid Kd. The FusC structure and
+    EF-G docking model are not a solved FusC-EF-G complex. Functional assays use E.
+    coli ribosomes with S. aureus EF-G and show relief of fusidic acid stalling; FusB
+    does not similarly protect E. coli EF-G. These experiments support target protection
+    with species and reconstitution boundaries. Their exact mechanism and affinity
+    values must not be copied automatically to FusD or FusF.
+  snapshot_sha256: 4e13f7ff8830f1ba35dac7e78d3fc54c79ab7a01acb422d7514a4781acbe541d
+- evidence_id: fuscdf2007
+  kind: primary_source
+  reference: PMID:17325218; DOI:10.1128/AAC.01542-06; https://pmc.ncbi.nlm.nih.gov/articles/PMC1855526/
+  locator: Complete original abstract; Methods, Table 1 and FusB-homologue functional
+    Results, plus relevant clinical-screening paragraphs.
+  accessed_at: '2026-10-21T17:14:23Z'
+  support: supports
+  summary: PCR-cloned fusC and fusD confer resistance in S. aureus RN4220. Constructs
+    under matched inducible expression distinguish FusB/C/D effects; this is functional
+    resistance evidence, while clinical gene carriage remains an association. Routine
+    culture is LB at 37 degrees C and susceptibility methodology is delegated to a
+    previous paper. The study does not solve each protection complex or establish
+    identical protein kinetics. Native database-level assignments are compatible without
+    importing numerical MICs or treating species associations as universal.
+  snapshot_sha256: f056af9c203b2068821802fc06a1a32f1d04f3991f50647db8c91c6d907ce852
+- evidence_id: cmeabc
+  kind: primary_source
+  reference: PMID:15728904; DOI:10.1128/AAC.49.3.1067-1075.2005; https://pmc.ncbi.nlm.nih.gov/articles/PMC549222/
+  locator: Original susceptibility Methods, CmeR mutation/expression Results, Table
+    4 and relevant Discussion.
+  accessed_at: '2026-10-21T17:14:23Z'
+  support: partial
+  summary: The C. jejuni 81-176 cmeR insertion mutant overexpresses CmeABC and shows
+    a reproducible twofold fusidic acid MIC increase, 39 to 78 micrograms/mL, in the
+    specified MH microdilution assay at 42 degrees C for 48 hours under microaerophilic
+    conditions. Sigma fusidic acid is named without complete bulk-material characterization.
+    The authors explicitly leave possible CmeR pleiotropy unresolved; the selected
+    CR3e background can contain additional mutations. This is supportive efflux-regulation
+    context, not direct fusidic acid-CmeR binding, a universal clinical breakpoint
+    or proof that every observed phenotype is caused solely by CmeABC.
+  snapshot_sha256: e124ecbd550022ee1696f3c561a44d90a1a16064ec003fab3d11d2964622a35f
+- evidence_id: fuse
+  kind: primary_source
+  reference: PMID:17923494; DOI:10.1128/AAC.00328-07; https://pmc.ncbi.nlm.nih.gov/articles/PMC2168011/
+  locator: Original strain/material, selection and Etest Methods, relevant genetic
+    Results and Discussion.
+  accessed_at: '2026-10-21T17:14:23Z'
+  support: partial
+  summary: Selected S. aureus SCV mutants have fusA or rplF/L6 alterations; the FusE
+    class denotes rplF mutants. Selection uses sodium fusidate, and susceptibility
+    is measured separately by Etest. The authors tentatively infer direct or indirect
+    effects on EF-G conformation and leave additional SCV determinants unresolved.
+    This supports resistance-associated ribosomal alteration, not direct binding of
+    neutral fusidic acid to L6. No salt-specific MIC is transferred into the neutral
+    record.
+  snapshot_sha256: a77cb62fb24e43110340c9df97feb2896d9860b7e7104db2bd65f56b357e4803
+- evidence_id: other-resistance
+  kind: primary_source
+  reference: PMID:9084170; PMID:25313205; PMID:12519196
+  locator: Complete indexed original abstracts for FusH, FusF and engineered fusA
+    resistance. Full papers were not obtained for these three.
+  accessed_at: '2026-10-21T17:11:46Z'
+  support: partial
+  summary: FusH is a purified extracellular S. lividans esterase hydrolysing the 16beta
+    acetyl substituent, with position/substrate selectivity and subsequent inactive
+    product formation. This corroborates the native C16 acetate and inactivation class.
+    FusF from S. cohnii confers resistance on heterologous expression in S. aureus;
+    the abstract does not directly demonstrate EF-G complex release. The fusA study
+    engineers particular substitutions into S. aureus and supports causal resistance
+    for those alleles, not every possible variant.
+  snapshot_sha256: c2f1bfa868aa37783c388711efb489bc4233a8b22e6a1165fa74702e30c49b29
+- evidence_id: producer
+  kind: primary_source
+  reference: PMID:13899435; DOI:10.1038/193987a0; PMID:557309; PMID:32734700; DOI:10.1111/jam.14797
+  locator: 1962 original publisher preview and bibliographic identity; complete 1977
+    and 2020 original indexed abstracts.
+  accessed_at: '2026-10-21T17:11:46Z'
+  support: partial
+  summary: The 1962 publisher preview describes isolation from a Fusidium fermentation;
+    its full text was not obtained. The 1977 original abstract explicitly studies
+    fusidic acid production by F. coccineum strain 257A under different nutrient conditions.
+    The 2020 mutagenesis study likewise concerns fusidic acid production by this fungus.
+    These independently support the broad definition. They do not justify adding every
+    predicted biosynthetic gene or assigning an antibacterial target from producer
+    transcriptomics.
+  snapshot_sha256: c2f1bfa868aa37783c388711efb489bc4233a8b22e6a1165fa74702e30c49b29
+- evidence_id: adopted
+  kind: database
+  reference: PMID:11412963; PMID:12937375; PMID:13899435; PMID:13996455; PMID:15843024;
+    PMID:17082187; PMID:20797618; PMID:22066960; PMID:22100514; PMID:22197537; PMID:7730233;
+    PMID:17980694
+  locator: All twelve adopted citation identities and every available complete indexed
+    abstract; deeper original reads are separately specified.
+  accessed_at: '2026-10-21T17:11:11Z'
+  support: context_only
+  summary: 11412963 is a marine Stilbella aciculosa metabolite identification lead
+    without indexed abstract; 13899435 is the original discovery lead, and 13996455
+    an early antibiotic report, both without indexed abstracts. 12937375 is a conjunctivitis
+    mini-review, not primary mechanism evidence. 15843024 is the native mutant EF-G
+    study. 17082187 studies sordarin derivatives and yeast eEF2, not a fusidic acid
+    antibacterial target experiment. 20797618 studies host PanK3/HepG2 screening,
+    with no automatic antibacterial-target transfer. 22066960 and 22197537 are clinical
+    isolate surveys of fusB/fusC and resistance; clonal association or silent variants
+    are not universal causal alleles. 22100514 compares polymorphs and amorphate,
+    not different molecular constitutions. 7730233 reports in vitro single-drug and
+    combination results with variable interactions; 17980694 is a lipid-membrane chromatography/monolayer
+    study in which EF-G did not improve fusidic acid binding to the membranes. No
+    host, producer, mixture or combination result is silently adopted as an exact
+    antibacterial mechanism.
+  snapshot_sha256: 7355a533b238a2e335652a9b01e42d77c50ebdd6571fabd3de4dc130fb6b00c2
+- evidence_id: policy
+  kind: record_content
+  reference: src/antibioticmech/schema/antibioticmech.yaml; docs/HARMONIZATION.md;
+    .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Structural parent, name-type, drug-xref, target-scope, evidence-status
+    and source-ownership semantics.
+  accessed_at: '2026-10-21T17:19:03Z'
+  support: supports
+  summary: A structural parent must apply to the actual graph. BRAND_NAME is available;
+    drug_xrefs permit parent/salt/stereoisomer associations. HOST_SHARED_TARGET describes
+    broadly conserved machinery here and is not read as a claim of direct inhibition
+    of a particular human homologue. Database assertions remain qualified, optional
+    missing activity/graph slots are not defects, and curator-owned corrections must
+    preserve source provenance and historical events.
+- evidence_id: search
+  kind: search
+  reference: 484-inclusive-hits.txt; 484-owner-hits.txt; exact-authority and primary
+    literature retrieval
+  locator: Hidden- and ignored-inclusive local search of records, maintained inputs,
+    configuration, source code, documentation and evidence/report directories; bounded
+    public identifier and exact-primary follow-up.
+  accessed_at: '2026-10-21T17:19:03Z'
+  support: context_only
+  summary: The entire native record and actual owners were located before scientific
+    assessment. No absence-based defect is asserted. Public retrieval limitations
+    for a database or paper are recorded as access limits, not proof that an identifier
+    or mechanism is invalid.
+  search_scope: 2026-10-21; rg --no-ignore --hidden across data, curation, conf, scripts,
+    src, docs, .claude, reviews and reports for fusidic acid, CHEBI:29013, ARO:3000759,
+    exact key and primary accession/PMID leads; structured adapter before protein
+    web research; exact public chemical, taxon, PDB, producer and resistance sources.
+  snapshot_sha256: 6613ea05f862a6ea29784db7a91c3216e4d4c7a55e35a47adc7f6625dea2aa85
+- evidence_id: checks
+  kind: validation
+  reference: 484-focused-results.json; 484-chemistry.json; 484-authority-chemistry.json;
+    484-authority-initial.log
+  locator: Actual focused schema, strict and chemical execution; final independent
+    authority diagnostic and preserved preliminary diagnostic failure.
+  accessed_at: '2026-10-21T17:19:03Z'
+  support: supports
+  summary: Schema, strict and internal chemistry exited 0. The final independent authority
+    comparison exited 0 after explicitly retaining KNApSAcK internal inconsistencies.
+    A preliminary diagnostic exited 1 because its blanket all-authorities-identical
+    assumption failed; that script/log are preserved and are not misreported as success.
+    The final check does not remove scientific findings. All original thirteen hashes
+    remain unchanged within nineteen captured inputs.
+  snapshot_sha256: 11cb31b6c022b3b206626c5bc5a320aec742481cd550294dec358806468f49b6
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact chemical identity, quantities and names
+  outcome: supported
+  summary: The neutral native graph and quantities are consistent across the independently
+    parsed major authority encodings. KNApSAcK internal representations conflict,
+    but its InChI positively matches. No wrong native structure is established.
+  target_ids:
+  - CHEBI:29013
+  evidence_ids:
+  - identity
+  - knapsack
+  - native
+- assessment_id: parents
+  area: grounding
+  topic: Structural hierarchy and chemical xrefs
+  outcome: concern
+  summary: The sterol-ester parent has a specific C3-ester requirement that the native
+    free C3 hydroxyl and C16 acetate do not meet. Other inspected parents and exact
+    chemical authorities are consistent. HMDB, MetaCyc, VSDB and paid registry entries
+    remain independently unresolved.
+  target_ids:
+  - CHEBI:29013
+  evidence_ids:
+  - parents
+  - identity
+  - other-resistance
+  - other-xrefs
+- assessment_id: naming
+  area: nomenclature
+  topic: Fucidin product-name typing
+  outcome: concern
+  summary: The ARO-imported fucidin exact synonym denotes a named product and should
+    retain its searchable alias under BRAND_NAME. Other spellings are not automatically
+    retyped.
+  target_ids:
+  - CHEBI:29013
+  evidence_ids:
+  - brand
+  - native
+  - owners
+  - policy
+- assessment_id: mode
+  area: evidence
+  topic: EF-G association, direct binding and mutant-complex state
+  outcome: concern
+  summary: Broad protein-synthesis inhibition and EF-G trapping have direct primary
+    support. The native 2005 association is correctly separated from drug-bound structures,
+    but ligand-free should be changed to fusidic-acid-free/GDP-bound. The 2009 complex
+    supports direct binding with resolution/orientation limits.
+  target_ids:
+  - CHEBI:29013
+  evidence_ids:
+  - mutants2005
+  - gdp
+  - bound2009
+  - native
+  - policy
+- assessment_id: protein
+  area: grounding
+  topic: Taxon, gene and protein example
+  outcome: supported
+  summary: Reviewed P13551, identical HB8 Q5SHN5 sequence and PDB mappings support
+    the EF-G reference example. The primary species context remains distinct from
+    exact experimental strain provenance; no unsupported wrong-protein finding is
+    made.
+  target_ids:
+  - CHEBI:29013
+  evidence_ids:
+  - protein
+  - adapter
+  - mutants2005
+- assessment_id: resistance
+  area: evidence
+  topic: All eight database resistance assertions
+  outcome: supported
+  summary: All eight edges reproduce maintained and current ARO assertions. Primary
+    follow-up supports distinct efflux-regulation, enzymatic inactivation, EF-G protection
+    and alteration contexts. FusD/FusF do not inherit unmeasured FusB kinetics; rplF
+    is not called a direct drug-binding target; salt-specific or strain-specific quantitative
+    results are not transferred.
+  target_ids:
+  - CHEBI:29013
+  evidence_ids:
+  - card
+  - cmeabc
+  - other-resistance
+  - fusbc2012
+  - fuscdf2007
+  - fuse
+- assessment_id: scope
+  area: scope
+  topic: Antibacterial role, producer definition and optional coverage
+  outcome: supported
+  summary: Broad antibacterial activity and the F. coccineum production statement
+    are supported. Host screening, yeast sordarin structures, producer transcriptomics,
+    clinical association and formulation studies stay in their own scopes. Optional
+    numerical observations, clinical status, producer objects and causal graphs are
+    not compulsory enrichment defects.
+  target_ids:
+  - CHEBI:29013
+  evidence_ids:
+  - producer
+  - adopted
+  - bound2009
+  - policy
+- assessment_id: provenance
+  area: provenance
+  topic: Review history, generated ownership and reproducibility
+  outcome: supported
+  summary: All fields and actual maintained source owners were read. Nineteen captured
+    inputs preserve the original thirteen hashes. The native REVIEWED status and passing
+    deterministic checks do not resolve the confirmed parent, name-type and wording
+    issues. Historical curation events should remain intact.
+  target_ids:
+  - CHEBI:29013
+  evidence_ids:
+  - owners
+  - native
+  - checks
+  - search
+findings:
+- finding_id: F1
+  issue_key: fusidic-acid-sterol-ester-parent-requires-absent-c3-ester
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Remove or correct the inapplicable sterol-ester parent
+  description: parent_compounds[2] is CHEBI:35915, defined by formal esterification
+    of a sterol 3-hydroxy group. The native exact structure and systematic name instead
+    have a free 3alpha hydroxyl and a 16beta acetate. The FusH primary abstract independently
+    specifies hydrolysis at the 16beta acetyl substituent. The general fact that fusidic
+    acid is a steroid bearing an ester does not satisfy this narrower parent definition.
+    Current ChEBI retains the same relation, locating a source-level error rather
+    than just a local extraction discrepancy.
+  target_ids:
+  - CHEBI:29013
+  field_paths:
+  - parent_compounds[2]
+  evidence_ids:
+  - parents
+  - identity
+  - other-resistance
+  - owners
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Imported structural parent
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source extraction or scoped override
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Parent normalization and regeneration
+  rule_id: Structural parent must apply to the exact native graph
+  native_severity: major
+  normalization_reason: Positive structure and explicit ontology definition establish
+    an incorrect structural grounding, not optional missing classification or an invalid
+    native identity.
+- finding_id: F2
+  issue_key: fusidic-acid-fucidin-product-name-typed-exact
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Retain fucidin as a brand name
+  description: The ARO-imported fucidin alias at synonym index 6 is EXACT_SYNONYM,
+    while the official product information identifies Fucidin as a named medicinal
+    cream containing fusidic acid. Retain the alias with BRAND_NAME semantics. This
+    finding does not assume all marketed Fucidin formulations have one salt form or
+    automatically reclassify Fucidin acid.
+  target_ids:
+  - CHEBI:29013
+  field_paths:
+  - synonyms[6].synonym_type
+  evidence_ids:
+  - brand
+  - native
+  - owners
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Imported fucidin name
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source name semantics
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Synonym typing or maintained override
+  rule_id: Distinguish product names from exact chemical synonyms
+  native_severity: minor
+  normalization_reason: A bounded alias-type error does not invalidate native chemical
+    identity or the product association.
+- finding_id: F3
+  issue_key: fusidic-acid-mutant-structures-gdp-bound-not-ligand-free
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Describe the mutant structures as fusidic-acid-free and GDP-bound
+  description: Current mode_of_action_notes describes the G16V and T84A structures
+    from PMID15843024 as ligand-free. Their cited PDB entries 2BM1 and 2BM0 contain
+    GDP and magnesium. The intended distinction from a fusidic-acid complex is already
+    correct, but ligand-free is too broad. Change only the current scientific wording
+    to fusidic-acid-free or GDP-bound; preserve the historical review event and the
+    primary target association.
+  target_ids:
+  - CHEBI:29013
+  field_paths:
+  - mode_of_action_notes
+  evidence_ids:
+  - mutants2005
+  - gdp
+  - native
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/fusidic-acid.yaml
+    role: Curator-owned current mode notes through validated record writer
+  rule_id: State the experimentally observed complex composition precisely
+  native_severity: minor
+  normalization_reason: The nucleotide-state wording is demonstrably wrong but does
+    not reverse the correctly qualified absence of fusidic acid or invalidate the
+    broad EF-G mechanism.
+actions:
+- action_id: A1
+  description: Correct the structural parent through maintained source extraction,
+    an explicit override or upstream ontology correction, then regenerate.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:29013
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Imported structural parent
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source extraction or scoped override
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Parent normalization and regeneration
+  acceptance_checks:
+  - Verify the free C3 hydroxyl and C16 acetate against the native graph and the explicit
+    CHEBI35915 definition. Do not move the ester or change the correct chemical structure
+    to satisfy the wrong parent.
+  - Remove or replace the unsupported narrow parent using a justified broader classification,
+    preserving valid hydroxysteroid, steroid antibiotic and acid parents.
+  - Run focused schema/strict checks and corpus reproduction after separately authorized
+    curation.
+- action_id: A2
+  description: Preserve the ARO fucidin alias with product-name typing through maintained
+    import logic.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:29013
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Imported fucidin name
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source name semantics
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Synonym typing or maintained override
+  acceptance_checks:
+  - Regeneration retains fucidin, its source provenance and BRAND_NAME type. Other
+    chemical names remain independently evaluated.
+  - Check that broad drug associations remain available without implying formulation
+    equivalence.
+- action_id: A3
+  description: Correct current mode notes without rewriting historical curation events
+    or upgrading the 2005 target to direct binding.
+  finding_ids:
+  - F3
+  target_ids:
+  - CHEBI:29013
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/fusidic-acid.yaml
+    role: Curator-owned current mode notes through validated record writer
+  acceptance_checks:
+  - Use fusidic-acid-free/GDP-bound wording for 2BM0 and 2BM1, retaining the distinction
+    between mutant sensitivity/GTP-affinity measurements and observed drug binding.
+  - If adding the 2009 drug-bound experiment, cite it separately with the ribosome,
+    species, nucleotide and structural-resolution context; do not assign its data
+    to PMID15843024.
+  - Validate the curated record through the established writer and focused checks.
+- action_id: A4
+  description: Resolve remaining authority and full-paper limits only if further exact
+    curation or scientific sign-off requires them.
+  finding_ids: []
+  target_ids:
+  - CHEBI:29013
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/fusidic-acid.yaml
+    role: Curator-owned evidence qualification and optional additions
+  acceptance_checks:
+  - Do not call MetaCyc, HMDB, VSDB, Beilstein or Reaxys invalid solely because public
+    verification was incomplete; resolve exact graphs from their authorities when
+    available.
+  - Retain KNApSAcK source inconsistencies and inspect original 2005 Methods before
+    asserting a particular experimental strain or new numerical target result.
+  - Any activity or resistance enrichment must keep exact material/salt, host strain,
+    assay and genetic causality boundaries; protein-protein Kd is not drug-binding
+    affinity.
+limitations:
+- 'The complete 2005 JMB paper was not obtained: the publisher route returned 403
+  and the author repository supplied the complete abstract only. Official PDB records
+  independently establish nucleotide/metal content and polymer identity. Exact primary
+  experimental strain provenance is not inferred from a reference sequence alone.'
+- HMDB returned 403, MetaCyc compound and XML routes returned login HTML, and the
+  actual VSDB resolver was unavailable in the bounded public attempt. Beilstein/Reaxys
+  were not inspected through paid records. DrugBank direct fetching returned 403 but
+  its public page was successfully read through the web tool.
+- The KNApSAcK entry internally disagrees among its matching InChI, double-bond-unspecified
+  SMILES and displayed key. This is retained as source quality uncertainty rather
+  than automatic native identity correction.
+- All twelve adopted leads were dispositioned. Three have no indexed abstract, including
+  the original 1962 discovery report; its apparent PDF download was HTML challenge
+  content, not a read PDF. The 1977 producer and other specified sources remain abstract-depth.
+- The 2009 main text and Figures1/5 were inspected; supplementary methods and raw
+  diffraction were not reprocessed. The authors allow alternative fusidic acid orientations
+  at 3.6 angstrom resolution. The 2012 FusB/C main text was inspected in the specified
+  Methods/Results/Discussion scope; its supplementary material was not read.
+- The 2007 FusC/D paper was inspected in functional Methods, Table1, relevant Results
+  and clinical-screening context, not every original source underlying its delegated
+  susceptibility method. The CmeR paper was inspected in the specified susceptibility/expression/Table4/Discussion
+  scope, not every unrelated promoter experiment.
+- The FusE study explicitly used sodium fusidate for selection; neutral-acid quantitative
+  transfer is not made. FusH, FusF and engineered fusA follow-up remain complete-abstract
+  depth. Database resistance objects are not silently promoted to full primary mechanistic
+  proof.
+- Structured adapter coverage lacks several exact species/strains. No module hit or
+  dataset absence is evidence against a biological mechanism. The S. aureus FUSC-family
+  text match is not assumed to be the fusidic acid resistance protein.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- 'Current ARO snapshot reused: /private/tmp/am-review-session/473-current-aro.obo,
+  fetched 2026-10-21T16:49:32Z from https://purl.obolibrary.org/obo/aro.obo, SHA256
+  d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4. Complete exact
+  stanzas were independently read for this record.'
+- Public fetch metadata and exact hashes are retained in 484-fetch-results.json through
+  484-fetch5-results.json. Initial PMC challenge HTML files were not counted as full
+  articles; successful ordinary ?page=1 retrievals are the -retry.html evidence snapshots.
+- The preliminary authority diagnostic exited 1 on a false all-encodings-identical
+  assumption. It is preserved as 484-authority-initial.py/.log; the final diagnostic
+  explicitly documents the KNApSAcK exception and exited 0. No scientific or native
+  correction was made during review.
+- The unrelated PMC2962247 files arose from an incorrect preliminary identifier guess
+  and were not used as evidence.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
