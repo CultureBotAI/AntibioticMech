@@ -1,0 +1,681 @@
+# Cyclacillin: coherent exact parent and seven historical FDA product assertions
+
+- Review: 20261021T140457Z-cyclacillin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T13:49:16Z
+- Finished UTC: 2026-10-21T14:04:57Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+No corrective native-record finding was established. The stereodefined neutral parent agrees with independent official structures. All seven native FDA product assertions retain the correct historical approval dates and discontinued marketing state; original antibacterial studies support eligibility without establishing a specific protein target. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position335; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:31444 | data/antibiotics/antibacterial/cyclacillin.yaml | generated | cyclacillin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:31444 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:31444 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:31444 | Actual focused execution exited 0. |
+| Current authority exact graph comparison | passed | False | CHEBI:31444 | Actual comparison exited 0; individual source results are retained. |
+| Authoritative full QC | failed | True | CHEBI:31444 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:31444 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:31444 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:31444 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:31444 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:31444 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:31444 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:31444 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:31444 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### One exact neutral penicillin
+
+identity: supported. Targets: CHEBI:31444.
+
+Native SMILES and InChI agree with ChEBI, PubChem, KEGG, DrugCentral and GSRS; all three assigned stereocentres are retained. No mixture, salt or epimer substitution is needed.
+
+### All aliases and chemical/document links
+
+grounding: supported. Targets: CHEBI:31444.
+
+Brands are already typed correctly. Accessible chemical graphs and document subjects agree; inaccessible registry/database links retain explicit verification limits. The German patent kind ambiguity was resolved without treating an unrelated default resolver result as a native chemical defect.
+
+### Seven product-level historical approvals
+
+evidence: supported. Targets: CHEBI:31444.
+
+Application, product number, sponsor, original approval date and discontinued marketing status match current official responses. Native source/retrieval dates and GSRS version are present. No current availability or clinical recommendation is inferred.
+
+### Antibacterial eligibility
+
+evidence: supported. Targets: CHEBI:31444.
+
+Original whole-cell experiments support the antibacterial classification. Agar-dilution MIC, CFU reduction and antibody/complement sensitization are distinct endpoints with material and inoculum limits.
+
+### Unpopulated definition, targets, activity and causal graph
+
+completeness: unknown. Targets: CHEBI:31444.
+
+Missing optional fields are not established errors. KEGG family-level PBP wording and conditional bacteriolysis do not identify a directly demonstrated exact protein target. No native gene/pathway assertion required a structured target lookup.
+
+### Source owner, mint and six history events
+
+provenance: supported. Targets: CHEBI:31444.
+
+The ChEBI source and FDA enrichment reproduce the populated slices; source status remains SEEDED. No prior review or readiness marker was used as scientific evidence.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Optionally add preparation- and assay-specific original activity observations.
+
+- Retain compound preparation, organism/strain where reported, medium, inoculum, exposure and endpoint.
+- Keep direct antibacterial inhibition separate from complement/antibody-dependent bacteriolysis; resolve internal original-paper discrepancies before copying numbers.
+- Keep historical product approval separate from current marketing and do not create an exact PBP target from class-level statements.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/cyclacillin.yaml; entire native YAML | supports | All native fields, aliases, classes, exact representations, xrefs, source concepts and history were read. Original target and context hashes were captured before judgment and remain unchanged. |
+| owners | data/raw/chebi_antimicrobials.tsv; row 639; exact source rows and maintained generation owners | supports | Source assertions were traced through extraction, seeding and applicable enrichment. Repository identity and ownership searches included hidden and ignored files. |
+| chemistry | RDKit 2026.03.5 / InChI 1.07.3; native and current authority molecular graph comparison | supports | Formula, charge, masses, stereocentres and full Standard InChIKey were calculated independently. Explicit source-specific outcomes are retained. |
+| authority | https://www.ebi.ac.uk/chebi/backend/api/public/compound/31444/; complete current ChEBI entry; official molfile; all native names, parents and roles | supports | CHEBI:31444 describes the neutral penicillin C15H23N3O4S with three assigned centres. All 20 native synonyms, including ten correctly typed brands and four INNs, are consistent with its names. No definition is supplied in the adopted record or current entry. Penicillin parent CHEBI:17334 and antimicrobial/antibacterial-drug roles resolve. |
+| crossrefs | https://rest.kegg.jp/get/C12766/mol; KEGG C12766/D01334 text and molfiles; DrugCentral632 molfile; PubChem exact-key query CID19003 | supports | All independently parsed graphs reproduce HGBLNBBNRORJKI-WCABBAIRSA-N. Average mass341.433, exact mass341.140927216, formula and charge agree. The initially guessed unrelated CID29031 was rejected; it is not identity evidence. Drug dictionaries do not establish current marketing. |
+| gsrs | https://api.fda.gov/other/substance.json?search=unii%3A72ZJ154X86&amp;limit=1; GSRS72ZJ154X86 version22 structure, names and relationships | supports | The official neutral parent molfile independently reproduces the native full key and supports the exact substance join used by native clinical assertions. |
+| fda050508 | https://api.fda.gov/drug/drugsfda.json?search=application_number%3A%22NDA050508%22&amp;limit=1; complete product list and submission history | supports | NDA050508 products001–003, CYCLAPEN-W/WYETH AYERST, have original approval1979-09-14 and current Discontinued product status, matching native assertions. |
+| fda050509 | https://api.fda.gov/drug/drugsfda.json?search=application_number%3A%22NDA050509%22&amp;limit=1; complete product list and submission history | supports | NDA050509 products001–002 have original approval1979-09-13 and Discontinued marketing status, matching native assertions. |
+| fda062895 | https://api.fda.gov/drug/drugsfda.json?search=application_number%3A%22ANDA062895%22&amp;limit=1; complete product list and submission history | supports | ANDA062895 products001–002, TEVA, have original approval1988-05-04 and Discontinued marketing status. Native currently_marketed=false is consistent. An historical approval and discontinued marketing are distinct assertions. |
+| primary1977 | https://www.jstage.jst.go.jp/article/antibiotics1968b/30/5/30_315/_pdf/-char/en; PMID:17021; complete six-page original text; page316 actual tables/figures visually inspected | supports | The original compares cyclacillin with five antibiotics by agar dilution in 248 clinical isolates:56 S.pyogenes,56 S.pneumoniae,64 S.aureus and72 E.coli. Potency-labelled powders and two inoculum levels are described; inoculum and isolation site affect MIC distributions. The original Japanese conclusion and Table2 concern S.pneumoniae where the English summary repeats S.pyogenes. No historical threshold is imported as a modern breakpoint. |
+| primary1976 | https://doi.org/10.3181/00379727-153-39533; complete four-page original text; actual page301 Methods visually inspected | supports | E.coli O127:B8 was tested in BHI with tube inhibition and CFU endpoints. Sublethal cyclacillin exposure followed by washing enhanced antibody/complement-mediated bacteriolysis. This is a conditional combination phenotype, not proof that the low drug dose alone killed cells or directly bound a specific PBP. The Methods/TableII immunization descriptions differ and must be checked before quantitative reuse. |
+| patents | https://patents.google.com/patent/US3194802A/en; US3194802 ExampleVIII/claim4; US3478018 Example3; DE1800698A1 document-family identification | supports | The US originals explicitly describe aminocyclohexane penicillins and relevant preparation. The kind-free German number initially resolved to an unrelated U document; explicit DE1800698A1 resolves to the penicillin family linked to US3478018. These are relevant document links, not exact chemical identifiers or current regulatory decisions. |
+| access | Bounded free authority and literature follow-up; current chemical authorities, FDA/GSRS and selected original studies | context_only | The adopted ChEBI inventory row has no citation leads; current additional references are not represented as adopted leads. DrugBank returned403; LINCS direct resolution was unsuccessful and its accession remains ChEBI-attested. Beilstein849154 and CAS were source-correlated without paid registry access. |
+
+## Limits And Additional Notes
+
+- DrugBank and LINCS could not be independently resolved; Beilstein was not accessed through a paid service. Current ChEBI supports the retained accessions but does not independently establish every historical name assignment.
+- Both selected original articles were read in complete text; page301 of1976 and page316 of1977 were visually inspected. Other scanned tables were not independently transcribed, and historical material purity/lot information was not reconstructed.
+- The review is not an exhaustive cyclacillin literature audit or a current clinical-use recommendation. No quantitative activity was added.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Review only: no native records, inventories, configuration, dependencies or generators were changed. Optional annotation gaps alone are not findings.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T140457Z-cyclacillin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cyclacillin: coherent exact parent and seven historical FDA product assertions'
+started_at: '2026-10-21T13:49:16Z'
+finished_at: '2026-10-21T14:04:57Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: No corrective native-record finding was established. The stereodefined neutral
+  parent agrees with independent official structures. All seven native FDA product
+  assertions retain the correct historical approval dates and discontinued marketing
+  state; original antibacterial studies support eligibility without establishing a
+  specific protein target. Scientific assessment retains the stated evidence limits;
+  full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cyclacillin.yaml
+    sha256: 6b8eb9e5e0c4fe5452652d789ebcdd63ff1930ed37a2573c790f374844455c5e
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+targets:
+- target_id: CHEBI:31444
+  path: data/antibiotics/antibacterial/cyclacillin.yaml
+  label: cyclacillin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Dated product approvals and GSRS identity
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: FDA product and GSRS extraction
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position335; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:31444
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:31444
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    335
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:31444
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cyclacillin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:31444
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cyclacillin.yaml --out /private/tmp/am-review-session/335-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: Current authority exact graph comparison
+  status: passed
+  required: false
+  summary: Actual comparison exited 0; individual source results are retained.
+  target_ids:
+  - CHEBI:31444
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/034-authority-gate.py
+    335
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:31444
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:31444
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:31444
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:31444
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:31444
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:31444
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:31444
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:31444
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:31444
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cyclacillin.yaml
+  locator: entire native YAML
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: All native fields, aliases, classes, exact representations, xrefs, source
+    concepts and history were read. Original target and context hashes were captured
+    before judgment and remain unchanged.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: row 639; exact source rows and maintained generation owners
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: Source assertions were traced through extraction, seeding and applicable
+    enrichment. Repository identity and ownership searches included hidden and ignored
+    files.
+  snapshot_sha256: 9c1e4c95bcbede2bc8ea5477964146f79d641df42d219411e280a7f5137111c4
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit 2026.03.5 / InChI 1.07.3
+  locator: native and current authority molecular graph comparison
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: Formula, charge, masses, stereocentres and full Standard InChIKey were
+    calculated independently. Explicit source-specific outcomes are retained.
+  snapshot_sha256: 67f0ff28febe7d59160480613bf15bfbee6599472fc565cd2e14a76e45e834c1
+- evidence_id: authority
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/31444/
+  locator: complete current ChEBI entry; official molfile; all native names, parents
+    and roles
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: CHEBI:31444 describes the neutral penicillin C15H23N3O4S with three assigned
+    centres. All 20 native synonyms, including ten correctly typed brands and four
+    INNs, are consistent with its names. No definition is supplied in the adopted
+    record or current entry. Penicillin parent CHEBI:17334 and antimicrobial/antibacterial-drug
+    roles resolve.
+  snapshot_sha256: c7e139e89fe8dda0edb601e0cb36f8f7df1ce17398486ea3b431c37b6b4e5aeb
+- evidence_id: crossrefs
+  kind: authority
+  reference: https://rest.kegg.jp/get/C12766/mol
+  locator: KEGG C12766/D01334 text and molfiles; DrugCentral632 molfile; PubChem exact-key
+    query CID19003
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: All independently parsed graphs reproduce HGBLNBBNRORJKI-WCABBAIRSA-N.
+    Average mass341.433, exact mass341.140927216, formula and charge agree. The initially
+    guessed unrelated CID29031 was rejected; it is not identity evidence. Drug dictionaries
+    do not establish current marketing.
+  snapshot_sha256: 67f0ff28febe7d59160480613bf15bfbee6599472fc565cd2e14a76e45e834c1
+- evidence_id: gsrs
+  kind: authority
+  reference: https://api.fda.gov/other/substance.json?search=unii%3A72ZJ154X86&limit=1
+  locator: GSRS72ZJ154X86 version22 structure, names and relationships
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: The official neutral parent molfile independently reproduces the native
+    full key and supports the exact substance join used by native clinical assertions.
+  snapshot_sha256: 82a971be3294f0690cb257f1f1ca34bde0640a9b9511ebb1afd91d117e10fb37
+- evidence_id: fda050508
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number%3A%22NDA050508%22&limit=1
+  locator: complete product list and submission history
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: NDA050508 products001–003, CYCLAPEN-W/WYETH AYERST, have original approval1979-09-14
+    and current Discontinued product status, matching native assertions.
+  snapshot_sha256: 5772276681b21e275838c9f79c3b60282684be393256476caede032771188e2b
+- evidence_id: fda050509
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number%3A%22NDA050509%22&limit=1
+  locator: complete product list and submission history
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: NDA050509 products001–002 have original approval1979-09-13 and Discontinued
+    marketing status, matching native assertions.
+  snapshot_sha256: acf83da3e94dba3c94d380f14eb14dc0857a0710a9060855ebe950224fe2e059
+- evidence_id: fda062895
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number%3A%22ANDA062895%22&limit=1
+  locator: complete product list and submission history
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: ANDA062895 products001–002, TEVA, have original approval1988-05-04 and
+    Discontinued marketing status. Native currently_marketed=false is consistent.
+    An historical approval and discontinued marketing are distinct assertions.
+  snapshot_sha256: a011f808898adf33053bdc6dc601edd4b69be43971645b32f164c9fcd69616f9
+- evidence_id: primary1977
+  kind: primary_source
+  reference: https://www.jstage.jst.go.jp/article/antibiotics1968b/30/5/30_315/_pdf/-char/en
+  locator: PMID:17021; complete six-page original text; page316 actual tables/figures
+    visually inspected
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: The original compares cyclacillin with five antibiotics by agar dilution
+    in 248 clinical isolates:56 S.pyogenes,56 S.pneumoniae,64 S.aureus and72 E.coli.
+    Potency-labelled powders and two inoculum levels are described; inoculum and isolation
+    site affect MIC distributions. The original Japanese conclusion and Table2 concern
+    S.pneumoniae where the English summary repeats S.pyogenes. No historical threshold
+    is imported as a modern breakpoint.
+  snapshot_sha256: f9a43aff37216c644484de25ba301d05ac14129c88807503b284754a8a3170fa
+- evidence_id: primary1976
+  kind: primary_source
+  reference: https://doi.org/10.3181/00379727-153-39533
+  locator: complete four-page original text; actual page301 Methods visually inspected
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: E.coli O127:B8 was tested in BHI with tube inhibition and CFU endpoints.
+    Sublethal cyclacillin exposure followed by washing enhanced antibody/complement-mediated
+    bacteriolysis. This is a conditional combination phenotype, not proof that the
+    low drug dose alone killed cells or directly bound a specific PBP. The Methods/TableII
+    immunization descriptions differ and must be checked before quantitative reuse.
+  snapshot_sha256: 13e54a605215b460311f0f9ad7ff4fa14618f40e95a3a7e58e8126bca897a8c1
+- evidence_id: patents
+  kind: primary_source
+  reference: https://patents.google.com/patent/US3194802A/en
+  locator: US3194802 ExampleVIII/claim4; US3478018 Example3; DE1800698A1 document-family
+    identification
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: supports
+  summary: The US originals explicitly describe aminocyclohexane penicillins and relevant
+    preparation. The kind-free German number initially resolved to an unrelated U
+    document; explicit DE1800698A1 resolves to the penicillin family linked to US3478018.
+    These are relevant document links, not exact chemical identifiers or current regulatory
+    decisions.
+  snapshot_sha256: 559af6c03e7728073f86658405c3de0cfb4adccadc43cfbeb535995481ce9e4f
+- evidence_id: access
+  kind: search
+  reference: Bounded free authority and literature follow-up
+  locator: current chemical authorities, FDA/GSRS and selected original studies
+  accessed_at: '2026-10-21T14:02:23Z'
+  support: context_only
+  summary: The adopted ChEBI inventory row has no citation leads; current additional
+    references are not represented as adopted leads. DrugBank returned403; LINCS direct
+    resolution was unsuccessful and its accession remains ChEBI-attested. Beilstein849154
+    and CAS were source-correlated without paid registry access.
+  search_scope: 2026-10-21; exact cyclacillin/ciclacillin, native identifiers, molecular
+    key and all seven FDA product keys. Hidden/ignored files were included in local
+    searches; primary follow-up was bounded, not exhaustive.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: One exact neutral penicillin
+  outcome: supported
+  summary: Native SMILES and InChI agree with ChEBI, PubChem, KEGG, DrugCentral and
+    GSRS; all three assigned stereocentres are retained. No mixture, salt or epimer
+    substitution is needed.
+  target_ids:
+  - CHEBI:31444
+  evidence_ids:
+  - native
+  - chemistry
+  - authority
+  - crossrefs
+  - gsrs
+- assessment_id: names
+  area: grounding
+  topic: All aliases and chemical/document links
+  outcome: supported
+  summary: Brands are already typed correctly. Accessible chemical graphs and document
+    subjects agree; inaccessible registry/database links retain explicit verification
+    limits. The German patent kind ambiguity was resolved without treating an unrelated
+    default resolver result as a native chemical defect.
+  target_ids:
+  - CHEBI:31444
+  evidence_ids:
+  - authority
+  - crossrefs
+  - patents
+  - access
+- assessment_id: clinical
+  area: evidence
+  topic: Seven product-level historical approvals
+  outcome: supported
+  summary: Application, product number, sponsor, original approval date and discontinued
+    marketing status match current official responses. Native source/retrieval dates
+    and GSRS version are present. No current availability or clinical recommendation
+    is inferred.
+  target_ids:
+  - CHEBI:31444
+  evidence_ids:
+  - native
+  - owners
+  - gsrs
+  - fda050508
+  - fda050509
+  - fda062895
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial eligibility
+  outcome: supported
+  summary: Original whole-cell experiments support the antibacterial classification.
+    Agar-dilution MIC, CFU reduction and antibody/complement sensitization are distinct
+    endpoints with material and inoculum limits.
+  target_ids:
+  - CHEBI:31444
+  evidence_ids:
+  - primary1977
+  - primary1976
+  - authority
+- assessment_id: optional
+  area: completeness
+  topic: Unpopulated definition, targets, activity and causal graph
+  outcome: unknown
+  summary: Missing optional fields are not established errors. KEGG family-level PBP
+    wording and conditional bacteriolysis do not identify a directly demonstrated
+    exact protein target. No native gene/pathway assertion required a structured target
+    lookup.
+  target_ids:
+  - CHEBI:31444
+  evidence_ids:
+  - native
+  - crossrefs
+  - primary1976
+- assessment_id: provenance
+  area: provenance
+  topic: Source owner, mint and six history events
+  outcome: supported
+  summary: The ChEBI source and FDA enrichment reproduce the populated slices; source
+    status remains SEEDED. No prior review or readiness marker was used as scientific
+    evidence.
+  target_ids:
+  - CHEBI:31444
+  evidence_ids:
+  - native
+  - owners
+  - access
+findings: []
+actions:
+- action_id: A1
+  description: Optionally add preparation- and assay-specific original activity observations.
+  finding_ids: []
+  target_ids:
+  - CHEBI:31444
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cyclacillin.yaml
+    role: Curator-owned optional activity and primary evidence
+  acceptance_checks:
+  - Retain compound preparation, organism/strain where reported, medium, inoculum,
+    exposure and endpoint.
+  - Keep direct antibacterial inhibition separate from complement/antibody-dependent
+    bacteriolysis; resolve internal original-paper discrepancies before copying numbers.
+  - Keep historical product approval separate from current marketing and do not create
+    an exact PBP target from class-level statements.
+limitations:
+- DrugBank and LINCS could not be independently resolved; Beilstein was not accessed
+  through a paid service. Current ChEBI supports the retained accessions but does
+  not independently establish every historical name assignment.
+- Both selected original articles were read in complete text; page301 of1976 and page316
+  of1977 were visually inspected. Other scanned tables were not independently transcribed,
+  and historical material purity/lot information was not reconstructed.
+- The review is not an exhaustive cyclacillin literature audit or a current clinical-use
+  recommendation. No quantitative activity was added.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- 'Review only: no native records, inventories, configuration, dependencies or generators
+  were changed. Optional annotation gaps alone are not findings.'
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
